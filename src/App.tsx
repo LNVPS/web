@@ -55,6 +55,9 @@ export default function App() {
       <div className="grid grid-cols-3 gap-2">
         {offers.map(a => <VpsCard spec={a} />)}
       </div>
+
+      <b>Please email lnvps@v0l.io after paying the invoice with your order id, desired OS and ssh key</b>
+      <br />
       <small>
         All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic.
       </small>

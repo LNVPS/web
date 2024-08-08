@@ -2,6 +2,14 @@ import { MachineSpec } from "../api";
 
 import "./pay-button.css"
 
+declare global {
+    interface Window {
+        btcpay?: {
+            appendInvoiceFrame(invoiceId: string): void;
+        }
+    }
+}
+
 export default function VpsPayButton({ spec }: { spec: MachineSpec }) {
     const serverUrl = "https://btcpay.v0l.io/api/v1/invoices";
 
@@ -11,7 +19,7 @@ export default function VpsPayButton({ spec }: { spec: MachineSpec }) {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200 && this.responseText) {
-                window.btcpay.appendInvoiceFrame(JSON.parse(this.responseText).invoiceId);
+                window.btcpay?.appendInvoiceFrame(JSON.parse(this.responseText).invoiceId);
             }
         };
         xhttp.open('POST', serverUrl, true);

@@ -1,5 +1,6 @@
 export interface MachineSpec {
   id: string;
+  active: boolean;
   cpu: number;
   ram: number;
   disk: {

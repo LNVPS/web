@@ -6,6 +6,7 @@ export default function App() {
   const offers: Array<MachineSpec> = [
     {
       id: "2x2x80",
+      active: true,
       cpu: 2,
       ram: 2 * GiB,
       disk: {
@@ -20,6 +21,7 @@ export default function App() {
     },
     {
       id: "4x4x160",
+      active: true,
       cpu: 4,
       ram: 4 * GiB,
       disk: {
@@ -34,6 +36,7 @@ export default function App() {
     },
     {
       id: "8x8x400",
+      active: true,
       cpu: 8,
       ram: 8 * GiB,
       disk: {

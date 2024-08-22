@@ -26,6 +26,12 @@ export default function VpsPayButton({ spec }: { spec: MachineSpec }) {
         xhttp.send(new FormData(form));
     }
 
+    if (!spec.active) {
+        return <div className="text-center text-xl uppercase bg-red-800 rounded-xl py-3 font-bold">
+            Unavailable
+        </div>
+    }
+
     return <form method="POST" action={serverUrl} className="btcpay-form btcpay-form--block" onSubmit={handleFormSubmit}>
         <input type="hidden" name="storeId" value="CdaHy1puLx4kLC9BG3A9mu88XNyLJukMJRuuhAfbDrxg" />
         <input type="hidden" name="jsonResponse" value="true" />

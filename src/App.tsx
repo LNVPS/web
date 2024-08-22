@@ -52,17 +52,18 @@ export default function App() {
       <h1>LNVPS</h1>
 
       <h1>VPS</h1>
-      <div className="grid grid-cols-3 gap-2">
-        {offers.map(a => <VpsCard spec={a} />)}
-      </div>
+      <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-3 gap-2">
+          {offers.map(a => <VpsCard spec={a} />)}
+        </div>
 
-      <br />
-      <b>Please email sales@lnvps.net after paying the invoice with your order id, desired OS and ssh key</b>
-      <br />
-      <br />
-      <small>
-        All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic.
-      </small>
+        <div className="flex flex-col gap-4">
+          <b>Please email sales@lnvps.net after paying the invoice with your order id, desired OS and ssh key</b>
+          <small>
+            All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic.
+          </small>
+        </div>
+      </div>
     </div>
   )
 }

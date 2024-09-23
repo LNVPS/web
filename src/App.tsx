@@ -4,8 +4,6 @@ import VpsCard from "./components/vps-card";
 import { GiB, NostrProfile } from "./const";
 import { NostrSystem } from "@snort/system";
 import Profile from "./components/profile";
-import { AsyncButton } from "./components/button";
-import { loginNip7 } from "./login";
 import LoginButton from "./components/login-button";
 
 const Offers: Array<MachineSpec> = [

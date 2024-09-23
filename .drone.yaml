@@ -10,7 +10,7 @@ steps:
   - name: build
     image: docker
     privileged: true
-    environment: 
+    environment:
       TOKEN:
         from_secret: registry_token
     commands:

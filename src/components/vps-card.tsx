@@ -16,6 +16,9 @@ export default function VpsCard({ spec }: { spec: MachineSpec }) {
           {spec.disk.type === DiskType.SSD ? "SSD" : "HDD"}:{" "}
           <BytesSize value={spec.disk.size} />
         </li>
+        <li>
+          Location: {spec.location}
+        </li>
       </ul>
       <h2>
         <CostLabel cost={spec.cost} />

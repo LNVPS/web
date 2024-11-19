@@ -4,18 +4,7 @@
 
 :root {
   font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-
-  color-scheme: light dark;
-  color: white;
-  @apply bg-neutral-900;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-black text-white;
 }
 
 html,

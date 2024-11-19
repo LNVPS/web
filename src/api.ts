@@ -12,6 +12,7 @@ export interface MachineSpec {
     count: number;
     currency: CostCurrency;
   };
+  location: string;
 }
 
 export enum DiskType {

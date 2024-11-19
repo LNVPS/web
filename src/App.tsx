@@ -6,9 +6,12 @@ import { NostrSystem } from "@snort/system";
 import Profile from "./components/profile";
 import LoginButton from "./components/login-button";
 
+import pgp from "../public/lnvps.asc?url";
+
 const Offers: Array<MachineSpec> = [
   {
     id: "2x2x80",
+    location: "IE",
     active: true,
     cpu: 2,
     ram: 2 * GiB,
@@ -24,6 +27,7 @@ const Offers: Array<MachineSpec> = [
   },
   {
     id: "4x4x160",
+    location: "IE",
     active: true,
     cpu: 4,
     ram: 4 * GiB,
@@ -39,6 +43,7 @@ const Offers: Array<MachineSpec> = [
   },
   {
     id: "8x8x400",
+    location: "IE",
     active: true,
     cpu: 8,
     ram: 8 * GiB,
@@ -54,7 +59,10 @@ const Offers: Array<MachineSpec> = [
   },
 ];
 
-const system = new NostrSystem({});
+const system = new NostrSystem({
+  automaticOutboxModel: false,
+  buildFollowGraph: false,
+});
 [
   "wss://relay.snort.social/",
   "wss://relay.damus.io/",
@@ -75,24 +83,26 @@ export default function App() {
         <div className="flex flex-col gap-2">
           <div className="grid grid-cols-3 gap-2">
             {Offers.map((a) => (
-              <VpsCard spec={a} />
+              <VpsCard spec={a} key={a.id} />
             ))}
           </div>
 
+          <small>
+            All VPS come with 1x IPv4 and 1x IPv6 address and unmetered
+            traffic
+          </small>
           <div className="flex flex-col gap-4">
             <b>
               Please email <a href="mailto:sales@lnvps.net">sales</a> after
               paying the invoice with your order id, desired OS and ssh key.
             </b>
             <b>You can also find us on nostr: </b>
-            <div className="flex flex-col gap-2">
+            <a target="_blank" href={`nostr:${NostrProfile.encode()}`}>
               <Profile link={NostrProfile} />
-              <pre className="overflow-x-scroll">{NostrProfile.encode()}</pre>
+            </a>
+            <div>
+              <a target="_blank" href="http://speedtest.v0l.io">Speedtest</a> | <a href={pgp}>PGP</a>
             </div>
-            <small>
-              All VPS come with 1x IPv4 and 1x IPv6 address and unmetered
-              traffic.
-            </small>
           </div>
         </div>
       </div>

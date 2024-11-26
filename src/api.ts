@@ -54,6 +54,11 @@ export interface VmStatus {
   disk_read: number;
 }
 
+export interface VmIpAssignment {
+  id: number;
+  ip: string;
+}
+
 export interface VmInstance {
   id: number;
   host_id: number;
@@ -61,8 +66,8 @@ export interface VmInstance {
   image_id: number;
   template_id: number;
   ssh_key_id: number;
-  created: Date;
-  expires: Date;
+  created: string;
+  expires: string;
   cpu: number;
   memory: number;
   disk_size: number;
@@ -72,6 +77,7 @@ export interface VmInstance {
   template?: VmTemplate;
   image?: VmOsImage;
   ssh_key?: UserSshKey;
+  ip_assignments: Array<VmIpAssignment>;
 }
 
 export interface VmOsImage {
@@ -100,7 +106,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) {}
+  ) { }
 
   async listVms() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmInstance>>>(

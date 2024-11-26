@@ -11,16 +11,25 @@ export default function VmActions({ vm }: { vm: VmInstance }) {
           name={state === "running" ? "stop" : "start"}
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
+          onClick={e => {
+            e.stopPropagation();
+          }}
         />
         <Icon
           name="delete"
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
+          onClick={e => {
+            e.stopPropagation();
+          }}
         />
         <Icon
           name="refresh-1"
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
+          onClick={e => {
+            e.stopPropagation();
+          }}
         />
       </div>
     </div>

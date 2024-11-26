@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-import Icons from "../icons.svg";
+import Icons from "../icons.svg?url";
 
 type Props = {
   name: string;

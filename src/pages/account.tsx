@@ -23,7 +23,7 @@ export default function AccountPage() {
       <h3>My Resources</h3>
       <div className="flex flex-col gap-2">
         {vms.map((a) => (
-          <VpsInstanceRow key={a.id} vm={a} />
+          <VpsInstanceRow key={a.id} vm={a} actions={false} />
         ))}
       </div>
     </>

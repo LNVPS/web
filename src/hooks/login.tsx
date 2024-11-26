@@ -3,10 +3,7 @@ import { Login } from "../login";
 
 export default function useLogin() {
   return useSyncExternalStore(
-    (c) => {
-      Login?.on("change", c);
-      return () => Login?.off("change", c);
-    },
-    () => Login,
+    (c) => Login.hook(c),
+    () => Login.snapshot(),
   );
 }

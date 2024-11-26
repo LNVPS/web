@@ -1,22 +1,20 @@
-import { CostInterval, MachineSpec } from "../api";
+import { VmCostPlan } from "../api";
 
-export default function CostLabel({ cost }: { cost: MachineSpec["cost"] }) {
-  function intervalName(n: number) {
+export default function CostLabel({ cost }: { cost: VmCostPlan }) {
+  function intervalName(n: string) {
     switch (n) {
-      case CostInterval.Hour:
-        return "Hour";
-      case CostInterval.Day:
+      case "day":
         return "Day";
-      case CostInterval.Month:
+      case "month":
         return "Month";
-      case CostInterval.Year:
+      case "year":
         return "Year";
     }
   }
 
   return (
     <>
-      {cost.count} {cost.currency}/{intervalName(cost.interval)}
+      {cost.amount} {cost.currency}/{intervalName(cost.interval_type)}
     </>
   );
 }

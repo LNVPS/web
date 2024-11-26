@@ -5,6 +5,7 @@ import { loginNip7 } from "../login";
 import useLogin from "../hooks/login";
 import Profile from "./profile";
 import { NostrLink } from "@snort/system";
+import { Link } from "react-router-dom";
 
 export default function LoginButton() {
   const system = useContext(SnortContext);
@@ -19,6 +20,8 @@ export default function LoginButton() {
       Sign In
     </AsyncButton>
   ) : (
-    <Profile link={NostrLink.publicKey(login.pubkey)} />
+    <Link to="/account">
+      <Profile link={NostrLink.publicKey(login.pubkey)} />
+    </Link>
   );
 }

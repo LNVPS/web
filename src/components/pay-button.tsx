@@ -1,6 +1,8 @@
-import { MachineSpec } from "../api";
-
-import "./pay-button.css";
+import { ReactNode } from "react";
+import { VmTemplate } from "../api";
+import useLogin from "../hooks/login";
+import { AsyncButton } from "./button";
+import { useNavigate } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -10,55 +12,33 @@ declare global {
   }
 }
 
-export default function VpsPayButton({ spec }: { spec: MachineSpec }) {
-  const serverUrl = "https://btcpay.v0l.io/api/v1/invoices";
+export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
+  const login = useLogin();
+  const classNames =
+    "w-full text-center text-lg uppercase rounded-xl py-3 font-bold cursor-pointer select-none";
+  const navigte = useNavigate();
 
-  function handleFormSubmit(event: React.FormEvent) {
-    event.preventDefault();
-    const form = event.target as HTMLFormElement;
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200 && this.responseText) {
-        window.btcpay?.appendInvoiceFrame(
-          JSON.parse(this.responseText).invoiceId,
-        );
-      }
-    };
-    xhttp.open("POST", serverUrl, true);
-    xhttp.send(new FormData(form));
+  function placeholder(inner: ReactNode) {
+    return <div className={`${classNames} bg-red-900`}>{inner}</div>;
   }
 
-  if (!spec.active) {
-    return (
-      <div className="text-center text-xl uppercase bg-red-800 rounded-xl py-3 font-bold">
-        Unavailable
-      </div>
-    );
+  if (!spec.enabled) {
+    return placeholder("Unavailable");
   }
 
+  if (!login) {
+    return placeholder("Please Login");
+  }
   return (
-    <form
-      method="POST"
-      action={serverUrl}
-      className="btcpay-form btcpay-form--block w-full"
-      onSubmit={handleFormSubmit}
+    <AsyncButton
+      className={`${classNames} bg-green-800`}
+      onClick={() =>
+        navigte("/order", {
+          state: spec,
+        })
+      }
     >
-      <input
-        type="hidden"
-        name="storeId"
-        value="CdaHy1puLx4kLC9BG3A9mu88XNyLJukMJRuuhAfbDrxg"
-      />
-      <input type="hidden" name="jsonResponse" value="true" />
-      <input type="hidden" name="orderId" value={spec.id} />
-      <input type="hidden" name="price" value={spec.cost.count} />
-      <input type="hidden" name="currency" value={spec.cost.currency} />
-      <input
-        type="image"
-        className="w-full"
-        name="submit"
-        src="https://btcpay.v0l.io/img/paybutton/pay.svg"
-        alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor"
-      />
-    </form>
+      Buy Now
+    </AsyncButton>
   );
 }

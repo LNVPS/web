@@ -26,7 +26,7 @@ export default function VpsInstanceRow({ vm, actions }: { vm: VmInstance, action
         </div>
         <VpsResources vm={vm} />
       </div>
-      {(actions ?? true) && <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center">
         {isExpired && (
           <>
             <Link to="/vm/renew" className="text-red-500 text-sm" state={vm}>
@@ -34,8 +34,8 @@ export default function VpsInstanceRow({ vm, actions }: { vm: VmInstance, action
             </Link>
           </>
         )}
-        {!isExpired && <VmActions vm={vm} />}
-      </div>}
+        {!isExpired && (actions ?? true) && <VmActions vm={vm} />}
+      </div>
     </div>
   );
 }

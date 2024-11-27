@@ -12,8 +12,7 @@ export const GB = KB * 1000;
 export const TB = GB * 1000;
 export const PB = TB * 1000;
 
-//export const ApiUrl = "http://localhost:8000";
-export const ApiUrl = "https://api.lnvps.net";
+export const ApiUrl = import.meta.env.VITE_API_URL;
 
 export const NostrProfile = new NostrLink(
   NostrPrefix.Profile,

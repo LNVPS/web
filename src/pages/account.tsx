@@ -9,13 +9,20 @@ export default function AccountPage() {
   const login = useLogin();
   const [vms, setVms] = useState<Array<VmInstance>>([]);
 
-  useEffect(() => {
+  async function loadVms() {
     if (!login?.signer) return;
     const api = new LNVpsApi(
       ApiUrl,
       new EventPublisher(login.signer, login.pubkey),
     );
-    api.listVms().then(setVms);
+    const vms = await api.listVms();
+    setVms(vms);
+  }
+
+  useEffect(() => {
+    loadVms();
+    const t = setInterval(() => loadVms(), 5_000);
+    return () => clearInterval(t);
   }, [login]);
 
   return (
@@ -23,7 +30,7 @@ export default function AccountPage() {
       <h3>My Resources</h3>
       <div className="flex flex-col gap-2">
         {vms.map((a) => (
-          <VpsInstanceRow key={a.id} vm={a} actions={false} />
+          <VpsInstanceRow key={a.id} vm={a} onReload={loadVms} />
         ))}
       </div>
     </>

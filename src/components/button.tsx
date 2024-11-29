@@ -1,18 +1,28 @@
 import classNames from "classnames";
-import { forwardRef, HTMLProps } from "react";
+import { forwardRef, HTMLProps, useState } from "react";
+import Spinner from "./spinner";
 
 export type AsyncButtonProps = {
   onClick?: (e: React.MouseEvent) => Promise<void> | void;
 } & Omit<HTMLProps<HTMLButtonElement>, "type" | "ref" | "onClick">;
 
 const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>(
-  function AsyncButton({ className, ...props }, ref) {
+  function AsyncButton({ className, onClick, ...props }, ref) {
+    const [loading, setLoading] = useState(false);
     const hasBg = className?.includes("bg-");
     return (
       <button
         ref={ref}
+        onClick={async (e) => {
+          setLoading(true);
+          try {
+            await onClick?.(e);
+          } finally {
+            setLoading(false);
+          }
+        }}
         className={classNames(
-          "py-1 px-2 rounded-xl font-medium",
+          "py-1 px-2 rounded-xl font-medium relative",
           {
             "bg-neutral-800 cursor-not-allowed text-neutral-500":
               !hasBg && props.disabled === true,
@@ -22,7 +32,17 @@ const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>(
         )}
         {...props}
       >
-        {props.children}
+        <span
+          style={{ visibility: loading ? "hidden" : "visible" }}
+          className="whitespace-nowrap items-center justify-center"
+        >
+          {props.children}
+        </span>
+        {loading && (
+          <span className="absolute w-full h-full top-0 left-0 flex items-center justify-center">
+            <Spinner />
+          </span>
+        )}
       </button>
     );
   },

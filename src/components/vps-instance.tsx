@@ -7,9 +7,11 @@ import VmActions from "./vps-actions";
 export default function VpsInstanceRow({
   vm,
   actions,
+  onReload,
 }: {
   vm: VmInstance;
   actions?: boolean;
+  onReload?: () => void;
 }) {
   const expires = new Date(vm.expires);
   const isExpired = expires <= new Date();
@@ -44,7 +46,9 @@ export default function VpsInstanceRow({
             </Link>
           </>
         )}
-        {!isExpired && (actions ?? true) && <VmActions vm={vm} />}
+        {!isExpired && (actions ?? true) && (
+          <VmActions vm={vm} onReload={onReload} />
+        )}
       </div>
     </div>
   );

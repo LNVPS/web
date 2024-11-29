@@ -122,6 +122,20 @@ export class LNVpsApi {
     return data;
   }
 
+  async startVm(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
+      await this.#req(`/api/v1/vm/${id}/start`, "PATCH"),
+    );
+    return data;
+  }
+
+  async stopVm(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
+      await this.#req(`/api/v1/vm/${id}/stop`, "PATCH"),
+    );
+    return data;
+  }
+
   async listOffers() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmTemplate>>>(
       await this.#req("/api/v1/vm/templates", "GET"),
@@ -192,7 +206,11 @@ export class LNVpsApi {
     }
   }
 
-  async #req(path: string, method: "GET" | "POST" | "DELETE", body?: object) {
+  async #req(
+    path: string,
+    method: "GET" | "POST" | "DELETE" | "PUT" | "PATCH",
+    body?: object,
+  ) {
     const auth = async (url: string, method: string) => {
       const auth = await this.publisher?.generic((eb) => {
         return eb

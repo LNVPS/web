@@ -34,7 +34,7 @@ export default function HomePage() {
             <a target="_blank" href="http://speedtest.v0l.io">
               Speedtest
             </a>{" "}
-            | <a href="/public/lnvps.asc">PGP</a>
+            | <a href="/lnvps.asc">PGP</a>
           </div>
         </div>
       </div>

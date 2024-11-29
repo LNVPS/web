@@ -1,7 +1,5 @@
 import { MouseEventHandler } from "react";
 
-import Icons from "../icons.svg?url";
-
 type Props = {
   name: string;
   size?: number;
@@ -11,7 +9,7 @@ type Props = {
 
 export function Icon(props: Props) {
   const size = props.size || 20;
-  const href = `${Icons}#${props.name}`;
+  const href = `/icons.svg#${props.name}`;
 
   return (
     <svg

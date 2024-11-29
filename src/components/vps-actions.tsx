@@ -11,7 +11,7 @@ export default function VmActions({ vm }: { vm: VmInstance }) {
           name={state === "running" ? "stop" : "start"}
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
           }}
         />
@@ -19,7 +19,7 @@ export default function VmActions({ vm }: { vm: VmInstance }) {
           name="delete"
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
           }}
         />
@@ -27,7 +27,7 @@ export default function VmActions({ vm }: { vm: VmInstance }) {
           name="refresh-1"
           className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
           size={40}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
           }}
         />

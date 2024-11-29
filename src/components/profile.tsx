@@ -4,6 +4,7 @@ import { useUserProfile } from "@snort/system-react";
 
 export default function Profile({ link }: { link: NostrLink }) {
   const profile = useUserProfile(link.id);
+  const name = profile?.display_name ?? profile?.name ?? "";
   return (
     <div className="flex gap-2 items-center">
       <img
@@ -11,9 +12,7 @@ export default function Profile({ link }: { link: NostrLink }) {
         className="w-12 h-12 rounded-full bg-neutral-800 object-cover object-center"
       />
       <div>
-        {profile?.display_name ??
-          profile?.name ??
-          hexToBech32("npub", link.id).slice(0, 12)}
+        {name.length > 0 ? name : hexToBech32("npub", link.id).slice(0, 12)}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { ExternalStore } from "@snort/shared";
 import {
   EventSigner,
   Nip7Signer,
+  PrivateKeySigner,
   SystemInterface,
   UserState,
 } from "@snort/system";
@@ -30,6 +31,20 @@ export const Login = new LoginShell();
 export async function loginNip7(system: SystemInterface) {
   const signer = new Nip7Signer();
   const pubkey = await signer.getPubKey();
+  if (pubkey) {
+    await Login.login(signer, system);
+  } else {
+    throw new Error("No nostr extension found");
+  }
+}
+
+export async function loginPrivateKey(
+  system: SystemInterface,
+  key: string | Uint8Array | PrivateKeySigner,
+) {
+  const signer =
+    key instanceof PrivateKeySigner ? key : new PrivateKeySigner(key);
+  const pubkey = signer.getPubKey();
   if (pubkey) {
     await Login.login(signer, system);
   } else {

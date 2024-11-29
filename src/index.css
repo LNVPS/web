@@ -35,3 +35,9 @@ a:hover {
 hr {
   @apply border-neutral-800;
 }
+
+input,
+textarea,
+select {
+  @apply border-none rounded-xl bg-neutral-900 p-2;
+}

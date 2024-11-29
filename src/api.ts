@@ -106,7 +106,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) { }
+  ) {}
 
   async listVms() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmInstance>>>(

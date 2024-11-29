@@ -146,7 +146,6 @@ export default function OrderPage() {
           <>
             <b>Add SSH Key:</b>
             <textarea
-              className="border-none rounded-xl bg-neutral-900 p-2"
               rows={5}
               placeholder="ssh-[rsa|ed25519] AA== id"
               value={newKey}
@@ -154,7 +153,6 @@ export default function OrderPage() {
             />
             <input
               type="text"
-              className="border-none rounded-xl bg-neutral-900 p-2"
               placeholder="Key name"
               value={newKeyName}
               onChange={(e) => setNewKeyName(e.target.value)}

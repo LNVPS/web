@@ -9,6 +9,7 @@ import HomePage from "./pages/home.tsx";
 import OrderPage from "./pages/order.tsx";
 import VmPage from "./pages/vm.tsx";
 import AccountPage from "./pages/account.tsx";
+import SignUpPage from "./pages/sign-up.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/new-account",
+        element: <SignUpPage />,
       },
       {
         path: "/account",

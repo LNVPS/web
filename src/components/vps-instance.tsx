@@ -4,16 +4,26 @@ import OsImageName from "./os-image-name";
 import VpsResources from "./vps-resources";
 import VmActions from "./vps-actions";
 
-export default function VpsInstanceRow({ vm, actions }: { vm: VmInstance, actions?: boolean }) {
+export default function VpsInstanceRow({
+  vm,
+  actions,
+}: {
+  vm: VmInstance;
+  actions?: boolean;
+}) {
   const expires = new Date(vm.expires);
   const isExpired = expires <= new Date();
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-between items-center rounded-xl bg-neutral-900 px-3 py-2 cursor-pointer hover:bg-neutral-800"
-      onClick={() => navigate("/vm", {
-        state: vm
-      })}>
+    <div
+      className="flex justify-between items-center rounded-xl bg-neutral-900 px-3 py-2 cursor-pointer hover:bg-neutral-800"
+      onClick={() =>
+        navigate("/vm", {
+          state: vm,
+        })
+      }
+    >
       <div className="flex flex-col gap-2">
         <div>
           <span className="text-sm text-neutral-400">#{vm.id}</span>

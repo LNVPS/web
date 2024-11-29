@@ -5,16 +5,21 @@ import { loginNip7 } from "../login";
 import useLogin from "../hooks/login";
 import Profile from "./profile";
 import { NostrLink } from "@snort/system";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LoginButton() {
   const system = useContext(SnortContext);
   const login = useLogin();
+  const navigate = useNavigate();
 
   return !login ? (
     <AsyncButton
       onClick={async () => {
-        await loginNip7(system);
+        if (window.nostr) {
+          await loginNip7(system);
+        } else {
+          navigate("/new-account");
+        }
       }}
     >
       Sign In

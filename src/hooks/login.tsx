@@ -1,9 +1,19 @@
-import { useSyncExternalStore } from "react";
-import { Login } from "../login";
+import { useContext, useSyncExternalStore } from "react";
+import { LoginState } from "../login";
+import { SnortContext } from "@snort/system-react";
 
 export default function useLogin() {
-  return useSyncExternalStore(
-    (c) => Login.hook(c),
-    () => Login.snapshot(),
+  const session = useSyncExternalStore(
+    (c) => LoginState.hook(c),
+    () => LoginState.snapshot(),
   );
+  const system = useContext(SnortContext);
+  return session
+    ? {
+        type: session.type,
+        publicKey: session.publicKey,
+        builder: LoginState.getSigner(),
+        system,
+      }
+    : undefined;
 }

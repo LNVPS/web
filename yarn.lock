@@ -758,20 +758,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@snort/system-react@npm:^1.5.7":
-  version: 1.5.7
-  resolution: "@snort/system-react@npm:1.5.7"
+"@snort/system-react@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@snort/system-react@npm:1.6.1"
   dependencies:
     "@snort/shared": "npm:^1.0.17"
-    "@snort/system": "npm:^1.5.7"
+    "@snort/system": "npm:^1.6.1"
     react: "npm:^18.2.0"
-  checksum: 10c0/b8261d72bef88fc6baa91f3f3765a7e65e7775e0f87142079ec425fdc3639871da068b2bfc9c4a2c0f15a20c7c76ffe84d9bc8cbc1e6ef5a76989cd78d3f7049
+  checksum: 10c0/fe3180c1f4341df4fd585c4031ef632a7d59c7637c6aed16ea254a1c22a66e288516d96939c0080efd0fb73940531855a59a24fae5f82c326f6544362eb0394c
   languageName: node
   linkType: hard
 
-"@snort/system@npm:^1.5.7":
-  version: 1.5.7
-  resolution: "@snort/system@npm:1.5.7"
+"@snort/system@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@snort/system@npm:1.6.1"
   dependencies:
     "@noble/ciphers": "npm:^0.6.0"
     "@noble/curves": "npm:^1.4.0"
@@ -786,7 +786,7 @@ __metadata:
     nostr-social-graph: "npm:^1.0.3"
     uuid: "npm:^9.0.0"
     ws: "npm:^8.14.0"
-  checksum: 10c0/9b1d6e36dfc3c0845754d4f2c10eb39665a2c4c4c61a07635e0b792a352f8566dbd79561561568c182272cd92b0d2c421ef137775b16872b7e28fa39366e2094
+  checksum: 10c0/5da01450970f4a51df98369c4cdd2b8886add3480e7962d11ed17498cf7db421bcd5e585abe532ff754efc0bf26b5734b9b24005f958802357ec390ccb74d281
   languageName: node
   linkType: hard
 
@@ -2379,8 +2379,8 @@ __metadata:
     "@eslint/js": "npm:^9.8.0"
     "@scure/base": "npm:^1.2.1"
     "@snort/shared": "npm:^1.0.17"
-    "@snort/system": "npm:^1.5.7"
-    "@snort/system-react": "npm:^1.5.7"
+    "@snort/system": "npm:^1.6.1"
+    "@snort/system-react": "npm:^1.6.1"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react": "npm:^4.3.1"

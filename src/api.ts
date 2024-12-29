@@ -103,11 +103,15 @@ export interface VmPayment {
   is_paid: boolean;
 }
 
+export interface PathVm {
+  ssh_key_id?: number;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) { }
+  ) {}
 
   async listVms() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmInstance>>>(
@@ -119,6 +123,13 @@ export class LNVpsApi {
   async getVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async patchVm(id: number, req: PathVm) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/vm/${id}`, "PATCH", req),
     );
     return data;
   }
@@ -196,19 +207,20 @@ export class LNVpsApi {
   async connect_terminal(id: number) {
     const u = `${this.url}/api/v1/console/${id}`;
     const auth = await this.#auth_event(u, "GET");
-    const ws = new WebSocket(`${u}?auth=${base64.encode(
-      new TextEncoder().encode(JSON.stringify(auth)),
-    )}`);
+    const ws = new WebSocket(
+      `${u}?auth=${base64.encode(
+        new TextEncoder().encode(JSON.stringify(auth)),
+      )}`,
+    );
     return await new Promise<WebSocket>((resolve, reject) => {
       ws.onopen = () => {
         resolve(ws);
-      }
+      };
       ws.onerror = (e) => {
-        reject(e)
-      }
-    })
+        reject(e);
+      };
+    });
   }
-
 
   async #handleResponse<T extends ApiResponseBase>(rsp: Response) {
     if (rsp.ok) {
@@ -230,7 +242,7 @@ export class LNVpsApi {
         .kind(EventKind.HttpAuthentication)
         .tag(["u", url])
         .tag(["method", method]);
-    })
+    });
   }
 
   async #auth(url: string, method: string) {

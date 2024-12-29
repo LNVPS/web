@@ -1,12 +1,17 @@
-import { EventPublisher, PrivateKeySigner } from "@snort/system";
+import {
+  EventPublisher,
+  Nip46Signer,
+  Nip7Signer,
+  PrivateKeySigner,
+} from "@snort/system";
 import { AsyncButton } from "../components/button";
 import { useContext, useState } from "react";
 import { bech32ToHex, hexToBech32 } from "@snort/shared";
 import { openFile } from "../utils";
 import { SnortContext } from "@snort/system-react";
 import { Blossom } from "../blossom";
-import { loginPrivateKey } from "../login";
 import { useNavigate } from "react-router-dom";
+import { LoginState } from "../login";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -44,16 +49,23 @@ export default function SignUpPage() {
       picture: pic,
     });
     system.BroadcastEvent(ev);
-    await loginPrivateKey(system, key);
+    LoginState.loginPrivateKey(key.privateKey);
     navigate("/");
   }
 
   async function loginKey() {
     setError("");
     try {
-      const key = bech32ToHex(keyIn);
-      await loginPrivateKey(system, new PrivateKeySigner(key));
-      navigate("/");
+      if (keyIn.startsWith("nsec1")) {
+        LoginState.loginPrivateKey(bech32ToHex(keyIn));
+        navigate("/");
+      } else if (keyIn.startsWith("bunker://")) {
+        const signer = new Nip46Signer(keyIn);
+        await signer.init();
+        const pubkey = await signer.getPubKey();
+        LoginState.loginBunker(keyIn, signer.privateKey!, pubkey);
+        navigate("/");
+      }
     } catch (e) {
       if (e instanceof Error) {
         setError(e.message);
@@ -71,9 +83,26 @@ export default function SignUpPage() {
         value={keyIn}
         onChange={(e) => setKeyIn(e.target.value)}
       />
-      <AsyncButton onClick={loginKey} disabled={!keyIn.startsWith("nsec")}>
+      <AsyncButton
+        onClick={loginKey}
+        disabled={!keyIn.startsWith("nsec") && !keyIn.startsWith("bunker://")}
+      >
         Login
       </AsyncButton>
+      {window.nostr && (
+        <div className="flex flex-col gap-4">
+          Browser Extension:
+          <AsyncButton
+            onClick={async () => {
+              const pk = await new Nip7Signer().getPubKey();
+              LoginState.login(pk);
+              navigate("/");
+            }}
+          >
+            Nostr Extension
+          </AsyncButton>
+        </div>
+      )}
       <div className="flex gap-4 items-center my-6">
         <div className="text-xl">OR</div>
         <div className="h-[1px] bg-neutral-800 w-full"></div>

@@ -51,7 +51,7 @@ export default function Modal(props: ModalProps) {
         className={
           props.bodyClassName ??
           classNames(
-            "relative bg-layer-1 p-8 transition max-xl:rounded-t-3xl xl:rounded-3xl max-xl:mt-auto xl:my-auto max-lg:w-full",
+            "relative bg-neutral-700 p-8 transition max-xl:rounded-t-3xl xl:rounded-3xl max-xl:mt-auto xl:my-auto max-lg:w-full",
             {
               "max-xl:-translate-y-[calc(100vh-100dvh)]": props.ready ?? true,
               "max-xl:translate-y-[50vh]": !(props.ready ?? true),

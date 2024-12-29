@@ -1,75 +1,34 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { LNVpsApi, UserSshKey, VmOsImage, VmTemplate } from "../api";
+import { LNVpsApi, VmOsImage, VmTemplate } from "../api";
 import { useEffect, useState } from "react";
 import CostLabel from "../components/cost";
 import { ApiUrl } from "../const";
-import { EventPublisher } from "@snort/system";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import classNames from "classnames";
 import VpsResources from "../components/vps-resources";
 import OsImageName from "../components/os-image-name";
+import SSHKeySelector from "../components/ssh-keys";
 
 export default function OrderPage() {
   const { state } = useLocation();
   const login = useLogin();
   const navigate = useNavigate();
   const template = state as VmTemplate | undefined;
-  const [newKey, setNewKey] = useState("");
-  const [newKeyError, setNewKeyError] = useState("");
-  const [newKeyName, setNewKeyName] = useState("");
   const [useImage, setUseImage] = useState(-1);
   const [useSshKey, setUseSshKey] = useState(-1);
-  const [showAddKey, setShowAddKey] = useState(false);
   const [images, setImages] = useState<Array<VmOsImage>>([]);
-  const [sshKeys, setSshKeys] = useState<Array<UserSshKey>>([]);
   const [orderError, setOrderError] = useState("");
 
   useEffect(() => {
-    if (!login?.signer) return;
-    const api = new LNVpsApi(
-      ApiUrl,
-      new EventPublisher(login.signer, login.pubkey),
-    );
+    if (!login?.builder) return;
+    const api = new LNVpsApi(ApiUrl, login.builder);
     api.listOsImages().then((a) => setImages(a));
-    api.listSshKeys().then((a) => {
-      setSshKeys(a);
-      if (a.length > 0) {
-        setUseSshKey(a[0].id);
-      } else {
-        setShowAddKey(true);
-      }
-    });
   }, [login]);
 
-  async function addNewKey() {
-    if (!login?.signer) return;
-    setNewKeyError("");
-    const api = new LNVpsApi(
-      ApiUrl,
-      new EventPublisher(login.signer, login.pubkey),
-    );
-
-    try {
-      const nk = await api.addSshKey(newKeyName, newKey);
-      setNewKey("");
-      setNewKeyName("");
-      setUseSshKey(nk.id);
-      setShowAddKey(false);
-      api.listSshKeys().then((a) => setSshKeys(a));
-    } catch (e) {
-      if (e instanceof Error) {
-        setNewKeyError(e.message);
-      }
-    }
-  }
-
   async function createOrder() {
-    if (!login?.signer || !template) return;
-    const api = new LNVpsApi(
-      ApiUrl,
-      new EventPublisher(login.signer, login.pubkey),
-    );
+    if (!login?.builder || !template) return;
+    const api = new LNVpsApi(ApiUrl, login.builder);
 
     setOrderError("");
     try {
@@ -122,51 +81,7 @@ export default function OrderPage() {
         ))}
       </div>
       <hr />
-      <div className="flex flex-col gap-2">
-        {sshKeys.length > 0 && (
-          <>
-            <b>Select SSH Key:</b>
-            <select
-              className="bg-neutral-900 p-2 rounded-xl"
-              value={useSshKey}
-              onChange={(e) => setUseSshKey(Number(e.target.value))}
-            >
-              {sshKeys.map((a) => (
-                <option value={a.id}>{a.name}</option>
-              ))}
-            </select>
-          </>
-        )}
-        {!showAddKey && sshKeys.length > 0 && (
-          <AsyncButton onClick={() => setShowAddKey(true)}>
-            Add new SSH key
-          </AsyncButton>
-        )}
-        {(showAddKey || sshKeys.length === 0) && (
-          <>
-            <b>Add SSH Key:</b>
-            <textarea
-              rows={5}
-              placeholder="ssh-[rsa|ed25519] AA== id"
-              value={newKey}
-              onChange={(e) => setNewKey(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Key name"
-              value={newKeyName}
-              onChange={(e) => setNewKeyName(e.target.value)}
-            />
-            <AsyncButton
-              disabled={newKey.length < 10 || newKeyName.length < 2}
-              onClick={addNewKey}
-            >
-              Add Key
-            </AsyncButton>
-            {newKeyError && <b className="text-red-500">{newKeyError}</b>}
-          </>
-        )}
-      </div>
+      <SSHKeySelector selectedKey={useSshKey} setSelectedKey={setUseSshKey} />
       <AsyncButton
         disabled={useSshKey === -1 || useImage === -1}
         onClick={createOrder}

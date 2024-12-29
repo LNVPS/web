@@ -1,53 +1,112 @@
 import { ExternalStore } from "@snort/shared";
 import {
-  EventSigner,
+  EventPublisher,
+  Nip46Signer,
   Nip7Signer,
   PrivateKeySigner,
-  SystemInterface,
-  UserState,
 } from "@snort/system";
 
-class LoginShell extends ExternalStore<UserState<void> | undefined> {
-  #state?: UserState<void>;
+export interface LoginSession {
+  type: "nip7" | "nsec" | "nip46";
+  publicKey: string;
+  privateKey?: string;
+  bunker?: string;
+}
+class LoginStore extends ExternalStore<LoginSession | undefined> {
+  #session?: LoginSession;
+  #signer?: EventPublisher;
 
-  async login(signer: EventSigner, system: SystemInterface) {
-    if (this.#state !== undefined) {
-      throw new Error("Already logged in");
+  constructor() {
+    super();
+    const s = window.localStorage.getItem("session");
+    if (s) {
+      this.#session = JSON.parse(s);
+      // patch session
+      if (this.#session) {
+        this.#session.type ??= "nip7";
+      }
     }
-    const pubkey = await signer.getPubKey();
-    this.#state = new UserState<void>(pubkey);
-    await this.#state.init(signer, system);
-    this.#state.on("change", () => this.notifyChange());
-    this.notifyChange();
   }
 
   takeSnapshot() {
-    return this.#state;
+    return this.#session ? { ...this.#session } : undefined;
+  }
+
+  logout() {
+    this.#session = undefined;
+    this.#signer = undefined;
+    this.#save();
+  }
+
+  login(pubkey: string, type: LoginSession["type"] = "nip7") {
+    this.#session = {
+      type: type ?? "nip7",
+      publicKey: pubkey,
+    };
+    this.#save();
+  }
+
+  loginPrivateKey(key: string) {
+    const s = new PrivateKeySigner(key);
+    this.#session = {
+      type: "nsec",
+      publicKey: s.getPubKey(),
+      privateKey: key,
+    };
+    this.#save();
+  }
+
+  loginBunker(url: string, localKey: string, remotePubkey: string) {
+    this.#session = {
+      type: "nip46",
+      publicKey: remotePubkey,
+      privateKey: localKey,
+      bunker: url,
+    };
+    this.#save();
+  }
+
+  getSigner() {
+    if (!this.#signer && this.#session) {
+      switch (this.#session.type) {
+        case "nsec":
+          this.#signer = new EventPublisher(
+            new PrivateKeySigner(this.#session.privateKey!),
+            this.#session.publicKey,
+          );
+          break;
+        case "nip46":
+          this.#signer = new EventPublisher(
+            new Nip46Signer(
+              this.#session.bunker!,
+              new PrivateKeySigner(this.#session.privateKey!),
+            ),
+            this.#session.publicKey,
+          );
+          break;
+        case "nip7":
+          this.#signer = new EventPublisher(
+            new Nip7Signer(),
+            this.#session.publicKey,
+          );
+          break;
+      }
+    }
+
+    if (this.#signer) {
+      return this.#signer;
+    }
+    throw "Signer not setup!";
+  }
+
+  #save() {
+    if (this.#session) {
+      window.localStorage.setItem("session", JSON.stringify(this.#session));
+    } else {
+      window.localStorage.removeItem("session");
+    }
+    this.notifyChange();
   }
 }
 
-export const Login = new LoginShell();
-
-export async function loginNip7(system: SystemInterface) {
-  const signer = new Nip7Signer();
-  const pubkey = await signer.getPubKey();
-  if (pubkey) {
-    await Login.login(signer, system);
-  } else {
-    throw new Error("No nostr extension found");
-  }
-}
-
-export async function loginPrivateKey(
-  system: SystemInterface,
-  key: string | Uint8Array | PrivateKeySigner,
-) {
-  const signer =
-    key instanceof PrivateKeySigner ? key : new PrivateKeySigner(key);
-  const pubkey = signer.getPubKey();
-  if (pubkey) {
-    await Login.login(signer, system);
-  } else {
-    throw new Error("No nostr extension found");
-  }
-}
+export const LoginState = new LoginStore();

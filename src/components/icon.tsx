@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { MouseEventHandler } from "react";
 
 type Props = {
@@ -15,7 +16,7 @@ export function Icon(props: Props) {
     <svg
       width={size}
       height={size}
-      className={props.className}
+      className={classNames(props.className, "cursor-pointer")}
       onClick={props.onClick}
     >
       <use href={href} />

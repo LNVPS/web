@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { LNVpsApi, VmInstance } from "../api";
 import useLogin from "../hooks/login";
-import { EventPublisher } from "@snort/system";
 import { ApiUrl } from "../const";
 import VpsInstanceRow from "../components/vps-instance";
 
@@ -10,11 +9,8 @@ export default function AccountPage() {
   const [vms, setVms] = useState<Array<VmInstance>>([]);
 
   async function loadVms() {
-    if (!login?.signer) return;
-    const api = new LNVpsApi(
-      ApiUrl,
-      new EventPublisher(login.signer, login.pubkey),
-    );
+    if (!login?.builder) return;
+    const api = new LNVpsApi(ApiUrl, login.builder);
     const vms = await api.listVms();
     setVms(vms);
   }

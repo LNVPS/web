@@ -31,13 +31,23 @@ export async function openFile(): Promise<File | undefined> {
   });
 }
 
-
 export function toEui64(prefix: string, mac: string) {
   const macData = base16.decode(mac.replace(/:/g, "").toUpperCase());
-  const macExtended = new Uint8Array([...macData.subarray(0, 3), 0xff, 0xfe, ...macData.subarray(3, 6)])
+  const macExtended = new Uint8Array([
+    ...macData.subarray(0, 3),
+    0xff,
+    0xfe,
+    ...macData.subarray(3, 6),
+  ]);
   macExtended[0] |= 0x02;
-  return (prefix + base16.encode(macExtended.subarray(0, 2)) + ":"
-    + base16.encode(macExtended.subarray(2, 4)) + ":"
-    + base16.encode(macExtended.subarray(4, 6)) + ":"
-    + base16.encode(macExtended.subarray(6, 8))).toLowerCase();
+  return (
+    prefix +
+    base16.encode(macExtended.subarray(0, 2)) +
+    ":" +
+    base16.encode(macExtended.subarray(2, 4)) +
+    ":" +
+    base16.encode(macExtended.subarray(4, 6)) +
+    ":" +
+    base16.encode(macExtended.subarray(6, 8))
+  ).toLowerCase();
 }

@@ -1,18 +1,15 @@
 import "@xterm/xterm/css/xterm.css";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { LNVpsApi, VmInstance, VmPayment } from "../api";
+import { VmInstance, VmPayment } from "../api";
 import VpsInstanceRow from "../components/vps-instance";
 import useLogin from "../hooks/login";
-import { ApiUrl } from "../const";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import VpsPayment from "../components/vps-payment";
 import CostLabel from "../components/cost";
 import { AsyncButton } from "../components/button";
-import { AttachAddon } from "@xterm/addon-attach";
 import { Terminal } from "@xterm/xterm";
 import { FitAddon } from "@xterm/addon-fit";
-import { WebglAddon } from "@xterm/addon-webgl";
 import { toEui64 } from "../utils";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
@@ -26,29 +23,23 @@ export default function VmPage() {
   const login = useLogin();
   const navigate = useNavigate();
   const [payment, setPayment] = useState<VmPayment>();
-  const [term, setTerm] = useState<Terminal>();
+  const [term] = useState<Terminal>();
   const termRef = useRef<HTMLDivElement | null>(null);
   const [editKey, setEditKey] = useState(false);
   const [key, setKey] = useState(state?.ssh_key_id ?? -1);
 
-  const api = useMemo(() => {
-    if (!login?.builder) return;
-    return new LNVpsApi(ApiUrl, login.builder);
-  }, [login]);
-
   const renew = useCallback(
     async function () {
-      if (!api || !state) return;
-      const p = await api.renewVm(state.id);
+      if (!login?.api || !state) return;
+      const p = await login?.api.renewVm(state.id);
       setPayment(p);
     },
-    [api, state],
+    [login?.api, state],
   );
 
-  async function openTerminal() {
-    if (!login?.builder || !state) return;
-    const api = new LNVpsApi(ApiUrl, login.builder);
-    const ws = await api.connect_terminal(state.id);
+  /*async function openTerminal() {
+    if (!login?.api || !state) return;
+    const ws = await login.api.connect_terminal(state.id);
     const te = new Terminal();
     const webgl = new WebglAddon();
     webgl.onContextLoss(() => {
@@ -62,7 +53,7 @@ export default function VmPage() {
     const attach = new AttachAddon(ws);
     te.loadAddon(attach);
     setTerm(te);
-  }
+  }*/
 
   useEffect(() => {
     if (term && termRef.current) {
@@ -136,9 +127,8 @@ export default function VmPage() {
             <VpsPayment
               payment={payment}
               onPaid={async () => {
-                if (!login?.builder || !state) return;
-                const api = new LNVpsApi(ApiUrl, login.builder);
-                const newState = await api.getVm(state.id);
+                if (!login?.api || !state) return;
+                const newState = await login?.api.getVm(state.id);
                 navigate("/vm", {
                   state: newState,
                 });
@@ -155,11 +145,11 @@ export default function VmPage() {
             <small>After selecting a new key, please restart the VM.</small>
             <AsyncButton
               onClick={async () => {
-                if (!state) return;
-                await api?.patchVm(state.id, {
+                if (!login?.api) return;
+                await login.api.patchVm(state.id, {
                   ssh_key_id: key,
                 });
-                const ns = await api?.getVm(state?.id);
+                const ns = await login.api.getVm(state?.id);
                 navigate(".", {
                   state: ns,
                   replace: true,

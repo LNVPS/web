@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { LNVpsApi, VmInstance } from "../api";
+import { VmInstance } from "../api";
 import useLogin from "../hooks/login";
-import { ApiUrl } from "../const";
 import VpsInstanceRow from "../components/vps-instance";
 
 export default function AccountPage() {
@@ -9,9 +8,8 @@ export default function AccountPage() {
   const [vms, setVms] = useState<Array<VmInstance>>([]);
 
   async function loadVms() {
-    if (!login?.builder) return;
-    const api = new LNVpsApi(ApiUrl, login.builder);
-    const vms = await api.listVms();
+    if (!login?.api) return;
+    const vms = await login?.api.listVms();
     setVms(vms);
   }
 

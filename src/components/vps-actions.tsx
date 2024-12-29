@@ -1,6 +1,4 @@
-import { EventPublisher } from "@snort/system";
-import { LNVpsApi, VmInstance } from "../api";
-import { ApiUrl } from "../const";
+import { VmInstance } from "../api";
 import useLogin from "../hooks/login";
 import { Icon } from "./icon";
 import { AsyncButton } from "./button";
@@ -14,12 +12,8 @@ export default function VmActions({
 }) {
   const login = useLogin();
   const state = vm.status?.state;
-  if (!state) return;
+  if (!login?.api) return;
 
-  const api = new LNVpsApi(
-    ApiUrl,
-    login?.signer ? new EventPublisher(login.signer, login.pubkey) : undefined,
-  );
   return (
     <div className="flex flex-col gap-1">
       <div className="flex gap-2">
@@ -28,9 +22,9 @@ export default function VmActions({
             e.stopPropagation();
 
             if (state === "running") {
-              await api.stopVm(vm.id);
+              await login?.api.stopVm(vm.id);
             } else {
-              await api.startVm(vm.id);
+              await login?.api.startVm(vm.id);
             }
             onReload?.();
           }}

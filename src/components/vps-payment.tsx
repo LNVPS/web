@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { LNVpsApi, VmPayment } from "../api";
 import QrCode from "./qr";
 import useLogin from "../hooks/login";
-import { ApiUrl } from "../const";
-import { EventPublisher } from "@snort/system";
 
 export default function VpsPayment({
   payment,
@@ -29,13 +27,10 @@ export default function VpsPayment({
   }
 
   useEffect(() => {
-    if (!login?.signer) return;
-    const api = new LNVpsApi(
-      ApiUrl,
-      new EventPublisher(login.signer, login.pubkey),
-    );
+    if (!login?.api) return;
+
     const tx = setInterval(async () => {
-      if (await checkPayment(api)) {
+      if (await checkPayment(login.api)) {
         clearInterval(tx);
       }
     }, 2_000);

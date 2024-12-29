@@ -1,8 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { LNVpsApi, VmOsImage, VmTemplate } from "../api";
+import { VmOsImage, VmTemplate } from "../api";
 import { useEffect, useState } from "react";
 import CostLabel from "../components/cost";
-import { ApiUrl } from "../const";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import classNames from "classnames";
@@ -21,18 +20,16 @@ export default function OrderPage() {
   const [orderError, setOrderError] = useState("");
 
   useEffect(() => {
-    if (!login?.builder) return;
-    const api = new LNVpsApi(ApiUrl, login.builder);
-    api.listOsImages().then((a) => setImages(a));
+    if (!login?.api) return;
+    login.api.listOsImages().then((a) => setImages(a));
   }, [login]);
 
   async function createOrder() {
-    if (!login?.builder || !template) return;
-    const api = new LNVpsApi(ApiUrl, login.builder);
+    if (!login?.api || !template) return;
 
     setOrderError("");
     try {
-      const newVm = await api.orderVm(template.id, useImage, useSshKey);
+      const newVm = await login.api.orderVm(template.id, useImage, useSshKey);
       navigate("/vm/renew", {
         state: newVm,
       });

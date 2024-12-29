@@ -1,7 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
-import { LNVpsApi, UserSshKey } from "../api";
+import { useEffect, useState } from "react";
+import { UserSshKey } from "../api";
 import useLogin from "../hooks/login";
-import { ApiUrl } from "../const";
 import { AsyncButton } from "./button";
 
 export default function SSHKeySelector({
@@ -18,23 +17,17 @@ export default function SSHKeySelector({
   const [showAddKey, setShowAddKey] = useState(false);
   const [sshKeys, setSshKeys] = useState<Array<UserSshKey>>([]);
 
-  const api = useMemo(() => {
-    if (!login?.builder) return;
-    const api = new LNVpsApi(ApiUrl, login.builder);
-    return api;
-  }, [login]);
-
   async function addNewKey() {
-    if (!api) return;
+    if (!login?.api) return;
     setNewKeyError("");
 
     try {
-      const nk = await api.addSshKey(newKeyName, newKey);
+      const nk = await login?.api.addSshKey(newKeyName, newKey);
       setNewKey("");
       setNewKeyName("");
       setSelectedKey(nk.id);
       setShowAddKey(false);
-      api.listSshKeys().then((a) => setSshKeys(a));
+      login?.api.listSshKeys().then((a) => setSshKeys(a));
     } catch (e) {
       if (e instanceof Error) {
         setNewKeyError(e.message);
@@ -43,8 +36,8 @@ export default function SSHKeySelector({
   }
 
   useEffect(() => {
-    if (!api) return;
-    api.listSshKeys().then((a) => {
+    if (!login?.api) return;
+    login?.api.listSshKeys().then((a) => {
       setSshKeys(a);
       if (a.length > 0) {
         setSelectedKey(a[0].id);

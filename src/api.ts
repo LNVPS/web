@@ -73,6 +73,7 @@ export interface VmInstance {
   disk_size: number;
   disk_id: number;
   status?: VmStatus;
+  mac_address: string;
 
   template?: VmTemplate;
   image?: VmOsImage;
@@ -106,7 +107,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) {}
+  ) { }
 
   async listVms() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmInstance>>>(
@@ -192,6 +193,23 @@ export class LNVpsApi {
     return data;
   }
 
+  async connect_terminal(id: number) {
+    const u = `${this.url}/api/v1/console/${id}`;
+    const auth = await this.#auth_event(u, "GET");
+    const ws = new WebSocket(`${u}?auth=${base64.encode(
+      new TextEncoder().encode(JSON.stringify(auth)),
+    )}`);
+    return await new Promise<WebSocket>((resolve, reject) => {
+      ws.onopen = () => {
+        resolve(ws);
+      }
+      ws.onerror = (e) => {
+        reject(e)
+      }
+    })
+  }
+
+
   async #handleResponse<T extends ApiResponseBase>(rsp: Response) {
     if (rsp.ok) {
       return (await rsp.json()) as T;
@@ -206,25 +224,29 @@ export class LNVpsApi {
     }
   }
 
+  async #auth_event(url: string, method: string) {
+    return await this.publisher?.generic((eb) => {
+      return eb
+        .kind(EventKind.HttpAuthentication)
+        .tag(["u", url])
+        .tag(["method", method]);
+    })
+  }
+
+  async #auth(url: string, method: string) {
+    const auth = await this.#auth_event(url, method);
+    if (auth) {
+      return `Nostr ${base64.encode(
+        new TextEncoder().encode(JSON.stringify(auth)),
+      )}`;
+    }
+  }
+
   async #req(
     path: string,
     method: "GET" | "POST" | "DELETE" | "PUT" | "PATCH",
     body?: object,
   ) {
-    const auth = async (url: string, method: string) => {
-      const auth = await this.publisher?.generic((eb) => {
-        return eb
-          .kind(EventKind.HttpAuthentication)
-          .tag(["u", url])
-          .tag(["method", method]);
-      });
-      if (auth) {
-        return `Nostr ${base64.encode(
-          new TextEncoder().encode(JSON.stringify(auth)),
-        )}`;
-      }
-    };
-
     const u = `${this.url}${path}`;
     return await fetch(u, {
       method,
@@ -232,7 +254,7 @@ export class LNVpsApi {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        authorization: (await auth(u, method)) ?? "",
+        authorization: (await this.#auth(u, method)) ?? "",
       },
     });
   }

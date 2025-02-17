@@ -68,9 +68,6 @@ export interface VmInstance {
   ssh_key_id: number;
   created: string;
   expires: string;
-  cpu: number;
-  memory: number;
-  disk_size: number;
   disk_id: number;
   status?: VmStatus;
   mac_address: string;

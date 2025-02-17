@@ -6,11 +6,12 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const region =
     "region_id" in vm ? vm.region?.name : vm.template?.region?.name;
   const status = "status" in vm ? vm.status : undefined;
+  const template = "template" in vm ? vm.template : vm as VmTemplate;
   return (
     <>
       <div className="text-xs text-neutral-400">
-        {vm.cpu} vCPU, <BytesSize value={vm.memory} /> RAM,{" "}
-        <BytesSize value={vm.disk_size} /> {diskType?.toUpperCase()},{" "}
+        {template?.cpu} vCPU, <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
+        <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()},{" "}
         {region && <>Location: {region}</>}
       </div>
       {status && status.state === "running" && (

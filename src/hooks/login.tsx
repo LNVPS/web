@@ -1,4 +1,4 @@
-import { useContext, useSyncExternalStore } from "react";
+import { useContext, useMemo, useSyncExternalStore } from "react";
 import { LoginState } from "../login";
 import { SnortContext } from "@snort/system-react";
 import { LNVpsApi } from "../api";
@@ -10,12 +10,12 @@ export default function useLogin() {
     () => LoginState.snapshot(),
   );
   const system = useContext(SnortContext);
-  return session
+  return useMemo(() => session
     ? {
       type: session.type,
       publicKey: session.publicKey,
       system,
       api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
     }
-    : undefined;
+    : undefined, [session, system]);
 }

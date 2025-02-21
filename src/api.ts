@@ -9,6 +9,12 @@ export type ApiResponse<T> = ApiResponseBase & {
   data: T;
 };
 
+export interface AccountDetail {
+  email?: string;
+  contact_nip17: boolean;
+  contact_email: boolean;
+}
+
 export interface VmCostPlan {
   id: number;
   name: string;
@@ -108,7 +114,21 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) {}
+  ) { }
+
+  async getAccount() {
+    const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
+      await this.#req("/api/v1/account", "GET"),
+    );
+    return data;
+  }
+
+  async updateAccount(acc: AccountDetail) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account", "PATCH", acc),
+    );
+    return data;
+  }
 
   async listVms() {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmInstance>>>(

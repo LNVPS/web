@@ -41,3 +41,7 @@ textarea,
 select {
   @apply border-none rounded-xl bg-neutral-900 p-2;
 }
+
+input:disabled {
+  @apply text-neutral-200/50;
+}

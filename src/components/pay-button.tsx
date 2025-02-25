@@ -22,10 +22,6 @@ export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
     return <div className={`${classNames} bg-red-900`}>{inner}</div>;
   }
 
-  if (!spec.enabled) {
-    return placeholder("Unavailable");
-  }
-
   if (!login) {
     return placeholder("Please Login");
   }

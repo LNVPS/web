@@ -2,9 +2,9 @@ import { VmInstance, VmTemplate } from "../api";
 import BytesSize from "./bytes";
 
 export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
-  const diskType = "template_id" in vm ? vm.template?.disk_type : vm.disk_type;
+  const diskType = "template" in vm ? vm.template?.disk_type : vm.disk_type;
   const region =
-    "region_id" in vm ? vm.region?.name : vm.template?.region?.name;
+    "region" in vm ? vm.region.name : vm.template?.region?.name;
   const status = "status" in vm ? vm.status : undefined;
   const template = "template" in vm ? vm.template : vm as VmTemplate;
   return (

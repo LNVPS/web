@@ -18,7 +18,6 @@ export interface AccountDetail {
 export interface VmCostPlan {
   id: number;
   name: string;
-  created: Date;
   amount: number;
   currency: "EUR" | "BTC";
   interval_amount: number;
@@ -28,13 +27,11 @@ export interface VmCostPlan {
 export interface VmHostRegion {
   id: number;
   name: string;
-  enabled: boolean;
 }
 
 export interface VmTemplate {
   id: number;
   name: string;
-  enabled: boolean;
   created: Date;
   expires?: Date;
   cpu: number;
@@ -42,11 +39,8 @@ export interface VmTemplate {
   disk_size: number;
   disk_type: string;
   disk_interface: string;
-  cost_plan_id: number;
-  region_id: number;
-
-  cost_plan?: VmCostPlan;
-  region?: VmHostRegion;
+  cost_plan: VmCostPlan;
+  region: VmHostRegion;
 }
 
 export interface VmStatus {
@@ -63,24 +57,18 @@ export interface VmStatus {
 export interface VmIpAssignment {
   id: number;
   ip: string;
+  range: string;
 }
 
 export interface VmInstance {
   id: number;
-  host_id: number;
-  user_id: number;
-  image_id: number;
-  template_id: number;
-  ssh_key_id: number;
   created: string;
   expires: string;
-  disk_id: number;
   status?: VmStatus;
   mac_address: string;
-
-  template?: VmTemplate;
-  image?: VmOsImage;
-  ssh_key?: UserSshKey;
+  template: VmTemplate;
+  image: VmOsImage;
+  ssh_key: UserSshKey;
   ip_assignments: Array<VmIpAssignment>;
 }
 

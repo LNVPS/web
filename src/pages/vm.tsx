@@ -26,7 +26,7 @@ export default function VmPage() {
   const [term] = useState<Terminal>();
   const termRef = useRef<HTMLDivElement | null>(null);
   const [editKey, setEditKey] = useState(false);
-  const [key, setKey] = useState(state?.ssh_key_id ?? -1);
+  const [key, setKey] = useState(state?.ssh_key.id ?? -1);
 
   const renew = useCallback(
     async function () {

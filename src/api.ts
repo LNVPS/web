@@ -94,7 +94,7 @@ export interface VmPayment {
   is_paid: boolean;
 }
 
-export interface PathVm {
+export interface PatchVm {
   ssh_key_id?: number;
 }
 
@@ -132,7 +132,7 @@ export class LNVpsApi {
     return data;
   }
 
-  async patchVm(id: number, req: PathVm) {
+  async patchVm(id: number, req: PatchVm) {
     const { data } = await this.#handleResponse<ApiResponse<void>>(
       await this.#req(`/api/v1/vm/${id}`, "PATCH", req),
     );

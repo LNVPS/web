@@ -102,7 +102,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) { }
+  ) {}
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(

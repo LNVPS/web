@@ -10,13 +10,17 @@ export default function useLogin() {
     () => LoginState.snapshot(),
   );
   const system = useContext(SnortContext);
-  return useMemo(() => session
-    ? {
-      type: session.type,
-      publicKey: session.publicKey,
-      system,
-      api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
-      logout: () => LoginState.logout()
-    }
-    : undefined, [session, system]);
+  return useMemo(
+    () =>
+      session
+        ? {
+            type: session.type,
+            publicKey: session.publicKey,
+            system,
+            api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
+            logout: () => LoginState.logout(),
+          }
+        : undefined,
+    [session, system],
+  );
 }

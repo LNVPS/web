@@ -26,42 +26,49 @@ export default function AccountPage() {
     }
   }, [login]);
 
-
   const npub = hexToBech32("npub", login?.publicKey);
   const subjectLine = `[${npub}] Account Query`;
   return (
     <div className="flex flex-col gap-2">
       Your Public Key:
-      <pre className="bg-neutral-900 rounded-md px-3 py-2 select-all text-sm">{npub}</pre>
+      <pre className="bg-neutral-900 rounded-md px-3 py-2 select-all text-sm">
+        {npub}
+      </pre>
       <div className="flex justify-between">
-        <AsyncButton onClick={() => navigate("settings")}>
-          Settings
-        </AsyncButton>
-        <AsyncButton onClick={() => {
-          login?.logout();
-          navigate("/")
-        }}>
+        <AsyncButton onClick={() => navigate("settings")}>Settings</AsyncButton>
+        <AsyncButton
+          onClick={() => {
+            login?.logout();
+            navigate("/");
+          }}
+        >
           Logout
         </AsyncButton>
       </div>
       <h3>My Resources</h3>
       <div className="rounded-xl bg-red-400 text-black p-3">
         Something doesnt look right? <br />
-        Please contact support on: {" "}
-        <a href={`mailto:sales@lnvps.net?subject=${encodeURIComponent(subjectLine)}`} className="underline">
+        Please contact support on:{" "}
+        <a
+          href={`mailto:sales@lnvps.net?subject=${encodeURIComponent(subjectLine)}`}
+          className="underline"
+        >
           sales@lnvps.net
         </a>
         <br />
         <b>Please include your public key in all communications.</b>
       </div>
       {vms.map((a) => (
-        <VpsInstanceRow key={a.id} vm={a} onReload={() => {
-          if (login?.api) {
-            loadVms(login.api);
-          }
-        }} />
+        <VpsInstanceRow
+          key={a.id}
+          vm={a}
+          onReload={() => {
+            if (login?.api) {
+              loadVms(login.api);
+            }
+          }}
+        />
       ))}
-
     </div>
   );
 }

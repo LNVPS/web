@@ -17,7 +17,8 @@ export default function HomePage() {
       <div className="flex flex-col gap-4">
         <div className="text-2xl">VPS Offers</div>
         <div>
-        Virtual Private Server hosting with flexible plans, high uptime, and dedicated support, tailored to your needs.
+          Virtual Private Server hosting with flexible plans, high uptime, and
+          dedicated support, tailored to your needs.
         </div>
         <div className="grid grid-cols-3 gap-2">
           {offers.map((a) => (
@@ -36,7 +37,10 @@ export default function HomePage() {
             {" | "}
             <Link to="/tos">Terms</Link>
             {" | "}
-            <a href={`https://snort.social/${NostrProfile.encode()}`} target="_blank">
+            <a
+              href={`https://snort.social/${NostrProfile.encode()}`}
+              target="_blank"
+            >
               Nostr
             </a>
             {" | "}
@@ -49,13 +53,13 @@ export default function HomePage() {
             </a>
           </div>
           <div className="text-xs text-center text-neutral-400">
-            LNVPS is a trading name of Apex Strata Ltd, a company registered in Ireland.
+            LNVPS is a trading name of Apex Strata Ltd, a company registered in
+            Ireland.
             <br />
-            Comany Number: 702423,
-            Address: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland
+            Comany Number: 702423, Address: Suite 10628, 26/27 Upper Pembroke
+            Street, Dublin 2, D02 X361, Ireland
           </div>
         </div>
-
       </div>
     </>
   );

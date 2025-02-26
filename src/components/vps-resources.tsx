@@ -3,16 +3,15 @@ import BytesSize from "./bytes";
 
 export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const diskType = "template" in vm ? vm.template?.disk_type : vm.disk_type;
-  const region =
-    "region" in vm ? vm.region.name : vm.template?.region?.name;
+  const region = "region" in vm ? vm.region.name : vm.template?.region?.name;
   const status = "status" in vm ? vm.status : undefined;
-  const template = "template" in vm ? vm.template : vm as VmTemplate;
+  const template = "template" in vm ? vm.template : (vm as VmTemplate);
   return (
     <>
       <div className="text-xs text-neutral-400">
         {template?.cpu} vCPU, <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
-        <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()},{" "}
-        {region && <>Location: {region}</>}
+        <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
+        , {region && <>Location: {region}</>}
       </div>
       {status && status.state === "running" && (
         <div className="text-sm text-neutral-200">

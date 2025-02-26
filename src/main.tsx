@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/account/settings",
-        element: <AccountSettings />
+        element: <AccountSettings />,
       },
       {
         path: "/order",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/status",
         element: <StatusPage />,
-      }
+      },
     ],
   },
 ]);

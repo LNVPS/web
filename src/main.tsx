@@ -10,6 +10,7 @@ import OrderPage from "./pages/order.tsx";
 import VmPage from "./pages/vm.tsx";
 import AccountPage from "./pages/account.tsx";
 import SignUpPage from "./pages/sign-up.tsx";
+import { TosPage } from "./pages/terms.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         path: "/vm/:action?",
         element: <VmPage />,
       },
+      {
+        path: "/tos",
+        element: <TosPage />,
+      }
     ],
   },
 ]);

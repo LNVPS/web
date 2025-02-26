@@ -1,0 +1,39 @@
+.markdown a {
+  @apply underline;
+}
+
+.markdown blockquote {
+  margin: 0;
+  padding-left: 12px;
+  @apply border-l-neutral-800 border-2 text-neutral-400;
+}
+
+.markdown hr {
+  border: 0;
+  height: 1px;
+  margin: 20px;
+  @apply bg-neutral-800;
+}
+
+.markdown img:not(.custom-emoji),
+.markdown video,
+.markdown iframe,
+.markdown audio {
+  max-width: 100%;
+  display: block;
+}
+
+.markdown iframe,
+.markdown video {
+  width: -webkit-fill-available;
+  aspect-ratio: 16 / 9;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: 0.5em 0;
+}

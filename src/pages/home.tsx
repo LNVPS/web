@@ -40,6 +40,12 @@ export default function HomePage() {
             <a href="https://lnvps1.statuspage.io/" target="_blank">Status</a>
           </div>
         </div>
+        <div className="text-xs text-center text-neutral-400">
+          LNVPS is a trading name of Apex Strata Ltd, a company registered in Ireland.
+          <br />
+          Comany Number: 702423,
+          Address: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland
+        </div>
       </div>
     </>
   );

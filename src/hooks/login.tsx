@@ -16,6 +16,7 @@ export default function useLogin() {
       publicKey: session.publicKey,
       system,
       api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
+      logout: () => LoginState.logout()
     }
     : undefined, [session, system]);
 }

@@ -48,7 +48,7 @@ export default function HomePage() {
               Git
             </a>
             {" | "}
-            <a href="https://speedtest.v0l.io" target="_blank">
+            <a href="http://speedtest.v0l.io" target="_blank">
               Speedtest
             </a>
           </div>

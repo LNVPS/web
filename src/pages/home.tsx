@@ -44,7 +44,7 @@ export default function HomePage() {
               Nostr
             </a>
             {" | "}
-            <a href="https://git.v0l.io/LNVPS" target="_blank">
+            <a href="https://github.com/LNVPS" target="_blank">
               Git
             </a>
             {" | "}

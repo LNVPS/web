@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { VmTemplate } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
@@ -18,12 +17,17 @@ export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
     "w-full text-center text-lg uppercase rounded-xl py-3 font-bold cursor-pointer select-none";
   const navigte = useNavigate();
 
-  function placeholder(inner: ReactNode) {
-    return <div className={`${classNames} bg-red-900`}>{inner}</div>;
-  }
-
   if (!login) {
-    return placeholder("Please Login");
+    return <AsyncButton
+      className={`${classNames} bg-red-900`}
+      onClick={() =>
+        navigte("/login", {
+          state: spec,
+        })
+      }
+    >
+      Login To Order
+    </AsyncButton>
   }
   return (
     <AsyncButton

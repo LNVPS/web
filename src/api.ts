@@ -57,7 +57,9 @@ export interface VmStatus {
 export interface VmIpAssignment {
   id: number;
   ip: string;
-  range: string;
+  gateway: string;
+  forward_dns?: string;
+  reverse_dns?: string;
 }
 
 export interface VmInstance {
@@ -96,6 +98,7 @@ export interface VmPayment {
 
 export interface PatchVm {
   ssh_key_id?: number;
+  reverse_dns?: string;
 }
 
 export class LNVpsApi {

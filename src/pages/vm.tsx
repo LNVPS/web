@@ -1,7 +1,7 @@
 import "@xterm/xterm/css/xterm.css";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { VmInstance, VmPayment } from "../api";
+import { VmInstance, VmIpAssignment, VmPayment } from "../api";
 import VpsInstanceRow from "../components/vps-instance";
 import useLogin from "../hooks/login";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -26,6 +26,8 @@ export default function VmPage() {
   const [term] = useState<Terminal>();
   const termRef = useRef<HTMLDivElement | null>(null);
   const [editKey, setEditKey] = useState(false);
+  const [editReverse, setEditReverse] = useState<VmIpAssignment>();
+  const [error, setError] = useState<string>();
   const [key, setKey] = useState(state?.ssh_key.id ?? -1);
 
   const renew = useCallback(
@@ -73,29 +75,49 @@ export default function VmPage() {
   if (!state) {
     return <h2>No VM selected</h2>;
   }
+
+  function ipRow(a: VmIpAssignment, reverse: boolean) {
+    return <div
+      key={a.id}
+      className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 flex-col justify-center"
+    >
+      <div>
+        <span>IP: </span>
+        <span className="select-all">{a.ip.split("/")[0]}</span>
+        {a.forward_dns && <span> ({a.forward_dns})</span>}
+      </div>
+      {reverse && <div className="text-sm flex items-center gap-2">
+        <div>PTR: {a.reverse_dns}</div>
+        <Icon name="pencil" className="inline" size={15} onClick={() => setEditReverse(a)} />
+      </div>}
+    </div>
+  }
+
+  function networkInfo() {
+    if (!state) return;
+    if ((state.ip_assignments?.length ?? 0) === 0) {
+      return <div className="text-sm text-red-500">No IP's assigned</div>
+    }
+    return <>
+      {state.ip_assignments?.map(i => ipRow(i, true))}
+      {ipRow({
+        id: -1,
+        ip: toEui64("2a13:2c0::", state.mac_address),
+        gateway: ""
+      }, false)}
+    </>
+  }
+
   return (
     <div className="flex flex-col gap-4">
       <VpsInstanceRow vm={state} actions={true} />
       {action === undefined && (
         <>
-          <div className="flex gap-4 items-center">
-            <div className="text-xl">Network:</div>
-            {(state.ip_assignments?.length ?? 0) === 0 && (
-              <div className="text-sm text-red-500">No IP's assigned</div>
-            )}
-            {state.ip_assignments?.map((a) => (
-              <div
-                key={a.id}
-                className="text-sm bg-neutral-900 px-3 py-1 rounded-lg"
-              >
-                {a.ip.split("/")[0]}
-              </div>
-            ))}
-            <div className="text-sm bg-neutral-900 px-3 py-1 rounded-lg">
-              {toEui64("2a13:2c0::", state.mac_address)}
-            </div>
+          <div className="text-xl">Network:</div>
+          <div className="grid grid-cols-2 gap-4">
+            {networkInfo()}
           </div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-2 items-center">
             <div className="text-xl">SSH Key:</div>
             <div className="text-sm bg-neutral-900 px-3 py-1 rounded-lg">
               {state.ssh_key?.name}
@@ -143,18 +165,65 @@ export default function VmPage() {
           <SSHKeySelector selectedKey={key} setSelectedKey={setKey} />
           <div className="flex flex-col gap-4 mt-8">
             <small>After selecting a new key, please restart the VM.</small>
+            {error && <b className="text-red-700">{error}</b>}
             <AsyncButton
               onClick={async () => {
+                setError(undefined);
                 if (!login?.api) return;
-                await login.api.patchVm(state.id, {
-                  ssh_key_id: key,
-                });
-                const ns = await login.api.getVm(state?.id);
-                navigate(".", {
-                  state: ns,
-                  replace: true,
-                });
-                setEditKey(false);
+                try {
+                  await login.api.patchVm(state.id, {
+                    ssh_key_id: key,
+                  });
+                  const ns = await login.api.getVm(state?.id);
+                  navigate(".", {
+                    state: ns,
+                    replace: true,
+                  });
+                  setEditKey(false);
+                } catch (e) {
+                  if (e instanceof Error) {
+                    setError(e.message);
+                  }
+                }
+              }}
+            >
+              Save
+            </AsyncButton>
+          </div>
+        </Modal>
+      )}
+      {editReverse && (
+        <Modal id="edit-reverse" onClose={() => setEditReverse(undefined)}>
+
+          <div className="flex flex-col gap-4">
+            <div className="text-lg">Reverse DNS:</div>
+            <input type="text" placeholder="my-domain.com" value={editReverse.reverse_dns} onChange={(e) => setEditReverse({
+              ...editReverse,
+              reverse_dns: e.target.value
+            })} />
+            <small>DNS updates can take up to 48hrs to propagate.</small>
+            {error && <b className="text-red-700">{error}</b>}
+            <AsyncButton
+              onClick={async () => {
+                setError(undefined);
+                if (!login?.api) return;
+
+                try {
+                  await login.api.patchVm(state.id, {
+                    reverse_dns: editReverse.reverse_dns,
+                  });
+
+                  const ns = await login.api.getVm(state?.id);
+                  navigate(".", {
+                    state: ns,
+                    replace: true,
+                  });
+                  setEditReverse(undefined);
+                } catch (e) {
+                  if (e instanceof Error) {
+                    setError(e.message);
+                  }
+                }
               }}
             >
               Save

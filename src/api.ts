@@ -105,7 +105,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) { }
+  ) {}
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
@@ -187,13 +187,18 @@ export class LNVpsApi {
     return data;
   }
 
-  async orderVm(template_id: number, image_id: number, ssh_key_id: number, ref_code?: string) {
+  async orderVm(
+    template_id: number,
+    image_id: number,
+    ssh_key_id: number,
+    ref_code?: string,
+  ) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req("/api/v1/vm", "POST", {
         template_id,
         image_id,
         ssh_key_id,
-        ref_code
+        ref_code,
       }),
     );
     return data;

@@ -13,6 +13,7 @@ import SignUpPage from "./pages/sign-up.tsx";
 import { TosPage } from "./pages/terms.tsx";
 import { StatusPage } from "./pages/status.tsx";
 import { AccountSettings } from "./pages/account-settings.tsx";
+import { VmBillingPage } from "./pages/vm-billing.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -50,8 +51,12 @@ const router = createBrowserRouter([
         element: <OrderPage />,
       },
       {
-        path: "/vm/:action?",
+        path: "/vm",
         element: <VmPage />,
+      },
+      {
+        path: "/vm/billing/:action?",
+        element: <VmBillingPage />,
       },
       {
         path: "/tos",

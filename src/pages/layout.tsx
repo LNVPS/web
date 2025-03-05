@@ -2,7 +2,6 @@ import { Link, Outlet } from "react-router-dom";
 import LoginButton from "../components/login-button";
 import { saveRefCode } from "../ref";
 
-
 export default function Layout() {
   saveRefCode();
   return (

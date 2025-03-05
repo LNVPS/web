@@ -41,7 +41,12 @@ export default function VpsInstanceRow({
       <div className="flex gap-2 items-center">
         {isExpired && (
           <>
-            <Link to="/vm/renew" className="text-red-500 text-sm" state={vm}>
+            <Link
+              to="/vm/billing/renew"
+              className="text-red-500 text-sm"
+              state={vm}
+              onClick={(e) => e.stopPropagation()}
+            >
               Expired
             </Link>
           </>

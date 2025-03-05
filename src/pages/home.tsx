@@ -21,11 +21,12 @@ export default function HomePage() {
           dedicated support, tailored to your needs.
         </div>
         <div className="grid grid-cols-3 gap-2">
-          {offers?.map((a) => (
-            <VpsCard spec={a} key={a.id} />
-          ))}
-          {offers !== undefined && offers.length === 0 &&
-            <div className="text-red-500 bold text-xl uppercase">No offers available</div>}
+          {offers?.map((a) => <VpsCard spec={a} key={a.id} />)}
+          {offers !== undefined && offers.length === 0 && (
+            <div className="text-red-500 bold text-xl uppercase">
+              No offers available
+            </div>
+          )}
         </div>
 
         <small className="text-neutral-400">

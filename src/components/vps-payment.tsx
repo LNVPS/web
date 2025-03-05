@@ -48,7 +48,9 @@ export default function VpsPayment({
         className="cursor-pointer rounded-xl overflow-hidden"
       />
       {(payment.amount / 1000).toLocaleString()} sats
-      <div className="monospace select-all break-all text-center text-sm">{payment.invoice}</div>
+      <div className="monospace select-all break-all text-center text-sm">
+        {payment.invoice}
+      </div>
     </div>
   );
 }

@@ -31,9 +31,14 @@ export default function OrderPage() {
     setOrderError("");
     try {
       const ref = getRefCode();
-      const newVm = await login.api.orderVm(template.id, useImage, useSshKey, ref?.code);
+      const newVm = await login.api.orderVm(
+        template.id,
+        useImage,
+        useSshKey,
+        ref?.code,
+      );
       clearRefCode();
-      navigate("/vm/renew", {
+      navigate("/vm/billing/renew", {
         state: newVm,
       });
     } catch (e) {

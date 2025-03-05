@@ -22,7 +22,7 @@ const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>(
           }
         }}
         className={classNames(
-          "py-1 px-2 rounded-xl font-medium relative",
+          "py-2 px-3 rounded-xl font-medium relative",
           {
             "bg-neutral-800 cursor-not-allowed text-neutral-500":
               !hasBg && props.disabled === true,

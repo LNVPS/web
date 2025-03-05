@@ -18,16 +18,18 @@ export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
   const navigte = useNavigate();
 
   if (!login) {
-    return <AsyncButton
-      className={`${classNames} bg-red-900`}
-      onClick={() =>
-        navigte("/login", {
-          state: spec,
-        })
-      }
-    >
-      Login To Order
-    </AsyncButton>
+    return (
+      <AsyncButton
+        className={`${classNames} bg-red-900`}
+        onClick={() =>
+          navigte("/login", {
+            state: spec,
+          })
+        }
+      >
+        Login To Order
+      </AsyncButton>
+    );
   }
   return (
     <AsyncButton

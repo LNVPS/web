@@ -39,6 +39,46 @@ export default function VmPage() {
     [login?.api, state],
   );
 
+  async function reloadVmState() {
+    if (!state) return;
+    const newState = await login?.api.getVm(state.id);
+    navigate("/vm", {
+      state: newState,
+    });
+  }
+
+  function ipRow(a: VmIpAssignment, reverse: boolean) {
+    return <div
+      key={a.id}
+      className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 flex-col justify-center"
+    >
+      <div>
+        <span className="select-none">IP: </span>
+        <span className="select-all">{a.ip.split("/")[0]}</span>
+      </div>
+      {a.forward_dns && <div className="text-sm select-none">DNS: <span className="select-all">{a.forward_dns}</span></div>}
+      {reverse && <div className="text-sm select-none flex items-center gap-2">
+        <div>PTR: <span className="select-all">{a.reverse_dns}</span></div>
+        <Icon name="pencil" className="inline" size={15} onClick={() => setEditReverse(a)} />
+      </div>}
+    </div>
+  }
+
+  function networkInfo() {
+    if (!state) return;
+    if ((state.ip_assignments?.length ?? 0) === 0) {
+      return <div className="text-sm text-red-500">No IP's assigned</div>
+    }
+    return <>
+      {state.ip_assignments?.map(i => ipRow(i, true))}
+      {ipRow({
+        id: -1,
+        ip: toEui64("2a13:2c0::", state.mac_address),
+        gateway: ""
+      }, false)}
+    </>
+  }
+
   /*async function openTerminal() {
     if (!login?.api || !state) return;
     const ws = await login.api.connect_terminal(state.id);
@@ -72,40 +112,13 @@ export default function VmPage() {
     }
   }, [renew, action]);
 
+  useEffect(() => {
+    const t = setInterval(() => reloadVmState(), 5000);
+    return () => clearInterval(t);
+  }, [])
+
   if (!state) {
     return <h2>No VM selected</h2>;
-  }
-
-  function ipRow(a: VmIpAssignment, reverse: boolean) {
-    return <div
-      key={a.id}
-      className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 flex-col justify-center"
-    >
-      <div>
-        <span>IP: </span>
-        <span className="select-all">{a.ip.split("/")[0]}</span>
-        {a.forward_dns && <span> ({a.forward_dns})</span>}
-      </div>
-      {reverse && <div className="text-sm flex items-center gap-2">
-        <div>PTR: {a.reverse_dns}</div>
-        <Icon name="pencil" className="inline" size={15} onClick={() => setEditReverse(a)} />
-      </div>}
-    </div>
-  }
-
-  function networkInfo() {
-    if (!state) return;
-    if ((state.ip_assignments?.length ?? 0) === 0) {
-      return <div className="text-sm text-red-500">No IP's assigned</div>
-    }
-    return <>
-      {state.ip_assignments?.map(i => ipRow(i, true))}
-      {ipRow({
-        id: -1,
-        ip: toEui64("2a13:2c0::", state.mac_address),
-        gateway: ""
-      }, false)}
-    </>
   }
 
   return (

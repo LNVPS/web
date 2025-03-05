@@ -116,7 +116,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) { }
+  ) {}
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
@@ -147,9 +147,9 @@ export class LNVpsApi {
   }
 
   async getVmTimeSeries(id: number) {
-    const { data } = await this.#handleResponse<ApiResponse<Array<TimeSeriesData>>>(
-      await this.#req(`/api/v1/vm/${id}/time-series`, "GET"),
-    );
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<TimeSeriesData>>
+    >(await this.#req(`/api/v1/vm/${id}/time-series`, "GET"));
     return data;
   }
 

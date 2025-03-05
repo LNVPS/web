@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/vm/graphs",
-        element: <VmGraphsPage />
+        element: <VmGraphsPage />,
       },
       {
         path: "/tos",

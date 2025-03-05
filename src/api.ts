@@ -101,11 +101,22 @@ export interface PatchVm {
   reverse_dns?: string;
 }
 
+export interface TimeSeriesData {
+  timestamp: number;
+  cpu: number;
+  memory: number;
+  memory_size: number;
+  net_in: number;
+  net_out: number;
+  disk_write: number;
+  disk_read: number;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) {}
+  ) { }
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
@@ -131,6 +142,13 @@ export class LNVpsApi {
   async getVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async getVmTimeSeries(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<TimeSeriesData>>>(
+      await this.#req(`/api/v1/vm/${id}/time-series`, "GET"),
     );
     return data;
   }

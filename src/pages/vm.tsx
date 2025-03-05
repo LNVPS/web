@@ -139,6 +139,9 @@ export default function VmPage() {
         <AsyncButton onClick={() => navigate("/vm/billing", { state })}>
           Billing
         </AsyncButton>
+        <AsyncButton onClick={() => navigate("/vm/graphs", { state })}>
+          Graphs
+        </AsyncButton>
       </div>
       {/*
           {!term && <AsyncButton onClick={openTerminal}>Connect Terminal</AsyncButton>}

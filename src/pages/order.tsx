@@ -8,6 +8,7 @@ import classNames from "classnames";
 import VpsResources from "../components/vps-resources";
 import OsImageName from "../components/os-image-name";
 import SSHKeySelector from "../components/ssh-keys";
+import { clearRefCode, getRefCode } from "../ref";
 
 export default function OrderPage() {
   const { state } = useLocation();
@@ -29,7 +30,9 @@ export default function OrderPage() {
 
     setOrderError("");
     try {
-      const newVm = await login.api.orderVm(template.id, useImage, useSshKey);
+      const ref = getRefCode();
+      const newVm = await login.api.orderVm(template.id, useImage, useSshKey, ref?.code);
+      clearRefCode();
       navigate("/vm/renew", {
         state: newVm,
       });

@@ -18,17 +18,18 @@ import SSHKeySelector from "../components/ssh-keys";
 const fit = new FitAddon();
 
 export default function VmPage() {
-  const { state } = useLocation() as { state?: VmInstance };
+  const location = useLocation() as { state?: VmInstance };
   const { action } = useParams();
   const login = useLogin();
   const navigate = useNavigate();
+  const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [payment, setPayment] = useState<VmPayment>();
   const [term] = useState<Terminal>();
   const termRef = useRef<HTMLDivElement | null>(null);
   const [editKey, setEditKey] = useState(false);
   const [editReverse, setEditReverse] = useState<VmIpAssignment>();
   const [error, setError] = useState<string>();
-  const [key, setKey] = useState(state?.ssh_key.id ?? -1);
+  const [key, setKey] = useState(state?.ssh_key?.id ?? -1);
 
   const renew = useCallback(
     async function () {
@@ -42,9 +43,7 @@ export default function VmPage() {
   async function reloadVmState() {
     if (!state) return;
     const newState = await login?.api.getVm(state.id);
-    navigate("/vm", {
-      state: newState,
-    });
+    setState(newState);
   }
 
   function ipRow(a: VmIpAssignment, reverse: boolean) {
@@ -162,12 +161,11 @@ export default function VmPage() {
             <VpsPayment
               payment={payment}
               onPaid={async () => {
-                if (!login?.api || !state) return;
-                const newState = await login?.api.getVm(state.id);
-                navigate("/vm", {
-                  state: newState,
-                });
                 setPayment(undefined);
+                if (!login?.api || !state) return;
+                navigate("/vm", {
+                  state
+                })
               }}
             />
           )}
@@ -187,11 +185,7 @@ export default function VmPage() {
                   await login.api.patchVm(state.id, {
                     ssh_key_id: key,
                   });
-                  const ns = await login.api.getVm(state?.id);
-                  navigate(".", {
-                    state: ns,
-                    replace: true,
-                  });
+                  await reloadVmState();
                   setEditKey(false);
                 } catch (e) {
                   if (e instanceof Error) {
@@ -225,12 +219,7 @@ export default function VmPage() {
                   await login.api.patchVm(state.id, {
                     reverse_dns: editReverse.reverse_dns,
                   });
-
-                  const ns = await login.api.getVm(state?.id);
-                  navigate(".", {
-                    state: ns,
-                    replace: true,
-                  });
+                  await reloadVmState();
                   setEditReverse(undefined);
                 } catch (e) {
                   if (e instanceof Error) {

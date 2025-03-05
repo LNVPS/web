@@ -35,7 +35,7 @@ export default function VpsPayment({
       }
     }, 2_000);
     return () => clearInterval(tx);
-  }, [login]);
+  }, [login, onPaid]);
 
   return (
     <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">

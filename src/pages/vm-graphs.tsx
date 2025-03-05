@@ -31,7 +31,7 @@ export function VmGraphsPage() {
   const KB = 1024;
   const MB = 1024 * 1024;
   function scaleLabel(v: number) {
-    switch (net_scale) {
+    switch (v) {
       case MB:
         return "MiB";
       case KB:

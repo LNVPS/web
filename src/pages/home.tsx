@@ -40,6 +40,8 @@ export default function HomePage() {
             {" | "}
             <Link to="/tos">Terms</Link>
             {" | "}
+            <Link to="/news">News</Link>
+            {" | "}
             <a
               href={`https://snort.social/${NostrProfile.encode()}`}
               target="_blank"

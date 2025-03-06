@@ -1,5 +1,3 @@
-import "./markdown.css";
-
 import { ReactNode, forwardRef, useMemo } from "react";
 import { Token, Tokens, marked } from "marked";
 import { Link } from "react-router-dom";
@@ -16,9 +14,9 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
         switch (t.type) {
           case "paragraph": {
             return (
-              <div key={ctr++}>
+              <p key={ctr++} className="py-2">
                 {t.tokens ? t.tokens.map(renderToken) : t.raw}
-              </div>
+              </p>
             );
           }
           case "image": {
@@ -28,37 +26,37 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
             switch (t.depth) {
               case 1:
                 return (
-                  <h1 key={ctr++}>
+                  <h1 key={ctr++} className="my-6 text-2xl">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h1>
                 );
               case 2:
                 return (
-                  <h2 key={ctr++}>
+                  <h2 key={ctr++} className="my-5 text-xl">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h2>
                 );
               case 3:
                 return (
-                  <h3 key={ctr++}>
+                  <h3 key={ctr++} className="my-4 text-lg">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h3>
                 );
               case 4:
                 return (
-                  <h4 key={ctr++}>
+                  <h4 key={ctr++} className="my-3 text-md">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h4>
                 );
               case 5:
                 return (
-                  <h5 key={ctr++}>
+                  <h5 key={ctr++} className="my-2">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h5>
                 );
               case 6:
                 return (
-                  <h6 key={ctr++}>
+                  <h6 key={ctr++} className="my-2">
                     {t.tokens ? t.tokens.map(renderToken) : t.raw}
                   </h6>
                 );
@@ -66,7 +64,11 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
             throw new Error("Invalid heading");
           }
           case "codespan": {
-            return <code key={ctr++}>{t.raw}</code>;
+            return (
+              <code key={ctr++} className="bg-neutral-900 px-2">
+                {t.raw.substring(1, t.raw.length - 1)}
+              </code>
+            );
           }
           case "code": {
             return <pre key={ctr++}>{t.raw}</pre>;
@@ -84,23 +86,34 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
           }
           case "blockquote": {
             return (
-              <blockquote key={ctr++}>
+              <blockquote
+                key={ctr++}
+                className="outline-l-neutral-900 outline text-neutral-300 p-3"
+              >
                 {t.tokens ? t.tokens.map(renderToken) : t.raw}
               </blockquote>
             );
           }
           case "link": {
             return (
-              <Link to={t.href} key={ctr++}>
+              <Link to={t.href} key={ctr++} className="underline">
                 {t.tokens ? t.tokens.map(renderToken) : t.raw}
               </Link>
             );
           }
           case "list": {
             if (t.ordered) {
-              return <ol key={ctr++}>{t.items.map(renderToken)}</ol>;
+              return (
+                <ol key={ctr++} className="list-decimal list-outside">
+                  {t.items.map(renderToken)}
+                </ol>
+              );
             } else {
-              return <ul key={ctr++}>{t.items.map(renderToken)}</ul>;
+              return (
+                <ul key={ctr++} className="list-disc list-outside">
+                  {t.items.map(renderToken)}
+                </ul>
+              );
             }
           }
           case "list_item": {
@@ -170,7 +183,7 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
       return marked.lexer(props.content);
     }, [props.content]);
     return (
-      <div className="markdown" ref={ref}>
+      <div className="leading-8 text-pretty break-words" ref={ref}>
         {parsed
           .filter((a) => a.type !== "footnote" && a.type !== "footnotes")
           .map((a) => renderToken(a))}

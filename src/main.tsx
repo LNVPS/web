@@ -15,6 +15,8 @@ import { StatusPage } from "./pages/status.tsx";
 import { AccountSettings } from "./pages/account-settings.tsx";
 import { VmBillingPage } from "./pages/vm-billing.tsx";
 import { VmGraphsPage } from "./pages/vm-graphs.tsx";
+import { NewsPage } from "./pages/news.tsx";
+import { NewsPost } from "./pages/news-post.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
       {
         path: "/status",
         element: <StatusPage />,
+      },
+      {
+        path: "/news",
+        element: <NewsPage />,
+      },
+      {
+        path: "/news/:id",
+        element: <NewsPost />,
       },
     ],
   },

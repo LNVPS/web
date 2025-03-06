@@ -4,6 +4,7 @@ import VpsCard from "../components/vps-card";
 import { ApiUrl, NostrProfile } from "../const";
 import { Link } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
+import { LatestNews } from "../components/latest-news";
 
 export default function HomePage() {
   const [offers, setOffers] = useState<VmTemplateResponse>();
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <>
       <div className="flex flex-col gap-4">
+        <LatestNews />
         <div className="text-2xl">VPS Offers</div>
         <div>
           Virtual Private Server hosting with flexible plans, high uptime, and

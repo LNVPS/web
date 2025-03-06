@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { VmTemplate, LNVpsApi } from "../api";
+import { LNVpsApi, VmTemplateResponse } from "../api";
 import VpsCard from "../components/vps-card";
 import { ApiUrl, NostrProfile } from "../const";
 import { Link } from "react-router-dom";
+import { VpsCustomOrder } from "../components/vps-custom";
 
 export default function HomePage() {
-  const [offers, setOffers] = useState<Array<VmTemplate>>();
+  const [offers, setOffers] = useState<VmTemplateResponse>();
 
   useEffect(() => {
     const api = new LNVpsApi(ApiUrl, undefined);
@@ -21,14 +22,16 @@ export default function HomePage() {
           dedicated support, tailored to your needs.
         </div>
         <div className="grid grid-cols-3 gap-2">
-          {offers?.map((a) => <VpsCard spec={a} key={a.id} />)}
-          {offers !== undefined && offers.length === 0 && (
+          {offers?.templates.map((a) => <VpsCard spec={a} key={a.id} />)}
+          {offers?.templates !== undefined && offers.templates.length === 0 && (
             <div className="text-red-500 bold text-xl uppercase">
               No offers available
             </div>
           )}
         </div>
-
+        {offers?.custom_template && (
+          <VpsCustomOrder templates={offers.custom_template} />
+        )}
         <small className="text-neutral-400">
           All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic
         </small>

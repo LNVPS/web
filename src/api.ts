@@ -9,6 +9,17 @@ export type ApiResponse<T> = ApiResponseBase & {
   data: T;
 };
 
+export enum DiskType {
+  SSD = "ssd",
+  HDD = "hdd",
+}
+
+export enum DiskInterface {
+  SATA = "sata",
+  SCSI = "scsi",
+  PCIe = "pcid",
+}
+
 export interface AccountDetail {
   email?: string;
   contact_nip17: boolean;
@@ -19,7 +30,7 @@ export interface VmCostPlan {
   id: number;
   name: string;
   amount: number;
-  currency: "EUR" | "BTC";
+  currency: string;
   interval_amount: number;
   interval_type: string;
 }
@@ -29,16 +40,54 @@ export interface VmHostRegion {
   name: string;
 }
 
+export interface VmCustomTemplateParams {
+  id: number;
+  name: string;
+  region: VmHostRegion;
+  max_cpu: number;
+  min_cpu: number;
+  min_memory: number;
+  max_memory: number;
+  min_disk: number;
+  max_disk: number;
+  disks: Array<VmCustomTemplateDiskParams>;
+}
+
+export interface VmCustomTemplateDiskParams {
+  disk_type: DiskType;
+  disk_interface: DiskInterface;
+}
+
+export interface VmCustomTemplateRequest {
+  pricing_id: number;
+  cpu: number;
+  memory: number;
+  disk: number;
+  disk_type: DiskType;
+  disk_interface: DiskInterface;
+}
+
+export interface VmCustomPrice {
+  currency: string;
+  amount: number;
+}
+
+export interface VmTemplateResponse {
+  templates: Array<VmTemplate>;
+  custom_template?: Array<VmCustomTemplateParams>;
+}
+
 export interface VmTemplate {
   id: number;
+  pricing_id?: number;
   name: string;
   created: Date;
   expires?: Date;
   cpu: number;
   memory: number;
   disk_size: number;
-  disk_type: string;
-  disk_interface: string;
+  disk_type: DiskType;
+  disk_interface: DiskInterface;
   cost_plan: VmCostPlan;
   region: VmHostRegion;
 }
@@ -175,9 +224,9 @@ export class LNVpsApi {
   }
 
   async listOffers() {
-    const { data } = await this.#handleResponse<ApiResponse<Array<VmTemplate>>>(
-      await this.#req("/api/v1/vm/templates", "GET"),
-    );
+    const { data } = await this.#handleResponse<
+      ApiResponse<VmTemplateResponse>
+    >(await this.#req("/api/v1/vm/templates", "GET"));
     return data;
   }
 
@@ -214,6 +263,30 @@ export class LNVpsApi {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req("/api/v1/vm", "POST", {
         template_id,
+        image_id,
+        ssh_key_id,
+        ref_code,
+      }),
+    );
+    return data;
+  }
+
+  async customPrice(req: VmCustomTemplateRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<VmCustomPrice>>(
+      await this.#req("/api/v1/vm/custom-template/price", "POST", req),
+    );
+    return data;
+  }
+
+  async orderCustom(
+    req: VmCustomTemplateRequest,
+    image_id: number,
+    ssh_key_id: number,
+    ref_code?: string,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
+      await this.#req("/api/v1/vm/custom-template", "POST", {
+        ...req,
         image_id,
         ssh_key_id,
         ref_code,

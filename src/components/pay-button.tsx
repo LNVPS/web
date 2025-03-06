@@ -21,11 +21,7 @@ export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
     return (
       <AsyncButton
         className={`${classNames} bg-red-900`}
-        onClick={() =>
-          navigte("/login", {
-            state: spec,
-          })
-        }
+        onClick={() => navigte("/login")}
       >
         Login To Order
       </AsyncButton>

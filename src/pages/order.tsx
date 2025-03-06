@@ -31,12 +31,21 @@ export default function OrderPage() {
     setOrderError("");
     try {
       const ref = getRefCode();
-      const newVm = await login.api.orderVm(
-        template.id,
-        useImage,
-        useSshKey,
-        ref?.code,
-      );
+      const newVm = template.pricing_id
+        ? await login.api.orderCustom(
+            {
+              cpu: template.cpu,
+              memory: template.memory,
+              disk: template.disk_size,
+              disk_type: template.disk_type,
+              disk_interface: template.disk_interface,
+              pricing_id: template.pricing_id!,
+            },
+            useImage,
+            useSshKey,
+            ref?.code,
+          )
+        : await login.api.orderVm(template.id, useImage, useSshKey, ref?.code);
       clearRefCode();
       navigate("/vm/billing/renew", {
         state: newVm,

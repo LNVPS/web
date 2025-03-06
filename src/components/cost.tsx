@@ -14,7 +14,8 @@ export default function CostLabel({ cost }: { cost: VmCostPlan }) {
 
   return (
     <>
-      {cost.amount} {cost.currency}/{intervalName(cost.interval_type)}
+      {cost.amount.toFixed(2)} {cost.currency}/
+      {intervalName(cost.interval_type)}
     </>
   );
 }

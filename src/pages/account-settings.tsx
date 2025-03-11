@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { AccountDetail } from "../api";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
+import { default as iso } from "iso-3166-1";
 
 export function AccountSettings() {
   const login = useLogin();
@@ -13,63 +14,73 @@ export function AccountSettings() {
     login?.api.getAccount().then(setAcc);
   }, [login]);
 
-  function notifications() {
-    return (
-      <>
-        <h3>Notification Settings</h3>
-        <div className="flex gap-2 items-center">
-          <input
-            type="checkbox"
-            checked={acc?.contact_email ?? false}
-            onChange={(e) => {
-              setAcc((s) =>
-                s ? { ...s, contact_email: e.target.checked } : undefined,
-              );
-            }}
-          />
-          Email
-          <input
-            type="checkbox"
-            checked={acc?.contact_nip17 ?? false}
-            onChange={(e) => {
-              setAcc((s) =>
-                s ? { ...s, contact_nip17: e.target.checked } : undefined,
-              );
-            }}
-          />
-          Nostr DM
-        </div>
-        <div className="flex gap-2 items-center">
-          <h4>Email</h4>
-          <input
-            type="text"
-            disabled={!editEmail}
-            value={acc?.email}
-            onChange={(e) =>
-              setAcc((s) => (s ? { ...s, email: e.target.value } : undefined))
-            }
-          />
-          {!editEmail && (
-            <Icon name="pencil" onClick={() => setEditEmail(true)} />
-          )}
-        </div>
-        <div>
-          <AsyncButton
-            onClick={async () => {
-              if (login?.api && acc) {
-                await login.api.updateAccount(acc);
-                const newAcc = await login.api.getAccount();
-                setAcc(newAcc);
-                setEditEmail(false);
-              }
-            }}
-          >
-            Save
-          </AsyncButton>
-        </div>
-      </>
-    );
-  }
+  if (!acc) return;
+  return <div className="flex flex-col gap-4">
+    <h3>
+      Account Settings
+    </h3>
 
-  return <>{notifications()}</>;
+    <div className="flex gap-2 items-center">
+      <h4>Country</h4>
+      <select value={acc?.country_code}
+        onChange={(e) =>
+          setAcc((s) => (s ? { ...s, country_code: e.target.value } : undefined))
+        }
+      >
+        {iso.all().map(c => <option value={c.alpha3}>{c.country}</option>)}
+      </select>
+    </div>
+
+    <h3>Notification Settings</h3>
+    <div className="flex gap-2 items-center">
+      <input
+        type="checkbox"
+        checked={acc?.contact_email ?? false}
+        onChange={(e) => {
+          setAcc((s) =>
+            s ? { ...s, contact_email: e.target.checked } : undefined,
+          );
+        }}
+      />
+      Email
+      <input
+        type="checkbox"
+        checked={acc?.contact_nip17 ?? false}
+        onChange={(e) => {
+          setAcc((s) =>
+            s ? { ...s, contact_nip17: e.target.checked } : undefined,
+          );
+        }}
+      />
+      Nostr DM
+    </div>
+    <div className="flex gap-2 items-center">
+      <h4>Email</h4>
+      <input
+        type="text"
+        disabled={!editEmail}
+        value={acc?.email}
+        onChange={(e) =>
+          setAcc((s) => (s ? { ...s, email: e.target.value } : undefined))
+        }
+      />
+      {!editEmail && (
+        <Icon name="pencil" onClick={() => setEditEmail(true)} />
+      )}
+    </div>
+    <div>
+      <AsyncButton
+        onClick={async () => {
+          if (login?.api && acc) {
+            await login.api.updateAccount(acc);
+            const newAcc = await login.api.getAccount();
+            setAcc(newAcc);
+            setEditEmail(false);
+          }
+        }}
+      >
+        Save
+      </AsyncButton>
+    </div>
+  </div>
 }

@@ -24,6 +24,7 @@ export interface AccountDetail {
   email?: string;
   contact_nip17: boolean;
   contact_email: boolean;
+  country_code: string;
 }
 
 export interface VmCostPlan {
@@ -141,6 +142,7 @@ export interface VmPayment {
   created: string;
   expires: string;
   amount: number;
+  tax: number;
   is_paid: boolean;
   data: {
     lightning?: string;

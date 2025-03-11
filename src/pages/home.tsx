@@ -34,8 +34,8 @@ export default function HomePage() {
         {offers?.custom_template && (
           <VpsCustomOrder templates={offers.custom_template} />
         )}
-        <small className="text-neutral-400">
-          All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic
+        <small className="text-neutral-400 text-center">
+          All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all prices are excluding taxes.
         </small>
         <div className="flex flex-col gap-6">
           <div className="text-center">

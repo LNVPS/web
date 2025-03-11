@@ -67,6 +67,7 @@ export function VmBillingPage() {
             </div>
             {state && (
               <RevolutPayWidget
+                mode={import.meta.env.VITE_REVOLUT_MODE}
                 pubkey={pkey}
                 amount={state.template.cost_plan}
                 onPaid={() => {
@@ -122,7 +123,10 @@ export function VmBillingPage() {
       </Link>
       <div className="text-xl bg-neutral-900 rounded-xl px-3 py-4 flex justify-between items-center">
         <div>Renewal for #{state.id}</div>
-        <CostLabel cost={state.template.cost_plan} />
+        <div>
+          <CostLabel cost={state.template.cost_plan} />
+          <span className="text-sm">ex. tax</span>
+        </div>
       </div>
       {days > 0 && (
         <div>

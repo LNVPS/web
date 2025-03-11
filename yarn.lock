@@ -2451,6 +2451,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"iso-3166-1@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "iso-3166-1@npm:2.1.1"
+  checksum: 10c0/65daf0283d22b2848d733a50ba6116a01df3e4d77970bb31d0df0696b4b386bdad0946dea53c9bb1e748e5e5e74608c07b6f4fe044908a5cffbf46f315385400
+  languageName: node
+  linkType: hard
+
 "isomorphic-ws@npm:^5.0.0":
   version: 5.0.0
   resolution: "isomorphic-ws@npm:5.0.0"
@@ -2618,6 +2625,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
     eslint-plugin-react-refresh: "npm:^0.4.9"
     globals: "npm:^15.9.0"
+    iso-3166-1: "npm:^2.1.1"
     marked: "npm:^15.0.7"
     postcss: "npm:^8.4.41"
     prettier: "npm:^3.3.3"

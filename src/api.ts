@@ -138,11 +138,16 @@ export interface UserSshKey {
 
 export interface VmPayment {
   id: string;
-  invoice: string;
   created: string;
   expires: string;
   amount: number;
   is_paid: boolean;
+  data: {
+    lightning?: string;
+    revolut?: {
+      token: string;
+    };
+  };
 }
 
 export interface PatchVm {
@@ -159,6 +164,12 @@ export interface TimeSeriesData {
   net_out: number;
   disk_write: number;
   disk_read: number;
+}
+
+export interface PaymentMethod {
+  name: string;
+  currencies: Array<string>;
+  metadata?: Record<string, string>;
 }
 
 export class LNVpsApi {
@@ -295,9 +306,9 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewVm(vm_id: number) {
+  async renewVm(vm_id: number, method: string) {
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
-      await this.#req(`/api/v1/vm/${vm_id}/renew`, "GET"),
+      await this.#req(`/api/v1/vm/${vm_id}/renew?method=${method}`, "GET"),
     );
     return data;
   }
@@ -306,6 +317,13 @@ export class LNVpsApi {
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
       await this.#req(`/api/v1/payment/${id}`, "GET"),
     );
+    return data;
+  }
+
+  async getPaymentMethods() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<PaymentMethod>>
+    >(await this.#req("/api/v1/payment/methods", "GET"));
     return data;
   }
 

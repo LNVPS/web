@@ -620,6 +620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@revolut/checkout@npm:^1.1.20":
+  version: 1.1.20
+  resolution: "@revolut/checkout@npm:1.1.20"
+  checksum: 10c0/8c1053a434ff759a4101f757e08a341331993e4be210fdd6c5def7e452ead9710dba300efe30fd8570a6686bd445ecd15716f5a5c93996a6d60713946e6317a0
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.20.0":
   version: 4.20.0
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.20.0"
@@ -2593,6 +2600,7 @@ __metadata:
   resolution: "lnvps_web@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.8.0"
+    "@revolut/checkout": "npm:^1.1.20"
     "@scure/base": "npm:^1.2.1"
     "@snort/shared": "npm:^1.0.17"
     "@snort/system": "npm:^1.6.1"

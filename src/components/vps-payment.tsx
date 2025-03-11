@@ -11,7 +11,8 @@ export default function VpsPayment({
   onPaid?: () => void;
 }) {
   const login = useLogin();
-  const ln = `lightning:${payment.invoice}`;
+  const invoice = payment.data.lightning;
+  const ln = `lightning:${invoice}`;
 
   async function checkPayment(api: LNVpsApi) {
     try {
@@ -49,7 +50,7 @@ export default function VpsPayment({
       />
       {(payment.amount / 1000).toLocaleString()} sats
       <div className="monospace select-all break-all text-center text-sm">
-        {payment.invoice}
+        {invoice}
       </div>
     </div>
   );

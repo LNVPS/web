@@ -236,6 +236,13 @@ export class LNVpsApi {
     return data;
   }
 
+  async reisntallVm(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
+      await this.#req(`/api/v1/vm/${id}/re-install`, "PATCH"),
+    );
+    return data;
+  }
+
   async listOffers() {
     const { data } = await this.#handleResponse<
       ApiResponse<VmTemplateResponse>

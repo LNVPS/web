@@ -17,7 +17,7 @@ export enum DiskType {
 export enum DiskInterface {
   SATA = "sata",
   SCSI = "scsi",
-  PCIe = "pcid",
+  PCIe = "pcie",
 }
 
 export interface AccountDetail {

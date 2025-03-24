@@ -4,16 +4,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { VmInstance, VmIpAssignment } from "../api";
 import VpsInstanceRow from "../components/vps-instance";
 import useLogin from "../hooks/login";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { AsyncButton } from "../components/button";
-import { Terminal } from "@xterm/xterm";
-import { FitAddon } from "@xterm/addon-fit";
 import { toEui64 } from "../utils";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
 import SSHKeySelector from "../components/ssh-keys";
 
-const fit = new FitAddon();
+
 
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -21,8 +19,6 @@ export default function VmPage() {
   const navigate = useNavigate();
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
 
-  const [term] = useState<Terminal>();
-  const termRef = useRef<HTMLDivElement | null>(null);
   const [editKey, setEditKey] = useState(false);
   const [editReverse, setEditReverse] = useState<VmIpAssignment>();
   const [error, setError] = useState<string>();
@@ -86,31 +82,6 @@ export default function VmPage() {
     );
   }
 
-  /*async function openTerminal() {
-    if (!login?.api || !state) return;
-    const ws = await login.api.connect_terminal(state.id);
-    const te = new Terminal();
-    const webgl = new WebglAddon();
-    webgl.onContextLoss(() => {
-      webgl.dispose();
-    });
-    te.loadAddon(webgl);
-    te.loadAddon(fit);
-    te.onResize(({ cols, rows }) => {
-      ws.send(`${cols}:${rows}`);
-    });
-    const attach = new AttachAddon(ws);
-    te.loadAddon(attach);
-    setTerm(te);
-  }*/
-
-  useEffect(() => {
-    if (term && termRef.current) {
-      term.open(termRef.current);
-      term.focus();
-      fit.fit();
-    }
-  }, [termRef, term, fit]);
 
   useEffect(() => {
     const t = setInterval(() => reloadVmState(), 5000);
@@ -136,6 +107,9 @@ export default function VmPage() {
       </div>
       <hr />
       <div className="flex gap-4">
+        <AsyncButton onClick={() => navigate("/vm/console", { state })}>
+          Console
+        </AsyncButton>
         <AsyncButton onClick={() => navigate("/vm/billing", { state })}>
           Billing
         </AsyncButton>
@@ -143,9 +117,7 @@ export default function VmPage() {
           Graphs
         </AsyncButton>
       </div>
-      {/*
-          {!term && <AsyncButton onClick={openTerminal}>Connect Terminal</AsyncButton>}
-          {term && <div className="border p-2" ref={termRef}></div>}*/}
+
       {editKey && (
         <Modal id="edit-ssh-key" onClose={() => setEditKey(false)}>
           <SSHKeySelector selectedKey={key} setSelectedKey={setKey} />

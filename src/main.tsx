@@ -17,6 +17,7 @@ import { VmBillingPage } from "./pages/vm-billing.tsx";
 import { VmGraphsPage } from "./pages/vm-graphs.tsx";
 import { NewsPage } from "./pages/news.tsx";
 import { NewsPost } from "./pages/news-post.tsx";
+import { VmConsolePage } from "./pages/vm-console.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/vm/graphs",
         element: <VmGraphsPage />,
+      },
+      {
+        path: "/vm/console",
+        element: <VmConsolePage />,
       },
       {
         path: "/tos",

@@ -337,7 +337,7 @@ export class LNVpsApi {
   }
 
   async connect_terminal(id: number) {
-    const u = `${this.url}/api/v1/console/${id}`;
+    const u = `${this.url}/api/v1/vm/${id}/console`;
     const auth = await this.#auth_event(u, "GET");
     const ws = new WebSocket(
       `${u}?auth=${base64.encode(

@@ -26,9 +26,6 @@ export function VmConsolePage() {
         });
         te.loadAddon(webgl);
         te.loadAddon(fit);
-        te.onResize(({ cols, rows }) => {
-            //ws.send(`${cols}:${rows}`);
-        });
         const attach = new AttachAddon(ws);
         attach.activate(te);
         setTerm((t) => {

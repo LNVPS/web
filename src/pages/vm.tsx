@@ -6,7 +6,6 @@ import VpsInstanceRow from "../components/vps-instance";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
 import { AsyncButton } from "../components/button";
-import { toEui64 } from "../utils";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
 import SSHKeySelector from "../components/ssh-keys";

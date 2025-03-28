@@ -70,14 +70,6 @@ export default function VmPage() {
     return (
       <>
         {state.ip_assignments?.map((i) => ipRow(i, true))}
-        {ipRow(
-          {
-            id: -1,
-            ip: toEui64("2a13:2c0::", state.mac_address),
-            gateway: "",
-          },
-          false,
-        )}
       </>
     );
   }

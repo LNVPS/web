@@ -11,6 +11,7 @@ export interface LoginSession {
   publicKey: string;
   privateKey?: string;
   bunker?: string;
+  currency: string;
 }
 class LoginStore extends ExternalStore<LoginSession | undefined> {
   #session?: LoginSession;
@@ -42,6 +43,7 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
     this.#session = {
       type: type ?? "nip7",
       publicKey: pubkey,
+      currency: "EUR"
     };
     this.#save();
   }
@@ -52,6 +54,7 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
       type: "nsec",
       publicKey: s.getPubKey(),
       privateKey: key,
+      currency: "EUR"
     };
     this.#save();
   }
@@ -62,6 +65,7 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
       publicKey: remotePubkey,
       privateKey: localKey,
       bunker: url,
+      currency: "EUR"
     };
     this.#save();
   }
@@ -97,6 +101,13 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
       return this.#signer;
     }
     throw "Signer not setup!";
+  }
+
+  updateSession(fx: (s: LoginSession) => void) {
+    if (this.#session) {
+      fx(this.#session);
+      this.#save();
+    }
   }
 
   #save() {

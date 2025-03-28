@@ -13,6 +13,8 @@ steps:
     environment:
       TOKEN:
         from_secret: registry_token
+      VITE_FOOTER_NOTE_1: "LNVPS is a trading name of Apex Strata Ltd, a company registered in Ireland."
+      VITE_FOOTER_NOTE_2: "Comany Number: 702423, Address: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland"
     commands:
       - dockerd &
       - docker login -u registry -p $TOKEN registry.v0l.io

@@ -1,41 +1,57 @@
+import useLogin from "../hooks/login";
+
 interface Price {
   currency: string;
   amount: number;
 }
-type Cost = Price & { interval_type?: string; other_price?: Array<Price> };
+type Cost = Price & { interval_type?: string };
 
-export default function CostLabel({
-  cost,
-  converted,
-}: {
-  cost: Cost;
-  converted?: boolean;
-}) {
-  function intervalName(n: string) {
-    switch (n) {
-      case "day":
-        return "Day";
-      case "month":
-        return "Month";
-      case "year":
-        return "Year";
+export default function CostLabel({ cost }: { cost: Cost & { other_price?: Array<Price> } }) {
+  const login = useLogin();
+
+  if (cost.currency === login?.currency) {
+    return <CostAmount cost={cost} converted={false} />
+  } else {
+    const converted_price = cost.other_price?.find((p) => p.currency === login?.currency);
+    if (converted_price) {
+      return <div>
+        <CostAmount cost={{
+          ...converted_price,
+          interval_type: cost.interval_type
+        }} converted={true} />
+        <CostAmount cost={cost} converted={false} className="text-sm text-neutral-400" />
+      </div>
+    } else {
+      return <CostAmount cost={cost} converted={false} />
     }
   }
+}
 
+function intervalName(n: string) {
+  switch (n) {
+    case "day":
+      return "Day";
+    case "month":
+      return "Month";
+    case "year":
+      return "Year";
+  }
+}
+
+export function CostAmount({ cost, converted, className }: { cost: Cost, converted: boolean, className?: string }) {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: cost.currency,
+    trailingZeroDisplay: 'stripIfInteger'
+  });
   return (
-    <div>
+    <div className={className}>
       {converted && "~"}
       {cost.currency !== "BTC"
-        ? cost.amount.toFixed(2)
-        : Math.floor(cost.amount * 1e8).toLocaleString()}{" "}
-      {cost.currency === "BTC" ? "sats" : cost.currency}
+        ? formatter.format(cost.amount)
+        : Math.floor(cost.amount * 1e8).toLocaleString()}
+      {cost.currency === "BTC" && " sats"}
       {cost.interval_type && <>/{intervalName(cost.interval_type)}</>}
-      {cost.other_price &&
-        cost.other_price.map((a) => (
-          <div key={a.currency} className="text-xs">
-            <CostLabel cost={a} converted={true} />
-          </div>
-        ))}
     </div>
   );
 }

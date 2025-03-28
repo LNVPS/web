@@ -7,8 +7,10 @@ import { VpsCustomOrder } from "../components/vps-custom";
 import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
 import { dedupe } from "@snort/shared";
+import useLogin from "../hooks/login";
 
 export default function HomePage() {
+  const login = useLogin();
   const [offers, setOffers] = useState<VmTemplateResponse>();
   const [region, setRegion] = useState<Array<number>>([]);
 
@@ -66,7 +68,7 @@ export default function HomePage() {
         <small className="text-neutral-400 text-center">
           All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all prices are excluding taxes.
         </small>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
           <div className="text-center">
             <a href="/lnvps.asc">PGP</a>
             {" | "}
@@ -91,12 +93,19 @@ export default function HomePage() {
               Speedtest
             </a>
           </div>
-          <div className="text-xs text-center text-neutral-400">
-            LNVPS is a trading name of Apex Strata Ltd, a company registered in
-            Ireland.
-            <br />
-            Comany Number: 702423, Address: Suite 10628, 26/27 Upper Pembroke
-            Street, Dublin 2, D02 X361, Ireland
+          {import.meta.env.VITE_FOOTER_NOTE_1 && <div className="text-xs text-center text-neutral-400">
+            {import.meta.env.VITE_FOOTER_NOTE_1}
+          </div>}
+          {import.meta.env.VITE_FOOTER_NOTE_2 && <div className="text-xs text-center text-neutral-400">
+            {import.meta.env.VITE_FOOTER_NOTE_2}
+          </div>}
+          <div className="text-sm text-center">
+            Currency:
+            {" "}
+            <select value={login?.currency ?? "EUR"}
+              onChange={(e) => login?.update(s => s.currency = e.target.value)}>
+              {["BTC", "EUR", "USD", "GBP", "AUD", "CAD", "CHF", "JPY"].map((a) => <option>{a}</option>)}
+            </select>
           </div>
         </div>
       </div>

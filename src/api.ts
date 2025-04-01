@@ -49,12 +49,12 @@ export interface VmCustomTemplateParams {
   min_cpu: number;
   min_memory: number;
   max_memory: number;
-  min_disk: number;
-  max_disk: number;
   disks: Array<VmCustomTemplateDiskParams>;
 }
 
 export interface VmCustomTemplateDiskParams {
+  min_disk: number;
+  max_disk: number;
   disk_type: DiskType;
   disk_interface: DiskInterface;
 }

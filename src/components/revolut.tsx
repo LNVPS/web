@@ -4,12 +4,12 @@ import { VmCostPlan } from "../api";
 
 interface RevolutProps {
   amount:
-    | VmCostPlan
-    | {
-        amount: number;
-        currency: string;
-        tax?: number;
-      };
+  | VmCostPlan
+  | {
+    amount: number;
+    currency: string;
+    tax?: number;
+  };
   pubkey: string;
   loadOrder: () => Promise<string>;
   onPaid: () => void;
@@ -33,9 +33,9 @@ export function RevolutPayWidget({
       publicToken: pubkey,
     });
     ref.innerHTML = "";
-    revolutPay.mount(ref, {
+    const payload = {
       currency: amount.currency,
-      totalAmount: amount.amount,
+      totalAmount: amount.amount * 100,
       createOrder: async () => {
         const id = await loadOrder();
         return {
@@ -45,7 +45,9 @@ export function RevolutPayWidget({
       buttonStyle: {
         cashback: false,
       },
-    });
+    };
+    console.debug("Revolut order: ", payload);
+    revolutPay.mount(ref, payload);
     revolutPay.on("payment", (payload) => {
       console.debug(payload);
       if (payload.type === "success") {

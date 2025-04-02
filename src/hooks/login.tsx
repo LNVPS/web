@@ -14,14 +14,15 @@ export default function useLogin() {
     () =>
       session
         ? {
-          type: session.type,
-          publicKey: session.publicKey,
-          system,
-          currency: session.currency,
-          api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
-          update: (fx: (ses: LoginSession) => void) => LoginState.updateSession(fx),
-          logout: () => LoginState.logout(),
-        }
+            type: session.type,
+            publicKey: session.publicKey,
+            system,
+            currency: session.currency,
+            api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
+            update: (fx: (ses: LoginSession) => void) =>
+              LoginState.updateSession(fx),
+            logout: () => LoginState.logout(),
+          }
         : undefined,
     [session, system],
   );

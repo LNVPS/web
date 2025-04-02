@@ -8,9 +8,7 @@ export default function VpsCard({ spec }: { spec: VmTemplate }) {
     <div className="rounded-xl border border-neutral-600 px-3 py-2 flex flex-col gap-2">
       <div className="text-xl">{spec.name}</div>
       <ul>
-        <li>
-          CPU: {spec.cpu}vCPU
-        </li>
+        <li>CPU: {spec.cpu}vCPU</li>
         <li>
           RAM: <BytesSize value={spec.memory} />
         </li>
@@ -19,7 +17,9 @@ export default function VpsCard({ spec }: { spec: VmTemplate }) {
         </li>
         <li>Location: {spec.region?.name}</li>
       </ul>
-      <div className="text-lg">{spec.cost_plan && <CostLabel cost={spec.cost_plan} />}</div>
+      <div className="text-lg">
+        {spec.cost_plan && <CostLabel cost={spec.cost_plan} />}
+      </div>
       <VpsPayButton spec={spec} />
     </div>
   );

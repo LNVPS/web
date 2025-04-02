@@ -10,47 +10,48 @@ import { AttachAddon } from "@xterm/addon-attach";
 const fit = new FitAddon();
 
 export function VmConsolePage() {
+  const { state } = useLocation() as { state?: VmInstance };
+  const login = useLogin();
+  const [term, setTerm] = useState<Terminal>();
+  const termRef = useRef<HTMLDivElement | null>(null);
 
-    const { state } = useLocation() as { state?: VmInstance };
-    const login = useLogin();
-    const [term, setTerm] = useState<Terminal>();
-    const termRef = useRef<HTMLDivElement | null>(null);
+  async function openTerminal() {
+    if (!login?.api || !state) return;
+    const ws = await login.api.connect_terminal(state.id);
+    const te = new Terminal();
+    const webgl = new WebglAddon();
+    webgl.onContextLoss(() => {
+      webgl.dispose();
+    });
+    te.loadAddon(webgl);
+    te.loadAddon(fit);
+    const attach = new AttachAddon(ws);
+    attach.activate(te);
+    setTerm((t) => {
+      if (t) {
+        t.dispose();
+      }
+      return te;
+    });
+  }
 
-    async function openTerminal() {
-        if (!login?.api || !state) return;
-        const ws = await login.api.connect_terminal(state.id);
-        const te = new Terminal();
-        const webgl = new WebglAddon();
-        webgl.onContextLoss(() => {
-            webgl.dispose();
-        });
-        te.loadAddon(webgl);
-        te.loadAddon(fit);
-        const attach = new AttachAddon(ws);
-        attach.activate(te);
-        setTerm((t) => {
-            if (t) {
-                t.dispose();
-            }
-            return te
-        });
+  useEffect(() => {
+    if (term && termRef.current) {
+      termRef.current.innerHTML = "";
+      term.open(termRef.current);
+      term.focus();
+      fit.fit();
     }
+  }, [termRef, term]);
 
-    useEffect(() => {
-        if (term && termRef.current) {
-            termRef.current.innerHTML = "";
-            term.open(termRef.current);
-            term.focus();
-            fit.fit();
-        }
-    }, [termRef, term]);
+  useEffect(() => {
+    openTerminal();
+  }, []);
 
-    useEffect(() => {
-        openTerminal();
-    }, []);
-
-    return <div className="flex flex-col gap-4">
-        <div className="text-xl">VM #{state?.id} Terminal:</div>
-        {term && <div className="border p-2" ref={termRef}></div>}
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="text-xl">VM #{state?.id} Terminal:</div>
+      {term && <div className="border p-2" ref={termRef}></div>}
     </div>
+  );
 }

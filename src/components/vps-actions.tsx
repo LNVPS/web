@@ -46,19 +46,19 @@ export default function VmActions({
           title="Reinstall"
           onClick={async (e) => {
             e.stopPropagation();
-            if(confirm("Are you sure you want to re-install your vm?\nTHIS WILL DELETE ALL DATA!!")) {
+            if (
+              confirm(
+                "Are you sure you want to re-install your vm?\nTHIS WILL DELETE ALL DATA!!",
+              )
+            ) {
               await login?.api.reisntallVm(vm.id);
               onReload?.();
             }
           }}
           className="bg-neutral-700 hover:bg-neutral-600"
         >
-          <Icon
-          name="refresh-1"
-          size={30}
-        />
+          <Icon name="refresh-1" size={30} />
         </AsyncButton>
-        
       </div>
     </div>
   );

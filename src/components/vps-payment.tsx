@@ -49,10 +49,14 @@ export default function VpsPayment({
         className="cursor-pointer rounded-xl overflow-hidden"
       />
       <div className="flex flex-col items-center">
-        <div>{((payment.amount + payment.tax) / 1000).toLocaleString()} sats</div>
-        {payment.tax > 0 && <div className="text-xs">
-          including {(payment.tax / 1000).toLocaleString()} sats tax
-        </div>}
+        <div>
+          {((payment.amount + payment.tax) / 1000).toLocaleString()} sats
+        </div>
+        {payment.tax > 0 && (
+          <div className="text-xs">
+            including {(payment.tax / 1000).toLocaleString()} sats tax
+          </div>
+        )}
       </div>
       <div className="monospace select-all break-all text-center text-sm">
         {invoice}

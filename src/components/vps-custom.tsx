@@ -21,8 +21,9 @@ export function VpsCustomOrder({
   const [cpu, setCpu] = useState(params.min_cpu ?? 1);
   const [diskType, setDiskType] = useState(params.disks.at(0));
   const [ram, setRam] = useState(Math.floor((params.min_memory ?? GiB) / GiB));
-  const [disk, setDisk] = useState(Math.floor((diskType?.min_disk ?? GiB) / GiB));
-
+  const [disk, setDisk] = useState(
+    Math.floor((diskType?.min_disk ?? GiB) / GiB),
+  );
 
   const [price, setPrice] = useState<VmCustomPrice>();
 
@@ -57,14 +58,18 @@ export function VpsCustomOrder({
   return (
     <div className="flex flex-col gap-4 bg-neutral-900 rounded-xl px-4 py-6">
       <div className="text-lg">Custom VPS Order</div>
-      {params.disks.length > 1 && <div className="flex gap-2">
-        {params.disks.map((d) =>
-          <FilterButton active={diskType?.disk_type === d.disk_type}
-            onClick={() => setDiskType(d)}>
-            {d.disk_type.toUpperCase()}
-          </FilterButton>
-        )}
-      </div>}
+      {params.disks.length > 1 && (
+        <div className="flex gap-2">
+          {params.disks.map((d) => (
+            <FilterButton
+              active={diskType?.disk_type === d.disk_type}
+              onClick={() => setDiskType(d)}
+            >
+              {d.disk_type.toUpperCase()}
+            </FilterButton>
+          ))}
+        </div>
+      )}
       <div className="flex items-center gap-4">
         <div className="min-w-[100px]">{cpu} CPU</div>
         <input

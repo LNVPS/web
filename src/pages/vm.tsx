@@ -10,8 +10,6 @@ import { Icon } from "../components/icon";
 import Modal from "../components/modal";
 import SSHKeySelector from "../components/ssh-keys";
 
-
-
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
@@ -66,13 +64,8 @@ export default function VmPage() {
     if ((state.ip_assignments?.length ?? 0) === 0) {
       return <div className="text-sm text-red-500">No IP's assigned</div>;
     }
-    return (
-      <>
-        {state.ip_assignments?.map((i) => ipRow(i, true))}
-      </>
-    );
+    return <>{state.ip_assignments?.map((i) => ipRow(i, true))}</>;
   }
-
 
   useEffect(() => {
     const t = setInterval(() => reloadVmState(), 5000);

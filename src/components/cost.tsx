@@ -6,23 +6,38 @@ interface Price {
 }
 type Cost = Price & { interval_type?: string };
 
-export default function CostLabel({ cost }: { cost: Cost & { other_price?: Array<Price> } }) {
+export default function CostLabel({
+  cost,
+}: {
+  cost: Cost & { other_price?: Array<Price> };
+}) {
   const login = useLogin();
 
   if (cost.currency === login?.currency) {
-    return <CostAmount cost={cost} converted={false} />
+    return <CostAmount cost={cost} converted={false} />;
   } else {
-    const converted_price = cost.other_price?.find((p) => p.currency === login?.currency);
+    const converted_price = cost.other_price?.find(
+      (p) => p.currency === login?.currency,
+    );
     if (converted_price) {
-      return <div>
-        <CostAmount cost={{
-          ...converted_price,
-          interval_type: cost.interval_type
-        }} converted={true} />
-        <CostAmount cost={cost} converted={false} className="text-sm text-neutral-400" />
-      </div>
+      return (
+        <div>
+          <CostAmount
+            cost={{
+              ...converted_price,
+              interval_type: cost.interval_type,
+            }}
+            converted={true}
+          />
+          <CostAmount
+            cost={cost}
+            converted={false}
+            className="text-sm text-neutral-400"
+          />
+        </div>
+      );
     } else {
-      return <CostAmount cost={cost} converted={false} />
+      return <CostAmount cost={cost} converted={false} />;
     }
   }
 }
@@ -38,11 +53,19 @@ function intervalName(n: string) {
   }
 }
 
-export function CostAmount({ cost, converted, className }: { cost: Cost, converted: boolean, className?: string }) {
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
+export function CostAmount({
+  cost,
+  converted,
+  className,
+}: {
+  cost: Cost;
+  converted: boolean;
+  className?: string;
+}) {
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
     currency: cost.currency,
-    trailingZeroDisplay: 'stripIfInteger'
+    trailingZeroDisplay: "stripIfInteger",
   });
   return (
     <div className={className}>

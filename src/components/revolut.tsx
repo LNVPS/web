@@ -4,12 +4,12 @@ import { VmCostPlan } from "../api";
 
 interface RevolutProps {
   amount:
-  | VmCostPlan
-  | {
-    amount: number;
-    currency: string;
-    tax?: number;
-  };
+    | VmCostPlan
+    | {
+        amount: number;
+        currency: string;
+        tax?: number;
+      };
   pubkey: string;
   loadOrder: () => Promise<string>;
   onPaid: () => void;

@@ -17,7 +17,7 @@ export function AccountSettings() {
   if (!acc) return;
   return (
     <div className="flex flex-col gap-4">
-      <h3>Account Settings</h3>
+      <div className="text-xl">Account Settings</div>
 
       <div className="flex gap-2 items-center">
         <h4>Country</h4>
@@ -35,7 +35,11 @@ export function AccountSettings() {
         </select>
       </div>
 
-      <h3>Notification Settings</h3>
+      <div className="text-xl">Notification Settings</div>
+      <p className="text-neutral-400 text-sm">
+        This is only for account notifications such as VM expiration
+        notifications, we do not send marketing or promotional messages.
+      </p>
       <div className="flex gap-2 items-center">
         <input
           type="checkbox"

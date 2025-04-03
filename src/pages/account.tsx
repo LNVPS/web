@@ -5,6 +5,7 @@ import VpsInstanceRow from "../components/vps-instance";
 import { hexToBech32 } from "@snort/shared";
 import { AsyncButton } from "../components/button";
 import { useNavigate } from "react-router-dom";
+import { AccountNostrDomains } from "../components/account-domains";
 
 export default function AccountPage() {
   const login = useLogin();
@@ -58,6 +59,7 @@ export default function AccountPage() {
         <br />
         <b>Please include your public key in all communications.</b>
       </div>
+      {vms.length > 0 && <h3>VPS</h3>}
       {vms.map((a) => (
         <VpsInstanceRow
           key={a.id}
@@ -69,6 +71,7 @@ export default function AccountPage() {
           }}
         />
       ))}
+      <AccountNostrDomains />
     </div>
   );
 }

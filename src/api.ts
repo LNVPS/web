@@ -174,6 +174,28 @@ export interface PaymentMethod {
   metadata?: Record<string, string>;
 }
 
+export interface NostrDomainsResponse {
+  domains: Array<NostrDomain>;
+  cname: string;
+}
+
+export interface NostrDomain {
+  id: number;
+  name: string;
+  enabled: boolean;
+  handles: number;
+  created: Date;
+  relays: Array<string>;
+}
+
+export interface NostrDomainHandle {
+  id: number;
+  domain_id: number;
+  handle: string;
+  created: Date;
+  pubkey: string;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -352,6 +374,46 @@ export class LNVpsApi {
         reject(e);
       };
     });
+  }
+
+  async listDomains() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<NostrDomainsResponse>
+    >(await this.#req("/api/v1/nostr/domain", "GET"));
+    return data;
+  }
+
+  async addDomain(domain: string) {
+    const { data } = await this.#handleResponse<ApiResponse<NostrDomain>>(
+      await this.#req("/api/v1/nostr/domain", "POST", { name: domain }),
+    );
+    return data;
+  }
+
+  async listDomainHandles(id: number) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<NostrDomainHandle>>
+    >(await this.#req(`/api/v1/nostr/domain/${id}/handle`, "GET"));
+    return data;
+  }
+
+  async addDomainHandle(domain: number, name: string, pubkey: string) {
+    const { data } = await this.#handleResponse<ApiResponse<NostrDomainHandle>>(
+      await this.#req(`/api/v1/nostr/domain/${domain}/handle`, "POST", {
+        name,
+        pubkey,
+      }),
+    );
+    return data;
+  }
+
+  async deleteDomainHandle(domain_id: number, handle_id: number) {
+    await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(
+        `/api/v1/nostr/domain/${domain_id}/handle/${handle_id}`,
+        "DELETE",
+      ),
+    );
   }
 
   async #handleResponse<T extends ApiResponseBase>(rsp: Response) {

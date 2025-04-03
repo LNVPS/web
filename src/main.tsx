@@ -18,6 +18,7 @@ import { VmGraphsPage } from "./pages/vm-graphs.tsx";
 import { NewsPage } from "./pages/news.tsx";
 import { NewsPost } from "./pages/news-post.tsx";
 import { VmConsolePage } from "./pages/vm-console.tsx";
+import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/account/settings",
         element: <AccountSettings />,
+      },
+      {
+        path: "/account/nostr-domain",
+        element: <AccountNostrDomainPage />,
       },
       {
         path: "/order",

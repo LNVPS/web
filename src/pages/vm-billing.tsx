@@ -7,6 +7,7 @@ import { AsyncButton } from "../components/button";
 import CostLabel, { CostAmount } from "../components/cost";
 import { RevolutPayWidget } from "../components/revolut";
 import { timeValue } from "../utils";
+import { Icon } from "../components/icon";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -179,6 +180,7 @@ export function VmBillingPage() {
             <th>Amount</th>
             <th>Time</th>
             <th>Status</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -188,6 +190,14 @@ export function VmBillingPage() {
               <td><CostAmount cost={{ amount: (a.amount + a.tax) / (a.currency === "BTC" ? 1e11 : 100), currency: a.currency }} converted={false} /></td>
               <td>{timeValue(a.time)}</td>
               <td>{a.is_paid ? "Paid" : (new Date(a.expires) <= new Date() ? "Expired" : "Unpaid")}</td>
+              <td>
+                {a.is_paid && <div title="Generate Invoice" onClick={async () => {
+                  const l = await login?.api.invoiceLink(a.id);
+                  window.open(l, "_blank");
+                }}>
+                  <Icon name="printer" />
+                </div>}
+              </td>
             </tr>)}
         </tbody>
       </table>

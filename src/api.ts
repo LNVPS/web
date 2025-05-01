@@ -360,6 +360,15 @@ export class LNVpsApi {
     return data;
   }
 
+  async invoiceLink(id: string) {
+    const u = `${this.url}/api/v1/payment/${id}/invoice`;
+    const auth = await this.#auth_event(u, "GET");
+    const auth_b64 = base64.encode(
+      new TextEncoder().encode(JSON.stringify(auth)),
+    );
+    return `${u}?auth=${auth_b64}`;
+  }
+
   async listPayments(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmPayment>>>(
       await this.#req(`/api/v1/vm/${id}/payments`, "GET"),
@@ -377,11 +386,10 @@ export class LNVpsApi {
   async connect_terminal(id: number) {
     const u = `${this.url}/api/v1/vm/${id}/console`;
     const auth = await this.#auth_event(u, "GET");
-    const ws = new WebSocket(
-      `${u}?auth=${base64.encode(
-        new TextEncoder().encode(JSON.stringify(auth)),
-      )}`,
+    const auth_b64 = base64.encode(
+      new TextEncoder().encode(JSON.stringify(auth)),
     );
+    const ws = new WebSocket(`${u}?auth=${auth_b64}`);
     return await new Promise<WebSocket>((resolve, reject) => {
       ws.onopen = () => {
         resolve(ws);

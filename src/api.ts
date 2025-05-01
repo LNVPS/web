@@ -24,7 +24,14 @@ export interface AccountDetail {
   email?: string;
   contact_nip17: boolean;
   contact_email: boolean;
-  country_code: string;
+  country_code?: string;
+  name?: string;
+  address_1?: string;
+  address_2?: string;
+  city?: string;
+  state?: string;
+  postcode?: string;
+  tax_id?: string;
 }
 
 export interface VmCostPlan {

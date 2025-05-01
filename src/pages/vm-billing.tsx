@@ -4,8 +4,9 @@ import { PaymentMethod, VmInstance, VmPayment } from "../api";
 import VpsPayment from "../components/vps-payment";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
-import CostLabel from "../components/cost";
+import CostLabel, { CostAmount } from "../components/cost";
 import { RevolutPayWidget } from "../components/revolut";
+import { timeValue } from "../utils";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -15,7 +16,14 @@ export function VmBillingPage() {
   const [methods, setMethods] = useState<Array<PaymentMethod>>();
   const [method, setMethod] = useState<PaymentMethod>();
   const [payment, setPayment] = useState<VmPayment>();
+  const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
+
+  async function listPayments() {
+    if (!state) return;
+    const history = await login?.api.listPayments(state.id);
+    setPayments(history ?? []);
+  }
 
   async function reloadVmState() {
     if (!state) return;
@@ -110,12 +118,16 @@ export function VmBillingPage() {
     if (params["action"] === "renew" && login && state) {
       loadPaymentMethods();
     }
+    if (login && state) {
+      listPayments();
+    }
   }, [login, state, params, renew]);
 
   if (!state) return;
   const expireDate = new Date(state.expires);
   const days =
     (expireDate.getTime() - new Date().getTime()) / 1000 / 24 / 60 / 60;
+
   return (
     <div className="flex flex-col gap-4">
       <Link to={"/vm"} state={state}>
@@ -159,6 +171,26 @@ export function VmBillingPage() {
           />
         </>
       )}
+      <div className="text-xl">Payment History</div>
+      <table className="table bg-neutral-900 rounded-xl text-center">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {payments.sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
+            .map(a => <tr key={a.id}>
+              <td className="pl-4">{new Date(a.created).toLocaleString()}</td>
+              <td><CostAmount cost={{ amount: (a.amount + a.tax) / (a.currency === "BTC" ? 1e11 : 100), currency: a.currency }} converted={false} /></td>
+              <td>{timeValue(a.time)}</td>
+              <td>{a.is_paid ? "Paid" : (new Date(a.expires) <= new Date() ? "Expired" : "Unpaid")}</td>
+            </tr>)}
+        </tbody>
+      </table>
     </div>
   );
 }

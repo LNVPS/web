@@ -149,8 +149,10 @@ export interface VmPayment {
   created: string;
   expires: string;
   amount: number;
+  currency: string;
   tax: number;
   is_paid: boolean;
+  time: number;
   data: {
     lightning?: string;
     revolut?: {
@@ -207,7 +209,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
-  ) {}
+  ) { }
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
@@ -354,6 +356,13 @@ export class LNVpsApi {
   async paymentStatus(id: string) {
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
       await this.#req(`/api/v1/payment/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async listPayments(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<VmPayment>>>(
+      await this.#req(`/api/v1/vm/${id}/payments`, "GET"),
     );
     return data;
   }

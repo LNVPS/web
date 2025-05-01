@@ -51,3 +51,24 @@ export function toEui64(prefix: string, mac: string) {
     base16.encode(macExtended.subarray(6, 8))
   ).toLowerCase();
 }
+
+export function timeValue(n: number): string {
+  if (!Number.isFinite(n) || n < 0) {
+    return "Invalid input";
+  }
+
+  if (n >= 86400) {
+    const days = Math.floor(n / 86400);
+    return days.toLocaleString() + " day" + (days !== 1 ? "s" : "");
+  }
+  if (n >= 3600) {
+    const hours = Math.floor(n / 3600);
+    const minutes = Math.floor((n % 3600) / 60);
+    return hours + " hr" + (hours !== 1 ? "s" : "") + (minutes > 0 ? " " + minutes + " min" + (minutes !== 1 ? "s" : "") : "");
+  }
+  if (n >= 60) {
+    const minutes = Math.floor(n / 60);
+    return minutes + " min" + (minutes !== 1 ? "s" : "");
+  }
+  return n + " sec" + (n !== 1 ? "s" : "");
+}

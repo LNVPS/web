@@ -1,6 +1,6 @@
 import "@xterm/xterm/css/xterm.css";
 
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { VmInstance, VmIpAssignment } from "../api";
 import VpsInstanceRow from "../components/vps-instance";
 import useLogin from "../hooks/login";
@@ -78,6 +78,9 @@ export default function VmPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Link to={"/account"}>
+        &lt; Back
+      </Link>
       <VpsInstanceRow vm={state} actions={true} />
 
       <div className="text-xl">Network:</div>

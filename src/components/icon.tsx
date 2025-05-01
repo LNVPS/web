@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { MouseEventHandler } from "react";
 
-import Icons from "../icons.svg";
+import Icons from "../icons.svg?no-inline";
 
 type Props = {
   name: string;

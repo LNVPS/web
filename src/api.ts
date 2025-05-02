@@ -137,6 +137,7 @@ export interface VmOsImage {
   flavour: string;
   version: string;
   release_date: string;
+  default_username?: string;
 }
 
 export interface UserSshKey {

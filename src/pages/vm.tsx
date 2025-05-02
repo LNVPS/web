@@ -72,6 +72,14 @@ export default function VmPage() {
     return () => clearInterval(t);
   }, []);
 
+  function bestHost() {
+    if (!state) return;
+    if (state.ip_assignments.length > 0) {
+      const ip = state.ip_assignments.at(0)!;
+      return ip.forward_dns ? ip.forward_dns : ip.ip.split("/")[0];
+    }
+  }
+
   if (!state) {
     return <h2>No VM selected</h2>;
   }
@@ -85,18 +93,27 @@ export default function VmPage() {
 
       <div className="text-xl">Network:</div>
       <div className="grid grid-cols-2 gap-4">{networkInfo()}</div>
-      <div className="flex gap-2 items-center">
-        <div className="text-xl">SSH Key:</div>
-        <div className="text-sm bg-neutral-900 px-3 py-1 rounded-lg">
-          {state.ssh_key?.name}
+      <div className="text-xl">SSH:</div>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
+          <div>Key:</div>
+          <div className="text-sm bg-neutral-900 px-3 py-1 rounded-lg">
+            {state.ssh_key?.name}
+          </div>
+          <Icon name="pencil" onClick={() => setEditKey(true)} />
         </div>
-        <Icon name="pencil" onClick={() => setEditKey(true)} />
+        <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
+          <div>Login:</div>
+          <pre className="select-all bg-neutral-800 px-3 py-1 rounded-full">
+            ssh {state.image.default_username}@{bestHost()}
+          </pre>
+        </div>
       </div>
       <hr />
       <div className="flex gap-4">
-        <AsyncButton onClick={() => navigate("/vm/console", { state })}>
+        {/*<AsyncButton onClick={() => navigate("/vm/console", { state })}>
           Console
-        </AsyncButton>
+        </AsyncButton>*/}
         <AsyncButton onClick={() => navigate("/vm/billing", { state })}>
           Billing
         </AsyncButton>

@@ -64,7 +64,12 @@ export function timeValue(n: number): string {
   if (n >= 3600) {
     const hours = Math.floor(n / 3600);
     const minutes = Math.floor((n % 3600) / 60);
-    return hours + " hr" + (hours !== 1 ? "s" : "") + (minutes > 0 ? " " + minutes + " min" + (minutes !== 1 ? "s" : "") : "");
+    return (
+      hours +
+      " hr" +
+      (hours !== 1 ? "s" : "") +
+      (minutes > 0 ? " " + minutes + " min" + (minutes !== 1 ? "s" : "") : "")
+    );
   }
   if (n >= 60) {
     const minutes = Math.floor(n / 60);

@@ -59,9 +59,10 @@ export default function VmPage() {
     );
   }
 
+  const hasNoIps = (state?.ip_assignments?.length ?? 0) === 0;
   function networkInfo() {
     if (!state) return;
-    if ((state.ip_assignments?.length ?? 0) === 0) {
+    if (hasNoIps) {
       return <div className="text-sm text-red-500">No IP's assigned</div>;
     }
     return <>{state.ip_assignments?.map((i) => ipRow(i, true))}</>;
@@ -86,9 +87,7 @@ export default function VmPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={"/account"}>
-        &lt; Back
-      </Link>
+      <Link to={"/account"}>&lt; Back</Link>
       <VpsInstanceRow vm={state} actions={true} />
 
       <div className="text-xl">Network:</div>
@@ -102,12 +101,14 @@ export default function VmPage() {
           </div>
           <Icon name="pencil" onClick={() => setEditKey(true)} />
         </div>
-        <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
-          <div>Login:</div>
-          <pre className="select-all bg-neutral-800 px-3 py-1 rounded-full">
-            ssh {state.image.default_username}@{bestHost()}
-          </pre>
-        </div>
+        {!hasNoIps && (
+          <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
+            <div>Login:</div>
+            <pre className="select-all bg-neutral-800 px-3 py-1 rounded-full">
+              ssh {state.image.default_username}@{bestHost()}
+            </pre>
+          </div>
+        )}
       </div>
       <hr />
       <div className="flex gap-4">

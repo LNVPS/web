@@ -1,0 +1,14 @@
+{
+  "kind": 30999,
+  "content": "<Long description with updates>",
+  "tags": [
+    ["d", "<id-of-outage>"],
+    ["title", "Network Outage"],
+    ["started", "<unix-time>"],
+    ["ended", "<unix-time"], // optional
+    ["service", "VPS"], // type of service
+    ["location", "<location-code>"], // ISO country code or datacenter location name
+    ["status", "<Active/Resolved/Monitoring, etc..>"],
+    ["t", "<other relavant tags, like mysql / database / api etc>"]
+  ]
+}

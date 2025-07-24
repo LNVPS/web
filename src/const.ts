@@ -21,8 +21,10 @@ export const NostrProfile = new NostrLink(
   undefined,
   [
     "wss://nos.lol/",
-    "wss://relay.nostr.bg/",
-    "wss://relay.damus.io",
+    "wss://relay.primal.net/",
+    "wss://relay.damus.io/",
     "wss://relay.snort.social/",
   ],
 );
+
+export const ServiceBirth = new Date("2024-06-05T00:00:00Z");

@@ -5,10 +5,11 @@
     ["d", "<id-of-outage>"],
     ["title", "Network Outage"],
     ["started", "<unix-time>"],
-    ["ended", "<unix-time"], // optional
+    ["ended", "<unix-time>"], // optional
     ["service", "VPS"], // type of service
     ["location", "<location-code>"], // ISO country code or datacenter location name
-    ["status", "<Active/Resolved/Monitoring, etc..>"],
-    ["t", "<other relavant tags, like mysql / database / api etc>"]
+    ["status", "<Active/Resolved/Monitoring/Investigating>"],
+    ["type", "<outage/degraded/maintenance/informational>"], // incident type - affects uptime calculation
+    ["t", "<other relevant tags, like mysql / database / api etc>"]
   ]
 }

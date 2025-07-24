@@ -5,7 +5,7 @@ import { saveRefCode } from "../ref";
 export default function Layout() {
   saveRefCode();
   return (
-    <div className="w-[700px] mx-auto m-2 p-2">
+    <div className="max-w-6xl mx-auto m-2 p-2">
       <div className="flex items-center justify-between mb-4">
         <Link to="/" className="text-2xl">
           LNVPS

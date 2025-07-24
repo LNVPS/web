@@ -1,6 +1,6 @@
 import { EventKind, RequestBuilder, EventBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Markdown from "../components/markdown";
 import { NostrProfile, ServiceBirth } from "../const";
 import useLogin from "../hooks/login";
@@ -25,6 +25,55 @@ export function StatusPage() {
   const login = useLogin();
   const canEdit = login?.publicKey === NostrProfile.id;
 
+  function StatusBadge({ status }: { status: string }) {
+    const getStatusColor = (status: string) => {
+      switch (status.toLowerCase()) {
+        case 'resolved':
+          return 'bg-green-600 text-white';
+        case 'active':
+          return 'bg-red-600 text-white';
+        case 'monitoring':
+          return 'bg-yellow-600 text-white';
+        case 'investigating':
+          return 'bg-orange-600 text-white';
+        default:
+          return 'bg-neutral-600 text-white';
+      }
+    };
+
+    return (
+      <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusColor(status)}`}>
+        {status}
+      </span>
+    );
+  }
+
+  function ActiveDuration({ startTime, isActive }: { startTime: number; isActive: boolean }) {
+    const [duration, setDuration] = useState(0);
+
+    useEffect(() => {
+      if (!isActive) return;
+
+      const updateDuration = () => {
+        const now = Math.floor(Date.now() / 1000);
+        setDuration(now - startTime);
+      };
+
+      updateDuration();
+      const interval = setInterval(updateDuration, 1000);
+
+      return () => clearInterval(interval);
+    }, [startTime, isActive]);
+
+    if (!isActive) return null;
+
+    return (
+      <span className="text-xs text-neutral-400 bg-neutral-800 px-2 py-1 rounded">
+        Active for {formatDuration(duration)}
+      </span>
+    );
+  }
+
   const req = new RequestBuilder("status");
   req
     .withOptions({ leaveOpen: true })
@@ -44,7 +93,7 @@ export function StatusPage() {
       const serviceTags = ev.tags
         .filter((t) => t[0] === "service")
         .map((t) => t[1]);
-      const locationTag = ev.tags.find((t) => t[0] === "location");
+      const locationTags = ev.tags.filter((t) => t[0] === "location").map((t) => t[1]);
       const statusTag = ev.tags.find((t) => t[0] === "status");
       const relevantTags = ev.tags.filter((t) => t[0] === "t").map((t) => t[1]);
 
@@ -54,7 +103,7 @@ export function StatusPage() {
         started: startedTag ? parseInt(startedTag[1]) : ev.created_at,
         ended: endedTag ? parseInt(endedTag[1]) : undefined,
         service: serviceTags.join(", "),
-        location: locationTag?.[1],
+        location: locationTags.join(", "),
         status: statusTag?.[1] || "Unknown",
         tags: relevantTags,
         content: ev.content,
@@ -75,12 +124,19 @@ export function StatusPage() {
   const uptime = 1 - totalDowntime / age;
 
   function formatDuration(n: number) {
-    if (n > 3600) {
-      return `${(n / 3600).toFixed(0)}h ${((n % 3600) / 60).toFixed(0)}m`;
-    } else if (n > 60) {
-      return `${(n % 60).toFixed(0)}m`;
+    const days = Math.floor(n / 86400);
+    const hours = Math.floor((n % 86400) / 3600);
+    const minutes = Math.floor((n % 3600) / 60);
+    const seconds = Math.floor(n % 60);
+
+    if (days > 0) {
+      return `${days}d ${hours}h ${minutes}m`;
+    } else if (hours > 0) {
+      return `${hours}h ${minutes}m`;
+    } else if (minutes > 0) {
+      return `${minutes}m`;
     } else {
-      return `${n.toFixed(0)}s`;
+      return `${seconds}s`;
     }
   }
 
@@ -95,7 +151,6 @@ export function StatusPage() {
       ["d", incident.id || crypto.randomUUID()],
       ["title", updates.title || incident.title],
       ["started", String(updates.started || incident.started)],
-      ["location", updates.location || incident.location || ""],
       ["status", updates.status || incident.status],
     ];
 
@@ -105,6 +160,15 @@ export function StatusPage() {
       services.split(",").forEach((service: string) => {
         const trimmedService = service.trim();
         if (trimmedService) tags.push(["service", trimmedService]);
+      });
+    }
+
+    // Add multiple location tags
+    const locations = updates.location || incident.location || "";
+    if (locations) {
+      locations.split(",").forEach((location: string) => {
+        const trimmedLocation = location.trim();
+        if (trimmedLocation) tags.push(["location", trimmedLocation]);
       });
     }
 
@@ -194,7 +258,7 @@ export function StatusPage() {
               setFormData({ ...formData, location: e.target.value })
             }
             className="p-2 bg-neutral-800 rounded"
-            placeholder="Location"
+            placeholder="Locations (comma separated)"
           />
         </div>
 
@@ -335,7 +399,14 @@ export function StatusPage() {
             ) : (
               <>
                 <div className="text-xl flex justify-between items-center">
-                  <div>{incident.title}</div>
+                  <div className="flex items-center gap-3">
+                    <div>{incident.title}</div>
+                    <StatusBadge status={incident.status} />
+                    <ActiveDuration
+                      startTime={incident.started}
+                      isActive={!incident.ended}
+                    />
+                  </div>
                   <div className="flex items-center gap-2">
                     <div>{start.toLocaleString()}</div>
                     {canEdit && (
@@ -348,12 +419,11 @@ export function StatusPage() {
                     )}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-neutral-400">
+                <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
                   {incident.service && <div>Service: {incident.service}</div>}
                   {incident.location && (
                     <div>Location: {incident.location}</div>
                   )}
-                  <div>Status: {incident.status}</div>
                 </div>
                 {incident.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1">

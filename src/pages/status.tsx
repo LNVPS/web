@@ -18,6 +18,7 @@ interface Incident {
   status: string;
   tags: string[];
   content: string;
+  endedCleared?: boolean;
 }
 
 export function StatusPage() {
@@ -26,14 +27,6 @@ export function StatusPage() {
   const login = useLogin();
   const canEdit = login?.publicKey === NostrProfile.id;
 
-  // Update current time every second for accurate uptime calculation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTime(Date.now());
-    }, 1000); // Update every second
-
-    return () => clearInterval(interval);
-  }, []);
 
   function StatusBadge({ status }: { status: string }) {
     const getStatusColor = (status: string) => {
@@ -141,6 +134,23 @@ export function StatusPage() {
   const age = currentTime - ServiceBirth.getTime();
   const uptime = 1 - totalDowntime / age;
 
+  // Update current time every second for accurate uptime calculation, but only when needed
+  useEffect(() => {
+    // Only update if there are ongoing incidents and we're not in edit mode
+    const hasOngoingIncidents = incidents.some(incident => !incident.ended);
+    const isEditing = editingId !== null;
+    
+    if (!hasOngoingIncidents || isEditing) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000); // Update every second
+
+    return () => clearInterval(interval);
+  }, [incidents, editingId]);
+
   function formatDuration(n: number) {
     const days = Math.floor(n / 86400);
     const hours = Math.floor((n % 86400) / 3600);
@@ -190,8 +200,14 @@ export function StatusPage() {
       });
     }
 
-    if (updates.ended || incident.ended) {
-      tags.push(["ended", String(updates.ended || incident.ended)]);
+    // Only add ended tag if there's actually an ended value and it wasn't explicitly cleared
+    if (updates.endedCleared) {
+      // Don't add ended tag - this effectively removes it
+    } else {
+      const endedValue = updates.ended !== null ? updates.ended : incident.ended;
+      if (endedValue) {
+        tags.push(["ended", String(endedValue)]);
+      }
     }
 
     // Add relevant tags
@@ -213,6 +229,21 @@ export function StatusPage() {
     setEditingId(null);
   }
 
+  // Helper function to convert Unix timestamp to local datetime-local format
+  function timestampToLocalDateTime(timestamp: number): string {
+    const date = new Date(timestamp * 1000);
+    // Adjust for timezone offset to show local time in the input
+    const offsetMs = date.getTimezoneOffset() * 60000;
+    const localDate = new Date(date.getTime() - offsetMs);
+    return localDate.toISOString().slice(0, 16);
+  }
+
+  // Helper function to convert datetime-local value to Unix timestamp
+  function localDateTimeToTimestamp(dateTimeValue: string): number {
+    // datetime-local is already in local time, so we create a date normally
+    return Math.floor(new Date(dateTimeValue).getTime() / 1000);
+  }
+
   function EditForm({
     incident,
     onCancel,
@@ -227,23 +258,22 @@ export function StatusPage() {
       location: incident.location || "",
       status: incident.status,
       tags: incident.tags.join(", "),
-      started: new Date(incident.started * 1000).toISOString().slice(0, 16),
-      ended: incident.ended
-        ? new Date(incident.ended * 1000).toISOString().slice(0, 16)
-        : "",
+      started: timestampToLocalDateTime(incident.started),
+      ended: incident.ended ? timestampToLocalDateTime(incident.ended) : "",
     });
 
     const handleSubmit = () => {
       const updates = {
         ...formData,
-        started: Math.floor(new Date(formData.started).getTime() / 1000),
+        started: localDateTimeToTimestamp(formData.started),
         tags: formData.tags
           .split(",")
           .map((t: string) => t.trim())
           .filter(Boolean),
-        ended: formData.ended
-          ? Math.floor(new Date(formData.ended).getTime() / 1000)
-          : undefined,
+        ended: formData.ended && formData.ended.trim()
+          ? localDateTimeToTimestamp(formData.ended)
+          : null, // Use null to explicitly indicate we want to clear it
+        endedCleared: !formData.ended || !formData.ended.trim(), // Flag to indicate if ended was cleared
       };
       updateIncident(incident, updates);
     };
@@ -316,14 +346,25 @@ export function StatusPage() {
             <label className="block text-sm text-neutral-400 mb-1">
               End Time (optional)
             </label>
-            <input
-              type="datetime-local"
-              value={formData.ended}
-              onChange={(e) =>
-                setFormData({ ...formData, ended: e.target.value })
-              }
-              className="w-full p-2 bg-neutral-800 rounded"
-            />
+            <div className="flex gap-2">
+              <input
+                type="datetime-local"
+                value={formData.ended}
+                onChange={(e) =>
+                  setFormData({ ...formData, ended: e.target.value })
+                }
+                className="flex-1 p-2 bg-neutral-800 rounded"
+              />
+              {formData.ended && (
+                <button
+                  type="button"
+                  onClick={() => setFormData({ ...formData, ended: "" })}
+                  className="px-3 py-2 bg-neutral-700 hover:bg-neutral-600 rounded text-xs"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

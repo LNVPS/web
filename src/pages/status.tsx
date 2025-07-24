@@ -204,7 +204,7 @@ export function StatusPage() {
     if (updates.endedCleared) {
       // Don't add ended tag - this effectively removes it
     } else {
-      const endedValue = updates.ended !== null ? updates.ended : incident.ended;
+      const endedValue = updates.ended !== undefined ? updates.ended : incident.ended;
       if (endedValue) {
         tags.push(["ended", String(endedValue)]);
       }
@@ -272,7 +272,7 @@ export function StatusPage() {
           .filter(Boolean),
         ended: formData.ended && formData.ended.trim()
           ? localDateTimeToTimestamp(formData.ended)
-          : null, // Use null to explicitly indicate we want to clear it
+          : undefined, // Use undefined to explicitly indicate we want to clear it
         endedCleared: !formData.ended || !formData.ended.trim(), // Flag to indicate if ended was cleared
       };
       updateIncident(incident, updates);

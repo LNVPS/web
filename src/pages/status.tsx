@@ -1,6 +1,6 @@
 import { EventKind, RequestBuilder, EventBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Markdown from "../components/markdown";
 import { NostrProfile, ServiceBirth } from "../const";
 import useLogin from "../hooks/login";
@@ -22,8 +22,18 @@ interface Incident {
 
 export function StatusPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [currentTime, setCurrentTime] = useState(Date.now());
   const login = useLogin();
   const canEdit = login?.publicKey === NostrProfile.id;
+
+  // Update current time every second for accurate uptime calculation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000); // Update every second
+
+    return () => clearInterval(interval);
+  }, []);
 
   function StatusBadge({ status }: { status: string }) {
     const getStatusColor = (status: string) => {
@@ -74,16 +84,19 @@ export function StatusPage() {
     );
   }
 
-  const req = new RequestBuilder("status");
-  req
-    .withOptions({ leaveOpen: true })
-    .withFilter()
-    .kinds([30999 as EventKind])
-    .authors([NostrProfile.id])
-    .limit(50);
+  const req = useMemo(() => {
+    const builder = new RequestBuilder("status");
+    builder
+      .withOptions({ leaveOpen: true })
+      .withFilter()
+      .kinds([30999 as EventKind])
+      .authors([NostrProfile.id])
+      .limit(50);
+    return builder;
+  }, []);
 
   const events = useRequestBuilder(req);
-  console.debug(events);
+  
   const incidents = events
     .map((ev) => {
       const dTag = ev.tags.find((t) => t[0] === "d");
@@ -112,15 +125,20 @@ export function StatusPage() {
     .sort((a, b) => b.started - a.started);
 
   const totalDowntime = incidents.reduce((acc, incident) => {
+    let duration;
     if (incident.ended) {
-      const duration = incident.ended - incident.started;
-      acc += duration * 1000; // Convert to milliseconds
+      // Completed incident - use actual duration
+      duration = incident.ended - incident.started;
+    } else {
+      // Ongoing incident - use current duration
+      const now = Math.floor(currentTime / 1000);
+      duration = now - incident.started;
     }
+    acc += duration * 1000; // Convert to milliseconds
     return acc;
   }, 0);
 
-  const now = new Date();
-  const age = now.getTime() - ServiceBirth.getTime();
+  const age = currentTime - ServiceBirth.getTime();
   const uptime = 1 - totalDowntime / age;
 
   function formatDuration(n: number) {

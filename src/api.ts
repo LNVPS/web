@@ -210,6 +210,7 @@ export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
+    readonly timeout?: number,
   ) {}
 
   async getAccount() {
@@ -479,14 +480,29 @@ export class LNVpsApi {
     body?: object,
   ) {
     const u = `${this.url}${path}`;
-    return await fetch(u, {
-      method,
-      body: body ? JSON.stringify(body) : undefined,
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-        authorization: (await this.#auth(u, method)) ?? "",
-      },
-    });
+    const controller = new AbortController();
+    let timeoutId: number | undefined;
+    
+    if (this.timeout) {
+      timeoutId = setTimeout(() => controller.abort(), this.timeout);
+    }
+    
+    try {
+      const response = await fetch(u, {
+        method,
+        body: body ? JSON.stringify(body) : undefined,
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json",
+          authorization: (await this.#auth(u, method)) ?? "",
+        },
+        signal: controller.signal,
+      });
+      if (timeoutId) clearTimeout(timeoutId);
+      return response;
+    } catch (error) {
+      if (timeoutId) clearTimeout(timeoutId);
+      throw error;
+    }
   }
 }

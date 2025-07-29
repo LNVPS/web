@@ -128,7 +128,7 @@ export function StatusPage() {
 
   const events = useRequestBuilder(req);
 
-  const incidents = events
+  const allIncidents = events
     .map((ev) => {
       const dTag = ev.tags.find((t) => t[0] === "d");
       const titleTag = ev.tags.find((t) => t[0] === "title");
@@ -157,7 +157,10 @@ export function StatusPage() {
     })
     .sort((a, b) => b.started - a.started);
 
-  const totalDowntime = incidents.reduce((acc, incident) => {
+  const activeIncidents = allIncidents.filter(incident => !incident.ended);
+  const resolvedIncidents = allIncidents.filter(incident => incident.ended);
+
+  const totalDowntime = allIncidents.reduce((acc, incident) => {
     // Only count incidents that affect uptime (exclude maintenance and informational)
     if (incident.type === 'maintenance' || incident.type === 'informational') {
       return acc;
@@ -182,7 +185,7 @@ export function StatusPage() {
   // Update current time every second for accurate uptime calculation, but only when needed
   useEffect(() => {
     // Only update if there are ongoing incidents and we're not in edit mode
-    const hasOngoingIncidents = incidents.some(incident => !incident.ended);
+    const hasOngoingIncidents = activeIncidents.length > 0;
     const isEditing = editingId !== null;
 
     if (!hasOngoingIncidents || isEditing) {
@@ -194,7 +197,7 @@ export function StatusPage() {
     }, 1000); // Update every second
 
     return () => clearInterval(interval);
-  }, [incidents, editingId]);
+  }, [activeIncidents, editingId]);
 
   function formatDuration(n: number) {
     const days = Math.floor(n / 86400);
@@ -262,6 +265,8 @@ export function StatusPage() {
       if (tag.trim()) tags.push(["t", tag.trim()]);
     });
 
+    setEditingId(null);
+
     const ev = await signer.generic((eb: EventBuilder) => {
       let builder = eb
         .kind(30999 as EventKind)
@@ -270,9 +275,7 @@ export function StatusPage() {
       tags.forEach((tag) => (builder = builder.tag(tag)));
       return builder;
     });
-    await login?.system.BroadcastEvent(ev);
-
-    setEditingId(null);
+    login?.system.BroadcastEvent(ev);
   }
 
   // Helper function to convert Unix timestamp to local datetime-local format
@@ -466,17 +469,16 @@ export function StatusPage() {
     <div className="flex flex-col gap-4">
       <div className="text-2xl">Uptime: {(100 * uptime).toFixed(5)}%</div>
 
-      <div className="flex justify-between items-center">
-        <div className="text-xl">Incidents:</div>
-        {canEdit && (
+      {canEdit && (
+        <div className="flex justify-end">
           <AsyncButton
             onClick={() => setEditingId("new")}
             className="bg-green-600 hover:bg-green-700 px-4 py-2"
           >
             New Incident
           </AsyncButton>
-        )}
-      </div>
+        </div>
+      )}
 
       {
         editingId === "new" && (
@@ -499,79 +501,160 @@ export function StatusPage() {
           </div>
         )
       }
-      {
-        incidents.map((incident, index) => {
-          const end = incident.ended
-            ? new Date(incident.ended * 1000)
-            : undefined;
-          const start = new Date(incident.started * 1000);
-          const duration = end ? end.getTime() - start.getTime() : undefined;
 
-          return (
-            <div
-              key={index}
-              className="rounded-xl bg-neutral-900 px-3 py-4 flex flex-col gap-2"
-            >
-              {editingId === incident.id ? (
-                <EditForm
-                  incident={incident}
-                  onCancel={() => setEditingId(null)}
-                />
-              ) : (
-                <>
-                  <div className="text-xl flex justify-between items-center">
-                    <div className="flex items-center gap-3">
-                      <div>{incident.title}</div>
-                      <StatusBadge status={incident.status} />
-                      <TypeBadge type={incident.type || 'outage'} />
-                      <ActiveDuration
-                        startTime={incident.started}
-                        isActive={!incident.ended}
-                      />
+      {activeIncidents.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="text-lg font-semibold text-red-400">Active Incidents</div>
+          {activeIncidents.map((incident, index) => {
+            const end = incident.ended
+              ? new Date(incident.ended * 1000)
+              : undefined;
+            const start = new Date(incident.started * 1000);
+            const duration = end ? end.getTime() - start.getTime() : undefined;
+
+            return (
+              <div
+                key={index}
+                className="rounded-xl bg-neutral-900 px-3 py-4 flex flex-col gap-2"
+              >
+                {editingId === incident.id ? (
+                  <EditForm
+                    incident={incident}
+                    onCancel={() => setEditingId(null)}
+                  />
+                ) : (
+                  <>
+                    <div className="text-xl flex justify-between items-center">
+                      <div className="flex items-center gap-3">
+                        <div>{incident.title}</div>
+                        <StatusBadge status={incident.status} />
+                        <TypeBadge type={incident.type || 'outage'} />
+                        <ActiveDuration
+                          startTime={incident.started}
+                          isActive={!incident.ended}
+                        />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div>{start.toLocaleString()}</div>
+                        {canEdit && (
+                          <AsyncButton
+                            onClick={() => setEditingId(incident.id || "")}
+                            className="p-1 hover:bg-neutral-700 rounded"
+                          >
+                            <Icon name="pencil" size={16} />
+                          </AsyncButton>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div>{start.toLocaleString()}</div>
-                      {canEdit && (
-                        <AsyncButton
-                          onClick={() => setEditingId(incident.id || "")}
-                          className="p-1 hover:bg-neutral-700 rounded"
-                        >
-                          <Icon name="pencil" size={16} />
-                        </AsyncButton>
+                    <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
+                      {incident.service && <div>Service: {incident.service}</div>}
+                      {incident.location && (
+                        <div>Location: {incident.location}</div>
                       )}
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
-                    {incident.service && <div>Service: {incident.service}</div>}
-                    {incident.location && (
-                      <div>Location: {incident.location}</div>
+                    {incident.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-1">
+                        {incident.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="bg-neutral-800 px-2 py-1 rounded text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     )}
-                  </div>
-                  {incident.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                      {incident.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="bg-neutral-800 px-2 py-1 rounded text-xs"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    {duration && (
+                      <div className="text-sm text-neutral-400">
+                        Duration: {formatDuration(duration / 1000)}
+                      </div>
+                    )}
+                    <Markdown content={incident.content} />
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {resolvedIncidents.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="text-lg font-semibold text-green-400">Resolved Incidents</div>
+          {resolvedIncidents.map((incident, index) => {
+            const end = incident.ended
+              ? new Date(incident.ended * 1000)
+              : undefined;
+            const start = new Date(incident.started * 1000);
+            const duration = end ? end.getTime() - start.getTime() : undefined;
+
+            return (
+              <div
+                key={index}
+                className="rounded-xl bg-neutral-900 px-3 py-4 flex flex-col gap-2"
+              >
+                {editingId === incident.id ? (
+                  <EditForm
+                    incident={incident}
+                    onCancel={() => setEditingId(null)}
+                  />
+                ) : (
+                  <>
+                    <div className="text-xl flex justify-between items-center">
+                      <div className="flex items-center gap-3">
+                        <div>{incident.title}</div>
+                        <StatusBadge status={incident.status} />
+                        <TypeBadge type={incident.type || 'outage'} />
+                        <ActiveDuration
+                          startTime={incident.started}
+                          isActive={!incident.ended}
+                        />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div>{start.toLocaleString()}</div>
+                        {canEdit && (
+                          <AsyncButton
+                            onClick={() => setEditingId(incident.id || "")}
+                            className="p-1 hover:bg-neutral-700 rounded"
+                          >
+                            <Icon name="pencil" size={16} />
+                          </AsyncButton>
+                        )}
+                      </div>
                     </div>
-                  )}
-                  {duration && (
-                    <div className="text-sm text-neutral-400">
-                      Duration: {formatDuration(duration / 1000)}
+                    <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
+                      {incident.service && <div>Service: {incident.service}</div>}
+                      {incident.location && (
+                        <div>Location: {incident.location}</div>
+                      )}
                     </div>
-                  )}
-                  <Markdown content={incident.content} />
-                </>
-              )}
-            </div>
-          );
-        })
-      }
-      {incidents.length === 0 && <div>No incidents to report.</div>}
+                    {incident.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-1">
+                        {incident.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="bg-neutral-800 px-2 py-1 rounded text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {duration && (
+                      <div className="text-sm text-neutral-400">
+                        Duration: {formatDuration(duration / 1000)}
+                      </div>
+                    )}
+                    <Markdown content={incident.content} />
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {allIncidents.length === 0 && <div>No incidents to report.</div>}
     </div >
   );
 }

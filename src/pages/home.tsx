@@ -8,12 +8,15 @@ import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
 import { appendDedupe, dedupe } from "@snort/shared";
 import useLogin from "../hooks/login";
+import Spinner from "../components/spinner";
 
 export default function HomePage() {
   const login = useLogin();
   const [offers, setOffers] = useState<VmTemplateResponse>();
   const [region, setRegion] = useState<Array<number>>([]);
   const [diskType, setDiskType] = useState<Array<DiskType>>([]);
+  const [loadError, setLoadError] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const regions = (offers?.templates.map((t) => t.region) ?? []).reduce(
     (acc, v) => {
@@ -27,11 +30,17 @@ export default function HomePage() {
   const diskTypes = dedupe(offers?.templates.map((t) => t.disk_type) ?? []);
 
   useEffect(() => {
-    const api = new LNVpsApi(ApiUrl, undefined);
+    const api = new LNVpsApi(ApiUrl, undefined, 5000);
+    setLoading(true);
     api.listOffers().then((o) => {
       setOffers(o);
       setRegion(dedupe(o.templates.map((z) => z.region.id)));
       setDiskType(dedupe(o.templates.map((z) => z.disk_type)));
+      setLoadError(false);
+    }).catch(() => {
+      setLoadError(true);
+    }).finally(() => {
+      setLoading(false);
     });
   }, []);
 
@@ -89,17 +98,40 @@ export default function HomePage() {
           )}
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-          {offers?.templates
-            .filter(
-              (t) =>
-                region.includes(t.region.id) && diskType.includes(t.disk_type),
-            )
-            .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
-            .map((a) => <VpsCard spec={a} key={a.id} />)}
-          {offers?.templates !== undefined && offers.templates.length === 0 && (
-            <div className="text-red-500 bold text-xl uppercase">
-              No offers available
+          {loading ? (
+            <div className="col-span-full text-center p-8">
+              <div className="flex items-center justify-center gap-3">
+                <Spinner width={24} height={24} />
+                <span className="text-neutral-400">Loading VPS offers...</span>
+              </div>
             </div>
+          ) : loadError ? (
+            <div className="col-span-full text-center p-8 bg-red-900/20 border border-red-500 rounded-xl">
+              <div className="text-red-500 bold text-xl uppercase mb-2">
+                Failed to load VPS offers
+              </div>
+              <div className="text-neutral-400 mb-4">
+                There may be a service issue. Check our status page for updates.
+              </div>
+              <Link to="/status" className="text-blue-400 hover:text-blue-300 underline">
+                View Status Page
+              </Link>
+            </div>
+          ) : (
+            <>
+              {offers?.templates
+                .filter(
+                  (t) =>
+                    region.includes(t.region.id) && diskType.includes(t.disk_type),
+                )
+                .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
+                .map((a) => <VpsCard spec={a} key={a.id} />)}
+              {offers?.templates !== undefined && offers.templates.length === 0 && (
+                <div className="text-red-500 bold text-xl uppercase">
+                  No offers available
+                </div>
+              )}
+            </>
           )}
         </div>
         {offers?.custom_template && (

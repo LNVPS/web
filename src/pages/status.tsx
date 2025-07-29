@@ -20,6 +20,7 @@ interface Incident {
   tags: string[];
   content: string;
   endedCleared?: boolean;
+  lastUpdated: number;
 }
 
 export function StatusPage() {
@@ -153,6 +154,7 @@ export function StatusPage() {
         type: typeTag?.[1] as 'outage' | 'maintenance' | 'degraded' | 'informational' || 'outage',
         tags: relevantTags,
         content: ev.content,
+        lastUpdated: ev.created_at,
       };
     })
     .sort((a, b) => b.started - a.started);
@@ -495,6 +497,7 @@ export function StatusPage() {
                 tags: [],
                 started: Math.floor(Date.now() / 1000),
                 ended: undefined,
+                lastUpdated: Math.floor(Date.now() / 1000),
               }}
               onCancel={() => setEditingId(null)}
             />
@@ -535,7 +538,14 @@ export function StatusPage() {
                         />
                       </div>
                       <div className="flex items-center gap-2">
-                        <div>{start.toLocaleString()}</div>
+                        <div>{start.toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit',
+                          hour12: false
+                        })}</div>
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
@@ -551,6 +561,14 @@ export function StatusPage() {
                       {incident.location && (
                         <div>Location: {incident.location}</div>
                       )}
+                      <div>Last updated: {new Date(incident.lastUpdated * 1000).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                      })}</div>
                     </div>
                     {incident.tags.length > 0 && (
                       <div className="flex flex-wrap gap-1">
@@ -611,7 +629,14 @@ export function StatusPage() {
                         />
                       </div>
                       <div className="flex items-center gap-2">
-                        <div>{start.toLocaleString()}</div>
+                        <div>{start.toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit',
+                          hour12: false
+                        })}</div>
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
@@ -627,6 +652,14 @@ export function StatusPage() {
                       {incident.location && (
                         <div>Location: {incident.location}</div>
                       )}
+                      <div>Last updated: {new Date(incident.lastUpdated * 1000).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                      })}</div>
                     </div>
                     {incident.tags.length > 0 && (
                       <div className="flex flex-wrap gap-1">

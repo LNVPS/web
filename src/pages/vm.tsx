@@ -121,6 +121,9 @@ export default function VmPage() {
         <AsyncButton onClick={() => navigate("/vm/graphs", { state })}>
           Graphs
         </AsyncButton>
+        <AsyncButton onClick={() => navigate("/vm/history", { state })}>
+          History
+        </AsyncButton>
       </div>
 
       {editKey && (

@@ -206,6 +206,26 @@ export interface NostrDomainHandle {
   pubkey: string;
 }
 
+export interface VmHistory {
+  id: number;
+  vm_id: number;
+  action_type: string;
+  timestamp: string;
+  initiated_by: 'owner' | 'system' | 'other';
+  previous_state?: string;
+  new_state?: string;
+  metadata?: string;
+  description?: string;
+}
+
+export interface LnurlPayResponse {
+  callback: string;
+  maxSendable: number;
+  minSendable: number;
+  metadata: string;
+  tag: string;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -269,7 +289,14 @@ export class LNVpsApi {
     return data;
   }
 
-  async reisntallVm(id: number) {
+  async restartVm(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
+      await this.#req(`/api/v1/vm/${id}/restart`, "PATCH"),
+    );
+    return data;
+  }
+
+  async reinstallVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}/re-install`, "PATCH"),
     );
@@ -440,6 +467,27 @@ export class LNVpsApi {
         "DELETE",
       ),
     );
+  }
+
+  async getVmHistory(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<VmHistory>>>(
+      await this.#req(`/api/v1/vm/${id}/history`, "GET"),
+    );
+    return data;
+  }
+
+  async getVmRenewLnurl(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<LnurlPayResponse>>(
+      await this.#req(`/api/v1/vm/${id}/renew-lnurlp`, "GET"),
+    );
+    return data;
+  }
+
+  async getLnurlPay(vm_id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<LnurlPayResponse>>(
+      await this.#req(`/.well-known/lnurlp/${vm_id}`, "GET"),
+    );
+    return data;
   }
 
   async #handleResponse<T extends ApiResponseBase>(rsp: Response) {

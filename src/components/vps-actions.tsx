@@ -51,7 +51,7 @@ export default function VmActions({
                 "Are you sure you want to re-install your vm?\nTHIS WILL DELETE ALL DATA!!",
               )
             ) {
-              await login?.api.reisntallVm(vm.id);
+              await login?.api.reinstallVm(vm.id);
               onReload?.();
             }
           }}

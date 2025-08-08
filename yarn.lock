@@ -1848,6 +1848,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dns-over-http-resolver@npm:^3.0.16":
+  version: 3.0.16
+  resolution: "dns-over-http-resolver@npm:3.0.16"
+  dependencies:
+    quick-lru: "npm:^7.0.0"
+    weald: "npm:^1.0.2"
+  checksum: 10c0/6e36d53de6514f925b78feb80a356b28468ae2af7cab48707d72278a956bbce053bffe3584b8e92951c7a5c389d6f0ed082dc38af76e6ca0d7b00e6320b453b9
+  languageName: node
+  linkType: hard
+
 "dom-helpers@npm:^5.0.1":
   version: 5.2.1
   resolution: "dom-helpers@npm:5.2.1"
@@ -2772,6 +2782,7 @@ __metadata:
     "@xterm/xterm": "npm:^5.5.0"
     autoprefixer: "npm:^10.4.20"
     classnames: "npm:^2.5.1"
+    dns-over-http-resolver: "npm:^3.0.16"
     eslint: "npm:^9.8.0"
     eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
     eslint-plugin-react-refresh: "npm:^0.4.9"
@@ -3003,6 +3014,13 @@ __metadata:
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 10c0/a437714e2f90dbf881b5191d35a6db792efbca5badf112f87b9e1c712aace4b4b9b742dd6537f3edf90fd6f684de897cec230abde57e87883766712ddda297cc
+  languageName: node
+  linkType: hard
+
+"ms@npm:^3.0.0-canary.1":
+  version: 3.0.0-canary.1
+  resolution: "ms@npm:3.0.0-canary.1"
+  checksum: 10c0/81040c55778c01b6cb8fd35aee71465b765a8ab5daa2f8d46a59f9fde0f86c668483232c82c9e8fb7d9379a3671b3bdd5f34b38e54dcedb608d791d149bb2815
   languageName: node
   linkType: hard
 
@@ -3432,6 +3450,13 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: 10c0/900a93d3cdae3acd7d16f642c29a642aea32c2026446151f0778c62ac089d4b8e6c986811076e1ae180a694cedf077d453a11b58ff0a865629a4f82ab558e102
+  languageName: node
+  linkType: hard
+
+"quick-lru@npm:^7.0.0":
+  version: 7.0.1
+  resolution: "quick-lru@npm:7.0.1"
+  checksum: 10c0/631d031d9aba116311b1db57fbf8637874f2b72731f435a9d015cc0405aae5d18206336953563627ca7c9ed971a3824f11cb4dc1575d03283252a8cea22ac8e1
   languageName: node
   linkType: hard
 
@@ -3923,6 +3948,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"supports-color@npm:^9.4.0":
+  version: 9.4.0
+  resolution: "supports-color@npm:9.4.0"
+  checksum: 10c0/6c24e6b2b64c6a60e5248490cfa50de5924da32cf09ae357ad8ebbf305cc5d2717ba705a9d4cb397d80bbf39417e8fdc8d7a0ce18bd0041bf7b5b456229164e4
+  languageName: node
+  linkType: hard
+
 "supports-preserve-symlinks-flag@npm:^1.0.0":
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
@@ -4260,6 +4292,16 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 10c0/f1534a3f42d14b30e11c58e5e451903d965d5f5ba18d8c81f9df208589e3d2c65535abaa3268d3963573174b8e056ea7bc445f567622c65fcdf98eb4acc1bf4e
+  languageName: node
+  linkType: hard
+
+"weald@npm:^1.0.2":
+  version: 1.0.4
+  resolution: "weald@npm:1.0.4"
+  dependencies:
+    ms: "npm:^3.0.0-canary.1"
+    supports-color: "npm:^9.4.0"
+  checksum: 10c0/6f705176549ffa9a8b14c589cc72b0a64d8bae3eed154d133d46e429f7156bc809a10416ea804b80acbf5cb108b144b8a1af20d5a22c60d1c283c69a3bd8233d
   languageName: node
   linkType: hard
 

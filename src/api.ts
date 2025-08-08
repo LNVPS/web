@@ -211,7 +211,7 @@ export interface VmHistory {
   vm_id: number;
   action_type: string;
   timestamp: string;
-  initiated_by: 'owner' | 'system' | 'other';
+  initiated_by: "owner" | "system" | "other";
   previous_state?: string;
   new_state?: string;
   metadata?: string;
@@ -530,11 +530,11 @@ export class LNVpsApi {
     const u = `${this.url}${path}`;
     const controller = new AbortController();
     let timeoutId: number | undefined;
-    
+
     if (this.timeout) {
       timeoutId = setTimeout(() => controller.abort(), this.timeout);
     }
-    
+
     try {
       const response = await fetch(u, {
         method,

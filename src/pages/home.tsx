@@ -32,16 +32,20 @@ export default function HomePage() {
   useEffect(() => {
     const api = new LNVpsApi(ApiUrl, undefined, 5000);
     setLoading(true);
-    api.listOffers().then((o) => {
-      setOffers(o);
-      setRegion(dedupe(o.templates.map((z) => z.region.id)));
-      setDiskType(dedupe(o.templates.map((z) => z.disk_type)));
-      setLoadError(false);
-    }).catch(() => {
-      setLoadError(true);
-    }).finally(() => {
-      setLoading(false);
-    });
+    api
+      .listOffers()
+      .then((o) => {
+        setOffers(o);
+        setRegion(dedupe(o.templates.map((z) => z.region.id)));
+        setDiskType(dedupe(o.templates.map((z) => z.disk_type)));
+        setLoadError(false);
+      })
+      .catch(() => {
+        setLoadError(true);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -113,7 +117,10 @@ export default function HomePage() {
               <div className="text-neutral-400 mb-4">
                 There may be a service issue. Check our status page for updates.
               </div>
-              <Link to="/status" className="text-blue-400 hover:text-blue-300 underline">
+              <Link
+                to="/status"
+                className="text-blue-400 hover:text-blue-300 underline"
+              >
                 View Status Page
               </Link>
             </div>
@@ -122,15 +129,17 @@ export default function HomePage() {
               {offers?.templates
                 .filter(
                   (t) =>
-                    region.includes(t.region.id) && diskType.includes(t.disk_type),
+                    region.includes(t.region.id) &&
+                    diskType.includes(t.disk_type),
                 )
                 .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
                 .map((a) => <VpsCard spec={a} key={a.id} />)}
-              {offers?.templates !== undefined && offers.templates.length === 0 && (
-                <div className="text-red-500 bold text-xl uppercase">
-                  No offers available
-                </div>
-              )}
+              {offers?.templates !== undefined &&
+                offers.templates.length === 0 && (
+                  <div className="text-red-500 bold text-xl uppercase">
+                    No offers available
+                  </div>
+                )}
             </>
           )}
         </div>

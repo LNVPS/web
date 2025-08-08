@@ -22,7 +22,7 @@ export function AccountNostrDomains() {
       <div className="flex flex-col gap-2">
         <h3>Nostr Domains</h3>
         <small>
-          Free NIP-05 hosting, add a CNAME entry pointing to
+          Free NIP-05 hosting, add a CNAME/A entry pointing to
           <code className="bg-neutral-900 px-2 py-1 rounded-full select-all">
             {domains?.cname}
           </code>

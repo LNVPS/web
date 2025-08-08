@@ -40,7 +40,7 @@ export function AccountNostrDomainPage() {
             key={a.id}
           >
             <div className="flex flex-col gap-2">
-              <div>{a.handle}</div>
+              <div>{a.handle}@{domain.name}</div>
               <div className="text-neutral-500 text-sm">
                 {hexToBech32("npub", a.pubkey)}
               </div>

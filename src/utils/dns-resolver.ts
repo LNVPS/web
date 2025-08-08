@@ -46,19 +46,5 @@ export async function resolveDnsRecords(domain: string): Promise<DnsRecord[]> {
     console.warn(`Failed to resolve AAAA records for ${domain}:`, error);
   }
 
-  // If no records found, try resolving CNAME chain manually
-  if (records.length === 0) {
-    try {
-      const cnameRecords = await resolver.resolveCname(domain);
-      if (cnameRecords && cnameRecords.length > 0) {
-        // Recursively resolve the CNAME target
-        const targetRecords = await resolveDnsRecords(cnameRecords[0]);
-        records.push(...targetRecords);
-      }
-    } catch (error) {
-      console.warn(`Failed to resolve CNAME records for ${domain}:`, error);
-    }
-  }
-
   return records;
 }

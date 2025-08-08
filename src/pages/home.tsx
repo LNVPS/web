@@ -8,10 +8,13 @@ import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
 import { appendDedupe, dedupe } from "@snort/shared";
 import useLogin from "../hooks/login";
+import usePaymentMethods from "../hooks/usePaymentMethods";
 import Spinner from "../components/spinner";
+import { Icon } from "../components/icon";
 
 export default function HomePage() {
   const login = useLogin();
+  const { methods } = usePaymentMethods();
   const [offers, setOffers] = useState<VmTemplateResponse>();
   const [region, setRegion] = useState<Array<number>>([]);
   const [diskType, setDiskType] = useState<Array<DiskType>>([]);
@@ -186,7 +189,7 @@ export default function HomePage() {
             </div>
           )}
           <div className="text-sm text-center">
-            Currency:{" "}
+            Display Currency:{" "}
             <select
               value={login?.currency ?? "EUR"}
               onChange={(e) =>
@@ -199,6 +202,18 @@ export default function HomePage() {
                 ),
               )}
             </select>
+          </div>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            {methods.some(m => m.name.toLowerCase().includes('revolut')) && (
+              <>
+                <Icon name="visa" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+                <Icon name="mastercard" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+                <Icon name="revolut" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+              </>
+            )}
+            {methods.some(m => m.name.toLowerCase().includes('bitcoin') || m.name.toLowerCase().includes('lightning') || m.name.toLowerCase().includes('btc')) && (
+              <Icon name="bitcoin" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+            )}
           </div>
         </div>
       </div>

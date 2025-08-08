@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { PaymentMethod, VmInstance, VmPayment } from "../api";
 import VpsPayment from "../components/vps-payment";
 import useLogin from "../hooks/login";
+import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "../components/button";
 import CostLabel, { CostAmount } from "../components/cost";
 import { RevolutPayWidget } from "../components/revolut";
@@ -17,6 +18,7 @@ export function VmBillingPage() {
   const params = useParams();
   const login = useLogin();
   const navigate = useNavigate();
+  const { methods: cachedMethods, loading: methodsLoading, reload: reloadMethods } = usePaymentMethods();
   const [methods, setMethods] = useState<Array<PaymentMethod>>();
   const [method, setMethod] = useState<PaymentMethod>();
   const [payment, setPayment] = useState<VmPayment>();
@@ -120,11 +122,16 @@ export function VmBillingPage() {
 
   const loadPaymentMethods = useCallback(
     async function () {
-      if (!login?.api || !state) return;
-      const p = await login?.api.getPaymentMethods();
-      setMethods(p);
+      if (!state) return;
+      // Use cached methods if available, otherwise trigger reload
+      if (cachedMethods.length > 0) {
+        setMethods(cachedMethods);
+      } else {
+        await reloadMethods();
+        setMethods(cachedMethods);
+      }
     },
-    [login?.api, state],
+    [state, cachedMethods, reloadMethods],
   );
 
   const renew = useCallback(
@@ -182,7 +189,9 @@ export function VmBillingPage() {
       )}
       {!methods && (
         <div>
-          <AsyncButton onClick={loadPaymentMethods}>Extend Now</AsyncButton>
+          <AsyncButton onClick={loadPaymentMethods} disabled={methodsLoading}>
+            {methodsLoading ? "Loading..." : "Extend Now"}
+          </AsyncButton>
         </div>
       )}
       {methods && !method && (

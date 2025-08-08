@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import { PaymentMethod } from "../api";
-import useLogin from "./login";
+import { PaymentMethod, LNVpsApi } from "../api";
+import { ApiUrl } from "../const";
 
 const CACHE_KEY = "payment_methods_cache";
 const CACHE_EXPIRY_KEY = "payment_methods_cache_expiry";
@@ -9,7 +9,6 @@ const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 export default function usePaymentMethods() {
   const [methods, setMethods] = useState<PaymentMethod[]>([]);
   const [loading, setLoading] = useState(false);
-  const login = useLogin();
 
   const getCachedMethods = useCallback((): PaymentMethod[] | null => {
     try {
@@ -42,11 +41,11 @@ export default function usePaymentMethods() {
   }, []);
 
   const loadFromApi = useCallback(async () => {
-    if (!login?.api) return;
+    const api = new LNVpsApi(ApiUrl, undefined);
     
     setLoading(true);
     try {
-      const apiMethods = await login.api.getPaymentMethods();
+      const apiMethods = await api.getPaymentMethods();
       setMethods(apiMethods);
       setCachedMethods(apiMethods);
     } catch (error) {
@@ -54,7 +53,7 @@ export default function usePaymentMethods() {
     } finally {
       setLoading(false);
     }
-  }, [login?.api, setCachedMethods]);
+  }, [setCachedMethods]);
 
   const reloadMethods = useCallback(() => {
     loadFromApi();
@@ -65,11 +64,11 @@ export default function usePaymentMethods() {
     const cached = getCachedMethods();
     if (cached) {
       setMethods(cached);
-    } else if (login?.api) {
+    } else {
       // If no valid cache, load from API
       loadFromApi();
     }
-  }, [login?.api, getCachedMethods, loadFromApi]);
+  }, [getCachedMethods, loadFromApi]);
 
   return {
     methods,

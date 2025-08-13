@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { PaymentMethod, VmInstance, VmPayment, VmUpgradeRequest } from "../api";
+import { PaymentMethod, VmInstance, VmPayment, VmUpgradeRequest, AccountDetail } from "../api";
 import VpsPayment from "./vps-payment";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
@@ -37,6 +37,18 @@ export default function VmPaymentFlow({
   const [payment, setPayment] = useState<VmPayment>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
+  const [account, setAccount] = useState<AccountDetail>();
+
+  const loadAccountInfo = useCallback(async function () {
+    if (login?.api) {
+      try {
+        const accountData = await login.api.getAccount();
+        setAccount(accountData);
+      } catch (e) {
+        console.error("Failed to load account info:", e);
+      }
+    }
+  }, [login?.api]);
 
   const loadPaymentMethods = useCallback(
     async function () {
@@ -94,7 +106,8 @@ export default function VmPaymentFlow({
 
   useEffect(() => {
     loadPaymentMethods();
-  }, [loadPaymentMethods]);
+    loadAccountInfo();
+  }, [loadPaymentMethods, loadAccountInfo]);
 
   // Auto-create payment for preselected payment method (used for upgrades, except revolut)
   useEffect(() => {
@@ -104,6 +117,11 @@ export default function VmPaymentFlow({
   }, [paymentMethod, payment, loading, createPayment]);
 
   function renderPaymentMethod(method: PaymentMethod) {
+    // Filter out NWC method when user has no NWC connection configured
+    if (method.name === "nwc" && (!account?.nwc_connection_string || account.nwc_connection_string.trim() === "")) {
+      return null;
+    }
+
     const className =
       "flex items-center justify-between px-3 py-2 bg-neutral-900 rounded-xl cursor-pointer hover:bg-neutral-800";
 
@@ -222,6 +240,7 @@ export default function VmPaymentFlow({
         },
       }
       : null;
+
 
   if (methodsLoading) {
     return (

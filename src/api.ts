@@ -32,6 +32,7 @@ export interface AccountDetail {
   state?: string;
   postcode?: string;
   tax_id?: string;
+  nwc_connection_string?: string;
 }
 
 export interface VmCostPlan {
@@ -129,6 +130,7 @@ export interface VmInstance {
   image: VmOsImage;
   ssh_key: UserSshKey;
   ip_assignments: Array<VmIpAssignment>;
+  auto_renewal_enabled?: boolean;
 }
 
 export interface VmOsImage {
@@ -165,6 +167,7 @@ export interface VmPayment {
 export interface PatchVm {
   ssh_key_id?: number;
   reverse_dns?: string;
+  auto_renewal_enabled?: boolean;
 }
 
 export interface TimeSeriesData {

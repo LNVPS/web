@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { VmInstance, VmPayment } from "../api";
 import useLogin from "../hooks/login";
+import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "../components/button";
 import CostLabel, { CostAmount } from "../components/cost";
 import VmPaymentFlow from "../components/vm-payment-flow";
@@ -13,6 +14,7 @@ export function VmBillingPage() {
   const params = useParams();
   const login = useLogin();
   const navigate = useNavigate();
+  const { data: paymentMethods, loading: methodsLoading } = usePaymentMethods();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
@@ -73,10 +75,47 @@ export function VmBillingPage() {
         <div className="text-red-500 text-xl">Expired</div>
       )}
       {!showPaymentFlow && (
-        <div>
-          <AsyncButton onClick={() => setShowPaymentFlow(true)}>
-            Extend Now
+        <div className="flex gap-4 flex-wrap">
+          <AsyncButton
+            onClick={() => setShowPaymentFlow(true)}
+            disabled={methodsLoading}
+          >
+            {methodsLoading ? 'Loading...' : 'Extend Now'}
           </AsyncButton>
+          <AsyncButton
+            onClick={async () => {
+              if (!login?.api) return;
+              try {
+                const newEnabled = !state.auto_renewal_enabled;
+                await login.api.patchVm(state.id, {
+                  auto_renewal_enabled: newEnabled,
+                });
+                setState((prev) => prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev);
+              } catch (error) {
+                console.error('Failed to update auto-renewal:', error);
+              }
+            }}
+          >
+            {state.auto_renewal_enabled ? 'Disable' : 'Enable'} Auto-Renewal
+          </AsyncButton>
+        </div>
+      )}
+
+      {!showPaymentFlow && state.auto_renewal_enabled && (
+        <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
+          <div className="text-green-400 text-sm font-medium">🔄 Auto-renewal enabled</div>
+          <p className="text-neutral-400 text-sm mt-1">
+            This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection.
+          </p>
+        </div>
+      )}
+
+      {!showPaymentFlow && !state.auto_renewal_enabled && (
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-3">
+          <div className="text-neutral-400 text-sm font-medium">Auto-renewal disabled</div>
+          <p className="text-neutral-400 text-sm mt-1">
+            Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals.
+          </p>
         </div>
       )}
 

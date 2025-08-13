@@ -14,7 +14,7 @@ export function VmBillingPage() {
   const params = useParams();
   const login = useLogin();
   const navigate = useNavigate();
-  const { data: paymentMethods, loading: methodsLoading } = usePaymentMethods();
+  const { loading: methodsLoading } = usePaymentMethods();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);

@@ -249,7 +249,11 @@ export function VmHistoryPage() {
                           Metadata
                         </summary>
                         <div className="mt-3 p-3 bg-black/30 rounded overflow-x-auto whitespace-pre">
-                          {JSON.stringify(JSON.parse(entry.metadata), undefined, 2)}
+                          {JSON.stringify(
+                            JSON.parse(entry.metadata),
+                            undefined,
+                            2,
+                          )}
                         </div>
                       </details>
                     </div>

@@ -38,7 +38,6 @@ export function VmBillingPage() {
     }
   }
 
-
   useEffect(() => {
     if (params["action"] === "renew" && login && state) {
       setShowPaymentFlow(true);
@@ -80,7 +79,7 @@ export function VmBillingPage() {
           </AsyncButton>
         </div>
       )}
-      
+
       {showPaymentFlow && (
         <VmPaymentFlow
           vm={state}
@@ -89,7 +88,7 @@ export function VmBillingPage() {
           onCancel={() => setShowPaymentFlow(false)}
         />
       )}
-      
+
       {!showPaymentFlow && (
         <>
           <div className="text-xl">Payment History</div>

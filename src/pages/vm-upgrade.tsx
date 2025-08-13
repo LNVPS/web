@@ -20,12 +20,15 @@ export default function VmUpgradePage() {
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
 
   // Form state
-  const [upgradeCpu, setUpgradeCpu] = useState<number>(state?.template.cpu ?? 1);
+  const [upgradeCpu, setUpgradeCpu] = useState<number>(
+    state?.template.cpu ?? 1,
+  );
   const [upgradeMemory, setUpgradeMemory] = useState<number>(
-    (state?.template.memory ?? 1024 * 1024 * 1024) / (1024 * 1024 * 1024)
+    (state?.template.memory ?? 1024 * 1024 * 1024) / (1024 * 1024 * 1024),
   );
   const [upgradeDisk, setUpgradeDisk] = useState<number>(
-    (state?.template.disk_size ?? 20 * 1024 * 1024 * 1024) / (1024 * 1024 * 1024)
+    (state?.template.disk_size ?? 20 * 1024 * 1024 * 1024) /
+      (1024 * 1024 * 1024),
   );
 
   // Set default payment method when methods are loaded
@@ -45,11 +48,16 @@ export default function VmUpgradePage() {
   if (!isStandardTemplate) {
     return (
       <div className="flex flex-col gap-4">
-        <Link to={"/vm"} state={state}>&lt; Back to VM</Link>
+        <Link to={"/vm"} state={state}>
+          &lt; Back to VM
+        </Link>
         <VpsInstanceRow vm={state} actions={false} />
         <div className="bg-yellow-900 text-yellow-100 p-4 rounded-lg">
           <h3 className="text-lg font-bold mb-2">Upgrade Not Available</h3>
-          <p>This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades.</p>
+          <p>
+            This VM uses a custom template and cannot be upgraded. Only VMs
+            using standard templates support upgrades.
+          </p>
         </div>
       </div>
     );
@@ -63,7 +71,9 @@ export default function VmUpgradePage() {
     upgradeCpu >= currentCpu &&
     upgradeMemory >= currentMemoryGB &&
     upgradeDisk >= currentDiskGB &&
-    (upgradeCpu > currentCpu || upgradeMemory > currentMemoryGB || upgradeDisk > currentDiskGB);
+    (upgradeCpu > currentCpu ||
+      upgradeMemory > currentMemoryGB ||
+      upgradeDisk > currentDiskGB);
 
   async function getQuote() {
     if (!login?.api || !hasValidUpgrade) return;
@@ -75,10 +85,16 @@ export default function VmUpgradePage() {
     try {
       const request: VmUpgradeRequest = {};
       if (upgradeCpu > currentCpu) request.cpu = upgradeCpu;
-      if (upgradeMemory > currentMemoryGB) request.memory = upgradeMemory * 1024 * 1024 * 1024;
-      if (upgradeDisk > currentDiskGB) request.disk = upgradeDisk * 1024 * 1024 * 1024;
+      if (upgradeMemory > currentMemoryGB)
+        request.memory = upgradeMemory * 1024 * 1024 * 1024;
+      if (upgradeDisk > currentDiskGB)
+        request.disk = upgradeDisk * 1024 * 1024 * 1024;
 
-      const result = await login.api.getVmUpgradeQuote(state!.id, request, selectedMethod);
+      const result = await login.api.getVmUpgradeQuote(
+        state!.id,
+        request,
+        selectedMethod,
+      );
       setQuote(result);
     } catch (e) {
       if (e instanceof Error) {
@@ -92,8 +108,10 @@ export default function VmUpgradePage() {
   function getUpgradeRequest(): VmUpgradeRequest {
     const request: VmUpgradeRequest = {};
     if (upgradeCpu > currentCpu) request.cpu = upgradeCpu;
-    if (upgradeMemory > currentMemoryGB) request.memory = upgradeMemory * 1024 * 1024 * 1024;
-    if (upgradeDisk > currentDiskGB) request.disk = upgradeDisk * 1024 * 1024 * 1024;
+    if (upgradeMemory > currentMemoryGB)
+      request.memory = upgradeMemory * 1024 * 1024 * 1024;
+    if (upgradeDisk > currentDiskGB)
+      request.disk = upgradeDisk * 1024 * 1024 * 1024;
     return request;
   }
 
@@ -130,7 +148,9 @@ export default function VmUpgradePage() {
   // Show upgrade configuration form
   return (
     <div className="flex flex-col gap-4">
-      <Link to={"/vm"} state={state}>&lt; Back to VM</Link>
+      <Link to={"/vm"} state={state}>
+        &lt; Back to VM
+      </Link>
       <VpsInstanceRow vm={state} actions={false} />
 
       <div className="text-xl">Upgrade VM Specifications</div>
@@ -141,7 +161,9 @@ export default function VmUpgradePage() {
           <div className="space-y-2">
             <div>CPU: {currentCpu} cores</div>
             <div>Memory: {currentMemoryGB} GB</div>
-            <div>Disk: {currentDiskGB} GB {state.template.disk_type.toUpperCase()}</div>
+            <div>
+              Disk: {currentDiskGB} GB {state.template.disk_type.toUpperCase()}
+            </div>
           </div>
         </div>
 
@@ -149,40 +171,57 @@ export default function VmUpgradePage() {
           <h3 className="text-lg font-bold mb-4">Upgrade To</h3>
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-1">CPU Cores</label>
+              <label className="block text-sm font-medium mb-1">
+                CPU Cores
+              </label>
               <input
                 type="number"
                 min={currentCpu}
                 value={upgradeCpu}
-                onChange={(e) => setUpgradeCpu(parseInt(e.target.value) || currentCpu)}
+                onChange={(e) =>
+                  setUpgradeCpu(parseInt(e.target.value) || currentCpu)
+                }
                 className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
               />
-              <small className="text-neutral-400">Minimum: {currentCpu} cores</small>
+              <small className="text-neutral-400">
+                Minimum: {currentCpu} cores
+              </small>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Memory (GB)</label>
+              <label className="block text-sm font-medium mb-1">
+                Memory (GB)
+              </label>
               <input
                 type="number"
                 min={currentMemoryGB}
                 value={upgradeMemory}
-                onChange={(e) => setUpgradeMemory(parseInt(e.target.value) || currentMemoryGB)}
+                onChange={(e) =>
+                  setUpgradeMemory(parseInt(e.target.value) || currentMemoryGB)
+                }
                 className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
               />
-              <small className="text-neutral-400">Minimum: {currentMemoryGB} GB</small>
+              <small className="text-neutral-400">
+                Minimum: {currentMemoryGB} GB
+              </small>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Disk (GB)</label>
+              <label className="block text-sm font-medium mb-1">
+                Disk (GB)
+              </label>
               <input
                 type="number"
                 min={currentDiskGB}
                 value={upgradeDisk}
-                onChange={(e) => setUpgradeDisk(parseInt(e.target.value) || currentDiskGB)}
+                onChange={(e) =>
+                  setUpgradeDisk(parseInt(e.target.value) || currentDiskGB)
+                }
                 className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
               />
               <small className="text-neutral-400">
-                Minimum: {currentDiskGB} GB {state.template.disk_type.toUpperCase()}
+                Minimum: {currentDiskGB} GB{" "}
+                {state.template.disk_type.toUpperCase()}
               </small>
             </div>
           </div>
@@ -208,13 +247,13 @@ export default function VmUpgradePage() {
                 <option key={method.name} value={method.name}>
                   {method.name.charAt(0).toUpperCase() + method.name.slice(1)}
                   {method.currencies.length > 0 &&
-                    ` (${method.currencies.join(", ")})`
-                  }
+                    ` (${method.currencies.join(", ")})`}
                 </option>
               ))}
             </select>
             <small className="text-neutral-400 mt-2 block">
-              Payment method affects the currency used for the quote and payment.
+              Payment method affects the currency used for the quote and
+              payment.
             </small>
           </div>
         )}
@@ -235,39 +274,52 @@ export default function VmUpgradePage() {
               <div className="space-y-1 text-sm">
                 <div className="flex justify-between">
                   <span>Value of remaining time at old rate:</span>
-                  <span><CostAmount cost={quote.discount} converted={false} /></span>
+                  <span>
+                    <CostAmount cost={quote.discount} converted={false} />
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Cost at new rate for remaining time:</span>
-                  <span><CostAmount cost={{
-                    currency: quote.cost_difference.currency,
-                    amount: quote.cost_difference.amount + quote.discount.amount
-                  }} converted={false} /></span>
+                  <span>
+                    <CostAmount
+                      cost={{
+                        currency: quote.cost_difference.currency,
+                        amount:
+                          quote.cost_difference.amount + quote.discount.amount,
+                      }}
+                      converted={false}
+                    />
+                  </span>
                 </div>
                 <hr className="border-green-700 my-2" />
                 <div className="flex justify-between font-semibold">
                   <span>Pro-rated upgrade cost:</span>
-                  <span><CostAmount cost={quote.cost_difference} converted={false} /></span>
+                  <span>
+                    <CostAmount
+                      cost={quote.cost_difference}
+                      converted={false}
+                    />
+                  </span>
                 </div>
               </div>
             </div>
             <p className="font-semibold">
-              New monthly renewal cost: {" "}
-              <strong><CostAmount cost={quote.new_renewal_cost} converted={false} /></strong>
+              New monthly renewal cost:{" "}
+              <strong>
+                <CostAmount cost={quote.new_renewal_cost} converted={false} />
+              </strong>
             </p>
           </div>
           <p className="text-sm mt-3 opacity-90">
-            The upgrade cost is calculated as: (new rate × remaining time) - (old rate × remaining time).
-            After upgrade, your VM will renew at the new monthly rate shown above.
+            The upgrade cost is calculated as: (new rate × remaining time) -
+            (old rate × remaining time). After upgrade, your VM will renew at
+            the new monthly rate shown above.
           </p>
         </div>
       )}
 
       <div className="flex gap-4">
-        <AsyncButton
-          onClick={getQuote}
-          disabled={!hasValidUpgrade || loading}
-        >
+        <AsyncButton onClick={getQuote} disabled={!hasValidUpgrade || loading}>
           Get Quote
         </AsyncButton>
 
@@ -283,7 +335,8 @@ export default function VmUpgradePage() {
 
       {!hasValidUpgrade && (
         <div className="text-yellow-400 text-sm">
-          Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current.
+          Please specify upgrade values that are greater than or equal to
+          current values, with at least one value being greater than current.
         </div>
       )}
     </div>

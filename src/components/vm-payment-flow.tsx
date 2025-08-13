@@ -11,7 +11,7 @@ import { ApiUrl } from "../const";
 import QrCode from "./qr";
 import { LNURL } from "@snort/shared";
 
-export type PaymentFlowType = 'renewal' | 'upgrade';
+export type PaymentFlowType = "renewal" | "upgrade";
 
 interface VmPaymentFlowProps {
   vm: VmInstance;
@@ -22,13 +22,13 @@ interface VmPaymentFlowProps {
   onCancel?: () => void;
 }
 
-export default function VmPaymentFlow({ 
-  vm, 
-  type, 
-  upgradeRequest, 
+export default function VmPaymentFlow({
+  vm,
+  type,
+  upgradeRequest,
   paymentMethod,
   onPaymentComplete,
-  onCancel 
+  onCancel,
 }: VmPaymentFlowProps) {
   const login = useLogin();
   const { data: cachedMethods, loading: methodsLoading } = usePaymentMethods();
@@ -51,24 +51,28 @@ export default function VmPaymentFlow({
   const createPayment = useCallback(
     async function (methodName: string) {
       if (!login?.api) return;
-      
+
       setLoading(true);
       setError(undefined);
-      
+
       try {
         let paymentResult: VmPayment;
-        
-        if (type === 'renewal') {
+
+        if (type === "renewal") {
           paymentResult = await login.api.renewVm(vm.id, methodName);
-        } else if (type === 'upgrade') {
+        } else if (type === "upgrade") {
           if (!upgradeRequest) {
             throw new Error("Upgrade request is required for upgrade payments");
           }
-          paymentResult = await login.api.createVmUpgradePayment(vm.id, upgradeRequest, methodName);
+          paymentResult = await login.api.createVmUpgradePayment(
+            vm.id,
+            upgradeRequest,
+            methodName,
+          );
         } else {
           throw new Error("Invalid payment type");
         }
-        
+
         setPayment(paymentResult);
       } catch (e) {
         if (e instanceof Error) {
@@ -94,13 +98,14 @@ export default function VmPaymentFlow({
 
   // Auto-create payment for preselected payment method (used for upgrades, except revolut)
   useEffect(() => {
-    if (paymentMethod && paymentMethod !== 'revolut' && !payment && !loading) {
+    if (paymentMethod && paymentMethod !== "revolut" && !payment && !loading) {
       createPayment(paymentMethod);
     }
   }, [paymentMethod, payment, loading, createPayment]);
 
   function renderPaymentMethod(method: PaymentMethod) {
-    const className = "flex items-center justify-between px-3 py-2 bg-neutral-900 rounded-xl cursor-pointer hover:bg-neutral-800";
+    const className =
+      "flex items-center justify-between px-3 py-2 bg-neutral-900 rounded-xl cursor-pointer hover:bg-neutral-800";
 
     const nameRow = (m: PaymentMethod) => (
       <div>
@@ -139,25 +144,36 @@ export default function VmPaymentFlow({
       }
       case "revolut": {
         const pkey = method.metadata?.["pubkey"];
-        if (!pkey) return <div key={method.name} className="text-red-500">Missing Revolut pubkey</div>;
-        
+        if (!pkey)
+          return (
+            <div key={method.name} className="text-red-500">
+              Missing Revolut pubkey
+            </div>
+          );
+
         return (
           <div key={method.name} className="bg-neutral-900 rounded-xl p-3">
             {nameRow(method)}
             <RevolutPayWidget
               mode={import.meta.env.VITE_REVOLUT_MODE}
               pubkey={pkey}
-              amount={type === 'renewal' ? vm.template.cost_plan : {
-                amount: upgradeRequest ? 0 : 0, // This would need proper calculation
-                currency: "EUR" // Default, should be dynamic
-              }}
+              amount={
+                type === "renewal"
+                  ? vm.template.cost_plan
+                  : {
+                      amount: upgradeRequest ? 0 : 0, // This would need proper calculation
+                      currency: "EUR", // Default, should be dynamic
+                    }
+              }
               onPaid={handlePaymentComplete}
               loadOrder={async () => {
                 if (!login?.api) {
                   throw new Error("Not logged in");
                 }
                 await createPayment(method.name);
-                return (payment && 'revolut' in payment.data) ? payment.data.revolut.token : "";
+                return payment && "revolut" in payment.data
+                  ? payment.data.revolut.token
+                  : "";
               }}
             />
           </div>
@@ -181,13 +197,16 @@ export default function VmPaymentFlow({
   }
 
   // Create LNURL payment method for renewals only
-  const lnurlMethod: PaymentMethod | null = type === 'renewal' ? {
-    name: "lnurl",
-    currencies: ["BTC"],
-    metadata: {
-      address: `${vm.id}@${new URL(ApiUrl).host}`,
-    },
-  } : null;
+  const lnurlMethod: PaymentMethod | null =
+    type === "renewal"
+      ? {
+          name: "lnurl",
+          currencies: ["BTC"],
+          metadata: {
+            address: `${vm.id}@${new URL(ApiUrl).host}`,
+          },
+        }
+      : null;
 
   if (methodsLoading) {
     return (
@@ -204,14 +223,8 @@ export default function VmPaymentFlow({
           <strong>Error:</strong> {error}
         </div>
         <div className="flex gap-2">
-          <AsyncButton onClick={loadPaymentMethods}>
-            Retry
-          </AsyncButton>
-          {onCancel && (
-            <AsyncButton onClick={onCancel}>
-              Cancel
-            </AsyncButton>
-          )}
+          <AsyncButton onClick={loadPaymentMethods}>Retry</AsyncButton>
+          {onCancel && <AsyncButton onClick={onCancel}>Cancel</AsyncButton>}
         </div>
       </div>
     );
@@ -222,36 +235,41 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <div className="text-xl font-bold">
-          {type === 'renewal' ? 'Renew VPS' : 'Upgrade Payment'}
+          {type === "renewal" ? "Renew VPS" : "Upgrade Payment"}
         </div>
-        
-        {'lightning' in payment.data ? (
-          <VpsPayment
-            payment={payment}
-            onPaid={handlePaymentComplete}
-          />
-        ) : 'revolut' in payment.data ? (
+
+        {"lightning" in payment.data ? (
+          <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
+        ) : "revolut" in payment.data ? (
           <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
-                <CostAmount cost={{
-                  currency: payment.currency, 
-                  amount: payment.currency === "BTC" ? (payment.amount + payment.tax) / 1000 : (payment.amount + payment.tax) / 100
-                }} converted={false} />
+                <CostAmount
+                  cost={{
+                    currency: payment.currency,
+                    amount:
+                      payment.currency === "BTC"
+                        ? (payment.amount + payment.tax) / 1000
+                        : (payment.amount + payment.tax) / 100,
+                  }}
+                  converted={false}
+                />
               </div>
               <div className="text-sm text-neutral-400">Total Amount</div>
             </div>
-            
+
             {(() => {
-              const revolutMethod = methods?.find(m => m.name === 'revolut');
+              const revolutMethod = methods?.find((m) => m.name === "revolut");
               const pkey = revolutMethod?.metadata?.["pubkey"];
-              
+
               if (!pkey) {
                 return (
                   <div className="space-y-2">
                     <div className="text-sm font-medium">Revolut Payment</div>
                     <div className="bg-neutral-900 p-3 rounded">
-                      <div className="text-sm">Payment Token: {payment.data.revolut.token}</div>
+                      <div className="text-sm">
+                        Payment Token: {payment.data.revolut.token}
+                      </div>
                       <div className="text-xs text-neutral-400 mt-1">
                         Use this token with your Revolut payment method
                       </div>
@@ -259,17 +277,22 @@ export default function VmPaymentFlow({
                   </div>
                 );
               }
-              
+
               return (
                 <RevolutPayWidget
                   mode={import.meta.env.VITE_REVOLUT_MODE}
                   pubkey={pkey}
                   amount={{
                     currency: payment.currency,
-                    amount: payment.currency === "BTC" ? (payment.amount + payment.tax) / 1000 : (payment.amount + payment.tax) / 100
+                    amount:
+                      payment.currency === "BTC"
+                        ? (payment.amount + payment.tax) / 1000
+                        : (payment.amount + payment.tax) / 100,
                   }}
                   onPaid={handlePaymentComplete}
-                  loadOrder={async () => ('revolut' in payment.data) ? payment.data.revolut.token : ""}
+                  loadOrder={async () =>
+                    "revolut" in payment.data ? payment.data.revolut.token : ""
+                  }
                 />
               );
             })()}
@@ -278,20 +301,27 @@ export default function VmPaymentFlow({
           <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
-                <CostAmount cost={{
-                  currency: payment.currency, 
-                  amount: payment.currency === "BTC" ? (payment.amount + payment.tax) / 1000 : (payment.amount + payment.tax) / 100
-                }} converted={false} />
+                <CostAmount
+                  cost={{
+                    currency: payment.currency,
+                    amount:
+                      payment.currency === "BTC"
+                        ? (payment.amount + payment.tax) / 1000
+                        : (payment.amount + payment.tax) / 100,
+                  }}
+                  converted={false}
+                />
               </div>
               <div className="text-sm text-neutral-400">Total Amount</div>
             </div>
-            
+
             <div className="text-sm text-neutral-400 text-center">
-              Complete your payment using the selected payment method. Changes will be applied automatically after confirmation.
+              Complete your payment using the selected payment method. Changes
+              will be applied automatically after confirmation.
             </div>
           </div>
         )}
-        
+
         <div className="flex justify-center">
           <AsyncButton
             onClick={() => {
@@ -312,7 +342,7 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <button 
+          <button
             onClick={() => setSelectedMethod(undefined)}
             className="text-blue-400 hover:text-blue-300"
           >
@@ -320,7 +350,7 @@ export default function VmPaymentFlow({
           </button>
           <div className="text-xl font-bold">LNURL Payment</div>
         </div>
-        
+
         <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">
           <QrCode
             data={`lightning:${new LNURL(lud16).lnurl}`}
@@ -338,22 +368,22 @@ export default function VmPaymentFlow({
   }
 
   // Skip payment method selection if payment method is preselected (but show RevolutPayWidget for revolut)
-  if (paymentMethod && paymentMethod !== 'revolut') {
+  if (paymentMethod && paymentMethod !== "revolut") {
     return (
       <div className="space-y-4">
         <div className="text-xl font-bold">
-          {type === 'renewal' ? 'Processing Renewal Payment' : 'Processing Upgrade Payment'}
+          {type === "renewal"
+            ? "Processing Renewal Payment"
+            : "Processing Upgrade Payment"}
         </div>
         <div className="text-center py-8">
           <div className="text-neutral-400">
-            {loading ? 'Creating payment...' : 'Loading payment details...'}
+            {loading ? "Creating payment..." : "Loading payment details..."}
           </div>
         </div>
         {onCancel && (
           <div className="flex justify-center">
-            <AsyncButton onClick={onCancel}>
-              Cancel
-            </AsyncButton>
+            <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
           </div>
         )}
       </div>
@@ -361,26 +391,26 @@ export default function VmPaymentFlow({
   }
 
   // Handle preselected revolut payment method
-  if (paymentMethod === 'revolut') {
-    const revolutMethod = methods?.find(m => m.name === 'revolut');
+  if (paymentMethod === "revolut") {
+    const revolutMethod = methods?.find((m) => m.name === "revolut");
     if (!revolutMethod) {
       return (
         <div className="space-y-4">
           <div className="text-xl font-bold">Revolut Payment</div>
           <div className="text-center py-8">
-            <div className="text-red-400">Revolut payment method not available</div>
+            <div className="text-red-400">
+              Revolut payment method not available
+            </div>
           </div>
           {onCancel && (
             <div className="flex justify-center">
-              <AsyncButton onClick={onCancel}>
-                Cancel
-              </AsyncButton>
+              <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
             </div>
           )}
         </div>
       );
     }
-    
+
     const pkey = revolutMethod.metadata?.["pubkey"];
     if (!pkey) {
       return (
@@ -391,9 +421,7 @@ export default function VmPaymentFlow({
           </div>
           {onCancel && (
             <div className="flex justify-center">
-              <AsyncButton onClick={onCancel}>
-                Cancel
-              </AsyncButton>
+              <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
             </div>
           )}
         </div>
@@ -404,7 +432,7 @@ export default function VmPaymentFlow({
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           {onCancel && (
-            <button 
+            <button
               onClick={onCancel}
               className="text-blue-400 hover:text-blue-300"
             >
@@ -413,34 +441,46 @@ export default function VmPaymentFlow({
           )}
           <div className="text-xl font-bold">Revolut Payment</div>
         </div>
-        
+
         <div className="bg-neutral-900 rounded-xl p-4">
           <RevolutPayWidget
             mode={import.meta.env.VITE_REVOLUT_MODE}
             pubkey={pkey}
-            amount={type === 'renewal' ? vm.template.cost_plan : {
-              amount: 0, // Will be determined by the widget
-              currency: "EUR" // Default, should be dynamic
-            }}
+            amount={
+              type === "renewal"
+                ? vm.template.cost_plan
+                : {
+                    amount: 0, // Will be determined by the widget
+                    currency: "EUR", // Default, should be dynamic
+                  }
+            }
             onPaid={handlePaymentComplete}
             loadOrder={async () => {
               if (!login?.api) {
                 throw new Error("Not logged in");
               }
-              
+
               let paymentResult: VmPayment;
-              if (type === 'renewal') {
-                paymentResult = await login.api.renewVm(vm.id, 'revolut');
-              } else if (type === 'upgrade') {
+              if (type === "renewal") {
+                paymentResult = await login.api.renewVm(vm.id, "revolut");
+              } else if (type === "upgrade") {
                 if (!upgradeRequest) {
-                  throw new Error("Upgrade request is required for upgrade payments");
+                  throw new Error(
+                    "Upgrade request is required for upgrade payments",
+                  );
                 }
-                paymentResult = await login.api.createVmUpgradePayment(vm.id, upgradeRequest, 'revolut');
+                paymentResult = await login.api.createVmUpgradePayment(
+                  vm.id,
+                  upgradeRequest,
+                  "revolut",
+                );
               } else {
                 throw new Error("Invalid payment type");
               }
-              
-              return ('revolut' in paymentResult.data) ? paymentResult.data.revolut.token : "";
+
+              return "revolut" in paymentResult.data
+                ? paymentResult.data.revolut.token
+                : "";
             }}
           />
         </div>
@@ -453,13 +493,11 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <AsyncButton onClick={loadPaymentMethods} disabled={loading}>
-          {loading ? "Loading..." : `${type === 'renewal' ? 'Extend' : 'Upgrade'} Now`}
+          {loading
+            ? "Loading..."
+            : `${type === "renewal" ? "Extend" : "Upgrade"} Now`}
         </AsyncButton>
-        {onCancel && (
-          <AsyncButton onClick={onCancel}>
-            Cancel
-          </AsyncButton>
-        )}
+        {onCancel && <AsyncButton onClick={onCancel}>Cancel</AsyncButton>}
       </div>
     );
   }
@@ -467,17 +505,15 @@ export default function VmPaymentFlow({
   return (
     <div className="space-y-4">
       <div className="text-xl font-bold">Select Payment Method</div>
-      
+
       <div className="space-y-2">
         {lnurlMethod && renderPaymentMethod(lnurlMethod)}
         {methods?.map((method) => renderPaymentMethod(method))}
       </div>
-      
+
       {onCancel && (
         <div className="flex justify-center pt-4">
-          <AsyncButton onClick={onCancel}>
-            Cancel
-          </AsyncButton>
+          <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
         </div>
       )}
     </div>

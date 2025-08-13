@@ -16,7 +16,11 @@ import { useCached } from "../hooks/useCached";
 export default function HomePage() {
   const login = useLogin();
   const { data: methods } = usePaymentMethods();
-  const { data: offers, loading, error: loadError } = useCached("offers", async () => {
+  const {
+    data: offers,
+    loading,
+    error: loadError,
+  } = useCached("offers", async () => {
     const api = new LNVpsApi(ApiUrl, undefined, 5000);
     return await api.listOffers();
   });
@@ -197,15 +201,36 @@ export default function HomePage() {
             </select>
           </div>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            {methods?.some(m => m.name.toLowerCase().includes('revolut')) && (
+            {methods?.some((m) => m.name.toLowerCase().includes("revolut")) && (
               <>
-                <Icon name="visa" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
-                <Icon name="mastercard" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
-                <Icon name="revolut" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+                <Icon
+                  name="visa"
+                  size={48}
+                  className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
+                />
+                <Icon
+                  name="mastercard"
+                  size={48}
+                  className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
+                />
+                <Icon
+                  name="revolut"
+                  size={48}
+                  className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
+                />
               </>
             )}
-            {methods?.some(m => m.name.toLowerCase().includes('bitcoin') || m.name.toLowerCase().includes('lightning') || m.name.toLowerCase().includes('btc')) && (
-              <Icon name="bitcoin" size={48} className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5" />
+            {methods?.some(
+              (m) =>
+                m.name.toLowerCase().includes("bitcoin") ||
+                m.name.toLowerCase().includes("lightning") ||
+                m.name.toLowerCase().includes("btc"),
+            ) && (
+              <Icon
+                name="bitcoin"
+                size={48}
+                className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
+              />
             )}
           </div>
         </div>

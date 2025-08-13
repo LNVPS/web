@@ -11,6 +11,12 @@ export default function VpsPayment({
   onPaid?: () => void;
 }) {
   const login = useLogin();
+  
+  // Only works for Lightning payments
+  if (!('lightning' in payment.data)) {
+    return <div className="text-red-500">This component only supports Lightning payments</div>;
+  }
+  
   const invoice = payment.data.lightning;
   const ln = `lightning:${invoice}`;
 

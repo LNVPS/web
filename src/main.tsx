@@ -20,6 +20,7 @@ import { NewsPost } from "./pages/news-post.tsx";
 import { VmConsolePage } from "./pages/vm-console.tsx";
 import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
+import VmUpgradePage from "./pages/vm-upgrade.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "/vm/history",
         element: <VmHistoryPage />,
+      },
+      {
+        path: "/vm/upgrade",
+        element: <VmUpgradePage />,
       },
       {
         path: "/tos",

@@ -68,13 +68,13 @@ export function CostAmount({
     trailingZeroDisplay: "stripIfInteger",
   });
   return (
-    <div className={className}>
+    <span className={className}>
       {converted && "~"}
       {cost.currency !== "BTC"
         ? formatter.format(cost.amount)
         : Math.floor(cost.amount * 1e8).toLocaleString()}
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && <>/{intervalName(cost.interval_type)}</>}
-    </div>
+    </span>
   );
 }

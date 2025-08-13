@@ -111,7 +111,7 @@ export default function VmPage() {
         )}
       </div>
       <hr />
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         {/*<AsyncButton onClick={() => navigate("/vm/console", { state })}>
           Console
         </AsyncButton>*/}
@@ -123,6 +123,9 @@ export default function VmPage() {
         </AsyncButton>
         <AsyncButton onClick={() => navigate("/vm/history", { state })}>
           History
+        </AsyncButton>
+        <AsyncButton onClick={() => navigate("/vm/upgrade", { state })}>
+          Upgrade
         </AsyncButton>
       </div>
 

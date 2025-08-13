@@ -145,21 +145,21 @@ export interface UserSshKey {
   name: string;
 }
 
+export type PaymentData = 
+  | { lightning: string }
+  | { revolut: { token: string } };
+
 export interface VmPayment {
   id: string;
+  vm_id: number;
   created: string;
   expires: string;
   amount: number;
-  currency: string;
   tax: number;
+  currency: string;
   is_paid: boolean;
+  data: PaymentData;
   time: number;
-  data: {
-    lightning?: string;
-    revolut?: {
-      token: string;
-    };
-  };
 }
 
 export interface PatchVm {
@@ -216,6 +216,23 @@ export interface VmHistory {
   new_state?: string;
   metadata?: string;
   description?: string;
+}
+
+export interface VmUpgradeRequest {
+  cpu?: number;
+  memory?: number;
+  disk?: number;
+}
+
+export interface Price {
+  currency: string;
+  amount: number;
+}
+
+export interface VmUpgradeQuote {
+  cost_difference: Price;
+  new_renewal_cost: Price;
+  discount: Price;
 }
 
 export interface LnurlPayResponse {
@@ -486,6 +503,22 @@ export class LNVpsApi {
   async getLnurlPay(vm_id: number) {
     const { data } = await this.#handleResponse<ApiResponse<LnurlPayResponse>>(
       await this.#req(`/.well-known/lnurlp/${vm_id}`, "GET"),
+    );
+    return data;
+  }
+
+  async getVmUpgradeQuote(vm_id: number, req: VmUpgradeRequest, method?: string) {
+    const methodParam = method ? `?method=${method}` : '';
+    const { data } = await this.#handleResponse<ApiResponse<VmUpgradeQuote>>(
+      await this.#req(`/api/v1/vm/${vm_id}/upgrade/quote${methodParam}`, "POST", req),
+    );
+    return data;
+  }
+
+  async createVmUpgradePayment(vm_id: number, req: VmUpgradeRequest, method?: string) {
+    const methodParam = method ? `?method=${method}` : '';
+    const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
+      await this.#req(`/api/v1/vm/${vm_id}/upgrade${methodParam}`, "POST", req),
     );
     return data;
   }

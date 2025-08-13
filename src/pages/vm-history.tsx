@@ -243,12 +243,14 @@ export function VmHistoryPage() {
                   )}
 
                   {entry.metadata && (
-                    <div className="text-xs text-neutral-400 mt-1">
+                    <div className="mt-3 p-3 bg-neutral-900 rounded">
                       <details>
-                        <summary className="cursor-pointer">Metadata</summary>
-                        <pre className="mt-1 p-2 bg-neutral-900 rounded overflow-x-auto">
-                          {entry.metadata}
-                        </pre>
+                        <summary className="cursor-pointer text-sm font-medium text-neutral-300 hover:text-neutral-200">
+                          Metadata
+                        </summary>
+                        <div className="mt-3 p-3 bg-black/30 rounded overflow-x-auto whitespace-pre">
+                          {JSON.stringify(JSON.parse(entry.metadata), undefined, 2)}
+                        </div>
                       </details>
                     </div>
                   )}

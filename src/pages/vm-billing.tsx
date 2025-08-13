@@ -1,29 +1,21 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { PaymentMethod, VmInstance, VmPayment } from "../api";
-import VpsPayment from "../components/vps-payment";
+import { VmInstance, VmPayment } from "../api";
 import useLogin from "../hooks/login";
-import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "../components/button";
 import CostLabel, { CostAmount } from "../components/cost";
-import { RevolutPayWidget } from "../components/revolut";
+import VmPaymentFlow from "../components/vm-payment-flow";
 import { timeValue } from "../utils";
 import { Icon } from "../components/icon";
-import { ApiUrl } from "../const";
-import QrCode from "../components/qr";
-import { LNURL } from "@snort/shared";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
   const params = useParams();
   const login = useLogin();
   const navigate = useNavigate();
-  const { methods: cachedMethods, loading: methodsLoading, reload: reloadMethods } = usePaymentMethods();
-  const [methods, setMethods] = useState<Array<PaymentMethod>>();
-  const [method, setMethod] = useState<PaymentMethod>();
-  const [payment, setPayment] = useState<VmPayment>();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
+  const [showPaymentFlow, setShowPaymentFlow] = useState(false);
 
   async function listPayments() {
     if (!state) return;
@@ -35,137 +27,31 @@ export function VmBillingPage() {
     if (!state) return;
     const newState = await login?.api.getVm(state.id);
     setState(newState);
-    setMethod(undefined);
-    setMethods(undefined);
     return newState;
   }
 
-  async function onPaid() {
-    setMethod(undefined);
-    setMethods(undefined);
-    const s = reloadVmState();
+  async function onPaymentComplete() {
+    setShowPaymentFlow(false);
+    const newState = await reloadVmState();
     if (params["action"] === "renew") {
-      navigate("/vm", { state: s });
+      navigate("/vm", { state: newState });
     }
   }
 
-  function paymentMethod(v: PaymentMethod) {
-    const className =
-      "flex items-center justify-between px-3 py-2 bg-neutral-900 rounded-xl cursor-pointer";
-
-    const nameRow = (v: PaymentMethod) => {
-      return (
-        <div>
-          {v.name.toUpperCase()} ({v.currencies.join(",")})
-        </div>
-      );
-    };
-    switch (v.name) {
-      case "lnurl": {
-        const addr = v.metadata?.["address"];
-        return (
-          <div
-            key={v.name}
-            className={className}
-            onClick={() => {
-              setMethod(v);
-            }}
-          >
-            {nameRow(v)}
-            <div>{addr}</div>
-          </div>
-        );
-      }
-      case "lightning": {
-        return (
-          <div
-            key={v.name}
-            className={className}
-            onClick={() => {
-              setMethod(v);
-              renew(v.name);
-            }}
-          >
-            {nameRow(v)}
-            <div className="rounded-lg p-2 bg-green-800">Pay Now</div>
-          </div>
-        );
-      }
-      case "revolut": {
-        const pkey = v.metadata?.["pubkey"];
-        if (!pkey) return <b>Missing Revolut pubkey</b>;
-        return (
-          <div key={v.name} className={className}>
-            {nameRow(v)}
-            {state && (
-              <RevolutPayWidget
-                mode={import.meta.env.VITE_REVOLUT_MODE}
-                pubkey={pkey}
-                amount={state.template.cost_plan}
-                onPaid={() => {
-                  onPaid();
-                }}
-                loadOrder={async () => {
-                  if (!login?.api || !state) {
-                    throw new Error("Not logged in");
-                  }
-                  const p = await login.api.renewVm(state.id, v.name);
-                  return p.data.revolut!.token;
-                }}
-              />
-            )}
-          </div>
-        );
-      }
-    }
-  }
-
-  const loadPaymentMethods = useCallback(
-    async function () {
-      if (!state) return;
-      // Use cached methods if available, otherwise trigger reload
-      if (cachedMethods.length > 0) {
-        setMethods(cachedMethods);
-      } else {
-        await reloadMethods();
-        setMethods(cachedMethods);
-      }
-    },
-    [state, cachedMethods, reloadMethods],
-  );
-
-  const renew = useCallback(
-    async function (m: string) {
-      if (!login?.api || !state) return;
-      const p = await login?.api.renewVm(state.id, m);
-      setPayment(p);
-    },
-    [login?.api, state],
-  );
 
   useEffect(() => {
     if (params["action"] === "renew" && login && state) {
-      loadPaymentMethods();
+      setShowPaymentFlow(true);
     }
     if (login && state) {
       listPayments();
     }
-  }, [login, state, params, renew]);
+  }, [login, state, params]);
 
   if (!state) return;
   const expireDate = new Date(state.expires);
   const days =
     (expireDate.getTime() - new Date().getTime()) / 1000 / 24 / 60 / 60;
-
-  const lud16 = `${state.id}@${new URL(ApiUrl).host}`;
-  // Static LNURL payment method
-  const lnurl = {
-    name: "lnurl",
-    currencies: ["BTC"],
-    metadata: {
-      address: lud16,
-    },
-  } as PaymentMethod;
 
   return (
     <div className="flex flex-col gap-4">
@@ -184,51 +70,27 @@ export function VmBillingPage() {
           Expires: {expireDate.toDateString()} ({Math.floor(days)} days)
         </div>
       )}
-      {days < 0 && !methods && (
+      {days < 0 && !showPaymentFlow && (
         <div className="text-red-500 text-xl">Expired</div>
       )}
-      {!methods && (
+      {!showPaymentFlow && (
         <div>
-          <AsyncButton onClick={loadPaymentMethods} disabled={methodsLoading}>
-            {methodsLoading ? "Loading..." : "Extend Now"}
+          <AsyncButton onClick={() => setShowPaymentFlow(true)}>
+            Extend Now
           </AsyncButton>
         </div>
       )}
-      {methods && !method && (
-        <>
-          <div className="text-xl">Payment Method:</div>
-          {[lnurl, ...methods].map((v) => paymentMethod(v))}
-        </>
+      
+      {showPaymentFlow && (
+        <VmPaymentFlow
+          vm={state}
+          type="renewal"
+          onPaymentComplete={onPaymentComplete}
+          onCancel={() => setShowPaymentFlow(false)}
+        />
       )}
-      {method?.name === "lnurl" && (
-        <>
-          <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">
-            <QrCode
-              data={`lightning:${new LNURL(lud16).lnurl}`}
-              width={512}
-              height={512}
-              avatar="/logo.jpg"
-              className="cursor-pointer rounded-xl overflow-hidden"
-            />
-            <div className="monospace select-all break-all text-center text-sm">
-              {lud16}
-            </div>
-          </div>
-        </>
-      )}
-      {payment && (
-        <>
-          <h3>Renew VPS</h3>
-          <VpsPayment
-            payment={payment}
-            onPaid={async () => {
-              setPayment(undefined);
-              onPaid();
-            }}
-          />
-        </>
-      )}
-      {!methods && (
+      
+      {!showPaymentFlow && (
         <>
           <div className="text-xl">Payment History</div>
           <table className="table bg-neutral-900 rounded-xl text-center">

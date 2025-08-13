@@ -12,18 +12,6 @@ export default function VpsPayment({
 }) {
   const login = useLogin();
 
-  // Only works for Lightning payments
-  if (!("lightning" in payment.data)) {
-    return (
-      <div className="text-red-500">
-        This component only supports Lightning payments
-      </div>
-    );
-  }
-
-  const invoice = payment.data.lightning;
-  const ln = `lightning:${invoice}`;
-
   async function checkPayment(api: LNVpsApi) {
     try {
       const st = await api.paymentStatus(payment.id);
@@ -36,7 +24,6 @@ export default function VpsPayment({
     }
     return false;
   }
-
   useEffect(() => {
     if (!login?.api) return;
 
@@ -47,6 +34,17 @@ export default function VpsPayment({
     }, 2_000);
     return () => clearInterval(tx);
   }, [login, onPaid]);
+
+  // Only works for Lightning payments
+  if (!("lightning" in payment.data)) {
+    return (
+      <div className="text-red-500">
+        This component only supports Lightning payments
+      </div>
+    );
+  }
+  const invoice = payment.data.lightning;
+  const ln = `lightning:${invoice}`;
 
   return (
     <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">

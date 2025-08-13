@@ -31,7 +31,7 @@ export default function VmPaymentFlow({
   onCancel 
 }: VmPaymentFlowProps) {
   const login = useLogin();
-  const { methods: cachedMethods, loading: methodsLoading, reload: reloadMethods } = usePaymentMethods();
+  const { data: cachedMethods, loading: methodsLoading } = usePaymentMethods();
   const [methods, setMethods] = useState<Array<PaymentMethod>>();
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod>();
   const [payment, setPayment] = useState<VmPayment>();
@@ -41,14 +41,11 @@ export default function VmPaymentFlow({
   const loadPaymentMethods = useCallback(
     async function () {
       // Use cached methods if available, otherwise trigger reload
-      if (cachedMethods.length > 0) {
-        setMethods(cachedMethods);
-      } else {
-        await reloadMethods();
+      if ((cachedMethods?.length ?? 0) > 0) {
         setMethods(cachedMethods);
       }
     },
-    [cachedMethods, reloadMethods],
+    [cachedMethods],
   );
 
   const createPayment = useCallback(

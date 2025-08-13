@@ -1,78 +1,14 @@
-import { useState, useEffect, useCallback } from "react";
-import { PaymentMethod, LNVpsApi } from "../api";
+import { LNVpsApi } from "../api";
 import { ApiUrl } from "../const";
+import { useCached } from "./useCached";
 
-const CACHE_KEY = "payment_methods_cache";
-const CACHE_EXPIRY_KEY = "payment_methods_cache_expiry";
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+const CACHE_KEY = "payment_methods";
+const CACHE_DURATION = 24 * 60 * 60; // 24 hours in seconds
 
 export default function usePaymentMethods() {
-  const [methods, setMethods] = useState<PaymentMethod[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const getCachedMethods = useCallback((): PaymentMethod[] | null => {
-    try {
-      const cached = localStorage.getItem(CACHE_KEY);
-      const expiry = localStorage.getItem(CACHE_EXPIRY_KEY);
-      
-      if (cached && expiry) {
-        const timestamp = parseInt(expiry, 10);
-        const isValid = Date.now() - timestamp < CACHE_DURATION;
-        
-        if (isValid) {
-          return JSON.parse(cached);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to get cached payment methods:", error);
-    }
-    
-    return null;
-  }, []);
-
-  const setCachedMethods = useCallback((paymentMethods: PaymentMethod[]) => {
-    try {
-      const timestamp = Date.now();
-      localStorage.setItem(CACHE_KEY, JSON.stringify(paymentMethods));
-      localStorage.setItem(CACHE_EXPIRY_KEY, timestamp.toString());
-    } catch (error) {
-      console.error("Failed to cache payment methods:", error);
-    }
-  }, []);
-
-  const loadFromApi = useCallback(async () => {
+  return useCached(CACHE_KEY, async () => {
     const api = new LNVpsApi(ApiUrl, undefined);
-    
-    setLoading(true);
-    try {
-      const apiMethods = await api.getPaymentMethods();
-      setMethods(apiMethods);
-      setCachedMethods(apiMethods);
-    } catch (error) {
-      console.error("Failed to load payment methods from API:", error);
-    } finally {
-      setLoading(false);
-    }
-  }, [setCachedMethods]);
-
-  const reloadMethods = useCallback(() => {
-    loadFromApi();
-  }, [loadFromApi]);
-
-  useEffect(() => {
-    // First try to load from cache
-    const cached = getCachedMethods();
-    if (cached) {
-      setMethods(cached);
-    } else {
-      // If no valid cache, load from API
-      loadFromApi();
-    }
-  }, [getCachedMethods, loadFromApi]);
-
-  return {
-    methods,
-    loading,
-    reload: reloadMethods
-  };
+    const methods = await api.getPaymentMethods();
+    return methods
+  }, CACHE_DURATION);
 }

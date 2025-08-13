@@ -11,7 +11,7 @@ import { CostAmount } from "../components/cost";
 export default function VmUpgradePage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
-  const { methods: paymentMethods, loading: methodsLoading } = usePaymentMethods();
+  const { data: paymentMethods, loading: methodsLoading } = usePaymentMethods();
   const [state] = useState<VmInstance | undefined>(location?.state);
   const [error, setError] = useState<string>();
   const [quote, setQuote] = useState<VmUpgradeQuote>();
@@ -30,8 +30,8 @@ export default function VmUpgradePage() {
 
   // Set default payment method when methods are loaded
   useEffect(() => {
-    if (paymentMethods.length > 0 && selectedMethod === "lightning") {
-      setSelectedMethod(paymentMethods[0].name);
+    if ((paymentMethods?.length ?? 0) > 0 && selectedMethod === "lightning") {
+      setSelectedMethod(paymentMethods![0].name);
     }
   }, [paymentMethods, selectedMethod]);
 
@@ -102,7 +102,7 @@ export default function VmUpgradePage() {
     return (
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <button 
+          <button
             onClick={() => setShowPaymentFlow(false)}
             className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
           >
@@ -110,7 +110,7 @@ export default function VmUpgradePage() {
           </button>
         </div>
         <VpsInstanceRow vm={state} actions={false} />
-        
+
         <VmPaymentFlow
           vm={state}
           type="upgrade"
@@ -204,10 +204,10 @@ export default function VmUpgradePage() {
               }}
               className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
             >
-              {paymentMethods.map((method) => (
+              {paymentMethods?.map((method) => (
                 <option key={method.name} value={method.name}>
                   {method.name.charAt(0).toUpperCase() + method.name.slice(1)}
-                  {method.currencies.length > 0 && 
+                  {method.currencies.length > 0 &&
                     ` (${method.currencies.join(", ")})`
                   }
                 </option>
@@ -257,7 +257,7 @@ export default function VmUpgradePage() {
             </p>
           </div>
           <p className="text-sm mt-3 opacity-90">
-            The upgrade cost is calculated as: (new rate × remaining time) - (old rate × remaining time). 
+            The upgrade cost is calculated as: (new rate × remaining time) - (old rate × remaining time).
             After upgrade, your VM will renew at the new monthly rate shown above.
           </p>
         </div>

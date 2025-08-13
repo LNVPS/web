@@ -1,7 +1,7 @@
 import { NostrEvent, NostrLink } from "@snort/system";
 import { Link } from "react-router-dom";
 
-export function NewLink({ ev }: { ev: NostrEvent }) {
+export function NewsLink({ ev }: { ev: NostrEvent }) {
   const link = NostrLink.fromEvent(ev);
   const title = ev.tags.find((a) => a[0] == "title")?.[1];
   const posted = Number(

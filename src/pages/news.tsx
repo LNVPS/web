@@ -1,7 +1,7 @@
 import { EventKind, RequestBuilder } from "@snort/system";
 import { NostrProfile } from "../const";
 import { useRequestBuilder } from "@snort/system-react";
-import { NewLink } from "../components/news-link";
+import { NewsLink } from "../components/news-link";
 
 export function NewsPage() {
   const req = new RequestBuilder("news");
@@ -27,7 +27,7 @@ export function NewsPage() {
           return b_posted - a_posted;
         })
         .map((a) => (
-          <NewLink ev={a} />
+          <NewsLink ev={a} />
         ))}
       {posts.length === 0 && <div>No posts yet..</div>}
     </div>

@@ -132,13 +132,28 @@ export default function VmPaymentFlow({
           <div
             key={method.name}
             className={className}
-            onClick={() => {
-              setSelectedMethod(method);
-              createPayment(method.name);
-            }}
           >
             {nameRow(method)}
-            <div className="rounded-lg p-2 bg-green-800 text-sm">Pay Now</div>
+            <AsyncButton className="rounded-lg p-2 bg-green-800 text-sm"
+              onClick={async () => {
+                setSelectedMethod(method);
+                await createPayment(method.name);
+              }}>Get Invoice</AsyncButton>
+          </div>
+        );
+      }
+      case "nwc": {
+        return (
+          <div
+            key={method.name}
+            className={className}
+          >
+            {nameRow(method)}
+            <AsyncButton className="rounded-lg p-2 bg-green-800 text-sm"
+              onClick={async () => {
+                setSelectedMethod(method);
+                await createPayment(method.name);
+              }}>Pay with NWC</AsyncButton>
           </div>
         );
       }
@@ -161,9 +176,9 @@ export default function VmPaymentFlow({
                 type === "renewal"
                   ? vm.template.cost_plan
                   : {
-                      amount: upgradeRequest ? 0 : 0, // This would need proper calculation
-                      currency: "EUR", // Default, should be dynamic
-                    }
+                    amount: upgradeRequest ? 0 : 0, // This would need proper calculation
+                    currency: "EUR", // Default, should be dynamic
+                  }
               }
               onPaid={handlePaymentComplete}
               loadOrder={async () => {
@@ -200,12 +215,12 @@ export default function VmPaymentFlow({
   const lnurlMethod: PaymentMethod | null =
     type === "renewal"
       ? {
-          name: "lnurl",
-          currencies: ["BTC"],
-          metadata: {
-            address: `${vm.id}@${new URL(ApiUrl).host}`,
-          },
-        }
+        name: "lnurl",
+        currencies: ["BTC"],
+        metadata: {
+          address: `${vm.id}@${new URL(ApiUrl).host}`,
+        },
+      }
       : null;
 
   if (methodsLoading) {
@@ -240,6 +255,35 @@ export default function VmPaymentFlow({
 
         {"lightning" in payment.data ? (
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
+        ) : "nwc" in payment.data ? (
+          <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
+            <div className="text-center space-y-2">
+              <div className="text-lg font-bold">
+                <CostAmount
+                  cost={{
+                    currency: payment.currency,
+                    amount:
+                      payment.currency === "BTC"
+                        ? (payment.amount + payment.tax) / 1000
+                        : (payment.amount + payment.tax) / 100,
+                  }}
+                  converted={false}
+                />
+              </div>
+              <div className="text-sm text-neutral-400">Total Amount</div>
+            </div>
+
+            <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg p-3">
+              <div className="text-orange-400 text-sm font-medium">⚡ NWC Payment Processing</div>
+              <p className="text-neutral-400 text-sm mt-1">
+                Payment is being processed through your configured Nostr Wallet Connect connection.
+                This may take a few moments to complete.
+              </p>
+              <div className="text-xs text-neutral-500 mt-2">
+                Status: {payment.data.nwc.status}
+              </div>
+            </div>
+          </div>
         ) : "revolut" in payment.data ? (
           <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
             <div className="text-center space-y-2">
@@ -450,9 +494,9 @@ export default function VmPaymentFlow({
               type === "renewal"
                 ? vm.template.cost_plan
                 : {
-                    amount: 0, // Will be determined by the widget
-                    currency: "EUR", // Default, should be dynamic
-                  }
+                  amount: 0, // Will be determined by the widget
+                  currency: "EUR", // Default, should be dynamic
+                }
             }
             onPaid={handlePaymentComplete}
             loadOrder={async () => {

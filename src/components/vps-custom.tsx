@@ -16,7 +16,7 @@ export function VpsCustomOrder({
 }: {
   templates: Array<VmCustomTemplateParams>;
 }) {
-  const [region] = useState(templates.at(0)?.region.id);
+  const [region, setRegion] = useState(templates.at(0)?.region.id);
   const params = templates.find((t) => t.region.id == region) ?? templates[0];
   const [cpu, setCpu] = useState(params.min_cpu ?? 1);
   const [diskType, setDiskType] = useState(params.disks.at(0));
@@ -35,6 +35,16 @@ export function VpsCustomOrder({
     interval_amount: 1,
     interval_type: "month",
   };
+
+  // Reset parameters when region changes
+  useEffect(() => {
+    if (params) {
+      setCpu(params.min_cpu ?? 1);
+      setDiskType(params.disks.at(0));
+      setRam(Math.floor((params.min_memory ?? GiB) / GiB));
+      setDisk(Math.floor((params.disks.at(0)?.min_disk ?? GiB) / GiB));
+    }
+  }, [region, params]);
 
   useEffect(() => {
     const t = setTimeout(() => {
@@ -58,8 +68,23 @@ export function VpsCustomOrder({
   return (
     <div className="flex flex-col gap-4 bg-neutral-900 rounded-xl px-4 py-6">
       <div className="text-lg">Custom VPS Order</div>
+      {templates.length > 1 && (
+        <div className="flex gap-2 items-center">
+          <div className="text-sm text-neutral-400 py-2">Region:</div>
+          {templates.map((template) => (
+            <FilterButton
+              key={template.region.id}
+              active={region === template.region.id}
+              onClick={() => setRegion(template.region.id)}
+            >
+              {template.region.name}
+            </FilterButton>
+          ))}
+        </div>
+      )}
       {params.disks.length > 1 && (
         <div className="flex gap-2">
+          <div className="text-sm text-neutral-400 py-2">Disk:</div>
           {params.disks.map((d) => (
             <FilterButton
               active={diskType?.disk_type === d.disk_type}

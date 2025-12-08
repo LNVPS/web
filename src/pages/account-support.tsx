@@ -11,6 +11,8 @@ export function AccountSupportPage() {
   const [message, setMessage] = useState("");
   const [encryptedMessage, setEncryptedMessage] = useState("");
   const [copied, setCopied] = useState(false);
+  const [useCustomEncryptKey, setUseCustomEncryptKey] = useState(false);
+  const [encryptKey, setEncryptKey] = useState("");
 
   const [encryptedInput, setEncryptedInput] = useState("");
   const [decryptedMessage, setDecryptedMessage] = useState("");
@@ -23,13 +25,13 @@ export function AccountSupportPage() {
   const subjectLine = `[${npub}] Account Query`;
 
   async function encryptMessage() {
-    if (!login || !message.trim()) return;
+    const key = useCustomEncryptKey
+      ? parsePublicKey(encryptKey)
+      : NostrProfile.id;
+    if (!login || !message.trim() || !key) return;
 
     const signer = LoginState.getSigner();
-    const encrypted = await signer.signer.nip44Encrypt(
-      message,
-      NostrProfile.id,
-    );
+    const encrypted = await signer.signer.nip44Encrypt(message, key);
     setEncryptedMessage(encrypted);
   }
 
@@ -94,6 +96,32 @@ export function AccountSupportPage() {
         <p className="text-neutral-500 text-xs mb-4">
           Support pubkey: {supportNpub}
         </p>
+
+        <div className="flex items-center gap-2 mb-4">
+          <input
+            type="checkbox"
+            checked={useCustomEncryptKey}
+            onChange={(e) => setUseCustomEncryptKey(e.target.checked)}
+          />
+          <label className="text-neutral-400 text-sm">
+            Use custom recipient key
+          </label>
+        </div>
+
+        {useCustomEncryptKey && (
+          <div className="flex flex-col gap-2 mb-4">
+            <label className="text-neutral-400 text-sm">
+              Recipient's public key (npub/nprofile/hex):
+            </label>
+            <input
+              type="text"
+              className="w-full bg-neutral-800 rounded-md p-3 text-sm"
+              placeholder="npub1..., nprofile1..., or hex"
+              value={encryptKey}
+              onChange={(e) => setEncryptKey(e.target.value)}
+            />
+          </div>
+        )}
 
         <textarea
           className="w-full bg-neutral-800 rounded-md p-3 min-h-32 resize-y"

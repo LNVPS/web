@@ -1,5 +1,11 @@
 import { useState, useCallback, useEffect } from "react";
-import { PaymentMethod, VmInstance, VmPayment, VmUpgradeRequest, AccountDetail } from "../api";
+import {
+  PaymentMethod,
+  VmInstance,
+  VmPayment,
+  VmUpgradeRequest,
+  AccountDetail,
+} from "../api";
 import VpsPayment from "./vps-payment";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
@@ -39,16 +45,19 @@ export default function VmPaymentFlow({
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
 
-  const loadAccountInfo = useCallback(async function () {
-    if (login?.api) {
-      try {
-        const accountData = await login.api.getAccount();
-        setAccount(accountData);
-      } catch (e) {
-        console.error("Failed to load account info:", e);
+  const loadAccountInfo = useCallback(
+    async function () {
+      if (login?.api) {
+        try {
+          const accountData = await login.api.getAccount();
+          setAccount(accountData);
+        } catch (e) {
+          console.error("Failed to load account info:", e);
+        }
       }
-    }
-  }, [login?.api]);
+    },
+    [login?.api],
+  );
 
   const loadPaymentMethods = useCallback(
     async function () {
@@ -118,7 +127,11 @@ export default function VmPaymentFlow({
 
   function renderPaymentMethod(method: PaymentMethod) {
     // Filter out NWC method when user has no NWC connection configured
-    if (method.name === "nwc" && (!account?.nwc_connection_string || account.nwc_connection_string.trim() === "")) {
+    if (
+      method.name === "nwc" &&
+      (!account?.nwc_connection_string ||
+        account.nwc_connection_string.trim() === "")
+    ) {
       return null;
     }
 
@@ -147,31 +160,33 @@ export default function VmPaymentFlow({
       }
       case "lightning": {
         return (
-          <div
-            key={method.name}
-            className={className}
-          >
+          <div key={method.name} className={className}>
             {nameRow(method)}
-            <AsyncButton className="rounded-lg p-2 bg-green-800 text-sm"
+            <AsyncButton
+              className="rounded-lg p-2 bg-green-800 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
-              }}>Get Invoice</AsyncButton>
+              }}
+            >
+              Get Invoice
+            </AsyncButton>
           </div>
         );
       }
       case "nwc": {
         return (
-          <div
-            key={method.name}
-            className={className}
-          >
+          <div key={method.name} className={className}>
             {nameRow(method)}
-            <AsyncButton className="rounded-lg p-2 bg-green-800 text-sm"
+            <AsyncButton
+              className="rounded-lg p-2 bg-green-800 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
-              }}>Pay with NWC</AsyncButton>
+              }}
+            >
+              Pay with NWC
+            </AsyncButton>
           </div>
         );
       }
@@ -194,9 +209,9 @@ export default function VmPaymentFlow({
                 type === "renewal"
                   ? vm.template.cost_plan
                   : {
-                    amount: upgradeRequest ? 0 : 0, // This would need proper calculation
-                    currency: "EUR", // Default, should be dynamic
-                  }
+                      amount: upgradeRequest ? 0 : 0, // This would need proper calculation
+                      currency: "EUR", // Default, should be dynamic
+                    }
               }
               onPaid={handlePaymentComplete}
               loadOrder={async () => {
@@ -233,14 +248,13 @@ export default function VmPaymentFlow({
   const lnurlMethod: PaymentMethod | null =
     type === "renewal"
       ? {
-        name: "lnurl",
-        currencies: ["BTC"],
-        metadata: {
-          address: `${vm.id}@${new URL(ApiUrl).host}`,
-        },
-      }
+          name: "lnurl",
+          currencies: ["BTC"],
+          metadata: {
+            address: `${vm.id}@${new URL(ApiUrl).host}`,
+          },
+        }
       : null;
-
 
   if (methodsLoading) {
     return (
@@ -484,9 +498,9 @@ export default function VmPaymentFlow({
               type === "renewal"
                 ? vm.template.cost_plan
                 : {
-                  amount: 0, // Will be determined by the widget
-                  currency: "EUR", // Default, should be dynamic
-                }
+                    amount: 0, // Will be determined by the widget
+                    currency: "EUR", // Default, should be dynamic
+                  }
             }
             onPaid={handlePaymentComplete}
             loadOrder={async () => {

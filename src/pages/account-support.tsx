@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useLogin from "../hooks/login";
 import { hexToBech32 } from "@snort/shared";
+import { tryParseNostrLink } from "@snort/system";
 import { AsyncButton } from "../components/button";
 import { NostrProfile } from "../const";
 import { LoginState } from "../login";
@@ -11,6 +12,12 @@ export function AccountSupportPage() {
   const [encryptedMessage, setEncryptedMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
+  const [encryptedInput, setEncryptedInput] = useState("");
+  const [decryptedMessage, setDecryptedMessage] = useState("");
+  const [decryptError, setDecryptError] = useState("");
+  const [useCustomKey, setUseCustomKey] = useState(false);
+  const [decryptKey, setDecryptKey] = useState("");
+
   const npub = hexToBech32("npub", login?.publicKey);
   const supportNpub = hexToBech32("npub", NostrProfile.id);
   const subjectLine = `[${npub}] Account Query`;
@@ -19,8 +26,33 @@ export function AccountSupportPage() {
     if (!login || !message.trim()) return;
 
     const signer = LoginState.getSigner();
-    const encrypted = await signer.signer.nip44Encrypt(message, NostrProfile.id);
+    const encrypted = await signer.signer.nip44Encrypt(
+      message,
+      NostrProfile.id,
+    );
     setEncryptedMessage(encrypted);
+  }
+
+  function parsePublicKey(input: string): string | undefined {
+    const trimmed = input.trim();
+    if (!trimmed) return undefined;
+    const parsed = tryParseNostrLink(trimmed);
+    return parsed?.id ?? trimmed;
+  }
+
+  async function decryptMessage() {
+    const key = useCustomKey ? parsePublicKey(decryptKey) : NostrProfile.id;
+    if (!login || !encryptedInput.trim() || !key) return;
+
+    setDecryptError("");
+    setDecryptedMessage("");
+    try {
+      const signer = LoginState.getSigner();
+      const decrypted = await signer.signer.nip44Decrypt(encryptedInput, key);
+      setDecryptedMessage(decrypted);
+    } catch (e) {
+      setDecryptError(e instanceof Error ? e.message : String(e));
+    }
   }
 
   async function copyToClipboard() {
@@ -87,6 +119,70 @@ export function AccountSupportPage() {
             <AsyncButton onClick={copyToClipboard}>
               {copied ? "Copied!" : "Copy to Clipboard"}
             </AsyncButton>
+          </div>
+        )}
+      </div>
+
+      <div className="border-t border-neutral-700 pt-4">
+        <div className="text-lg mb-2">Decrypt Message</div>
+        <p className="text-neutral-400 text-sm mb-4">
+          Decrypt a message sent to you by support.
+        </p>
+
+        <div className="flex items-center gap-2 mb-4">
+          <input
+            type="checkbox"
+            checked={useCustomKey}
+            onChange={(e) => setUseCustomKey(e.target.checked)}
+          />
+          <label className="text-neutral-400 text-sm">
+            Use custom sender key
+          </label>
+        </div>
+
+        {useCustomKey && (
+          <div className="flex flex-col gap-2 mb-4">
+            <label className="text-neutral-400 text-sm">
+              Sender's public key (npub/nprofile/hex):
+            </label>
+            <input
+              type="text"
+              className="w-full bg-neutral-800 rounded-md p-3 text-sm"
+              placeholder="npub1..., nprofile1..., or hex"
+              value={decryptKey}
+              onChange={(e) => setDecryptKey(e.target.value)}
+            />
+          </div>
+        )}
+
+        <textarea
+          className="w-full bg-neutral-800 rounded-md p-3 min-h-32 resize-y"
+          placeholder="Paste encrypted message here..."
+          value={encryptedInput}
+          onChange={(e) => setEncryptedInput(e.target.value)}
+        />
+
+        <div className="mt-2">
+          <AsyncButton
+            onClick={decryptMessage}
+            disabled={!encryptedInput.trim()}
+          >
+            Decrypt Message
+          </AsyncButton>
+        </div>
+
+        {decryptError && (
+          <div className="mt-4 p-3 bg-red-900/50 border border-red-500 rounded-md text-red-200 text-sm">
+            {decryptError}
+          </div>
+        )}
+
+        {decryptedMessage && (
+          <div className="mt-4 flex flex-col gap-2">
+            <p className="text-neutral-400 text-sm">Decrypted message:</p>
+            <pre className="bg-neutral-900 rounded-md px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
+              {decryptedMessage}
+            </pre>
           </div>
         )}
       </div>

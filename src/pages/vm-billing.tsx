@@ -80,7 +80,7 @@ export function VmBillingPage() {
             onClick={() => setShowPaymentFlow(true)}
             disabled={methodsLoading}
           >
-            {methodsLoading ? 'Loading...' : 'Extend Now'}
+            {methodsLoading ? "Loading..." : "Extend Now"}
           </AsyncButton>
           <AsyncButton
             onClick={async () => {
@@ -90,31 +90,39 @@ export function VmBillingPage() {
                 await login.api.patchVm(state.id, {
                   auto_renewal_enabled: newEnabled,
                 });
-                setState((prev) => prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev);
+                setState((prev) =>
+                  prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev,
+                );
               } catch (error) {
-                console.error('Failed to update auto-renewal:', error);
+                console.error("Failed to update auto-renewal:", error);
               }
             }}
           >
-            {state.auto_renewal_enabled ? 'Disable' : 'Enable'} Auto-Renewal
+            {state.auto_renewal_enabled ? "Disable" : "Enable"} Auto-Renewal
           </AsyncButton>
         </div>
       )}
 
       {!showPaymentFlow && state.auto_renewal_enabled && (
         <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
-          <div className="text-green-400 text-sm font-medium">🔄 Auto-renewal enabled</div>
+          <div className="text-green-400 text-sm font-medium">
+            🔄 Auto-renewal enabled
+          </div>
           <p className="text-neutral-400 text-sm mt-1">
-            This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection.
+            This VM will automatically renew 1 day before expiration using your
+            configured Nostr Wallet Connect connection.
           </p>
         </div>
       )}
 
       {!showPaymentFlow && !state.auto_renewal_enabled && (
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-3">
-          <div className="text-neutral-400 text-sm font-medium">Auto-renewal disabled</div>
+          <div className="text-neutral-400 text-sm font-medium">
+            Auto-renewal disabled
+          </div>
           <p className="text-neutral-400 text-sm mt-1">
-            Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals.
+            Configure an NWC connection string in account settings, then enable
+            auto-renewal to automatically pay for VM renewals.
           </p>
         </div>
       )}

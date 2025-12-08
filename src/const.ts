@@ -1,4 +1,5 @@
-import { NostrLink, NostrPrefix } from "@snort/system";
+import { NostrPrefix } from "@snort/shared";
+import { NostrLink } from "@snort/system";
 
 export const KiB = 1024;
 export const MiB = KiB * 1024;

@@ -28,7 +28,6 @@ export default function AccountPage() {
   }, [login]);
 
   const npub = hexToBech32("npub", login?.publicKey);
-  const subjectLine = `[${npub}] Account Query`;
   return (
     <div className="flex flex-col gap-2">
       Your Public Key:
@@ -36,7 +35,12 @@ export default function AccountPage() {
         {npub}
       </pre>
       <div className="flex justify-between">
-        <AsyncButton onClick={() => navigate("settings")}>Settings</AsyncButton>
+        <div className="flex gap-2">
+          <AsyncButton onClick={() => navigate("settings")}>
+            Settings
+          </AsyncButton>
+          <AsyncButton onClick={() => navigate("support")}>Support</AsyncButton>
+        </div>
         <AsyncButton
           onClick={() => {
             login?.logout();
@@ -47,18 +51,6 @@ export default function AccountPage() {
         </AsyncButton>
       </div>
       <h3>My Resources</h3>
-      <div className="rounded-xl bg-red-400 text-black p-3">
-        Something doesnt look right? <br />
-        Please contact support on:{" "}
-        <a
-          href={`mailto:sales@lnvps.net?subject=${encodeURIComponent(subjectLine)}`}
-          className="underline"
-        >
-          sales@lnvps.net
-        </a>
-        <br />
-        <b>Please include your public key in all communications.</b>
-      </div>
       {vms.length > 0 && <h3>VPS</h3>}
       {vms.map((a) => (
         <VpsInstanceRow

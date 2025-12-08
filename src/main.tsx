@@ -21,6 +21,7 @@ import { VmConsolePage } from "./pages/vm-console.tsx";
 import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
+import { AccountSupportPage } from "./pages/account-support.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/account/nostr-domain",
         element: <AccountNostrDomainPage />,
+      },
+      {
+        path: "/account/support",
+        element: <AccountSupportPage />,
       },
       {
         path: "/order",

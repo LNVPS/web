@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { VmInstance } from "../api";
-import OsImageName from "./os-image-name";
 import VpsResources from "./vps-resources";
 import VmActions from "./vps-actions";
 
@@ -30,11 +29,7 @@ export default function VpsInstanceRow({
         <div>
           <span className="text-sm text-neutral-400">#{vm.id}</span>
           &nbsp;
-          {vm.template?.name}
-          &nbsp;
-          <span className="text-sm text-neutral-400">
-            <OsImageName image={vm.image!} />
-          </span>
+          {vm.ip_assignments?.[0]?.reverse_dns ?? vm.template?.name}
         </div>
         <VpsResources vm={vm} />
       </div>

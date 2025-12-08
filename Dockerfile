@@ -1,4 +1,4 @@
-FROM node:bookworm AS builder
+FROM node:trixie AS builder
 ARG MODE=production
 WORKDIR /src
 COPY . .

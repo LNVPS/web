@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.4.1",
     "@revolut/checkout": "^1.1.20",
     "@scure/base": "^1.2.1",
     "@snort/shared": "^2.0.0-pre.3",

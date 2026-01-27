@@ -246,6 +246,16 @@ export interface LnurlPayResponse {
   tag: string;
 }
 
+export interface ContactFormRequest {
+  subject: string;
+  message: string;
+  email: string;
+  name: string;
+  user_pubkey?: string;
+  timestamp: string;
+  turnstile_token: string;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -534,6 +544,13 @@ export class LNVpsApi {
     const methodParam = method ? `?method=${method}` : "";
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
       await this.#req(`/api/v1/vm/${vm_id}/upgrade${methodParam}`, "POST", req),
+    );
+    return data;
+  }
+
+  async submitContactForm(req: ContactFormRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/contact", "POST", req),
     );
     return data;
   }

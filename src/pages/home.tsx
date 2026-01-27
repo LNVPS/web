@@ -133,7 +133,9 @@ export default function HomePage() {
                     diskType.includes(t.disk_type),
                 )
                 .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
-                .map((a) => <VpsCard spec={a} key={a.id} />)}
+                .map((a) => (
+                  <VpsCard spec={a} key={a.id} />
+                ))}
               {offers?.templates !== undefined &&
                 offers.templates.length === 0 && (
                   <div className="text-red-500 bold text-xl uppercase">
@@ -159,6 +161,8 @@ export default function HomePage() {
             <Link to="/tos">Terms</Link>
             {" | "}
             <Link to="/news">News</Link>
+            {" | "}
+            <Link to="/contact">Contact</Link>
             {" | "}
             <a
               href={`https://snort.social/${NostrProfile.encode()}`}

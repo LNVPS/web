@@ -22,6 +22,7 @@ import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
+import { ContactPage } from "./pages/contact.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/account/support",
         element: <AccountSupportPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
       {
         path: "/order",

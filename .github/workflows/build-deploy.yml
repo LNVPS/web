@@ -31,3 +31,12 @@ jobs:
           tags: registry.v0l.io/lnvps-web:latest
           build-args: MODE=lnvps
           platforms: linux/amd64
+
+      - name: Build Docker image (UAT)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: registry.v0l.io/lnvps-web:uat
+          build-args: MODE=uat
+          platforms: linux/amd64

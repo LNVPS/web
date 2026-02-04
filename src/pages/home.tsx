@@ -145,7 +145,7 @@ export default function HomePage() {
             </>
           )}
         </div>
-        {offers?.custom_template && (
+        {offers?.custom_template && offers?.custom_template.length > 0 && (
           <VpsCustomOrder templates={offers.custom_template} />
         )}
         <small className="text-neutral-400 text-center">
@@ -230,12 +230,12 @@ export default function HomePage() {
                 m.name.toLowerCase().includes("lightning") ||
                 m.name.toLowerCase().includes("btc"),
             ) && (
-              <Icon
-                name="bitcoin"
-                size={48}
-                className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
-              />
-            )}
+                <Icon
+                  name="bitcoin"
+                  size={48}
+                  className="opacity-80 hover:opacity-100 transition-opacity rounded-lg bg-white p-0.5"
+                />
+              )}
             {methods?.some((m) => m.name === "nwc") && (
               <a href="https://nwc.dev" target="_blank" title="NWC">
                 <Icon

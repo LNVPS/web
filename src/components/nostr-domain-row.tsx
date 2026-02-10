@@ -13,7 +13,7 @@ export function NostrDomainRow({
   const navigate = useNavigate();
   return (
     <div
-      className="bg-cyber-panel rounded border border-cyber-border px-2 py-3 flex items-center justify-between"
+      className="bg-cyber-panel rounded-sm border border-cyber-border px-2 py-3 flex items-center justify-between"
       key={domain.id}
     >
       <div className="flex flex-col gap-2">

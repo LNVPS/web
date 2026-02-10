@@ -31,7 +31,7 @@ export default function AccountPage() {
   return (
     <div className="flex flex-col gap-2">
       Your Public Key:
-      <pre className="bg-cyber-panel rounded px-3 py-2 select-all text-sm">
+      <pre className="bg-cyber-panel rounded-sm px-3 py-2 select-all text-sm">
         {npub}
       </pre>
       <div className="flex justify-between">

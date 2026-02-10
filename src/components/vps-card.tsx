@@ -40,7 +40,7 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
       </td>
       <td>
         <AsyncButton
-          className="text-sm uppercase rounded px-4 py-1.5 font-bold cursor-pointer select-none bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon whitespace-nowrap"
+          className="text-sm uppercase rounded-sm px-4 py-1.5 font-bold cursor-pointer select-none bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon whitespace-nowrap"
           onClick={() =>
             order({
               type: "vm",

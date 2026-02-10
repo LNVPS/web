@@ -41,7 +41,7 @@ export default function Modal(props: ModalProps) {
     <div
       className={classNames(
         "z-[42] w-screen h-screen top-0 left-0 fixed bg-black/90 flex justify-center overflow-y-auto",
-        "backdrop-blur-sm",
+        "backdrop-blur-xs",
       )}
       onMouseDown={handleBackdropClick}
       onClick={(e) => {
@@ -74,7 +74,7 @@ export default function Modal(props: ModalProps) {
                 e.stopPropagation();
                 props.onClose?.(e);
               }}
-              className="rounded aspect-square bg-cyber-panel-light border-cyber-danger/50 hover:border-cyber-danger hover:shadow-neon-danger p-3 text-cyber-danger"
+              className="rounded-sm aspect-square bg-cyber-panel-light border-cyber-danger/50 hover:border-cyber-danger hover:shadow-neon-danger p-3 text-cyber-danger"
             />
           </div>
         )}

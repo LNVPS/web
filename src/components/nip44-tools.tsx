@@ -90,7 +90,7 @@ export default function Nip44Tools() {
             </label>
             <input
               type="text"
-              className="w-full bg-cyber-panel-light rounded p-3 text-sm"
+              className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
               placeholder="npub1..., nprofile1..., or hex"
               value={encryptKey}
               onChange={(e) => setEncryptKey(e.target.value)}
@@ -99,7 +99,7 @@ export default function Nip44Tools() {
         )}
 
         <textarea
-          className="w-full bg-cyber-panel-light rounded p-3 min-h-32 resize-y"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 min-h-32 resize-y"
           placeholder="Type your message here..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -116,7 +116,7 @@ export default function Nip44Tools() {
             <p className="text-cyber-muted text-sm">
               Encrypted message (copy and include in your email):
             </p>
-            <pre className="bg-cyber-panel rounded px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
+            <pre className="bg-cyber-panel rounded-sm px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
               {encryptedMessage}
             </pre>
             <AsyncButton onClick={copyToClipboard}>
@@ -150,7 +150,7 @@ export default function Nip44Tools() {
             </label>
             <input
               type="text"
-              className="w-full bg-cyber-panel-light rounded p-3 text-sm"
+              className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
               placeholder="npub1..., nprofile1..., or hex"
               value={decryptKey}
               onChange={(e) => setDecryptKey(e.target.value)}
@@ -159,7 +159,7 @@ export default function Nip44Tools() {
         )}
 
         <textarea
-          className="w-full bg-cyber-panel-light rounded p-3 min-h-32 resize-y"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 min-h-32 resize-y"
           placeholder="Paste encrypted message here..."
           value={encryptedInput}
           onChange={(e) => setEncryptedInput(e.target.value)}
@@ -175,7 +175,7 @@ export default function Nip44Tools() {
         </div>
 
         {decryptError && (
-          <div className="mt-4 p-3 bg-cyber-danger/10 border border-cyber-danger rounded text-cyber-danger text-sm">
+          <div className="mt-4 p-3 bg-cyber-danger/10 border border-cyber-danger rounded-sm text-cyber-danger text-sm">
             {decryptError}
           </div>
         )}
@@ -183,7 +183,7 @@ export default function Nip44Tools() {
         {decryptedMessage && (
           <div className="mt-4 flex flex-col gap-2">
             <p className="text-cyber-muted text-sm">Decrypted message:</p>
-            <pre className="bg-cyber-panel rounded px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
+            <pre className="bg-cyber-panel rounded-sm px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
               {decryptedMessage}
             </pre>
           </div>

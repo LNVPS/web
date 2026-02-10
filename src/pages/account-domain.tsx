@@ -36,7 +36,7 @@ export function AccountNostrDomainPage() {
         )}
         {handles?.map((a) => (
           <div
-            className="flex items-center p-2 rounded border border-cyber-border bg-cyber-panel justify-between"
+            className="flex items-center p-2 rounded-sm border border-cyber-border bg-cyber-panel justify-between"
             key={a.id}
           >
             <div className="flex flex-col gap-2">

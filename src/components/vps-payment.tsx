@@ -47,14 +47,14 @@ export default function VpsPayment({
   const ln = `lightning:${invoice}`;
 
   return (
-    <div className="flex flex-col gap-4 rounded border border-cyber-border p-3 bg-cyber-panel items-center">
+    <div className="flex flex-col gap-4 rounded-sm border border-cyber-border p-3 bg-cyber-panel items-center">
       <QrCode
         data={ln}
         link={ln}
         width={512}
         height={512}
         avatar="/logo.jpg"
-        className="cursor-pointer rounded overflow-hidden"
+        className="cursor-pointer rounded-sm overflow-hidden"
       />
       <div className="flex flex-col items-center">
         <div className="text-cyber-primary">

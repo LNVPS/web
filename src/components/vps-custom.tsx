@@ -66,7 +66,7 @@ export function VpsCustomOrder({
   if (templates.length == 0) return;
 
   return (
-    <div className="flex flex-col gap-4 bg-cyber-panel rounded px-4 py-6">
+    <div className="flex flex-col gap-4 bg-cyber-panel rounded-sm px-4 py-6">
       <div className="text-lg">Custom VPS Order</div>
       {templates.length > 1 && (
         <div className="flex gap-2 items-center">

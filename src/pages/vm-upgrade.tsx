@@ -52,7 +52,7 @@ export default function VmUpgradePage() {
           &lt; Back to VM
         </Link>
         <VpsInstanceRow vm={state} actions={false} />
-        <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded">
+        <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded-sm">
           <h3 className="text-lg font-bold mb-2">Upgrade Not Available</h3>
           <p>
             This VM uses a custom template and cannot be upgraded. Only VMs
@@ -156,7 +156,7 @@ export default function VmUpgradePage() {
       <div className="text-xl">Upgrade VM Specifications</div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-cyber-panel p-4 rounded">
+        <div className="bg-cyber-panel p-4 rounded-sm">
           <h3 className="text-lg font-bold mb-4">Current Specifications</h3>
           <div className="space-y-2">
             <div>CPU: {currentCpu} cores</div>
@@ -167,7 +167,7 @@ export default function VmUpgradePage() {
           </div>
         </div>
 
-        <div className="bg-cyber-panel p-4 rounded">
+        <div className="bg-cyber-panel p-4 rounded-sm">
           <h3 className="text-lg font-bold mb-4">Upgrade To</h3>
           <div className="space-y-4">
             <div>
@@ -181,7 +181,7 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeCpu(parseInt(e.target.value) || currentCpu)
                 }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
                 Minimum: {currentCpu} cores
@@ -199,7 +199,7 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeMemory(parseInt(e.target.value) || currentMemoryGB)
                 }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
                 Minimum: {currentMemoryGB} GB
@@ -217,7 +217,7 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeDisk(parseInt(e.target.value) || currentDiskGB)
                 }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
                 Minimum: {currentDiskGB} GB{" "}
@@ -228,7 +228,7 @@ export default function VmUpgradePage() {
         </div>
       </div>
 
-      <div className="bg-cyber-panel p-4 rounded">
+      <div className="bg-cyber-panel p-4 rounded-sm">
         <h3 className="text-lg font-bold mb-4">Payment Method</h3>
         {methodsLoading ? (
           <div className="text-cyber-muted">Loading payment methods...</div>
@@ -241,7 +241,7 @@ export default function VmUpgradePage() {
                 // Clear quote when payment method changes
                 setQuote(undefined);
               }}
-              className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
+              className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
             >
               {paymentMethods?.map((method) => (
                 <option key={method.name} value={method.name}>
@@ -260,16 +260,16 @@ export default function VmUpgradePage() {
       </div>
 
       {error && (
-        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded">
+        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded-sm">
           <strong>Error:</strong> {error}
         </div>
       )}
 
       {quote && (
-        <div className="bg-cyber-primary/20 text-cyber-primary p-4 rounded">
+        <div className="bg-cyber-primary/20 text-cyber-primary p-4 rounded-sm">
           <h3 className="text-lg font-bold mb-2">Upgrade Quote</h3>
           <div className="space-y-3">
-            <div className="bg-cyber-primary/10 p-3 rounded">
+            <div className="bg-cyber-primary/10 p-3 rounded-sm">
               <h4 className="font-semibold mb-2">Cost Breakdown</h4>
               <div className="space-y-1 text-sm">
                 <div className="flex justify-between">

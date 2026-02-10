@@ -104,13 +104,13 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
           case "list": {
             if (t.ordered) {
               return (
-                <ol key={ctr++} className="list-decimal list-outside">
+                <ol key={ctr++} className="list-decimal list-outside pl-6">
                   {t.items.map(renderToken)}
                 </ol>
               );
             } else {
               return (
-                <ul key={ctr++} className="list-disc list-outside">
+                <ul key={ctr++} className="list-disc list-outside pl-6">
                   {t.items.map(renderToken)}
                 </ul>
               );

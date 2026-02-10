@@ -13,7 +13,7 @@ export function FilterButton({
   return (
     <div
       className={classNames(
-        "rounded border px-4 py-1 cursor-pointer select-none transition-all duration-200 text-sm",
+        "rounded-sm border px-4 py-1 cursor-pointer select-none transition-all duration-200 text-sm",
         {
           "bg-cyber-primary/10 border-cyber-primary text-cyber-primary shadow-neon-sm":
             active,

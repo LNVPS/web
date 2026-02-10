@@ -67,7 +67,7 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
   return (
     <div className="flex flex-col gap-4">
       <div className="text-xl">New Order</div>
-      <div className="flex justify-between items-center rounded bg-cyber-panel px-4 py-3">
+      <div className="flex justify-between items-center rounded-sm bg-cyber-panel px-4 py-3">
         <div className="flex flex-col gap-1">
           <div>{template.name}</div>
           <VpsResources vm={template} />
@@ -82,7 +82,7 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
             {sortedImages.map((a) => (
               <div
                 className={classNames(
-                  "flex justify-between items-center rounded px-4 py-3 cursor-pointer",
+                  "flex justify-between items-center rounded-sm px-4 py-3 cursor-pointer",
                   {
                     "bg-cyber-panel": useImage !== a.id,
                     "bg-cyber-panel-light": useImage === a.id,

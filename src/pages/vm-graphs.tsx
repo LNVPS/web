@@ -81,7 +81,7 @@ export function VmGraphsPage() {
         if (active && payload && payload.length) {
           const data = payload[0].payload as TimeSeriesData;
           return (
-            <div className="flex flex-col gap-2 bg-cyber-panel-light border border-cyber-border rounded px-2 py-3">
+            <div className="flex flex-col gap-2 bg-cyber-panel-light border border-cyber-border rounded-sm px-2 py-3">
               <div>{data.timestamp}</div>
               {payload.map((p) => (
                 <div>

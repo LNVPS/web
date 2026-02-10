@@ -53,7 +53,7 @@ export default function SSHKeySelector({
         <>
           <b className="text-cyber-primary">Select SSH Key:</b>
           <select
-            className="bg-cyber-panel p-2 rounded border border-cyber-border"
+            className="bg-cyber-panel p-2 rounded-sm border border-cyber-border"
             value={selectedKey}
             onChange={(e) => setSelectedKey(Number(e.target.value))}
           >

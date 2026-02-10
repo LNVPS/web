@@ -47,7 +47,7 @@ export function StatusPage() {
 
     return (
       <span
-        className={`px-2 py-1 rounded text-xs font-medium ${getStatusColor(status)}`}
+        className={`px-2 py-1 rounded-sm text-xs font-medium ${getStatusColor(status)}`}
       >
         {status}
       </span>
@@ -86,7 +86,7 @@ export function StatusPage() {
 
     return (
       <span
-        className={`px-2 py-1 rounded text-xs font-medium ${getTypeColor(type)}`}
+        className={`px-2 py-1 rounded-sm text-xs font-medium ${getTypeColor(type)}`}
       >
         {getTypeLabel(type)}
       </span>
@@ -119,7 +119,7 @@ export function StatusPage() {
     if (!isActive) return null;
 
     return (
-      <span className="text-xs text-cyber-muted bg-cyber-panel-light px-2 py-1 rounded">
+      <span className="text-xs text-cyber-muted bg-cyber-panel-light px-2 py-1 rounded-sm">
         Active for {formatDuration(duration)}
       </span>
     );
@@ -354,7 +354,7 @@ export function StatusPage() {
           type="text"
           value={formData.title}
           onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-          className="w-full p-2 bg-cyber-panel-light rounded"
+          className="w-full p-2 bg-cyber-panel-light rounded-sm"
           placeholder="Incident title"
           required
         />
@@ -366,7 +366,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, service: e.target.value })
             }
-            className="p-2 bg-cyber-panel-light rounded"
+            className="p-2 bg-cyber-panel-light rounded-sm"
             placeholder="Services (comma separated)"
           />
           <input
@@ -375,7 +375,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, location: e.target.value })
             }
-            className="p-2 bg-cyber-panel-light rounded"
+            className="p-2 bg-cyber-panel-light rounded-sm"
             placeholder="Locations (comma separated)"
           />
         </div>
@@ -386,7 +386,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, status: e.target.value })
             }
-            className="p-2 bg-cyber-panel-light rounded"
+            className="p-2 bg-cyber-panel-light rounded-sm"
             required
           >
             <option value="Active">Active</option>
@@ -406,7 +406,7 @@ export function StatusPage() {
                   | "informational",
               })
             }
-            className="p-2 bg-cyber-panel-light rounded"
+            className="p-2 bg-cyber-panel-light rounded-sm"
             required
           >
             <option value="outage">Outage</option>
@@ -427,7 +427,7 @@ export function StatusPage() {
               onChange={(e) =>
                 setFormData({ ...formData, started: e.target.value })
               }
-              className="w-full p-2 bg-cyber-panel-light rounded"
+              className="w-full p-2 bg-cyber-panel-light rounded-sm"
               required
             />
           </div>
@@ -442,13 +442,13 @@ export function StatusPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, ended: e.target.value })
                 }
-                className="flex-1 p-2 bg-cyber-panel-light rounded"
+                className="flex-1 p-2 bg-cyber-panel-light rounded-sm"
               />
               {formData.ended && (
                 <button
                   type="button"
                   onClick={() => setFormData({ ...formData, ended: "" })}
-                  className="px-3 py-2 bg-cyber-panel-light hover:bg-cyber-panel rounded text-xs"
+                  className="px-3 py-2 bg-cyber-panel-light hover:bg-cyber-panel rounded-sm text-xs"
                 >
                   Clear
                 </button>
@@ -461,7 +461,7 @@ export function StatusPage() {
           type="text"
           value={formData.tags}
           onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-          className="w-full p-2 bg-cyber-panel-light rounded"
+          className="w-full p-2 bg-cyber-panel-light rounded-sm"
           placeholder="Tags (comma separated)"
         />
 
@@ -470,20 +470,20 @@ export function StatusPage() {
           onChange={(e) =>
             setFormData({ ...formData, content: e.target.value })
           }
-          className="w-full p-2 bg-cyber-panel-light rounded h-32"
+          className="w-full p-2 bg-cyber-panel-light rounded-sm h-32"
           placeholder="Incident description (markdown supported)"
         />
 
         <div className="flex gap-2">
           <AsyncButton
             onClick={handleSubmit}
-            className="bg-cyber-accent/20 hover:bg-cyber-accent/30 border border-cyber-accent text-cyber-accent px-4 py-2 rounded"
+            className="bg-cyber-accent/20 hover:bg-cyber-accent/30 border border-cyber-accent text-cyber-accent px-4 py-2 rounded-sm"
           >
             Save
           </AsyncButton>
           <AsyncButton
             onClick={onCancel}
-            className="bg-cyber-panel-light hover:bg-cyber-panel border border-cyber-border px-4 py-2 rounded"
+            className="bg-cyber-panel-light hover:bg-cyber-panel border border-cyber-border px-4 py-2 rounded-sm"
           >
             Cancel
           </AsyncButton>
@@ -508,7 +508,7 @@ export function StatusPage() {
       )}
 
       {editingId === "new" && (
-        <div className="rounded bg-cyber-panel px-3 py-4">
+        <div className="rounded-sm bg-cyber-panel px-3 py-4">
           <EditForm
             incident={{
               id: crypto.randomUUID(),
@@ -543,7 +543,7 @@ export function StatusPage() {
             return (
               <div
                 key={index}
-                className="rounded bg-cyber-panel px-3 py-4 flex flex-col gap-2"
+                className="rounded-sm bg-cyber-panel px-3 py-4 flex flex-col gap-2"
               >
                 {editingId === incident.id ? (
                   <EditForm
@@ -576,7 +576,7 @@ export function StatusPage() {
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
-                            className="p-1 hover:bg-cyber-panel rounded"
+                            className="p-1 hover:bg-cyber-panel rounded-sm"
                           >
                             <Icon name="pencil" size={16} />
                           </AsyncButton>
@@ -609,7 +609,7 @@ export function StatusPage() {
                         {incident.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="bg-cyber-panel-light px-2 py-1 rounded text-xs"
+                            className="bg-cyber-panel-light px-2 py-1 rounded-sm text-xs"
                           >
                             {tag}
                           </span>
@@ -645,7 +645,7 @@ export function StatusPage() {
             return (
               <div
                 key={index}
-                className="rounded bg-cyber-panel px-3 py-4 flex flex-col gap-2"
+                className="rounded-sm bg-cyber-panel px-3 py-4 flex flex-col gap-2"
               >
                 {editingId === incident.id ? (
                   <EditForm
@@ -678,7 +678,7 @@ export function StatusPage() {
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
-                            className="p-1 hover:bg-cyber-panel rounded"
+                            className="p-1 hover:bg-cyber-panel rounded-sm"
                           >
                             <Icon name="pencil" size={16} />
                           </AsyncButton>
@@ -711,7 +711,7 @@ export function StatusPage() {
                         {incident.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="bg-cyber-panel-light px-2 py-1 rounded text-xs"
+                            className="bg-cyber-panel-light px-2 py-1 rounded-sm text-xs"
                           >
                             {tag}
                           </span>

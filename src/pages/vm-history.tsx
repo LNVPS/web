@@ -177,7 +177,7 @@ export function VmHistoryPage() {
         &lt; Back
       </Link>
 
-      <div className="bg-cyber-panel-light p-4 rounded">
+      <div className="bg-cyber-panel-light p-4 rounded-sm">
         <h2 className="text-lg font-semibold mb-2">
           VM: {state.template.name}
         </h2>
@@ -191,7 +191,7 @@ export function VmHistoryPage() {
       )}
 
       {error && (
-        <div className="bg-cyber-danger/10 border border-cyber-danger p-4 rounded">
+        <div className="bg-cyber-danger/10 border border-cyber-danger p-4 rounded-sm">
           <div className="text-cyber-danger">
             Error loading history: {error}
           </div>
@@ -199,7 +199,7 @@ export function VmHistoryPage() {
       )}
 
       {history && history.length === 0 && (
-        <div className="bg-cyber-panel-light p-8 rounded text-center text-cyber-muted">
+        <div className="bg-cyber-panel-light p-8 rounded-sm text-center text-cyber-muted">
           No history entries found for this VM.
         </div>
       )}
@@ -215,7 +215,7 @@ export function VmHistoryPage() {
               return (
                 <div
                   key={entry.id}
-                  className={`bg-cyber-panel-light p-4 rounded border-l-4 ${borderColor}`}
+                  className={`bg-cyber-panel-light p-4 rounded-sm border-l-4 ${borderColor}`}
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex flex-col">
@@ -239,7 +239,7 @@ export function VmHistoryPage() {
                   )}
 
                   {entry.previous_state && entry.new_state && (
-                    <div className="mt-3 p-3 bg-cyber-panel rounded">
+                    <div className="mt-3 p-3 bg-cyber-panel rounded-sm">
                       <div className="text-sm font-medium text-cyber-text mb-2">
                         Configuration Changes:
                       </div>
@@ -251,12 +251,12 @@ export function VmHistoryPage() {
                   )}
 
                   {entry.metadata && (
-                    <div className="mt-3 p-3 bg-cyber-panel rounded">
+                    <div className="mt-3 p-3 bg-cyber-panel rounded-sm">
                       <details>
                         <summary className="cursor-pointer text-sm font-medium text-cyber-text hover:text-cyber-text-bright">
                           Metadata
                         </summary>
-                        <div className="mt-3 p-3 bg-cyber-darker/50 rounded overflow-x-auto whitespace-pre">
+                        <div className="mt-3 p-3 bg-cyber-darker/50 rounded-sm overflow-x-auto whitespace-pre">
                           {JSON.stringify(
                             JSON.parse(entry.metadata),
                             undefined,

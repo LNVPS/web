@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import LoginButton from "../components/login-button";
+import ThemeToggle from "../components/theme-toggle";
 import { saveRefCode } from "../ref";
 
 export default function Layout() {
@@ -14,7 +15,10 @@ export default function Layout() {
         >
           LNVPS
         </Link>
-        <LoginButton />
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <LoginButton />
+        </div>
       </div>
 
       <Outlet />

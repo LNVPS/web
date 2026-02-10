@@ -136,7 +136,7 @@ export default function VmPaymentFlow({
     }
 
     const className =
-      "flex items-center justify-between px-3 py-2 bg-cyber-panel rounded cursor-pointer hover:bg-cyber-panel-light";
+      "flex items-center justify-between px-3 py-2 bg-cyber-panel rounded-sm cursor-pointer hover:bg-cyber-panel-light";
 
     const nameRow = (m: PaymentMethod) => (
       <div>
@@ -163,7 +163,7 @@ export default function VmPaymentFlow({
           <div key={method.name} className={className}>
             {nameRow(method)}
             <AsyncButton
-              className="rounded p-2 bg-cyber-primary/20 text-sm"
+              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
@@ -179,7 +179,7 @@ export default function VmPaymentFlow({
           <div key={method.name} className={className}>
             {nameRow(method)}
             <AsyncButton
-              className="rounded p-2 bg-cyber-primary/20 text-sm"
+              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
@@ -200,7 +200,7 @@ export default function VmPaymentFlow({
           );
 
         return (
-          <div key={method.name} className="bg-cyber-panel rounded p-3">
+          <div key={method.name} className="bg-cyber-panel rounded-sm p-3">
             {nameRow(method)}
             <RevolutPayWidget
               mode={import.meta.env.VITE_REVOLUT_MODE}
@@ -238,7 +238,7 @@ export default function VmPaymentFlow({
             }}
           >
             {nameRow(method)}
-            <div className="rounded p-2 bg-cyber-accent/20 text-sm">
+            <div className="rounded-sm p-2 bg-cyber-accent/20 text-sm">
               Pay Now
             </div>
           </div>
@@ -269,7 +269,7 @@ export default function VmPaymentFlow({
   if (error) {
     return (
       <div className="space-y-4">
-        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded">
+        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded-sm">
           <strong>Error:</strong> {error}
         </div>
         <div className="flex gap-2">
@@ -291,7 +291,7 @@ export default function VmPaymentFlow({
         {"lightning" in payment.data ? (
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
         ) : "revolut" in payment.data ? (
-          <div className="bg-cyber-panel-light p-4 rounded space-y-4">
+          <div className="bg-cyber-panel-light p-4 rounded-sm space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
                 <CostAmount
@@ -316,7 +316,7 @@ export default function VmPaymentFlow({
                 return (
                   <div className="space-y-2">
                     <div className="text-sm font-medium">Revolut Payment</div>
-                    <div className="bg-cyber-panel p-3 rounded">
+                    <div className="bg-cyber-panel p-3 rounded-sm">
                       <div className="text-sm">
                         Payment Token: {payment.data.revolut.token}
                       </div>
@@ -348,7 +348,7 @@ export default function VmPaymentFlow({
             })()}
           </div>
         ) : (
-          <div className="bg-cyber-panel-light p-4 rounded space-y-4">
+          <div className="bg-cyber-panel-light p-4 rounded-sm space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
                 <CostAmount
@@ -401,13 +401,13 @@ export default function VmPaymentFlow({
           <div className="text-xl font-bold">LNURL Payment</div>
         </div>
 
-        <div className="flex flex-col gap-4 rounded p-3 bg-cyber-panel items-center">
+        <div className="flex flex-col gap-4 rounded-sm p-3 bg-cyber-panel items-center">
           <QrCode
             data={`lightning:${new LNURL(lud16).lnurl}`}
             width={512}
             height={512}
             avatar="/logo.jpg"
-            className="cursor-pointer rounded overflow-hidden"
+            className="cursor-pointer rounded-sm overflow-hidden"
           />
           <div className="monospace select-all break-all text-center text-sm">
             {lud16}
@@ -494,7 +494,7 @@ export default function VmPaymentFlow({
           <div className="text-xl font-bold">Revolut Payment</div>
         </div>
 
-        <div className="bg-cyber-panel rounded p-4">
+        <div className="bg-cyber-panel rounded-sm p-4">
           <RevolutPayWidget
             mode={import.meta.env.VITE_REVOLUT_MODE}
             pubkey={pkey}

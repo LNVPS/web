@@ -18,7 +18,7 @@ export default function VpsInstanceRow({
 
   return (
     <div
-      className="flex justify-between items-center rounded border border-cyber-border bg-cyber-panel px-3 py-2 cursor-pointer hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-200"
+      className="flex justify-between items-center rounded-sm border border-cyber-border bg-cyber-panel px-3 py-2 cursor-pointer hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-200"
       onClick={() =>
         navigate("/vm", {
           state: vm,

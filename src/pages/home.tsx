@@ -91,7 +91,7 @@ function FilterSection({
   children?: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-2 bg-cyber-panel px-3 py-2 rounded">
+    <div className="flex flex-col gap-2 bg-cyber-panel px-3 py-2 rounded-sm">
       <div className="text-md text-cyber-muted">{header}</div>
       <div className="flex gap-2 items-center">{children}</div>
     </div>
@@ -107,17 +107,17 @@ function PaymentMethodsFooter() {
           <Icon
             name="visa"
             size={48}
-            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
           />
           <Icon
             name="mastercard"
             size={48}
-            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
           />
           <Icon
             name="revolut"
             size={48}
-            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
           />
         </>
       )}
@@ -130,7 +130,7 @@ function PaymentMethodsFooter() {
         <Icon
           name="bitcoin"
           size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
         />
       )}
       {methods?.some((m) => m.name === "nwc") && (
@@ -138,7 +138,7 @@ function PaymentMethodsFooter() {
           <Icon
             name="nwc"
             size={48}
-            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
           />
         </a>
       )}
@@ -232,7 +232,7 @@ function VpsOffersSection() {
           </div>
         </div>
       ) : loadError ? (
-        <div className="text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
+        <div className="text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
           <div className="text-cyber-danger bold text-xl uppercase mb-2">
             Failed to load VPS offers
           </div>
@@ -245,7 +245,7 @@ function VpsOffersSection() {
           >
             View Status Page
           </Link>
-          <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded whitespace-pre">
+          <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
             Error: {loadError.message}
           </pre>
         </div>
@@ -308,11 +308,11 @@ function IpSpaceSection() {
             </div>
           </div>
         ) : ipError ? (
-          <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
+          <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
             <div className="text-cyber-danger bold text-xl uppercase mb-2">
               Failed to load IP blocks
             </div>
-            <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded whitespace-pre">
+            <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
               Error: {ipError.message}
             </pre>
           </div>

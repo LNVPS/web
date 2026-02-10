@@ -21,10 +21,10 @@ export default function IpBlockCard({
   const order = useNavigateOrder();
 
   const classNames =
-    "w-full text-center text-lg uppercase rounded py-3 font-bold cursor-pointer select-none";
+    "w-full text-center text-lg uppercase rounded-sm py-3 font-bold cursor-pointer select-none";
 
   return (
-    <div className="rounded border border-cyber-border px-3 py-2 flex flex-col gap-1 bg-cyber-panel hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-300">
+    <div className="rounded-sm border border-cyber-border px-3 py-2 flex flex-col gap-1 bg-cyber-panel hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-300">
       <div className="text-lg text-cyber-primary">
         {block.registry.toUpperCase()}{" "}
         {block.ip_version === "ipv6" ? "IPv6" : "IPv4"} /{price.prefix_size}

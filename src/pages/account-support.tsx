@@ -37,7 +37,7 @@ export function AccountSupportPage() {
         <p className="text-cyber-muted text-sm">
           Your Public Key (include this in all communications):
         </p>
-        <pre className="bg-cyber-panel rounded px-3 py-2 select-all text-sm break-all">
+        <pre className="bg-cyber-panel rounded-sm px-3 py-2 select-all text-sm break-all">
           {npub}
         </pre>
       </div>

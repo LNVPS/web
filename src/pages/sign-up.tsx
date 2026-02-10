@@ -75,7 +75,7 @@ export default function SignUpPage() {
       <div className="flex flex-col gap-2">
         <div>Avatar</div>
         <div
-          className="w-40 h-40 bg-cyber-panel rounded relative cursor-pointer overflow-hidden"
+          className="w-40 h-40 bg-cyber-panel rounded-sm relative cursor-pointer overflow-hidden"
           onClick={uploadImage}
         >
           <div className="absolute bg-cyber-darker/70 w-full h-full hover:opacity-90 opacity-0 flex items-center justify-center">

@@ -59,7 +59,7 @@ export function VmBillingPage() {
       <Link to={"/vm"} state={state}>
         &lt; Back
       </Link>
-      <div className="text-xl bg-cyber-panel rounded px-3 py-4 flex justify-between items-center">
+      <div className="text-xl bg-cyber-panel rounded-sm px-3 py-4 flex justify-between items-center">
         <div>Renewal for #{state.id}</div>
         <div>
           <CostLabel cost={state.template.cost_plan} />
@@ -104,7 +104,7 @@ export function VmBillingPage() {
       )}
 
       {!showPaymentFlow && state.auto_renewal_enabled && (
-        <div className="bg-cyber-primary/10 border border-cyber-primary/30 rounded p-3">
+        <div className="bg-cyber-primary/10 border border-cyber-primary/30 rounded-sm p-3">
           <div className="text-cyber-primary text-sm font-medium">
             🔄 Auto-renewal enabled
           </div>
@@ -116,7 +116,7 @@ export function VmBillingPage() {
       )}
 
       {!showPaymentFlow && !state.auto_renewal_enabled && (
-        <div className="bg-cyber-panel/50 border border-cyber-border rounded p-3">
+        <div className="bg-cyber-panel/50 border border-cyber-border rounded-sm p-3">
           <div className="text-cyber-muted text-sm font-medium">
             Auto-renewal disabled
           </div>
@@ -139,7 +139,7 @@ export function VmBillingPage() {
       {!showPaymentFlow && (
         <>
           <div className="text-xl">Payment History</div>
-          <table className="table bg-cyber-panel rounded text-center">
+          <table className="table bg-cyber-panel rounded-sm text-center">
             <thead>
               <tr>
                 <th>Date</th>

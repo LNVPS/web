@@ -15,7 +15,7 @@ export default function Profile({
     <div className="flex gap-2 items-center">
       <img
         src={profile?.picture}
-        className="w-12 h-12 rounded border border-cyber-border bg-cyber-panel object-cover object-center"
+        className="w-12 h-12 rounded-sm border border-cyber-border bg-cyber-panel object-cover object-center"
       />
       {(withName ?? true) && (
         <div className="text-cyber-primary">

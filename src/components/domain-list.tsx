@@ -8,7 +8,7 @@ interface DomainListProps {
 export function DomainList({ domains }: DomainListProps) {
   if (domains.length === 0) {
     return (
-      <div className="text-cyber-muted text-sm p-4 text-center border-2 border-dashed border-cyber-border rounded">
+      <div className="text-cyber-muted text-sm p-4 text-center border-2 border-dashed border-cyber-border rounded-sm">
         No domains added yet. Add your first domain above to get started.
       </div>
     );

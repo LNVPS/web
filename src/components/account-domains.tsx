@@ -37,13 +37,13 @@ export function AccountNostrDomains() {
     <>
       <div className="flex flex-col gap-2">
         <h3>Nostr Domains</h3>
-        <div className="bg-cyber-panel-light p-4 rounded border border-cyber-border">
+        <div className="bg-cyber-panel-light p-4 rounded-sm border border-cyber-border">
           <h4 className="text-lg font-medium mb-3 text-cyber-primary">
             DNS Configuration
           </h4>
           <p className="text-sm text-cyber-text mb-3">
             Free NIP-05 hosting, add a CNAME/A entry pointing to
-            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-primary">
+            <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-primary">
               {domains?.cname}
             </code>
           </p>
@@ -63,9 +63,9 @@ export function AccountNostrDomains() {
 
               <div className="space-y-3">
                 {/* CNAME Option */}
-                <div className="bg-cyber-panel p-3 rounded border border-cyber-border">
+                <div className="bg-cyber-panel p-3 rounded-sm border border-cyber-border">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-cyber-primary font-mono text-sm bg-cyber-primary/20 px-2 py-1 rounded">
+                    <span className="text-cyber-primary font-mono text-sm bg-cyber-primary/20 px-2 py-1 rounded-sm">
                       CNAME
                     </span>
                     <span className="text-sm text-cyber-text">
@@ -77,7 +77,7 @@ export function AccountNostrDomains() {
                       Type: <span className="text-cyber-primary">CNAME</span>,
                       Name: <span className="text-cyber-text-bright">@</span>,
                       Value:{" "}
-                      <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
+                      <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-text-bright">
                         {domains?.cname}
                       </code>
                     </div>
@@ -86,9 +86,9 @@ export function AccountNostrDomains() {
 
                 {/* A/AAAA Records Option */}
                 {dnsRecords.length > 0 && (
-                  <div className="bg-cyber-panel p-3 rounded border border-cyber-border">
+                  <div className="bg-cyber-panel p-3 rounded-sm border border-cyber-border">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-cyber-accent font-mono text-sm bg-cyber-accent/20 px-2 py-1 rounded">
+                      <span className="text-cyber-accent font-mono text-sm bg-cyber-accent/20 px-2 py-1 rounded-sm">
                         A / AAAA
                       </span>
                       <span className="text-sm text-cyber-text">
@@ -104,7 +104,7 @@ export function AccountNostrDomains() {
                             Name:{" "}
                             <span className="text-cyber-text-bright">@</span>,
                             Value:{" "}
-                            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
+                            <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-text-bright">
                               {record.value}
                             </code>
                           </div>
@@ -121,7 +121,7 @@ export function AccountNostrDomains() {
                             Name:{" "}
                             <span className="text-cyber-text-bright">@</span>,
                             Value:{" "}
-                            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
+                            <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-text-bright">
                               {record.value}
                             </code>
                           </div>
@@ -131,7 +131,7 @@ export function AccountNostrDomains() {
                 )}
               </div>
 
-              <div className="mt-4 p-3 bg-cyber-panel rounded border border-cyber-border">
+              <div className="mt-4 p-3 bg-cyber-panel rounded-sm border border-cyber-border">
                 <h5 className="font-medium mb-2 text-cyber-primary">
                   Configuration Notes:
                 </h5>
@@ -145,9 +145,9 @@ export function AccountNostrDomains() {
                     addresses but may need manual updates
                   </li>
                   <li>
-                    Use <code className="bg-cyber-panel px-1 rounded">@</code>{" "}
+                    Use <code className="bg-cyber-panel px-1 rounded-sm">@</code>{" "}
                     for the root domain or your subdomain name (e.g.,{" "}
-                    <code className="bg-cyber-panel px-1 rounded">nostr</code>)
+                    <code className="bg-cyber-panel px-1 rounded-sm">nostr</code>)
                   </li>
                   <li>
                     TTL (Time To Live) can be set to 3600 seconds (1 hour) or

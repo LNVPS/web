@@ -31,7 +31,7 @@ export default function VmPage() {
     return (
       <div
         key={a.id}
-        className="bg-cyber-panel px-2 py-3 rounded flex gap-2 flex-col justify-center"
+        className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 flex-col justify-center"
       >
         <div>
           <span className="select-none">IP: </span>
@@ -94,15 +94,15 @@ export default function VmPage() {
       <div className="grid grid-cols-2 gap-4">{networkInfo()}</div>
       <div className="text-xl">SSH:</div>
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-cyber-panel px-2 py-3 rounded flex gap-2 items-center">
+        <div className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 items-center">
           <div>Key:</div>
-          <div className="text-sm bg-cyber-panel px-3 py-1 rounded">
+          <div className="text-sm bg-cyber-panel px-3 py-1 rounded-sm">
             {state.ssh_key?.name}
           </div>
           <Icon name="pencil" onClick={() => setEditKey(true)} />
         </div>
         {!hasNoIps && (
-          <div className="bg-cyber-panel px-2 py-3 rounded flex gap-2 items-center">
+          <div className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 items-center">
             <div>Login:</div>
             <pre className="select-all bg-cyber-panel-light px-3 py-1 rounded-full">
               ssh {state.image.default_username}@{bestHost()}

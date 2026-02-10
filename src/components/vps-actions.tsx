@@ -36,7 +36,7 @@ export default function VmActions({
 
         {/*<Icon
           name="delete"
-          className="bg-cyber-panel-light p-2 rounded hover:bg-cyber-panel"
+          className="bg-cyber-panel-light p-2 rounded-sm hover:bg-cyber-panel"
           size={40}
           onClick={(e) => {
             e.stopPropagation();

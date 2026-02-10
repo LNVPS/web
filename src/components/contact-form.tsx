@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AsyncButton } from "./button";
 import { Turnstile } from "@marsidev/react-turnstile";
+import useTheme from "../hooks/theme";
 
 export interface ContactFormData {
   subject: string;
@@ -15,6 +16,7 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
+  const { theme } = useTheme();
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
@@ -74,7 +76,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
   if (success) {
     return (
       <div className="flex flex-col gap-3">
-        <div className="p-4 bg-cyber-primary/10 border border-cyber-primary rounded text-cyber-primary">
+        <div className="p-4 bg-cyber-primary/10 border border-cyber-primary rounded-sm text-cyber-primary">
           Thank you for contacting us. We'll get back to you as soon as
           possible.
         </div>
@@ -88,7 +90,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
   return (
     <div className="flex flex-col gap-3">
       {error && (
-        <div className="p-3 bg-cyber-danger/10 border border-cyber-danger rounded text-cyber-danger text-sm">
+        <div className="p-3 bg-cyber-danger/10 border border-cyber-danger rounded-sm text-cyber-danger text-sm">
           {error}
         </div>
       )}
@@ -97,7 +99,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         <label className="block text-cyber-muted text-sm mb-2">Subject *</label>
         <input
           type="text"
-          className="w-full bg-cyber-panel-light rounded p-3 text-sm"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
           placeholder="What is this regarding?"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
@@ -107,7 +109,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       <div>
         <label className="block text-cyber-muted text-sm mb-2">Message *</label>
         <textarea
-          className="w-full bg-cyber-panel-light rounded p-3 min-h-32 resize-y text-sm"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 min-h-32 resize-y text-sm"
           placeholder="Please describe your question or issue in detail..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -118,7 +120,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         <label className="block text-cyber-muted text-sm mb-2">Name *</label>
         <input
           type="text"
-          className="w-full bg-cyber-panel-light rounded p-3 text-sm"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -129,7 +131,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         <label className="block text-cyber-muted text-sm mb-2">Email *</label>
         <input
           type="email"
-          className="w-full bg-cyber-panel-light rounded p-3 text-sm"
+          className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
           placeholder="your@email.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -138,6 +140,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
       <Turnstile
         siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+        options={{ theme: theme === "light" ? "light" : "dark" }}
         onSuccess={(token) => setTurnstileToken(token)}
         onExpire={() => setTurnstileToken("")}
         onError={() => setTurnstileToken("")}

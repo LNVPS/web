@@ -12,7 +12,7 @@ declare global {
 
 export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
   const classNames =
-    "w-full text-center text-lg uppercase rounded py-3 font-bold cursor-pointer select-none";
+    "w-full text-center text-lg uppercase rounded-sm py-3 font-bold cursor-pointer select-none";
   const order = useNavigateOrder();
 
   return (

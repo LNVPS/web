@@ -741,10 +741,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@revolut/checkout@npm:^1.1.20":
-  version: 1.1.20
-  resolution: "@revolut/checkout@npm:1.1.20"
-  checksum: 10c0/8c1053a434ff759a4101f757e08a341331993e4be210fdd6c5def7e452ead9710dba300efe30fd8570a6686bd445ecd15716f5a5c93996a6d60713946e6317a0
+"@revolut/checkout@npm:^1.1.24":
+  version: 1.1.24
+  resolution: "@revolut/checkout@npm:1.1.24"
+  checksum: 10c0/c179e39032d3d5a2d63e3ef86d5de7030fbda6cf2b55dc400c46a02f59a1fd072436d7c14eeada96228c6ac13ad6e1e5902a176f5aca080530d959edd5ded044
   languageName: node
   linkType: hard
 
@@ -2920,7 +2920,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.8.0"
     "@marsidev/react-turnstile": "npm:^1.4.1"
-    "@revolut/checkout": "npm:^1.1.20"
+    "@revolut/checkout": "npm:^1.1.24"
     "@scure/base": "npm:^1.2.1"
     "@snort/shared": "npm:^2.0.0-pre.3"
     "@snort/system": "npm:^2.0.0-pre.8"
@@ -2951,6 +2951,9 @@ __metadata:
     typescript: "npm:^5.5.3"
     typescript-eslint: "npm:^8.0.0"
     vite: "npm:^6.3.4"
+  dependenciesMeta:
+    "@revolut/checkout@1.1.24":
+      unplugged: true
   languageName: unknown
   linkType: soft
 

@@ -1,69 +1,59 @@
-import RevolutCheckout, { Mode } from "@revolut/checkout";
+import RevolutCheckout from "@revolut/checkout";
+import { Mode } from "@revolut/checkout";
 import { useEffect, useRef } from "react";
-import { VmCostPlan } from "../api";
 
 interface RevolutProps {
-  amount:
-    | VmCostPlan
-    | {
-        amount: number;
-        currency: string;
-        tax?: number;
-      };
-  pubkey: string;
-  loadOrder: () => Promise<string>;
+  token: string;
   onPaid: () => void;
   onCancel?: () => void;
-  mode?: string;
+  mode?: Mode;
 }
 
 export function RevolutPayWidget({
-  pubkey,
-  loadOrder,
-  amount,
+  token,
   onPaid,
   onCancel,
   mode,
 }: RevolutProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  async function load(pubkey: string, ref: HTMLDivElement) {
-    const { revolutPay } = await RevolutCheckout.payments({
-      locale: "auto",
-      mode: (mode ?? "prod") as Mode,
-      publicToken: pubkey,
-    });
-    ref.innerHTML = "";
-    const payload = {
-      currency: amount.currency,
-      totalAmount: amount.amount * 100,
-      createOrder: async () => {
-        const id = await loadOrder();
-        return {
-          publicId: id,
-        };
-      },
-      buttonStyle: {
-        cashback: false,
-      },
-    };
-    console.debug("Revolut order: ", payload);
-    revolutPay.mount(ref, payload);
-    revolutPay.on("payment", (payload) => {
-      console.debug(payload);
-      if (payload.type === "success") {
-        onPaid();
-      }
-      if (payload.type === "cancel") {
-        onCancel?.();
-      }
-    });
-  }
+  const instanceRef = useRef<{ destroy: () => void } | null>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      load(pubkey, ref.current);
-    }
-  }, [pubkey, ref]);
+    if (!ref.current) return;
 
-  return <div ref={ref}></div>;
+    let destroyed = false;
+
+    RevolutCheckout(token, mode ?? "prod").then((instance) => {
+      if (destroyed) {
+        instance.destroy();
+        return;
+      }
+
+      instance.embeddedCheckout({
+        target: ref.current!,
+        createOrder: async () => {
+          return { publicId: token };
+        },
+        onSuccess: () => {
+          onPaid();
+        },
+        onError: ({ error }: { error: Error }) => {
+          console.error("Revolut payment error:", error.message);
+        },
+        onCancel: () => {
+          onCancel?.();
+        },
+      });
+
+      instanceRef.current = instance;
+    });
+
+    return () => {
+      destroyed = true;
+      instanceRef.current?.destroy();
+      instanceRef.current = null;
+    };
+  }, [token, mode]);
+
+  return <div ref={ref} />;
 }

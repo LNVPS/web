@@ -492,9 +492,13 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewVm(vm_id: number, method: string) {
+  async renewVm(vm_id: number, method: string, intervals?: number) {
+    const params = new URLSearchParams({ method });
+    if (intervals !== undefined && intervals > 1) {
+      params.set("intervals", intervals.toString());
+    }
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
-      await this.#req(`/api/v1/vm/${vm_id}/renew?method=${method}`, "GET"),
+      await this.#req(`/api/v1/vm/${vm_id}/renew?${params.toString()}`, "GET"),
     );
     return data;
   }

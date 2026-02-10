@@ -1,5 +1,5 @@
 import { unixNow } from "@snort/shared";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface CachedObj<T> {
   cached: number;
@@ -40,40 +40,46 @@ export function useCached<T>(
   loader: () => Promise<T>,
   expires?: number,
 ) {
-  if (import.meta.env.DEV) {
-    expires = 0;
-  }
+  const isDev = import.meta.env.DEV;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>();
   const [data, setData] = useState<CachedObj<T> | undefined>(() =>
-    loadData<T>(key),
+    isDev ? undefined : loadData<T>(key),
   );
+  const [fetched, setFetched] = useState(false);
+  const loaderRef = useRef(loader);
+  loaderRef.current = loader;
 
   useEffect(() => {
-    const now = unixNow();
-    if (
-      loading === false &&
-      error === undefined &&
-      (data === undefined || data.cached < now - (expires ?? 120))
-    ) {
-      setLoading(true);
-      storeObj<T>(key, loader)
-        .then(setData)
-        .catch((e) => {
-          if (e instanceof Error) {
-            setError(e);
-          } else {
-            setError(new Error(e.toString()));
-          }
-        })
-        .finally(() => setLoading(false));
+    if (loading || error !== undefined) return;
+
+    if (isDev) {
+      if (fetched) return;
+    } else {
+      const now = unixNow();
+      if (data !== undefined && data.cached >= now - (expires ?? 120)) return;
     }
-  }, [key, loading, error, data, loader, expires]);
+
+    setLoading(true);
+    storeObj<T>(key, () => loaderRef.current())
+      .then((result) => {
+        setData(result);
+        setFetched(true);
+      })
+      .catch((e) => {
+        if (e instanceof Error) {
+          setError(e);
+        } else {
+          setError(new Error(e.toString()));
+        }
+      })
+      .finally(() => setLoading(false));
+  }, [key, loading, error, data, fetched, isDev, expires]);
 
   return {
     data: data?.object,
     loading,
     error,
-    reloadNow: () => storeObj<T>(key, loader).then(setData),
+    reloadNow: () => storeObj<T>(key, () => loaderRef.current()).then(setData),
   };
 }

@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import {
   PaymentMethod,
   VmInstance,
@@ -44,6 +44,9 @@ export default function VmPaymentFlow({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
+  const [intervals, setIntervals] = useState(1);
+  const intervalsRef = useRef(intervals);
+  intervalsRef.current = intervals;
 
   const loadAccountInfo = useCallback(
     async function () {
@@ -80,7 +83,11 @@ export default function VmPaymentFlow({
         let paymentResult: VmPayment;
 
         if (type === "renewal") {
-          paymentResult = await login.api.renewVm(vm.id, methodName);
+          paymentResult = await login.api.renewVm(
+            vm.id,
+            methodName,
+            intervalsRef.current,
+          );
         } else if (type === "upgrade") {
           if (!upgradeRequest) {
             throw new Error("Upgrade request is required for upgrade payments");
@@ -118,9 +125,9 @@ export default function VmPaymentFlow({
     loadAccountInfo();
   }, [loadPaymentMethods, loadAccountInfo]);
 
-  // Auto-create payment for preselected payment method (used for upgrades, except revolut)
+  // Auto-create payment for preselected payment method
   useEffect(() => {
-    if (paymentMethod && paymentMethod !== "revolut" && !payment && !loading) {
+    if (paymentMethod && !payment && !loading) {
       createPayment(paymentMethod);
     }
   }, [paymentMethod, payment, loading, createPayment]);
@@ -191,39 +198,18 @@ export default function VmPaymentFlow({
         );
       }
       case "revolut": {
-        const pkey = method.metadata?.["pubkey"];
-        if (!pkey)
-          return (
-            <div key={method.name} className="text-cyber-danger">
-              Missing Revolut pubkey
-            </div>
-          );
-
         return (
-          <div key={method.name} className="bg-cyber-panel rounded-sm p-3">
+          <div key={method.name} className={className}>
             {nameRow(method)}
-            <RevolutPayWidget
-              mode={import.meta.env.VITE_REVOLUT_MODE}
-              pubkey={pkey}
-              amount={
-                type === "renewal"
-                  ? vm.template.cost_plan
-                  : {
-                      amount: upgradeRequest ? 0 : 0, // This would need proper calculation
-                      currency: "EUR", // Default, should be dynamic
-                    }
-              }
-              onPaid={handlePaymentComplete}
-              loadOrder={async () => {
-                if (!login?.api) {
-                  throw new Error("Not logged in");
-                }
+            <AsyncButton
+              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+              onClick={async () => {
+                setSelectedMethod(method);
                 await createPayment(method.name);
-                return payment && "revolut" in payment.data
-                  ? payment.data.revolut.token
-                  : "";
               }}
-            />
+            >
+              Pay with Card
+            </AsyncButton>
           </div>
         );
       }
@@ -291,62 +277,11 @@ export default function VmPaymentFlow({
         {"lightning" in payment.data ? (
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
         ) : "revolut" in payment.data ? (
-          <div className="bg-cyber-panel-light p-4 rounded-sm space-y-4">
-            <div className="text-center space-y-2">
-              <div className="text-lg font-bold">
-                <CostAmount
-                  cost={{
-                    currency: payment.currency,
-                    amount:
-                      payment.currency === "BTC"
-                        ? (payment.amount + payment.tax) / 1000
-                        : (payment.amount + payment.tax) / 100,
-                  }}
-                  converted={false}
-                />
-              </div>
-              <div className="text-sm text-cyber-muted">Total Amount</div>
-            </div>
-
-            {(() => {
-              const revolutMethod = methods?.find((m) => m.name === "revolut");
-              const pkey = revolutMethod?.metadata?.["pubkey"];
-
-              if (!pkey) {
-                return (
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium">Revolut Payment</div>
-                    <div className="bg-cyber-panel p-3 rounded-sm">
-                      <div className="text-sm">
-                        Payment Token: {payment.data.revolut.token}
-                      </div>
-                      <div className="text-xs text-cyber-muted mt-1">
-                        Use this token with your Revolut payment method
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-
-              return (
-                <RevolutPayWidget
-                  mode={import.meta.env.VITE_REVOLUT_MODE}
-                  pubkey={pkey}
-                  amount={{
-                    currency: payment.currency,
-                    amount:
-                      payment.currency === "BTC"
-                        ? (payment.amount + payment.tax) / 1000
-                        : (payment.amount + payment.tax) / 100,
-                  }}
-                  onPaid={handlePaymentComplete}
-                  loadOrder={async () =>
-                    "revolut" in payment.data ? payment.data.revolut.token : ""
-                  }
-                />
-              );
-            })()}
-          </div>
+          <RevolutPayWidget
+            mode={import.meta.env.VITE_REVOLUT_MODE}
+            token={payment.data.revolut.token}
+            onPaid={handlePaymentComplete}
+          />
         ) : (
           <div className="bg-cyber-panel-light p-4 rounded-sm space-y-4">
             <div className="text-center space-y-2">
@@ -417,8 +352,8 @@ export default function VmPaymentFlow({
     );
   }
 
-  // Skip payment method selection if payment method is preselected (but show RevolutPayWidget for revolut)
-  if (paymentMethod && paymentMethod !== "revolut") {
+  // Skip payment method selection if payment method is preselected
+  if (paymentMethod) {
     return (
       <div className="space-y-4">
         <div className="text-xl font-bold">
@@ -440,106 +375,6 @@ export default function VmPaymentFlow({
     );
   }
 
-  // Handle preselected revolut payment method
-  if (paymentMethod === "revolut") {
-    const revolutMethod = methods?.find((m) => m.name === "revolut");
-    if (!revolutMethod) {
-      return (
-        <div className="space-y-4">
-          <div className="text-xl font-bold">Revolut Payment</div>
-          <div className="text-center py-8">
-            <div className="text-cyber-danger">
-              Revolut payment method not available
-            </div>
-          </div>
-          {onCancel && (
-            <div className="flex justify-center">
-              <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
-            </div>
-          )}
-        </div>
-      );
-    }
-
-    const pkey = revolutMethod.metadata?.["pubkey"];
-    if (!pkey) {
-      return (
-        <div className="space-y-4">
-          <div className="text-xl font-bold">Revolut Payment</div>
-          <div className="text-center py-8">
-            <div className="text-cyber-danger">
-              Missing Revolut configuration
-            </div>
-          </div>
-          {onCancel && (
-            <div className="flex justify-center">
-              <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
-            </div>
-          )}
-        </div>
-      );
-    }
-
-    return (
-      <div className="space-y-4">
-        <div className="flex items-center gap-2">
-          {onCancel && (
-            <button
-              onClick={onCancel}
-              className="text-cyber-accent hover:text-cyber-accent"
-            >
-              <Icon name="arrow-left" size={20} />
-            </button>
-          )}
-          <div className="text-xl font-bold">Revolut Payment</div>
-        </div>
-
-        <div className="bg-cyber-panel rounded-sm p-4">
-          <RevolutPayWidget
-            mode={import.meta.env.VITE_REVOLUT_MODE}
-            pubkey={pkey}
-            amount={
-              type === "renewal"
-                ? vm.template.cost_plan
-                : {
-                    amount: 0, // Will be determined by the widget
-                    currency: "EUR", // Default, should be dynamic
-                  }
-            }
-            onPaid={handlePaymentComplete}
-            loadOrder={async () => {
-              if (!login?.api) {
-                throw new Error("Not logged in");
-              }
-
-              let paymentResult: VmPayment;
-              if (type === "renewal") {
-                paymentResult = await login.api.renewVm(vm.id, "revolut");
-              } else if (type === "upgrade") {
-                if (!upgradeRequest) {
-                  throw new Error(
-                    "Upgrade request is required for upgrade payments",
-                  );
-                }
-                paymentResult = await login.api.createVmUpgradePayment(
-                  vm.id,
-                  upgradeRequest,
-                  "revolut",
-                );
-              } else {
-                throw new Error("Invalid payment type");
-              }
-
-              return "revolut" in paymentResult.data
-                ? paymentResult.data.revolut.token
-                : "";
-            }}
-          />
-        </div>
-      </div>
-    );
-  }
-
   // Show payment method selection for renewals or when no method is preselected
   if (!methods && !methodsLoading) {
     return (
@@ -554,9 +389,42 @@ export default function VmPaymentFlow({
     );
   }
 
+  const intervalType = vm.template.cost_plan.interval_type;
+
   return (
     <div className="space-y-4">
       <div className="text-xl font-bold">Select Payment Method</div>
+
+      {type === "renewal" &&
+        (() => {
+          const steps = intervalType === "day" ? [1, 7, 14, 30] : [1, 3, 6, 12];
+          const stepIndex = steps.indexOf(intervals);
+          const currentIndex = stepIndex >= 0 ? stepIndex : 0;
+          return (
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <span className="text-cyber-muted text-sm">Renew for:</span>
+                <span className="text-sm">
+                  {intervals} {intervalType}
+                  {intervals > 1 ? "s" : ""}
+                </span>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={steps.length - 1}
+                step={1}
+                value={currentIndex}
+                onChange={(e) => setIntervals(steps[e.target.valueAsNumber])}
+              />
+              <div className="flex justify-between text-xs text-cyber-muted">
+                {steps.map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
       <div className="space-y-2">
         {lnurlMethod && renderPaymentMethod(lnurlMethod)}

@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactNode } from "react";
 import { DiskType, LNVpsApi, VmHostRegion } from "../api";
-import VpsCard from "../components/vps-card";
+import VpsRow, { VpsTableHeader } from "../components/vps-card";
 import { ApiUrl, NostrProfile } from "../const";
 import { Link } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
@@ -100,48 +100,50 @@ function FilterSection({
 
 function PaymentMethodsFooter() {
   const { data: methods } = usePaymentMethods();
-  return <div className="flex items-center gap-4 flex-wrap justify-center">
-    {methods?.some((m) => m.name.toLowerCase().includes("revolut")) && (
-      <>
-        <Icon
-          name="visa"
-          size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-        />
-        <Icon
-          name="mastercard"
-          size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-        />
-        <Icon
-          name="revolut"
-          size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-        />
-      </>
-    )}
-    {methods?.some(
-      (m) =>
-        m.name.toLowerCase().includes("bitcoin") ||
-        m.name.toLowerCase().includes("lightning") ||
-        m.name.toLowerCase().includes("btc"),
-    ) && (
+  return (
+    <div className="flex items-center gap-4 flex-wrap justify-center">
+      {methods?.some((m) => m.name.toLowerCase().includes("revolut")) && (
+        <>
+          <Icon
+            name="visa"
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+          <Icon
+            name="mastercard"
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+          <Icon
+            name="revolut"
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+        </>
+      )}
+      {methods?.some(
+        (m) =>
+          m.name.toLowerCase().includes("bitcoin") ||
+          m.name.toLowerCase().includes("lightning") ||
+          m.name.toLowerCase().includes("btc"),
+      ) && (
         <Icon
           name="bitcoin"
           size={48}
           className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
         />
       )}
-    {methods?.some((m) => m.name === "nwc") && (
-      <a href="https://nwc.dev" target="_blank" title="NWC">
-        <Icon
-          name="nwc"
-          size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-        />
-      </a>
-    )}
-  </div>
+      {methods?.some((m) => m.name === "nwc") && (
+        <a href="https://nwc.dev" target="_blank" title="NWC">
+          <Icon
+            name="nwc"
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+        </a>
+      )}
+    </div>
+  );
 }
 
 function VpsOffersSection() {
@@ -174,66 +176,63 @@ function VpsOffersSection() {
     }
   }, [offers]);
 
-  return <>
-    <div className="text-2xl">VPS Offers</div>
-    <div>
-      Virtual Private Server hosting with flexible plans, high uptime, and
-      dedicated support, tailored to your needs.
-    </div>
-    <div className="flex gap-4 items-center">
-      {Object.keys(regions).length > 1 && (
-        <FilterSection header={"Region"}>
-          {Object.values(regions).map((r) => {
-            return (
-              <FilterButton
-                active={region.includes(r.id)}
-                onClick={() =>
-                  setRegion((x) => {
-                    if (x.includes(r.id)) {
-                      return x.filter((y) => y != r.id);
-                    } else {
-                      return appendDedupe(x, [r.id]);
-                    }
-                  })
-                }
-              >
-                {r.name}
-              </FilterButton>
-            );
-          })}
-        </FilterSection>
-      )}
-      {diskTypes.length > 1 && (
-        <FilterSection header={"Disk"}>
-          {diskTypes.map((d) => (
-            <FilterButton
-              active={diskType.includes(d)}
-              onClick={() => {
-                setDiskType((s) => {
-                  if (s?.includes(d)) {
-                    return s.filter((y) => y !== d);
-                  } else {
-                    return appendDedupe(s, [d]);
+  return (
+    <>
+      <div className="text-2xl">VPS Offers</div>
+      <div>High-performance VPS powered by Bitcoin. No KYC, no fuss.</div>
+      <div className="flex gap-4 items-center">
+        {Object.keys(regions).length > 1 && (
+          <FilterSection header={"Region"}>
+            {Object.values(regions).map((r) => {
+              return (
+                <FilterButton
+                  active={region.includes(r.id)}
+                  onClick={() =>
+                    setRegion((x) => {
+                      if (x.includes(r.id)) {
+                        return x.filter((y) => y != r.id);
+                      } else {
+                        return appendDedupe(x, [r.id]);
+                      }
+                    })
                   }
-                });
-              }}
-            >
-              {d.toUpperCase()}
-            </FilterButton>
-          ))}
-        </FilterSection>
-      )}
-    </div>
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                >
+                  {r.name}
+                </FilterButton>
+              );
+            })}
+          </FilterSection>
+        )}
+        {diskTypes.length > 1 && (
+          <FilterSection header={"Disk"}>
+            {diskTypes.map((d) => (
+              <FilterButton
+                active={diskType.includes(d)}
+                onClick={() => {
+                  setDiskType((s) => {
+                    if (s?.includes(d)) {
+                      return s.filter((y) => y !== d);
+                    } else {
+                      return appendDedupe(s, [d]);
+                    }
+                  });
+                }}
+              >
+                {d.toUpperCase()}
+              </FilterButton>
+            ))}
+          </FilterSection>
+        )}
+      </div>
       {loading ? (
-        <div className="col-span-full text-center p-8">
+        <div className="text-center p-8">
           <div className="flex items-center justify-center gap-3">
             <Spinner width={24} height={24} />
             <span className="text-cyber-muted">Loading VPS offers...</span>
           </div>
         </div>
       ) : loadError ? (
-        <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
+        <div className="text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
           <div className="text-cyber-danger bold text-xl uppercase mb-2">
             Failed to load VPS offers
           </div>
@@ -250,40 +249,42 @@ function VpsOffersSection() {
             Error: {loadError.message}
           </pre>
         </div>
+      ) : offers?.templates !== undefined && offers.templates.length === 0 ? (
+        <div className="text-cyber-danger bold text-xl uppercase">
+          No offers available
+        </div>
       ) : (
-        <>
-          {offers?.templates
-            .filter(
-              (t) =>
-                region.includes(t.region.id) &&
-                diskType.includes(t.disk_type),
-            )
-            .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
-            .map((a) => (
-              <VpsCard spec={a} key={a.id} />
-            ))}
-          {offers?.templates !== undefined &&
-            offers.templates.length === 0 && (
-              <div className="text-cyber-danger bold text-xl uppercase">
-                No offers available
-              </div>
-            )}
-        </>
+        <div className="overflow-x-auto">
+          <table>
+            <VpsTableHeader />
+            <tbody>
+              {offers?.templates
+                .filter(
+                  (t) =>
+                    region.includes(t.region.id) &&
+                    diskType.includes(t.disk_type),
+                )
+                .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
+                .map((a) => (
+                  <VpsRow spec={a} key={a.id} />
+                ))}
+            </tbody>
+          </table>
+        </div>
       )}
-    </div>
 
-    {offers?.custom_template && offers?.custom_template.length > 0 && (
-      <VpsCustomOrder templates={offers.custom_template} />
-    )}
-    <small className="text-cyber-muted text-center">
-      All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic,
-      all prices are excluding taxes.
-    </small>
-  </>
+      {offers?.custom_template && offers?.custom_template.length > 0 && (
+        <VpsCustomOrder templates={offers.custom_template} />
+      )}
+      <small className="text-cyber-muted text-center">
+        All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all
+        prices are excluding taxes.
+      </small>
+    </>
+  );
 }
 
 function IpSpaceSection() {
-
   const {
     data: ipSpaces,
     loading: ipLoading,
@@ -295,38 +296,38 @@ function IpSpaceSection() {
 
   if (!ipSpaces || ipSpaces.length === 0) return;
 
-  return <div className="flex flex-col gap-4 mt-8">
-    <div className="text-2xl">Available IP Blocks</div>
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-      {ipLoading ? (
-        <div className="col-span-full text-center p-8">
-          <div className="flex items-center justify-center gap-3">
-            <Spinner width={24} height={24} />
-            <span className="text-cyber-muted">
-              Loading IP blocks...
-            </span>
+  return (
+    <div className="flex flex-col gap-4 mt-8">
+      <div className="text-2xl">Available IP Blocks</div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        {ipLoading ? (
+          <div className="col-span-full text-center p-8">
+            <div className="flex items-center justify-center gap-3">
+              <Spinner width={24} height={24} />
+              <span className="text-cyber-muted">Loading IP blocks...</span>
+            </div>
           </div>
-        </div>
-      ) : ipError ? (
-        <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
-          <div className="text-cyber-danger bold text-xl uppercase mb-2">
-            Failed to load IP blocks
+        ) : ipError ? (
+          <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded">
+            <div className="text-cyber-danger bold text-xl uppercase mb-2">
+              Failed to load IP blocks
+            </div>
+            <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded whitespace-pre">
+              Error: {ipError.message}
+            </pre>
           </div>
-          <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded whitespace-pre">
-            Error: {ipError.message}
-          </pre>
-        </div>
-      ) : (
-        ipSpaces.flatMap((block) =>
-          block.pricing.map((p) => (
-            <IpBlockCard
-              block={block}
-              price={p}
-              key={`${block.id}_${p.id}`}
-            />
-          )),
-        )
-      )}
+        ) : (
+          ipSpaces.flatMap((block) =>
+            block.pricing.map((p) => (
+              <IpBlockCard
+                block={block}
+                price={p}
+                key={`${block.id}_${p.id}`}
+              />
+            )),
+          )
+        )}
+      </div>
     </div>
-  </div>
+  );
 }

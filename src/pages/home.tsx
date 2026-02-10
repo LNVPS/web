@@ -265,9 +265,7 @@ function VpsOffersSection() {
                     diskType.includes(t.disk_type),
                 )
                 .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
-                .map((a) => (
-                  <VpsRow spec={a} key={a.id} />
-                ))}
+                .map((a) => <VpsRow spec={a} key={a.id} />)}
             </tbody>
           </table>
         </div>

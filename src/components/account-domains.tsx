@@ -145,9 +145,13 @@ export function AccountNostrDomains() {
                     addresses but may need manual updates
                   </li>
                   <li>
-                    Use <code className="bg-cyber-panel px-1 rounded-sm">@</code>{" "}
+                    Use{" "}
+                    <code className="bg-cyber-panel px-1 rounded-sm">@</code>{" "}
                     for the root domain or your subdomain name (e.g.,{" "}
-                    <code className="bg-cyber-panel px-1 rounded-sm">nostr</code>)
+                    <code className="bg-cyber-panel px-1 rounded-sm">
+                      nostr
+                    </code>
+                    )
                   </li>
                   <li>
                     TTL (Time To Live) can be set to 3600 seconds (1 hour) or

@@ -23,8 +23,7 @@
 
   --shadow-neon: 0 0 5px #39ff14, 0 0 20px oklch(0.8 0.3 142 / 0.2);
   --shadow-neon-sm: 0 0 3px #39ff14, 0 0 10px oklch(0.8 0.3 142 / 0.2);
-  --shadow-neon-lg:
-    0 0 10px #39ff14, 0 0 40px oklch(0.8 0.3 142 / 0.2),
+  --shadow-neon-lg: 0 0 10px #39ff14, 0 0 40px oklch(0.8 0.3 142 / 0.2),
     0 0 80px oklch(0.8 0.3 142 / 0.13);
   --shadow-neon-accent: 0 0 5px #00fff2, 0 0 20px oklch(0.75 0.15 195 / 0.2);
   --shadow-neon-danger: 0 0 5px #ff0040, 0 0 20px oklch(0.55 0.25 15 / 0.2);

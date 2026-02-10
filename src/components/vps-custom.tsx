@@ -46,6 +46,15 @@ export function VpsCustomOrder({
     }
   }, [region, params]);
 
+  // Clamp disk value when disk type changes
+  useEffect(() => {
+    if (diskType) {
+      const min = Math.floor(diskType.min_disk / GiB);
+      const max = Math.floor(diskType.max_disk / GiB);
+      setDisk((prev) => Math.max(min, Math.min(max, prev)));
+    }
+  }, [diskType]);
+
   useEffect(() => {
     const t = setTimeout(() => {
       const api = new LNVpsApi(ApiUrl, undefined);

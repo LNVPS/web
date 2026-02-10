@@ -15,10 +15,10 @@ export default function Profile({
     <div className="flex gap-2 items-center">
       <img
         src={profile?.picture}
-        className="w-12 h-12 rounded-full bg-neutral-800 object-cover object-center"
+        className="w-12 h-12 rounded border border-cyber-border bg-cyber-panel object-cover object-center"
       />
       {(withName ?? true) && (
-        <div>
+        <div className="text-cyber-primary">
           {name.length > 0 ? name : hexToBech32("npub", link.id).slice(0, 12)}
         </div>
       )}

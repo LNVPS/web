@@ -33,15 +33,15 @@ export function StatusPage() {
     const getStatusColor = (status: string) => {
       switch (status.toLowerCase()) {
         case "resolved":
-          return "bg-green-600 text-white";
+          return "bg-cyber-primary/30 text-cyber-text-bright";
         case "active":
-          return "bg-red-600 text-white";
+          return "bg-cyber-danger/30 text-cyber-text-bright";
         case "monitoring":
-          return "bg-yellow-600 text-white";
+          return "bg-cyber-warning/30 text-cyber-text-bright";
         case "investigating":
-          return "bg-orange-600 text-white";
+          return "bg-cyber-warning/30 text-cyber-text-bright";
         default:
-          return "bg-neutral-600 text-white";
+          return "bg-cyber-panel-light text-cyber-text-bright";
       }
     };
 
@@ -58,15 +58,15 @@ export function StatusPage() {
     const getTypeColor = (type: string) => {
       switch (type.toLowerCase()) {
         case "outage":
-          return "bg-red-500 text-white";
+          return "bg-cyber-danger/30 text-cyber-text-bright";
         case "degraded":
-          return "bg-orange-500 text-white";
+          return "bg-cyber-warning/30 text-cyber-text-bright";
         case "maintenance":
-          return "bg-blue-500 text-white";
+          return "bg-cyber-accent/30 text-cyber-text-bright";
         case "informational":
-          return "bg-gray-500 text-white";
+          return "bg-cyber-muted text-cyber-text-bright";
         default:
-          return "bg-neutral-600 text-white";
+          return "bg-cyber-panel-light text-cyber-text-bright";
       }
     };
 
@@ -119,7 +119,7 @@ export function StatusPage() {
     if (!isActive) return null;
 
     return (
-      <span className="text-xs text-neutral-400 bg-neutral-800 px-2 py-1 rounded">
+      <span className="text-xs text-cyber-muted bg-cyber-panel-light px-2 py-1 rounded">
         Active for {formatDuration(duration)}
       </span>
     );
@@ -354,7 +354,7 @@ export function StatusPage() {
           type="text"
           value={formData.title}
           onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-          className="w-full p-2 bg-neutral-800 rounded"
+          className="w-full p-2 bg-cyber-panel-light rounded"
           placeholder="Incident title"
           required
         />
@@ -366,7 +366,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, service: e.target.value })
             }
-            className="p-2 bg-neutral-800 rounded"
+            className="p-2 bg-cyber-panel-light rounded"
             placeholder="Services (comma separated)"
           />
           <input
@@ -375,7 +375,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, location: e.target.value })
             }
-            className="p-2 bg-neutral-800 rounded"
+            className="p-2 bg-cyber-panel-light rounded"
             placeholder="Locations (comma separated)"
           />
         </div>
@@ -386,7 +386,7 @@ export function StatusPage() {
             onChange={(e) =>
               setFormData({ ...formData, status: e.target.value })
             }
-            className="p-2 bg-neutral-800 rounded"
+            className="p-2 bg-cyber-panel-light rounded"
             required
           >
             <option value="Active">Active</option>
@@ -406,7 +406,7 @@ export function StatusPage() {
                   | "informational",
               })
             }
-            className="p-2 bg-neutral-800 rounded"
+            className="p-2 bg-cyber-panel-light rounded"
             required
           >
             <option value="outage">Outage</option>
@@ -418,7 +418,7 @@ export function StatusPage() {
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">
+            <label className="block text-sm text-cyber-muted mb-1">
               Start Time
             </label>
             <input
@@ -427,12 +427,12 @@ export function StatusPage() {
               onChange={(e) =>
                 setFormData({ ...formData, started: e.target.value })
               }
-              className="w-full p-2 bg-neutral-800 rounded"
+              className="w-full p-2 bg-cyber-panel-light rounded"
               required
             />
           </div>
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">
+            <label className="block text-sm text-cyber-muted mb-1">
               End Time (optional)
             </label>
             <div className="flex gap-2">
@@ -442,13 +442,13 @@ export function StatusPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, ended: e.target.value })
                 }
-                className="flex-1 p-2 bg-neutral-800 rounded"
+                className="flex-1 p-2 bg-cyber-panel-light rounded"
               />
               {formData.ended && (
                 <button
                   type="button"
                   onClick={() => setFormData({ ...formData, ended: "" })}
-                  className="px-3 py-2 bg-neutral-700 hover:bg-neutral-600 rounded text-xs"
+                  className="px-3 py-2 bg-cyber-panel-light hover:bg-cyber-panel rounded text-xs"
                 >
                   Clear
                 </button>
@@ -461,7 +461,7 @@ export function StatusPage() {
           type="text"
           value={formData.tags}
           onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-          className="w-full p-2 bg-neutral-800 rounded"
+          className="w-full p-2 bg-cyber-panel-light rounded"
           placeholder="Tags (comma separated)"
         />
 
@@ -470,20 +470,20 @@ export function StatusPage() {
           onChange={(e) =>
             setFormData({ ...formData, content: e.target.value })
           }
-          className="w-full p-2 bg-neutral-800 rounded h-32"
+          className="w-full p-2 bg-cyber-panel-light rounded h-32"
           placeholder="Incident description (markdown supported)"
         />
 
         <div className="flex gap-2">
           <AsyncButton
             onClick={handleSubmit}
-            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+            className="bg-cyber-accent/20 hover:bg-cyber-accent/30 border border-cyber-accent text-cyber-accent px-4 py-2 rounded"
           >
             Save
           </AsyncButton>
           <AsyncButton
             onClick={onCancel}
-            className="bg-neutral-600 hover:bg-neutral-700 px-4 py-2 rounded"
+            className="bg-cyber-panel-light hover:bg-cyber-panel border border-cyber-border px-4 py-2 rounded"
           >
             Cancel
           </AsyncButton>
@@ -500,7 +500,7 @@ export function StatusPage() {
         <div className="flex justify-end">
           <AsyncButton
             onClick={() => setEditingId("new")}
-            className="bg-green-600 hover:bg-green-700 px-4 py-2"
+            className="bg-cyber-primary/20 hover:bg-cyber-primary/30 border border-cyber-primary text-cyber-primary px-4 py-2"
           >
             New Incident
           </AsyncButton>
@@ -508,7 +508,7 @@ export function StatusPage() {
       )}
 
       {editingId === "new" && (
-        <div className="rounded-xl bg-neutral-900 px-3 py-4">
+        <div className="rounded bg-cyber-panel px-3 py-4">
           <EditForm
             incident={{
               id: crypto.randomUUID(),
@@ -530,7 +530,7 @@ export function StatusPage() {
 
       {activeIncidents.length > 0 && (
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-semibold text-red-400">
+          <div className="text-lg font-semibold text-cyber-danger">
             Active Incidents
           </div>
           {activeIncidents.map((incident, index) => {
@@ -543,7 +543,7 @@ export function StatusPage() {
             return (
               <div
                 key={index}
-                className="rounded-xl bg-neutral-900 px-3 py-4 flex flex-col gap-2"
+                className="rounded bg-cyber-panel px-3 py-4 flex flex-col gap-2"
               >
                 {editingId === incident.id ? (
                   <EditForm
@@ -576,14 +576,14 @@ export function StatusPage() {
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
-                            className="p-1 hover:bg-neutral-700 rounded"
+                            className="p-1 hover:bg-cyber-panel rounded"
                           >
                             <Icon name="pencil" size={16} />
                           </AsyncButton>
                         )}
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
+                    <div className="flex flex-wrap gap-4 text-sm text-cyber-muted items-center">
                       {incident.service && (
                         <div>Service: {incident.service}</div>
                       )}
@@ -609,7 +609,7 @@ export function StatusPage() {
                         {incident.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="bg-neutral-800 px-2 py-1 rounded text-xs"
+                            className="bg-cyber-panel-light px-2 py-1 rounded text-xs"
                           >
                             {tag}
                           </span>
@@ -617,7 +617,7 @@ export function StatusPage() {
                       </div>
                     )}
                     {duration && (
-                      <div className="text-sm text-neutral-400">
+                      <div className="text-sm text-cyber-muted">
                         Duration: {formatDuration(duration / 1000)}
                       </div>
                     )}
@@ -632,7 +632,7 @@ export function StatusPage() {
 
       {resolvedIncidents.length > 0 && (
         <div className="flex flex-col gap-4">
-          <div className="text-lg font-semibold text-green-400">
+          <div className="text-lg font-semibold text-cyber-primary">
             Resolved Incidents
           </div>
           {resolvedIncidents.map((incident, index) => {
@@ -645,7 +645,7 @@ export function StatusPage() {
             return (
               <div
                 key={index}
-                className="rounded-xl bg-neutral-900 px-3 py-4 flex flex-col gap-2"
+                className="rounded bg-cyber-panel px-3 py-4 flex flex-col gap-2"
               >
                 {editingId === incident.id ? (
                   <EditForm
@@ -678,14 +678,14 @@ export function StatusPage() {
                         {canEdit && (
                           <AsyncButton
                             onClick={() => setEditingId(incident.id || "")}
-                            className="p-1 hover:bg-neutral-700 rounded"
+                            className="p-1 hover:bg-cyber-panel rounded"
                           >
                             <Icon name="pencil" size={16} />
                           </AsyncButton>
                         )}
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-4 text-sm text-neutral-400 items-center">
+                    <div className="flex flex-wrap gap-4 text-sm text-cyber-muted items-center">
                       {incident.service && (
                         <div>Service: {incident.service}</div>
                       )}
@@ -711,7 +711,7 @@ export function StatusPage() {
                         {incident.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="bg-neutral-800 px-2 py-1 rounded text-xs"
+                            className="bg-cyber-panel-light px-2 py-1 rounded text-xs"
                           >
                             {tag}
                           </span>
@@ -719,7 +719,7 @@ export function StatusPage() {
                       </div>
                     )}
                     {duration && (
-                      <div className="text-sm text-neutral-400">
+                      <div className="text-sm text-cyber-muted">
                         Duration: {formatDuration(duration / 1000)}
                       </div>
                     )}

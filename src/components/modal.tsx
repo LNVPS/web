@@ -40,7 +40,8 @@ export default function Modal(props: ModalProps) {
   return createPortal(
     <div
       className={classNames(
-        "z-[42] w-screen h-screen top-0 left-0 fixed bg-black/80 flex justify-center overflow-y-auto",
+        "z-[42] w-screen h-screen top-0 left-0 fixed bg-black/90 flex justify-center overflow-y-auto",
+        "backdrop-blur-sm",
       )}
       onMouseDown={handleBackdropClick}
       onClick={(e) => {
@@ -51,7 +52,7 @@ export default function Modal(props: ModalProps) {
         className={
           props.bodyClassName ??
           classNames(
-            "relative bg-neutral-800 p-8 transition max-xl:rounded-t-3xl lg:rounded-3xl max-xl:mt-auto lg:my-auto max-lg:w-full",
+            "relative bg-cyber-panel border border-cyber-border p-8 transition shadow-neon max-xl:rounded-t-lg lg:rounded-lg max-xl:mt-auto lg:my-auto max-lg:w-full",
             {
               "max-xl:-translate-y-[calc(100vh-100dvh)]": props.ready ?? true,
               "max-xl:translate-y-[50vh]": !(props.ready ?? true),
@@ -73,7 +74,7 @@ export default function Modal(props: ModalProps) {
                 e.stopPropagation();
                 props.onClose?.(e);
               }}
-              className="rounded-full aspect-square bg-layer-2 p-3"
+              className="rounded aspect-square bg-cyber-panel-light border-cyber-danger/50 hover:border-cyber-danger hover:shadow-neon-danger p-3 text-cyber-danger"
             />
           </div>
         )}

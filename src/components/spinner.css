@@ -6,6 +6,7 @@
 .spinner_V8m1 circle {
   stroke-linecap: round;
   animation: spinner_YpZS 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 3px #39ff14);
 }
 
 @keyframes spinner_zKoa {

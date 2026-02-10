@@ -65,7 +65,7 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
           }
           case "codespan": {
             return (
-              <code key={ctr++} className="bg-neutral-900 px-2">
+              <code key={ctr++} className="bg-cyber-panel px-2">
                 {t.raw.substring(1, t.raw.length - 1)}
               </code>
             );
@@ -88,7 +88,7 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
             return (
               <blockquote
                 key={ctr++}
-                className="outline-l-neutral-900 outline text-neutral-300 p-3"
+                className="outline-l-cyber-panel outline text-cyber-text p-3"
               >
                 {t.tokens ? t.tokens.map(renderToken) : t.raw}
               </blockquote>

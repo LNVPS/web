@@ -1,7 +1,4 @@
-import {
-  EventPublisher,
-  PrivateKeySigner,
-} from "@snort/system";
+import { EventPublisher, PrivateKeySigner } from "@snort/system";
 import { AsyncButton } from "../components/button";
 import { useContext, useState } from "react";
 import { hexToBech32 } from "@snort/shared";
@@ -51,17 +48,16 @@ export default function SignUpPage() {
     navigate("/");
   }
 
-
   return (
     <div className="flex flex-col gap-4">
-      {error && <b className="text-red-500">{error}</b>}
+      {error && <b className="text-cyber-danger">{error}</b>}
       <h1>Login</h1>
 
       <Login onLogin={() => navigate("/")} />
 
       <div className="flex gap-4 items-center my-6">
         <div className="text-xl">OR</div>
-        <div className="h-[1px] bg-neutral-800 w-full"></div>
+        <div className="h-[1px] bg-cyber-border w-full"></div>
       </div>
 
       <h1>Create Account</h1>
@@ -79,10 +75,10 @@ export default function SignUpPage() {
       <div className="flex flex-col gap-2">
         <div>Avatar</div>
         <div
-          className="w-40 h-40 bg-neutral-900 rounded-xl relative cursor-pointer overflow-hidden"
+          className="w-40 h-40 bg-cyber-panel rounded relative cursor-pointer overflow-hidden"
           onClick={uploadImage}
         >
-          <div className="absolute bg-black/50 w-full h-full hover:opacity-90 opacity-0 flex items-center justify-center">
+          <div className="absolute bg-cyber-darker/70 w-full h-full hover:opacity-90 opacity-0 flex items-center justify-center">
             Upload
           </div>
           {file && (

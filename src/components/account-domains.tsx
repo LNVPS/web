@@ -37,44 +37,47 @@ export function AccountNostrDomains() {
     <>
       <div className="flex flex-col gap-2">
         <h3>Nostr Domains</h3>
-        <div className="bg-neutral-800 p-4 rounded-xl">
-          <h4 className="text-lg font-medium mb-3">DNS Configuration</h4>
-          <p className="text-sm text-neutral-300 mb-3">
+        <div className="bg-cyber-panel-light p-4 rounded border border-cyber-border">
+          <h4 className="text-lg font-medium mb-3 text-cyber-primary">
+            DNS Configuration
+          </h4>
+          <p className="text-sm text-cyber-text mb-3">
             Free NIP-05 hosting, add a CNAME/A entry pointing to
-            <code className="bg-neutral-900 px-2 py-1 rounded-full select-all">
+            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-primary">
               {domains?.cname}
             </code>
           </p>
 
           <button
             onClick={handleMoreInfoClick}
-            className="text-blue-400 hover:text-blue-300 text-sm underline"
+            className="text-cyber-accent hover:text-cyber-primary text-sm underline"
           >
             More Info
           </button>
 
           {showDnsDetails && (
             <div className="mt-4 space-y-3">
-              <p className="text-sm text-neutral-300">
+              <p className="text-sm text-cyber-text">
                 Configure your domain's DNS with one of the following options:
               </p>
 
               <div className="space-y-3">
                 {/* CNAME Option */}
-                <div className="bg-neutral-700 p-3 rounded-lg">
+                <div className="bg-cyber-panel p-3 rounded border border-cyber-border">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-green-400 font-mono text-sm bg-green-400/20 px-2 py-1 rounded">
+                    <span className="text-cyber-primary font-mono text-sm bg-cyber-primary/20 px-2 py-1 rounded">
                       CNAME
                     </span>
-                    <span className="text-sm text-neutral-300">
+                    <span className="text-sm text-cyber-text">
                       (Recommended)
                     </span>
                   </div>
                   <div className="font-mono text-sm">
-                    <div className="text-neutral-400">
-                      Type: <span className="text-green-400">CNAME</span>, Name:{" "}
-                      <span className="text-white">@</span>, Value:{" "}
-                      <code className="bg-neutral-900 px-2 py-1 rounded select-all text-white">
+                    <div className="text-cyber-muted">
+                      Type: <span className="text-cyber-primary">CNAME</span>,
+                      Name: <span className="text-cyber-text-bright">@</span>,
+                      Value:{" "}
+                      <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
                         {domains?.cname}
                       </code>
                     </div>
@@ -83,12 +86,12 @@ export function AccountNostrDomains() {
 
                 {/* A/AAAA Records Option */}
                 {dnsRecords.length > 0 && (
-                  <div className="bg-neutral-700 p-3 rounded-lg">
+                  <div className="bg-cyber-panel p-3 rounded border border-cyber-border">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-blue-400 font-mono text-sm bg-blue-400/20 px-2 py-1 rounded">
+                      <span className="text-cyber-accent font-mono text-sm bg-cyber-accent/20 px-2 py-1 rounded">
                         A / AAAA
                       </span>
-                      <span className="text-sm text-neutral-300">
+                      <span className="text-sm text-cyber-text">
                         (Alternative)
                       </span>
                     </div>
@@ -96,10 +99,12 @@ export function AccountNostrDomains() {
                       {dnsRecords
                         .filter((record) => record.type === "A")
                         .map((record, index) => (
-                          <div key={`A-${index}`} className="text-neutral-400">
-                            Type: <span className="text-blue-400">A</span>,
-                            Name: <span className="text-white">@</span>, Value:{" "}
-                            <code className="bg-neutral-900 px-2 py-1 rounded select-all text-white">
+                          <div key={`A-${index}`} className="text-cyber-muted">
+                            Type: <span className="text-cyber-accent">A</span>,
+                            Name:{" "}
+                            <span className="text-cyber-text-bright">@</span>,
+                            Value:{" "}
+                            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
                               {record.value}
                             </code>
                           </div>
@@ -109,11 +114,14 @@ export function AccountNostrDomains() {
                         .map((record, index) => (
                           <div
                             key={`AAAA-${index}`}
-                            className="text-neutral-400"
+                            className="text-cyber-muted"
                           >
-                            Type: <span className="text-blue-400">AAAA</span>,
-                            Name: <span className="text-white">@</span>, Value:{" "}
-                            <code className="bg-neutral-900 px-2 py-1 rounded select-all text-white">
+                            Type:{" "}
+                            <span className="text-cyber-accent">AAAA</span>,
+                            Name:{" "}
+                            <span className="text-cyber-text-bright">@</span>,
+                            Value:{" "}
+                            <code className="bg-cyber-panel px-2 py-1 rounded select-all text-cyber-text-bright">
                               {record.value}
                             </code>
                           </div>
@@ -123,9 +131,11 @@ export function AccountNostrDomains() {
                 )}
               </div>
 
-              <div className="mt-4 p-3 bg-neutral-700 rounded-lg">
-                <h5 className="font-medium mb-2">Configuration Notes:</h5>
-                <ul className="text-sm text-neutral-300 space-y-1 list-disc list-inside">
+              <div className="mt-4 p-3 bg-cyber-panel rounded border border-cyber-border">
+                <h5 className="font-medium mb-2 text-cyber-primary">
+                  Configuration Notes:
+                </h5>
+                <ul className="text-sm text-cyber-text space-y-1 list-disc list-inside">
                   <li>
                     <strong>CNAME</strong> is recommended as it automatically
                     updates if our server IPs change
@@ -135,9 +145,9 @@ export function AccountNostrDomains() {
                     addresses but may need manual updates
                   </li>
                   <li>
-                    Use <code className="bg-neutral-900 px-1 rounded">@</code>{" "}
+                    Use <code className="bg-cyber-panel px-1 rounded">@</code>{" "}
                     for the root domain or your subdomain name (e.g.,{" "}
-                    <code className="bg-neutral-900 px-1 rounded">nostr</code>)
+                    <code className="bg-cyber-panel px-1 rounded">nostr</code>)
                   </li>
                   <li>
                     TTL (Time To Live) can be set to 3600 seconds (1 hour) or

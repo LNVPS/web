@@ -136,7 +136,7 @@ export default function VmPaymentFlow({
     }
 
     const className =
-      "flex items-center justify-between px-3 py-2 bg-neutral-900 rounded-xl cursor-pointer hover:bg-neutral-800";
+      "flex items-center justify-between px-3 py-2 bg-cyber-panel rounded cursor-pointer hover:bg-cyber-panel-light";
 
     const nameRow = (m: PaymentMethod) => (
       <div>
@@ -154,7 +154,7 @@ export default function VmPaymentFlow({
             onClick={() => setSelectedMethod(method)}
           >
             {nameRow(method)}
-            <div className="text-sm text-neutral-400">{addr}</div>
+            <div className="text-sm text-cyber-muted">{addr}</div>
           </div>
         );
       }
@@ -163,7 +163,7 @@ export default function VmPaymentFlow({
           <div key={method.name} className={className}>
             {nameRow(method)}
             <AsyncButton
-              className="rounded-lg p-2 bg-green-800 text-sm"
+              className="rounded p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
@@ -179,7 +179,7 @@ export default function VmPaymentFlow({
           <div key={method.name} className={className}>
             {nameRow(method)}
             <AsyncButton
-              className="rounded-lg p-2 bg-green-800 text-sm"
+              className="rounded p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
                 await createPayment(method.name);
@@ -194,13 +194,13 @@ export default function VmPaymentFlow({
         const pkey = method.metadata?.["pubkey"];
         if (!pkey)
           return (
-            <div key={method.name} className="text-red-500">
+            <div key={method.name} className="text-cyber-danger">
               Missing Revolut pubkey
             </div>
           );
 
         return (
-          <div key={method.name} className="bg-neutral-900 rounded-xl p-3">
+          <div key={method.name} className="bg-cyber-panel rounded p-3">
             {nameRow(method)}
             <RevolutPayWidget
               mode={import.meta.env.VITE_REVOLUT_MODE}
@@ -238,7 +238,9 @@ export default function VmPaymentFlow({
             }}
           >
             {nameRow(method)}
-            <div className="rounded-lg p-2 bg-blue-800 text-sm">Pay Now</div>
+            <div className="rounded p-2 bg-cyber-accent/20 text-sm">
+              Pay Now
+            </div>
           </div>
         );
     }
@@ -259,7 +261,7 @@ export default function VmPaymentFlow({
   if (methodsLoading) {
     return (
       <div className="text-center py-8">
-        <div className="text-neutral-400">Loading payment methods...</div>
+        <div className="text-cyber-muted">Loading payment methods...</div>
       </div>
     );
   }
@@ -267,7 +269,7 @@ export default function VmPaymentFlow({
   if (error) {
     return (
       <div className="space-y-4">
-        <div className="bg-red-900 text-red-100 p-4 rounded-lg">
+        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded">
           <strong>Error:</strong> {error}
         </div>
         <div className="flex gap-2">
@@ -289,7 +291,7 @@ export default function VmPaymentFlow({
         {"lightning" in payment.data ? (
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
         ) : "revolut" in payment.data ? (
-          <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
+          <div className="bg-cyber-panel-light p-4 rounded space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
                 <CostAmount
@@ -303,7 +305,7 @@ export default function VmPaymentFlow({
                   converted={false}
                 />
               </div>
-              <div className="text-sm text-neutral-400">Total Amount</div>
+              <div className="text-sm text-cyber-muted">Total Amount</div>
             </div>
 
             {(() => {
@@ -314,11 +316,11 @@ export default function VmPaymentFlow({
                 return (
                   <div className="space-y-2">
                     <div className="text-sm font-medium">Revolut Payment</div>
-                    <div className="bg-neutral-900 p-3 rounded">
+                    <div className="bg-cyber-panel p-3 rounded">
                       <div className="text-sm">
                         Payment Token: {payment.data.revolut.token}
                       </div>
-                      <div className="text-xs text-neutral-400 mt-1">
+                      <div className="text-xs text-cyber-muted mt-1">
                         Use this token with your Revolut payment method
                       </div>
                     </div>
@@ -346,7 +348,7 @@ export default function VmPaymentFlow({
             })()}
           </div>
         ) : (
-          <div className="bg-neutral-800 p-4 rounded-lg space-y-4">
+          <div className="bg-cyber-panel-light p-4 rounded space-y-4">
             <div className="text-center space-y-2">
               <div className="text-lg font-bold">
                 <CostAmount
@@ -360,10 +362,10 @@ export default function VmPaymentFlow({
                   converted={false}
                 />
               </div>
-              <div className="text-sm text-neutral-400">Total Amount</div>
+              <div className="text-sm text-cyber-muted">Total Amount</div>
             </div>
 
-            <div className="text-sm text-neutral-400 text-center">
+            <div className="text-sm text-cyber-muted text-center">
               Complete your payment using the selected payment method. Changes
               will be applied automatically after confirmation.
             </div>
@@ -392,20 +394,20 @@ export default function VmPaymentFlow({
         <div className="flex items-center gap-2">
           <button
             onClick={() => setSelectedMethod(undefined)}
-            className="text-blue-400 hover:text-blue-300"
+            className="text-cyber-accent hover:text-cyber-accent"
           >
             <Icon name="arrow-left" size={20} />
           </button>
           <div className="text-xl font-bold">LNURL Payment</div>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">
+        <div className="flex flex-col gap-4 rounded p-3 bg-cyber-panel items-center">
           <QrCode
             data={`lightning:${new LNURL(lud16).lnurl}`}
             width={512}
             height={512}
             avatar="/logo.jpg"
-            className="cursor-pointer rounded-xl overflow-hidden"
+            className="cursor-pointer rounded overflow-hidden"
           />
           <div className="monospace select-all break-all text-center text-sm">
             {lud16}
@@ -425,7 +427,7 @@ export default function VmPaymentFlow({
             : "Processing Upgrade Payment"}
         </div>
         <div className="text-center py-8">
-          <div className="text-neutral-400">
+          <div className="text-cyber-muted">
             {loading ? "Creating payment..." : "Loading payment details..."}
           </div>
         </div>
@@ -446,7 +448,7 @@ export default function VmPaymentFlow({
         <div className="space-y-4">
           <div className="text-xl font-bold">Revolut Payment</div>
           <div className="text-center py-8">
-            <div className="text-red-400">
+            <div className="text-cyber-danger">
               Revolut payment method not available
             </div>
           </div>
@@ -465,7 +467,9 @@ export default function VmPaymentFlow({
         <div className="space-y-4">
           <div className="text-xl font-bold">Revolut Payment</div>
           <div className="text-center py-8">
-            <div className="text-red-400">Missing Revolut configuration</div>
+            <div className="text-cyber-danger">
+              Missing Revolut configuration
+            </div>
           </div>
           {onCancel && (
             <div className="flex justify-center">
@@ -482,7 +486,7 @@ export default function VmPaymentFlow({
           {onCancel && (
             <button
               onClick={onCancel}
-              className="text-blue-400 hover:text-blue-300"
+              className="text-cyber-accent hover:text-cyber-accent"
             >
               <Icon name="arrow-left" size={20} />
             </button>
@@ -490,7 +494,7 @@ export default function VmPaymentFlow({
           <div className="text-xl font-bold">Revolut Payment</div>
         </div>
 
-        <div className="bg-neutral-900 rounded-xl p-4">
+        <div className="bg-cyber-panel rounded p-4">
           <RevolutPayWidget
             mode={import.meta.env.VITE_REVOLUT_MODE}
             pubkey={pkey}

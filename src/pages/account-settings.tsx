@@ -18,7 +18,7 @@ export function AccountSettings() {
   return (
     <div className="flex flex-col gap-4">
       <div className="text-xl">Account Settings</div>
-      <p className="text-neutral-400 text-sm">
+      <p className="text-cyber-muted text-sm">
         Update your billing information to appear on generated invoices
         (optional).
       </p>
@@ -94,7 +94,7 @@ export function AccountSettings() {
         />
       </div>
       <div className="text-xl">Automatic Renewal</div>
-      <p className="text-neutral-400 text-sm">
+      <p className="text-cyber-muted text-sm">
         Configure automatic VM renewal using Nostr Wallet Connect. Your wallet
         will automatically pay for VM renewals 1 day before expiration.
       </p>
@@ -111,13 +111,13 @@ export function AccountSettings() {
           }
         />
       </div>
-      <p className="text-neutral-400 text-xs">
+      <p className="text-cyber-muted text-xs">
         Get your NWC connection string from compatible Lightning wallets like
         Alby, Mutiny, or Phoenixd. Auto-renewal must also be enabled per-VM in
         your VM settings.
       </p>
       <div className="text-xl">Notification Settings</div>
-      <p className="text-neutral-400 text-sm">
+      <p className="text-cyber-muted text-sm">
         This is only for account notifications such as VM expiration
         notifications, we do not send marketing or promotional messages.
       </p>

@@ -51,9 +51,9 @@ export default function SSHKeySelector({
     <div className="flex flex-col gap-2">
       {sshKeys.length > 0 && (
         <>
-          <b>Select SSH Key:</b>
+          <b className="text-cyber-primary">Select SSH Key:</b>
           <select
-            className="bg-neutral-900 p-2 rounded-xl"
+            className="bg-cyber-panel p-2 rounded border border-cyber-border"
             value={selectedKey}
             onChange={(e) => setSelectedKey(Number(e.target.value))}
           >
@@ -70,7 +70,7 @@ export default function SSHKeySelector({
       )}
       {(showAddKey || sshKeys.length === 0) && (
         <>
-          <b>Add SSH Key:</b>
+          <b className="text-cyber-primary">Add SSH Key:</b>
           <textarea
             rows={5}
             placeholder="ssh-[rsa|ed25519] AA== id"
@@ -89,7 +89,7 @@ export default function SSHKeySelector({
           >
             Add Key
           </AsyncButton>
-          {newKeyError && <b className="text-red-500">{newKeyError}</b>}
+          {newKeyError && <b className="text-cyber-danger">{newKeyError}</b>}
         </>
       )}
     </div>

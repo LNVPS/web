@@ -31,7 +31,7 @@ export default function VmPage() {
     return (
       <div
         key={a.id}
-        className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 flex-col justify-center"
+        className="bg-cyber-panel px-2 py-3 rounded flex gap-2 flex-col justify-center"
       >
         <div>
           <span className="select-none">IP: </span>
@@ -63,7 +63,7 @@ export default function VmPage() {
   function networkInfo() {
     if (!state) return;
     if (hasNoIps) {
-      return <div className="text-sm text-red-500">No IP's assigned</div>;
+      return <div className="text-sm text-cyber-danger">No IP's assigned</div>;
     }
     return <>{state.ip_assignments?.map((i) => ipRow(i, true))}</>;
   }
@@ -94,17 +94,17 @@ export default function VmPage() {
       <div className="grid grid-cols-2 gap-4">{networkInfo()}</div>
       <div className="text-xl">SSH:</div>
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
+        <div className="bg-cyber-panel px-2 py-3 rounded flex gap-2 items-center">
           <div>Key:</div>
-          <div className="text-sm bg-neutral-900 px-3 py-1 rounded-lg">
+          <div className="text-sm bg-cyber-panel px-3 py-1 rounded">
             {state.ssh_key?.name}
           </div>
           <Icon name="pencil" onClick={() => setEditKey(true)} />
         </div>
         {!hasNoIps && (
-          <div className="bg-neutral-900 px-2 py-3 rounded-lg flex gap-2 items-center">
+          <div className="bg-cyber-panel px-2 py-3 rounded flex gap-2 items-center">
             <div>Login:</div>
-            <pre className="select-all bg-neutral-800 px-3 py-1 rounded-full">
+            <pre className="select-all bg-cyber-panel-light px-3 py-1 rounded-full">
               ssh {state.image.default_username}@{bestHost()}
             </pre>
           </div>
@@ -134,7 +134,7 @@ export default function VmPage() {
           <SSHKeySelector selectedKey={key} setSelectedKey={setKey} />
           <div className="flex flex-col gap-4 mt-8">
             <small>After selecting a new key, please restart the VM.</small>
-            {error && <b className="text-red-500">{error}</b>}
+            {error && <b className="text-cyber-danger">{error}</b>}
             <AsyncButton
               onClick={async () => {
                 setError(undefined);
@@ -173,7 +173,7 @@ export default function VmPage() {
               }
             />
             <small>DNS updates can take up to 48hrs to propagate.</small>
-            {error && <b className="text-red-500">{error}</b>}
+            {error && <b className="text-cyber-danger">{error}</b>}
             <AsyncButton
               onClick={async () => {
                 setError(undefined);

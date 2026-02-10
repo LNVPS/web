@@ -28,14 +28,9 @@ export default function CostLabel({
               interval_type: cost.interval_type,
             }}
             converted={true}
-          />
-          {" "}
-          <span
-            className="text-xs text-neutral-400">
-            (<CostAmount
-              cost={cost}
-              converted={false}
-            />)
+          />{" "}
+          <span className="text-xs text-cyber-muted">
+            (<CostAmount cost={cost} converted={false} />)
           </span>
         </div>
       );

@@ -29,14 +29,14 @@ export default function VmActions({
             }
             onReload?.();
           }}
-          className="bg-neutral-700 hover:bg-neutral-600"
+          className="bg-cyber-panel-light border-cyber-border hover:border-cyber-primary"
         >
           <Icon name={state === "running" ? "stop" : "start"} size={30} />
         </AsyncButton>
 
         {/*<Icon
           name="delete"
-          className="bg-neutral-700 p-2 rounded-lg hover:bg-neutral-600"
+          className="bg-cyber-panel-light p-2 rounded hover:bg-cyber-panel"
           size={40}
           onClick={(e) => {
             e.stopPropagation();
@@ -55,7 +55,7 @@ export default function VmActions({
               onReload?.();
             }
           }}
-          className="bg-neutral-700 hover:bg-neutral-600"
+          className="bg-cyber-panel-light border-cyber-border hover:border-cyber-danger hover:shadow-neon-danger"
         >
           <Icon name="refresh-1" size={30} />
         </AsyncButton>

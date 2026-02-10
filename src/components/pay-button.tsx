@@ -12,16 +12,16 @@ declare global {
 
 export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
   const classNames =
-    "w-full text-center text-lg uppercase rounded-xl py-3 font-bold cursor-pointer select-none";
+    "w-full text-center text-lg uppercase rounded py-3 font-bold cursor-pointer select-none";
   const order = useNavigateOrder();
 
   return (
     <AsyncButton
-      className={`${classNames} bg-green-800`}
+      className={`${classNames} bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon`}
       onClick={() =>
         order({
           type: "vm",
-          template: spec
+          template: spec,
         })
       }
     >

@@ -18,7 +18,7 @@ export default function VpsInstanceRow({
 
   return (
     <div
-      className="flex justify-between items-center rounded-xl bg-neutral-900 px-3 py-2 cursor-pointer hover:bg-neutral-800"
+      className="flex justify-between items-center rounded border border-cyber-border bg-cyber-panel px-3 py-2 cursor-pointer hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-200"
       onClick={() =>
         navigate("/vm", {
           state: vm,
@@ -27,9 +27,11 @@ export default function VpsInstanceRow({
     >
       <div className="flex flex-col gap-2">
         <div>
-          <span className="text-sm text-neutral-400">#{vm.id}</span>
+          <span className="text-sm text-cyber-muted">#{vm.id}</span>
           &nbsp;
-          {vm.ip_assignments?.[0]?.reverse_dns ?? vm.template?.name}
+          <span className="text-cyber-text-bright">
+            {vm.ip_assignments?.[0]?.reverse_dns ?? vm.template?.name}
+          </span>
         </div>
         <VpsResources vm={vm} />
       </div>
@@ -38,7 +40,7 @@ export default function VpsInstanceRow({
           <>
             <Link
               to="/vm/billing/renew"
-              className="text-red-500 text-sm"
+              className="text-cyber-danger text-sm"
               state={vm}
               onClick={(e) => e.stopPropagation()}
             >

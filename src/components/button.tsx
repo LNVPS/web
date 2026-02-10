@@ -22,11 +22,11 @@ const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>(
           }
         }}
         className={classNames(
-          "py-2 px-3 rounded-xl font-medium relative",
+          "py-2 px-3 rounded font-medium relative border border-cyber-border transition-all duration-200",
+          "hover:border-cyber-primary hover:shadow-neon-sm hover:text-cyber-primary",
           {
-            "opacity-50 cursor-not-allowed":
-              !hasBg && props.disabled === true,
-            "bg-neutral-900": !hasBg,
+            "opacity-50 cursor-not-allowed": !hasBg && props.disabled === true,
+            "bg-cyber-panel text-cyber-text": !hasBg,
           },
           className,
         )}

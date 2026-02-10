@@ -32,23 +32,23 @@ export function AccountNostrDomainPage() {
       <div className="text-xl">Handles</div>
       <div className="flex flex-col gap-1">
         {handles !== undefined && handles.length === 0 && (
-          <div className="text-red-500 text-sm">No Registerd Handles</div>
+          <div className="text-cyber-danger text-sm">No Registerd Handles</div>
         )}
         {handles?.map((a) => (
           <div
-            className="flex items-center p-2 rounded-xl bg-neutral-900 justify-between"
+            className="flex items-center p-2 rounded border border-cyber-border bg-cyber-panel justify-between"
             key={a.id}
           >
             <div className="flex flex-col gap-2">
-              <div>
+              <div className="text-cyber-text-bright">
                 {a.handle}@{domain.name}
               </div>
-              <div className="text-neutral-500 text-sm">
+              <div className="text-cyber-muted text-sm">
                 {hexToBech32("npub", a.pubkey)}
               </div>
             </div>
             <AsyncButton
-              className="bg-neutral-700 hover:bg-neutral-600"
+              className="bg-cyber-panel-light border-cyber-border hover:border-cyber-danger hover:shadow-neon-danger"
               onClick={async () => {
                 if (
                   login?.api &&
@@ -83,7 +83,7 @@ export function AccountNostrDomainPage() {
               onChange={(e) => setNewHandlePubkey(e.target.value)}
             />
             {newHandleError && (
-              <div className="text-red-500">{newHandleError}</div>
+              <div className="text-cyber-danger">{newHandleError}</div>
             )}
             <AsyncButton
               onClick={async () => {

@@ -13,19 +13,19 @@ export function NostrDomainRow({
   const navigate = useNavigate();
   return (
     <div
-      className="bg-neutral-900 rounded-xl px-2 py-3 flex items-center justify-between"
+      className="bg-cyber-panel rounded border border-cyber-border px-2 py-3 flex items-center justify-between"
       key={domain.id}
     >
       <div className="flex flex-col gap-2">
-        <div>{domain.name}</div>
-        <div className="flex gap-2 items-center text-neutral-400 text-sm">
+        <div className="text-cyber-text-bright">{domain.name}</div>
+        <div className="flex gap-2 items-center text-cyber-muted text-sm">
           <div>{domain.handles} handles</div>
-          {!domain.enabled && <div className="text-red-500">Inactive</div>}
+          {!domain.enabled && <div className="text-cyber-danger">Inactive</div>}
         </div>
       </div>
       {canEdit && (
         <AsyncButton
-          className="bg-neutral-700 hover:bg-neutral-600"
+          className="bg-cyber-panel-light border-cyber-border hover:border-cyber-primary"
           onClick={() =>
             navigate("/account/nostr-domain", {
               state: domain,

@@ -52,7 +52,7 @@ export default function VmUpgradePage() {
           &lt; Back to VM
         </Link>
         <VpsInstanceRow vm={state} actions={false} />
-        <div className="bg-yellow-900 text-yellow-100 p-4 rounded-lg">
+        <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded">
           <h3 className="text-lg font-bold mb-2">Upgrade Not Available</h3>
           <p>
             This VM uses a custom template and cannot be upgraded. Only VMs
@@ -122,7 +122,7 @@ export default function VmUpgradePage() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowPaymentFlow(false)}
-            className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+            className="text-cyber-accent hover:text-cyber-accent flex items-center gap-1"
           >
             &lt; Back to Upgrade
           </button>
@@ -156,7 +156,7 @@ export default function VmUpgradePage() {
       <div className="text-xl">Upgrade VM Specifications</div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-neutral-900 p-4 rounded-lg">
+        <div className="bg-cyber-panel p-4 rounded">
           <h3 className="text-lg font-bold mb-4">Current Specifications</h3>
           <div className="space-y-2">
             <div>CPU: {currentCpu} cores</div>
@@ -167,7 +167,7 @@ export default function VmUpgradePage() {
           </div>
         </div>
 
-        <div className="bg-neutral-900 p-4 rounded-lg">
+        <div className="bg-cyber-panel p-4 rounded">
           <h3 className="text-lg font-bold mb-4">Upgrade To</h3>
           <div className="space-y-4">
             <div>
@@ -181,9 +181,9 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeCpu(parseInt(e.target.value) || currentCpu)
                 }
-                className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
               />
-              <small className="text-neutral-400">
+              <small className="text-cyber-muted">
                 Minimum: {currentCpu} cores
               </small>
             </div>
@@ -199,9 +199,9 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeMemory(parseInt(e.target.value) || currentMemoryGB)
                 }
-                className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
               />
-              <small className="text-neutral-400">
+              <small className="text-cyber-muted">
                 Minimum: {currentMemoryGB} GB
               </small>
             </div>
@@ -217,9 +217,9 @@ export default function VmUpgradePage() {
                 onChange={(e) =>
                   setUpgradeDisk(parseInt(e.target.value) || currentDiskGB)
                 }
-                className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
+                className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
               />
-              <small className="text-neutral-400">
+              <small className="text-cyber-muted">
                 Minimum: {currentDiskGB} GB{" "}
                 {state.template.disk_type.toUpperCase()}
               </small>
@@ -228,10 +228,10 @@ export default function VmUpgradePage() {
         </div>
       </div>
 
-      <div className="bg-neutral-900 p-4 rounded-lg">
+      <div className="bg-cyber-panel p-4 rounded">
         <h3 className="text-lg font-bold mb-4">Payment Method</h3>
         {methodsLoading ? (
-          <div className="text-neutral-400">Loading payment methods...</div>
+          <div className="text-cyber-muted">Loading payment methods...</div>
         ) : (
           <div>
             <select
@@ -241,7 +241,7 @@ export default function VmUpgradePage() {
                 // Clear quote when payment method changes
                 setQuote(undefined);
               }}
-              className="w-full px-3 py-2 bg-neutral-800 rounded border border-neutral-700 focus:border-blue-500"
+              className="w-full px-3 py-2 bg-cyber-panel-light rounded border border-cyber-border focus:border-cyber-primary"
             >
               {paymentMethods?.map((method) => (
                 <option key={method.name} value={method.name}>
@@ -251,7 +251,7 @@ export default function VmUpgradePage() {
                 </option>
               ))}
             </select>
-            <small className="text-neutral-400 mt-2 block">
+            <small className="text-cyber-muted mt-2 block">
               Payment method affects the currency used for the quote and
               payment.
             </small>
@@ -260,16 +260,16 @@ export default function VmUpgradePage() {
       </div>
 
       {error && (
-        <div className="bg-red-900 text-red-100 p-4 rounded-lg">
+        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded">
           <strong>Error:</strong> {error}
         </div>
       )}
 
       {quote && (
-        <div className="bg-green-900 text-green-100 p-4 rounded-lg">
+        <div className="bg-cyber-primary/20 text-cyber-primary p-4 rounded">
           <h3 className="text-lg font-bold mb-2">Upgrade Quote</h3>
           <div className="space-y-3">
-            <div className="bg-green-800/50 p-3 rounded">
+            <div className="bg-cyber-primary/10 p-3 rounded">
               <h4 className="font-semibold mb-2">Cost Breakdown</h4>
               <div className="space-y-1 text-sm">
                 <div className="flex justify-between">
@@ -291,7 +291,7 @@ export default function VmUpgradePage() {
                     />
                   </span>
                 </div>
-                <hr className="border-green-700 my-2" />
+                <hr className="border-cyber-primary my-2" />
                 <div className="flex justify-between font-semibold">
                   <span>Pro-rated upgrade cost:</span>
                   <span>
@@ -334,7 +334,7 @@ export default function VmUpgradePage() {
       </div>
 
       {!hasValidUpgrade && (
-        <div className="text-yellow-400 text-sm">
+        <div className="text-cyber-warning text-sm">
           Please specify upgrade values that are greater than or equal to
           current values, with at least one value being greater than current.
         </div>

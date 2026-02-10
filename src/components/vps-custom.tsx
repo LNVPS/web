@@ -66,11 +66,11 @@ export function VpsCustomOrder({
   if (templates.length == 0) return;
 
   return (
-    <div className="flex flex-col gap-4 bg-neutral-900 rounded-xl px-4 py-6">
+    <div className="flex flex-col gap-4 bg-cyber-panel rounded px-4 py-6">
       <div className="text-lg">Custom VPS Order</div>
       {templates.length > 1 && (
         <div className="flex gap-2 items-center">
-          <div className="text-sm text-neutral-400 py-2">Region:</div>
+          <div className="text-sm text-cyber-muted py-2">Region:</div>
           {templates.map((template) => (
             <FilterButton
               key={template.region.id}
@@ -84,7 +84,7 @@ export function VpsCustomOrder({
       )}
       {params.disks.length > 1 && (
         <div className="flex gap-2">
-          <div className="text-sm text-neutral-400 py-2">Disk:</div>
+          <div className="text-sm text-cyber-muted py-2">Disk:</div>
           {params.disks.map((d) => (
             <FilterButton
               active={diskType?.disk_type === d.disk_type}
@@ -96,7 +96,21 @@ export function VpsCustomOrder({
         </div>
       )}
       <div className="flex items-center gap-4">
-        <div className="min-w-[100px]">{cpu} CPU</div>
+        <div className="min-w-[120px] flex items-center gap-2">
+          <input
+            type="number"
+            value={cpu}
+            onChange={(e) => {
+              const v = parseInt(e.target.value);
+              if (!isNaN(v))
+                setCpu(Math.max(params.min_cpu, Math.min(params.max_cpu, v)));
+            }}
+            min={params.min_cpu}
+            max={params.max_cpu}
+            className="w-16 text-center"
+          />
+          <span className="text-cyber-muted text-sm">CPU</span>
+        </div>
         <input
           type="range"
           value={cpu}
@@ -108,7 +122,22 @@ export function VpsCustomOrder({
         />
       </div>
       <div className="flex items-center gap-4">
-        <div className="min-w-[100px]">{ram.toString()} GB RAM</div>
+        <div className="min-w-[120px] flex items-center gap-2">
+          <input
+            type="number"
+            value={ram}
+            onChange={(e) => {
+              const v = parseInt(e.target.value);
+              const min = Math.floor(params.min_memory / GiB);
+              const max = Math.floor(params.max_memory / GiB);
+              if (!isNaN(v)) setRam(Math.max(min, Math.min(max, v)));
+            }}
+            min={Math.floor(params.min_memory / GiB)}
+            max={Math.floor(params.max_memory / GiB)}
+            className="w-16 text-center"
+          />
+          <span className="text-cyber-muted text-sm">GB RAM</span>
+        </div>
         <input
           type="range"
           value={ram}
@@ -120,8 +149,23 @@ export function VpsCustomOrder({
         />
       </div>
       <div className="flex items-center gap-4">
-        <div className="min-w-[100px]">
-          {disk.toString()} GB {diskType?.disk_type.toLocaleUpperCase()}
+        <div className="min-w-[120px] flex items-center gap-2">
+          <input
+            type="number"
+            value={disk}
+            onChange={(e) => {
+              const v = parseInt(e.target.value);
+              const min = Math.floor((diskType?.min_disk ?? 0) / GiB);
+              const max = Math.floor((diskType?.max_disk ?? 0) / GiB);
+              if (!isNaN(v)) setDisk(Math.max(min, Math.min(max, v)));
+            }}
+            min={Math.floor((diskType?.min_disk ?? 0) / GiB)}
+            max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
+            className="w-16 text-center"
+          />
+          <span className="text-cyber-muted text-sm">
+            GB {diskType?.disk_type.toLocaleUpperCase()}
+          </span>
         </div>
         <input
           type="range"

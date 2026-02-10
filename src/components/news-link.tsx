@@ -15,10 +15,12 @@ export function NewsLink({ ev }: { ev: NostrEvent }) {
     .replace(/ /g, "-");
   return (
     <Link to={`/news/${slug}`} state={ev} key={link.tagKey}>
-      <div className="flex flex-col rounded-xl bg-neutral-900 px-3 py-4">
+      <div className="flex flex-col rounded border border-cyber-border bg-cyber-panel px-3 py-4 hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-200">
         <div className="text-xl flex items-center justify-between">
-          <div>{title}</div>
-          <div>{new Date(posted * 1000).toDateString()}</div>
+          <div className="text-cyber-text-bright">{title}</div>
+          <div className="text-cyber-muted text-sm">
+            {new Date(posted * 1000).toDateString()}
+          </div>
         </div>
       </div>
     </Link>

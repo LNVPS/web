@@ -13,10 +13,12 @@ export function FilterButton({
   return (
     <div
       className={classNames(
-        "rounded-full outline outline-1 px-4 py-1 cursor-pointer select-none",
+        "rounded border px-4 py-1 cursor-pointer select-none transition-all duration-200 text-sm",
         {
-          "bg-neutral-800 outline-neutral-300": active,
-          "bg-neutral-900 outline-neutral-800 text-neutral-500": !active,
+          "bg-cyber-primary/10 border-cyber-primary text-cyber-primary shadow-neon-sm":
+            active,
+          "bg-cyber-panel border-cyber-border text-cyber-muted hover:border-cyber-primary hover:text-cyber-primary":
+            !active,
         },
       )}
       onClick={onClick}

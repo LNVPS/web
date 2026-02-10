@@ -8,21 +8,21 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const template = "template" in vm ? vm.template : (vm as VmTemplate);
   return (
     <>
-      <div className="text-xs text-neutral-400">
+      <div className="text-xs text-cyber-muted">
         {template?.cpu} vCPU, <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
         <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
         , {region && <>Location: {region}</>}
       </div>
       {status && status.state === "running" && (
-        <div className="text-sm text-neutral-200">
-          <div className="w-2 h-2 rounded-full bg-green-800 inline-block"></div>{" "}
+        <div className="text-sm text-cyber-text">
+          <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
           {(100 * status.cpu_usage).toFixed(1)}% CPU,{" "}
           {(100 * status.mem_usage).toFixed(0)}% RAM
         </div>
       )}
       {status && status.state === "stopped" && (
-        <div className="text-sm text-neutral-200">
-          <div className="w-2 h-2 rounded-full bg-red-800 inline-block"></div>{" "}
+        <div className="text-sm text-cyber-text">
+          <div className="w-2 h-2 rounded-full bg-cyber-danger inline-block shadow-neon-danger"></div>{" "}
           Stopped
         </div>
       )}

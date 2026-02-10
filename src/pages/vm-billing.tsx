@@ -59,7 +59,7 @@ export function VmBillingPage() {
       <Link to={"/vm"} state={state}>
         &lt; Back
       </Link>
-      <div className="text-xl bg-neutral-900 rounded-xl px-3 py-4 flex justify-between items-center">
+      <div className="text-xl bg-cyber-panel rounded px-3 py-4 flex justify-between items-center">
         <div>Renewal for #{state.id}</div>
         <div>
           <CostLabel cost={state.template.cost_plan} />
@@ -72,7 +72,7 @@ export function VmBillingPage() {
         </div>
       )}
       {days < 0 && !showPaymentFlow && (
-        <div className="text-red-500 text-xl">Expired</div>
+        <div className="text-cyber-danger text-xl">Expired</div>
       )}
       {!showPaymentFlow && (
         <div className="flex gap-4 flex-wrap">
@@ -104,11 +104,11 @@ export function VmBillingPage() {
       )}
 
       {!showPaymentFlow && state.auto_renewal_enabled && (
-        <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
-          <div className="text-green-400 text-sm font-medium">
+        <div className="bg-cyber-primary/10 border border-cyber-primary/30 rounded p-3">
+          <div className="text-cyber-primary text-sm font-medium">
             🔄 Auto-renewal enabled
           </div>
-          <p className="text-neutral-400 text-sm mt-1">
+          <p className="text-cyber-muted text-sm mt-1">
             This VM will automatically renew 1 day before expiration using your
             configured Nostr Wallet Connect connection.
           </p>
@@ -116,11 +116,11 @@ export function VmBillingPage() {
       )}
 
       {!showPaymentFlow && !state.auto_renewal_enabled && (
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-3">
-          <div className="text-neutral-400 text-sm font-medium">
+        <div className="bg-cyber-panel/50 border border-cyber-border rounded p-3">
+          <div className="text-cyber-muted text-sm font-medium">
             Auto-renewal disabled
           </div>
-          <p className="text-neutral-400 text-sm mt-1">
+          <p className="text-cyber-muted text-sm mt-1">
             Configure an NWC connection string in account settings, then enable
             auto-renewal to automatically pay for VM renewals.
           </p>
@@ -139,7 +139,7 @@ export function VmBillingPage() {
       {!showPaymentFlow && (
         <>
           <div className="text-xl">Payment History</div>
-          <table className="table bg-neutral-900 rounded-xl text-center">
+          <table className="table bg-cyber-panel rounded text-center">
             <thead>
               <tr>
                 <th>Date</th>

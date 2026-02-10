@@ -21,15 +21,15 @@ export default function IpBlockCard({
   const order = useNavigateOrder();
 
   const classNames =
-    "w-full text-center text-lg uppercase rounded-xl py-3 font-bold cursor-pointer select-none";
+    "w-full text-center text-lg uppercase rounded py-3 font-bold cursor-pointer select-none";
 
   return (
-    <div className="rounded-xl border border-neutral-600 px-3 py-2 flex flex-col gap-1">
-      <div className="text-xl">
+    <div className="rounded border border-cyber-border px-3 py-2 flex flex-col gap-1 bg-cyber-panel hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-300">
+      <div className="text-lg text-cyber-primary">
         {block.registry.toUpperCase()}{" "}
         {block.ip_version === "ipv6" ? "IPv6" : "IPv4"} /{price.prefix_size}
       </div>
-      <div className="text-lg">
+      <div className="text-lg text-cyber-accent">
         {price && (
           <CostLabel
             cost={{
@@ -41,7 +41,7 @@ export default function IpBlockCard({
         )}
       </div>
       {price.setup_fee.amount !== 0 && (
-        <div className="text-neutral-400">
+        <div className="text-cyber-muted">
           Setup fee:{" "}
           <CostLabel
             cost={{
@@ -54,7 +54,7 @@ export default function IpBlockCard({
       <div className="mt-2">
         {login ? (
           <AsyncButton
-            className={`${classNames} bg-green-800`}
+            className={`${classNames} bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon`}
             onClick={() =>
               order({
                 type: "ip_space",
@@ -66,7 +66,7 @@ export default function IpBlockCard({
           </AsyncButton>
         ) : (
           <AsyncButton
-            className={`${classNames} bg-red-900`}
+            className={`${classNames} bg-cyber-danger/20 border-cyber-danger text-cyber-danger hover:bg-cyber-danger/30 hover:shadow-neon-danger`}
             onClick={() => navigate("/login")}
           >
             Login To Order

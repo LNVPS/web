@@ -38,7 +38,7 @@ export default function VpsPayment({
   // Only works for Lightning payments
   if (!("lightning" in payment.data)) {
     return (
-      <div className="text-red-500">
+      <div className="text-cyber-danger">
         This component only supports Lightning payments
       </div>
     );
@@ -47,26 +47,26 @@ export default function VpsPayment({
   const ln = `lightning:${invoice}`;
 
   return (
-    <div className="flex flex-col gap-4 rounded-xl p-3 bg-neutral-900 items-center">
+    <div className="flex flex-col gap-4 rounded border border-cyber-border p-3 bg-cyber-panel items-center">
       <QrCode
         data={ln}
         link={ln}
         width={512}
         height={512}
         avatar="/logo.jpg"
-        className="cursor-pointer rounded-xl overflow-hidden"
+        className="cursor-pointer rounded overflow-hidden"
       />
       <div className="flex flex-col items-center">
-        <div>
+        <div className="text-cyber-primary">
           {((payment.amount + payment.tax) / 1000).toLocaleString()} sats
         </div>
         {payment.tax > 0 && (
-          <div className="text-xs">
+          <div className="text-xs text-cyber-muted">
             including {(payment.tax / 1000).toLocaleString()} sats tax
           </div>
         )}
       </div>
-      <div className="monospace select-all break-all text-center text-sm">
+      <div className="monospace select-all break-all text-center text-sm text-cyber-text">
         {invoice}
       </div>
     </div>

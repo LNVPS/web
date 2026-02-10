@@ -13,6 +13,7 @@ export default function LoginButton() {
       onClick={async () => {
         navigate("/login");
       }}
+      className="border-cyber-primary text-cyber-primary hover:shadow-neon"
     >
       Sign In
     </AsyncButton>

@@ -81,7 +81,7 @@ export function VmGraphsPage() {
         if (active && payload && payload.length) {
           const data = payload[0].payload as TimeSeriesData;
           return (
-            <div className="flex flex-col gap-2 bg-neutral-700 rounded-xl px-2 py-3">
+            <div className="flex flex-col gap-2 bg-cyber-panel-light border border-cyber-border rounded px-2 py-3">
               <div>{data.timestamp}</div>
               {payload.map((p) => (
                 <div>
@@ -139,14 +139,14 @@ export function VmGraphsPage() {
             type="monotone"
             dataKey="NET_IN"
             unit={`${net_scale_label}/s`}
-            stroke="red"
+            stroke="#ff0040"
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="NET_OUT"
             unit={`${net_scale_label}/s`}
-            stroke="green"
+            stroke="#39ff14"
             dot={false}
           />
           {toolTip}
@@ -166,14 +166,14 @@ export function VmGraphsPage() {
             type="monotone"
             dataKey="DISK_READ"
             unit={`${disk_scale_label}/s`}
-            stroke="red"
+            stroke="#ff0040"
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="DISK_WRITE"
             unit={`${disk_scale_label}/s`}
-            stroke="green"
+            stroke="#39ff14"
             dot={false}
           />
           {toolTip}

@@ -5,7 +5,7 @@
 :root {
   font-family: "Source Code Pro", monospace;
   font-size: 15px;
-  @apply bg-black text-white;
+  @apply bg-cyber-darker text-cyber-text;
 }
 
 html,
@@ -13,36 +13,181 @@ body {
   margin: 0;
 }
 
+/* Subtle scanline overlay on body */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(57, 255, 20, 0.015) 2px,
+    rgba(57, 255, 20, 0.015) 4px
+  );
+}
+
 h1 {
-  @apply text-2xl font-medium my-2;
+  @apply text-2xl font-medium my-2 text-cyber-primary;
 }
 
 h2 {
-  @apply text-xl font-medium my-2;
+  @apply text-xl font-medium my-2 text-cyber-primary;
 }
 
 h3 {
-  @apply text-lg font-medium my-2;
+  @apply text-lg font-medium my-2 text-cyber-text-bright;
 }
 
 a {
   text-decoration: none;
+  @apply text-cyber-accent transition-colors;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  @apply text-cyber-primary;
+  text-shadow: 0 0 8px #39ff1466;
 }
 
 hr {
-  @apply border-neutral-800;
+  @apply border-cyber-border;
 }
 
-input,
+input:not([type="range"]):not([type="checkbox"]),
 textarea,
 select {
-  @apply border-none rounded-xl bg-neutral-900 p-2;
+  @apply border border-cyber-border rounded bg-cyber-panel p-2 text-cyber-text outline-none transition-all;
+}
+
+input:not([type="range"]):not([type="checkbox"]):focus,
+textarea:focus,
+select:focus {
+  @apply border-cyber-primary shadow-neon-sm;
 }
 
 input:disabled {
-  @apply text-neutral-200/50;
+  @apply text-cyber-muted opacity-50;
+}
+
+/* Custom range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #39ff1466;
+  border: 1px solid #39ff1488;
+  box-shadow: 0 0 6px #39ff1433;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #39ff14;
+  cursor: pointer;
+  border: 2px solid #39ff14;
+  box-shadow:
+    0 0 10px #39ff14,
+    0 0 24px #39ff1466;
+  margin-top: -9px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #39ff1466;
+  border: 1px solid #39ff1488;
+  box-shadow: 0 0 6px #39ff1433;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #39ff14;
+  cursor: pointer;
+  border: 2px solid #39ff14;
+  box-shadow:
+    0 0 10px #39ff14,
+    0 0 24px #39ff1466;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: #39ff14;
+  height: 6px;
+  border-radius: 3px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  @apply appearance-none w-4 h-4 border border-cyber-border rounded-sm bg-cyber-panel cursor-pointer;
+  @apply checked:bg-cyber-primary checked:border-cyber-primary;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyber-border-bright rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyber-primary;
+}
+
+/* Selection styling */
+::selection {
+  background: #39ff1433;
+  color: #39ff14;
+}
+
+/* Table styling */
+table {
+  @apply w-full;
+}
+
+th {
+  @apply text-cyber-primary text-sm font-medium p-3 text-left border-b border-cyber-border;
+}
+
+td {
+  @apply p-3 text-sm border-b border-cyber-border/30;
+}
+
+tr:hover td {
+  @apply bg-cyber-panel-light/50;
 }

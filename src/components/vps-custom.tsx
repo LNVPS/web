@@ -96,7 +96,7 @@ export function VpsCustomOrder({
         </div>
       )}
       <div className="flex items-center gap-4">
-        <div className="min-w-[120px] flex items-center gap-2">
+        <div className="min-w-[140px] flex items-center gap-2">
           <input
             type="number"
             value={cpu}
@@ -107,7 +107,7 @@ export function VpsCustomOrder({
             }}
             min={params.min_cpu}
             max={params.max_cpu}
-            className="w-16 text-center"
+            className="w-20 text-center"
           />
           <span className="text-cyber-muted text-sm">CPU</span>
         </div>
@@ -122,7 +122,7 @@ export function VpsCustomOrder({
         />
       </div>
       <div className="flex items-center gap-4">
-        <div className="min-w-[120px] flex items-center gap-2">
+        <div className="min-w-[140px] flex items-center gap-2">
           <input
             type="number"
             value={ram}
@@ -134,7 +134,7 @@ export function VpsCustomOrder({
             }}
             min={Math.floor(params.min_memory / GiB)}
             max={Math.floor(params.max_memory / GiB)}
-            className="w-16 text-center"
+            className="w-20 text-center"
           />
           <span className="text-cyber-muted text-sm">GB RAM</span>
         </div>
@@ -149,7 +149,7 @@ export function VpsCustomOrder({
         />
       </div>
       <div className="flex items-center gap-4">
-        <div className="min-w-[120px] flex items-center gap-2">
+        <div className="min-w-[160px] flex items-center gap-2">
           <input
             type="number"
             value={disk}
@@ -161,7 +161,7 @@ export function VpsCustomOrder({
             }}
             min={Math.floor((diskType?.min_disk ?? 0) / GiB)}
             max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
-            className="w-16 text-center"
+            className="w-24 text-center"
           />
           <span className="text-cyber-muted text-sm">
             GB {diskType?.disk_type.toLocaleUpperCase()}

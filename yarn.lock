@@ -2951,9 +2951,6 @@ __metadata:
     typescript: "npm:^5.5.3"
     typescript-eslint: "npm:^8.0.0"
     vite: "npm:^6.3.4"
-  dependenciesMeta:
-    "@revolut/checkout@1.1.24":
-      unplugged: true
   languageName: unknown
   linkType: soft
 

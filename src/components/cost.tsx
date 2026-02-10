@@ -29,11 +29,14 @@ export default function CostLabel({
             }}
             converted={true}
           />
-          <CostAmount
-            cost={cost}
-            converted={false}
-            className="text-sm text-neutral-400"
-          />
+          {" "}
+          <span
+            className="text-xs text-neutral-400">
+            (<CostAmount
+              cost={cost}
+              converted={false}
+            />)
+          </span>
         </div>
       );
     } else {

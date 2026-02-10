@@ -256,6 +256,93 @@ export interface ContactFormRequest {
   turnstile_token: string;
 }
 
+export type InternetRegistry = "arin" | "ripe" | "apnic" | "lacnic" | "afrinic";
+
+export interface IpSpacePricing {
+  id: number;
+  prefix_size: number;
+  price: Price;
+  setup_fee: Price;
+  other_price?: Array<Price>;
+  other_setup_fee?: Array<Price>;
+}
+
+export interface AvailableIpSpace {
+  id: number;
+  ip_version: "ipv4" | "ipv6";
+  min_prefix_size: number;
+  max_prefix_size: number;
+  registry: InternetRegistry;
+  pricing: Array<IpSpacePricing>;
+}
+
+export interface IpRangeSubscription {
+  id: number;
+  cidr: string;
+  is_active: boolean;
+  started_at: string;
+  ended_at?: string;
+  parent_cidr: string;
+}
+
+export interface AddIpRangeToSubscriptionRequest {
+  ip_space_pricing_id: number;
+}
+
+export interface Subscription {
+  id: number;
+  name: string;
+  description?: string;
+  created: string;
+  expires?: string;
+  is_active: boolean;
+  currency: string;
+  interval_amount: number;
+  interval_type: string;
+  setup_fee: number;
+  auto_renewal_enabled: boolean;
+  line_items: Array<SubscriptionLineItem>;
+}
+
+export interface SubscriptionLineItem {
+  id: number;
+  subscription_id: number;
+  name: string;
+  description?: string;
+  amount: number;
+  setup_amount: number;
+  configuration?: any;
+}
+
+export interface SubscriptionPayment {
+  id: string;
+  subscription_id: number;
+  created: string;
+  expires?: string;
+  amount: number;
+  currency: string;
+  payment_method: string;
+  payment_type: string;
+  is_paid: boolean;
+  rate?: number;
+  time_value: number;
+  tax: number;
+  external_id?: string;
+}
+
+export interface SubscriptionSummary {
+  active_subscriptions: number;
+  total_monthly_cost: number;
+  currency: string;
+}
+
+export type PaginatedResponse<T> = ApiResponseBase & {
+  data: Array<T>;
+  total: number;
+  limit: number;
+  offset: number;
+};
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -551,6 +638,60 @@ export class LNVpsApi {
   async submitContactForm(req: ContactFormRequest) {
     const { data } = await this.#handleResponse<ApiResponse<void>>(
       await this.#req("/api/v1/contact", "POST", req),
+    );
+    return data;
+  }
+
+  async listAvailableIpSpace(limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<
+      PaginatedResponse<AvailableIpSpace>
+    >(await this.#req(`/api/v1/ip_space${query}`, "GET"));
+    return data;
+  }
+
+  async getIpSpace(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AvailableIpSpace>>(
+      await this.#req(`/api/v1/ip_space/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async listSubscriptionIpRanges(
+    subscriptionId: number,
+    limit?: number,
+    offset?: number,
+  ) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<
+      PaginatedResponse<IpRangeSubscription>
+    >(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/ip_ranges${query}`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  async addIpRangeToSubscription(
+    subscriptionId: number,
+    req: AddIpRangeToSubscriptionRequest,
+  ) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<IpRangeSubscription>
+    >(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/ip_ranges`,
+        "POST",
+        req,
+      ),
     );
     return data;
   }

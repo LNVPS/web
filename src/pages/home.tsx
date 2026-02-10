@@ -12,6 +12,7 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
 import { useCached } from "../hooks/useCached";
+import IpBlockCard from "../components/ip-block-card";
 
 export default function HomePage() {
   const login = useLogin();
@@ -23,6 +24,14 @@ export default function HomePage() {
   } = useCached("offers", async () => {
     const api = new LNVpsApi(ApiUrl, undefined, 5000);
     return await api.listOffers();
+  });
+  const {
+    data: ipSpaces,
+    loading: ipLoading,
+    error: ipError,
+  } = useCached("ipSpaces", async () => {
+    const api = new LNVpsApi(ApiUrl, undefined, 5000);
+    return await api.listAvailableIpSpace();
   });
   const [region, setRegion] = useState<Array<number>>([]);
   const [diskType, setDiskType] = useState<Array<DiskType>>([]);
@@ -145,6 +154,35 @@ export default function HomePage() {
             </>
           )}
         </div>
+        {/* IP Blocks section */}
+        {ipSpaces && ipSpaces.length > 0 && (
+          <div className="flex flex-col gap-4 mt-8">
+            <div className="text-2xl">Available IP Blocks</div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              {ipLoading ? (
+                <div className="col-span-full text-center p-8">
+                  <div className="flex items-center justify-center gap-3">
+                    <Spinner width={24} height={24} />
+                    <span className="text-neutral-400">Loading IP blocks...</span>
+                  </div>
+                </div>
+              ) : ipError ? (
+                <div className="col-span-full text-center p-8 bg-red-900/20 border border-red-500 rounded-xl">
+                  <div className="text-red-500 bold text-xl uppercase mb-2">
+                    Failed to load IP blocks
+                  </div>
+                  <pre className="text-xs bg-red-600/50 mt-4 px-1 py-2 rounded-lg whitespace-pre">
+                    Error: {ipError.message}
+                  </pre>
+                </div>
+              ) : (
+                ipSpaces.flatMap((block) => (
+                  block.pricing.map((p) => <IpBlockCard block={block} price={p} key={`${block.id}_${p.id}`} />)
+              ))
+              )}
+            </div>
+          </div>
+        )}
         {offers?.custom_template && offers?.custom_template.length > 0 && (
           <VpsCustomOrder templates={offers.custom_template} />
         )}

@@ -24,9 +24,9 @@ const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>(
         className={classNames(
           "py-2 px-3 rounded-xl font-medium relative",
           {
-            "bg-neutral-800 cursor-not-allowed text-neutral-500":
+            "opacity-50 cursor-not-allowed":
               !hasBg && props.disabled === true,
-            "bg-neutral-900": !hasBg && !props.disabled,
+            "bg-neutral-900": !hasBg,
           },
           className,
         )}

@@ -6,7 +6,7 @@ import { NostrSystem } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
 import Layout from "./pages/layout.tsx";
 import HomePage from "./pages/home.tsx";
-import OrderPage from "./pages/order.tsx";
+import { OrderPage } from "./pages/order";
 import VmPage from "./pages/vm.tsx";
 import AccountPage from "./pages/account.tsx";
 import SignUpPage from "./pages/sign-up.tsx";

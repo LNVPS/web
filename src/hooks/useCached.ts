@@ -40,6 +40,9 @@ export function useCached<T>(
   loader: () => Promise<T>,
   expires?: number,
 ) {
+  if (import.meta.env.DEV) {
+    expires = 0;
+  }
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>();
   const [data, setData] = useState<CachedObj<T> | undefined>(() =>

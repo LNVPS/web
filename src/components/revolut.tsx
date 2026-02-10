@@ -3,6 +3,7 @@ import { Mode } from "@revolut/checkout";
 import { useEffect, useRef } from "react";
 
 interface RevolutProps {
+  pubkey: string;
   token: string;
   onPaid: () => void;
   onCancel?: () => void;
@@ -10,6 +11,7 @@ interface RevolutProps {
 }
 
 export function RevolutPayWidget({
+  pubkey,
   token,
   onPaid,
   onCancel,
@@ -23,7 +25,7 @@ export function RevolutPayWidget({
 
     let destroyed = false;
 
-    RevolutCheckout(token, mode ?? "prod").then((instance) => {
+    RevolutCheckout(pubkey, mode ?? "prod").then((instance) => {
       if (destroyed) {
         instance.destroy();
         return;
@@ -53,7 +55,7 @@ export function RevolutPayWidget({
       instanceRef.current?.destroy();
       instanceRef.current = null;
     };
-  }, [token, mode]);
+  }, [pubkey, token, mode]);
 
   return <div ref={ref} />;
 }

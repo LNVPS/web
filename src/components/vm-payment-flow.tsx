@@ -279,6 +279,11 @@ export default function VmPaymentFlow({
         ) : "revolut" in payment.data ? (
           <RevolutPayWidget
             mode={import.meta.env.VITE_REVOLUT_MODE}
+            pubkey={
+              methods?.find((m) => m.name === "revolut")?.metadata?.[
+                "pubkey"
+              ] ?? ""
+            }
             token={payment.data.revolut.token}
             onPaid={handlePaymentComplete}
           />

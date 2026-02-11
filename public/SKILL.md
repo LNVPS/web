@@ -241,53 +241,56 @@ LLMs and agents can call the LNVPS API directly from the command line using [nak
 # Install nak
 go install github.com/fiatjaf/nak@latest
 
-# Set your Nostr secret key
-export NSEC="nsec1..."
+# Set your Nostr secret key as environment variable
+export NOSTR_SECRET_KEY="nsec1..."
 ```
 
 ### Usage
 
-`nak curl` accepts all standard curl options. Just prefix your curl command with `nak` and add `--sec`:
+`nak curl` accepts all standard curl options. Set the `NOSTR_SECRET_KEY` environment variable and use `nak curl` like regular curl:
 
 ```bash
-nak curl --sec $NSEC [curl options] <url>
+NOSTR_SECRET_KEY="nsec1..." nak curl [curl options] <url>
 ```
+
+**Important:** Do NOT use `--sec` flag with `nak curl` - it doesn't work correctly. Always use the `NOSTR_SECRET_KEY` environment variable instead.
 
 ### Examples
 
 ```bash
 # List VMs
-nak curl --sec $NSEC https://api.lnvps.net/api/v1/vm
+NOSTR_SECRET_KEY=$NSEC nak curl https://api.lnvps.net/api/v1/vm
 
 # Add SSH key
-nak curl --sec $NSEC -X POST -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$NSEC nak curl -X POST -H "Content-Type: application/json" \
   -d '{"name": "my-key", "key_data": "ssh-ed25519 AAAAC3..."}' \
   https://api.lnvps.net/api/v1/ssh-key
 
 # Create VM
-nak curl --sec $NSEC -X POST -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$NSEC nak curl -X POST -H "Content-Type: application/json" \
   -d '{"template_id": 1, "image_id": 1, "ssh_key_id": 1}' \
   https://api.lnvps.net/api/v1/vm
 
 # Get Lightning invoice
-nak curl --sec $NSEC "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
+NOSTR_SECRET_KEY=$NSEC nak curl "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
 
 # Check payment status
-nak curl --sec $NSEC https://api.lnvps.net/api/v1/payment/PAYMENT_ID
+NOSTR_SECRET_KEY=$NSEC nak curl https://api.lnvps.net/api/v1/payment/PAYMENT_ID
 
 # Start/Stop/Restart VM
-nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/start
-nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/stop
-nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/restart
+NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/start
+NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/stop
+NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/restart
 
 # Set reverse DNS
-nak curl --sec $NSEC -X PATCH -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH -H "Content-Type: application/json" \
   -d '{"reverse_dns": "myserver.example.com"}' \
   https://api.lnvps.net/api/v1/vm/123
 ```
 
 ### Notes
 
+- **Use `NOSTR_SECRET_KEY` env var**, not `--sec` flag (the flag doesn't work correctly with `nak curl`)
 - Public endpoints (`/api/v1/image`, `/api/v1/vm/templates`) work with regular `curl`
 - Quote URLs containing `?` to avoid shell interpretation
 - Poll `GET /api/v1/payment/{id}` until `is_paid: true` after paying

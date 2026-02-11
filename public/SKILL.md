@@ -29,11 +29,15 @@ All API requests (except public endpoints) require **NIP-98 HTTP Authentication*
 3. Send as: `Authorization: Nostr <base64_encoded_event>`
 
 Example event:
+
 ```json
 {
   "kind": 27235,
   "created_at": 1704067200,
-  "tags": [["u", "https://api.lnvps.net/api/v1/vm"], ["method", "POST"]],
+  "tags": [
+    ["u", "https://api.lnvps.net/api/v1/vm"],
+    ["method", "POST"]
+  ],
   "content": "",
   "pubkey": "<your_nostr_pubkey>",
   "id": "<event_id>",
@@ -66,20 +70,43 @@ Content-Type: application/json
 ```
 
 Response:
+
 ```json
-{"data": {"id": 1, "name": "my-key", "created": "2024-01-01T00:00:00Z"}}
+{ "data": { "id": 1, "name": "my-key", "created": "2024-01-01T00:00:00Z" } }
 ```
 
 ### Step 2: List Available Resources
 
 **OS Images**: `GET /api/v1/image`
+
 ```json
-{"data": [{"id": 1, "distribution": "ubuntu", "version": "24.04", "default_username": "ubuntu"}]}
+{
+  "data": [
+    {
+      "id": 1,
+      "distribution": "ubuntu",
+      "version": "24.04",
+      "default_username": "ubuntu"
+    }
+  ]
+}
 ```
 
 **Templates**: `GET /api/v1/vm/templates`
+
 ```json
-{"data": [{"id": 1, "name": "VPS-Small", "cpu": 1, "memory": 1073741824, "disk_size": 21474836480, "cost_plan": {"amount": 500, "currency": "EUR"}}]}
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "VPS-Small",
+      "cpu": 1,
+      "memory": 1073741824,
+      "disk_size": 21474836480,
+      "cost_plan": { "amount": 500, "currency": "EUR" }
+    }
+  ]
+}
 ```
 
 ### Step 3: Create VM Order
@@ -100,6 +127,7 @@ GET /api/v1/vm/{id}/renew?method=lightning
 ```
 
 Response:
+
 ```json
 {
   "data": {
@@ -107,7 +135,7 @@ Response:
     "amount": 21000,
     "currency": "BTC",
     "is_paid": false,
-    "data": {"Lightning": "lnbc210u1pj..."},
+    "data": { "Lightning": "lnbc210u1pj..." },
     "time": 2592000
   }
 }
@@ -123,35 +151,38 @@ Poll `GET /api/v1/payment/{id}` until `is_paid: true`, then poll `GET /api/v1/vm
 
 ## Key Endpoints
 
-| Action | Method | Endpoint |
-|--------|--------|----------|
-| List VMs | GET | `/api/v1/vm` |
-| Get VM | GET | `/api/v1/vm/{id}` |
-| Create VM | POST | `/api/v1/vm` |
-| Start VM | PATCH | `/api/v1/vm/{id}/start` |
-| Stop VM | PATCH | `/api/v1/vm/{id}/stop` |
-| Restart VM | PATCH | `/api/v1/vm/{id}/restart` |
-| Reinstall VM | PATCH | `/api/v1/vm/{id}/re-install` |
-| Renew VM | GET | `/api/v1/vm/{id}/renew` |
-| Update VM | PATCH | `/api/v1/vm/{id}` |
-| List SSH Keys | GET | `/api/v1/ssh-key` |
-| Add SSH Key | POST | `/api/v1/ssh-key` |
-| Get Account | GET | `/api/v1/account` |
-| Update Account | PATCH | `/api/v1/account` |
+| Action         | Method | Endpoint                     |
+| -------------- | ------ | ---------------------------- |
+| List VMs       | GET    | `/api/v1/vm`                 |
+| Get VM         | GET    | `/api/v1/vm/{id}`            |
+| Create VM      | POST   | `/api/v1/vm`                 |
+| Start VM       | PATCH  | `/api/v1/vm/{id}/start`      |
+| Stop VM        | PATCH  | `/api/v1/vm/{id}/stop`       |
+| Restart VM     | PATCH  | `/api/v1/vm/{id}/restart`    |
+| Reinstall VM   | PATCH  | `/api/v1/vm/{id}/re-install` |
+| Renew VM       | GET    | `/api/v1/vm/{id}/renew`      |
+| Update VM      | PATCH  | `/api/v1/vm/{id}`            |
+| List SSH Keys  | GET    | `/api/v1/ssh-key`            |
+| Add SSH Key    | POST   | `/api/v1/ssh-key`            |
+| Get Account    | GET    | `/api/v1/account`            |
+| Update Account | PATCH  | `/api/v1/account`            |
 
 See [REFERENCE.md](REFERENCE.md) for complete endpoint documentation.
 
 ## Data Formats
 
 **Sizes are in bytes:**
+
 - 1 GB = `1073741824`
 - 1 TB = `1099511627776`
 
 **Amounts are in smallest currency unit:**
+
 - BTC: satoshis
 - EUR/USD: cents
 
 **Enum values (lowercase):**
+
 - Disk types: `hdd`, `ssd`
 - Disk interfaces: `sata`, `scsi`, `pcie`
 - VM states: `pending`, `running`, `stopped`, `failed`
@@ -160,36 +191,104 @@ See [REFERENCE.md](REFERENCE.md) for complete endpoint documentation.
 ## Response Format
 
 Success:
+
 ```json
 {"data": { ... }}
 ```
 
 Paginated:
+
 ```json
 {"data": [...], "total": 100, "limit": 20, "offset": 0}
 ```
 
 Error:
+
 ```json
-{"error": "Description of the error"}
+{ "error": "Description of the error" }
 ```
 
 ## Common Tasks
 
 **Enable auto-renewal with NWC:**
+
 ```http
 PATCH /api/v1/account
 {"nwc_connection_string": "nostr+walletconnect://..."}
 ```
 
 **Set reverse DNS:**
+
 ```http
 PATCH /api/v1/vm/{id}
 {"reverse_dns": "myserver.example.com"}
 ```
 
 **Get upgrade quote:**
+
 ```http
 POST /api/v1/vm/{id}/upgrade/quote
 {"new_cpu": 4, "new_memory": 8589934592}
 ```
+
+## CLI Usage with nak curl
+
+LLMs and agents can call the LNVPS API directly from the command line using [nak](https://github.com/fiatjaf/nak). The `nak curl` subcommand works exactly like `curl` but automatically appends the NIP-98 Authorization header.
+
+### Setup
+
+```bash
+# Install nak
+go install github.com/fiatjaf/nak@latest
+
+# Set your Nostr secret key
+export NSEC="nsec1..."
+```
+
+### Usage
+
+`nak curl` accepts all standard curl options. Just prefix your curl command with `nak` and add `--sec`:
+
+```bash
+nak curl --sec $NSEC [curl options] <url>
+```
+
+### Examples
+
+```bash
+# List VMs
+nak curl --sec $NSEC https://api.lnvps.net/api/v1/vm
+
+# Add SSH key
+nak curl --sec $NSEC -X POST -H "Content-Type: application/json" \
+  -d '{"name": "my-key", "key_data": "ssh-ed25519 AAAAC3..."}' \
+  https://api.lnvps.net/api/v1/ssh-key
+
+# Create VM
+nak curl --sec $NSEC -X POST -H "Content-Type: application/json" \
+  -d '{"template_id": 1, "image_id": 1, "ssh_key_id": 1}' \
+  https://api.lnvps.net/api/v1/vm
+
+# Get Lightning invoice
+nak curl --sec $NSEC "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
+
+# Check payment status
+nak curl --sec $NSEC https://api.lnvps.net/api/v1/payment/PAYMENT_ID
+
+# Start/Stop/Restart VM
+nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/start
+nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/stop
+nak curl --sec $NSEC -X PATCH https://api.lnvps.net/api/v1/vm/123/restart
+
+# Set reverse DNS
+nak curl --sec $NSEC -X PATCH -H "Content-Type: application/json" \
+  -d '{"reverse_dns": "myserver.example.com"}' \
+  https://api.lnvps.net/api/v1/vm/123
+```
+
+### Notes
+
+- Public endpoints (`/api/v1/image`, `/api/v1/vm/templates`) work with regular `curl`
+- Quote URLs containing `?` to avoid shell interpretation
+- Poll `GET /api/v1/payment/{id}` until `is_paid: true` after paying
+- Poll `GET /api/v1/vm/{id}` until `status.state: "running"` after payment

@@ -241,8 +241,20 @@ LLMs and agents can call the LNVPS API directly from the command line using [nak
 # Install nak
 go install github.com/fiatjaf/nak@latest
 
+# Generate a new Nostr keypair if you don't have one
+nak key generate | nak encode nsec  # outputs nsec1...
+
+# Save your key securely
+mkdir -p ~/.nostr && chmod 700 ~/.nostr
+echo "nsec1..." > ~/.nostr/lnvps.nsec && chmod 600 ~/.nostr/lnvps.nsec
+
 # Set your Nostr secret key as environment variable
-export NOSTR_SECRET_KEY="nsec1..."
+export NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec)
+```
+
+To view your public key (npub):
+```bash
+nak key public $(cat ~/.nostr/lnvps.nsec) | nak encode npub
 ```
 
 ### Usage

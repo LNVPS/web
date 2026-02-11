@@ -50,6 +50,13 @@ export default function HomePage() {
             <a href="http://speedtest.v0l.io" target="_blank">
               Speedtest
             </a>
+            {" | "}
+            <a
+              href="SKILL.md"
+              target="_blank"
+            >
+              SKILL.md
+            </a>
           </div>
           {import.meta.env.VITE_FOOTER_NOTE_1 && (
             <div className="text-xs text-center text-cyber-muted">
@@ -127,12 +134,12 @@ function PaymentMethodsFooter() {
           m.name.toLowerCase().includes("lightning") ||
           m.name.toLowerCase().includes("btc"),
       ) && (
-        <Icon
-          name="bitcoin"
-          size={48}
-          className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-        />
-      )}
+          <Icon
+            name="bitcoin"
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+        )}
       {methods?.some((m) => m.name === "nwc") && (
         <a href="https://nwc.dev" target="_blank" title="NWC">
           <Icon
@@ -265,7 +272,9 @@ function VpsOffersSection() {
                     diskType.includes(t.disk_type),
                 )
                 .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
-                .map((a) => <VpsRow spec={a} key={a.id} />)}
+                .map((a) => (
+                  <VpsRow spec={a} key={a.id} />
+                ))}
             </tbody>
           </table>
         </div>

@@ -11,6 +11,8 @@ compatibility: Requires network access to LNVPS API endpoints and a Nostr keypai
 
 This skill enables interaction with the LNVPS customer-facing API to create and manage VPS instances paid via Bitcoin Lightning Network.
 
+**Base URL:** `https://api.lnvps.net`
+
 ## Authentication
 
 All API requests (except public endpoints) require **NIP-98 HTTP Authentication**.
@@ -145,21 +147,7 @@ Response:
 - `time` is seconds added to expiry upon payment
 - Pay the invoice in `data.Lightning` with any Lightning wallet
 
-### Step 5: Pay Lightning Invoice
-
-Before paying, check your wallet balance and attempt payment with `nak wallet`:
-
-```bash
-# Check wallet balance first
-nak wallet --sec "$NOSTR_SECRET_KEY"
-
-# If sufficient balance, pay the invoice
-nak wallet --sec "$NOSTR_SECRET_KEY" pay "lnbc210u1pj..."
-```
-
-The `nak wallet pay` command will output the payment preimage on success. If the wallet has insufficient funds, ask the user to fund their Cashu wallet or pay manually.
-
-### Step 6-7: Poll Until Ready
+### Step 5-7: Poll Until Ready
 
 Poll `GET /api/v1/payment/{id}` until `is_paid: true`, then poll `GET /api/v1/vm/{id}` until `status.state: "running"`.
 
@@ -301,12 +289,6 @@ NOSTR_SECRET_KEY=$NSEC nak curl -X POST -H "Content-Type: application/json" \
 # Get Lightning invoice
 NOSTR_SECRET_KEY=$NSEC nak curl "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
 
-# Check wallet balance before paying
-nak wallet --sec "$NSEC"
-
-# Pay invoice with nak wallet (extract invoice from response above)
-nak wallet --sec "$NSEC" pay "lnbc210u1pj..."
-
 # Check payment status
 NOSTR_SECRET_KEY=$NSEC nak curl https://api.lnvps.net/api/v1/payment/PAYMENT_ID
 
@@ -328,78 +310,3 @@ NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH -H "Content-Type: application/json" \
 - Quote URLs containing `?` to avoid shell interpretation
 - Poll `GET /api/v1/payment/{id}` until `is_paid: true` after paying
 - Poll `GET /api/v1/vm/{id}` until `status.state: "running"` after payment
-
-## Paying Invoices with nak wallet
-
-The `nak wallet` command allows paying Lightning invoices from the command line using a Cashu ecash wallet stored on Nostr relays (NIP-60).
-
-### How it Works
-
-`nak wallet` stores ecash tokens encrypted on Nostr relays, tied to your Nostr key. The same wallet can be accessed from any NIP-60 compatible client.
-
-### Check Balance First
-
-Before attempting payment, always check the wallet balance:
-
-```bash
-# Display wallet balance
-nak wallet --sec "$NOSTR_SECRET_KEY"
-
-# List tokens by mint
-nak wallet --sec "$NOSTR_SECRET_KEY" tokens
-```
-
-### Paying an Invoice
-
-```bash
-# Pay a Lightning invoice (melts ecash tokens)
-nak wallet --sec "$NOSTR_SECRET_KEY" pay "lnbc210u1pj..."
-
-# Pay from a specific mint
-nak wallet --sec "$NOSTR_SECRET_KEY" pay --mint "https://mint.example.com" "lnbc210u1pj..."
-```
-
-If the wallet has insufficient funds, ask the user to:
-
-1. Fund their Cashu wallet using a NIP-60 compatible client
-2. Or pay the Lightning invoice manually with another wallet
-
-### Full VM Purchase Flow
-
-```bash
-# Set credentials
-export NOSTR_SECRET_KEY="nsec1..."
-
-# 1. Create VM order
-VM_RESPONSE=$(nak curl -X POST -H "Content-Type: application/json" \
-  -d '{"template_id": 1, "image_id": 1, "ssh_key_id": 1}' \
-  https://api.lnvps.net/api/v1/vm)
-VM_ID=$(echo "$VM_RESPONSE" | jq -r '.data.id')
-
-# 2. Get Lightning invoice
-INVOICE_RESPONSE=$(nak curl "https://api.lnvps.net/api/v1/vm/$VM_ID/renew?method=lightning")
-INVOICE=$(echo "$INVOICE_RESPONSE" | jq -r '.data.data.Lightning')
-PAYMENT_ID=$(echo "$INVOICE_RESPONSE" | jq -r '.data.id')
-
-# 3. Check wallet balance
-nak wallet --sec "$NOSTR_SECRET_KEY"
-
-# 4. Pay the invoice (if sufficient balance)
-nak wallet --sec "$NOSTR_SECRET_KEY" pay "$INVOICE"
-
-# 5. Poll payment status until paid
-while true; do
-  PAID=$(nak curl "https://api.lnvps.net/api/v1/payment/$PAYMENT_ID" | jq -r '.data.is_paid')
-  [ "$PAID" = "true" ] && break
-  sleep 5
-done
-
-# 6. Poll VM status until running
-while true; do
-  STATE=$(nak curl "https://api.lnvps.net/api/v1/vm/$VM_ID" | jq -r '.data.status.state')
-  [ "$STATE" = "running" ] && break
-  sleep 10
-done
-
-echo "VM $VM_ID is now running!"
-```

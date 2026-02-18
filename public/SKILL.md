@@ -9,6 +9,9 @@ compatibility: Requires network access to LNVPS API endpoints and a Nostr keypai
 
 # LNVPS Customer API
 
+> **Latest version of this skill:** https://lnvps.net/SKILL.md
+> To ensure you have the most up-to-date API information, fetch the latest version before use.
+
 This skill enables interaction with the LNVPS customer-facing API to create and manage VPS instances paid via Bitcoin Lightning Network.
 
 **Base URL:** `https://api.lnvps.net`
@@ -153,21 +156,31 @@ Poll `GET /api/v1/payment/{id}` until `is_paid: true`, then poll `GET /api/v1/vm
 
 ## Key Endpoints
 
-| Action         | Method | Endpoint                     |
-| -------------- | ------ | ---------------------------- |
-| List VMs       | GET    | `/api/v1/vm`                 |
-| Get VM         | GET    | `/api/v1/vm/{id}`            |
-| Create VM      | POST   | `/api/v1/vm`                 |
-| Start VM       | PATCH  | `/api/v1/vm/{id}/start`      |
-| Stop VM        | PATCH  | `/api/v1/vm/{id}/stop`       |
-| Restart VM     | PATCH  | `/api/v1/vm/{id}/restart`    |
-| Reinstall VM   | PATCH  | `/api/v1/vm/{id}/re-install` |
-| Renew VM       | GET    | `/api/v1/vm/{id}/renew`      |
-| Update VM      | PATCH  | `/api/v1/vm/{id}`            |
-| List SSH Keys  | GET    | `/api/v1/ssh-key`            |
-| Add SSH Key    | POST   | `/api/v1/ssh-key`            |
-| Get Account    | GET    | `/api/v1/account`            |
-| Update Account | PATCH  | `/api/v1/account`            |
+| Action             | Method | Endpoint                           |
+| ------------------ | ------ | ---------------------------------- |
+| List VMs           | GET    | `/api/v1/vm`                       |
+| Get VM             | GET    | `/api/v1/vm/{id}`                  |
+| Create VM          | POST   | `/api/v1/vm`                       |
+| Start VM           | PATCH  | `/api/v1/vm/{id}/start`            |
+| Stop VM            | PATCH  | `/api/v1/vm/{id}/stop`             |
+| Restart VM         | PATCH  | `/api/v1/vm/{id}/restart`          |
+| Reinstall VM       | PATCH  | `/api/v1/vm/{id}/re-install`       |
+| Renew VM           | GET    | `/api/v1/vm/{id}/renew`            |
+| Update VM          | PATCH  | `/api/v1/vm/{id}`                  |
+| Upgrade quote      | POST   | `/api/v1/vm/{id}/upgrade/quote`    |
+| Upgrade VM         | POST   | `/api/v1/vm/{id}/upgrade`          |
+| VM history         | GET    | `/api/v1/vm/{id}/history`          |
+| VM time series     | GET    | `/api/v1/vm/{id}/time-series`      |
+| List SSH Keys      | GET    | `/api/v1/ssh-key`                  |
+| Add SSH Key        | POST   | `/api/v1/ssh-key`                  |
+| Get Account        | GET    | `/api/v1/account`                  |
+| Update Account     | PATCH  | `/api/v1/account`                  |
+| Payment methods    | GET    | `/api/v1/payment/methods`          |
+| Get Payment        | GET    | `/api/v1/payment/{id}`             |
+| List Subscriptions | GET    | `/api/v1/subscriptions`            |
+| Renew Subscription | GET    | `/api/v1/subscriptions/{id}/renew` |
+| List IP Spaces     | GET    | `/api/v1/ip_space`                 |
+| Contact form       | POST   | `/api/v1/contact`                  |
 
 See [REFERENCE.md](REFERENCE.md) for complete endpoint documentation.
 
@@ -187,8 +200,8 @@ See [REFERENCE.md](REFERENCE.md) for complete endpoint documentation.
 
 - Disk types: `hdd`, `ssd`
 - Disk interfaces: `sata`, `scsi`, `pcie`
-- VM states: `pending`, `running`, `stopped`, `failed`
-- Payment methods: `lightning`, `revolut`
+- VM states: `pending`, `running`, `stopped`, `failed`, `error`, `unknown`
+- Payment methods: `lightning`, `revolut`, `paypal`, `stripe`, `nwc`
 
 ## Response Format
 
@@ -230,7 +243,7 @@ PATCH /api/v1/vm/{id}
 
 ```http
 POST /api/v1/vm/{id}/upgrade/quote
-{"new_cpu": 4, "new_memory": 8589934592}
+{"cpu": 4, "memory": 8589934592, "disk": 107374182400}
 ```
 
 ## CLI Usage with nak curl
@@ -249,9 +262,6 @@ nak key generate | nak encode nsec  # outputs nsec1...
 # Save your key securely
 mkdir -p ~/.nostr && chmod 700 ~/.nostr
 echo "nsec1..." > ~/.nostr/lnvps.nsec && chmod 600 ~/.nostr/lnvps.nsec
-
-# Set your Nostr secret key as environment variable
-export NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec)
 ```
 
 To view your public key (npub):
@@ -274,38 +284,38 @@ NOSTR_SECRET_KEY="nsec1..." nak curl [curl options] <url>
 
 ```bash
 # List VMs
-NOSTR_SECRET_KEY=$NSEC nak curl https://api.lnvps.net/api/v1/vm
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl https://api.lnvps.net/api/v1/vm
 
 # Add SSH key
-NOSTR_SECRET_KEY=$NSEC nak curl -X POST -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X POST -H "Content-Type: application/json" \
   -d '{"name": "my-key", "key_data": "ssh-ed25519 AAAAC3..."}' \
   https://api.lnvps.net/api/v1/ssh-key
 
 # Create VM
-NOSTR_SECRET_KEY=$NSEC nak curl -X POST -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X POST -H "Content-Type: application/json" \
   -d '{"template_id": 1, "image_id": 1, "ssh_key_id": 1}' \
   https://api.lnvps.net/api/v1/vm
 
 # Get Lightning invoice
-NOSTR_SECRET_KEY=$NSEC nak curl "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl "https://api.lnvps.net/api/v1/vm/123/renew?method=lightning"
 
 # Check payment status
-NOSTR_SECRET_KEY=$NSEC nak curl https://api.lnvps.net/api/v1/payment/PAYMENT_ID
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl https://api.lnvps.net/api/v1/payment/PAYMENT_ID
 
 # Start/Stop/Restart VM
-NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/start
-NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/stop
-NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/restart
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/start
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/stop
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X PATCH https://api.lnvps.net/api/v1/vm/123/restart
 
 # Set reverse DNS
-NOSTR_SECRET_KEY=$NSEC nak curl -X PATCH -H "Content-Type: application/json" \
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X PATCH -H "Content-Type: application/json" \
   -d '{"reverse_dns": "myserver.example.com"}' \
   https://api.lnvps.net/api/v1/vm/123
 ```
 
 ### Notes
 
-- **Use `NOSTR_SECRET_KEY` env var**, not `--sec` flag (the flag doesn't work correctly with `nak curl`)
+- **Use `NOSTR_SECRET_KEY` env var inline** — do NOT use `--sec` flag (it doesn't work with `nak curl`) and do NOT `export` it (inline per-command prevents leaking into child processes)
 - Public endpoints (`/api/v1/image`, `/api/v1/vm/templates`) work with regular `curl`
 - Quote URLs containing `?` to avoid shell interpretation
 - Poll `GET /api/v1/payment/{id}` until `is_paid: true` after paying

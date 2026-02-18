@@ -39,12 +39,14 @@ All endpoints except those marked "Public" require NIP-98 HTTP Authentication.
 ```
 
 **Validation rules:**
+
 - `created_at` must be within 600 seconds of server time
 - `u` tag must exactly match the request URL
 - `method` tag must match the HTTP method (GET, POST, PATCH, etc.)
 - Signature must be valid
 
 **Header format:**
+
 ```
 Authorization: Nostr <base64_encoded_event_json>
 ```
@@ -60,23 +62,21 @@ GET /api/v1/account
 ```
 
 **Response:**
+
 ```json
 {
   "data": {
-    "id": 1,
-    "pubkey": "npub1...",
-    "created": "2024-01-01T00:00:00Z",
     "email": "user@example.com",
     "contact_email": true,
     "contact_nip17": false,
     "country_code": "DE",
-    "billing_name": "John Doe",
-    "billing_address_1": "123 Main St",
-    "billing_address_2": null,
-    "billing_city": "Berlin",
-    "billing_state": null,
-    "billing_postcode": "10115",
-    "billing_tax_id": null
+    "name": "John Doe",
+    "address_1": "123 Main St",
+    "address_2": null,
+    "city": "Berlin",
+    "state": null,
+    "postcode": "10115",
+    "tax_id": null
   }
 }
 ```
@@ -89,19 +89,20 @@ Content-Type: application/json
 ```
 
 **Request body (all fields optional):**
+
 ```json
 {
   "email": "user@example.com",
   "contact_email": true,
   "contact_nip17": false,
   "country_code": "DE",
-  "billing_name": "John Doe",
-  "billing_address_1": "123 Main St",
-  "billing_address_2": "Apt 4",
-  "billing_city": "Berlin",
-  "billing_state": "Berlin",
-  "billing_postcode": "10115",
-  "billing_tax_id": "DE123456789",
+  "name": "John Doe",
+  "address_1": "123 Main St",
+  "address_2": "Apt 4",
+  "city": "Berlin",
+  "state": "Berlin",
+  "postcode": "10115",
+  "tax_id": "DE123456789",
   "nwc_connection_string": "nostr+walletconnect://..."
 }
 ```
@@ -125,6 +126,7 @@ GET /api/v1/vm
 | `offset` | u64 | Pagination offset |
 
 **Response:**
+
 ```json
 {
   "data": [
@@ -149,6 +151,8 @@ GET /api/v1/vm
         "disk_type": "ssd",
         "disk_interface": "scsi",
         "cost_plan": {
+          "id": 1,
+          "name": "Monthly",
           "amount": 500,
           "currency": "EUR",
           "interval_amount": 1,
@@ -161,15 +165,15 @@ GET /api/v1/vm
       },
       "ssh_key": {
         "id": 1,
-        "name": "my-key",
-        "created": "2024-01-01T00:00:00Z"
+        "name": "my-key"
       },
       "ip_assignments": [
         {
           "id": 1,
           "ip": "203.0.113.45/24",
           "gateway": "203.0.113.1",
-          "dns_reverse": "45.113.0.203.in-addr.arpa"
+          "forward_dns": "45.113.0.203.in-addr.arpa",
+          "reverse_dns": "myserver.example.com"
         }
       ],
       "status": {
@@ -207,6 +211,7 @@ Content-Type: application/json
 ```
 
 **Request body:**
+
 ```json
 {
   "template_id": 1,
@@ -216,12 +221,12 @@ Content-Type: application/json
 }
 ```
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `template_id` | u64 | Yes | Template ID from `/api/v1/vm/templates` |
-| `image_id` | u64 | Yes | Image ID from `/api/v1/image` |
-| `ssh_key_id` | u64 | Yes | SSH key ID from `/api/v1/ssh-key` |
-| `ref_code` | string | No | Referral code for discounts |
+| Field         | Type   | Required | Description                             |
+| ------------- | ------ | -------- | --------------------------------------- |
+| `template_id` | u64    | Yes      | Template ID from `/api/v1/vm/templates` |
+| `image_id`    | u64    | Yes      | Image ID from `/api/v1/image`           |
+| `ssh_key_id`  | u64    | Yes      | SSH key ID from `/api/v1/ssh-key`       |
+| `ref_code`    | string | No       | Referral code for discounts             |
 
 **Response:** VM object (same as Get VM)
 
@@ -235,6 +240,7 @@ Content-Type: application/json
 ```
 
 **Request body (all fields optional):**
+
 ```json
 {
   "ssh_key_id": 2,
@@ -278,9 +284,11 @@ GET /api/v1/vm/{id}/renew
 **Query parameters:**
 | Parameter | Type | Values | Default |
 |-----------|------|--------|---------|
-| `method` | string | `lightning`, `revolut` | `lightning` |
+| `method` | string | `lightning`, `revolut`, `paypal`, `stripe`, `nwc` | `lightning` |
+| `intervals` | number | Number of billing intervals to pay for | `1` |
 
 **Response:**
+
 ```json
 {
   "data": {
@@ -293,7 +301,7 @@ GET /api/v1/vm/{id}/renew
     "currency": "BTC",
     "is_paid": false,
     "data": {
-      "Lightning": "lnbc210u1pj..."
+      "lightning": "lnbc210u1pj..."
     },
     "time": 2592000,
     "is_upgrade": false,
@@ -303,6 +311,7 @@ GET /api/v1/vm/{id}/renew
 ```
 
 **Notes:**
+
 - `amount` is in satoshis (BTC) or cents (fiat)
 - `time` is seconds added to expiry upon payment
 - `expires` on the payment is invoice expiry (typically 15 minutes)
@@ -352,17 +361,19 @@ Content-Type: application/json
 ```
 
 **Request body:**
+
 ```json
 {
-  "new_cpu": 4,
-  "new_memory": 8589934592,
-  "new_disk": 107374182400
+  "cpu": 4,
+  "memory": 8589934592,
+  "disk": 107374182400
 }
 ```
 
 All fields are optional. Only include resources you want to change.
 
 **Response:**
+
 ```json
 {
   "data": {
@@ -401,6 +412,7 @@ GET /api/v1/ssh-key
 ```
 
 **Response:**
+
 ```json
 {
   "data": [
@@ -421,6 +433,7 @@ Content-Type: application/json
 ```
 
 **Request body:**
+
 ```json
 {
   "name": "my-laptop",
@@ -428,10 +441,10 @@ Content-Type: application/json
 }
 ```
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `name` | string | Yes | Friendly name for the key |
-| `key_data` | string | Yes | Full SSH public key |
+| Field      | Type   | Required | Description               |
+| ---------- | ------ | -------- | ------------------------- |
+| `name`     | string | Yes      | Friendly name for the key |
+| `key_data` | string | Yes      | Full SSH public key       |
 
 ---
 
@@ -444,9 +457,21 @@ GET /api/v1/payment/methods
 ```
 
 **Response:**
+
 ```json
 {
-  "data": ["lightning", "revolut"]
+  "data": [
+    {
+      "name": "lightning",
+      "currencies": ["BTC"],
+      "metadata": {}
+    },
+    {
+      "name": "revolut",
+      "currencies": ["EUR", "USD"],
+      "metadata": {}
+    }
+  ]
 }
 ```
 
@@ -457,6 +482,7 @@ GET /api/v1/payment/{id}
 ```
 
 **Response:**
+
 ```json
 {
   "data": {
@@ -469,7 +495,7 @@ GET /api/v1/payment/{id}
     "currency": "BTC",
     "is_paid": true,
     "data": {
-      "Lightning": "lnbc210u1pj..."
+      "lightning": "lnbc210u1pj..."
     },
     "time": 2592000,
     "is_upgrade": false,
@@ -497,6 +523,7 @@ GET /api/v1/image
 ```
 
 **Response:**
+
 ```json
 {
   "data": [
@@ -521,6 +548,7 @@ GET /api/v1/image
 ```
 
 **Distributions:**
+
 - `ubuntu`, `debian`, `centos`, `fedora`
 - `freebsd`, `opensuse`, `archlinux`, `redhatenterprise`
 
@@ -537,6 +565,7 @@ GET /api/v1/vm/templates
 Returns both standard templates and custom pricing options.
 
 **Response:**
+
 ```json
 {
   "data": [
@@ -577,6 +606,7 @@ Content-Type: application/json
 ```
 
 **Request body:**
+
 ```json
 {
   "pricing_id": 1,
@@ -588,29 +618,31 @@ Content-Type: application/json
 }
 ```
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `pricing_id` | u64 | Yes | Custom pricing plan ID |
-| `cpu` | u16 | Yes | Number of CPU cores |
-| `memory` | u64 | Yes | Memory in bytes |
-| `disk` | u64 | Yes | Disk size in bytes |
-| `disk_type` | string | Yes | `hdd` or `ssd` |
-| `disk_interface` | string | Yes | `sata`, `scsi`, or `pcie` |
+| Field            | Type   | Required | Description               |
+| ---------------- | ------ | -------- | ------------------------- |
+| `pricing_id`     | u64    | Yes      | Custom pricing plan ID    |
+| `cpu`            | u16    | Yes      | Number of CPU cores       |
+| `memory`         | u64    | Yes      | Memory in bytes           |
+| `disk`           | u64    | Yes      | Disk size in bytes        |
+| `disk_type`      | string | Yes      | `hdd` or `ssd`            |
+| `disk_interface` | string | Yes      | `sata`, `scsi`, or `pcie` |
 
 **Response:**
+
 ```json
 {
   "data": {
-    "amount": 1200,
-    "currency": "EUR",
-    "interval_amount": 1,
-    "interval_type": "month",
-    "breakdown": {
-      "cpu_cost": 400,
-      "memory_cost": 400,
-      "disk_cost": 300,
-      "ip4_cost": 100,
-      "ip6_cost": 0
+    "cost_difference": {
+      "amount": 5000,
+      "currency": "EUR"
+    },
+    "new_renewal_cost": {
+      "amount": 1500,
+      "currency": "EUR"
+    },
+    "discount": {
+      "amount": 500,
+      "currency": "EUR"
     }
   }
 }
@@ -624,6 +656,7 @@ Content-Type: application/json
 ```
 
 **Request body:**
+
 ```json
 {
   "pricing_id": 1,
@@ -650,6 +683,39 @@ Content-Type: application/json
 GET /api/v1/subscriptions
 ```
 
+**Response:**
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "My Subscription",
+      "description": null,
+      "created": "2024-01-01T00:00:00Z",
+      "expires": "2024-02-01T00:00:00Z",
+      "is_active": true,
+      "currency": "EUR",
+      "interval_amount": 1,
+      "interval_type": "month",
+      "setup_fee": 0,
+      "auto_renewal_enabled": true,
+      "line_items": [
+        {
+          "id": 1,
+          "subscription_id": 1,
+          "name": "IPv4 /24",
+          "description": null,
+          "amount": 1000,
+          "setup_amount": 500,
+          "configuration": null
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Create Subscription
 
 ```http
@@ -662,6 +728,8 @@ Content-Type: application/json
 ```http
 GET /api/v1/subscriptions/{id}
 ```
+
+**Response:** Same structure as single item in List Subscriptions.
 
 ### List Subscription Payments
 
@@ -726,14 +794,14 @@ All errors return:
 
 **HTTP Status Codes:**
 
-| Code | Meaning |
-|------|---------|
-| 200 | Success |
-| 400 | Bad request (invalid parameters) |
-| 401 | Unauthorized (invalid/missing NIP-98 auth) |
-| 403 | Forbidden (resource belongs to another user) |
-| 404 | Resource not found |
-| 500 | Internal server error |
+| Code | Meaning                                      |
+| ---- | -------------------------------------------- |
+| 200  | Success                                      |
+| 400  | Bad request (invalid parameters)             |
+| 401  | Unauthorized (invalid/missing NIP-98 auth)   |
+| 403  | Forbidden (resource belongs to another user) |
+| 404  | Resource not found                           |
+| 500  | Internal server error                        |
 
 ---
 
@@ -741,48 +809,48 @@ All errors return:
 
 ### Size Units (bytes)
 
-| Unit | Bytes |
-|------|-------|
-| 1 KB | 1,024 |
-| 1 MB | 1,048,576 |
-| 1 GB | 1,073,741,824 |
+| Unit | Bytes             |
+| ---- | ----------------- |
+| 1 KB | 1,024             |
+| 1 MB | 1,048,576         |
+| 1 GB | 1,073,741,824     |
 | 1 TB | 1,099,511,627,776 |
 
 ### Disk Types
 
-| Value | Description |
-|-------|-------------|
-| `hdd` | Hard disk drive |
+| Value | Description       |
+| ----- | ----------------- |
+| `hdd` | Hard disk drive   |
 | `ssd` | Solid state drive |
 
 ### Disk Interfaces
 
-| Value | Description |
-|-------|-------------|
-| `sata` | SATA interface |
+| Value  | Description                  |
+| ------ | ---------------------------- |
+| `sata` | SATA interface               |
 | `scsi` | SCSI interface (recommended) |
-| `pcie` | PCIe/NVMe (fastest) |
+| `pcie` | PCIe/NVMe (fastest)          |
 
 ### VM States
 
-| State | Description |
-|-------|-------------|
-| `pending` | Being provisioned |
+| State     | Description           |
+| --------- | --------------------- |
+| `pending` | Being provisioned     |
 | `running` | Online and accessible |
-| `stopped` | Powered off |
-| `failed` | Error state |
+| `stopped` | Powered off           |
+| `failed`  | Error state           |
 
 ### Payment Methods
 
-| Value | Description |
-|-------|-------------|
+| Value       | Description               |
+| ----------- | ------------------------- |
 | `lightning` | Bitcoin Lightning Network |
-| `revolut` | Fiat via Revolut |
+| `revolut`   | Fiat via Revolut          |
 
 ### Cost Plan Interval Types
 
-| Value | Description |
-|-------|-------------|
-| `day` | Daily billing |
+| Value   | Description     |
+| ------- | --------------- |
+| `day`   | Daily billing   |
 | `month` | Monthly billing |
-| `year` | Yearly billing |
+| `year`  | Yearly billing  |

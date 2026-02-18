@@ -102,7 +102,7 @@ export interface VmTemplate {
 }
 
 export interface VmStatus {
-  state: "running" | "stopped";
+  state: "running" | "stopped" | "pending" | "failed" | "error" | "unknown";
   cpu_usage: number;
   mem_usage: number;
   uptime: number;
@@ -145,6 +145,7 @@ export interface VmOsImage {
 export interface UserSshKey {
   id: number;
   name: string;
+  created?: string;
 }
 
 export type PaymentData =
@@ -162,6 +163,8 @@ export interface VmPayment {
   is_paid: boolean;
   data: PaymentData;
   time: number;
+  is_upgrade?: boolean;
+  upgrade_params?: VmUpgradeRequest | null;
 }
 
 export interface PatchVm {

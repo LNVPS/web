@@ -187,6 +187,19 @@ export function RevolutPayWidget({
             tax
           </div>
         )}
+        {payment.processing_fee > 0 && (
+          <div className="text-xs text-cyber-muted">
+            including{" "}
+            <CostAmount
+              cost={{
+                currency: payment.currency,
+                amount: payment.processing_fee,
+              }}
+              converted={false}
+            />{" "}
+            processing fee
+          </div>
+        )}
       </div>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">

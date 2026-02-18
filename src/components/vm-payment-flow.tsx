@@ -296,6 +296,19 @@ export default function VmPaymentFlow({
                 />
               </div>
               <div className="text-sm text-cyber-muted">Total Amount</div>
+              {payment.processing_fee > 0 && (
+                <div className="text-xs text-cyber-muted">
+                  including{" "}
+                  <CostAmount
+                    cost={{
+                      currency: payment.currency,
+                      amount: payment.processing_fee,
+                    }}
+                    converted={false}
+                  />{" "}
+                  processing fee
+                </div>
+              )}
             </div>
 
             <div className="text-sm text-cyber-muted text-center">

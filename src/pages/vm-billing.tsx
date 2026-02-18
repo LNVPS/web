@@ -144,6 +144,7 @@ export function VmBillingPage() {
               <tr>
                 <th>Date</th>
                 <th>Amount</th>
+                <th>Method</th>
                 <th>Time</th>
                 <th>Status</th>
                 <th></th>
@@ -164,11 +165,44 @@ export function VmBillingPage() {
                     <td>
                       <CostAmount
                         cost={{
-                          amount: a.amount + a.tax,
+                          amount: a.amount + a.tax + a.processing_fee,
                           currency: a.currency,
                         }}
                         converted={false}
                       />
+                      {a.tax > 0 && (
+                        <span className="text-cyber-muted text-xs">
+                          {" "}
+                          (
+                          <CostAmount
+                            cost={{ amount: a.tax, currency: a.currency }}
+                            converted={false}
+                          />{" "}
+                          tax)
+                        </span>
+                      )}
+                      {a.processing_fee > 0 && (
+                        <span className="text-cyber-muted text-xs">
+                          {" "}
+                          (
+                          <CostAmount
+                            cost={{
+                              amount: a.processing_fee,
+                              currency: a.currency,
+                            }}
+                            converted={false}
+                          />{" "}
+                          fee)
+                        </span>
+                      )}
+                    </td>
+                    <td className="uppercase text-sm">
+                      {a.payment_method ??
+                        ("lightning" in a.data
+                          ? "lightning"
+                          : "revolut" in a.data
+                            ? "revolut"
+                            : "—")}
                     </td>
                     <td>{timeValue(a.time)}</td>
                     <td>

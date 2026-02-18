@@ -159,12 +159,14 @@ export interface VmPayment {
   expires: string;
   amount: number;
   tax: number;
+  processing_fee: number;
   currency: string;
   is_paid: boolean;
   data: PaymentData;
   time: number;
   is_upgrade?: boolean;
   upgrade_params?: VmUpgradeRequest | null;
+  payment_method?: string;
 }
 
 export interface PatchVm {

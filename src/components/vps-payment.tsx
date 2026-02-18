@@ -77,6 +77,19 @@ export default function VpsPayment({
             tax
           </div>
         )}
+        {payment.processing_fee > 0 && (
+          <div className="text-xs text-cyber-muted">
+            including{" "}
+            <CostAmount
+              cost={{
+                currency: payment.currency,
+                amount: payment.processing_fee,
+              }}
+              converted={false}
+            />{" "}
+            processing fee
+          </div>
+        )}
       </div>
       <div className="monospace select-all break-all text-center text-sm text-cyber-text">
         {invoice}

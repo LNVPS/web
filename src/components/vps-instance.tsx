@@ -13,7 +13,11 @@ export default function VpsInstanceRow({
   onReload?: () => void;
 }) {
   const expires = new Date(vm.expires);
-  const isExpired = expires <= new Date();
+  const now = new Date();
+  const isExpired = expires <= now;
+  const daysLeft = Math.ceil(
+    (expires.getTime() - now.getTime()) / 1000 / 60 / 60 / 24,
+  );
   const navigate = useNavigate();
 
   return (
@@ -32,21 +36,25 @@ export default function VpsInstanceRow({
           <span className="text-cyber-text-bright">
             {vm.ip_assignments?.[0]?.reverse_dns ?? vm.template?.name}
           </span>
+          &nbsp;
+          <span
+            className={`text-xs ${isExpired ? "text-cyber-danger" : daysLeft <= 3 ? "text-cyber-danger" : daysLeft <= 7 ? "text-yellow-400" : "text-cyber-muted"}`}
+          >
+            {isExpired ? "[Expired]" : `- [${daysLeft} days remaining]`}
+          </span>
         </div>
         <VpsResources vm={vm} />
       </div>
       <div className="flex gap-2 items-center">
         {isExpired && (
-          <>
-            <Link
-              to="/vm/billing/renew"
-              className="text-cyber-danger text-sm"
-              state={vm}
-              onClick={(e) => e.stopPropagation()}
-            >
-              Expired
-            </Link>
-          </>
+          <Link
+            to="/vm/billing/renew"
+            className="text-cyber-danger text-sm"
+            state={vm}
+            onClick={(e) => e.stopPropagation()}
+          >
+            Renew
+          </Link>
         )}
         {!isExpired && (actions ?? true) && (
           <VmActions vm={vm} onReload={onReload} />

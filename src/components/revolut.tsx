@@ -159,14 +159,13 @@ export function RevolutPayWidget({
   }
 
   const total = payment.amount + payment.tax;
-  const displayAmount = payment.currency === "BTC" ? total / 1000 : total / 100;
 
   return (
     <div className="flex flex-col gap-4 rounded-sm border border-cyber-border p-4 bg-cyber-panel">
       <div className="text-center space-y-1">
         <div className="text-lg font-bold">
           <CostAmount
-            cost={{ currency: payment.currency, amount: displayAmount }}
+            cost={{ currency: payment.currency, amount: total }}
             converted={false}
           />
         </div>
@@ -181,10 +180,7 @@ export function RevolutPayWidget({
             <CostAmount
               cost={{
                 currency: payment.currency,
-                amount:
-                  payment.currency === "BTC"
-                    ? payment.tax / 1000
-                    : payment.tax / 100,
+                amount: payment.tax,
               }}
               converted={false}
             />{" "}

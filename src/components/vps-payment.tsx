@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { LNVpsApi, VmPayment } from "../api";
 import QrCode from "./qr";
 import useLogin from "../hooks/login";
+import { CostAmount } from "./cost";
 
 export default function VpsPayment({
   payment,
@@ -58,11 +59,22 @@ export default function VpsPayment({
       />
       <div className="flex flex-col items-center">
         <div className="text-cyber-primary">
-          {((payment.amount + payment.tax) / 1000).toLocaleString()} sats
+          <CostAmount
+            cost={{
+              currency: payment.currency,
+              amount: payment.amount + payment.tax,
+            }}
+            converted={false}
+          />
         </div>
         {payment.tax > 0 && (
           <div className="text-xs text-cyber-muted">
-            including {(payment.tax / 1000).toLocaleString()} sats tax
+            including{" "}
+            <CostAmount
+              cost={{ currency: payment.currency, amount: payment.tax }}
+              converted={false}
+            />{" "}
+            tax
           </div>
         )}
       </div>

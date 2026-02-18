@@ -290,10 +290,7 @@ export default function VmPaymentFlow({
                 <CostAmount
                   cost={{
                     currency: payment.currency,
-                    amount:
-                      payment.currency === "BTC"
-                        ? (payment.amount + payment.tax) / 1000
-                        : (payment.amount + payment.tax) / 100,
+                    amount: payment.amount + payment.tax,
                   }}
                   converted={false}
                 />

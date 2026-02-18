@@ -69,8 +69,8 @@ export function CostAmount({
     <span className={className}>
       {converted && "~"}
       {cost.currency !== "BTC"
-        ? formatter.format(cost.amount)
-        : Math.floor(cost.amount * 1e8).toLocaleString()}
+        ? formatter.format(cost.amount / 100)
+        : Math.floor(cost.amount / 1000).toLocaleString()}
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && <>/{intervalName(cost.interval_type)}</>}
     </span>

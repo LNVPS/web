@@ -164,9 +164,7 @@ export function VmBillingPage() {
                     <td>
                       <CostAmount
                         cost={{
-                          amount:
-                            (a.amount + a.tax) /
-                            (a.currency === "BTC" ? 1e11 : 100),
+                          amount: a.amount + a.tax,
                           currency: a.currency,
                         }}
                         converted={false}

@@ -544,7 +544,9 @@ export class LNVpsApi {
     const auth_b64 = base64.encode(
       new TextEncoder().encode(JSON.stringify(auth)),
     );
-    const ws = new WebSocket(`${u}?auth=${auth_b64}`);
+    // Rewrite http(s):// → ws(s):// so the URL is valid for WebSocket
+    const wsUrl = u.replace(/^http(s?):\/\//, "ws$1://");
+    const ws = new WebSocket(`${wsUrl}?auth=${auth_b64}`);
     return await new Promise<WebSocket>((resolve, reject) => {
       ws.onopen = () => {
         resolve(ws);

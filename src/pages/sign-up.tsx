@@ -5,7 +5,7 @@ import { hexToBech32 } from "@snort/shared";
 import { openFile } from "../utils";
 import { SnortContext } from "@snort/system-react";
 import { Blossom } from "../blossom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { LoginState } from "../login";
 import Login from "../components/login";
 
@@ -14,6 +14,7 @@ export default function SignUpPage() {
   const [error, setError] = useState("");
   const [file, setFile] = useState<File>();
   const [key, setKey] = useState<PrivateKeySigner>();
+  const location = useLocation();
   const system = useContext(SnortContext);
   const navigate = useNavigate();
 
@@ -45,7 +46,8 @@ export default function SignUpPage() {
     });
     system.BroadcastEvent(ev);
     LoginState.loginPrivateKey(key.privateKey);
-    navigate("/");
+    const backState = location.state;
+    navigate(-1, { state: backState });
   }
 
   return (
@@ -53,7 +55,12 @@ export default function SignUpPage() {
       {error && <b className="text-cyber-danger">{error}</b>}
       <h1>Login</h1>
 
-      <Login onLogin={() => navigate("/")} />
+      <Login
+        onLogin={() => {
+          const backState = location.state;
+          navigate(-1, { state: backState });
+        }}
+      />
 
       <div className="flex gap-4 items-center my-6">
         <div className="text-xl">OR</div>

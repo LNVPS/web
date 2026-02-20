@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { VmTemplate } from "../../api";
 import OrderVmPage from "./vm";
 import useLogin from "../../hooks/login";
-import Login from "../../components/login";
+import LoginButton from "../../components/login-button";
 
 export interface NewSubscriptionLineItem {}
 
@@ -29,9 +29,8 @@ export function OrderPage() {
     <div className="flex flex-col gap-12">
       {login === undefined && (
         <div className="flex flex-col gap-2">
-          <h1>Login</h1>
-          <small>Please login first before making a purchase</small>
-          <Login />
+          <div>Please login first before making a purchase</div>
+          <LoginButton />
         </div>
       )}
       {inner()}

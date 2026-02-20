@@ -12,6 +12,7 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "./button";
 import { CostAmount } from "./cost";
 import { RevolutPayWidget } from "./revolut";
+import SaleTag from "./sale-tag";
 import { Icon } from "./icon";
 import { ApiUrl } from "../const";
 import QrCode from "./qr";
@@ -201,15 +202,22 @@ export default function VmPaymentFlow({
         return (
           <div key={method.name} className={className}>
             {nameRow(method)}
-            <AsyncButton
-              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
-              onClick={async () => {
-                setSelectedMethod(method);
-                await createPayment(method.name);
-              }}
-            >
-              Pay with Card
-            </AsyncButton>
+            <div className="relative">
+              <SaleTag
+                className="absolute -top-2 -right-2 z-10"
+                value={2.8}
+                title="Additional card processing fees apply"
+              />
+              <AsyncButton
+                className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+                onClick={async () => {
+                  setSelectedMethod(method);
+                  await createPayment(method.name);
+                }}
+              >
+                Pay with Card
+              </AsyncButton>
+            </div>
           </div>
         );
       }

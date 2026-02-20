@@ -23,6 +23,7 @@ import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
 import { ContactPage } from "./pages/contact.tsx";
+import TranslationProvider from "./components/translation-provider.tsx";
 
 const system = new NostrSystem({
   automaticOutboxModel: false,
@@ -117,8 +118,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <SnortContext.Provider value={system}>
-      <RouterProvider router={router} />
-    </SnortContext.Provider>
+    <TranslationProvider>
+      <SnortContext.Provider value={system}>
+        <RouterProvider router={router} />
+      </SnortContext.Provider>
+    </TranslationProvider>
   </StrictMode>,
 );

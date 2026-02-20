@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect, ReactNode, Fragment } from "react";
 import { DiskType, LNVpsApi, VmHostRegion } from "../api";
 import VpsRow, { VpsTableHeader } from "../components/vps-card";
 import { ApiUrl, NostrProfile } from "../const";
@@ -13,6 +13,7 @@ import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
 import { useCached } from "../hooks/useCached";
 import IpBlockCard from "../components/ip-block-card";
+import { FormattedMessage } from "react-intl";
 
 export default function HomePage() {
   const login = useLogin();
@@ -26,36 +27,43 @@ export default function HomePage() {
         <hr />
         <div className="flex flex-col gap-4">
           <div className="text-center">
-            <a href="/lnvps.asc">PGP</a>
+            <a href="/lnvps.asc">
+              <FormattedMessage defaultMessage="PGP" />
+            </a>
             {" | "}
-            <Link to="/status">Status</Link>
+            <Link to="/status">
+              <FormattedMessage defaultMessage="Status" />
+            </Link>
             {" | "}
-            <Link to="/tos">Terms</Link>
+            <Link to="/tos">
+              <FormattedMessage defaultMessage="Terms" />
+            </Link>
             {" | "}
-            <Link to="/news">News</Link>
+            <Link to="/news">
+              <FormattedMessage defaultMessage="News" />
+            </Link>
             {" | "}
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">
+              <FormattedMessage defaultMessage="Contact" />
+            </Link>
             {" | "}
             <a
               href={`https://snort.social/${NostrProfile.encode()}`}
               target="_blank"
             >
-              Nostr
+              <FormattedMessage defaultMessage="Nostr" />
             </a>
             {" | "}
             <a href="https://github.com/LNVPS" target="_blank">
-              Git
+              <FormattedMessage defaultMessage="Git" />
             </a>
             {" | "}
             <a href="http://speedtest.v0l.io" target="_blank">
-              Speedtest
+              <FormattedMessage defaultMessage="Speedtest" />
             </a>
             {" | "}
-            <a
-              href="SKILL.md"
-              target="_blank"
-            >
-              SKILL.md
+            <a href="SKILL.md" target="_blank">
+              <FormattedMessage defaultMessage="SKILL.md" />
             </a>
           </div>
           {import.meta.env.VITE_FOOTER_NOTE_1 && (
@@ -69,7 +77,7 @@ export default function HomePage() {
             </div>
           )}
           <div className="text-sm text-center">
-            Display Currency:{" "}
+            <FormattedMessage defaultMessage="Display Currency:" />{" "}
             <select
               value={login?.currency ?? "EUR"}
               onChange={(e) =>
@@ -78,7 +86,9 @@ export default function HomePage() {
             >
               {["BTC", "EUR", "USD", "GBP", "AUD", "CAD", "CHF", "JPY"].map(
                 (a) => (
-                  <option>{a}</option>
+                  <option key={a} value={a}>
+                    {a}
+                  </option>
                 ),
               )}
             </select>
@@ -134,12 +144,12 @@ function PaymentMethodsFooter() {
           m.name.toLowerCase().includes("lightning") ||
           m.name.toLowerCase().includes("btc"),
       ) && (
-          <Icon
-            name="bitcoin"
-            size={48}
-            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
-          />
-        )}
+        <Icon
+          name="bitcoin"
+          size={48}
+          className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+        />
+      )}
       {methods?.some((m) => m.name === "nwc") && (
         <a href="https://nwc.dev" target="_blank" title="NWC">
           <Icon
@@ -185,11 +195,15 @@ function VpsOffersSection() {
 
   return (
     <>
-      <div className="text-2xl">VPS Offers</div>
-      <div>High-performance VPS powered by Bitcoin. No KYC, no fuss.</div>
+      <div className="text-2xl">
+        <FormattedMessage defaultMessage="VPS Offers" />
+      </div>
+      <div>
+        <FormattedMessage defaultMessage="High-performance VPS powered by Bitcoin. No KYC, no fuss." />
+      </div>
       <div className="flex gap-4 items-center">
         {Object.keys(regions).length > 1 && (
-          <FilterSection header={"Region"}>
+          <FilterSection header={<FormattedMessage defaultMessage="Region" />}>
             {Object.values(regions).map((r) => {
               return (
                 <FilterButton
@@ -211,7 +225,7 @@ function VpsOffersSection() {
           </FilterSection>
         )}
         {diskTypes.length > 1 && (
-          <FilterSection header={"Disk"}>
+          <FilterSection header={<FormattedMessage defaultMessage="Disk" />}>
             {diskTypes.map((d) => (
               <FilterButton
                 active={diskType.includes(d)}
@@ -235,22 +249,24 @@ function VpsOffersSection() {
         <div className="text-center p-8">
           <div className="flex items-center justify-center gap-3">
             <Spinner width={24} height={24} />
-            <span className="text-cyber-muted">Loading VPS offers...</span>
+            <span className="text-cyber-muted">
+              <FormattedMessage defaultMessage="Loading VPS offers..." />
+            </span>
           </div>
         </div>
       ) : loadError ? (
         <div className="text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
           <div className="text-cyber-danger bold text-xl uppercase mb-2">
-            Failed to load VPS offers
+            <FormattedMessage defaultMessage="Failed to load VPS offers" />
           </div>
           <div className="text-cyber-muted mb-4">
-            There may be a service issue. Check our status page for updates.
+            <FormattedMessage defaultMessage="There may be a service issue. Check our status page for updates." />
           </div>
           <Link
             to="/status"
             className="text-cyber-accent hover:text-cyber-accent underline"
           >
-            View Status Page
+            <FormattedMessage defaultMessage="View Status Page" />
           </Link>
           <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
             Error: {loadError.message}
@@ -258,7 +274,7 @@ function VpsOffersSection() {
         </div>
       ) : offers?.templates !== undefined && offers.templates.length === 0 ? (
         <div className="text-cyber-danger bold text-xl uppercase">
-          No offers available
+          <FormattedMessage defaultMessage="No offers available" />
         </div>
       ) : (
         <div className="overflow-x-auto">
@@ -284,8 +300,7 @@ function VpsOffersSection() {
         <VpsCustomOrder templates={offers.custom_template} />
       )}
       <small className="text-cyber-muted text-center">
-        All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all
-        prices are excluding taxes.
+        <FormattedMessage defaultMessage="All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all prices are excluding taxes." />
       </small>
     </>
   );
@@ -305,19 +320,23 @@ function IpSpaceSection() {
 
   return (
     <div className="flex flex-col gap-4 mt-8">
-      <div className="text-2xl">Available IP Blocks</div>
+      <div className="text-2xl">
+        <FormattedMessage defaultMessage="Available IP Blocks" />
+      </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {ipLoading ? (
           <div className="col-span-full text-center p-8">
             <div className="flex items-center justify-center gap-3">
               <Spinner width={24} height={24} />
-              <span className="text-cyber-muted">Loading IP blocks...</span>
+              <span className="text-cyber-muted">
+                <FormattedMessage defaultMessage="Loading IP blocks..." />
+              </span>
             </div>
           </div>
         ) : ipError ? (
           <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
             <div className="text-cyber-danger bold text-xl uppercase mb-2">
-              Failed to load IP blocks
+              <FormattedMessage defaultMessage="Failed to load IP blocks" />
             </div>
             <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
               Error: {ipError.message}

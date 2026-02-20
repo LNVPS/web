@@ -1,0 +1,7 @@
+{
+  "src": ["src/**/*.tsx", "src/**/*.ts"],
+  "out": "src/locales/{{locale}}.json",
+  "removeMessages": false,
+  "extractors": ["@formatjs/cli/intl-visitor-transformer"],
+  "ast": true
+}

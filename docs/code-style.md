@@ -146,3 +146,11 @@ class LNVpsApi {
   async #handleResponse<T>(rsp: Response): Promise<T> { ... }
 }
 ```
+
+## Translations
+
+- Use `<FormattedMessage>` component directly in JSX for all user-facing strings
+- Auto-generated message IDs (no `id` or `defaultMessage` in `defineMessage`)
+- Never use `defineMessage`/`Messages` constant pattern except for API error messages
+- All dynamic strings in JSX should be wrapped in `<FormattedMessage>`
+- Translation files: `src/locales/{locale}.json` (auto-generated via `yarn locale:extract`)

@@ -5,7 +5,6 @@ import { hexToBech32 } from "@snort/shared";
 import { openFile } from "../utils";
 import { SnortContext } from "@snort/system-react";
 import { Blossom } from "../blossom";
-import { useNavigate, useLocation } from "react-router-dom";
 import { LoginState } from "../login";
 import Login from "../components/login";
 
@@ -14,9 +13,7 @@ export default function SignUpPage() {
   const [error, setError] = useState("");
   const [file, setFile] = useState<File>();
   const [key, setKey] = useState<PrivateKeySigner>();
-  const location = useLocation();
   const system = useContext(SnortContext);
-  const navigate = useNavigate();
 
   async function uploadImage() {
     const f = await openFile();
@@ -46,8 +43,7 @@ export default function SignUpPage() {
     });
     system.BroadcastEvent(ev);
     LoginState.loginPrivateKey(key.privateKey);
-    const backState = location.state;
-    navigate(-1, { state: backState });
+    window.history.back();
   }
 
   return (
@@ -57,8 +53,7 @@ export default function SignUpPage() {
 
       <Login
         onLogin={() => {
-          const backState = location.state;
-          navigate(-1, { state: backState });
+          window.history.back();
         }}
       />
 

@@ -1,7 +1,7 @@
 import { FitAddon } from "@xterm/addon-fit";
 import { Terminal } from "@xterm/xterm";
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import useLogin from "../hooks/login";
 import { VmInstance } from "../api";
 import { WebglAddon } from "@xterm/addon-webgl";
@@ -12,7 +12,6 @@ type ConnectionStatus = "connecting" | "connected" | "disconnected";
 export function VmConsolePage() {
   const { state } = useLocation() as { state?: VmInstance };
   const login = useLogin();
-  const navigate = useNavigate();
   const termRef = useRef<HTMLDivElement | null>(null);
   const wsRef = useRef<WebSocket | null>(null);
   const termObjRef = useRef<Terminal | null>(null);
@@ -138,7 +137,7 @@ export function VmConsolePage() {
         <div className="flex items-center gap-3">
           <button
             className="text-sm px-3 py-1 border rounded hover:bg-neutral-800"
-            onClick={() => navigate(-1)}
+            onClick={() => window.history.back()}
           >
             ← Back
           </button>

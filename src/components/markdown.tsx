@@ -141,7 +141,10 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
                 <thead>
                   <tr>
                     {(t.header as Tokens.TableCell[]).map((v) => (
-                      <th className="border" key={ctr++}>
+                      <th
+                        className="border border-cyber-border px-2 py-1"
+                        key={ctr++}
+                      >
                         {v.tokens ? v.tokens.map(renderToken) : v.text}
                       </th>
                     ))}
@@ -151,7 +154,10 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
                   {(t.rows as Tokens.TableCell[][]).map((v) => (
                     <tr key={ctr++}>
                       {v.map((d, d_key) => (
-                        <td className="border px-2 py-1" key={d_key}>
+                        <td
+                          className="border border-cyber-border px-2 py-1"
+                          key={d_key}
+                        >
                           {d.tokens ? d.tokens.map(renderToken) : d.text}
                         </td>
                       ))}

@@ -1,7 +1,7 @@
 import { EventKind, RequestBuilder } from "@snort/system";
 import { NostrProfile } from "../const";
 import { useRequestBuilder } from "@snort/system-react";
-import { NewsLink } from "../components/news-link";
+import { NewsPostContent } from "./news-post";
 
 export function NewsPage() {
   const req = new RequestBuilder("news");
@@ -14,7 +14,7 @@ export function NewsPage() {
   const posts = useRequestBuilder(req);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <div className="text-2xl">News</div>
       {posts
         .sort((a, b) => {
@@ -27,7 +27,12 @@ export function NewsPage() {
           return b_posted - a_posted;
         })
         .map((a) => (
-          <NewsLink ev={a} />
+          <article
+            key={a.id}
+            className="rounded-sm border border-cyber-border bg-cyber-panel px-4 py-6"
+          >
+            <NewsPostContent ev={a} />
+          </article>
         ))}
       {posts.length === 0 && <div>No posts yet..</div>}
     </div>

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
+import NewTag from "../components/new-tag";
 import SSHKeySelector from "../components/ssh-keys";
 
 export default function VmPage() {
@@ -112,9 +113,12 @@ export default function VmPage() {
       </div>
       <hr />
       <div className="flex gap-4 flex-wrap">
-        <AsyncButton onClick={() => navigate("/vm/console", { state })}>
-          Console
-        </AsyncButton>
+        <div className="relative">
+          <AsyncButton onClick={() => navigate("/vm/console", { state })}>
+            Console
+          </AsyncButton>
+          <NewTag className="absolute -top-2 -right-2" />
+        </div>
         <AsyncButton onClick={() => navigate("/vm/billing", { state })}>
           Billing
         </AsyncButton>

@@ -117,7 +117,7 @@ if (!login?.api) return;
 - **Tailwind CSS** utility classes inline in JSX
 - `classnames` library (imported as `classNames`) for conditional classes
 - No CSS modules, no styled-components
-- Dark theme: `bg-neutral-900`, `bg-neutral-800`, `text-neutral-400`, etc.
+- **Theme colors:** Always use `cyber-*` color classes for light/dark theme support. See `src/index.css` for available colors.
 - Only custom CSS file: `src/components/spinner.css`
 
 ## Routing

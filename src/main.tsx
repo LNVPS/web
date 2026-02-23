@@ -23,6 +23,8 @@ import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
 import { ContactPage } from "./pages/contact.tsx";
+import { AccountReferralPage } from "./pages/account-referral.tsx";
+import AccountLayout from "./pages/account-layout.tsx";
 import TranslationProvider from "./components/translation-provider.tsx";
 
 const system = new NostrSystem({
@@ -50,19 +52,29 @@ const router = createBrowserRouter([
       },
       {
         path: "/account",
-        element: <AccountPage />,
-      },
-      {
-        path: "/account/settings",
-        element: <AccountSettings />,
-      },
-      {
-        path: "/account/nostr-domain",
-        element: <AccountNostrDomainPage />,
-      },
-      {
-        path: "/account/support",
-        element: <AccountSupportPage />,
+        element: <AccountLayout />,
+        children: [
+          {
+            index: true,
+            element: <AccountPage />,
+          },
+          {
+            path: "settings",
+            element: <AccountSettings />,
+          },
+          {
+            path: "nostr-domain",
+            element: <AccountNostrDomainPage />,
+          },
+          {
+            path: "support",
+            element: <AccountSupportPage />,
+          },
+          {
+            path: "referral",
+            element: <AccountReferralPage />,
+          },
+        ],
       },
       {
         path: "/contact",

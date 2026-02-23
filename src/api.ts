@@ -315,6 +315,7 @@ export interface NostrDomain {
   handles: number;
   created: Date;
   relays: Array<string>;
+  activation_hash?: string;
 }
 
 export interface NostrDomainHandle {

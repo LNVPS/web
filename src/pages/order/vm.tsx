@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { VmOsImage, VmTemplate } from "../../api";
-import { useEffect, useState } from "react";
+import { LNVpsApi, VmOsImage, VmTemplate } from "../../api";
+import { useEffect, useMemo, useState } from "react";
 import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
 import { AsyncButton } from "../../components/button";
@@ -9,6 +9,7 @@ import VpsResources from "../../components/vps-resources";
 import OsImageName from "../../components/os-image-name";
 import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
+import { ApiUrl } from "../../const";
 
 export default function OrderVmPage({ template }: { template: VmTemplate }) {
   const login = useLogin();
@@ -18,10 +19,22 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
   const [images, setImages] = useState<Array<VmOsImage>>([]);
   const [orderError, setOrderError] = useState("");
 
+  // Fetch images without auth (public endpoint) to reduce signer burden
   useEffect(() => {
-    if (!login?.api) return;
-    login.api.listOsImages().then((a) => setImages(a));
-  }, [login]);
+    const api = new LNVpsApi(ApiUrl, undefined);
+    api.listOsImages().then((a) => {
+      setImages(a);
+      // Auto-select the first (most recent) image
+      if (a.length > 0) {
+        const sorted = [...a].sort(
+          (x, y) =>
+            new Date(y.release_date).getTime() -
+            new Date(x.release_date).getTime(),
+        );
+        setUseImage(sorted[0].id);
+      }
+    });
+  }, []);
 
   async function createOrder() {
     if (!login?.api || !template) return;
@@ -55,9 +68,14 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
     }
   }
 
-  const sortedImages = images.sort(
-    (a, b) =>
-      new Date(b.release_date).getTime() - new Date(a.release_date).getTime(),
+  const sortedImages = useMemo(
+    () =>
+      [...images].sort(
+        (a, b) =>
+          new Date(b.release_date).getTime() -
+          new Date(a.release_date).getTime(),
+      ),
+    [images],
   );
 
   if (!template) {

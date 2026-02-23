@@ -1,50 +1,120 @@
-# React + TypeScript + Vite
+# LNVPS Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React single-page application for [LNVPS](https://lnvps.com) - a Bitcoin Lightning Network VPS provider.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Nostr Authentication** - Sign in using your Nostr identity (NIP-07 browser extension or nsec)
+- **VM Management** - Order, start, stop, restart, reinstall, and upgrade virtual machines
+- **Web Terminal** - Access your VMs directly from the browser via WebSocket console
+- **Resource Monitoring** - View CPU, memory, network, and disk usage graphs
+- **Lightning Payments** - Pay for VMs with Bitcoin Lightning Network
+- **Fiat Payments** - Alternative payment via Revolut
+- **Auto-Renewal** - Configure automatic renewals using Nostr Wallet Connect (NWC)
+- **Custom VPS** - Configure custom VM specifications (CPU, RAM, disk)
+- **Referral Program** - Earn rewards by referring new users
+- **IP Space Management** - Browse and subscribe to IP address blocks
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React 18** - UI framework
+- **TypeScript 5.5** - Type-safe JavaScript
+- **Vite 6** - Build tool and dev server
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **React Router 7** - Client-side routing
+- **@snort/system** - Nostr protocol integration
+- **xterm.js** - Web terminal emulator
+- **Recharts** - Resource usage graphs
+- **react-intl** - Internationalization
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+### Prerequisites
+
+- Node.js 18+
+- Yarn 4 (Berry)
+
+### Installation
+
+```bash
+# Install dependencies
+yarn
+
+# Start development server
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The app will be available at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+### Build
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
+```bash
+# Production build
+yarn build
+
+# Build for specific environment
+yarn build --mode lnvps
+yarn build --mode uat
 ```
+
+### Other Commands
+
+```bash
+# Run linter
+yarn lint
+
+# Preview production build
+yarn preview
+
+# Extract translation strings
+yarn locale:extract
+
+# Compile translations
+yarn locale:compile
+```
+
+## Project Structure
+
+```
+src/
+├── main.tsx              # Entry point, router setup
+├── api.ts                # API client and types
+├── login.ts              # Authentication state management
+├── const.ts              # Constants and configuration
+├── components/           # Reusable UI components
+├── pages/                # Route page components
+├── hooks/                # Custom React hooks
+└── locales/              # Translation files
+```
+
+## Environment Variables
+
+Configure the API endpoint and other settings via environment files:
+
+- `.env` - Default/production
+- `.env.lnvps` - LNVPS production
+- `.env.uat` - User acceptance testing
+- `.env.development` - Local development
+
+Key variables:
+
+- `VITE_API_URL` - Backend API URL
+- `VITE_NOSTR_PUBKEY` - Nostr public key for the service
+
+## Deployment
+
+The project uses Docker multi-stage builds:
+
+1. **Builder stage** - Node.js builds the static assets
+2. **Runner stage** - Nginx serves the built files
+
+CI/CD via GitHub Actions automatically builds and pushes to `registry.v0l.io`.
+
+## API Documentation
+
+The backend API documentation is available at:
+https://github.com/LNVPS/api/blob/master/API_DOCUMENTATION.md
+
+## License
+
+MIT

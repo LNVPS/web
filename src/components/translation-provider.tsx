@@ -12,7 +12,7 @@ export default function TranslationProvider({
   const messages = useMemo(() => ({}), []);
 
   return (
-    <IntlProvider locale={locale} messages={messages} fallbackLocale="en">
+    <IntlProvider locale={locale} messages={messages} defaultLocale="en">
       {children}
     </IntlProvider>
   );

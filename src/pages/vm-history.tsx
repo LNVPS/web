@@ -79,8 +79,8 @@ function JsonDiff({
     const allKeys = new Set([...Object.keys(prevObj), ...Object.keys(currObj)]);
     const changes: Array<{
       key: string;
-      from: any;
-      to: any;
+      from: unknown;
+      to: unknown;
       type: "added" | "removed" | "changed";
     }> = [];
 

@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
+  CostPlanIntervalType,
+  CpuArch,
+  CpuMfg,
   DiskInterface,
   DiskType,
   LNVpsApi,
@@ -11,13 +14,122 @@ import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
 import { FilterButton } from "./button-filter";
 
+function formatCpuMfg(mfg?: CpuMfg): string | undefined {
+  if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
+  switch (mfg) {
+    case CpuMfg.INTEL:
+      return "Intel";
+    case CpuMfg.AMD:
+      return "AMD";
+    case CpuMfg.APPLE:
+      return "Apple";
+    case CpuMfg.NVIDIA:
+      return "NVIDIA";
+    case CpuMfg.ARM:
+      return "ARM";
+    default:
+      return undefined;
+  }
+}
+
+function formatCpuArch(arch?: CpuArch): string | undefined {
+  if (!arch || arch === CpuArch.UNKNOWN) return undefined;
+  switch (arch) {
+    case CpuArch.X86_64:
+      return "x86_64";
+    case CpuArch.ARM64:
+      return "ARM64";
+    default:
+      return undefined;
+  }
+}
+
+/**
+ * Generate a CPU constraint label for a custom template variant
+ */
+function getCpuConstraintLabel(template: VmCustomTemplateParams): string {
+  const parts: string[] = [];
+
+  // Add CPU manufacturer
+  const cpuMfg = formatCpuMfg(template.cpu_mfg);
+  if (cpuMfg) {
+    parts.push(cpuMfg);
+  }
+
+  // Add CPU architecture
+  const cpuArch = formatCpuArch(template.cpu_arch);
+  if (cpuArch) {
+    parts.push(cpuArch);
+  }
+
+  // Add notable CPU features (limit to a few key ones)
+  if (template.cpu_features && template.cpu_features.length > 0) {
+    const notableFeatures = template.cpu_features
+      .filter((f) =>
+        ["AVX512F", "AVX2", "NestedVirt", "SGX", "SEV", "TDX"].includes(f),
+      )
+      .slice(0, 2);
+    if (notableFeatures.length > 0) {
+      parts.push(notableFeatures.join(", "));
+    }
+  }
+
+  // Return "Any" if no specific constraints
+  if (parts.length === 0) {
+    return "Any";
+  }
+
+  return parts.join(" ");
+}
+
 export function VpsCustomOrder({
   templates,
 }: {
   templates: Array<VmCustomTemplateParams>;
 }) {
+  // Group templates by region
+  const templatesByRegion = useMemo(() => {
+    const grouped = new Map<number, VmCustomTemplateParams[]>();
+    for (const template of templates) {
+      const regionId = template.region.id;
+      if (!grouped.has(regionId)) {
+        grouped.set(regionId, []);
+      }
+      grouped.get(regionId)!.push(template);
+    }
+    return grouped;
+  }, [templates]);
+
+  // Get unique regions
+  const regions = useMemo(() => {
+    const seen = new Map<number, VmCustomTemplateParams>();
+    for (const template of templates) {
+      if (!seen.has(template.region.id)) {
+        seen.set(template.region.id, template);
+      }
+    }
+    return Array.from(seen.values());
+  }, [templates]);
+
   const [region, setRegion] = useState(templates.at(0)?.region.id);
-  const params = templates.find((t) => t.region.id == region) ?? templates[0];
+
+  // Get templates for selected region
+  const regionTemplates = useMemo(
+    () => templatesByRegion.get(region ?? 0) ?? [],
+    [templatesByRegion, region],
+  );
+
+  // Selected template within region (for when there are multiple variants)
+  const [selectedTemplateId, setSelectedTemplateId] = useState<number>(
+    templates.at(0)?.id ?? 0,
+  );
+
+  // Find current params - either by selected template id or first in region
+  const params = useMemo(() => {
+    const found = regionTemplates.find((t) => t.id === selectedTemplateId);
+    return found ?? regionTemplates[0] ?? templates[0];
+  }, [regionTemplates, selectedTemplateId, templates]);
+
   const [cpu, setCpu] = useState(params.min_cpu ?? 1);
   const [diskType, setDiskType] = useState(params.disks.at(0));
   const [ram, setRam] = useState(Math.floor((params.min_memory ?? GiB) / GiB));
@@ -31,12 +143,21 @@ export function VpsCustomOrder({
     id: 0,
     name: "custom",
     amount: price?.amount ?? 0,
-    currency: price?.currency ?? "",
+    currency: (price?.currency as "BTC" | "EUR" | "USD") ?? "USD",
+    other_price: [],
     interval_amount: 1,
-    interval_type: "month",
+    interval_type: CostPlanIntervalType.MONTH,
   };
 
-  // Reset parameters when region changes
+  // Reset selected template when region changes
+  useEffect(() => {
+    const firstInRegion = regionTemplates[0];
+    if (firstInRegion) {
+      setSelectedTemplateId(firstInRegion.id);
+    }
+  }, [region, regionTemplates]);
+
+  // Reset parameters when selected template changes
   useEffect(() => {
     if (params) {
       setCpu(params.min_cpu ?? 1);
@@ -44,7 +165,7 @@ export function VpsCustomOrder({
       setRam(Math.floor((params.min_memory ?? GiB) / GiB));
       setDisk(Math.floor((params.disks.at(0)?.min_disk ?? GiB) / GiB));
     }
-  }, [region, params]);
+  }, [params]);
 
   // Clamp disk value when disk type changes
   useEffect(() => {
@@ -77,16 +198,32 @@ export function VpsCustomOrder({
   return (
     <div className="flex flex-col gap-4 bg-cyber-panel rounded-sm px-4 py-6">
       <div className="text-lg">Custom VPS Order</div>
-      {templates.length > 1 && (
-        <div className="flex gap-2 items-center">
-          <div className="text-sm text-cyber-muted py-2">Region:</div>
-          {templates.map((template) => (
+      <div className="flex gap-2 items-center flex-wrap">
+        <div className="text-sm text-cyber-muted py-2">Region:</div>
+        {regions.length > 1 ? (
+          regions.map((template) => (
             <FilterButton
               key={template.region.id}
               active={region === template.region.id}
               onClick={() => setRegion(template.region.id)}
             >
               {template.region.name}
+            </FilterButton>
+          ))
+        ) : (
+          <span className="text-sm">{regions[0]?.region.name}</span>
+        )}
+      </div>
+      {regionTemplates.length > 1 && (
+        <div className="flex gap-2 items-center flex-wrap">
+          <div className="text-sm text-cyber-muted py-2">CPU:</div>
+          {regionTemplates.map((template) => (
+            <FilterButton
+              key={template.id}
+              active={selectedTemplateId === template.id}
+              onClick={() => setSelectedTemplateId(template.id)}
+            >
+              {getCpuConstraintLabel(template)}
             </FilterButton>
           ))}
         </div>
@@ -202,7 +339,7 @@ export function VpsCustomOrder({
                 disk_size: disk * GiB,
                 disk_type: diskType?.disk_type ?? DiskType.SSD,
                 disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
-                created: new Date(),
+                created: new Date().toISOString(),
                 region: params.region,
                 cost_plan,
               }}

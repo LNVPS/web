@@ -1,23 +1,61 @@
-import { VmInstance, VmTemplate } from "../api";
+import { CpuArch, CpuMfg, VmInstance, VmTemplate, VmStatus } from "../api";
 import BytesSize from "./bytes";
+
+function formatCpuMfg(mfg?: CpuMfg): string | undefined {
+  if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
+  switch (mfg) {
+    case CpuMfg.INTEL:
+      return "Intel";
+    case CpuMfg.AMD:
+      return "AMD";
+    case CpuMfg.APPLE:
+      return "Apple";
+    case CpuMfg.NVIDIA:
+      return "NVIDIA";
+    case CpuMfg.ARM:
+      return "ARM";
+    default:
+      return undefined;
+  }
+}
+
+function formatCpuArch(arch?: CpuArch): string | undefined {
+  if (!arch || arch === CpuArch.UNKNOWN) return undefined;
+  switch (arch) {
+    case CpuArch.X86_64:
+      return "x86_64";
+    case CpuArch.ARM64:
+      return "ARM64";
+    default:
+      return undefined;
+  }
+}
 
 export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const diskType = "template" in vm ? vm.template?.disk_type : vm.disk_type;
   const region = "region" in vm ? vm.region.name : vm.template?.region?.name;
   const status = "status" in vm ? vm.status : undefined;
   const template = "template" in vm ? vm.template : (vm as VmTemplate);
+  const cpuMfg = formatCpuMfg(template?.cpu_mfg);
+  const cpuArch = formatCpuArch(template?.cpu_arch);
+  const cpuInfo = [cpuMfg, cpuArch].filter(Boolean).join(" ");
   return (
     <>
       <div className="text-xs text-cyber-muted">
-        {template?.cpu} vCPU, <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
+        {template?.cpu} vCPU{cpuInfo && ` (${cpuInfo})`},{" "}
+        <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
         <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
         , {region && <>Location: {region}</>}
       </div>
       {status && status.state === "running" && (
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
-          {(100 * status.cpu_usage).toFixed(1)}% CPU,{" "}
-          {(100 * status.mem_usage).toFixed(0)}% RAM
+          {"cpu_usage" in status
+            ? `${(100 * (status as VmStatus & { cpu_usage: number }).cpu_usage).toFixed(1)}% CPU`
+            : "CPU:"}{" "}
+          {"mem_usage" in status
+            ? `${(100 * (status as VmStatus & { mem_usage: number }).mem_usage).toFixed(0)}% RAM`
+            : "RAM"}
         </div>
       )}
       {status && status.state === "stopped" && (

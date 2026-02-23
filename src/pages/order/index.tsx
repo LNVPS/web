@@ -1,15 +1,13 @@
 import { useLocation } from "react-router-dom";
-import { VmTemplate } from "../../api";
+import { VmTemplate, AvailableIpSpace, IpSpacePricing } from "../../api";
 import OrderVmPage from "./vm";
 import useLogin from "../../hooks/login";
 import LoginButton from "../../components/login-button";
 
-export interface NewSubscriptionLineItem {}
-
 export interface OrderCart {
   type: "vm" | "ip_space";
   template?: VmTemplate;
-  items?: Array<NewSubscriptionLineItem>;
+  items?: Array<{ ipBlock?: AvailableIpSpace; pricing?: IpSpacePricing }>;
 }
 
 export function OrderPage() {
@@ -22,6 +20,9 @@ export function OrderPage() {
     switch (cart.type) {
       case "vm": {
         return <OrderVmPage template={cart.template!} />;
+      }
+      case "ip_space": {
+        return <div>IP Space ordering coming soon</div>;
       }
     }
   }

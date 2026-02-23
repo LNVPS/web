@@ -1,8 +1,38 @@
-import { VmTemplate } from "../api";
+import { CpuArch, CpuMfg, VmTemplate } from "../api";
 import BytesSize from "./bytes";
 import CostLabel from "./cost";
 import { useNavigateOrder } from "../hooks/order";
 import { AsyncButton } from "./button";
+
+function formatCpuMfg(mfg?: CpuMfg): string | undefined {
+  if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
+  switch (mfg) {
+    case CpuMfg.INTEL:
+      return "Intel";
+    case CpuMfg.AMD:
+      return "AMD";
+    case CpuMfg.APPLE:
+      return "Apple";
+    case CpuMfg.NVIDIA:
+      return "NVIDIA";
+    case CpuMfg.ARM:
+      return "ARM";
+    default:
+      return undefined;
+  }
+}
+
+function formatCpuArch(arch?: CpuArch): string | undefined {
+  if (!arch || arch === CpuArch.UNKNOWN) return undefined;
+  switch (arch) {
+    case CpuArch.X86_64:
+      return "x86_64";
+    case CpuArch.ARM64:
+      return "ARM64";
+    default:
+      return undefined;
+  }
+}
 
 export function VpsTableHeader() {
   return (
@@ -22,11 +52,19 @@ export function VpsTableHeader() {
 
 export default function VpsRow({ spec }: { spec: VmTemplate }) {
   const order = useNavigateOrder();
+  const cpuMfg = formatCpuMfg(spec.cpu_mfg);
+  const cpuArch = formatCpuArch(spec.cpu_arch);
+  const cpuInfo = [cpuMfg, cpuArch].filter(Boolean).join(" ");
 
   return (
     <tr className="hover:bg-cyber-panel-light/50 transition-colors">
       <td className="text-cyber-primary font-medium">{spec.name}</td>
-      <td>{spec.cpu} vCPU</td>
+      <td>
+        {spec.cpu} vCPU
+        {cpuInfo && (
+          <span className="text-cyber-muted text-xs ml-1">({cpuInfo})</span>
+        )}
+      </td>
       <td>
         <BytesSize value={spec.memory} />
       </td>

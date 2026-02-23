@@ -12,7 +12,6 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "./button";
 import { CostAmount } from "./cost";
 import { RevolutPayWidget } from "./revolut";
-import SaleTag from "./sale-tag";
 import { Icon } from "./icon";
 import { ApiUrl } from "../const";
 import QrCode from "./qr";
@@ -152,8 +151,35 @@ export default function VmPaymentFlow({
       </div>
     );
 
+    const renderProcessingFee = (m: PaymentMethod) => {
+      if (m.processing_fee_rate || m.processing_fee_base) {
+        const rate = m.processing_fee_rate;
+        const base = m.processing_fee_base;
+        const currency = m.processing_fee_currency?.toUpperCase();
+
+        const feeParts = [];
+        if (rate) {
+          feeParts.push(`${rate.toFixed(1)}%`);
+        }
+        if (base) {
+          if (currency === "BTC") {
+            feeParts.push(`${base} sats`);
+          } else {
+            feeParts.push(`${(base / 100).toFixed(2)} ${currency}`);
+          }
+        }
+
+        return (
+          <div className="text-xs text-cyber-muted bg-cyber-panel p-1 rounded">
+            Fee: {feeParts.join(" + ")}
+          </div>
+        );
+      }
+      return null;
+    };
+
     switch (method.name) {
-      case "lnurl": {
+      case "nwc": {
         const addr = method.metadata?.["address"];
         return (
           <div
@@ -161,7 +187,10 @@ export default function VmPaymentFlow({
             className={className}
             onClick={() => setSelectedMethod(method)}
           >
-            {nameRow(method)}
+            <div>
+              {nameRow(method)}
+              {renderProcessingFee(method)}
+            </div>
             <div className="text-sm text-cyber-muted">{addr}</div>
           </div>
         );
@@ -169,7 +198,10 @@ export default function VmPaymentFlow({
       case "lightning": {
         return (
           <div key={method.name} className={className}>
-            {nameRow(method)}
+            <div>
+              {nameRow(method)}
+              {renderProcessingFee(method)}
+            </div>
             <AsyncButton
               className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
@@ -182,10 +214,13 @@ export default function VmPaymentFlow({
           </div>
         );
       }
-      case "nwc": {
+      case "revolut": {
         return (
           <div key={method.name} className={className}>
-            {nameRow(method)}
+            <div>
+              {nameRow(method)}
+              {renderProcessingFee(method)}
+            </div>
             <AsyncButton
               className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
@@ -193,31 +228,8 @@ export default function VmPaymentFlow({
                 await createPayment(method.name);
               }}
             >
-              Pay with NWC
+              Pay with Card
             </AsyncButton>
-          </div>
-        );
-      }
-      case "revolut": {
-        return (
-          <div key={method.name} className={className}>
-            {nameRow(method)}
-            <div className="relative">
-              <SaleTag
-                className="absolute -top-2 -right-2 z-10"
-                value={2.8}
-                title="Additional card processing fees apply"
-              />
-              <AsyncButton
-                className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
-                onClick={async () => {
-                  setSelectedMethod(method);
-                  await createPayment(method.name);
-                }}
-              >
-                Pay with Card
-              </AsyncButton>
-            </div>
           </div>
         );
       }
@@ -240,11 +252,11 @@ export default function VmPaymentFlow({
     }
   }
 
-  // Create LNURL payment method for renewals only
-  const lnurlMethod: PaymentMethod | null =
+  // Create NWC payment method for renewals only
+  const nwcMethod: PaymentMethod | null =
     type === "renewal"
       ? {
-          name: "lnurl",
+          name: "nwc",
           currencies: ["BTC"],
           metadata: {
             address: `${vm.id}@${new URL(ApiUrl).host}`,
@@ -340,9 +352,9 @@ export default function VmPaymentFlow({
     );
   }
 
-  // Show LNURL payment interface
-  if (selectedMethod?.name === "lnurl" && lnurlMethod) {
-    const lud16 = lnurlMethod.metadata?.address || "";
+  // Show NWC payment interface
+  if (selectedMethod?.name === "nwc" && nwcMethod) {
+    const lud16 = nwcMethod.metadata?.address || "";
     return (
       <div className="space-y-4">
         <div className="flex items-center gap-2">
@@ -446,7 +458,7 @@ export default function VmPaymentFlow({
         })()}
 
       <div className="space-y-2">
-        {lnurlMethod && renderPaymentMethod(lnurlMethod)}
+        {nwcMethod && renderPaymentMethod(nwcMethod)}
         {methods?.map((method) => renderPaymentMethod(method))}
       </div>
 

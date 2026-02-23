@@ -2,13 +2,12 @@ import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
 import { AccountDetail } from "../api";
 import { AsyncButton } from "../components/button";
-import { Icon } from "../components/icon";
 import { default as iso } from "iso-3166-1";
 
 export function AccountSettings() {
   const login = useLogin();
   const [acc, setAcc] = useState<AccountDetail>();
-  const [editEmail, setEditEmail] = useState(false);
+  const [error, setError] = useState<string>();
 
   useEffect(() => {
     login?.api.getAccount().then(setAcc);
@@ -93,6 +92,21 @@ export function AccountSettings() {
           }
         />
       </div>
+      <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 items-center">
+        <div>Email</div>
+        <div className="flex gap-2 items-center">
+          <input
+            type="email"
+            value={acc?.email ?? ""}
+            onChange={(e) =>
+              setAcc((s) => (s ? { ...s, email: e.target.value } : undefined))
+            }
+          />
+          {acc?.email_verified && (
+            <span className="text-green-500 text-sm">Verified</span>
+          )}
+        </div>
+      </div>
       <div className="text-xl">Automatic Renewal</div>
       <p className="text-cyber-muted text-sm">
         Configure automatic VM renewal using Nostr Wallet Connect. Your wallet
@@ -111,11 +125,6 @@ export function AccountSettings() {
           }
         />
       </div>
-      <p className="text-cyber-muted text-xs">
-        Get your NWC connection string from compatible Lightning wallets like
-        Alby, Mutiny, or Phoenixd. Auto-renewal must also be enabled per-VM in
-        your VM settings.
-      </p>
       <div className="text-xl">Notification Settings</div>
       <p className="text-cyber-muted text-sm">
         This is only for account notifications such as VM expiration
@@ -143,34 +152,25 @@ export function AccountSettings() {
         />
         Nostr DM
       </div>
-      <div className="flex gap-2 items-center">
-        <h4>Email</h4>
-        <input
-          type="text"
-          disabled={!editEmail}
-          value={acc?.email}
-          onChange={(e) =>
-            setAcc((s) => (s ? { ...s, email: e.target.value } : undefined))
-          }
-        />
-        {!editEmail && (
-          <Icon name="pencil" onClick={() => setEditEmail(true)} />
-        )}
-      </div>
       <div>
         <AsyncButton
           onClick={async () => {
             if (login?.api && acc) {
-              await login.api.updateAccount(acc);
-              const newAcc = await login.api.getAccount();
-              setAcc(newAcc);
-              setEditEmail(false);
+              setError(undefined);
+              try {
+                await login.api.updateAccount(acc);
+                const newAcc = await login.api.getAccount();
+                setAcc(newAcc);
+              } catch (e: unknown) {
+                setError(e instanceof Error ? e.message : String(e));
+              }
             }
           }}
         >
           Save
         </AsyncButton>
       </div>
+      {error && <b className="text-cyber-danger">{error}</b>}
     </div>
   );
 }

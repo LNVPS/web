@@ -20,8 +20,105 @@ export enum DiskInterface {
   PCIe = "pcie",
 }
 
+export enum CostPlanIntervalType {
+  DAY = "day",
+  MONTH = "month",
+  YEAR = "year",
+}
+
+export enum OsDistribution {
+  UBUNTU = "ubuntu",
+  DEBIAN = "debian",
+  CENTOS = "centos",
+  FEDORA = "fedora",
+  FREEBSD = "freebsd",
+  OPENSUSE = "opensuse",
+  ARCHLINUX = "archlinux",
+  REDHATENTERPRISE = "redhatenterprise",
+}
+
+export enum CpuMfg {
+  UNKNOWN = "unknown",
+  INTEL = "intel",
+  AMD = "amd",
+  APPLE = "apple",
+  NVIDIA = "nvidia",
+  ARM = "arm",
+}
+
+export enum CpuArch {
+  UNKNOWN = "unknown",
+  X86_64 = "x86_64",
+  ARM64 = "arm64",
+}
+
+export enum CpuFeature {
+  SSE = "SSE",
+  SSE2 = "SSE2",
+  SSE3 = "SSE3",
+  SSSE3 = "SSSE3",
+  SSE4_1 = "SSE4_1",
+  SSE4_2 = "SSE4_2",
+  AVX = "AVX",
+  AVX2 = "AVX2",
+  FMA = "FMA",
+  F16C = "F16C",
+  AVX512F = "AVX512F",
+  AVX512VNNI = "AVX512VNNI",
+  AVX512BF16 = "AVX512BF16",
+  AVXVNNI = "AVXVNNI",
+  NEON = "NEON",
+  SVE = "SVE",
+  SVE2 = "SVE2",
+  AES = "AES",
+  SHA = "SHA",
+  SHA512 = "SHA512",
+  PCLMULQDQ = "PCLMULQDQ",
+  RNG = "RNG",
+  GFNI = "GFNI",
+  VAES = "VAES",
+  VPCLMULQDQ = "VPCLMULQDQ",
+  VMX = "VMX",
+  NestedVirt = "NestedVirt",
+  AMX = "AMX",
+  SME = "SME",
+  SGX = "SGX",
+  SEV = "SEV",
+  TDX = "TDX",
+  EncodeH264 = "EncodeH264",
+  EncodeHEVC = "EncodeHEVC",
+  EncodeAV1 = "EncodeAV1",
+  EncodeVP9 = "EncodeVP9",
+  EncodeJPEG = "EncodeJPEG",
+  DecodeH264 = "DecodeH264",
+  DecodeHEVC = "DecodeHEVC",
+  DecodeAV1 = "DecodeAV1",
+  DecodeVP9 = "DecodeVP9",
+  DecodeJPEG = "DecodeJPEG",
+  DecodeMPEG2 = "DecodeMPEG2",
+  DecodeVC1 = "DecodeVC1",
+  VideoScaling = "VideoScaling",
+  VideoDeinterlace = "VideoDeinterlace",
+  VideoCSC = "VideoCSC",
+  VideoComposition = "VideoComposition",
+}
+
+export type VmState = "running" | "stopped" | "pending" | "error" | "unknown";
+
+export type PaymentMethodType =
+  | "lightning"
+  | "revolut"
+  | "paypal"
+  | "stripe"
+  | "nwc";
+
+export type PaymentTypeValue = "new" | "renew" | "upgrade";
+
+export type PaymentTypeMethod = "Purchase" | "Renewal";
+
 export interface AccountDetail {
   email?: string;
+  email_verified?: boolean;
   contact_nip17: boolean;
   contact_email: boolean;
   country_code?: string;
@@ -38,10 +135,11 @@ export interface AccountDetail {
 export interface VmCostPlan {
   id: number;
   name: string;
+  currency: "BTC" | "EUR" | "USD";
   amount: number;
-  currency: string;
+  other_price?: Array<Price>;
   interval_amount: number;
-  interval_type: string;
+  interval_type: CostPlanIntervalType;
 }
 
 export interface VmHostRegion {
@@ -53,6 +151,9 @@ export interface VmCustomTemplateParams {
   id: number;
   name: string;
   region: VmHostRegion;
+  cpu_mfg?: CpuMfg;
+  cpu_arch?: CpuArch;
+  cpu_features?: Array<CpuFeature>;
   max_cpu: number;
   min_cpu: number;
   min_memory: number;
@@ -90,9 +191,12 @@ export interface VmTemplate {
   id: number;
   pricing_id?: number;
   name: string;
-  created: Date;
-  expires?: Date;
+  created: string;
+  expires?: string;
   cpu: number;
+  cpu_mfg?: CpuMfg;
+  cpu_arch?: CpuArch;
+  cpu_features?: Array<CpuFeature>;
   memory: number;
   disk_size: number;
   disk_type: DiskType;
@@ -102,22 +206,16 @@ export interface VmTemplate {
 }
 
 export interface VmStatus {
-  state: "running" | "stopped" | "pending" | "failed" | "error" | "unknown";
-  cpu_usage: number;
-  mem_usage: number;
-  uptime: number;
-  net_in: number;
-  net_out: number;
-  disk_write: number;
-  disk_read: number;
-}
-
-export interface VmIpAssignment {
   id: number;
-  ip: string;
-  gateway: string;
-  forward_dns?: string;
-  reverse_dns?: string;
+  created: string;
+  expires: string;
+  mac_address: string;
+  image: VmOsImage;
+  template: VmTemplate;
+  ssh_key: UserSshKey;
+  ip_assignments: Array<VmIpAssignment>;
+  state: VmState;
+  auto_renewal_enabled: boolean;
 }
 
 export interface VmInstance {
@@ -133,9 +231,17 @@ export interface VmInstance {
   auto_renewal_enabled?: boolean;
 }
 
+export interface VmIpAssignment {
+  id: number;
+  ip: string;
+  gateway: string;
+  forward_dns?: string;
+  reverse_dns?: string;
+}
+
 export interface VmOsImage {
   id: number;
-  distribution: string;
+  distribution: OsDistribution;
   flavour: string;
   version: string;
   release_date: string;
@@ -150,7 +256,8 @@ export interface UserSshKey {
 
 export type PaymentData =
   | { lightning: string }
-  | { revolut: { token: string } };
+  | { revolut: { token: string } }
+  | { stripe: { session_id: string } };
 
 export interface VmPayment {
   id: string;
@@ -162,6 +269,7 @@ export interface VmPayment {
   processing_fee: number;
   currency: string;
   is_paid: boolean;
+  paid_at?: string;
   data: PaymentData;
   time: number;
   is_upgrade?: boolean;
@@ -187,9 +295,12 @@ export interface TimeSeriesData {
 }
 
 export interface PaymentMethod {
-  name: string;
-  currencies: Array<string>;
+  name: PaymentMethodType;
   metadata?: Record<string, string>;
+  currencies: Array<"BTC" | "EUR" | "USD">;
+  processing_fee_rate?: number;
+  processing_fee_base?: number;
+  processing_fee_currency?: string;
 }
 
 export interface NostrDomainsResponse {
@@ -233,7 +344,7 @@ export interface VmUpgradeRequest {
 }
 
 export interface Price {
-  currency: string;
+  currency: "BTC" | "EUR" | "USD";
   amount: number;
 }
 
@@ -296,15 +407,11 @@ export interface AddIpRangeToSubscriptionRequest {
 
 export interface Subscription {
   id: number;
-  name: string;
+  name?: string;
   description?: string;
   created: string;
   expires?: string;
   is_active: boolean;
-  currency: string;
-  interval_amount: number;
-  interval_type: string;
-  setup_fee: number;
   auto_renewal_enabled: boolean;
   line_items: Array<SubscriptionLineItem>;
 }
@@ -314,9 +421,9 @@ export interface SubscriptionLineItem {
   subscription_id: number;
   name: string;
   description?: string;
-  amount: number;
-  setup_amount: number;
-  configuration?: any;
+  price: Price;
+  setup_fee: Price;
+  configuration?: unknown;
 }
 
 export interface SubscriptionPayment {
@@ -324,15 +431,12 @@ export interface SubscriptionPayment {
   subscription_id: number;
   created: string;
   expires?: string;
-  amount: number;
-  currency: string;
-  payment_method: string;
-  payment_type: string;
+  amount: Price;
+  payment_method: PaymentMethodType;
+  payment_type: PaymentTypeMethod;
   is_paid: boolean;
-  rate?: number;
-  time_value: number;
-  tax: number;
-  external_id?: string;
+  paid_at?: string;
+  tax: Price;
 }
 
 export interface SubscriptionSummary {
@@ -341,12 +445,96 @@ export interface SubscriptionSummary {
   currency: string;
 }
 
+export interface CreateSubscriptionRequest {
+  name?: string;
+  description?: string;
+  currency?: string;
+  auto_renewal_enabled?: boolean;
+  line_items: Array<CreateSubscriptionLineItemRequest>;
+}
+
+export type CreateSubscriptionLineItemRequest =
+  | { type: "ip_range"; ip_space_pricing_id: number }
+  | { type: "asn_sponsoring"; asn: number }
+  | { type: "dns_hosting"; domain: string };
+
+export interface Referral {
+  code: string;
+  lightning_address?: string;
+  use_nwc: boolean;
+  created: string;
+}
+
+export interface ReferralEarning {
+  currency: string;
+  amount: number;
+}
+
+export interface ReferralPayout {
+  id: number;
+  amount: number;
+  currency: string;
+  created: string;
+  is_paid: boolean;
+  invoice?: string;
+}
+
+export interface ReferralState extends Referral {
+  earned: Array<ReferralEarning>;
+  payouts: Array<ReferralPayout>;
+  referrals_success: number;
+  referrals_failed: number;
+}
+
+export interface ReferralSignupRequest {
+  lightning_address?: string;
+  use_nwc?: boolean;
+}
+
+export interface ReferralPatchRequest {
+  lightning_address?: string | null;
+  use_nwc?: boolean;
+}
+
 export type PaginatedResponse<T> = ApiResponseBase & {
   data: Array<T>;
   total: number;
   limit: number;
   offset: number;
 };
+
+export interface CreateSshKey {
+  name: string;
+  key_data: string;
+}
+
+export interface CustomVmRequest {
+  pricing_id: number;
+  cpu: number;
+  memory: number;
+  disk: number;
+  disk_type: DiskType;
+  disk_interface: DiskInterface;
+}
+
+export type CustomVmOrder = CustomVmRequest & {
+  image_id: number;
+  ssh_key_id: number;
+  ref_code?: string;
+};
+
+export interface VmPatchRequest {
+  ssh_key_id?: number;
+  reverse_dns?: string;
+  auto_renewal_enabled?: boolean;
+}
+
+export interface CreateVmRequest {
+  template_id: number;
+  image_id: number;
+  ssh_key_id: number;
+  ref_code?: string;
+}
 
 export class LNVpsApi {
   constructor(
@@ -597,9 +785,13 @@ export class LNVpsApi {
     );
   }
 
-  async getVmHistory(id: number) {
+  async getVmHistory(id: number, limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
     const { data } = await this.#handleResponse<ApiResponse<Array<VmHistory>>>(
-      await this.#req(`/api/v1/vm/${id}/history`, "GET"),
+      await this.#req(`/api/v1/vm/${id}/history${query}`, "GET"),
     );
     return data;
   }
@@ -707,6 +899,93 @@ export class LNVpsApi {
     return data;
   }
 
+  async listSubscriptions(limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<
+      PaginatedResponse<Subscription>
+    >(await this.#req(`/api/v1/subscriptions${query}`, "GET"));
+    return data;
+  }
+
+  async createSubscription(req: CreateSubscriptionRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<Subscription>>(
+      await this.#req("/api/v1/subscriptions", "POST", req),
+    );
+    return data;
+  }
+
+  async getSubscription(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Subscription>>(
+      await this.#req(`/api/v1/subscriptions/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async renewSubscription(subscriptionId: number, method?: string) {
+    const params = new URLSearchParams();
+    if (method !== undefined) params.set("method", method);
+    const { data } = await this.#handleResponse<
+      ApiResponse<SubscriptionPayment>
+    >(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/renew?${params.toString()}`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  async listSubscriptionPayments(
+    subscriptionId: number,
+    limit?: number,
+    offset?: number,
+  ) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<
+      PaginatedResponse<SubscriptionPayment>
+    >(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/payments${query}`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  async enrollReferral(req: ReferralSignupRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<Referral>>(
+      await this.#req("/api/v1/referral", "POST", req),
+    );
+    return data;
+  }
+
+  async getReferralState() {
+    const { data } = await this.#handleResponse<ApiResponse<ReferralState>>(
+      await this.#req("/api/v1/referral", "GET"),
+    );
+    return data;
+  }
+
+  async updateReferral(req: ReferralPatchRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<Referral>>(
+      await this.#req("/api/v1/referral", "PATCH", req),
+    );
+    return data;
+  }
+
+  async verifyEmail(token: string) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/account/verify-email?token=${token}`, "GET"),
+    );
+    return data;
+  }
+
   async #handleResponse<T extends ApiResponseBase>(rsp: Response) {
     if (rsp.ok) {
       return (await rsp.json()) as T;
@@ -714,10 +993,13 @@ export class LNVpsApi {
       const text = await rsp.text();
       try {
         const obj = JSON.parse(text) as ApiResponseBase;
-        throw new Error(obj.error);
+        if (obj.error) {
+          return Promise.reject(new Error(obj.error));
+        }
       } catch {
-        throw new Error(text);
+        // JSON parse failed
       }
+      return Promise.reject(new Error(text));
     }
   }
 

@@ -9,7 +9,7 @@ export default function TranslationProvider({
   children,
 }: TranslationProviderProps) {
   const locale = useMemo(() => navigator.language.split("-")[0] || "en", []);
-  const messages = useMemo(() => ({}), []);
+  const messages = useMemo(() => ({}) as Record<string, string>, []);
 
   return (
     <IntlProvider locale={locale} messages={messages} defaultLocale="en">

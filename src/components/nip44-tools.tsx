@@ -2,13 +2,13 @@ import { useState } from "react";
 import { hexToBech32 } from "@snort/shared";
 import { tryParseNostrLink } from "@snort/system";
 import { AsyncButton } from "./button";
+import { CopyButton } from "./copy-button";
 import { NostrProfile } from "../const";
 import { LoginState } from "../login";
 
 export default function Nip44Tools() {
   const [message, setMessage] = useState("");
   const [encryptedMessage, setEncryptedMessage] = useState("");
-  const [copied, setCopied] = useState(false);
   const [useCustomEncryptKey, setUseCustomEncryptKey] = useState(false);
   const [encryptKey, setEncryptKey] = useState("");
 
@@ -51,12 +51,6 @@ export default function Nip44Tools() {
     } catch (e) {
       setDecryptError(e instanceof Error ? e.message : String(e));
     }
-  }
-
-  async function copyToClipboard() {
-    await navigator.clipboard.writeText(encryptedMessage);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
   }
 
   return (
@@ -119,9 +113,7 @@ export default function Nip44Tools() {
             <pre className="bg-cyber-panel rounded-sm px-3 py-2 text-sm break-all whitespace-pre-wrap max-h-48 overflow-y-auto">
               {encryptedMessage}
             </pre>
-            <AsyncButton onClick={copyToClipboard}>
-              {copied ? "Copied!" : "Copy to Clipboard"}
-            </AsyncButton>
+            <CopyButton text={encryptedMessage} label="Copy to Clipboard" />
           </div>
         )}
       </div>

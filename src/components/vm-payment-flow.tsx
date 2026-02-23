@@ -163,7 +163,7 @@ export default function VmPaymentFlow({
         }
         if (base) {
           if (currency === "BTC") {
-            feeParts.push(`${base} sats`);
+            feeParts.push(`${Math.floor(base / 1000).toLocaleString()} sats`);
           } else {
             feeParts.push(`${(base / 100).toFixed(2)} ${currency}`);
           }

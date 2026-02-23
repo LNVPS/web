@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { UserSshKey } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
@@ -16,18 +16,37 @@ export default function SSHKeySelector({
   const [newKeyName, setNewKeyName] = useState("");
   const [showAddKey, setShowAddKey] = useState(false);
   const [sshKeys, setSshKeys] = useState<Array<UserSshKey>>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const loadKeys = useCallback(async () => {
+    if (!login?.api) return;
+    setIsLoading(true);
+    try {
+      const keys = await login.api.listSshKeys();
+      setSshKeys(keys);
+      // Only auto-select if no key is currently selected
+      if (selectedKey === -1 && keys.length > 0) {
+        setSelectedKey(keys[0].id);
+      } else if (keys.length === 0) {
+        setShowAddKey(true);
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  }, [login?.api, selectedKey, setSelectedKey]);
 
   async function addNewKey() {
     if (!login?.api) return;
     setNewKeyError("");
 
     try {
-      const nk = await login?.api.addSshKey(newKeyName, newKey);
+      const nk = await login.api.addSshKey(newKeyName, newKey);
       setNewKey("");
       setNewKeyName("");
       setSelectedKey(nk.id);
       setShowAddKey(false);
-      login?.api.listSshKeys().then((a) => setSshKeys(a));
+      // Reload the keys list to include the new key
+      await loadKeys();
     } catch (e) {
       if (e instanceof Error) {
         setNewKeyError(e.message);
@@ -36,20 +55,13 @@ export default function SSHKeySelector({
   }
 
   useEffect(() => {
-    if (!login?.api) return;
-    login?.api.listSshKeys().then((a) => {
-      setSshKeys(a);
-      if (a.length > 0) {
-        setSelectedKey(a[0].id);
-      } else {
-        setShowAddKey(true);
-      }
-    });
-  }, []);
+    loadKeys();
+  }, [loadKeys]);
 
   return (
     <div className="flex flex-col gap-2">
-      {sshKeys.length > 0 && (
+      {isLoading && <div className="text-cyber-muted">Loading SSH keys...</div>}
+      {!isLoading && sshKeys.length > 0 && (
         <>
           <b className="text-cyber-primary">Select SSH Key:</b>
           <select
@@ -58,17 +70,19 @@ export default function SSHKeySelector({
             onChange={(e) => setSelectedKey(Number(e.target.value))}
           >
             {sshKeys.map((a) => (
-              <option value={a.id}>{a.name}</option>
+              <option key={a.id} value={a.id}>
+                {a.name}
+              </option>
             ))}
           </select>
         </>
       )}
-      {!showAddKey && sshKeys.length > 0 && (
+      {!isLoading && !showAddKey && sshKeys.length > 0 && (
         <AsyncButton onClick={() => setShowAddKey(true)}>
           Add new SSH key
         </AsyncButton>
       )}
-      {(showAddKey || sshKeys.length === 0) && (
+      {!isLoading && (showAddKey || sshKeys.length === 0) && (
         <>
           <b className="text-cyber-primary">Add SSH Key:</b>
           <textarea

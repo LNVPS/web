@@ -1,7 +1,8 @@
 import { NostrEvent, NostrLink, TaggedNostrEvent } from "@snort/system";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Markdown from "../components/markdown";
 import Profile from "../components/profile";
+import { useNewsPost } from "../hooks/news-post";
 
 export function NewsPostContent({ ev }: { ev: NostrEvent }) {
   const title = ev.tags.find((a) => a[0] == "title")?.[1];
@@ -22,8 +23,12 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
 }
 
 export function NewsPost() {
+  const { id } = useParams<{ id: string }>();
   const { state } = useLocation() as { state?: TaggedNostrEvent };
 
-  if (!state) return;
-  return <NewsPostContent ev={state} />;
+  const data = useNewsPost(state ? undefined : id);
+  const ev = state || data.at(0);
+
+  if (!ev) return null;
+  return <NewsPostContent ev={ev} />;
 }

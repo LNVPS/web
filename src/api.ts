@@ -110,7 +110,8 @@ export type PaymentMethodType =
   | "revolut"
   | "paypal"
   | "stripe"
-  | "nwc";
+  | "nwc"
+  | "lnurl";
 
 export type PaymentTypeValue = "new" | "renew" | "upgrade";
 

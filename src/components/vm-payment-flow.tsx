@@ -180,18 +180,39 @@ export default function VmPaymentFlow({
 
     switch (method.name) {
       case "nwc": {
-        const addr = method.metadata?.["address"];
         return (
-          <div
-            key={method.name}
-            className={className}
-            onClick={() => setSelectedMethod(method)}
-          >
+          <div key={method.name} className={className}>
             <div>
               {nameRow(method)}
               {renderProcessingFee(method)}
             </div>
-            <div className="text-sm text-cyber-muted">{addr}</div>
+            <AsyncButton
+              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+              onClick={async () => {
+                setSelectedMethod(method);
+                await createPayment(method.name);
+              }}
+            >
+              Pay Now
+            </AsyncButton>
+          </div>
+        );
+      }
+      case "lnurl": {
+        return (
+          <div key={method.name} className={className}>
+            <div>
+              {nameRow(method)}
+              {renderProcessingFee(method)}
+            </div>
+            <AsyncButton
+              className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+              onClick={async () => {
+                setSelectedMethod(method);
+              }}
+            >
+              Show QR
+            </AsyncButton>
           </div>
         );
       }
@@ -233,36 +254,8 @@ export default function VmPaymentFlow({
           </div>
         );
       }
-      default:
-        return (
-          <div
-            key={method.name}
-            className={className}
-            onClick={() => {
-              setSelectedMethod(method);
-              createPayment(method.name);
-            }}
-          >
-            {nameRow(method)}
-            <div className="rounded-sm p-2 bg-cyber-accent/20 text-sm">
-              Pay Now
-            </div>
-          </div>
-        );
     }
   }
-
-  // Create NWC payment method for renewals only
-  const nwcMethod: PaymentMethod | null =
-    type === "renewal"
-      ? {
-          name: "nwc",
-          currencies: ["BTC"],
-          metadata: {
-            address: `${vm.id}@${new URL(ApiUrl).host}`,
-          },
-        }
-      : null;
 
   if (methodsLoading) {
     return (
@@ -353,8 +346,8 @@ export default function VmPaymentFlow({
   }
 
   // Show NWC payment interface
-  if (selectedMethod?.name === "nwc" && nwcMethod) {
-    const lud16 = nwcMethod.metadata?.address || "";
+  if (selectedMethod?.name === "lnurl") {
+    const lud16 = `${vm.id}@${new URL(ApiUrl).host}`
     return (
       <div className="space-y-4">
         <div className="flex items-center gap-2">
@@ -458,7 +451,6 @@ export default function VmPaymentFlow({
         })()}
 
       <div className="space-y-2">
-        {nwcMethod && renderPaymentMethod(nwcMethod)}
         {methods?.map((method) => renderPaymentMethod(method))}
       </div>
 

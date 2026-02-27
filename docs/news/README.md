@@ -7,7 +7,7 @@ News posts are published as Nostr long-form content events (NIP-23) by the LNVPS
 Each file uses the naming convention `{published_at}-{dtag}.md` where:
 
 - `published_at` is a Unix timestamp (seconds)
-- `dtag` is a unique identifier for the Nostr event `d` tag
+- `dtag` is a unique identifier for the Nostr event `d` tag, prefixed with the date (`YYYY-MM-DD-slug`) to ensure uniqueness across posts with similar topics
 
 ### Frontmatter
 
@@ -15,7 +15,7 @@ Each file uses the naming convention `{published_at}-{dtag}.md` where:
 ---
 title: "Post Title"
 published_at: 1771927035
-dtag: short-slug
+dtag: YYYY-MM-DD-short-slug
 ---
 ```
 

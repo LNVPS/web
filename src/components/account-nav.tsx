@@ -22,6 +22,11 @@ const NAV_ITEMS: NavItem[] = [
     description: "Billing, renewal & notifications",
   },
   {
+    to: "/account/messages",
+    label: "Messages",
+    description: "Encrypted direct messages",
+  },
+  {
     to: "/account/referral",
     label: "Referral",
     description: "Earn rewards by referring others",

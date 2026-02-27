@@ -13,27 +13,56 @@ interface DecryptedMessage {
   fromMe: boolean;
 }
 
+function dmCacheKey(pubkey: string) {
+  return `nip17-dm:${pubkey}`;
+}
+
+function loadDmCache(pubkey: string): DecryptedMessage[] {
+  try {
+    const raw = window.localStorage.getItem(dmCacheKey(pubkey));
+    if (!raw) return [];
+    return JSON.parse(raw) as DecryptedMessage[];
+  } catch {
+    return [];
+  }
+}
+
+function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
+  window.localStorage.setItem(dmCacheKey(pubkey), JSON.stringify(messages));
+}
+
 export default function Nip17DM() {
   const login = useLogin();
-  const [messages, setMessages] = useState<DecryptedMessage[]>([]);
+  const [messages, setMessages] = useState<DecryptedMessage[]>(() =>
+    login?.publicKey ? loadDmCache(login.publicKey) : [],
+  );
   const [messageInput, setMessageInput] = useState("");
-  const processedIds = useRef<Set<string>>(new Set());
+  // processedIds is seeded from the cache so already-decrypted wraps are skipped
+  const processedIds = useRef<Set<string>>(new Set(messages.map((m) => m.id)));
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const supportPubkey = NostrProfile.id;
+
+  const since = useMemo(() => {
+    if (messages.length === 0) return undefined;
+    return Math.max(...messages.map((m) => m.created_at));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps -- intentionally only computed once from the initial cache
 
   const req = useMemo(() => {
     if (!login?.publicKey) return new RequestBuilder("nip17-dm-empty");
     const builder = new RequestBuilder(
       `nip17-dm:${login.publicKey.slice(0, 12)}`,
     );
-    builder
+    const filter = builder
       .withOptions({ leaveOpen: true })
       .withFilter()
       .kinds([EventKind.GiftWrap])
       .tag("p", [login.publicKey]);
+    if (since !== undefined) {
+      filter.since(since);
+    }
     return builder;
-  }, [login?.publicKey]);
+  }, [login?.publicKey, since]);
 
   const giftWraps = useRequestBuilder(req);
 
@@ -78,9 +107,11 @@ export default function Nip17DM() {
           const existingIds = new Set(prev.map((m) => m.id));
           const newMsgs = valid.filter((m) => !existingIds.has(m.id));
           if (newMsgs.length === 0) return prev;
-          return [...prev, ...newMsgs].sort(
+          const next = [...prev, ...newMsgs].sort(
             (a, b) => a.created_at - b.created_at,
           );
+          saveDmCache(login.publicKey, next);
+          return next;
         });
       }
     });
@@ -104,7 +135,10 @@ export default function Nip17DM() {
     );
 
     const sealedForSupport = await signer.sealRumor(rumor, supportPubkey);
-    const wrapForSupport = await signer.giftWrap(sealedForSupport, supportPubkey);
+    const wrapForSupport = await signer.giftWrap(
+      sealedForSupport,
+      supportPubkey,
+    );
 
     const sealedForSelf = await signer.sealRumor(rumor, myPubkey);
     const wrapForSelf = await signer.giftWrap(sealedForSelf, myPubkey);
@@ -115,8 +149,8 @@ export default function Nip17DM() {
     const tempId = wrapForSelf.id;
     processedIds.current.add(tempId);
 
-    setMessages((prev) =>
-      [
+    setMessages((prev) => {
+      const next = [
         ...prev,
         {
           id: tempId,
@@ -124,8 +158,10 @@ export default function Nip17DM() {
           created_at: rumor.created_at,
           fromMe: true,
         },
-      ].sort((a, b) => a.created_at - b.created_at),
-    );
+      ].sort((a, b) => a.created_at - b.created_at);
+      saveDmCache(myPubkey, next);
+      return next;
+    });
 
     setMessageInput("");
   }
@@ -136,7 +172,7 @@ export default function Nip17DM() {
     <div className="flex flex-col gap-3">
       <div
         ref={scrollRef}
-        className="border border-cyber-border rounded-sm h-64 overflow-y-auto p-3 flex flex-col gap-2 bg-cyber-panel"
+        className="border border-cyber-border rounded-sm h-[calc(100vh-20rem)] min-h-96 overflow-y-auto p-3 flex flex-col gap-2 bg-cyber-panel"
       >
         {messages.length === 0 ? (
           <p className="text-cyber-muted text-sm text-center m-auto">
@@ -149,13 +185,15 @@ export default function Nip17DM() {
               className={`flex ${msg.fromMe ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-xs px-3 py-2 rounded-sm text-sm ${
+                className={`min-w-0 w-full max-w-prose px-3 py-2 rounded-sm text-sm ${
                   msg.fromMe
                     ? "bg-cyber-primary/20 border border-cyber-primary/30 text-cyber-text-bright"
                     : "bg-cyber-panel-light border border-cyber-border text-cyber-text"
                 }`}
               >
-                <div className="break-words">{msg.content}</div>
+                <div className="break-words whitespace-pre-wrap">
+                  {msg.content}
+                </div>
                 <div className="text-xs text-cyber-muted mt-1">
                   {new Date(msg.created_at * 1000).toLocaleString()}
                 </div>

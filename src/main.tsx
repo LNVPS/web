@@ -22,6 +22,7 @@ import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
+import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
           {
             path: "nostr-domain",
             element: <AccountNostrDomainPage />,
+          },
+          {
+            path: "messages",
+            element: <AccountMessagesPage />,
           },
           {
             path: "support",

@@ -3,7 +3,6 @@ import { hexToBech32 } from "@snort/shared";
 import Collapsible from "../components/collapsible";
 import ContactForm, { ContactFormData } from "../components/contact-form";
 import Nip44Tools from "../components/nip44-tools";
-import Nip17DM from "../components/nip17-dm";
 import { ApiUrl, NostrProfile } from "../const";
 import { LoginState } from "../login";
 import { LNVpsApi } from "../api";
@@ -41,15 +40,6 @@ export function AccountSupportPage() {
         <pre className="bg-cyber-panel rounded-sm px-3 py-2 select-all text-sm break-all">
           {npub}
         </pre>
-      </div>
-
-      <div className="border-t border-cyber-border pt-4">
-        <div className="text-lg mb-2">Direct Messages</div>
-        <p className="text-cyber-muted text-sm mb-4">
-          Send and receive encrypted direct messages with support via NIP-17.
-          Messages are end-to-end encrypted.
-        </p>
-        <Nip17DM />
       </div>
 
       <div className="border-t border-cyber-border pt-4">

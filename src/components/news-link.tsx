@@ -7,14 +7,9 @@ export function NewsLink({ ev }: { ev: NostrEvent }) {
   const posted = Number(
     ev.tags.find((a) => a[0] == "published_at")?.[1] ?? ev.created_at,
   );
-  const slug = title
-    ?.toLocaleLowerCase()
-    .replace(/[:/]/g, "")
-    .trimStart()
-    .trimEnd()
-    .replace(/ /g, "-");
+  const dtag = ev.tags.find((a) => a[0] == "d")?.[1] ?? ev.id;
   return (
-    <Link to={`/news/${slug}`} state={ev} key={link.tagKey}>
+    <Link to={`/news/${dtag}`} state={ev} key={link.tagKey}>
       <div className="flex flex-col rounded-sm border border-cyber-border bg-cyber-panel px-3 py-4 hover:border-cyber-primary hover:shadow-neon-sm transition-all duration-200">
         <div className="text-xl flex items-center justify-between">
           <div className="text-cyber-text-bright">{title}</div>

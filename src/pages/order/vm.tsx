@@ -10,6 +10,7 @@ import OsImageName from "../../components/os-image-name";
 import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
 import { ApiUrl } from "../../const";
+import { EmailVerification } from "../../components/email-verification";
 
 export default function OrderVmPage({ template }: { template: VmTemplate }) {
   const login = useLogin();
@@ -95,6 +96,7 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
       <hr />
       {login && (
         <>
+          <EmailVerification />
           <div className="flex flex-col gap-2">
             <b>Select OS:</b>
             {sortedImages.map((a) => (

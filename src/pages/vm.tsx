@@ -132,6 +132,24 @@ export default function VmPage() {
           Upgrade
         </AsyncButton>
       </div>
+      <hr />
+      <div className="flex gap-4 flex-wrap">
+        <AsyncButton
+          className="border-cyber-danger text-cyber-danger hover:border-cyber-danger hover:shadow-neon-danger hover:text-cyber-danger"
+          onClick={async () => {
+            if (
+              confirm(
+                "Are you sure you want to re-install your VM?\nTHIS WILL DELETE ALL DATA!!",
+              )
+            ) {
+              await login?.api.reinstallVm(state.id);
+              await reloadVmState();
+            }
+          }}
+        >
+          Reinstall
+        </AsyncButton>
+      </div>
 
       {editKey && (
         <Modal id="edit-ssh-key" onClose={() => setEditKey(false)}>

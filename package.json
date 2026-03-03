@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "locale:extract": "yarn formatjs extract 'src/**/*.tsx' 'src/**/*.ts' '!src/vite-env.d.ts' --out-file src/locales/en.json",
-    "locale:compile": "mkdir -p dist/locales && yarn formatjs compile-folder src/locales dist/locales"
+    "locale:compile": "mkdir -p dist/locales && yarn formatjs compile-folder src/locales dist/locales",
+    "locale:translate": "bash scripts/translate.sh"
   },
   "dependencies": {
     "@formatjs/cli": "^6.13.0",

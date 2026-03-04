@@ -7,7 +7,7 @@ import useLogin from "../hooks/login";
 import { LoginState } from "../login";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 
 interface Incident {
   id?: string;
@@ -28,7 +28,7 @@ export function StatusPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState(Date.now());
   const login = useLogin();
-  const { locale } = useIntl();
+  const { formatDate, formatNumber } = useIntl();
   const canEdit = login?.publicKey === NostrProfile.id;
 
   function StatusBadge({ status }: { status: string }) {
@@ -501,8 +501,14 @@ export function StatusPage() {
     <div className="flex flex-col gap-4">
       <div className="text-2xl">
         <FormattedMessage
-          defaultMessage="Uptime: {uptime}%"
-          values={{ uptime: (100 * uptime).toFixed(5) }}
+          defaultMessage="Uptime: {uptime}"
+          values={{
+            uptime: formatNumber(uptime, {
+              style: "percent",
+              minimumFractionDigits: 5,
+              maximumFractionDigits: 5,
+            }),
+          }}
         />
       </div>
 
@@ -574,14 +580,15 @@ export function StatusPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div>
-                          {start.toLocaleDateString(locale, {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                            hour: "2-digit",
-                            minute: "2-digit",
-                            hour12: false,
-                          })}
+                          <FormattedDate
+                            value={start}
+                            year="numeric"
+                            month="short"
+                            day="numeric"
+                            hour="2-digit"
+                            minute="2-digit"
+                            hour12={false}
+                          />
                         </div>
                         {canEdit && (
                           <AsyncButton
@@ -614,9 +621,7 @@ export function StatusPage() {
                         <FormattedMessage
                           defaultMessage="Last updated: {date}"
                           values={{
-                            date: new Date(
-                              incident.lastUpdated * 1000,
-                            ).toLocaleDateString(locale, {
+                            date: formatDate(incident.lastUpdated * 1000, {
                               year: "numeric",
                               month: "short",
                               day: "numeric",
@@ -693,14 +698,15 @@ export function StatusPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div>
-                          {start.toLocaleDateString(locale, {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                            hour: "2-digit",
-                            minute: "2-digit",
-                            hour12: false,
-                          })}
+                          <FormattedDate
+                            value={start}
+                            year="numeric"
+                            month="short"
+                            day="numeric"
+                            hour="2-digit"
+                            minute="2-digit"
+                            hour12={false}
+                          />
                         </div>
                         {canEdit && (
                           <AsyncButton
@@ -733,9 +739,7 @@ export function StatusPage() {
                         <FormattedMessage
                           defaultMessage="Last updated: {date}"
                           values={{
-                            date: new Date(
-                              incident.lastUpdated * 1000,
-                            ).toLocaleDateString(locale, {
+                            date: formatDate(incident.lastUpdated * 1000, {
                               year: "numeric",
                               month: "short",
                               day: "numeric",

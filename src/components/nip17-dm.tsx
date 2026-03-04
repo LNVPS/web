@@ -5,7 +5,7 @@ import { NostrProfile } from "../const";
 import { LoginState } from "../login";
 import { AsyncButton } from "./button";
 import useLogin from "../hooks/login";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 
 interface DecryptedMessage {
   id: string;
@@ -34,7 +34,7 @@ function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
 
 export default function Nip17DM() {
   const login = useLogin();
-  const { formatMessage, locale } = useIntl();
+  const { formatMessage } = useIntl();
   const [messages, setMessages] = useState<DecryptedMessage[]>(() =>
     login?.publicKey ? loadDmCache(login.publicKey) : [],
   );
@@ -197,7 +197,14 @@ export default function Nip17DM() {
                   {msg.content}
                 </div>
                 <div className="text-xs text-cyber-muted mt-1">
-                  {new Date(msg.created_at * 1000).toLocaleString(locale)}
+                  <FormattedDate
+                    value={msg.created_at * 1000}
+                    year="numeric"
+                    month="short"
+                    day="numeric"
+                    hour="2-digit"
+                    minute="2-digit"
+                  />
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import { CopyButton } from "../components/copy-button";
 import { CostAmount } from "../components/cost";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate, FormattedMessage } from "react-intl";
 
 type PayoutMethod = "lightning" | "nwc";
 
@@ -292,11 +292,17 @@ function EarningStat({ earning }: { earning: ReferralEarning }) {
 }
 
 function PayoutRow({ payout }: { payout: ReferralPayout }) {
-  const { locale } = useIntl();
   return (
     <tr>
       <td className="pl-4">
-        {new Date(payout.created).toLocaleString(locale)}
+        <FormattedDate
+          value={payout.created}
+          year="numeric"
+          month="short"
+          day="numeric"
+          hour="2-digit"
+          minute="2-digit"
+        />
       </td>
       <td>
         <CostAmount

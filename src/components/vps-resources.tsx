@@ -1,6 +1,6 @@
 import { CpuArch, CpuMfg, VmInstance, VmTemplate, VmStatus } from "../api";
 import BytesSize from "./bytes";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -33,6 +33,7 @@ function formatCpuArch(arch?: CpuArch): string | undefined {
 }
 
 export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
+  const { formatNumber } = useIntl();
   const diskType = "template" in vm ? vm.template?.disk_type : vm.disk_type;
   const region = "region" in vm ? vm.region.name : vm.template?.region?.name;
   const status = "status" in vm ? vm.status : undefined;
@@ -60,10 +61,10 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
           {"cpu_usage" in status
-            ? `${(100 * (status as VmStatus & { cpu_usage: number }).cpu_usage).toFixed(1)}% CPU`
+            ? `${formatNumber((status as VmStatus & { cpu_usage: number }).cpu_usage, { style: "percent", maximumFractionDigits: 1 })} CPU`
             : "CPU:"}{" "}
           {"mem_usage" in status
-            ? `${(100 * (status as VmStatus & { mem_usage: number }).mem_usage).toFixed(0)}% RAM`
+            ? `${formatNumber((status as VmStatus & { mem_usage: number }).mem_usage, { style: "percent", maximumFractionDigits: 0 })} RAM`
             : "RAM"}
         </div>
       )}

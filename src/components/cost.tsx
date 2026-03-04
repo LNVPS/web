@@ -1,4 +1,4 @@
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage, FormattedNumber } from "react-intl";
 import useLogin from "../hooks/login";
 
 interface Price {
@@ -85,18 +85,19 @@ export function CostAmount({
   converted: boolean;
   className?: string;
 }) {
-  const { locale } = useIntl();
-  const formatter = new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency: cost.currency,
-    trailingZeroDisplay: "stripIfInteger",
-  });
   return (
     <span className={className}>
       {converted && "~"}
-      {cost.currency !== "BTC"
-        ? formatter.format(cost.amount / 100)
-        : Math.floor(cost.amount / 1000).toLocaleString(locale)}
+      {cost.currency !== "BTC" ? (
+        <FormattedNumber
+          value={cost.amount / 100}
+          style="currency"
+          currency={cost.currency}
+          trailingZeroDisplay="stripIfInteger"
+        />
+      ) : (
+        <FormattedNumber value={Math.floor(cost.amount / 1000)} />
+      )}
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>

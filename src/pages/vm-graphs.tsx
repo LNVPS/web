@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { TimeSeriesData, VmInstance } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import {
   ResponsiveContainer,
   XAxis,
@@ -16,6 +16,7 @@ import {
 export function VmGraphsPage() {
   const { state } = useLocation() as { state?: VmInstance };
   const login = useLogin();
+  const { formatTime, formatNumber } = useIntl();
   const [data, setData] = useState<Array<TimeSeriesData>>();
 
   useEffect(() => {
@@ -67,7 +68,10 @@ export function VmGraphsPage() {
   const sortedData = (data ?? [])
     .sort((a, b) => a.timestamp - b.timestamp)
     .map((v) => ({
-      timestamp: new Date(v.timestamp * 1000).toLocaleTimeString(),
+      timestamp: formatTime(v.timestamp * 1000, {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
       CPU: 100 * v.cpu,
       RAM: v.memory / 1024 / 1024,
       NET_IN: v.net_in / net_scale,
@@ -86,7 +90,8 @@ export function VmGraphsPage() {
               <div>{data.timestamp}</div>
               {payload.map((p) => (
                 <div>
-                  {p.name}: {Number(p.value).toFixed(2)}
+                  {p.name}:{" "}
+                  {formatNumber(Number(p.value), { maximumFractionDigits: 2 })}
                   {p.unit}
                 </div>
               ))}

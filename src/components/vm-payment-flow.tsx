@@ -38,7 +38,7 @@ export default function VmPaymentFlow({
   onCancel,
 }: VmPaymentFlowProps) {
   const login = useLogin();
-  const { locale } = useIntl();
+  const { formatNumber } = useIntl();
   const { data: cachedMethods, loading: methodsLoading } = usePaymentMethods();
   const [methods, setMethods] = useState<Array<PaymentMethod>>();
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod>();
@@ -161,15 +161,24 @@ export default function VmPaymentFlow({
 
         const feeParts = [];
         if (rate) {
-          feeParts.push(`${rate.toFixed(1)}%`);
+          feeParts.push(
+            formatNumber(rate / 100, {
+              style: "percent",
+              minimumFractionDigits: 1,
+              maximumFractionDigits: 1,
+            }),
+          );
         }
         if (base) {
           if (currency === "BTC") {
-            feeParts.push(
-              `${Math.floor(base / 1000).toLocaleString(locale)} sats`,
-            );
+            feeParts.push(`${formatNumber(Math.floor(base / 1000))} sats`);
           } else {
-            feeParts.push(`${(base / 100).toFixed(2)} ${currency}`);
+            feeParts.push(
+              formatNumber(base / 100, {
+                style: "currency",
+                currency: currency!,
+              }),
+            );
           }
         }
 

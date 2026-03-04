@@ -8,13 +8,13 @@ import CostLabel, { CostAmount } from "../components/cost";
 import VmPaymentFlow from "../components/vm-payment-flow";
 import { TimeValue } from "../components/time-value";
 import { Icon } from "../components/icon";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
   const params = useParams();
   const login = useLogin();
-  const { locale } = useIntl();
+  const { formatDate } = useIntl();
   const navigate = useNavigate();
   const { loading: methodsLoading } = usePaymentMethods();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
@@ -80,7 +80,14 @@ export function VmBillingPage() {
         <div>
           <FormattedMessage
             defaultMessage="Expires: {date} ({days} days)"
-            values={{ date: expireDate.toDateString(), days: Math.floor(days) }}
+            values={{
+              date: formatDate(expireDate, {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              days: Math.floor(days),
+            }}
           />
         </div>
       )}
@@ -193,7 +200,14 @@ export function VmBillingPage() {
                 .map((a) => (
                   <tr key={a.id}>
                     <td className="pl-4">
-                      {new Date(a.created).toLocaleString(locale)}
+                      <FormattedDate
+                        value={a.created}
+                        year="numeric"
+                        month="short"
+                        day="numeric"
+                        hour="2-digit"
+                        minute="2-digit"
+                      />
                     </td>
                     <td>
                       <CostAmount

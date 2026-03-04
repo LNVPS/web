@@ -41,7 +41,7 @@ export default function CostLabel({
   }
 }
 
-function IntervalName({ interval }: { interval: string }) {
+export function IntervalName({ interval }: { interval: string }) {
   switch (interval) {
     case "day":
       return <FormattedMessage defaultMessage="Day" />;

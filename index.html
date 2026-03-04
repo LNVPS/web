@@ -29,6 +29,14 @@
       if (localStorage.getItem("theme") === "light") {
         document.documentElement.classList.add("light");
       }
+      (function () {
+        var RTL = ["ar", "he", "fa", "ur"];
+        var locale = localStorage.getItem("locale") || "";
+        if (RTL.indexOf(locale) !== -1) {
+          document.documentElement.dir = "rtl";
+          document.documentElement.lang = locale;
+        }
+      })();
     </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

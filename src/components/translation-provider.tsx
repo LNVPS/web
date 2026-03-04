@@ -3,6 +3,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 import localesMetadata from "../locales-metadata.json";
 
 const supportedLocales = Object.keys(localesMetadata);
+
+const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);
+
+function getDir(locale: string): "rtl" | "ltr" {
+  return RTL_LOCALES.has(locale) ? "rtl" : "ltr";
+}
+
 const STORAGE_KEY = "locale";
 
 function resolveLocale(raw: string): string {
@@ -49,6 +56,12 @@ export default function TranslationProvider({
     setLocaleState(next);
   }
   const [messages, setMessages] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.lang = locale;
+    root.dir = getDir(locale);
+  }, [locale]);
 
   useEffect(() => {
     if (locale === "en") {

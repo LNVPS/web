@@ -1,3 +1,5 @@
+*Cet article a été traduit automatiquement depuis l'anglais.*
+
 Gagnez des points en partageant LNVPS ! Nous avons lancé un programme de parrainage qui vous rémunère lorsque quelqu'un commande un nouveau VM en utilisant votre lien de parrainage.
 
 ## Comment ça marche

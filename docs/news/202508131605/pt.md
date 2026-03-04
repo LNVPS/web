@@ -1,3 +1,5 @@
+*Esta publicação foi traduzida automaticamente do inglês.*
+
 Outro recurso excelente concluído hoje é o NWC!
 
 Isso permite a renovação automática diretamente pelos relés do Nostr, sem mais renovações manuais!

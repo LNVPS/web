@@ -1,3 +1,5 @@
+*Cet article a été traduit automatiquement depuis l'anglais.*
+
 Une autre grande fonctionnalité a été mise en place aujourd'hui : la CNO !
 
 Elle permet un renouvellement automatique directement via les relais Nostr, plus de renouvellements manuels !

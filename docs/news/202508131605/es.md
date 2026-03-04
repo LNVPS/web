@@ -1,3 +1,5 @@
+*Esta publicación fue traducida automáticamente del inglés.*
+
 Otra de las grandes novedades de hoy es el NWC
 
 Esto permite la renovación automática directamente a través de los relés Nostr, ¡no más renovaciones manuales!

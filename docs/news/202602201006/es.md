@@ -1,3 +1,5 @@
+*Esta publicación fue traducida automáticamente del inglés.*
+
 Nos complace anunciar la nueva función de la Consola Web
 
 Ahora puede acceder al terminal de su máquina virtual directamente desde su navegador, sin necesidad de un cliente SSH. Esto es perfecto para tareas rápidas de mantenimiento, depuración, o cuando usted está lejos de su estación de trabajo habitual.

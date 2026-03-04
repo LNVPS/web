@@ -1,10 +1,26 @@
 {
   "kind": 30023,
   "tags": [
-    ["d", "nkbwMjUKSlxDhLSrle9gU-zh"],
-    ["title", "\u4ef7\u683c\u66f4\u65b0"],
-    ["published_at", "1741299793"],
-    ["L", "ISO-639-1"],
-    ["l", "zh", "ISO-639-1"]
+    [
+      "d",
+      "nkbwMjUKSlxDhLSrle9gU-zh"
+    ],
+    [
+      "title",
+      "价格更新"
+    ],
+    [
+      "published_at",
+      "1741299793"
+    ],
+    [
+      "L",
+      "ISO-639-1"
+    ],
+    [
+      "l",
+      "zh",
+      "ISO-639-1"
+    ]
   ]
 }

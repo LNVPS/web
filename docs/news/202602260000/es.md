@@ -1,3 +1,5 @@
+*Esta publicación fue traducida automáticamente del inglés.*
+
 Ayer sufrimos una interrupción prolongada de la red durante lo que estaba previsto como mantenimiento rutinario: una actualización del firmware de nuestro router central. Queremos ser transparentes sobre lo que ocurrió y por qué tardó tanto en resolverse.
 
 ## Qué ocurrió

@@ -1,3 +1,5 @@
+*Esta publicação foi traduzida automaticamente do inglês.*
+
 Ganhe sats compartilhando o LNVPS! Lançamos um programa de indicação que paga a você quando alguém solicita uma nova VM usando seu link de indicação.
 
 ## Como funciona

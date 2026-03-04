@@ -1,3 +1,5 @@
+*Esta publicación fue traducida automáticamente del inglés.*
+
 ¡Gana sats compartiendo LNVPS! Hemos puesto en marcha un programa de referencia que le paga cuando alguien ordena un nuevo VM utilizando su enlace de referencia.
 
 ## Cómo funciona

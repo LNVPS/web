@@ -1,3 +1,5 @@
+*Cet article a été traduit automatiquement depuis l'anglais.*
+
 Nous sommes ravis d'annoncer la nouvelle fonctionnalité de la console Web !
 
 Vous pouvez désormais accéder au terminal de votre VM directement depuis votre navigateur - aucun client SSH n'est nécessaire. C'est parfait pour les tâches de maintenance rapide, le débogage, ou lorsque vous n'êtes pas sur votre poste de travail habituel.

@@ -1,3 +1,5 @@
+*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*
+
 Gestern kam es zu einem längeren Netzausfall während einer routinemäßigen Wartungsmaßnahme: einem Firmware-Upgrade auf unserem Hauptrouter. Wir möchten transparent machen, was passiert ist und warum es so lange gedauert hat, bis die Störung behoben war.
 
 ## Was geschah

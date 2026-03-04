@@ -1,3 +1,5 @@
+*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*
+
 Wir freuen uns, die neue Funktion der Web-Konsole ankündigen zu können!
 
 Sie können jetzt direkt über Ihren Browser auf das Terminal Ihrer VM zugreifen - ein SSH-Client ist nicht erforderlich. Dies ist perfekt für schnelle Wartungsaufgaben, Debugging oder wenn Sie nicht an Ihrem üblichen Arbeitsplatz sind.

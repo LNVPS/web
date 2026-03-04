@@ -1,3 +1,5 @@
+*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*
+
 Eine weitere großartige Funktion, die heute fertiggestellt wurde, ist NWC!
 
 Dies ermöglicht eine automatische Erneuerung direkt über Nostr-Relais, keine manuellen Erneuerungen mehr!

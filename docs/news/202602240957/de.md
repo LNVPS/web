@@ -1,3 +1,5 @@
+*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*
+
 Verdienen Sie Sats, indem Sie LNVPS weiterempfehlen! Wir haben ein Empfehlungsprogramm gestartet, das Sie bezahlt, wenn jemand eine neue VM über Ihren Empfehlungslink bestellt.
 
 ## Wie es funktioniert

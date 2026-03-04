@@ -1,9 +1,13 @@
 {
-  "en": "English",
-  "fr": "Français",
+  "ar": "العربية",
   "de": "Deutsch",
+  "en": "English",
   "es": "Español",
-  "pt": "Português",
+  "fr": "Français",
   "ja": "日本語",
+  "ko": "한국어",
+  "pt": "Português",
+  "ru": "Русский",
+  "tr": "Türkçe",
   "zh": "中文"
 }

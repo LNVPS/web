@@ -1,0 +1,1025 @@
+{
+  "+8AmJ0": {
+    "defaultMessage": "تعطيل التجديد التلقائي."
+  },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{عام} other{سنوات}}"
+  },
+  "+SM72m": {
+    "defaultMessage": "المفتاح العام للمستلم (npub/nprofile/hex):"
+  },
+  "/0TOL5": {
+    "defaultMessage": "المبلغ"
+  },
+  "/GCoTA": {
+    "defaultMessage": "واضح"
+  },
+  "/QkDVJ": {
+    "defaultMessage": "محفظة إن دبليو سي"
+  },
+  "/nQTeE": {
+    "defaultMessage": "حفظ إعدادات الدفع"
+  },
+  "063dCM": {
+    "defaultMessage": "قم بتعيين سلسلة اتصال NWC في إعدادات الحساب، ثم فعّل التجديد التلقائي للدفع تلقائيًا مقابل تجديدات الأجهزة الافتراضية."
+  },
+  "0HkBaC": {
+    "defaultMessage": "اختر إحدى الطرق التالية للتحقق من نطاقك:"
+  },
+  "0h/lPM": {
+    "defaultMessage": "تحديث"
+  },
+  "0oL1zz": {
+    "defaultMessage": "تم النسخ!"
+  },
+  "0pn9yK": {
+    "defaultMessage": "npub1...، أو nprofile1...، أو بصيغة ست عشرية"
+  },
+  "0rlAUP": {
+    "defaultMessage": "تم تسجيل الدخول باسم: {key}"
+  },
+  "13cluZ": {
+    "defaultMessage": "أضف مفتاح SSH:"
+  },
+  "1LBny5": {
+    "defaultMessage": "توقف."
+  },
+  "1M3SKY": {
+    "defaultMessage": "يرجى وصف سؤالك أو المشكلة التي تواجهك بالتفصيل..."
+  },
+  "1VQrBL": {
+    "defaultMessage": "{h,plural,one{# ساعة} other{# ساعات}} {m,plural,one{# دقيقة} other{# دقائق}}"
+  },
+  "1v7S+3": {
+    "defaultMessage": "أضف نطاق نوستر."
+  },
+  "2/2yg+": {
+    "defaultMessage": "أضف"
+  },
+  "2/hxXE": {
+    "defaultMessage": "الفواتير، والتجديد، والإشعارات"
+  },
+  "20Sod8": {
+    "defaultMessage": "وحدة المعالجة المركزية:"
+  },
+  "2LslN1": {
+    "defaultMessage": "قم بالترقية الآن"
+  },
+  "2RFWLf": {
+    "defaultMessage": "اختبار سرعة الإنترنت"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n,plural,one{# ثانية} other{# ثوانٍ}}"
+  },
+  "2l2y5p": {
+    "defaultMessage": "إنشاء طلب شراء"
+  },
+  "36aVfS": {
+    "defaultMessage": "رسالة مباشرة على منصة نوستر."
+  },
+  "3WU2Fe": {
+    "defaultMessage": "الموقع: {region}"
+  },
+  "3xnP4c": {
+    "defaultMessage": "استخدم نظام التشفير NIP-44 لإرسال رسالة آمنة. هذا يثبت أنك تمتلك المفتاح الخاص المرتبط بحسابك. قم بتشفير رسالتك أدناه وقم بتضمين النص المشفر في بريدك الإلكتروني."
+  },
+  "47FYwb": {
+    "defaultMessage": "إلغاء"
+  },
+  "4X/Ixq": {
+    "defaultMessage": "الرسالة بعد فك تشفيرها:"
+  },
+  "4j0zpr": {
+    "defaultMessage": "الحد الأدنى: {min} نوى"
+  },
+  "4l6vz1": {
+    "defaultMessage": "انسخ"
+  },
+  "4lrWah": {
+    "defaultMessage": "حدث خطأ أثناء تحميل سجل التصفح: {error}"
+  },
+  "53RN0g": {
+    "defaultMessage": "تابع إلى صفحة الدفع."
+  },
+  "5JcXdV": {
+    "defaultMessage": "إنشاء حساب"
+  },
+  "5QYdPU": {
+    "defaultMessage": "وقت البدء"
+  },
+  "5VEOig": {
+    "defaultMessage": "التكلفة بالسعر الجديد للفترة المتبقية:"
+  },
+  "5elgIe": {
+    "defaultMessage": "خطأ:"
+  },
+  "5y2qWO": {
+    "defaultMessage": "جارٍ الاتصال..."
+  },
+  "62nsdy": {
+    "defaultMessage": "أعد المحاولة."
+  },
+  "6OWS4p": {
+    "defaultMessage": "جاري المعالجة..."
+  },
+  "6SfJaf": {
+    "defaultMessage": "قم بالترقية إلى"
+  },
+  "6Tps09": {
+    "defaultMessage": "غير نشط"
+  },
+  "6ZsOsA": {
+    "defaultMessage": "انضم إلى برنامج الإحالة."
+  },
+  "6uMqL1": {
+    "defaultMessage": "غير مدفوع الأجر."
+  },
+  "7+Domh": {
+    "defaultMessage": "ملاحظات"
+  },
+  "78CCi1": {
+    "defaultMessage": "{n,plural,one{# دقيقة} other{# دقائق}}"
+  },
+  "78fz1O": {
+    "defaultMessage": "الرمز البريدي *"
+  },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{يوم} other{أيام}}"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n,plural,one{# ساعة} other{# ساعات}}"
+  },
+  "7zs+Vz": {
+    "defaultMessage": "الذاكرة: {gb} جيجابايت"
+  },
+  "82Y7Sa": {
+    "defaultMessage": "جاري الإرسال..."
+  },
+  "82zlBD": {
+    "defaultMessage": "اسم حامل البطاقة *"
+  },
+  "89xu1A": {
+    "defaultMessage": "طلب خادم افتراضي خاص (VPS) مُخصَّص"
+  },
+  "8BgaUL": {
+    "defaultMessage": "المواصفات الحالية"
+  },
+  "8FF5Bq": {
+    "defaultMessage": "جارٍ إنشاء طريقة الدفع..."
+  },
+  "8Jfsz3": {
+    "defaultMessage": "أرسل رمز التحقق."
+  },
+  "8Q504V": {
+    "defaultMessage": "البيانات الوصفية"
+  },
+  "8ecw1u": {
+    "defaultMessage": "مقابض"
+  },
+  "8f0dzf": {
+    "defaultMessage": "تجديد الاشتراك في #{id}"
+  },
+  "90f82/": {
+    "defaultMessage": "ابدأ تشغيل الجهاز الظاهري."
+  },
+  "9AfNRx": {
+    "defaultMessage": "سيتم توفير خدمة طلب عناوين بروتوكول الإنترنت (IP) قريبًا."
+  },
+  "9QV3cp": {
+    "defaultMessage": "كتل عناوين IP المتاحة"
+  },
+  "9V+Kpc": {
+    "defaultMessage": "سيتم تجديد هذه الآلة الافتراضية تلقائيًا قبل يوم واحد من انتهاء صلاحيتها، وذلك باستخدام اتصال محفظة نوستر التي قمت بإعدادها."
+  },
+  "9WRlF4": {
+    "defaultMessage": "أرسل"
+  },
+  "9uOFF3": {
+    "defaultMessage": "نظرة عامة"
+  },
+  "A11S6W": {
+    "defaultMessage": "أرسل لنا رسالة مباشرة. سيتم تضمين مفتاحك العام تلقائيًا."
+  },
+  "AHJbyB": {
+    "defaultMessage": "أكمل عملية الدفع باستخدام طريقة الدفع التي اخترتها. سيتم تطبيق التغييرات تلقائيًا بعد التأكيد."
+  },
+  "AQkpi3": {
+    "defaultMessage": "أعد التثبيت."
+  },
+  "AyGauy": {
+    "defaultMessage": "تسجيل الدخول"
+  },
+  "B4reHi": {
+    "defaultMessage": "أحداث تاريخية"
+  },
+  "BBiS7b": {
+    "defaultMessage": "إيقاف الجهاز الافتراضي"
+  },
+  "BCmVPf": {
+    "defaultMessage": "استضافة مجانية لـ NIP-05. وجّه نطاقك إلى {cname} باستخدام نظام أسماء النطاقات (DNS) أو خادم وسيط."
+  },
+  "BFqRWv": {
+    "defaultMessage": "سلسلة الاتصال الخاصة بـ NWC."
+  },
+  "BFqlLP": {
+    "defaultMessage": "{records} يشير مباشرةً إلى عناوين بروتوكول الإنترنت (IP)، وقد يحتاج إلى تحديث في حالة تغييرها."
+  },
+  "BKqdjg": {
+    "defaultMessage": "أضف مقبضًا لـ {name}"
+  },
+  "BLZbXj": {
+    "defaultMessage": "رسالة *"
+  },
+  "BOV9bc": {
+    "defaultMessage": "جارٍ تحميل طرق الدفع..."
+  },
+  "BXmJ0S": {
+    "defaultMessage": "(بديل)"
+  },
+  "BZF5HJ": {
+    "defaultMessage": "نطاقات نوستر"
+  },
+  "BlFeZA": {
+    "defaultMessage": "آخر الأخبار"
+  },
+  "CDTMW3": {
+    "defaultMessage": "المبلغ الإجمالي"
+  },
+  "CYP/Jx": {
+    "defaultMessage": "اطلب المساعدة من الفريق."
+  },
+  "Cl+kqZ": {
+    "defaultMessage": "اعرض رمز الاستجابة السريعة."
+  },
+  "D3idYv": {
+    "defaultMessage": "إعدادات"
+  },
+  "DDMksJ": {
+    "defaultMessage": "قم بتشغيل أول خادم افتراضي خاص بك."
+  },
+  "DFLJpz": {
+    "defaultMessage": "تكلفة التجديد الشهري الجديدة: {cost}"
+  },
+  "DU+LLZ": {
+    "defaultMessage": "إحالة"
+  },
+  "Dfuz87": {
+    "defaultMessage": "لم تتم إضافة أي نطاقات حتى الآن. أضف نطاقك الأول أعلاه للبدء."
+  },
+  "E2YqWs": {
+    "defaultMessage": "برنامج الإحالة"
+  },
+  "EBMKSN": {
+    "defaultMessage": "تحديث مواصفات الجهاز الظاهري"
+  },
+  "EKlM8d": {
+    "defaultMessage": "حجم القرص (جيجابايت)"
+  },
+  "Eg11ZY": {
+    "defaultMessage": "أعد الاتصال."
+  },
+  "FJhjgz": {
+    "defaultMessage": "الرمز البريدي"
+  },
+  "FZeQlc": {
+    "defaultMessage": "غير متصل."
+  },
+  "FrXeQJ": {
+    "defaultMessage": "ما هو نوستر؟"
+  },
+  "GDR0px": {
+    "defaultMessage": "نوستر"
+  },
+  "GLA+G9": {
+    "defaultMessage": "طرق أخرى للتواصل معنا:"
+  },
+  "GQNYob": {
+    "defaultMessage": "مشاركة الرابط"
+  },
+  "GSye7T": {
+    "defaultMessage": "عنوان Lightning"
+  },
+  "Gb4Uh/": {
+    "defaultMessage": "هل لديك أي أسئلة أو تعليقات أو تحتاج إلى مساعدة؟ يرجى ملء النموذج أدناه وسنتواصل معك في أقرب وقت ممكن."
+  },
+  "GqRat5": {
+    "defaultMessage": "يرجى التحقق من عنوان بريدك الإلكتروني لإتمام طلبك."
+  },
+  "GsCz6b": {
+    "defaultMessage": "استخدم مفتاح المرسل المخصص."
+  },
+  "H43Krf": {
+    "defaultMessage": "مدة التشغيل: {uptime}٪"
+  },
+  "HAlOn1": {
+    "defaultMessage": "الاسم"
+  },
+  "HOWHco": {
+    "defaultMessage": "لا توجد رسائل حتى الآن. ابدأ محادثة أدناه."
+  },
+  "HqRNN8": {
+    "defaultMessage": "دعم"
+  },
+  "I3JhPS": {
+    "defaultMessage": "شبكة"
+  },
+  "IChMNf": {
+    "defaultMessage": "لم يتم اكتشاف أي تغييرات."
+  },
+  "INlWvJ": {
+    "defaultMessage": "أو"
+  },
+  "Id24hd": {
+    "defaultMessage": "الاسم *"
+  },
+  "Ij0H43": {
+    "defaultMessage": "رسوم بيانية"
+  },
+  "IvjoDS": {
+    "defaultMessage": "متصل"
+  },
+  "Iz4veS": {
+    "defaultMessage": "الحد الأدنى: {min} جيجابايت"
+  },
+  "JW40Ux": {
+    "defaultMessage": "عرض صفحة الحالة"
+  },
+  "JmgL7z": {
+    "defaultMessage": "ينتهي الصلاح: {date} ({days} أيام)"
+  },
+  "K/zU0+": {
+    "defaultMessage": "+ نشر جديد"
+  },
+  "KAL6xF": {
+    "defaultMessage": "اسم المفتاح"
+  },
+  "KWAuBK": {
+    "defaultMessage": "لم يتم تعيين أي عناوين IP."
+  },
+  "KaSlC8": {
+    "defaultMessage": "جيت"
+  },
+  "KuX7em": {
+    "defaultMessage": "نشط منذ {duration}"
+  },
+  "LNcnLC": {
+    "defaultMessage": "الإحالات غير الناجحة"
+  },
+  "LjglgP": {
+    "defaultMessage": "ذاكرة الوصول العشوائي"
+  },
+  "LjziLu": {
+    "defaultMessage": "تشفير الرسالة"
+  },
+  "LqFfRA": {
+    "defaultMessage": "البلد *"
+  },
+  "MT4qAu": {
+    "defaultMessage": "أدوات التشفير الخاصة بـ NIP-44"
+  },
+  "MTnSwY": {
+    "defaultMessage": "مثال: ضريبة"
+  },
+  "Mp+zDS": {
+    "defaultMessage": "يدعم هذا المكون عمليات الدفع عبر نظام \"لايتنينغ\" فقط."
+  },
+  "NQgbYA": {
+    "defaultMessage": "إعدادات الحساب"
+  },
+  "NZyhSX": {
+    "defaultMessage": "أخبار"
+  },
+  "Ny9qbm": {
+    "defaultMessage": "نوستر: {handle}"
+  },
+  "O/68ZX": {
+    "defaultMessage": "هل أنت متأكد من أنك تريد إعادة تثبيت جهازك الافتراضي؟ سيؤدي ذلك إلى حذف جميع البيانات!"
+  },
+  "OLqOyf": {
+    "defaultMessage": "تعليمات الإعداد"
+  },
+  "OikYIw": {
+    "defaultMessage": "الحد الأدنى: {min} جيجابايت {type}"
+  },
+  "Olq7Wf": {
+    "defaultMessage": "اكتب رسالتك هنا..."
+  },
+  "OtUSLU": {
+    "defaultMessage": "التجديد التلقائي"
+  },
+  "OtuYup": {
+    "defaultMessage": "البريد الإلكتروني *"
+  },
+  "OuCSDn": {
+    "defaultMessage": "قرص"
+  },
+  "P+08xT": {
+    "defaultMessage": "احصل على عرض أسعار."
+  },
+  "P7PLVj": {
+    "defaultMessage": "تاريخ"
+  },
+  "PJtOx7": {
+    "defaultMessage": "لا توجد حوادث للإبلاغ عنها."
+  },
+  "PPcUVc": {
+    "defaultMessage": "يستخدم نظام LNVPS حسابات نوستر. {link}"
+  },
+  "PT4sD/": {
+    "defaultMessage": "اختر نظام التشغيل:"
+  },
+  "PfSZy5": {
+    "defaultMessage": "لم يتم العثور على أي طلب."
+  },
+  "PucUfl": {
+    "defaultMessage": "اختر مفتاح SSH:"
+  },
+  "QDA9xg": {
+    "defaultMessage": "سجل المدفوعات"
+  },
+  "QN/rCc": {
+    "defaultMessage": "حدث خطأ أثناء تحليل بيانات JSON: {msg}"
+  },
+  "QdbxqE": {
+    "defaultMessage": "قم بإعداد التجديد التلقائي للآلة الافتراضية باستخدام خدمة \"Nostr Wallet Connect\". ستقوم محفظتك تلقائيًا بدفع رسوم تجديد الآلة الافتراضية قبل يوم واحد من تاريخ انتهاء صلاحيتها."
+  },
+  "QgBuiV": {
+    "defaultMessage": "وحدة المعالجة المركزية"
+  },
+  "QvXah/": {
+    "defaultMessage": "العودة إلى الجهاز الظاهري."
+  },
+  "R0skQD": {
+    "defaultMessage": "جيت هب: قم بإنشاء مشكلة على موقع github.com/LNVPS."
+  },
+  "R7x8iU": {
+    "defaultMessage": "القرص: {gb} جيجابايت {type}"
+  },
+  "RB2CER": {
+    "defaultMessage": "نوى المعالج المركزي"
+  },
+  "RF85OG": {
+    "defaultMessage": "مفتاحك الجديد:"
+  },
+  "RahCRH": {
+    "defaultMessage": "منتهي الصلاحية"
+  },
+  "RcshyP": {
+    "defaultMessage": "تم الحصول على ({currency})"
+  },
+  "S1hhGJ": {
+    "defaultMessage": "بروتوكول الوصول الآمن (SSH):"
+  },
+  "SMHOve": {
+    "defaultMessage": "إحالات ناجحة"
+  },
+  "SU1E+O": {
+    "defaultMessage": "طلب جديد"
+  },
+  "Sczo8n": {
+    "defaultMessage": "المدة: {duration}"
+  },
+  "Sg3z1C": {
+    "defaultMessage": "لم يتم تحديد أي جهاز افتراضي."
+  },
+  "Ss0sWu": {
+    "defaultMessage": "ادفع الآن"
+  },
+  "Sv1hgX": {
+    "defaultMessage": "تم تعطيل التجديد التلقائي."
+  },
+  "Sz/3Vf": {
+    "defaultMessage": "يرجى تحديد قيم الترقية التي تكون أكبر من أو مساوية للقيم الحالية، مع التأكد من أن إحدى هذه القيم على الأقل أكبر من القيمة الحالية."
+  },
+  "T1/en5": {
+    "defaultMessage": "المعرّف: {id}"
+  },
+  "T4yFyM": {
+    "defaultMessage": "جارٍ تحميل تفاصيل الدفع..."
+  },
+  "T7b6ZF": {
+    "defaultMessage": "الحوادث التي تم حلها."
+  },
+  "TE4fIS": {
+    "defaultMessage": "مدينة"
+  },
+  "TNSbi4": {
+    "defaultMessage": "نظام اسم النطاق العكسي:"
+  },
+  "Tbo377": {
+    "defaultMessage": "الفواتير"
+  },
+  "Td/uhP": {
+    "defaultMessage": "فعّل التجديد التلقائي."
+  },
+  "TieXig": {
+    "defaultMessage": "سيتم إرسال المدفوعات إلى محفظة NWC المحددة في إعدادات حسابك."
+  },
+  "UPjtBm": {
+    "defaultMessage": "قد تكون هناك مشكلة في الخدمة. يرجى مراجعة صفحة حالة الخدمة للاطلاع على آخر المستجدات."
+  },
+  "UQc03N": {
+    "defaultMessage": "أضف مفتاح SSH جديدًا."
+  },
+  "Ub+AGc": {
+    "defaultMessage": "تسجيل الدخول"
+  },
+  "UbzBlr": {
+    "defaultMessage": "{cname} يوصى باستخدامه؛ فهو يتتبع تلقائيًا أي تغييرات في عنوان بروتوكول الإنترنت الخاص بالخادم."
+  },
+  "Ue9DHy": {
+    "defaultMessage": "المنطقة:"
+  },
+  "Uk68vE": {
+    "defaultMessage": "المفتاح العام للمرسل (npub/nprofile/hex):"
+  },
+  "Un5Bdm": {
+    "defaultMessage": "حل مشكلات عناوين بروتوكول الإنترنت (IP) الخاصة بـ {cname}..."
+  },
+  "UwP+xI": {
+    "defaultMessage": "تم تفعيل التجديد التلقائي."
+  },
+  "VE4z7n": {
+    "defaultMessage": "احصل على الفاتورة"
+  },
+  "VL/B6x": {
+    "defaultMessage": "عنوان بريدك الإلكتروني"
+  },
+  "VnXp8Z": {
+    "defaultMessage": "أفاتار"
+  },
+  "W+1MOm": {
+    "defaultMessage": "المنهجية"
+  },
+  "WUeavc": {
+    "defaultMessage": "أو راسلنا مباشرة على البريد الإلكتروني: {email}"
+  },
+  "WhLfzM": {
+    "defaultMessage": "عنوان السطر الثاني"
+  },
+  "Ws8Qkf": {
+    "defaultMessage": "خادم افتراضي خاص (VPS) عالي الأداء يعمل بتقنية البيتكوين. لا حاجة لعملية التحقق من الهوية، ولا أي إجراءات معقدة."
+  },
+  "Wsj2fc": {
+    "defaultMessage": "الحوادث الجارية"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{شهر} other{أشهر}}"
+  },
+  "X5QA2h": {
+    "defaultMessage": "جاري معالجة دفعة تجديد الاشتراك."
+  },
+  "XD6788": {
+    "defaultMessage": "رسوم التأسيس:"
+  },
+  "XNiOLB": {
+    "defaultMessage": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
+  },
+  "Xoi0Uz": {
+    "defaultMessage": "ادفع باستخدام البطاقة"
+  },
+  "Y+LcmX": {
+    "defaultMessage": "إذا لم تتمكن من تغيير إعدادات نظام أسماء النطاقات (DNS)، فاستخدم خادم وكيل. {path} على الخادم الحالي لديك لـ {target}"
+  },
+  "Y6YwKh": {
+    "defaultMessage": "هذا مخصص فقط لإشعارات الحساب، مثل إشعارات انتهاء صلاحية الجهاز الظاهري، ولا نرسل رسائل تسويقية أو ترويجية."
+  },
+  "Y7opZr": {
+    "defaultMessage": "جدد اشتراك الخادم الافتراضي الخاص (VPS)."
+  },
+  "YdQxfw": {
+    "defaultMessage": "اتصل بالدعم الفني"
+  },
+  "Yl8GBP": {
+    "defaultMessage": "رقم التعريف الضريبي"
+  },
+  "Yt9S7n": {
+    "defaultMessage": "الرسوم: {fees}"
+  },
+  "YyojwF": {
+    "defaultMessage": "تغييرات الإعدادات:"
+  },
+  "Z+AMVE": {
+    "defaultMessage": "يجب التحقق من عنوان البريد الإلكتروني."
+  },
+  "Z5yzel": {
+    "defaultMessage": "احفظ تفاصيل الفوترة في الحساب."
+  },
+  "Z8971h": {
+    "defaultMessage": "تم التحقق منه."
+  },
+  "ZdCdo5": {
+    "defaultMessage": "آخر تحديث: {date}"
+  },
+  "ZewCpX": {
+    "defaultMessage": "أضف نطاقًا."
+  },
+  "aAnyb9": {
+    "defaultMessage": "شارك هذا الرابط. عندما يسجل الآخرون ويقومون بالدفع، ستحصل على عمولة."
+  },
+  "aFJYR3": {
+    "defaultMessage": "تفاصيل البطاقة"
+  },
+  "ajQtDJ": {
+    "defaultMessage": "اختر طريقة الدفع."
+  },
+  "b1zuN9": {
+    "defaultMessage": "السعر"
+  },
+  "bW7B87": {
+    "defaultMessage": "جديد"
+  },
+  "bZ1uDf": {
+    "defaultMessage": "ارجع إلى الصفحة الرئيسية."
+  },
+  "bh3pad": {
+    "defaultMessage": "يرجى تسجيل الدخول أولاً قبل إجراء عملية شراء."
+  },
+  "bhfNWq": {
+    "defaultMessage": "الصق الرسالة المشفرة هنا..."
+  },
+  "bm5rt1": {
+    "defaultMessage": "يرجى حفظ هذا المفتاح، لأنه لا يمكن استعادته."
+  },
+  "bpBvBq": {
+    "defaultMessage": "عرض العملة:"
+  },
+  "c78ZVJ": {
+    "defaultMessage": "قد يستغرق تفعيل تغييرات نظام أسماء النطاقات (DNS) ما يصل إلى 24-48 ساعة."
+  },
+  "c8LeaL": {
+    "defaultMessage": "فشل تحميل قائمة عناوين IP المحظورة."
+  },
+  "cM5n1C": {
+    "defaultMessage": "وقت الانتهاء (اختياري)"
+  },
+  "cV0ZGf": {
+    "defaultMessage": "تفصيل التكاليف"
+  },
+  "cbZ7Ix": {
+    "defaultMessage": "الآلة الافتراضية: {name}"
+  },
+  "cyR7Kh": {
+    "defaultMessage": "رجوع/عودة"
+  },
+  "d+1v5f": {
+    "defaultMessage": "جدد الاشتراك لـ:"
+  },
+  "d1nnRF": {
+    "defaultMessage": "أرسل رسالة أخرى."
+  },
+  "d3wxHm": {
+    "defaultMessage": "جارٍ تحميل سجل العمليات..."
+  },
+  "dCaiAm": {
+    "defaultMessage": "مدد الآن"
+  },
+  "dKHSEA": {
+    "defaultMessage": "شكرًا لتواصلكم معنا. سنتواصل معكم في أقرب وقت ممكن."
+  },
+  "dOQCL8": {
+    "defaultMessage": "اسم العرض"
+  },
+  "dVYvX2": {
+    "defaultMessage": "هل أنت متأكد أنك تريد حذف هذا الاسم؟"
+  },
+  "dVx3yz": {
+    "defaultMessage": "ذاكرة"
+  },
+  "dgTL/5": {
+    "defaultMessage": "لا توجد أسماء مستخدمين مسجلة."
+  },
+  "djJp6c": {
+    "defaultMessage": "تاريخ"
+  },
+  "duElEE": {
+    "defaultMessage": "لم يتم العثور على أي سجلات تاريخية لهذه الآلة الافتراضية."
+  },
+  "e4iTJm": {
+    "defaultMessage": "اكتب رسالتك..."
+  },
+  "eKEL/g": {
+    "defaultMessage": "قيد الانتظار."
+  },
+  "eR9d9s": {
+    "defaultMessage": "تم إرسال رسالة بريد إلكتروني للتحقق، يرجى التحقق من صندوق الوارد الخاص بك."
+  },
+  "eVlu1R": {
+    "defaultMessage": "اختر اللغة."
+  },
+  "ebmhes": {
+    "defaultMessage": "إضافة نوستر"
+  },
+  "elhFf1": {
+    "defaultMessage": "[منتهي الصلاحية]"
+  },
+  "eu+sDO": {
+    "defaultMessage": "تسجيل الدخول:"
+  },
+  "f00p/7": {
+    "defaultMessage": "فشل التحميل."
+  },
+  "fGeu02": {
+    "defaultMessage": "إضافة للمتصفح:"
+  },
+  "fNSGnl": {
+    "defaultMessage": "سجّل الدخول لتقديم طلبك"
+  },
+  "fxYCqm": {
+    "defaultMessage": "الموقع: {location}"
+  },
+  "gBvImw": {
+    "defaultMessage": "{count} يتعامل مع/ يعالج"
+  },
+  "gH4VcS": {
+    "defaultMessage": "تكلفة الترقية محسوبة على أساس تناسبي:"
+  },
+  "gPsMm7": {
+    "defaultMessage": "قم بتفعيل هذا العامل وأضف مسارًا لـ. {route}"
+  },
+  "gZz74a": {
+    "defaultMessage": "يرجى ملء جميع الحقول المطلوبة."
+  },
+  "gc+2Z2": {
+    "defaultMessage": "وحدة تحكم"
+  },
+  "gdP56I": {
+    "defaultMessage": "ضريبة"
+  },
+  "gjBiyj": {
+    "defaultMessage": "جاري التحميل..."
+  },
+  "gtGLdm": {
+    "defaultMessage": "بما في ذلك {amount} رسوم المعالجة"
+  },
+  "gv8O1e": {
+    "defaultMessage": "عروض الخوادم الافتراضية الخاصة (VPS)"
+  },
+  "h+26/n": {
+    "defaultMessage": "رمز الإحالة الخاص بك"
+  },
+  "h/PJh3": {
+    "defaultMessage": "بعد اختيار مفتاح جديد، يرجى إعادة تشغيل الجهاز الظاهري."
+  },
+  "hMzcSq": {
+    "defaultMessage": "رسائل"
+  },
+  "hZOGLS": {
+    "defaultMessage": "تواصل معنا"
+  },
+  "iO1K6D": {
+    "defaultMessage": "لا توجد منشورات حتى الآن."
+  },
+  "icn2DS": {
+    "defaultMessage": "(مُوصًى به)"
+  },
+  "iluJkV": {
+    "defaultMessage": "إعدادات الدفع"
+  },
+  "j4RCJW": {
+    "defaultMessage": "ملف SKILL.md"
+  },
+  "jM8W7d": {
+    "defaultMessage": "اختر الدولة."
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n,plural,one{# يوم} other{# أيام}}"
+  },
+  "jmVweB": {
+    "defaultMessage": "جارٍ تحميل مفاتيح SSH..."
+  },
+  "jvo0vs": {
+    "defaultMessage": "حفظ"
+  },
+  "k1UDSi": {
+    "defaultMessage": "دفع عبر نظام LNURL"
+  },
+  "k3yLiC": {
+    "defaultMessage": "حدّث معلومات الدفع الخاصة بك لتظهر في الفواتير التي يتم إنشاؤها (اختياري)."
+  },
+  "kLNEaL": {
+    "defaultMessage": "يرجى إكمال عملية التحقق من خلال اختبار الكابتشا."
+  },
+  "kSjQ3a": {
+    "defaultMessage": "بواسطة {initiatedBy}"
+  },
+  "kfr95E": {
+    "defaultMessage": "السطر الأول من العنوان"
+  },
+  "ku+mDU": {
+    "defaultMessage": "ولاية"
+  },
+  "l4RUua": {
+    "defaultMessage": "الخدمة: {service}"
+  },
+  "lCILNz": {
+    "defaultMessage": "اشترِ الآن"
+  },
+  "lPsVOx": {
+    "defaultMessage": "الأجهزة الافتراضية والنطاقات الخاصة بك"
+  },
+  "lloEWi": {
+    "defaultMessage": "ما هو موضوع هذا؟"
+  },
+  "lnaWo/": {
+    "defaultMessage": "منطقة"
+  },
+  "luhCIe": {
+    "defaultMessage": "عنوان بروتوكول الإنترنت:"
+  },
+  "lvV1wo": {
+    "defaultMessage": "تحديث الدفع"
+  },
+  "m22Mzk": {
+    "defaultMessage": "معالجة دفعة ترقية الخدمة."
+  },
+  "mJPBXd": {
+    "defaultMessage": "رسالة مشفرة (انسخها وأرفقها في بريدك الإلكتروني):"
+  },
+  "mOR+qH": {
+    "defaultMessage": "نسخ إلى الحافظة"
+  },
+  "mXu0jm": {
+    "defaultMessage": "إعداد النطاق"
+  },
+  "nFQbxh": {
+    "defaultMessage": "طريقة الدفع"
+  },
+  "nQ0mEC": {
+    "defaultMessage": "مفتاح:"
+  },
+  "nWQFic": {
+    "defaultMessage": "جدد"
+  },
+  "nm81YC": {
+    "defaultMessage": "جارٍ تحميل خادم VPS..."
+  },
+  "nxqAD7": {
+    "defaultMessage": "حادثة جديدة"
+  },
+  "o2AdrJ": {
+    "defaultMessage": "تستخدم هذه الآلة الافتراضية قالبًا مخصصًا ولا يمكن تحديثها. تدعم فقط الآلات الافتراضية التي تستخدم قوالب قياسية التحديثات."
+  },
+  "o8lVmf": {
+    "defaultMessage": "تؤثر طريقة الدفع على العملة المستخدمة في عرض الأسعار والدفع."
+  },
+  "o9lOhm": {
+    "defaultMessage": "يدعم المفتاح العام: {npub}"
+  },
+  "oBSxZS": {
+    "defaultMessage": "عرض سعر الترقية"
+  },
+  "oCc8Oq": {
+    "defaultMessage": "أضف مفتاحًا."
+  },
+  "oXGNZ+": {
+    "defaultMessage": "جهاز افتراضي رقم{id} المحطة الطرفية:"
+  },
+  "p4N05H": {
+    "defaultMessage": "حمّل"
+  },
+  "pSH5mR": {
+    "defaultMessage": "سجل الدفعات"
+  },
+  "pY6CgO": {
+    "defaultMessage": "ليس لديك أي أجهزة افتراضية حتى الآن."
+  },
+  "qJRR8N": {
+    "defaultMessage": "جارٍ تحميل قائمة عناوين IP المحظورة..."
+  },
+  "qV+TFm": {
+    "defaultMessage": "فشل الدفع."
+  },
+  "qWMcff": {
+    "defaultMessage": "قد يستغرق تحديث نظام أسماء النطاقات (DNS) ما يصل إلى 48 ساعة حتى يتم نشره."
+  },
+  "qZkVyB": {
+    "defaultMessage": "مفتاحك العام (يُرجى تضمينه في جميع المراسلات):"
+  },
+  "qq7WMq": {
+    "defaultMessage": "تأتي جميع خوادم VPS مع عنوان IPv4 واحد وعنوان IPv6 واحد وحركة مرور بيانات غير محدودة، والأسعار المذكورة لا تشمل الضرائب."
+  },
+  "quroDq": {
+    "defaultMessage": "سجل الأجهزة الافتراضية"
+  },
+  "qvZHhC": {
+    "defaultMessage": "فشل تحميل عروض VPS."
+  },
+  "r2BhUh": {
+    "defaultMessage": "فك تشفير الرسالة"
+  },
+  "rCcPOd": {
+    "defaultMessage": "رسوم"
+  },
+  "rKLmW/": {
+    "defaultMessage": "إلغاء الدفع"
+  },
+  "rvirM2": {
+    "defaultMessage": "الموقع"
+  },
+  "s+YpY+": {
+    "defaultMessage": "احصل على مكافآت مقابل إحالة أشخاص آخرين."
+  },
+  "sH1q5P": {
+    "defaultMessage": "لأجل/من أجل/خلال/مقابل {time}"
+  },
+  "sTesGq": {
+    "defaultMessage": "لا توجد عروض متاحة."
+  },
+  "sXj7R6": {
+    "defaultMessage": "قرص:"
+  },
+  "sqvjkf": {
+    "defaultMessage": "أضف مقبضًا"
+  },
+  "sy+pv5": {
+    "defaultMessage": "بريد إلكتروني"
+  },
+  "tzMNF3": {
+    "defaultMessage": "الحالة"
+  },
+  "u/vOPu": {
+    "defaultMessage": "مدفوع الأجر"
+  },
+  "uN7rbm": {
+    "defaultMessage": "انضم إلى برنامج الإحالة لتحصل على مكافآت عندما يسجل آخرون باستخدام رمزك. اختر الطريقة التي تريد أن تتلقى بها المكافآت."
+  },
+  "uPNlBw": {
+    "defaultMessage": "البريد الإلكتروني: {email}"
+  },
+  "uRfNhn": {
+    "defaultMessage": "الشبكة:"
+  },
+  "ug01Mk": {
+    "defaultMessage": "وقت"
+  },
+  "uqUeK9": {
+    "defaultMessage": "فك تشفير رسالة أُرسلت إليك من فريق الدعم."
+  },
+  "v2BRjN": {
+    "defaultMessage": "الموضوع *"
+  },
+  "v4Sg0C": {
+    "defaultMessage": "استخدم مفتاح المستلم المخصص."
+  },
+  "vONi+O": {
+    "defaultMessage": "دولة"
+  },
+  "vlKhIl": {
+    "defaultMessage": "اسمك"
+  },
+  "wLwJ9Q": {
+    "defaultMessage": "قيمة الوقت المتبقي بالسعر القديم:"
+  },
+  "wfYHHe": {
+    "defaultMessage": "- [{daysLeft} الأيام المتبقية]"
+  },
+  "wz7uSD": {
+    "defaultMessage": "بما في ذلك {amount} ضريبة"
+  },
+  "x0cZXf": {
+    "defaultMessage": "لا يمكن إجراء الترقية."
+  },
+  "xLbpvq": {
+    "defaultMessage": "أرسل واستقبل رسائل خاصة مشفرة مع دعم عبر بروتوكول NIP-17. الرسائل مشفرة بالكامل من المرسل إلى المستلم."
+  },
+  "xR03Aa": {
+    "defaultMessage": "إعدادات الإشعارات"
+  },
+  "xXbJso": {
+    "defaultMessage": "تسجيل الخروج"
+  },
+  "xj59EM": {
+    "defaultMessage": "{proxy} يعمل دون الحاجة إلى إجراء أي تغييرات على إعدادات نظام أسماء النطاقات (DNS)، وهو أمر مفيد إذا كان لديك بالفعل موقع ويب على هذا النطاق."
+  },
+  "xkr+zo": {
+    "defaultMessage": "الشروط والأحكام"
+  },
+  "xmSWcf": {
+    "defaultMessage": "وحدة المعالجة المركزية: {cores} نوى"
+  },
+  "y43e4q": {
+    "defaultMessage": "(لا يلزم إجراء أي تغييرات في إعدادات نظام أسماء النطاقات)"
+  },
+  "yDjevn": {
+    "defaultMessage": "برنامج التشفير الجيد (PGP)"
+  },
+  "yJAKR0": {
+    "defaultMessage": "إرسال رسالة"
+  },
+  "yYs9cj": {
+    "defaultMessage": "العودة إلى صفحة الترقية"
+  },
+  "zAN0RF": {
+    "defaultMessage": "رسائل مباشرة مشفرة."
+  },
+  "zEk9h3": {
+    "defaultMessage": "الأجهزة الافتراضية"
+  },
+  "zFegDD": {
+    "defaultMessage": "اتصل بنا"
+  },
+  "zRPHCo": {
+    "defaultMessage": "ذاكرة الوصول العشوائي (جيجابايت)"
+  }
+}

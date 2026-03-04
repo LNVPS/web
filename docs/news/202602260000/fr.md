@@ -1,3 +1,5 @@
+*Cet article a été traduit automatiquement depuis l'anglais.*
+
 Hier, nous avons connu une panne de réseau prolongée au cours de ce qui était prévu comme une maintenance de routine : une mise à jour du micrologiciel de notre routeur principal. Nous voulons être transparents sur ce qui s'est passé et sur les raisons pour lesquelles il a fallu autant de temps pour résoudre ce problème.
 
 ## Ce qui s'est passé

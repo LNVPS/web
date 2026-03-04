@@ -1,3 +1,5 @@
+*Esta publicação foi traduzida automaticamente do inglês.*
+
 Ontem, tivemos uma interrupção prolongada da rede durante o que foi planejado como manutenção de rotina: uma atualização de firmware em nosso roteador principal. Queremos ser transparentes sobre o que aconteceu e por que demorou tanto tempo para ser resolvido.
 
 ## O que aconteceu

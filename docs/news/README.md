@@ -52,13 +52,42 @@ Translations use a language-suffixed `d` tag (required — addressable events ar
 
 The client groups articles by stripping the `-{lang}` suffix from the `d` tag and picks the best locale match automatically.
 
-## Publishing
+## Translation
 
-Use `publish.sh` to sign and publish all language variants in a directory:
+Use `translate.sh` to auto-translate articles using Ollama. It generates `{lang}.md` and `{lang}.metadata.json` for each target language, skipping files that already exist.
 
 ```bash
-./docs/news/publish.sh docs/news/202602201006 $(cat ~/.nostr/lnvps-admin.nsec)
+# Translate all articles (ru, ar, tr, ko by default)
+./docs/news/translate.sh
+
+# Translate a single article directory
+./docs/news/translate.sh --dir docs/news/202602201006
+
+# Override Ollama URL or model
+./docs/news/translate.sh --url http://10.0.0.1:11434/v1 --model llama3:8b
+
+# Re-translate even if output files already exist
+./docs/news/translate.sh --force
 ```
+
+Target languages are driven by `src/locales-metadata.json` (all locales except `en`). Adding a new language to that file will automatically include it on the next run. Files that already exist are skipped unless `--force` is passed.
+
+## Publishing
+
+Use `publish.sh` to sign and publish articles to Nostr relays.
+
+```bash
+# Publish all articles (recursive diff — skips unchanged variants)
+./docs/news/publish.sh $(cat ~/.nostr/lnvps-admin.nsec)
+
+# Publish a single article directory (no diff, publishes all variants)
+./docs/news/publish.sh docs/news/202602201006 $(cat ~/.nostr/lnvps-admin.nsec)
+
+# Publish a single article directory, skipping unchanged variants
+./docs/news/publish.sh --diff docs/news/202602201006 $(cat ~/.nostr/lnvps-admin.nsec)
+```
+
+In diff mode the script fetches the current `kind:30023` event for each `d-tag` from the relays, compares body and title against the local files, and skips publishing if they match.
 
 Or manually for a single variant:
 

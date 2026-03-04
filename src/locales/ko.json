@@ -1,0 +1,1025 @@
+{
+  "+8AmJ0": {
+    "defaultMessage": "자동 갱신 기능 끄기"
+  },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{년} other{년}}"
+  },
+  "+SM72m": {
+    "defaultMessage": "받는 사람의 공개 키(npub/nprofile/16진수):"
+  },
+  "/0TOL5": {
+    "defaultMessage": "수량"
+  },
+  "/GCoTA": {
+    "defaultMessage": "명확하게, 깨끗하게, 분명하게"
+  },
+  "/QkDVJ": {
+    "defaultMessage": "NWC 지갑"
+  },
+  "/nQTeE": {
+    "defaultMessage": "지급 설정을 저장합니다."
+  },
+  "063dCM": {
+    "defaultMessage": "계정 설정에서 NWC 연결 문자열을 구성한 다음, 자동 갱신을 활성화하여 가상 머신 갱신 비용을 자동으로 지불하도록 설정합니다."
+  },
+  "0HkBaC": {
+    "defaultMessage": "다음 방법 중 하나를 선택하여 도메인을 확인하세요."
+  },
+  "0h/lPM": {
+    "defaultMessage": "업그레이드하다"
+  },
+  "0oL1zz": {
+    "defaultMessage": "복사되었습니다!"
+  },
+  "0pn9yK": {
+    "defaultMessage": "npub1..., nprofile1..., 또는 16진수"
+  },
+  "0rlAUP": {
+    "defaultMessage": "다음 계정으로 로그인했습니다. {key}"
+  },
+  "13cluZ": {
+    "defaultMessage": "SSH 키 추가:"
+  },
+  "1LBny5": {
+    "defaultMessage": "중단됨"
+  },
+  "1M3SKY": {
+    "defaultMessage": "질문이나 문제점을 자세히 설명해 주십시오."
+  },
+  "1VQrBL": {
+    "defaultMessage": "{h,plural,one{# 시간} other{# 시간}} {m,plural,one{# 분} other{# 분}}"
+  },
+  "1v7S+3": {
+    "defaultMessage": "Nostr 도메인 추가"
+  },
+  "2/2yg+": {
+    "defaultMessage": "추가"
+  },
+  "2/hxXE": {
+    "defaultMessage": "결제, 갱신 및 알림"
+  },
+  "20Sod8": {
+    "defaultMessage": "CPU:"
+  },
+  "2LslN1": {
+    "defaultMessage": "지금 업그레이드하세요."
+  },
+  "2RFWLf": {
+    "defaultMessage": "속도 측정"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n,plural,one{# 초} other{# 초}}"
+  },
+  "2l2y5p": {
+    "defaultMessage": "주문 생성"
+  },
+  "36aVfS": {
+    "defaultMessage": "노스트르 다이렉트 메시지"
+  },
+  "3WU2Fe": {
+    "defaultMessage": "위치: {region}"
+  },
+  "3xnP4c": {
+    "defaultMessage": "NIP-44 암호화를 사용하여 보안 메시지를 전송하세요. 이렇게 하면 귀하의 계정과 연결된 개인 키를 소유하고 있음을 증명할 수 있습니다. 아래에 메시지를 암호화하고 암호화된 텍스트를 이메일에 포함하세요."
+  },
+  "47FYwb": {
+    "defaultMessage": "취소하기"
+  },
+  "4X/Ixq": {
+    "defaultMessage": "해독된 메시지:"
+  },
+  "4j0zpr": {
+    "defaultMessage": "최소: {min} 코어"
+  },
+  "4l6vz1": {
+    "defaultMessage": "복사"
+  },
+  "4lrWah": {
+    "defaultMessage": "기록 로딩 중 오류 발생: {error}"
+  },
+  "53RN0g": {
+    "defaultMessage": "결제 진행"
+  },
+  "5JcXdV": {
+    "defaultMessage": "계정 만들기"
+  },
+  "5QYdPU": {
+    "defaultMessage": "시작 시간"
+  },
+  "5VEOig": {
+    "defaultMessage": "남은 시간에 대한 변경된 요금:"
+  },
+  "5elgIe": {
+    "defaultMessage": "오류:"
+  },
+  "5y2qWO": {
+    "defaultMessage": "연결 중..."
+  },
+  "62nsdy": {
+    "defaultMessage": "다시 시도하세요."
+  },
+  "6OWS4p": {
+    "defaultMessage": "처리 중..."
+  },
+  "6SfJaf": {
+    "defaultMessage": "업그레이드하세요."
+  },
+  "6Tps09": {
+    "defaultMessage": "비활성 상태"
+  },
+  "6ZsOsA": {
+    "defaultMessage": "추천 프로그램에 참여하세요."
+  },
+  "6uMqL1": {
+    "defaultMessage": "미지급"
+  },
+  "7+Domh": {
+    "defaultMessage": "참고 사항"
+  },
+  "78CCi1": {
+    "defaultMessage": "{n,plural,one{# 분} other{# 분}}"
+  },
+  "78fz1O": {
+    "defaultMessage": "우편번호 *"
+  },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{일} other{일}}"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n,plural,one{# 시간} other{# 시간}}"
+  },
+  "7zs+Vz": {
+    "defaultMessage": "메모리: {gb} 기가바이트"
+  },
+  "82Y7Sa": {
+    "defaultMessage": "전송 중..."
+  },
+  "82zlBD": {
+    "defaultMessage": "카드 소유자 이름 *"
+  },
+  "89xu1A": {
+    "defaultMessage": "맞춤형 VPS 주문"
+  },
+  "8BgaUL": {
+    "defaultMessage": "현재 사양"
+  },
+  "8FF5Bq": {
+    "defaultMessage": "결제 진행 중..."
+  },
+  "8Jfsz3": {
+    "defaultMessage": "인증 전송"
+  },
+  "8Q504V": {
+    "defaultMessage": "메타데이터"
+  },
+  "8ecw1u": {
+    "defaultMessage": "손잡이"
+  },
+  "8f0dzf": {
+    "defaultMessage": "#의 갱신{id}"
+  },
+  "90f82/": {
+    "defaultMessage": "가상 머신 시작"
+  },
+  "9AfNRx": {
+    "defaultMessage": "IP 주소 할당 서비스가 곧 시작됩니다."
+  },
+  "9QV3cp": {
+    "defaultMessage": "사용 가능한 IP 블록"
+  },
+  "9V+Kpc": {
+    "defaultMessage": "이 가상 머신은 설정된 Nostr 지갑 연결을 사용하여 만료일 1일 전에 자동으로 갱신됩니다."
+  },
+  "9WRlF4": {
+    "defaultMessage": "보내기"
+  },
+  "9uOFF3": {
+    "defaultMessage": "개요"
+  },
+  "A11S6W": {
+    "defaultMessage": "직접 메시지를 보내주세요. 공개 키가 자동으로 포함됩니다."
+  },
+  "AHJbyB": {
+    "defaultMessage": "선택한 결제 방법을 사용하여 결제를 완료하세요. 확인이 완료되면 변경 사항이 자동으로 적용됩니다."
+  },
+  "AQkpi3": {
+    "defaultMessage": "다시 설치"
+  },
+  "AyGauy": {
+    "defaultMessage": "로그인"
+  },
+  "B4reHi": {
+    "defaultMessage": "역사적 사건"
+  },
+  "BBiS7b": {
+    "defaultMessage": "가상 머신 중지"
+  },
+  "BCmVPf": {
+    "defaultMessage": "무료 NIP-05 호스팅을 이용하세요. 도메인을 해당 주소로 연결하세요. {cname} DNS 또는 경로 프록시를 사용합니다."
+  },
+  "BFqRWv": {
+    "defaultMessage": "NWC 연결 문자열"
+  },
+  "BFqlLP": {
+    "defaultMessage": "{records} IP 주소를 직접 가리키므로, IP 주소가 변경될 경우 업데이트가 필요할 수 있습니다."
+  },
+  "BKqdjg": {
+    "defaultMessage": "핸들 추가 {name}"
+  },
+  "BLZbXj": {
+    "defaultMessage": "메시지 *"
+  },
+  "BOV9bc": {
+    "defaultMessage": "결제 방법을 불러오는 중입니다..."
+  },
+  "BXmJ0S": {
+    "defaultMessage": "(대안)"
+  },
+  "BZF5HJ": {
+    "defaultMessage": "노스트르 도메인"
+  },
+  "BlFeZA": {
+    "defaultMessage": "최신 뉴스"
+  },
+  "CDTMW3": {
+    "defaultMessage": "총액"
+  },
+  "CYP/Jx": {
+    "defaultMessage": "팀의 도움을 받으세요."
+  },
+  "Cl+kqZ": {
+    "defaultMessage": "QR 코드 표시"
+  },
+  "D3idYv": {
+    "defaultMessage": "설정"
+  },
+  "DDMksJ": {
+    "defaultMessage": "첫 번째 VPS를 배포하세요."
+  },
+  "DFLJpz": {
+    "defaultMessage": "새로운 월간 갱신 비용: {cost}"
+  },
+  "DU+LLZ": {
+    "defaultMessage": "추천"
+  },
+  "Dfuz87": {
+    "defaultMessage": "아직 도메인이 추가되지 않았습니다. 위에서 첫 번째 도메인을 추가하여 시작하세요."
+  },
+  "E2YqWs": {
+    "defaultMessage": "추천 프로그램"
+  },
+  "EBMKSN": {
+    "defaultMessage": "가상 머신 사양 업그레이드"
+  },
+  "EKlM8d": {
+    "defaultMessage": "디스크(GB)"
+  },
+  "Eg11ZY": {
+    "defaultMessage": "다시 연결합니다."
+  },
+  "FJhjgz": {
+    "defaultMessage": "우편번호"
+  },
+  "FZeQlc": {
+    "defaultMessage": "연결이 끊어졌습니다."
+  },
+  "FrXeQJ": {
+    "defaultMessage": "노스트르는 무엇인가요?"
+  },
+  "GDR0px": {
+    "defaultMessage": "노스트르"
+  },
+  "GLA+G9": {
+    "defaultMessage": "저희에게 연락할 수 있는 다른 방법은 다음과 같습니다."
+  },
+  "GQNYob": {
+    "defaultMessage": "링크 공유"
+  },
+  "GSye7T": {
+    "defaultMessage": "라이트닝 주소"
+  },
+  "Gb4Uh/": {
+    "defaultMessage": "궁금한 점이 있거나 의견을 주시거나 도움이 필요하시면 아래 양식을 작성해 주시면 최대한 빨리 답변드리겠습니다."
+  },
+  "GqRat5": {
+    "defaultMessage": "주문 완료를 위해 이메일 주소를 확인해 주시기 바랍니다."
+  },
+  "GsCz6b": {
+    "defaultMessage": "사용자 지정 발신 키를 사용하세요."
+  },
+  "H43Krf": {
+    "defaultMessage": "가동 시간: {uptime}%"
+  },
+  "HAlOn1": {
+    "defaultMessage": "이름"
+  },
+  "HOWHco": {
+    "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
+  },
+  "HqRNN8": {
+    "defaultMessage": "지원"
+  },
+  "I3JhPS": {
+    "defaultMessage": "네트워크"
+  },
+  "IChMNf": {
+    "defaultMessage": "변경 사항 없음"
+  },
+  "INlWvJ": {
+    "defaultMessage": "또는"
+  },
+  "Id24hd": {
+    "defaultMessage": "이름 *"
+  },
+  "Ij0H43": {
+    "defaultMessage": "그래프"
+  },
+  "IvjoDS": {
+    "defaultMessage": "연결됨"
+  },
+  "Iz4veS": {
+    "defaultMessage": "최소: {min} 기가바이트"
+  },
+  "JW40Ux": {
+    "defaultMessage": "상태 페이지 보기"
+  },
+  "JmgL7z": {
+    "defaultMessage": "만료일: {date} ({days} 일"
+  },
+  "K/zU0+": {
+    "defaultMessage": "+ 새로 배포"
+  },
+  "KAL6xF": {
+    "defaultMessage": "키 이름"
+  },
+  "KWAuBK": {
+    "defaultMessage": "IP 주소가 할당되지 않음"
+  },
+  "KaSlC8": {
+    "defaultMessage": "깃"
+  },
+  "KuX7em": {
+    "defaultMessage": "활성 상태 {duration}"
+  },
+  "LNcnLC": {
+    "defaultMessage": "실패한 추천"
+  },
+  "LjglgP": {
+    "defaultMessage": "램(RAM)"
+  },
+  "LjziLu": {
+    "defaultMessage": "메시지 암호화"
+  },
+  "LqFfRA": {
+    "defaultMessage": "국가"
+  },
+  "MT4qAu": {
+    "defaultMessage": "NIP-44 암호화 도구"
+  },
+  "MTnSwY": {
+    "defaultMessage": "예: 세금"
+  },
+  "Mp+zDS": {
+    "defaultMessage": "이 구성 요소는 라이트닝 결제만 지원합니다."
+  },
+  "NQgbYA": {
+    "defaultMessage": "계정 설정"
+  },
+  "NZyhSX": {
+    "defaultMessage": "뉴스"
+  },
+  "Ny9qbm": {
+    "defaultMessage": "노스트르: {handle}"
+  },
+  "O/68ZX": {
+    "defaultMessage": "정말로 가상 머신을 다시 설치하시겠습니까? 이 작업을 수행하면 모든 데이터가 삭제됩니다!!"
+  },
+  "OLqOyf": {
+    "defaultMessage": "설정 방법"
+  },
+  "OikYIw": {
+    "defaultMessage": "최소: {min} 기가바이트 {type}"
+  },
+  "Olq7Wf": {
+    "defaultMessage": "여기에 메시지를 입력하세요."
+  },
+  "OtUSLU": {
+    "defaultMessage": "자동 갱신"
+  },
+  "OtuYup": {
+    "defaultMessage": "이메일 주소"
+  },
+  "OuCSDn": {
+    "defaultMessage": "디스크"
+  },
+  "P+08xT": {
+    "defaultMessage": "견적 받기"
+  },
+  "P7PLVj": {
+    "defaultMessage": "날짜"
+  },
+  "PJtOx7": {
+    "defaultMessage": "보고할 만한 사건은 없습니다."
+  },
+  "PPcUVc": {
+    "defaultMessage": "LNVPS는 노스트르 계정을 사용합니다. {link}"
+  },
+  "PT4sD/": {
+    "defaultMessage": "운영체제 선택:"
+  },
+  "PfSZy5": {
+    "defaultMessage": "해당 주문을 찾을 수 없습니다."
+  },
+  "PucUfl": {
+    "defaultMessage": "SSH 키 선택:"
+  },
+  "QDA9xg": {
+    "defaultMessage": "지급 내역"
+  },
+  "QN/rCc": {
+    "defaultMessage": "JSON 구문 분석 오류: {msg}"
+  },
+  "QdbxqE": {
+    "defaultMessage": "Nostr 지갑 연결을 사용하여 자동 VM 갱신을 설정하세요. 지갑이 자동으로 VM 갱신 비용을 지불하며, 갱신은 만료일 1일 전에 이루어집니다."
+  },
+  "QgBuiV": {
+    "defaultMessage": "중앙 처리 장치"
+  },
+  "QvXah/": {
+    "defaultMessage": "VM으로 돌아가기"
+  },
+  "R0skQD": {
+    "defaultMessage": "GitHub: github.com/LNVPS에서 이슈를 생성하세요."
+  },
+  "R7x8iU": {
+    "defaultMessage": "디스크: {gb} 기가바이트 {type}"
+  },
+  "RB2CER": {
+    "defaultMessage": "CPU 코어 수"
+  },
+  "RF85OG": {
+    "defaultMessage": "새로운 키입니다:"
+  },
+  "RahCRH": {
+    "defaultMessage": "유효 기간 만료"
+  },
+  "RcshyP": {
+    "defaultMessage": "획득한({currency}"
+  },
+  "S1hhGJ": {
+    "defaultMessage": "SSH:"
+  },
+  "SMHOve": {
+    "defaultMessage": "성공적인 추천"
+  },
+  "SU1E+O": {
+    "defaultMessage": "새로운 주문"
+  },
+  "Sczo8n": {
+    "defaultMessage": "지속 시간: {duration}"
+  },
+  "Sg3z1C": {
+    "defaultMessage": "선택된 가상 머신이 없습니다."
+  },
+  "Ss0sWu": {
+    "defaultMessage": "지금 결제하세요."
+  },
+  "Sv1hgX": {
+    "defaultMessage": "자동 갱신 기능이 비활성화되었습니다."
+  },
+  "Sz/3Vf": {
+    "defaultMessage": "현재 값보다 크거나 같은 업그레이드 값을 지정해 주십시오. 이때 최소 하나의 값은 현재 값보다 커야 합니다."
+  },
+  "T1/en5": {
+    "defaultMessage": "ID: {id}"
+  },
+  "T4yFyM": {
+    "defaultMessage": "결제 정보 로딩 중..."
+  },
+  "T7b6ZF": {
+    "defaultMessage": "해결된 문제들"
+  },
+  "TE4fIS": {
+    "defaultMessage": "도시"
+  },
+  "TNSbi4": {
+    "defaultMessage": "역방향 DNS:"
+  },
+  "Tbo377": {
+    "defaultMessage": "요금 청구"
+  },
+  "Td/uhP": {
+    "defaultMessage": "자동 갱신 기능 활성화"
+  },
+  "TieXig": {
+    "defaultMessage": "지급액은 귀하의 계정 설정에 등록된 NWC 지갑으로 전송됩니다."
+  },
+  "UPjtBm": {
+    "defaultMessage": "서비스에 문제가 있을 수 있습니다. 최신 정보는 상태 페이지에서 확인해 주세요."
+  },
+  "UQc03N": {
+    "defaultMessage": "새 SSH 키 추가"
+  },
+  "Ub+AGc": {
+    "defaultMessage": "로그인"
+  },
+  "UbzBlr": {
+    "defaultMessage": "{cname} 권장됩니다. 서버 IP 주소 변경 사항을 자동으로 추적합니다."
+  },
+  "Ue9DHy": {
+    "defaultMessage": "지역:"
+  },
+  "Uk68vE": {
+    "defaultMessage": "보낸 사람의 공개 키(npub/nprofile/16진수):"
+  },
+  "Un5Bdm": {
+    "defaultMessage": "다음 IP 주소 확인: {cname}…"
+  },
+  "UwP+xI": {
+    "defaultMessage": "자동 갱신 기능 활성화됨"
+  },
+  "VE4z7n": {
+    "defaultMessage": "송장 받기"
+  },
+  "VL/B6x": {
+    "defaultMessage": "your@email.com"
+  },
+  "VnXp8Z": {
+    "defaultMessage": "아바타"
+  },
+  "W+1MOm": {
+    "defaultMessage": "방법"
+  },
+  "WUeavc": {
+    "defaultMessage": "또는 다음 이메일 주소로 직접 문의해 주십시오. {email}"
+  },
+  "WhLfzM": {
+    "defaultMessage": "주소 2행"
+  },
+  "Ws8Qkf": {
+    "defaultMessage": "비트코인으로 구동되는 고성능 VPS입니다. KYC 절차 없이 간편하게 이용하세요."
+  },
+  "Wsj2fc": {
+    "defaultMessage": "현재 진행 중인 사건"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{달} other{개월}}"
+  },
+  "X5QA2h": {
+    "defaultMessage": "갱신 결제 처리 중"
+  },
+  "XD6788": {
+    "defaultMessage": "설치 비용:"
+  },
+  "XNiOLB": {
+    "defaultMessage": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
+  },
+  "Xoi0Uz": {
+    "defaultMessage": "카드로 결제하세요."
+  },
+  "Y+LcmX": {
+    "defaultMessage": "DNS 설정을 변경할 수 없는 경우, 프록시 설정을 사용하세요. {path} 기존 서버에서 {target}"
+  },
+  "Y6YwKh": {
+    "defaultMessage": "이는 계정 관련 알림(예: 가상 머신 만료 알림)에만 해당하며, 마케팅 또는 홍보 메시지는 발송하지 않습니다."
+  },
+  "Y7opZr": {
+    "defaultMessage": "VPS 갱신"
+  },
+  "YdQxfw": {
+    "defaultMessage": "고객 지원팀에 문의하세요."
+  },
+  "Yl8GBP": {
+    "defaultMessage": "세금 식별 번호"
+  },
+  "Yt9S7n": {
+    "defaultMessage": "요금: {fees}"
+  },
+  "YyojwF": {
+    "defaultMessage": "구성 변경 사항:"
+  },
+  "Z+AMVE": {
+    "defaultMessage": "이메일 인증이 필요합니다."
+  },
+  "Z5yzel": {
+    "defaultMessage": "결제 정보를 계정에 저장합니다."
+  },
+  "Z8971h": {
+    "defaultMessage": "확인됨"
+  },
+  "ZdCdo5": {
+    "defaultMessage": "최종 업데이트 날짜: {date}"
+  },
+  "ZewCpX": {
+    "defaultMessage": "도메인 추가"
+  },
+  "aAnyb9": {
+    "defaultMessage": "이 링크를 공유하세요. 다른 사람들이 가입하고 결제하면 귀하에게 보상이 지급됩니다."
+  },
+  "aFJYR3": {
+    "defaultMessage": "카드 정보"
+  },
+  "ajQtDJ": {
+    "defaultMessage": "결제 방법을 선택하세요."
+  },
+  "b1zuN9": {
+    "defaultMessage": "가격"
+  },
+  "bW7B87": {
+    "defaultMessage": "새로운"
+  },
+  "bZ1uDf": {
+    "defaultMessage": "홈으로 돌아가기"
+  },
+  "bh3pad": {
+    "defaultMessage": "구매하기 전에 먼저 로그인해 주세요."
+  },
+  "bhfNWq": {
+    "defaultMessage": "암호화된 메시지를 여기에 붙여넣으세요."
+  },
+  "bm5rt1": {
+    "defaultMessage": "이 키는 반드시 저장해 두세요. 복구할 수 없습니다."
+  },
+  "bpBvBq": {
+    "defaultMessage": "표시할 통화:"
+  },
+  "c78ZVJ": {
+    "defaultMessage": "DNS 변경 사항은 적용되는 데 최대 24~48시간이 걸릴 수 있습니다."
+  },
+  "c8LeaL": {
+    "defaultMessage": "IP 주소 블록을 로드하는 데 실패했습니다."
+  },
+  "cM5n1C": {
+    "defaultMessage": "종료 시간(선택 사항)"
+  },
+  "cV0ZGf": {
+    "defaultMessage": "비용 내역"
+  },
+  "cbZ7Ix": {
+    "defaultMessage": "VM: {name}"
+  },
+  "cyR7Kh": {
+    "defaultMessage": "뒤로"
+  },
+  "d+1v5f": {
+    "defaultMessage": "다음 기간으로 갱신:"
+  },
+  "d1nnRF": {
+    "defaultMessage": "다른 메시지 보내기"
+  },
+  "d3wxHm": {
+    "defaultMessage": "불러오는 기록..."
+  },
+  "dCaiAm": {
+    "defaultMessage": "지금 바로 연장하세요."
+  },
+  "dKHSEA": {
+    "defaultMessage": "문의해 주셔서 감사합니다. 가능한 한 빨리 답변드리겠습니다."
+  },
+  "dOQCL8": {
+    "defaultMessage": "표시 이름"
+  },
+  "dVYvX2": {
+    "defaultMessage": "정말로 이 계정을 삭제하시겠습니까?"
+  },
+  "dVx3yz": {
+    "defaultMessage": "메모리"
+  },
+  "dgTL/5": {
+    "defaultMessage": "등록된 핸들이 없습니다."
+  },
+  "djJp6c": {
+    "defaultMessage": "역사"
+  },
+  "duElEE": {
+    "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
+  },
+  "e4iTJm": {
+    "defaultMessage": "메시지를 입력하세요..."
+  },
+  "eKEL/g": {
+    "defaultMessage": "대기 중"
+  },
+  "eR9d9s": {
+    "defaultMessage": "확인 이메일을 보냈으니, 받은 편지함을 확인해 주세요."
+  },
+  "eVlu1R": {
+    "defaultMessage": "언어 선택"
+  },
+  "ebmhes": {
+    "defaultMessage": "노스트르 확장 프로그램"
+  },
+  "elhFf1": {
+    "defaultMessage": "[유효 기간 만료]"
+  },
+  "eu+sDO": {
+    "defaultMessage": "로그인:"
+  },
+  "f00p/7": {
+    "defaultMessage": "업로드에 실패했습니다."
+  },
+  "fGeu02": {
+    "defaultMessage": "브라우저 확장 프로그램:"
+  },
+  "fNSGnl": {
+    "defaultMessage": "주문하려면 로그인하세요."
+  },
+  "fxYCqm": {
+    "defaultMessage": "위치: {location}"
+  },
+  "gBvImw": {
+    "defaultMessage": "{count} 손잡이"
+  },
+  "gH4VcS": {
+    "defaultMessage": "비율에 따라 계산된 업그레이드 비용:"
+  },
+  "gPsMm7": {
+    "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
+  },
+  "gZz74a": {
+    "defaultMessage": "모든 필수 항목을 입력해 주세요."
+  },
+  "gc+2Z2": {
+    "defaultMessage": "콘솔"
+  },
+  "gdP56I": {
+    "defaultMessage": "세금"
+  },
+  "gjBiyj": {
+    "defaultMessage": "불러오는 중..."
+  },
+  "gtGLdm": {
+    "defaultMessage": "다음 포함 {amount} 처리 수수료"
+  },
+  "gv8O1e": {
+    "defaultMessage": "VPS 상품 안내"
+  },
+  "h+26/n": {
+    "defaultMessage": "고유 추천 코드"
+  },
+  "h/PJh3": {
+    "defaultMessage": "새 키를 선택한 후에는 가상 머신을 다시 시작하십시오."
+  },
+  "hMzcSq": {
+    "defaultMessage": "메시지"
+  },
+  "hZOGLS": {
+    "defaultMessage": "문의하기"
+  },
+  "iO1K6D": {
+    "defaultMessage": "아직 게시물이 없습니다."
+  },
+  "icn2DS": {
+    "defaultMessage": "(추천)"
+  },
+  "iluJkV": {
+    "defaultMessage": "지급 설정"
+  },
+  "j4RCJW": {
+    "defaultMessage": "기술.md"
+  },
+  "jM8W7d": {
+    "defaultMessage": "국가 선택"
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n,plural,one{# 일} other{# 일}}"
+  },
+  "jmVweB": {
+    "defaultMessage": "SSH 키를 불러오는 중..."
+  },
+  "jvo0vs": {
+    "defaultMessage": "저장"
+  },
+  "k1UDSi": {
+    "defaultMessage": "LNURL 결제"
+  },
+  "k3yLiC": {
+    "defaultMessage": "생성되는 청구서에 표시될 결제 정보를 업데이트하세요(선택 사항)."
+  },
+  "kLNEaL": {
+    "defaultMessage": "캡차 인증을 완료해 주세요."
+  },
+  "kSjQ3a": {
+    "defaultMessage": "~에 의해 {initiatedBy}"
+  },
+  "kfr95E": {
+    "defaultMessage": "주소 1번 줄"
+  },
+  "ku+mDU": {
+    "defaultMessage": "상태"
+  },
+  "l4RUua": {
+    "defaultMessage": "서비스: {service}"
+  },
+  "lCILNz": {
+    "defaultMessage": "지금 구매하세요."
+  },
+  "lPsVOx": {
+    "defaultMessage": "귀하의 가상 머신 및 도메인"
+  },
+  "lloEWi": {
+    "defaultMessage": "이것은 어떤 건에 관한 것인가요?"
+  },
+  "lnaWo/": {
+    "defaultMessage": "지역"
+  },
+  "luhCIe": {
+    "defaultMessage": "IP 주소:"
+  },
+  "lvV1wo": {
+    "defaultMessage": "결제 금액 조정"
+  },
+  "m22Mzk": {
+    "defaultMessage": "결제 방식 업그레이드 처리 중"
+  },
+  "mJPBXd": {
+    "defaultMessage": "암호화된 메시지(복사하여 이메일에 포함):"
+  },
+  "mOR+qH": {
+    "defaultMessage": "클립보드로 복사"
+  },
+  "mXu0jm": {
+    "defaultMessage": "도메인 설정"
+  },
+  "nFQbxh": {
+    "defaultMessage": "결제 방법"
+  },
+  "nQ0mEC": {
+    "defaultMessage": "참고:"
+  },
+  "nWQFic": {
+    "defaultMessage": "갱신하다"
+  },
+  "nm81YC": {
+    "defaultMessage": "VPS 로딩 중..."
+  },
+  "nxqAD7": {
+    "defaultMessage": "새로운 사고"
+  },
+  "o2AdrJ": {
+    "defaultMessage": "이 가상 머신은 사용자 지정 템플릿을 사용하므로 업그레이드할 수 없습니다. 표준 템플릿을 사용하는 가상 머신만 업그레이드를 지원합니다."
+  },
+  "o8lVmf": {
+    "defaultMessage": "결제 방식은 견적 및 결제에 사용되는 통화에 영향을 미칩니다."
+  },
+  "o9lOhm": {
+    "defaultMessage": "공개 키 지원: {npub}"
+  },
+  "oBSxZS": {
+    "defaultMessage": "업그레이드 견적"
+  },
+  "oCc8Oq": {
+    "defaultMessage": "키 추가"
+  },
+  "oXGNZ+": {
+    "defaultMessage": "VM 번호{id} 터미널:"
+  },
+  "p4N05H": {
+    "defaultMessage": "업로드"
+  },
+  "pSH5mR": {
+    "defaultMessage": "결제 내역"
+  },
+  "pY6CgO": {
+    "defaultMessage": "아직 가상 머신이 없습니다."
+  },
+  "qJRR8N": {
+    "defaultMessage": "IP 주소 차단 목록을 불러오는 중입니다..."
+  },
+  "qV+TFm": {
+    "defaultMessage": "결제가 실패했습니다."
+  },
+  "qWMcff": {
+    "defaultMessage": "DNS 업데이트가 적용되는 데 최대 48시간이 걸릴 수 있습니다."
+  },
+  "qZkVyB": {
+    "defaultMessage": "귀하의 공개 키(모든 통신에 포함):"
+  },
+  "qq7WMq": {
+    "defaultMessage": "모든 VPS에는 IPv4 주소 1개와 IPv6 주소 1개가 포함되어 있으며 트래픽 제한이 없습니다. 모든 가격은 세금을 제외한 금액입니다."
+  },
+  "quroDq": {
+    "defaultMessage": "VM 기록"
+  },
+  "qvZHhC": {
+    "defaultMessage": "VPS 상품 로드에 실패했습니다."
+  },
+  "r2BhUh": {
+    "defaultMessage": "메시지 해독"
+  },
+  "rCcPOd": {
+    "defaultMessage": "수수료"
+  },
+  "rKLmW/": {
+    "defaultMessage": "결제 취소"
+  },
+  "rvirM2": {
+    "defaultMessage": "위치"
+  },
+  "s+YpY+": {
+    "defaultMessage": "다른 사람을 추천하여 보상을 받으세요."
+  },
+  "sH1q5P": {
+    "defaultMessage": "~을 위하여, ~를 위해 {time}"
+  },
+  "sTesGq": {
+    "defaultMessage": "제안 가능한 상품이 없습니다."
+  },
+  "sXj7R6": {
+    "defaultMessage": "디스크:"
+  },
+  "sqvjkf": {
+    "defaultMessage": "핸들 추가"
+  },
+  "sy+pv5": {
+    "defaultMessage": "이메일"
+  },
+  "tzMNF3": {
+    "defaultMessage": "상태"
+  },
+  "u/vOPu": {
+    "defaultMessage": "유료"
+  },
+  "uN7rbm": {
+    "defaultMessage": "추천 프로그램을 통해 다른 사용자가 귀하의 추천 코드를 사용하여 가입하면 보상을 받을 수 있습니다. 보상을 받는 방법을 선택하세요."
+  },
+  "uPNlBw": {
+    "defaultMessage": "이메일: {email}"
+  },
+  "uRfNhn": {
+    "defaultMessage": "네트워크:"
+  },
+  "ug01Mk": {
+    "defaultMessage": "시간"
+  },
+  "uqUeK9": {
+    "defaultMessage": "고객 지원팀에서 보낸 메시지를 해독하세요."
+  },
+  "v2BRjN": {
+    "defaultMessage": "제목"
+  },
+  "v4Sg0C": {
+    "defaultMessage": "사용자 지정 수신자 키를 사용하세요."
+  },
+  "vONi+O": {
+    "defaultMessage": "국가"
+  },
+  "vlKhIl": {
+    "defaultMessage": "성함"
+  },
+  "wLwJ9Q": {
+    "defaultMessage": "기존 요금으로 남은 시간에 대한 가치:"
+  },
+  "wfYHHe": {
+    "defaultMessage": "-{daysLeft} 남은 날짜"
+  },
+  "wz7uSD": {
+    "defaultMessage": "포함하여 {amount} 세금"
+  },
+  "x0cZXf": {
+    "defaultMessage": "업그레이드 불가"
+  },
+  "xLbpvq": {
+    "defaultMessage": "NIP-17을 통해 지원되는 암호화된 개인 메시지를 주고받을 수 있습니다. 메시지는 종단 간 암호화됩니다."
+  },
+  "xR03Aa": {
+    "defaultMessage": "알림 설정"
+  },
+  "xXbJso": {
+    "defaultMessage": "로그아웃"
+  },
+  "xj59EM": {
+    "defaultMessage": "{proxy} DNS 설정을 변경하지 않아도 작동하므로, 이미 해당 도메인에 웹사이트를 구축해 놓은 경우에 유용합니다."
+  },
+  "xkr+zo": {
+    "defaultMessage": "약관"
+  },
+  "xmSWcf": {
+    "defaultMessage": "CPU: {cores} 코어"
+  },
+  "y43e4q": {
+    "defaultMessage": "(DNS 변경이 필요하지 않음)"
+  },
+  "yDjevn": {
+    "defaultMessage": "PGP"
+  },
+  "yJAKR0": {
+    "defaultMessage": "메시지 보내기"
+  },
+  "yYs9cj": {
+    "defaultMessage": "업데이트 페이지로 돌아가기"
+  },
+  "zAN0RF": {
+    "defaultMessage": "암호화된 직접 메시지"
+  },
+  "zEk9h3": {
+    "defaultMessage": "가상 머신"
+  },
+  "zFegDD": {
+    "defaultMessage": "문의"
+  },
+  "zRPHCo": {
+    "defaultMessage": "메모리(GB)"
+  }
+}

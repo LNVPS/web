@@ -1,10 +1,26 @@
 {
   "kind": 30023,
   "tags": [
-    ["d", "nkbwMjUKSlxDhLSrle9gU-de"],
-    ["title", "Preis-Updates"],
-    ["published_at", "1741299793"],
-    ["L", "ISO-639-1"],
-    ["l", "de", "ISO-639-1"]
+    [
+      "d",
+      "nkbwMjUKSlxDhLSrle9gU-de"
+    ],
+    [
+      "title",
+      "Preisaktualisierungen"
+    ],
+    [
+      "published_at",
+      "1741299793"
+    ],
+    [
+      "L",
+      "ISO-639-1"
+    ],
+    [
+      "l",
+      "de",
+      "ISO-639-1"
+    ]
   ]
 }

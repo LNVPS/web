@@ -10,6 +10,9 @@ dist
 !.yarn/versions
 docs
 .env*
+!.env.lnvps
+!.env.uat
+!.env.development
 .git
 .github
 .vscode

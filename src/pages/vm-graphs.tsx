@@ -3,6 +3,7 @@ import { TimeSeriesData, VmInstance } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 import {
   ResponsiveContainer,
   XAxis,
@@ -103,6 +104,7 @@ export function VmGraphsPage() {
   );
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <Link to={"/vm"} state={state}>
         &lt; <FormattedMessage defaultMessage="Back" />
       </Link>

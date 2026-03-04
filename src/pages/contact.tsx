@@ -2,10 +2,12 @@ import useLogin from "../hooks/login";
 import ContactForm, { ContactFormData } from "../components/contact-form";
 import { LNVpsApi } from "../api";
 import { ApiUrl } from "../const";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 export function ContactPage() {
   const login = useLogin();
+  const { formatMessage } = useIntl();
 
   async function handleSubmit(data: ContactFormData) {
     const api = new LNVpsApi(ApiUrl, undefined, 5000);
@@ -18,6 +20,14 @@ export function ContactPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo
+        title={formatMessage({ defaultMessage: "Contact" })}
+        canonical="/contact"
+        description={formatMessage({
+          defaultMessage:
+            "Get in touch with the LNVPS team. Have questions about our Bitcoin Lightning VPS service? We're here to help.",
+        })}
+      />
       <div className="text-xl">
         <FormattedMessage defaultMessage="Contact Us" />
       </div>

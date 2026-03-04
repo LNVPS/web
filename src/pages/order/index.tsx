@@ -4,6 +4,7 @@ import OrderVmPage from "./vm";
 import useLogin from "../../hooks/login";
 import LoginButton from "../../components/login-button";
 import { FormattedMessage } from "react-intl";
+import Seo from "../../components/seo";
 
 export interface OrderCart {
   type: "vm" | "ip_space";
@@ -33,6 +34,7 @@ export function OrderPage() {
   }
   return (
     <div className="flex flex-col gap-12">
+      <Seo noindex={true} />
       {login === undefined && (
         <div className="flex flex-col gap-2">
           <div>

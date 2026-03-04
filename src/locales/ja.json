@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
   },
+  "32rBNK": {
+    "defaultMessage": "利用規約"
+  },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "再インストール"
   },
+  "AuSwGG": {
+    "defaultMessage": "稼働時間： {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "ログイン"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
+  },
+  "CjLFf2": {
+    "defaultMessage": "LNVPSチームまでお気軽にご連絡ください。当社のビットコインライトニングVPSサービスについてご質問がございましたら、お気軽にお問い合わせください。"
   },
   "Cl+kqZ": {
     "defaultMessage": "QRコードを表示"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "カスタム送信者キーを使用する"
   },
-  "H43Krf": {
-    "defaultMessage": "稼働時間：{uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "名前"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "サポート"
+  },
+  "HuLZ50": {
+    "defaultMessage": "ビットコインライトニングを活用した高性能VPS。本人確認（KYC）は不要で、手間もかかりません。月額わずかなサトシから利用できる仮想専用サーバーです。"
   },
   "I3JhPS": {
     "defaultMessage": "ネットワーク"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "VPSを更新する"
   },
+  "YH46Fd": {
+    "defaultMessage": "LNVPS（ビットコインのライトニングVPSプロバイダー）からの最新ニュース、アップデート、およびお知らせ。"
+  },
   "YdQxfw": {
     "defaultMessage": "サポートにお問い合わせください。"
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "ドメインを追加"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "LNVPSの利用規約 — ビットコインライトニングVPSプロバイダー。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条項をお読みください。"
   },
   "aAnyb9": {
     "defaultMessage": "このリンクを共有してください。他の人が登録して支払いを行うと、あなたは報酬を得ることができます。"
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "アップグレードに戻る"
+  },
+  "yr1Ove": {
+    "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のビットコインライトニングVPSインフラの現在の運用状況をご確認ください。"
   },
   "zAN0RF": {
     "defaultMessage": "暗号化されたダイレクトメッセージ"

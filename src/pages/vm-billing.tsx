@@ -9,6 +9,7 @@ import VmPaymentFlow from "../components/vm-payment-flow";
 import { TimeValue } from "../components/time-value";
 import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -58,6 +59,7 @@ export function VmBillingPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <Link to={"/vm"} state={state}>
         &lt; <FormattedMessage defaultMessage="Back" />
       </Link>

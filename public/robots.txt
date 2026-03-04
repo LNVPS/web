@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /account
+Disallow: /account/
+Disallow: /vm
+Disallow: /vm/
+Disallow: /order
+Disallow: /login
+
+Sitemap: https://lnvps.net/sitemap.xml

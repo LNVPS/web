@@ -2,12 +2,14 @@ import { EventKind, RequestBuilder } from "@snort/system";
 import { NostrProfile } from "../const";
 import { useRequestBuilder } from "@snort/system-react";
 import { NewsPostContent } from "./news-post";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { useLocale } from "../components/translation-provider";
 import { filterArticlesByLocale } from "../utils/news-locale";
+import Seo from "../components/seo";
 
 export function NewsPage() {
   const { locale } = useLocale();
+  const { formatMessage } = useIntl();
 
   const req = new RequestBuilder("news");
   req
@@ -29,6 +31,14 @@ export function NewsPage() {
 
   return (
     <div className="flex flex-col gap-6">
+      <Seo
+        title={formatMessage({ defaultMessage: "News" })}
+        canonical="/news"
+        description={formatMessage({
+          defaultMessage:
+            "Latest news, updates, and announcements from LNVPS — your Bitcoin Lightning VPS provider.",
+        })}
+      />
       <div className="text-2xl">
         <FormattedMessage defaultMessage="News" />
       </div>

@@ -8,6 +8,7 @@ import { Blossom } from "../blossom";
 import { LoginState } from "../login";
 import Login from "../components/login";
 import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -49,6 +50,7 @@ export default function SignUpPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       {error && <b className="text-cyber-danger">{error}</b>}
       <h1>
         <FormattedMessage defaultMessage="Login" />

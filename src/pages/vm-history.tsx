@@ -3,6 +3,7 @@ import { VmInstance, VmHistory } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
 import { FormattedDate, FormattedMessage } from "react-intl";
+import Seo from "../components/seo";
 
 function toTitleCase(str: string): string {
   return str
@@ -185,6 +186,7 @@ export function VmHistoryPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <Link to={"/vm"} state={state}>
         &lt; <FormattedMessage defaultMessage="Back" />
       </Link>

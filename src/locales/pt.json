@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "Criar Pedido"
   },
+  "32rBNK": {
+    "defaultMessage": "Termos de Serviço"
+  },
   "36aVfS": {
     "defaultMessage": "Mensagem direta no Nostr."
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "Reinstalar"
   },
+  "AuSwGG": {
+    "defaultMessage": "Tempo de atividade: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "Iniciar sessão"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
+  },
+  "CjLFf2": {
+    "defaultMessage": "Entre em contato com a equipe da LNVPS. Tem alguma dúvida sobre o nosso serviço de VPS Bitcoin Lightning? Estamos aqui para ajudar."
   },
   "Cl+kqZ": {
     "defaultMessage": "Mostrar código QR"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "Use uma chave de remetente personalizada."
   },
-  "H43Krf": {
-    "defaultMessage": "Tempo de atividade: {uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "Nome"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "Suporte"
+  },
+  "HuLZ50": {
+    "defaultMessage": "Servidores privados virtuais (VPS) de alto desempenho, alimentados pela Bitcoin Lightning. Sem necessidade de verificação de identidade (KYC) e sem complicações. Servidores virtuais privados a partir de apenas alguns sats por mês."
   },
   "I3JhPS": {
     "defaultMessage": "Rede"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "Renovar VPS"
   },
+  "YH46Fd": {
+    "defaultMessage": "As últimas notícias, atualizações e anúncios da LNVPS — o seu fornecedor de VPS Bitcoin Lightning."
+  },
   "YdQxfw": {
     "defaultMessage": "Contacte o suporte."
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Adicionar Domínio"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "Termos de Serviço da LNVPS — Fornecedor de VPS Bitcoin Lightning. Leia as nossas políticas de utilização, diretrizes de uso aceitável e termos de serviço."
   },
   "aAnyb9": {
     "defaultMessage": "Partilhe este link. Quando outras pessoas se inscreverem e efetuarem o pagamento, receberá uma comissão."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "Voltar para a página de atualização."
+  },
+  "yr1Ove": {
+    "defaultMessage": "Acompanhe em tempo real o tempo de atividade e o histórico de incidentes dos serviços LNVPS. Verifique o estado operacional atual da nossa infraestrutura Bitcoin Lightning VPS."
   },
   "zAN0RF": {
     "defaultMessage": "Mensagens diretas criptografadas"

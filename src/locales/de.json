@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "Bestellung aufgeben"
   },
+  "32rBNK": {
+    "defaultMessage": "Nutzungsbedingungen"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr Direktnachricht"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "Erneut installieren"
   },
+  "AuSwGG": {
+    "defaultMessage": "Betriebszeit: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "Anmelden"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
+  },
+  "CjLFf2": {
+    "defaultMessage": "Nehmen Sie Kontakt mit dem LNVPS-Team auf. Haben Sie Fragen zu unserem Bitcoin Lightning VPS-Dienst? Wir sind für Sie da."
   },
   "Cl+kqZ": {
     "defaultMessage": "QR-Code anzeigen"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "Benutzerdefinierten Absender-Schlüssel verwenden"
   },
-  "H43Krf": {
-    "defaultMessage": "Betriebszeit: {uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "Name"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "Unterstützung"
+  },
+  "HuLZ50": {
+    "defaultMessage": "Hochleistungsfähige virtuelle private Server (VPS), die mit Bitcoin Lightning betrieben werden. Keine Identitätsprüfung erforderlich, keine komplizierten Verfahren. Virtuelle private Server bereits ab wenigen Satoshis pro Monat."
   },
   "I3JhPS": {
     "defaultMessage": "Netzwerk"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "VPS verlängern"
   },
+  "YH46Fd": {
+    "defaultMessage": "Die neuesten Nachrichten, Aktualisierungen und Ankündigungen von LNVPS – Ihrem Anbieter von Bitcoin Lightning VPS."
+  },
   "YdQxfw": {
     "defaultMessage": "Kontaktieren Sie den Support."
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Domäne hinzufügen"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "Nutzungsbedingungen für LNVPS – ein Anbieter von Bitcoin Lightning VPS. Bitte lesen Sie unsere Nutzungsrichtlinien, Richtlinien für die zulässige Nutzung und Servicebedingungen."
   },
   "aAnyb9": {
     "defaultMessage": "Teilen Sie diesen Link. Wenn sich andere anmelden und bezahlen, erhalten Sie eine Provision."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "Zurück zur Upgrade-Seite"
+  },
+  "yr1Ove": {
+    "defaultMessage": "Echtzeit-Verfügbarkeits- und Ereignisprotokolle für LNVPS-Dienste. Überprüfen Sie den aktuellen Betriebszustand unserer Bitcoin Lightning VPS-Infrastruktur."
   },
   "zAN0RF": {
     "defaultMessage": "Ende-zu-Ende-verschlüsselte Direktnachrichten"

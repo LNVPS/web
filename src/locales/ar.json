@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "إنشاء طلب شراء"
   },
+  "32rBNK": {
+    "defaultMessage": "شروط الخدمة"
+  },
   "36aVfS": {
     "defaultMessage": "رسالة مباشرة على منصة نوستر."
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "أعد التثبيت."
   },
+  "AuSwGG": {
+    "defaultMessage": "مدة التشغيل: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "تسجيل الدخول"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
+  },
+  "CjLFf2": {
+    "defaultMessage": "تواصل مع فريق LNVPS. هل لديك أي أسئلة حول خدمة خوادمنا الافتراضية الخاصة بتقنية \"بيتكوين لايتنينغ\"؟ نحن هنا لمساعدتك."
   },
   "Cl+kqZ": {
     "defaultMessage": "اعرض رمز الاستجابة السريعة."
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "استخدم مفتاح المرسل المخصص."
   },
-  "H43Krf": {
-    "defaultMessage": "مدة التشغيل: {uptime}٪"
-  },
   "HAlOn1": {
     "defaultMessage": "الاسم"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "دعم"
+  },
+  "HuLZ50": {
+    "defaultMessage": "خوادم افتراضية خاصة عالية الأداء تعمل بتقنية بيتكوين لايتنينغ. لا حاجة للتحقق من الهوية، ولا تعقيدات. تبدأ أسعار الخوادم الافتراضية الخاصة من بضعة \"ساتوشي\" شهريًا."
   },
   "I3JhPS": {
     "defaultMessage": "شبكة"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "جدد اشتراك الخادم الافتراضي الخاص (VPS)."
   },
+  "YH46Fd": {
+    "defaultMessage": "أحدث الأخبار والتحديثات والإعلانات من LNVPS — مزود خدمة VPS الخاص بك لشبكة Bitcoin Lightning."
+  },
   "YdQxfw": {
     "defaultMessage": "اتصل بالدعم الفني"
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "أضف نطاقًا."
+  },
+  "ZlYFmj": {
+    "defaultMessage": "شروط الخدمة الخاصة بـ LNVPS — مزود خدمة VPS بتقنية Bitcoin Lightning. يرجى قراءة سياسات الاستخدام والإرشادات الخاصة بالاستخدام المقبول وشروط الخدمة."
   },
   "aAnyb9": {
     "defaultMessage": "شارك هذا الرابط. عندما يسجل الآخرون ويقومون بالدفع، ستحصل على عمولة."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "العودة إلى صفحة الترقية"
+  },
+  "yr1Ove": {
+    "defaultMessage": "عرض مباشر لوقت التشغيل وسجل الحوادث لخدمات LNVPS. تحقق من الحالة التشغيلية الحالية للبنية التحتية الخاصة بنا لـ Bitcoin Lightning VPS."
   },
   "zAN0RF": {
     "defaultMessage": "رسائل مباشرة مشفرة."

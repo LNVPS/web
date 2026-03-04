@@ -8,6 +8,7 @@ import { LoginState } from "../login";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 interface Incident {
   id?: string;
@@ -28,7 +29,7 @@ export function StatusPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState(Date.now());
   const login = useLogin();
-  const { formatDate, formatNumber } = useIntl();
+  const { formatDate, formatNumber, formatMessage } = useIntl();
   const canEdit = login?.publicKey === NostrProfile.id;
 
   function StatusBadge({ status }: { status: string }) {
@@ -499,6 +500,14 @@ export function StatusPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo
+        title={formatMessage({ defaultMessage: "Status" })}
+        canonical="/status"
+        description={formatMessage({
+          defaultMessage:
+            "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure.",
+        })}
+      />
       <div className="text-2xl">
         <FormattedMessage
           defaultMessage="Uptime: {uptime}"

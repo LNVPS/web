@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { NostrSystem } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
+import { HelmetProvider } from "react-helmet-async";
 import Layout from "./pages/layout.tsx";
 import HomePage from "./pages/home.tsx";
 import { OrderPage } from "./pages/order";
@@ -134,10 +135,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TranslationProvider>
-      <SnortContext.Provider value={system}>
-        <RouterProvider router={router} />
-      </SnortContext.Provider>
-    </TranslationProvider>
+    <HelmetProvider>
+      <TranslationProvider>
+        <SnortContext.Provider value={system}>
+          <RouterProvider router={router} />
+        </SnortContext.Provider>
+      </TranslationProvider>
+    </HelmetProvider>
   </StrictMode>,
 );

@@ -7,6 +7,7 @@ import { VmInstance } from "../api";
 import { WebglAddon } from "@xterm/addon-webgl";
 import { AttachAddon } from "@xterm/addon-attach";
 import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 type ConnectionStatus = "connecting" | "connected" | "disconnected";
 
@@ -135,6 +136,7 @@ export function VmConsolePage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <button

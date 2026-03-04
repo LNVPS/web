@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "创建订单"
   },
+  "32rBNK": {
+    "defaultMessage": "服务条款"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "重新安装"
   },
+  "AuSwGG": {
+    "defaultMessage": "运行时间： {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "登录"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
+  },
+  "CjLFf2": {
+    "defaultMessage": "请与 LNVPS 团队联系。您对我们的比特币闪电网络 VPS 服务有疑问吗？我们随时为您提供帮助。"
   },
   "Cl+kqZ": {
     "defaultMessage": "显示二维码"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "使用自定义发送方密钥。"
   },
-  "H43Krf": {
-    "defaultMessage": "系统运行时间：{uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "姓名"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "支持"
+  },
+  "HuLZ50": {
+    "defaultMessage": "高性能虚拟专用服务器，由比特币闪电网络提供支持。无需身份验证，操作简便。虚拟专用服务器每月只需几枚聪即可使用。"
   },
   "I3JhPS": {
     "defaultMessage": "网络"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "续订 VPS。"
   },
+  "YH46Fd": {
+    "defaultMessage": "LNVPS 最新消息、更新和公告——您值得信赖的比特币闪电网络 VPS 服务提供商。"
+  },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "添加域名"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "LNVPS 服务条款——比特币闪电网络虚拟专用服务器提供商。请阅读我们的使用政策、可接受的使用指南和服务条款。"
   },
   "aAnyb9": {
     "defaultMessage": "分享此链接。当其他人注册并付款时，您将获得相应的报酬。"
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "返回升级页面"
+  },
+  "yr1Ove": {
+    "defaultMessage": "查看 LNVPS 服务的实时运行时间和历史事件记录。请查看我们比特币闪电 VPS 基础设施的当前运行状态。"
   },
   "zAN0RF": {
     "defaultMessage": "加密的私信"

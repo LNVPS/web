@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "Create Order"
   },
+  "32rBNK": {
+    "defaultMessage": "Terms of Service"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr DM"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "Reinstall"
   },
+  "AuSwGG": {
+    "defaultMessage": "Uptime: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "Login"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
+  },
+  "CjLFf2": {
+    "defaultMessage": "Get in touch with the LNVPS team. Have questions about our Bitcoin Lightning VPS service? We're here to help."
   },
   "Cl+kqZ": {
     "defaultMessage": "Show QR"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "Use custom sender key"
   },
-  "H43Krf": {
-    "defaultMessage": "Uptime: {uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "Name"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "Support"
+  },
+  "HuLZ50": {
+    "defaultMessage": "High-performance VPS powered by Bitcoin Lightning. No KYC, no fuss. Virtual private servers starting from a few sats per month."
   },
   "I3JhPS": {
     "defaultMessage": "Network"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "Renew VPS"
   },
+  "YH46Fd": {
+    "defaultMessage": "Latest news, updates, and announcements from LNVPS — your Bitcoin Lightning VPS provider."
+  },
   "YdQxfw": {
     "defaultMessage": "Contact Support"
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Add Domain"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "Terms of Service for LNVPS — Bitcoin Lightning VPS provider. Read our usage policies, acceptable use guidelines, and service terms."
   },
   "aAnyb9": {
     "defaultMessage": "Share this link. When others sign up and pay, you earn a payout."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "Back to Upgrade"
+  },
+  "yr1Ove": {
+    "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure."
   },
   "zAN0RF": {
     "defaultMessage": "Encrypted direct messages"

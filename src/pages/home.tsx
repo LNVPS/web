@@ -13,13 +13,41 @@ import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
 import { useCached } from "../hooks/useCached";
 import IpBlockCard from "../components/ip-block-card";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "LNVPS",
+  url: "https://lnvps.net",
+  logo: "https://lnvps.net/logo.jpg",
+  description:
+    "Bitcoin Lightning VPS provider — high-performance virtual private servers, no KYC, paid with Bitcoin Lightning.",
+  sameAs: ["https://github.com/LNVPS"],
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "LNVPS",
+  url: "https://lnvps.net",
+};
 
 export default function HomePage() {
   const login = useLogin();
+  const { formatMessage } = useIntl();
 
   return (
     <>
+      <Seo
+        canonical="/"
+        description={formatMessage({
+          defaultMessage:
+            "High-performance VPS powered by Bitcoin Lightning. No KYC, no fuss. Virtual private servers starting from a few sats per month.",
+        })}
+        jsonLd={[organizationSchema, webSiteSchema]}
+      />
       <div className="flex flex-col gap-4">
         <LatestNews />
         <VpsOffersSection />

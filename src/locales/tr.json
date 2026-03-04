@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "Sipariş Oluştur"
   },
+  "32rBNK": {
+    "defaultMessage": "Hizmet Şartları"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr Özel Mesaj"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "Yeniden yükleyin"
   },
+  "AuSwGG": {
+    "defaultMessage": "Çalışma süresi: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "Giriş yap"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
+  },
+  "CjLFf2": {
+    "defaultMessage": "LNVPS ekibiyle iletişime geçin. Bitcoin Lightning VPS hizmetimizle ilgili sorularınız mı var? Size yardımcı olmak için buradayız."
   },
   "Cl+kqZ": {
     "defaultMessage": "QR kodunu göster"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "Özel gönderen anahtarını kullanın"
   },
-  "H43Krf": {
-    "defaultMessage": "Çalışma süresi: {uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "Ad"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "Destek"
+  },
+  "HuLZ50": {
+    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS. KYC gerektirmez, sorunsuz kullanım. Aylık birkaç satoshi'den başlayan sanal özel sunucular."
   },
   "I3JhPS": {
     "defaultMessage": "Ağ"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "VPS'nizi yenileyin"
   },
+  "YH46Fd": {
+    "defaultMessage": "LNVPS'den en son haberler, güncellemeler ve duyurular — Bitcoin Lightning VPS hizmet sağlayıcınız."
+  },
   "YdQxfw": {
     "defaultMessage": "Destekle İletişime Geçin"
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Alan Adı Ekle"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "LNVPS Hizmet Şartları — Bitcoin Lightning VPS sağlayıcısı. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
   },
   "aAnyb9": {
     "defaultMessage": "Bu bağlantıyı paylaşın. Başkaları kayıt yaptırıp ödeme yaptığında, siz de bir komisyon kazanırsınız."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "Yeniden Yükseltmeye Dön"
+  },
+  "yr1Ove": {
+    "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorunlar görüntülenebilir. Bitcoin Lightning VPS altyapımızın mevcut çalışma durumunu kontrol edin."
   },
   "zAN0RF": {
     "defaultMessage": "Şifrelenmiş özel mesajlar"

@@ -11,6 +11,7 @@ import Modal from "../components/modal";
 import NewTag from "../components/new-tag";
 import SSHKeySelector from "../components/ssh-keys";
 import { FormattedMessage, useIntl } from "react-intl";
+import Seo from "../components/seo";
 
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -100,6 +101,7 @@ export default function VmPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <Link to={"/account"}>
         &lt; <FormattedMessage defaultMessage="Back" />
       </Link>

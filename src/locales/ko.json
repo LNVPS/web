@@ -74,6 +74,9 @@
   "2l2y5p": {
     "defaultMessage": "주문 생성"
   },
+  "32rBNK": {
+    "defaultMessage": "이용 약관"
+  },
   "36aVfS": {
     "defaultMessage": "노스트르 다이렉트 메시지"
   },
@@ -206,6 +209,9 @@
   "AQkpi3": {
     "defaultMessage": "다시 설치"
   },
+  "AuSwGG": {
+    "defaultMessage": "가동 시간: {uptime}"
+  },
   "AyGauy": {
     "defaultMessage": "로그인"
   },
@@ -247,6 +253,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
+  },
+  "CjLFf2": {
+    "defaultMessage": "LNVPS 팀에 문의하세요. 저희의 비트코인 라이트닝 VPS 서비스에 대해 궁금한 점이 있으신가요? 언제든지 도움을 드릴 준비가 되어 있습니다."
   },
   "Cl+kqZ": {
     "defaultMessage": "QR 코드 표시"
@@ -308,9 +317,6 @@
   "GsCz6b": {
     "defaultMessage": "사용자 지정 발신 키를 사용하세요."
   },
-  "H43Krf": {
-    "defaultMessage": "가동 시간: {uptime}%"
-  },
   "HAlOn1": {
     "defaultMessage": "이름"
   },
@@ -319,6 +325,9 @@
   },
   "HqRNN8": {
     "defaultMessage": "지원"
+  },
+  "HuLZ50": {
+    "defaultMessage": "비트코인 라이트닝 네트워크를 기반으로 하는 고성능 VPS입니다. KYC 절차 없이 간편하게 이용할 수 있으며, 월 몇 사토시부터 시작하는 가상 전용 서버를 제공합니다."
   },
   "I3JhPS": {
     "defaultMessage": "네트워크"
@@ -587,6 +596,9 @@
   "Y7opZr": {
     "defaultMessage": "VPS 갱신"
   },
+  "YH46Fd": {
+    "defaultMessage": "LNVPS의 최신 뉴스, 업데이트 및 공지사항을 확인하세요. LNVPS는 여러분의 비트코인 라이트닝 VPS를 제공합니다."
+  },
   "YdQxfw": {
     "defaultMessage": "고객 지원팀에 문의하세요."
   },
@@ -613,6 +625,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "도메인 추가"
+  },
+  "ZlYFmj": {
+    "defaultMessage": "LNVPS 서비스 약관 — 비트코인 라이트닝 VPS 제공업체. 당사의 사용 정책, 허용되는 사용 지침 및 서비스 약관을 읽어보세요."
   },
   "aAnyb9": {
     "defaultMessage": "이 링크를 공유하세요. 다른 사람들이 가입하고 결제하면 귀하에게 보상이 지급됩니다."
@@ -1009,6 +1024,9 @@
   },
   "yYs9cj": {
     "defaultMessage": "업데이트 페이지로 돌아가기"
+  },
+  "yr1Ove": {
+    "defaultMessage": "LNVPS 서비스의 실시간 가동 시간 및 장애 이력을 확인하세요. 현재 비트코인 라이트닝 VPS 인프라의 운영 상태를 확인하세요."
   },
   "zAN0RF": {
     "defaultMessage": "암호화된 직접 메시지"

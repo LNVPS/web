@@ -8,6 +8,7 @@ import VpsInstanceRow from "../components/vps-instance";
 import VmPaymentFlow from "../components/vm-payment-flow";
 import { CostAmount } from "../components/cost";
 import { FormattedMessage } from "react-intl";
+import Seo from "../components/seo";
 
 export default function VmUpgradePage() {
   const location = useLocation() as { state?: VmInstance };
@@ -142,6 +143,7 @@ export default function VmUpgradePage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <Seo noindex={true} />
       <Link to={"/vm"} state={state}>
         &lt; <FormattedMessage defaultMessage="Back to VM" />
       </Link>

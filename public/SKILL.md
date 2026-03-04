@@ -175,6 +175,7 @@ Poll `GET /api/v1/payment/{id}` until `is_paid: true`, then poll `GET /api/v1/vm
 | Add SSH Key        | POST   | `/api/v1/ssh-key`                  |
 | Get Account        | GET    | `/api/v1/account`                  |
 | Update Account     | PATCH  | `/api/v1/account`                  |
+| Verify Email       | GET    | `/api/v1/account/verify-email`     |
 | Payment methods    | GET    | `/api/v1/payment/methods`          |
 | Get Payment        | GET    | `/api/v1/payment/{id}`             |
 | List Subscriptions | GET    | `/api/v1/subscriptions`            |
@@ -222,6 +223,54 @@ Error:
 ```json
 { "error": "Description of the error" }
 ```
+
+## Email Verification
+
+LNVPS accounts require a verified email address. The verification flow works as follows:
+
+1. **Set email on account** — `PATCH /api/v1/account` with `{"email": "user@example.com"}`. The server sends a verification link to that address.
+2. **User clicks the link** — the link includes a `token` query parameter pointing to the API.
+3. **Confirm the token** — `GET /api/v1/account/verify-email?token=<token>`. Returns `200 OK` on success.
+4. **Check status** — `GET /api/v1/account` returns `email_verified: true` once confirmed.
+
+### Check if email is verified
+
+```http
+GET /api/v1/account
+```
+
+Look for `email_verified: true` in the response:
+
+```json
+{
+  "data": {
+    "email": "user@example.com",
+    "email_verified": true,
+    ...
+  }
+}
+```
+
+### Trigger verification email
+
+```http
+PATCH /api/v1/account
+Content-Type: application/json
+
+{"email": "user@example.com"}
+```
+
+Sending a `PATCH` with an email address causes the server to send a verification email. If the email is already set, send it again to re-trigger the email.
+
+### Confirm the token
+
+```http
+GET /api/v1/account/verify-email?token=<token>
+```
+
+The `token` value comes from the link in the verification email. Returns `200 OK` with no body on success.
+
+---
 
 ## Common Tasks
 

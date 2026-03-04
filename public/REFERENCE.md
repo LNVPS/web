@@ -67,6 +67,7 @@ GET /api/v1/account
 {
   "data": {
     "email": "user@example.com",
+    "email_verified": true,
     "contact_email": true,
     "contact_nip17": false,
     "country_code": "DE",
@@ -80,6 +81,8 @@ GET /api/v1/account
   }
 }
 ```
+
+`email_verified` is `true` once the user has confirmed their email address.
 
 ### Update Account
 
@@ -108,6 +111,27 @@ Content-Type: application/json
 ```
 
 **Note:** Setting `nwc_connection_string` enables automatic renewal payments via Nostr Wallet Connect.
+
+### Verify Email
+
+```http
+GET /api/v1/account/verify-email?token=<token>
+```
+
+Confirms an email verification token sent by the server after a `PATCH /api/v1/account` with an `email` value.
+
+| Parameter | Type   | Required | Description                            |
+| --------- | ------ | -------- | -------------------------------------- |
+| `token`   | string | Yes      | Verification token from the email link |
+
+**Response:** `200 OK` with no body on success.
+
+**Flow:**
+
+1. `PATCH /api/v1/account` with `{"email": "user@example.com"}` — server sends verification email.
+2. User clicks link in email containing `?token=<token>`.
+3. `GET /api/v1/account/verify-email?token=<token>` — confirms the token.
+4. `GET /api/v1/account` now returns `email_verified: true`.
 
 ---
 

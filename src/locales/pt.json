@@ -836,6 +836,9 @@
   "mJPBXd": {
     "defaultMessage": "Mensagem criptografada (copie e inclua no seu e-mail):"
   },
+  "mMeU1k": {
+    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
+  },
   "mOR+qH": {
     "defaultMessage": "Copiar para a área de transferência"
   },

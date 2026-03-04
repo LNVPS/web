@@ -836,6 +836,9 @@
   "mJPBXd": {
     "defaultMessage": "Mensaje cifrado (copie e incluya en su correo electrónico):"
   },
+  "mMeU1k": {
+    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
+  },
   "mOR+qH": {
     "defaultMessage": "Copiar al portapapeles"
   },

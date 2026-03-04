@@ -836,6 +836,9 @@
   "mJPBXd": {
     "defaultMessage": "加密消息（复制并包含在您的电子邮件中）："
   },
+  "mMeU1k": {
+    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
+  },
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
   },

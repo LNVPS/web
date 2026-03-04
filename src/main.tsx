@@ -35,7 +35,6 @@ const system = new NostrSystem({
 [
   "wss://relay.snort.social/",
   "wss://relay.damus.io/",
-  "wss://relay.nostr.band/",
   "wss://nos.lol/",
 ].forEach((a) => system.ConnectToRelay(a, { read: true, write: true }));
 

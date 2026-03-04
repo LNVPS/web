@@ -836,6 +836,9 @@
   "mJPBXd": {
     "defaultMessage": "Message chiffré (copiez-le et incluez-le dans votre courriel) :"
   },
+  "mMeU1k": {
+    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
+  },
   "mOR+qH": {
     "defaultMessage": "Copier dans le presse-papiers"
   },

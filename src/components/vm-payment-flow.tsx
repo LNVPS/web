@@ -16,7 +16,7 @@ import { Icon } from "./icon";
 import { ApiUrl } from "../const";
 import QrCode from "./qr";
 import { LNURL } from "@snort/shared";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export type PaymentFlowType = "renewal" | "upgrade";
 
@@ -38,6 +38,7 @@ export default function VmPaymentFlow({
   onCancel,
 }: VmPaymentFlowProps) {
   const login = useLogin();
+  const { locale } = useIntl();
   const { data: cachedMethods, loading: methodsLoading } = usePaymentMethods();
   const [methods, setMethods] = useState<Array<PaymentMethod>>();
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod>();
@@ -164,7 +165,9 @@ export default function VmPaymentFlow({
         }
         if (base) {
           if (currency === "BTC") {
-            feeParts.push(`${Math.floor(base / 1000).toLocaleString()} sats`);
+            feeParts.push(
+              `${Math.floor(base / 1000).toLocaleString(locale)} sats`,
+            );
           } else {
             feeParts.push(`${(base / 100).toFixed(2)} ${currency}`);
           }

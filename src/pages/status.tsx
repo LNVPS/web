@@ -7,7 +7,7 @@ import useLogin from "../hooks/login";
 import { LoginState } from "../login";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 interface Incident {
   id?: string;
@@ -28,6 +28,7 @@ export function StatusPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState(Date.now());
   const login = useLogin();
+  const { locale } = useIntl();
   const canEdit = login?.publicKey === NostrProfile.id;
 
   function StatusBadge({ status }: { status: string }) {
@@ -573,7 +574,7 @@ export function StatusPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div>
-                          {start.toLocaleDateString("en-US", {
+                          {start.toLocaleDateString(locale, {
                             year: "numeric",
                             month: "short",
                             day: "numeric",
@@ -615,7 +616,7 @@ export function StatusPage() {
                           values={{
                             date: new Date(
                               incident.lastUpdated * 1000,
-                            ).toLocaleDateString("en-US", {
+                            ).toLocaleDateString(locale, {
                               year: "numeric",
                               month: "short",
                               day: "numeric",
@@ -692,7 +693,7 @@ export function StatusPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div>
-                          {start.toLocaleDateString("en-US", {
+                          {start.toLocaleDateString(locale, {
                             year: "numeric",
                             month: "short",
                             day: "numeric",
@@ -734,7 +735,7 @@ export function StatusPage() {
                           values={{
                             date: new Date(
                               incident.lastUpdated * 1000,
-                            ).toLocaleDateString("en-US", {
+                            ).toLocaleDateString(locale, {
                               year: "numeric",
                               month: "short",
                               day: "numeric",

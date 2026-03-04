@@ -6,14 +6,15 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "../components/button";
 import CostLabel, { CostAmount } from "../components/cost";
 import VmPaymentFlow from "../components/vm-payment-flow";
-import { timeValue } from "../utils";
+import { TimeValue } from "../components/time-value";
 import { Icon } from "../components/icon";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
   const params = useParams();
   const login = useLogin();
+  const { locale } = useIntl();
   const navigate = useNavigate();
   const { loading: methodsLoading } = usePaymentMethods();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
@@ -192,7 +193,7 @@ export function VmBillingPage() {
                 .map((a) => (
                   <tr key={a.id}>
                     <td className="pl-4">
-                      {new Date(a.created).toLocaleString()}
+                      {new Date(a.created).toLocaleString(locale)}
                     </td>
                     <td>
                       <CostAmount
@@ -236,7 +237,9 @@ export function VmBillingPage() {
                             ? "revolut"
                             : "—")}
                     </td>
-                    <td>{timeValue(a.time)}</td>
+                    <td>
+                      <TimeValue seconds={a.time} />
+                    </td>
                     <td>
                       {a.is_paid ? (
                         <FormattedMessage defaultMessage="Paid" />

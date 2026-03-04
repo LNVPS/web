@@ -34,7 +34,7 @@ function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
 
 export default function Nip17DM() {
   const login = useLogin();
-  const { formatMessage } = useIntl();
+  const { formatMessage, locale } = useIntl();
   const [messages, setMessages] = useState<DecryptedMessage[]>(() =>
     login?.publicKey ? loadDmCache(login.publicKey) : [],
   );
@@ -197,7 +197,7 @@ export default function Nip17DM() {
                   {msg.content}
                 </div>
                 <div className="text-xs text-cyber-muted mt-1">
-                  {new Date(msg.created_at * 1000).toLocaleString()}
+                  {new Date(msg.created_at * 1000).toLocaleString(locale)}
                 </div>
               </div>
             </div>

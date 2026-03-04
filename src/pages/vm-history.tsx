@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { VmInstance, VmHistory } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 function toTitleCase(str: string): string {
   return str
@@ -152,6 +152,7 @@ function JsonDiff({
 export function VmHistoryPage() {
   const { state } = useLocation() as { state?: VmInstance };
   const login = useLogin();
+  const { locale } = useIntl();
   const [history, setHistory] = useState<Array<VmHistory>>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>();
@@ -258,7 +259,7 @@ export function VmHistoryPage() {
                       </span>
                     </div>
                     <span className="text-sm text-cyber-muted">
-                      {new Date(entry.timestamp).toLocaleString()}
+                      {new Date(entry.timestamp).toLocaleString(locale)}
                     </span>
                   </div>
                   {entry.description && (

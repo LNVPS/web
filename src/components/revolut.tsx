@@ -5,7 +5,7 @@ import { AsyncButton } from "./button";
 import { AccountDetail, VmPayment } from "../api";
 import { CostAmount } from "./cost";
 import useLogin from "../hooks/login";
-import { timeValue } from "../utils";
+import { TimeValue } from "./time-value";
 import useTheme from "../hooks/theme";
 import { default as iso } from "iso-3166-1";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -179,7 +179,7 @@ export function RevolutPayWidget({
           <div className="text-sm text-cyber-muted">
             <FormattedMessage
               defaultMessage="for {time}"
-              values={{ time: timeValue(payment.time) }}
+              values={{ time: <TimeValue seconds={payment.time} /> }}
             />
           </div>
         )}

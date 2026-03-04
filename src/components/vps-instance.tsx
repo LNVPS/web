@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { VmInstance } from "../api";
 import VpsResources from "./vps-resources";
 import VmActions from "./vps-actions";
+import { FormattedMessage } from "react-intl";
 
 export default function VpsInstanceRow({
   vm,
@@ -40,7 +41,14 @@ export default function VpsInstanceRow({
           <span
             className={`text-xs ${isExpired ? "text-cyber-danger" : daysLeft <= 3 ? "text-cyber-danger" : daysLeft <= 7 ? "text-yellow-400" : "text-cyber-muted"}`}
           >
-            {isExpired ? "[Expired]" : `- [${daysLeft} days remaining]`}
+            {isExpired ? (
+              <FormattedMessage defaultMessage="[Expired]" />
+            ) : (
+              <FormattedMessage
+                defaultMessage="- [{daysLeft} days remaining]"
+                values={{ daysLeft }}
+              />
+            )}
           </span>
         </div>
         <VpsResources vm={vm} />
@@ -53,7 +61,7 @@ export default function VpsInstanceRow({
             state={vm}
             onClick={(e) => e.stopPropagation()}
           >
-            Renew
+            <FormattedMessage defaultMessage="Renew" />
           </Link>
         )}
         {!isExpired && (actions ?? true) && (

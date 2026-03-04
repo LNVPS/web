@@ -1,9 +1,3 @@
----
-title: "Network Outage Post-Mortem — February 26, 2026"
-published_at: 1772064000
-dtag: 2026-02-26-network-outage-post-mortem
----
-
 Yesterday we experienced an extended network outage during what was planned as routine maintenance: a firmware upgrade on our core router. We want to be transparent about what happened and why it took as long as it did to resolve.
 
 ## What happened

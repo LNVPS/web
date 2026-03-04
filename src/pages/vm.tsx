@@ -10,11 +10,13 @@ import { Icon } from "../components/icon";
 import Modal from "../components/modal";
 import NewTag from "../components/new-tag";
 import SSHKeySelector from "../components/ssh-keys";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
   const navigate = useNavigate();
+  const { formatMessage } = useIntl();
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
 
   const [editKey, setEditKey] = useState(false);
@@ -35,7 +37,9 @@ export default function VmPage() {
         className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 flex-col justify-center"
       >
         <div>
-          <span className="select-none">IP: </span>
+          <span className="select-none">
+            <FormattedMessage defaultMessage="IP:" />{" "}
+          </span>
           <span className="select-all">{a.ip.split("/")[0]}</span>
         </div>
         {a.forward_dns && (
@@ -64,7 +68,11 @@ export default function VmPage() {
   function networkInfo() {
     if (!state) return;
     if (hasNoIps) {
-      return <div className="text-sm text-cyber-danger">No IP's assigned</div>;
+      return (
+        <div className="text-sm text-cyber-danger">
+          <FormattedMessage defaultMessage="No IP's assigned" />
+        </div>
+      );
     }
     return <>{state.ip_assignments?.map((i) => ipRow(i, true))}</>;
   }
@@ -83,20 +91,32 @@ export default function VmPage() {
   }
 
   if (!state) {
-    return <h2>No VM selected</h2>;
+    return (
+      <h2>
+        <FormattedMessage defaultMessage="No VM selected" />
+      </h2>
+    );
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={"/account"}>&lt; Back</Link>
+      <Link to={"/account"}>
+        &lt; <FormattedMessage defaultMessage="Back" />
+      </Link>
       <VpsInstanceRow vm={state} actions={true} />
 
-      <div className="text-xl">Network:</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="Network:" />
+      </div>
       <div className="grid grid-cols-2 gap-4">{networkInfo()}</div>
-      <div className="text-xl">SSH:</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="SSH:" />
+      </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 items-center">
-          <div>Key:</div>
+          <div>
+            <FormattedMessage defaultMessage="Key:" />
+          </div>
           <div className="text-sm bg-cyber-panel px-3 py-1 rounded-sm">
             {state.ssh_key?.name}
           </div>
@@ -104,7 +124,9 @@ export default function VmPage() {
         </div>
         {!hasNoIps && (
           <div className="bg-cyber-panel px-2 py-3 rounded-sm flex gap-2 items-center">
-            <div>Login:</div>
+            <div>
+              <FormattedMessage defaultMessage="Login:" />
+            </div>
             <pre className="select-all bg-cyber-panel-light px-3 py-1 rounded-full">
               ssh {state.image.default_username}@{bestHost()}
             </pre>
@@ -115,21 +137,21 @@ export default function VmPage() {
       <div className="flex gap-4 flex-wrap">
         <div className="relative">
           <AsyncButton onClick={() => navigate("/vm/console", { state })}>
-            Console
+            <FormattedMessage defaultMessage="Console" />
           </AsyncButton>
           <NewTag className="absolute -top-2 -right-2" />
         </div>
         <AsyncButton onClick={() => navigate("/vm/billing", { state })}>
-          Billing
+          <FormattedMessage defaultMessage="Billing" />
         </AsyncButton>
         <AsyncButton onClick={() => navigate("/vm/graphs", { state })}>
-          Graphs
+          <FormattedMessage defaultMessage="Graphs" />
         </AsyncButton>
         <AsyncButton onClick={() => navigate("/vm/history", { state })}>
-          History
+          <FormattedMessage defaultMessage="History" />
         </AsyncButton>
         <AsyncButton onClick={() => navigate("/vm/upgrade", { state })}>
-          Upgrade
+          <FormattedMessage defaultMessage="Upgrade" />
         </AsyncButton>
       </div>
       <hr />
@@ -139,7 +161,10 @@ export default function VmPage() {
           onClick={async () => {
             if (
               confirm(
-                "Are you sure you want to re-install your VM?\nTHIS WILL DELETE ALL DATA!!",
+                formatMessage({
+                  defaultMessage:
+                    "Are you sure you want to re-install your VM?\nTHIS WILL DELETE ALL DATA!!",
+                }),
               )
             ) {
               await login?.api.reinstallVm(state.id);
@@ -147,7 +172,7 @@ export default function VmPage() {
             }
           }}
         >
-          Reinstall
+          <FormattedMessage defaultMessage="Reinstall" />
         </AsyncButton>
       </div>
 
@@ -155,7 +180,9 @@ export default function VmPage() {
         <Modal id="edit-ssh-key" onClose={() => setEditKey(false)}>
           <SSHKeySelector selectedKey={key} setSelectedKey={setKey} />
           <div className="flex flex-col gap-4 mt-8">
-            <small>After selecting a new key, please restart the VM.</small>
+            <small>
+              <FormattedMessage defaultMessage="After selecting a new key, please restart the VM." />
+            </small>
             {error && <b className="text-cyber-danger">{error}</b>}
             <AsyncButton
               onClick={async () => {
@@ -174,7 +201,7 @@ export default function VmPage() {
                 }
               }}
             >
-              Save
+              <FormattedMessage defaultMessage="Save" />
             </AsyncButton>
           </div>
         </Modal>
@@ -182,7 +209,9 @@ export default function VmPage() {
       {editReverse && (
         <Modal id="edit-reverse" onClose={() => setEditReverse(undefined)}>
           <div className="flex flex-col gap-4">
-            <div className="text-lg">Reverse DNS:</div>
+            <div className="text-lg">
+              <FormattedMessage defaultMessage="Reverse DNS:" />
+            </div>
             <input
               type="text"
               placeholder="my-domain.com"
@@ -194,13 +223,14 @@ export default function VmPage() {
                 })
               }
             />
-            <small>DNS updates can take up to 48hrs to propagate.</small>
+            <small>
+              <FormattedMessage defaultMessage="DNS updates can take up to 48hrs to propagate." />
+            </small>
             {error && <b className="text-cyber-danger">{error}</b>}
             <AsyncButton
               onClick={async () => {
                 setError(undefined);
                 if (!login?.api) return;
-
                 try {
                   await login.api.patchVm(state.id, {
                     reverse_dns: editReverse.reverse_dns,
@@ -214,7 +244,7 @@ export default function VmPage() {
                 }
               }}
             >
-              Save
+              <FormattedMessage defaultMessage="Save" />
             </AsyncButton>
           </div>
         </Modal>

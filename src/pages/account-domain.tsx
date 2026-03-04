@@ -8,10 +8,12 @@ import Modal from "../components/modal";
 import { tryParseNostrLink } from "@snort/system";
 import { hexToBech32 } from "@snort/shared";
 import { Icon } from "../components/icon";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export function AccountNostrDomainPage() {
   const { state } = useLocation();
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const [handles, setHandles] = useState<Array<NostrDomainHandle>>();
   const [addHandle, setAddHandle] = useState(false);
   const [newHandle, setNewHandle] = useState<string>();
@@ -27,12 +29,18 @@ export function AccountNostrDomainPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={"/account"}>&lt; Back</Link>
+      <Link to={"/account"}>
+        &lt; <FormattedMessage defaultMessage="Back" />
+      </Link>
       <NostrDomainRow domain={domain} />
-      <div className="text-xl">Handles</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="Handles" />
+      </div>
       <div className="flex flex-col gap-1">
         {handles !== undefined && handles.length === 0 && (
-          <div className="text-cyber-danger text-sm">No Registerd Handles</div>
+          <div className="text-cyber-danger text-sm">
+            <FormattedMessage defaultMessage="No Registered Handles" />
+          </div>
         )}
         {handles?.map((a) => (
           <div
@@ -52,7 +60,12 @@ export function AccountNostrDomainPage() {
               onClick={async () => {
                 if (
                   login?.api &&
-                  confirm("Are you sure you want to delete this handle?")
+                  confirm(
+                    formatMessage({
+                      defaultMessage:
+                        "Are you sure you want to delete this handle?",
+                    }),
+                  )
                 ) {
                   await login.api.deleteDomainHandle(a.domain_id, a.id);
                   const handles = await login.api.listDomainHandles(domain.id);
@@ -65,11 +78,18 @@ export function AccountNostrDomainPage() {
           </div>
         ))}
       </div>
-      <AsyncButton onClick={() => setAddHandle(true)}>Add Handle</AsyncButton>
+      <AsyncButton onClick={() => setAddHandle(true)}>
+        <FormattedMessage defaultMessage="Add Handle" />
+      </AsyncButton>
       {addHandle && (
         <Modal id="add-handle" onClose={() => setAddHandle(false)}>
           <div className="flex flex-col gap-4">
-            <div className="text-xl">Add Handle for {domain.name}</div>
+            <div className="text-xl">
+              <FormattedMessage
+                defaultMessage="Add Handle for {name}"
+                values={{ name: domain.name }}
+              />
+            </div>
             <input
               type="text"
               placeholder="name"
@@ -118,7 +138,7 @@ export function AccountNostrDomainPage() {
                 }
               }}
             >
-              Add
+              <FormattedMessage defaultMessage="Add" />
             </AsyncButton>
           </div>
         </Modal>

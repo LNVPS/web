@@ -1,0 +1,5 @@
+我们很高兴地宣布新的虚拟机升级功能！该功能允许所有用户只需点击几下即可按需升级 CPU、内存和磁盘空间。
+
+![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)
+
+完成升级支付后，您的虚拟机将立即升级并重新启动，从而轻松扩展您的项目！

@@ -1,34 +1,72 @@
 # News Posts
 
-News posts are published as Nostr long-form content events (NIP-23) by the LNVPS profile. The source markdown is maintained here for drafting and version control.
+News posts are published as Nostr long-form content events (NIP-23, `kind:30023`) by the LNVPS profile.
 
-## File Format
+## Directory Structure
 
-Each file uses the naming convention `{published_at}-{dtag}.md` where:
+Each article lives in its own directory named after the `published_at` timestamp formatted as `YYYYMMDDHHMM` (UTC). This keeps articles sorted chronologically in the filesystem. The article slug (Nostr `d` tag) lives inside `metadata.json`.
 
-- `published_at` is a Unix timestamp (seconds)
-- `dtag` is a unique identifier for the Nostr event `d` tag, prefixed with the date (`YYYY-MM-DD-slug`) to ensure uniqueness across posts with similar topics
-
-### Frontmatter
-
-```yaml
----
-title: "Post Title"
-published_at: 1771927035
-dtag: YYYY-MM-DD-short-slug
----
+```
+news/
+  202602201006/
+    en.metadata.json     ← Nostr event template for the English original
+    en.md                ← English body (raw markdown, no frontmatter)
+    fr.metadata.json     ← Nostr event template for the French translation
+    fr.md                ← French translation body
+    de.metadata.json
+    de.md
+    ...
 ```
 
-| Field          | Description                                            |
-| -------------- | ------------------------------------------------------ |
-| `title`        | Post title (maps to the Nostr `title` tag)             |
-| `published_at` | Unix timestamp in seconds (maps to `published_at` tag) |
-| `dtag`         | Unique slug (maps to the Nostr `d` tag)                |
+## en.metadata.json
 
-### Body
+The English `en.metadata.json` is a partial Nostr event template ready for signing and publishing:
 
-Standard markdown. Keep posts concise and conversational. Images can be hosted on Nostr-compatible image hosts (nostr.build, blossom, etc.).
+```json
+{
+  "kind": 30023,
+  "tags": [
+    ["d", "web-console"],
+    ["title", "Web Console"],
+    ["published_at", "1771582008"]
+  ]
+}
+```
+
+## Translation metadata ({lang}.metadata.json)
+
+Translations use a language-suffixed `d` tag (required — addressable events are unique per `kind:pubkey:d`) and NIP-32 ISO-639-1 language labels:
+
+```json
+{
+  "kind": 30023,
+  "tags": [
+    ["d", "web-console-zh"],
+    ["title", "网络控制台"],
+    ["published_at", "1771582008"],
+    ["L", "ISO-639-1"],
+    ["l", "zh", "ISO-639-1"]
+  ]
+}
+```
+
+The client groups articles by stripping the `-{lang}` suffix from the `d` tag and picks the best locale match automatically.
 
 ## Publishing
 
-Posts are published to Nostr relays as `kind:30023` (LongFormTextNote) events using the LNVPS profile key. Use a NIP-23 compatible client such as Habla.news or Yakihonne to publish.
+Use `publish.sh` to sign and publish all language variants in a directory:
+
+```bash
+./docs/news/publish.sh docs/news/202602201006 $(cat ~/.nostr/lnvps-admin.nsec)
+```
+
+Or manually for a single variant:
+
+```bash
+NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps-admin.nsec) nak event \
+  -c "$(cat docs/news/202602201006/zh.md)" \
+  wss://relay.damus.io wss://nos.lol \
+  < docs/news/202602201006/zh.metadata.json
+```
+
+The script publishes `en` first, then all other language variants found in the directory, to the following relays: `relay.damus.io`, `nos.lol`, `relay.snort.social`, `relay.primal.net`.

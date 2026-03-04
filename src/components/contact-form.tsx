@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AsyncButton } from "./button";
 import { Turnstile } from "@marsidev/react-turnstile";
 import useTheme from "../hooks/theme";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export interface ContactFormData {
   subject: string;
@@ -17,6 +18,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
   const { theme } = useTheme();
+  const { formatMessage } = useIntl();
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
@@ -35,12 +37,18 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
   async function handleSubmit() {
     if (!formValid) {
-      setError("Please fill in all required fields");
+      setError(
+        formatMessage({ defaultMessage: "Please fill in all required fields" }),
+      );
       return;
     }
 
     if (!turnstileToken) {
-      setError("Please complete the captcha verification");
+      setError(
+        formatMessage({
+          defaultMessage: "Please complete the captcha verification",
+        }),
+      );
       return;
     }
 
@@ -66,7 +74,9 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       setError(
         e instanceof Error
           ? e.message
-          : "Failed to send message. Please try again.",
+          : formatMessage({
+              defaultMessage: "Failed to send message. Please try again.",
+            }),
       );
     } finally {
       setLoading(false);
@@ -77,11 +87,10 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
     return (
       <div className="flex flex-col gap-3">
         <div className="p-4 bg-cyber-primary/10 border border-cyber-primary rounded-sm text-cyber-primary">
-          Thank you for contacting us. We'll get back to you as soon as
-          possible.
+          <FormattedMessage defaultMessage="Thank you for contacting us. We'll get back to you as soon as possible." />
         </div>
         <AsyncButton onClick={() => setSuccess(false)}>
-          Send Another Message
+          <FormattedMessage defaultMessage="Send Another Message" />
         </AsyncButton>
       </div>
     );
@@ -96,43 +105,56 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       )}
 
       <div>
-        <label className="block text-cyber-muted text-sm mb-2">Subject *</label>
+        <label className="block text-cyber-muted text-sm mb-2">
+          <FormattedMessage defaultMessage="Subject *" />
+        </label>
         <input
           type="text"
           className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
-          placeholder="What is this regarding?"
+          placeholder={formatMessage({
+            defaultMessage: "What is this regarding?",
+          })}
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
         />
       </div>
 
       <div>
-        <label className="block text-cyber-muted text-sm mb-2">Message *</label>
+        <label className="block text-cyber-muted text-sm mb-2">
+          <FormattedMessage defaultMessage="Message *" />
+        </label>
         <textarea
           className="w-full bg-cyber-panel-light rounded-sm p-3 min-h-32 resize-y text-sm"
-          placeholder="Please describe your question or issue in detail..."
+          placeholder={formatMessage({
+            defaultMessage:
+              "Please describe your question or issue in detail...",
+          })}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
 
       <div>
-        <label className="block text-cyber-muted text-sm mb-2">Name *</label>
+        <label className="block text-cyber-muted text-sm mb-2">
+          <FormattedMessage defaultMessage="Name *" />
+        </label>
         <input
           type="text"
           className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
-          placeholder="Your name"
+          placeholder={formatMessage({ defaultMessage: "Your name" })}
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
 
       <div>
-        <label className="block text-cyber-muted text-sm mb-2">Email *</label>
+        <label className="block text-cyber-muted text-sm mb-2">
+          <FormattedMessage defaultMessage="Email *" />
+        </label>
         <input
           type="email"
           className="w-full bg-cyber-panel-light rounded-sm p-3 text-sm"
-          placeholder="your@email.com"
+          placeholder={formatMessage({ defaultMessage: "your@email.com" })}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -147,7 +169,11 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       />
 
       <AsyncButton onClick={handleSubmit} disabled={!formValid || loading}>
-        {loading ? "Sending..." : "Send Message"}
+        {loading ? (
+          <FormattedMessage defaultMessage="Sending..." />
+        ) : (
+          <FormattedMessage defaultMessage="Send Message" />
+        )}
       </AsyncButton>
     </div>
   );

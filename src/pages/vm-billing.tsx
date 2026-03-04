@@ -8,6 +8,7 @@ import CostLabel, { CostAmount } from "../components/cost";
 import VmPaymentFlow from "../components/vm-payment-flow";
 import { timeValue } from "../utils";
 import { Icon } from "../components/icon";
+import { FormattedMessage } from "react-intl";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -57,22 +58,35 @@ export function VmBillingPage() {
   return (
     <div className="flex flex-col gap-4">
       <Link to={"/vm"} state={state}>
-        &lt; Back
+        &lt; <FormattedMessage defaultMessage="Back" />
       </Link>
       <div className="text-xl bg-cyber-panel rounded-sm px-3 py-4 flex justify-between items-center">
-        <div>Renewal for #{state.id}</div>
+        <div>
+          <FormattedMessage
+            defaultMessage="Renewal for #{id}"
+            values={{ id: state.id }}
+          />
+        </div>
         <div>
           <CostLabel cost={state.template.cost_plan} />
-          <span className="text-sm">ex. tax</span>
+          <span className="text-sm">
+            {" "}
+            <FormattedMessage defaultMessage="ex. tax" />
+          </span>
         </div>
       </div>
       {days > 0 && (
         <div>
-          Expires: {expireDate.toDateString()} ({Math.floor(days)} days)
+          <FormattedMessage
+            defaultMessage="Expires: {date} ({days} days)"
+            values={{ date: expireDate.toDateString(), days: Math.floor(days) }}
+          />
         </div>
       )}
       {days < 0 && !showPaymentFlow && (
-        <div className="text-cyber-danger text-xl">Expired</div>
+        <div className="text-cyber-danger text-xl">
+          <FormattedMessage defaultMessage="Expired" />
+        </div>
       )}
       {!showPaymentFlow && (
         <div className="flex gap-4 flex-wrap">
@@ -80,7 +94,11 @@ export function VmBillingPage() {
             onClick={() => setShowPaymentFlow(true)}
             disabled={methodsLoading}
           >
-            {methodsLoading ? "Loading..." : "Extend Now"}
+            {methodsLoading ? (
+              <FormattedMessage defaultMessage="Loading..." />
+            ) : (
+              <FormattedMessage defaultMessage="Extend Now" />
+            )}
           </AsyncButton>
           <AsyncButton
             onClick={async () => {
@@ -98,7 +116,11 @@ export function VmBillingPage() {
               }
             }}
           >
-            {state.auto_renewal_enabled ? "Disable" : "Enable"} Auto-Renewal
+            {state.auto_renewal_enabled ? (
+              <FormattedMessage defaultMessage="Disable Auto-Renewal" />
+            ) : (
+              <FormattedMessage defaultMessage="Enable Auto-Renewal" />
+            )}
           </AsyncButton>
         </div>
       )}
@@ -106,11 +128,10 @@ export function VmBillingPage() {
       {!showPaymentFlow && state.auto_renewal_enabled && (
         <div className="bg-cyber-primary/10 border border-cyber-primary/30 rounded-sm p-3">
           <div className="text-cyber-primary text-sm font-medium">
-            🔄 Auto-renewal enabled
+            <FormattedMessage defaultMessage="Auto-renewal enabled" />
           </div>
           <p className="text-cyber-muted text-sm mt-1">
-            This VM will automatically renew 1 day before expiration using your
-            configured Nostr Wallet Connect connection.
+            <FormattedMessage defaultMessage="This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection." />
           </p>
         </div>
       )}
@@ -118,11 +139,10 @@ export function VmBillingPage() {
       {!showPaymentFlow && !state.auto_renewal_enabled && (
         <div className="bg-cyber-panel/50 border border-cyber-border rounded-sm p-3">
           <div className="text-cyber-muted text-sm font-medium">
-            Auto-renewal disabled
+            <FormattedMessage defaultMessage="Auto-renewal disabled" />
           </div>
           <p className="text-cyber-muted text-sm mt-1">
-            Configure an NWC connection string in account settings, then enable
-            auto-renewal to automatically pay for VM renewals.
+            <FormattedMessage defaultMessage="Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals." />
           </p>
         </div>
       )}
@@ -138,15 +158,27 @@ export function VmBillingPage() {
 
       {!showPaymentFlow && (
         <>
-          <div className="text-xl">Payment History</div>
+          <div className="text-xl">
+            <FormattedMessage defaultMessage="Payment History" />
+          </div>
           <table className="table bg-cyber-panel rounded-sm text-center">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Method</th>
-                <th>Time</th>
-                <th>Status</th>
+                <th>
+                  <FormattedMessage defaultMessage="Date" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Amount" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Method" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Time" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Status" />
+                </th>
                 <th></th>
               </tr>
             </thead>
@@ -178,7 +210,7 @@ export function VmBillingPage() {
                             cost={{ amount: a.tax, currency: a.currency }}
                             converted={false}
                           />{" "}
-                          tax)
+                          <FormattedMessage defaultMessage="tax" />)
                         </span>
                       )}
                       {a.processing_fee > 0 && (
@@ -192,7 +224,7 @@ export function VmBillingPage() {
                             }}
                             converted={false}
                           />{" "}
-                          fee)
+                          <FormattedMessage defaultMessage="fee" />)
                         </span>
                       )}
                     </td>
@@ -206,11 +238,13 @@ export function VmBillingPage() {
                     </td>
                     <td>{timeValue(a.time)}</td>
                     <td>
-                      {a.is_paid
-                        ? "Paid"
-                        : new Date(a.expires) <= new Date()
-                          ? "Expired"
-                          : "Unpaid"}
+                      {a.is_paid ? (
+                        <FormattedMessage defaultMessage="Paid" />
+                      ) : new Date(a.expires) <= new Date() ? (
+                        <FormattedMessage defaultMessage="Expired" />
+                      ) : (
+                        <FormattedMessage defaultMessage="Unpaid" />
+                      )}
                     </td>
                     <td>
                       {a.is_paid && (

@@ -11,6 +11,7 @@ import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
 import { ApiUrl } from "../../const";
 import { EmailVerification } from "../../components/email-verification";
+import { FormattedMessage } from "react-intl";
 
 export default function OrderVmPage({ template }: { template: VmTemplate }) {
   const login = useLogin();
@@ -80,12 +81,18 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
   );
 
   if (!template) {
-    return <h3>No order found</h3>;
+    return (
+      <h3>
+        <FormattedMessage defaultMessage="No order found" />
+      </h3>
+    );
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="text-xl">New Order</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="New Order" />
+      </div>
       <div className="flex justify-between items-center rounded-sm bg-cyber-panel px-4 py-3">
         <div className="flex flex-col gap-1">
           <div>{template.name}</div>
@@ -98,7 +105,9 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
         <>
           <EmailVerification />
           <div className="flex flex-col gap-2">
-            <b>Select OS:</b>
+            <b>
+              <FormattedMessage defaultMessage="Select OS:" />
+            </b>
             {sortedImages.map((a) => (
               <div
                 className={classNames(
@@ -125,7 +134,7 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
         disabled={useSshKey === -1 || useImage === -1}
         onClick={createOrder}
       >
-        Create Order
+        <FormattedMessage defaultMessage="Create Order" />
       </AsyncButton>
       {orderError && <b className="text-cyber-danger">{orderError}</b>}
     </div>

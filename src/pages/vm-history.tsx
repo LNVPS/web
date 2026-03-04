@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { VmInstance, VmHistory } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 function toTitleCase(str: string): string {
   return str
@@ -99,7 +100,9 @@ function JsonDiff({
 
     if (changes.length === 0) {
       return (
-        <div className="text-cyber-muted text-sm">No changes detected</div>
+        <div className="text-cyber-muted text-sm">
+          <FormattedMessage defaultMessage="No changes detected" />
+        </div>
       );
     }
 
@@ -135,8 +138,12 @@ function JsonDiff({
   } catch (error) {
     return (
       <div className="text-cyber-danger text-sm">
-        Error parsing JSON:{" "}
-        {error instanceof Error ? error.message : "Unknown error"}
+        <FormattedMessage
+          defaultMessage="Error parsing JSON: {msg}"
+          values={{
+            msg: error instanceof Error ? error.message : "Unknown error",
+          }}
+        />
       </div>
     );
   }
@@ -162,10 +169,14 @@ export function VmHistoryPage() {
   if (!state) {
     return (
       <div className="flex flex-col gap-2">
-        <h1>VM History</h1>
-        <div className="text-cyber-danger">No VM selected</div>
+        <h1>
+          <FormattedMessage defaultMessage="VM History" />
+        </h1>
+        <div className="text-cyber-danger">
+          <FormattedMessage defaultMessage="No VM selected" />
+        </div>
         <Link to="/" className="text-cyber-accent hover:text-cyber-accent">
-          Go back to home
+          <FormattedMessage defaultMessage="Go back to home" />
         </Link>
       </div>
     );
@@ -174,39 +185,54 @@ export function VmHistoryPage() {
   return (
     <div className="flex flex-col gap-4">
       <Link to={"/vm"} state={state}>
-        &lt; Back
+        &lt; <FormattedMessage defaultMessage="Back" />
       </Link>
 
       <div className="bg-cyber-panel-light p-4 rounded-sm">
         <h2 className="text-lg font-semibold mb-2">
-          VM: {state.template.name}
+          <FormattedMessage
+            defaultMessage="VM: {name}"
+            values={{ name: state.template.name }}
+          />
         </h2>
-        <div className="text-sm text-cyber-muted">ID: {state.id}</div>
+        <div className="text-sm text-cyber-muted">
+          <FormattedMessage
+            defaultMessage="ID: {id}"
+            values={{ id: state.id }}
+          />
+        </div>
       </div>
 
       {loading && (
         <div className="flex justify-center py-8">
-          <div className="text-cyber-muted">Loading history...</div>
+          <div className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Loading history..." />
+          </div>
         </div>
       )}
 
       {error && (
         <div className="bg-cyber-danger/10 border border-cyber-danger p-4 rounded-sm">
           <div className="text-cyber-danger">
-            Error loading history: {error}
+            <FormattedMessage
+              defaultMessage="Error loading history: {error}"
+              values={{ error }}
+            />
           </div>
         </div>
       )}
 
       {history && history.length === 0 && (
         <div className="bg-cyber-panel-light p-8 rounded-sm text-center text-cyber-muted">
-          No history entries found for this VM.
+          <FormattedMessage defaultMessage="No history entries found for this VM." />
         </div>
       )}
 
       {history && history.length > 0 && (
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold">History Events</h3>
+          <h3 className="text-lg font-semibold">
+            <FormattedMessage defaultMessage="History Events" />
+          </h3>
           <div className="space-y-2">
             {history.map((entry) => {
               const colorClasses = getActionTypeColor(entry.action_type);
@@ -225,7 +251,10 @@ export function VmHistoryPage() {
                       <span
                         className={`text-xs ${getInitiatedByColor(entry.initiated_by)}`}
                       >
-                        by {entry.initiated_by}
+                        <FormattedMessage
+                          defaultMessage="by {initiatedBy}"
+                          values={{ initiatedBy: entry.initiated_by }}
+                        />
                       </span>
                     </div>
                     <span className="text-sm text-cyber-muted">
@@ -241,7 +270,7 @@ export function VmHistoryPage() {
                   {entry.previous_state && entry.new_state && (
                     <div className="mt-3 p-3 bg-cyber-panel rounded-sm">
                       <div className="text-sm font-medium text-cyber-text mb-2">
-                        Configuration Changes:
+                        <FormattedMessage defaultMessage="Configuration Changes:" />
                       </div>
                       <JsonDiff
                         previous={entry.previous_state}
@@ -254,7 +283,7 @@ export function VmHistoryPage() {
                     <div className="mt-3 p-3 bg-cyber-panel rounded-sm">
                       <details>
                         <summary className="cursor-pointer text-sm font-medium text-cyber-text hover:text-cyber-text-bright">
-                          Metadata
+                          <FormattedMessage defaultMessage="Metadata" />
                         </summary>
                         <div className="mt-3 p-3 bg-cyber-darker/50 rounded-sm overflow-x-auto whitespace-pre">
                           {JSON.stringify(

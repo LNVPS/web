@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import {
   CostPlanIntervalType,
   CpuArch,
@@ -197,9 +198,13 @@ export function VpsCustomOrder({
 
   return (
     <div className="flex flex-col gap-4 bg-cyber-panel rounded-sm px-4 py-6">
-      <div className="text-lg">Custom VPS Order</div>
+      <div className="text-lg">
+        <FormattedMessage defaultMessage="Custom VPS Order" />
+      </div>
       <div className="flex gap-2 items-center flex-wrap">
-        <div className="text-sm text-cyber-muted py-2">Region:</div>
+        <div className="text-sm text-cyber-muted py-2">
+          <FormattedMessage defaultMessage="Region:" />
+        </div>
         {regions.length > 1 ? (
           regions.map((template) => (
             <FilterButton
@@ -216,7 +221,9 @@ export function VpsCustomOrder({
       </div>
       {regionTemplates.length > 1 && (
         <div className="flex gap-2 items-center flex-wrap">
-          <div className="text-sm text-cyber-muted py-2">CPU:</div>
+          <div className="text-sm text-cyber-muted py-2">
+            <FormattedMessage defaultMessage="CPU:" />
+          </div>
           {regionTemplates.map((template) => (
             <FilterButton
               key={template.id}
@@ -230,7 +237,9 @@ export function VpsCustomOrder({
       )}
       {params.disks.length > 1 && (
         <div className="flex gap-2">
-          <div className="text-sm text-cyber-muted py-2">Disk:</div>
+          <div className="text-sm text-cyber-muted py-2">
+            <FormattedMessage defaultMessage="Disk:" />
+          </div>
           {params.disks.map((d) => (
             <FilterButton
               active={diskType?.disk_type === d.disk_type}
@@ -255,7 +264,9 @@ export function VpsCustomOrder({
             max={params.max_cpu}
             className="w-20 text-center"
           />
-          <span className="text-cyber-muted text-sm">CPU</span>
+          <span className="text-cyber-muted text-sm">
+            <FormattedMessage defaultMessage="CPU" />
+          </span>
         </div>
         <input
           type="range"
@@ -282,7 +293,9 @@ export function VpsCustomOrder({
             max={Math.floor(params.max_memory / GiB)}
             className="w-20 text-center"
           />
-          <span className="text-cyber-muted text-sm">GB RAM</span>
+          <span className="text-cyber-muted text-sm">
+            <FormattedMessage defaultMessage="GB RAM" />
+          </span>
         </div>
         <input
           type="range"
@@ -310,7 +323,10 @@ export function VpsCustomOrder({
             className="w-24 text-center"
           />
           <span className="text-cyber-muted text-sm">
-            GB {diskType?.disk_type.toLocaleUpperCase()}
+            <FormattedMessage
+              defaultMessage="GB {diskType}"
+              values={{ diskType: diskType?.disk_type.toLocaleUpperCase() }}
+            />
           </span>
         </div>
         <input

@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 
 interface CollapsibleProps {
-  title: string;
+  title: ReactNode;
   defaultOpen?: boolean;
   children: ReactNode;
 }

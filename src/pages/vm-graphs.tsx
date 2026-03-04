@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { TimeSeriesData, VmInstance } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import {
   ResponsiveContainer,
   XAxis,
@@ -98,9 +99,11 @@ export function VmGraphsPage() {
   return (
     <div className="flex flex-col gap-4">
       <Link to={"/vm"} state={state}>
-        &lt; Back
+        &lt; <FormattedMessage defaultMessage="Back" />
       </Link>
-      <h2>CPU</h2>
+      <h2>
+        <FormattedMessage defaultMessage="CPU" />
+      </h2>
       <ResponsiveContainer height={200}>
         <LineChart
           data={sortedData}
@@ -113,7 +116,9 @@ export function VmGraphsPage() {
           {toolTip}
         </LineChart>
       </ResponsiveContainer>
-      <h2>Memory</h2>
+      <h2>
+        <FormattedMessage defaultMessage="Memory" />
+      </h2>
       <ResponsiveContainer height={200}>
         <LineChart
           data={sortedData}
@@ -126,7 +131,9 @@ export function VmGraphsPage() {
           {toolTip}
         </LineChart>
       </ResponsiveContainer>
-      <h2>Network</h2>
+      <h2>
+        <FormattedMessage defaultMessage="Network" />
+      </h2>
       <ResponsiveContainer height={200}>
         <LineChart
           data={sortedData}
@@ -153,7 +160,9 @@ export function VmGraphsPage() {
           <Legend />
         </LineChart>
       </ResponsiveContainer>
-      <h2>Disk</h2>
+      <h2>
+        <FormattedMessage defaultMessage="Disk" />
+      </h2>
       <ResponsiveContainer height={200}>
         <LineChart
           data={sortedData}

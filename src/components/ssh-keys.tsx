@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { UserSshKey } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function SSHKeySelector({
   selectedKey,
@@ -11,6 +12,7 @@ export default function SSHKeySelector({
   setSelectedKey: (k: UserSshKey["id"]) => void;
 }) {
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const [newKey, setNewKey] = useState("");
   const [newKeyError, setNewKeyError] = useState("");
   const [newKeyName, setNewKeyName] = useState("");
@@ -24,7 +26,6 @@ export default function SSHKeySelector({
     try {
       const keys = await login.api.listSshKeys();
       setSshKeys(keys);
-      // Only auto-select if no key is currently selected
       if (selectedKey === -1 && keys.length > 0) {
         setSelectedKey(keys[0].id);
       } else if (keys.length === 0) {
@@ -38,14 +39,12 @@ export default function SSHKeySelector({
   async function addNewKey() {
     if (!login?.api) return;
     setNewKeyError("");
-
     try {
       const nk = await login.api.addSshKey(newKeyName, newKey);
       setNewKey("");
       setNewKeyName("");
       setSelectedKey(nk.id);
       setShowAddKey(false);
-      // Reload the keys list to include the new key
       await loadKeys();
     } catch (e) {
       if (e instanceof Error) {
@@ -60,10 +59,16 @@ export default function SSHKeySelector({
 
   return (
     <div className="flex flex-col gap-2">
-      {isLoading && <div className="text-cyber-muted">Loading SSH keys...</div>}
+      {isLoading && (
+        <div className="text-cyber-muted">
+          <FormattedMessage defaultMessage="Loading SSH keys..." />
+        </div>
+      )}
       {!isLoading && sshKeys.length > 0 && (
         <>
-          <b className="text-cyber-primary">Select SSH Key:</b>
+          <b className="text-cyber-primary">
+            <FormattedMessage defaultMessage="Select SSH Key:" />
+          </b>
           <select
             className="bg-cyber-panel p-2 rounded-sm border border-cyber-border"
             value={selectedKey}
@@ -79,12 +84,14 @@ export default function SSHKeySelector({
       )}
       {!isLoading && !showAddKey && sshKeys.length > 0 && (
         <AsyncButton onClick={() => setShowAddKey(true)}>
-          Add new SSH key
+          <FormattedMessage defaultMessage="Add new SSH key" />
         </AsyncButton>
       )}
       {!isLoading && (showAddKey || sshKeys.length === 0) && (
         <>
-          <b className="text-cyber-primary">Add SSH Key:</b>
+          <b className="text-cyber-primary">
+            <FormattedMessage defaultMessage="Add SSH Key:" />
+          </b>
           <textarea
             rows={5}
             placeholder="ssh-[rsa|ed25519] AA== id"
@@ -93,7 +100,7 @@ export default function SSHKeySelector({
           />
           <input
             type="text"
-            placeholder="Key name"
+            placeholder={formatMessage({ defaultMessage: "Key name" })}
             value={newKeyName}
             onChange={(e) => setNewKeyName(e.target.value)}
           />
@@ -101,7 +108,7 @@ export default function SSHKeySelector({
             disabled={newKey.length < 10 || newKeyName.length < 2}
             onClick={addNewKey}
           >
-            Add Key
+            <FormattedMessage defaultMessage="Add Key" />
           </AsyncButton>
           {newKeyError && <b className="text-cyber-danger">{newKeyError}</b>}
         </>

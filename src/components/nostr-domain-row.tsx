@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { NostrDomain } from "../api";
 import { AsyncButton } from "./button";
 import { Icon } from "./icon";
+import { FormattedMessage } from "react-intl";
 
 export function NostrDomainRow({
   domain,
@@ -19,8 +20,17 @@ export function NostrDomainRow({
       <div className="flex flex-col gap-2">
         <div className="text-cyber-text-bright">{domain.name}</div>
         <div className="flex gap-2 items-center text-cyber-muted text-sm">
-          <div>{domain.handles} handles</div>
-          {!domain.enabled && <div className="text-cyber-danger">Inactive</div>}
+          <div>
+            <FormattedMessage
+              defaultMessage="{count} handles"
+              values={{ count: domain.handles }}
+            />
+          </div>
+          {!domain.enabled && (
+            <div className="text-cyber-danger">
+              <FormattedMessage defaultMessage="Inactive" />
+            </div>
+          )}
         </div>
       </div>
       {canEdit && (

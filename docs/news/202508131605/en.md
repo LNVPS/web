@@ -1,9 +1,3 @@
----
-title: "NWC"
-published_at: 1755101117
-dtag: Xc-U7jVUxf3zEm_uip-g8
----
-
 Another great feature completed today is NWC!
 
 This allows for automatic renewal directly via Nostr relays, no more manual renewals!

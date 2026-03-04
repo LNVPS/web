@@ -5,6 +5,7 @@ import { AsyncButton } from "./button";
 import Modal from "./modal";
 import { DomainList } from "./domain-list";
 import { resolveDnsRecords, DnsRecord } from "../utils/dns-resolver";
+import { FormattedMessage } from "react-intl";
 
 export function AccountNostrDomains() {
   const login = useLogin();
@@ -35,30 +36,37 @@ export function AccountNostrDomains() {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <h3>Nostr Domains</h3>
+        <h3>
+          <FormattedMessage defaultMessage="Nostr Domains" />
+        </h3>
         <div className="bg-cyber-panel-light p-4 rounded-sm border border-cyber-border">
           <h4 className="text-lg font-medium mb-3 text-cyber-primary">
-            Domain Setup
+            <FormattedMessage defaultMessage="Domain Setup" />
           </h4>
           <p className="text-sm text-cyber-text mb-3">
-            Free NIP-05 hosting. Point your domain at{" "}
-            <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-primary">
-              {domains?.cname}
-            </code>{" "}
-            using DNS or a path proxy.
+            <FormattedMessage
+              defaultMessage="Free NIP-05 hosting. Point your domain at {cname} using DNS or a path proxy."
+              values={{
+                cname: (
+                  <code className="bg-cyber-panel px-2 py-1 rounded-sm select-all text-cyber-primary">
+                    {domains?.cname}
+                  </code>
+                ),
+              }}
+            />
           </p>
 
           <button
             onClick={handleMoreInfoClick}
             className="text-cyber-accent hover:text-cyber-primary text-sm underline"
           >
-            Setup Instructions
+            <FormattedMessage defaultMessage="Setup Instructions" />
           </button>
 
           {showSetupDetails && (
             <div className="mt-4 space-y-3">
               <p className="text-sm text-cyber-text">
-                Choose one of the following methods to verify your domain:
+                <FormattedMessage defaultMessage="Choose one of the following methods to verify your domain:" />
               </p>
 
               <div className="space-y-3">
@@ -69,7 +77,7 @@ export function AccountNostrDomains() {
                       CNAME
                     </span>
                     <span className="text-sm text-cyber-text">
-                      (Recommended)
+                      <FormattedMessage defaultMessage="(Recommended)" />
                     </span>
                   </div>
                   <div className="font-mono text-sm">
@@ -91,17 +99,22 @@ export function AccountNostrDomains() {
                       A / AAAA
                     </span>
                     <span className="text-sm text-cyber-text">
-                      (Alternative)
+                      <FormattedMessage defaultMessage="(Alternative)" />
                     </span>
                   </div>
                   <div className="font-mono text-sm space-y-1">
                     {dnsRecords.length === 0 ? (
                       <div className="text-cyber-muted text-sm">
-                        Resolving IPs for{" "}
-                        <span className="text-cyber-text-bright">
-                          {domains?.cname}
-                        </span>
-                        …
+                        <FormattedMessage
+                          defaultMessage="Resolving IPs for {cname}…"
+                          values={{
+                            cname: (
+                              <span className="text-cyber-text-bright">
+                                {domains?.cname}
+                              </span>
+                            ),
+                          }}
+                        />
                       </div>
                     ) : (
                       <>
@@ -151,18 +164,25 @@ export function AccountNostrDomains() {
                     Path Proxy
                   </span>
                   <span className="text-sm text-cyber-text">
-                    (No DNS change required)
+                    <FormattedMessage defaultMessage="(No DNS change required)" />
                   </span>
                 </div>
                 <p className="text-sm text-cyber-muted mb-3">
-                  If you cannot change your DNS, proxy{" "}
-                  <code className="bg-cyber-panel-light px-1 rounded-sm text-cyber-text-bright">
-                    /.well-known/nostr.json
-                  </code>{" "}
-                  on your existing server to{" "}
-                  <code className="select-all bg-cyber-panel-light px-1 rounded-sm text-cyber-text-bright">
-                    https://{domains?.cname}/.well-known/nostr.json
-                  </code>
+                  <FormattedMessage
+                    defaultMessage="If you cannot change your DNS, proxy {path} on your existing server to {target}"
+                    values={{
+                      path: (
+                        <code className="bg-cyber-panel-light px-1 rounded-sm text-cyber-text-bright">
+                          /.well-known/nostr.json
+                        </code>
+                      ),
+                      target: (
+                        <code className="select-all bg-cyber-panel-light px-1 rounded-sm text-cyber-text-bright">
+                          https://{domains?.cname}/.well-known/nostr.json
+                        </code>
+                      ),
+                    }}
+                  />
                 </p>
                 <div className="flex flex-col gap-2">
                   <div className="text-xs text-cyber-muted uppercase tracking-wide">
@@ -183,30 +203,46 @@ export function AccountNostrDomains() {
   }
 }`}</pre>
                   <p className="text-xs text-cyber-muted">
-                    Deploy this Worker and add a route for{" "}
-                    <code className="bg-cyber-panel px-1 rounded-sm">
-                      yourdomain.com/.well-known/nostr.json*
-                    </code>
+                    <FormattedMessage
+                      defaultMessage="Deploy this Worker and add a route for {route}"
+                      values={{
+                        route: (
+                          <code className="bg-cyber-panel px-1 rounded-sm">
+                            yourdomain.com/.well-known/nostr.json*
+                          </code>
+                        ),
+                      }}
+                    />
                   </p>
                 </div>
               </div>
 
               <div className="mt-4 p-3 bg-cyber-panel rounded-sm border border-cyber-border">
-                <h5 className="font-medium mb-2 text-cyber-primary">Notes</h5>
+                <h5 className="font-medium mb-2 text-cyber-primary">
+                  <FormattedMessage defaultMessage="Notes" />
+                </h5>
                 <ul className="text-sm text-cyber-text space-y-1 list-disc list-inside">
                   <li>
-                    <strong>CNAME</strong> is recommended — it automatically
-                    follows server IP changes
+                    <FormattedMessage
+                      defaultMessage="{cname} is recommended — it automatically follows server IP changes"
+                      values={{ cname: <strong>CNAME</strong> }}
+                    />
                   </li>
                   <li>
-                    <strong>A/AAAA records</strong> point directly to IPs and
-                    may need updating if they change
+                    <FormattedMessage
+                      defaultMessage="{records} point directly to IPs and may need updating if they change"
+                      values={{ records: <strong>A/AAAA records</strong> }}
+                    />
                   </li>
                   <li>
-                    <strong>Path proxy</strong> works without any DNS changes —
-                    useful if you already have a site on the domain
+                    <FormattedMessage
+                      defaultMessage="{proxy} works without any DNS changes — useful if you already have a site on the domain"
+                      values={{ proxy: <strong>Path proxy</strong> }}
+                    />
                   </li>
-                  <li>DNS changes may take up to 24–48 hours to propagate</li>
+                  <li>
+                    <FormattedMessage defaultMessage="DNS changes may take up to 24–48 hours to propagate" />
+                  </li>
                 </ul>
               </div>
             </div>
@@ -214,11 +250,15 @@ export function AccountNostrDomains() {
         </div>
         <DomainList domains={domains?.domains || []} />
       </div>
-      <AsyncButton onClick={() => setAddDomain(true)}>Add Domain</AsyncButton>
+      <AsyncButton onClick={() => setAddDomain(true)}>
+        <FormattedMessage defaultMessage="Add Domain" />
+      </AsyncButton>
       {addDomain && (
         <Modal id="add-nostr-domain" onClose={() => setAddDomain(false)}>
           <div className="flex flex-col gap-4">
-            <div className="text-xl">Add Nostr Domain</div>
+            <div className="text-xl">
+              <FormattedMessage defaultMessage="Add Nostr Domain" />
+            </div>
             <input
               type="text"
               value={newDomain}
@@ -236,7 +276,7 @@ export function AccountNostrDomains() {
                 }
               }}
             >
-              Add
+              <FormattedMessage defaultMessage="Add" />
             </AsyncButton>
           </div>
         </Modal>

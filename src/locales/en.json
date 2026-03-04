@@ -1,71 +1,1019 @@
 {
+  "+8AmJ0": {
+    "defaultMessage": "Disable Auto-Renewal"
+  },
+  "+SM72m": {
+    "defaultMessage": "Recipient's public key (npub/nprofile/hex):"
+  },
+  "/0TOL5": {
+    "defaultMessage": "Amount"
+  },
+  "/GCoTA": {
+    "defaultMessage": "Clear"
+  },
+  "/QkDVJ": {
+    "defaultMessage": "NWC Wallet"
+  },
+  "/nQTeE": {
+    "defaultMessage": "Save Payout Settings"
+  },
+  "063dCM": {
+    "defaultMessage": "Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals."
+  },
+  "0HkBaC": {
+    "defaultMessage": "Choose one of the following methods to verify your domain:"
+  },
+  "0h/lPM": {
+    "defaultMessage": "Upgrade"
+  },
+  "0oL1zz": {
+    "defaultMessage": "Copied!"
+  },
+  "0pn9yK": {
+    "defaultMessage": "npub1..., nprofile1..., or hex"
+  },
+  "0rlAUP": {
+    "defaultMessage": "Logged in as: {key}"
+  },
+  "13cluZ": {
+    "defaultMessage": "Add SSH Key:"
+  },
+  "1LBny5": {
+    "defaultMessage": "Stopped"
+  },
+  "1M3SKY": {
+    "defaultMessage": "Please describe your question or issue in detail..."
+  },
+  "1v7S+3": {
+    "defaultMessage": "Add Nostr Domain"
+  },
+  "2/2yg+": {
+    "defaultMessage": "Add"
+  },
+  "2/hxXE": {
+    "defaultMessage": "Billing, renewal & notifications"
+  },
+  "20Sod8": {
+    "defaultMessage": "CPU:"
+  },
+  "2LslN1": {
+    "defaultMessage": "Upgrade Now"
+  },
   "2RFWLf": {
     "defaultMessage": "Speedtest"
+  },
+  "2l2y5p": {
+    "defaultMessage": "Create Order"
+  },
+  "36aVfS": {
+    "defaultMessage": "Nostr DM"
+  },
+  "3WU2Fe": {
+    "defaultMessage": "Location: {region}"
+  },
+  "3xnP4c": {
+    "defaultMessage": "Use NIP-44 encryption to send a secure message. This proves you own the private key associated with your account. Encrypt your message below and include the encrypted text in your email."
+  },
+  "47FYwb": {
+    "defaultMessage": "Cancel"
+  },
+  "4X/Ixq": {
+    "defaultMessage": "Decrypted message:"
+  },
+  "4j0zpr": {
+    "defaultMessage": "Minimum: {min} cores"
+  },
+  "4l6vz1": {
+    "defaultMessage": "Copy"
+  },
+  "4lrWah": {
+    "defaultMessage": "Error loading history: {error}"
+  },
+  "53RN0g": {
+    "defaultMessage": "Proceed to Payment"
+  },
+  "5JcXdV": {
+    "defaultMessage": "Create Account"
+  },
+  "5QYdPU": {
+    "defaultMessage": "Start Time"
+  },
+  "5VEOig": {
+    "defaultMessage": "Cost at new rate for remaining time:"
+  },
+  "5elgIe": {
+    "defaultMessage": "Error:"
+  },
+  "5y2qWO": {
+    "defaultMessage": "Connecting..."
+  },
+  "62nsdy": {
+    "defaultMessage": "Retry"
+  },
+  "6OWS4p": {
+    "defaultMessage": "Processing..."
+  },
+  "6SfJaf": {
+    "defaultMessage": "Upgrade To"
+  },
+  "6Tps09": {
+    "defaultMessage": "Inactive"
+  },
+  "6ZsOsA": {
+    "defaultMessage": "Join Referral Program"
+  },
+  "6uMqL1": {
+    "defaultMessage": "Unpaid"
+  },
+  "7+Domh": {
+    "defaultMessage": "Notes"
+  },
+  "78fz1O": {
+    "defaultMessage": "Postcode *"
+  },
+  "7zs+Vz": {
+    "defaultMessage": "Memory: {gb} GB"
+  },
+  "82Y7Sa": {
+    "defaultMessage": "Sending..."
+  },
+  "82zlBD": {
+    "defaultMessage": "Cardholder Name *"
+  },
+  "89xu1A": {
+    "defaultMessage": "Custom VPS Order"
+  },
+  "8BgaUL": {
+    "defaultMessage": "Current Specifications"
+  },
+  "8FF5Bq": {
+    "defaultMessage": "Creating payment..."
+  },
+  "8Jfsz3": {
+    "defaultMessage": "Send Verification"
+  },
+  "8Q504V": {
+    "defaultMessage": "Metadata"
+  },
+  "8ecw1u": {
+    "defaultMessage": "Handles"
+  },
+  "8f0dzf": {
+    "defaultMessage": "Renewal for #{id}"
+  },
+  "90f82/": {
+    "defaultMessage": "Start VM"
+  },
+  "9AfNRx": {
+    "defaultMessage": "IP Space ordering coming soon"
   },
   "9QV3cp": {
     "defaultMessage": "Available IP Blocks"
   },
+  "9V+Kpc": {
+    "defaultMessage": "This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection."
+  },
+  "9WRlF4": {
+    "defaultMessage": "Send"
+  },
+  "9uOFF3": {
+    "defaultMessage": "Overview"
+  },
+  "A11S6W": {
+    "defaultMessage": "Send us a message directly. Your public key will be included automatically."
+  },
+  "AHJbyB": {
+    "defaultMessage": "Complete your payment using the selected payment method. Changes will be applied automatically after confirmation."
+  },
+  "AQkpi3": {
+    "defaultMessage": "Reinstall"
+  },
+  "AyGauy": {
+    "defaultMessage": "Login"
+  },
+  "B4reHi": {
+    "defaultMessage": "History Events"
+  },
+  "BBiS7b": {
+    "defaultMessage": "Stop VM"
+  },
+  "BCmVPf": {
+    "defaultMessage": "Free NIP-05 hosting. Point your domain at {cname} using DNS or a path proxy."
+  },
+  "BFqRWv": {
+    "defaultMessage": "NWC Connection String"
+  },
+  "BFqlLP": {
+    "defaultMessage": "{records} point directly to IPs and may need updating if they change"
+  },
+  "BKqdjg": {
+    "defaultMessage": "Add Handle for {name}"
+  },
+  "BLZbXj": {
+    "defaultMessage": "Message *"
+  },
+  "BOV9bc": {
+    "defaultMessage": "Loading payment methods..."
+  },
+  "BXmJ0S": {
+    "defaultMessage": "(Alternative)"
+  },
+  "BZF5HJ": {
+    "defaultMessage": "Nostr Domains"
+  },
+  "BlFeZA": {
+    "defaultMessage": "Latest News"
+  },
+  "CDTMW3": {
+    "defaultMessage": "Total Amount"
+  },
+  "CYP/Jx": {
+    "defaultMessage": "Get help from the team"
+  },
+  "Cl+kqZ": {
+    "defaultMessage": "Show QR"
+  },
+  "D3idYv": {
+    "defaultMessage": "Settings"
+  },
+  "DDMksJ": {
+    "defaultMessage": "Deploy your first VPS"
+  },
+  "DFLJpz": {
+    "defaultMessage": "New monthly renewal cost: {cost}"
+  },
+  "DU+LLZ": {
+    "defaultMessage": "Referral"
+  },
+  "DYMg53": {
+    "defaultMessage": "GB {diskType}"
+  },
+  "Dfuz87": {
+    "defaultMessage": "No domains added yet. Add your first domain above to get started."
+  },
+  "E2YqWs": {
+    "defaultMessage": "Referral Program"
+  },
+  "EBMKSN": {
+    "defaultMessage": "Upgrade VM Specifications"
+  },
+  "EKlM8d": {
+    "defaultMessage": "Disk (GB)"
+  },
+  "Eg11ZY": {
+    "defaultMessage": "Reconnect"
+  },
+  "FJhjgz": {
+    "defaultMessage": "Postcode"
+  },
+  "FZeQlc": {
+    "defaultMessage": "Disconnected"
+  },
+  "FrXeQJ": {
+    "defaultMessage": "what is nostr?"
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
+  },
+  "GLA+G9": {
+    "defaultMessage": "Other ways to reach us:"
+  },
+  "GQNYob": {
+    "defaultMessage": "Share link"
+  },
+  "GSye7T": {
+    "defaultMessage": "Lightning Address"
+  },
+  "Gb4Uh/": {
+    "defaultMessage": "Have questions, feedback, or need support? Fill out the form below and we'll get back to you as soon as possible."
+  },
+  "GqRat5": {
+    "defaultMessage": "Please verify your email address to complete your order."
+  },
+  "GsCz6b": {
+    "defaultMessage": "Use custom sender key"
+  },
+  "H43Krf": {
+    "defaultMessage": "Uptime: {uptime}%"
+  },
+  "HAlOn1": {
+    "defaultMessage": "Name"
+  },
+  "HOWHco": {
+    "defaultMessage": "No messages yet. Start a conversation below."
+  },
+  "HqRNN8": {
+    "defaultMessage": "Support"
+  },
+  "I3JhPS": {
+    "defaultMessage": "Network"
+  },
+  "IChMNf": {
+    "defaultMessage": "No changes detected"
+  },
+  "INlWvJ": {
+    "defaultMessage": "OR"
+  },
+  "Id24hd": {
+    "defaultMessage": "Name *"
+  },
+  "Ij0H43": {
+    "defaultMessage": "Graphs"
+  },
+  "IvjoDS": {
+    "defaultMessage": "Connected"
+  },
+  "Iz4veS": {
+    "defaultMessage": "Minimum: {min} GB"
   },
   "JW40Ux": {
     "defaultMessage": "View Status Page"
   },
+  "JmgL7z": {
+    "defaultMessage": "Expires: {date} ({days} days)"
+  },
+  "K/zU0+": {
+    "defaultMessage": "+ Deploy new"
+  },
+  "KAL6xF": {
+    "defaultMessage": "Key name"
+  },
+  "KWAuBK": {
+    "defaultMessage": "No IP's assigned"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
+  },
+  "KuX7em": {
+    "defaultMessage": "Active for {duration}"
+  },
+  "LNcnLC": {
+    "defaultMessage": "Failed Referrals"
+  },
+  "LjglgP": {
+    "defaultMessage": "RAM"
+  },
+  "LjziLu": {
+    "defaultMessage": "Encrypt Message"
+  },
+  "LqFfRA": {
+    "defaultMessage": "Country *"
+  },
+  "MT4qAu": {
+    "defaultMessage": "NIP-44 Encryption Tools"
+  },
+  "MTnSwY": {
+    "defaultMessage": "ex. tax"
+  },
+  "Mp+zDS": {
+    "defaultMessage": "This component only supports Lightning payments"
+  },
+  "NQgbYA": {
+    "defaultMessage": "Account Settings"
   },
   "NZyhSX": {
     "defaultMessage": "News"
   },
+  "Ny9qbm": {
+    "defaultMessage": "Nostr: {handle}"
+  },
+  "O/68ZX": {
+    "defaultMessage": "Are you sure you want to re-install your VM? THIS WILL DELETE ALL DATA!!"
+  },
+  "OLqOyf": {
+    "defaultMessage": "Setup Instructions"
+  },
+  "OikYIw": {
+    "defaultMessage": "Minimum: {min} GB {type}"
+  },
+  "Olq7Wf": {
+    "defaultMessage": "Type your message here..."
+  },
+  "OtUSLU": {
+    "defaultMessage": "Automatic Renewal"
+  },
+  "OtuYup": {
+    "defaultMessage": "Email *"
+  },
   "OuCSDn": {
     "defaultMessage": "Disk"
+  },
+  "P+08xT": {
+    "defaultMessage": "Get Quote"
+  },
+  "P7PLVj": {
+    "defaultMessage": "Date"
+  },
+  "PJtOx7": {
+    "defaultMessage": "No incidents to report."
+  },
+  "PPcUVc": {
+    "defaultMessage": "LNVPS uses nostr accounts, {link}"
+  },
+  "PT4sD/": {
+    "defaultMessage": "Select OS:"
+  },
+  "PfSZy5": {
+    "defaultMessage": "No order found"
+  },
+  "PucUfl": {
+    "defaultMessage": "Select SSH Key:"
+  },
+  "QDA9xg": {
+    "defaultMessage": "Payout History"
+  },
+  "QN/rCc": {
+    "defaultMessage": "Error parsing JSON: {msg}"
+  },
+  "QdbxqE": {
+    "defaultMessage": "Configure automatic VM renewal using Nostr Wallet Connect. Your wallet will automatically pay for VM renewals 1 day before expiration."
+  },
+  "QgBuiV": {
+    "defaultMessage": "CPU"
+  },
+  "QvXah/": {
+    "defaultMessage": "Back to VM"
+  },
+  "R0skQD": {
+    "defaultMessage": "GitHub: Create an issue at github.com/LNVPS"
+  },
+  "R7x8iU": {
+    "defaultMessage": "Disk: {gb} GB {type}"
+  },
+  "RB2CER": {
+    "defaultMessage": "CPU Cores"
+  },
+  "RF85OG": {
+    "defaultMessage": "Your new key:"
+  },
+  "RahCRH": {
+    "defaultMessage": "Expired"
+  },
+  "RcshyP": {
+    "defaultMessage": "Earned ({currency})"
+  },
+  "S1hhGJ": {
+    "defaultMessage": "SSH:"
+  },
+  "SMHOve": {
+    "defaultMessage": "Successful Referrals"
+  },
+  "SU1E+O": {
+    "defaultMessage": "New Order"
+  },
+  "Sczo8n": {
+    "defaultMessage": "Duration: {duration}"
+  },
+  "Sg3z1C": {
+    "defaultMessage": "No VM selected"
+  },
+  "Ss0sWu": {
+    "defaultMessage": "Pay Now"
+  },
+  "Sv1hgX": {
+    "defaultMessage": "Auto-renewal disabled"
+  },
+  "Sz/3Vf": {
+    "defaultMessage": "Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current."
+  },
+  "T1/en5": {
+    "defaultMessage": "ID: {id}"
+  },
+  "T4yFyM": {
+    "defaultMessage": "Loading payment details..."
+  },
+  "T7b6ZF": {
+    "defaultMessage": "Resolved Incidents"
+  },
+  "TE4fIS": {
+    "defaultMessage": "City"
+  },
+  "TNSbi4": {
+    "defaultMessage": "Reverse DNS:"
+  },
+  "Tbo377": {
+    "defaultMessage": "Billing"
+  },
+  "Td/uhP": {
+    "defaultMessage": "Enable Auto-Renewal"
+  },
+  "TieXig": {
+    "defaultMessage": "Payouts will be sent to the NWC wallet configured in your account settings."
   },
   "UPjtBm": {
     "defaultMessage": "There may be a service issue. Check our status page for updates."
   },
+  "UQc03N": {
+    "defaultMessage": "Add new SSH key"
+  },
+  "Ub+AGc": {
+    "defaultMessage": "Sign In"
+  },
+  "UbzBlr": {
+    "defaultMessage": "{cname} is recommended — it automatically follows server IP changes"
+  },
+  "Ue9DHy": {
+    "defaultMessage": "Region:"
+  },
+  "Uk68vE": {
+    "defaultMessage": "Sender's public key (npub/nprofile/hex):"
+  },
+  "Un5Bdm": {
+    "defaultMessage": "Resolving IPs for {cname}…"
+  },
+  "UwP+xI": {
+    "defaultMessage": "Auto-renewal enabled"
+  },
+  "VE4z7n": {
+    "defaultMessage": "Get Invoice"
+  },
+  "VL/B6x": {
+    "defaultMessage": "your@email.com"
+  },
+  "VnXp8Z": {
+    "defaultMessage": "Avatar"
+  },
+  "W+1MOm": {
+    "defaultMessage": "Method"
+  },
+  "WUeavc": {
+    "defaultMessage": "Or email us directly at {email}"
+  },
+  "WhLfzM": {
+    "defaultMessage": "Address Line 2"
+  },
   "Ws8Qkf": {
     "defaultMessage": "High-performance VPS powered by Bitcoin. No KYC, no fuss."
+  },
+  "Wsj2fc": {
+    "defaultMessage": "Active Incidents"
+  },
+  "X5QA2h": {
+    "defaultMessage": "Processing Renewal Payment"
+  },
+  "XD6788": {
+    "defaultMessage": "Setup fee:"
+  },
+  "XNiOLB": {
+    "defaultMessage": "Failed to send message. Please try again."
+  },
+  "Xoi0Uz": {
+    "defaultMessage": "Pay with Card"
+  },
+  "Y+LcmX": {
+    "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
+  },
+  "Y6YwKh": {
+    "defaultMessage": "This is only for account notifications such as VM expiration notifications, we do not send marketing or promotional messages."
+  },
+  "Y7opZr": {
+    "defaultMessage": "Renew VPS"
+  },
+  "YdQxfw": {
+    "defaultMessage": "Contact Support"
+  },
+  "Yl8GBP": {
+    "defaultMessage": "Tax ID"
+  },
+  "Yt9S7n": {
+    "defaultMessage": "Fee: {fees}"
+  },
+  "Yx0Kq/": {
+    "defaultMessage": "{usage}% RAM"
+  },
+  "YyojwF": {
+    "defaultMessage": "Configuration Changes:"
+  },
+  "Z+AMVE": {
+    "defaultMessage": "Email Verification Required"
+  },
+  "Z5yzel": {
+    "defaultMessage": "Save billing details to account"
+  },
+  "Z8971h": {
+    "defaultMessage": "Verified"
+  },
+  "ZdCdo5": {
+    "defaultMessage": "Last updated: {date}"
+  },
+  "ZewCpX": {
+    "defaultMessage": "Add Domain"
+  },
+  "aAnyb9": {
+    "defaultMessage": "Share this link. When others sign up and pay, you earn a payout."
+  },
+  "aFJYR3": {
+    "defaultMessage": "Card Details"
+  },
+  "ajQtDJ": {
+    "defaultMessage": "Select Payment Method"
+  },
+  "b1zuN9": {
+    "defaultMessage": "Price"
+  },
+  "bW7B87": {
+    "defaultMessage": "New"
+  },
+  "bZ1uDf": {
+    "defaultMessage": "Go back to home"
+  },
+  "bh3pad": {
+    "defaultMessage": "Please login first before making a purchase"
+  },
+  "bhfNWq": {
+    "defaultMessage": "Paste encrypted message here..."
+  },
+  "bm5rt1": {
+    "defaultMessage": "Please save this key, it CANNOT be recovered"
   },
   "bpBvBq": {
     "defaultMessage": "Display Currency:"
   },
+  "c78ZVJ": {
+    "defaultMessage": "DNS changes may take up to 24–48 hours to propagate"
+  },
   "c8LeaL": {
     "defaultMessage": "Failed to load IP blocks"
+  },
+  "cM5n1C": {
+    "defaultMessage": "End Time (optional)"
+  },
+  "cV0ZGf": {
+    "defaultMessage": "Cost Breakdown"
+  },
+  "cbZ7Ix": {
+    "defaultMessage": "VM: {name}"
+  },
+  "cyR7Kh": {
+    "defaultMessage": "Back"
+  },
+  "d+1v5f": {
+    "defaultMessage": "Renew for:"
+  },
+  "d1nnRF": {
+    "defaultMessage": "Send Another Message"
+  },
+  "d3wxHm": {
+    "defaultMessage": "Loading history..."
+  },
+  "dCaiAm": {
+    "defaultMessage": "Extend Now"
+  },
+  "dKHSEA": {
+    "defaultMessage": "Thank you for contacting us. We'll get back to you as soon as possible."
+  },
+  "dOQCL8": {
+    "defaultMessage": "Display name"
+  },
+  "dVYvX2": {
+    "defaultMessage": "Are you sure you want to delete this handle?"
+  },
+  "dVx3yz": {
+    "defaultMessage": "Memory"
+  },
+  "dgTL/5": {
+    "defaultMessage": "No Registered Handles"
+  },
+  "djJp6c": {
+    "defaultMessage": "History"
+  },
+  "duElEE": {
+    "defaultMessage": "No history entries found for this VM."
+  },
+  "e4iTJm": {
+    "defaultMessage": "Type your message..."
+  },
+  "eKEL/g": {
+    "defaultMessage": "Pending"
+  },
+  "eR9d9s": {
+    "defaultMessage": "Verification email sent, please check your inbox."
+  },
+  "eVlu1R": {
+    "defaultMessage": "Select language"
+  },
+  "ebmhes": {
+    "defaultMessage": "Nostr Extension"
+  },
+  "elhFf1": {
+    "defaultMessage": "[Expired]"
+  },
+  "eu+sDO": {
+    "defaultMessage": "Login:"
+  },
+  "f00p/7": {
+    "defaultMessage": "Upload failed"
+  },
+  "fGeu02": {
+    "defaultMessage": "Browser Extension:"
+  },
+  "fNSGnl": {
+    "defaultMessage": "Login To Order"
+  },
+  "fxYCqm": {
+    "defaultMessage": "Location: {location}"
+  },
+  "gBvImw": {
+    "defaultMessage": "{count} handles"
+  },
+  "gH4VcS": {
+    "defaultMessage": "Pro-rated upgrade cost:"
+  },
+  "gPsMm7": {
+    "defaultMessage": "Deploy this Worker and add a route for {route}"
+  },
+  "gZz74a": {
+    "defaultMessage": "Please fill in all required fields"
+  },
+  "gc+2Z2": {
+    "defaultMessage": "Console"
+  },
+  "gdP56I": {
+    "defaultMessage": "tax"
+  },
+  "gdfy5u": {
+    "defaultMessage": "{usage}% CPU"
+  },
+  "gjBiyj": {
+    "defaultMessage": "Loading..."
+  },
+  "gtGLdm": {
+    "defaultMessage": "including {amount} processing fee"
   },
   "gv8O1e": {
     "defaultMessage": "VPS Offers"
   },
+  "h+26/n": {
+    "defaultMessage": "Your referral code"
+  },
+  "h/PJh3": {
+    "defaultMessage": "After selecting a new key, please restart the VM."
+  },
+  "hMzcSq": {
+    "defaultMessage": "Messages"
+  },
+  "hZOGLS": {
+    "defaultMessage": "Contact Us"
+  },
+  "iO1K6D": {
+    "defaultMessage": "No posts yet.."
+  },
+  "icn2DS": {
+    "defaultMessage": "(Recommended)"
+  },
+  "iluJkV": {
+    "defaultMessage": "Payout Settings"
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
+  },
+  "jM8W7d": {
+    "defaultMessage": "Select country"
+  },
+  "jmVweB": {
+    "defaultMessage": "Loading SSH keys..."
+  },
+  "jvo0vs": {
+    "defaultMessage": "Save"
+  },
+  "k1UDSi": {
+    "defaultMessage": "LNURL Payment"
+  },
+  "k3yLiC": {
+    "defaultMessage": "Update your billing information to appear on generated invoices (optional)."
+  },
+  "kLNEaL": {
+    "defaultMessage": "Please complete the captcha verification"
+  },
+  "kSjQ3a": {
+    "defaultMessage": "by {initiatedBy}"
+  },
+  "kfr95E": {
+    "defaultMessage": "Address Line 1"
+  },
+  "ku+mDU": {
+    "defaultMessage": "State"
+  },
+  "l4RUua": {
+    "defaultMessage": "Service: {service}"
+  },
+  "lCILNz": {
+    "defaultMessage": "Buy Now"
+  },
+  "lPsVOx": {
+    "defaultMessage": "Your VMs and domains"
+  },
+  "lloEWi": {
+    "defaultMessage": "What is this regarding?"
   },
   "lnaWo/": {
     "defaultMessage": "Region"
   },
+  "luhCIe": {
+    "defaultMessage": "IP:"
+  },
+  "lvV1wo": {
+    "defaultMessage": "Upgrade Payment"
+  },
+  "m22Mzk": {
+    "defaultMessage": "Processing Upgrade Payment"
+  },
+  "mJPBXd": {
+    "defaultMessage": "Encrypted message (copy and include in your email):"
+  },
+  "mOR+qH": {
+    "defaultMessage": "Copy to Clipboard"
+  },
+  "mXu0jm": {
+    "defaultMessage": "Domain Setup"
+  },
+  "nFQbxh": {
+    "defaultMessage": "Payment Method"
+  },
+  "nQ0mEC": {
+    "defaultMessage": "Key:"
+  },
+  "nWQFic": {
+    "defaultMessage": "Renew"
+  },
   "nm81YC": {
     "defaultMessage": "Loading VPS offers..."
+  },
+  "nxqAD7": {
+    "defaultMessage": "New Incident"
+  },
+  "o2AdrJ": {
+    "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
+  },
+  "o8lVmf": {
+    "defaultMessage": "Payment method affects the currency used for the quote and payment."
+  },
+  "o9lOhm": {
+    "defaultMessage": "Support pubkey: {npub}"
+  },
+  "oBSxZS": {
+    "defaultMessage": "Upgrade Quote"
+  },
+  "oCc8Oq": {
+    "defaultMessage": "Add Key"
+  },
+  "oXGNZ+": {
+    "defaultMessage": "VM #{id} Terminal:"
+  },
+  "p4N05H": {
+    "defaultMessage": "Upload"
+  },
+  "pSH5mR": {
+    "defaultMessage": "Payment History"
+  },
+  "pY6CgO": {
+    "defaultMessage": "You have no virtual machines yet."
   },
   "qJRR8N": {
     "defaultMessage": "Loading IP blocks..."
   },
+  "qV+TFm": {
+    "defaultMessage": "Payment failed"
+  },
+  "qWMcff": {
+    "defaultMessage": "DNS updates can take up to 48hrs to propagate."
+  },
+  "qZkVyB": {
+    "defaultMessage": "Your Public Key (include this in all communications):"
+  },
   "qq7WMq": {
     "defaultMessage": "All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all prices are excluding taxes."
+  },
+  "quroDq": {
+    "defaultMessage": "VM History"
   },
   "qvZHhC": {
     "defaultMessage": "Failed to load VPS offers"
   },
+  "r2BhUh": {
+    "defaultMessage": "Decrypt Message"
+  },
+  "rCcPOd": {
+    "defaultMessage": "fee"
+  },
+  "rKLmW/": {
+    "defaultMessage": "Cancel Payment"
+  },
+  "rvirM2": {
+    "defaultMessage": "Location"
+  },
+  "s+YpY+": {
+    "defaultMessage": "Earn rewards by referring others"
+  },
+  "sH1q5P": {
+    "defaultMessage": "for {time}"
+  },
   "sTesGq": {
     "defaultMessage": "No offers available"
+  },
+  "sXj7R6": {
+    "defaultMessage": "Disk:"
+  },
+  "sXqUvN": {
+    "defaultMessage": "{cpu} vCPU"
+  },
+  "sqvjkf": {
+    "defaultMessage": "Add Handle"
+  },
+  "sy+pv5": {
+    "defaultMessage": "Email"
+  },
+  "tjOvn7": {
+    "defaultMessage": "GB RAM"
   },
   "tzMNF3": {
     "defaultMessage": "Status"
   },
+  "u/vOPu": {
+    "defaultMessage": "Paid"
+  },
+  "uN7rbm": {
+    "defaultMessage": "Join the referral program to earn payouts when others sign up using your code. Choose how you want to receive payouts."
+  },
+  "uPNlBw": {
+    "defaultMessage": "Email: {email}"
+  },
+  "uRfNhn": {
+    "defaultMessage": "Network:"
+  },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uqUeK9": {
+    "defaultMessage": "Decrypt a message sent to you by support."
+  },
+  "v2BRjN": {
+    "defaultMessage": "Subject *"
+  },
+  "v4Sg0C": {
+    "defaultMessage": "Use custom recipient key"
+  },
+  "vONi+O": {
+    "defaultMessage": "Country"
+  },
+  "vlKhIl": {
+    "defaultMessage": "Your name"
+  },
+  "voiR31": {
+    "defaultMessage": "{cpu} vCPU{cpuInfo}, {memory} RAM, {disk} {diskType}"
+  },
+  "wLwJ9Q": {
+    "defaultMessage": "Value of remaining time at old rate:"
+  },
+  "wfYHHe": {
+    "defaultMessage": "- [{daysLeft} days remaining]"
+  },
+  "wz7uSD": {
+    "defaultMessage": "including {amount} tax"
+  },
+  "x0cZXf": {
+    "defaultMessage": "Upgrade Not Available"
+  },
+  "xLbpvq": {
+    "defaultMessage": "Send and receive encrypted direct messages with support via NIP-17. Messages are end-to-end encrypted."
+  },
+  "xR03Aa": {
+    "defaultMessage": "Notification Settings"
+  },
+  "xXbJso": {
+    "defaultMessage": "Sign out"
+  },
+  "xj59EM": {
+    "defaultMessage": "{proxy} works without any DNS changes — useful if you already have a site on the domain"
+  },
   "xkr+zo": {
     "defaultMessage": "Terms"
+  },
+  "xmSWcf": {
+    "defaultMessage": "CPU: {cores} cores"
+  },
+  "y43e4q": {
+    "defaultMessage": "(No DNS change required)"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
   },
+  "yJAKR0": {
+    "defaultMessage": "Send Message"
+  },
+  "yYs9cj": {
+    "defaultMessage": "Back to Upgrade"
+  },
+  "zAN0RF": {
+    "defaultMessage": "Encrypted direct messages"
+  },
+  "zEk9h3": {
+    "defaultMessage": "Virtual Machines"
+  },
   "zFegDD": {
     "defaultMessage": "Contact"
+  },
+  "zRPHCo": {
+    "defaultMessage": "Memory (GB)"
   }
 }

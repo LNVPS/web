@@ -1,5 +1,6 @@
 import { NostrDomain } from "../api";
 import { NostrDomainRow } from "./nostr-domain-row";
+import { FormattedMessage } from "react-intl";
 
 interface DomainListProps {
   domains: NostrDomain[];
@@ -9,7 +10,7 @@ export function DomainList({ domains }: DomainListProps) {
   if (domains.length === 0) {
     return (
       <div className="text-cyber-muted text-sm p-4 text-center border-2 border-dashed border-cyber-border rounded-sm">
-        No domains added yet. Add your first domain above to get started.
+        <FormattedMessage defaultMessage="No domains added yet. Add your first domain above to get started." />
       </div>
     );
   }

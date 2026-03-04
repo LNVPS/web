@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { AsyncButton } from "./button";
 import type { AsyncButtonProps } from "./button";
+import { FormattedMessage, useIntl } from "react-intl";
 
 type CopyButtonProps = Omit<AsyncButtonProps, "onClick" | "children"> & {
   text: string;
   label?: string;
 };
 
-export function CopyButton({
-  text,
-  label = "Copy",
-  ...props
-}: CopyButtonProps) {
+export function CopyButton({ text, label, ...props }: CopyButtonProps) {
+  const { formatMessage } = useIntl();
   const [copied, setCopied] = useState(false);
+  const defaultLabel = formatMessage({ defaultMessage: "Copy" });
 
   return (
     <AsyncButton
@@ -23,7 +22,11 @@ export function CopyButton({
         setTimeout(() => setCopied(false), 2000);
       }}
     >
-      {copied ? "Copied!" : label}
+      {copied ? (
+        <FormattedMessage defaultMessage="Copied!" />
+      ) : (
+        (label ?? defaultLabel)
+      )}
     </AsyncButton>
   );
 }

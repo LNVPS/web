@@ -5,6 +5,7 @@ import { NostrProfile } from "../const";
 import { LoginState } from "../login";
 import { AsyncButton } from "./button";
 import useLogin from "../hooks/login";
+import { FormattedMessage, useIntl } from "react-intl";
 
 interface DecryptedMessage {
   id: string;
@@ -33,6 +34,7 @@ function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
 
 export default function Nip17DM() {
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const [messages, setMessages] = useState<DecryptedMessage[]>(() =>
     login?.publicKey ? loadDmCache(login.publicKey) : [],
   );
@@ -176,7 +178,7 @@ export default function Nip17DM() {
       >
         {messages.length === 0 ? (
           <p className="text-cyber-muted text-sm text-center m-auto">
-            No messages yet. Start a conversation below.
+            <FormattedMessage defaultMessage="No messages yet. Start a conversation below." />
           </p>
         ) : (
           messages.map((msg) => (
@@ -207,7 +209,9 @@ export default function Nip17DM() {
         <input
           type="text"
           className="flex-1 bg-cyber-panel-light rounded-sm p-3 text-sm"
-          placeholder="Type your message..."
+          placeholder={formatMessage({
+            defaultMessage: "Type your message...",
+          })}
           value={messageInput}
           onChange={(e) => setMessageInput(e.target.value)}
           onKeyDown={(e) => {
@@ -218,7 +222,7 @@ export default function Nip17DM() {
           }}
         />
         <AsyncButton onClick={sendMessage} disabled={!messageInput.trim()}>
-          Send
+          <FormattedMessage defaultMessage="Send" />
         </AsyncButton>
       </div>
     </div>

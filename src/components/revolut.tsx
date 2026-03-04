@@ -8,6 +8,7 @@ import useLogin from "../hooks/login";
 import { timeValue } from "../utils";
 import useTheme from "../hooks/theme";
 import { default as iso } from "iso-3166-1";
+import { FormattedMessage, useIntl } from "react-intl";
 
 interface RevolutProps {
   payment: VmPayment;
@@ -25,6 +26,7 @@ export function RevolutPayWidget({
   mode,
 }: RevolutProps) {
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const { theme } = useTheme();
   const ref = useRef<HTMLDivElement | null>(null);
   const instanceRef = useRef<{ destroy: () => void } | null>(null);
@@ -80,7 +82,9 @@ export function RevolutPayWidget({
         },
         onError: (err) => {
           setSubmitting(false);
-          setError(err.message || "Payment failed");
+          setError(
+            err.message || formatMessage({ defaultMessage: "Payment failed" }),
+          );
         },
         onCancel: () => {
           setSubmitting(false);
@@ -120,7 +124,9 @@ export function RevolutPayWidget({
   async function handleSubmit() {
     if (!cardFieldRef.current) return;
     if (!email || !name || !countryCode || !postcode) {
-      setError("Please fill in all required fields");
+      setError(
+        formatMessage({ defaultMessage: "Please fill in all required fields" }),
+      );
       return;
     }
     if (saveDetails && login?.api) {
@@ -171,39 +177,54 @@ export function RevolutPayWidget({
         </div>
         {payment.time > 0 && (
           <div className="text-sm text-cyber-muted">
-            for {timeValue(payment.time)}
+            <FormattedMessage
+              defaultMessage="for {time}"
+              values={{ time: timeValue(payment.time) }}
+            />
           </div>
         )}
         {payment.tax > 0 && (
           <div className="text-xs text-cyber-muted">
-            including{" "}
-            <CostAmount
-              cost={{
-                currency: payment.currency,
-                amount: payment.tax,
+            <FormattedMessage
+              defaultMessage="including {amount} tax"
+              values={{
+                amount: (
+                  <CostAmount
+                    cost={{
+                      currency: payment.currency,
+                      amount: payment.tax,
+                    }}
+                    converted={false}
+                  />
+                ),
               }}
-              converted={false}
-            />{" "}
-            tax
+            />
           </div>
         )}
         {payment.processing_fee > 0 && (
           <div className="text-xs text-cyber-muted">
-            including{" "}
-            <CostAmount
-              cost={{
-                currency: payment.currency,
-                amount: payment.processing_fee,
+            <FormattedMessage
+              defaultMessage="including {amount} processing fee"
+              values={{
+                amount: (
+                  <CostAmount
+                    cost={{
+                      currency: payment.currency,
+                      amount: payment.processing_fee,
+                    }}
+                    converted={false}
+                  />
+                ),
               }}
-              converted={false}
-            />{" "}
-            processing fee
+            />
           </div>
         )}
       </div>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">Email *</label>
+          <label className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Email *" />
+          </label>
           <input
             type="email"
             value={email}
@@ -212,7 +233,9 @@ export function RevolutPayWidget({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">Cardholder Name *</label>
+          <label className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Cardholder Name *" />
+          </label>
           <input
             type="text"
             value={name}
@@ -222,12 +245,16 @@ export function RevolutPayWidget({
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-cyber-muted">Country *</label>
+            <label className="text-xs text-cyber-muted">
+              <FormattedMessage defaultMessage="Country *" />
+            </label>
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
             >
-              <option value="">Select country</option>
+              <option value="">
+                {formatMessage({ defaultMessage: "Select country" })}
+              </option>
               {iso.all().map((c) => (
                 <option key={c.alpha2} value={c.alpha2}>
                   {c.country}
@@ -236,7 +263,9 @@ export function RevolutPayWidget({
             </select>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-cyber-muted">Postcode *</label>
+            <label className="text-xs text-cyber-muted">
+              <FormattedMessage defaultMessage="Postcode *" />
+            </label>
             <input
               type="text"
               value={postcode}
@@ -246,7 +275,9 @@ export function RevolutPayWidget({
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">City</label>
+          <label className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="City" />
+          </label>
           <input
             type="text"
             value={city}
@@ -255,7 +286,9 @@ export function RevolutPayWidget({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">Address Line 1</label>
+          <label className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Address Line 1" />
+          </label>
           <input
             type="text"
             value={streetLine1}
@@ -264,7 +297,9 @@ export function RevolutPayWidget({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">Address Line 2</label>
+          <label className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Address Line 2" />
+          </label>
           <input
             type="text"
             value={streetLine2}
@@ -279,10 +314,12 @@ export function RevolutPayWidget({
           checked={saveDetails}
           onChange={(e) => setSaveDetails(e.target.checked)}
         />
-        Save billing details to account
+        <FormattedMessage defaultMessage="Save billing details to account" />
       </label>
       <div className="flex flex-col gap-1">
-        <label className="text-xs text-cyber-muted">Card Details</label>
+        <label className="text-xs text-cyber-muted">
+          <FormattedMessage defaultMessage="Card Details" />
+        </label>
         <div
           ref={ref}
           className="rounded-sm border border-cyber-border bg-cyber-panel-light p-3"
@@ -290,7 +327,11 @@ export function RevolutPayWidget({
       </div>
       {error && <div className="text-cyber-danger text-sm">{error}</div>}
       <AsyncButton onClick={handleSubmit} disabled={submitting}>
-        {submitting ? "Processing..." : "Pay Now"}
+        {submitting ? (
+          <FormattedMessage defaultMessage="Processing..." />
+        ) : (
+          <FormattedMessage defaultMessage="Pay Now" />
+        )}
       </AsyncButton>
     </div>
   );

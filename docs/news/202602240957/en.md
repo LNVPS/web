@@ -1,9 +1,3 @@
----
-title: "Referral Program"
-published_at: 1771927035
-dtag: referral-program
----
-
 Earn sats by sharing LNVPS! We've launched a referral program that pays you when someone orders a new VM using your referral link.
 
 ## How It Works

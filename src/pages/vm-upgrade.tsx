@@ -7,6 +7,7 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import VpsInstanceRow from "../components/vps-instance";
 import VmPaymentFlow from "../components/vm-payment-flow";
 import { CostAmount } from "../components/cost";
+import { FormattedMessage } from "react-intl";
 
 export default function VmUpgradePage() {
   const location = useLocation() as { state?: VmInstance };
@@ -19,7 +20,6 @@ export default function VmUpgradePage() {
   const [selectedMethod, setSelectedMethod] = useState<string>("lightning");
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
 
-  // Form state
   const [upgradeCpu, setUpgradeCpu] = useState<number>(
     state?.template.cpu ?? 1,
   );
@@ -31,7 +31,6 @@ export default function VmUpgradePage() {
       (1024 * 1024 * 1024),
   );
 
-  // Set default payment method when methods are loaded
   useEffect(() => {
     if ((paymentMethods?.length ?? 0) > 0 && selectedMethod === "lightning") {
       setSelectedMethod(paymentMethods![0].name);
@@ -39,24 +38,28 @@ export default function VmUpgradePage() {
   }, [paymentMethods, selectedMethod]);
 
   if (!state) {
-    return <h2>No VM selected</h2>;
+    return (
+      <h2>
+        <FormattedMessage defaultMessage="No VM selected" />
+      </h2>
+    );
   }
 
-  // Check if VM uses standard template (required for upgrades)
   const isStandardTemplate = !state?.template.pricing_id;
 
   if (!isStandardTemplate) {
     return (
       <div className="flex flex-col gap-4">
         <Link to={"/vm"} state={state}>
-          &lt; Back to VM
+          &lt; <FormattedMessage defaultMessage="Back to VM" />
         </Link>
         <VpsInstanceRow vm={state} actions={false} />
         <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-2">Upgrade Not Available</h3>
+          <h3 className="text-lg font-bold mb-2">
+            <FormattedMessage defaultMessage="Upgrade Not Available" />
+          </h3>
           <p>
-            This VM uses a custom template and cannot be upgraded. Only VMs
-            using standard templates support upgrades.
+            <FormattedMessage defaultMessage="This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades." />
           </p>
         </div>
       </div>
@@ -77,11 +80,9 @@ export default function VmUpgradePage() {
 
   async function getQuote() {
     if (!login?.api || !hasValidUpgrade) return;
-
     setLoading(true);
     setError(undefined);
     setQuote(undefined);
-
     try {
       const request: VmUpgradeRequest = {};
       if (upgradeCpu > currentCpu) request.cpu = upgradeCpu;
@@ -89,7 +90,6 @@ export default function VmUpgradePage() {
         request.memory = upgradeMemory * 1024 * 1024 * 1024;
       if (upgradeDisk > currentDiskGB)
         request.disk = upgradeDisk * 1024 * 1024 * 1024;
-
       const result = await login.api.getVmUpgradeQuote(
         state!.id,
         request,
@@ -97,9 +97,7 @@ export default function VmUpgradePage() {
       );
       setQuote(result);
     } catch (e) {
-      if (e instanceof Error) {
-        setError(e.message);
-      }
+      if (e instanceof Error) setError(e.message);
     } finally {
       setLoading(false);
     }
@@ -115,7 +113,6 @@ export default function VmUpgradePage() {
     return request;
   }
 
-  // Show payment flow when user clicks "Proceed to Payment"
   if (showPaymentFlow && state && quote) {
     return (
       <div className="flex flex-col gap-4">
@@ -124,11 +121,10 @@ export default function VmUpgradePage() {
             onClick={() => setShowPaymentFlow(false)}
             className="text-cyber-accent hover:text-cyber-accent flex items-center gap-1"
           >
-            &lt; Back to Upgrade
+            &lt; <FormattedMessage defaultMessage="Back to Upgrade" />
           </button>
         </div>
         <VpsInstanceRow vm={state} actions={false} />
-
         <VmPaymentFlow
           vm={state}
           type="upgrade"
@@ -137,7 +133,6 @@ export default function VmUpgradePage() {
           onPaymentComplete={() => {
             setShowPaymentFlow(false);
             setQuote(undefined);
-            // Could show success message or redirect
           }}
           onCancel={() => setShowPaymentFlow(false)}
         />
@@ -145,34 +140,55 @@ export default function VmUpgradePage() {
     );
   }
 
-  // Show upgrade configuration form
   return (
     <div className="flex flex-col gap-4">
       <Link to={"/vm"} state={state}>
-        &lt; Back to VM
+        &lt; <FormattedMessage defaultMessage="Back to VM" />
       </Link>
       <VpsInstanceRow vm={state} actions={false} />
 
-      <div className="text-xl">Upgrade VM Specifications</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="Upgrade VM Specifications" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-cyber-panel p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-4">Current Specifications</h3>
+          <h3 className="text-lg font-bold mb-4">
+            <FormattedMessage defaultMessage="Current Specifications" />
+          </h3>
           <div className="space-y-2">
-            <div>CPU: {currentCpu} cores</div>
-            <div>Memory: {currentMemoryGB} GB</div>
             <div>
-              Disk: {currentDiskGB} GB {state.template.disk_type.toUpperCase()}
+              <FormattedMessage
+                defaultMessage="CPU: {cores} cores"
+                values={{ cores: currentCpu }}
+              />
+            </div>
+            <div>
+              <FormattedMessage
+                defaultMessage="Memory: {gb} GB"
+                values={{ gb: currentMemoryGB }}
+              />
+            </div>
+            <div>
+              <FormattedMessage
+                defaultMessage="Disk: {gb} GB {type}"
+                values={{
+                  gb: currentDiskGB,
+                  type: state.template.disk_type.toUpperCase(),
+                }}
+              />
             </div>
           </div>
         </div>
 
         <div className="bg-cyber-panel p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-4">Upgrade To</h3>
+          <h3 className="text-lg font-bold mb-4">
+            <FormattedMessage defaultMessage="Upgrade To" />
+          </h3>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium mb-1">
-                CPU Cores
+                <FormattedMessage defaultMessage="CPU Cores" />
               </label>
               <input
                 type="number"
@@ -184,13 +200,16 @@ export default function VmUpgradePage() {
                 className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
-                Minimum: {currentCpu} cores
+                <FormattedMessage
+                  defaultMessage="Minimum: {min} cores"
+                  values={{ min: currentCpu }}
+                />
               </small>
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-1">
-                Memory (GB)
+                <FormattedMessage defaultMessage="Memory (GB)" />
               </label>
               <input
                 type="number"
@@ -202,13 +221,16 @@ export default function VmUpgradePage() {
                 className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
-                Minimum: {currentMemoryGB} GB
+                <FormattedMessage
+                  defaultMessage="Minimum: {min} GB"
+                  values={{ min: currentMemoryGB }}
+                />
               </small>
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-1">
-                Disk (GB)
+                <FormattedMessage defaultMessage="Disk (GB)" />
               </label>
               <input
                 type="number"
@@ -220,8 +242,13 @@ export default function VmUpgradePage() {
                 className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
               />
               <small className="text-cyber-muted">
-                Minimum: {currentDiskGB} GB{" "}
-                {state.template.disk_type.toUpperCase()}
+                <FormattedMessage
+                  defaultMessage="Minimum: {min} GB {type}"
+                  values={{
+                    min: currentDiskGB,
+                    type: state.template.disk_type.toUpperCase(),
+                  }}
+                />
               </small>
             </div>
           </div>
@@ -229,16 +256,19 @@ export default function VmUpgradePage() {
       </div>
 
       <div className="bg-cyber-panel p-4 rounded-sm">
-        <h3 className="text-lg font-bold mb-4">Payment Method</h3>
+        <h3 className="text-lg font-bold mb-4">
+          <FormattedMessage defaultMessage="Payment Method" />
+        </h3>
         {methodsLoading ? (
-          <div className="text-cyber-muted">Loading payment methods...</div>
+          <div className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Loading payment methods..." />
+          </div>
         ) : (
           <div>
             <select
               value={selectedMethod}
               onChange={(e) => {
                 setSelectedMethod(e.target.value);
-                // Clear quote when payment method changes
                 setQuote(undefined);
               }}
               className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
@@ -252,8 +282,7 @@ export default function VmUpgradePage() {
               ))}
             </select>
             <small className="text-cyber-muted mt-2 block">
-              Payment method affects the currency used for the quote and
-              payment.
+              <FormattedMessage defaultMessage="Payment method affects the currency used for the quote and payment." />
             </small>
           </div>
         )}
@@ -261,25 +290,36 @@ export default function VmUpgradePage() {
 
       {error && (
         <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded-sm">
-          <strong>Error:</strong> {error}
+          <strong>
+            <FormattedMessage defaultMessage="Error:" />
+          </strong>{" "}
+          {error}
         </div>
       )}
 
       {quote && (
         <div className="bg-cyber-primary/20 text-cyber-primary p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-2">Upgrade Quote</h3>
+          <h3 className="text-lg font-bold mb-2">
+            <FormattedMessage defaultMessage="Upgrade Quote" />
+          </h3>
           <div className="space-y-3">
             <div className="bg-cyber-primary/10 p-3 rounded-sm">
-              <h4 className="font-semibold mb-2">Cost Breakdown</h4>
+              <h4 className="font-semibold mb-2">
+                <FormattedMessage defaultMessage="Cost Breakdown" />
+              </h4>
               <div className="space-y-1 text-sm">
                 <div className="flex justify-between">
-                  <span>Value of remaining time at old rate:</span>
+                  <span>
+                    <FormattedMessage defaultMessage="Value of remaining time at old rate:" />
+                  </span>
                   <span>
                     <CostAmount cost={quote.discount} converted={false} />
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Cost at new rate for remaining time:</span>
+                  <span>
+                    <FormattedMessage defaultMessage="Cost at new rate for remaining time:" />
+                  </span>
                   <span>
                     <CostAmount
                       cost={{
@@ -293,7 +333,9 @@ export default function VmUpgradePage() {
                 </div>
                 <hr className="border-cyber-primary my-2" />
                 <div className="flex justify-between font-semibold">
-                  <span>Pro-rated upgrade cost:</span>
+                  <span>
+                    <FormattedMessage defaultMessage="Pro-rated upgrade cost:" />
+                  </span>
                   <span>
                     <CostAmount
                       cost={quote.cost_difference}
@@ -304,39 +346,41 @@ export default function VmUpgradePage() {
               </div>
             </div>
             <p className="font-semibold">
-              New monthly renewal cost:{" "}
-              <strong>
-                <CostAmount cost={quote.new_renewal_cost} converted={false} />
-              </strong>
+              <FormattedMessage
+                defaultMessage="New monthly renewal cost: {cost}"
+                values={{
+                  cost: (
+                    <strong>
+                      <CostAmount
+                        cost={quote.new_renewal_cost}
+                        converted={false}
+                      />
+                    </strong>
+                  ),
+                }}
+              />
             </p>
           </div>
-          <p className="text-sm mt-3 opacity-90">
-            The upgrade cost is calculated as: (new rate × remaining time) -
-            (old rate × remaining time). After upgrade, your VM will renew at
-            the new monthly rate shown above.
-          </p>
         </div>
       )}
 
       <div className="flex gap-4">
         <AsyncButton onClick={getQuote} disabled={!hasValidUpgrade || loading}>
-          Get Quote
+          <FormattedMessage defaultMessage="Get Quote" />
         </AsyncButton>
-
         {quote && (
           <AsyncButton
             onClick={() => setShowPaymentFlow(true)}
             disabled={loading}
           >
-            Proceed to Payment
+            <FormattedMessage defaultMessage="Proceed to Payment" />
           </AsyncButton>
         )}
       </div>
 
       {!hasValidUpgrade && (
         <div className="text-cyber-warning text-sm">
-          Please specify upgrade values that are greater than or equal to
-          current values, with at least one value being greater than current.
+          <FormattedMessage defaultMessage="Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current." />
         </div>
       )}
     </div>

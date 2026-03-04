@@ -7,6 +7,7 @@ import { SnortContext } from "@snort/system-react";
 import { Blossom } from "../blossom";
 import { LoginState } from "../login";
 import Login from "../components/login";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -14,6 +15,7 @@ export default function SignUpPage() {
   const [file, setFile] = useState<File>();
   const [key, setKey] = useState<PrivateKeySigner>();
   const system = useContext(SnortContext);
+  const { formatMessage } = useIntl();
 
   async function uploadImage() {
     const f = await openFile();
@@ -27,13 +29,12 @@ export default function SignUpPage() {
 
     let pic = undefined;
     if (file) {
-      // upload picture
       const b = new Blossom("https://nostr.download", pub);
       const up = await b.upload(file);
       if (up.url) {
         pic = up.url;
       } else {
-        setError("Upload filed");
+        setError(formatMessage({ defaultMessage: "Upload failed" }));
         return;
       }
     }
@@ -49,7 +50,9 @@ export default function SignUpPage() {
   return (
     <div className="flex flex-col gap-4">
       {error && <b className="text-cyber-danger">{error}</b>}
-      <h1>Login</h1>
+      <h1>
+        <FormattedMessage defaultMessage="Login" />
+      </h1>
 
       <Login
         onLogin={() => {
@@ -58,30 +61,42 @@ export default function SignUpPage() {
       />
 
       <div className="flex gap-4 items-center my-6">
-        <div className="text-xl">OR</div>
+        <div className="text-xl">
+          <FormattedMessage defaultMessage="OR" />
+        </div>
         <div className="h-[1px] bg-cyber-border w-full"></div>
       </div>
 
-      <h1>Create Account</h1>
+      <h1>
+        <FormattedMessage defaultMessage="Create Account" />
+      </h1>
 
       <p>
-        LNVPS uses nostr accounts,{" "}
-        <a
-          href="https://nostr.how/en/what-is-nostr"
-          target="_blank"
-          className="underline"
-        >
-          what is nostr?
-        </a>
+        <FormattedMessage
+          defaultMessage="LNVPS uses nostr accounts, {link}"
+          values={{
+            link: (
+              <a
+                href="https://nostr.how/en/what-is-nostr"
+                target="_blank"
+                className="underline"
+              >
+                <FormattedMessage defaultMessage="what is nostr?" />
+              </a>
+            ),
+          }}
+        />
       </p>
       <div className="flex flex-col gap-2">
-        <div>Avatar</div>
+        <div>
+          <FormattedMessage defaultMessage="Avatar" />
+        </div>
         <div
           className="w-40 h-40 bg-cyber-panel rounded-sm relative cursor-pointer overflow-hidden"
           onClick={uploadImage}
         >
           <div className="absolute bg-cyber-darker/70 w-full h-full hover:opacity-90 opacity-0 flex items-center justify-center">
-            Upload
+            <FormattedMessage defaultMessage="Upload" />
           </div>
           {file && (
             <img
@@ -92,11 +107,13 @@ export default function SignUpPage() {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <div>Name</div>
+        <div>
+          <FormattedMessage defaultMessage="Name" />
+        </div>
         <div>
           <input
             type="text"
-            placeholder="Display name"
+            placeholder={formatMessage({ defaultMessage: "Display name" })}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -108,19 +125,25 @@ export default function SignUpPage() {
           setKey(PrivateKeySigner.random());
         }}
       >
-        Create Account
+        <FormattedMessage defaultMessage="Create Account" />
       </AsyncButton>
 
       {key && (
         <>
           <div className="flex flex-col gap-2">
-            <h3>Your new key:</h3>
+            <h3>
+              <FormattedMessage defaultMessage="Your new key:" />
+            </h3>
             <div className="font-monospace select-all">
               {hexToBech32("nsec", key.privateKey)}
             </div>
-            <b>Please save this key, it CANNOT be recovered</b>
+            <b>
+              <FormattedMessage defaultMessage="Please save this key, it CANNOT be recovered" />
+            </b>
           </div>
-          <AsyncButton onClick={spawnAccount}>Login</AsyncButton>
+          <AsyncButton onClick={spawnAccount}>
+            <FormattedMessage defaultMessage="Login" />
+          </AsyncButton>
         </>
       )}
     </div>

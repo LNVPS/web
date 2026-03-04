@@ -6,12 +6,14 @@ import useLogin from "../hooks/login";
 import { VmInstance } from "../api";
 import { WebglAddon } from "@xterm/addon-webgl";
 import { AttachAddon } from "@xterm/addon-attach";
+import { FormattedMessage, useIntl } from "react-intl";
 
 type ConnectionStatus = "connecting" | "connected" | "disconnected";
 
 export function VmConsolePage() {
   const { state } = useLocation() as { state?: VmInstance };
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const termRef = useRef<HTMLDivElement | null>(null);
   const wsRef = useRef<WebSocket | null>(null);
   const termObjRef = useRef<Terminal | null>(null);
@@ -126,10 +128,10 @@ export function VmConsolePage() {
 
   const statusLabel =
     status === "connected"
-      ? "Connected"
+      ? formatMessage({ defaultMessage: "Connected" })
       : status === "disconnected"
-        ? "Disconnected"
-        : "Connecting...";
+        ? formatMessage({ defaultMessage: "Disconnected" })
+        : formatMessage({ defaultMessage: "Connecting..." });
 
   return (
     <div className="flex flex-col gap-4">
@@ -139,9 +141,14 @@ export function VmConsolePage() {
             className="text-sm px-3 py-1 border rounded hover:bg-neutral-800"
             onClick={() => window.history.back()}
           >
-            ← Back
+            ← <FormattedMessage defaultMessage="Back" />
           </button>
-          <div className="text-xl">VM #{state?.id} Terminal:</div>
+          <div className="text-xl">
+            <FormattedMessage
+              defaultMessage="VM #{id} Terminal:"
+              values={{ id: state?.id }}
+            />
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <span className={`text-sm font-medium ${statusColor}`}>
@@ -152,7 +159,7 @@ export function VmConsolePage() {
               className="text-sm px-3 py-1 border rounded hover:bg-neutral-800"
               onClick={openTerminal}
             >
-              Reconnect
+              <FormattedMessage defaultMessage="Reconnect" />
             </button>
           )}
         </div>

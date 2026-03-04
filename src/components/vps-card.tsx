@@ -3,6 +3,7 @@ import BytesSize from "./bytes";
 import CostLabel from "./cost";
 import { useNavigateOrder } from "../hooks/order";
 import { AsyncButton } from "./button";
+import { FormattedMessage } from "react-intl";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -38,12 +39,24 @@ export function VpsTableHeader() {
   return (
     <thead>
       <tr>
-        <th>Name</th>
-        <th>CPU</th>
-        <th>RAM</th>
-        <th>Disk</th>
-        <th>Location</th>
-        <th>Price</th>
+        <th>
+          <FormattedMessage defaultMessage="Name" />
+        </th>
+        <th>
+          <FormattedMessage defaultMessage="CPU" />
+        </th>
+        <th>
+          <FormattedMessage defaultMessage="RAM" />
+        </th>
+        <th>
+          <FormattedMessage defaultMessage="Disk" />
+        </th>
+        <th>
+          <FormattedMessage defaultMessage="Location" />
+        </th>
+        <th>
+          <FormattedMessage defaultMessage="Price" />
+        </th>
         <th></th>
       </tr>
     </thead>
@@ -60,7 +73,10 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
     <tr className="hover:bg-cyber-panel-light/50 transition-colors">
       <td className="text-cyber-primary font-medium">{spec.name}</td>
       <td>
-        {spec.cpu} vCPU
+        <FormattedMessage
+          defaultMessage="{cpu} vCPU"
+          values={{ cpu: spec.cpu }}
+        />
         {cpuInfo && (
           <span className="text-cyber-muted text-xs ml-1">({cpuInfo})</span>
         )}
@@ -86,7 +102,7 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
             })
           }
         >
-          Buy Now
+          <FormattedMessage defaultMessage="Buy Now" />
         </AsyncButton>
       </td>
     </tr>

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import useLogin from "../hooks/login";
 import CostLabel from "./cost";
 import { useNavigateOrder } from "../hooks/order";
+import { FormattedMessage } from "react-intl";
 
 // CostAmount is no longer needed for simplified IP block card
 // import { CostAmount } from "./cost";
@@ -42,7 +43,7 @@ export default function IpBlockCard({
       </div>
       {price.setup_fee.amount !== 0 && (
         <div className="text-cyber-muted">
-          Setup fee:{" "}
+          <FormattedMessage defaultMessage="Setup fee:" />{" "}
           <CostLabel
             cost={{
               ...price.setup_fee,
@@ -62,14 +63,14 @@ export default function IpBlockCard({
               })
             }
           >
-            Buy Now
+            <FormattedMessage defaultMessage="Buy Now" />
           </AsyncButton>
         ) : (
           <AsyncButton
             className={`${classNames} bg-cyber-danger/20 border-cyber-danger text-cyber-danger hover:bg-cyber-danger/30 hover:shadow-neon-danger`}
             onClick={() => navigate("/login")}
           >
-            Login To Order
+            <FormattedMessage defaultMessage="Login To Order" />
           </AsyncButton>
         )}
       </div>

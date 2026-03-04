@@ -3,6 +3,7 @@ import { Nip46Signer, Nip7Signer } from "@snort/system";
 import { useState } from "react";
 import { LoginState } from "../login";
 import { AsyncButton } from "./button";
+import { FormattedMessage } from "react-intl";
 
 export default function Login({ onLogin }: { onLogin?: () => void }) {
   const [keyIn, setKeyIn] = useState("");
@@ -41,11 +42,11 @@ export default function Login({ onLogin }: { onLogin?: () => void }) {
         onClick={loginKey}
         disabled={!keyIn.startsWith("nsec") && !keyIn.startsWith("bunker://")}
       >
-        Login
+        <FormattedMessage defaultMessage="Login" />
       </AsyncButton>
       {window.nostr && (
         <div className="flex flex-col gap-4">
-          Browser Extension:
+          <FormattedMessage defaultMessage="Browser Extension:" />
           <AsyncButton
             onClick={async () => {
               const pk = await new Nip7Signer().getPubKey();
@@ -53,7 +54,7 @@ export default function Login({ onLogin }: { onLogin?: () => void }) {
               onLogin?.();
             }}
           >
-            Nostr Extension
+            <FormattedMessage defaultMessage="Nostr Extension" />
           </AsyncButton>
         </div>
       )}

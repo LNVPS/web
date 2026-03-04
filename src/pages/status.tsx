@@ -7,6 +7,7 @@ import useLogin from "../hooks/login";
 import { LoginState } from "../login";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
+import { FormattedMessage } from "react-intl";
 
 interface Incident {
   id?: string;
@@ -120,7 +121,10 @@ export function StatusPage() {
 
     return (
       <span className="text-xs text-cyber-muted bg-cyber-panel-light px-2 py-1 rounded-sm">
-        Active for {formatDuration(duration)}
+        <FormattedMessage
+          defaultMessage="Active for {duration}"
+          values={{ duration: formatDuration(duration) }}
+        />
       </span>
     );
   }
@@ -419,7 +423,7 @@ export function StatusPage() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-cyber-muted mb-1">
-              Start Time
+              <FormattedMessage defaultMessage="Start Time" />
             </label>
             <input
               type="datetime-local"
@@ -433,7 +437,7 @@ export function StatusPage() {
           </div>
           <div>
             <label className="block text-sm text-cyber-muted mb-1">
-              End Time (optional)
+              <FormattedMessage defaultMessage="End Time (optional)" />
             </label>
             <div className="flex gap-2">
               <input
@@ -450,7 +454,7 @@ export function StatusPage() {
                   onClick={() => setFormData({ ...formData, ended: "" })}
                   className="px-3 py-2 bg-cyber-panel-light hover:bg-cyber-panel rounded-sm text-xs"
                 >
-                  Clear
+                  <FormattedMessage defaultMessage="Clear" />
                 </button>
               )}
             </div>
@@ -479,13 +483,13 @@ export function StatusPage() {
             onClick={handleSubmit}
             className="bg-cyber-accent/20 hover:bg-cyber-accent/30 border border-cyber-accent text-cyber-accent px-4 py-2 rounded-sm"
           >
-            Save
+            <FormattedMessage defaultMessage="Save" />
           </AsyncButton>
           <AsyncButton
             onClick={onCancel}
             className="bg-cyber-panel-light hover:bg-cyber-panel border border-cyber-border px-4 py-2 rounded-sm"
           >
-            Cancel
+            <FormattedMessage defaultMessage="Cancel" />
           </AsyncButton>
         </div>
       </div>
@@ -494,7 +498,12 @@ export function StatusPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="text-2xl">Uptime: {(100 * uptime).toFixed(5)}%</div>
+      <div className="text-2xl">
+        <FormattedMessage
+          defaultMessage="Uptime: {uptime}%"
+          values={{ uptime: (100 * uptime).toFixed(5) }}
+        />
+      </div>
 
       {canEdit && (
         <div className="flex justify-end">
@@ -502,7 +511,7 @@ export function StatusPage() {
             onClick={() => setEditingId("new")}
             className="bg-cyber-primary/20 hover:bg-cyber-primary/30 border border-cyber-primary text-cyber-primary px-4 py-2"
           >
-            New Incident
+            <FormattedMessage defaultMessage="New Incident" />
           </AsyncButton>
         </div>
       )}
@@ -531,7 +540,7 @@ export function StatusPage() {
       {activeIncidents.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="text-lg font-semibold text-cyber-danger">
-            Active Incidents
+            <FormattedMessage defaultMessage="Active Incidents" />
           </div>
           {activeIncidents.map((incident, index) => {
             const end = incident.ended
@@ -585,23 +594,37 @@ export function StatusPage() {
                     </div>
                     <div className="flex flex-wrap gap-4 text-sm text-cyber-muted items-center">
                       {incident.service && (
-                        <div>Service: {incident.service}</div>
+                        <div>
+                          <FormattedMessage
+                            defaultMessage="Service: {service}"
+                            values={{ service: incident.service }}
+                          />
+                        </div>
                       )}
                       {incident.location && (
-                        <div>Location: {incident.location}</div>
+                        <div>
+                          <FormattedMessage
+                            defaultMessage="Location: {location}"
+                            values={{ location: incident.location }}
+                          />
+                        </div>
                       )}
                       <div>
-                        Last updated:{" "}
-                        {new Date(
-                          incident.lastUpdated * 1000,
-                        ).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                          hour12: false,
-                        })}
+                        <FormattedMessage
+                          defaultMessage="Last updated: {date}"
+                          values={{
+                            date: new Date(
+                              incident.lastUpdated * 1000,
+                            ).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                              hour: "2-digit",
+                              minute: "2-digit",
+                              hour12: false,
+                            }),
+                          }}
+                        />
                       </div>
                     </div>
                     {incident.tags.length > 0 && (
@@ -618,7 +641,10 @@ export function StatusPage() {
                     )}
                     {duration && (
                       <div className="text-sm text-cyber-muted">
-                        Duration: {formatDuration(duration / 1000)}
+                        <FormattedMessage
+                          defaultMessage="Duration: {duration}"
+                          values={{ duration: formatDuration(duration / 1000) }}
+                        />
                       </div>
                     )}
                     <Markdown content={incident.content} />
@@ -633,7 +659,7 @@ export function StatusPage() {
       {resolvedIncidents.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="text-lg font-semibold text-cyber-primary">
-            Resolved Incidents
+            <FormattedMessage defaultMessage="Resolved Incidents" />
           </div>
           {resolvedIncidents.map((incident, index) => {
             const end = incident.ended
@@ -687,23 +713,37 @@ export function StatusPage() {
                     </div>
                     <div className="flex flex-wrap gap-4 text-sm text-cyber-muted items-center">
                       {incident.service && (
-                        <div>Service: {incident.service}</div>
+                        <div>
+                          <FormattedMessage
+                            defaultMessage="Service: {service}"
+                            values={{ service: incident.service }}
+                          />
+                        </div>
                       )}
                       {incident.location && (
-                        <div>Location: {incident.location}</div>
+                        <div>
+                          <FormattedMessage
+                            defaultMessage="Location: {location}"
+                            values={{ location: incident.location }}
+                          />
+                        </div>
                       )}
                       <div>
-                        Last updated:{" "}
-                        {new Date(
-                          incident.lastUpdated * 1000,
-                        ).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                          hour12: false,
-                        })}
+                        <FormattedMessage
+                          defaultMessage="Last updated: {date}"
+                          values={{
+                            date: new Date(
+                              incident.lastUpdated * 1000,
+                            ).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                              hour: "2-digit",
+                              minute: "2-digit",
+                              hour12: false,
+                            }),
+                          }}
+                        />
                       </div>
                     </div>
                     {incident.tags.length > 0 && (
@@ -720,7 +760,10 @@ export function StatusPage() {
                     )}
                     {duration && (
                       <div className="text-sm text-cyber-muted">
-                        Duration: {formatDuration(duration / 1000)}
+                        <FormattedMessage
+                          defaultMessage="Duration: {duration}"
+                          values={{ duration: formatDuration(duration / 1000) }}
+                        />
                       </div>
                     )}
                     <Markdown content={incident.content} />
@@ -732,7 +775,11 @@ export function StatusPage() {
         </div>
       )}
 
-      {allIncidents.length === 0 && <div>No incidents to report.</div>}
+      {allIncidents.length === 0 && (
+        <div>
+          <FormattedMessage defaultMessage="No incidents to report." />
+        </div>
+      )}
     </div>
   );
 }

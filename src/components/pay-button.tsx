@@ -1,6 +1,7 @@
 import { VmTemplate } from "../api";
 import { useNavigateOrder } from "../hooks/order";
 import { AsyncButton } from "./button";
+import { FormattedMessage } from "react-intl";
 
 declare global {
   interface Window {
@@ -25,7 +26,7 @@ export default function VpsPayButton({ spec }: { spec: VmTemplate }) {
         })
       }
     >
-      Buy Now
+      <FormattedMessage defaultMessage="Buy Now" />
     </AsyncButton>
   );
 }

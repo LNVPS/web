@@ -9,6 +9,7 @@ import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import { CopyButton } from "../components/copy-button";
 import { CostAmount } from "../components/cost";
+import { FormattedMessage } from "react-intl";
 
 type PayoutMethod = "lightning" | "nwc";
 
@@ -25,11 +26,9 @@ export function AccountReferralPage() {
   const [notEnrolled, setNotEnrolled] = useState(false);
   const [error, setError] = useState<string>();
 
-  // signup form state
   const [signupMethod, setSignupMethod] = useState<PayoutMethod>("lightning");
   const [signupAddress, setSignupAddress] = useState("");
 
-  // patch form state
   const [patchMethod, setPatchMethod] = useState<PayoutMethod>("lightning");
   const [patchAddress, setPatchAddress] = useState("");
 
@@ -96,10 +95,11 @@ export function AccountReferralPage() {
   if (notEnrolled) {
     return (
       <div className="flex flex-col gap-4">
-        <div className="text-xl">Referral Program</div>
+        <div className="text-xl">
+          <FormattedMessage defaultMessage="Referral Program" />
+        </div>
         <p className="text-cyber-muted text-sm">
-          Join the referral program to earn payouts when others sign up using
-          your code. Choose how you want to receive payouts.
+          <FormattedMessage defaultMessage="Join the referral program to earn payouts when others sign up using your code. Choose how you want to receive payouts." />
         </p>
         <PayoutMethodSelector
           method={signupMethod}
@@ -109,7 +109,7 @@ export function AccountReferralPage() {
         />
         <div>
           <AsyncButton onClick={handleEnroll}>
-            Join Referral Program
+            <FormattedMessage defaultMessage="Join Referral Program" />
           </AsyncButton>
         </div>
         {error && <b className="text-cyber-danger">{error}</b>}
@@ -121,14 +121,20 @@ export function AccountReferralPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="text-xl">Referral Program</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="Referral Program" />
+      </div>
 
       <div className="bg-cyber-panel rounded-sm px-4 py-3 flex flex-col gap-2">
-        <div className="text-sm text-cyber-muted">Your referral code</div>
+        <div className="text-sm text-cyber-muted">
+          <FormattedMessage defaultMessage="Your referral code" />
+        </div>
         <pre className="select-all text-cyber-primary text-lg font-mono">
           {state.code}
         </pre>
-        <div className="text-sm text-cyber-muted">Share link</div>
+        <div className="text-sm text-cyber-muted">
+          <FormattedMessage defaultMessage="Share link" />
+        </div>
         <div className="flex gap-2 items-center">
           <pre className="select-all text-sm font-mono bg-cyber-bg rounded-sm px-2 py-1 flex-1 break-all">
             {`${window.location.origin}/?ref=${state.code}`}
@@ -136,17 +142,17 @@ export function AccountReferralPage() {
           <CopyButton text={`${window.location.origin}/?ref=${state.code}`} />
         </div>
         <div className="text-xs text-cyber-muted">
-          Share this link. When others sign up and pay, you earn a payout.
+          <FormattedMessage defaultMessage="Share this link. When others sign up and pay, you earn a payout." />
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <ReferralStat
-          label="Successful Referrals"
+          label={<FormattedMessage defaultMessage="Successful Referrals" />}
           value={String(state.referrals_success)}
         />
         <ReferralStat
-          label="Failed Referrals"
+          label={<FormattedMessage defaultMessage="Failed Referrals" />}
           value={String(state.referrals_failed)}
         />
         {state.earned.map((e) => (
@@ -154,7 +160,9 @@ export function AccountReferralPage() {
         ))}
       </div>
 
-      <div className="text-xl">Payout Settings</div>
+      <div className="text-xl">
+        <FormattedMessage defaultMessage="Payout Settings" />
+      </div>
       <PayoutMethodSelector
         method={patchMethod}
         address={patchAddress}
@@ -162,19 +170,29 @@ export function AccountReferralPage() {
         onAddressChange={setPatchAddress}
       />
       <div>
-        <AsyncButton onClick={handleUpdate}>Save Payout Settings</AsyncButton>
+        <AsyncButton onClick={handleUpdate}>
+          <FormattedMessage defaultMessage="Save Payout Settings" />
+        </AsyncButton>
       </div>
       {error && <b className="text-cyber-danger">{error}</b>}
 
       {state.payouts.length > 0 && (
         <>
-          <div className="text-xl">Payout History</div>
+          <div className="text-xl">
+            <FormattedMessage defaultMessage="Payout History" />
+          </div>
           <table className="table bg-cyber-panel rounded-sm text-center">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Status</th>
+                <th>
+                  <FormattedMessage defaultMessage="Date" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Amount" />
+                </th>
+                <th>
+                  <FormattedMessage defaultMessage="Status" />
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -210,7 +228,7 @@ function PayoutMethodSelector({
             checked={method === "lightning"}
             onChange={() => onMethodChange("lightning")}
           />
-          Lightning Address
+          <FormattedMessage defaultMessage="Lightning Address" />
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -219,7 +237,7 @@ function PayoutMethodSelector({
             checked={method === "nwc"}
             onChange={() => onMethodChange("nwc")}
           />
-          NWC Wallet
+          <FormattedMessage defaultMessage="NWC Wallet" />
         </label>
       </div>
       {method === "lightning" && (
@@ -232,15 +250,20 @@ function PayoutMethodSelector({
       )}
       {method === "nwc" && (
         <p className="text-cyber-muted text-sm">
-          Payouts will be sent to the NWC wallet configured in your account
-          settings.
+          <FormattedMessage defaultMessage="Payouts will be sent to the NWC wallet configured in your account settings." />
         </p>
       )}
     </div>
   );
 }
 
-function ReferralStat({ label, value }: { label: string; value: string }) {
+function ReferralStat({
+  label,
+  value,
+}: {
+  label: React.ReactNode;
+  value: string;
+}) {
   return (
     <div className="bg-cyber-panel rounded-sm px-4 py-3 flex flex-col gap-1">
       <div className="text-xl font-mono">{value}</div>
@@ -259,7 +282,10 @@ function EarningStat({ earning }: { earning: ReferralEarning }) {
         />
       </div>
       <div className="text-xs text-cyber-muted">
-        Earned ({earning.currency})
+        <FormattedMessage
+          defaultMessage="Earned ({currency})"
+          values={{ currency: earning.currency }}
+        />
       </div>
     </div>
   );
@@ -275,7 +301,13 @@ function PayoutRow({ payout }: { payout: ReferralPayout }) {
           converted={false}
         />
       </td>
-      <td>{payout.is_paid ? "Paid" : "Pending"}</td>
+      <td>
+        {payout.is_paid ? (
+          <FormattedMessage defaultMessage="Paid" />
+        ) : (
+          <FormattedMessage defaultMessage="Pending" />
+        )}
+      </td>
     </tr>
   );
 }

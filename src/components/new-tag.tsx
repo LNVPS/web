@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { FormattedMessage } from "react-intl";
 
 interface NewTagProps {
   className?: string;
@@ -13,7 +14,7 @@ export default function NewTag({ className }: NewTagProps) {
         className,
       )}
     >
-      New
+      <FormattedMessage defaultMessage="New" />
     </span>
   );
 }

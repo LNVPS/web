@@ -1,5 +1,6 @@
 import { CpuArch, CpuMfg, VmInstance, VmTemplate, VmStatus } from "../api";
 import BytesSize from "./bytes";
+import { FormattedMessage } from "react-intl";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -42,26 +43,59 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   return (
     <>
       <div className="text-xs text-cyber-muted">
-        {template?.cpu} vCPU{cpuInfo && ` (${cpuInfo})`},{" "}
-        <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
-        <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
-        , {region && <>Location: {region}</>}
+        <FormattedMessage
+          defaultMessage="{cpu} vCPU{cpuInfo}, {memory} RAM, {disk} {diskType}"
+          values={{
+            cpu: template?.cpu,
+            cpuInfo: cpuInfo ? ` (${cpuInfo})` : "",
+            memory: <BytesSize value={template?.memory ?? 0} />,
+            disk: <BytesSize value={template?.disk_size ?? 0} />,
+            diskType: diskType?.toUpperCase(),
+          }}
+        />
+        {region && (
+          <>
+            ,{" "}
+            <FormattedMessage
+              defaultMessage="Location: {region}"
+              values={{ region }}
+            />
+          </>
+        )}
       </div>
       {status && status.state === "running" && (
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
-          {"cpu_usage" in status
-            ? `${(100 * (status as VmStatus & { cpu_usage: number }).cpu_usage).toFixed(1)}% CPU`
-            : "CPU:"}{" "}
-          {"mem_usage" in status
-            ? `${(100 * (status as VmStatus & { mem_usage: number }).mem_usage).toFixed(0)}% RAM`
-            : "RAM"}
+          {"cpu_usage" in status ? (
+            <FormattedMessage
+              defaultMessage="{usage}% CPU"
+              values={{
+                usage: (
+                  100 * (status as VmStatus & { cpu_usage: number }).cpu_usage
+                ).toFixed(1),
+              }}
+            />
+          ) : (
+            <FormattedMessage defaultMessage="CPU:" />
+          )}{" "}
+          {"mem_usage" in status ? (
+            <FormattedMessage
+              defaultMessage="{usage}% RAM"
+              values={{
+                usage: (
+                  100 * (status as VmStatus & { mem_usage: number }).mem_usage
+                ).toFixed(0),
+              }}
+            />
+          ) : (
+            <FormattedMessage defaultMessage="RAM" />
+          )}
         </div>
       )}
       {status && status.state === "stopped" && (
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-danger inline-block shadow-neon-danger"></div>{" "}
-          Stopped
+          <FormattedMessage defaultMessage="Stopped" />
         </div>
       )}
     </>

@@ -3,6 +3,7 @@ import { LNVpsApi, VmPayment } from "../api";
 import QrCode from "./qr";
 import useLogin from "../hooks/login";
 import { CostAmount } from "./cost";
+import { FormattedMessage } from "react-intl";
 
 export default function VpsPayment({
   payment,
@@ -40,7 +41,7 @@ export default function VpsPayment({
   if (!("lightning" in payment.data)) {
     return (
       <div className="text-cyber-danger">
-        This component only supports Lightning payments
+        <FormattedMessage defaultMessage="This component only supports Lightning payments" />
       </div>
     );
   }
@@ -69,25 +70,35 @@ export default function VpsPayment({
         </div>
         {payment.tax > 0 && (
           <div className="text-xs text-cyber-muted">
-            including{" "}
-            <CostAmount
-              cost={{ currency: payment.currency, amount: payment.tax }}
-              converted={false}
-            />{" "}
-            tax
+            <FormattedMessage
+              defaultMessage="including {amount} tax"
+              values={{
+                amount: (
+                  <CostAmount
+                    cost={{ currency: payment.currency, amount: payment.tax }}
+                    converted={false}
+                  />
+                ),
+              }}
+            />
           </div>
         )}
         {payment.processing_fee > 0 && (
           <div className="text-xs text-cyber-muted">
-            including{" "}
-            <CostAmount
-              cost={{
-                currency: payment.currency,
-                amount: payment.processing_fee,
+            <FormattedMessage
+              defaultMessage="including {amount} processing fee"
+              values={{
+                amount: (
+                  <CostAmount
+                    cost={{
+                      currency: payment.currency,
+                      amount: payment.processing_fee,
+                    }}
+                    converted={false}
+                  />
+                ),
               }}
-              converted={false}
-            />{" "}
-            processing fee
+            />
           </div>
         )}
       </div>

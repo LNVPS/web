@@ -16,6 +16,7 @@ import { Icon } from "./icon";
 import { ApiUrl } from "../const";
 import QrCode from "./qr";
 import { LNURL } from "@snort/shared";
+import { FormattedMessage } from "react-intl";
 
 export type PaymentFlowType = "renewal" | "upgrade";
 
@@ -171,7 +172,10 @@ export default function VmPaymentFlow({
 
         return (
           <div className="text-xs text-cyber-muted bg-cyber-panel p-1 rounded">
-            Fee: {feeParts.join(" + ")}
+            <FormattedMessage
+              defaultMessage="Fee: {fees}"
+              values={{ fees: feeParts.join(" + ") }}
+            />
           </div>
         );
       }
@@ -193,7 +197,7 @@ export default function VmPaymentFlow({
                 await createPayment(method.name);
               }}
             >
-              Pay Now
+              <FormattedMessage defaultMessage="Pay Now" />
             </AsyncButton>
           </div>
         );
@@ -211,7 +215,7 @@ export default function VmPaymentFlow({
                 setSelectedMethod(method);
               }}
             >
-              Show QR
+              <FormattedMessage defaultMessage="Show QR" />
             </AsyncButton>
           </div>
         );
@@ -230,7 +234,7 @@ export default function VmPaymentFlow({
                 await createPayment(method.name);
               }}
             >
-              Get Invoice
+              <FormattedMessage defaultMessage="Get Invoice" />
             </AsyncButton>
           </div>
         );
@@ -249,7 +253,7 @@ export default function VmPaymentFlow({
                 await createPayment(method.name);
               }}
             >
-              Pay with Card
+              <FormattedMessage defaultMessage="Pay with Card" />
             </AsyncButton>
           </div>
         );
@@ -260,7 +264,9 @@ export default function VmPaymentFlow({
   if (methodsLoading) {
     return (
       <div className="text-center py-8">
-        <div className="text-cyber-muted">Loading payment methods...</div>
+        <div className="text-cyber-muted">
+          <FormattedMessage defaultMessage="Loading payment methods..." />
+        </div>
       </div>
     );
   }
@@ -269,11 +275,20 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded-sm">
-          <strong>Error:</strong> {error}
+          <strong>
+            <FormattedMessage defaultMessage="Error:" />
+          </strong>{" "}
+          {error}
         </div>
         <div className="flex gap-2">
-          <AsyncButton onClick={loadPaymentMethods}>Retry</AsyncButton>
-          {onCancel && <AsyncButton onClick={onCancel}>Cancel</AsyncButton>}
+          <AsyncButton onClick={loadPaymentMethods}>
+            <FormattedMessage defaultMessage="Retry" />
+          </AsyncButton>
+          {onCancel && (
+            <AsyncButton onClick={onCancel}>
+              <FormattedMessage defaultMessage="Cancel" />
+            </AsyncButton>
+          )}
         </div>
       </div>
     );
@@ -284,7 +299,11 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <div className="text-xl font-bold">
-          {type === "renewal" ? "Renew VPS" : "Upgrade Payment"}
+          {type === "renewal" ? (
+            <FormattedMessage defaultMessage="Renew VPS" />
+          ) : (
+            <FormattedMessage defaultMessage="Upgrade Payment" />
+          )}
         </div>
 
         {"lightning" in payment.data ? (
@@ -308,25 +327,31 @@ export default function VmPaymentFlow({
                   converted={false}
                 />
               </div>
-              <div className="text-sm text-cyber-muted">Total Amount</div>
+              <div className="text-sm text-cyber-muted">
+                <FormattedMessage defaultMessage="Total Amount" />
+              </div>
               {payment.processing_fee > 0 && (
                 <div className="text-xs text-cyber-muted">
-                  including{" "}
-                  <CostAmount
-                    cost={{
-                      currency: payment.currency,
-                      amount: payment.processing_fee,
+                  <FormattedMessage
+                    defaultMessage="including {amount} processing fee"
+                    values={{
+                      amount: (
+                        <CostAmount
+                          cost={{
+                            currency: payment.currency,
+                            amount: payment.processing_fee,
+                          }}
+                          converted={false}
+                        />
+                      ),
                     }}
-                    converted={false}
-                  />{" "}
-                  processing fee
+                  />
                 </div>
               )}
             </div>
 
             <div className="text-sm text-cyber-muted text-center">
-              Complete your payment using the selected payment method. Changes
-              will be applied automatically after confirmation.
+              <FormattedMessage defaultMessage="Complete your payment using the selected payment method. Changes will be applied automatically after confirmation." />
             </div>
           </div>
         )}
@@ -338,7 +363,7 @@ export default function VmPaymentFlow({
               setSelectedMethod(undefined);
             }}
           >
-            Cancel Payment
+            <FormattedMessage defaultMessage="Cancel Payment" />
           </AsyncButton>
         </div>
       </div>
@@ -347,7 +372,7 @@ export default function VmPaymentFlow({
 
   // Show NWC payment interface
   if (selectedMethod?.name === "lnurl") {
-    const lud16 = `${vm.id}@${new URL(ApiUrl).host}`
+    const lud16 = `${vm.id}@${new URL(ApiUrl).host}`;
     return (
       <div className="space-y-4">
         <div className="flex items-center gap-2">
@@ -357,7 +382,9 @@ export default function VmPaymentFlow({
           >
             <Icon name="arrow-left" size={20} />
           </button>
-          <div className="text-xl font-bold">LNURL Payment</div>
+          <div className="text-xl font-bold">
+            <FormattedMessage defaultMessage="LNURL Payment" />
+          </div>
         </div>
 
         <div className="flex flex-col gap-4 rounded-sm p-3 bg-cyber-panel items-center">
@@ -381,18 +408,26 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <div className="text-xl font-bold">
-          {type === "renewal"
-            ? "Processing Renewal Payment"
-            : "Processing Upgrade Payment"}
+          {type === "renewal" ? (
+            <FormattedMessage defaultMessage="Processing Renewal Payment" />
+          ) : (
+            <FormattedMessage defaultMessage="Processing Upgrade Payment" />
+          )}
         </div>
         <div className="text-center py-8">
           <div className="text-cyber-muted">
-            {loading ? "Creating payment..." : "Loading payment details..."}
+            {loading ? (
+              <FormattedMessage defaultMessage="Creating payment..." />
+            ) : (
+              <FormattedMessage defaultMessage="Loading payment details..." />
+            )}
           </div>
         </div>
         {onCancel && (
           <div className="flex justify-center">
-            <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
+            <AsyncButton onClick={onCancel}>
+              <FormattedMessage defaultMessage="Cancel" />
+            </AsyncButton>
           </div>
         )}
       </div>
@@ -404,11 +439,19 @@ export default function VmPaymentFlow({
     return (
       <div className="space-y-4">
         <AsyncButton onClick={loadPaymentMethods} disabled={loading}>
-          {loading
-            ? "Loading..."
-            : `${type === "renewal" ? "Extend" : "Upgrade"} Now`}
+          {loading ? (
+            <FormattedMessage defaultMessage="Loading..." />
+          ) : type === "renewal" ? (
+            <FormattedMessage defaultMessage="Extend Now" />
+          ) : (
+            <FormattedMessage defaultMessage="Upgrade Now" />
+          )}
         </AsyncButton>
-        {onCancel && <AsyncButton onClick={onCancel}>Cancel</AsyncButton>}
+        {onCancel && (
+          <AsyncButton onClick={onCancel}>
+            <FormattedMessage defaultMessage="Cancel" />
+          </AsyncButton>
+        )}
       </div>
     );
   }
@@ -417,7 +460,9 @@ export default function VmPaymentFlow({
 
   return (
     <div className="space-y-4">
-      <div className="text-xl font-bold">Select Payment Method</div>
+      <div className="text-xl font-bold">
+        <FormattedMessage defaultMessage="Select Payment Method" />
+      </div>
 
       {type === "renewal" &&
         (() => {
@@ -427,7 +472,9 @@ export default function VmPaymentFlow({
           return (
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <span className="text-cyber-muted text-sm">Renew for:</span>
+                <span className="text-cyber-muted text-sm">
+                  <FormattedMessage defaultMessage="Renew for:" />
+                </span>
                 <span className="text-sm">
                   {intervals} {intervalType}
                   {intervals > 1 ? "s" : ""}
@@ -456,7 +503,9 @@ export default function VmPaymentFlow({
 
       {onCancel && (
         <div className="flex justify-center pt-4">
-          <AsyncButton onClick={onCancel}>Cancel</AsyncButton>
+          <AsyncButton onClick={onCancel}>
+            <FormattedMessage defaultMessage="Cancel" />
+          </AsyncButton>
         </div>
       )}
     </div>

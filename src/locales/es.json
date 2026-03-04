@@ -1,71 +1,1022 @@
 {
-  "JW40Ux": {
-    "defaultMessage": "Ver página de estado."
+  "+8AmJ0": {
+    "defaultMessage": "Desactivar la renovación automática."
   },
-  "yDjevn": {
-    "defaultMessage": "PGP"
+  "+SM72m": {
+    "defaultMessage": "Clave pública del destinatario (npub/nprofile/hex):"
   },
-  "tzMNF3": {
-    "defaultMessage": "Estado"
+  "/0TOL5": {
+    "defaultMessage": "Cantidad"
   },
-  "qq7WMq": {
-    "defaultMessage": "Todos los servidores virtuales privados (VPS) incluyen una dirección IPv4 y una dirección IPv6, así como tráfico ilimitado. Todos los precios indicados no incluyen impuestos."
+  "/GCoTA": {
+    "defaultMessage": "Claro/a"
   },
-  "nm81YC": {
-    "defaultMessage": "Cargando... Ofertas de VPS."
+  "/QkDVJ": {
+    "defaultMessage": "Cartera NWC"
   },
-  "zFegDD": {
-    "defaultMessage": "Contacto"
+  "/nQTeE": {
+    "defaultMessage": "Guardar la configuración de los pagos."
+  },
+  "063dCM": {
+    "defaultMessage": "Configure una cadena de conexión NWC en la configuración de la cuenta y, a continuación, active la renovación automática para que se realicen los pagos correspondientes a las renovaciones de las máquinas virtuales de forma automática."
+  },
+  "0HkBaC": {
+    "defaultMessage": "Elija uno de los siguientes métodos para verificar su dominio:"
+  },
+  "0h/lPM": {
+    "defaultMessage": "Actualizar"
+  },
+  "0oL1zz": {
+    "defaultMessage": "¡Copiado!"
+  },
+  "0pn9yK": {
+    "defaultMessage": "npub1..., nprofile1..., o en formato hexadecimal"
+  },
+  "0rlAUP": {
+    "defaultMessage": "Ha iniciado sesión como: {key}"
+  },
+  "13cluZ": {
+    "defaultMessage": "Añadir clave SSH:"
+  },
+  "1LBny5": {
+    "defaultMessage": "Detenido."
+  },
+  "1M3SKY": {
+    "defaultMessage": "Por favor, describa su pregunta o problema con detalle."
+  },
+  "1v7S+3": {
+    "defaultMessage": "Añadir dominio Nostr."
+  },
+  "2/2yg+": {
+    "defaultMessage": "Añadir"
+  },
+  "2/hxXE": {
+    "defaultMessage": "Facturación, renovación y notificaciones"
+  },
+  "20Sod8": {
+    "defaultMessage": "CPU:"
+  },
+  "2LslN1": {
+    "defaultMessage": "Actualice ahora."
   },
   "2RFWLf": {
     "defaultMessage": "Prueba de velocidad"
   },
-  "Ws8Qkf": {
-    "defaultMessage": "Servidores virtuales privados (VPS) de alto rendimiento que funcionan con Bitcoin. Sin necesidad de verificación de identidad ni trámites complicados."
+  "2l2y5p": {
+    "defaultMessage": "Crear pedido"
   },
-  "lnaWo/": {
-    "defaultMessage": "Región"
+  "36aVfS": {
+    "defaultMessage": "Mensaje directo de Nostr."
   },
-  "UPjtBm": {
-    "defaultMessage": "Es posible que haya algún problema con el servicio. Consulte nuestra página de estado para obtener las últimas actualizaciones."
+  "3WU2Fe": {
+    "defaultMessage": "Ubicación: {region}"
   },
-  "bpBvBq": {
-    "defaultMessage": "Moneda de visualización:"
+  "3xnP4c": {
+    "defaultMessage": "Utilice el cifrado NIP-44 para enviar un mensaje seguro. Esto demostrará que usted es el propietario de la clave privada asociada a su cuenta. Cifre su mensaje a continuación e incluya el texto cifrado en su correo electrónico."
   },
-  "qvZHhC": {
-    "defaultMessage": "No se pudieron cargar las ofertas de VPS."
+  "47FYwb": {
+    "defaultMessage": "Cancelar"
+  },
+  "4X/Ixq": {
+    "defaultMessage": "Mensaje descifrado:"
+  },
+  "4j0zpr": {
+    "defaultMessage": "Mínimo: {min} núcleos."
+  },
+  "4l6vz1": {
+    "defaultMessage": "Copiar"
+  },
+  "4lrWah": {
+    "defaultMessage": "Error al cargar el historial: {error}"
+  },
+  "53RN0g": {
+    "defaultMessage": "Continúe con el pago."
+  },
+  "5JcXdV": {
+    "defaultMessage": "Crear cuenta"
+  },
+  "5QYdPU": {
+    "defaultMessage": "Hora de inicio"
+  },
+  "5VEOig": {
+    "defaultMessage": "Costo con la nueva tarifa para el tiempo restante:"
+  },
+  "5elgIe": {
+    "defaultMessage": "Error:"
+  },
+  "5y2qWO": {
+    "defaultMessage": "Conectando..."
+  },
+  "62nsdy": {
+    "defaultMessage": "Intentar de nuevo"
+  },
+  "6OWS4p": {
+    "defaultMessage": "Procesando..."
+  },
+  "6SfJaf": {
+    "defaultMessage": "Actualizar a"
+  },
+  "6Tps09": {
+    "defaultMessage": "Inactivo"
+  },
+  "6ZsOsA": {
+    "defaultMessage": "Únase al programa de referidos."
+  },
+  "6uMqL1": {
+    "defaultMessage": "No pagado."
+  },
+  "7+Domh": {
+    "defaultMessage": "Notas"
+  },
+  "78fz1O": {
+    "defaultMessage": "Código postal *"
+  },
+  "7zs+Vz": {
+    "defaultMessage": "Memoria: {gb} GB"
+  },
+  "82Y7Sa": {
+    "defaultMessage": "Enviando..."
+  },
+  "82zlBD": {
+    "defaultMessage": "Nombre del titular de la tarjeta *"
+  },
+  "89xu1A": {
+    "defaultMessage": "Pedido de VPS personalizado"
+  },
+  "8BgaUL": {
+    "defaultMessage": "Especificaciones actuales"
+  },
+  "8FF5Bq": {
+    "defaultMessage": "Creando el pago..."
+  },
+  "8Jfsz3": {
+    "defaultMessage": "Enviar código de verificación"
+  },
+  "8Q504V": {
+    "defaultMessage": "Metadatos"
+  },
+  "8ecw1u": {
+    "defaultMessage": "Manijas"
+  },
+  "8f0dzf": {
+    "defaultMessage": "Renovación para el número {id}"
+  },
+  "90f82/": {
+    "defaultMessage": "Iniciar máquina virtual."
+  },
+  "9AfNRx": {
+    "defaultMessage": "Próximamente, podrá solicitar espacio de direcciones IP."
+  },
+  "9QV3cp": {
+    "defaultMessage": "Bloques de IP disponibles"
+  },
+  "9V+Kpc": {
+    "defaultMessage": "Esta máquina virtual se renovará automáticamente 1 día antes de la fecha de vencimiento, utilizando la conexión de su billetera Nostr configurada."
+  },
+  "9WRlF4": {
+    "defaultMessage": "Enviar"
+  },
+  "9uOFF3": {
+    "defaultMessage": "Resumen"
+  },
+  "A11S6W": {
+    "defaultMessage": "Envíenos un mensaje directamente. Su clave pública se incluirá automáticamente."
+  },
+  "AHJbyB": {
+    "defaultMessage": "Complete su pago utilizando el método de pago seleccionado. Los cambios se aplicarán automáticamente después de la confirmación."
+  },
+  "AQkpi3": {
+    "defaultMessage": "Volver a instalar"
+  },
+  "AyGauy": {
+    "defaultMessage": "Iniciar sesión"
+  },
+  "B4reHi": {
+    "defaultMessage": "Eventos históricos"
+  },
+  "BBiS7b": {
+    "defaultMessage": "Detener la máquina virtual."
+  },
+  "BCmVPf": {
+    "defaultMessage": "Alojamiento gratuito de NIP-05. Apunte su dominio a {cname} utilizando DNS o un proxy de ruta."
+  },
+  "BFqRWv": {
+    "defaultMessage": "Cadena de conexión de NWC."
+  },
+  "BFqlLP": {
+    "defaultMessage": "Los {records} apuntan directamente a las direcciones IP y es posible que deban actualizarse si estas cambian."
+  },
+  "BKqdjg": {
+    "defaultMessage": "Añadir identificador para {name}"
+  },
+  "BLZbXj": {
+    "defaultMessage": "Mensaje *"
+  },
+  "BOV9bc": {
+    "defaultMessage": "Cargando los métodos de pago..."
+  },
+  "BXmJ0S": {
+    "defaultMessage": "(Alternativa)"
+  },
+  "BZF5HJ": {
+    "defaultMessage": "Dominios Nostr"
+  },
+  "BlFeZA": {
+    "defaultMessage": "Últimas noticias"
+  },
+  "CDTMW3": {
+    "defaultMessage": "Importe total"
+  },
+  "CYP/Jx": {
+    "defaultMessage": "Pide ayuda al equipo."
+  },
+  "Cl+kqZ": {
+    "defaultMessage": "Mostrar código QR"
+  },
+  "D3idYv": {
+    "defaultMessage": "Configuración"
+  },
+  "DDMksJ": {
+    "defaultMessage": "Implementa tu primer VPS."
+  },
+  "DFLJpz": {
+    "defaultMessage": "Nuevo coste de renovación mensual: {cost}"
+  },
+  "DU+LLZ": {
+    "defaultMessage": "Recomendación."
+  },
+  "DYMg53": {
+    "defaultMessage": "GB {diskType}"
+  },
+  "Dfuz87": {
+    "defaultMessage": "Aún no se han añadido dominios. Añada su primer dominio en el espacio indicado para empezar."
+  },
+  "E2YqWs": {
+    "defaultMessage": "Programa de referidos"
+  },
+  "EBMKSN": {
+    "defaultMessage": "Actualice las especificaciones de la máquina virtual."
+  },
+  "EKlM8d": {
+    "defaultMessage": "Disco (GB)"
+  },
+  "Eg11ZY": {
+    "defaultMessage": "Volver a conectar."
+  },
+  "FJhjgz": {
+    "defaultMessage": "Código postal"
+  },
+  "FZeQlc": {
+    "defaultMessage": "Desconectado."
+  },
+  "FrXeQJ": {
+    "defaultMessage": "¿qué es Nostr?"
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
-  "qJRR8N": {
-    "defaultMessage": "Cargando la lista de direcciones IP bloqueadas..."
+  "GKzO/A": {
+    "defaultMessage": "Precio:"
   },
-  "c8LeaL": {
-    "defaultMessage": "No se pudieron cargar los bloques de direcciones IP."
+  "GLA+G9": {
+    "defaultMessage": "Otras formas de contactarnos:"
   },
-  "j4RCJW": {
-    "defaultMessage": "HABILIDADES.md"
+  "GQNYob": {
+    "defaultMessage": "Compartir enlace"
   },
-  "9QV3cp": {
-    "defaultMessage": "Bloques de direcciones IP disponibles."
+  "GSye7T": {
+    "defaultMessage": "Dirección Lightning"
   },
-  "OuCSDn": {
-    "defaultMessage": "Disco."
+  "Gb4Uh/": {
+    "defaultMessage": "¿Tiene preguntas, comentarios o necesita ayuda? Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible."
   },
-  "gv8O1e": {
-    "defaultMessage": "Ofertas de VPS"
+  "GqRat5": {
+    "defaultMessage": "Por favor, verifique su dirección de correo electrónico para completar su pedido."
   },
-  "xkr+zo": {
-    "defaultMessage": "Términos y condiciones"
+  "GsCz6b": {
+    "defaultMessage": "Utilice una clave de remitente personalizada."
   },
-  "NZyhSX": {
-    "defaultMessage": "Noticias"
+  "H43Krf": {
+    "defaultMessage": "Tiempo de actividad: {uptime}%"
+  },
+  "HAlOn1": {
+    "defaultMessage": "Nombre"
+  },
+  "HOWHco": {
+    "defaultMessage": "Aún no hay mensajes. Inicie una conversación a continuación."
+  },
+  "HqRNN8": {
+    "defaultMessage": "Soporte"
+  },
+  "I3JhPS": {
+    "defaultMessage": "Red"
+  },
+  "IChMNf": {
+    "defaultMessage": "No se detectaron cambios."
+  },
+  "INlWvJ": {
+    "defaultMessage": "O"
+  },
+  "Id24hd": {
+    "defaultMessage": "Nombre *"
+  },
+  "Ij0H43": {
+    "defaultMessage": "Gráficos"
+  },
+  "IvjoDS": {
+    "defaultMessage": "Conectado"
+  },
+  "Iz4veS": {
+    "defaultMessage": "Mínimo: {min} GB"
+  },
+  "JW40Ux": {
+    "defaultMessage": "Ver página de estado."
+  },
+  "JmgL7z": {
+    "defaultMessage": "Caduca el: {date} ({days} días)"
+  },
+  "K/zU0+": {
+    "defaultMessage": "+ Implementar nuevo"
+  },
+  "KAL6xF": {
+    "defaultMessage": "Nombre clave"
+  },
+  "KWAuBK": {
+    "defaultMessage": "No se han asignado direcciones IP."
   },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "KuX7em": {
+    "defaultMessage": "Activo durante {duration}."
+  },
+  "LNcnLC": {
+    "defaultMessage": "Referencias no exitosas."
+  },
+  "LjglgP": {
+    "defaultMessage": "RAM"
+  },
+  "LjziLu": {
+    "defaultMessage": "Cifrar mensaje"
+  },
+  "LqFfRA": {
+    "defaultMessage": "País"
+  },
+  "MT4qAu": {
+    "defaultMessage": "Herramientas de cifrado NIP-44"
+  },
+  "MTnSwY": {
+    "defaultMessage": "impuestos incluidos."
+  },
+  "Mp+zDS": {
+    "defaultMessage": "Este componente solo admite pagos con Lightning."
+  },
+  "NQgbYA": {
+    "defaultMessage": "Configuración de la cuenta"
+  },
+  "NZyhSX": {
+    "defaultMessage": "Noticias"
+  },
+  "Ny9qbm": {
+    "defaultMessage": "Nostr: {handle}"
+  },
+  "O/68ZX": {
+    "defaultMessage": "¿Está seguro de que desea volver a instalar su máquina virtual? ¡ESTO BORRARÁ TODOS LOS DATOS!"
+  },
+  "OLqOyf": {
+    "defaultMessage": "Instrucciones de configuración"
+  },
+  "OikYIw": {
+    "defaultMessage": "Mínimo: {min} GB {type}"
+  },
+  "Olq7Wf": {
+    "defaultMessage": "Escribe tu mensaje aquí..."
+  },
+  "OtUSLU": {
+    "defaultMessage": "Renovación automática"
+  },
+  "OtuYup": {
+    "defaultMessage": "Correo electrónico *"
+  },
+  "OuCSDn": {
+    "defaultMessage": "Disco"
+  },
+  "P+08xT": {
+    "defaultMessage": "Solicitar presupuesto"
+  },
+  "P7PLVj": {
+    "defaultMessage": "Fecha"
+  },
+  "PJtOx7": {
+    "defaultMessage": "No hay incidentes que comunicar."
+  },
+  "PPcUVc": {
+    "defaultMessage": "LNVPS utiliza cuentas de Nostr, {link}."
+  },
+  "PT4sD/": {
+    "defaultMessage": "Seleccione el sistema operativo:"
+  },
+  "PfSZy5": {
+    "defaultMessage": "No se encontró ninguna orden."
+  },
+  "PucUfl": {
+    "defaultMessage": "Seleccione la clave SSH:"
+  },
+  "QDA9xg": {
+    "defaultMessage": "Historial de pagos"
+  },
+  "QN/rCc": {
+    "defaultMessage": "Error al analizar el archivo JSON: {msg}"
+  },
+  "QdbxqE": {
+    "defaultMessage": "Configure la renovación automática de las máquinas virtuales utilizando Nostr Wallet Connect. Su billetera pagará automáticamente por las renovaciones de las máquinas virtuales un día antes de la fecha de vencimiento."
+  },
+  "QgBuiV": {
+    "defaultMessage": "CPU"
+  },
+  "QvXah/": {
+    "defaultMessage": "Volver a la máquina virtual."
+  },
+  "R0skQD": {
+    "defaultMessage": "GitHub: Cree un problema en github.com/LNVPS"
+  },
+  "R7x8iU": {
+    "defaultMessage": "Disco: {gb} GB, {type}"
+  },
+  "RB2CER": {
+    "defaultMessage": "Núcleos de la CPU"
+  },
+  "RF85OG": {
+    "defaultMessage": "Su nueva clave:"
+  },
+  "RahCRH": {
+    "defaultMessage": "Caducado"
+  },
+  "RcshyP": {
+    "defaultMessage": "Ganado ({currency})"
+  },
+  "S1hhGJ": {
+    "defaultMessage": "SSH:"
+  },
+  "SMHOve": {
+    "defaultMessage": "Referencias exitosas"
+  },
+  "SU1E+O": {
+    "defaultMessage": "New Order"
+  },
+  "Sczo8n": {
+    "defaultMessage": "Duración: {duration}"
+  },
+  "Sg3z1C": {
+    "defaultMessage": "No se ha seleccionado ninguna máquina virtual."
+  },
+  "Ss0sWu": {
+    "defaultMessage": "Pague ahora."
+  },
+  "Sv1hgX": {
+    "defaultMessage": "La renovación automática está desactivada."
+  },
+  "Sz/3Vf": {
+    "defaultMessage": "Indique los valores de actualización que sean mayores o iguales a los valores actuales, y asegúrese de que al menos uno de los valores sea mayor que el actual."
+  },
+  "T1/en5": {
+    "defaultMessage": "ID: {id}"
+  },
+  "T4yFyM": {
+    "defaultMessage": "Cargando los datos de pago..."
+  },
+  "T7b6ZF": {
+    "defaultMessage": "Incidentes resueltos"
+  },
+  "TE4fIS": {
+    "defaultMessage": "Ciudad"
+  },
+  "TNSbi4": {
+    "defaultMessage": "DNS inversa:"
+  },
+  "Tbo377": {
+    "defaultMessage": "Facturación"
+  },
+  "Td/uhP": {
+    "defaultMessage": "Activar la renovación automática."
+  },
+  "TieXig": {
+    "defaultMessage": "Los pagos se enviarán a la billetera de NWC configurada en la configuración de su cuenta."
+  },
+  "UPjtBm": {
+    "defaultMessage": "Es posible que haya un problema con el servicio. Consulte nuestra página de estado para obtener las últimas actualizaciones."
+  },
+  "UQc03N": {
+    "defaultMessage": "Añadir nueva clave SSH"
+  },
+  "Ub+AGc": {
+    "defaultMessage": "Iniciar sesión"
+  },
+  "UbzBlr": {
+    "defaultMessage": "Se recomienda {cname}; detecta automáticamente los cambios en la dirección IP del servidor."
+  },
+  "Ue9DHy": {
+    "defaultMessage": "Región:"
+  },
+  "Uk68vE": {
+    "defaultMessage": "Clave pública del remitente (npub/nprofile/hex):"
+  },
+  "Un5Bdm": {
+    "defaultMessage": "Resolviendo las direcciones IP para {cname}…"
+  },
+  "UwP+xI": {
+    "defaultMessage": "La renovación automática está activada."
+  },
+  "VE4z7n": {
+    "defaultMessage": "Obtener factura."
+  },
+  "VL/B6x": {
+    "defaultMessage": "tu@email.com"
+  },
+  "VnXp8Z": {
+    "defaultMessage": "Avatar"
+  },
+  "W+1MOm": {
+    "defaultMessage": "Método"
+  },
+  "WUeavc": {
+    "defaultMessage": "O bien, envíenos un correo electrónico directamente a {email}."
+  },
+  "WhLfzM": {
+    "defaultMessage": "Dirección, línea 2"
+  },
+  "Ws8Qkf": {
+    "defaultMessage": "Servidores virtuales privados (VPS) de alto rendimiento que utilizan Bitcoin. Sin necesidad de verificación de identidad (KYC) ni complicaciones."
+  },
+  "Wsj2fc": {
+    "defaultMessage": "Incidentes activos"
+  },
+  "X5QA2h": {
+    "defaultMessage": "Procesando el pago de la renovación."
+  },
+  "XD6788": {
+    "defaultMessage": "Cargo por la configuración:"
+  },
+  "XNiOLB": {
+    "defaultMessage": "No se pudo enviar el mensaje. Por favor, inténtelo de nuevo."
+  },
+  "Xoi0Uz": {
+    "defaultMessage": "Pague con tarjeta."
+  },
+  "Y+LcmX": {
+    "defaultMessage": "Si no puede cambiar su DNS, configure un proxy en {path} en su servidor actual para que apunte a {target}."
+  },
+  "Y6YwKh": {
+    "defaultMessage": "Esto solo se utiliza para enviar notificaciones relacionadas con la cuenta, como las notificaciones de vencimiento de las máquinas virtuales; no enviamos mensajes de marketing ni promocionales."
+  },
+  "Y7opZr": {
+    "defaultMessage": "Renovar VPS"
+  },
+  "YdQxfw": {
+    "defaultMessage": "Póngase en contacto con el servicio de asistencia."
+  },
+  "Yl8GBP": {
+    "defaultMessage": "Número de identificación fiscal"
+  },
+  "Yt9S7n": {
+    "defaultMessage": "Tarifa: {fees}"
+  },
+  "Yx0Kq/": {
+    "defaultMessage": "{usage}% de memoria RAM."
+  },
+  "YyojwF": {
+    "defaultMessage": "Cambios en la configuración:"
+  },
+  "Z+AMVE": {
+    "defaultMessage": "Se requiere la verificación del correo electrónico."
+  },
+  "Z5yzel": {
+    "defaultMessage": "Guarde los datos de facturación en la cuenta."
+  },
+  "Z8971h": {
+    "defaultMessage": "Verificado"
+  },
+  "ZdCdo5": {
+    "defaultMessage": "Última actualización: {date}"
+  },
+  "ZewCpX": {
+    "defaultMessage": "Añadir dominio"
+  },
+  "aAnyb9": {
+    "defaultMessage": "Comparte este enlace. Cuando otras personas se registren y realicen el pago, recibirás una comisión."
+  },
+  "aFJYR3": {
+    "defaultMessage": "Datos de la tarjeta"
+  },
+  "ajQtDJ": {
+    "defaultMessage": "Seleccione el método de pago."
+  },
+  "b1zuN9": {
+    "defaultMessage": "Precio"
+  },
+  "bW7B87": {
+    "defaultMessage": "Nuevo"
+  },
+  "bZ1uDf": {
+    "defaultMessage": "Volver a la página de inicio."
+  },
+  "bh3pad": {
+    "defaultMessage": "Por favor, inicie sesión antes de realizar una compra."
+  },
+  "bhfNWq": {
+    "defaultMessage": "Pegue el mensaje cifrado aquí..."
+  },
+  "bm5rt1": {
+    "defaultMessage": "Guarde esta clave, ya que NO se puede recuperar."
+  },
+  "bpBvBq": {
+    "defaultMessage": "Mostrar moneda:"
+  },
+  "c78ZVJ": {
+    "defaultMessage": "Los cambios en el DNS pueden tardar entre 24 y 48 horas en aplicarse."
+  },
+  "c8LeaL": {
+    "defaultMessage": "No se pudieron cargar los bloques de direcciones IP."
+  },
+  "cM5n1C": {
+    "defaultMessage": "Hora de finalización (opcional)"
+  },
+  "cV0ZGf": {
+    "defaultMessage": "Desglose de costos"
+  },
+  "cbZ7Ix": {
+    "defaultMessage": "VM: {name}"
+  },
+  "cyR7Kh": {
+    "defaultMessage": "Volver"
+  },
+  "d+1v5f": {
+    "defaultMessage": "Renueve su suscripción para:"
+  },
+  "d1nnRF": {
+    "defaultMessage": "Enviar otro mensaje."
+  },
+  "d3wxHm": {
+    "defaultMessage": "Cargando el historial..."
+  },
+  "dCaiAm": {
+    "defaultMessage": "Extienda ahora."
+  },
+  "dKHSEA": {
+    "defaultMessage": "Gracias por ponerse en contacto con nosotros. Nos comunicaremos con usted lo antes posible."
+  },
+  "dOQCL8": {
+    "defaultMessage": "Nombre que se muestra"
+  },
+  "dVYvX2": {
+    "defaultMessage": "¿Está seguro de que desea eliminar este nombre de usuario?"
+  },
+  "dVx3yz": {
+    "defaultMessage": "Memoria"
+  },
+  "dgTL/5": {
+    "defaultMessage": "No se han registrado identificadores."
+  },
+  "djJp6c": {
+    "defaultMessage": "Historia"
+  },
+  "duElEE": {
+    "defaultMessage": "No se encontraron entradas de historial para esta máquina virtual."
+  },
+  "e4iTJm": {
+    "defaultMessage": "Escribe tu mensaje..."
+  },
+  "eKEL/g": {
+    "defaultMessage": "Pendiente"
+  },
+  "eR9d9s": {
+    "defaultMessage": "Se ha enviado un correo electrónico de verificación, por favor revise su bandeja de entrada."
+  },
+  "eVlu1R": {
+    "defaultMessage": "Seleccione el idioma."
+  },
+  "ebmhes": {
+    "defaultMessage": "Extensión de Nostr"
+  },
+  "elhFf1": {
+    "defaultMessage": "[Caducado]"
+  },
+  "eu+sDO": {
+    "defaultMessage": "Iniciar sesión:"
+  },
+  "f00p/7": {
+    "defaultMessage": "La carga no se completó."
+  },
+  "fGeu02": {
+    "defaultMessage": "Extensión del navegador:"
+  },
+  "fNSGnl": {
+    "defaultMessage": "Inicie sesión para realizar su pedido."
+  },
+  "fxYCqm": {
+    "defaultMessage": "Ubicación: {location}"
+  },
+  "gBvImw": {
+    "defaultMessage": "{count} manijas"
+  },
+  "gH4VcS": {
+    "defaultMessage": "Coste del cambio de categoría calculado proporcionalmente:"
+  },
+  "gPsMm7": {
+    "defaultMessage": "Implemente este Worker y agregue una ruta para {route}."
+  },
+  "gZz74a": {
+    "defaultMessage": "Por favor, complete todos los campos obligatorios."
+  },
+  "gc+2Z2": {
+    "defaultMessage": "Consola"
+  },
+  "gdP56I": {
+    "defaultMessage": "impuesto"
+  },
+  "gdfy5u": {
+    "defaultMessage": "{usage}% de uso de la CPU"
+  },
+  "gjBiyj": {
+    "defaultMessage": "Cargando..."
+  },
+  "gtGLdm": {
+    "defaultMessage": "incluido el cargo de procesamiento de {amount}"
+  },
+  "gv8O1e": {
+    "defaultMessage": "Ofertas de VPS"
+  },
+  "h+26/n": {
+    "defaultMessage": "Tu código de referencia."
+  },
+  "h/PJh3": {
+    "defaultMessage": "Después de seleccionar una nueva clave, reinicie la máquina virtual."
+  },
+  "hMzcSq": {
+    "defaultMessage": "Mensajes"
+  },
+  "hZOGLS": {
+    "defaultMessage": "Contáctenos"
+  },
+  "iO1K6D": {
+    "defaultMessage": "Aún no hay publicaciones."
+  },
+  "icn2DS": {
+    "defaultMessage": "(Recomendado)"
+  },
+  "iluJkV": {
+    "defaultMessage": "Configuración de los pagos"
+  },
+  "j4RCJW": {
+    "defaultMessage": "SKILL.md"
+  },
+  "jM8W7d": {
+    "defaultMessage": "Seleccione el país."
+  },
+  "jmVweB": {
+    "defaultMessage": "Cargando las claves SSH..."
+  },
+  "jvo0vs": {
+    "defaultMessage": "Guardar"
+  },
+  "k1UDSi": {
+    "defaultMessage": "Pago mediante LNURL"
+  },
+  "k3yLiC": {
+    "defaultMessage": "Actualice su información de facturación para que aparezca en las facturas generadas (opcional)."
+  },
+  "kLNEaL": {
+    "defaultMessage": "Por favor, complete la verificación del CAPTCHA."
+  },
+  "kSjQ3a": {
+    "defaultMessage": "por {initiatedBy}"
+  },
+  "kfr95E": {
+    "defaultMessage": "Dirección, línea 1"
+  },
+  "ku+mDU": {
+    "defaultMessage": "Estado"
+  },
+  "l4RUua": {
+    "defaultMessage": "Servicio: {service}"
+  },
+  "lCILNz": {
+    "defaultMessage": "Compre ahora."
+  },
+  "lPsVOx": {
+    "defaultMessage": "Sus máquinas virtuales y dominios"
+  },
+  "lloEWi": {
+    "defaultMessage": "¿De qué se trata?"
+  },
+  "lnaWo/": {
+    "defaultMessage": "Región"
+  },
+  "luhCIe": {
+    "defaultMessage": "Dirección IP:"
+  },
+  "lvV1wo": {
+    "defaultMessage": "Actualizar el pago"
+  },
+  "m22Mzk": {
+    "defaultMessage": "Procesando el pago de la mejora."
+  },
+  "mJPBXd": {
+    "defaultMessage": "Mensaje cifrado (copie e incluya en su correo electrónico):"
+  },
+  "mOR+qH": {
+    "defaultMessage": "Copiar al portapapeles"
+  },
+  "mXu0jm": {
+    "defaultMessage": "Configuración del dominio"
+  },
+  "nFQbxh": {
+    "defaultMessage": "Método de pago"
+  },
+  "nQ0mEC": {
+    "defaultMessage": "Clave:"
+  },
+  "nWQFic": {
+    "defaultMessage": "Renovar"
+  },
+  "nm81YC": {
+    "defaultMessage": "Cargando las ofertas de VPS..."
+  },
+  "nxqAD7": {
+    "defaultMessage": "Nuevo incidente"
+  },
+  "o2AdrJ": {
+    "defaultMessage": "Esta máquina virtual utiliza una plantilla personalizada y no se puede actualizar. Solo las máquinas virtuales que utilizan plantillas estándar admiten actualizaciones."
+  },
+  "o8lVmf": {
+    "defaultMessage": "El método de pago influye en la moneda que se utilizará para el presupuesto y el pago."
+  },
+  "o9lOhm": {
+    "defaultMessage": "Soporte para la clave pública: {npub}"
+  },
+  "oBSxZS": {
+    "defaultMessage": "Presupuesto para la mejora."
+  },
+  "oCc8Oq": {
+    "defaultMessage": "Añadir clave"
+  },
+  "oXGNZ+": {
+    "defaultMessage": "VM nº {id}, terminal:"
+  },
+  "p4N05H": {
+    "defaultMessage": "Subir"
+  },
+  "pSH5mR": {
+    "defaultMessage": "Historial de pagos"
+  },
+  "pY6CgO": {
+    "defaultMessage": "Todavía no tiene ninguna máquina virtual."
+  },
+  "qJRR8N": {
+    "defaultMessage": "Cargando los bloques de direcciones IP..."
+  },
+  "qV+TFm": {
+    "defaultMessage": "El pago no se realizó."
+  },
+  "qWMcff": {
+    "defaultMessage": "Las actualizaciones de DNS pueden tardar hasta 48 horas en propagarse."
+  },
+  "qZkVyB": {
+    "defaultMessage": "Su clave pública (inclúyala en todas las comunicaciones):"
+  },
+  "qq7WMq": {
+    "defaultMessage": "Todos los VPS incluyen una dirección IPv4 y una dirección IPv6, así como tráfico ilimitado. Todos los precios indicados no incluyen impuestos."
+  },
+  "quroDq": {
+    "defaultMessage": "Historial de máquinas virtuales"
+  },
+  "qvZHhC": {
+    "defaultMessage": "No se pudieron cargar las ofertas de VPS."
+  },
+  "r2BhUh": {
+    "defaultMessage": "Descifrar mensaje"
+  },
+  "rCcPOd": {
+    "defaultMessage": "tarifa, cuota, honorarios"
+  },
+  "rKLmW/": {
+    "defaultMessage": "Cancelar pago"
+  },
+  "rvirM2": {
+    "defaultMessage": "Ubicación"
+  },
+  "s+YpY+": {
+    "defaultMessage": "Obtenga recompensas al recomendar nuestros productos o servicios a otras personas."
+  },
+  "sH1q5P": {
+    "defaultMessage": "durante {time}"
+  },
   "sTesGq": {
     "defaultMessage": "No hay ofertas disponibles."
+  },
+  "sXj7R6": {
+    "defaultMessage": "Disco:"
+  },
+  "sXqUvN": {
+    "defaultMessage": "{cpu} vCPU"
+  },
+  "sqvjkf": {
+    "defaultMessage": "Añadir asa."
+  },
+  "sy+pv5": {
+    "defaultMessage": "Correo electrónico"
+  },
+  "tjOvn7": {
+    "defaultMessage": "{GB} de RAM"
+  },
+  "tzMNF3": {
+    "defaultMessage": "Estado"
+  },
+  "u/vOPu": {
+    "defaultMessage": "Pagado."
+  },
+  "uN7rbm": {
+    "defaultMessage": "Únase al programa de referidos para obtener recompensas cuando otras personas se registren utilizando su código. Elija cómo desea recibir las recompensas."
+  },
+  "uPNlBw": {
+    "defaultMessage": "Correo electrónico: {email}"
+  },
+  "uRfNhn": {
+    "defaultMessage": "Red:"
+  },
+  "ug01Mk": {
+    "defaultMessage": "Tiempo"
+  },
+  "uqUeK9": {
+    "defaultMessage": "Descifra un mensaje que te ha enviado el equipo de soporte."
+  },
+  "v2BRjN": {
+    "defaultMessage": "Asunto *"
+  },
+  "v4Sg0C": {
+    "defaultMessage": "Utilice una clave de destinatario personalizada."
+  },
+  "vONi+O": {
+    "defaultMessage": "País"
+  },
+  "vlKhIl": {
+    "defaultMessage": "Su nombre."
+  },
+  "voiR31": {
+    "defaultMessage": "{cpu} vCPU{cpuInfo}, {memory} de RAM, {disk} {diskType}"
+  },
+  "wLwJ9Q": {
+    "defaultMessage": "Valor del tiempo restante a la tarifa anterior:"
+  },
+  "wfYHHe": {
+    "defaultMessage": "- {daysLeft} días restantes"
+  },
+  "wz7uSD": {
+    "defaultMessage": "incluidos los {amount} de impuestos."
+  },
+  "x0cZXf": {
+    "defaultMessage": "No se puede realizar la actualización."
+  },
+  "xLbpvq": {
+    "defaultMessage": "Envía y recibe mensajes directos cifrados con compatibilidad con NIP-17. Los mensajes están cifrados de extremo a extremo."
+  },
+  "xR03Aa": {
+    "defaultMessage": "Configuración de notificaciones"
+  },
+  "xXbJso": {
+    "defaultMessage": "Cerrar sesión"
+  },
+  "xj59EM": {
+    "defaultMessage": "{proxy} funciona sin necesidad de realizar cambios en la configuración del DNS, lo cual es útil si ya tienes un sitio web en ese dominio."
+  },
+  "xkr+zo": {
+    "defaultMessage": "Términos y condiciones"
+  },
+  "xmSWcf": {
+    "defaultMessage": "CPU: {cores} núcleos"
+  },
+  "y43e4q": {
+    "defaultMessage": "(No se requiere ningún cambio en la configuración de DNS)"
+  },
+  "yDjevn": {
+    "defaultMessage": "PGP"
+  },
+  "yJAKR0": {
+    "defaultMessage": "Enviar mensaje"
+  },
+  "yYs9cj": {
+    "defaultMessage": "Volver a la página de actualización."
+  },
+  "zAN0RF": {
+    "defaultMessage": "Mensajes directos cifrados."
+  },
+  "zEk9h3": {
+    "defaultMessage": "Máquinas virtuales"
+  },
+  "zFegDD": {
+    "defaultMessage": "Contacto"
+  },
+  "zRPHCo": {
+    "defaultMessage": "Memoria (GB)"
   }
 }

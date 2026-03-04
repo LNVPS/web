@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { AccountDetail } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export function EmailVerification() {
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const [acc, setAcc] = useState<AccountDetail>();
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -32,19 +34,21 @@ export function EmailVerification() {
 
   return (
     <div className="flex flex-col gap-2 rounded-sm bg-cyber-panel px-4 py-3 border border-cyber-primary">
-      <div className="font-semibold">Email Verification Required</div>
+      <div className="font-semibold">
+        <FormattedMessage defaultMessage="Email Verification Required" />
+      </div>
       <p className="text-cyber-muted text-sm">
-        Please verify your email address to complete your order.
+        <FormattedMessage defaultMessage="Please verify your email address to complete your order." />
       </p>
       {sent ? (
         <p className="text-green-500 text-sm">
-          Verification email sent, please check your inbox.
+          <FormattedMessage defaultMessage="Verification email sent, please check your inbox." />
         </p>
       ) : (
         <div className="flex gap-2 items-center">
           <input
             type="email"
-            placeholder="your@email.com"
+            placeholder={formatMessage({ defaultMessage: "your@email.com" })}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="grow"
@@ -62,7 +66,7 @@ export function EmailVerification() {
               }
             }}
           >
-            Send Verification
+            <FormattedMessage defaultMessage="Send Verification" />
           </AsyncButton>
         </div>
       )}

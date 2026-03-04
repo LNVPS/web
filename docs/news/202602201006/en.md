@@ -1,9 +1,3 @@
----
-title: "Web Console"
-published_at: 1771582008
-dtag: web-console
----
-
 We're excited to announce the new Web Console feature!
 
 You can now access your VM's terminal directly from your browser - no SSH client required. This is perfect for quick maintenance tasks, debugging, or when you're away from your usual workstation.

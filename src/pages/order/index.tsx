@@ -3,6 +3,7 @@ import { VmTemplate, AvailableIpSpace, IpSpacePricing } from "../../api";
 import OrderVmPage from "./vm";
 import useLogin from "../../hooks/login";
 import LoginButton from "../../components/login-button";
+import { FormattedMessage } from "react-intl";
 
 export interface OrderCart {
   type: "vm" | "ip_space";
@@ -22,7 +23,11 @@ export function OrderPage() {
         return <OrderVmPage template={cart.template!} />;
       }
       case "ip_space": {
-        return <div>IP Space ordering coming soon</div>;
+        return (
+          <div>
+            <FormattedMessage defaultMessage="IP Space ordering coming soon" />
+          </div>
+        );
       }
     }
   }
@@ -30,7 +35,9 @@ export function OrderPage() {
     <div className="flex flex-col gap-12">
       {login === undefined && (
         <div className="flex flex-col gap-2">
-          <div>Please login first before making a purchase</div>
+          <div>
+            <FormattedMessage defaultMessage="Please login first before making a purchase" />
+          </div>
           <LoginButton />
         </div>
       )}

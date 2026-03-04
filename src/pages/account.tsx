@@ -4,6 +4,7 @@ import useLogin from "../hooks/login";
 import VpsInstanceRow from "../components/vps-instance";
 import { AccountNostrDomains } from "../components/account-domains";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 export default function AccountPage() {
   const login = useLogin();
@@ -26,29 +27,28 @@ export default function AccountPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Virtual Machines */}
       <section className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-cyber-text-bright">
-            Virtual Machines
+            <FormattedMessage defaultMessage="Virtual Machines" />
           </h2>
           <Link
             to="/"
             className="text-sm text-cyber-primary hover:shadow-neon-sm transition-all"
           >
-            + Deploy new
+            <FormattedMessage defaultMessage="+ Deploy new" />
           </Link>
         </div>
         {vms.length === 0 ? (
           <div className="flex flex-col items-center gap-4 py-10 rounded-sm border border-dashed border-cyber-border text-center">
             <p className="text-cyber-muted text-sm">
-              You have no virtual machines yet.
+              <FormattedMessage defaultMessage="You have no virtual machines yet." />
             </p>
             <Link
               to="/"
               className="py-2 px-4 rounded-sm border border-cyber-primary text-cyber-primary text-sm hover:shadow-neon-sm transition-all"
             >
-              Deploy your first VPS
+              <FormattedMessage defaultMessage="Deploy your first VPS" />
             </Link>
           </div>
         ) : (
@@ -66,10 +66,9 @@ export default function AccountPage() {
         )}
       </section>
 
-      {/* Nostr Domains */}
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold text-cyber-text-bright">
-          Nostr Domains
+          <FormattedMessage defaultMessage="Nostr Domains" />
         </h2>
         <AccountNostrDomains />
       </section>

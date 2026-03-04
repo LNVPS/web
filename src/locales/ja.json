@@ -1,71 +1,1022 @@
 {
+  "+8AmJ0": {
+    "defaultMessage": "自動更新を無効にする"
+  },
+  "+SM72m": {
+    "defaultMessage": "受信者の公開鍵（npub/nprofile/16進数）："
+  },
+  "/0TOL5": {
+    "defaultMessage": "金額"
+  },
+  "/GCoTA": {
+    "defaultMessage": "はっきりしている、明確な、晴れた"
+  },
+  "/QkDVJ": {
+    "defaultMessage": "NWCウォレット"
+  },
+  "/nQTeE": {
+    "defaultMessage": "支払い設定を保存"
+  },
+  "063dCM": {
+    "defaultMessage": "アカウント設定でNWC接続文字列を設定し、自動更新を有効にすることで、VMの更新費用を自動的に支払うように設定できます。"
+  },
+  "0HkBaC": {
+    "defaultMessage": "以下のいずれかの方法でドメインの所有権を確認してください。"
+  },
+  "0h/lPM": {
+    "defaultMessage": "アップグレードする"
+  },
+  "0oL1zz": {
+    "defaultMessage": "コピーしました！"
+  },
+  "0pn9yK": {
+    "defaultMessage": "npub1...、nprofile1...、または16進数"
+  },
+  "0rlAUP": {
+    "defaultMessage": "{key} としてログインしました。"
+  },
+  "13cluZ": {
+    "defaultMessage": "SSHキーを追加："
+  },
+  "1LBny5": {
+    "defaultMessage": "停止しました。"
+  },
+  "1M3SKY": {
+    "defaultMessage": "ご質問や問題について、できるだけ詳しくご説明ください。"
+  },
+  "1v7S+3": {
+    "defaultMessage": "Nostrドメインを追加"
+  },
+  "2/2yg+": {
+    "defaultMessage": "追加"
+  },
+  "2/hxXE": {
+    "defaultMessage": "請求、更新、および通知"
+  },
+  "20Sod8": {
+    "defaultMessage": "CPU："
+  },
+  "2LslN1": {
+    "defaultMessage": "今すぐアップグレードしましょう。"
+  },
+  "2RFWLf": {
+    "defaultMessage": "スピードテスト"
+  },
+  "2l2y5p": {
+    "defaultMessage": "注文を作成する"
+  },
+  "36aVfS": {
+    "defaultMessage": "Nostrのダイレクトメッセージ"
+  },
+  "3WU2Fe": {
+    "defaultMessage": "場所：{region}"
+  },
+  "3xnP4c": {
+    "defaultMessage": "NIP-44暗号化を使用して、安全なメッセージを送信してください。これにより、お客様のアカウントに関連付けられた秘密鍵を所有していることが証明されます。以下のメッセージを暗号化し、暗号化されたテキストをメールに含めて送信してください。"
+  },
+  "47FYwb": {
+    "defaultMessage": "キャンセル"
+  },
+  "4X/Ixq": {
+    "defaultMessage": "復号されたメッセージ："
+  },
+  "4j0zpr": {
+    "defaultMessage": "最小要件：{min} コア"
+  },
+  "4l6vz1": {
+    "defaultMessage": "コピー"
+  },
+  "4lrWah": {
+    "defaultMessage": "履歴の読み込み中にエラーが発生しました：{error}"
+  },
+  "53RN0g": {
+    "defaultMessage": "お支払い手続きへ進んでください。"
+  },
+  "5JcXdV": {
+    "defaultMessage": "アカウントを作成"
+  },
+  "5QYdPU": {
+    "defaultMessage": "開始時間"
+  },
+  "5VEOig": {
+    "defaultMessage": "残りの期間における新しい料金:"
+  },
+  "5elgIe": {
+    "defaultMessage": "エラー："
+  },
+  "5y2qWO": {
+    "defaultMessage": "接続中です。"
+  },
+  "62nsdy": {
+    "defaultMessage": "再試行"
+  },
+  "6OWS4p": {
+    "defaultMessage": "処理中です..."
+  },
+  "6SfJaf": {
+    "defaultMessage": "アップグレードするには"
+  },
+  "6Tps09": {
+    "defaultMessage": "非アクティブ"
+  },
+  "6ZsOsA": {
+    "defaultMessage": "紹介プログラムに参加する"
+  },
+  "6uMqL1": {
+    "defaultMessage": "未払い"
+  },
+  "7+Domh": {
+    "defaultMessage": "備考"
+  },
+  "78fz1O": {
+    "defaultMessage": "郵便番号 *"
+  },
+  "7zs+Vz": {
+    "defaultMessage": "メモリ：{gb} GB"
+  },
+  "82Y7Sa": {
+    "defaultMessage": "送信中..."
+  },
+  "82zlBD": {
+    "defaultMessage": "カード所有者名*"
+  },
+  "89xu1A": {
+    "defaultMessage": "カスタムVPSのご注文"
+  },
+  "8BgaUL": {
+    "defaultMessage": "現在の仕様"
+  },
+  "8FF5Bq": {
+    "defaultMessage": "支払い処理中です..."
+  },
+  "8Jfsz3": {
+    "defaultMessage": "確認コードを送信"
+  },
+  "8Q504V": {
+    "defaultMessage": "メタデータ"
+  },
+  "8ecw1u": {
+    "defaultMessage": "ハンドル"
+  },
+  "8f0dzf": {
+    "defaultMessage": "{id} の更新"
+  },
+  "90f82/": {
+    "defaultMessage": "VMを起動します。"
+  },
+  "9AfNRx": {
+    "defaultMessage": "IPアドレスの割り当ては近日中に開始されます。"
+  },
   "9QV3cp": {
     "defaultMessage": "利用可能なIPアドレス範囲"
   },
-  "2RFWLf": {
-    "defaultMessage": "通信速度テスト"
+  "9V+Kpc": {
+    "defaultMessage": "この仮想マシンは、設定済みのNostrウォレット接続を使用して、有効期限の1日前から自動的に更新されます。"
   },
-  "c8LeaL": {
-    "defaultMessage": "IPアドレスのブロックの読み込みに失敗しました。"
+  "9WRlF4": {
+    "defaultMessage": "送信"
+  },
+  "9uOFF3": {
+    "defaultMessage": "概要"
+  },
+  "A11S6W": {
+    "defaultMessage": "直接メッセージをお送りください。お客様の公開鍵は自動的に添付されます。"
+  },
+  "AHJbyB": {
+    "defaultMessage": "選択した支払い方法で支払いを完了してください。確認後、変更が自動的に適用されます。"
+  },
+  "AQkpi3": {
+    "defaultMessage": "再インストール"
+  },
+  "AyGauy": {
+    "defaultMessage": "ログイン"
+  },
+  "B4reHi": {
+    "defaultMessage": "過去の出来事"
+  },
+  "BBiS7b": {
+    "defaultMessage": "VMを停止します。"
+  },
+  "BCmVPf": {
+    "defaultMessage": "NIP-05の無料ホスティングサービスをご利用いただけます。DNSまたはパスプロキシを使用して、ドメインを{cname}に設定してください。"
+  },
+  "BFqRWv": {
+    "defaultMessage": "NWC接続文字列"
+  },
+  "BFqlLP": {
+    "defaultMessage": "{records}にはIPアドレスが直接記載されているため、IPアドレスが変更された場合は更新が必要になる場合があります。"
+  },
+  "BKqdjg": {
+    "defaultMessage": "{name}にハンドルを追加します。"
+  },
+  "BLZbXj": {
+    "defaultMessage": "メッセージ*"
+  },
+  "BOV9bc": {
+    "defaultMessage": "支払い方法を読み込んでいます..."
+  },
+  "BXmJ0S": {
+    "defaultMessage": "（代替案）"
+  },
+  "BZF5HJ": {
+    "defaultMessage": "Nostrドメイン"
+  },
+  "BlFeZA": {
+    "defaultMessage": "最新ニュース"
+  },
+  "CDTMW3": {
+    "defaultMessage": "合計金額"
+  },
+  "CYP/Jx": {
+    "defaultMessage": "チームに協力を求めましょう。"
+  },
+  "Cl+kqZ": {
+    "defaultMessage": "QRコードを表示"
+  },
+  "D3idYv": {
+    "defaultMessage": "設定"
+  },
+  "DDMksJ": {
+    "defaultMessage": "最初のVPSをデプロイしましょう。"
+  },
+  "DFLJpz": {
+    "defaultMessage": "新しい月額料金：{cost}"
+  },
+  "DU+LLZ": {
+    "defaultMessage": "紹介"
+  },
+  "DYMg53": {
+    "defaultMessage": "ギガバイト {diskType}"
+  },
+  "Dfuz87": {
+    "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
+  },
+  "E2YqWs": {
+    "defaultMessage": "紹介プログラム"
+  },
+  "EBMKSN": {
+    "defaultMessage": "仮想マシンの仕様をアップグレードします。"
+  },
+  "EKlM8d": {
+    "defaultMessage": "ディスク（GB）"
+  },
+  "Eg11ZY": {
+    "defaultMessage": "再接続する"
+  },
+  "FJhjgz": {
+    "defaultMessage": "郵便番号"
+  },
+  "FZeQlc": {
+    "defaultMessage": "接続が切断されました。"
+  },
+  "FrXeQJ": {
+    "defaultMessage": "Nostrとは何ですか？"
+  },
+  "GDR0px": {
+    "defaultMessage": "Nostr"
+  },
+  "GKzO/A": {
+    "defaultMessage": "料金："
+  },
+  "GLA+G9": {
+    "defaultMessage": "その他のご連絡方法："
+  },
+  "GQNYob": {
+    "defaultMessage": "リンクを共有"
+  },
+  "GSye7T": {
+    "defaultMessage": "ライトニングアドレス"
+  },
+  "Gb4Uh/": {
+    "defaultMessage": "ご質問、ご意見、またはサポートが必要な場合は、以下のフォームにご記入ください。できるだけ早くご連絡いたします。"
+  },
+  "GqRat5": {
+    "defaultMessage": "ご注文を完了するには、お客様のメールアドレスをご確認ください。"
+  },
+  "GsCz6b": {
+    "defaultMessage": "カスタム送信者キーを使用する"
+  },
+  "H43Krf": {
+    "defaultMessage": "稼働時間：{uptime}%"
+  },
+  "HAlOn1": {
+    "defaultMessage": "名前"
+  },
+  "HOWHco": {
+    "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
+  },
+  "HqRNN8": {
+    "defaultMessage": "サポート"
+  },
+  "I3JhPS": {
+    "defaultMessage": "ネットワーク"
+  },
+  "IChMNf": {
+    "defaultMessage": "変更は検出されませんでした。"
+  },
+  "INlWvJ": {
+    "defaultMessage": "または"
+  },
+  "Id24hd": {
+    "defaultMessage": "名前 *"
+  },
+  "Ij0H43": {
+    "defaultMessage": "グラフ"
+  },
+  "IvjoDS": {
+    "defaultMessage": "接続済み"
+  },
+  "Iz4veS": {
+    "defaultMessage": "最小要件：{min} GB"
   },
   "JW40Ux": {
     "defaultMessage": "ステータスページを表示"
   },
-  "j4RCJW": {
-    "defaultMessage": "スキルに関する情報が記載されたファイル名。"
+  "JmgL7z": {
+    "defaultMessage": "有効期限：{date}（残り{days}日）"
   },
-  "bpBvBq": {
-    "defaultMessage": "表示通貨："
+  "K/zU0+": {
+    "defaultMessage": "+ 新しいものを展開"
   },
-  "UPjtBm": {
-    "defaultMessage": "サービスに問題が発生している可能性があります。最新情報については、当社のステータスページをご確認ください。"
+  "KAL6xF": {
+    "defaultMessage": "キー名"
   },
-  "Ws8Qkf": {
-    "defaultMessage": "ビットコインを活用した高性能VPS。本人確認手続きは不要で、手間もかかりません。"
-  },
-  "nm81YC": {
-    "defaultMessage": "VPSの読み込み中..."
-  },
-  "GDR0px": {
-    "defaultMessage": "ノストル"
-  },
-  "zFegDD": {
-    "defaultMessage": "お問い合わせ"
-  },
-  "qvZHhC": {
-    "defaultMessage": "VPSの提供情報を読み込めませんでした。"
-  },
-  "OuCSDn": {
-    "defaultMessage": "ディスク"
-  },
-  "qq7WMq": {
-    "defaultMessage": "すべてのVPSには、IPv4アドレス1つとIPv6アドレス1つが付属しており、データ通信量に制限はありません。価格はすべて税抜きです。"
-  },
-  "yDjevn": {
-    "defaultMessage": "PGP"
-  },
-  "xkr+zo": {
-    "defaultMessage": "条件、条項"
-  },
-  "gv8O1e": {
-    "defaultMessage": "VPSの提供内容"
-  },
-  "sTesGq": {
-    "defaultMessage": "現在、該当するオファーはありません。"
-  },
-  "lnaWo/": {
-    "defaultMessage": "地域"
+  "KWAuBK": {
+    "defaultMessage": "IPアドレスは割り当てられていません。"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
-  "tzMNF3": {
-    "defaultMessage": "状況、状態、ステータス"
+  "KuX7em": {
+    "defaultMessage": "{duration}の間、アクティブでした。"
+  },
+  "LNcnLC": {
+    "defaultMessage": "紹介に失敗したケース"
+  },
+  "LjglgP": {
+    "defaultMessage": "RAM"
+  },
+  "LjziLu": {
+    "defaultMessage": "メッセージを暗号化"
+  },
+  "LqFfRA": {
+    "defaultMessage": "国"
+  },
+  "MT4qAu": {
+    "defaultMessage": "NIP-44暗号化ツール"
+  },
+  "MTnSwY": {
+    "defaultMessage": "税込み"
+  },
+  "Mp+zDS": {
+    "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
+  },
+  "NQgbYA": {
+    "defaultMessage": "アカウント設定"
   },
   "NZyhSX": {
     "defaultMessage": "ニュース"
   },
+  "Ny9qbm": {
+    "defaultMessage": "Nostr：{handle}"
+  },
+  "O/68ZX": {
+    "defaultMessage": "本当に仮想マシンを再インストールしますか？再インストールすると、すべてのデータが削除されます！"
+  },
+  "OLqOyf": {
+    "defaultMessage": "セットアップ方法"
+  },
+  "OikYIw": {
+    "defaultMessage": "最小要件：{min} GBの{type}"
+  },
+  "Olq7Wf": {
+    "defaultMessage": "ここにメッセージを入力してください。"
+  },
+  "OtUSLU": {
+    "defaultMessage": "自動更新"
+  },
+  "OtuYup": {
+    "defaultMessage": "メールアドレス"
+  },
+  "OuCSDn": {
+    "defaultMessage": "ディスク"
+  },
+  "P+08xT": {
+    "defaultMessage": "見積もりを依頼する"
+  },
+  "P7PLVj": {
+    "defaultMessage": "日付"
+  },
+  "PJtOx7": {
+    "defaultMessage": "報告すべき事象はありません。"
+  },
+  "PPcUVc": {
+    "defaultMessage": "LNVPSは、Nostrアカウントを使用します。{link}"
+  },
+  "PT4sD/": {
+    "defaultMessage": "OSを選択してください。"
+  },
+  "PfSZy5": {
+    "defaultMessage": "該当する注文は見つかりませんでした。"
+  },
+  "PucUfl": {
+    "defaultMessage": "SSHキーを選択してください。"
+  },
+  "QDA9xg": {
+    "defaultMessage": "支払い履歴"
+  },
+  "QN/rCc": {
+    "defaultMessage": "JSONの解析中にエラーが発生しました：{msg}"
+  },
+  "QdbxqE": {
+    "defaultMessage": "Nostr Wallet Connectを使用して、仮想マシンの自動更新を設定します。ウォレットが自動的に仮想マシンの更新費用を、有効期限の1日前にお支払いします。"
+  },
+  "QgBuiV": {
+    "defaultMessage": "CPU"
+  },
+  "QvXah/": {
+    "defaultMessage": "VMに戻る"
+  },
+  "R0skQD": {
+    "defaultMessage": "GitHub：github.com/LNVPS で issue を作成してください。"
+  },
+  "R7x8iU": {
+    "defaultMessage": "ディスク：{gb} GB、{type}"
+  },
+  "RB2CER": {
+    "defaultMessage": "CPUコア"
+  },
+  "RF85OG": {
+    "defaultMessage": "新しいキーはこちらです："
+  },
+  "RahCRH": {
+    "defaultMessage": "有効期限切れ"
+  },
+  "RcshyP": {
+    "defaultMessage": "獲得額（{currency}）"
+  },
+  "S1hhGJ": {
+    "defaultMessage": "SSH："
+  },
+  "SMHOve": {
+    "defaultMessage": "紹介による新規顧客獲得"
+  },
+  "SU1E+O": {
+    "defaultMessage": "ニュー・オーダー"
+  },
+  "Sczo8n": {
+    "defaultMessage": "期間：{duration}"
+  },
+  "Sg3z1C": {
+    "defaultMessage": "選択された仮想マシンはありません。"
+  },
+  "Ss0sWu": {
+    "defaultMessage": "今すぐお支払いください。"
+  },
+  "Sv1hgX": {
+    "defaultMessage": "自動更新を無効にしました。"
+  },
+  "Sz/3Vf": {
+    "defaultMessage": "アップグレードする値として、現在の値以上で、かつ、少なくとも1つは現在の値よりも大きい値を指定してください。"
+  },
+  "T1/en5": {
+    "defaultMessage": "ID：{id}"
+  },
+  "T4yFyM": {
+    "defaultMessage": "支払い情報の読み込み中です..."
+  },
+  "T7b6ZF": {
+    "defaultMessage": "解決済みのインシデント"
+  },
+  "TE4fIS": {
+    "defaultMessage": "都市"
+  },
+  "TNSbi4": {
+    "defaultMessage": "逆引きDNS："
+  },
+  "Tbo377": {
+    "defaultMessage": "請求"
+  },
+  "Td/uhP": {
+    "defaultMessage": "自動更新を有効にする"
+  },
+  "TieXig": {
+    "defaultMessage": "お支払い（報酬）は、お客様のアカウント設定で指定されたNWCウォレットに送金されます。"
+  },
+  "UPjtBm": {
+    "defaultMessage": "サービスに問題が発生している可能性があります。最新情報については、当社のステータスページをご確認ください。"
+  },
+  "UQc03N": {
+    "defaultMessage": "新しいSSHキーを追加する"
+  },
+  "Ub+AGc": {
+    "defaultMessage": "サインイン"
+  },
+  "UbzBlr": {
+    "defaultMessage": "{cname}をお勧めします。サーバーのIPアドレスの変更を自動的に追跡します。"
+  },
+  "Ue9DHy": {
+    "defaultMessage": "地域："
+  },
+  "Uk68vE": {
+    "defaultMessage": "送信者の公開鍵（npub/nprofile/16進数）："
+  },
+  "Un5Bdm": {
+    "defaultMessage": "{cname} の IP アドレスを解決中です…"
+  },
+  "UwP+xI": {
+    "defaultMessage": "自動更新が有効になっています。"
+  },
+  "VE4z7n": {
+    "defaultMessage": "請求書を取得する"
+  },
+  "VL/B6x": {
+    "defaultMessage": "your@email.com"
+  },
+  "VnXp8Z": {
+    "defaultMessage": "アバター"
+  },
+  "W+1MOm": {
+    "defaultMessage": "方法"
+  },
+  "WUeavc": {
+    "defaultMessage": "または、直接{email}までメールでお問い合わせください。"
+  },
+  "WhLfzM": {
+    "defaultMessage": "住所2行目"
+  },
+  "Ws8Qkf": {
+    "defaultMessage": "ビットコインを基盤とした高性能VPS。本人確認（KYC）は不要で、煩わしい手続きもありません。"
+  },
+  "Wsj2fc": {
+    "defaultMessage": "現在発生中のインシデント"
+  },
+  "X5QA2h": {
+    "defaultMessage": "更新料金の処理中"
+  },
+  "XD6788": {
+    "defaultMessage": "初期設定費用："
+  },
+  "XNiOLB": {
+    "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
+  },
+  "Xoi0Uz": {
+    "defaultMessage": "カードで支払い"
+  },
+  "Y+LcmX": {
+    "defaultMessage": "DNSを変更できない場合は、既存のサーバーで{path}のプロキシを{target}に設定してください。"
+  },
+  "Y6YwKh": {
+    "defaultMessage": "これは、仮想マシンの有効期限切れ通知など、アカウントに関する通知のみを送信するためのものであり、マーケティングやプロモーションのメッセージは送信しません。"
+  },
+  "Y7opZr": {
+    "defaultMessage": "VPSを更新する"
+  },
+  "YdQxfw": {
+    "defaultMessage": "サポートにお問い合わせください。"
+  },
+  "Yl8GBP": {
+    "defaultMessage": "納税者番号"
+  },
+  "Yt9S7n": {
+    "defaultMessage": "料金：{fees}"
+  },
+  "Yx0Kq/": {
+    "defaultMessage": "{usage}% のRAMを使用中"
+  },
+  "YyojwF": {
+    "defaultMessage": "設定の変更点："
+  },
+  "Z+AMVE": {
+    "defaultMessage": "メールアドレスの認証が必要です。"
+  },
+  "Z5yzel": {
+    "defaultMessage": "お支払い情報をアカウントに保存"
+  },
+  "Z8971h": {
+    "defaultMessage": "確認済み"
+  },
+  "ZdCdo5": {
+    "defaultMessage": "最終更新日：{date}"
+  },
+  "ZewCpX": {
+    "defaultMessage": "ドメインを追加"
+  },
+  "aAnyb9": {
+    "defaultMessage": "このリンクを共有してください。他の人が登録して支払いを行うと、あなたは報酬を得ることができます。"
+  },
+  "aFJYR3": {
+    "defaultMessage": "カード情報"
+  },
+  "ajQtDJ": {
+    "defaultMessage": "支払い方法を選択してください。"
+  },
+  "b1zuN9": {
+    "defaultMessage": "価格"
+  },
+  "bW7B87": {
+    "defaultMessage": "新しい"
+  },
+  "bZ1uDf": {
+    "defaultMessage": "ホームに戻る"
+  },
+  "bh3pad": {
+    "defaultMessage": "ご購入前にログインしてください。"
+  },
+  "bhfNWq": {
+    "defaultMessage": "暗号化されたメッセージをここに貼り付けてください。"
+  },
+  "bm5rt1": {
+    "defaultMessage": "このキーは必ず保存してください。再発行はできません。"
+  },
+  "bpBvBq": {
+    "defaultMessage": "表示通貨："
+  },
+  "c78ZVJ": {
+    "defaultMessage": "DNSの変更が反映されるまでには、最大で24～48時間かかる場合があります。"
+  },
+  "c8LeaL": {
+    "defaultMessage": "IPアドレスのブロックの読み込みに失敗しました。"
+  },
+  "cM5n1C": {
+    "defaultMessage": "終了時間（任意）"
+  },
+  "cV0ZGf": {
+    "defaultMessage": "費用内訳"
+  },
+  "cbZ7Ix": {
+    "defaultMessage": "VM：{name}"
+  },
+  "cyR7Kh": {
+    "defaultMessage": "戻る"
+  },
+  "d+1v5f": {
+    "defaultMessage": "更新期間："
+  },
+  "d1nnRF": {
+    "defaultMessage": "別のメッセージを送信"
+  },
+  "d3wxHm": {
+    "defaultMessage": "履歴の読み込み中..."
+  },
+  "dCaiAm": {
+    "defaultMessage": "今すぐ延長してください。"
+  },
+  "dKHSEA": {
+    "defaultMessage": "お問い合わせいただきありがとうございます。できるだけ早くご連絡いたします。"
+  },
+  "dOQCL8": {
+    "defaultMessage": "表示名"
+  },
+  "dVYvX2": {
+    "defaultMessage": "本当にこのハンドルを削除しますか？"
+  },
+  "dVx3yz": {
+    "defaultMessage": "記憶"
+  },
+  "dgTL/5": {
+    "defaultMessage": "登録されたハンドルは存在しません。"
+  },
+  "djJp6c": {
+    "defaultMessage": "歴史"
+  },
+  "duElEE": {
+    "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
+  },
+  "e4iTJm": {
+    "defaultMessage": "メッセージを入力してください。"
+  },
+  "eKEL/g": {
+    "defaultMessage": "保留中"
+  },
+  "eR9d9s": {
+    "defaultMessage": "確認メールをお送りしました。受信トレイをご確認ください。"
+  },
+  "eVlu1R": {
+    "defaultMessage": "言語を選択してください。"
+  },
+  "ebmhes": {
+    "defaultMessage": "Nostr拡張機能"
+  },
+  "elhFf1": {
+    "defaultMessage": "[有効期限切れ]"
+  },
+  "eu+sDO": {
+    "defaultMessage": "ログイン："
+  },
+  "f00p/7": {
+    "defaultMessage": "アップロードに失敗しました。"
+  },
+  "fGeu02": {
+    "defaultMessage": "ブラウザ拡張機能："
+  },
+  "fNSGnl": {
+    "defaultMessage": "ご注文にはログインが必要です。"
+  },
+  "fxYCqm": {
+    "defaultMessage": "場所：{location}"
+  },
+  "gBvImw": {
+    "defaultMessage": "{count} 個のハンドル"
+  },
+  "gH4VcS": {
+    "defaultMessage": "按分計算されたアップグレード費用："
+  },
+  "gPsMm7": {
+    "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
+  },
+  "gZz74a": {
+    "defaultMessage": "すべての必須項目にご記入ください。"
+  },
+  "gc+2Z2": {
+    "defaultMessage": "コンソール"
+  },
+  "gdP56I": {
+    "defaultMessage": "税"
+  },
+  "gdfy5u": {
+    "defaultMessage": "CPU使用率：{usage}%"
+  },
+  "gjBiyj": {
+    "defaultMessage": "読み込み中..."
+  },
+  "gtGLdm": {
+    "defaultMessage": "手数料{amount}を含む"
+  },
+  "gv8O1e": {
+    "defaultMessage": "VPSの特典"
+  },
+  "h+26/n": {
+    "defaultMessage": "お客様の紹介コード"
+  },
+  "h/PJh3": {
+    "defaultMessage": "新しいキーを選択した後、仮想マシンを再起動してください。"
+  },
+  "hMzcSq": {
+    "defaultMessage": "メッセージ"
+  },
+  "hZOGLS": {
+    "defaultMessage": "お問い合わせ"
+  },
+  "iO1K6D": {
+    "defaultMessage": "まだ投稿はありません。"
+  },
+  "icn2DS": {
+    "defaultMessage": "（おすすめ）"
+  },
+  "iluJkV": {
+    "defaultMessage": "支払い設定"
+  },
+  "j4RCJW": {
+    "defaultMessage": "SKILL.md"
+  },
+  "jM8W7d": {
+    "defaultMessage": "国を選択してください。"
+  },
+  "jmVweB": {
+    "defaultMessage": "SSHキーを読み込んでいます。"
+  },
+  "jvo0vs": {
+    "defaultMessage": "保存"
+  },
+  "k1UDSi": {
+    "defaultMessage": "LNURL決済"
+  },
+  "k3yLiC": {
+    "defaultMessage": "請求書に表示される請求情報を更新してください（任意）。"
+  },
+  "kLNEaL": {
+    "defaultMessage": "CAPTCHA認証を完了してください。"
+  },
+  "kSjQ3a": {
+    "defaultMessage": "{initiatedBy} によって開始"
+  },
+  "kfr95E": {
+    "defaultMessage": "住所1行目"
+  },
+  "ku+mDU": {
+    "defaultMessage": "州"
+  },
+  "l4RUua": {
+    "defaultMessage": "サービス：{service}"
+  },
+  "lCILNz": {
+    "defaultMessage": "今すぐ購入"
+  },
+  "lPsVOx": {
+    "defaultMessage": "お客様の仮想マシンとドメイン"
+  },
+  "lloEWi": {
+    "defaultMessage": "これは何についてですか？"
+  },
+  "lnaWo/": {
+    "defaultMessage": "地域"
+  },
+  "luhCIe": {
+    "defaultMessage": "IPアドレス："
+  },
+  "lvV1wo": {
+    "defaultMessage": "アップグレード料金"
+  },
+  "m22Mzk": {
+    "defaultMessage": "アップグレード料金の処理中"
+  },
+  "mJPBXd": {
+    "defaultMessage": "暗号化されたメッセージ（コピーしてメールに添付してください）："
+  },
+  "mOR+qH": {
+    "defaultMessage": "クリップボードにコピー"
+  },
+  "mXu0jm": {
+    "defaultMessage": "ドメイン設定"
+  },
+  "nFQbxh": {
+    "defaultMessage": "支払い方法"
+  },
+  "nQ0mEC": {
+    "defaultMessage": "凡例："
+  },
+  "nWQFic": {
+    "defaultMessage": "更新する"
+  },
+  "nm81YC": {
+    "defaultMessage": "VPSのロード中..."
+  },
+  "nxqAD7": {
+    "defaultMessage": "新規インシデント"
+  },
+  "o2AdrJ": {
+    "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
+  },
+  "o8lVmf": {
+    "defaultMessage": "支払い方法によって、見積もりや支払いで使用する通貨が決まります。"
+  },
+  "o9lOhm": {
+    "defaultMessage": "公開鍵をサポート：{npub}"
+  },
+  "oBSxZS": {
+    "defaultMessage": "アップグレードの見積もり"
+  },
+  "oCc8Oq": {
+    "defaultMessage": "キーを追加"
+  },
+  "oXGNZ+": {
+    "defaultMessage": "VM #{id} のターミナル："
+  },
+  "p4N05H": {
+    "defaultMessage": "アップロード"
+  },
+  "pSH5mR": {
+    "defaultMessage": "支払い履歴"
+  },
+  "pY6CgO": {
+    "defaultMessage": "まだ仮想マシンは作成されていません。"
+  },
   "qJRR8N": {
     "defaultMessage": "IPアドレスのブロックを読み込んでいます..."
+  },
+  "qV+TFm": {
+    "defaultMessage": "支払いに失敗しました。"
+  },
+  "qWMcff": {
+    "defaultMessage": "DNSの更新が反映されるまでに最大48時間かかる場合があります。"
+  },
+  "qZkVyB": {
+    "defaultMessage": "お客様の公開鍵（すべての通信に含めてください）："
+  },
+  "qq7WMq": {
+    "defaultMessage": "すべてのVPSには、IPv4アドレス1つとIPv6アドレス1つが付属しており、データ通信量に制限はありません。すべての価格は税抜きです。"
+  },
+  "quroDq": {
+    "defaultMessage": "VMの履歴"
+  },
+  "qvZHhC": {
+    "defaultMessage": "VPSの提供情報を読み込めませんでした。"
+  },
+  "r2BhUh": {
+    "defaultMessage": "メッセージを復号化"
+  },
+  "rCcPOd": {
+    "defaultMessage": "手数料"
+  },
+  "rKLmW/": {
+    "defaultMessage": "支払いをキャンセル"
+  },
+  "rvirM2": {
+    "defaultMessage": "場所"
+  },
+  "s+YpY+": {
+    "defaultMessage": "他の人に紹介して報酬を獲得しましょう。"
+  },
+  "sH1q5P": {
+    "defaultMessage": "{time}の間"
+  },
+  "sTesGq": {
+    "defaultMessage": "現在、利用可能なオファーはありません。"
+  },
+  "sXj7R6": {
+    "defaultMessage": "ディスク："
+  },
+  "sXqUvN": {
+    "defaultMessage": "{cpu} 個の仮想CPU"
+  },
+  "sqvjkf": {
+    "defaultMessage": "ハンドルを追加"
+  },
+  "sy+pv5": {
+    "defaultMessage": "メール"
+  },
+  "tjOvn7": {
+    "defaultMessage": "GBのRAM"
+  },
+  "tzMNF3": {
+    "defaultMessage": "状況"
+  },
+  "u/vOPu": {
+    "defaultMessage": "有料"
+  },
+  "uN7rbm": {
+    "defaultMessage": "紹介プログラムに参加して、あなたの紹介コードを使って他の人が登録すると、報酬を獲得できます。報酬の受け取り方法を選択してください。"
+  },
+  "uPNlBw": {
+    "defaultMessage": "メールアドレス：{email}"
+  },
+  "uRfNhn": {
+    "defaultMessage": "ネットワーク："
+  },
+  "ug01Mk": {
+    "defaultMessage": "時間"
+  },
+  "uqUeK9": {
+    "defaultMessage": "サポートから送信されたメッセージを復号化します。"
+  },
+  "v2BRjN": {
+    "defaultMessage": "件名"
+  },
+  "v4Sg0C": {
+    "defaultMessage": "カスタム受信者キーを使用する"
+  },
+  "vONi+O": {
+    "defaultMessage": "国"
+  },
+  "vlKhIl": {
+    "defaultMessage": "あなたの名前"
+  },
+  "voiR31": {
+    "defaultMessage": "{cpu} vCPU：{cpuInfo}、RAM：{memory}、ディスク：{disk}（{diskType}）"
+  },
+  "wLwJ9Q": {
+    "defaultMessage": "旧料金での残りの期間の価値："
+  },
+  "wfYHHe": {
+    "defaultMessage": "- 残り{daysLeft}日"
+  },
+  "wz7uSD": {
+    "defaultMessage": "税込み {amount}"
+  },
+  "x0cZXf": {
+    "defaultMessage": "アップグレードは利用できません。"
+  },
+  "xLbpvq": {
+    "defaultMessage": "NIP-17に対応した暗号化されたダイレクトメッセージを送受信できます。メッセージはエンドツーエンドで暗号化されます。"
+  },
+  "xR03Aa": {
+    "defaultMessage": "通知設定"
+  },
+  "xXbJso": {
+    "defaultMessage": "サインアウト"
+  },
+  "xj59EM": {
+    "defaultMessage": "{proxy}はDNS設定を変更することなく機能します。すでにそのドメインにサイトがある場合に便利です。"
+  },
+  "xkr+zo": {
+    "defaultMessage": "利用規約"
+  },
+  "xmSWcf": {
+    "defaultMessage": "CPU：{cores} コア"
+  },
+  "y43e4q": {
+    "defaultMessage": "（DNSの変更は不要です）"
+  },
+  "yDjevn": {
+    "defaultMessage": "PGP"
+  },
+  "yJAKR0": {
+    "defaultMessage": "メッセージを送信"
+  },
+  "yYs9cj": {
+    "defaultMessage": "アップグレードに戻る"
+  },
+  "zAN0RF": {
+    "defaultMessage": "暗号化されたダイレクトメッセージ"
+  },
+  "zEk9h3": {
+    "defaultMessage": "仮想マシン"
+  },
+  "zFegDD": {
+    "defaultMessage": "お問い合わせ"
+  },
+  "zRPHCo": {
+    "defaultMessage": "メモリ（GB）"
   }
 }

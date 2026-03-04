@@ -147,9 +147,42 @@ class LNVpsApi {
 }
 ```
 
+## News Article Language Tagging
+
+Long-form articles (`kind:30023`) are tagged with language using **NIP-32** self-labels (ISO-639-1):
+
+```json
+["L", "ISO-639-1"],
+["l", "zh", "ISO-639-1"]
+```
+
+**`d` tag convention** — addressable events require a unique `kind:author:d` key, so translations **must** use distinct `d` tags. Use a language suffix on the slug:
+
+| Version             | `d` tag         | language tag                         |
+| ------------------- | --------------- | ------------------------------------ |
+| English original    | `my-article`    | none (or `["l", "en", "ISO-639-1"]`) |
+| Chinese translation | `my-article-zh` | `["l", "zh", "ISO-639-1"]`           |
+| French translation  | `my-article-fr` | `["l", "fr", "ISO-639-1"]`           |
+
+The client groups articles by canonical slug (stripping the `-<lang>` suffix) using `src/utils/news-locale.ts`, then picks the best version for the active locale: locale → `en` → unlabelled → any.
+
+- `useLatestNews`, `useNewsPost`, and `NewsPage` all apply this filtering automatically.
+- English articles do not need a language tag or suffix — they are the default fallback.
+
 ## Translations
 
 - Use `<FormattedMessage>` component directly in JSX for all user-facing strings
+- **Never** use `formatMessage({...})` as JSX children or text output — use `<FormattedMessage>` instead:
+
+  ```tsx
+  // Wrong — function call in JSX children
+  <button>{formatMessage({ defaultMessage: "Save" })}</button>
+
+  // Correct — component in JSX
+  <button><FormattedMessage defaultMessage="Save" /></button>
+  ```
+
+- `formatMessage({...})` is only acceptable for attributes that cannot accept JSX nodes (e.g., `placeholder`, `title`, `aria-label`, string arguments to `confirm()`)
 - Auto-generated message IDs (no `id` or `defaultMessage` in `defineMessage`)
 - Never use `defineMessage`/`Messages` constant pattern except for API error messages
 - All dynamic strings in JSX should be wrapped in `<FormattedMessage>`

@@ -3,6 +3,7 @@ import useLogin from "../hooks/login";
 import Profile from "./profile";
 import { NostrLink } from "@snort/system";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 export default function LoginButton() {
   const login = useLogin();
@@ -16,7 +17,7 @@ export default function LoginButton() {
       }}
       className="border-cyber-primary text-cyber-primary hover:shadow-neon"
     >
-      Sign In
+      <FormattedMessage defaultMessage="Sign In" />
     </AsyncButton>
   ) : (
     <Link to="/account">

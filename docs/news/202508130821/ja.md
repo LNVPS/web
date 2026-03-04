@@ -1,0 +1,5 @@
+新しいVMアップグレード機能を発表できることを嬉しく思います！この機能により、すべてのユーザーが数回クリックするだけで、CPU、RAM、ディスク容量をオンデマンドでアップグレードすることができます。
+
+![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)
+
+アップグレードの支払いが完了すると、VMは即座にアップグレードされ、再起動されます！

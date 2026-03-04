@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "locale:extract": "yarn formatjs extract 'src/**/*.tsx' 'src/**/*.ts' '!src/vite-env.d.ts' --out-file src/locales/en.json",
     "locale:compile": "mkdir -p dist/locales && yarn formatjs compile-folder src/locales dist/locales",
-    "locale:translate": "bash scripts/translate.sh"
+    "locale:translate": "yarn locale:extract && yarn locale:compile && ollama_intl -u ${OLLAMA_URL:-http://localhost:11434/v1} -i src/locales/en.json -o src/locales -t German:de -t Spanish:es -t French:fr -t Portuguese:pt -t Japanese:ja -t Chinese:zh"
   },
   "dependencies": {
     "@formatjs/cli": "^6.13.0",

@@ -264,9 +264,7 @@ export function VpsCustomOrder({
             max={params.max_cpu}
             className="w-20 text-center"
           />
-          <span className="text-cyber-muted text-sm">
-            <FormattedMessage defaultMessage="CPU" />
-          </span>
+          <span className="text-cyber-muted text-sm">CPU</span>
         </div>
         <input
           type="range"
@@ -293,9 +291,7 @@ export function VpsCustomOrder({
             max={Math.floor(params.max_memory / GiB)}
             className="w-20 text-center"
           />
-          <span className="text-cyber-muted text-sm">
-            <FormattedMessage defaultMessage="GB RAM" />
-          </span>
+          <span className="text-cyber-muted text-sm">GB RAM</span>
         </div>
         <input
           type="range"
@@ -323,10 +319,7 @@ export function VpsCustomOrder({
             className="w-24 text-center"
           />
           <span className="text-cyber-muted text-sm">
-            <FormattedMessage
-              defaultMessage="GB {diskType}"
-              values={{ diskType: diskType?.disk_type.toLocaleUpperCase() }}
-            />
+            GB {diskType?.disk_type.toLocaleUpperCase()}
           </span>
         </div>
         <input

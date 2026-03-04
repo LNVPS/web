@@ -73,10 +73,7 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
     <tr className="hover:bg-cyber-panel-light/50 transition-colors">
       <td className="text-cyber-primary font-medium">{spec.name}</td>
       <td>
-        <FormattedMessage
-          defaultMessage="{cpu} vCPU"
-          values={{ cpu: spec.cpu }}
-        />
+        {spec.cpu} vCPU
         {cpuInfo && (
           <span className="text-cyber-muted text-xs ml-1">({cpuInfo})</span>
         )}

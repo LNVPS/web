@@ -43,16 +43,9 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   return (
     <>
       <div className="text-xs text-cyber-muted">
-        <FormattedMessage
-          defaultMessage="{cpu} vCPU{cpuInfo}, {memory} RAM, {disk} {diskType}"
-          values={{
-            cpu: template?.cpu,
-            cpuInfo: cpuInfo ? ` (${cpuInfo})` : "",
-            memory: <BytesSize value={template?.memory ?? 0} />,
-            disk: <BytesSize value={template?.disk_size ?? 0} />,
-            diskType: diskType?.toUpperCase(),
-          }}
-        />
+        {template?.cpu} vCPU{cpuInfo && ` (${cpuInfo})`},{" "}
+        <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
+        <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
         {region && (
           <>
             ,{" "}
@@ -66,30 +59,12 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
       {status && status.state === "running" && (
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
-          {"cpu_usage" in status ? (
-            <FormattedMessage
-              defaultMessage="{usage}% CPU"
-              values={{
-                usage: (
-                  100 * (status as VmStatus & { cpu_usage: number }).cpu_usage
-                ).toFixed(1),
-              }}
-            />
-          ) : (
-            <FormattedMessage defaultMessage="CPU:" />
-          )}{" "}
-          {"mem_usage" in status ? (
-            <FormattedMessage
-              defaultMessage="{usage}% RAM"
-              values={{
-                usage: (
-                  100 * (status as VmStatus & { mem_usage: number }).mem_usage
-                ).toFixed(0),
-              }}
-            />
-          ) : (
-            <FormattedMessage defaultMessage="RAM" />
-          )}
+          {"cpu_usage" in status
+            ? `${(100 * (status as VmStatus & { cpu_usage: number }).cpu_usage).toFixed(1)}% CPU`
+            : "CPU:"}{" "}
+          {"mem_usage" in status
+            ? `${(100 * (status as VmStatus & { mem_usage: number }).mem_usage).toFixed(0)}% RAM`
+            : "RAM"}
         </div>
       )}
       {status && status.state === "stopped" && (

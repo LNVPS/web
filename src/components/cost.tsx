@@ -1,3 +1,4 @@
+import { FormattedMessage, useIntl } from "react-intl";
 import useLogin from "../hooks/login";
 
 interface Price {
@@ -40,14 +41,16 @@ export default function CostLabel({
   }
 }
 
-function intervalName(n: string) {
-  switch (n) {
+function IntervalName({ interval }: { interval: string }) {
+  switch (interval) {
     case "day":
-      return "Day";
+      return <FormattedMessage defaultMessage="Day" />;
     case "month":
-      return "Month";
+      return <FormattedMessage defaultMessage="Month" />;
     case "year":
-      return "Year";
+      return <FormattedMessage defaultMessage="Year" />;
+    default:
+      return <>{interval}</>;
   }
 }
 
@@ -60,7 +63,8 @@ export function CostAmount({
   converted: boolean;
   className?: string;
 }) {
-  const formatter = new Intl.NumberFormat("en-US", {
+  const { locale } = useIntl();
+  const formatter = new Intl.NumberFormat(locale, {
     style: "currency",
     currency: cost.currency,
     trailingZeroDisplay: "stripIfInteger",
@@ -70,9 +74,13 @@ export function CostAmount({
       {converted && "~"}
       {cost.currency !== "BTC"
         ? formatter.format(cost.amount / 100)
-        : Math.floor(cost.amount / 1000).toLocaleString()}
+        : Math.floor(cost.amount / 1000).toLocaleString(locale)}
       {cost.currency === "BTC" && " sats"}
-      {cost.interval_type && <>/{intervalName(cost.interval_type)}</>}
+      {cost.interval_type && (
+        <>
+          /<IntervalName interval={cost.interval_type} />
+        </>
+      )}
     </span>
   );
 }

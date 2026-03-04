@@ -38,27 +38,6 @@ export default function VmActions({
         >
           <Icon name={state === "running" ? "stop" : "start"} size={30} />
         </AsyncButton>
-
-        <AsyncButton
-          title={formatMessage({ defaultMessage: "Reinstall" })}
-          onClick={async (e) => {
-            e.stopPropagation();
-            if (
-              confirm(
-                formatMessage({
-                  defaultMessage:
-                    "Are you sure you want to re-install your VM?\nTHIS WILL DELETE ALL DATA!!",
-                }),
-              )
-            ) {
-              await login?.api.reinstallVm(vm.id);
-              onReload?.();
-            }
-          }}
-          className="bg-cyber-panel-light border-cyber-border hover:border-cyber-danger hover:shadow-neon-danger"
-        >
-          <Icon name="refresh-1" size={30} />
-        </AsyncButton>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ FROM node:22 AS builder
 ARG MODE=production
 WORKDIR /src
 COPY . .
-RUN yarn && yarn build --mode $MODE
+RUN yarn && yarn tsc -b && yarn vite build --mode $MODE && yarn locale:compile
 
 FROM nginx AS runner
 WORKDIR /usr/share/nginx/html

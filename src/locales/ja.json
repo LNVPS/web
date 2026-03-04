@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "自動更新を無効にする"
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{年} other{年}}"
+  },
   "+SM72m": {
     "defaultMessage": "受信者の公開鍵（npub/nprofile/16進数）："
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "郵便番号 *"
   },
-  "7pXrnq": {
-    "defaultMessage": "日"
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{日} other{日}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# 時間} other{# 時間}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "変更は検出されませんでした。"
   },
-  "IFo1oo": {
-    "defaultMessage": "年"
-  },
   "INlWvJ": {
     "defaultMessage": "または"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "解決済みのインシデント"
   },
-  "TBovrx": {
-    "defaultMessage": "月"
-  },
   "TE4fIS": {
     "defaultMessage": "都市"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "現在発生中のインシデント"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{月} other{月}}"
   },
   "X5QA2h": {
     "defaultMessage": "更新料金の処理中"
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "暗号化されたメッセージ（コピーしてメールに添付してください）："
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "クリップボードにコピー"

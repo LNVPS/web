@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "Disable Auto-Renewal"
   },
+  "+JVG/q": {
+    "defaultMessage": "{n, plural, one {year} other {years}}"
+  },
   "+SM72m": {
     "defaultMessage": "Recipient's public key (npub/nprofile/hex):"
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "Postcode *"
   },
-  "7pXrnq": {
-    "defaultMessage": "Day"
+  "7Xz8h2": {
+    "defaultMessage": "{n, plural, one {day} other {days}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n, plural, one {# hr} other {# hrs}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "No changes detected"
   },
-  "IFo1oo": {
-    "defaultMessage": "Year"
-  },
   "INlWvJ": {
     "defaultMessage": "OR"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
   },
-  "TBovrx": {
-    "defaultMessage": "Month"
-  },
   "TE4fIS": {
     "defaultMessage": "City"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "Active Incidents"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n, plural, one {month} other {months}}"
   },
   "X5QA2h": {
     "defaultMessage": "Processing Renewal Payment"
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "Encrypted message (copy and include in your email):"
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "Copy to Clipboard"

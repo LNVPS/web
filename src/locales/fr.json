@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "Désactiver le renouvellement automatique."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{an} other{ans}}"
+  },
   "+SM72m": {
     "defaultMessage": "Clé publique du destinataire (npub/nprofile/hex) :"
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "Code postal *"
   },
-  "7pXrnq": {
-    "defaultMessage": "Jour"
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{jour} other{jours}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# h} other{# h}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "Aucun changement détecté."
   },
-  "IFo1oo": {
-    "defaultMessage": "Année"
-  },
   "INlWvJ": {
     "defaultMessage": "OU"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "Incidents résolus"
   },
-  "TBovrx": {
-    "defaultMessage": "Mois"
-  },
   "TE4fIS": {
     "defaultMessage": "Ville"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "Incidents en cours"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{mois} other{mois}}"
   },
   "X5QA2h": {
     "defaultMessage": "Traitement du paiement de renouvellement."
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "Message chiffré (copiez-le et incluez-le dans votre courriel) :"
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "Copier dans le presse-papiers"

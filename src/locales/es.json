@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "Desactivar la renovación automática."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{año} other{años}}"
+  },
   "+SM72m": {
     "defaultMessage": "Clave pública del destinatario (npub/nprofile/hex):"
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "Código postal *"
   },
-  "7pXrnq": {
-    "defaultMessage": "Día"
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{día} other{días}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# hora} other{# horas}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "No se detectaron cambios."
   },
-  "IFo1oo": {
-    "defaultMessage": "Año"
-  },
   "INlWvJ": {
     "defaultMessage": "O"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "Incidentes resueltos"
   },
-  "TBovrx": {
-    "defaultMessage": "Mes"
-  },
   "TE4fIS": {
     "defaultMessage": "Ciudad"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "Incidentes activos"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{mes} other{meses}}"
   },
   "X5QA2h": {
     "defaultMessage": "Procesando el pago de la renovación."
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "Mensaje cifrado (copie e incluya en su correo electrónico):"
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "Copiar al portapapeles"

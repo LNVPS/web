@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "关闭自动续订"
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{年} other{年}}"
+  },
   "+SM72m": {
     "defaultMessage": "收件人的公钥（npub/nprofile/十六进制）："
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "邮政编码 *"
   },
-  "7pXrnq": {
-    "defaultMessage": "天；白天"
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{天} other{天}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# 小时} other{# 小时}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "未检测到任何更改。"
   },
-  "IFo1oo": {
-    "defaultMessage": "年份"
-  },
   "INlWvJ": {
     "defaultMessage": "或者"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
   },
-  "TBovrx": {
-    "defaultMessage": "月份"
-  },
   "TE4fIS": {
     "defaultMessage": "城市"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "正在发生的事件"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{月} other{月}}"
   },
   "X5QA2h": {
     "defaultMessage": "处理续费付款。"
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "加密消息（复制并包含在您的电子邮件中）："
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"

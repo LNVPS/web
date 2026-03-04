@@ -2,6 +2,9 @@
   "+8AmJ0": {
     "defaultMessage": "Automatische Verlängerung deaktivieren"
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
+  },
   "+SM72m": {
     "defaultMessage": "Öffentlicher Schlüssel des Empfängers (npub/nprofile/hex):"
   },
@@ -140,8 +143,8 @@
   "78fz1O": {
     "defaultMessage": "Postleitzahl *"
   },
-  "7pXrnq": {
-    "defaultMessage": "Tag"
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{Tag} other{Tage}}"
   },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# Std.} other{# Std.}}"
@@ -323,9 +326,6 @@
   "IChMNf": {
     "defaultMessage": "Keine Änderungen festgestellt."
   },
-  "IFo1oo": {
-    "defaultMessage": "Jahr"
-  },
   "INlWvJ": {
     "defaultMessage": "ODER"
   },
@@ -500,9 +500,6 @@
   "T7b6ZF": {
     "defaultMessage": "Gelöste Vorfälle"
   },
-  "TBovrx": {
-    "defaultMessage": "Monat"
-  },
   "TE4fIS": {
     "defaultMessage": "Stadt"
   },
@@ -565,6 +562,9 @@
   },
   "Wsj2fc": {
     "defaultMessage": "Aktuelle Vorfälle"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{Monat} other{Monate}}"
   },
   "X5QA2h": {
     "defaultMessage": "Verarbeitung der Zahlung für die Verlängerung"
@@ -835,9 +835,6 @@
   },
   "mJPBXd": {
     "defaultMessage": "Verschlüsselte Nachricht (kopieren Sie diese und fügen Sie sie in Ihre E-Mail ein):"
-  },
-  "mMeU1k": {
-    "defaultMessage": "{n, plural, one {# {unit}} other {# {unit}s}}"
   },
   "mOR+qH": {
     "defaultMessage": "In die Zwischenablage kopieren"

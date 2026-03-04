@@ -41,14 +41,36 @@ export default function CostLabel({
   }
 }
 
-export function IntervalName({ interval }: { interval: string }) {
+export function IntervalSuffix({
+  interval,
+  n,
+}: {
+  interval: string;
+  n?: number;
+}) {
+  const count = n ?? 1;
   switch (interval) {
     case "day":
-      return <FormattedMessage defaultMessage="Day" />;
+      return (
+        <FormattedMessage
+          defaultMessage="{n, plural, one {day} other {days}}"
+          values={{ n: count }}
+        />
+      );
     case "month":
-      return <FormattedMessage defaultMessage="Month" />;
+      return (
+        <FormattedMessage
+          defaultMessage="{n, plural, one {month} other {months}}"
+          values={{ n: count }}
+        />
+      );
     case "year":
-      return <FormattedMessage defaultMessage="Year" />;
+      return (
+        <FormattedMessage
+          defaultMessage="{n, plural, one {year} other {years}}"
+          values={{ n: count }}
+        />
+      );
     default:
       return <>{interval}</>;
   }
@@ -78,7 +100,7 @@ export function CostAmount({
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>
-          /<IntervalName interval={cost.interval_type} />
+          /<IntervalSuffix interval={cost.interval_type} />
         </>
       )}
     </span>

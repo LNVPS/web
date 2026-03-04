@@ -10,7 +10,7 @@ import VpsPayment from "./vps-payment";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "./button";
-import { CostAmount, IntervalName } from "./cost";
+import { CostAmount, IntervalSuffix } from "./cost";
 import { RevolutPayWidget } from "./revolut";
 import { Icon } from "./icon";
 import { ApiUrl } from "../const";
@@ -479,13 +479,8 @@ export default function VmPaymentFlow({
                   <FormattedMessage defaultMessage="Renew for:" />
                 </span>
                 <span className="text-sm">
-                  <FormattedMessage
-                    defaultMessage="{n, plural, one {# {unit}} other {# {unit}s}}"
-                    values={{
-                      n: intervals,
-                      unit: <IntervalName interval={intervalType} />,
-                    }}
-                  />
+                  {intervals}{" "}
+                  <IntervalSuffix interval={intervalType} n={intervals} />
                 </span>
               </div>
               <input

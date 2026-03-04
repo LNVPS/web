@@ -44,6 +44,9 @@
   "1M3SKY": {
     "defaultMessage": "Please describe your question or issue in detail..."
   },
+  "1VQrBL": {
+    "defaultMessage": "{h, plural, one {# hr} other {# hrs}} {m, plural, one {# min} other {# mins}}"
+  },
   "1v7S+3": {
     "defaultMessage": "Add Nostr Domain"
   },
@@ -61,6 +64,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Speedtest"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n, plural, one {# sec} other {# secs}}"
   },
   "2l2y5p": {
     "defaultMessage": "Create Order"
@@ -128,8 +134,17 @@
   "7+Domh": {
     "defaultMessage": "Notes"
   },
+  "78CCi1": {
+    "defaultMessage": "{n, plural, one {# min} other {# mins}}"
+  },
   "78fz1O": {
     "defaultMessage": "Postcode *"
+  },
+  "7pXrnq": {
+    "defaultMessage": "Day"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n, plural, one {# hr} other {# hrs}}"
   },
   "7zs+Vz": {
     "defaultMessage": "Memory: {gb} GB"
@@ -245,9 +260,6 @@
   "DU+LLZ": {
     "defaultMessage": "Referral"
   },
-  "DYMg53": {
-    "defaultMessage": "GB {diskType}"
-  },
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
   },
@@ -310,6 +322,9 @@
   },
   "IChMNf": {
     "defaultMessage": "No changes detected"
+  },
+  "IFo1oo": {
+    "defaultMessage": "Year"
   },
   "INlWvJ": {
     "defaultMessage": "OR"
@@ -485,6 +500,9 @@
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
   },
+  "TBovrx": {
+    "defaultMessage": "Month"
+  },
   "TE4fIS": {
     "defaultMessage": "City"
   },
@@ -577,9 +595,6 @@
   },
   "Yt9S7n": {
     "defaultMessage": "Fee: {fees}"
-  },
-  "Yx0Kq/": {
-    "defaultMessage": "{usage}% RAM"
   },
   "YyojwF": {
     "defaultMessage": "Configuration Changes:"
@@ -731,9 +746,6 @@
   "gdP56I": {
     "defaultMessage": "tax"
   },
-  "gdfy5u": {
-    "defaultMessage": "{usage}% CPU"
-  },
   "gjBiyj": {
     "defaultMessage": "Loading..."
   },
@@ -769,6 +781,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Select country"
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n, plural, one {# day} other {# days}}"
   },
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."
@@ -914,17 +929,11 @@
   "sXj7R6": {
     "defaultMessage": "Disk:"
   },
-  "sXqUvN": {
-    "defaultMessage": "{cpu} vCPU"
-  },
   "sqvjkf": {
     "defaultMessage": "Add Handle"
   },
   "sy+pv5": {
     "defaultMessage": "Email"
-  },
-  "tjOvn7": {
-    "defaultMessage": "GB RAM"
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -958,9 +967,6 @@
   },
   "vlKhIl": {
     "defaultMessage": "Your name"
-  },
-  "voiR31": {
-    "defaultMessage": "{cpu} vCPU{cpuInfo}, {memory} RAM, {disk} {diskType}"
   },
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"

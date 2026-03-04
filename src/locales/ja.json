@@ -44,6 +44,9 @@
   "1M3SKY": {
     "defaultMessage": "ご質問や問題について、できるだけ詳しくご説明ください。"
   },
+  "1VQrBL": {
+    "defaultMessage": "{h,plural,one{# 時間} other{# 時間}} {m,plural,one{# 分} other{# 分}}"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostrドメインを追加"
   },
@@ -61,6 +64,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "スピードテスト"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n,plural,one{# 秒} other{# 秒}}"
   },
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
@@ -128,8 +134,17 @@
   "7+Domh": {
     "defaultMessage": "備考"
   },
+  "78CCi1": {
+    "defaultMessage": "{n,plural,one{# 分} other{# 分}}"
+  },
   "78fz1O": {
     "defaultMessage": "郵便番号 *"
+  },
+  "7pXrnq": {
+    "defaultMessage": "日"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n,plural,one{# 時間} other{# 時間}}"
   },
   "7zs+Vz": {
     "defaultMessage": "メモリ：{gb} GB"
@@ -245,9 +260,6 @@
   "DU+LLZ": {
     "defaultMessage": "紹介"
   },
-  "DYMg53": {
-    "defaultMessage": "ギガバイト {diskType}"
-  },
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
   },
@@ -274,9 +286,6 @@
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
-  },
-  "GKzO/A": {
-    "defaultMessage": "料金："
   },
   "GLA+G9": {
     "defaultMessage": "その他のご連絡方法："
@@ -313,6 +322,9 @@
   },
   "IChMNf": {
     "defaultMessage": "変更は検出されませんでした。"
+  },
+  "IFo1oo": {
+    "defaultMessage": "年"
   },
   "INlWvJ": {
     "defaultMessage": "または"
@@ -488,6 +500,9 @@
   "T7b6ZF": {
     "defaultMessage": "解決済みのインシデント"
   },
+  "TBovrx": {
+    "defaultMessage": "月"
+  },
   "TE4fIS": {
     "defaultMessage": "都市"
   },
@@ -580,9 +595,6 @@
   },
   "Yt9S7n": {
     "defaultMessage": "料金：{fees}"
-  },
-  "Yx0Kq/": {
-    "defaultMessage": "{usage}% のRAMを使用中"
   },
   "YyojwF": {
     "defaultMessage": "設定の変更点："
@@ -734,9 +746,6 @@
   "gdP56I": {
     "defaultMessage": "税"
   },
-  "gdfy5u": {
-    "defaultMessage": "CPU使用率：{usage}%"
-  },
   "gjBiyj": {
     "defaultMessage": "読み込み中..."
   },
@@ -772,6 +781,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "国を選択してください。"
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n,plural,one{# 日} other{# 日}}"
   },
   "jmVweB": {
     "defaultMessage": "SSHキーを読み込んでいます。"
@@ -917,17 +929,11 @@
   "sXj7R6": {
     "defaultMessage": "ディスク："
   },
-  "sXqUvN": {
-    "defaultMessage": "{cpu} 個の仮想CPU"
-  },
   "sqvjkf": {
     "defaultMessage": "ハンドルを追加"
   },
   "sy+pv5": {
     "defaultMessage": "メール"
-  },
-  "tjOvn7": {
-    "defaultMessage": "GBのRAM"
   },
   "tzMNF3": {
     "defaultMessage": "状況"
@@ -961,9 +967,6 @@
   },
   "vlKhIl": {
     "defaultMessage": "あなたの名前"
-  },
-  "voiR31": {
-    "defaultMessage": "{cpu} vCPU：{cpuInfo}、RAM：{memory}、ディスク：{disk}（{diskType}）"
   },
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："

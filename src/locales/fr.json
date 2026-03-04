@@ -44,6 +44,9 @@
   "1M3SKY": {
     "defaultMessage": "Veuillez décrire votre question ou votre problème de manière détaillée..."
   },
+  "1VQrBL": {
+    "defaultMessage": "{h,plural,one{# h} other{# h}} {m,plural,one{# min} other{# min}}"
+  },
   "1v7S+3": {
     "defaultMessage": "Ajouter un domaine Nostr"
   },
@@ -61,6 +64,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Test de vitesse"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n,plural,one{# sec} other{# sec}}"
   },
   "2l2y5p": {
     "defaultMessage": "Créer une commande"
@@ -128,8 +134,17 @@
   "7+Domh": {
     "defaultMessage": "Notes"
   },
+  "78CCi1": {
+    "defaultMessage": "{n,plural,one{# min} other{# minutes}}"
+  },
   "78fz1O": {
     "defaultMessage": "Code postal *"
+  },
+  "7pXrnq": {
+    "defaultMessage": "Jour"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n,plural,one{# h} other{# h}}"
   },
   "7zs+Vz": {
     "defaultMessage": "Mémoire : {gb} Go"
@@ -245,9 +260,6 @@
   "DU+LLZ": {
     "defaultMessage": "Recommandation"
   },
-  "DYMg53": {
-    "defaultMessage": "{diskType} Go"
-  },
   "Dfuz87": {
     "defaultMessage": "Aucun domaine n’a été ajouté pour le moment. Ajoutez votre premier domaine ci-dessus pour commencer."
   },
@@ -274,9 +286,6 @@
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
-  },
-  "GKzO/A": {
-    "defaultMessage": "Frais :"
   },
   "GLA+G9": {
     "defaultMessage": "Autres moyens de nous contacter :"
@@ -313,6 +322,9 @@
   },
   "IChMNf": {
     "defaultMessage": "Aucun changement détecté."
+  },
+  "IFo1oo": {
+    "defaultMessage": "Année"
   },
   "INlWvJ": {
     "defaultMessage": "OU"
@@ -488,6 +500,9 @@
   "T7b6ZF": {
     "defaultMessage": "Incidents résolus"
   },
+  "TBovrx": {
+    "defaultMessage": "Mois"
+  },
   "TE4fIS": {
     "defaultMessage": "Ville"
   },
@@ -580,9 +595,6 @@
   },
   "Yt9S7n": {
     "defaultMessage": "Frais : {fees}"
-  },
-  "Yx0Kq/": {
-    "defaultMessage": "{usage}% de la mémoire RAM utilisée."
   },
   "YyojwF": {
     "defaultMessage": "Modifications de la configuration :"
@@ -734,9 +746,6 @@
   "gdP56I": {
     "defaultMessage": "impôt"
   },
-  "gdfy5u": {
-    "defaultMessage": "{usage}% d’utilisation du processeur"
-  },
   "gjBiyj": {
     "defaultMessage": "Chargement en cours…"
   },
@@ -772,6 +781,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Sélectionnez le pays."
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n,plural,one{# jour} other{# jours}}"
   },
   "jmVweB": {
     "defaultMessage": "Chargement des clés SSH…"
@@ -917,17 +929,11 @@
   "sXj7R6": {
     "defaultMessage": "Disque :"
   },
-  "sXqUvN": {
-    "defaultMessage": "{cpu} cœurs de processeur virtuel"
-  },
   "sqvjkf": {
     "defaultMessage": "Ajouter une poignée"
   },
   "sy+pv5": {
     "defaultMessage": "Courriel"
-  },
-  "tjOvn7": {
-    "defaultMessage": "{GB} de mémoire RAM"
   },
   "tzMNF3": {
     "defaultMessage": "Statut"
@@ -961,9 +967,6 @@
   },
   "vlKhIl": {
     "defaultMessage": "Votre nom"
-  },
-  "voiR31": {
-    "defaultMessage": "{cpu} vCPU{cpuInfo}, {memory} Go de RAM, {disk} {diskType}"
   },
   "wLwJ9Q": {
     "defaultMessage": "Valeur du temps restant au tarif précédent :"

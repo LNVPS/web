@@ -44,6 +44,9 @@
   "1M3SKY": {
     "defaultMessage": "请详细描述您的问题或遇到的情况……"
   },
+  "1VQrBL": {
+    "defaultMessage": "{h,plural,one{# 小时} other{# 小时}} {m,plural,one{# 分钟} other{# 分钟}}"
+  },
   "1v7S+3": {
     "defaultMessage": "添加 Nostr 域名"
   },
@@ -61,6 +64,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "网速测试"
+  },
+  "2jI5j1": {
+    "defaultMessage": "{n,plural,one{# 秒} other{# 秒}}"
   },
   "2l2y5p": {
     "defaultMessage": "创建订单"
@@ -128,8 +134,17 @@
   "7+Domh": {
     "defaultMessage": "注释"
   },
+  "78CCi1": {
+    "defaultMessage": "{n,plural,one{# 分钟} other{# 分钟}}"
+  },
   "78fz1O": {
     "defaultMessage": "邮政编码 *"
+  },
+  "7pXrnq": {
+    "defaultMessage": "天；白天"
+  },
+  "7qSZJ7": {
+    "defaultMessage": "{n,plural,one{# 小时} other{# 小时}}"
   },
   "7zs+Vz": {
     "defaultMessage": "内存：{gb} GB"
@@ -245,9 +260,6 @@
   "DU+LLZ": {
     "defaultMessage": "推荐"
   },
-  "DYMg53": {
-    "defaultMessage": "GB {diskType}"
-  },
   "Dfuz87": {
     "defaultMessage": "目前尚未添加任何域名。请在上方添加您的第一个域名，开始使用。"
   },
@@ -274,9 +286,6 @@
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
-  },
-  "GKzO/A": {
-    "defaultMessage": "费用："
   },
   "GLA+G9": {
     "defaultMessage": "其他联系方式："
@@ -313,6 +322,9 @@
   },
   "IChMNf": {
     "defaultMessage": "未检测到任何更改。"
+  },
+  "IFo1oo": {
+    "defaultMessage": "年份"
   },
   "INlWvJ": {
     "defaultMessage": "或者"
@@ -488,6 +500,9 @@
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
   },
+  "TBovrx": {
+    "defaultMessage": "月份"
+  },
   "TE4fIS": {
     "defaultMessage": "城市"
   },
@@ -580,9 +595,6 @@
   },
   "Yt9S7n": {
     "defaultMessage": "费用：{fees}"
-  },
-  "Yx0Kq/": {
-    "defaultMessage": "已使用 {usage}% 的内存。"
   },
   "YyojwF": {
     "defaultMessage": "配置更改："
@@ -734,9 +746,6 @@
   "gdP56I": {
     "defaultMessage": "税"
   },
-  "gdfy5u": {
-    "defaultMessage": "CPU 使用率：{usage}%"
-  },
   "gjBiyj": {
     "defaultMessage": "正在加载……"
   },
@@ -772,6 +781,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "请选择国家。"
+  },
+  "jYLOYR": {
+    "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
@@ -917,17 +929,11 @@
   "sXj7R6": {
     "defaultMessage": "磁盘："
   },
-  "sXqUvN": {
-    "defaultMessage": "{cpu} 个虚拟 CPU"
-  },
   "sqvjkf": {
     "defaultMessage": "添加把手"
   },
   "sy+pv5": {
     "defaultMessage": "电子邮件"
-  },
-  "tjOvn7": {
-    "defaultMessage": "千兆内存"
   },
   "tzMNF3": {
     "defaultMessage": "状态"
@@ -961,9 +967,6 @@
   },
   "vlKhIl": {
     "defaultMessage": "您的姓名。"
-  },
-  "voiR31": {
-    "defaultMessage": "{cpu} 个 vCPU，{cpuInfo}，{memory} GB 内存，{disk} 个 {diskType} 磁盘"
   },
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："

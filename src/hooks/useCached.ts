@@ -50,6 +50,17 @@ export function useCached<T>(
   const loaderRef = useRef(loader);
   loaderRef.current = loader;
 
+  // When the key changes (e.g. locale switch), reset state to whatever is
+  // cached for the new key so the stale check below works correctly.
+  const prevKeyRef = useRef(key);
+  useEffect(() => {
+    if (prevKeyRef.current === key) return;
+    prevKeyRef.current = key;
+    setError(undefined);
+    setFetched(false);
+    setData(isDev ? undefined : loadData<T>(key));
+  }, [key, isDev]);
+
   useEffect(() => {
     if (loading || error !== undefined) return;
 

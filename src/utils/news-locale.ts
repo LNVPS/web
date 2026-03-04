@@ -64,20 +64,19 @@ function pickBestLocale(
   locale: string,
 ): NostrEvent | undefined {
   if (group.length === 0) return undefined;
-  if (group.length === 1) return group[0];
 
   // Prefer exact locale match
   const exact = group.find((ev) => getArticleLang(ev) === locale);
   if (exact) return exact;
 
-  // Fall back to English
-  const english = group.find((ev) => getArticleLang(ev) === "en");
-  if (english) return english;
-
-  // Fall back to unlabelled (assumed English)
+  // Fall back to unlabelled (assumed English original)
   const unlabelled = group.find((ev) => getArticleLang(ev) === undefined);
   if (unlabelled) return unlabelled;
 
-  // Last resort: any version
-  return group[0];
+  // Fall back to explicitly tagged English
+  const english = group.find((ev) => getArticleLang(ev) === "en");
+  if (english) return english;
+
+  // No suitable version found — return nothing rather than a wrong-language article
+  return undefined;
 }

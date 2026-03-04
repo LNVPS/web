@@ -1,5 +1,6 @@
 import { NostrEvent, NostrLink } from "@snort/system";
 import { Link } from "react-router-dom";
+import { FormattedDate } from "react-intl";
 
 export function NewsLink({ ev }: { ev: NostrEvent }) {
   const link = NostrLink.fromEvent(ev);
@@ -14,7 +15,12 @@ export function NewsLink({ ev }: { ev: NostrEvent }) {
         <div className="text-xl flex items-center justify-between">
           <div className="text-cyber-text-bright">{title}</div>
           <div className="text-cyber-muted text-sm">
-            {new Date(posted * 1000).toDateString()}
+            <FormattedDate
+              value={posted * 1000}
+              year="numeric"
+              month="short"
+              day="numeric"
+            />
           </div>
         </div>
       </div>

@@ -12,18 +12,19 @@ export function useLatestNews() {
   const system = useContext(SnortContext);
   const { locale } = useLocale();
 
-  // Fetch more than 1 so we can pick the best locale version after filtering.
-  // Translations share the same d-tag, so e.g. limit:10 gives ~5 unique articles
-  // across up to 2 language variants each.
+  // Fetch enough events to cover all translation variants of the most recent
+  // article plus a buffer. With 11 supported locales, one article can have up
+  // to 11 variants — fetching 25 ensures the English original of the latest
+  // article is always included even when translations are published after it.
   const req = new RequestBuilder("latest-news");
   req
     .withFilter()
     .kinds([EventKind.LongFormTextNote])
     .authors([NostrProfile.id])
-    .limit(10);
+    .limit(25);
 
   return useCached(
-    `latest-news:${locale}`,
+    `latest-news:v2:${locale}`,
     async () => {
       const events = await system.Fetch(req);
       return filterArticlesByLocale(events, locale).slice(0, 1);

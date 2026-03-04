@@ -9,3 +9,8 @@ dist
 !.yarn/sdks
 !.yarn/versions
 docs
+.env*
+.git
+.github
+.vscode
+work

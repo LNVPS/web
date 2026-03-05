@@ -242,6 +242,7 @@ export function VpsCustomOrder({
           </div>
           {params.disks.map((d) => (
             <FilterButton
+              key={d.disk_type}
               active={diskType?.disk_type === d.disk_type}
               onClick={() => setDiskType(d)}
             >

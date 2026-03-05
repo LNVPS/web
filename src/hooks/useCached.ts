@@ -12,12 +12,12 @@ function formatKey(key: string): string {
 
 function loadData<T>(key: string): CachedObj<T> | undefined {
   const k = formatKey(key);
-  const raw = window.localStorage.getItem(k);
+  const raw = localStorage.getItem(k);
   try {
     const obj: CachedObj<T> | undefined = JSON.parse(raw || "");
     return obj;
   } catch {
-    window.localStorage.removeItem(k);
+    localStorage.removeItem(k);
   }
 }
 
@@ -31,7 +31,7 @@ async function storeObj<T>(
     cached: unixNow(),
     object: newData,
   } as CachedObj<T>;
-  window.localStorage.setItem(k, JSON.stringify(obj));
+  localStorage.setItem(k, JSON.stringify(obj));
   return obj;
 }
 
@@ -40,11 +40,10 @@ export function useCached<T>(
   loader: () => Promise<T>,
   expires?: number,
 ) {
-  const isDev = import.meta.env.DEV;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>();
   const [data, setData] = useState<CachedObj<T> | undefined>(() =>
-    isDev ? undefined : loadData<T>(key),
+    loadData<T>(key),
   );
   const [fetched, setFetched] = useState(false);
   const loaderRef = useRef(loader);
@@ -58,18 +57,14 @@ export function useCached<T>(
     prevKeyRef.current = key;
     setError(undefined);
     setFetched(false);
-    setData(isDev ? undefined : loadData<T>(key));
-  }, [key, isDev]);
+    setData(loadData<T>(key));
+  }, [key]);
 
   useEffect(() => {
     if (loading || error !== undefined) return;
 
-    if (isDev) {
-      if (fetched) return;
-    } else {
-      const now = unixNow();
-      if (data !== undefined && data.cached >= now - (expires ?? 120)) return;
-    }
+    const now = unixNow();
+    if (data !== undefined && data.cached >= now - (expires ?? 120)) return;
 
     setLoading(true);
     storeObj<T>(key, () => loaderRef.current())
@@ -85,7 +80,7 @@ export function useCached<T>(
         }
       })
       .finally(() => setLoading(false));
-  }, [key, loading, error, data, fetched, isDev, expires]);
+  }, [key, loading, error, data, fetched, expires]);
 
   return {
     data: data?.object,

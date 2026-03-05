@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { useMemo } from "react";
+import { useHead, type HeadTags } from "./head-context";
 
 const SITE_NAME = "LNVPS";
 const SITE_URL = "https://lnvps.net";
@@ -37,39 +38,50 @@ export default function Seo({
     ? ogImage
     : `${SITE_URL}${ogImage}`;
 
-  const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+  const tags = useMemo<HeadTags>(() => {
+    const meta: Array<Record<string, string>> = [
+      { name: "description", content: description },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:title", content: pageTitle },
+      { property: "og:description", content: description },
+      { property: "og:type", content: ogType },
+      { property: "og:image", content: absoluteOgImage },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: pageTitle },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: absoluteOgImage },
+    ];
+    if (noindex) meta.push({ name: "robots", content: "noindex,nofollow" });
+    if (canonicalUrl) meta.push({ property: "og:url", content: canonicalUrl });
+    if (publishedAt)
+      meta.push({ property: "article:published_time", content: publishedAt });
+    if (author) meta.push({ property: "article:author", content: author });
 
-  return (
-    <Helmet>
-      <title>{pageTitle}</title>
-      <meta name="description" content={description} />
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    const links: Array<Record<string, string>> = [];
+    if (canonicalUrl) links.push({ rel: "canonical", href: canonicalUrl });
 
-      {/* Open Graph */}
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={absoluteOgImage} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      {publishedAt && (
-        <meta property="article:published_time" content={publishedAt} />
-      )}
-      {author && <meta property="article:author" content={author} />}
+    const jsonLdArray = jsonLd
+      ? Array.isArray(jsonLd)
+        ? jsonLd
+        : [jsonLd]
+      : [];
+    const scripts = jsonLdArray.map((s) => JSON.stringify(s));
 
-      {/* Twitter / X Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={absoluteOgImage} />
+    return { title: pageTitle, meta, links, scripts };
+  }, [
+    pageTitle,
+    description,
+    ogType,
+    absoluteOgImage,
+    canonicalUrl,
+    noindex,
+    publishedAt,
+    author,
+    jsonLd,
+  ]);
 
-      {/* JSON-LD structured data */}
-      {jsonLdArray.map((schema, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
-    </Helmet>
-  );
+  useHead(tags);
+
+  // Render nothing — tags are managed via context (SSR) or DOM (client).
+  return null;
 }

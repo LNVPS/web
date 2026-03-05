@@ -5,6 +5,7 @@ import {
   Nip7Signer,
   PrivateKeySigner,
 } from "@snort/system";
+import { isBrowser } from "./ssr";
 
 export interface LoginSession {
   type: "nip7" | "nsec" | "nip46";
@@ -19,12 +20,14 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
 
   constructor() {
     super();
-    const s = window.localStorage.getItem("session");
-    if (s) {
-      this.#session = JSON.parse(s);
-      // patch session
-      if (this.#session) {
-        this.#session.type ??= "nip7";
+    if (isBrowser) {
+      const s = localStorage.getItem("session");
+      if (s) {
+        this.#session = JSON.parse(s);
+        // patch session
+        if (this.#session) {
+          this.#session.type ??= "nip7";
+        }
       }
     }
   }
@@ -112,9 +115,9 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
 
   #save() {
     if (this.#session) {
-      window.localStorage.setItem("session", JSON.stringify(this.#session));
+      localStorage.setItem("session", JSON.stringify(this.#session));
     } else {
-      window.localStorage.removeItem("session");
+      localStorage.removeItem("session");
     }
     this.notifyChange();
   }

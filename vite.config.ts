@@ -8,9 +8,22 @@ export default defineConfig({
     tailwindcss(),
     react({
       babel: {
-        configFile: true,
+        plugins: [
+          [
+            "formatjs",
+            {
+              idInterpolationPattern: "[sha512:contenthash:base64:6]",
+            },
+          ],
+        ],
       },
     }),
   ],
   assetsInclude: ["**/*.md"],
+  ssr: {
+    // By default Vite externalises node_modules in SSR builds. We only need
+    // to force-inline packages that ship un-transpiled ESM or use Vite-
+    // specific features (e.g. ?no-inline import suffixes).
+    noExternal: ["react-intl", "@formatjs/intl", "@scure/base"],
+  },
 });

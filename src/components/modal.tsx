@@ -37,6 +37,11 @@ export default function Modal(props: ModalProps) {
     props.onClose?.(e);
   };
 
+  // createPortal requires a DOM target — skip during SSR.
+  if (typeof document === "undefined") {
+    return null;
+  }
+
   return createPortal(
     <div
       className={classNames(

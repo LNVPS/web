@@ -6,10 +6,13 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { useLocale } from "../components/translation-provider";
 import { filterArticlesByLocale } from "../utils/news-locale";
 import Seo from "../components/seo";
+import { useLoaderData } from "react-router-dom";
+import type { NewsLoaderData } from "../loaders";
 
 export function NewsPage() {
   const { locale } = useLocale();
   const { formatMessage } = useIntl();
+  const { articles: loaderArticles } = useLoaderData<NewsLoaderData>();
 
   const req = new RequestBuilder("news");
   req
@@ -18,7 +21,10 @@ export function NewsPage() {
     .authors([NostrProfile.id])
     .limit(50);
 
-  const rawPosts = useRequestBuilder(req);
+  const liveEvents = useRequestBuilder(req);
+
+  // Prefer live relay data, fall back to loader (SSR) data
+  const rawPosts = liveEvents.length > 0 ? liveEvents : loaderArticles;
   const posts = filterArticlesByLocale(rawPosts, locale).sort((a, b) => {
     const a_posted = Number(
       a.tags.find((t) => t[0] == "published_at")?.[1] ?? a.created_at,

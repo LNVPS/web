@@ -1,14 +1,8 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { NostrSystem } from "@snort/system";
-import { SnortContext } from "@snort/system-react";
-import { HelmetProvider } from "react-helmet-async";
+import { lazy, Suspense } from "react";
+import type { RouteObject } from "react-router-dom";
 import Layout from "./pages/layout.tsx";
 import HomePage from "./pages/home.tsx";
 import { OrderPage } from "./pages/order";
-import VmPage from "./pages/vm.tsx";
 import AccountPage from "./pages/account.tsx";
 import SignUpPage from "./pages/sign-up.tsx";
 import { TosPage } from "./pages/terms.tsx";
@@ -18,7 +12,6 @@ import { VmBillingPage } from "./pages/vm-billing.tsx";
 import { VmGraphsPage } from "./pages/vm-graphs.tsx";
 import { NewsPage } from "./pages/news.tsx";
 import { NewsPost } from "./pages/news-post.tsx";
-import { VmConsolePage } from "./pages/vm-console.tsx";
 import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
@@ -27,25 +20,32 @@ import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
-import TranslationProvider from "./components/translation-provider.tsx";
+import {
+  homeLoader,
+  newsLoader,
+  newsPostLoader,
+  statusLoader,
+} from "./loaders.ts";
 
-const system = new NostrSystem({
-  automaticOutboxModel: false,
-  buildFollowGraph: false,
-});
-[
-  "wss://relay.snort.social/",
-  "wss://relay.damus.io/",
-  "wss://nos.lol/",
-].forEach((a) => system.ConnectToRelay(a, { read: true, write: true }));
+// Lazy-load pages that import browser-only libraries (xterm, qr-code-styling)
+// so they are code-split out of the SSR bundle.
+const VmPage = lazy(() => import("./pages/vm.tsx"));
+const VmConsolePage = lazy(() =>
+  import("./pages/vm-console.tsx").then((m) => ({ default: m.VmConsolePage })),
+);
 
-const router = createBrowserRouter([
+function Lazy({ children }: { children: React.ReactNode }) {
+  return <Suspense fallback={null}>{children}</Suspense>;
+}
+
+export const routes: RouteObject[] = [
   {
     element: <Layout />,
     children: [
       {
         path: "/",
         element: <HomePage />,
+        loader: homeLoader,
       },
       {
         path: "/login",
@@ -91,7 +91,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/vm",
-        element: <VmPage />,
+        element: (
+          <Lazy>
+            <VmPage />
+          </Lazy>
+        ),
       },
       {
         path: "/vm/billing/:action?",
@@ -103,7 +107,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/vm/console",
-        element: <VmConsolePage />,
+        element: (
+          <Lazy>
+            <VmConsolePage />
+          </Lazy>
+        ),
       },
       {
         path: "/vm/history",
@@ -120,27 +128,18 @@ const router = createBrowserRouter([
       {
         path: "/status",
         element: <StatusPage />,
+        loader: statusLoader,
       },
       {
         path: "/news",
         element: <NewsPage />,
+        loader: newsLoader,
       },
       {
         path: "/news/:id",
         element: <NewsPost />,
+        loader: newsPostLoader,
       },
     ],
   },
-]);
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <HelmetProvider>
-      <TranslationProvider>
-        <SnortContext.Provider value={system}>
-          <RouterProvider router={router} />
-        </SnortContext.Provider>
-      </TranslationProvider>
-    </HelmetProvider>
-  </StrictMode>,
-);
+];

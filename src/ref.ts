@@ -4,11 +4,12 @@ export interface RefCode {
 }
 
 export function saveRefCode() {
+  if (typeof window === "undefined") return;
   const search = new URLSearchParams(window.location.search);
   const code = search.get("ref");
   if (code) {
     // save or overwrite new code from landing
-    window.localStorage.setItem(
+    localStorage.setItem(
       "ref",
       JSON.stringify({
         code,
@@ -20,18 +21,18 @@ export function saveRefCode() {
 }
 
 export function getRefCode() {
-  const ref = window.localStorage.getItem("ref");
+  const ref = localStorage.getItem("ref");
   if (ref) {
     const refObj = JSON.parse(ref) as RefCode;
     const now = Math.floor(new Date().getTime() / 1000);
     // treat code as stale if > 7days old
     if (Math.abs(refObj.saved - now) > 604800) {
-      window.localStorage.removeItem("ref");
+      localStorage.removeItem("ref");
     }
     return refObj;
   }
 }
 
 export function clearRefCode() {
-  window.localStorage.removeItem("ref");
+  localStorage.removeItem("ref");
 }

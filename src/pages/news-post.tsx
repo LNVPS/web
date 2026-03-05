@@ -1,10 +1,11 @@
 import { NostrEvent, NostrLink, TaggedNostrEvent } from "@snort/system";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useLoaderData, useParams } from "react-router-dom";
 import Markdown from "../components/markdown";
 import Profile from "../components/profile";
 import { useNewsPost } from "../hooks/news-post";
 import { FormattedDate } from "react-intl";
 import Seo from "../components/seo";
+import type { NewsPostLoaderData } from "../loaders";
 
 export function NewsPostContent({ ev }: { ev: NostrEvent }) {
   const title = ev.tags.find((a) => a[0] == "title")?.[1];
@@ -71,9 +72,11 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
 export function NewsPost() {
   const { id } = useParams<{ id: string }>();
   const { state } = useLocation() as { state?: TaggedNostrEvent };
+  const { article: loaderEv } = useLoaderData<NewsPostLoaderData>();
 
   const data = useNewsPost(state ? undefined : id);
-  const ev = state || data.at(0);
+
+  const ev = state || data.at(0) || loaderEv;
 
   if (!ev) return null;
   return <NewsPostContent ev={ev} />;

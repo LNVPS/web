@@ -1,20 +1,19 @@
 import { useState, useEffect, ReactNode } from "react";
-import { DiskType, LNVpsApi, VmHostRegion } from "../api";
+import { DiskType, VmHostRegion } from "../api";
 import VpsRow, { VpsTableHeader } from "../components/vps-card";
-import { ApiUrl, NostrProfile } from "../const";
-import { Link } from "react-router-dom";
+import { NostrProfile } from "../const";
+import { Link, useLoaderData } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
 import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
 import { appendDedupe, dedupe } from "@snort/shared";
 import useLogin from "../hooks/login";
-import usePaymentMethods from "../hooks/usePaymentMethods";
 import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
-import { useCached } from "../hooks/useCached";
 import IpBlockCard from "../components/ip-block-card";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import type { HomeLoaderData } from "../loaders";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -144,7 +143,7 @@ function FilterSection({
 }
 
 function PaymentMethodsFooter() {
-  const { data: methods } = usePaymentMethods();
+  const { paymentMethods: methods } = useLoaderData<HomeLoaderData>();
   return (
     <div className="flex items-center gap-4 flex-wrap justify-center">
       {methods?.some((m) => m.name.toLowerCase().includes("revolut")) && (
@@ -192,16 +191,14 @@ function PaymentMethodsFooter() {
 }
 
 function VpsOffersSection() {
-  const {
-    data: offers,
-    loading,
-    error: loadError,
-  } = useCached("offers", async () => {
-    const api = new LNVpsApi(ApiUrl, undefined, 5000);
-    return await api.listOffers();
-  });
-  const [region, setRegion] = useState<Array<number>>([]);
-  const [diskType, setDiskType] = useState<Array<DiskType>>([]);
+  const { offers } = useLoaderData<HomeLoaderData>();
+  const loading = false;
+  const [region, setRegion] = useState<Array<number>>(() =>
+    dedupe(offers?.templates.map((z) => z.region.id) ?? []),
+  );
+  const [diskType, setDiskType] = useState<Array<DiskType>>(() =>
+    dedupe(offers?.templates.map((z) => z.disk_type) ?? []),
+  );
 
   const regions = (offers?.templates.map((t) => t.region) ?? []).reduce(
     (acc, v) => {
@@ -282,24 +279,6 @@ function VpsOffersSection() {
             </span>
           </div>
         </div>
-      ) : loadError ? (
-        <div className="text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
-          <div className="text-cyber-danger bold text-xl uppercase mb-2">
-            <FormattedMessage defaultMessage="Failed to load VPS offers" />
-          </div>
-          <div className="text-cyber-muted mb-4">
-            <FormattedMessage defaultMessage="There may be a service issue. Check our status page for updates." />
-          </div>
-          <Link
-            to="/status"
-            className="text-cyber-accent hover:text-cyber-accent underline"
-          >
-            <FormattedMessage defaultMessage="View Status Page" />
-          </Link>
-          <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
-            Error: {loadError.message}
-          </pre>
-        </div>
       ) : offers?.templates !== undefined && offers.templates.length === 0 ? (
         <div className="text-cyber-danger bold text-xl uppercase">
           <FormattedMessage defaultMessage="No offers available" />
@@ -335,14 +314,8 @@ function VpsOffersSection() {
 }
 
 function IpSpaceSection() {
-  const {
-    data: ipSpaces,
-    loading: ipLoading,
-    error: ipError,
-  } = useCached("ipSpaces", async () => {
-    const api = new LNVpsApi(ApiUrl, undefined, 5000);
-    return await api.listAvailableIpSpace();
-  });
+  const { ipSpaces } = useLoaderData<HomeLoaderData>();
+  const ipLoading = false;
 
   if (!ipSpaces || ipSpaces.length === 0) return;
 
@@ -360,15 +333,6 @@ function IpSpaceSection() {
                 <FormattedMessage defaultMessage="Loading IP blocks..." />
               </span>
             </div>
-          </div>
-        ) : ipError ? (
-          <div className="col-span-full text-center p-8 bg-cyber-danger/10 border border-cyber-danger rounded-sm">
-            <div className="text-cyber-danger bold text-xl uppercase mb-2">
-              <FormattedMessage defaultMessage="Failed to load IP blocks" />
-            </div>
-            <pre className="text-xs bg-cyber-danger/20 mt-4 px-1 py-2 rounded-sm whitespace-pre">
-              Error: {ipError.message}
-            </pre>
           </div>
         ) : (
           ipSpaces.flatMap((block) =>

@@ -9,6 +9,8 @@ import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { useLoaderData } from "react-router-dom";
+import type { StatusLoaderData } from "../loaders";
 
 interface Incident {
   id?: string;
@@ -131,6 +133,8 @@ export function StatusPage() {
     );
   }
 
+  const { events: loaderEvents } = useLoaderData<StatusLoaderData>();
+
   const req = useMemo(() => {
     const builder = new RequestBuilder("status");
     builder
@@ -142,7 +146,10 @@ export function StatusPage() {
     return builder;
   }, []);
 
-  const events = useRequestBuilder(req);
+  const liveEvents = useRequestBuilder(req);
+
+  // Prefer live relay data, fall back to loader (SSR) data
+  const events = liveEvents.length > 0 ? liveEvents : loaderEvents;
 
   const allIncidents = events
     .map((ev) => {

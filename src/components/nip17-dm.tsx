@@ -20,7 +20,7 @@ function dmCacheKey(pubkey: string) {
 
 function loadDmCache(pubkey: string): DecryptedMessage[] {
   try {
-    const raw = window.localStorage.getItem(dmCacheKey(pubkey));
+    const raw = localStorage.getItem(dmCacheKey(pubkey));
     if (!raw) return [];
     return JSON.parse(raw) as DecryptedMessage[];
   } catch {
@@ -29,7 +29,7 @@ function loadDmCache(pubkey: string): DecryptedMessage[] {
 }
 
 function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
-  window.localStorage.setItem(dmCacheKey(pubkey), JSON.stringify(messages));
+  localStorage.setItem(dmCacheKey(pubkey), JSON.stringify(messages));
 }
 
 export default function Nip17DM() {

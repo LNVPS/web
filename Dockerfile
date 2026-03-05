@@ -1,17 +1,24 @@
-FROM node:22-alpine AS builder
+FROM oven/bun:1 AS builder
 ARG MODE=production
 WORKDIR /src
 
-# Install dependencies in a separate layer so they are cached
-# independently of source changes.
-COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn/ .yarn/
-RUN yarn install --immutable
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
 COPY . .
-RUN yarn vite build --mode $MODE && yarn locale:compile
+RUN bunx vite build --outDir dist/client --mode $MODE && \
+    bunx vite build --ssr src/entry-server.tsx --outDir dist/server --mode $MODE && \
+    bun run locale:compile
 
-FROM nginx:alpine AS runner
-WORKDIR /usr/share/nginx/html
-COPY --from=builder /src/dist .
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+FROM oven/bun:1-alpine AS runner
+ENV NODE_ENV=production
+WORKDIR /app
+
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile --production
+
+COPY --from=builder /src/dist ./dist
+COPY --from=builder /src/server ./server
+
+EXPOSE 3000
+CMD ["bun", "server/index.ts"]

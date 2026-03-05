@@ -8,6 +8,7 @@ export default function useLogin() {
   const session = useSyncExternalStore(
     (c) => LoginState.hook(c),
     () => LoginState.snapshot(),
+    () => undefined,
   );
   const system = useContext(SnortContext);
   return useMemo(

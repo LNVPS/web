@@ -44,7 +44,7 @@ export default function Login({ onLogin }: { onLogin?: () => void }) {
       >
         <FormattedMessage defaultMessage="Login" />
       </AsyncButton>
-      {window.nostr && (
+      {typeof window !== "undefined" && window.nostr && (
         <div className="flex flex-col gap-4">
           <FormattedMessage defaultMessage="Browser Extension:" />
           <AsyncButton

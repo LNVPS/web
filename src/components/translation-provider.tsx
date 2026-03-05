@@ -1,6 +1,14 @@
 import { IntlProvider } from "react-intl";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import localesMetadata from "../locales-metadata.json";
+import { LOCALE_COOKIE } from "../utils/locale";
+
+declare global {
+  interface Window {
+    __SSR_LOCALE__?: string;
+    __SSR_MESSAGES__?: Record<string, string>;
+  }
+}
 
 const supportedLocales = Object.keys(localesMetadata);
 
@@ -10,27 +18,20 @@ function getDir(locale: string): "rtl" | "ltr" {
   return RTL_LOCALES.has(locale) ? "rtl" : "ltr";
 }
 
-const STORAGE_KEY = "locale";
-
-/** Language-only tag (e.g. "en", "ar") — used to select translation messages. */
-function langTag(locale: string): string {
-  const lang = locale.split("-")[0];
-  return supportedLocales.includes(lang) ? lang : "en";
+/** Write the locale preference as a long-lived cookie readable by the server. */
+function setLocaleCookie(locale: string) {
+  document.cookie = `${LOCALE_COOKIE}=${encodeURIComponent(locale)}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 }
 
-/**
- * Returns { lang, full } where:
- *  - lang  — language-only tag used to load translation messages ("en", "ar", …)
- *  - full  — full BCP 47 tag passed to IntlProvider for date/number formatting
- *            ("en-IE", "zh-TW", "ar", …)
- */
-function detectLocale(): { lang: string; full: string } {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored && supportedLocales.includes(stored)) {
-    return { lang: stored, full: stored };
-  }
-  const full = navigator.language || "en";
-  return { lang: langTag(full), full };
+/** Read the locale cookie on the client, returns null if absent. */
+function getLocaleCookie(): string | null {
+  const match = document.cookie
+    .split(";")
+    .map((c) => c.trim())
+    .find((c) => c.startsWith(`${LOCALE_COOKIE}=`));
+  if (!match) return null;
+  const val = decodeURIComponent(match.slice(LOCALE_COOKIE.length + 1));
+  return supportedLocales.includes(val) ? val : null;
 }
 
 interface LocaleContextValue {
@@ -57,19 +58,25 @@ interface TranslationProviderProps {
 export default function TranslationProvider({
   children,
 }: TranslationProviderProps) {
-  const initial = detectLocale();
-  const [locale, setLocaleState] = useState(initial.lang);
-  // fullLocale preserves the region subtag (e.g. "en-IE") for date/number formatting.
-  // When the user explicitly picks a language from the switcher we only have the
-  // language tag, so full and lang are the same in that case.
-  const [fullLocale, setFullLocale] = useState(initial.full);
+  // The server already read the locale cookie and rendered in the right locale.
+  // Use the injected SSR globals as the initial state so the first client render
+  // matches exactly, avoiding a hydration mismatch.
+  const ssrLocale =
+    typeof window !== "undefined" ? window.__SSR_LOCALE__ : undefined;
+  const ssrMessages =
+    typeof window !== "undefined" ? window.__SSR_MESSAGES__ : undefined;
+
+  const [locale, setLocaleState] = useState(ssrLocale ?? "en");
+  const [fullLocale, setFullLocale] = useState(ssrLocale ?? "en");
+  const [messages, setMessages] = useState<Record<string, string>>(
+    ssrMessages ?? {},
+  );
 
   function setLocale(next: string) {
-    localStorage.setItem(STORAGE_KEY, next);
+    setLocaleCookie(next);
     setLocaleState(next);
     setFullLocale(next);
   }
-  const [messages, setMessages] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const root = document.documentElement;
@@ -77,19 +84,24 @@ export default function TranslationProvider({
     root.dir = getDir(locale);
   }, [locale, fullLocale]);
 
+  // Capture SSR values in refs — they're set once at module load and never
+  // change, so they don't need to be in the useEffect dependency array.
+  const ssrLocaleRef = useRef(ssrLocale);
+  const ssrMessagesRef = useRef(ssrMessages);
+
   useEffect(() => {
     if (locale === "en") {
       setMessages({});
       return;
     }
+    // Skip the dynamic import if SSR already provided matching messages.
+    if (ssrMessagesRef.current && ssrLocaleRef.current === locale) return;
     import(`../locales/${locale}.json`)
       .then((m) => {
         const raw = m.default as Record<
           string,
           string | { defaultMessage: string }
         >;
-        // src/locales files are in { key: { defaultMessage: "..." } } format
-        // flatten to { key: "..." } for IntlProvider
         const flat: Record<string, string> = {};
         for (const [k, v] of Object.entries(raw)) {
           flat[k] = typeof v === "string" ? v : v.defaultMessage;
@@ -99,11 +111,24 @@ export default function TranslationProvider({
       .catch(() => setMessages({}));
   }, [locale]);
 
+  // On first mount, if the user has no cookie yet but has a browser preference
+  // that differs from what the server guessed, correct it without a full reload.
+  useEffect(() => {
+    const cookieLocale = getLocaleCookie();
+    if (!cookieLocale) {
+      // No explicit preference — fall back to navigator.language.
+      const navLang = navigator.language.split("-")[0].toLowerCase();
+      const best = supportedLocales.includes(navLang) ? navLang : "en";
+      if (best !== locale) setLocale(best);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <LocaleContext.Provider
       value={{ locale, setLocale, supportedLocales: localesMetadata }}
     >
-      <IntlProvider locale={fullLocale} messages={messages} defaultLocale="en">
+      <IntlProvider locale={locale} messages={messages} defaultLocale="en">
         {children}
       </IntlProvider>
     </LocaleContext.Provider>

@@ -21,4 +21,4 @@ COPY --from=builder /src/dist ./dist
 COPY --from=builder /src/server ./server
 
 EXPOSE 3000
-CMD ["bun", "server/index.ts"]
+CMD ["bun", "server/prod.ts"]

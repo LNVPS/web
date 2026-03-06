@@ -43,6 +43,8 @@ export function StatusPage() {
           return "bg-cyber-warning/30 text-cyber-text-bright";
         case "investigating":
           return "bg-cyber-warning/30 text-cyber-text-bright";
+        case "planned":
+          return "bg-cyber-accent/30 text-cyber-text-bright";
         default:
           return "bg-cyber-panel-light text-cyber-text-bright";
       }
@@ -175,7 +177,7 @@ export function StatusPage() {
   const now = Math.floor(currentTime / 1000);
   const thirtyDaysAgo = now - 30 * 86400;
 
-  function accumilateDowntime(acc: number, incident: typeof allIncidents[0]) {
+  function accumilateDowntime(acc: number, incident: (typeof allIncidents)[0]) {
     // Only count incidents that affect uptime (exclude maintenance and informational)
     if (incident.type === "maintenance" || incident.type === "informational") {
       return acc;
@@ -199,7 +201,9 @@ export function StatusPage() {
   const uptime = 1 - totalDowntime / age;
 
   // 30 Days
-  const last30DaysDowntime = allIncidents.filter(a => a.started >= thirtyDaysAgo).reduce(accumilateDowntime, 0);
+  const last30DaysDowntime = allIncidents
+    .filter((a) => a.started >= thirtyDaysAgo)
+    .reduce(accumilateDowntime, 0);
   const last30DaysAge = 30 * 86400 * 1000; // 30 days in milliseconds
   const last30DaysUptime = 1 - last30DaysDowntime / last30DaysAge;
 
@@ -396,6 +400,7 @@ export function StatusPage() {
             <option value="Resolved">Resolved</option>
             <option value="Monitoring">Monitoring</option>
             <option value="Investigating">Investigating</option>
+            <option value="Planned">Planned</option>
           </select>
           <select
             value={formData.type}
@@ -509,16 +514,17 @@ export function StatusPage() {
         <FormattedMessage defaultMessage="LNVPS Service Status and Uptime" />
       </h1>
       <div className="text-xl flex flex-col gap-2">
-        <div><FormattedMessage
-          defaultMessage="Overall Uptime: {uptime}"
-          values={{
-            uptime: formatNumber(uptime, {
-              style: "percent",
-              minimumFractionDigits: 5,
-              maximumFractionDigits: 5,
-            }),
-          }}
-        />
+        <div>
+          <FormattedMessage
+            defaultMessage="Overall Uptime: {uptime}"
+            values={{
+              uptime: formatNumber(uptime, {
+                style: "percent",
+                minimumFractionDigits: 5,
+                maximumFractionDigits: 5,
+              }),
+            }}
+          />
         </div>
         <div>
           <FormattedMessage

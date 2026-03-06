@@ -1,5 +1,5 @@
 import { EventKind, EventBuilder } from "@snort/system";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Markdown from "../components/markdown";
 import { NostrProfile, ServiceBirth } from "../const";
 import useLogin from "../hooks/login";
@@ -9,6 +9,15 @@ import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { useStatus } from "../hooks/status";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 interface Incident {
   id?: string;
@@ -206,6 +215,60 @@ export function StatusPage() {
     .reduce(accumilateDowntime, 0);
   const last30DaysAge = 30 * 86400 * 1000; // 30 days in milliseconds
   const last30DaysUptime = 1 - last30DaysDowntime / last30DaysAge;
+
+  // Monthly uptime for past 12 months
+  const monthlyUptimeData = useMemo(() => {
+    const data = [];
+
+    for (let i = 11; i >= 0; i--) {
+      const date = new Date();
+      date.setMonth(date.getMonth() - i);
+      const monthStart = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        1,
+      ).getTime();
+      const monthEnd = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        1,
+      ).getTime();
+      const monthEndTs = Math.floor(monthEnd / 1000);
+      const monthStartTs = Math.floor(monthStart / 1000);
+
+      let monthDowntime = 0;
+      for (const incident of allIncidents) {
+        if (
+          incident.type === "maintenance" ||
+          incident.type === "informational"
+        ) {
+          continue;
+        }
+
+        const incidentStart = incident.started;
+        const incidentEnd = incident.ended || monthEndTs;
+
+        if (incidentStart < monthEndTs && incidentEnd > monthStartTs) {
+          const overlapStart = Math.max(incidentStart, monthStartTs);
+          const overlapEnd = Math.min(incidentEnd, monthEndTs);
+          monthDowntime += (overlapEnd - overlapStart) * 1000;
+        }
+      }
+
+      const monthLength = monthEnd - monthStart;
+      const monthUptimePercent = (1 - monthDowntime / monthLength) * 100;
+
+      data.push({
+        month: date.toLocaleDateString("en-US", {
+          month: "short",
+          year: "2-digit",
+        }),
+        uptime: Math.max(0, monthUptimePercent),
+      });
+    }
+
+    return data;
+  }, [allIncidents]);
 
   // Update current time every second for accurate uptime calculation, but only when needed
   useEffect(() => {
@@ -537,6 +600,52 @@ export function StatusPage() {
               }),
             }}
           />
+        </div>
+      </div>
+
+      <div className="rounded-sm bg-cyber-panel px-3 py-4">
+        <div className="text-lg font-semibold text-cyber-primary mb-4">
+          <FormattedMessage defaultMessage="Monthly Uptime (Past 12 Months)" />
+        </div>
+        <div className="h-64">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={monthlyUptimeData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+              <XAxis
+                dataKey="month"
+                stroke="#9ca3af"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
+              <YAxis
+                stroke="#9ca3af"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+                domain={[99, 100]}
+                tickFormatter={(value) => `${value.toFixed(2)}%`}
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#1f2937",
+                  border: "1px solid #374151",
+                  borderRadius: "4px",
+                }}
+                itemStyle={{ color: "#06b6d4" }}
+                formatter={(value) => `${(value as number).toFixed(2)}%`}
+                labelStyle={{ color: "#9ca3af" }}
+              />
+              <Line
+                type="monotone"
+                dataKey="uptime"
+                stroke="#06b6d4"
+                strokeWidth={2}
+                dot={{ fill: "#06b6d4", strokeWidth: 2, r: 4 }}
+                activeDot={{ r: 6, fill: "#06b6d4" }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
       </div>
 

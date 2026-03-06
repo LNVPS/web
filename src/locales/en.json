@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Create Order"
   },
-  "32rBNK": {
-    "defaultMessage": "Terms of Service"
-  },
   "36aVfS": {
     "defaultMessage": "Nostr DM"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Error loading history: {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "Have questions about provisioning, billing, abuse handling, or a specific service issue? Send a message and the LNVPS team will get back to you as soon as possible."
   },
   "53RN0g": {
     "defaultMessage": "Proceed to Payment"
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Postcode"
   },
+  "FMHDSp": {
+    "defaultMessage": "LNVPS News and Product Updates"
+  },
   "FZeQlc": {
     "defaultMessage": "Disconnected"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Lightning Address"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "Have questions, feedback, or need support? Fill out the form below and we'll get back to you as soon as possible."
-  },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Support"
-  },
-  "HuLZ50": {
-    "defaultMessage": "High-performance VPS powered by Bitcoin Lightning. No KYC, no fuss. Virtual private servers starting from a few sats per month."
   },
   "I3JhPS": {
     "defaultMessage": "Network"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "View Status Page"
+  "JVClQM": {
+    "defaultMessage": "LNVPS Service Status and Uptime"
   },
   "JmgL7z": {
     "defaultMessage": "Expires: {date} ({days} days)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "Bitcoin Lightning VPS Hosting"
+  },
   "KuX7em": {
     "defaultMessage": "Active for {duration}"
+  },
+  "LAMeIi": {
+    "defaultMessage": "Contact LNVPS Support"
   },
   "LNcnLC": {
     "defaultMessage": "Failed Referrals"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "Country *"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Bitcoin Lightning VPS provider with high-performance virtual private servers and streamlined account management."
+  },
+  "ML7RRt": {
+    "defaultMessage": "High-performance VPS powered by Bitcoin Lightning. Virtual private servers starting from a few sats per month."
   },
   "MT4qAu": {
     "defaultMessage": "NIP-44 Encryption Tools"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub: Create an issue at github.com/LNVPS"
   },
+  "R5zovH": {
+    "defaultMessage": "Contact and Support"
+  },
   "R7x8iU": {
     "defaultMessage": "Disk: {gb} GB {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Payouts will be sent to the NWC wallet configured in your account settings."
   },
-  "UPjtBm": {
-    "defaultMessage": "There may be a service issue. Check our status page for updates."
-  },
   "UQc03N": {
     "defaultMessage": "Add new SSH key"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Get Invoice"
   },
+  "VJ4xwX": {
+    "defaultMessage": "News and Product Updates"
+  },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Address Line 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "High-performance VPS powered by Bitcoin. No KYC, no fuss."
   },
   "Wsj2fc": {
     "defaultMessage": "Active Incidents"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "DNS changes may take up to 24–48 hours to propagate"
   },
-  "c8LeaL": {
-    "defaultMessage": "Failed to load IP blocks"
-  },
   "cM5n1C": {
     "defaultMessage": "End Time (optional)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} handles"
   },
+  "gCrKqH": {
+    "defaultMessage": "High-performance VPS powered by Bitcoin Lightning."
+  },
   "gH4VcS": {
     "defaultMessage": "Pro-rated upgrade cost:"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Contact Us"
   },
   "iO1K6D": {
     "defaultMessage": "No posts yet.."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "Processing Upgrade Payment"
   },
+  "mIuuiJ": {
+    "defaultMessage": "Service Status and Uptime"
+  },
   "mJPBXd": {
     "defaultMessage": "Encrypted message (copy and include in your email):"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "You have no virtual machines yet."
   },
+  "pgLgIU": {
+    "defaultMessage": "Read the full update"
+  },
   "qJRR8N": {
     "defaultMessage": "Loading IP blocks..."
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "VM History"
-  },
-  "qvZHhC": {
-    "defaultMessage": "Failed to load VPS offers"
   },
   "r2BhUh": {
     "defaultMessage": "Decrypt Message"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Paid"
+  },
+  "u3FDCD": {
+    "defaultMessage": "Terms of Service and Acceptable Use"
   },
   "uN7rbm": {
     "defaultMessage": "Join the referral program to earn payouts when others sign up using your code. Choose how you want to receive payouts."

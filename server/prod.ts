@@ -8,7 +8,9 @@ import { renderPage } from "./ssr-render.ts";
 const port = Number(process.env.PORT) || 3000;
 
 const templateHtml = await Bun.file("./dist/client/index.html").text();
+
 const ssr: typeof import("../src/entry-server") =
+  // @ts-ignore built SSR output has no declarations
   await import("../dist/server/entry-server.js");
 
 const server = Bun.serve({
@@ -40,9 +42,9 @@ const server = Bun.serve({
         status: result.status,
         headers: { "Content-Type": "text/html" },
       });
-    } catch (e) {
-      console.error((e as Error).stack);
-      return new Response((e as Error).stack, { status: 500 });
+    } catch {
+      console.error(`[${req.method}] ${pathname} 500`);
+      return new Response("Internal Server Error", { status: 500 });
     }
   },
 });

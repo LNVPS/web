@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect } from "react";
 
+const MANAGED_ATTR = "data-lnvps-head";
+
 export interface HeadTags {
   title?: string;
   meta: Array<Record<string, string>>;
@@ -18,7 +20,7 @@ const emptyTags = (): HeadTags => ({ meta: [], links: [], scripts: [] });
 
 /** Create a mutable store for one render pass. */
 export function createHeadStore(): HeadContextValue {
-  let tags = emptyTags();
+  const tags = emptyTags();
   return {
     set(t) {
       if (t.title) tags.title = t.title;
@@ -51,29 +53,39 @@ export function useHead(tags: HeadTags) {
   // Server: push into context synchronously during render.
   if (typeof document === "undefined") {
     ctx.set(tags);
-    return;
   }
 
   // Client: apply to DOM via useEffect.
   useEffect(() => {
+    if (typeof document === "undefined") {
+      return;
+    }
+
     if (tags.title) document.title = tags.title;
+
+    document.head.querySelectorAll(`[${MANAGED_ATTR}]`).forEach((el) => {
+      el.remove();
+    });
 
     const elements: HTMLElement[] = [];
     for (const attrs of tags.meta) {
       const el = document.createElement("meta");
       for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+      el.setAttribute(MANAGED_ATTR, "true");
       document.head.appendChild(el);
       elements.push(el);
     }
     for (const attrs of tags.links) {
       const el = document.createElement("link");
       for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+      el.setAttribute(MANAGED_ATTR, "true");
       document.head.appendChild(el);
       elements.push(el);
     }
     for (const json of tags.scripts) {
       const el = document.createElement("script");
       el.type = "application/ld+json";
+      el.setAttribute(MANAGED_ATTR, "true");
       el.textContent = json;
       document.head.appendChild(el);
       elements.push(el);
@@ -97,16 +109,18 @@ export function serializeHead(tags: HeadTags): string {
     const a = Object.entries(attrs)
       .map(([k, v]) => `${k}="${escapeHtml(v)}"`)
       .join(" ");
-    parts.push(`<meta ${a}/>`);
+    parts.push(`<meta ${MANAGED_ATTR}="true" ${a}/>`);
   }
   for (const attrs of tags.links) {
     const a = Object.entries(attrs)
       .map(([k, v]) => `${k}="${escapeHtml(v)}"`)
       .join(" ");
-    parts.push(`<link ${a}/>`);
+    parts.push(`<link ${MANAGED_ATTR}="true" ${a}/>`);
   }
   for (const json of tags.scripts) {
-    parts.push(`<script type="application/ld+json">${json}</script>`);
+    parts.push(
+      `<script ${MANAGED_ATTR}="true" type="application/ld+json">${json}</script>`,
+    );
   }
 
   return parts.join("\n");

@@ -543,7 +543,7 @@ export class LNVpsApi {
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
     readonly timeout?: number,
-  ) {}
+  ) { }
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
@@ -1030,7 +1030,7 @@ export class LNVpsApi {
   ) {
     const u = `${this.url}${path}`;
     const controller = new AbortController();
-    let timeoutId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
     if (this.timeout) {
       timeoutId = setTimeout(() => controller.abort(), this.timeout);
@@ -1048,6 +1048,7 @@ export class LNVpsApi {
         signal: controller.signal,
       });
       if (timeoutId) clearTimeout(timeoutId);
+      console.log(`[${method}] ${u} => ${response.status}`);
       return response;
     } catch (error) {
       if (timeoutId) clearTimeout(timeoutId);

@@ -1,4 +1,4 @@
-# Terms of Service
+# Terms of Service and Acceptable Use
 
 **LNVPS**  
 _Last Updated: February 26, 2025_

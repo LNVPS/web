@@ -1,5 +1,5 @@
 import { NostrPrefix } from "@snort/shared";
-import { NostrLink } from "@snort/system";
+import { NostrLink, NostrSystem } from "@snort/system";
 
 export const KiB = 1024;
 export const MiB = KiB * 1024;
@@ -31,3 +31,9 @@ export const NostrProfile = new NostrLink(
 );
 
 export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
+
+export const System = new NostrSystem({
+  automaticOutboxModel: false,
+  buildFollowGraph: false,
+});
+Relays.forEach((r) => System.ConnectToRelay(r, { read: true, write: false }));

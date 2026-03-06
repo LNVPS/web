@@ -1,5 +1,4 @@
 import { ExternalStore } from "@snort/shared";
-import { isBrowser } from "./ssr";
 
 export type Theme = "dark" | "light";
 
@@ -8,11 +7,9 @@ class ThemeStore extends ExternalStore<Theme> {
 
   constructor() {
     super();
-    const saved = isBrowser
-      ? (localStorage.getItem("theme") as Theme | null)
-      : null;
+    const saved = localStorage.getItem("theme") as Theme | null
     this.#theme = saved === "light" ? "light" : "dark";
-    if (isBrowser) this.#apply();
+    this.#apply();
   }
 
   takeSnapshot(): Theme {
@@ -27,6 +24,7 @@ class ThemeStore extends ExternalStore<Theme> {
   }
 
   #apply() {
+    if (import.meta.env.SSR) return;
     if (this.#theme === "light") {
       document.documentElement.classList.add("light");
     } else {

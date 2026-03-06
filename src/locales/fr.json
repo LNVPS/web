@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Créer une commande"
   },
-  "32rBNK": {
-    "defaultMessage": "Conditions d’utilisation"
-  },
   "36aVfS": {
     "defaultMessage": "Message privé Nostr"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Erreur lors du chargement de l’historique : {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "Vous avez des questions concernant l’approvisionnement, la facturation, la gestion des abus ou un problème spécifique lié à un service? Envoyez-nous un message et l’équipe LNVPS vous répondra dans les plus brefs délais."
   },
   "53RN0g": {
     "defaultMessage": "Passez au paiement."
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Code postal"
   },
+  "FMHDSp": {
+    "defaultMessage": "Actualités et mises à jour des produits LNVPS"
+  },
   "FZeQlc": {
     "defaultMessage": "Déconnecté"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Adresse Lightning"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "Vous avez des questions, des commentaires ou besoin d’aide ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais."
-  },
   "GqRat5": {
     "defaultMessage": "Veuillez vérifier votre adresse électronique pour finaliser votre commande."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Assistance"
-  },
-  "HuLZ50": {
-    "defaultMessage": "Serveurs privés virtuels (VPS) performants, alimentés par Bitcoin Lightning. Pas de vérification d’identité, simplicité maximale. Les VPS sont disponibles à partir de quelques satoshis par mois."
   },
   "I3JhPS": {
     "defaultMessage": "Réseau"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "Minimum : {min} Go"
   },
-  "JW40Ux": {
-    "defaultMessage": "Consulter la page d’état."
+  "JVClQM": {
+    "defaultMessage": "État du service LNVPS et durée de fonctionnement."
   },
   "JmgL7z": {
     "defaultMessage": "Valable jusqu’au : {date} ({days} jours)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "Hébergement VPS pour Bitcoin Lightning"
+  },
   "KuX7em": {
     "defaultMessage": "Actif pendant {duration}."
+  },
+  "LAMeIi": {
+    "defaultMessage": "Contactez l’assistance de LNVPS."
   },
   "LNcnLC": {
     "defaultMessage": "Références infructueuses"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "Pays"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Fournisseur de VPS Bitcoin Lightning offrant des serveurs privés virtuels performants et une gestion de compte simplifiée."
+  },
+  "ML7RRt": {
+    "defaultMessage": "Serveurs privés virtuels (VPS) haute performance alimentés par Bitcoin Lightning. Les VPS sont disponibles à partir de quelques satoshis par mois."
   },
   "MT4qAu": {
     "defaultMessage": "Outils de chiffrement NIP-44"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub : Créez un problème sur github.com/LNVPS."
   },
+  "R5zovH": {
+    "defaultMessage": "Contact et assistance"
+  },
   "R7x8iU": {
     "defaultMessage": "Disque : {gb} Go, type {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Les paiements seront envoyés au portefeuille NWC configuré dans les paramètres de votre compte."
   },
-  "UPjtBm": {
-    "defaultMessage": "Il pourrait y avoir un problème de service. Veuillez consulter notre page d’état pour connaître les dernières informations."
-  },
   "UQc03N": {
     "defaultMessage": "Ajouter une nouvelle clé SSH"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Obtenir la facture"
   },
+  "VJ4xwX": {
+    "defaultMessage": "Actualités et mises à jour des produits"
+  },
   "VL/B6x": {
     "defaultMessage": "votre@adresse-e-mail.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Adresse, ligne 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "Serveurs privés virtuels (VPS) haute performance alimentés par Bitcoin. Pas de procédure KYC, simplicité garantie."
   },
   "Wsj2fc": {
     "defaultMessage": "Incidents en cours"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "Les modifications du DNS peuvent prendre jusqu’à 24 à 48 heures pour être prises en compte."
   },
-  "c8LeaL": {
-    "defaultMessage": "Impossible de charger les blocs d’adresses IP."
-  },
   "cM5n1C": {
     "defaultMessage": "Heure de fin (facultatif)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} poignées"
   },
+  "gCrKqH": {
+    "defaultMessage": "Serveurs privés virtuels (VPS) performants, alimentés par Bitcoin Lightning."
+  },
   "gH4VcS": {
     "defaultMessage": "Coût de la mise à niveau, calculé au prorata :"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Contactez-nous"
   },
   "iO1K6D": {
     "defaultMessage": "Aucun message pour le moment."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "Traitement du paiement de mise à niveau."
   },
+  "mIuuiJ": {
+    "defaultMessage": "État du service et temps de fonctionnement."
+  },
   "mJPBXd": {
     "defaultMessage": "Message chiffré (copiez-le et incluez-le dans votre courriel) :"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "Vous n’avez encore créé aucune machine virtuelle."
   },
+  "pgLgIU": {
+    "defaultMessage": "Lisez la mise à jour complète."
+  },
   "qJRR8N": {
     "defaultMessage": "Chargement des blocs d’adresses IP…"
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "Historique des machines virtuelles"
-  },
-  "qvZHhC": {
-    "defaultMessage": "Impossible de charger les offres VPS."
   },
   "r2BhUh": {
     "defaultMessage": "Décrypter le message"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Payé"
+  },
+  "u3FDCD": {
+    "defaultMessage": "Conditions d’utilisation et règles d’utilisation acceptables."
   },
   "uN7rbm": {
     "defaultMessage": "Participez au programme de parrainage et gagnez des récompenses lorsque d’autres personnes s’inscrivent en utilisant votre code. Choisissez la méthode de paiement qui vous convient."

@@ -15,12 +15,3 @@ export function createNostrSystem(write: boolean): NostrSystem {
   Relays.forEach((r) => system.ConnectToRelay(r, { read: true, write }));
   return system;
 }
-
-/**
- * Server-side singleton — shared between entry-server.tsx and loaders.ts so
- * both use the same persistent relay connections rather than opening duplicates.
- *
- * This module is never imported on the browser (Vite SSR splits the bundles),
- * so the top-level ConnectToRelay calls only run on the server.
- */
-export const serverSystem = createNostrSystem(false);

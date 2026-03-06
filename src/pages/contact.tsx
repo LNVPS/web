@@ -10,7 +10,7 @@ export function ContactPage() {
   const { formatMessage } = useIntl();
 
   async function handleSubmit(data: ContactFormData) {
-    const api = new LNVpsApi(ApiUrl, undefined, 5000);
+    const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
     await api.submitContactForm({
       ...data,
       user_pubkey: login?.publicKey || "",
@@ -21,20 +21,20 @@ export function ContactPage() {
   return (
     <div className="flex flex-col gap-4">
       <Seo
-        title={formatMessage({ defaultMessage: "Contact" })}
+        title={formatMessage({ defaultMessage: "Contact and Support" })}
         canonical="/contact"
         description={formatMessage({
           defaultMessage:
             "Get in touch with the LNVPS team. Have questions about our Bitcoin Lightning VPS service? We're here to help.",
         })}
       />
-      <div className="text-xl">
-        <FormattedMessage defaultMessage="Contact Us" />
-      </div>
+      <h1 className="text-xl">
+        <FormattedMessage defaultMessage="Contact LNVPS Support" />
+      </h1>
 
-      <div className="text-cyber-muted text-sm">
-        <FormattedMessage defaultMessage="Have questions, feedback, or need support? Fill out the form below and we'll get back to you as soon as possible." />
-      </div>
+      <p className="text-cyber-muted text-sm">
+        <FormattedMessage defaultMessage="Have questions about provisioning, billing, abuse handling, or a specific service issue? Send a message and the LNVPS team will get back to you as soon as possible." />
+      </p>
 
       <ContactForm onSubmit={handleSubmit} />
 

@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Bestellung aufgeben"
   },
-  "32rBNK": {
-    "defaultMessage": "Nutzungsbedingungen"
-  },
   "36aVfS": {
     "defaultMessage": "Nostr Direktnachricht"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Fehler beim Laden des Verlaufs: {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "Haben Sie Fragen zur Bereitstellung, Abrechnung, zum Umgang mit Missbrauchsfällen oder zu einem bestimmten Problem mit einem unserer Dienste? Senden Sie uns eine Nachricht, und das LNVPS-Team wird sich so schnell wie möglich bei Ihnen melden."
   },
   "53RN0g": {
     "defaultMessage": "Zur Zahlung übergehen"
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Postleitzahl"
   },
+  "FMHDSp": {
+    "defaultMessage": "LNVPS-Nachrichten und Produktaktualisierungen"
+  },
   "FZeQlc": {
     "defaultMessage": "Verbindung unterbrochen."
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Lightning-Adresse"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "Haben Sie Fragen, Anmerkungen oder benötigen Sie Unterstützung? Füllen Sie das untenstehende Formular aus, und wir werden uns so schnell wie möglich bei Ihnen melden."
-  },
   "GqRat5": {
     "defaultMessage": "Bitte bestätigen Sie Ihre E-Mail-Adresse, um Ihre Bestellung abzuschließen."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Unterstützung"
-  },
-  "HuLZ50": {
-    "defaultMessage": "Hochleistungsfähige virtuelle private Server (VPS), die mit Bitcoin Lightning betrieben werden. Keine Identitätsprüfung erforderlich, keine komplizierten Verfahren. Virtuelle private Server bereits ab wenigen Satoshis pro Monat."
   },
   "I3JhPS": {
     "defaultMessage": "Netzwerk"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "Statusseite anzeigen"
+  "JVClQM": {
+    "defaultMessage": "Status und Verfügbarkeit des LNVPS-Dienstes"
   },
   "JmgL7z": {
     "defaultMessage": "Gültig bis: {date} ({days} Tage)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "Bitcoin Lightning VPS-Hosting"
+  },
   "KuX7em": {
     "defaultMessage": "Aktiv seit {duration}."
+  },
+  "LAMeIi": {
+    "defaultMessage": "Wenden Sie sich an den LNVPS-Support."
   },
   "LNcnLC": {
     "defaultMessage": "Fehlgeschlagene Weiterleitungen"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "Land *"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Bitcoin Lightning VPS-Anbieter mit leistungsstarken virtuellen privaten Servern und einer effizienten Kontoverwaltung."
+  },
+  "ML7RRt": {
+    "defaultMessage": "Hochleistungsfähige virtuelle Privatserver (VPS), die mit Bitcoin Lightning betrieben werden. Virtuelle Privatserver bereits ab wenigen Sats pro Monat."
   },
   "MT4qAu": {
     "defaultMessage": "NIP-44-Verschlüsselungstools"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub: Erstellen Sie ein Problem unter github.com/LNVPS"
   },
+  "R5zovH": {
+    "defaultMessage": "Kontakt und Support"
+  },
   "R7x8iU": {
     "defaultMessage": "Festplatte: {gb} GB, Typ: {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Die Auszahlungen werden an das NWC-Wallet gesendet, das in den Einstellungen Ihres Kontos konfiguriert ist."
   },
-  "UPjtBm": {
-    "defaultMessage": "Es könnte ein Problem mit unserem Dienst vorliegen. Bitte informieren Sie sich auf unserer Statusseite über aktuelle Informationen."
-  },
   "UQc03N": {
     "defaultMessage": "Neuen SSH-Schlüssel hinzufügen"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Rechnung anfordern"
   },
+  "VJ4xwX": {
+    "defaultMessage": "Neues und Produktaktualisierungen"
+  },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Adresszeile 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "Hochleistungsfähige virtuelle Privatserver (VPS), die mit Bitcoin betrieben werden. Keine Identitätsprüfung erforderlich, unkomplizierte Nutzung."
   },
   "Wsj2fc": {
     "defaultMessage": "Aktuelle Vorfälle"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "DNS-Änderungen können bis zu 24–48 Stunden benötigen, bis sie sich im gesamten Netzwerk verbreitet haben."
   },
-  "c8LeaL": {
-    "defaultMessage": "Das Laden der IP-Blockliste ist fehlgeschlagen."
-  },
   "cM5n1C": {
     "defaultMessage": "Endzeit (optional)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} Griffe"
   },
+  "gCrKqH": {
+    "defaultMessage": "Hochleistungsfähiger VPS, der mit Bitcoin Lightning betrieben wird."
+  },
   "gH4VcS": {
     "defaultMessage": "Der Preis für ein Upgrade, berechnet anteilig:"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Nachrichten"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Kontaktieren Sie uns."
   },
   "iO1K6D": {
     "defaultMessage": "Bisher keine Beiträge."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "Zahlung für das Upgrade wird bearbeitet."
   },
+  "mIuuiJ": {
+    "defaultMessage": "Service-Status und Verfügbarkeit"
+  },
   "mJPBXd": {
     "defaultMessage": "Verschlüsselte Nachricht (kopieren Sie diese und fügen Sie sie in Ihre E-Mail ein):"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "Sie haben noch keine virtuellen Maschinen."
   },
+  "pgLgIU": {
+    "defaultMessage": "Lesen Sie die vollständige Aktualisierung."
+  },
   "qJRR8N": {
     "defaultMessage": "IP-Blöcke werden geladen …"
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "VM-Historie"
-  },
-  "qvZHhC": {
-    "defaultMessage": "Es konnten keine Angebote für virtuelle Privatserver (VPS) geladen werden."
   },
   "r2BhUh": {
     "defaultMessage": "Nachricht entschlüsseln"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Bezahlt"
+  },
+  "u3FDCD": {
+    "defaultMessage": "Nutzungsbedingungen und Richtlinien für die akzeptable Nutzung"
   },
   "uN7rbm": {
     "defaultMessage": "Nehmen Sie am Empfehlungsprogramm teil und erhalten Sie Prämien, wenn sich andere mit Ihrem Code anmelden. Wählen Sie, wie Sie die Prämien erhalten möchten."

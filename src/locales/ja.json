@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
   },
-  "32rBNK": {
-    "defaultMessage": "利用規約"
-  },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "履歴の読み込み中にエラーが発生しました：{error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "プロビジョニング、請求、不正利用への対応、または特定のサービスに関する問題についてご質問がありますか？メッセージをお送りいただければ、LNVPSチームがなるべく早くご連絡いたします。"
   },
   "53RN0g": {
     "defaultMessage": "お支払い手続きへ進んでください。"
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "郵便番号"
   },
+  "FMHDSp": {
+    "defaultMessage": "LNVPSの最新ニュースと製品情報"
+  },
   "FZeQlc": {
     "defaultMessage": "接続が切断されました。"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "ライトニングアドレス"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "ご質問、ご意見、またはサポートが必要な場合は、以下のフォームにご記入ください。できるだけ早くご連絡いたします。"
-  },
   "GqRat5": {
     "defaultMessage": "ご注文を完了するには、お客様のメールアドレスをご確認ください。"
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "サポート"
-  },
-  "HuLZ50": {
-    "defaultMessage": "ビットコインライトニングを活用した高性能VPS。本人確認（KYC）は不要で、手間もかかりません。月額わずかなサトシから利用できる仮想専用サーバーです。"
   },
   "I3JhPS": {
     "defaultMessage": "ネットワーク"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "最小要件：{min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "ステータスページを表示"
+  "JVClQM": {
+    "defaultMessage": "LNVPSのサービス状況と稼働時間"
   },
   "JmgL7z": {
     "defaultMessage": "有効期限：{date}（残り{days}日）"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "ビットコインライトニングVPSホスティング"
+  },
   "KuX7em": {
     "defaultMessage": "{duration}の間、アクティブでした。"
+  },
+  "LAMeIi": {
+    "defaultMessage": "LNVPSサポートにお問い合わせください。"
   },
   "LNcnLC": {
     "defaultMessage": "紹介に失敗したケース"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "国"
+  },
+  "LvkbFg": {
+    "defaultMessage": "高性能な仮想専用サーバーと効率的なアカウント管理を提供する、ビットコインのライトニングネットワークに対応したVPSプロバイダーです。"
+  },
+  "ML7RRt": {
+    "defaultMessage": "ビットコインライトニングを活用した高性能VPS。月額わずかなサトシから利用可能な仮想専用サーバーです。"
   },
   "MT4qAu": {
     "defaultMessage": "NIP-44暗号化ツール"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub：github.com/LNVPS で issue を作成してください。"
   },
+  "R5zovH": {
+    "defaultMessage": "お問い合わせとサポート"
+  },
   "R7x8iU": {
     "defaultMessage": "ディスク：{gb} GB、{type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "お支払い（報酬）は、お客様のアカウント設定で指定されたNWCウォレットに送金されます。"
   },
-  "UPjtBm": {
-    "defaultMessage": "サービスに問題が発生している可能性があります。最新情報については、当社のステータスページをご確認ください。"
-  },
   "UQc03N": {
     "defaultMessage": "新しいSSHキーを追加する"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "請求書を取得する"
   },
+  "VJ4xwX": {
+    "defaultMessage": "最新ニュースと製品情報"
+  },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "住所2行目"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "ビットコインを基盤とした高性能VPS。本人確認（KYC）は不要で、煩わしい手続きもありません。"
   },
   "Wsj2fc": {
     "defaultMessage": "現在発生中のインシデント"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "DNSの変更が反映されるまでには、最大で24～48時間かかる場合があります。"
   },
-  "c8LeaL": {
-    "defaultMessage": "IPアドレスのブロックの読み込みに失敗しました。"
-  },
   "cM5n1C": {
     "defaultMessage": "終了時間（任意）"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} 個のハンドル"
   },
+  "gCrKqH": {
+    "defaultMessage": "ビットコイン・ライトニングを活用した高性能VPS。"
+  },
   "gH4VcS": {
     "defaultMessage": "按分計算されたアップグレード費用："
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "メッセージ"
-  },
-  "hZOGLS": {
-    "defaultMessage": "お問い合わせ"
   },
   "iO1K6D": {
     "defaultMessage": "まだ投稿はありません。"
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "アップグレード料金の処理中"
   },
+  "mIuuiJ": {
+    "defaultMessage": "サービスの状況と稼働時間"
+  },
   "mJPBXd": {
     "defaultMessage": "暗号化されたメッセージ（コピーしてメールに添付してください）："
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "まだ仮想マシンは作成されていません。"
   },
+  "pgLgIU": {
+    "defaultMessage": "最新情報をすべてお読みください。"
+  },
   "qJRR8N": {
     "defaultMessage": "IPアドレスのブロックを読み込んでいます..."
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "VMの履歴"
-  },
-  "qvZHhC": {
-    "defaultMessage": "VPSの提供情報を読み込めませんでした。"
   },
   "r2BhUh": {
     "defaultMessage": "メッセージを復号化"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "有料"
+  },
+  "u3FDCD": {
+    "defaultMessage": "利用規約および利用に関する注意事項"
   },
   "uN7rbm": {
     "defaultMessage": "紹介プログラムに参加して、あなたの紹介コードを使って他の人が登録すると、報酬を獲得できます。報酬の受け取り方法を選択してください。"

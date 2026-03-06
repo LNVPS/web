@@ -5,9 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { SnortContext } from "@snort/system-react";
 import TranslationProvider from "./components/translation-provider.tsx";
 import { routes } from "./routes.tsx";
-import { createNostrSystem } from "./nostr-system.ts";
-
-const system = createNostrSystem(true);
+import { System } from "./const.ts";
 
 const router = createBrowserRouter(routes);
 
@@ -15,7 +13,7 @@ hydrateRoot(
   document.getElementById("root")!,
   <StrictMode>
     <TranslationProvider>
-      <SnortContext.Provider value={system}>
+      <SnortContext.Provider value={System}>
         <RouterProvider router={router} />
       </SnortContext.Provider>
     </TranslationProvider>

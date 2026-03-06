@@ -15,39 +15,47 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import type { HomeLoaderData } from "../loaders";
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "LNVPS",
-  url: "https://lnvps.net",
-  logo: "https://lnvps.net/logo.jpg",
-  description:
-    "Bitcoin Lightning VPS provider — high-performance virtual private servers, no KYC, paid with Bitcoin Lightning.",
-  sameAs: ["https://github.com/LNVPS"],
-};
-
-const webSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "LNVPS",
-  url: "https://lnvps.net",
-};
-
 export default function HomePage() {
   const login = useLogin();
   const { formatMessage } = useIntl();
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "LNVPS",
+    url: "https://lnvps.net",
+    logo: "https://lnvps.net/logo.jpg",
+    description: formatMessage({
+      defaultMessage:
+        "Bitcoin Lightning VPS provider with high-performance virtual private servers and streamlined account management.",
+    }),
+    sameAs: ["https://github.com/LNVPS"],
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "LNVPS",
+    url: "https://lnvps.net",
+  };
+
   return (
     <>
       <Seo
+        title={formatMessage({
+          defaultMessage: "Bitcoin Lightning VPS Hosting",
+        })}
         canonical="/"
         description={formatMessage({
           defaultMessage:
-            "High-performance VPS powered by Bitcoin Lightning. No KYC, no fuss. Virtual private servers starting from a few sats per month.",
+            "High-performance VPS powered by Bitcoin Lightning. Virtual private servers starting from a few sats per month.",
         })}
         jsonLd={[organizationSchema, webSiteSchema]}
       />
       <div className="flex flex-col gap-4">
+        <h1 className="text-3xl text-cyber-text-bright">
+          <FormattedMessage defaultMessage="Bitcoin Lightning VPS Hosting" />
+        </h1>
         <LatestNews />
         <VpsOffersSection />
         <IpSpaceSection />
@@ -220,12 +228,12 @@ function VpsOffersSection() {
 
   return (
     <>
-      <div className="text-2xl">
+      <h2 className="text-2xl">
         <FormattedMessage defaultMessage="VPS Offers" />
-      </div>
-      <div>
-        <FormattedMessage defaultMessage="High-performance VPS powered by Bitcoin. No KYC, no fuss." />
-      </div>
+      </h2>
+      <p>
+        <FormattedMessage defaultMessage="High-performance VPS powered by Bitcoin Lightning." />
+      </p>
       <div className="flex gap-4 items-center">
         {Object.keys(regions).length > 1 && (
           <FilterSection header={<FormattedMessage defaultMessage="Region" />}>
@@ -321,9 +329,9 @@ function IpSpaceSection() {
 
   return (
     <div className="flex flex-col gap-4 mt-8">
-      <div className="text-2xl">
+      <h2 className="text-2xl">
         <FormattedMessage defaultMessage="Available IP Blocks" />
-      </div>
+      </h2>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {ipLoading ? (
           <div className="col-span-full text-center p-8">

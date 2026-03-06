@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Criar Pedido"
   },
-  "32rBNK": {
-    "defaultMessage": "Termos de Serviço"
-  },
   "36aVfS": {
     "defaultMessage": "Mensagem direta no Nostr."
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Erro ao carregar o histórico: {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "Tem alguma questão sobre o fornecimento de serviços, faturas, tratamento de denúncias ou um problema específico relacionado a um serviço? Envie uma mensagem e a equipa da LNVPS entrará em contacto consigo o mais breve possível."
   },
   "53RN0g": {
     "defaultMessage": "Continue para o pagamento."
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Código postal"
   },
+  "FMHDSp": {
+    "defaultMessage": "Notícias e atualizações de produtos da LNVPS"
+  },
   "FZeQlc": {
     "defaultMessage": "Desligado/a"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Endereço Lightning"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "Tem perguntas, comentários ou precisa de ajuda? Preencha o formulário abaixo e entraremos em contato o mais breve possível."
-  },
   "GqRat5": {
     "defaultMessage": "Por favor, confirme o seu endereço de e-mail para finalizar o seu pedido."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Suporte"
-  },
-  "HuLZ50": {
-    "defaultMessage": "Servidores privados virtuais (VPS) de alto desempenho, alimentados pela Bitcoin Lightning. Sem necessidade de verificação de identidade (KYC) e sem complicações. Servidores virtuais privados a partir de apenas alguns sats por mês."
   },
   "I3JhPS": {
     "defaultMessage": "Rede"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "Ver página de estado."
+  "JVClQM": {
+    "defaultMessage": "Estado do serviço LNVPS e tempo de atividade."
   },
   "JmgL7z": {
     "defaultMessage": "Validade: {date} ({days} dias)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "Serviço de hospedagem VPS para Bitcoin Lightning"
+  },
   "KuX7em": {
     "defaultMessage": "Ativo durante {duration}."
+  },
+  "LAMeIi": {
+    "defaultMessage": "Entre em contato com o suporte da LNVPS."
   },
   "LNcnLC": {
     "defaultMessage": "Encaminhamentos com Falha"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "País"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Fornecedor de VPS Bitcoin Lightning com servidores privados virtuais de alto desempenho e gestão de contas simplificada."
+  },
+  "ML7RRt": {
+    "defaultMessage": "Servidores privados virtuais (VPS) de alto desempenho, alimentados pela tecnologia Bitcoin Lightning. Planos a partir de apenas alguns sats por mês."
   },
   "MT4qAu": {
     "defaultMessage": "Ferramentas de criptografia NIP-44"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub: Crie um problema em github.com/LNVPS"
   },
+  "R5zovH": {
+    "defaultMessage": "Contato e Suporte"
+  },
   "R7x8iU": {
     "defaultMessage": "Disco: {gb} GB, {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Os pagamentos serão enviados para a carteira NWC configurada nas definições da sua conta."
   },
-  "UPjtBm": {
-    "defaultMessage": "Pode haver algum problema com o serviço. Consulte a nossa página de estado para obter as últimas informações."
-  },
   "UQc03N": {
     "defaultMessage": "Adicionar nova chave SSH"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Obtenha a fatura."
   },
+  "VJ4xwX": {
+    "defaultMessage": "Notícias e atualizações de produtos"
+  },
   "VL/B6x": {
     "defaultMessage": "seu@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Endereço – Linha 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "Servidores virtuais privados (VPS) de alto desempenho, alimentados por Bitcoin. Sem necessidade de verificação de identidade (KYC) e sem complicações."
   },
   "Wsj2fc": {
     "defaultMessage": "Incidentes Ativos"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "As alterações do DNS podem levar até 24 a 48 horas para serem propagadas."
   },
-  "c8LeaL": {
-    "defaultMessage": "Não foi possível carregar os blocos de endereços IP."
-  },
   "cM5n1C": {
     "defaultMessage": "Hora de término (opcional)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} maçanetas"
   },
+  "gCrKqH": {
+    "defaultMessage": "Servidores virtuais privados (VPS) de alto desempenho, com tecnologia Bitcoin Lightning."
+  },
   "gH4VcS": {
     "defaultMessage": "Custo do upgrade calculado proporcionalmente:"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Mensagens"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Contacte-nos"
   },
   "iO1K6D": {
     "defaultMessage": "Ainda não há publicações."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "A processar o pagamento da atualização."
   },
+  "mIuuiJ": {
+    "defaultMessage": "Estado do serviço e tempo de atividade."
+  },
   "mJPBXd": {
     "defaultMessage": "Mensagem criptografada (copie e inclua no seu e-mail):"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "Ainda não tem máquinas virtuais."
   },
+  "pgLgIU": {
+    "defaultMessage": "Leia a atualização completa."
+  },
   "qJRR8N": {
     "defaultMessage": "A carregar os blocos de endereços IP..."
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "Histórico da VM"
-  },
-  "qvZHhC": {
-    "defaultMessage": "Falha ao carregar as ofertas de VPS."
   },
   "r2BhUh": {
     "defaultMessage": "Descriptografar mensagem"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Pago"
+  },
+  "u3FDCD": {
+    "defaultMessage": "Termos de Serviço e Condições de Utilização"
   },
   "uN7rbm": {
     "defaultMessage": "Participe do programa de indicação e receba recompensas quando outras pessoas se inscreverem usando o seu código. Escolha a forma como deseja receber as recompensas."

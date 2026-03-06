@@ -35,18 +35,14 @@ app.use("*all", async (req, res) => {
       req.headers["cookie"],
     );
 
+    console.log(`[${req.method}] ${url} ${result.status}`);
     res
       .status(result.status)
       .set({ "Content-Type": "text/html" })
       .send(result.html);
-  } catch (e) {
-    try {
-      vite.ssrFixStacktrace(e as Error);
-    } catch {
-      /* */
-    }
-    console.error((e as Error).stack);
-    res.status(500).end((e as Error).stack);
+  } catch {
+    console.error(`[${req.method}] ${req.originalUrl} 500`);
+    res.status(500).end("Internal Server Error");
   }
 });
 

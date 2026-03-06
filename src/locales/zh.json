@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "创建订单"
   },
-  "32rBNK": {
-    "defaultMessage": "服务条款"
-  },
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "加载历史记录时出错：{error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "您对资源配置、计费、滥用行为处理或特定服务问题有疑问吗？请发送消息，LNVPS 团队会尽快与您联系。"
   },
   "53RN0g": {
     "defaultMessage": "继续支付"
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "邮政编码"
   },
+  "FMHDSp": {
+    "defaultMessage": "LNVPS 新闻与产品更新"
+  },
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "闪电地址"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "如果您有任何疑问、建议或需要帮助，请填写以下表格，我们会尽快与您联系。"
-  },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "支持"
-  },
-  "HuLZ50": {
-    "defaultMessage": "高性能虚拟专用服务器，由比特币闪电网络提供支持。无需身份验证，操作简便。虚拟专用服务器每月只需几枚聪即可使用。"
   },
   "I3JhPS": {
     "defaultMessage": "网络"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "最低：{min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "查看状态页面"
+  "JVClQM": {
+    "defaultMessage": "LNVPS 服务状态和在线时间"
   },
   "JmgL7z": {
     "defaultMessage": "有效期：{date}（{days}天）"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "比特币闪电网络虚拟专用服务器托管"
+  },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
+  },
+  "LAMeIi": {
+    "defaultMessage": "联系 LNVPS 技术支持。"
   },
   "LNcnLC": {
     "defaultMessage": "转诊失败"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "国家/地区"
+  },
+  "LvkbFg": {
+    "defaultMessage": "提供高性能虚拟专用服务器和简化的账户管理服务的比特币闪电网络 VPS 服务商。"
+  },
+  "ML7RRt": {
+    "defaultMessage": "高性能 VPS，由比特币闪电网络提供支持。虚拟专用服务器，每月只需几枚聪即可使用。"
   },
   "MT4qAu": {
     "defaultMessage": "NIP-44 加密工具"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub：请在 github.com/LNVPS 上提交问题。"
   },
+  "R5zovH": {
+    "defaultMessage": "联系方式与技术支持"
+  },
   "R7x8iU": {
     "defaultMessage": "磁盘：{gb} GB，类型：{type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "款项将发送到您帐户设置中配置的 NWC 钱包。"
   },
-  "UPjtBm": {
-    "defaultMessage": "可能存在服务问题。请查看我们的状态页面以获取最新信息。"
-  },
   "UQc03N": {
     "defaultMessage": "添加新的 SSH 密钥。"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "获取发票。"
   },
+  "VJ4xwX": {
+    "defaultMessage": "新闻和产品更新"
+  },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "地址行 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "高性能虚拟专用服务器，采用比特币支付。无需身份验证，操作简单。"
   },
   "Wsj2fc": {
     "defaultMessage": "正在发生的事件"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
   },
-  "c8LeaL": {
-    "defaultMessage": "未能加载 IP 地址段。"
-  },
   "cM5n1C": {
     "defaultMessage": "结束时间（可选）"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} 个把手"
   },
+  "gCrKqH": {
+    "defaultMessage": "高性能虚拟专用服务器，由比特币闪电网络提供支持。"
+  },
   "gH4VcS": {
     "defaultMessage": "按比例计算的升级费用："
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "消息"
-  },
-  "hZOGLS": {
-    "defaultMessage": "联系我们"
   },
   "iO1K6D": {
     "defaultMessage": "目前还没有帖子。"
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "处理升级付款。"
   },
+  "mIuuiJ": {
+    "defaultMessage": "服务状态和正常运行时间。"
+  },
   "mJPBXd": {
     "defaultMessage": "加密消息（复制并包含在您的电子邮件中）："
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "您目前还没有创建任何虚拟机。"
   },
+  "pgLgIU": {
+    "defaultMessage": "阅读完整更新内容。"
+  },
   "qJRR8N": {
     "defaultMessage": "正在加载 IP 屏蔽列表……"
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "虚拟机历史记录"
-  },
-  "qvZHhC": {
-    "defaultMessage": "未能加载 VPS 优惠信息。"
   },
   "r2BhUh": {
     "defaultMessage": "解密消息"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "已支付。"
+  },
+  "u3FDCD": {
+    "defaultMessage": "服务条款和可接受的使用规范"
   },
   "uN7rbm": {
     "defaultMessage": "加入推荐计划，当其他人使用您的推荐码注册时，您即可获得奖励。您可以选择您希望的收款方式。"

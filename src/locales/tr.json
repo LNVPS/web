@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Sipariş Oluştur"
   },
-  "32rBNK": {
-    "defaultMessage": "Hizmet Şartları"
-  },
   "36aVfS": {
     "defaultMessage": "Nostr Özel Mesaj"
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Geçmiş yüklenirken bir hata oluştu: {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "Kaynak sağlama, faturalandırma, kötüye kullanım durumları veya belirli bir hizmetle ilgili sorunlarınız mı var? Bir mesaj gönderin, LNVPS ekibi en kısa sürede size geri dönüş yapacaktır."
   },
   "53RN0g": {
     "defaultMessage": "Ödemeye Geçin"
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Posta kodu"
   },
+  "FMHDSp": {
+    "defaultMessage": "LNVPS Haberleri ve Ürün Güncellemeleri"
+  },
   "FZeQlc": {
     "defaultMessage": "Bağlantı kesildi"
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Şimşek Hızlı Adres"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "Sorularınız, geri bildirimleriniz veya yardıma ihtiyacınız mı var? Aşağıdaki formu doldurun, en kısa sürede size geri dönüş yapacağız."
-  },
   "GqRat5": {
     "defaultMessage": "Lütfen siparişinizi tamamlamak için e-posta adresinizi doğrulayın."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Destek"
-  },
-  "HuLZ50": {
-    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS. KYC gerektirmez, sorunsuz kullanım. Aylık birkaç satoshi'den başlayan sanal özel sunucular."
   },
   "I3JhPS": {
     "defaultMessage": "Ağ"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "En az: {min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "Durum Sayfasını Görüntüle"
+  "JVClQM": {
+    "defaultMessage": "LNVPS Hizmet Durumu ve Çalışma Süresi"
   },
   "JmgL7z": {
     "defaultMessage": "Geçerlilik süresi: {date} ({days} gün)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git."
   },
+  "Kd8VbI": {
+    "defaultMessage": "Bitcoin Lightning VPS Hosting"
+  },
   "KuX7em": {
     "defaultMessage": "Etkin olduğu süre {duration}"
+  },
+  "LAMeIi": {
+    "defaultMessage": "LNVPS Destek ile iletişime geçin"
   },
   "LNcnLC": {
     "defaultMessage": "Başarısız Yönlendirmeler"
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "Ülke"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Yüksek performanslı sanal özel sunucular ve kolaylaştırılmış hesap yönetimi sunan Bitcoin Lightning VPS sağlayıcısı."
+  },
+  "ML7RRt": {
+    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS. Aylık birkaç satoshi'den başlayan sanal özel sunucular."
   },
   "MT4qAu": {
     "defaultMessage": "NIP-44 Şifreleme Araçları"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub: github.com/LNVPS adresinde bir sorun bildirimi oluşturun."
   },
+  "R5zovH": {
+    "defaultMessage": "İletişim ve Destek"
+  },
   "R7x8iU": {
     "defaultMessage": "Disk: {gb} GB {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Ödemeler, hesabınızın ayarlarında yapılandırılmış olan NWC cüzdanına gönderilecektir."
   },
-  "UPjtBm": {
-    "defaultMessage": "Hizmetle ilgili bir sorun olabilir. Güncel bilgiler için durum sayfamızı kontrol edin."
-  },
   "UQc03N": {
     "defaultMessage": "Yeni bir SSH anahtarı ekleyin"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Fatura Alın"
   },
+  "VJ4xwX": {
+    "defaultMessage": "Haberler ve Ürün Güncellemeleri"
+  },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Adres Satırı 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "Bitcoin ile çalışan, yüksek performanslı VPS. Kimlik doğrulama veya karmaşık işlemler yok."
   },
   "Wsj2fc": {
     "defaultMessage": "Devam Eden Olaylar"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "DNS değişikliklerinin uygulanması 24–48 saat sürebilir."
   },
-  "c8LeaL": {
-    "defaultMessage": "IP adresleri yüklenirken bir hata oluştu."
-  },
   "cM5n1C": {
     "defaultMessage": "Bitiş Saati (isteğe bağlı)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} sapları"
   },
+  "gCrKqH": {
+    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS."
+  },
   "gH4VcS": {
     "defaultMessage": "Oransal olarak hesaplanan yükseltme maliyeti:"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Mesajlar"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Bizimle İletişime Geçin"
   },
   "iO1K6D": {
     "defaultMessage": "Henüz hiçbir gönderi yok."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "Yükseltme Ödemesi İşleniyor"
   },
+  "mIuuiJ": {
+    "defaultMessage": "Hizmet Durumu ve Çalışma Süresi"
+  },
   "mJPBXd": {
     "defaultMessage": "Şifrelenmiş mesaj (kopyalayın ve e-postanıza ekleyin):"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "Şu anda sanal makineniz bulunmuyor."
   },
+  "pgLgIU": {
+    "defaultMessage": "Güncellemenin tamamını okuyun"
+  },
   "qJRR8N": {
     "defaultMessage": "IP adresleri yükleniyor..."
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "VM Geçmişi"
-  },
-  "qvZHhC": {
-    "defaultMessage": "VPS teklifleri yüklenirken bir hata oluştu."
   },
   "r2BhUh": {
     "defaultMessage": "Şifrelenmiş Mesajı Çöz"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Ödendi"
+  },
+  "u3FDCD": {
+    "defaultMessage": "Hizmet Şartları ve Kabul Edilebilir Kullanım"
   },
   "uN7rbm": {
     "defaultMessage": "Referans programına katılarak, başkaları sizin kodunuzu kullanarak kayıt yaptığında ödeme alın. Ödemeleri nasıl almak istediğinizi seçin."

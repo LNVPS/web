@@ -1,26 +1,23 @@
 import { NostrEvent, NostrLink, TaggedNostrEvent } from "@snort/system";
-import { useLocation, useLoaderData, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Markdown from "../components/markdown";
 import Profile from "../components/profile";
 import { useNewsPost } from "../hooks/news-post";
 import { FormattedDate } from "react-intl";
 import Seo from "../components/seo";
-import type { NewsPostLoaderData } from "../loaders";
+import {
+  getNewsExcerpt,
+  getNewsPublishedAt,
+  getNewsSlug,
+  getNewsTitle,
+} from "../utils/news-seo";
 
 export function NewsPostContent({ ev }: { ev: NostrEvent }) {
-  const title = ev.tags.find((a) => a[0] == "title")?.[1];
-  const summary = ev.tags.find((a) => a[0] == "summary")?.[1];
-  const posted = Number(
-    ev.tags.find((a) => a[0] == "published_at")?.[1] ?? ev.created_at,
-  );
+  const title = getNewsTitle(ev);
+  const posted = getNewsPublishedAt(ev);
   const postedIso = new Date(posted * 1000).toISOString();
-  // Derive a plain-text excerpt for the meta description
-  const excerpt =
-    summary ??
-    ev.content
-      .replace(/[#*`[\]()!]/g, "")
-      .slice(0, 160)
-      .trim();
+  const excerpt = getNewsExcerpt(ev);
+  const canonical = `/news/${getNewsSlug(ev)}`;
 
   const newsArticleSchema = {
     "@context": "https://schema.org",
@@ -45,11 +42,12 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
           title={title}
           description={excerpt}
           ogType="article"
+          canonical={canonical}
           publishedAt={postedIso}
           jsonLd={newsArticleSchema}
         />
       )}
-      <div className="text-2xl">{title}</div>
+      <h1 className="text-2xl">{title}</h1>
       <div className="flex items-center justify-between py-8">
         <Profile link={NostrLink.profile(ev.pubkey)} />
         <div>
@@ -72,11 +70,9 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
 export function NewsPost() {
   const { id } = useParams<{ id: string }>();
   const { state } = useLocation() as { state?: TaggedNostrEvent };
-  const { article: loaderEv } = useLoaderData<NewsPostLoaderData>();
 
   const data = useNewsPost(state ? undefined : id);
-
-  const ev = state || data.at(0) || loaderEv;
+  const ev = state || data.at(0);
 
   if (!ev) return null;
   return <NewsPostContent ev={ev} />;

@@ -11,16 +11,35 @@ import { LocaleContext } from "./components/translation-provider.tsx";
 import { routes } from "./routes.tsx";
 import localesMetadata from "./locales-metadata.json";
 import { setSSRLocale, serializeCacheScript } from "./ssr-cache.ts";
-import { serverSystem } from "./nostr-system.ts";
 import {
   HeadContext,
   createHeadStore,
   serializeHead,
 } from "./components/head-context.tsx";
+import { RequestBuilder, EventKind } from "@snort/system";
+import { NostrProfile, System } from "./const.ts";
 
-// Shared SSR NostrSystem — same instance used by loaders.ts so both share one
-// set of persistent relay connections rather than opening duplicates.
-const system = serverSystem;
+export function startPersistentQueries() {
+  const newsReq = new RequestBuilder("server-news");
+  newsReq
+    .withOptions({ leaveOpen: true })
+    .withFilter()
+    .kinds([EventKind.LongFormTextNote])
+    .authors([NostrProfile.id]);
+
+  const statusReq = new RequestBuilder("server-status");
+  statusReq
+    .withOptions({ leaveOpen: true })
+    .withFilter()
+    .kinds([30999 as number])
+    .authors([NostrProfile.id]);
+
+  const newsQuery = System.Query(newsReq);
+  newsQuery.start();
+  const statusQuery = System.Query(statusReq);
+  statusQuery.start();
+}
+startPersistentQueries();
 
 /** Load and flatten translation messages for a locale. */
 async function loadMessages(locale: string): Promise<Record<string, string>> {
@@ -89,12 +108,12 @@ export async function render(
         <LocaleContext.Provider
           value={{
             locale,
-            setLocale: () => {},
+            setLocale: () => { },
             supportedLocales: localesMetadata,
           }}
         >
           <IntlProvider locale={locale} messages={messages} defaultLocale="en">
-            <SnortContext.Provider value={system}>
+            <SnortContext.Provider value={System}>
               <StaticRouterProvider router={router} context={context} />
             </SnortContext.Provider>
           </IntlProvider>
@@ -111,5 +130,4 @@ export async function render(
   return { html, head, cacheScript, lang: locale, dir };
 }
 
-export { system };
 export { detectLocale } from "./utils/locale.ts";

@@ -8,7 +8,7 @@
     "build": "bun run build:client && bun run build:server && bun run locale:compile",
     "build:client": "bunx vite build --outDir dist/client",
     "build:server": "bunx vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "serve": "bun server/prod.ts",
+    "serve": "bun run build && bun server/prod.ts",
     "lint": "eslint .",
     "preview": "bunx vite preview",
     "locale:extract": "bunx formatjs extract 'src/**/*.tsx' 'src/**/*.ts' '!src/vite-env.d.ts' --out-file src/locales/en.json",

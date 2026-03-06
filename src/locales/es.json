@@ -74,9 +74,6 @@
   "2l2y5p": {
     "defaultMessage": "Crear pedido"
   },
-  "32rBNK": {
-    "defaultMessage": "Términos de servicio"
-  },
   "36aVfS": {
     "defaultMessage": "Mensaje directo de Nostr."
   },
@@ -100,6 +97,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Error al cargar el historial: {error}"
+  },
+  "4upFOv": {
+    "defaultMessage": "¿Tiene preguntas sobre el aprovisionamiento, la facturación, la gestión de casos de uso indebido o algún problema específico relacionado con un servicio? Envíe un mensaje y el equipo de LNVPS se pondrá en contacto con usted lo antes posible."
   },
   "53RN0g": {
     "defaultMessage": "Continúe con el pago."
@@ -290,6 +290,9 @@
   "FJhjgz": {
     "defaultMessage": "Código postal"
   },
+  "FMHDSp": {
+    "defaultMessage": "Noticias y novedades de productos de LNVPS"
+  },
   "FZeQlc": {
     "defaultMessage": "Desconectado."
   },
@@ -308,9 +311,6 @@
   "GSye7T": {
     "defaultMessage": "Dirección Lightning"
   },
-  "Gb4Uh/": {
-    "defaultMessage": "¿Tiene preguntas, comentarios o necesita ayuda? Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible."
-  },
   "GqRat5": {
     "defaultMessage": "Por favor, verifique su dirección de correo electrónico para completar su pedido."
   },
@@ -325,9 +325,6 @@
   },
   "HqRNN8": {
     "defaultMessage": "Soporte"
-  },
-  "HuLZ50": {
-    "defaultMessage": "Servidores virtuales privados (VPS) de alto rendimiento, impulsados por Bitcoin Lightning. Sin necesidad de verificación de identidad (KYC) ni trámites complicados. Servidores virtuales privados disponibles desde unos pocos satoshis al mes."
   },
   "I3JhPS": {
     "defaultMessage": "Red"
@@ -350,8 +347,8 @@
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
-  "JW40Ux": {
-    "defaultMessage": "Ver página de estado."
+  "JVClQM": {
+    "defaultMessage": "Estado del servicio LNVPS y tiempo de actividad"
   },
   "JmgL7z": {
     "defaultMessage": "Caduca el: {date} ({days} días)"
@@ -368,8 +365,14 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "Kd8VbI": {
+    "defaultMessage": "Alojamiento VPS para Bitcoin Lightning"
+  },
   "KuX7em": {
     "defaultMessage": "Activo durante {duration}."
+  },
+  "LAMeIi": {
+    "defaultMessage": "Póngase en contacto con el servicio de asistencia de LNVPS."
   },
   "LNcnLC": {
     "defaultMessage": "Referencias no exitosas."
@@ -382,6 +385,12 @@
   },
   "LqFfRA": {
     "defaultMessage": "País"
+  },
+  "LvkbFg": {
+    "defaultMessage": "Proveedor de VPS de Bitcoin Lightning que ofrece servidores privados virtuales de alto rendimiento y una gestión de cuentas simplificada."
+  },
+  "ML7RRt": {
+    "defaultMessage": "Servidores privados virtuales de alto rendimiento, impulsados por Bitcoin Lightning. Precios a partir de unos pocos satoshis al mes."
   },
   "MT4qAu": {
     "defaultMessage": "Herramientas de cifrado NIP-44"
@@ -461,6 +470,9 @@
   "R0skQD": {
     "defaultMessage": "GitHub: Cree un problema en github.com/LNVPS"
   },
+  "R5zovH": {
+    "defaultMessage": "Contacto y asistencia"
+  },
   "R7x8iU": {
     "defaultMessage": "Disco: {gb} GB, {type}"
   },
@@ -524,9 +536,6 @@
   "TieXig": {
     "defaultMessage": "Los pagos se enviarán a la billetera de NWC configurada en la configuración de su cuenta."
   },
-  "UPjtBm": {
-    "defaultMessage": "Es posible que haya un problema con el servicio. Consulte nuestra página de estado para obtener las últimas actualizaciones."
-  },
   "UQc03N": {
     "defaultMessage": "Añadir nueva clave SSH"
   },
@@ -551,6 +560,9 @@
   "VE4z7n": {
     "defaultMessage": "Obtener factura."
   },
+  "VJ4xwX": {
+    "defaultMessage": "Novedades y actualizaciones de productos"
+  },
   "VL/B6x": {
     "defaultMessage": "tu@email.com"
   },
@@ -565,9 +577,6 @@
   },
   "WhLfzM": {
     "defaultMessage": "Dirección, línea 2"
-  },
-  "Ws8Qkf": {
-    "defaultMessage": "Servidores virtuales privados (VPS) de alto rendimiento que utilizan Bitcoin. Sin necesidad de verificación de identidad (KYC) ni complicaciones."
   },
   "Wsj2fc": {
     "defaultMessage": "Incidentes activos"
@@ -662,9 +671,6 @@
   "c78ZVJ": {
     "defaultMessage": "Los cambios en el DNS pueden tardar entre 24 y 48 horas en aplicarse."
   },
-  "c8LeaL": {
-    "defaultMessage": "No se pudieron cargar los bloques de direcciones IP."
-  },
   "cM5n1C": {
     "defaultMessage": "Hora de finalización (opcional)"
   },
@@ -746,6 +752,9 @@
   "gBvImw": {
     "defaultMessage": "{count} manijas"
   },
+  "gCrKqH": {
+    "defaultMessage": "Servidores virtuales privados (VPS) de alto rendimiento con tecnología Bitcoin Lightning."
+  },
   "gH4VcS": {
     "defaultMessage": "Coste del cambio de categoría calculado proporcionalmente:"
   },
@@ -778,9 +787,6 @@
   },
   "hMzcSq": {
     "defaultMessage": "Mensajes"
-  },
-  "hZOGLS": {
-    "defaultMessage": "Contáctenos"
   },
   "iO1K6D": {
     "defaultMessage": "Aún no hay publicaciones."
@@ -848,6 +854,9 @@
   "m22Mzk": {
     "defaultMessage": "Procesando el pago de la mejora."
   },
+  "mIuuiJ": {
+    "defaultMessage": "Estado del servicio y tiempo de actividad."
+  },
   "mJPBXd": {
     "defaultMessage": "Mensaje cifrado (copie e incluya en su correo electrónico):"
   },
@@ -899,6 +908,9 @@
   "pY6CgO": {
     "defaultMessage": "Todavía no tiene ninguna máquina virtual."
   },
+  "pgLgIU": {
+    "defaultMessage": "Lea la actualización completa."
+  },
   "qJRR8N": {
     "defaultMessage": "Cargando los bloques de direcciones IP..."
   },
@@ -916,9 +928,6 @@
   },
   "quroDq": {
     "defaultMessage": "Historial de máquinas virtuales"
-  },
-  "qvZHhC": {
-    "defaultMessage": "No se pudieron cargar las ofertas de VPS."
   },
   "r2BhUh": {
     "defaultMessage": "Descifrar mensaje"
@@ -955,6 +964,9 @@
   },
   "u/vOPu": {
     "defaultMessage": "Pagado."
+  },
+  "u3FDCD": {
+    "defaultMessage": "Términos de servicio y condiciones de uso."
   },
   "uN7rbm": {
     "defaultMessage": "Únase al programa de referidos para obtener recompensas cuando otras personas se registren utilizando su código. Elija cómo desea recibir las recompensas."

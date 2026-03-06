@@ -3,7 +3,7 @@ import { useHead, type HeadTags } from "./head-context";
 
 const SITE_NAME = "LNVPS";
 const SITE_URL = "https://lnvps.net";
-const DEFAULT_DESCRIPTION = "Bitcoin Lightning VPS provider";
+const DEFAULT_DESCRIPTION = "Bitcoin Lightning VPS hosting";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.jpg`;
 
 interface SeoProps {

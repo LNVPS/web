@@ -1,17 +1,16 @@
 import type { LoaderFunctionArgs } from "react-router-dom";
-import { EventKind, RequestBuilder, TaggedNostrEvent } from "@snort/system";
+import type { TaggedNostrEvent } from "@snort/system";
 import {
   LNVpsApi,
   PaymentMethod,
   VmTemplateResponse,
   AvailableIpSpace,
 } from "./api";
-import { ApiUrl, NostrProfile } from "./const";
+import { ApiUrl, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
 import { detectLocale } from "./utils/locale";
-import { serverSystem as loaderSystem } from "./nostr-system";
 
-// ── In-process TTL cache shared across requests ───────────────────────────────
+// ── In-process TTL cache shared across requests ──────────────────────────────
 
 interface CacheEntry<T> {
   data: T;
@@ -19,7 +18,7 @@ interface CacheEntry<T> {
 }
 
 const memCache = new Map<string, CacheEntry<unknown>>();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const CACHE_TTL = 5 * 60 * 1000;
 
 async function cached<T>(key: string, loader: () => Promise<T>): Promise<T> {
   const entry = memCache.get(key) as CacheEntry<T> | undefined;
@@ -34,50 +33,32 @@ async function cached<T>(key: string, loader: () => Promise<T>): Promise<T> {
   }
 }
 
-// ── Shared Nostr request builders ─────────────────────────────────────────────
-
-function buildNewsReq() {
-  const req = new RequestBuilder("loader-news");
-  req
-    .withFilter()
-    .kinds([EventKind.LongFormTextNote])
-    .authors([NostrProfile.id])
-    .limit(50);
-  return req;
-}
-
-function buildStatusReq() {
-  const req = new RequestBuilder("loader-status");
-  req
-    .withFilter()
-    .kinds([30999 as number])
-    .authors([NostrProfile.id])
-    .limit(50);
-  return req;
-}
-
-// ── Loader return types ───────────────────────────────────────────────────────
-
 export interface HomeLoaderData {
-  offers: VmTemplateResponse | undefined;
-  ipSpaces: AvailableIpSpace[] | undefined;
-  paymentMethods: PaymentMethod[] | undefined;
-  latestNews: TaggedNostrEvent[];
+  offers?: VmTemplateResponse;
+  ipSpaces?: AvailableIpSpace[];
+  paymentMethods?: PaymentMethod[];
+  latestNews?: TaggedNostrEvent[];
 }
 
 export interface NewsLoaderData {
-  articles: TaggedNostrEvent[];
+  articles?: TaggedNostrEvent[];
 }
 
 export interface NewsPostLoaderData {
-  article: TaggedNostrEvent | undefined;
+  article?: TaggedNostrEvent;
 }
 
 export interface StatusLoaderData {
-  events: TaggedNostrEvent[];
+  events?: TaggedNostrEvent[];
 }
 
-// ── Loader functions ──────────────────────────────────────────────────────────
+export function getNews() {
+  return System.GetQuery("server-news")?.snapshot;
+}
+
+export function getStatus() {
+  return System.GetQuery("server-status")?.snapshot;
+}
 
 export async function homeLoader({
   request,
@@ -88,17 +69,18 @@ export async function homeLoader({
   );
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
 
-  const [offers, ipSpaces, paymentMethods, rawNews] = await Promise.all([
+  const news = getNews();
+
+  const [offers, ipSpaces, paymentMethods] = await Promise.all([
     cached("offers", () => api.listOffers()),
     cached("ipSpaces", () => api.listAvailableIpSpace()),
     cached("payment_methods", () => api.getPaymentMethods()),
-    cached("news", () => loaderSystem.Fetch(buildNewsReq())),
   ]);
 
   const latestNews =
-    rawNews && rawNews.length > 0
-      ? filterArticlesByLocale(rawNews, locale).slice(0, 1)
-      : [];
+    news && news.length > 0
+      ? filterArticlesByLocale(news, locale).slice(0, 1)
+      : undefined;
 
   return { offers, ipSpaces, paymentMethods, latestNews };
 }
@@ -111,15 +93,12 @@ export async function newsLoader({
     request.headers.get("cookie"),
   );
 
-  const rawNews = await cached("news", () =>
-    loaderSystem.Fetch(buildNewsReq()),
-  );
-  const articles =
-    rawNews && rawNews.length > 0
-      ? filterArticlesByLocale(rawNews, locale)
-      : [];
-
-  return { articles };
+  const news = getNews();
+  if (news) {
+    return { articles: filterArticlesByLocale(news, locale) };
+  } else {
+    return { articles: undefined }
+  }
 }
 
 export async function newsPostLoader({
@@ -128,21 +107,15 @@ export async function newsPostLoader({
   const dTag = params.id;
   if (!dTag) return { article: undefined };
 
-  const req = new RequestBuilder("loader-news-post");
-  req.withFilter().tag("d", [dTag]).authors([NostrProfile.id]).limit(1);
+  const news = getNews();
+  const article = news?.find((e) =>
+    e.tags.some((t) => t[0] === "d" && t[1] === dTag),
+  );
 
-  try {
-    const events = await loaderSystem.Fetch(req);
-    return { article: events.at(0) };
-  } catch {
-    return { article: undefined };
-  }
+  return { article };
 }
 
 export async function statusLoader(): Promise<StatusLoaderData> {
-  const events = await cached("status", () =>
-    loaderSystem.Fetch(buildStatusReq()),
-  );
-
-  return { events: events ?? [] };
+  const status = getStatus();
+  return { events: status };
 }

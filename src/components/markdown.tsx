@@ -20,7 +20,7 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
             );
           }
           case "image": {
-            return <img key={ctr++} src={t.href} />;
+            return <img key={ctr++} src={t.href} alt={t.text || ""} />;
           }
           case "heading": {
             switch (t.depth) {

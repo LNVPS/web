@@ -1,6 +1,5 @@
-import { EventKind, RequestBuilder, EventBuilder } from "@snort/system";
-import { useRequestBuilder } from "@snort/system-react";
-import { useState, useEffect, useMemo } from "react";
+import { EventKind, EventBuilder } from "@snort/system";
+import { useState, useEffect } from "react";
 import Markdown from "../components/markdown";
 import { NostrProfile, ServiceBirth } from "../const";
 import useLogin from "../hooks/login";
@@ -9,8 +8,7 @@ import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
-import { useLoaderData } from "react-router-dom";
-import type { StatusLoaderData } from "../loaders";
+import { useStatus } from "../hooks/status";
 
 interface Incident {
   id?: string;
@@ -133,24 +131,7 @@ export function StatusPage() {
     );
   }
 
-  const { events: loaderEvents } = useLoaderData<StatusLoaderData>();
-
-  const req = useMemo(() => {
-    const builder = new RequestBuilder("status");
-    builder
-      .withOptions({ leaveOpen: true })
-      .withFilter()
-      .kinds([30999 as EventKind])
-      .authors([NostrProfile.id])
-      .limit(50);
-    return builder;
-  }, []);
-
-  const liveEvents = useRequestBuilder(req);
-
-  // Prefer live relay data, fall back to loader (SSR) data
-  const events = liveEvents.length > 0 ? liveEvents : loaderEvents;
-
+  const events = useStatus();
   const allIncidents = events
     .map((ev) => {
       const dTag = ev.tags.find((t) => t[0] === "d");
@@ -191,7 +172,10 @@ export function StatusPage() {
   const activeIncidents = allIncidents.filter((incident) => !incident.ended);
   const resolvedIncidents = allIncidents.filter((incident) => incident.ended);
 
-  const totalDowntime = allIncidents.reduce((acc, incident) => {
+  const now = Math.floor(currentTime / 1000);
+  const thirtyDaysAgo = now - 30 * 86400;
+
+  function accumilateDowntime(acc: number, incident: typeof allIncidents[0]) {
     // Only count incidents that affect uptime (exclude maintenance and informational)
     if (incident.type === "maintenance" || incident.type === "informational") {
       return acc;
@@ -203,15 +187,21 @@ export function StatusPage() {
       duration = incident.ended - incident.started;
     } else {
       // Ongoing incident - use current duration
-      const now = Math.floor(currentTime / 1000);
       duration = now - incident.started;
     }
     acc += duration * 1000; // Convert to milliseconds
     return acc;
-  }, 0);
+  }
 
+  // Full downtime
+  const totalDowntime = allIncidents.reduce(accumilateDowntime, 0);
   const age = currentTime - ServiceBirth.getTime();
   const uptime = 1 - totalDowntime / age;
+
+  // 30 Days
+  const last30DaysDowntime = allIncidents.filter(a => a.started >= thirtyDaysAgo).reduce(accumilateDowntime, 0);
+  const last30DaysAge = 30 * 86400 * 1000; // 30 days in milliseconds
+  const last30DaysUptime = 1 - last30DaysDowntime / last30DaysAge;
 
   // Update current time every second for accurate uptime calculation, but only when needed
   useEffect(() => {
@@ -508,16 +498,19 @@ export function StatusPage() {
   return (
     <div className="flex flex-col gap-4">
       <Seo
-        title={formatMessage({ defaultMessage: "Status" })}
+        title={formatMessage({ defaultMessage: "Service Status and Uptime" })}
         canonical="/status"
         description={formatMessage({
           defaultMessage:
             "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure.",
         })}
       />
-      <div className="text-2xl">
-        <FormattedMessage
-          defaultMessage="Uptime: {uptime}"
+      <h1 className="text-2xl">
+        <FormattedMessage defaultMessage="LNVPS Service Status and Uptime" />
+      </h1>
+      <div className="text-xl flex flex-col gap-2">
+        <div><FormattedMessage
+          defaultMessage="Overall Uptime: {uptime}"
           values={{
             uptime: formatNumber(uptime, {
               style: "percent",
@@ -526,6 +519,19 @@ export function StatusPage() {
             }),
           }}
         />
+        </div>
+        <div>
+          <FormattedMessage
+            defaultMessage="Past 30 Days Uptime: {uptime}"
+            values={{
+              uptime: formatNumber(last30DaysUptime, {
+                style: "percent",
+                minimumFractionDigits: 5,
+                maximumFractionDigits: 5,
+              }),
+            }}
+          />
+        </div>
       </div>
 
       {canEdit && (

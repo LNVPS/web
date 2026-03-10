@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { VmInstance, VmHistory } from "../api";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
@@ -177,9 +177,6 @@ export function VmHistoryPage() {
         <div className="text-cyber-danger">
           <FormattedMessage defaultMessage="No VM selected" />
         </div>
-        <Link to="/" className="text-cyber-accent hover:text-cyber-accent">
-          <FormattedMessage defaultMessage="Go back to home" />
-        </Link>
       </div>
     );
   }
@@ -187,9 +184,6 @@ export function VmHistoryPage() {
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <Link to={"/vm"} state={state}>
-        &lt; <FormattedMessage defaultMessage="Back" />
-      </Link>
 
       <div className="bg-cyber-panel-light p-4 rounded-sm">
         <h2 className="text-lg font-semibold mb-2">

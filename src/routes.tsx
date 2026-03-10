@@ -20,6 +20,7 @@ import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
+import VmLayout from "./pages/vm-layout.tsx";
 import {
   homeLoader,
   newsLoader,
@@ -91,35 +92,41 @@ export const routes: RouteObject[] = [
       },
       {
         path: "/vm",
-        element: (
-          <Lazy>
-            <VmPage />
-          </Lazy>
-        ),
-      },
-      {
-        path: "/vm/billing/:action?",
-        element: <VmBillingPage />,
-      },
-      {
-        path: "/vm/graphs",
-        element: <VmGraphsPage />,
-      },
-      {
-        path: "/vm/console",
-        element: (
-          <Lazy>
-            <VmConsolePage />
-          </Lazy>
-        ),
-      },
-      {
-        path: "/vm/history",
-        element: <VmHistoryPage />,
-      },
-      {
-        path: "/vm/upgrade",
-        element: <VmUpgradePage />,
+        element: <VmLayout />,
+        children: [
+          {
+            index: true,
+            element: (
+              <Lazy>
+                <VmPage />
+              </Lazy>
+            ),
+          },
+          {
+            path: "billing/:action?",
+            element: <VmBillingPage />,
+          },
+          {
+            path: "graphs",
+            element: <VmGraphsPage />,
+          },
+          {
+            path: "console",
+            element: (
+              <Lazy>
+                <VmConsolePage />
+              </Lazy>
+            ),
+          },
+          {
+            path: "history",
+            element: <VmHistoryPage />,
+          },
+          {
+            path: "upgrade",
+            element: <VmUpgradePage />,
+          },
+        ],
       },
       {
         path: "/tos",

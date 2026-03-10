@@ -1,4 +1,4 @@
-import { CpuArch, CpuMfg, VmInstance, VmTemplate, VmStatus } from "../api";
+import { CpuArch, CpuMfg, VmInstance, VmTemplate } from "../api";
 import BytesSize from "./bytes";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -60,11 +60,11 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
       {status && status.state === "running" && (
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-primary inline-block shadow-neon-sm"></div>{" "}
-          {"cpu_usage" in status
-            ? `${formatNumber((status as VmStatus & { cpu_usage: number }).cpu_usage, { style: "percent", maximumFractionDigits: 1 })} CPU`
-            : "CPU:"}{" "}
-          {"mem_usage" in status
-            ? `${formatNumber((status as VmStatus & { mem_usage: number }).mem_usage, { style: "percent", maximumFractionDigits: 0 })} RAM`
+          {status.cpu_usage !== undefined
+            ? `${formatNumber(status.cpu_usage, { style: "percent", maximumFractionDigits: 1 })} CPU`
+            : "CPU"}{" "}
+          {status.mem_usage !== undefined
+            ? `${formatNumber(status.mem_usage, { style: "percent", maximumFractionDigits: 0 })} RAM`
             : "RAM"}
         </div>
       )}
@@ -72,6 +72,12 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
         <div className="text-sm text-cyber-text">
           <div className="w-2 h-2 rounded-full bg-cyber-danger inline-block shadow-neon-danger"></div>{" "}
           <FormattedMessage defaultMessage="Stopped" />
+        </div>
+      )}
+      {status && status.state === "creating" && (
+        <div className="text-sm text-cyber-text">
+          <div className="w-2 h-2 rounded-full bg-yellow-400 inline-block"></div>{" "}
+          <FormattedMessage defaultMessage="Creating" />
         </div>
       )}
     </>

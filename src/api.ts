@@ -103,7 +103,7 @@ export enum CpuFeature {
   VideoComposition = "VideoComposition",
 }
 
-export type VmState = "running" | "stopped" | "pending" | "error" | "unknown";
+export type VmState = "unknown" | "running" | "stopped" | "creating";
 
 export type PaymentMethodType =
   | "lightning"
@@ -216,13 +216,20 @@ export interface VmStatus {
   ssh_key: UserSshKey;
   ip_assignments: Array<VmIpAssignment>;
   state: VmState;
+  cpu_usage?: number;
+  mem_usage?: number;
+  uptime?: number;
+  net_in?: number;
+  net_out?: number;
+  disk_write?: number;
+  disk_read?: number;
   auto_renewal_enabled: boolean;
 }
 
 export interface VmInstance {
   id: number;
   created: string;
-  expires: string;
+  expires?: string;
   status?: VmStatus;
   mac_address: string;
   template: VmTemplate;
@@ -543,7 +550,7 @@ export class LNVpsApi {
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
     readonly timeout?: number,
-  ) { }
+  ) {}
 
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { VmInstance, VmPayment } from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
@@ -53,16 +53,14 @@ export function VmBillingPage() {
   }, [login, state, params]);
 
   if (!state) return;
-  const expireDate = new Date(state.expires);
-  const days =
-    (expireDate.getTime() - new Date().getTime()) / 1000 / 24 / 60 / 60;
+  const expireDate = state.expires ? new Date(state.expires) : undefined;
+  const days = expireDate
+    ? (expireDate.getTime() - new Date().getTime()) / 1000 / 24 / 60 / 60
+    : undefined;
 
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <Link to={"/vm"} state={state}>
-        &lt; <FormattedMessage defaultMessage="Back" />
-      </Link>
       <div className="text-xl bg-cyber-panel rounded-sm px-3 py-4 flex justify-between items-center">
         <div>
           <FormattedMessage
@@ -78,7 +76,7 @@ export function VmBillingPage() {
           </span>
         </div>
       </div>
-      {days > 0 && (
+      {expireDate && days !== undefined && days > 0 && (
         <div>
           <FormattedMessage
             defaultMessage="Expires: {date} ({days} days)"
@@ -93,7 +91,7 @@ export function VmBillingPage() {
           />
         </div>
       )}
-      {days < 0 && !showPaymentFlow && (
+      {(days === undefined || days < 0) && !showPaymentFlow && (
         <div className="text-cyber-danger text-xl">
           <FormattedMessage defaultMessage="Expired" />
         </div>

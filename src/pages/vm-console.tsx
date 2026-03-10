@@ -138,19 +138,11 @@ export function VmConsolePage() {
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <button
-            className="text-sm px-3 py-1 border rounded hover:bg-neutral-800"
-            onClick={() => window.history.back()}
-          >
-            ← <FormattedMessage defaultMessage="Back" />
-          </button>
-          <div className="text-xl">
-            <FormattedMessage
-              defaultMessage="VM #{id} Terminal:"
-              values={{ id: state?.id }}
-            />
-          </div>
+        <div className="text-xl">
+          <FormattedMessage
+            defaultMessage="VM #{id} Terminal:"
+            values={{ id: state?.id }}
+          />
         </div>
         <div className="flex items-center gap-3">
           <span className={`text-sm font-medium ${statusColor}`}>

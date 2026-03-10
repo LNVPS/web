@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { VmInstance, VmUpgradeRequest, VmUpgradeQuote } from "../api";
 import { AsyncButton } from "../components/button";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
-import VpsInstanceRow from "../components/vps-instance";
 import VmPaymentFlow from "../components/vm-payment-flow";
 import { CostAmount } from "../components/cost";
 import { FormattedMessage } from "react-intl";
@@ -51,10 +50,6 @@ export default function VmUpgradePage() {
   if (!isStandardTemplate) {
     return (
       <div className="flex flex-col gap-4">
-        <Link to={"/vm"} state={state}>
-          &lt; <FormattedMessage defaultMessage="Back to VM" />
-        </Link>
-        <VpsInstanceRow vm={state} actions={false} />
         <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded-sm">
           <h3 className="text-lg font-bold mb-2">
             <FormattedMessage defaultMessage="Upgrade Not Available" />
@@ -125,7 +120,6 @@ export default function VmUpgradePage() {
             &lt; <FormattedMessage defaultMessage="Back to Upgrade" />
           </button>
         </div>
-        <VpsInstanceRow vm={state} actions={false} />
         <VmPaymentFlow
           vm={state}
           type="upgrade"
@@ -144,10 +138,6 @@ export default function VmUpgradePage() {
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <Link to={"/vm"} state={state}>
-        &lt; <FormattedMessage defaultMessage="Back to VM" />
-      </Link>
-      <VpsInstanceRow vm={state} actions={false} />
 
       <div className="text-xl">
         <FormattedMessage defaultMessage="Upgrade VM Specifications" />

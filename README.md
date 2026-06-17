@@ -53,7 +53,7 @@ The app will be available at `http://localhost:5173`
 yarn build
 
 # Build for specific environment
-yarn build --mode lnvps
+yarn build --mode production
 yarn build --mode uat
 ```
 
@@ -92,7 +92,7 @@ src/
 Configure the API endpoint and other settings via environment files:
 
 - `.env` - Default/production
-- `.env.lnvps` - LNVPS production
+- `.env.production` - LNVPS production
 - `.env.uat` - User acceptance testing
 - `.env.development` - Local development
 

@@ -1,5 +1,5 @@
 FROM oven/bun:1 AS builder
-ARG MODE=lnvps
+ARG MODE=production
 WORKDIR /src
 
 COPY package.json bun.lock ./

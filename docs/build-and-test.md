@@ -10,7 +10,7 @@ Yarn 4 (Berry with PnP). Always use `yarn`, never `npm`.
 yarn                    # Install dependencies
 yarn dev                # Start dev server (Vite)
 yarn build              # Type-check (tsc -b) then build for production
-yarn build --mode lnvps # Build with .env.lnvps
+yarn build --mode production # Build with .env.production
 yarn lint               # Run ESLint
 yarn preview            # Preview production build locally
 ```

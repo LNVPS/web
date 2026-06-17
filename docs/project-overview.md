@@ -35,5 +35,5 @@ The API client class is in `src/api.ts` (`LNVpsApi`). All API types/interfaces a
 
 - Docker multi-stage build: Node builder -> Nginx runner
 - CI: GitHub Actions builds and pushes to `registry.v0l.io`
-- Build modes: `production` (default), `lnvps`, `uat`
-- Corresponding env files: `.env`, `.env.lnvps`, `.env.uat`
+- Build modes: `production`, `uat`
+- Corresponding env files: `.env`, `.env.production`, `.env.uat`

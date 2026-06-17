@@ -101,7 +101,7 @@ export function VpsCustomOrder({
     return grouped;
   }, [templates]);
 
-  // Get unique regions
+  // Get unique regions, sorted by id for stable ordering
   const regions = useMemo(() => {
     const seen = new Map<number, VmCustomTemplateParams>();
     for (const template of templates) {
@@ -109,10 +109,12 @@ export function VpsCustomOrder({
         seen.set(template.region.id, template);
       }
     }
-    return Array.from(seen.values());
+    return Array.from(seen.values()).sort(
+      (a, b) => a.region.id - b.region.id,
+    );
   }, [templates]);
 
-  const [region, setRegion] = useState(templates.at(0)?.region.id);
+  const [region, setRegion] = useState(regions[0]?.region.id);
 
   // Get templates for selected region
   const regionTemplates = useMemo(
@@ -179,7 +181,7 @@ export function VpsCustomOrder({
 
   useEffect(() => {
     const t = setTimeout(() => {
-      const api = new LNVpsApi(ApiUrl, undefined);
+      const api = new LNVpsApi(ApiUrl ?? "", undefined);
       api
         .customPrice({
           pricing_id: params.id,

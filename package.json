@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "bun server/dev.ts",
     "build": "bun run build:client && bun run build:server && bun run locale:compile",
-    "build:client": "bunx vite build --outDir dist/client",
-    "build:server": "bunx vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "build:client": "bunx vite build --mode ${MODE:-production} --outDir dist/client",
+    "build:server": "bunx vite build --mode ${MODE:-production} --ssr src/entry-server.tsx --outDir dist/server",
     "serve": "bun run build && bun server/prod.ts",
     "lint": "eslint .",
     "preview": "bunx vite preview",

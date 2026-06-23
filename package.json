@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun server/dev.ts",
-    "build": "bun run build:client && bun run build:server && bun run locale:compile",
+    "build": "bun run build:client && bun run build:server && bun run locale:compile && bun run skill:index",
+    "skill:index": "bun server/gen-skill-index.ts",
     "build:client": "bunx vite build --mode ${MODE:-production} --outDir dist/client",
     "build:server": "bunx vite build --mode ${MODE:-production} --ssr src/entry-server.tsx --outDir dist/server",
     "serve": "bun run build && bun server/prod.ts",

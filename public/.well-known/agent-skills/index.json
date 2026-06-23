@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "lnvps-api",
+      "type": "skill-md",
+      "description": "Create and manage VPS instances using the LNVPS customer API with Bitcoin Lightning Network payments. Use when building integrations that provision virtual machines, handle Lightning invoice payments, manage SSH keys, or automate VPS lifecycle operations.",
+      "url": "https://lnvps.net/SKILL.md",
+      "digest": "sha256:b77e1f7eedc36187346ae806a44914dd19929588188c1c0537371ff7e2c566e6"
+    }
+  ]
+}

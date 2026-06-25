@@ -12,6 +12,7 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import { AsyncButton } from "./button";
 import { CostAmount, IntervalSuffix } from "./cost";
 import { RevolutPayWidget } from "./revolut";
+import type { Mode } from "@revolut/checkout";
 import { Icon } from "./icon";
 import { ApiUrl } from "../const";
 import QrCode from "./qr";
@@ -322,7 +323,7 @@ export default function VmPaymentFlow({
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
         ) : "revolut" in payment.data ? (
           <RevolutPayWidget
-            mode={import.meta.env.VITE_REVOLUT_MODE}
+            mode={import.meta.env.VITE_REVOLUT_MODE as Mode | undefined}
             payment={payment}
             account={account}
             onPaid={handlePaymentComplete}

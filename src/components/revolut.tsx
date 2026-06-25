@@ -144,6 +144,8 @@ export function RevolutPayWidget({
           address_2: streetLine2 || undefined,
           contact_nip17: account?.contact_nip17 ?? false,
           contact_email: account?.contact_email ?? false,
+          contact_telegram: account?.contact_telegram ?? false,
+          contact_whatsapp: account?.contact_whatsapp ?? false,
         });
       } catch (e) {
         console.error("Failed to save account details:", e);

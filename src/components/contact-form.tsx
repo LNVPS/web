@@ -161,7 +161,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       </div>
 
       <Turnstile
-        siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+        siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY ?? ""}
         options={{ theme: theme === "light" ? "light" : "dark" }}
         onSuccess={(token) => setTurnstileToken(token)}
         onExpire={() => setTurnstileToken("")}

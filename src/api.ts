@@ -122,6 +122,14 @@ export interface AccountDetail {
   email_verified?: boolean;
   contact_nip17: boolean;
   contact_email: boolean;
+  contact_telegram: boolean;
+  /** Whether a Telegram chat is linked (read-only) */
+  telegram_linked?: boolean;
+  contact_whatsapp: boolean;
+  /** The verified WhatsApp number, if any (read-only) */
+  whatsapp_number?: string;
+  /** Whether the WhatsApp number is verified (read-only) */
+  whatsapp_verified?: boolean;
   country_code?: string;
   name?: string;
   address_1?: string;
@@ -131,6 +139,21 @@ export interface AccountDetail {
   postcode?: string;
   tax_id?: string;
   nwc_connection_string?: string;
+}
+
+/** Which notification channels are configured on the server */
+export interface NotificationChannels {
+  nip17: boolean;
+  email: boolean;
+  telegram: boolean;
+  whatsapp: boolean;
+}
+
+export interface TelegramLinkResponse {
+  /** Deep link the user should open to link their Telegram chat */
+  url: string;
+  /** One-time token embedded in the deep link */
+  token: string;
 }
 
 export interface VmCostPlan {
@@ -991,6 +1014,48 @@ export class LNVpsApi {
   async verifyEmail(token: string) {
     const { data } = await this.#handleResponse<ApiResponse<void>>(
       await this.#req(`/api/v1/account/verify-email?token=${token}`, "GET"),
+    );
+    return data;
+  }
+
+  async notificationChannels() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<NotificationChannels>
+    >(await this.#req("/api/v1/notification/channels", "GET"));
+    return data;
+  }
+
+  async telegramLink() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<TelegramLinkResponse>
+    >(await this.#req("/api/v1/account/telegram/link", "POST"));
+    return data;
+  }
+
+  async telegramUnlink() {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account/telegram/link", "DELETE"),
+    );
+    return data;
+  }
+
+  async whatsappVerify(number: string) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account/whatsapp/verify", "POST", { number }),
+    );
+    return data;
+  }
+
+  async whatsappConfirm(code: string) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account/whatsapp/confirm", "POST", { code }),
+    );
+    return data;
+  }
+
+  async whatsappUnlink() {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account/whatsapp/verify", "DELETE"),
     );
     return data;
   }

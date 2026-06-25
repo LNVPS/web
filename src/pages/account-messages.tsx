@@ -8,7 +8,7 @@ export function AccountMessagesPage() {
         <FormattedMessage defaultMessage="Messages" />
       </div>
       <p className="text-cyber-muted text-sm">
-        <FormattedMessage defaultMessage="Send and receive encrypted direct messages with support via NIP-17. Messages are end-to-end encrypted." />
+        <FormattedMessage defaultMessage="Your past encrypted NIP-17 messages with support. This inbox is no longer monitored — please use the Support tab to reach us." />
       </p>
       <Nip17DM />
     </div>

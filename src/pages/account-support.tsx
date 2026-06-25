@@ -3,7 +3,7 @@ import { hexToBech32 } from "@snort/shared";
 import Collapsible from "../components/collapsible";
 import ContactForm, { ContactFormData } from "../components/contact-form";
 import Nip44Tools from "../components/nip44-tools";
-import { ApiUrl, NostrProfile } from "../const";
+import { ApiUrl, SupportPubkey } from "../const";
 import { LoginState } from "../login";
 import { LNVpsApi } from "../api";
 import { FormattedMessage } from "react-intl";
@@ -11,14 +11,16 @@ import { FormattedMessage } from "react-intl";
 export function AccountSupportPage() {
   const login = useLogin();
 
-  const npub = hexToBech32("npub", login?.publicKey);
+  const npub = login?.publicKey
+    ? hexToBech32("npub", login.publicKey)
+    : "";
   const subjectLine = `[${npub}] Account Query`;
 
   async function handleContactSubmit(data: ContactFormData) {
     const signer = LoginState.getSigner();
     const encrypted = await signer.signer.nip44Encrypt(
       data.message,
-      NostrProfile.id,
+      SupportPubkey,
     );
     const api = new LNVpsApi(ApiUrl, undefined, 5000);
     await api.submitContactForm({
@@ -34,15 +36,6 @@ export function AccountSupportPage() {
     <div className="flex flex-col gap-4">
       <div className="text-xl">
         <FormattedMessage defaultMessage="Support" />
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <p className="text-cyber-muted text-sm">
-          <FormattedMessage defaultMessage="Your Public Key (include this in all communications):" />
-        </p>
-        <pre className="bg-cyber-panel rounded-sm px-3 py-2 select-all text-sm break-all">
-          {npub}
-        </pre>
       </div>
 
       <div className="border-t border-cyber-border pt-4">

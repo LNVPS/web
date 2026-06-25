@@ -3,9 +3,8 @@ import { EventKind, RequestBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
 import { NostrProfile } from "../const";
 import { LoginState } from "../login";
-import { AsyncButton } from "./button";
 import useLogin from "../hooks/login";
-import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import { FormattedDate, FormattedMessage } from "react-intl";
 
 interface DecryptedMessage {
   id: string;
@@ -34,11 +33,9 @@ function saveDmCache(pubkey: string, messages: DecryptedMessage[]) {
 
 export default function Nip17DM() {
   const login = useLogin();
-  const { formatMessage } = useIntl();
   const [messages, setMessages] = useState<DecryptedMessage[]>(() =>
     login?.publicKey ? loadDmCache(login.publicKey) : [],
   );
-  const [messageInput, setMessageInput] = useState("");
   // processedIds is seeded from the cache so already-decrypted wraps are skipped
   const processedIds = useRef<Set<string>>(new Set(messages.map((m) => m.id)));
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -125,49 +122,6 @@ export default function Nip17DM() {
     }
   }, [messages]);
 
-  async function sendMessage() {
-    if (!messageInput.trim() || !login?.publicKey) return;
-
-    const signer = LoginState.getSigner();
-    const myPubkey = login.publicKey;
-    const content = messageInput.trim();
-
-    const rumor = signer.createUnsigned(EventKind.ChatRumor, content, (eb) =>
-      eb.tag(["p", supportPubkey]),
-    );
-
-    const sealedForSupport = await signer.sealRumor(rumor, supportPubkey);
-    const wrapForSupport = await signer.giftWrap(
-      sealedForSupport,
-      supportPubkey,
-    );
-
-    const sealedForSelf = await signer.sealRumor(rumor, myPubkey);
-    const wrapForSelf = await signer.giftWrap(sealedForSelf, myPubkey);
-
-    login.system.BroadcastEvent(wrapForSupport);
-    login.system.BroadcastEvent(wrapForSelf);
-
-    const tempId = wrapForSelf.id;
-    processedIds.current.add(tempId);
-
-    setMessages((prev) => {
-      const next = [
-        ...prev,
-        {
-          id: tempId,
-          content,
-          created_at: rumor.created_at,
-          fromMe: true,
-        },
-      ].sort((a, b) => a.created_at - b.created_at);
-      saveDmCache(myPubkey, next);
-      return next;
-    });
-
-    setMessageInput("");
-  }
-
   if (!login) return null;
 
   return (
@@ -212,25 +166,8 @@ export default function Nip17DM() {
         )}
       </div>
 
-      <div className="flex gap-2">
-        <input
-          type="text"
-          className="flex-1 bg-cyber-panel-light rounded-sm p-3 text-sm"
-          placeholder={formatMessage({
-            defaultMessage: "Type your message...",
-          })}
-          value={messageInput}
-          onChange={(e) => setMessageInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              sendMessage();
-            }
-          }}
-        />
-        <AsyncButton onClick={sendMessage} disabled={!messageInput.trim()}>
-          <FormattedMessage defaultMessage="Send" />
-        </AsyncButton>
+      <div className="border border-cyber-border rounded-sm bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
+        <FormattedMessage defaultMessage="This inbox is no longer monitored, so new messages can't be sent here. For support, please open a ticket from the Support tab." />
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import { NewsPage } from "./pages/news.tsx";
 import { NewsPost } from "./pages/news-post.tsx";
 import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
+import { VmFirewallPage } from "./pages/vm-firewall.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
 import { AccountMessagesPage } from "./pages/account-messages.tsx";
@@ -121,6 +122,10 @@ export const routes: RouteObject[] = [
           {
             path: "history",
             element: <VmHistoryPage />,
+          },
+          {
+            path: "firewall",
+            element: <VmFirewallPage />,
           },
           {
             path: "upgrade",

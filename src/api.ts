@@ -568,6 +568,54 @@ export interface CreateVmRequest {
   ref_code?: string;
 }
 
+export enum FirewallDirection {
+  INBOUND = "inbound",
+  OUTBOUND = "outbound",
+}
+
+export enum FirewallProtocol {
+  ANY = "any",
+  TCP = "tcp",
+  UDP = "udp",
+  ICMP = "icmp",
+}
+
+export enum FirewallAction {
+  ACCEPT = "accept",
+  DROP = "drop",
+  REJECT = "reject",
+}
+
+export interface FirewallRule {
+  id: number;
+  priority: number;
+  direction: FirewallDirection;
+  protocol: FirewallProtocol;
+  action: FirewallAction;
+  src_cidr?: string | null;
+  dst_port_start?: number | null;
+  dst_port_end?: number | null;
+  enabled: boolean;
+}
+
+export interface CreateFirewallRule {
+  priority?: number;
+  direction: FirewallDirection;
+  protocol: FirewallProtocol;
+  action: FirewallAction;
+  src_cidr?: string | null;
+  dst_port_start?: number | null;
+  dst_port_end?: number | null;
+  enabled?: boolean;
+}
+
+export type UpdateFirewallRule = Partial<CreateFirewallRule>;
+
+export interface FirewallPolicy {
+  policy_in?: FirewallAction | null;
+  policy_out?: FirewallAction | null;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -641,6 +689,52 @@ export class LNVpsApi {
   async reinstallVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}/re-install`, "PATCH"),
+    );
+    return data;
+  }
+
+  async listFirewallRules(id: number) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<FirewallRule>>
+    >(await this.#req(`/api/v1/vm/${id}/firewall`, "GET"));
+    return data;
+  }
+
+  async createFirewallRule(id: number, req: CreateFirewallRule) {
+    const { data } = await this.#handleResponse<ApiResponse<FirewallRule>>(
+      await this.#req(`/api/v1/vm/${id}/firewall`, "POST", req),
+    );
+    return data;
+  }
+
+  async updateFirewallRule(
+    id: number,
+    rule_id: number,
+    req: UpdateFirewallRule,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<FirewallRule>>(
+      await this.#req(`/api/v1/vm/${id}/firewall/${rule_id}`, "PATCH", req),
+    );
+    return data;
+  }
+
+  async deleteFirewallRule(id: number, rule_id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/vm/${id}/firewall/${rule_id}`, "DELETE"),
+    );
+    return data;
+  }
+
+  async getFirewallPolicy(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<FirewallPolicy>>(
+      await this.#req(`/api/v1/vm/${id}/firewall/policy`, "GET"),
+    );
+    return data;
+  }
+
+  async updateFirewallPolicy(id: number, req: FirewallPolicy) {
+    const { data } = await this.#handleResponse<ApiResponse<FirewallPolicy>>(
+      await this.#req(`/api/v1/vm/${id}/firewall/policy`, "PATCH", req),
     );
     return data;
   }

@@ -84,6 +84,11 @@ export default function VmLayout() {
             <FormattedMessage defaultMessage="Audit log" />,
           )}
           {navLink(
+            "/vm/firewall",
+            <FormattedMessage defaultMessage="Firewall" />,
+            <FormattedMessage defaultMessage="Rules & policy" />,
+          )}
+          {navLink(
             "/vm/upgrade",
             <FormattedMessage defaultMessage="Upgrade" />,
             <FormattedMessage defaultMessage="Resize VM specs" />,

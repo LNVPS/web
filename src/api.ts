@@ -115,7 +115,7 @@ export type PaymentMethodType =
 
 export type PaymentTypeValue = "new" | "renew" | "upgrade";
 
-export type PaymentTypeMethod = "Purchase" | "Renewal";
+export type PaymentTypeMethod = "Purchase" | "Renewal" | "Upgrade";
 
 export interface AccountDetail {
   email?: string;
@@ -456,19 +456,30 @@ export interface SubscriptionLineItem {
   price: Price;
   setup_fee: Price;
   configuration?: unknown;
+  resource?: SubscriptionLineItemResource;
 }
+
+// Typed reference to the resource a line item bills for, resolved server-side
+// from the line item's subscription type (null when there is no linked resource).
+export type SubscriptionLineItemResource =
+  | { type: "vps"; vm_id: number }
+  | { type: "ip_range"; ip_range_subscription_id: number };
 
 export interface SubscriptionPayment {
   id: string;
   subscription_id: number;
   created: string;
-  expires?: string;
+  expires: string;
   amount: Price;
   payment_method: PaymentMethodType;
   payment_type: PaymentTypeMethod;
   is_paid: boolean;
   paid_at?: string;
   tax: Price;
+  processing_fee: Price;
+  // Payment-method-specific data needed to complete the payment
+  // (e.g. the Lightning invoice when payment_method === "lightning").
+  data: PaymentData;
 }
 
 export interface SubscriptionSummary {

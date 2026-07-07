@@ -68,6 +68,24 @@ export default function AccountNav() {
           </span>
         </NavLink>
         <NavLink
+          to="/account/subscriptions"
+          className={({ isActive }) =>
+            classNames(
+              "flex flex-col gap-0.5 px-3 py-2 rounded-sm border transition-all duration-200",
+              isActive
+                ? "border-cyber-primary bg-cyber-panel shadow-neon-sm text-cyber-primary"
+                : "border-transparent hover:border-cyber-border hover:bg-cyber-panel text-cyber-text hover:text-cyber-text-bright",
+            )
+          }
+        >
+          <span className="font-medium text-sm">
+            <FormattedMessage defaultMessage="Subscriptions" />
+          </span>
+          <span className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="IP space & other services" />
+          </span>
+        </NavLink>
+        <NavLink
           to="/account/referral"
           className={({ isActive }) =>
             classNames(

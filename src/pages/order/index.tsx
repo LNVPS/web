@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { VmTemplate, AvailableIpSpace, IpSpacePricing } from "../../api";
 import OrderVmPage from "./vm";
+import OrderIpSpacePage from "./ip-space";
 import useLogin from "../../hooks/login";
 import LoginButton from "../../components/login-button";
 import { FormattedMessage } from "react-intl";
@@ -24,11 +25,7 @@ export function OrderPage() {
         return <OrderVmPage template={cart.template!} />;
       }
       case "ip_space": {
-        return (
-          <div>
-            <FormattedMessage defaultMessage="IP Space ordering coming soon" />
-          </div>
-        );
+        return <OrderIpSpacePage items={cart.items ?? []} />;
       }
     }
   }

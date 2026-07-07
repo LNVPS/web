@@ -8,6 +8,7 @@ import Modal from "../components/modal";
 import { tryParseNostrLink } from "@snort/system";
 import { hexToBech32 } from "@snort/shared";
 import { Icon } from "../components/icon";
+import { showError } from "../toast";
 import { FormattedMessage, useIntl } from "react-intl";
 
 export function AccountNostrDomainPage() {
@@ -67,9 +68,15 @@ export function AccountNostrDomainPage() {
                     }),
                   )
                 ) {
-                  await login.api.deleteDomainHandle(a.domain_id, a.id);
-                  const handles = await login.api.listDomainHandles(domain.id);
-                  setHandles(handles);
+                  try {
+                    await login.api.deleteDomainHandle(a.domain_id, a.id);
+                    const handles = await login.api.listDomainHandles(
+                      domain.id,
+                    );
+                    setHandles(handles);
+                  } catch (e) {
+                    showError(e);
+                  }
                 }
               }}
             >

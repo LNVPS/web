@@ -12,6 +12,7 @@ import Modal from "../components/modal";
 import SSHKeySelector from "../components/ssh-keys";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { showError } from "../toast";
 
 function StatBlock({
   label,
@@ -338,8 +339,12 @@ export default function VmPage() {
                     }),
                   )
                 ) {
-                  await login?.api.reinstallVm(state.id);
-                  await reloadVmState();
+                  try {
+                    await login?.api.reinstallVm(state.id);
+                    await reloadVmState();
+                  } catch (e) {
+                    showError(e);
+                  }
                 }
               }}
             >

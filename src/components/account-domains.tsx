@@ -5,6 +5,7 @@ import { AsyncButton } from "./button";
 import Modal from "./modal";
 import { DomainList } from "./domain-list";
 import { resolveDnsRecords, DnsRecord } from "../utils/dns-resolver";
+import { showError } from "../toast";
 import { FormattedMessage } from "react-intl";
 
 export function AccountNostrDomains() {
@@ -268,11 +269,15 @@ export function AccountNostrDomains() {
             <AsyncButton
               onClick={async () => {
                 if (newDomain && newDomain.length > 4 && login?.api) {
-                  await login.api.addDomain(newDomain);
-                  const doms = await login.api.listDomains();
-                  setDomains(doms);
-                  setNewDomain(undefined);
-                  setAddDomain(false);
+                  try {
+                    await login.api.addDomain(newDomain);
+                    const doms = await login.api.listDomains();
+                    setDomains(doms);
+                    setNewDomain(undefined);
+                    setAddDomain(false);
+                  } catch (e) {
+                    showError(e);
+                  }
                 }
               }}
             >

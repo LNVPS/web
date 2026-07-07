@@ -20,6 +20,8 @@ import { AccountSupportPage } from "./pages/account-support.tsx";
 import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
+import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
+import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
 import VmLayout from "./pages/vm-layout.tsx";
 import {
@@ -80,6 +82,14 @@ export const routes: RouteObject[] = [
           {
             path: "referral",
             element: <AccountReferralPage />,
+          },
+          {
+            path: "subscriptions",
+            element: <AccountSubscriptionsPage />,
+          },
+          {
+            path: "subscriptions/:id",
+            element: <AccountSubscriptionPage />,
           },
         ],
       },

@@ -2,6 +2,7 @@ import { VmInstance } from "../api";
 import useLogin from "../hooks/login";
 import { Icon } from "./icon";
 import { AsyncButton } from "./button";
+import { showError } from "../toast";
 import { useIntl } from "react-intl";
 
 export default function VmActions({
@@ -27,12 +28,16 @@ export default function VmActions({
           }
           onClick={async (e) => {
             e.stopPropagation();
-            if (state === "running") {
-              await login?.api.stopVm(vm.id);
-            } else {
-              await login?.api.startVm(vm.id);
+            try {
+              if (state === "running") {
+                await login?.api.stopVm(vm.id);
+              } else {
+                await login?.api.startVm(vm.id);
+              }
+              onReload?.();
+            } catch (err) {
+              showError(err);
             }
-            onReload?.();
           }}
           className="bg-cyber-panel-light border-cyber-border hover:border-cyber-primary"
         >

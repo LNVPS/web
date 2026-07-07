@@ -10,6 +10,7 @@ import { TimeValue } from "../components/time-value";
 import { Icon } from "../components/icon";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { showError } from "../toast";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -120,7 +121,7 @@ export function VmBillingPage() {
                   prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev,
                 );
               } catch (error) {
-                console.error("Failed to update auto-renewal:", error);
+                showError(error);
               }
             }}
           >

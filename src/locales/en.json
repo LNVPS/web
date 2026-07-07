@@ -11,11 +11,20 @@
   "+SM72m": {
     "defaultMessage": "Recipient's public key (npub/nprofile/hex):"
   },
+  "+U6ozc": {
+    "defaultMessage": "Type"
+  },
   "+UjQFc": {
     "defaultMessage": "Rules & policy"
   },
+  "+sQCsu": {
+    "defaultMessage": "Complete Payment"
+  },
   "/0TOL5": {
     "defaultMessage": "Amount"
+  },
+  "/2t1lH": {
+    "defaultMessage": "VM #{id}"
   },
   "/GCoTA": {
     "defaultMessage": "Clear"
@@ -34,6 +43,12 @@
   },
   "0QLzxo": {
     "defaultMessage": "Protocol"
+  },
+  "0Ze+1G": {
+    "defaultMessage": "Renew Now"
+  },
+  "0gkn9c": {
+    "defaultMessage": "Your IP space subscription has been created. Complete the first payment to allocate the address space and activate the subscription."
   },
   "0h/lPM": {
     "defaultMessage": "Upgrade"
@@ -77,6 +92,9 @@
   "2LslN1": {
     "defaultMessage": "Upgrade Now"
   },
+  "2QrTo0": {
+    "defaultMessage": "New IP Space Order"
+  },
   "2RFWLf": {
     "defaultMessage": "Speedtest"
   },
@@ -97,6 +115,9 @@
   },
   "3WU2Fe": {
     "defaultMessage": "Location: {region}"
+  },
+  "3a5wL8": {
+    "defaultMessage": "Active"
   },
   "3woNJO": {
     "defaultMessage": "Rules are evaluated in priority order (lowest first) before the default policy. Anti-spoofing protection is always enforced by the host."
@@ -154,6 +175,9 @@
   },
   "6OWS4p": {
     "defaultMessage": "Processing..."
+  },
+  "6R6Hph": {
+    "defaultMessage": "Renews: {date}"
   },
   "6SfJaf": {
     "defaultMessage": "Upgrade To"
@@ -217,9 +241,6 @@
   },
   "90f82/": {
     "defaultMessage": "Start VM"
-  },
-  "9AfNRx": {
-    "defaultMessage": "IP Space ordering coming soon"
   },
   "9QV3cp": {
     "defaultMessage": "Available IP Blocks"
@@ -335,6 +356,9 @@
   "EUSRTV": {
     "defaultMessage": "Your past encrypted NIP-17 messages with support. This inbox is no longer monitored — please use the Support tab to reach us."
   },
+  "EdHq8/": {
+    "defaultMessage": "Complete your payment using the selected payment method. Your subscription will activate automatically after confirmation."
+  },
   "Eg11ZY": {
     "defaultMessage": "Reconnect"
   },
@@ -422,6 +446,9 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
+  "J+dIsA": {
+    "defaultMessage": "Subscriptions"
+  },
   "JBWS0c": {
     "defaultMessage": "Link"
   },
@@ -446,6 +473,9 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
+  "KcSMYZ": {
+    "defaultMessage": "Line Items"
+  },
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
@@ -460,6 +490,9 @@
   },
   "LNcnLC": {
     "defaultMessage": "Failed Referrals"
+  },
+  "LX6weZ": {
+    "defaultMessage": "Pending payment"
   },
   "LjglgP": {
     "defaultMessage": "RAM"
@@ -493,6 +526,9 @@
   },
   "NZyhSX": {
     "defaultMessage": "News"
+  },
+  "Niq27F": {
+    "defaultMessage": "Subscription name (optional)"
   },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
@@ -640,6 +676,9 @@
   },
   "UQc03N": {
     "defaultMessage": "Add new SSH key"
+  },
+  "UXpysW": {
+    "defaultMessage": "IP range #{id}"
   },
   "Ub+AGc": {
     "defaultMessage": "Sign In"
@@ -968,6 +1007,9 @@
   "lTtWDY": {
     "defaultMessage": "{daysLeft} days remaining"
   },
+  "lcv/d8": {
+    "defaultMessage": "IP space & other services"
+  },
   "lloEWi": {
     "defaultMessage": "What is this regarding?"
   },
@@ -1169,6 +1211,9 @@
   "wEQDC6": {
     "defaultMessage": "Edit"
   },
+  "wL4Olp": {
+    "defaultMessage": "Renews {date}"
+  },
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"
   },
@@ -1186,6 +1231,9 @@
   },
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
+  },
+  "xQ8iOj": {
+    "defaultMessage": "You don't have any subscriptions yet."
   },
   "xXbJso": {
     "defaultMessage": "Sign out"
@@ -1222,6 +1270,9 @@
   },
   "yr1Ove": {
     "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure."
+  },
+  "z+hIFs": {
+    "defaultMessage": "No payments yet."
   },
   "zAN0RF": {
     "defaultMessage": "Encrypted direct messages"

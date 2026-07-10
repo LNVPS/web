@@ -93,7 +93,7 @@ export default function HomePage() {
               <FormattedMessage defaultMessage="Git" />
             </a>
             {" | "}
-            <a href="http://speedtest.v0l.io" target="_blank">
+            <a href="https://speedtest.lnvps.net/" target="_blank">
               <FormattedMessage defaultMessage="Speedtest" />
             </a>
             {" | "}

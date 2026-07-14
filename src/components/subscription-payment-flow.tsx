@@ -52,6 +52,7 @@ export default function SubscriptionPaymentFlow({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
+  const [autoRenewalEnabled, setAutoRenewalEnabled] = useState(false);
 
   useEffect(() => {
     if (!login?.api) return;
@@ -60,6 +61,16 @@ export default function SubscriptionPaymentFlow({
       .then(setAccount)
       .catch((e) => console.error("Failed to load account info:", e));
   }, [login?.api]);
+
+  // Load the subscription so we know whether to save the card for off-session
+  // automatic renewals during a Revolut checkout.
+  useEffect(() => {
+    if (!login?.api) return;
+    login.api
+      .getSubscription(subscriptionId)
+      .then((s) => setAutoRenewalEnabled(s.auto_renewal_enabled))
+      .catch((e) => console.error("Failed to load subscription:", e));
+  }, [login?.api, subscriptionId]);
 
   const handlePaymentComplete = useCallback(() => {
     setPayment(undefined);
@@ -225,6 +236,7 @@ export default function SubscriptionPaymentFlow({
             payment={toVmPayment(payment)}
             account={account}
             onPaid={handlePaymentComplete}
+            saveCard={autoRenewalEnabled}
           />
         ) : (
           <div className="bg-cyber-panel-light p-4 rounded-sm space-y-2 text-center">

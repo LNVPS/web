@@ -4,8 +4,8 @@ import useLogin from "../hooks/login";
 import { SavedPaymentMethod } from "../api";
 import { AsyncButton } from "./button";
 
-/** Human-readable label for a saved payment method. */
-function methodLabel(m: SavedPaymentMethod): string {
+/** Default (provider-derived) label for a saved payment method. */
+function defaultLabel(m: SavedPaymentMethod): string {
   if (m.provider === "nwc") return "Lightning Wallet (NWC)";
   if (m.provider === "revolut") {
     const brand = m.card_brand ?? "Card";
@@ -42,6 +42,9 @@ export function PaymentMethods() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>();
   const [nwc, setNwc] = useState("");
+  const [nwcName, setNwcName] = useState("");
+  const [editingId, setEditingId] = useState<number>();
+  const [editingName, setEditingName] = useState("");
 
   const reload = useCallback(async () => {
     if (!login?.api) return;
@@ -83,13 +86,22 @@ export function PaymentMethods() {
     const value = nwc.trim();
     if (!value) return;
     try {
-      await login.api.addNwcPaymentMethod(value);
+      await login.api.addNwcPaymentMethod(value, nwcName.trim() || undefined);
       setNwc("");
+      setNwcName("");
       setError(undefined);
       await reload();
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     }
+  }
+
+  async function saveName(id: number) {
+    if (!login?.api) return;
+    await login.api.updatePaymentMethod(id, { name: editingName.trim() || null });
+    setEditingId(undefined);
+    setEditingName("");
+    await reload();
   }
 
   return (
@@ -117,7 +129,7 @@ export function PaymentMethods() {
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-center gap-2">
                     <span className="text-cyber-text-bright">
-                      {methodLabel(m)}
+                      {m.name?.trim() || defaultLabel(m)}
                     </span>
                     {m.is_default && (
                       <span className="rounded-sm bg-cyber-primary/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-cyber-primary">
@@ -135,16 +147,47 @@ export function PaymentMethods() {
                       </span>
                     )}
                   </div>
-                  {exp && (
-                    <span className="text-xs text-cyber-muted">
+                  <span className="text-xs text-cyber-muted">
+                    {/* Show the derived label as a subtitle when a custom name is set */}
+                    {m.name?.trim() ? `${defaultLabel(m)}` : null}
+                    {m.name?.trim() && exp ? " · " : null}
+                    {exp ? (
                       <FormattedMessage
                         defaultMessage="Expires {exp}"
                         values={{ exp }}
                       />
-                    </span>
+                    ) : null}
+                  </span>
+                  {editingId === m.id && (
+                    <div className="mt-1 flex gap-2">
+                      <input
+                        type="text"
+                        className="text-sm"
+                        placeholder={formatMessage({
+                          defaultMessage: "Label (e.g. Personal Visa)",
+                        })}
+                        value={editingName}
+                        onChange={(e) => setEditingName(e.target.value)}
+                      />
+                      <AsyncButton
+                        className="text-xs"
+                        onClick={() => saveName(m.id)}
+                      >
+                        <FormattedMessage defaultMessage="Save" />
+                      </AsyncButton>
+                    </div>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
+                  <AsyncButton
+                    className="text-xs"
+                    onClick={() => {
+                      setEditingId(editingId === m.id ? undefined : m.id);
+                      setEditingName(m.name ?? "");
+                    }}
+                  >
+                    <FormattedMessage defaultMessage="Rename" />
+                  </AsyncButton>
                   {!m.is_default && m.enabled && !expired && (
                     <AsyncButton
                       className="text-xs"
@@ -177,13 +220,20 @@ export function PaymentMethods() {
         <label className="text-xs text-cyber-muted">
           <FormattedMessage defaultMessage="Add a Nostr Wallet Connect wallet" />
         </label>
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2 sm:flex-row">
           <input
             type="text"
             className="w-full"
             placeholder="nostr+walletconnect://..."
             value={nwc}
             onChange={(e) => setNwc(e.target.value)}
+          />
+          <input
+            type="text"
+            className="w-full sm:w-48"
+            placeholder={formatMessage({ defaultMessage: "Label (optional)" })}
+            value={nwcName}
+            onChange={(e) => setNwcName(e.target.value)}
           />
           <AsyncButton onClick={addNwc} disabled={!nwc.trim()}>
             <FormattedMessage defaultMessage="Add" />

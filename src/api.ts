@@ -145,6 +145,8 @@ export interface SavedPaymentMethod {
   id: number;
   /** Payment processor: 'nwc' or 'revolut' */
   provider: string;
+  /** Optional user-defined label */
+  name?: string;
   created: string;
   card_brand?: string;
   card_last_four?: string;
@@ -668,10 +670,11 @@ export class LNVpsApi {
     return data;
   }
 
-  async addNwcPaymentMethod(nwc_connection_string: string) {
+  async addNwcPaymentMethod(nwc_connection_string: string, name?: string) {
     const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
       await this.#req("/api/v1/payment-methods", "POST", {
         nwc_connection_string,
+        name,
       }),
     );
     return data;
@@ -679,7 +682,7 @@ export class LNVpsApi {
 
   async updatePaymentMethod(
     id: number,
-    patch: { is_default?: boolean; enabled?: boolean },
+    patch: { is_default?: boolean; enabled?: boolean; name?: string | null },
   ) {
     const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
       await this.#req(`/api/v1/payment-methods/${id}`, "PATCH", patch),

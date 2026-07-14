@@ -2,6 +2,7 @@ import useLogin from "../hooks/login";
 import { ReactNode, useEffect, useState } from "react";
 import { AccountDetail, NotificationChannels } from "../api";
 import { AsyncButton } from "../components/button";
+import { PaymentMethods } from "../components/payment-methods";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
@@ -230,22 +231,12 @@ export function AccountSettings() {
 
       <SettingsSection
         eyebrow="Renewal"
-        title={<FormattedMessage defaultMessage="Automatic Renewal" />}
+        title={<FormattedMessage defaultMessage="Payment Methods" />}
         description={
-          <FormattedMessage defaultMessage="Connect a Nostr Wallet Connect wallet to auto-pay renewals one day before a VM expires." />
+          <FormattedMessage defaultMessage="Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default." />
         }
       >
-        <Field
-          label={<FormattedMessage defaultMessage="NWC Connection" />}
-        >
-          <input
-            type="text"
-            className="w-full"
-            placeholder="nostr+walletconnect://..."
-            value={acc.nwc_connection_string ?? ""}
-            onChange={(e) => update({ nwc_connection_string: e.target.value })}
-          />
-        </Field>
+        <PaymentMethods />
       </SettingsSection>
 
       <SettingsSection

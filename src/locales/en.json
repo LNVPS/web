@@ -188,6 +188,9 @@
   "6ZsOsA": {
     "defaultMessage": "Join Referral Program"
   },
+  "6hEevT": {
+    "defaultMessage": "Set default"
+  },
   "6uMqL1": {
     "defaultMessage": "Unpaid"
   },
@@ -199,6 +202,9 @@
   },
   "78fz1O": {
     "defaultMessage": "Postcode *"
+  },
+  "7Cdpiv": {
+    "defaultMessage": "SSH Keys"
   },
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
@@ -470,6 +476,9 @@
   "KAL6xF": {
     "defaultMessage": "Key name"
   },
+  "KKYB/E": {
+    "defaultMessage": "No saved payment methods yet."
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
@@ -487,6 +496,9 @@
   },
   "LAMeIi": {
     "defaultMessage": "Contact LNVPS Support"
+  },
+  "LHX6Oo": {
+    "defaultMessage": "Expires {exp}"
   },
   "LNcnLC": {
     "defaultMessage": "Failed Referrals"
@@ -544,9 +556,6 @@
   },
   "Olq7Wf": {
     "defaultMessage": "Type your message here..."
-  },
-  "OtUSLU": {
-    "defaultMessage": "Automatic Renewal"
   },
   "OtuYup": {
     "defaultMessage": "Email *"
@@ -617,6 +626,9 @@
   "RcshyP": {
     "defaultMessage": "Earned ({currency})"
   },
+  "Ru62sn": {
+    "defaultMessage": "Add a Nostr Wallet Connect wallet"
+  },
   "Rw7iI7": {
     "defaultMessage": "Disable"
   },
@@ -643,6 +655,9 @@
   },
   "T1/en5": {
     "defaultMessage": "ID: {id}"
+  },
+  "T4VxQN": {
+    "defaultMessage": "Loading…"
   },
   "T4yFyM": {
     "defaultMessage": "Loading payment details..."
@@ -799,6 +814,9 @@
   },
   "ajQtDJ": {
     "defaultMessage": "Select Payment Method"
+  },
+  "an3Zx3": {
+    "defaultMessage": "Manage the SSH keys used to access your VMs."
   },
   "aoXv6v": {
     "defaultMessage": "Loading firewall..."
@@ -959,17 +977,29 @@
   "iO1K6D": {
     "defaultMessage": "No posts yet.."
   },
+  "iXNbPf": {
+    "defaultMessage": "Rename"
+  },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
   },
   "iluJkV": {
     "defaultMessage": "Payout Settings"
   },
+  "iuQLCB": {
+    "defaultMessage": "Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
   "jM8W7d": {
     "defaultMessage": "Select country"
+  },
+  "jOo6oG": {
+    "defaultMessage": "Manage VM access keys"
+  },
+  "jUqYir": {
+    "defaultMessage": "Added {date}"
   },
   "jYLOYR": {
     "defaultMessage": "{n, plural, one {# day} other {# days}}"
@@ -986,6 +1016,9 @@
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
   },
+  "kRFEho": {
+    "defaultMessage": "Add SSH Key"
+  },
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
   },
@@ -1000,6 +1033,9 @@
   },
   "lCILNz": {
     "defaultMessage": "Buy Now"
+  },
+  "lKv8ex": {
+    "defaultMessage": "Default"
   },
   "lPsVOx": {
     "defaultMessage": "Your VMs and domains"
@@ -1106,6 +1142,12 @@
   "qWMcff": {
     "defaultMessage": "DNS updates can take up to 48hrs to propagate."
   },
+  "qX7u3z": {
+    "defaultMessage": "Label (e.g. Personal Visa)"
+  },
+  "qkLHOL": {
+    "defaultMessage": "Are you sure you want to delete SSH key \"{name}\"?"
+  },
   "qpBS29": {
     "defaultMessage": "Resize VM specs"
   },
@@ -1151,6 +1193,12 @@
   "sXj7R6": {
     "defaultMessage": "Disk:"
   },
+  "sYlcs7": {
+    "defaultMessage": "Cards are saved automatically when you pay with Revolut and automatic renewal is enabled."
+  },
+  "snh6R6": {
+    "defaultMessage": "Label (optional)"
+  },
   "sqvjkf": {
     "defaultMessage": "Add Handle"
   },
@@ -1165,6 +1213,9 @@
   },
   "tngc9N": {
     "defaultMessage": "Source CIDR"
+  },
+  "tthToS": {
+    "defaultMessage": "Disabled"
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -1195,6 +1246,9 @@
   },
   "v2BRjN": {
     "defaultMessage": "Subject *"
+  },
+  "v3j7Fq": {
+    "defaultMessage": "You have no SSH keys."
   },
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
@@ -1250,11 +1304,11 @@
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} cores"
   },
+  "xuTqgN": {
+    "defaultMessage": "Payment Methods"
+  },
   "y43e4q": {
     "defaultMessage": "(No DNS change required)"
-  },
-  "y9hfYT": {
-    "defaultMessage": "Connect a Nostr Wallet Connect wallet to auto-pay renewals one day before a VM expires."
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -1264,9 +1318,6 @@
   },
   "yYs9cj": {
     "defaultMessage": "Back to Upgrade"
-  },
-  "yoVX+l": {
-    "defaultMessage": "NWC Connection"
   },
   "yr1Ove": {
     "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure."

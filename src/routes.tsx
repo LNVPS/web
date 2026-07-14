@@ -22,6 +22,7 @@ import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
+import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
 import VmLayout from "./pages/vm-layout.tsx";
 import {
@@ -66,6 +67,10 @@ export const routes: RouteObject[] = [
           {
             path: "settings",
             element: <AccountSettings />,
+          },
+          {
+            path: "ssh-keys",
+            element: <AccountSshKeysPage />,
           },
           {
             path: "nostr-domain",

@@ -830,6 +830,12 @@ export class LNVpsApi {
     return data;
   }
 
+  async deleteSshKey(id: number) {
+    await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/ssh-key/${id}`, "DELETE"),
+    );
+  }
+
   async orderVm(
     template_id: number,
     image_id: number,

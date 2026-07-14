@@ -16,6 +16,8 @@ interface RevolutProps {
   onPaid: () => void;
   onCancel?: () => void;
   mode?: Mode;
+  /** Save the card for merchant-initiated (off-session) automatic renewals */
+  saveCard?: boolean;
 }
 
 export function RevolutPayWidget({
@@ -24,6 +26,7 @@ export function RevolutPayWidget({
   onPaid,
   onCancel,
   mode,
+  saveCard,
 }: RevolutProps) {
   const login = useLogin();
   const { formatMessage } = useIntl();
@@ -163,6 +166,10 @@ export function RevolutPayWidget({
         streetLine1: streetLine1 || undefined,
         streetLine2: streetLine2 || undefined,
       },
+      // Save the payment method for merchant-initiated (off-session) automatic
+      // renewals. The backend then captures the saved customer/payment-method
+      // ids on webhook completion.
+      ...(saveCard ? { savePaymentMethodFor: "merchant" as const } : {}),
     });
   }
 

@@ -53,6 +53,7 @@ export default function SubscriptionPaymentFlow({
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
   const [autoRenewalEnabled, setAutoRenewalEnabled] = useState(false);
+  const [hasNwc, setHasNwc] = useState(false);
 
   useEffect(() => {
     if (!login?.api) return;
@@ -60,6 +61,12 @@ export default function SubscriptionPaymentFlow({
       .getAccount()
       .then(setAccount)
       .catch((e) => console.error("Failed to load account info:", e));
+    login.api
+      .listPaymentMethods()
+      .then((m) =>
+        setHasNwc(m.some((x) => x.provider === "nwc" && x.enabled)),
+      )
+      .catch((e) => console.error("Failed to load payment methods:", e));
   }, [login?.api]);
 
   // Load the subscription so we know whether to save the card for off-session
@@ -154,12 +161,8 @@ export default function SubscriptionPaymentFlow({
   function renderPaymentMethod(method: PaymentMethod) {
     // No LNURL renewal endpoint exists for subscriptions.
     if (method.name === "lnurl") return null;
-    // Hide NWC unless the account has a connection string configured.
-    if (
-      method.name === "nwc" &&
-      (!account?.nwc_connection_string ||
-        account.nwc_connection_string.trim() === "")
-    ) {
+    // Hide NWC unless the user has a saved NWC payment method.
+    if (method.name === "nwc" && !hasNwc) {
       return null;
     }
 

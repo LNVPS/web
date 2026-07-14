@@ -47,6 +47,7 @@ export default function VmPaymentFlow({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
+  const [hasNwc, setHasNwc] = useState(false);
   const [intervals, setIntervals] = useState(1);
   const intervalsRef = useRef(intervals);
   intervalsRef.current = intervals;
@@ -57,6 +58,8 @@ export default function VmPaymentFlow({
         try {
           const accountData = await login.api.getAccount();
           setAccount(accountData);
+          const pms = await login.api.listPaymentMethods();
+          setHasNwc(pms.some((x) => x.provider === "nwc" && x.enabled));
         } catch (e) {
           console.error("Failed to load account info:", e);
         }
@@ -136,12 +139,8 @@ export default function VmPaymentFlow({
   }, [paymentMethod, payment, loading, createPayment]);
 
   function renderPaymentMethod(method: PaymentMethod) {
-    // Filter out NWC method when user has no NWC connection configured
-    if (
-      method.name === "nwc" &&
-      (!account?.nwc_connection_string ||
-        account.nwc_connection_string.trim() === "")
-    ) {
+    // Filter out NWC method when the user has no saved NWC payment method
+    if (method.name === "nwc" && !hasNwc) {
       return null;
     }
 

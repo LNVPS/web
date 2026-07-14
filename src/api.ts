@@ -138,7 +138,22 @@ export interface AccountDetail {
   state?: string;
   postcode?: string;
   tax_id?: string;
-  nwc_connection_string?: string;
+}
+
+/** A saved payment method for automatic renewals */
+export interface SavedPaymentMethod {
+  id: number;
+  /** Payment processor: 'nwc' or 'revolut' */
+  provider: string;
+  /** Optional user-defined label */
+  name?: string;
+  created: string;
+  card_brand?: string;
+  card_last_four?: string;
+  exp_month?: number;
+  exp_year?: number;
+  is_default: boolean;
+  enabled: boolean;
 }
 
 /** Which notification channels are configured on the server */
@@ -644,6 +659,40 @@ export class LNVpsApi {
   async updateAccount(acc: AccountDetail) {
     const { data } = await this.#handleResponse<ApiResponse<void>>(
       await this.#req("/api/v1/account", "PATCH", acc),
+    );
+    return data;
+  }
+
+  async listPaymentMethods() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<SavedPaymentMethod>>
+    >(await this.#req("/api/v1/payment-methods", "GET"));
+    return data;
+  }
+
+  async addNwcPaymentMethod(nwc_connection_string: string, name?: string) {
+    const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
+      await this.#req("/api/v1/payment-methods", "POST", {
+        nwc_connection_string,
+        name,
+      }),
+    );
+    return data;
+  }
+
+  async updatePaymentMethod(
+    id: number,
+    patch: { is_default?: boolean; enabled?: boolean; name?: string | null },
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
+      await this.#req(`/api/v1/payment-methods/${id}`, "PATCH", patch),
+    );
+    return data;
+  }
+
+  async deletePaymentMethod(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/payment-methods/${id}`, "DELETE"),
     );
     return data;
   }

@@ -138,6 +138,24 @@ export interface AccountDetail {
   state?: string;
   postcode?: string;
   tax_id?: string;
+  /**
+   * Read-only (GET only): the VAT that will currently be charged to the user,
+   * one entry per seller company. Determined from the user's billing info
+   * (VAT number, declared country, IP-derived country). Ignored on PATCH.
+   */
+  tax?: Array<AccountTaxInfo>;
+}
+
+/** The VAT that will be charged to the user for a given seller company. */
+export interface AccountTaxInfo {
+  company_id: number;
+  company_name: string;
+  /** VAT rate as a percentage, e.g. 23.0 for 23% */
+  rate: number;
+  /** Place-of-supply country (ISO 3166-1 alpha-3), if determined */
+  country_code?: string;
+  /** "domestic" | "oss_b2c" | "reverse_charge" | "out_of_scope" | "undetermined_default" */
+  treatment: string;
 }
 
 /** A saved payment method for automatic renewals */
@@ -184,6 +202,8 @@ export interface VmCostPlan {
 export interface VmHostRegion {
   id: number;
   name: string;
+  /** Seller company id; match against account.tax[].company_id for the VAT rate */
+  company_id: number;
 }
 
 export interface VmCustomTemplateParams {
@@ -262,6 +282,8 @@ export interface VmStatus {
   disk_write?: number;
   disk_read?: number;
   auto_renewal_enabled: boolean;
+  /** The subscription this VM is billed under; renew via renewSubscription. */
+  subscription_id?: number;
 }
 
 export interface VmInstance {
@@ -275,6 +297,13 @@ export interface VmInstance {
   ssh_key: UserSshKey;
   ip_assignments: Array<VmIpAssignment>;
   auto_renewal_enabled?: boolean;
+  /**
+   * Date the VM will be deleted if not renewed (expiry + dynamic grace period).
+   * Absent when the VM has no expiry (never paid).
+   */
+  deleting_on?: string;
+  /** The subscription this VM is billed under; renew via renewSubscription. */
+  subscription_id?: number;
 }
 
 export interface VmIpAssignment {
@@ -398,9 +427,14 @@ export interface Price {
 }
 
 export interface VmUpgradeQuote {
+  /** Net pro-rated upgrade cost (before tax/fees). */
   cost_difference: Price;
   new_renewal_cost: Price;
   discount: Price;
+  /** VAT on the upgrade, when the server computes it (else estimated client-side). */
+  tax?: Price;
+  /** Payment processing fee, when the server computes it (else estimated client-side). */
+  processing_fee?: Price;
 }
 
 export interface LnurlPayResponse {
@@ -894,7 +928,7 @@ export class LNVpsApi {
     if (opts?.saveCard) {
       params.set("save_card", "true");
     }
-    // For method=saved off-session charges: select a specific saved card.
+    // For method=saved off-session charges: select a specific saved payment method.
     if (opts?.paymentMethodId !== undefined) {
       params.set("payment_method_id", opts.paymentMethodId.toString());
     }
@@ -1147,7 +1181,7 @@ export class LNVpsApi {
     if (opts?.saveCard) {
       params.set("save_card", "true");
     }
-    // For method=saved off-session charges: select a specific saved card.
+    // For method=saved off-session charges: select a specific saved payment method.
     if (opts?.paymentMethodId !== undefined) {
       params.set("payment_method_id", opts.paymentMethodId.toString());
     }

@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { AsyncButton } from "./button";
 import { AccountDetail, VmPayment } from "../api";
 import { CostAmount } from "./cost";
+import { SectionLabel } from "./checkout";
 import useLogin from "../hooks/login";
-import { TimeValue } from "./time-value";
 import useTheme from "../hooks/theme";
 import { default as iso } from "iso-3166-1";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -57,6 +57,17 @@ export function RevolutPayWidget({
   const [streetLine1, setStreetLine1] = useState(account?.address_1 ?? "");
   const [streetLine2, setStreetLine2] = useState(account?.address_2 ?? "");
   const [saveDetails, setSaveDetails] = useState(true);
+  // Collapse the address form when the account already has the fields Revolut
+  // requires; the user can still expand it to edit.
+  const [editingBilling, setEditingBilling] = useState(
+    () =>
+      !(
+        account?.email &&
+        account?.name &&
+        account?.country_code &&
+        account?.postcode
+      ),
+  );
 
   useEffect(() => {
     if (!ref.current) return;
@@ -140,7 +151,7 @@ export function RevolutPayWidget({
       );
       return;
     }
-    if (saveDetails && login?.api) {
+    if (editingBilling && saveDetails && login?.api) {
       try {
         const alpha3 =
           iso.whereAlpha2(countryCode)?.alpha3 ?? account?.country_code;
@@ -181,184 +192,187 @@ export function RevolutPayWidget({
     });
   }
 
-  const total = payment.amount + payment.tax;
+  const total = payment.amount + payment.tax + payment.processing_fee;
+  const countryName = countryCode
+    ? (iso.whereAlpha2(countryCode)?.country ?? countryCode)
+    : "";
+  const addressSummary = [streetLine1, streetLine2, city, postcode, countryName]
+    .map((s) => s?.trim())
+    .filter(Boolean)
+    .join(", ");
 
   return (
-    <div className="flex flex-col gap-4 rounded-sm border border-cyber-border p-4 bg-cyber-panel">
-      <div className="text-center space-y-1">
-        <div className="text-lg font-bold">
-          <CostAmount
-            cost={{ currency: payment.currency, amount: total }}
-            converted={false}
-          />
-        </div>
-        {payment.time > 0 && (
-          <div className="text-sm text-cyber-muted">
-            <FormattedMessage
-              defaultMessage="for {time}"
-              values={{ time: <TimeValue seconds={payment.time} /> }}
-            />
-          </div>
-        )}
-        {payment.tax > 0 && (
-          <div className="text-xs text-cyber-muted">
-            <FormattedMessage
-              defaultMessage="including {amount} tax"
-              values={{
-                amount: (
-                  <CostAmount
-                    cost={{
-                      currency: payment.currency,
-                      amount: payment.tax,
-                    }}
-                    converted={false}
-                  />
-                ),
-              }}
-            />
-          </div>
-        )}
-        {payment.processing_fee > 0 && (
-          <div className="text-xs text-cyber-muted">
-            <FormattedMessage
-              defaultMessage="including {amount} processing fee"
-              values={{
-                amount: (
-                  <CostAmount
-                    cost={{
-                      currency: payment.currency,
-                      amount: payment.processing_fee,
-                    }}
-                    converted={false}
-                  />
-                ),
-              }}
-            />
-          </div>
-        )}
-      </div>
+    <div className="flex flex-col gap-5 rounded-sm border border-cyber-border p-4 bg-cyber-panel">
       <div className="flex flex-col gap-3">
-        <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="Email *" />
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="Cardholder Name *" />
-          </label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="John Doe"
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="flex flex-col gap-1">
-            <label className="text-xs text-cyber-muted">
-              <FormattedMessage defaultMessage="Country *" />
-            </label>
-            <select
-              value={countryCode}
-              onChange={(e) => setCountryCode(e.target.value)}
+        <div className="flex items-center justify-between">
+          <SectionLabel>
+            <FormattedMessage defaultMessage="Billing details" />
+          </SectionLabel>
+          {!editingBilling && (
+            <button
+              type="button"
+              onClick={() => setEditingBilling(true)}
+              className="text-xs text-cyber-primary hover:text-cyber-text-bright transition-colors"
             >
-              <option value="">
-                {formatMessage({ defaultMessage: "Select country" })}
-              </option>
-              {iso.all().map((c) => (
-                <option key={c.alpha2} value={c.alpha2}>
-                  {c.country}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="text-xs text-cyber-muted">
-              <FormattedMessage defaultMessage="Postcode *" />
+              <FormattedMessage defaultMessage="Edit" />
+            </button>
+          )}
+        </div>
+
+        {editingBilling ? (
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <label className="text-xs text-cyber-text">
+                <FormattedMessage defaultMessage="Email *" />
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs text-cyber-text">
+                <FormattedMessage defaultMessage="Cardholder name *" />
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="John Doe"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="flex flex-col gap-1">
+                <label className="text-xs text-cyber-text">
+                  <FormattedMessage defaultMessage="Country *" />
+                </label>
+                <select
+                  value={countryCode}
+                  onChange={(e) => setCountryCode(e.target.value)}
+                >
+                  <option value="">
+                    {formatMessage({ defaultMessage: "Select country" })}
+                  </option>
+                  {iso.all().map((c) => (
+                    <option key={c.alpha2} value={c.alpha2}>
+                      {c.country}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-xs text-cyber-text">
+                  <FormattedMessage defaultMessage="Postcode *" />
+                </label>
+                <input
+                  type="text"
+                  value={postcode}
+                  onChange={(e) => setPostcode(e.target.value)}
+                  placeholder="10001"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs text-cyber-text">
+                <FormattedMessage defaultMessage="City" />
+              </label>
+              <input
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                placeholder="New York"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs text-cyber-text">
+                <FormattedMessage defaultMessage="Address line 1" />
+              </label>
+              <input
+                type="text"
+                value={streetLine1}
+                onChange={(e) => setStreetLine1(e.target.value)}
+                placeholder="123 Main St"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs text-cyber-text">
+                <FormattedMessage defaultMessage="Address line 2" />
+              </label>
+              <input
+                type="text"
+                value={streetLine2}
+                onChange={(e) => setStreetLine2(e.target.value)}
+                placeholder="Apt 4B"
+              />
+            </div>
+            <label className="flex items-center gap-2 text-sm text-cyber-text cursor-pointer">
+              <input
+                type="checkbox"
+                checked={saveDetails}
+                onChange={(e) => setSaveDetails(e.target.checked)}
+              />
+              <FormattedMessage defaultMessage="Save billing details to account" />
             </label>
-            <input
-              type="text"
-              value={postcode}
-              onChange={(e) => setPostcode(e.target.value)}
-              placeholder="10001"
-            />
           </div>
-        </div>
-        <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="City" />
-          </label>
-          <input
-            type="text"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            placeholder="New York"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="Address Line 1" />
-          </label>
-          <input
-            type="text"
-            value={streetLine1}
-            onChange={(e) => setStreetLine1(e.target.value)}
-            placeholder="123 Main St"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="Address Line 2" />
-          </label>
-          <input
-            type="text"
-            value={streetLine2}
-            onChange={(e) => setStreetLine2(e.target.value)}
-            placeholder="Apt 4B"
-          />
-        </div>
+        ) : (
+          <div className="rounded-sm border border-cyber-border bg-cyber-panel-light px-3 py-3">
+            <div className="text-sm text-cyber-text-bright">{name}</div>
+            {email && (
+              <div className="text-xs text-cyber-muted">{email}</div>
+            )}
+            {addressSummary && (
+              <div className="text-xs text-cyber-text mt-1">
+                {addressSummary}
+              </div>
+            )}
+          </div>
+        )}
       </div>
-      <label className="flex items-center gap-2 text-sm text-cyber-muted cursor-pointer">
-        <input
-          type="checkbox"
-          checked={saveDetails}
-          onChange={(e) => setSaveDetails(e.target.checked)}
-        />
-        <FormattedMessage defaultMessage="Save billing details to account" />
-      </label>
-      {onSaveCardChange && (
-        <label className="flex items-center gap-2 text-sm text-cyber-muted cursor-pointer">
-          <input
-            type="checkbox"
-            checked={saveCard ?? false}
-            disabled={submitting}
-            onChange={(e) => onSaveCardChange(e.target.checked)}
-          />
-          <FormattedMessage defaultMessage="Save this card for future payments" />
-        </label>
-      )}
-      <div className="flex flex-col gap-1">
-        <label className="text-xs text-cyber-muted">
-          <FormattedMessage defaultMessage="Card Details" />
-        </label>
+
+      <div className="flex flex-col gap-3">
+        <SectionLabel>
+          <FormattedMessage defaultMessage="Card details" />
+        </SectionLabel>
         <div
           ref={ref}
           className="rounded-sm border border-cyber-border bg-cyber-panel-light p-3"
         />
+        {onSaveCardChange && (
+          <label className="flex items-center gap-2 text-sm text-cyber-text cursor-pointer">
+            <input
+              type="checkbox"
+              checked={saveCard ?? false}
+              disabled={submitting}
+              onChange={(e) => onSaveCardChange(e.target.checked)}
+            />
+            <FormattedMessage defaultMessage="Save this card for future payments" />
+          </label>
+        )}
       </div>
+
       {error && <div className="text-cyber-danger text-sm">{error}</div>}
-      <AsyncButton onClick={handleSubmit} disabled={submitting}>
+
+      <AsyncButton
+        onClick={handleSubmit}
+        disabled={submitting}
+        className="w-full justify-center bg-cyber-primary/20 text-base"
+      >
         {submitting ? (
-          <FormattedMessage defaultMessage="Processing..." />
+          <FormattedMessage defaultMessage="Processing…" />
         ) : (
-          <FormattedMessage defaultMessage="Pay Now" />
+          <FormattedMessage
+            defaultMessage="Pay {amount}"
+            values={{
+              amount: (
+                <CostAmount
+                  cost={{ currency: payment.currency, amount: total }}
+                  converted={false}
+                />
+              ),
+            }}
+          />
         )}
       </AsyncButton>
     </div>

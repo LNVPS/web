@@ -10,8 +10,11 @@ export default function VmLayout() {
   if (!state) {
     return (
       <div className="flex flex-col gap-4">
-        <Link to="/account">
-          &lt; <FormattedMessage defaultMessage="Back" />
+        <Link
+          to="/account"
+          className="text-sm text-cyber-muted hover:text-cyber-text transition-all"
+        >
+          &lt; <FormattedMessage defaultMessage="Back to account" />
         </Link>
         <h2>
           <FormattedMessage defaultMessage="No VM selected" />
@@ -41,62 +44,68 @@ export default function VmLayout() {
     );
   }
 
+  // A "new" VM has never been paid for, so it isn't provisioned yet: only
+  // Overview, Billing and History make sense until it's live.
+  const isNew = !state.expires;
+
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex gap-6 items-start">
       <Seo noindex={true} />
-      <Link
-        to="/account"
-        className="text-sm text-cyber-muted hover:text-cyber-text transition-all"
-      >
-        &lt; <FormattedMessage defaultMessage="Back to account" />
-      </Link>
-      <div className="flex items-baseline gap-2">
-        <span className="text-cyber-muted text-sm">#{state.id}</span>
-        <span className="text-cyber-text-bright font-medium">
-          {state.ip_assignments?.[0]?.reverse_dns ?? state.template?.name}
-        </span>
-      </div>
-      <div className="flex gap-6 items-start">
-        <aside className="flex flex-col gap-1 w-44 shrink-0">
-          {navLink(
-            "/vm",
-            <FormattedMessage defaultMessage="Overview" />,
-            <FormattedMessage defaultMessage="Details & SSH" />,
-          )}
-          {navLink(
-            "/vm/billing",
-            <FormattedMessage defaultMessage="Billing" />,
-            <FormattedMessage defaultMessage="Payments & renewal" />,
-          )}
-          {navLink(
+      <aside className="flex flex-col gap-1 w-44 shrink-0">
+        <Link
+          to="/account"
+          className="text-sm text-cyber-muted hover:text-cyber-text transition-all px-3"
+        >
+          &lt; <FormattedMessage defaultMessage="Back to account" />
+        </Link>
+        <div className="flex flex-col gap-0.5 px-3 py-2 mb-2 mt-1 border-b border-cyber-border">
+          <span className="text-cyber-text-bright font-medium truncate">
+            {state.ip_assignments?.[0]?.reverse_dns ?? state.template?.name}
+          </span>
+          <span className="text-cyber-muted text-xs">#{state.id}</span>
+        </div>
+        {navLink(
+          "/vm",
+          <FormattedMessage defaultMessage="Overview" />,
+          <FormattedMessage defaultMessage="Details & SSH" />,
+        )}
+        {navLink(
+          "/vm/billing",
+          <FormattedMessage defaultMessage="Billing" />,
+          <FormattedMessage defaultMessage="Payments & renewal" />,
+        )}
+        {!isNew &&
+          navLink(
             "/vm/console",
             <FormattedMessage defaultMessage="Console" />,
             <FormattedMessage defaultMessage="Serial terminal" />,
           )}
-          {navLink(
+        {!isNew &&
+          navLink(
             "/vm/graphs",
             <FormattedMessage defaultMessage="Graphs" />,
             <FormattedMessage defaultMessage="CPU, RAM & network" />,
           )}
-          {navLink(
-            "/vm/history",
-            <FormattedMessage defaultMessage="History" />,
-            <FormattedMessage defaultMessage="Audit log" />,
-          )}
-          {navLink(
+        {navLink(
+          "/vm/history",
+          <FormattedMessage defaultMessage="History" />,
+          <FormattedMessage defaultMessage="Audit log" />,
+        )}
+        {!isNew &&
+          navLink(
             "/vm/firewall",
             <FormattedMessage defaultMessage="Firewall" />,
             <FormattedMessage defaultMessage="Rules & policy" />,
           )}
-          {navLink(
+        {!isNew &&
+          navLink(
             "/vm/upgrade",
             <FormattedMessage defaultMessage="Upgrade" />,
             <FormattedMessage defaultMessage="Resize VM specs" />,
           )}
-        </aside>
-        <div className="flex-1 min-w-0">
-          <Outlet />
-        </div>
+      </aside>
+      <div className="flex-1 min-w-0">
+        <Outlet />
       </div>
     </div>
   );

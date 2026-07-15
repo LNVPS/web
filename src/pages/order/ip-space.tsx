@@ -4,7 +4,8 @@ import { AvailableIpSpace, IpSpacePricing, Subscription } from "../../api";
 import useLogin from "../../hooks/login";
 import { AsyncButton } from "../../components/button";
 import CostLabel from "../../components/cost";
-import SubscriptionPaymentFlow from "../../components/subscription-payment-flow";
+import PaymentFlow from "../../components/payment-flow";
+import { subscriptionRenewalSource } from "../../components/payment-sources";
 import { FormattedMessage } from "react-intl";
 
 export interface IpSpaceCartItem {
@@ -60,15 +61,18 @@ export default function OrderIpSpacePage({
         <div className="text-cyber-muted text-sm">
           <FormattedMessage defaultMessage="Your IP space subscription has been created. Complete the first payment to allocate the address space and activate the subscription." />
         </div>
-        <SubscriptionPaymentFlow
-          subscriptionId={subscription.id}
-          onPaymentComplete={() =>
-            navigate(`/account/subscriptions/${subscription.id}`)
-          }
-          onCancel={() =>
-            navigate(`/account/subscriptions/${subscription.id}`)
-          }
-        />
+        {login?.api && (
+          <PaymentFlow
+            title={<FormattedMessage defaultMessage="Complete Payment" />}
+            source={subscriptionRenewalSource(login.api, subscription.id)}
+            onPaymentComplete={() =>
+              navigate(`/account/subscriptions/${subscription.id}`)
+            }
+            onCancel={() =>
+              navigate(`/account/subscriptions/${subscription.id}`)
+            }
+          />
+        )}
       </div>
     );
   }

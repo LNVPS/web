@@ -1,36 +1,43 @@
 import { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
+  SavedPaymentMethod,
   Subscription,
   SubscriptionLineItem,
   SubscriptionPayment,
 } from "../api";
 import useLogin from "../hooks/login";
-import { AsyncButton } from "../components/button";
 import { CostAmount } from "../components/cost";
-import SubscriptionPaymentFlow from "../components/subscription-payment-flow";
+import { Card, CardBody, CardHeader } from "../components/card";
+import { Icon } from "../components/icon";
+import PaymentFlow from "../components/payment-flow";
+import { subscriptionRenewalSource } from "../components/payment-sources";
+import {
+  AutoRenewCard,
+  BillingPaymentsTable,
+  BillingStatusCard,
+  expiryStatus,
+  type PaymentRow,
+} from "../components/billing";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
-import { FormattedDate, FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 function ResourceBadge({ item }: { item: SubscriptionLineItem }) {
   if (!item.resource) return null;
-  if (item.resource.type === "vps") {
-    return (
-      <span className="text-xs text-cyber-muted">
+  return (
+    <span className="inline-flex w-fit items-center rounded-sm border border-cyber-border bg-cyber-panel-light px-1.5 py-0.5 text-[0.6rem] uppercase tracking-wider text-cyber-muted">
+      {item.resource.type === "vps" ? (
         <FormattedMessage
           defaultMessage="VM #{id}"
           values={{ id: item.resource.vm_id }}
         />
-      </span>
-    );
-  }
-  return (
-    <span className="text-xs text-cyber-muted">
-      <FormattedMessage
-        defaultMessage="IP range #{id}"
-        values={{ id: item.resource.ip_range_subscription_id }}
-      />
+      ) : (
+        <FormattedMessage
+          defaultMessage="IP range #{id}"
+          values={{ id: item.resource.ip_range_subscription_id }}
+        />
+      )}
     </span>
   );
 }
@@ -38,9 +45,13 @@ function ResourceBadge({ item }: { item: SubscriptionLineItem }) {
 export function AccountSubscriptionPage() {
   const login = useLogin();
   const params = useParams();
+  const { formatDate } = useIntl();
   const id = Number(params["id"]);
   const [subscription, setSubscription] = useState<Subscription>();
   const [payments, setPayments] = useState<Array<SubscriptionPayment>>([]);
+  const [savedMethods, setSavedMethods] = useState<Array<SavedPaymentMethod>>(
+    [],
+  );
   const [error, setError] = useState<string>();
   const [showPayment, setShowPayment] = useState(false);
 
@@ -53,6 +64,10 @@ export function AccountSubscriptionPage() {
       ]);
       setSubscription(sub);
       setPayments(pay);
+      login.api
+        .listPaymentMethods()
+        .then((pms) => setSavedMethods(pms.filter((x) => x.enabled)))
+        .catch(() => {});
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -76,168 +91,246 @@ export function AccountSubscriptionPage() {
     await reload();
   }
 
+  const currency = subscription.line_items[0]?.price.currency ?? "EUR";
+  const totalAmount = subscription.line_items.reduce(
+    (sum, li) => sum + li.price.amount,
+    0,
+  );
+  const expires = subscription.expires
+    ? new Date(subscription.expires)
+    : undefined;
+  // Subscriptions bill monthly, so scale the lease meter against a 30-day cycle.
+  const st = expiryStatus(subscription.expires, 30);
+  const pending = !subscription.is_active;
+  const tone = pending && !st.expired ? "warning" : st.tone;
+  const defaultMethod =
+    savedMethods.find((m) => m.is_default && m.enabled) ??
+    savedMethods.find((m) => m.is_default);
+
+  const paymentRows: Array<PaymentRow> = payments.map((p) => ({
+    id: p.id,
+    created: p.created,
+    amount: {
+      currency: p.amount.currency,
+      amount: p.amount.amount + p.tax.amount + p.processing_fee.amount,
+    },
+    method:
+      p.payment_method ??
+      ("lightning" in p.data
+        ? "lightning"
+        : "revolut" in p.data
+          ? "revolut"
+          : "—"),
+    status: p.is_paid ? (
+      <FormattedMessage defaultMessage="Paid" />
+    ) : new Date(p.expires) <= new Date() ? (
+      <FormattedMessage defaultMessage="Expired" />
+    ) : (
+      <FormattedMessage defaultMessage="Unpaid" />
+    ),
+    statusTone: p.is_paid
+      ? "primary"
+      : new Date(p.expires) <= new Date()
+        ? "danger"
+        : "warning",
+    action: p.is_paid ? (
+      <div
+        title="Generate invoice"
+        className="cursor-pointer"
+        onClick={async () => {
+          const l = await login?.api.invoiceLink(p.id);
+          if (l) window.open(l, "_blank");
+        }}
+      >
+        <Icon name="printer" />
+      </div>
+    ) : undefined,
+  }));
+
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <div className="flex justify-between items-center">
-        <div className="text-xl">
-          {subscription.name || `#${subscription.id}`}
-        </div>
-        <span
-          className={
-            subscription.is_active
-              ? "text-xs px-2 py-0.5 rounded-sm bg-cyber-primary/20 text-cyber-primary"
-              : "text-xs px-2 py-0.5 rounded-sm bg-cyber-panel-light text-cyber-muted"
+
+      <Link
+        to="/account/subscriptions"
+        className="w-fit text-sm text-cyber-muted hover:text-cyber-text transition-all"
+      >
+        &lt; <FormattedMessage defaultMessage="Back to subscriptions" />
+      </Link>
+
+      {showPayment && login?.api ? (
+        <PaymentFlow
+          title={
+            subscription.is_active ? (
+              <FormattedMessage defaultMessage="Renew subscription" />
+            ) : (
+              <FormattedMessage defaultMessage="Pay subscription" />
+            )
           }
-        >
-          {subscription.is_active ? (
-            <FormattedMessage defaultMessage="Active" />
-          ) : (
-            <FormattedMessage defaultMessage="Pending payment" />
-          )}
-        </span>
-      </div>
-
-      {subscription.description && (
-        <div className="text-cyber-muted text-sm">
-          {subscription.description}
-        </div>
-      )}
-
-      {subscription.expires && (
-        <div className="text-sm">
-          <FormattedMessage
-            defaultMessage="Renews: {date}"
-            values={{
-              date: (
-                <FormattedDate
-                  value={subscription.expires}
-                  year="numeric"
-                  month="short"
-                  day="numeric"
-                />
-              ),
-            }}
-          />
-        </div>
-      )}
-
-      <div className="flex flex-col gap-2">
-        <div className="text-lg">
-          <FormattedMessage defaultMessage="Line Items" />
-        </div>
-        {subscription.line_items.map((li) => (
-          <div
-            key={li.id}
-            className="flex justify-between items-center rounded-sm bg-cyber-panel px-4 py-3"
-          >
-            <div className="flex flex-col gap-1">
-              <div>{li.name}</div>
-              <ResourceBadge item={li} />
-            </div>
-            <div className="text-cyber-accent">
-              <CostAmount
-                cost={{ ...li.price, interval_type: "month" }}
-                converted={false}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {showPayment ? (
-        <SubscriptionPaymentFlow
-          subscriptionId={subscription.id}
+          source={subscriptionRenewalSource(login.api, subscription.id)}
           onPaymentComplete={onPaymentComplete}
           onCancel={() => setShowPayment(false)}
         />
       ) : (
-        <AsyncButton onClick={() => setShowPayment(true)}>
-          {subscription.is_active ? (
-            <FormattedMessage defaultMessage="Renew Now" />
-          ) : (
-            <FormattedMessage defaultMessage="Pay Now" />
-          )}
-        </AsyncButton>
-      )}
-
-      {!showPayment && (
         <>
-          <div className="text-lg">
-            <FormattedMessage defaultMessage="Payment History" />
-          </div>
-          {payments.length === 0 ? (
+          <BillingStatusCard
+            eyebrow={
+              <>
+                <FormattedMessage defaultMessage="Subscription" /> ·{" "}
+                {subscription.name || `#${subscription.id}`}
+              </>
+            }
+            statusLabel={
+              pending ? (
+                <FormattedMessage defaultMessage="Pending payment" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Expired" />
+              ) : st.expiringSoon ? (
+                <FormattedMessage defaultMessage="Expiring soon" />
+              ) : (
+                <FormattedMessage defaultMessage="Active" />
+              )
+            }
+            tone={tone}
+            priceLabel={<FormattedMessage defaultMessage="Renews at" />}
+            price={
+              <>
+                <CostAmount
+                  cost={{ currency, amount: totalAmount, interval_type: "month" }}
+                  converted={false}
+                />
+                <span className="text-xs text-cyber-muted">
+                  <FormattedMessage defaultMessage="ex. tax" />
+                </span>
+              </>
+            }
+            dateLabel={
+              st.expired ? (
+                <FormattedMessage defaultMessage="Expired on" />
+              ) : (
+                <FormattedMessage defaultMessage="Next payment" />
+              )
+            }
+            date={
+              expires
+                ? formatDate(expires, {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                : "—"
+            }
+            meterPct={st.meterPct}
+            meterLeft={
+              st.isNew ? (
+                <FormattedMessage defaultMessage="Not yet active" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Lease expired" />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="{days, plural, one {# day left} other {# days left}}"
+                  values={{ days: st.daysLeft }}
+                />
+              )
+            }
+            meterRight={<FormattedMessage defaultMessage="Billed monthly" />}
+            cta={{
+              onClick: () => setShowPayment(true),
+              label: pending ? (
+                <FormattedMessage defaultMessage="Pay now" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Reactivate now" />
+              ) : (
+                <FormattedMessage defaultMessage="Renew now" />
+              ),
+            }}
+          />
+
+          <AutoRenewCard
+            enabled={subscription.auto_renewal_enabled}
+            defaultMethod={defaultMethod}
+            description={
+              subscription.auto_renewal_enabled ? (
+                <FormattedMessage defaultMessage="Renews automatically one day before expiry using your default payment method." />
+              ) : (
+                <FormattedMessage defaultMessage="Automatic renewal is off. Renew manually before expiry to avoid interruption." />
+              )
+            }
+          />
+
+          {subscription.description && (
             <div className="text-cyber-muted text-sm">
-              <FormattedMessage defaultMessage="No payments yet." />
+              {subscription.description}
             </div>
-          ) : (
-            <table className="table bg-cyber-panel rounded-sm text-center">
-              <thead>
-                <tr>
-                  <th>
-                    <FormattedMessage defaultMessage="Date" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Amount" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Type" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Method" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Status" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {payments
-                  .sort(
-                    (a, b) =>
-                      new Date(b.created).getTime() -
-                      new Date(a.created).getTime(),
-                  )
-                  .map((p) => (
-                    <tr key={p.id}>
-                      <td className="pl-4">
-                        <FormattedDate
-                          value={p.created}
-                          year="numeric"
-                          month="short"
-                          day="numeric"
-                          hour="2-digit"
-                          minute="2-digit"
-                        />
-                      </td>
-                      <td>
+          )}
+
+          <Card>
+            <CardHeader strip className="px-4 py-2">
+              <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
+                <FormattedMessage defaultMessage="Line items" />
+              </span>
+            </CardHeader>
+            <CardBody className="p-0">
+              <div className="divide-y divide-cyber-border/60">
+                {subscription.line_items.map((li) => (
+                  <div
+                    key={li.id}
+                    className="flex items-start justify-between gap-4 px-4 py-3"
+                  >
+                    <div className="flex min-w-0 flex-col gap-1">
+                      <span className="text-cyber-text-bright">{li.name}</span>
+                      {li.description && (
+                        <span className="text-xs text-cyber-muted">
+                          {li.description}
+                        </span>
+                      )}
+                      <ResourceBadge item={li} />
+                    </div>
+                    <div className="flex shrink-0 flex-col items-end tabular-nums">
+                      <span className="text-cyber-accent">
                         <CostAmount
-                          cost={{
-                            currency: p.amount.currency,
-                            amount:
-                              p.amount.amount +
-                              p.tax.amount +
-                              p.processing_fee.amount,
-                          }}
+                          cost={{ ...li.price, interval_type: "month" }}
                           converted={false}
                         />
-                      </td>
-                      <td className="text-sm">{p.payment_type}</td>
-                      <td className="uppercase text-sm">{p.payment_method}</td>
-                      <td>
-                        {p.is_paid ? (
-                          <FormattedMessage defaultMessage="Paid" />
-                        ) : new Date(p.expires) <= new Date() ? (
-                          <FormattedMessage defaultMessage="Expired" />
-                        ) : (
-                          <FormattedMessage defaultMessage="Unpaid" />
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          )}
+                      </span>
+                      {li.setup_fee.amount > 0 && (
+                        <span className="text-xs text-cyber-muted">
+                          <FormattedMessage
+                            defaultMessage="+ {fee} setup"
+                            values={{
+                              fee: (
+                                <CostAmount
+                                  cost={li.setup_fee}
+                                  converted={false}
+                                />
+                              ),
+                            }}
+                          />
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between gap-4 border-t border-cyber-border bg-cyber-panel-light px-4 py-3">
+                <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+                  <FormattedMessage defaultMessage="Monthly total" />
+                </span>
+                <span className="text-cyber-text-bright tabular-nums">
+                  <CostAmount
+                    cost={{ currency, amount: totalAmount, interval_type: "month" }}
+                    converted={false}
+                  />
+                  <span className="text-xs text-cyber-muted">
+                    {" "}
+                    <FormattedMessage defaultMessage="ex. tax" />
+                  </span>
+                </span>
+              </div>
+            </CardBody>
+          </Card>
+
+          <BillingPaymentsTable rows={paymentRows} hasAction />
         </>
       )}
     </div>

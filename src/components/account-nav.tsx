@@ -100,7 +100,7 @@ export default function AccountNav() {
             <FormattedMessage defaultMessage="Subscriptions" />
           </span>
           <span className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="IP space & other services" />
+            <FormattedMessage defaultMessage="Recurring services" />
           </span>
         </NavLink>
         <NavLink

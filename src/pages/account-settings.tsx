@@ -2,6 +2,7 @@ import useLogin from "../hooks/login";
 import { ReactNode, useEffect, useState } from "react";
 import { AccountDetail, NotificationChannels } from "../api";
 import { AsyncButton } from "../components/button";
+import { Card, CardBody, CardHeader } from "../components/card";
 import { PaymentMethods } from "../components/payment-methods";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
@@ -20,8 +21,8 @@ function SettingsSection({
   children: ReactNode;
 }) {
   return (
-    <section className="rounded-sm border border-cyber-border bg-cyber-panel/40">
-      <header className="border-b border-cyber-border px-5 py-4">
+    <Card className="bg-cyber-panel/40">
+      <CardHeader className="px-5 py-4">
         <div className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-primary">
           {eyebrow}
         </div>
@@ -29,9 +30,9 @@ function SettingsSection({
         {description && (
           <p className="mt-1 mb-0 text-sm text-cyber-muted">{description}</p>
         )}
-      </header>
-      <div className="p-5">{children}</div>
-    </section>
+      </CardHeader>
+      <CardBody className="p-5">{children}</CardBody>
+    </Card>
   );
 }
 

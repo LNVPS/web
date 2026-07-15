@@ -1,14 +1,30 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { VmInstance, VmPayment } from "../api";
+import {
+  VmCostPlan,
+  VmInstance,
+  VmPayment,
+  CostPlanIntervalType,
+  SavedPaymentMethod,
+} from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
-import { AsyncButton } from "../components/button";
-import CostLabel, { CostAmount } from "../components/cost";
-import VmPaymentFlow from "../components/vm-payment-flow";
-import { TimeValue } from "../components/time-value";
+import CostLabel, { IntervalSuffix } from "../components/cost";
+import PaymentFlow from "../components/payment-flow";
+import {
+  vmRenewalSource,
+  resolveVmSubscriptionId,
+} from "../components/payment-sources";
+import {
+  AutoRenewCard,
+  BillingPaymentsTable,
+  BillingStatusCard,
+  DeletionWarning,
+  expiryStatus,
+  type PaymentRow,
+} from "../components/billing";
 import { Icon } from "../components/icon";
-import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { showError } from "../toast";
 
@@ -22,11 +38,24 @@ export function VmBillingPage() {
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
+  const [renewSaving, setRenewSaving] = useState(false);
+  const [savedMethods, setSavedMethods] = useState<Array<SavedPaymentMethod>>(
+    [],
+  );
 
   async function listPayments() {
     if (!state) return;
     const history = await login?.api.listPayments(state.id);
     setPayments(history ?? []);
+  }
+
+  async function loadSavedMethods() {
+    if (!login?.api) return;
+    try {
+      setSavedMethods((await login.api.listPaymentMethods()) ?? []);
+    } catch {
+      // non-fatal: the auto-renew card just won't show a method
+    }
   }
 
   async function reloadVmState() {
@@ -44,245 +73,282 @@ export function VmBillingPage() {
     }
   }
 
+  async function toggleRenew() {
+    if (!login?.api || !state) return;
+    setRenewSaving(true);
+    try {
+      const newEnabled = !state.auto_renewal_enabled;
+      await login.api.patchVm(state.id, { auto_renewal_enabled: newEnabled });
+      setState((prev) =>
+        prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev,
+      );
+    } catch (error) {
+      showError(error);
+    } finally {
+      setRenewSaving(false);
+    }
+  }
+
   useEffect(() => {
     if (params["action"] === "renew" && login && state) {
       setShowPaymentFlow(true);
     }
     if (login && state) {
       listPayments();
+      loadSavedMethods();
     }
   }, [login, state, params]);
 
   if (!state) return;
+  const plan = state.template.cost_plan;
   const expireDate = state.expires ? new Date(state.expires) : undefined;
-  const days = expireDate
-    ? (expireDate.getTime() - new Date().getTime()) / 1000 / 24 / 60 / 60
+  const deletingOn = state.deleting_on
+    ? new Date(state.deleting_on)
     : undefined;
+  const defaultMethod =
+    savedMethods.find((m) => m.is_default && m.enabled) ??
+    savedMethods.find((m) => m.is_default);
+  const st = expiryStatus(state.expires, planCycleDays(plan));
+
+  const paymentRows: Array<PaymentRow> = payments.map((a) => ({
+    id: a.id,
+    created: a.created,
+    amount: {
+      currency: a.currency,
+      amount: a.amount + a.tax + a.processing_fee,
+    },
+    method:
+      a.payment_method ??
+      ("lightning" in a.data
+        ? "lightning"
+        : "revolut" in a.data
+          ? "revolut"
+          : "—"),
+    status: a.is_paid ? (
+      <FormattedMessage defaultMessage="Paid" />
+    ) : new Date(a.expires) <= new Date() ? (
+      <FormattedMessage defaultMessage="Expired" />
+    ) : (
+      <FormattedMessage defaultMessage="Unpaid" />
+    ),
+    statusTone: a.is_paid
+      ? "primary"
+      : new Date(a.expires) <= new Date()
+        ? "danger"
+        : "warning",
+    action: a.is_paid ? (
+      <div
+        title="Generate Invoice"
+        className="cursor-pointer"
+        onClick={async () => {
+          const l = await login?.api.invoiceLink(a.id);
+          window.open(l, "_blank");
+        }}
+      >
+        <Icon name="printer" />
+      </div>
+    ) : undefined,
+  }));
 
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <div className="text-xl bg-cyber-panel rounded-sm px-3 py-4 flex justify-between items-center">
-        <div>
-          <FormattedMessage
-            defaultMessage="Renewal for #{id}"
-            values={{ id: state.id }}
-          />
-        </div>
-        <div>
-          <CostLabel cost={state.template.cost_plan} />
-          <span className="text-sm">
-            {" "}
-            <FormattedMessage defaultMessage="ex. tax" />
-          </span>
-        </div>
-      </div>
-      {expireDate && days !== undefined && days > 0 && (
-        <div>
-          <FormattedMessage
-            defaultMessage="Expires: {date} ({days} days)"
-            values={{
-              date: formatDate(expireDate, {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              }),
-              days: Math.floor(days),
-            }}
-          />
-        </div>
-      )}
-      {(days === undefined || days < 0) && !showPaymentFlow && (
-        <div className="text-cyber-danger text-xl">
-          <FormattedMessage defaultMessage="Expired" />
-        </div>
-      )}
       {!showPaymentFlow && (
-        <div className="flex gap-4 flex-wrap">
-          <AsyncButton
-            onClick={() => setShowPaymentFlow(true)}
-            disabled={methodsLoading}
-          >
-            {methodsLoading ? (
-              <FormattedMessage defaultMessage="Loading..." />
-            ) : (
-              <FormattedMessage defaultMessage="Extend Now" />
-            )}
-          </AsyncButton>
-          <AsyncButton
-            onClick={async () => {
-              if (!login?.api) return;
-              try {
-                const newEnabled = !state.auto_renewal_enabled;
-                await login.api.patchVm(state.id, {
-                  auto_renewal_enabled: newEnabled,
-                });
-                setState((prev) =>
-                  prev ? { ...prev, auto_renewal_enabled: newEnabled } : prev,
-                );
-              } catch (error) {
-                showError(error);
-              }
+        <div className="flex flex-col gap-4">
+          <BillingStatusCard
+            eyebrow={
+              <>
+                <FormattedMessage defaultMessage="Subscription" /> · VPS #
+                {state.id}
+              </>
+            }
+            statusLabel={
+              st.isNew ? (
+                <FormattedMessage defaultMessage="Not active" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Expired" />
+              ) : st.expiringSoon ? (
+                <FormattedMessage defaultMessage="Expiring soon" />
+              ) : (
+                <FormattedMessage defaultMessage="Active" />
+              )
+            }
+            tone={st.tone}
+            priceLabel={<FormattedMessage defaultMessage="Renews at" />}
+            price={
+              <>
+                <CostLabel cost={plan} />
+                <span className="text-xs text-cyber-muted">
+                  <FormattedMessage defaultMessage="ex. tax" />
+                </span>
+              </>
+            }
+            dateLabel={
+              st.expired ? (
+                <FormattedMessage defaultMessage="Expired on" />
+              ) : (
+                <FormattedMessage defaultMessage="Next payment" />
+              )
+            }
+            date={
+              expireDate
+                ? formatDate(expireDate, {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                : "—"
+            }
+            meterPct={st.meterPct}
+            meterLeft={
+              st.isNew ? (
+                <FormattedMessage defaultMessage="Not yet active" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Lease expired" />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="{days, plural, one {# day left} other {# days left}}"
+                  values={{ days: st.daysLeft }}
+                />
+              )
+            }
+            meterRight={
+              <>
+                <FormattedMessage defaultMessage="Billed every" />{" "}
+                {plan.interval_amount > 1 && <>{plan.interval_amount} </>}
+                <IntervalSuffix
+                  interval={plan.interval_type}
+                  n={plan.interval_amount}
+                />
+              </>
+            }
+            warning={
+              st.expired && deletingOn ? (
+                <DeletionWarning deletingOn={deletingOn} />
+              ) : undefined
+            }
+            cta={{
+              onClick: () => setShowPaymentFlow(true),
+              disabled: methodsLoading,
+              label: methodsLoading ? (
+                <FormattedMessage defaultMessage="Loading…" />
+              ) : st.isNew ? (
+                <FormattedMessage defaultMessage="Pay now" />
+              ) : st.expired ? (
+                <FormattedMessage defaultMessage="Reactivate now" />
+              ) : (
+                <FormattedMessage defaultMessage="Extend now" />
+              ),
             }}
-          >
-            {state.auto_renewal_enabled ? (
-              <FormattedMessage defaultMessage="Disable Auto-Renewal" />
-            ) : (
-              <FormattedMessage defaultMessage="Enable Auto-Renewal" />
-            )}
-          </AsyncButton>
+          />
+
+          <AutoRenewCard
+            enabled={state.auto_renewal_enabled ?? false}
+            saving={renewSaving}
+            onToggle={toggleRenew}
+            defaultMethod={defaultMethod}
+            description={
+              state.auto_renewal_enabled ? (
+                <FormattedMessage defaultMessage="Renews automatically one day before expiry using your default payment method." />
+              ) : (
+                <FormattedMessage defaultMessage="Turn on to charge your default payment method automatically one day before expiry." />
+              )
+            }
+          />
         </div>
       )}
 
-      {!showPaymentFlow && state.auto_renewal_enabled && (
-        <div className="bg-cyber-primary/10 border border-cyber-primary/30 rounded-sm p-3">
-          <div className="text-cyber-primary text-sm font-medium">
-            <FormattedMessage defaultMessage="Auto-renewal enabled" />
-          </div>
-          <p className="text-cyber-muted text-sm mt-1">
-            <FormattedMessage defaultMessage="This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection." />
-          </p>
-        </div>
-      )}
-
-      {!showPaymentFlow && !state.auto_renewal_enabled && (
-        <div className="bg-cyber-panel/50 border border-cyber-border rounded-sm p-3">
-          <div className="text-cyber-muted text-sm font-medium">
-            <FormattedMessage defaultMessage="Auto-renewal disabled" />
-          </div>
-          <p className="text-cyber-muted text-sm mt-1">
-            <FormattedMessage defaultMessage="Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals." />
-          </p>
-        </div>
-      )}
-
-      {showPaymentFlow && (
-        <VmPaymentFlow
+      {showPaymentFlow && login?.api && (
+        <RenewalFlow
           vm={state}
-          type="renewal"
           onPaymentComplete={onPaymentComplete}
           onCancel={() => setShowPaymentFlow(false)}
         />
       )}
 
       {!showPaymentFlow && (
-        <>
-          <div className="text-xl">
-            <FormattedMessage defaultMessage="Payment History" />
-          </div>
-          <table className="table bg-cyber-panel rounded-sm text-center">
-            <thead>
-              <tr>
-                <th>
-                  <FormattedMessage defaultMessage="Date" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Amount" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Method" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Time" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Status" />
-                </th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {payments
-                .sort(
-                  (a, b) =>
-                    new Date(b.created).getTime() -
-                    new Date(a.created).getTime(),
-                )
-                .map((a) => (
-                  <tr key={a.id}>
-                    <td className="pl-4">
-                      <FormattedDate
-                        value={a.created}
-                        year="numeric"
-                        month="short"
-                        day="numeric"
-                        hour="2-digit"
-                        minute="2-digit"
-                      />
-                    </td>
-                    <td>
-                      <CostAmount
-                        cost={{
-                          amount: a.amount + a.tax + a.processing_fee,
-                          currency: a.currency,
-                        }}
-                        converted={false}
-                      />
-                      {a.tax > 0 && (
-                        <span className="text-cyber-muted text-xs">
-                          {" "}
-                          (
-                          <CostAmount
-                            cost={{ amount: a.tax, currency: a.currency }}
-                            converted={false}
-                          />{" "}
-                          <FormattedMessage defaultMessage="tax" />)
-                        </span>
-                      )}
-                      {a.processing_fee > 0 && (
-                        <span className="text-cyber-muted text-xs">
-                          {" "}
-                          (
-                          <CostAmount
-                            cost={{
-                              amount: a.processing_fee,
-                              currency: a.currency,
-                            }}
-                            converted={false}
-                          />{" "}
-                          <FormattedMessage defaultMessage="fee" />)
-                        </span>
-                      )}
-                    </td>
-                    <td className="uppercase text-sm">
-                      {a.payment_method ??
-                        ("lightning" in a.data
-                          ? "lightning"
-                          : "revolut" in a.data
-                            ? "revolut"
-                            : "—")}
-                    </td>
-                    <td>
-                      <TimeValue seconds={a.time} />
-                    </td>
-                    <td>
-                      {a.is_paid ? (
-                        <FormattedMessage defaultMessage="Paid" />
-                      ) : new Date(a.expires) <= new Date() ? (
-                        <FormattedMessage defaultMessage="Expired" />
-                      ) : (
-                        <FormattedMessage defaultMessage="Unpaid" />
-                      )}
-                    </td>
-                    <td>
-                      {a.is_paid && (
-                        <div
-                          title="Generate Invoice"
-                          onClick={async () => {
-                            const l = await login?.api.invoiceLink(a.id);
-                            window.open(l, "_blank");
-                          }}
-                        >
-                          <Icon name="printer" />
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </>
+        <BillingPaymentsTable rows={paymentRows} hasAction />
       )}
     </div>
+  );
+}
+
+/** Length of one billing cycle in days, used to scale the expiry meter. */
+function planCycleDays(plan: VmCostPlan): number {
+  const n = plan.interval_amount || 1;
+  switch (plan.interval_type) {
+    case CostPlanIntervalType.DAY:
+      return n;
+    case CostPlanIntervalType.MONTH:
+      return n * 30;
+    case CostPlanIntervalType.YEAR:
+      return n * 365;
+    default:
+      return 30;
+  }
+}
+
+/** Renew a VM via its underlying subscription. */
+function RenewalFlow({
+  vm,
+  onPaymentComplete,
+  onCancel,
+}: {
+  vm: VmInstance;
+  onPaymentComplete: () => void;
+  onCancel: () => void;
+}) {
+  const login = useLogin();
+  const [subscriptionId, setSubscriptionId] = useState<number>();
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (!login?.api) return;
+    let active = true;
+    resolveVmSubscriptionId(login.api, vm)
+      .then((id) => {
+        if (!active) return;
+        if (id === undefined) setError(true);
+        else setSubscriptionId(id);
+      })
+      .catch(() => active && setError(true));
+    return () => {
+      active = false;
+    };
+  }, [login?.api, vm]);
+
+  if (error) {
+    return (
+      <div className="flex flex-col gap-3">
+        <div className="rounded-sm bg-cyber-danger/20 p-4 text-cyber-danger text-sm">
+          <FormattedMessage defaultMessage="Couldn't find a subscription to renew for this VM." />
+        </div>
+        <button
+          onClick={onCancel}
+          className="self-start text-sm text-cyber-muted hover:text-cyber-primary transition-colors"
+        >
+          <FormattedMessage defaultMessage="Cancel" />
+        </button>
+      </div>
+    );
+  }
+
+  if (!login?.api || subscriptionId === undefined) {
+    return (
+      <div className="py-8 text-center text-cyber-muted">
+        <FormattedMessage defaultMessage="Loading renewal…" />
+      </div>
+    );
+  }
+
+  return (
+    <PaymentFlow
+      title={
+        <FormattedMessage defaultMessage="Renew VPS #{id}" values={{ id: vm.id }} />
+      }
+      source={vmRenewalSource(login.api, vm, subscriptionId)}
+      onPaymentComplete={onPaymentComplete}
+      onCancel={onCancel}
+    />
   );
 }

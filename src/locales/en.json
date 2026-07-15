@@ -2,17 +2,11 @@
   "+3NyB6": {
     "defaultMessage": "Outbound"
   },
-  "+8AmJ0": {
-    "defaultMessage": "Disable Auto-Renewal"
-  },
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
   "+SM72m": {
     "defaultMessage": "Recipient's public key (npub/nprofile/hex):"
-  },
-  "+U6ozc": {
-    "defaultMessage": "Type"
   },
   "+UjQFc": {
     "defaultMessage": "Rules & policy"
@@ -35,17 +29,11 @@
   "/nQTeE": {
     "defaultMessage": "Save Payout Settings"
   },
-  "063dCM": {
-    "defaultMessage": "Configure an NWC connection string in account settings, then enable auto-renewal to automatically pay for VM renewals."
-  },
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
   },
   "0QLzxo": {
     "defaultMessage": "Protocol"
-  },
-  "0Ze+1G": {
-    "defaultMessage": "Renew Now"
   },
   "0gkn9c": {
     "defaultMessage": "Your IP space subscription has been created. Complete the first payment to allocate the address space and activate the subscription."
@@ -77,6 +65,9 @@
   "1VQrBL": {
     "defaultMessage": "{h, plural, one {# hr} other {# hrs}} {m, plural, one {# min} other {# mins}}"
   },
+  "1aBLDj": {
+    "defaultMessage": "Pay from any Lightning wallet to top up this subscription."
+  },
   "1v7S+3": {
     "defaultMessage": "Add Nostr Domain"
   },
@@ -88,9 +79,6 @@
   },
   "20Sod8": {
     "defaultMessage": "CPU:"
-  },
-  "2LslN1": {
-    "defaultMessage": "Upgrade Now"
   },
   "2QrTo0": {
     "defaultMessage": "New IP Space Order"
@@ -125,8 +113,14 @@
   "3xnP4c": {
     "defaultMessage": "Use NIP-44 encryption to send a secure message. This proves you own the private key associated with your account. Encrypt your message below and include the encrypted text in your email."
   },
+  "43xNq5": {
+    "defaultMessage": "Renew VPS #{id}"
+  },
   "47FYwb": {
     "defaultMessage": "Cancel"
+  },
+  "48dUkY": {
+    "defaultMessage": "+ {fee} setup"
   },
   "4PKxPs": {
     "defaultMessage": "Unlink"
@@ -136,6 +130,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "Decrypted message:"
+  },
+  "4cMKIO": {
+    "defaultMessage": "Recurring plans that keep your services active."
   },
   "4j0zpr": {
     "defaultMessage": "Minimum: {min} cores"
@@ -148,6 +145,9 @@
   },
   "4upFOv": {
     "defaultMessage": "Have questions about provisioning, billing, abuse handling, or a specific service issue? Send a message and the LNVPS team will get back to you as soon as possible."
+  },
+  "5/Pb3D": {
+    "defaultMessage": "Active subscriptions"
   },
   "53RN0g": {
     "defaultMessage": "Proceed to Payment"
@@ -169,15 +169,6 @@
   },
   "5y2qWO": {
     "defaultMessage": "Connecting..."
-  },
-  "62nsdy": {
-    "defaultMessage": "Retry"
-  },
-  "6OWS4p": {
-    "defaultMessage": "Processing..."
-  },
-  "6R6Hph": {
-    "defaultMessage": "Renews: {date}"
   },
   "6SfJaf": {
     "defaultMessage": "Upgrade To"
@@ -209,8 +200,20 @@
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
   },
+  "7fbBqG": {
+    "defaultMessage": "Cancel payment"
+  },
+  "7q/bs/": {
+    "defaultMessage": "Renew now"
+  },
   "7qSZJ7": {
     "defaultMessage": "{n, plural, one {# hr} other {# hrs}}"
+  },
+  "7tOz+m": {
+    "defaultMessage": "Pay now"
+  },
+  "7yPJTW": {
+    "defaultMessage": "Expiring soon"
   },
   "7zs+Vz": {
     "defaultMessage": "Memory: {gb} GB"
@@ -218,17 +221,11 @@
   "82Y7Sa": {
     "defaultMessage": "Sending..."
   },
-  "82zlBD": {
-    "defaultMessage": "Cardholder Name *"
-  },
   "89xu1A": {
     "defaultMessage": "Custom VPS Order"
   },
   "8BgaUL": {
     "defaultMessage": "Current Specifications"
-  },
-  "8FF5Bq": {
-    "defaultMessage": "Creating payment..."
   },
   "8Jfsz3": {
     "defaultMessage": "Send Verification"
@@ -236,23 +233,26 @@
   "8Q504V": {
     "defaultMessage": "Metadata"
   },
+  "8X6Kwp": {
+    "defaultMessage": "Next payment"
+  },
   "8ecw1u": {
     "defaultMessage": "Handles"
   },
-  "8f0dzf": {
-    "defaultMessage": "Renewal for #{id}"
-  },
   "8lCjAM": {
     "defaultMessage": "Priority"
+  },
+  "8lK3rQ": {
+    "defaultMessage": "Renew before {date} or this and its data will be permanently deleted."
+  },
+  "8xIysb": {
+    "defaultMessage": "Extend now"
   },
   "90f82/": {
     "defaultMessage": "Start VM"
   },
   "9QV3cp": {
     "defaultMessage": "Available IP Blocks"
-  },
-  "9V+Kpc": {
-    "defaultMessage": "This VM will automatically renew 1 day before expiration using your configured Nostr Wallet Connect connection."
   },
   "9dOxDN": {
     "defaultMessage": "Payments & renewal"
@@ -263,11 +263,17 @@
   "A11S6W": {
     "defaultMessage": "Send us a message directly. Your public key will be included automatically."
   },
-  "AHJbyB": {
-    "defaultMessage": "Complete your payment using the selected payment method. Changes will be applied automatically after confirmation."
+  "A7Mqan": {
+    "defaultMessage": "Loading renewal…"
+  },
+  "AL9+3/": {
+    "defaultMessage": "Couldn't find a subscription to renew for this VM."
   },
   "AQkpi3": {
     "defaultMessage": "Reinstall"
+  },
+  "AUlRcp": {
+    "defaultMessage": "Nostr Wallet Connect"
   },
   "AfmrGS": {
     "defaultMessage": "Send Code"
@@ -281,11 +287,17 @@
   "B4reHi": {
     "defaultMessage": "History Events"
   },
+  "B52Em/": {
+    "defaultMessage": "Address line 1"
+  },
   "BBiS7b": {
     "defaultMessage": "Stop VM"
   },
   "BCmVPf": {
     "defaultMessage": "Free NIP-05 hosting. Point your domain at {cname} using DNS or a path proxy."
+  },
+  "BD6I/Z": {
+    "defaultMessage": "The exact tax is confirmed when you pay."
   },
   "BFqlLP": {
     "defaultMessage": "{records} point directly to IPs and may need updating if they change"
@@ -296,8 +308,8 @@
   "BLZbXj": {
     "defaultMessage": "Message *"
   },
-  "BOV9bc": {
-    "defaultMessage": "Loading payment methods..."
+  "BVTni9": {
+    "defaultMessage": "Payment method"
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternative)"
@@ -311,17 +323,17 @@
   "Bwqhmd": {
     "defaultMessage": "Firewall"
   },
-  "CDTMW3": {
-    "defaultMessage": "Total Amount"
+  "Bzv1CO": {
+    "defaultMessage": "Reactivate now"
+  },
+  "CHgKgH": {
+    "defaultMessage": "Recurring services"
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
   },
   "CjLFf2": {
     "defaultMessage": "Get in touch with the LNVPS team. Have questions about our Bitcoin Lightning VPS service? We're here to help."
-  },
-  "Cl+kqZ": {
-    "defaultMessage": "Show QR"
   },
   "D3idYv": {
     "defaultMessage": "Settings"
@@ -347,8 +359,14 @@
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
   },
+  "DpNZQY": {
+    "defaultMessage": "Processing fee"
+  },
   "E2YqWs": {
     "defaultMessage": "Referral Program"
+  },
+  "E8y+Hb": {
+    "defaultMessage": "Lease expired"
   },
   "EBMKSN": {
     "defaultMessage": "Upgrade VM Specifications"
@@ -362,8 +380,8 @@
   "EUSRTV": {
     "defaultMessage": "Your past encrypted NIP-17 messages with support. This inbox is no longer monitored — please use the Support tab to reach us."
   },
-  "EdHq8/": {
-    "defaultMessage": "Complete your payment using the selected payment method. Your subscription will activate automatically after confirmation."
+  "Ecfndm": {
+    "defaultMessage": "Invoice"
   },
   "Eg11ZY": {
     "defaultMessage": "Reconnect"
@@ -371,20 +389,38 @@
   "EhL8Q+": {
     "defaultMessage": "Details & SSH"
   },
+  "Epas1Z": {
+    "defaultMessage": "{n} {unit}"
+  },
   "F8RFcI": {
     "defaultMessage": "Optional. Appears on the invoices we generate for your payments."
+  },
+  "FBjXEw": {
+    "defaultMessage": "Upgrade VPS #{id}"
   },
   "FJhjgz": {
     "defaultMessage": "Postcode"
   },
+  "FLpm0X": {
+    "defaultMessage": "Line items"
+  },
   "FMHDSp": {
     "defaultMessage": "LNVPS News and Product Updates"
+  },
+  "FOEu1B": {
+    "defaultMessage": "Lightning address"
   },
   "FZeQlc": {
     "defaultMessage": "Disconnected"
   },
+  "FazwRl": {
+    "defaultMessage": "Try again"
+  },
   "FlypmR": {
     "defaultMessage": "Add an email address below"
+  },
+  "FoHB5c": {
+    "defaultMessage": "Renew subscription"
   },
   "FrXeQJ": {
     "defaultMessage": "what is nostr?"
@@ -407,14 +443,26 @@
   "GSye7T": {
     "defaultMessage": "Lightning Address"
   },
+  "Gd6Kbk": {
+    "defaultMessage": "Not yet active"
+  },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
   },
   "GsCz6b": {
     "defaultMessage": "Use custom sender key"
   },
+  "GuLP+V": {
+    "defaultMessage": "Renews automatically one day before expiry using your default payment method."
+  },
+  "Gw07ly": {
+    "defaultMessage": "Monthly total"
+  },
   "H4Ucn0": {
     "defaultMessage": "Inbound"
+  },
+  "H9Az5Z": {
+    "defaultMessage": "Billing details"
   },
   "HAlOn1": {
     "defaultMessage": "Name"
@@ -446,8 +494,8 @@
   "Ij0H43": {
     "defaultMessage": "Graphs"
   },
-  "IpOeTQ": {
-    "defaultMessage": "Pay with a saved card"
+  "IuFETn": {
+    "defaultMessage": "Duration"
   },
   "IvjoDS": {
     "defaultMessage": "Connected"
@@ -467,8 +515,8 @@
   "JVClQM": {
     "defaultMessage": "LNVPS Service Status and Uptime"
   },
-  "JmgL7z": {
-    "defaultMessage": "Expires: {date} ({days} days)"
+  "Jm+fih": {
+    "defaultMessage": "Not active"
   },
   "K/zU0+": {
     "defaultMessage": "+ Deploy new"
@@ -485,9 +533,6 @@
   "KaSlC8": {
     "defaultMessage": "Git"
   },
-  "KcSMYZ": {
-    "defaultMessage": "Line Items"
-  },
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
@@ -497,6 +542,12 @@
   "Kw4098": {
     "defaultMessage": "New Rule"
   },
+  "KxG+iy": {
+    "defaultMessage": "VAT"
+  },
+  "L8seEc": {
+    "defaultMessage": "Subtotal"
+  },
   "LAMeIi": {
     "defaultMessage": "Contact LNVPS Support"
   },
@@ -505,6 +556,9 @@
   },
   "LNcnLC": {
     "defaultMessage": "Failed Referrals"
+  },
+  "LR754a": {
+    "defaultMessage": "Renews at"
   },
   "LX6weZ": {
     "defaultMessage": "Pending payment"
@@ -535,6 +589,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
+  },
+  "N4e/Yn": {
+    "defaultMessage": "Fee {fee}"
   },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
@@ -593,20 +650,23 @@
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
   },
-  "QTlZeB": {
-    "defaultMessage": "Charging your saved card… This will be applied automatically once confirmed."
-  },
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
   "QlsDcr": {
     "defaultMessage": "Action"
   },
+  "Qqli25": {
+    "defaultMessage": "Turn on to charge your default payment method automatically one day before expiry."
+  },
   "QuGLBN": {
     "defaultMessage": "This SSH key is in use by one or more VMs and cannot be deleted."
   },
   "R+j5Qu": {
     "defaultMessage": "No IPs assigned"
+  },
+  "R/6nsx": {
+    "defaultMessage": "Subscription"
   },
   "R0skQD": {
     "defaultMessage": "GitHub: Create an issue at github.com/LNVPS"
@@ -616,6 +676,9 @@
   },
   "R7x8iU": {
     "defaultMessage": "Disk: {gb} GB {type}"
+  },
+  "RAyrhP": {
+    "defaultMessage": "VAT ({rate}):"
   },
   "RB2CER": {
     "defaultMessage": "CPU Cores"
@@ -641,6 +704,12 @@
   "Rw7iI7": {
     "defaultMessage": "Disable"
   },
+  "Rw82/V": {
+    "defaultMessage": "per month"
+  },
+  "SB//YQ": {
+    "defaultMessage": "Order summary"
+  },
   "SMHOve": {
     "defaultMessage": "Successful Referrals"
   },
@@ -656,9 +725,6 @@
   "Ss0sWu": {
     "defaultMessage": "Pay Now"
   },
-  "Sv1hgX": {
-    "defaultMessage": "Auto-renewal disabled"
-  },
   "Sz/3Vf": {
     "defaultMessage": "Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current."
   },
@@ -667,9 +733,6 @@
   },
   "T4VxQN": {
     "defaultMessage": "Loading…"
-  },
-  "T4yFyM": {
-    "defaultMessage": "Loading payment details..."
   },
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
@@ -689,14 +752,14 @@
   "Tbo377": {
     "defaultMessage": "Billing"
   },
-  "Td/uhP": {
-    "defaultMessage": "Enable Auto-Renewal"
-  },
   "TieXig": {
     "defaultMessage": "Payouts will be sent to the NWC wallet configured in your account settings."
   },
   "TqSTI0": {
     "defaultMessage": "Enable"
+  },
+  "TtNbPG": {
+    "defaultMessage": "Total per month"
   },
   "U96Gl9": {
     "defaultMessage": "Save this card for future payments"
@@ -722,14 +785,14 @@
   "Uk68vE": {
     "defaultMessage": "Sender's public key (npub/nprofile/hex):"
   },
+  "UkQy3+": {
+    "defaultMessage": "Cardholder name *"
+  },
   "Un5Bdm": {
     "defaultMessage": "Resolving IPs for {cname}…"
   },
-  "UwP+xI": {
-    "defaultMessage": "Auto-renewal enabled"
-  },
-  "VE4z7n": {
-    "defaultMessage": "Get Invoice"
+  "Uvhzx4": {
+    "defaultMessage": "Automatic renewal is off. Renew manually before expiry to avoid interruption."
   },
   "VJ4xwX": {
     "defaultMessage": "News and Product Updates"
@@ -767,23 +830,17 @@
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
   },
-  "X5QA2h": {
-    "defaultMessage": "Processing Renewal Payment"
-  },
   "XD6788": {
     "defaultMessage": "Setup fee:"
   },
   "XNiOLB": {
     "defaultMessage": "Failed to send message. Please try again."
   },
-  "Xoi0Uz": {
-    "defaultMessage": "Pay with Card"
-  },
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
-  "Y7opZr": {
-    "defaultMessage": "Renew VPS"
+  "Y/tMXU": {
+    "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
   },
   "YH46Fd": {
     "defaultMessage": "Latest news, updates, and announcements from LNVPS — your Bitcoin Lightning VPS provider."
@@ -796,9 +853,6 @@
   },
   "Yl8GBP": {
     "defaultMessage": "Tax ID"
-  },
-  "Yt9S7n": {
-    "defaultMessage": "Fee: {fees}"
   },
   "YyojwF": {
     "defaultMessage": "Configuration Changes:"
@@ -823,12 +877,6 @@
   },
   "aAnyb9": {
     "defaultMessage": "Share this link. When others sign up and pay, you earn a payout."
-  },
-  "aFJYR3": {
-    "defaultMessage": "Card Details"
-  },
-  "ajQtDJ": {
-    "defaultMessage": "Select Payment Method"
   },
   "an3Zx3": {
     "defaultMessage": "Manage the SSH keys used to access your VMs."
@@ -872,11 +920,11 @@
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
+  "ciFSHC": {
+    "defaultMessage": "Pay {amount}"
+  },
   "cyR7Kh": {
     "defaultMessage": "Back"
-  },
-  "d+1v5f": {
-    "defaultMessage": "Renew for:"
   },
   "d1nnRF": {
     "defaultMessage": "Send Another Message"
@@ -884,8 +932,8 @@
   "d3wxHm": {
     "defaultMessage": "Loading history..."
   },
-  "dCaiAm": {
-    "defaultMessage": "Extend Now"
+  "dHltrI": {
+    "defaultMessage": "Billed every"
   },
   "dKHSEA": {
     "defaultMessage": "Thank you for contacting us. We'll get back to you as soon as possible."
@@ -911,6 +959,9 @@
   "duElEE": {
     "defaultMessage": "No history entries found for this VM."
   },
+  "eClqvz": {
+    "defaultMessage": "Saved payment methods"
+  },
   "eKEL/g": {
     "defaultMessage": "Pending"
   },
@@ -926,11 +977,20 @@
   "elhFf1": {
     "defaultMessage": "[Expired]"
   },
+  "evMlX9": {
+    "defaultMessage": "Auto-renew"
+  },
   "f00p/7": {
     "defaultMessage": "Upload failed"
   },
+  "f7+Xwr": {
+    "defaultMessage": "Credit or debit card"
+  },
   "fGeu02": {
     "defaultMessage": "Browser Extension:"
+  },
+  "fHZKQp": {
+    "defaultMessage": "VAT ({rate})"
   },
   "fNSGnl": {
     "defaultMessage": "Login To Order"
@@ -956,23 +1016,23 @@
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
   },
+  "gYR5sK": {
+    "defaultMessage": "This is past its grace period and may be deleted at any time. Renew now to keep it."
+  },
   "gZz74a": {
     "defaultMessage": "Please fill in all required fields"
   },
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
-  "gdP56I": {
-    "defaultMessage": "tax"
-  },
-  "gjBiyj": {
-    "defaultMessage": "Loading..."
-  },
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"
   },
   "gv8O1e": {
     "defaultMessage": "VPS Offers"
+  },
+  "gvPhJ7": {
+    "defaultMessage": "Billed monthly"
   },
   "h+26/n": {
     "defaultMessage": "Your referral code"
@@ -1019,14 +1079,14 @@
   "jYLOYR": {
     "defaultMessage": "{n, plural, one {# day} other {# days}}"
   },
+  "jf7fbc": {
+    "defaultMessage": "None set — add one"
+  },
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."
   },
   "jvo0vs": {
     "defaultMessage": "Save"
-  },
-  "k1UDSi": {
-    "defaultMessage": "LNURL Payment"
   },
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
@@ -1046,6 +1106,9 @@
   "l4RUua": {
     "defaultMessage": "Service: {service}"
   },
+  "l7PJ8l": {
+    "defaultMessage": "Total due now:"
+  },
   "lCILNz": {
     "defaultMessage": "Buy Now"
   },
@@ -1055,14 +1118,17 @@
   "lKv8ex": {
     "defaultMessage": "Default"
   },
+  "lP4qIQ": {
+    "defaultMessage": "Card details"
+  },
   "lPsVOx": {
     "defaultMessage": "Your VMs and domains"
   },
   "lTtWDY": {
     "defaultMessage": "{daysLeft} days remaining"
   },
-  "lcv/d8": {
-    "defaultMessage": "IP space & other services"
+  "lcXewt": {
+    "defaultMessage": "Lightning invoice"
   },
   "lhCavK": {
     "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
@@ -1070,17 +1136,23 @@
   "lloEWi": {
     "defaultMessage": "What is this regarding?"
   },
+  "lmac7x": {
+    "defaultMessage": "{n, plural, one {# item} other {# items}}"
+  },
   "lnaWo/": {
     "defaultMessage": "Region"
+  },
+  "lsFKTa": {
+    "defaultMessage": "Charging your saved payment method. This is applied automatically once it confirms."
   },
   "ltoBql": {
     "defaultMessage": "[New]"
   },
-  "lvV1wo": {
-    "defaultMessage": "Upgrade Payment"
+  "m4QgXr": {
+    "defaultMessage": "{days, plural, one {# day left} other {# days left}}"
   },
-  "m22Mzk": {
-    "defaultMessage": "Processing Upgrade Payment"
+  "mBP5Sb": {
+    "defaultMessage": "Show Lightning address"
   },
   "mIuuiJ": {
     "defaultMessage": "Service Status and Uptime"
@@ -1096,6 +1168,9 @@
   },
   "mY+s0A": {
     "defaultMessage": "How We Reach You"
+  },
+  "mtEKFV": {
+    "defaultMessage": "Processing…"
   },
   "n9fdaJ": {
     "defaultMessage": "Unverified"
@@ -1124,9 +1199,6 @@
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
-  "o8lVmf": {
-    "defaultMessage": "Payment method affects the currency used for the quote and payment."
-  },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
   },
@@ -1136,6 +1208,9 @@
   "oCc8Oq": {
     "defaultMessage": "Add Key"
   },
+  "oQY0a2": {
+    "defaultMessage": "Address line 2"
+  },
   "oXGNZ+": {
     "defaultMessage": "VM #{id} Terminal:"
   },
@@ -1144,9 +1219,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "Not set"
-  },
-  "pSH5mR": {
-    "defaultMessage": "Payment History"
   },
   "pY6CgO": {
     "defaultMessage": "You have no virtual machines yet."
@@ -1181,14 +1253,11 @@
   "r2BhUh": {
     "defaultMessage": "Decrypt Message"
   },
-  "rCcPOd": {
-    "defaultMessage": "fee"
-  },
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
-  "rKLmW/": {
-    "defaultMessage": "Cancel Payment"
+  "rieTwF": {
+    "defaultMessage": "Expired on"
   },
   "rv2p0H": {
     "defaultMessage": "CPU, RAM & network"
@@ -1199,11 +1268,14 @@
   "s+YpY+": {
     "defaultMessage": "Earn rewards by referring others"
   },
+  "s+ixZq": {
+    "defaultMessage": "Default method"
+  },
   "s2ZjPB": {
     "defaultMessage": "No firewall rules. The default policy applies."
   },
-  "sH1q5P": {
-    "defaultMessage": "for {time}"
+  "sAJryD": {
+    "defaultMessage": "VAT and fees are estimated; the exact amount is confirmed at payment."
   },
   "sQu9nL": {
     "defaultMessage": "SSH Key"
@@ -1219,6 +1291,9 @@
   },
   "sqvjkf": {
     "defaultMessage": "Add Handle"
+  },
+  "srgk8m": {
+    "defaultMessage": "Sets the currency used for the quote and payment."
   },
   "sy+pv5": {
     "defaultMessage": "Email"
@@ -1256,9 +1331,6 @@
   "ubXbwc": {
     "defaultMessage": "Default Policy"
   },
-  "ug01Mk": {
-    "defaultMessage": "Time"
-  },
   "uqUeK9": {
     "defaultMessage": "Decrypt a message sent to you by support."
   },
@@ -1274,11 +1346,23 @@
   "vONi+O": {
     "defaultMessage": "Country"
   },
+  "vWsXtg": {
+    "defaultMessage": "Creating payment…"
+  },
+  "vaoVHG": {
+    "defaultMessage": "Back to subscriptions"
+  },
   "vlKhIl": {
     "defaultMessage": "Your name"
   },
   "vo0Z8o": {
     "defaultMessage": "Link your chat, then press Start in the bot"
+  },
+  "vtStU2": {
+    "defaultMessage": "Payment history"
+  },
+  "vy2rlX": {
+    "defaultMessage": "Processing fee:"
   },
   "wEQDC6": {
     "defaultMessage": "Edit"
@@ -1303,6 +1387,9 @@
   },
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
+  },
+  "xOnplm": {
+    "defaultMessage": "Loading payment methods…"
   },
   "xQ8iOj": {
     "defaultMessage": "You don't have any subscriptions yet."
@@ -1334,8 +1421,8 @@
   "yJAKR0": {
     "defaultMessage": "Send Message"
   },
-  "yYs9cj": {
-    "defaultMessage": "Back to Upgrade"
+  "yKzuSB": {
+    "defaultMessage": "Pay subscription"
   },
   "yr1Ove": {
     "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure."

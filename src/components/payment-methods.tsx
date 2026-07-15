@@ -242,7 +242,7 @@ export function PaymentMethods() {
         <p className="m-0 text-xs text-cyber-muted">
           {formatMessage({
             defaultMessage:
-              "Cards are saved automatically when you pay with Revolut and automatic renewal is enabled.",
+              "Tick \u201cSave this card\u201d when paying with Revolut to store a card here for future payments and automatic renewals.",
           })}
         </p>
       </div>

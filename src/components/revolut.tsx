@@ -18,6 +18,13 @@ interface RevolutProps {
   mode?: Mode;
   /** Save the card for merchant-initiated (off-session) automatic renewals */
   saveCard?: boolean;
+  /**
+   * Toggle saving the card. Because the backend must know `save_card` at
+   * order-creation time (before the card field can render), changing this
+   * recreates the payment/order. When provided, a “Save this card” checkbox is
+   * shown above the card field.
+   */
+  onSaveCardChange?: (save: boolean) => void | Promise<void>;
 }
 
 export function RevolutPayWidget({
@@ -27,6 +34,7 @@ export function RevolutPayWidget({
   onCancel,
   mode,
   saveCard,
+  onSaveCardChange,
 }: RevolutProps) {
   const login = useLogin();
   const { formatMessage } = useIntl();
@@ -325,6 +333,17 @@ export function RevolutPayWidget({
         />
         <FormattedMessage defaultMessage="Save billing details to account" />
       </label>
+      {onSaveCardChange && (
+        <label className="flex items-center gap-2 text-sm text-cyber-muted cursor-pointer">
+          <input
+            type="checkbox"
+            checked={saveCard ?? false}
+            disabled={submitting}
+            onChange={(e) => onSaveCardChange(e.target.checked)}
+          />
+          <FormattedMessage defaultMessage="Save this card for future payments" />
+        </label>
+      )}
       <div className="flex flex-col gap-1">
         <label className="text-xs text-cyber-muted">
           <FormattedMessage defaultMessage="Card Details" />

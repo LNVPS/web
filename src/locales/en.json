@@ -446,6 +446,9 @@
   "Ij0H43": {
     "defaultMessage": "Graphs"
   },
+  "IpOeTQ": {
+    "defaultMessage": "Pay with a saved card"
+  },
   "IvjoDS": {
     "defaultMessage": "Connected"
   },
@@ -590,6 +593,9 @@
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
   },
+  "QTlZeB": {
+    "defaultMessage": "Charging your saved card… This will be applied automatically once confirmed."
+  },
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
@@ -691,6 +697,9 @@
   },
   "TqSTI0": {
     "defaultMessage": "Enable"
+  },
+  "U96Gl9": {
+    "defaultMessage": "Save this card for future payments"
   },
   "UPP+wZ": {
     "defaultMessage": "In use by {count, plural, one {VM} other {VMs}}: {vms}"
@@ -1040,6 +1049,9 @@
   "lCILNz": {
     "defaultMessage": "Buy Now"
   },
+  "lD3+8a": {
+    "defaultMessage": "Pay"
+  },
   "lKv8ex": {
     "defaultMessage": "Default"
   },
@@ -1051,6 +1063,9 @@
   },
   "lcv/d8": {
     "defaultMessage": "IP space & other services"
+  },
+  "lhCavK": {
+    "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
   },
   "lloEWi": {
     "defaultMessage": "What is this regarding?"
@@ -1198,9 +1213,6 @@
   },
   "sXj7R6": {
     "defaultMessage": "Disk:"
-  },
-  "sYlcs7": {
-    "defaultMessage": "Cards are saved automatically when you pay with Revolut and automatic renewal is enabled."
   },
   "snh6R6": {
     "defaultMessage": "Label (optional)"

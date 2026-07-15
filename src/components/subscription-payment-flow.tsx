@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   AccountDetail,
   PaymentMethod,
+  SavedPaymentMethod,
   SubscriptionPayment,
   VmPayment,
 } from "../api";
@@ -52,7 +53,10 @@ export default function SubscriptionPaymentFlow({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
-  const [autoRenewalEnabled, setAutoRenewalEnabled] = useState(false);
+  // Default to saving the card so it's available for future payments; the user
+  // can opt out via the checkbox on the card screen.
+  const [saveCard, setSaveCard] = useState(true);
+  const [savedCards, setSavedCards] = useState<Array<SavedPaymentMethod>>([]);
   const [hasNwc, setHasNwc] = useState(false);
 
   useEffect(() => {
@@ -63,21 +67,12 @@ export default function SubscriptionPaymentFlow({
       .catch((e) => console.error("Failed to load account info:", e));
     login.api
       .listPaymentMethods()
-      .then((m) =>
-        setHasNwc(m.some((x) => x.provider === "nwc" && x.enabled)),
-      )
+      .then((m) => {
+        setHasNwc(m.some((x) => x.provider === "nwc" && x.enabled));
+        setSavedCards(m.filter((x) => x.provider === "revolut" && x.enabled));
+      })
       .catch((e) => console.error("Failed to load payment methods:", e));
   }, [login?.api]);
-
-  // Load the subscription so we know whether to save the card for off-session
-  // automatic renewals during a Revolut checkout.
-  useEffect(() => {
-    if (!login?.api) return;
-    login.api
-      .getSubscription(subscriptionId)
-      .then((s) => setAutoRenewalEnabled(s.auto_renewal_enabled))
-      .catch((e) => console.error("Failed to load subscription:", e));
-  }, [login?.api, subscriptionId]);
 
   const handlePaymentComplete = useCallback(() => {
     setPayment(undefined);
@@ -105,7 +100,10 @@ export default function SubscriptionPaymentFlow({
   }, [login?.api, payment, subscriptionId, handlePaymentComplete]);
 
   const createPayment = useCallback(
-    async function (methodName: string) {
+    async function (
+      methodName: string,
+      opts?: { saveCard?: boolean; paymentMethodId?: number },
+    ) {
       if (!login?.api) return;
       setLoading(true);
       setError(undefined);
@@ -113,6 +111,10 @@ export default function SubscriptionPaymentFlow({
         const result = await login.api.renewSubscription(
           subscriptionId,
           methodName,
+          {
+            saveCard: opts?.saveCard,
+            paymentMethodId: opts?.paymentMethodId,
+          },
         );
         setPayment(result);
       } catch (e) {
@@ -175,6 +177,7 @@ export default function SubscriptionPaymentFlow({
         <FormattedMessage defaultMessage="Get Invoice" />
       );
 
+    const isRevolut = method.name === "revolut";
     return (
       <div
         key={method.name}
@@ -189,9 +192,38 @@ export default function SubscriptionPaymentFlow({
         <AsyncButton
           className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
           disabled={loading}
-          onClick={() => createPayment(method.name)}
+          onClick={() =>
+            createPayment(method.name, isRevolut ? { saveCard } : undefined)
+          }
         >
           {label}
+        </AsyncButton>
+      </div>
+    );
+  }
+
+  function renderSavedCard(card: SavedPaymentMethod) {
+    const brand = card.card_brand ?? "Card";
+    const last4 = card.card_last_four ? ` •••• ${card.card_last_four}` : "";
+    return (
+      <div
+        key={card.id}
+        className="flex items-center justify-between px-3 py-2 bg-cyber-panel rounded-sm"
+      >
+        <div>
+          {card.name?.trim() || `${brand}${last4}`}
+          {card.is_default && (
+            <span className="ml-2 rounded-sm bg-cyber-primary/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-cyber-primary">
+              <FormattedMessage defaultMessage="Default" />
+            </span>
+          )}
+        </div>
+        <AsyncButton
+          className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+          disabled={loading}
+          onClick={() => createPayment("saved", { paymentMethodId: card.id })}
+        >
+          <FormattedMessage defaultMessage="Pay" />
         </AsyncButton>
       </div>
     );
@@ -239,7 +271,11 @@ export default function SubscriptionPaymentFlow({
             payment={toVmPayment(payment)}
             account={account}
             onPaid={handlePaymentComplete}
-            saveCard={autoRenewalEnabled}
+            saveCard={saveCard}
+            onSaveCardChange={async (v) => {
+              setSaveCard(v);
+              await createPayment("revolut", { saveCard: v });
+            }}
           />
         ) : (
           <div className="bg-cyber-panel-light p-4 rounded-sm space-y-2 text-center">
@@ -274,6 +310,14 @@ export default function SubscriptionPaymentFlow({
       <div className="space-y-2">
         {cachedMethods?.map((method) => renderPaymentMethod(method))}
       </div>
+      {savedCards.length > 0 && (
+        <div className="space-y-2">
+          <div className="text-sm text-cyber-muted">
+            <FormattedMessage defaultMessage="Pay with a saved card" />
+          </div>
+          {savedCards.map((card) => renderSavedCard(card))}
+        </div>
+      )}
       {onCancel && (
         <div className="flex justify-center pt-4">
           <AsyncButton onClick={onCancel}>

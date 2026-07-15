@@ -879,10 +879,24 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewVm(vm_id: number, method: string, intervals?: number) {
+  async renewVm(
+    vm_id: number,
+    method: string,
+    intervals?: number,
+    opts?: { saveCard?: boolean; paymentMethodId?: number },
+  ) {
     const params = new URLSearchParams({ method });
     if (intervals !== undefined && intervals > 1) {
       params.set("intervals", intervals.toString());
+    }
+    // Explicitly tokenize the entered card as a reusable payment method,
+    // independent of auto-renewal.
+    if (opts?.saveCard) {
+      params.set("save_card", "true");
+    }
+    // For method=saved off-session charges: select a specific saved card.
+    if (opts?.paymentMethodId !== undefined) {
+      params.set("payment_method_id", opts.paymentMethodId.toString());
     }
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
       await this.#req(`/api/v1/vm/${vm_id}/renew?${params.toString()}`, "GET"),
@@ -1118,9 +1132,25 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewSubscription(subscriptionId: number, method?: string) {
+  async renewSubscription(
+    subscriptionId: number,
+    method?: string,
+    opts?: { saveCard?: boolean; paymentMethodId?: number; intervals?: number },
+  ) {
     const params = new URLSearchParams();
     if (method !== undefined) params.set("method", method);
+    if (opts?.intervals !== undefined && opts.intervals > 1) {
+      params.set("intervals", opts.intervals.toString());
+    }
+    // Explicitly tokenize the entered card as a reusable payment method,
+    // independent of auto-renewal.
+    if (opts?.saveCard) {
+      params.set("save_card", "true");
+    }
+    // For method=saved off-session charges: select a specific saved card.
+    if (opts?.paymentMethodId !== undefined) {
+      params.set("payment_method_id", opts.paymentMethodId.toString());
+    }
     const { data } = await this.#handleResponse<
       ApiResponse<SubscriptionPayment>
     >(

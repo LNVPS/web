@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import {
   PaymentMethod,
+  SavedPaymentMethod,
   VmInstance,
   VmPayment,
   VmUpgradeRequest,
@@ -48,6 +49,12 @@ export default function VmPaymentFlow({
   const [error, setError] = useState<string>();
   const [account, setAccount] = useState<AccountDetail>();
   const [hasNwc, setHasNwc] = useState(false);
+  const [savedCards, setSavedCards] = useState<Array<SavedPaymentMethod>>([]);
+  // Default to saving the card so it's available for future payments; the user
+  // can opt out via the checkbox on the card screen.
+  const [saveCard, setSaveCard] = useState(true);
+  const saveCardRef = useRef(saveCard);
+  saveCardRef.current = saveCard;
   const [intervals, setIntervals] = useState(1);
   const intervalsRef = useRef(intervals);
   intervalsRef.current = intervals;
@@ -60,6 +67,9 @@ export default function VmPaymentFlow({
           setAccount(accountData);
           const pms = await login.api.listPaymentMethods();
           setHasNwc(pms.some((x) => x.provider === "nwc" && x.enabled));
+          setSavedCards(
+            pms.filter((x) => x.provider === "revolut" && x.enabled),
+          );
         } catch (e) {
           console.error("Failed to load account info:", e);
         }
@@ -79,7 +89,10 @@ export default function VmPaymentFlow({
   );
 
   const createPayment = useCallback(
-    async function (methodName: string) {
+    async function (
+      methodName: string,
+      opts?: { saveCard?: boolean; paymentMethodId?: number },
+    ) {
       if (!login?.api) return;
 
       setLoading(true);
@@ -93,6 +106,10 @@ export default function VmPaymentFlow({
             vm.id,
             methodName,
             intervalsRef.current,
+            {
+              saveCard: opts?.saveCard,
+              paymentMethodId: opts?.paymentMethodId,
+            },
           );
         } else if (type === "upgrade") {
           if (!upgradeRequest) {
@@ -125,6 +142,28 @@ export default function VmPaymentFlow({
     setMethods(undefined);
     onPaymentComplete();
   }, [onPaymentComplete]);
+
+  // Off-session (saved-card) charges have no interactive widget: the backend
+  // charges the saved card immediately, so poll until it settles.
+  const isOffSession =
+    !!payment &&
+    !("lightning" in payment.data) &&
+    !("revolut" in payment.data);
+  useEffect(() => {
+    if (!login?.api || !payment || !isOffSession) return;
+    const tx = setInterval(async () => {
+      try {
+        const st = await login.api.paymentStatus(payment.id);
+        if (st.is_paid) {
+          clearInterval(tx);
+          handlePaymentComplete();
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }, 2_000);
+    return () => clearInterval(tx);
+  }, [login?.api, payment, isOffSession, handlePaymentComplete]);
 
   useEffect(() => {
     loadPaymentMethods();
@@ -262,7 +301,9 @@ export default function VmPaymentFlow({
               className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
               onClick={async () => {
                 setSelectedMethod(method);
-                await createPayment(method.name);
+                await createPayment(method.name, {
+                  saveCard: saveCardRef.current,
+                });
               }}
             >
               <FormattedMessage defaultMessage="Pay with Card" />
@@ -271,6 +312,36 @@ export default function VmPaymentFlow({
         );
       }
     }
+  }
+
+  function renderSavedCard(card: SavedPaymentMethod) {
+    const brand = card.card_brand ?? "Card";
+    const last4 = card.card_last_four ? ` •••• ${card.card_last_four}` : "";
+    return (
+      <div
+        key={card.id}
+        className="flex items-center justify-between px-3 py-2 bg-cyber-panel rounded-sm"
+      >
+        <div>
+          <div>
+            {card.name?.trim() || `${brand}${last4}`}
+            {card.is_default && (
+              <span className="ml-2 rounded-sm bg-cyber-primary/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-cyber-primary">
+                <FormattedMessage defaultMessage="Default" />
+              </span>
+            )}
+          </div>
+        </div>
+        <AsyncButton
+          className="rounded-sm p-2 bg-cyber-primary/20 text-sm"
+          onClick={async () => {
+            await createPayment("saved", { paymentMethodId: card.id });
+          }}
+        >
+          <FormattedMessage defaultMessage="Pay" />
+        </AsyncButton>
+      </div>
+    );
   }
 
   if (methodsLoading) {
@@ -326,6 +397,15 @@ export default function VmPaymentFlow({
             payment={payment}
             account={account}
             onPaid={handlePaymentComplete}
+            saveCard={type === "renewal" ? saveCard : undefined}
+            onSaveCardChange={
+              type === "renewal"
+                ? async (v) => {
+                    setSaveCard(v);
+                    await createPayment("revolut", { saveCard: v });
+                  }
+                : undefined
+            }
           />
         ) : (
           <div className="bg-cyber-panel-light p-4 rounded-sm space-y-4">
@@ -363,7 +443,11 @@ export default function VmPaymentFlow({
             </div>
 
             <div className="text-sm text-cyber-muted text-center">
-              <FormattedMessage defaultMessage="Complete your payment using the selected payment method. Changes will be applied automatically after confirmation." />
+              {isOffSession ? (
+                <FormattedMessage defaultMessage="Charging your saved card… This will be applied automatically once confirmed." />
+              ) : (
+                <FormattedMessage defaultMessage="Complete your payment using the selected payment method. Changes will be applied automatically after confirmation." />
+              )}
             </div>
           </div>
         )}
@@ -512,6 +596,15 @@ export default function VmPaymentFlow({
       <div className="space-y-2">
         {methods?.map((method) => renderPaymentMethod(method))}
       </div>
+
+      {type === "renewal" && savedCards.length > 0 && (
+        <div className="space-y-2">
+          <div className="text-sm text-cyber-muted">
+            <FormattedMessage defaultMessage="Pay with a saved card" />
+          </div>
+          {savedCards.map((card) => renderSavedCard(card))}
+        </div>
+      )}
 
       {onCancel && (
         <div className="flex justify-center pt-4">

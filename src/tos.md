@@ -1,7 +1,7 @@
 # Terms of Service and Acceptable Use
 
 **LNVPS**  
-_Last Updated: February 26, 2025_
+_Last Updated: July 15, 2026_
 
 Welcome to LNVPS, a trading name of Apex Strata Ltd, a company registered in Ireland. These Terms of Service ("Terms") govern your use of our Virtual Private Server (VPS) hosting services, website, and related offerings (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, please do not use our Services.
 
@@ -63,10 +63,21 @@ We reserve the right to suspend or terminate your Services without notice if we 
 
 ## 7. Payment and Billing
 
-- **Fees**: You agree to pay the fees for your chosen plan as outlined at checkout. All prices are in Euro (€) and include VAT where applicable.
+- **Fees**: You agree to pay the fees for your chosen plan as outlined at checkout. All prices are in Euro (€).
 - **Billing Cycle**: Payments are due in advance (monthly, quarterly, or annually, depending on your plan).
 - **Late Payment**: Overdue accounts may be suspended until payment is received.
 - **Refunds**: Refunds are available within 7 days of initial purchase, provided no excessive usage has occurred, as determined by us.
+
+### 7.1 Taxes (VAT)
+
+As Apex Strata Ltd is established in Ireland (an EU member state), Value Added Tax (VAT) is applied to your purchases as required by EU law:
+
+- **Applicable VAT**: Any VAT due is calculated and added at checkout, and the applied rate is shown on your invoice. Prices displayed may be exclusive of VAT; the total payable, including any VAT, is confirmed before you pay.
+- **Determining Your Location**: VAT treatment depends on your place of supply. We determine this from the country you declare in your account and/or checkout and, where necessary, from location evidence such as your IP address (resolved to a country). You agree to provide accurate location information and confirm that any country you declare is correct.
+- **Business Customers (Reverse Charge)**: If you are a VAT-registered business in an EU member state other than Ireland, you may provide a valid VAT identification number. Where the number is validated, the intra-EU business-to-business reverse charge applies (Article 196 of Council Directive 2006/112/EC), no VAT is charged by us, and you are responsible for accounting for VAT in your own member state. You are responsible for the accuracy and validity of any VAT number you provide.
+- **Irish and EU Consumers**: Customers in Ireland are charged Irish VAT. Consumers in other EU member states are charged VAT at the applicable rate for their location.
+- **Non-EU Customers**: Supplies to customers established outside the EU are generally outside the scope of EU VAT and no EU VAT is charged. You remain responsible for any taxes, duties, or charges that may apply in your own jurisdiction (e.g. local sales, use, or import taxes), which are not collected or remitted by us.
+- **Not Tax Advice**: The above is a general summary of how we apply VAT and does not constitute tax advice. You are responsible for your own tax obligations and should seek independent advice where needed.
 
 ---
 

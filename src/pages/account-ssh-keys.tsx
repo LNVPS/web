@@ -44,6 +44,7 @@ export function AccountSshKeysPage() {
 
   async function deleteKey(key: UserSshKey) {
     if (!login?.api) return;
+    if (key.vms && key.vms.length > 0) return;
     if (
       !confirm(
         formatMessage(
@@ -108,9 +109,29 @@ export function AccountSshKeysPage() {
                   />
                 </div>
               )}
+              {a.vms && a.vms.length > 0 && (
+                <div className="text-cyber-muted text-sm">
+                  <FormattedMessage
+                    defaultMessage="In use by {count, plural, one {VM} other {VMs}}: {vms}"
+                    values={{
+                      count: a.vms.length,
+                      vms: a.vms.map((id) => `#${id}`).join(", "),
+                    }}
+                  />
+                </div>
+              )}
             </div>
             <AsyncButton
-              className="bg-cyber-panel-light border-cyber-border hover:border-cyber-danger hover:shadow-neon-danger shrink-0"
+              className="bg-cyber-panel-light border-cyber-border hover:border-cyber-danger hover:shadow-neon-danger shrink-0 disabled:opacity-40 disabled:hover:border-cyber-border disabled:hover:shadow-none"
+              disabled={(a.vms?.length ?? 0) > 0}
+              title={
+                (a.vms?.length ?? 0) > 0
+                  ? formatMessage({
+                      defaultMessage:
+                        "This SSH key is in use by one or more VMs and cannot be deleted.",
+                    })
+                  : undefined
+              }
               onClick={() => deleteKey(a)}
             >
               <Icon name="delete" size={24} />

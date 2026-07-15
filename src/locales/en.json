@@ -596,6 +596,9 @@
   "QlsDcr": {
     "defaultMessage": "Action"
   },
+  "QuGLBN": {
+    "defaultMessage": "This SSH key is in use by one or more VMs and cannot be deleted."
+  },
   "R+j5Qu": {
     "defaultMessage": "No IPs assigned"
   },
@@ -688,6 +691,9 @@
   },
   "TqSTI0": {
     "defaultMessage": "Enable"
+  },
+  "UPP+wZ": {
+    "defaultMessage": "In use by {count, plural, one {VM} other {VMs}}: {vms}"
   },
   "UQc03N": {
     "defaultMessage": "Add new SSH key"

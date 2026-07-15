@@ -298,6 +298,8 @@ export interface UserSshKey {
   id: number;
   name: string;
   created?: string;
+  /** IDs of the user's active VMs currently using this SSH key */
+  vms?: Array<number>;
 }
 
 export type PaymentData =

@@ -552,10 +552,22 @@ export type CreateSubscriptionLineItemRequest =
   | { type: "asn_sponsoring"; asn: number }
   | { type: "dns_hosting"; domain: string };
 
+export type ReferralPayoutMode =
+  | "lightning_address"
+  | "nwc"
+  | "account_credit";
+
 export interface Referral {
   code: string;
   lightning_address?: string;
-  use_nwc: boolean;
+  /** Payout method: `lightning_address`, `nwc`, or `account_credit`. */
+  mode: ReferralPayoutMode;
+  /**
+   * Per-referrer commission override, as a whole percentage of a referred VM's
+   * first payment. `null`/undefined means the referred VM's company default
+   * rate applies instead.
+   */
+  referral_rate?: number | null;
   created: string;
 }
 
@@ -571,6 +583,20 @@ export interface ReferralPayout {
   created: string;
   is_paid: boolean;
   invoice?: string;
+  /** Payment preimage (hex), present once the payout has settled. */
+  pre_image?: string;
+}
+
+/** Per-referred-VM breakdown of the commission earned from its first payment. */
+export interface ReferralUsage {
+  vm_id: number;
+  created: string;
+  amount: number;
+  currency: string;
+  /** Effective commission rate applied (whole %). */
+  effective_rate: number;
+  /** Commission earned = amount * effective_rate% (smallest currency unit). */
+  commission: number;
 }
 
 export interface ReferralState extends Referral {
@@ -582,12 +608,14 @@ export interface ReferralState extends Referral {
 
 export interface ReferralSignupRequest {
   lightning_address?: string;
-  use_nwc?: boolean;
+  /** Payout method: `lightning_address` (default) or `nwc`. */
+  mode?: ReferralPayoutMode;
 }
 
 export interface ReferralPatchRequest {
   lightning_address?: string | null;
-  use_nwc?: boolean;
+  /** Payout method: `lightning_address`, `nwc`, or `account_credit`. */
+  mode?: ReferralPayoutMode;
 }
 
 export type PaginatedResponse<T> = ApiResponseBase & {
@@ -1233,6 +1261,20 @@ export class LNVpsApi {
   async updateReferral(req: ReferralPatchRequest) {
     const { data } = await this.#handleResponse<ApiResponse<Referral>>(
       await this.#req("/api/v1/referral", "PATCH", req),
+    );
+    return data;
+  }
+
+  async leaveReferral() {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/referral", "DELETE"),
+    );
+    return data;
+  }
+
+  async getReferralUsage() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<ReferralUsage>>>(
+      await this.#req("/api/v1/referral/usage", "GET"),
     );
     return data;
   }

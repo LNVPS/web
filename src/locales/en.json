@@ -17,6 +17,9 @@
   "/0TOL5": {
     "defaultMessage": "Amount"
   },
+  "/2Xcxs": {
+    "defaultMessage": "Leave Program"
+  },
   "/2t1lH": {
     "defaultMessage": "VM #{id}"
   },
@@ -26,8 +29,8 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Wallet"
   },
-  "/nQTeE": {
-    "defaultMessage": "Save Payout Settings"
+  "0CZsku": {
+    "defaultMessage": "Payouts go to the NWC wallet set in your account settings."
   },
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
@@ -107,11 +110,17 @@
   "3a5wL8": {
     "defaultMessage": "Active"
   },
+  "3aeXvu": {
+    "defaultMessage": "Get a referral code to share. You earn a commission when someone signs up with it and their VM makes its first payment. Pick where payouts should land, then activate."
+  },
   "3woNJO": {
     "defaultMessage": "Rules are evaluated in priority order (lowest first) before the default policy. Anti-spoofing protection is always enforced by the host."
   },
   "3xnP4c": {
     "defaultMessage": "Use NIP-44 encryption to send a secure message. This proves you own the private key associated with your account. Encrypt your message below and include the encrypted text in your email."
+  },
+  "3zEByO": {
+    "defaultMessage": "Activate Referral Code"
   },
   "43xNq5": {
     "defaultMessage": "Renew VPS #{id}"
@@ -176,9 +185,6 @@
   "6Tps09": {
     "defaultMessage": "Inactive"
   },
-  "6ZsOsA": {
-    "defaultMessage": "Join Referral Program"
-  },
   "6hEevT": {
     "defaultMessage": "Set default"
   },
@@ -236,6 +242,9 @@
   "8X6Kwp": {
     "defaultMessage": "Next payment"
   },
+  "8cnlb5": {
+    "defaultMessage": "Save Payout Route"
+  },
   "8ecw1u": {
     "defaultMessage": "Handles"
   },
@@ -266,6 +275,9 @@
   "A7Mqan": {
     "defaultMessage": "Loading renewal…"
   },
+  "ABL6b+": {
+    "defaultMessage": "Turn your code into commission"
+  },
   "AL9+3/": {
     "defaultMessage": "Couldn't find a subscription to renew for this VM."
   },
@@ -289,6 +301,9 @@
   },
   "B52Em/": {
     "defaultMessage": "Address line 1"
+  },
+  "B9v1WK": {
+    "defaultMessage": "Payout Route"
   },
   "BBiS7b": {
     "defaultMessage": "Stop VM"
@@ -446,6 +461,9 @@
   "Gd6Kbk": {
     "defaultMessage": "Not yet active"
   },
+  "GlTZFC": {
+    "defaultMessage": "Share this link. You earn a commission when someone signs up and their VM makes its first payment."
+  },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
   },
@@ -554,9 +572,6 @@
   "LHX6Oo": {
     "defaultMessage": "Expires {exp}"
   },
-  "LNcnLC": {
-    "defaultMessage": "Failed Referrals"
-  },
   "LR754a": {
     "defaultMessage": "Renews at"
   },
@@ -602,6 +617,9 @@
   "Niq27F": {
     "defaultMessage": "Subscription name (optional)"
   },
+  "NmK6zy": {
+    "defaultMessage": "Payment"
+  },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
@@ -626,6 +644,9 @@
   "P+08xT": {
     "defaultMessage": "Get Quote"
   },
+  "P/PGYR": {
+    "defaultMessage": "No referrals yet. Share your link to start converting."
+  },
   "P7PLVj": {
     "defaultMessage": "Date"
   },
@@ -643,9 +664,6 @@
   },
   "PucUfl": {
     "defaultMessage": "Select SSH Key:"
-  },
-  "QDA9xg": {
-    "defaultMessage": "Payout History"
   },
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
@@ -695,9 +713,6 @@
   "RahCRH": {
     "defaultMessage": "Expired"
   },
-  "RcshyP": {
-    "defaultMessage": "Earned ({currency})"
-  },
   "Ru62sn": {
     "defaultMessage": "Add a Nostr Wallet Connect wallet"
   },
@@ -710,9 +725,6 @@
   "SB//YQ": {
     "defaultMessage": "Order summary"
   },
-  "SMHOve": {
-    "defaultMessage": "Successful Referrals"
-  },
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
@@ -721,6 +733,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "No VM selected"
+  },
+  "SnyOdn": {
+    "defaultMessage": "converted"
   },
   "Ss0sWu": {
     "defaultMessage": "Pay Now"
@@ -740,6 +755,9 @@
   "TE4fIS": {
     "defaultMessage": "City"
   },
+  "TGPQYT": {
+    "defaultMessage": "{success} paid"
+  },
   "TH1fFo": {
     "defaultMessage": "Telegram"
   },
@@ -749,11 +767,11 @@
   "TT0vME": {
     "defaultMessage": "Rule limit reached."
   },
+  "TVBZb8": {
+    "defaultMessage": "{success} of {total} referrals paid"
+  },
   "Tbo377": {
     "defaultMessage": "Billing"
-  },
-  "TieXig": {
-    "defaultMessage": "Payouts will be sent to the NWC wallet configured in your account settings."
   },
   "TqSTI0": {
     "defaultMessage": "Enable"
@@ -812,9 +830,6 @@
   "VzzYJk": {
     "defaultMessage": "Create"
   },
-  "W+1MOm": {
-    "defaultMessage": "Method"
-  },
   "WUV28A": {
     "defaultMessage": "Saving…"
   },
@@ -854,6 +869,9 @@
   "Yl8GBP": {
     "defaultMessage": "Tax ID"
   },
+  "Ysr8td": {
+    "defaultMessage": "Earned"
+  },
   "YyojwF": {
     "defaultMessage": "Configuration Changes:"
   },
@@ -874,9 +892,6 @@
   },
   "ZlYFmj": {
     "defaultMessage": "Terms of Service for LNVPS — Bitcoin Lightning VPS provider. Read our usage policies, acceptable use guidelines, and service terms."
-  },
-  "aAnyb9": {
-    "defaultMessage": "Share this link. When others sign up and pay, you earn a payout."
   },
   "an3Zx3": {
     "defaultMessage": "Manage the SSH keys used to access your VMs."
@@ -907,6 +922,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "Display Currency:"
+  },
+  "c0b5XV": {
+    "defaultMessage": "Rate"
   },
   "c78ZVJ": {
     "defaultMessage": "DNS changes may take up to 24–48 hours to propagate"
@@ -1016,6 +1034,9 @@
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
   },
+  "gWp9QV": {
+    "defaultMessage": "{failed} never paid"
+  },
   "gYR5sK": {
     "defaultMessage": "This is past its grace period and may be deleted at any time. Renew now to keep it."
   },
@@ -1024,6 +1045,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "Console"
+  },
+  "gmu1tl": {
+    "defaultMessage": "VM"
   },
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"
@@ -1058,9 +1082,6 @@
   "icn2DS": {
     "defaultMessage": "(Recommended)"
   },
-  "iluJkV": {
-    "defaultMessage": "Payout Settings"
-  },
   "iuQLCB": {
     "defaultMessage": "Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default."
   },
@@ -1084,6 +1105,9 @@
   },
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."
+  },
+  "jtkU3K": {
+    "defaultMessage": "Conversion"
   },
   "jvo0vs": {
     "defaultMessage": "Save"
@@ -1160,8 +1184,14 @@
   "mJPBXd": {
     "defaultMessage": "Encrypted message (copy and include in your email):"
   },
+  "mMug3Z": {
+    "defaultMessage": "earned · {currency}"
+  },
   "mOR+qH": {
     "defaultMessage": "Copy to Clipboard"
+  },
+  "mV5FZi": {
+    "defaultMessage": "Leave Referral Program"
   },
   "mXu0jm": {
     "defaultMessage": "Domain Setup"
@@ -1171,6 +1201,9 @@
   },
   "mtEKFV": {
     "defaultMessage": "Processing…"
+  },
+  "mznk9z": {
+    "defaultMessage": "Commission"
   },
   "n9fdaJ": {
     "defaultMessage": "Unverified"
@@ -1183,6 +1216,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Renew"
+  },
+  "nidU9E": {
+    "defaultMessage": "{rate} commission"
   },
   "nm81YC": {
     "defaultMessage": "Loading VPS offers..."
@@ -1214,6 +1250,9 @@
   "oXGNZ+": {
     "defaultMessage": "VM #{id} Terminal:"
   },
+  "oswGmn": {
+    "defaultMessage": "You can't leave while payout history exists."
+  },
   "p4N05H": {
     "defaultMessage": "Upload"
   },
@@ -1225,6 +1264,9 @@
   },
   "pgLgIU": {
     "defaultMessage": "Read the full update"
+  },
+  "pus6h6": {
+    "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
   },
   "qJRR8N": {
     "defaultMessage": "Loading IP blocks..."
@@ -1322,9 +1364,6 @@
   "uJV0wU": {
     "defaultMessage": "IP Address"
   },
-  "uN7rbm": {
-    "defaultMessage": "Join the referral program to earn payouts when others sign up using your code. Choose how you want to receive payouts."
-  },
   "uPNlBw": {
     "defaultMessage": "Email: {email}"
   },
@@ -1333,6 +1372,9 @@
   },
   "uqUeK9": {
     "defaultMessage": "Decrypt a message sent to you by support."
+  },
+  "uqe58g": {
+    "defaultMessage": "Breakdown"
   },
   "v2BRjN": {
     "defaultMessage": "Subject *"
@@ -1414,6 +1456,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(No DNS change required)"
+  },
+  "y9xHR9": {
+    "defaultMessage": "Payouts"
   },
   "yDjevn": {
     "defaultMessage": "PGP"

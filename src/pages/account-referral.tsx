@@ -1,45 +1,69 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
   ReferralEarning,
   ReferralPayout,
+  ReferralPayoutMode,
   ReferralSignupRequest,
   ReferralState,
+  ReferralUsage,
 } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import { CopyButton } from "../components/copy-button";
 import { CostAmount } from "../components/cost";
-import { FormattedDate, FormattedMessage } from "react-intl";
+import { FormattedDate, FormattedMessage, FormattedNumber } from "react-intl";
 
-type PayoutMethod = "lightning" | "nwc";
+// `account_credit` is a defined-but-unimplemented server mode, so the UI only
+// offers the two selectable payout methods.
+type SelectableMode = "lightning_address" | "nwc";
 
-function deriveMethod(state: {
-  lightning_address?: string;
-  use_nwc: boolean;
-}): PayoutMethod {
-  return state.use_nwc ? "nwc" : "lightning";
+function toSelectable(mode: ReferralPayoutMode): SelectableMode {
+  return mode === "nwc" ? "nwc" : "lightning_address";
+}
+
+/** Small uppercase section marker used to label each block of the page. */
+function Eyebrow({ children }: { children: ReactNode }) {
+  return (
+    <div className="flex items-center gap-2 text-cyber-primary">
+      <span className="h-px w-4 bg-cyber-border-bright" />
+      <span className="text-xs uppercase tracking-[0.25em] font-medium">
+        {children}
+      </span>
+    </div>
+  );
 }
 
 export function AccountReferralPage() {
   const login = useLogin();
   const [state, setState] = useState<ReferralState | undefined>();
+  const [usage, setUsage] = useState<Array<ReferralUsage>>([]);
   const [notEnrolled, setNotEnrolled] = useState(false);
   const [error, setError] = useState<string>();
 
-  const [signupMethod, setSignupMethod] = useState<PayoutMethod>("lightning");
+  const [signupMethod, setSignupMethod] =
+    useState<SelectableMode>("lightning_address");
   const [signupAddress, setSignupAddress] = useState("");
 
-  const [patchMethod, setPatchMethod] = useState<PayoutMethod>("lightning");
+  const [patchMethod, setPatchMethod] =
+    useState<SelectableMode>("lightning_address");
   const [patchAddress, setPatchAddress] = useState("");
+
+  function applyState(s: ReferralState) {
+    setState(s);
+    setPatchMethod(toSelectable(s.mode));
+    setPatchAddress(s.lightning_address ?? "");
+  }
 
   useEffect(() => {
     if (!login?.api) return;
     login.api
       .getReferralState()
       .then((s) => {
-        setState(s);
-        setPatchMethod(deriveMethod(s));
-        setPatchAddress(s.lightning_address ?? "");
+        applyState(s);
+        login.api
+          ?.getReferralUsage()
+          .then(setUsage)
+          .catch(() => setUsage([]));
       })
       .catch(() => {
         setNotEnrolled(true);
@@ -51,15 +75,17 @@ export function AccountReferralPage() {
     setError(undefined);
     const req: ReferralSignupRequest =
       signupMethod === "nwc"
-        ? { use_nwc: true }
-        : { lightning_address: signupAddress.trim() };
+        ? { mode: "nwc" }
+        : { mode: "lightning_address", lightning_address: signupAddress.trim() };
     try {
       await login.api.enrollReferral(req);
       const s = await login.api.getReferralState();
-      setState(s);
-      setPatchMethod(deriveMethod(s));
-      setPatchAddress(s.lightning_address ?? "");
+      applyState(s);
       setNotEnrolled(false);
+      login.api
+        .getReferralUsage()
+        .then(setUsage)
+        .catch(() => setUsage([]));
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -71,20 +97,37 @@ export function AccountReferralPage() {
     try {
       const updated = await login.api.updateReferral(
         patchMethod === "nwc"
-          ? { use_nwc: true, lightning_address: null }
-          : { use_nwc: false, lightning_address: patchAddress.trim() || null },
+          ? { mode: "nwc", lightning_address: null }
+          : {
+              mode: "lightning_address",
+              lightning_address: patchAddress.trim() || null,
+            },
       );
       setState((prev) =>
         prev
           ? {
               ...prev,
               lightning_address: updated.lightning_address,
-              use_nwc: updated.use_nwc,
+              mode: updated.mode,
+              referral_rate: updated.referral_rate,
             }
           : prev,
       );
-      setPatchMethod(deriveMethod(updated));
+      setPatchMethod(toSelectable(updated.mode));
       setPatchAddress(updated.lightning_address ?? "");
+    } catch (e) {
+      if (e instanceof Error) setError(e.message);
+    }
+  }
+
+  async function handleLeave() {
+    if (!login?.api) return;
+    setError(undefined);
+    try {
+      await login.api.leaveReferral();
+      setState(undefined);
+      setUsage([]);
+      setNotEnrolled(true);
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -92,117 +135,320 @@ export function AccountReferralPage() {
 
   if (!login) return;
 
+  // ── Not enrolled: activation call-to-action ────────────────────────────────
   if (notEnrolled) {
     return (
-      <div className="flex flex-col gap-4">
-        <div className="text-xl">
+      <div className="flex flex-col gap-6 max-w-3xl">
+        <Eyebrow>
           <FormattedMessage defaultMessage="Referral Program" />
+        </Eyebrow>
+        <div className="flex flex-col gap-2">
+          <h1 className="text-2xl text-cyber-text-bright">
+            <FormattedMessage defaultMessage="Turn your code into commission" />
+          </h1>
+          <p className="text-cyber-muted text-sm max-w-prose">
+            <FormattedMessage defaultMessage="Get a referral code to share. You earn a commission when someone signs up with it and their VM makes its first payment. Pick where payouts should land, then activate." />
+          </p>
         </div>
-        <p className="text-cyber-muted text-sm">
-          <FormattedMessage defaultMessage="Join the referral program to earn payouts when others sign up using your code. Choose how you want to receive payouts." />
-        </p>
-        <PayoutMethodSelector
-          method={signupMethod}
-          address={signupAddress}
-          onMethodChange={setSignupMethod}
-          onAddressChange={setSignupAddress}
-        />
-        <div>
-          <AsyncButton onClick={handleEnroll}>
-            <FormattedMessage defaultMessage="Join Referral Program" />
-          </AsyncButton>
+        <div className="rounded-sm border border-cyber-border bg-cyber-panel p-5 flex flex-col gap-4">
+          <Eyebrow>
+            <FormattedMessage defaultMessage="Payout Route" />
+          </Eyebrow>
+          <PayoutMethodSelector
+            method={signupMethod}
+            address={signupAddress}
+            onMethodChange={setSignupMethod}
+            onAddressChange={setSignupAddress}
+          />
+          <div>
+            <AsyncButton
+              className="bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+              onClick={handleEnroll}
+            >
+              <FormattedMessage defaultMessage="Activate Referral Code" />
+            </AsyncButton>
+          </div>
+          {error && (
+            <b className="text-cyber-danger text-sm break-words">{error}</b>
+          )}
         </div>
-        {error && <b className="text-cyber-danger">{error}</b>}
       </div>
     );
   }
 
   if (!state) return;
 
+  const shareLink = `${window.location.origin}/?ref=${state.code}`;
+  const success = state.referrals_success;
+  const failed = state.referrals_failed;
+  const total = success + failed;
+  const rate = total > 0 ? success / total : 0;
+  const canLeave = state.payouts.length === 0;
+
   return (
-    <div className="flex flex-col gap-4">
-      <div className="text-xl">
-        <FormattedMessage defaultMessage="Referral Program" />
-      </div>
-
-      <div className="bg-cyber-panel rounded-sm px-4 py-3 flex flex-col gap-2">
-        <div className="text-sm text-cyber-muted">
-          <FormattedMessage defaultMessage="Your referral code" />
-        </div>
-        <pre className="select-all text-cyber-primary text-lg font-mono">
-          {state.code}
-        </pre>
-        <div className="text-sm text-cyber-muted">
-          <FormattedMessage defaultMessage="Share link" />
-        </div>
-        <div className="flex gap-2 items-center">
-          <pre className="select-all text-sm font-mono bg-cyber-bg rounded-sm px-2 py-1 flex-1 break-all">
-            {`${window.location.origin}/?ref=${state.code}`}
-          </pre>
-          <CopyButton text={`${window.location.origin}/?ref=${state.code}`} />
-        </div>
-        <div className="text-xs text-cyber-muted">
-          <FormattedMessage defaultMessage="Share this link. When others sign up and pay, you earn a payout." />
+    <div className="flex flex-col gap-10 max-w-3xl">
+      {/* ── Header ─────────────────────────────────────────────────────────── */}
+      <div className="flex items-center justify-between gap-4">
+        <Eyebrow>
+          <FormattedMessage defaultMessage="Referral Program" />
+        </Eyebrow>
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-cyber-primary">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-cyber-primary opacity-60 animate-ping motion-reduce:hidden" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-cyber-primary" />
+          </span>
+          <FormattedMessage defaultMessage="Active" />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <ReferralStat
-          label={<FormattedMessage defaultMessage="Successful Referrals" />}
-          value={String(state.referrals_success)}
-        />
-        <ReferralStat
-          label={<FormattedMessage defaultMessage="Failed Referrals" />}
-          value={String(state.referrals_failed)}
-        />
-        {state.earned.map((e) => (
-          <EarningStat key={e.currency} earning={e} />
-        ))}
-      </div>
+      {/* ── Hero: the code as a broadcast beacon ───────────────────────────── */}
+      <div className="relative rounded-sm border border-cyber-border-bright bg-cyber-darker px-6 py-8 shadow-neon-inset overflow-hidden">
+        {/* targeting-reticle corners */}
+        <span className="pointer-events-none absolute top-2 left-2 h-3 w-3 border-t border-l border-cyber-primary/60" />
+        <span className="pointer-events-none absolute top-2 right-2 h-3 w-3 border-t border-r border-cyber-primary/60" />
+        <span className="pointer-events-none absolute bottom-2 left-2 h-3 w-3 border-b border-l border-cyber-primary/60" />
+        <span className="pointer-events-none absolute bottom-2 right-2 h-3 w-3 border-b border-r border-cyber-primary/60" />
 
-      <div className="text-xl">
-        <FormattedMessage defaultMessage="Payout Settings" />
-      </div>
-      <PayoutMethodSelector
-        method={patchMethod}
-        address={patchAddress}
-        onMethodChange={setPatchMethod}
-        onAddressChange={setPatchAddress}
-      />
-      <div>
-        <AsyncButton onClick={handleUpdate}>
-          <FormattedMessage defaultMessage="Save Payout Settings" />
-        </AsyncButton>
-      </div>
-      {error && <b className="text-cyber-danger">{error}</b>}
-
-      {state.payouts.length > 0 && (
-        <>
-          <div className="text-xl">
-            <FormattedMessage defaultMessage="Payout History" />
+        <div className="flex flex-col gap-1">
+          <span className="text-xs uppercase tracking-[0.3em] text-cyber-muted">
+            <FormattedMessage defaultMessage="Your referral code" />
+          </span>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <span className="text-cyber-muted font-mono text-lg select-none">
+              ref://
+            </span>
+            <span className="text-cyber-primary font-bold font-mono text-4xl md:text-5xl select-all break-all [text-shadow:0_0_14px_oklch(0.8_0.3_142_/_0.45)]">
+              {state.code}
+            </span>
+            {state.referral_rate != null && (
+              <span className="ml-auto rounded-sm border border-cyber-border bg-cyber-panel px-2 py-1 text-xs text-cyber-accent">
+                <FormattedMessage
+                  defaultMessage="{rate} commission"
+                  values={{
+                    rate: (
+                      <FormattedNumber
+                        value={state.referral_rate / 100}
+                        style="percent"
+                        maximumFractionDigits={2}
+                      />
+                    ),
+                  }}
+                />
+              </span>
+            )}
           </div>
-          <table className="table bg-cyber-panel rounded-sm text-center">
-            <thead>
-              <tr>
-                <th>
-                  <FormattedMessage defaultMessage="Date" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Amount" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Status" />
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {state.payouts.map((p) => (
-                <PayoutRow key={p.id} payout={p} />
-              ))}
-            </tbody>
-          </table>
-        </>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-2">
+          <span className="text-xs uppercase tracking-[0.3em] text-cyber-muted">
+            <FormattedMessage defaultMessage="Share link" />
+          </span>
+          <div className="flex gap-2 items-stretch">
+            <div className="flex-1 flex items-center gap-2 bg-cyber-panel border border-cyber-border rounded-sm px-3 py-2 font-mono text-sm min-w-0">
+              <span className="text-cyber-primary select-none">$</span>
+              <span className="select-all truncate text-cyber-text">
+                {shareLink}
+              </span>
+            </div>
+            <CopyButton text={shareLink} />
+          </div>
+          <p className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Share this link. You earn a commission when someone signs up and their VM makes its first payment." />
+          </p>
+        </div>
+      </div>
+
+      {/* ── Conversion meter ───────────────────────────────────────────────── */}
+      <div className="flex flex-col gap-4">
+        <Eyebrow>
+          <FormattedMessage defaultMessage="Conversion" />
+        </Eyebrow>
+        {total > 0 ? (
+          <div className="flex flex-col gap-3">
+            <div className="flex items-end justify-between gap-4">
+              <div className="flex items-baseline gap-2">
+                <span className="text-4xl font-bold font-mono text-cyber-primary tabular-nums">
+                  <FormattedNumber
+                    value={rate}
+                    style="percent"
+                    maximumFractionDigits={0}
+                  />
+                </span>
+                <span className="text-xs uppercase tracking-widest text-cyber-muted">
+                  <FormattedMessage defaultMessage="converted" />
+                </span>
+              </div>
+              <span className="text-sm font-mono text-cyber-muted tabular-nums">
+                <FormattedMessage
+                  defaultMessage="{success} of {total} referrals paid"
+                  values={{ success, total }}
+                />
+              </span>
+            </div>
+            <div className="flex h-3 w-full overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
+              <div
+                className="bg-cyber-primary transition-all duration-500"
+                style={{ width: `${rate * 100}%` }}
+                aria-hidden
+              />
+              <div
+                className="bg-cyber-danger/40 transition-all duration-500"
+                style={{ width: `${(1 - rate) * 100}%` }}
+                aria-hidden
+              />
+            </div>
+            <div className="flex gap-6 text-xs font-mono">
+              <span className="flex items-center gap-2 text-cyber-text">
+                <span className="h-2 w-2 rounded-sm bg-cyber-primary" />
+                <FormattedMessage
+                  defaultMessage="{success} paid"
+                  values={{ success }}
+                />
+              </span>
+              <span className="flex items-center gap-2 text-cyber-muted">
+                <span className="h-2 w-2 rounded-sm bg-cyber-danger/40" />
+                <FormattedMessage
+                  defaultMessage="{failed} never paid"
+                  values={{ failed }}
+                />
+              </span>
+            </div>
+          </div>
+        ) : (
+          <p className="text-sm text-cyber-muted">
+            <FormattedMessage defaultMessage="No referrals yet. Share your link to start converting." />
+          </p>
+        )}
+      </div>
+
+      {/* ── Earnings ───────────────────────────────────────────────────────── */}
+      {state.earned.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <Eyebrow>
+            <FormattedMessage defaultMessage="Earned" />
+          </Eyebrow>
+          <div className="flex flex-wrap gap-3">
+            {state.earned.map((e) => (
+              <EarningChip key={e.currency} earning={e} />
+            ))}
+          </div>
+        </div>
       )}
+
+      {/* ── Referral breakdown ─────────────────────────────────────────────── */}
+      {usage.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <Eyebrow>
+            <FormattedMessage defaultMessage="Breakdown" />
+          </Eyebrow>
+          <div className="overflow-hidden rounded-sm border border-cyber-border">
+            <table className="table text-left">
+              <thead>
+                <tr>
+                  <th className="!text-left">
+                    <FormattedMessage defaultMessage="VM" />
+                  </th>
+                  <th className="!text-left">
+                    <FormattedMessage defaultMessage="Date" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Payment" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Rate" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Commission" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {usage.map((u) => (
+                  <UsageRow key={u.vm_id} usage={u} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* ── Payout history ─────────────────────────────────────────────────── */}
+      {state.payouts.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <Eyebrow>
+            <FormattedMessage defaultMessage="Payouts" />
+          </Eyebrow>
+          <div className="overflow-hidden rounded-sm border border-cyber-border">
+            <table className="table text-left">
+              <thead>
+                <tr>
+                  <th className="!text-left">
+                    <FormattedMessage defaultMessage="Date" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Amount" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Status" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {state.payouts.map((p) => (
+                  <PayoutRow key={p.id} payout={p} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* ── Payout settings ────────────────────────────────────────────────── */}
+      <div className="flex flex-col gap-4">
+        <Eyebrow>
+          <FormattedMessage defaultMessage="Payout Route" />
+        </Eyebrow>
+        <PayoutMethodSelector
+          method={patchMethod}
+          address={patchAddress}
+          onMethodChange={setPatchMethod}
+          onAddressChange={setPatchAddress}
+        />
+        <div>
+          <AsyncButton onClick={handleUpdate}>
+            <FormattedMessage defaultMessage="Save Payout Route" />
+          </AsyncButton>
+        </div>
+        {error && (
+          <b className="text-cyber-danger text-sm break-words">{error}</b>
+        )}
+      </div>
+
+      {/* ── Leave program ──────────────────────────────────────────────────── */}
+      <div className="flex flex-col gap-3 border-t border-cyber-border pt-6">
+        <Eyebrow>
+          <FormattedMessage defaultMessage="Leave Program" />
+        </Eyebrow>
+        {canLeave ? (
+          <>
+            <p className="text-cyber-muted text-sm">
+              <FormattedMessage defaultMessage="Leave any time. Your code stops earning and can't be reused." />
+            </p>
+            <div>
+              <AsyncButton
+                className="!bg-cyber-danger/15 !border-cyber-danger !text-cyber-danger hover:!bg-cyber-danger/25 hover:!border-cyber-danger hover:!text-cyber-danger hover:!shadow-none"
+                onClick={handleLeave}
+              >
+                <FormattedMessage defaultMessage="Leave Referral Program" />
+              </AsyncButton>
+            </div>
+          </>
+        ) : (
+          <p className="text-cyber-muted text-sm">
+            <FormattedMessage defaultMessage="You can't leave while payout history exists." />
+          </p>
+        )}
+      </div>
     </div>
   );
 }
@@ -213,34 +459,45 @@ function PayoutMethodSelector({
   onMethodChange,
   onAddressChange,
 }: {
-  method: PayoutMethod;
+  method: SelectableMode;
   address: string;
-  onMethodChange: (m: PayoutMethod) => void;
+  onMethodChange: (m: SelectableMode) => void;
   onAddressChange: (v: string) => void;
 }) {
+  const options: Array<{ value: SelectableMode; label: ReactNode }> = [
+    {
+      value: "lightning_address",
+      label: <FormattedMessage defaultMessage="Lightning Address" />,
+    },
+    { value: "nwc", label: <FormattedMessage defaultMessage="NWC Wallet" /> },
+  ];
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex gap-6">
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="radio"
-            name="payout-method"
-            checked={method === "lightning"}
-            onChange={() => onMethodChange("lightning")}
-          />
-          <FormattedMessage defaultMessage="Lightning Address" />
-        </label>
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="radio"
-            name="payout-method"
-            checked={method === "nwc"}
-            onChange={() => onMethodChange("nwc")}
-          />
-          <FormattedMessage defaultMessage="NWC Wallet" />
-        </label>
+      <div
+        role="radiogroup"
+        className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-cyber-border bg-cyber-border"
+      >
+        {options.map((o) => {
+          const active = method === o.value;
+          return (
+            <button
+              key={o.value}
+              type="button"
+              role="radio"
+              aria-checked={active}
+              onClick={() => onMethodChange(o.value)}
+              className={
+                active
+                  ? "px-4 py-2 text-sm text-cyber-primary bg-cyber-primary/15"
+                  : "px-4 py-2 text-sm text-cyber-muted bg-cyber-panel hover:text-cyber-text"
+              }
+            >
+              {o.label}
+            </button>
+          );
+        })}
       </div>
-      {method === "lightning" && (
+      {method === "lightning_address" && (
         <input
           type="text"
           placeholder="you@wallet.example"
@@ -250,40 +507,25 @@ function PayoutMethodSelector({
       )}
       {method === "nwc" && (
         <p className="text-cyber-muted text-sm">
-          <FormattedMessage defaultMessage="Payouts will be sent to the NWC wallet configured in your account settings." />
+          <FormattedMessage defaultMessage="Payouts go to the NWC wallet set in your account settings." />
         </p>
       )}
     </div>
   );
 }
 
-function ReferralStat({
-  label,
-  value,
-}: {
-  label: React.ReactNode;
-  value: string;
-}) {
+function EarningChip({ earning }: { earning: ReferralEarning }) {
   return (
-    <div className="bg-cyber-panel rounded-sm px-4 py-3 flex flex-col gap-1">
-      <div className="text-xl font-mono">{value}</div>
-      <div className="text-xs text-cyber-muted">{label}</div>
-    </div>
-  );
-}
-
-function EarningStat({ earning }: { earning: ReferralEarning }) {
-  return (
-    <div className="bg-cyber-panel rounded-sm px-4 py-3 flex flex-col gap-1">
-      <div className="text-xl font-mono">
+    <div className="flex flex-col gap-1 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 min-w-32">
+      <div className="text-xl font-mono text-cyber-primary">
         <CostAmount
           cost={{ currency: earning.currency, amount: earning.amount }}
           converted={false}
         />
       </div>
-      <div className="text-xs text-cyber-muted">
+      <div className="text-[0.65rem] uppercase tracking-widest text-cyber-muted">
         <FormattedMessage
-          defaultMessage="Earned ({currency})"
+          defaultMessage="earned · {currency}"
           values={{ currency: earning.currency }}
         />
       </div>
@@ -291,10 +533,45 @@ function EarningStat({ earning }: { earning: ReferralEarning }) {
   );
 }
 
+function UsageRow({ usage }: { usage: ReferralUsage }) {
+  return (
+    <tr>
+      <td className="font-mono text-cyber-accent">#{usage.vm_id}</td>
+      <td className="text-cyber-muted">
+        <FormattedDate
+          value={usage.created}
+          year="numeric"
+          month="short"
+          day="numeric"
+        />
+      </td>
+      <td className="text-right font-mono">
+        <CostAmount
+          cost={{ currency: usage.currency, amount: usage.amount }}
+          converted={false}
+        />
+      </td>
+      <td className="text-right font-mono text-cyber-muted">
+        <FormattedNumber
+          value={usage.effective_rate / 100}
+          style="percent"
+          maximumFractionDigits={2}
+        />
+      </td>
+      <td className="text-right font-mono text-cyber-primary">
+        <CostAmount
+          cost={{ currency: usage.currency, amount: usage.commission }}
+          converted={false}
+        />
+      </td>
+    </tr>
+  );
+}
+
 function PayoutRow({ payout }: { payout: ReferralPayout }) {
   return (
     <tr>
-      <td className="pl-4">
+      <td className="text-cyber-muted">
         <FormattedDate
           value={payout.created}
           year="numeric"
@@ -304,17 +581,21 @@ function PayoutRow({ payout }: { payout: ReferralPayout }) {
           minute="2-digit"
         />
       </td>
-      <td>
+      <td className="text-right font-mono">
         <CostAmount
           cost={{ currency: payout.currency, amount: payout.amount }}
           converted={false}
         />
       </td>
-      <td>
+      <td className="text-right">
         {payout.is_paid ? (
-          <FormattedMessage defaultMessage="Paid" />
+          <span className="inline-block rounded-sm border border-cyber-border-bright bg-cyber-primary/15 px-2 py-0.5 text-xs uppercase tracking-wider text-cyber-primary">
+            <FormattedMessage defaultMessage="Paid" />
+          </span>
         ) : (
-          <FormattedMessage defaultMessage="Pending" />
+          <span className="inline-block rounded-sm border border-cyber-border bg-cyber-warning/15 px-2 py-0.5 text-xs uppercase tracking-wider text-cyber-warning">
+            <FormattedMessage defaultMessage="Pending" />
+          </span>
         )}
       </td>
     </tr>

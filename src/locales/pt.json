@@ -1,6 +1,9 @@
 {
-  "+8AmJ0": {
-    "defaultMessage": "Desativar a renovação automática"
+  "++XeyK": {
+    "defaultMessage": "Chave Nostr"
+  },
+  "+3NyB6": {
+    "defaultMessage": "De saída / Em direção ao destino."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{ano} other{anos}}"
@@ -8,23 +11,44 @@
   "+SM72m": {
     "defaultMessage": "Chave pública do destinatário (npub/nprofile/hex):"
   },
+  "+UjQFc": {
+    "defaultMessage": "Regras e políticas"
+  },
+  "+sQCsu": {
+    "defaultMessage": "Efetuar o pagamento completo."
+  },
   "/0TOL5": {
     "defaultMessage": "Valor"
+  },
+  "/2Xcxs": {
+    "defaultMessage": "Programa de licença/afastamento."
+  },
+  "/2t1lH": {
+    "defaultMessage": "VM nº{id}"
   },
   "/GCoTA": {
     "defaultMessage": "Claro/a"
   },
+  "/K+qGR": {
+    "defaultMessage": "Gerar chave Nostr"
+  },
+  "/PE1Wn": {
+    "defaultMessage": "Nome da chave (ex.: MacBook)"
+  },
   "/QkDVJ": {
     "defaultMessage": "Carteira NWC"
   },
-  "/nQTeE": {
-    "defaultMessage": "Guardar as configurações de pagamento."
-  },
-  "063dCM": {
-    "defaultMessage": "Configure uma cadeia de conexão NWC nas configurações da conta e, em seguida, ative a renovação automática para que os pagamentos das renovações das VMs sejam efetuados automaticamente."
+  "/tiBYY": {
+    "defaultMessage": "Continuar com {provider}"
   },
   "0HkBaC": {
     "defaultMessage": "Escolha um dos seguintes métodos para verificar o seu domínio:"
+  },
+  "0QLzxo": {
+    "defaultMessage": "Protocolo"
+  },
+  "0gkn9c": {
+    "defaultMessage": "A sua subscrição do espaço de endereços IP foi criada. Efetue o primeiro pagamento para alocar o espaço de endereços e ativar a subscrição."
   },
   "0h/lPM": {
     "defaultMessage": "Atualizar"
@@ -38,6 +62,9 @@
   "0rlAUP": {
     "defaultMessage": "Autenticado como: {key}"
   },
+  "0t1qvq": {
+    "defaultMessage": "Adicionar Regra"
+  },
   "13cluZ": {
     "defaultMessage": "Adicionar chave SSH:"
   },
@@ -49,6 +76,9 @@
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# h} other{# horas}} {m,plural,one{# min} other{# min.}}"
+  },
+  "1aBLDj": {
+    "defaultMessage": "Pague através de qualquer carteira Lightning para renovar esta assinatura."
   },
   "1v7S+3": {
     "defaultMessage": "Adicionar Domínio Nostr"
@@ -62,8 +92,8 @@
   "20Sod8": {
     "defaultMessage": "Processador:"
   },
-  "2LslN1": {
-    "defaultMessage": "Atualize agora."
+  "2QrTo0": {
+    "defaultMessage": "Novo pedido de espaço de endereço IP"
   },
   "2RFWLf": {
     "defaultMessage": "Teste de velocidade"
@@ -77,17 +107,56 @@
   "36aVfS": {
     "defaultMessage": "Mensagem direta no Nostr."
   },
+  "3GLHv9": {
+    "defaultMessage": "autenticar"
+  },
+  "3NsyM4": {
+    "defaultMessage": "Mensagem direta criptografada NIP-17."
+  },
+  "3VI9mt": {
+    "defaultMessage": "Guardar alterações"
+  },
   "3WU2Fe": {
     "defaultMessage": "Localização: {region}"
+  },
+  "3a5wL8": {
+    "defaultMessage": "Ativo(a)"
+  },
+  "3aeXvu": {
+    "defaultMessage": "Obtenha um código de indicação para partilhar. Receberá uma comissão quando alguém se inscrever através desse código e a sua carteira virtual efetuar o primeiro pagamento. Escolha onde deseja receber os pagamentos e, em seguida, ative-o."
+  },
+  "3vxkus": {
+    "defaultMessage": "Nada para guardar — o seu dispositivo (Face ID, Touch ID, Windows Hello ou uma chave de segurança) protege a conta."
+  },
+  "3woNJO": {
+    "defaultMessage": "As regras são avaliadas por ordem de prioridade (da mais baixa para a mais alta) antes da política predefinida. A proteção contra falsificação é sempre aplicada pelo servidor."
   },
   "3xnP4c": {
     "defaultMessage": "Utilize a encriptação NIP-44 para enviar uma mensagem segura. Isso comprova que você é o proprietário da chave privada associada à sua conta. Encripte sua mensagem abaixo e inclua o texto encriptado no seu e-mail."
   },
+  "3zEByO": {
+    "defaultMessage": "Ative o código de indicação."
+  },
+  "43xNq5": {
+    "defaultMessage": "Renove o seu VPS nº{id}"
+  },
   "47FYwb": {
     "defaultMessage": "Cancelar"
   },
+  "48dUkY": {
+    "defaultMessage": "+ {fee} configuração; preparar; organizar"
+  },
+  "4PKxPs": {
+    "defaultMessage": "Desvincular"
+  },
+  "4PkXEE": {
+    "defaultMessage": "Terminal serial"
+  },
   "4X/Ixq": {
     "defaultMessage": "Mensagem descriptografada:"
+  },
+  "4cMKIO": {
+    "defaultMessage": "Planos recorrentes que mantêm seus serviços ativos."
   },
   "4j0zpr": {
     "defaultMessage": "Mínimo: {min} núcleos"
@@ -101,11 +170,11 @@
   "4upFOv": {
     "defaultMessage": "Tem alguma questão sobre o fornecimento de serviços, faturas, tratamento de denúncias ou um problema específico relacionado a um serviço? Envie uma mensagem e a equipa da LNVPS entrará em contacto consigo o mais breve possível."
   },
+  "5/Pb3D": {
+    "defaultMessage": "Assinaturas ativas"
+  },
   "53RN0g": {
     "defaultMessage": "Continue para o pagamento."
-  },
-  "5JcXdV": {
-    "defaultMessage": "Criar Conta"
   },
   "5QYdPU": {
     "defaultMessage": "Hora de início"
@@ -116,14 +185,17 @@
   "5elgIe": {
     "defaultMessage": "Erro:"
   },
+  "5ow6dg": {
+    "defaultMessage": "WhatsApp"
+  },
+  "5uQfFj": {
+    "defaultMessage": "O que é o Nostr?"
+  },
   "5y2qWO": {
     "defaultMessage": "A conectar..."
   },
-  "62nsdy": {
-    "defaultMessage": "Tentar novamente"
-  },
-  "6OWS4p": {
-    "defaultMessage": "A processar..."
+  "6Auf1w": {
+    "defaultMessage": "Não foi possível efetuar o início de sessão. Tente novamente."
   },
   "6SfJaf": {
     "defaultMessage": "Atualize para"
@@ -131,8 +203,8 @@
   "6Tps09": {
     "defaultMessage": "Inativo"
   },
-  "6ZsOsA": {
-    "defaultMessage": "Participe do Programa de Indicação"
+  "6hEevT": {
+    "defaultMessage": "Definir como padrão"
   },
   "6uMqL1": {
     "defaultMessage": "Não pago(a) / Pendente de pagamento"
@@ -146,11 +218,29 @@
   "78fz1O": {
     "defaultMessage": "Código postal *"
   },
+  "7Cdpiv": {
+    "defaultMessage": "Chaves SSH"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{dia} other{dias}}"
   },
+  "7fbBqG": {
+    "defaultMessage": "Cancelar pagamento"
+  },
+  "7q/bs/": {
+    "defaultMessage": "Renove agora."
+  },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# h} other{# horas}}"
+  },
+  "7tOz+m": {
+    "defaultMessage": "Pague agora."
+  },
+  "7wbySo": {
+    "defaultMessage": "Envie-nos uma mensagem diretamente e a nossa equipa entrará em contacto consigo."
+  },
+  "7yPJTW": {
+    "defaultMessage": "Em breve, o prazo expira."
   },
   "7zs+Vz": {
     "defaultMessage": "Memória: {gb} GB"
@@ -158,17 +248,14 @@
   "82Y7Sa": {
     "defaultMessage": "A enviar..."
   },
-  "82zlBD": {
-    "defaultMessage": "Nome do titular do cartão *"
-  },
   "89xu1A": {
     "defaultMessage": "Pedido de VPS Personalizado"
   },
   "8BgaUL": {
     "defaultMessage": "Especificações Atuais"
   },
-  "8FF5Bq": {
-    "defaultMessage": "A criar o pagamento..."
+  "8HYfsO": {
+    "defaultMessage": "Chave de acesso sem nome"
   },
   "8Jfsz3": {
     "defaultMessage": "Enviar Código de Verificação"
@@ -176,26 +263,35 @@
   "8Q504V": {
     "defaultMessage": "Metadados"
   },
+  "8X6Kwp": {
+    "defaultMessage": "Próximo pagamento"
+  },
+  "8cnlb5": {
+    "defaultMessage": "Guardar rota de pagamento"
+  },
   "8ecw1u": {
     "defaultMessage": "Maçanetas/Puxadores"
   },
-  "8f0dzf": {
-    "defaultMessage": "Renovação para o número #{id}"
+  "8lCjAM": {
+    "defaultMessage": "Prioridade"
+  },
+  "8lK3rQ": {
+    "defaultMessage": "Renove antes de {date} ou isso e os dados associados serão apagados permanentemente."
+  },
+  "8xIysb": {
+    "defaultMessage": "Estenda agora."
   },
   "90f82/": {
     "defaultMessage": "Iniciar máquina virtual."
   },
-  "9AfNRx": {
-    "defaultMessage": "Em breve, será possível solicitar espaço de endereçamento IP."
-  },
   "9QV3cp": {
     "defaultMessage": "Blocos de IP disponíveis"
   },
-  "9V+Kpc": {
-    "defaultMessage": "Esta máquina virtual será renovada automaticamente 1 dia antes do prazo de validade, utilizando a sua ligação configurada com a carteira Nostr Wallet Connect."
+  "9d9svQ": {
+    "defaultMessage": "Ainda não há chaves de acesso. Adicione uma para iniciar sessão sem uma chave."
   },
-  "9WRlF4": {
-    "defaultMessage": "Enviar"
+  "9dOxDN": {
+    "defaultMessage": "Pagamentos e renovação"
   },
   "9uOFF3": {
     "defaultMessage": "Visão geral"
@@ -203,20 +299,41 @@
   "A11S6W": {
     "defaultMessage": "Envie-nos uma mensagem diretamente. A sua chave pública será incluída automaticamente."
   },
-  "AHJbyB": {
-    "defaultMessage": "Conclua o seu pagamento utilizando o método de pagamento selecionado. As alterações serão aplicadas automaticamente após a confirmação."
+  "A7Mqan": {
+    "defaultMessage": "Aguarde enquanto a renovação é processada…"
+  },
+  "ABL6b+": {
+    "defaultMessage": "Transforme o seu código em lucro."
+  },
+  "AL9+3/": {
+    "defaultMessage": "Não foi possível encontrar uma subscrição para renovar para esta máquina virtual."
   },
   "AQkpi3": {
     "defaultMessage": "Reinstalar"
   },
-  "AuSwGG": {
-    "defaultMessage": "Tempo de atividade: {uptime}"
+  "ASrBq8": {
+    "defaultMessage": "Chaves de acesso"
   },
-  "AyGauy": {
-    "defaultMessage": "Iniciar sessão"
+  "AUlRcp": {
+    "defaultMessage": "Conexão da carteira Nostr"
+  },
+  "AfmrGS": {
+    "defaultMessage": "Enviar código."
+  },
+  "AxlcnX": {
+    "defaultMessage": "Esta caixa de entrada não é mais monitorada, portanto, novas mensagens não podem ser enviadas para cá. Para obter suporte, abra um pedido na guia «Suporte»."
+  },
+  "B3YjIQ": {
+    "defaultMessage": "Guarde esta chave agora, pois não será possível recuperá-la."
   },
   "B4reHi": {
     "defaultMessage": "Eventos Históricos"
+  },
+  "B52Em/": {
+    "defaultMessage": "Endereço, linha 1"
+  },
+  "B9v1WK": {
+    "defaultMessage": "Método de pagamento"
   },
   "BBiS7b": {
     "defaultMessage": "Parar a máquina virtual."
@@ -224,8 +341,8 @@
   "BCmVPf": {
     "defaultMessage": "Alojamento gratuito para NIP-05. Aponte o seu domínio para {cname} utilizando DNS ou um proxy de caminho."
   },
-  "BFqRWv": {
-    "defaultMessage": "Cadeia de conexão NWC"
+  "BD6I/Z": {
+    "defaultMessage": "O valor exato do imposto é confirmado no momento do pagamento."
   },
   "BFqlLP": {
     "defaultMessage": "Os {records} apontam diretamente para os endereços IP e podem precisar de ser atualizados caso estes mudem."
@@ -236,8 +353,8 @@
   "BLZbXj": {
     "defaultMessage": "Mensagem *"
   },
-  "BOV9bc": {
-    "defaultMessage": "A carregar os métodos de pagamento..."
+  "BVTni9": {
+    "defaultMessage": "Método de pagamento"
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternativa)"
@@ -248,8 +365,14 @@
   "BlFeZA": {
     "defaultMessage": "Últimas notícias"
   },
-  "CDTMW3": {
-    "defaultMessage": "Valor Total"
+  "Bwqhmd": {
+    "defaultMessage": "Firewall (firewall)"
+  },
+  "Bzv1CO": {
+    "defaultMessage": "Reative agora."
+  },
+  "CHgKgH": {
+    "defaultMessage": "Serviços recorrentes"
   },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
@@ -257,11 +380,11 @@
   "CjLFf2": {
     "defaultMessage": "Entre em contato com a equipe da LNVPS. Tem alguma dúvida sobre o nosso serviço de VPS Bitcoin Lightning? Estamos aqui para ajudar."
   },
-  "Cl+kqZ": {
-    "defaultMessage": "Mostrar código QR"
-  },
   "D3idYv": {
     "defaultMessage": "Definições"
+  },
+  "DATKpj": {
+    "defaultMessage": "Esta página será atualizada automaticamente."
   },
   "DDMksJ": {
     "defaultMessage": "Implemente o seu primeiro VPS."
@@ -272,32 +395,95 @@
   "DU+LLZ": {
     "defaultMessage": "Indicação"
   },
+  "DYDzPa": {
+    "defaultMessage": "Chat conectado/vinculado."
+  },
+  "DZ2Koj": {
+    "defaultMessage": "Direção"
+  },
   "Dfuz87": {
     "defaultMessage": "Ainda não foram adicionados domínios. Adicione o seu primeiro domínio acima para começar."
+  },
+  "DpNZQY": {
+    "defaultMessage": "Taxa de processamento"
+  },
+  "E2X6+s": {
+    "defaultMessage": "nsec1… or bunker://…"
   },
   "E2YqWs": {
     "defaultMessage": "Programa de Indicação"
   },
+  "E8y+Hb": {
+    "defaultMessage": "O contrato de arrendamento terminou."
+  },
   "EBMKSN": {
     "defaultMessage": "Atualize as especificações da máquina virtual."
+  },
+  "ED9RG5": {
+    "defaultMessage": "Registo de auditoria"
   },
   "EKlM8d": {
     "defaultMessage": "Disco (GB)"
   },
+  "EUSRTV": {
+    "defaultMessage": "As suas mensagens NIP-17 antigas, criptografadas, com o suporte correspondente. Esta caixa de entrada não é mais monitorizada – utilize a secção «Suporte» para nos contactar."
+  },
+  "Ecfndm": {
+    "defaultMessage": "Fatura"
+  },
   "Eg11ZY": {
     "defaultMessage": "Reconecte-se"
+  },
+  "EhL8Q+": {
+    "defaultMessage": "Detalhes e SSH"
+  },
+  "EhjW+X": {
+    "defaultMessage": "Este navegador não suporta chaves de acesso."
+  },
+  "Epas1Z": {
+    "defaultMessage": "{n} {unit}"
+  },
+  "ErHVHe": {
+    "defaultMessage": "satoshi"
+  },
+  "F8RFcI": {
+    "defaultMessage": "Opcional. Aparece nas faturas que emitimos para os seus pagamentos."
+  },
+  "FBjXEw": {
+    "defaultMessage": "Atualize o VPS nº{id}"
   },
   "FJhjgz": {
     "defaultMessage": "Código postal"
   },
+  "FLpm0X": {
+    "defaultMessage": "Itens da linha"
+  },
   "FMHDSp": {
     "defaultMessage": "Notícias e atualizações de produtos da LNVPS"
+  },
+  "FOEu1B": {
+    "defaultMessage": "Endereço Lightning"
   },
   "FZeQlc": {
     "defaultMessage": "Desligado/a"
   },
-  "FrXeQJ": {
-    "defaultMessage": "o que é o Nostr?"
+  "FazwRl": {
+    "defaultMessage": "Tente novamente."
+  },
+  "FlypmR": {
+    "defaultMessage": "Adicione um endereço de e-mail abaixo."
+  },
+  "FoHB5c": {
+    "defaultMessage": "Renovar assinatura"
+  },
+  "G/yZLu": {
+    "defaultMessage": "Remover"
+  },
+  "G1kGar": {
+    "defaultMessage": "Não pode remover a sua única chave de acesso numa conta que só usa chaves de acesso."
+  },
+  "G5cGLJ": {
+    "defaultMessage": "À espera do primeiro pagamento."
   },
   "G6nrEF": {
     "defaultMessage": "Guardado com avisos."
@@ -314,6 +500,12 @@
   "GSye7T": {
     "defaultMessage": "Endereço Lightning"
   },
+  "Gd6Kbk": {
+    "defaultMessage": "Ainda não está ativo."
+  },
+  "GlTZFC": {
+    "defaultMessage": "Partilhe este link. Receberá uma comissão quando alguém se registar e o seu sistema de gestão de máquinas virtuais efetuar o primeiro pagamento."
+  },
   "GqRat5": {
     "defaultMessage": "Por favor, confirme o seu endereço de e-mail para finalizar o seu pedido."
   },
@@ -322,6 +514,21 @@
   },
   "GtI0l1": {
     "defaultMessage": "Os pagamentos são efetuados para uma carteira NWC guardada. Adicione ou selecione uma abaixo – a carteira padrão ativada será utilizada."
+  },
+  "GuLP+V": {
+    "defaultMessage": "A renovação é feita automaticamente um dia antes do prazo de validade, utilizando o método de pagamento predefinido."
+  },
+  "Gw07ly": {
+    "defaultMessage": "Total mensal"
+  },
+  "H0SDpi": {
+    "defaultMessage": "Falha ao registar a chave de acesso"
+  },
+  "H4Ucn0": {
+    "defaultMessage": "Entrada."
+  },
+  "H9Az5Z": {
+    "defaultMessage": "Detalhes da faturação"
   },
   "HAlOn1": {
     "defaultMessage": "Nome"
@@ -341,8 +548,11 @@
   "ID2dFf": {
     "defaultMessage": "Ainda não foi criada nenhuma carteira NWC. Adicione uma abaixo para receber os pagamentos."
   },
-  "INlWvJ": {
-    "defaultMessage": "OU"
+  "ILTAun": {
+    "defaultMessage": "A sua máquina virtual está a ser configurada. Normalmente, este processo demora um ou dois minutos."
+  },
+  "IZFEUg": {
+    "defaultMessage": "Pronto."
   },
   "Id24hd": {
     "defaultMessage": "Nome *"
@@ -350,26 +560,41 @@
   "Ij0H43": {
     "defaultMessage": "Gráficos"
   },
+  "IuFETn": {
+    "defaultMessage": "Duração"
+  },
   "IvjoDS": {
     "defaultMessage": "Conectado"
   },
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
+  "J+dIsA": {
+    "defaultMessage": "Assinaturas"
+  },
+  "JBWS0c": {
+    "defaultMessage": "Link/Ligação"
+  },
+  "JH4wUD": {
+    "defaultMessage": "Guardado ✓"
+  },
   "JVClQM": {
     "defaultMessage": "Estado do serviço LNVPS e tempo de atividade."
   },
-  "JmgL7z": {
-    "defaultMessage": "Validade: {date} ({days} dias)"
+  "Jm+fih": {
+    "defaultMessage": "Inativo."
   },
   "K/zU0+": {
     "defaultMessage": "+ Implementar novo"
   },
+  "K3r6DQ": {
+    "defaultMessage": "Apagar"
+  },
   "KAL6xF": {
     "defaultMessage": "Nome principal"
   },
-  "KWAuBK": {
-    "defaultMessage": "Nenhum endereço IP atribuído."
+  "KKYB/E": {
+    "defaultMessage": "Ainda não há métodos de pagamento guardados."
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -380,11 +605,26 @@
   "KuX7em": {
     "defaultMessage": "Ativo durante {duration}."
   },
+  "Kw4098": {
+    "defaultMessage": "Nova regra."
+  },
+  "KxG+iy": {
+    "defaultMessage": "IVA"
+  },
+  "L8seEc": {
+    "defaultMessage": "Subtotal"
+  },
   "LAMeIi": {
     "defaultMessage": "Entre em contato com o suporte da LNVPS."
   },
-  "LNcnLC": {
-    "defaultMessage": "Encaminhamentos com Falha"
+  "LHX6Oo": {
+    "defaultMessage": "Validade até {exp}"
+  },
+  "LR754a": {
+    "defaultMessage": "Renova em"
+  },
+  "LX6weZ": {
+    "defaultMessage": "Pagamento pendente."
   },
   "LjglgP": {
     "defaultMessage": "Memória de acesso aleatório"
@@ -410,17 +650,35 @@
   "Mp+zDS": {
     "defaultMessage": "Este componente suporta apenas pagamentos Lightning."
   },
+  "N2IrpM": {
+    "defaultMessage": "Confirme."
+  },
+  "N4e/Yn": {
+    "defaultMessage": "Taxa {fee}"
+  },
   "NQgbYA": {
     "defaultMessage": "Definições da Conta"
   },
   "NZyhSX": {
     "defaultMessage": "Notícias"
   },
+  "Niq27F": {
+    "defaultMessage": "Nome da assinatura (opcional)"
+  },
+  "NmK6zy": {
+    "defaultMessage": "Pagamento"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "ou"
+  },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
   "O/68ZX": {
     "defaultMessage": "Tem a certeza de que pretende reinstalar a sua máquina virtual? ISSO IRÁ APAGAR TODOS OS DADOS!"
+  },
+  "OJuBck": {
+    "defaultMessage": "Sem necessidade de senha"
   },
   "OLqOyf": {
     "defaultMessage": "Instruções de instalação"
@@ -431,8 +689,8 @@
   "Olq7Wf": {
     "defaultMessage": "Digite a sua mensagem aqui..."
   },
-  "OtUSLU": {
-    "defaultMessage": "Renovação automática"
+  "Op5EHr": {
+    "defaultMessage": "Iniciar sessão com o Google"
   },
   "OtuYup": {
     "defaultMessage": "Endereço de e-mail *"
@@ -443,14 +701,14 @@
   "P+08xT": {
     "defaultMessage": "Solicitar orçamento"
   },
+  "P/PGYR": {
+    "defaultMessage": "Ainda não recebeu indicações. Partilhe o seu link para começar a obter resultados."
+  },
   "P7PLVj": {
     "defaultMessage": "Data"
   },
   "PJtOx7": {
     "defaultMessage": "Não há ocorrências a relatar."
-  },
-  "PPcUVc": {
-    "defaultMessage": "LNVPS utiliza contas Nostr, {link}."
   },
   "PT4sD/": {
     "defaultMessage": "Selecione o sistema operativo:"
@@ -461,20 +719,32 @@
   "PucUfl": {
     "defaultMessage": "Selecione a chave SSH:"
   },
-  "QDA9xg": {
-    "defaultMessage": "Histórico de Pagamentos"
+  "PujK1s": {
+    "defaultMessage": "gerar"
+  },
+  "QEuWMk": {
+    "defaultMessage": "As contas LNVPS utilizam o protocolo Nostr ou um fornecedor de serviços de autenticação. {link}"
   },
   "QN/rCc": {
     "defaultMessage": "Erro ao analisar o JSON: {msg}"
   },
-  "QdbxqE": {
-    "defaultMessage": "Configure a renovação automática de máquinas virtuais (VM) usando o Nostr Wallet Connect. A sua carteira irá efetuar automaticamente o pagamento das renovações de VM 1 dia antes da data de expiração."
-  },
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
-  "QvXah/": {
-    "defaultMessage": "Voltar para o VM"
+  "QlsDcr": {
+    "defaultMessage": "Ação"
+  },
+  "Qqli25": {
+    "defaultMessage": "Ative para que o seu método de pagamento padrão seja automaticamente cobrado um dia antes da data de vencimento."
+  },
+  "QuGLBN": {
+    "defaultMessage": "Esta chave SSH está a ser utilizada por uma ou mais máquinas virtuais e não pode ser eliminada."
+  },
+  "R+j5Qu": {
+    "defaultMessage": "Nenhum endereço IP atribuído."
+  },
+  "R/6nsx": {
+    "defaultMessage": "Assinatura"
   },
   "R0skQD": {
     "defaultMessage": "GitHub: Crie um problema em github.com/LNVPS"
@@ -485,23 +755,35 @@
   "R7x8iU": {
     "defaultMessage": "Disco: {gb} GB, {type}"
   },
+  "RAyrhP": {
+    "defaultMessage": "IVA ({rate}):"
+  },
   "RB2CER": {
     "defaultMessage": "Núcleos da CPU"
   },
-  "RF85OG": {
-    "defaultMessage": "A sua nova chave:"
+  "RCHbbR": {
+    "defaultMessage": "Gerencie os seus dados de faturação, a renovação automática e a forma como entraremos em contacto consigo."
+  },
+  "RXjd0H": {
+    "defaultMessage": "Voltar à conta"
   },
   "RahCRH": {
     "defaultMessage": "Vencido"
   },
-  "RcshyP": {
-    "defaultMessage": "Ganho ({currency})"
+  "Ru62sn": {
+    "defaultMessage": "Adicione uma carteira compatível com o Nostr Wallet Connect."
   },
-  "S1hhGJ": {
-    "defaultMessage": "SSH:"
+  "Rw7iI7": {
+    "defaultMessage": "Desativar"
   },
-  "SMHOve": {
-    "defaultMessage": "Indicações bem-sucedidas"
+  "Rw82/V": {
+    "defaultMessage": "por mês"
+  },
+  "SB//YQ": {
+    "defaultMessage": "Resumo do pedido"
+  },
+  "SQJto2": {
+    "defaultMessage": "Iniciar sessão"
   },
   "SU1E+O": {
     "defaultMessage": "New Order"
@@ -512,11 +794,11 @@
   "Sg3z1C": {
     "defaultMessage": "Nenhuma máquina virtual selecionada."
   },
+  "SnyOdn": {
+    "defaultMessage": "convertido(a)"
+  },
   "Ss0sWu": {
     "defaultMessage": "Pague Agora"
-  },
-  "Sv1hgX": {
-    "defaultMessage": "A renovação automática foi desativada."
   },
   "Sz/3Vf": {
     "defaultMessage": "Por favor, indique os valores de atualização que sejam superiores ou iguais aos valores atuais, sendo que pelo menos um dos valores deve ser superior ao atual."
@@ -524,8 +806,8 @@
   "T1/en5": {
     "defaultMessage": "ID: {id}"
   },
-  "T4yFyM": {
-    "defaultMessage": "A carregar os detalhes do pagamento..."
+  "T4VxQN": {
+    "defaultMessage": "A carregar..."
   },
   "T7b6ZF": {
     "defaultMessage": "Incidentes resolvidos"
@@ -533,20 +815,44 @@
   "TE4fIS": {
     "defaultMessage": "Cidade"
   },
+  "TGPQYT": {
+    "defaultMessage": "{success} pago(a)"
+  },
+  "TH1fFo": {
+    "defaultMessage": "Telegrama"
+  },
   "TNSbi4": {
     "defaultMessage": "DNS reverso:"
+  },
+  "TT0vME": {
+    "defaultMessage": "Limite de regras atingido."
+  },
+  "TVBZb8": {
+    "defaultMessage": "{success} de {total} indicações remuneradas"
   },
   "Tbo377": {
     "defaultMessage": "Faturação"
   },
-  "Td/uhP": {
-    "defaultMessage": "Ativar a renovação automática."
+  "TqSTI0": {
+    "defaultMessage": "Ativar"
   },
-  "TieXig": {
-    "defaultMessage": "Os pagamentos serão enviados para a carteira NWC configurada nas definições da sua conta."
+  "TtNbPG": {
+    "defaultMessage": "Total mensal"
+  },
+  "TwyMau": {
+    "defaultMessage": "Conta"
+  },
+  "U96Gl9": {
+    "defaultMessage": "Guarde este cartão para pagamentos futuros."
+  },
+  "UPP+wZ": {
+    "defaultMessage": "Em uso por: {count,plural,one{VM} other{Máquinas virtuais}}: {vms}"
   },
   "UQc03N": {
     "defaultMessage": "Adicionar nova chave SSH"
+  },
+  "UXpysW": {
+    "defaultMessage": "Intervalo de endereços IP nº{id}"
   },
   "Ub+AGc": {
     "defaultMessage": "Iniciar sessão"
@@ -560,14 +866,17 @@
   "Uk68vE": {
     "defaultMessage": "Chave pública do remetente (npub/nprofile/hex):"
   },
+  "UkQy3+": {
+    "defaultMessage": "Nome do titular do cartão *"
+  },
   "Un5Bdm": {
     "defaultMessage": "A resolver os endereços IP para {cname}…"
   },
-  "UwP+xI": {
-    "defaultMessage": "Renovação automática ativada."
+  "Uvhzx4": {
+    "defaultMessage": "A renovação automática está desativada. Renove manualmente antes do prazo para evitar interrupções."
   },
-  "VE4z7n": {
-    "defaultMessage": "Obtenha a fatura."
+  "V7fgpY": {
+    "defaultMessage": "A concluir o início de sessão…"
   },
   "VJ4xwX": {
     "defaultMessage": "Notícias e atualizações de produtos"
@@ -575,11 +884,20 @@
   "VL/B6x": {
     "defaultMessage": "seu@email.com"
   },
-  "VnXp8Z": {
-    "defaultMessage": "Avatar"
+  "VLRCfi": {
+    "defaultMessage": "Tempo de atividade nos últimos 30 dias: {uptime}"
   },
-  "W+1MOm": {
-    "defaultMessage": "Método"
+  "VffztH": {
+    "defaultMessage": "última utilização {date}"
+  },
+  "VtKAyJ": {
+    "defaultMessage": "{count} / {max} regras"
+  },
+  "VzzYJk": {
+    "defaultMessage": "Criar"
+  },
+  "WUV28A": {
+    "defaultMessage": "A guardar..."
   },
   "WUeavc": {
     "defaultMessage": "Ou envie-nos um e-mail diretamente para {email}."
@@ -593,29 +911,23 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mês} other{meses}}"
   },
-  "X5QA2h": {
-    "defaultMessage": "A processar o pagamento da renovação."
-  },
   "XD6788": {
     "defaultMessage": "Taxa de instalação:"
   },
   "XNiOLB": {
     "defaultMessage": "Não foi possível enviar a mensagem. Tente novamente."
   },
-  "Xoi0Uz": {
-    "defaultMessage": "Pague com cartão."
-  },
   "Y+LcmX": {
     "defaultMessage": "Se não puder alterar o seu DNS, configure um proxy no caminho {path} do seu servidor atual para {target}."
   },
-  "Y6YwKh": {
-    "defaultMessage": "Isto serve apenas para enviar notificações sobre a conta, como notificações de expiração de máquinas virtuais; não enviamos mensagens de marketing ou promocionais."
-  },
-  "Y7opZr": {
-    "defaultMessage": "Renovar VPS"
+  "Y/tMXU": {
+    "defaultMessage": "Aguardando o pagamento. Este processo é aplicado automaticamente após a confirmação."
   },
   "YH46Fd": {
     "defaultMessage": "As últimas notícias, atualizações e anúncios da LNVPS — o seu fornecedor de VPS Bitcoin Lightning."
+  },
+  "YWjrby": {
+    "defaultMessage": "Apenas alertas de conta, como o prazo de validade do certificado digital. Nunca enviamos mensagens de marketing."
   },
   "YdQxfw": {
     "defaultMessage": "Contacte o suporte."
@@ -623,8 +935,8 @@
   "Yl8GBP": {
     "defaultMessage": "Número de identificação fiscal"
   },
-  "Yt9S7n": {
-    "defaultMessage": "Taxa: {fees}"
+  "Ysr8td": {
+    "defaultMessage": "Obtido/Ganho"
   },
   "YyojwF": {
     "defaultMessage": "Alterações na configuração:"
@@ -647,23 +959,32 @@
   "ZlYFmj": {
     "defaultMessage": "Termos de Serviço da LNVPS — Fornecedor de VPS Bitcoin Lightning. Leia as nossas políticas de utilização, diretrizes de uso aceitável e termos de serviço."
   },
-  "aAnyb9": {
-    "defaultMessage": "Partilhe este link. Quando outras pessoas se inscreverem e efetuarem o pagamento, receberá uma comissão."
+  "aTgjTE": {
+    "defaultMessage": "Adicionar chave de acesso"
   },
-  "aFJYR3": {
-    "defaultMessage": "Detalhes do Cartão"
+  "acrOoz": {
+    "defaultMessage": "Continue."
   },
-  "ajQtDJ": {
-    "defaultMessage": "Selecione o método de pagamento."
+  "alJZVR": {
+    "defaultMessage": "Conta Nostr"
+  },
+  "an3Zx3": {
+    "defaultMessage": "Gerencie as chaves SSH usadas para acessar suas máquinas virtuais."
+  },
+  "aoXv6v": {
+    "defaultMessage": "A carregar o firewall..."
   },
   "b1zuN9": {
     "defaultMessage": "Preço"
   },
+  "b6Q2tD": {
+    "defaultMessage": "Tempo total de funcionamento: {uptime}"
+  },
+  "bMQUWl": {
+    "defaultMessage": "CIDR de origem (esta máquina virtual)"
+  },
   "bW7B87": {
     "defaultMessage": "Novo"
-  },
-  "bZ1uDf": {
-    "defaultMessage": "Voltar à página inicial"
   },
   "bh3pad": {
     "defaultMessage": "Faça o login antes de efetuar uma compra."
@@ -671,11 +992,11 @@
   "bhfNWq": {
     "defaultMessage": "Cole aqui a mensagem criptografada..."
   },
-  "bm5rt1": {
-    "defaultMessage": "Guarde esta chave, pois NÃO é possível recuperá-la."
-  },
   "bpBvBq": {
     "defaultMessage": "Moeda a exibir:"
+  },
+  "c0b5XV": {
+    "defaultMessage": "Taxa/Avaliação"
   },
   "c78ZVJ": {
     "defaultMessage": "As alterações do DNS podem levar até 24 a 48 horas para serem propagadas."
@@ -689,11 +1010,11 @@
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
+  "ciFSHC": {
+    "defaultMessage": "Pagamento {amount}"
+  },
   "cyR7Kh": {
     "defaultMessage": "Voltar"
-  },
-  "d+1v5f": {
-    "defaultMessage": "Renove por:"
   },
   "d1nnRF": {
     "defaultMessage": "Enviar Outra Mensagem"
@@ -701,8 +1022,8 @@
   "d3wxHm": {
     "defaultMessage": "A carregar o histórico..."
   },
-  "dCaiAm": {
-    "defaultMessage": "Renove agora."
+  "dHltrI": {
+    "defaultMessage": "Faturado a cada"
   },
   "dKHSEA": {
     "defaultMessage": "Obrigado por entrar em contato. Entraremos em contato o mais breve possível."
@@ -710,11 +1031,17 @@
   "dOQCL8": {
     "defaultMessage": "Nome a ser exibido"
   },
+  "dUQeuG": {
+    "defaultMessage": "Criar conta com chave de acesso"
+  },
   "dVYvX2": {
     "defaultMessage": "Tem a certeza de que quer eliminar este identificador?"
   },
   "dVx3yz": {
     "defaultMessage": "Memória"
+  },
+  "dXTCjA": {
+    "defaultMessage": "Não verificado."
   },
   "dgTL/5": {
     "defaultMessage": "Nenhum identificador registrado."
@@ -725,8 +1052,8 @@
   "duElEE": {
     "defaultMessage": "Não foram encontradas entradas de histórico para esta máquina virtual."
   },
-  "e4iTJm": {
-    "defaultMessage": "Digite a sua mensagem..."
+  "eClqvz": {
+    "defaultMessage": "Métodos de pagamento guardados"
   },
   "eKEL/g": {
     "defaultMessage": "Pendente"
@@ -743,17 +1070,29 @@
   "elhFf1": {
     "defaultMessage": "[Prazo expirado]"
   },
-  "eu+sDO": {
-    "defaultMessage": "Iniciar sessão:"
+  "eq14GY": {
+    "defaultMessage": "A sua nova chave secreta."
+  },
+  "evMlX9": {
+    "defaultMessage": "Renovação automática"
   },
   "f00p/7": {
     "defaultMessage": "O envio falhou."
   },
-  "fGeu02": {
-    "defaultMessage": "Extensão do navegador:"
+  "f7+Xwr": {
+    "defaultMessage": "Cartão de crédito ou débito"
+  },
+  "fHZKQp": {
+    "defaultMessage": "IVA ({rate})"
   },
   "fNSGnl": {
     "defaultMessage": "Inicie sessão para fazer o seu pedido."
+  },
+  "fnWV0M": {
+    "defaultMessage": "Para as regras de saída, o CIDR de origem corresponde ao endereço desta máquina virtual. O host de destino remoto não pode ser restrito – apenas o protocolo e a porta de destino podem ser definidos."
+  },
+  "fsB/4p": {
+    "defaultMessage": "Guardado/Salvo"
   },
   "fxYCqm": {
     "defaultMessage": "Localização: {location}"
@@ -770,17 +1109,17 @@
   "gPsMm7": {
     "defaultMessage": "Implemente este Worker e adicione uma rota para {route}."
   },
+  "gWp9QV": {
+    "defaultMessage": "{failed} nunca pago/a"
+  },
+  "gYR5sK": {
+    "defaultMessage": "O período de proteção já terminou e o ficheiro poderá ser eliminado a qualquer momento. Renove agora para mantê-lo."
+  },
   "gZz74a": {
     "defaultMessage": "Por favor, preencha todos os campos obrigatórios."
   },
   "gc+2Z2": {
     "defaultMessage": "Consola"
-  },
-  "gdP56I": {
-    "defaultMessage": "imposto"
-  },
-  "gjBiyj": {
-    "defaultMessage": "A carregar..."
   },
   "gtGLdm": {
     "defaultMessage": "incluindo uma taxa de processamento de {amount}"
@@ -788,23 +1127,41 @@
   "gv8O1e": {
     "defaultMessage": "Ofertas de VPS"
   },
+  "gvPhJ7": {
+    "defaultMessage": "Faturado mensalmente."
+  },
   "h+26/n": {
     "defaultMessage": "O seu código de indicação."
   },
   "h/PJh3": {
     "defaultMessage": "Depois de selecionar uma nova chave, reinicie a máquina virtual."
   },
+  "h9Vgyc": {
+    "defaultMessage": "{n} CPU virtual"
+  },
   "hMzcSq": {
     "defaultMessage": "Mensagens"
+  },
+  "hX8VXF": {
+    "defaultMessage": "Tempo de atividade mensal (últimos 12 meses)"
+  },
+  "hs3HVz": {
+    "defaultMessage": "Inicie sessão com Face ID, Touch ID, Windows Hello ou uma chave de segurança. Pode adicionar uma chave de acesso a qualquer conta."
+  },
+  "huqKGl": {
+    "defaultMessage": "Criar conta"
   },
   "iO1K6D": {
     "defaultMessage": "Ainda não há publicações."
   },
+  "iXNbPf": {
+    "defaultMessage": "Renomear"
+  },
   "icn2DS": {
     "defaultMessage": "(Recomendado)"
   },
-  "iluJkV": {
-    "defaultMessage": "Configurações de Pagamento"
+  "iuQLCB": {
+    "defaultMessage": "Os métodos de pagamento guardados são usados para efetuar automaticamente o pagamento das renovações um dia antes do término da validade da máquina virtual. Selecione qual deles será o método padrão."
   },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
@@ -812,23 +1169,35 @@
   "jM8W7d": {
     "defaultMessage": "Selecione o país."
   },
+  "jOo6oG": {
+    "defaultMessage": "Gerencie as chaves de acesso da máquina virtual."
+  },
+  "jUqYir": {
+    "defaultMessage": "Adicionado. {date}"
+  },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# dia} other{# dias}}"
+  },
+  "jf7fbc": {
+    "defaultMessage": "Nenhum definido — adicione um."
   },
   "jmVweB": {
     "defaultMessage": "A carregar as chaves SSH..."
   },
+  "jtkU3K": {
+    "defaultMessage": "Conversão"
+  },
   "jvo0vs": {
     "defaultMessage": "Guardar"
   },
-  "k1UDSi": {
-    "defaultMessage": "Pagamento via LNURL"
-  },
-  "k3yLiC": {
-    "defaultMessage": "Atualize as suas informações de faturação para que apareçam nas faturas geradas (opcional)."
+  "jwt9EL": {
+    "defaultMessage": "Falha ao iniciar sessão com a chave de acesso"
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete o teste de verificação."
+  },
+  "kRFEho": {
+    "defaultMessage": "Adicionar chave SSH"
   },
   "kSjQ3a": {
     "defaultMessage": "por {initiatedBy}"
@@ -842,26 +1211,53 @@
   "l4RUua": {
     "defaultMessage": "Serviço: {service}"
   },
+  "l7PJ8l": {
+    "defaultMessage": "Valor total a pagar agora:"
+  },
   "lCILNz": {
     "defaultMessage": "Compre agora"
+  },
+  "lD3+8a": {
+    "defaultMessage": "Pagamento"
+  },
+  "lKv8ex": {
+    "defaultMessage": "Padrão"
+  },
+  "lP4qIQ": {
+    "defaultMessage": "Dados do cartão"
   },
   "lPsVOx": {
     "defaultMessage": "As suas máquinas virtuais e domínios"
   },
+  "lTtWDY": {
+    "defaultMessage": "{daysLeft} dias restantes"
+  },
+  "lcXewt": {
+    "defaultMessage": "Fatura rápida"
+  },
+  "lhCavK": {
+    "defaultMessage": "Marque a opção «Guardar este cartão» ao efetuar pagamentos com o Revolut para guardar um cartão neste local, de forma a poder utilizá-lo em pagamentos futuros e renovações automáticas."
+  },
   "lloEWi": {
     "defaultMessage": "A que se refere isto?"
+  },
+  "lmac7x": {
+    "defaultMessage": "{n,plural,one{# item} other{# itens}}"
   },
   "lnaWo/": {
     "defaultMessage": "Região"
   },
-  "luhCIe": {
-    "defaultMessage": "Endereço IP:"
+  "lsFKTa": {
+    "defaultMessage": "Estamos a processar o pagamento através do método de pagamento que guardou. O débito será efetuado automaticamente após a confirmação."
   },
-  "lvV1wo": {
-    "defaultMessage": "Pagamento para atualização."
+  "ltoBql": {
+    "defaultMessage": "[Novo]"
   },
-  "m22Mzk": {
-    "defaultMessage": "A processar o pagamento da atualização."
+  "m4QgXr": {
+    "defaultMessage": "{days,plural,one{# dia restante} other{# dias restantes}}"
+  },
+  "mBP5Sb": {
+    "defaultMessage": "Mostrar endereço do Lightning"
   },
   "mIuuiJ": {
     "defaultMessage": "Estado do serviço e tempo de atividade."
@@ -869,32 +1265,56 @@
   "mJPBXd": {
     "defaultMessage": "Mensagem criptografada (copie e inclua no seu e-mail):"
   },
+  "mMug3Z": {
+    "defaultMessage": "ganho(s) · {currency}"
+  },
   "mOR+qH": {
     "defaultMessage": "Copiar para a área de transferência"
+  },
+  "mV5FZi": {
+    "defaultMessage": "Programa de Indicação para o Período de Afastamento"
   },
   "mXu0jm": {
     "defaultMessage": "Configuração do domínio"
   },
+  "mY+s0A": {
+    "defaultMessage": "Como Entramos em Contato com Você"
+  },
+  "mtEKFV": {
+    "defaultMessage": "A processar..."
+  },
+  "mznk9z": {
+    "defaultMessage": "Comissão"
+  },
+  "n9fdaJ": {
+    "defaultMessage": "Não verificado."
+  },
+  "nDyaq/": {
+    "defaultMessage": "A correr / Em execução"
+  },
   "nFQbxh": {
     "defaultMessage": "Método de Pagamento"
-  },
-  "nQ0mEC": {
-    "defaultMessage": "Legenda:"
   },
   "nWQFic": {
     "defaultMessage": "Renovar"
   },
+  "nidU9E": {
+    "defaultMessage": "{rate} comissão"
+  },
   "nm81YC": {
     "defaultMessage": "A carregar as opções de VPS..."
+  },
+  "nx5ZnY": {
+    "defaultMessage": "Verifique um número de telefone para ativar."
   },
   "nxqAD7": {
     "defaultMessage": "Novo incidente"
   },
+  "o0jcye": {
+    "defaultMessage": "SO"
+  },
   "o2AdrJ": {
     "defaultMessage": "Esta máquina virtual utiliza um modelo personalizado e não pode ser atualizada. Apenas as máquinas virtuais que utilizam modelos padrão suportam atualizações."
-  },
-  "o8lVmf": {
-    "defaultMessage": "O método de pagamento influencia a moeda utilizada para o orçamento e para o pagamento."
   },
   "o9lOhm": {
     "defaultMessage": "Suporte para chave pública: {npub}"
@@ -905,20 +1325,32 @@
   "oCc8Oq": {
     "defaultMessage": "Adicionar chave."
   },
+  "oQY0a2": {
+    "defaultMessage": "Endereço, linha 2"
+  },
   "oXGNZ+": {
     "defaultMessage": "VM nº {id}, Terminal:"
+  },
+  "odTkf5": {
+    "defaultMessage": "Voltar ao início de sessão"
+  },
+  "oswGmn": {
+    "defaultMessage": "Não pode sair enquanto houver um histórico de pagamentos pendente."
   },
   "p4N05H": {
     "defaultMessage": "Carregar"
   },
-  "pSH5mR": {
-    "defaultMessage": "Histórico de Pagamentos"
+  "p5LNtB": {
+    "defaultMessage": "Não definido."
   },
   "pY6CgO": {
     "defaultMessage": "Ainda não tem máquinas virtuais."
   },
   "pgLgIU": {
     "defaultMessage": "Leia a atualização completa."
+  },
+  "pus6h6": {
+    "defaultMessage": "Pode sair a qualquer momento. O seu código deixa de gerar créditos e não poderá ser reutilizado."
   },
   "qJRR8N": {
     "defaultMessage": "A carregar os blocos de endereços IP..."
@@ -929,8 +1361,14 @@
   "qWMcff": {
     "defaultMessage": "As atualizações do DNS podem demorar até 48 horas para serem propagadas."
   },
-  "qZkVyB": {
-    "defaultMessage": "A sua chave pública (inclua-a em todas as comunicações):"
+  "qX7u3z": {
+    "defaultMessage": "Etiqueta (por exemplo, Visto pessoal)"
+  },
+  "qkLHOL": {
+    "defaultMessage": "Tem certeza de que deseja excluir a chave SSH «»?{name}?"
+  },
+  "qpBS29": {
+    "defaultMessage": "Redimensione as especificações da máquina virtual."
   },
   "qq7WMq": {
     "defaultMessage": "Todos os VPS incluem 1 endereço IPv4 e 1 endereço IPv6, além de tráfego ilimitado. Todos os preços indicados não incluem impostos."
@@ -941,11 +1379,14 @@
   "r2BhUh": {
     "defaultMessage": "Descriptografar mensagem"
   },
-  "rCcPOd": {
-    "defaultMessage": "taxa; honorários"
+  "rF6EmI": {
+    "defaultMessage": "Detalhes da faturação"
   },
-  "rKLmW/": {
-    "defaultMessage": "Cancelar Pagamento"
+  "rieTwF": {
+    "defaultMessage": "Validade:"
+  },
+  "rv2p0H": {
+    "defaultMessage": "Processador, memória RAM e rede."
   },
   "rvirM2": {
     "defaultMessage": "Localização"
@@ -953,20 +1394,53 @@
   "s+YpY+": {
     "defaultMessage": "Ganhe recompensas ao indicar novos clientes."
   },
-  "sH1q5P": {
-    "defaultMessage": "por {time}"
+  "s+ixZq": {
+    "defaultMessage": "Método padrão"
+  },
+  "s2ZjPB": {
+    "defaultMessage": "Não existem regras de firewall. A política predefinida está em vigor."
+  },
+  "sAJryD": {
+    "defaultMessage": "O IVA e as taxas são valores estimados; o montante exato será confirmado no momento do pagamento."
+  },
+  "sQu9nL": {
+    "defaultMessage": "Chave SSH"
   },
   "sTesGq": {
     "defaultMessage": "Nenhuma oferta disponível."
   },
+  "sUw18G": {
+    "defaultMessage": "As mensagens criptografadas estão disponíveis apenas para contas Nostr. A sua conta não tem uma chave Nostr para ler ou enviar mensagens NIP-17. Para obter ajuda, utilize o separador «Suporte»."
+  },
   "sXj7R6": {
     "defaultMessage": "Disco:"
+  },
+  "sn+Rj5": {
+    "defaultMessage": "Iniciar sessão com chave de acesso"
+  },
+  "snh6R6": {
+    "defaultMessage": "Etiqueta (opcional)"
   },
   "sqvjkf": {
     "defaultMessage": "Adicionar alça"
   },
+  "srgk8m": {
+    "defaultMessage": "Define a moeda utilizada para o orçamento e o pagamento."
+  },
   "sy+pv5": {
     "defaultMessage": "E-mail"
+  },
+  "tNmjzW": {
+    "defaultMessage": "Porto(s)"
+  },
+  "tTpLsN": {
+    "defaultMessage": "Não está vinculado."
+  },
+  "tngc9N": {
+    "defaultMessage": "CIDR de origem"
+  },
+  "tthToS": {
+    "defaultMessage": "Desativado/a"
   },
   "tzMNF3": {
     "defaultMessage": "Estado"
@@ -977,23 +1451,26 @@
   "u3FDCD": {
     "defaultMessage": "Termos de Serviço e Condições de Utilização"
   },
-  "uN7rbm": {
-    "defaultMessage": "Participe do programa de indicação e receba recompensas quando outras pessoas se inscreverem usando o seu código. Escolha a forma como deseja receber as recompensas."
+  "uJV0wU": {
+    "defaultMessage": "Endereço IP"
   },
   "uPNlBw": {
     "defaultMessage": "Endereço de e-mail: {email}"
   },
-  "uRfNhn": {
-    "defaultMessage": "Rede:"
-  },
-  "ug01Mk": {
-    "defaultMessage": "Tempo"
+  "ubXbwc": {
+    "defaultMessage": "Política padrão"
   },
   "uqUeK9": {
     "defaultMessage": "Descodifique uma mensagem que lhe foi enviada pelo suporte."
   },
+  "uqe58g": {
+    "defaultMessage": "Análise detalhada; discriminação."
+  },
   "v2BRjN": {
     "defaultMessage": "Assunto *"
+  },
+  "v3j7Fq": {
+    "defaultMessage": "Não tem chaves SSH."
   },
   "v4Sg0C": {
     "defaultMessage": "Use uma chave de destinatário personalizada."
@@ -1001,14 +1478,44 @@
   "vONi+O": {
     "defaultMessage": "País"
   },
+  "vWsXtg": {
+    "defaultMessage": "A criar o pagamento…"
+  },
+  "vaoVHG": {
+    "defaultMessage": "Voltar às assinaturas"
+  },
   "vlKhIl": {
     "defaultMessage": "O seu nome"
+  },
+  "vo0Z8o": {
+    "defaultMessage": "Associe o seu canal de conversa e, em seguida, clique em «Iniciar» no bot."
+  },
+  "vtStU2": {
+    "defaultMessage": "Histórico de pagamentos"
+  },
+  "vy2rlX": {
+    "defaultMessage": "Taxa de processamento:"
+  },
+  "wEQDC6": {
+    "defaultMessage": "Editar"
+  },
+  "wL4Olp": {
+    "defaultMessage": "Renova. {date}"
   },
   "wLwJ9Q": {
     "defaultMessage": "Valor do tempo restante à tarifa antiga:"
   },
+  "waJLKW": {
+    "defaultMessage": "Ligado(s)/Conectado(s)"
+  },
+  "waUHa4": {
+    "defaultMessage": "SSH"
+  },
   "wfYHHe": {
     "defaultMessage": "- [{daysLeft} dias restantes]"
+  },
+  "wo868v": {
+    "defaultMessage": "Iniciar sessão com uma chave Nostr ou bunker →"
   },
   "wz7uSD": {
     "defaultMessage": "incluindo {amount} de imposto"
@@ -1016,14 +1523,17 @@
   "x0cZXf": {
     "defaultMessage": "Atualização indisponível."
   },
-  "xLbpvq": {
-    "defaultMessage": "Envie e receba mensagens diretas criptografadas com suporte via NIP-17. As mensagens são criptografadas de ponta a ponta."
+  "xOnplm": {
+    "defaultMessage": "A carregar os métodos de pagamento…"
   },
-  "xR03Aa": {
-    "defaultMessage": "Definições de notificações"
+  "xQ8iOj": {
+    "defaultMessage": "Ainda não tem nenhuma assinatura ativa."
   },
   "xXbJso": {
     "defaultMessage": "Desconectar-se"
+  },
+  "xhfdqv": {
+    "defaultMessage": "Criando"
   },
   "xj59EM": {
     "defaultMessage": "O {proxy} funciona sem que seja necessário fazer alterações nas configurações de DNS, o que é útil se já tiver um site no domínio."
@@ -1034,8 +1544,14 @@
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} núcleos"
   },
+  "xuTqgN": {
+    "defaultMessage": "Métodos de Pagamento"
+  },
   "y43e4q": {
     "defaultMessage": "(Não é necessário alterar as configurações de DNS)"
+  },
+  "y9xHR9": {
+    "defaultMessage": "Pagamentos"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -1043,11 +1559,17 @@
   "yJAKR0": {
     "defaultMessage": "Enviar mensagem"
   },
-  "yYs9cj": {
-    "defaultMessage": "Voltar para a página de atualização."
+  "yKzuSB": {
+    "defaultMessage": "Pague a assinatura."
+  },
+  "yPgnbL": {
+    "defaultMessage": "Falha ao iniciar sessão"
   },
   "yr1Ove": {
     "defaultMessage": "Acompanhe em tempo real o tempo de atividade e o histórico de incidentes dos serviços LNVPS. Verifique o estado operacional atual da nossa infraestrutura Bitcoin Lightning VPS."
+  },
+  "z+hIFs": {
+    "defaultMessage": "Ainda não foram efetuados pagamentos."
   },
   "zAN0RF": {
     "defaultMessage": "Mensagens diretas criptografadas"

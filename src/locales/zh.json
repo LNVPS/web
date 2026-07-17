@@ -1,6 +1,9 @@
 {
-  "+8AmJ0": {
-    "defaultMessage": "关闭自动续订"
+  "++XeyK": {
+    "defaultMessage": "Nostr 密钥"
+  },
+  "+3NyB6": {
+    "defaultMessage": "外发；已发出。"
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
@@ -8,23 +11,44 @@
   "+SM72m": {
     "defaultMessage": "收件人的公钥（npub/nprofile/十六进制）："
   },
+  "+UjQFc": {
+    "defaultMessage": "规章制度"
+  },
+  "+sQCsu": {
+    "defaultMessage": "完成支付。"
+  },
   "/0TOL5": {
     "defaultMessage": "金额"
+  },
+  "/2Xcxs": {
+    "defaultMessage": "离职计划"
+  },
+  "/2t1lH": {
+    "defaultMessage": "虚拟机编号{id}"
   },
   "/GCoTA": {
     "defaultMessage": "清楚；清晰；明了"
   },
+  "/K+qGR": {
+    "defaultMessage": "生成 Nostr 密钥"
+  },
+  "/PE1Wn": {
+    "defaultMessage": "通行密钥名称（例如 MacBook）"
+  },
   "/QkDVJ": {
     "defaultMessage": "NWC 钱包"
   },
-  "/nQTeE": {
-    "defaultMessage": "保存提现设置。"
-  },
-  "063dCM": {
-    "defaultMessage": "在帐户设置中配置 NWC 连接字符串，然后启用自动续订功能，以便自动支付虚拟机续订费用。"
+  "/tiBYY": {
+    "defaultMessage": "使用 {provider} 继续"
   },
   "0HkBaC": {
     "defaultMessage": "请选择以下其中一种方法来验证您的域名："
+  },
+  "0QLzxo": {
+    "defaultMessage": "协议"
+  },
+  "0gkn9c": {
+    "defaultMessage": "您的 IP 地址段订阅已创建。请完成首次付款，以便分配地址空间并激活该订阅。"
   },
   "0h/lPM": {
     "defaultMessage": "升级"
@@ -38,6 +62,9 @@
   "0rlAUP": {
     "defaultMessage": "已登录用户：{key}"
   },
+  "0t1qvq": {
+    "defaultMessage": "添加规则。"
+  },
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
   },
@@ -49,6 +76,9 @@
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 小时} other{# 小时}} {m,plural,one{# 分钟} other{# 分钟}}"
+  },
+  "1aBLDj": {
+    "defaultMessage": "使用任意闪电网络钱包支付，即可充值此订阅。"
   },
   "1v7S+3": {
     "defaultMessage": "添加 Nostr 域名"
@@ -62,8 +92,8 @@
   "20Sod8": {
     "defaultMessage": "中央处理器："
   },
-  "2LslN1": {
-    "defaultMessage": "立即升级"
+  "2QrTo0": {
+    "defaultMessage": "新的 IP 地址分配方案"
   },
   "2RFWLf": {
     "defaultMessage": "网速测试"
@@ -77,17 +107,56 @@
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
   },
+  "3GLHv9": {
+    "defaultMessage": "验证"
+  },
+  "3NsyM4": {
+    "defaultMessage": "已加密的 NIP-17 直接消息。"
+  },
+  "3VI9mt": {
+    "defaultMessage": "保存更改。"
+  },
   "3WU2Fe": {
     "defaultMessage": "地点：{region}"
+  },
+  "3a5wL8": {
+    "defaultMessage": "活跃的；正在进行的。"
+  },
+  "3aeXvu": {
+    "defaultMessage": "获取推荐码，以便与他人分享。当有人使用该推荐码注册，并且他们的虚拟机（VM）完成首次支付时，您将获得佣金。选择希望接收付款的账户，然后激活即可。"
+  },
+  "3vxkus": {
+    "defaultMessage": "无需保存任何内容——您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
+  },
+  "3woNJO": {
+    "defaultMessage": "在应用默认策略之前，系统会按照优先级顺序（从低到高）评估规则。防欺骗保护始终由主机强制执行。"
   },
   "3xnP4c": {
     "defaultMessage": "使用 NIP-44 加密方式发送安全消息。这可以证明您拥有与您的账户关联的私钥。请在下方加密您的消息，并将加密后的文本包含在您的电子邮件中。"
   },
+  "3zEByO": {
+    "defaultMessage": "激活推荐码。"
+  },
+  "43xNq5": {
+    "defaultMessage": "续订虚拟专用服务器。{id}"
+  },
   "47FYwb": {
     "defaultMessage": "取消"
   },
+  "48dUkY": {
+    "defaultMessage": "加号 {fee} 设置；准备"
+  },
+  "4PKxPs": {
+    "defaultMessage": "取消链接。"
+  },
+  "4PkXEE": {
+    "defaultMessage": "串行终端"
+  },
   "4X/Ixq": {
     "defaultMessage": "已解密的消息："
+  },
+  "4cMKIO": {
+    "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
   },
   "4j0zpr": {
     "defaultMessage": "最低：{min} 个内核"
@@ -101,11 +170,11 @@
   "4upFOv": {
     "defaultMessage": "您对资源配置、计费、滥用行为处理或特定服务问题有疑问吗？请发送消息，LNVPS 团队会尽快与您联系。"
   },
+  "5/Pb3D": {
+    "defaultMessage": "已激活的订阅服务。"
+  },
   "53RN0g": {
     "defaultMessage": "继续支付"
-  },
-  "5JcXdV": {
-    "defaultMessage": "创建账户"
   },
   "5QYdPU": {
     "defaultMessage": "开始时间"
@@ -116,14 +185,17 @@
   "5elgIe": {
     "defaultMessage": "错误："
   },
+  "5ow6dg": {
+    "defaultMessage": "WhatsApp（一款聊天软件）"
+  },
+  "5uQfFj": {
+    "defaultMessage": "什么是 Nostr？"
+  },
   "5y2qWO": {
     "defaultMessage": "正在连接……"
   },
-  "62nsdy": {
-    "defaultMessage": "重试"
-  },
-  "6OWS4p": {
-    "defaultMessage": "正在处理中……"
+  "6Auf1w": {
+    "defaultMessage": "我们无法完成登录。请重试。"
   },
   "6SfJaf": {
     "defaultMessage": "升级至"
@@ -131,8 +203,8 @@
   "6Tps09": {
     "defaultMessage": "未激活；不活跃"
   },
-  "6ZsOsA": {
-    "defaultMessage": "参与推荐计划。"
+  "6hEevT": {
+    "defaultMessage": "设置为默认值。"
   },
   "6uMqL1": {
     "defaultMessage": "未支付"
@@ -146,11 +218,29 @@
   "78fz1O": {
     "defaultMessage": "邮政编码 *"
   },
+  "7Cdpiv": {
+    "defaultMessage": "SSH 密钥"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{天} other{天}}"
   },
+  "7fbBqG": {
+    "defaultMessage": "取消付款。"
+  },
+  "7q/bs/": {
+    "defaultMessage": "立即续订。"
+  },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# 小时} other{# 小时}}"
+  },
+  "7tOz+m": {
+    "defaultMessage": "立即付款。"
+  },
+  "7wbySo": {
+    "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
+  },
+  "7yPJTW": {
+    "defaultMessage": "即将到期。"
   },
   "7zs+Vz": {
     "defaultMessage": "内存：{gb} GB"
@@ -158,17 +248,14 @@
   "82Y7Sa": {
     "defaultMessage": "正在发送……"
   },
-  "82zlBD": {
-    "defaultMessage": "持卡人姓名 *"
-  },
   "89xu1A": {
     "defaultMessage": "定制虚拟专用服务器订单"
   },
   "8BgaUL": {
     "defaultMessage": "当前规格"
   },
-  "8FF5Bq": {
-    "defaultMessage": "正在创建付款信息……"
+  "8HYfsO": {
+    "defaultMessage": "未命名的通行密钥"
   },
   "8Jfsz3": {
     "defaultMessage": "发送验证码"
@@ -176,26 +263,35 @@
   "8Q504V": {
     "defaultMessage": "元数据"
   },
+  "8X6Kwp": {
+    "defaultMessage": "下次付款"
+  },
+  "8cnlb5": {
+    "defaultMessage": "保存提款方式。"
+  },
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
   },
-  "8f0dzf": {
-    "defaultMessage": "续订 #{id}。"
+  "8lCjAM": {
+    "defaultMessage": "优先级"
+  },
+  "8lK3rQ": {
+    "defaultMessage": "到期前续订。 {date} 或者，这些内容及其相关数据将被永久删除。"
+  },
+  "8xIysb": {
+    "defaultMessage": "立即延长。"
   },
   "90f82/": {
     "defaultMessage": "启动虚拟机。"
   },
-  "9AfNRx": {
-    "defaultMessage": "IP地址段的预订功能即将推出。"
-  },
   "9QV3cp": {
     "defaultMessage": "可用的 IP 地址段"
   },
-  "9V+Kpc": {
-    "defaultMessage": "此虚拟机将在到期前 1 天自动续订，续订时将使用您配置好的 Nostr 钱包连接。"
+  "9d9svQ": {
+    "defaultMessage": "还没有通行密钥。添加一个即可无需密钥登录。"
   },
-  "9WRlF4": {
-    "defaultMessage": "发送"
+  "9dOxDN": {
+    "defaultMessage": "付款与续订。"
   },
   "9uOFF3": {
     "defaultMessage": "概述"
@@ -203,20 +299,41 @@
   "A11S6W": {
     "defaultMessage": "请直接向我们发送消息。您的公钥将自动包含在内。"
   },
-  "AHJbyB": {
-    "defaultMessage": "请使用您选择的支付方式完成付款。确认后，更改将自动生效。"
+  "A7Mqan": {
+    "defaultMessage": "正在加载续订信息……"
+  },
+  "ABL6b+": {
+    "defaultMessage": "将您的代码转化为收益。"
+  },
+  "AL9+3/": {
+    "defaultMessage": "找不到可用于续订此虚拟机的订阅。"
   },
   "AQkpi3": {
     "defaultMessage": "重新安装"
   },
-  "AuSwGG": {
-    "defaultMessage": "运行时间： {uptime}"
+  "ASrBq8": {
+    "defaultMessage": "通行密钥"
   },
-  "AyGauy": {
-    "defaultMessage": "登录"
+  "AUlRcp": {
+    "defaultMessage": "Nostr 钱包连接"
+  },
+  "AfmrGS": {
+    "defaultMessage": "发送代码。"
+  },
+  "AxlcnX": {
+    "defaultMessage": "此收件箱不再接受监控，因此无法在此发送新消息。如需技术支持，请从“支持”选项卡中提交工单。"
+  },
+  "B3YjIQ": {
+    "defaultMessage": "请立即保存此密钥，因为一旦丢失就无法恢复。"
   },
   "B4reHi": {
     "defaultMessage": "历史事件"
+  },
+  "B52Em/": {
+    "defaultMessage": "地址第一行"
+  },
+  "B9v1WK": {
+    "defaultMessage": "支付方式。"
   },
   "BBiS7b": {
     "defaultMessage": "停止虚拟机。"
@@ -224,8 +341,8 @@
   "BCmVPf": {
     "defaultMessage": "免费提供 NIP-05 托管服务。通过 DNS 或路径代理将您的域名指向 {cname}。"
   },
-  "BFqRWv": {
-    "defaultMessage": "NWC 连接字符串"
+  "BD6I/Z": {
+    "defaultMessage": "确切的税额会在您付款时确认。"
   },
   "BFqlLP": {
     "defaultMessage": "{records} 中的记录直接指向 IP 地址，如果 IP 地址发生更改，可能需要更新。"
@@ -236,8 +353,8 @@
   "BLZbXj": {
     "defaultMessage": "消息 *"
   },
-  "BOV9bc": {
-    "defaultMessage": "正在加载支付方式……"
+  "BVTni9": {
+    "defaultMessage": "支付方式"
   },
   "BXmJ0S": {
     "defaultMessage": "（备选方案）"
@@ -248,8 +365,14 @@
   "BlFeZA": {
     "defaultMessage": "最新消息"
   },
-  "CDTMW3": {
-    "defaultMessage": "总金额"
+  "Bwqhmd": {
+    "defaultMessage": "防火墙"
+  },
+  "Bzv1CO": {
+    "defaultMessage": "立即重新激活。"
+  },
+  "CHgKgH": {
+    "defaultMessage": "定期提供的服务"
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
@@ -257,11 +380,11 @@
   "CjLFf2": {
     "defaultMessage": "请与 LNVPS 团队联系。您对我们的比特币闪电网络 VPS 服务有疑问吗？我们随时为您提供帮助。"
   },
-  "Cl+kqZ": {
-    "defaultMessage": "显示二维码"
-  },
   "D3idYv": {
     "defaultMessage": "设置"
+  },
+  "DATKpj": {
+    "defaultMessage": "此页面将自动更新。"
   },
   "DDMksJ": {
     "defaultMessage": "部署您的第一个虚拟专用服务器。"
@@ -272,32 +395,95 @@
   "DU+LLZ": {
     "defaultMessage": "推荐"
   },
+  "DYDzPa": {
+    "defaultMessage": "聊天已关联。"
+  },
+  "DZ2Koj": {
+    "defaultMessage": "方向"
+  },
   "Dfuz87": {
     "defaultMessage": "目前尚未添加任何域名。请在上方添加您的第一个域名，开始使用。"
+  },
+  "DpNZQY": {
+    "defaultMessage": "手续费。"
+  },
+  "E2X6+s": {
+    "defaultMessage": "nsec1… or bunker://…"
   },
   "E2YqWs": {
     "defaultMessage": "推荐计划"
   },
+  "E8y+Hb": {
+    "defaultMessage": "租赁期已满。"
+  },
   "EBMKSN": {
     "defaultMessage": "升级虚拟机配置"
+  },
+  "ED9RG5": {
+    "defaultMessage": "审计日志"
   },
   "EKlM8d": {
     "defaultMessage": "磁盘（GB）"
   },
+  "EUSRTV": {
+    "defaultMessage": "您之前发送的已加密的 NIP-17 格式的消息已存档。此收件箱不再进行监控，请使用“支持”选项卡与我们联系。"
+  },
+  "Ecfndm": {
+    "defaultMessage": "发票"
+  },
   "Eg11ZY": {
     "defaultMessage": "重新连接。"
+  },
+  "EhL8Q+": {
+    "defaultMessage": "详细信息和 SSH。"
+  },
+  "EhjW+X": {
+    "defaultMessage": "此浏览器不支持通行密钥。"
+  },
+  "Epas1Z": {
+    "defaultMessage": "{n} {unit}"
+  },
+  "ErHVHe": {
+    "defaultMessage": "satoshi"
+  },
+  "F8RFcI": {
+    "defaultMessage": "可选。将显示在为您的付款而生成的发票上。"
+  },
+  "FBjXEw": {
+    "defaultMessage": "升级虚拟专用服务器。{id}"
   },
   "FJhjgz": {
     "defaultMessage": "邮政编码"
   },
+  "FLpm0X": {
+    "defaultMessage": "项目明细"
+  },
   "FMHDSp": {
     "defaultMessage": "LNVPS 新闻与产品更新"
+  },
+  "FOEu1B": {
+    "defaultMessage": "闪电地址"
   },
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
-  "FrXeQJ": {
-    "defaultMessage": "Nostr 是什么？"
+  "FazwRl": {
+    "defaultMessage": "请重试。"
+  },
+  "FlypmR": {
+    "defaultMessage": "请在下方添加电子邮件地址。"
+  },
+  "FoHB5c": {
+    "defaultMessage": "续订订阅。"
+  },
+  "G/yZLu": {
+    "defaultMessage": "移除。"
+  },
+  "G1kGar": {
+    "defaultMessage": "在仅使用通行密钥的账户中，您无法删除唯一的通行密钥。"
+  },
+  "G5cGLJ": {
+    "defaultMessage": "等待第一笔付款。"
   },
   "G6nrEF": {
     "defaultMessage": "已保存，但存在警告信息。"
@@ -314,6 +500,12 @@
   "GSye7T": {
     "defaultMessage": "闪电地址"
   },
+  "Gd6Kbk": {
+    "defaultMessage": "尚未激活。"
+  },
+  "GlTZFC": {
+    "defaultMessage": "分享此链接。当有人注册并成功完成首次虚拟货币支付时，您将获得佣金。"
+  },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
   },
@@ -322,6 +514,21 @@
   },
   "GtI0l1": {
     "defaultMessage": "提现款会转入您已保存的 NWC 钱包。您可以添加或选择一个钱包，系统将默认使用启用的钱包。"
+  },
+  "GuLP+V": {
+    "defaultMessage": "您的订阅将在到期前一天自动续订，系统将使用您默认的支付方式进行扣款。"
+  },
+  "Gw07ly": {
+    "defaultMessage": "月总计"
+  },
+  "H0SDpi": {
+    "defaultMessage": "通行密钥注册失败"
+  },
+  "H4Ucn0": {
+    "defaultMessage": "入站；进入"
+  },
+  "H9Az5Z": {
+    "defaultMessage": "账单详情。"
   },
   "HAlOn1": {
     "defaultMessage": "姓名"
@@ -341,8 +548,11 @@
   "ID2dFf": {
     "defaultMessage": "尚未保存任何 NWC 钱包。请在下方添加一个，以便接收付款。"
   },
-  "INlWvJ": {
-    "defaultMessage": "或者"
+  "ILTAun": {
+    "defaultMessage": "您的虚拟机正在配置中。通常需要一两分钟的时间。"
+  },
+  "IZFEUg": {
+    "defaultMessage": "准备好了。"
   },
   "Id24hd": {
     "defaultMessage": "姓名 *"
@@ -350,26 +560,41 @@
   "Ij0H43": {
     "defaultMessage": "图表"
   },
+  "IuFETn": {
+    "defaultMessage": "持续时间"
+  },
   "IvjoDS": {
     "defaultMessage": "已连接。"
   },
   "Iz4veS": {
     "defaultMessage": "最低：{min} GB"
   },
+  "J+dIsA": {
+    "defaultMessage": "订阅"
+  },
+  "JBWS0c": {
+    "defaultMessage": "链接"
+  },
+  "JH4wUD": {
+    "defaultMessage": "已保存。"
+  },
   "JVClQM": {
     "defaultMessage": "LNVPS 服务状态和在线时间"
   },
-  "JmgL7z": {
-    "defaultMessage": "有效期：{date}（{days}天）"
+  "Jm+fih": {
+    "defaultMessage": "未激活。"
   },
   "K/zU0+": {
     "defaultMessage": "+ 部署新版本"
   },
+  "K3r6DQ": {
+    "defaultMessage": "删除"
+  },
   "KAL6xF": {
     "defaultMessage": "密钥名称"
   },
-  "KWAuBK": {
-    "defaultMessage": "未分配任何 IP 地址。"
+  "KKYB/E": {
+    "defaultMessage": "尚未保存任何支付方式。"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -380,11 +605,26 @@
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
   },
+  "Kw4098": {
+    "defaultMessage": "新规定。"
+  },
+  "KxG+iy": {
+    "defaultMessage": "增值税"
+  },
+  "L8seEc": {
+    "defaultMessage": "小计"
+  },
   "LAMeIi": {
     "defaultMessage": "联系 LNVPS 技术支持。"
   },
-  "LNcnLC": {
-    "defaultMessage": "转诊失败"
+  "LHX6Oo": {
+    "defaultMessage": "到期日 {exp}"
+  },
+  "LR754a": {
+    "defaultMessage": "续订时间："
+  },
+  "LX6weZ": {
+    "defaultMessage": "待付款。"
   },
   "LjglgP": {
     "defaultMessage": "随机存取存储器"
@@ -410,17 +650,35 @@
   "Mp+zDS": {
     "defaultMessage": "此组件仅支持闪电网络支付。"
   },
+  "N2IrpM": {
+    "defaultMessage": "确认。"
+  },
+  "N4e/Yn": {
+    "defaultMessage": "费用 {fee}"
+  },
   "NQgbYA": {
     "defaultMessage": "账户设置"
   },
   "NZyhSX": {
     "defaultMessage": "新闻"
   },
+  "Niq27F": {
+    "defaultMessage": "订阅名称（可选）"
+  },
+  "NmK6zy": {
+    "defaultMessage": "付款。"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "或者"
+  },
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
   "O/68ZX": {
     "defaultMessage": "您确定要重新安装虚拟机吗？这将删除所有数据！"
+  },
+  "OJuBck": {
+    "defaultMessage": "无需密码"
   },
   "OLqOyf": {
     "defaultMessage": "设置说明"
@@ -431,8 +689,8 @@
   "Olq7Wf": {
     "defaultMessage": "请在此处输入您的消息……"
   },
-  "OtUSLU": {
-    "defaultMessage": "自动续订"
+  "Op5EHr": {
+    "defaultMessage": "使用 Google 账号登录"
   },
   "OtuYup": {
     "defaultMessage": "电子邮件地址 *"
@@ -443,14 +701,14 @@
   "P+08xT": {
     "defaultMessage": "获取报价。"
   },
+  "P/PGYR": {
+    "defaultMessage": "目前还没有任何推荐。分享您的链接，开始进行转化。"
+  },
   "P7PLVj": {
     "defaultMessage": "日期"
   },
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
-  },
-  "PPcUVc": {
-    "defaultMessage": "LNVPS 使用 Nostr 账户，链接为：{link}"
   },
   "PT4sD/": {
     "defaultMessage": "选择操作系统："
@@ -461,20 +719,32 @@
   "PucUfl": {
     "defaultMessage": "选择 SSH 密钥："
   },
-  "QDA9xg": {
-    "defaultMessage": "提款记录"
+  "PujK1s": {
+    "defaultMessage": "生成"
+  },
+  "QEuWMk": {
+    "defaultMessage": "LNVPS 账户使用 Nostr 或登录服务提供商。 {link}"
   },
   "QN/rCc": {
     "defaultMessage": "解析 JSON 时出错：{msg}"
   },
-  "QdbxqE": {
-    "defaultMessage": "使用 Nostr 钱包连接功能配置自动虚拟机续订。您的钱包将在虚拟机到期前 1 天自动支付续订费用。"
-  },
   "QgBuiV": {
     "defaultMessage": "中央处理器"
   },
-  "QvXah/": {
-    "defaultMessage": "返回虚拟机。"
+  "QlsDcr": {
+    "defaultMessage": "行动；采取措施。"
+  },
+  "Qqli25": {
+    "defaultMessage": "请开启自动充电功能，以便在默认支付方式到期前一天自动进行充值。"
+  },
+  "QuGLBN": {
+    "defaultMessage": "此 SSH 密钥当前正被一个或多个虚拟机使用，因此无法删除。"
+  },
+  "R+j5Qu": {
+    "defaultMessage": "未分配任何 IP 地址。"
+  },
+  "R/6nsx": {
+    "defaultMessage": "订阅"
   },
   "R0skQD": {
     "defaultMessage": "GitHub：请在 github.com/LNVPS 上提交问题。"
@@ -485,23 +755,35 @@
   "R7x8iU": {
     "defaultMessage": "磁盘：{gb} GB，类型：{type}"
   },
+  "RAyrhP": {
+    "defaultMessage": "增值税（{rate}）："
+  },
   "RB2CER": {
     "defaultMessage": "CPU 核心数"
   },
-  "RF85OG": {
-    "defaultMessage": "您的新密钥："
+  "RCHbbR": {
+    "defaultMessage": "管理您的账单信息、自动续订设置以及我们与您联系的方式。"
+  },
+  "RXjd0H": {
+    "defaultMessage": "返回账户。"
   },
   "RahCRH": {
     "defaultMessage": "已过期。"
   },
-  "RcshyP": {
-    "defaultMessage": "已赚取的金额（{currency}）"
+  "Ru62sn": {
+    "defaultMessage": "添加一个 Nostr 钱包连接。"
   },
-  "S1hhGJ": {
-    "defaultMessage": "SSH："
+  "Rw7iI7": {
+    "defaultMessage": "禁用"
   },
-  "SMHOve": {
-    "defaultMessage": "成功的推荐"
+  "Rw82/V": {
+    "defaultMessage": "每月"
+  },
+  "SB//YQ": {
+    "defaultMessage": "订单摘要。"
+  },
+  "SQJto2": {
+    "defaultMessage": "登录"
   },
   "SU1E+O": {
     "defaultMessage": "新秩序"
@@ -512,11 +794,11 @@
   "Sg3z1C": {
     "defaultMessage": "未选择虚拟机。"
   },
+  "SnyOdn": {
+    "defaultMessage": "已转换。"
+  },
   "Ss0sWu": {
     "defaultMessage": "立即支付"
-  },
-  "Sv1hgX": {
-    "defaultMessage": "已禁用自动续订。"
   },
   "Sz/3Vf": {
     "defaultMessage": "请指定升级值，使其大于或等于当前值，并且至少有一个值必须大于当前值。"
@@ -524,8 +806,8 @@
   "T1/en5": {
     "defaultMessage": "ID：{id}"
   },
-  "T4yFyM": {
-    "defaultMessage": "正在加载支付信息……"
+  "T4VxQN": {
+    "defaultMessage": "正在加载……"
   },
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
@@ -533,20 +815,44 @@
   "TE4fIS": {
     "defaultMessage": "城市"
   },
+  "TGPQYT": {
+    "defaultMessage": "{success} 已支付。"
+  },
+  "TH1fFo": {
+    "defaultMessage": "电报"
+  },
   "TNSbi4": {
     "defaultMessage": "反向 DNS："
+  },
+  "TT0vME": {
+    "defaultMessage": "规则限制已达到。"
+  },
+  "TVBZb8": {
+    "defaultMessage": "{success} 的 {total} 已支付的推荐费用。"
   },
   "Tbo377": {
     "defaultMessage": "账单"
   },
-  "Td/uhP": {
-    "defaultMessage": "启用自动续订"
+  "TqSTI0": {
+    "defaultMessage": "启用"
   },
-  "TieXig": {
-    "defaultMessage": "款项将发送到您帐户设置中配置的 NWC 钱包。"
+  "TtNbPG": {
+    "defaultMessage": "每月总计"
+  },
+  "TwyMau": {
+    "defaultMessage": "账户"
+  },
+  "U96Gl9": {
+    "defaultMessage": "请保存此卡，以便今后使用。"
+  },
+  "UPP+wZ": {
+    "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
   },
   "UQc03N": {
     "defaultMessage": "添加新的 SSH 密钥。"
+  },
+  "UXpysW": {
+    "defaultMessage": "IP 地址范围：{id}"
   },
   "Ub+AGc": {
     "defaultMessage": "登录"
@@ -560,14 +866,17 @@
   "Uk68vE": {
     "defaultMessage": "发送者的公钥（npub/nprofile/十六进制）："
   },
+  "UkQy3+": {
+    "defaultMessage": "持卡人姓名*"
+  },
   "Un5Bdm": {
     "defaultMessage": "正在解析 {cname} 的 IP 地址……"
   },
-  "UwP+xI": {
-    "defaultMessage": "已启用自动续订功能。"
+  "Uvhzx4": {
+    "defaultMessage": "已关闭自动续订功能。请在到期前手动续订，以避免服务中断。"
   },
-  "VE4z7n": {
-    "defaultMessage": "获取发票。"
+  "V7fgpY": {
+    "defaultMessage": "正在完成登录…"
   },
   "VJ4xwX": {
     "defaultMessage": "新闻和产品更新"
@@ -575,11 +884,20 @@
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
-  "VnXp8Z": {
-    "defaultMessage": "阿凡达"
+  "VLRCfi": {
+    "defaultMessage": "过去 30 天的正常运行时间： {uptime}"
   },
-  "W+1MOm": {
-    "defaultMessage": "方法"
+  "VffztH": {
+    "defaultMessage": "上次使用时间 {date}"
+  },
+  "VtKAyJ": {
+    "defaultMessage": "{count} / {max} 规则"
+  },
+  "VzzYJk": {
+    "defaultMessage": "创建"
+  },
+  "WUV28A": {
+    "defaultMessage": "正在保存……"
   },
   "WUeavc": {
     "defaultMessage": "或者，您可以直接通过电子邮件 {email} 与我们联系。"
@@ -593,29 +911,23 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
-  "X5QA2h": {
-    "defaultMessage": "处理续费付款。"
-  },
   "XD6788": {
     "defaultMessage": "设置费用："
   },
   "XNiOLB": {
     "defaultMessage": "消息发送失败。请稍后重试。"
   },
-  "Xoi0Uz": {
-    "defaultMessage": "使用银行卡支付。"
-  },
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
-  "Y6YwKh": {
-    "defaultMessage": "此功能仅用于发送账户通知，例如虚拟机到期通知，我们不会发送营销或促销信息。"
-  },
-  "Y7opZr": {
-    "defaultMessage": "续订 VPS。"
+  "Y/tMXU": {
+    "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
   "YH46Fd": {
     "defaultMessage": "LNVPS 最新消息、更新和公告——您值得信赖的比特币闪电网络 VPS 服务提供商。"
+  },
+  "YWjrby": {
+    "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
   },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
@@ -623,8 +935,8 @@
   "Yl8GBP": {
     "defaultMessage": "税务识别号"
   },
-  "Yt9S7n": {
-    "defaultMessage": "费用：{fees}"
+  "Ysr8td": {
+    "defaultMessage": "已获得。"
   },
   "YyojwF": {
     "defaultMessage": "配置更改："
@@ -647,23 +959,32 @@
   "ZlYFmj": {
     "defaultMessage": "LNVPS 服务条款——比特币闪电网络虚拟专用服务器提供商。请阅读我们的使用政策、可接受的使用指南和服务条款。"
   },
-  "aAnyb9": {
-    "defaultMessage": "分享此链接。当其他人注册并付款时，您将获得相应的报酬。"
+  "aTgjTE": {
+    "defaultMessage": "添加通行密钥"
   },
-  "aFJYR3": {
-    "defaultMessage": "卡片详情"
+  "acrOoz": {
+    "defaultMessage": "继续。"
   },
-  "ajQtDJ": {
-    "defaultMessage": "选择支付方式。"
+  "alJZVR": {
+    "defaultMessage": "Nostr 账户"
+  },
+  "an3Zx3": {
+    "defaultMessage": "管理用于访问您的虚拟机的 SSH 密钥。"
+  },
+  "aoXv6v": {
+    "defaultMessage": "正在加载防火墙……"
   },
   "b1zuN9": {
     "defaultMessage": "价格"
   },
+  "b6Q2tD": {
+    "defaultMessage": "总运行时间： {uptime}"
+  },
+  "bMQUWl": {
+    "defaultMessage": "源 CIDR（此虚拟机）"
+  },
   "bW7B87": {
     "defaultMessage": "新"
-  },
-  "bZ1uDf": {
-    "defaultMessage": "返回首页。"
   },
   "bh3pad": {
     "defaultMessage": "请先登录后再进行购买。"
@@ -671,11 +992,11 @@
   "bhfNWq": {
     "defaultMessage": "请在此处粘贴加密后的消息……"
   },
-  "bm5rt1": {
-    "defaultMessage": "请妥善保存此密钥，一旦丢失将无法找回。"
-  },
   "bpBvBq": {
     "defaultMessage": "显示货币："
+  },
+  "c0b5XV": {
+    "defaultMessage": "费率"
   },
   "c78ZVJ": {
     "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
@@ -689,11 +1010,11 @@
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
   },
+  "ciFSHC": {
+    "defaultMessage": "付款；工资 {amount}"
+  },
   "cyR7Kh": {
     "defaultMessage": "返回"
-  },
-  "d+1v5f": {
-    "defaultMessage": "续订："
   },
   "d1nnRF": {
     "defaultMessage": "发送另一条消息。"
@@ -701,8 +1022,8 @@
   "d3wxHm": {
     "defaultMessage": "正在加载历史记录……"
   },
-  "dCaiAm": {
-    "defaultMessage": "立即续订"
+  "dHltrI": {
+    "defaultMessage": "每月计费。"
   },
   "dKHSEA": {
     "defaultMessage": "感谢您与我们联系。我们会尽快回复您。"
@@ -710,11 +1031,17 @@
   "dOQCL8": {
     "defaultMessage": "显示名称"
   },
+  "dUQeuG": {
+    "defaultMessage": "创建通行密钥账户"
+  },
   "dVYvX2": {
     "defaultMessage": "您确定要删除此句柄吗？"
   },
   "dVx3yz": {
     "defaultMessage": "记忆"
+  },
+  "dXTCjA": {
+    "defaultMessage": "未经验证。"
   },
   "dgTL/5": {
     "defaultMessage": "未注册的句柄。"
@@ -725,8 +1052,8 @@
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
-  "e4iTJm": {
-    "defaultMessage": "输入您的消息……"
+  "eClqvz": {
+    "defaultMessage": "已保存的支付方式。"
   },
   "eKEL/g": {
     "defaultMessage": "待处理"
@@ -743,17 +1070,29 @@
   "elhFf1": {
     "defaultMessage": "已过期。"
   },
-  "eu+sDO": {
-    "defaultMessage": "登录："
+  "eq14GY": {
+    "defaultMessage": "您新的密钥。"
+  },
+  "evMlX9": {
+    "defaultMessage": "自动续订"
   },
   "f00p/7": {
     "defaultMessage": "上传失败。"
   },
-  "fGeu02": {
-    "defaultMessage": "浏览器扩展程序："
+  "f7+Xwr": {
+    "defaultMessage": "信用卡或借记卡"
+  },
+  "fHZKQp": {
+    "defaultMessage": "增值税（{rate}）"
   },
   "fNSGnl": {
     "defaultMessage": "登录以进行订购。"
+  },
+  "fnWV0M": {
+    "defaultMessage": "对于出站规则，源 CIDR 应与该虚拟机的自身地址匹配。无法限制远程目标主机——只能限制协议和目标端口。"
+  },
+  "fsB/4p": {
+    "defaultMessage": "已保存。"
   },
   "fxYCqm": {
     "defaultMessage": "地点：{location}"
@@ -770,17 +1109,17 @@
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
+  "gWp9QV": {
+    "defaultMessage": "{failed} 从未支付过。"
+  },
+  "gYR5sK": {
+    "defaultMessage": "此域名已超过宽限期，可能会随时被删除。请立即续费以保留该域名。"
+  },
   "gZz74a": {
     "defaultMessage": "请填写所有必填字段。"
   },
   "gc+2Z2": {
     "defaultMessage": "控制台"
-  },
-  "gdP56I": {
-    "defaultMessage": "税"
-  },
-  "gjBiyj": {
-    "defaultMessage": "正在加载……"
   },
   "gtGLdm": {
     "defaultMessage": "包括 {amount} 的手续费。"
@@ -788,23 +1127,41 @@
   "gv8O1e": {
     "defaultMessage": "VPS 优惠活动"
   },
+  "gvPhJ7": {
+    "defaultMessage": "按月计费。"
+  },
   "h+26/n": {
     "defaultMessage": "您的推荐码"
   },
   "h/PJh3": {
     "defaultMessage": "选择新的密钥后，请重启虚拟机。"
   },
+  "h9Vgyc": {
+    "defaultMessage": "{n} 虚拟 CPU"
+  },
   "hMzcSq": {
     "defaultMessage": "消息"
+  },
+  "hX8VXF": {
+    "defaultMessage": "月度正常运行时间（过去 12 个月）"
+  },
+  "hs3HVz": {
+    "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
+  },
+  "huqKGl": {
+    "defaultMessage": "创建账户"
   },
   "iO1K6D": {
     "defaultMessage": "目前还没有帖子。"
   },
+  "iXNbPf": {
+    "defaultMessage": "重命名"
+  },
   "icn2DS": {
     "defaultMessage": "（推荐）"
   },
-  "iluJkV": {
-    "defaultMessage": "提现设置"
+  "iuQLCB": {
+    "defaultMessage": "已保存的付款方式将用于自动支付续订费用，续订将在虚拟机到期前一天进行。请选择默认使用的付款方式。"
   },
   "j4RCJW": {
     "defaultMessage": "技能.md"
@@ -812,23 +1169,35 @@
   "jM8W7d": {
     "defaultMessage": "请选择国家。"
   },
+  "jOo6oG": {
+    "defaultMessage": "管理虚拟机访问密钥。"
+  },
+  "jUqYir": {
+    "defaultMessage": "已添加。 {date}"
+  },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
+  },
+  "jf7fbc": {
+    "defaultMessage": "未设置——添加一个。"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
   },
+  "jtkU3K": {
+    "defaultMessage": "转换"
+  },
   "jvo0vs": {
     "defaultMessage": "保存"
   },
-  "k1UDSi": {
-    "defaultMessage": "LNURL 支付"
-  },
-  "k3yLiC": {
-    "defaultMessage": "更新您的账单信息，以便在生成的发票中显示（可选）。"
+  "jwt9EL": {
+    "defaultMessage": "通行密钥登录失败"
   },
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
+  },
+  "kRFEho": {
+    "defaultMessage": "添加 SSH 密钥。"
   },
   "kSjQ3a": {
     "defaultMessage": "由 {initiatedBy} 发起"
@@ -842,26 +1211,53 @@
   "l4RUua": {
     "defaultMessage": "服务：{service}"
   },
+  "l7PJ8l": {
+    "defaultMessage": "目前应付总额："
+  },
   "lCILNz": {
     "defaultMessage": "立即购买"
+  },
+  "lD3+8a": {
+    "defaultMessage": "付款；工资"
+  },
+  "lKv8ex": {
+    "defaultMessage": "默认"
+  },
+  "lP4qIQ": {
+    "defaultMessage": "卡片信息。"
   },
   "lPsVOx": {
     "defaultMessage": "您的虚拟机和域名。"
   },
+  "lTtWDY": {
+    "defaultMessage": "{daysLeft} 剩余天数"
+  },
+  "lcXewt": {
+    "defaultMessage": "快速开票"
+  },
+  "lhCavK": {
+    "defaultMessage": "使用Revolut付款时，请勾选“保存此卡”，以便将该卡保存在此处，用于未来的支付和自动续订。"
+  },
   "lloEWi": {
     "defaultMessage": "这是关于什么的？"
+  },
+  "lmac7x": {
+    "defaultMessage": "{n,plural,one{# 项目；物品} other{# 项目；物品}}"
   },
   "lnaWo/": {
     "defaultMessage": "地区"
   },
-  "luhCIe": {
-    "defaultMessage": "IP地址："
+  "lsFKTa": {
+    "defaultMessage": "正在使用您保存的付款方式进行扣款。系统会在确认后自动执行此操作。"
   },
-  "lvV1wo": {
-    "defaultMessage": "升级付款"
+  "ltoBql": {
+    "defaultMessage": "[新功能]"
   },
-  "m22Mzk": {
-    "defaultMessage": "处理升级付款。"
+  "m4QgXr": {
+    "defaultMessage": "{days,plural,one{# 剩余天数} other{# 剩余天数}}"
+  },
+  "mBP5Sb": {
+    "defaultMessage": "显示闪电地址。"
   },
   "mIuuiJ": {
     "defaultMessage": "服务状态和正常运行时间。"
@@ -869,32 +1265,56 @@
   "mJPBXd": {
     "defaultMessage": "加密消息（复制并包含在您的电子邮件中）："
   },
+  "mMug3Z": {
+    "defaultMessage": "已获得；赚取。 {currency}"
+  },
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
+  },
+  "mV5FZi": {
+    "defaultMessage": "员工推荐奖励计划"
   },
   "mXu0jm": {
     "defaultMessage": "域名设置"
   },
+  "mY+s0A": {
+    "defaultMessage": "我们如何与您联系。"
+  },
+  "mtEKFV": {
+    "defaultMessage": "正在处理中……"
+  },
+  "mznk9z": {
+    "defaultMessage": "委员会；佣金"
+  },
+  "n9fdaJ": {
+    "defaultMessage": "未经核实"
+  },
+  "nDyaq/": {
+    "defaultMessage": "正在运行。"
+  },
   "nFQbxh": {
     "defaultMessage": "支付方式"
-  },
-  "nQ0mEC": {
-    "defaultMessage": "关键："
   },
   "nWQFic": {
     "defaultMessage": "续订"
   },
+  "nidU9E": {
+    "defaultMessage": "{rate} 佣金；委托"
+  },
   "nm81YC": {
     "defaultMessage": "正在加载 VPS 服务……"
+  },
+  "nx5ZnY": {
+    "defaultMessage": "验证电话号码以启用该功能。"
   },
   "nxqAD7": {
     "defaultMessage": "新增事件"
   },
+  "o0jcye": {
+    "defaultMessage": "操作系统"
+  },
   "o2AdrJ": {
     "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
-  },
-  "o8lVmf": {
-    "defaultMessage": "付款方式会影响报价和付款时使用的货币。"
   },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
@@ -905,20 +1325,32 @@
   "oCc8Oq": {
     "defaultMessage": "添加密钥"
   },
+  "oQY0a2": {
+    "defaultMessage": "地址行 2"
+  },
   "oXGNZ+": {
     "defaultMessage": "虚拟机 #{id}：终端："
+  },
+  "odTkf5": {
+    "defaultMessage": "返回登录"
+  },
+  "oswGmn": {
+    "defaultMessage": "在未完成所有提现记录的情况下，您不能离开。"
   },
   "p4N05H": {
     "defaultMessage": "上传"
   },
-  "pSH5mR": {
-    "defaultMessage": "付款记录"
+  "p5LNtB": {
+    "defaultMessage": "未设置。"
   },
   "pY6CgO": {
     "defaultMessage": "您目前还没有创建任何虚拟机。"
   },
   "pgLgIU": {
     "defaultMessage": "阅读完整更新内容。"
+  },
+  "pus6h6": {
+    "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
   },
   "qJRR8N": {
     "defaultMessage": "正在加载 IP 屏蔽列表……"
@@ -929,8 +1361,14 @@
   "qWMcff": {
     "defaultMessage": "DNS 更新可能需要最多 48 小时才能完全生效。"
   },
-  "qZkVyB": {
-    "defaultMessage": "您的公钥（请在所有通信中包含此公钥）："
+  "qX7u3z": {
+    "defaultMessage": "标签（例如：个人签证）"
+  },
+  "qkLHOL": {
+    "defaultMessage": "您确定要删除 SSH 密钥吗？{name}？"
+  },
+  "qpBS29": {
+    "defaultMessage": "调整虚拟机规格。"
   },
   "qq7WMq": {
     "defaultMessage": "所有虚拟专用服务器（VPS）都配备一个 IPv4 地址和一个 IPv6 地址，并且提供无限流量，所有价格均不含税。"
@@ -941,11 +1379,14 @@
   "r2BhUh": {
     "defaultMessage": "解密消息"
   },
-  "rCcPOd": {
-    "defaultMessage": "费用"
+  "rF6EmI": {
+    "defaultMessage": "账单详情"
   },
-  "rKLmW/": {
-    "defaultMessage": "取消付款。"
+  "rieTwF": {
+    "defaultMessage": "已过期，截止日期为："
+  },
+  "rv2p0H": {
+    "defaultMessage": "中央处理器、内存和网络。"
   },
   "rvirM2": {
     "defaultMessage": "位置"
@@ -953,20 +1394,53 @@
   "s+YpY+": {
     "defaultMessage": "通过推荐他人来赚取奖励。"
   },
-  "sH1q5P": {
-    "defaultMessage": "持续 {time}。"
+  "s+ixZq": {
+    "defaultMessage": "默认方法"
+  },
+  "s2ZjPB": {
+    "defaultMessage": "没有防火墙规则。系统将应用默认策略。"
+  },
+  "sAJryD": {
+    "defaultMessage": "增值税和各项费用为预估金额，确切金额将在付款时确认。"
+  },
+  "sQu9nL": {
+    "defaultMessage": "SSH 密钥"
   },
   "sTesGq": {
     "defaultMessage": "目前没有可用的优惠。"
   },
+  "sUw18G": {
+    "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
+  },
   "sXj7R6": {
     "defaultMessage": "磁盘："
+  },
+  "sn+Rj5": {
+    "defaultMessage": "使用通行密钥登录"
+  },
+  "snh6R6": {
+    "defaultMessage": "标签（可选）"
   },
   "sqvjkf": {
     "defaultMessage": "添加把手"
   },
+  "srgk8m": {
+    "defaultMessage": "设置用于报价和支付的货币。"
+  },
   "sy+pv5": {
     "defaultMessage": "电子邮件"
+  },
+  "tNmjzW": {
+    "defaultMessage": "港口（或码头）"
+  },
+  "tTpLsN": {
+    "defaultMessage": "未关联。"
+  },
+  "tngc9N": {
+    "defaultMessage": "源 CIDR"
+  },
+  "tthToS": {
+    "defaultMessage": "残疾人；已禁用"
   },
   "tzMNF3": {
     "defaultMessage": "状态"
@@ -977,23 +1451,26 @@
   "u3FDCD": {
     "defaultMessage": "服务条款和可接受的使用规范"
   },
-  "uN7rbm": {
-    "defaultMessage": "加入推荐计划，当其他人使用您的推荐码注册时，您即可获得奖励。您可以选择您希望的收款方式。"
+  "uJV0wU": {
+    "defaultMessage": "IP 地址"
   },
   "uPNlBw": {
     "defaultMessage": "邮箱：{email}"
   },
-  "uRfNhn": {
-    "defaultMessage": "网络："
-  },
-  "ug01Mk": {
-    "defaultMessage": "时间"
+  "ubXbwc": {
+    "defaultMessage": "默认策略"
   },
   "uqUeK9": {
     "defaultMessage": "解密收到的来自技术支持部门的消息。"
   },
+  "uqe58g": {
+    "defaultMessage": "分解；细分。"
+  },
   "v2BRjN": {
     "defaultMessage": "主题 *"
+  },
+  "v3j7Fq": {
+    "defaultMessage": "您没有 SSH 密钥。"
   },
   "v4Sg0C": {
     "defaultMessage": "使用自定义收件人密钥。"
@@ -1001,14 +1478,44 @@
   "vONi+O": {
     "defaultMessage": "国家"
   },
+  "vWsXtg": {
+    "defaultMessage": "正在创建付款……"
+  },
+  "vaoVHG": {
+    "defaultMessage": "返回订阅页面。"
+  },
   "vlKhIl": {
     "defaultMessage": "您的姓名。"
+  },
+  "vo0Z8o": {
+    "defaultMessage": "将您的聊天记录连接起来，然后点击机器人中的“开始”按钮。"
+  },
+  "vtStU2": {
+    "defaultMessage": "付款记录"
+  },
+  "vy2rlX": {
+    "defaultMessage": "处理费："
+  },
+  "wEQDC6": {
+    "defaultMessage": "编辑"
+  },
+  "wL4Olp": {
+    "defaultMessage": "续订。 {date}"
   },
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
   },
+  "waJLKW": {
+    "defaultMessage": "已链接。"
+  },
+  "waUHa4": {
+    "defaultMessage": "安全外壳协议 (Secure Shell)"
+  },
   "wfYHHe": {
     "defaultMessage": "- 剩余 {daysLeft} 天"
+  },
+  "wo868v": {
+    "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"
   },
   "wz7uSD": {
     "defaultMessage": "包括{amount}的税费"
@@ -1016,14 +1523,17 @@
   "x0cZXf": {
     "defaultMessage": "无法升级。"
   },
-  "xLbpvq": {
-    "defaultMessage": "通过 NIP-17 协议发送和接收加密的私信。所有消息均采用端到端加密。"
+  "xOnplm": {
+    "defaultMessage": "正在加载支付方式……"
   },
-  "xR03Aa": {
-    "defaultMessage": "通知设置"
+  "xQ8iOj": {
+    "defaultMessage": "您目前还没有订阅任何内容。"
   },
   "xXbJso": {
     "defaultMessage": "注销登录"
+  },
+  "xhfdqv": {
+    "defaultMessage": "创建中"
   },
   "xj59EM": {
     "defaultMessage": "{proxy} 无需更改 DNS 设置即可正常工作——如果您的域名下已经有一个网站，这将非常有用。"
@@ -1034,8 +1544,14 @@
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} 个核心"
   },
+  "xuTqgN": {
+    "defaultMessage": "付款方式"
+  },
   "y43e4q": {
     "defaultMessage": "（无需更改 DNS 设置）"
+  },
+  "y9xHR9": {
+    "defaultMessage": "支付款项"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -1043,11 +1559,17 @@
   "yJAKR0": {
     "defaultMessage": "发送消息"
   },
-  "yYs9cj": {
-    "defaultMessage": "返回升级页面"
+  "yKzuSB": {
+    "defaultMessage": "支付订阅费用。"
+  },
+  "yPgnbL": {
+    "defaultMessage": "登录失败"
   },
   "yr1Ove": {
     "defaultMessage": "查看 LNVPS 服务的实时运行时间和历史事件记录。请查看我们比特币闪电 VPS 基础设施的当前运行状态。"
+  },
+  "z+hIFs": {
+    "defaultMessage": "目前尚未收到任何付款。"
   },
   "zAN0RF": {
     "defaultMessage": "加密的私信"

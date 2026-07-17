@@ -1,6 +1,9 @@
 {
-  "+8AmJ0": {
-    "defaultMessage": "Отключить автоматическое продление."
+  "++XeyK": {
+    "defaultMessage": "Ключ Nostr"
+  },
+  "+3NyB6": {
+    "defaultMessage": "Исходящие (звонки/сообщения)"
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{год} other{лет}}"
@@ -8,23 +11,44 @@
   "+SM72m": {
     "defaultMessage": "Публичный ключ получателя (npub/nprofile/в шестнадцатеричном формате):"
   },
+  "+UjQFc": {
+    "defaultMessage": "Правила и положения"
+  },
+  "+sQCsu": {
+    "defaultMessage": "Оплатите полностью."
+  },
   "/0TOL5": {
     "defaultMessage": "Сумма"
+  },
+  "/2Xcxs": {
+    "defaultMessage": "Программа выхода из системы."
+  },
+  "/2t1lH": {
+    "defaultMessage": "Виртуальная машина №{id}"
   },
   "/GCoTA": {
     "defaultMessage": "Понятно/Ясно/Готово/Очистить"
   },
+  "/K+qGR": {
+    "defaultMessage": "Сгенерировать ключ Nostr"
+  },
+  "/PE1Wn": {
+    "defaultMessage": "Название ключа (например, MacBook)"
+  },
   "/QkDVJ": {
     "defaultMessage": "Кошелек NWC"
   },
-  "/nQTeE": {
-    "defaultMessage": "Сохранить настройки выплат"
-  },
-  "063dCM": {
-    "defaultMessage": "Настройте строку подключения NWC в настройках учётной записи, а затем включите автоматическое продление, чтобы автоматически оплачивать продление срока действия виртуальных машин."
+  "/tiBYY": {
+    "defaultMessage": "Продолжить с {provider}"
   },
   "0HkBaC": {
     "defaultMessage": "Выберите один из предложенных способов подтверждения прав на ваш домен:"
+  },
+  "0QLzxo": {
+    "defaultMessage": "Протокол"
+  },
+  "0gkn9c": {
+    "defaultMessage": "Ваша подписка на выделенный блок IP-адресов создана. Чтобы получить доступ к выделенному блоку адресов и активировать подписку, выполните первую оплату."
   },
   "0h/lPM": {
     "defaultMessage": "Обновить"
@@ -38,6 +62,9 @@
   "0rlAUP": {
     "defaultMessage": "Вы вошли в систему как: {key}"
   },
+  "0t1qvq": {
+    "defaultMessage": "Добавить правило."
+  },
   "13cluZ": {
     "defaultMessage": "Добавить SSH-ключ:"
   },
@@ -49,6 +76,9 @@
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# час} other{# час.}} {m,plural,one{# мин.} other{# мин.}}"
+  },
+  "1aBLDj": {
+    "defaultMessage": "Оплатите подписку с любого кошелька Lightning."
   },
   "1v7S+3": {
     "defaultMessage": "Добавить домен Nostr."
@@ -62,8 +92,8 @@
   "20Sod8": {
     "defaultMessage": "Центральный процессор:"
   },
-  "2LslN1": {
-    "defaultMessage": "Обновите сейчас."
+  "2QrTo0": {
+    "defaultMessage": "Новый заказ на выделение IP-адресов."
   },
   "2RFWLf": {
     "defaultMessage": "Тест скорости соединения"
@@ -77,17 +107,56 @@
   "36aVfS": {
     "defaultMessage": "Nostr DM"
   },
+  "3GLHv9": {
+    "defaultMessage": "аутентификация"
+  },
+  "3NsyM4": {
+    "defaultMessage": "Зашифрованное прямое сообщение в формате NIP-17."
+  },
+  "3VI9mt": {
+    "defaultMessage": "Сохранить изменения"
+  },
   "3WU2Fe": {
     "defaultMessage": "Местоположение: {region}"
+  },
+  "3a5wL8": {
+    "defaultMessage": "Активный"
+  },
+  "3aeXvu": {
+    "defaultMessage": "Получите реферальный код, чтобы поделиться им. Вы будете получать комиссию, когда кто-то зарегистрируется по этому коду и его виртуальная машина совершит первую оплату. Укажите, куда должны поступать выплаты, а затем активируйте программу."
+  },
+  "3vxkus": {
+    "defaultMessage": "Ничего не нужно сохранять — ваше устройство (Face ID, Touch ID, Windows Hello или ключ безопасности) защищает аккаунт."
+  },
+  "3woNJO": {
+    "defaultMessage": "Правила применяются в порядке приоритета (сначала правила с наименьшим приоритетом), прежде чем будет применена политика по умолчанию. Защита от подмены адреса всегда обеспечивается хостом."
   },
   "3xnP4c": {
     "defaultMessage": "Используйте шифрование NIP-44 для отправки безопасного сообщения. Это подтвердит, что вы являетесь владельцем закрытого ключа, связанного с вашей учетной записью. Зашифруйте свое сообщение ниже и включите зашифрованный текст в свое электронное письмо."
   },
+  "3zEByO": {
+    "defaultMessage": "Активировать реферальный код."
+  },
+  "43xNq5": {
+    "defaultMessage": "Продлить срок действия VPS.{id}"
+  },
   "47FYwb": {
     "defaultMessage": "Отменить"
   },
+  "48dUkY": {
+    "defaultMessage": "+ {fee} настройка; подготовка"
+  },
+  "4PKxPs": {
+    "defaultMessage": "Отключить связь"
+  },
+  "4PkXEE": {
+    "defaultMessage": "Последовательный терминал"
+  },
   "4X/Ixq": {
     "defaultMessage": "Расшифрованное сообщение:"
+  },
+  "4cMKIO": {
+    "defaultMessage": "Планы с автоматическим продлением, обеспечивающие непрерывную работу ваших услуг."
   },
   "4j0zpr": {
     "defaultMessage": "Минимум: {min} ядра"
@@ -101,11 +170,11 @@
   "4upFOv": {
     "defaultMessage": "У вас есть вопросы, касающиеся предоставления услуг, выставления счетов, обработки жалоб или конкретной проблемы с обслуживанием? Отправьте сообщение, и команда LNVPS свяжется с вами в ближайшее время."
   },
+  "5/Pb3D": {
+    "defaultMessage": "Действующие подписки"
+  },
   "53RN0g": {
     "defaultMessage": "Перейти к оплате."
-  },
-  "5JcXdV": {
-    "defaultMessage": "Создать учётную запись"
   },
   "5QYdPU": {
     "defaultMessage": "Время начала"
@@ -116,14 +185,17 @@
   "5elgIe": {
     "defaultMessage": "Ошибка:"
   },
+  "5ow6dg": {
+    "defaultMessage": "Ватсап"
+  },
+  "5uQfFj": {
+    "defaultMessage": "Что такое Nostr?"
+  },
   "5y2qWO": {
     "defaultMessage": "Выполняется подключение..."
   },
-  "62nsdy": {
-    "defaultMessage": "Повторить попытку"
-  },
-  "6OWS4p": {
-    "defaultMessage": "Выполняется обработка..."
+  "6Auf1w": {
+    "defaultMessage": "Не удалось выполнить вход в систему. Пожалуйста, повторите попытку."
   },
   "6SfJaf": {
     "defaultMessage": "Обновите до"
@@ -131,8 +203,8 @@
   "6Tps09": {
     "defaultMessage": "Неактивный"
   },
-  "6ZsOsA": {
-    "defaultMessage": "Присоединяйтесь к реферальной программе."
+  "6hEevT": {
+    "defaultMessage": "Установить значение по умолчанию."
   },
   "6uMqL1": {
     "defaultMessage": "Неоплаченный"
@@ -146,11 +218,29 @@
   "78fz1O": {
     "defaultMessage": "Почтовый индекс *"
   },
+  "7Cdpiv": {
+    "defaultMessage": "Ключи SSH"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{день} other{дней}}"
   },
+  "7fbBqG": {
+    "defaultMessage": "Отменить платеж."
+  },
+  "7q/bs/": {
+    "defaultMessage": "Продлите подписку сейчас."
+  },
   "7qSZJ7": {
     "defaultMessage": "{n,plural,one{# час} other{# час.}}"
+  },
+  "7tOz+m": {
+    "defaultMessage": "Оплатите сейчас."
+  },
+  "7wbySo": {
+    "defaultMessage": "Отправьте нам сообщение, и наша команда свяжется с вами."
+  },
+  "7yPJTW": {
+    "defaultMessage": "Срок действия истекает скоро."
   },
   "7zs+Vz": {
     "defaultMessage": "Память: {gb} ГБ"
@@ -158,17 +248,14 @@
   "82Y7Sa": {
     "defaultMessage": "Отправка..."
   },
-  "82zlBD": {
-    "defaultMessage": "Имя владельца карты *"
-  },
   "89xu1A": {
     "defaultMessage": "Оформление заказа на виртуальный сервер (VPS) с индивидуальными настройками"
   },
   "8BgaUL": {
     "defaultMessage": "Текущие технические характеристики"
   },
-  "8FF5Bq": {
-    "defaultMessage": "Создание платежа..."
+  "8HYfsO": {
+    "defaultMessage": "Ключ доступа без названия"
   },
   "8Jfsz3": {
     "defaultMessage": "Отправить код подтверждения"
@@ -176,26 +263,35 @@
   "8Q504V": {
     "defaultMessage": "Метаданные"
   },
+  "8X6Kwp": {
+    "defaultMessage": "Следующий платёж."
+  },
+  "8cnlb5": {
+    "defaultMessage": "Сохранить способ выплаты."
+  },
   "8ecw1u": {
     "defaultMessage": "Ручки"
   },
-  "8f0dzf": {
-    "defaultMessage": "Продление подписки №{id}"
+  "8lCjAM": {
+    "defaultMessage": "Приоритет"
+  },
+  "8lK3rQ": {
+    "defaultMessage": "Продлите подписку до {date} или это и все связанные с этим данные будут безвозвратно удалены."
+  },
+  "8xIysb": {
+    "defaultMessage": "Продлить сейчас."
   },
   "90f82/": {
     "defaultMessage": "Запустить виртуальную машину."
   },
-  "9AfNRx": {
-    "defaultMessage": "В ближайшее время вы сможете заказать IP-адреса."
-  },
   "9QV3cp": {
     "defaultMessage": "Доступные IP-адреса."
   },
-  "9V+Kpc": {
-    "defaultMessage": "Эта виртуальная машина будет автоматически продлена за 1 день до истечения срока действия с использованием настроенного вами подключения Nostr Wallet Connect."
+  "9d9svQ": {
+    "defaultMessage": "Ключей доступа пока нет. Добавьте один, чтобы входить без ключа."
   },
-  "9WRlF4": {
-    "defaultMessage": "Отправить"
+  "9dOxDN": {
+    "defaultMessage": "Оплата и продление."
   },
   "9uOFF3": {
     "defaultMessage": "Обзор"
@@ -203,20 +299,41 @@
   "A11S6W": {
     "defaultMessage": "Отправьте нам сообщение напрямую. Ваш открытый ключ будет добавлен автоматически."
   },
-  "AHJbyB": {
-    "defaultMessage": "Завершите оплату, используя выбранный способ оплаты. Изменения будут применены автоматически после подтверждения."
+  "A7Mqan": {
+    "defaultMessage": "Идёт процесс продления…"
+  },
+  "ABL6b+": {
+    "defaultMessage": "Превратите свой код в источник дохода."
+  },
+  "AL9+3/": {
+    "defaultMessage": "Не удалось найти действующую подписку для продления на эту виртуальную машину."
   },
   "AQkpi3": {
     "defaultMessage": "Переустановите"
   },
-  "AuSwGG": {
-    "defaultMessage": "Время безотказной работы: {uptime}"
+  "ASrBq8": {
+    "defaultMessage": "Ключи доступа"
   },
-  "AyGauy": {
-    "defaultMessage": "Войти"
+  "AUlRcp": {
+    "defaultMessage": "Подключение к кошельку Nostr."
+  },
+  "AfmrGS": {
+    "defaultMessage": "Отправить код."
+  },
+  "AxlcnX": {
+    "defaultMessage": "Этот почтовый ящик больше не используется для обработки входящих сообщений, поэтому отправлять сюда новые сообщения невозможно. Для получения поддержки обратитесь в службу поддержки через соответствующую вкладку."
+  },
+  "B3YjIQ": {
+    "defaultMessage": "Сохраните этот ключ сейчас — его НЕЛЬЗЯ будет восстановить."
   },
   "B4reHi": {
     "defaultMessage": "Исторические события"
+  },
+  "B52Em/": {
+    "defaultMessage": "Строка адреса 1."
+  },
+  "B9v1WK": {
+    "defaultMessage": "Способ выплаты."
   },
   "BBiS7b": {
     "defaultMessage": "Остановить виртуальную машину."
@@ -224,8 +341,8 @@
   "BCmVPf": {
     "defaultMessage": "Бесплатный хостинг для NIP-05. Укажите свой домен на {cname} используя DNS или прокси-сервер для перенаправления трафика."
   },
-  "BFqRWv": {
-    "defaultMessage": "Строка подключения к NWC."
+  "BD6I/Z": {
+    "defaultMessage": "Точная сумма налога будет подтверждена при оплате."
   },
   "BFqlLP": {
     "defaultMessage": "{records} указывают непосредственно на IP-адреса и могут потребовать обновления в случае их изменения."
@@ -236,8 +353,8 @@
   "BLZbXj": {
     "defaultMessage": "Сообщение *"
   },
-  "BOV9bc": {
-    "defaultMessage": "Загрузка доступных способов оплаты..."
+  "BVTni9": {
+    "defaultMessage": "Способ оплаты."
   },
   "BXmJ0S": {
     "defaultMessage": "(Альтернативный вариант)"
@@ -248,8 +365,14 @@
   "BlFeZA": {
     "defaultMessage": "Последние новости"
   },
-  "CDTMW3": {
-    "defaultMessage": "Общая сумма"
+  "Bwqhmd": {
+    "defaultMessage": "Межсетевой экран"
+  },
+  "Bzv1CO": {
+    "defaultMessage": "Активируйте повторно сейчас."
+  },
+  "CHgKgH": {
+    "defaultMessage": "Регулярные услуги"
   },
   "CYP/Jx": {
     "defaultMessage": "Обратитесь за помощью к команде."
@@ -257,11 +380,11 @@
   "CjLFf2": {
     "defaultMessage": "Свяжитесь с командой LNVPS. У вас есть вопросы о нашей услуге Bitcoin Lightning VPS? Мы всегда готовы помочь."
   },
-  "Cl+kqZ": {
-    "defaultMessage": "Показать QR-код"
-  },
   "D3idYv": {
     "defaultMessage": "Настройки"
+  },
+  "DATKpj": {
+    "defaultMessage": "Эта страница будет автоматически обновляться."
   },
   "DDMksJ": {
     "defaultMessage": "Разверните свой первый виртуальный частный сервер."
@@ -272,32 +395,95 @@
   "DU+LLZ": {
     "defaultMessage": "Направление (пациента)"
   },
+  "DYDzPa": {
+    "defaultMessage": "Чат подключен."
+  },
+  "DZ2Koj": {
+    "defaultMessage": "Направление"
+  },
   "Dfuz87": {
     "defaultMessage": "Пока не добавлено ни одного домена. Добавьте свой первый домен выше, чтобы начать работу."
+  },
+  "DpNZQY": {
+    "defaultMessage": "Комиссия за обработку."
+  },
+  "E2X6+s": {
+    "defaultMessage": "nsec1… or bunker://…"
   },
   "E2YqWs": {
     "defaultMessage": "Партнёрская программа"
   },
+  "E8y+Hb": {
+    "defaultMessage": "Срок аренды истек."
+  },
   "EBMKSN": {
     "defaultMessage": "Обновите характеристики виртуальной машины."
+  },
+  "ED9RG5": {
+    "defaultMessage": "Журнал аудита"
   },
   "EKlM8d": {
     "defaultMessage": "Объем диска (ГБ)"
   },
+  "EUSRTV": {
+    "defaultMessage": "Ваши предыдущие зашифрованные сообщения в формате NIP-17 с запросами в службу поддержки больше не отслеживаются. Пожалуйста, используйте вкладку «Поддержка», чтобы связаться с нами."
+  },
+  "Ecfndm": {
+    "defaultMessage": "Счет-фактура"
+  },
   "Eg11ZY": {
     "defaultMessage": "Восстановить соединение"
+  },
+  "EhL8Q+": {
+    "defaultMessage": "Подробная информация и SSH."
+  },
+  "EhjW+X": {
+    "defaultMessage": "Этот браузер не поддерживает ключи доступа."
+  },
+  "Epas1Z": {
+    "defaultMessage": "{n} {unit}"
+  },
+  "ErHVHe": {
+    "defaultMessage": "satoshi"
+  },
+  "F8RFcI": {
+    "defaultMessage": "Необязательно. Отображается в счетах, которые мы формируем для ваших платежей."
+  },
+  "FBjXEw": {
+    "defaultMessage": "Обновить виртуальный выделенный сервер (VPS) №{id}"
   },
   "FJhjgz": {
     "defaultMessage": "Почтовый индекс"
   },
+  "FLpm0X": {
+    "defaultMessage": "Строки в списке"
+  },
   "FMHDSp": {
     "defaultMessage": "Новости и обновления продуктов LNVPS"
+  },
+  "FOEu1B": {
+    "defaultMessage": "Адрес Lightning Network."
   },
   "FZeQlc": {
     "defaultMessage": "Отключено."
   },
-  "FrXeQJ": {
-    "defaultMessage": "что такое Nostr?"
+  "FazwRl": {
+    "defaultMessage": "Попробуйте ещё раз."
+  },
+  "FlypmR": {
+    "defaultMessage": "Укажите адрес электронной почты ниже."
+  },
+  "FoHB5c": {
+    "defaultMessage": "Продлить подписку."
+  },
+  "G/yZLu": {
+    "defaultMessage": "Удалить"
+  },
+  "G1kGar": {
+    "defaultMessage": "Нельзя удалить единственный ключ доступа в аккаунте, где используются только ключи доступа."
+  },
+  "G5cGLJ": {
+    "defaultMessage": "Ожидаем первый платёж."
   },
   "G6nrEF": {
     "defaultMessage": "Сохранено с предупреждениями."
@@ -314,6 +500,12 @@
   "GSye7T": {
     "defaultMessage": "Адрес Lightning Network"
   },
+  "Gd6Kbk": {
+    "defaultMessage": "Пока неактивен."
+  },
+  "GlTZFC": {
+    "defaultMessage": "Поделитесь этой ссылкой. Вы получите комиссию, когда кто-то зарегистрируется и его виртуальная машина совершит первую оплату."
+  },
   "GqRat5": {
     "defaultMessage": "Пожалуйста, подтвердите свой адрес электронной почты, чтобы завершить оформление заказа."
   },
@@ -322,6 +514,21 @@
   },
   "GtI0l1": {
     "defaultMessage": "Выплаты поступают на сохраненный кошелек NWC. Вы можете добавить новый кошелек или выбрать один из предложенных ниже — по умолчанию используется включенный кошелек."
+  },
+  "GuLP+V": {
+    "defaultMessage": "Продлевается автоматически за день до истечения срока действия с использованием выбранного вами способа оплаты."
+  },
+  "Gw07ly": {
+    "defaultMessage": "Общая сумма за месяц."
+  },
+  "H0SDpi": {
+    "defaultMessage": "Не удалось зарегистрировать ключ доступа"
+  },
+  "H4Ucn0": {
+    "defaultMessage": "Входящие."
+  },
+  "H9Az5Z": {
+    "defaultMessage": "Данные для выставления счетов"
   },
   "HAlOn1": {
     "defaultMessage": "Имя"
@@ -341,8 +548,11 @@
   "ID2dFf": {
     "defaultMessage": "Пока не создан ни один кошелек NWC. Добавьте его, чтобы начать получать выплаты."
   },
-  "INlWvJ": {
-    "defaultMessage": "ИЛИ"
+  "ILTAun": {
+    "defaultMessage": "В настоящее время выполняется настройка вашей виртуальной машины. Обычно это занимает одну-две минуты."
+  },
+  "IZFEUg": {
+    "defaultMessage": "Готово."
   },
   "Id24hd": {
     "defaultMessage": "Имя *"
@@ -350,26 +560,41 @@
   "Ij0H43": {
     "defaultMessage": "Графики"
   },
+  "IuFETn": {
+    "defaultMessage": "Продолжительность"
+  },
   "IvjoDS": {
     "defaultMessage": "Подключено"
   },
   "Iz4veS": {
     "defaultMessage": "Минимум: {min} ГБ"
   },
+  "J+dIsA": {
+    "defaultMessage": "Подписки"
+  },
+  "JBWS0c": {
+    "defaultMessage": "Ссылка"
+  },
+  "JH4wUD": {
+    "defaultMessage": "Сохранено ✓"
+  },
   "JVClQM": {
     "defaultMessage": "Статус и время безотказной работы сервиса LNVPS."
   },
-  "JmgL7z": {
-    "defaultMessage": "Срок действия истекает: {date} ({days} дней)"
+  "Jm+fih": {
+    "defaultMessage": "Неактивен."
   },
   "K/zU0+": {
     "defaultMessage": "+ Развернуть новую версию"
   },
+  "K3r6DQ": {
+    "defaultMessage": "Удалить"
+  },
   "KAL6xF": {
     "defaultMessage": "Ключевое имя"
   },
-  "KWAuBK": {
-    "defaultMessage": "IP-адреса не назначены."
+  "KKYB/E": {
+    "defaultMessage": "Пока не сохранено ни одного способа оплаты."
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -380,11 +605,26 @@
   "KuX7em": {
     "defaultMessage": "Активен в течение {duration}"
   },
+  "Kw4098": {
+    "defaultMessage": "Новое правило."
+  },
+  "KxG+iy": {
+    "defaultMessage": "НДС"
+  },
+  "L8seEc": {
+    "defaultMessage": "Промежуточная сумма"
+  },
   "LAMeIi": {
     "defaultMessage": "Обратитесь в службу поддержки LNVPS."
   },
-  "LNcnLC": {
-    "defaultMessage": "Неудачные обращения/запросы/направления."
+  "LHX6Oo": {
+    "defaultMessage": "Срок действия истекает. {exp}"
+  },
+  "LR754a": {
+    "defaultMessage": "Продлевается в"
+  },
+  "LX6weZ": {
+    "defaultMessage": "Ожидается оплата."
   },
   "LjglgP": {
     "defaultMessage": "ОЗУ"
@@ -410,17 +650,35 @@
   "Mp+zDS": {
     "defaultMessage": "Этот компонент поддерживает только платежи через Lightning."
   },
+  "N2IrpM": {
+    "defaultMessage": "Подтвердите."
+  },
+  "N4e/Yn": {
+    "defaultMessage": "Плата / комиссия {fee}"
+  },
   "NQgbYA": {
     "defaultMessage": "Настройки учётной записи"
   },
   "NZyhSX": {
     "defaultMessage": "Новости"
   },
+  "Niq27F": {
+    "defaultMessage": "Название подписки (необязательно)."
+  },
+  "NmK6zy": {
+    "defaultMessage": "Оплата"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "или"
+  },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
   "O/68ZX": {
     "defaultMessage": "Вы уверены, что хотите переустановить свою виртуальную машину? ЭТО ПРИВЕДЕТ К УДАЛЕНИЮ ВСЕХ ДАННЫХ!"
+  },
+  "OJuBck": {
+    "defaultMessage": "Без пароля"
   },
   "OLqOyf": {
     "defaultMessage": "Инструкция по настройке"
@@ -431,8 +689,8 @@
   "Olq7Wf": {
     "defaultMessage": "Введите здесь ваше сообщение..."
   },
-  "OtUSLU": {
-    "defaultMessage": "Автоматическое продление."
+  "Op5EHr": {
+    "defaultMessage": "Войти через Google"
   },
   "OtuYup": {
     "defaultMessage": "Адрес электронной почты"
@@ -443,14 +701,14 @@
   "P+08xT": {
     "defaultMessage": "Получить расценку"
   },
+  "P/PGYR": {
+    "defaultMessage": "Пока нет ни одной рекомендации. Поделитесь своей ссылкой, чтобы начать привлекать новых пользователей."
+  },
   "P7PLVj": {
     "defaultMessage": "Дата"
   },
   "PJtOx7": {
     "defaultMessage": "Не было никаких происшествий, о которых следовало бы сообщить."
-  },
-  "PPcUVc": {
-    "defaultMessage": "LNVPS использует аккаунты Nostr. {link}"
   },
   "PT4sD/": {
     "defaultMessage": "Выберите операционную систему:"
@@ -461,20 +719,32 @@
   "PucUfl": {
     "defaultMessage": "Выберите SSH-ключ:"
   },
-  "QDA9xg": {
-    "defaultMessage": "История выплат"
+  "PujK1s": {
+    "defaultMessage": "генерация"
+  },
+  "QEuWMk": {
+    "defaultMessage": "Для доступа к учетным записям LNVPS используются протокол Nostr или поставщик услуг аутентификации. {link}"
   },
   "QN/rCc": {
     "defaultMessage": "Ошибка при разборе JSON: {msg}"
   },
-  "QdbxqE": {
-    "defaultMessage": "Настройте автоматическое продление срока действия виртуальной машины с помощью Nostr Wallet Connect. Ваш кошелек будет автоматически оплачивать продление срока действия виртуальной машины за 1 день до его истечения."
-  },
   "QgBuiV": {
     "defaultMessage": "центральный процессор"
   },
-  "QvXah/": {
-    "defaultMessage": "Вернуться к VM."
+  "QlsDcr": {
+    "defaultMessage": "Действие"
+  },
+  "Qqli25": {
+    "defaultMessage": "Включите автоматическую функцию, чтобы выбранный способ оплаты списывался за день до истечения срока его действия."
+  },
+  "QuGLBN": {
+    "defaultMessage": "Этот ключ SSH используется одной или несколькими виртуальными машинами, и его нельзя удалить."
+  },
+  "R+j5Qu": {
+    "defaultMessage": "IP-адреса не назначены."
+  },
+  "R/6nsx": {
+    "defaultMessage": "Подписка"
   },
   "R0skQD": {
     "defaultMessage": "GitHub: создайте запрос в системе отслеживания ошибок на github.com/LNVPS."
@@ -485,23 +755,35 @@
   "R7x8iU": {
     "defaultMessage": "Диск: {gb} ГБ {type}"
   },
+  "RAyrhP": {
+    "defaultMessage": "НДС ({rate}):"
+  },
   "RB2CER": {
     "defaultMessage": "Ядра процессора"
   },
-  "RF85OG": {
-    "defaultMessage": "Ваш новый ключ:"
+  "RCHbbR": {
+    "defaultMessage": "Управляйте своими данными для выставления счетов, настройками автоматического продления и способами связи с вами."
+  },
+  "RXjd0H": {
+    "defaultMessage": "Вернуться в личный кабинет."
   },
   "RahCRH": {
     "defaultMessage": "Срок действия истек."
   },
-  "RcshyP": {
-    "defaultMessage": "Получено{currency})"
+  "Ru62sn": {
+    "defaultMessage": "Добавьте кошелек Nostr, поддерживающий подключение через WalletConnect."
   },
-  "S1hhGJ": {
-    "defaultMessage": "SSH:"
+  "Rw7iI7": {
+    "defaultMessage": "Отключить"
   },
-  "SMHOve": {
-    "defaultMessage": "Успешные рекомендации"
+  "Rw82/V": {
+    "defaultMessage": "в месяц"
+  },
+  "SB//YQ": {
+    "defaultMessage": "Сводка по заказу."
+  },
+  "SQJto2": {
+    "defaultMessage": "Войти"
   },
   "SU1E+O": {
     "defaultMessage": "Новый заказ"
@@ -512,11 +794,11 @@
   "Sg3z1C": {
     "defaultMessage": "Не выбрана виртуальная машина."
   },
+  "SnyOdn": {
+    "defaultMessage": "преобразован(о) / конвертирован(о)"
+  },
   "Ss0sWu": {
     "defaultMessage": "Оплатить сейчас"
-  },
-  "Sv1hgX": {
-    "defaultMessage": "Автоматическое продление отменено."
   },
   "Sz/3Vf": {
     "defaultMessage": "Пожалуйста, укажите значения, на которые следует обновить систему, при этом значения должны быть больше или равны текущим, и как минимум одно из них должно быть больше текущего."
@@ -524,8 +806,8 @@
   "T1/en5": {
     "defaultMessage": "Идентификатор: {id}"
   },
-  "T4yFyM": {
-    "defaultMessage": "Загрузка данных об оплате..."
+  "T4VxQN": {
+    "defaultMessage": "Загрузка…"
   },
   "T7b6ZF": {
     "defaultMessage": "Устранённые инциденты"
@@ -533,20 +815,44 @@
   "TE4fIS": {
     "defaultMessage": "Город"
   },
+  "TGPQYT": {
+    "defaultMessage": "{success} оплачено"
+  },
+  "TH1fFo": {
+    "defaultMessage": "Телеграмма"
+  },
   "TNSbi4": {
     "defaultMessage": "Обратная зона DNS:"
+  },
+  "TT0vME": {
+    "defaultMessage": "Превышен лимит правил."
+  },
+  "TVBZb8": {
+    "defaultMessage": "{success} из {total} оплаченные направления (пациентов)"
   },
   "Tbo377": {
     "defaultMessage": "Выставление счетов"
   },
-  "Td/uhP": {
-    "defaultMessage": "Включите автоматическое продление."
+  "TqSTI0": {
+    "defaultMessage": "Включить"
   },
-  "TieXig": {
-    "defaultMessage": "Выплаты будут отправляться на кошелек NWC, настроенный в параметрах вашей учетной записи."
+  "TtNbPG": {
+    "defaultMessage": "Итого за месяц."
+  },
+  "TwyMau": {
+    "defaultMessage": "Аккаунт"
+  },
+  "U96Gl9": {
+    "defaultMessage": "Сохраните эту карту для будущих платежей."
+  },
+  "UPP+wZ": {
+    "defaultMessage": "В настоящее время используется. {count,plural,one{ВМ} other{Виртуальные машины}}: {vms}"
   },
   "UQc03N": {
     "defaultMessage": "Добавить новый SSH-ключ."
+  },
+  "UXpysW": {
+    "defaultMessage": "Диапазон IP-адресов №{id}"
   },
   "Ub+AGc": {
     "defaultMessage": "Войти"
@@ -560,14 +866,17 @@
   "Uk68vE": {
     "defaultMessage": "Открытый ключ отправителя (в формате npub/nprofile/hex):"
   },
+  "UkQy3+": {
+    "defaultMessage": "Имя владельца карты *"
+  },
   "Un5Bdm": {
     "defaultMessage": "Разрешение IP-адресов для {cname}…"
   },
-  "UwP+xI": {
-    "defaultMessage": "Автоматическое продление включено."
+  "Uvhzx4": {
+    "defaultMessage": "Автоматическое продление отключено. Продлите подписку вручную до истечения срока действия, чтобы избежать перерыва в обслуживании."
   },
-  "VE4z7n": {
-    "defaultMessage": "Получить счет"
+  "V7fgpY": {
+    "defaultMessage": "Завершение входа…"
   },
   "VJ4xwX": {
     "defaultMessage": "Новости и обновления продуктов"
@@ -575,11 +884,20 @@
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
-  "VnXp8Z": {
-    "defaultMessage": "Аватар"
+  "VLRCfi": {
+    "defaultMessage": "Время безотказной работы за последние 30 дней: {uptime}"
   },
-  "W+1MOm": {
-    "defaultMessage": "Метод"
+  "VffztH": {
+    "defaultMessage": "в последний раз использовано {date}"
+  },
+  "VtKAyJ": {
+    "defaultMessage": "{count} / {max} правила"
+  },
+  "VzzYJk": {
+    "defaultMessage": "Создать"
+  },
+  "WUV28A": {
+    "defaultMessage": "Сохранение…"
   },
   "WUeavc": {
     "defaultMessage": "Или напишите нам напрямую по адресу: {email}"
@@ -593,29 +911,23 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{месяц} other{месяцы}}"
   },
-  "X5QA2h": {
-    "defaultMessage": "Обработка платежа за продление."
-  },
   "XD6788": {
     "defaultMessage": "Плата за настройку:"
   },
   "XNiOLB": {
     "defaultMessage": "Не удалось отправить сообщение. Пожалуйста, повторите попытку."
   },
-  "Xoi0Uz": {
-    "defaultMessage": "Оплатите картой."
-  },
   "Y+LcmX": {
     "defaultMessage": "Если вы не можете изменить настройки DNS, используйте прокси-сервер. {path} на вашем существующем сервере {target}"
   },
-  "Y6YwKh": {
-    "defaultMessage": "Это относится только к уведомлениям, связанным с учетной записью, например, к уведомлениям об истечении срока действия виртуальной машины. Мы не отправляем рекламные или маркетинговые сообщения."
-  },
-  "Y7opZr": {
-    "defaultMessage": "Продлить срок действия VPS."
+  "Y/tMXU": {
+    "defaultMessage": "Ожидание подтверждения оплаты. Это происходит автоматически после получения подтверждения."
   },
   "YH46Fd": {
     "defaultMessage": "Последние новости, обновления и объявления от LNVPS — вашего поставщика услуг виртуального частного сервера (VPS) для сети Bitcoin Lightning."
+  },
+  "YWjrby": {
+    "defaultMessage": "Уведомления по учетной записи, например, об истечении срока действия виртуальной машины. Мы никогда не отправляем рекламные сообщения."
   },
   "YdQxfw": {
     "defaultMessage": "Обратитесь в службу поддержки."
@@ -623,8 +935,8 @@
   "Yl8GBP": {
     "defaultMessage": "Идентификационный номер налогоплательщика"
   },
-  "Yt9S7n": {
-    "defaultMessage": "Стоимость: {fees}"
+  "Ysr8td": {
+    "defaultMessage": "Получено."
   },
   "YyojwF": {
     "defaultMessage": "Изменения в конфигурации:"
@@ -647,23 +959,32 @@
   "ZlYFmj": {
     "defaultMessage": "Условия использования сервиса LNVPS — поставщика услуг виртуальных частных серверов Bitcoin Lightning. Ознакомьтесь с нашими правилами использования, требованиями к допустимому использованию и условиями предоставления услуг."
   },
-  "aAnyb9": {
-    "defaultMessage": "Поделитесь этой ссылкой. Когда другие пользователи зарегистрируются и произведут оплату, вы получите вознаграждение."
+  "aTgjTE": {
+    "defaultMessage": "Добавить ключ доступа"
   },
-  "aFJYR3": {
-    "defaultMessage": "Данные карты"
+  "acrOoz": {
+    "defaultMessage": "Продолжайте."
   },
-  "ajQtDJ": {
-    "defaultMessage": "Выберите способ оплаты."
+  "alJZVR": {
+    "defaultMessage": "Аккаунт Nostr"
+  },
+  "an3Zx3": {
+    "defaultMessage": "Управляйте ключами SSH, используемыми для доступа к вашим виртуальным машинам."
+  },
+  "aoXv6v": {
+    "defaultMessage": "Загружается брандмауэр..."
   },
   "b1zuN9": {
     "defaultMessage": "Цена"
   },
+  "b6Q2tD": {
+    "defaultMessage": "Общее время безотказной работы: {uptime}"
+  },
+  "bMQUWl": {
+    "defaultMessage": "CIDR-адрес источника (данная виртуальная машина)"
+  },
   "bW7B87": {
     "defaultMessage": "Новый"
-  },
-  "bZ1uDf": {
-    "defaultMessage": "Вернитесь на главную страницу."
   },
   "bh3pad": {
     "defaultMessage": "Пожалуйста, сначала войдите в свою учетную запись, прежде чем совершать покупку."
@@ -671,11 +992,11 @@
   "bhfNWq": {
     "defaultMessage": "Вставьте зашифрованное сообщение здесь..."
   },
-  "bm5rt1": {
-    "defaultMessage": "Пожалуйста, сохраните этот ключ, его НЕЛЬЗЯ будет восстановить."
-  },
   "bpBvBq": {
     "defaultMessage": "Валюта отображения:"
+  },
+  "c0b5XV": {
+    "defaultMessage": "Цена/тариф/ставка"
   },
   "c78ZVJ": {
     "defaultMessage": "Для распространения изменений в DNS может потребоваться от 24 до 48 часов."
@@ -689,11 +1010,11 @@
   "cbZ7Ix": {
     "defaultMessage": "Виртуальная машина: {name}"
   },
+  "ciFSHC": {
+    "defaultMessage": "Оплата {amount}"
+  },
   "cyR7Kh": {
     "defaultMessage": "Назад"
-  },
-  "d+1v5f": {
-    "defaultMessage": "Продлить на:"
   },
   "d1nnRF": {
     "defaultMessage": "Отправить ещё одно сообщение."
@@ -701,8 +1022,8 @@
   "d3wxHm": {
     "defaultMessage": "Загрузка истории..."
   },
-  "dCaiAm": {
-    "defaultMessage": "Продлить сейчас"
+  "dHltrI": {
+    "defaultMessage": "Оплата производится каждый"
   },
   "dKHSEA": {
     "defaultMessage": "Благодарим вас за обращение. Мы свяжемся с вами в ближайшее время."
@@ -710,11 +1031,17 @@
   "dOQCL8": {
     "defaultMessage": "Отображаемое имя"
   },
+  "dUQeuG": {
+    "defaultMessage": "Создать аккаунт с ключом доступа"
+  },
   "dVYvX2": {
     "defaultMessage": "Вы уверены, что хотите удалить этот элемент?"
   },
   "dVx3yz": {
     "defaultMessage": "Память"
+  },
+  "dXTCjA": {
+    "defaultMessage": "Не подтверждено."
   },
   "dgTL/5": {
     "defaultMessage": "Нет зарегистрированных учётных записей."
@@ -725,8 +1052,8 @@
   "duElEE": {
     "defaultMessage": "Для данной виртуальной машины не найдено записей в истории."
   },
-  "e4iTJm": {
-    "defaultMessage": "Введите ваше сообщение..."
+  "eClqvz": {
+    "defaultMessage": "Сохраненные способы оплаты"
   },
   "eKEL/g": {
     "defaultMessage": "В ожидании"
@@ -743,17 +1070,29 @@
   "elhFf1": {
     "defaultMessage": "[Срок действия истек]"
   },
-  "eu+sDO": {
-    "defaultMessage": "Вход:"
+  "eq14GY": {
+    "defaultMessage": "Ваш новый секретный ключ."
+  },
+  "evMlX9": {
+    "defaultMessage": "Автоматическое продление."
   },
   "f00p/7": {
     "defaultMessage": "Загрузка не удалась."
   },
-  "fGeu02": {
-    "defaultMessage": "Расширение для браузера:"
+  "f7+Xwr": {
+    "defaultMessage": "Кредитная или дебетовая карта."
+  },
+  "fHZKQp": {
+    "defaultMessage": "НДС ({rate})"
   },
   "fNSGnl": {
     "defaultMessage": "Войдите, чтобы сделать заказ."
+  },
+  "fnWV0M": {
+    "defaultMessage": "Для исходящих правил источник CIDR должен соответствовать адресу этой виртуальной машины. Нельзя ограничить удаленный хост назначения — можно ограничить только протокол и порт назначения."
+  },
+  "fsB/4p": {
+    "defaultMessage": "Сохранено"
   },
   "fxYCqm": {
     "defaultMessage": "Местоположение: {location}"
@@ -770,17 +1109,17 @@
   "gPsMm7": {
     "defaultMessage": "Разверните этого работника и добавьте маршрут для {route}"
   },
+  "gWp9QV": {
+    "defaultMessage": "{failed} ни разу не заплатили"
+  },
+  "gYR5sK": {
+    "defaultMessage": "Срок действия этой записи истек, и она может быть удалена в любой момент. Продлите срок действия сейчас, чтобы сохранить ее."
+  },
   "gZz74a": {
     "defaultMessage": "Пожалуйста, заполните все обязательные поля."
   },
   "gc+2Z2": {
     "defaultMessage": "Консоль"
-  },
-  "gdP56I": {
-    "defaultMessage": "налог"
-  },
-  "gjBiyj": {
-    "defaultMessage": "Загрузка..."
   },
   "gtGLdm": {
     "defaultMessage": "включая {amount} плата за обработку"
@@ -788,23 +1127,41 @@
   "gv8O1e": {
     "defaultMessage": "Предложения по VPS"
   },
+  "gvPhJ7": {
+    "defaultMessage": "Оплата производится ежемесячно."
+  },
   "h+26/n": {
     "defaultMessage": "Ваш реферальный код."
   },
   "h/PJh3": {
     "defaultMessage": "После выбора нового ключа перезапустите виртуальную машину."
   },
+  "h9Vgyc": {
+    "defaultMessage": "{n} виртуальный процессор"
+  },
   "hMzcSq": {
     "defaultMessage": "Сообщения"
+  },
+  "hX8VXF": {
+    "defaultMessage": "Ежемесячное время безотказной работы (за последние 12 месяцев)."
+  },
+  "hs3HVz": {
+    "defaultMessage": "Входите с помощью Face ID, Touch ID, Windows Hello или ключа безопасности. Ключ доступа можно добавить к любому аккаунту."
+  },
+  "huqKGl": {
+    "defaultMessage": "Создать аккаунт"
   },
   "iO1K6D": {
     "defaultMessage": "Пока нет ни одной записи."
   },
+  "iXNbPf": {
+    "defaultMessage": "Переименовать"
+  },
   "icn2DS": {
     "defaultMessage": "(Рекомендуется)"
   },
-  "iluJkV": {
-    "defaultMessage": "Настройки выплат"
+  "iuQLCB": {
+    "defaultMessage": "Сохраненные способы оплаты используются для автоматической оплаты продления подписки за день до истечения срока действия виртуальной машины. Выберите, какой из них будет использоваться по умолчанию."
   },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
@@ -812,23 +1169,35 @@
   "jM8W7d": {
     "defaultMessage": "Выберите страну."
   },
+  "jOo6oG": {
+    "defaultMessage": "Управляйте ключами доступа к виртуальным машинам."
+  },
+  "jUqYir": {
+    "defaultMessage": "Добавлено {date}"
+  },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# день} other{# дней}}"
+  },
+  "jf7fbc": {
+    "defaultMessage": "Ничего не выбрано — добавьте один пункт."
   },
   "jmVweB": {
     "defaultMessage": "Загрузка SSH-ключей..."
   },
+  "jtkU3K": {
+    "defaultMessage": "Преобразование"
+  },
   "jvo0vs": {
     "defaultMessage": "Сохранить"
   },
-  "k1UDSi": {
-    "defaultMessage": "Оплата по LNURL"
-  },
-  "k3yLiC": {
-    "defaultMessage": "Обновите свои платежные данные, чтобы они отображались в сгенерированных счетах (необязательно)."
+  "jwt9EL": {
+    "defaultMessage": "Не удалось войти с ключом доступа"
   },
   "kLNEaL": {
     "defaultMessage": "Пожалуйста, пройдите проверку CAPTCHA."
+  },
+  "kRFEho": {
+    "defaultMessage": "Добавить ключ SSH."
   },
   "kSjQ3a": {
     "defaultMessage": "от {initiatedBy}"
@@ -842,26 +1211,53 @@
   "l4RUua": {
     "defaultMessage": "Обслуживание: {service}"
   },
+  "l7PJ8l": {
+    "defaultMessage": "Общая сумма к оплате:"
+  },
   "lCILNz": {
     "defaultMessage": "Купить сейчас"
+  },
+  "lD3+8a": {
+    "defaultMessage": "Оплата"
+  },
+  "lKv8ex": {
+    "defaultMessage": "По умолчанию"
+  },
+  "lP4qIQ": {
+    "defaultMessage": "Данные карты"
   },
   "lPsVOx": {
     "defaultMessage": "Ваши виртуальные машины и домены."
   },
+  "lTtWDY": {
+    "defaultMessage": "{daysLeft} оставшиеся дни"
+  },
+  "lcXewt": {
+    "defaultMessage": "Молниеносная выставка счетов."
+  },
+  "lhCavK": {
+    "defaultMessage": "При оплате через Revolut установите флажок «Сохранить эту карту», чтобы сохранить данные карты для будущих платежей и автоматического продления подписки."
+  },
   "lloEWi": {
     "defaultMessage": "О чём это? / Что это такое? / К чему это относится?"
+  },
+  "lmac7x": {
+    "defaultMessage": "{n,plural,one{# элемент; позиция} other{# элементы; товары}}"
   },
   "lnaWo/": {
     "defaultMessage": "Регион"
   },
-  "luhCIe": {
-    "defaultMessage": "IP-адрес:"
+  "lsFKTa": {
+    "defaultMessage": "Идёт обработка платежа с использованием сохранённых данных. Эта операция выполняется автоматически после подтверждения."
   },
-  "lvV1wo": {
-    "defaultMessage": "Оплата за обновление"
+  "ltoBql": {
+    "defaultMessage": "[Новое]"
   },
-  "m22Mzk": {
-    "defaultMessage": "Обработка платежа за обновление"
+  "m4QgXr": {
+    "defaultMessage": "{days,plural,one{# осталось один день} other{# осталось дней}}"
+  },
+  "mBP5Sb": {
+    "defaultMessage": "Показать адрес доставки Amazon"
   },
   "mIuuiJ": {
     "defaultMessage": "Статус сервиса и время безотказной работы"
@@ -869,32 +1265,56 @@
   "mJPBXd": {
     "defaultMessage": "Зашифрованное сообщение (скопируйте и вставьте в своё электронное письмо):"
   },
+  "mMug3Z": {
+    "defaultMessage": "получено · {currency}"
+  },
   "mOR+qH": {
     "defaultMessage": "Скопировать в буфер обмена"
+  },
+  "mV5FZi": {
+    "defaultMessage": "Программа по привлечению сотрудников через рекомендации"
   },
   "mXu0jm": {
     "defaultMessage": "Настройка домена"
   },
+  "mY+s0A": {
+    "defaultMessage": "Как мы с вами связываемся."
+  },
+  "mtEKFV": {
+    "defaultMessage": "Выполняется обработка…"
+  },
+  "mznk9z": {
+    "defaultMessage": "Комиссия"
+  },
+  "n9fdaJ": {
+    "defaultMessage": "Не подтверждено."
+  },
+  "nDyaq/": {
+    "defaultMessage": "Бег"
+  },
   "nFQbxh": {
     "defaultMessage": "Способ оплаты"
-  },
-  "nQ0mEC": {
-    "defaultMessage": "Ключ:"
   },
   "nWQFic": {
     "defaultMessage": "Продлить"
   },
+  "nidU9E": {
+    "defaultMessage": "{rate} комиссия"
+  },
   "nm81YC": {
     "defaultMessage": "Загрузка VPS..."
+  },
+  "nx5ZnY": {
+    "defaultMessage": "Подтвердите номер телефона, чтобы включить функцию."
   },
   "nxqAD7": {
     "defaultMessage": "Новый инцидент"
   },
+  "o0jcye": {
+    "defaultMessage": "Операционная система"
+  },
   "o2AdrJ": {
     "defaultMessage": "Эта виртуальная машина использует пользовательский шаблон и не может быть обновлена. Обновление поддерживается только для виртуальных машин, использующих стандартные шаблоны."
-  },
-  "o8lVmf": {
-    "defaultMessage": "Выбранный способ оплаты влияет на валюту, используемую для формирования сметы и осуществления платежа."
   },
   "o9lOhm": {
     "defaultMessage": "Поддерживаемый открытый ключ: {npub}"
@@ -905,20 +1325,32 @@
   "oCc8Oq": {
     "defaultMessage": "Добавить ключ."
   },
+  "oQY0a2": {
+    "defaultMessage": "Вторая строка адреса."
+  },
   "oXGNZ+": {
     "defaultMessage": "Виртуальная машина №{id} Терминал:"
+  },
+  "odTkf5": {
+    "defaultMessage": "Вернуться ко входу"
+  },
+  "oswGmn": {
+    "defaultMessage": "Вы не можете выйти, пока существует история выплат."
   },
   "p4N05H": {
     "defaultMessage": "Загрузить"
   },
-  "pSH5mR": {
-    "defaultMessage": "История платежей"
+  "p5LNtB": {
+    "defaultMessage": "Не задано."
   },
   "pY6CgO": {
     "defaultMessage": "У вас пока нет виртуальных машин."
   },
   "pgLgIU": {
     "defaultMessage": "Ознакомьтесь с полной версией обновления."
+  },
+  "pus6h6": {
+    "defaultMessage": "Вы можете прекратить участие в любое время. После этого ваш код перестанет приносить доход и его нельзя будет использовать повторно."
   },
   "qJRR8N": {
     "defaultMessage": "Загрузка списка IP-адресов..."
@@ -929,8 +1361,14 @@
   "qWMcff": {
     "defaultMessage": "Обновление DNS-записей может занять до 48 часов, прежде чем изменения распространятся."
   },
-  "qZkVyB": {
-    "defaultMessage": "Ваш открытый ключ (указывайте его во всех сообщениях):"
+  "qX7u3z": {
+    "defaultMessage": "Название (например, личная виза)"
+  },
+  "qkLHOL": {
+    "defaultMessage": "Вы уверены, что хотите удалить ключ SSH «…»?{name}?"
+  },
+  "qpBS29": {
+    "defaultMessage": "Измените параметры виртуальной машины."
   },
   "qq7WMq": {
     "defaultMessage": "Все виртуальные серверы предоставляются с одним IPv4-адресом и одним IPv6-адресом, а также с неограниченным объёмом трафика. Все цены указаны без учёта налогов."
@@ -941,11 +1379,14 @@
   "r2BhUh": {
     "defaultMessage": "Расшифровать сообщение."
   },
-  "rCcPOd": {
-    "defaultMessage": "плата, взнос, гонорар"
+  "rF6EmI": {
+    "defaultMessage": "Платежные данные"
   },
-  "rKLmW/": {
-    "defaultMessage": "Отменить платёж"
+  "rieTwF": {
+    "defaultMessage": "Срок действия истек."
+  },
+  "rv2p0H": {
+    "defaultMessage": "Процессор, оперативная память и сетевое оборудование."
   },
   "rvirM2": {
     "defaultMessage": "Местоположение"
@@ -953,20 +1394,53 @@
   "s+YpY+": {
     "defaultMessage": "Получайте вознаграждения, привлекая новых пользователей."
   },
-  "sH1q5P": {
-    "defaultMessage": "для {time}"
+  "s+ixZq": {
+    "defaultMessage": "Метод по умолчанию."
+  },
+  "s2ZjPB": {
+    "defaultMessage": "Правила межсетевого экрана не настроены. Применяется политика по умолчанию."
+  },
+  "sAJryD": {
+    "defaultMessage": "Сумма НДС и комиссионных сборов указана приблизительно; точная сумма будет подтверждена при оплате."
+  },
+  "sQu9nL": {
+    "defaultMessage": "Ключ SSH"
   },
   "sTesGq": {
     "defaultMessage": "Предложений нет."
   },
+  "sUw18G": {
+    "defaultMessage": "Зашифрованные сообщения доступны только для аккаунтов Nostr. В вашем аккаунте отсутствует ключ Nostr, необходимый для чтения или отправки сообщений в формате NIP-17. Если вам нужна помощь, воспользуйтесь вкладкой «Поддержка»."
+  },
   "sXj7R6": {
     "defaultMessage": "Диск:"
+  },
+  "sn+Rj5": {
+    "defaultMessage": "Войти с ключом доступа"
+  },
+  "snh6R6": {
+    "defaultMessage": "Название (необязательно)"
   },
   "sqvjkf": {
     "defaultMessage": "Добавить рукоятку."
   },
+  "srgk8m": {
+    "defaultMessage": "Указывает валюту, используемую для расчётов и оплаты."
+  },
   "sy+pv5": {
     "defaultMessage": "Электронная почта"
+  },
+  "tNmjzW": {
+    "defaultMessage": "Порт(ы)"
+  },
+  "tTpLsN": {
+    "defaultMessage": "Не связаны."
+  },
+  "tngc9N": {
+    "defaultMessage": "Исходный CIDR-блок."
+  },
+  "tthToS": {
+    "defaultMessage": "Отключено"
   },
   "tzMNF3": {
     "defaultMessage": "Статус"
@@ -977,23 +1451,26 @@
   "u3FDCD": {
     "defaultMessage": "Условия использования и правила приемлемого использования"
   },
-  "uN7rbm": {
-    "defaultMessage": "Присоединяйтесь к нашей реферальной программе и получайте вознаграждение, когда другие пользователи регистрируются, используя ваш код. Выберите удобный для вас способ получения выплат."
+  "uJV0wU": {
+    "defaultMessage": "IP-адрес"
   },
   "uPNlBw": {
     "defaultMessage": "Электронная почта: {email}"
   },
-  "uRfNhn": {
-    "defaultMessage": "Сеть:"
-  },
-  "ug01Mk": {
-    "defaultMessage": "Время"
+  "ubXbwc": {
+    "defaultMessage": "Политика по умолчанию."
   },
   "uqUeK9": {
     "defaultMessage": "Расшифруйте сообщение, отправленное вам службой поддержки."
   },
+  "uqe58g": {
+    "defaultMessage": "Разбивка (на части) / Анализ по составным частям"
+  },
   "v2BRjN": {
     "defaultMessage": "Тема сообщения *"
+  },
+  "v3j7Fq": {
+    "defaultMessage": "У вас отсутствуют ключи SSH."
   },
   "v4Sg0C": {
     "defaultMessage": "Используйте пользовательский ключ получателя."
@@ -1001,14 +1478,44 @@
   "vONi+O": {
     "defaultMessage": "Страна"
   },
+  "vWsXtg": {
+    "defaultMessage": "Создание платежа…"
+  },
+  "vaoVHG": {
+    "defaultMessage": "Вернуться к списку подписок."
+  },
   "vlKhIl": {
     "defaultMessage": "Ваше имя"
+  },
+  "vo0Z8o": {
+    "defaultMessage": "Подключите свой чат, затем нажмите кнопку «Начать» в боте."
+  },
+  "vtStU2": {
+    "defaultMessage": "История платежей."
+  },
+  "vy2rlX": {
+    "defaultMessage": "Комиссия за обработку:"
+  },
+  "wEQDC6": {
+    "defaultMessage": "Редактировать"
+  },
+  "wL4Olp": {
+    "defaultMessage": "Продлевает. {date}"
   },
   "wLwJ9Q": {
     "defaultMessage": "Стоимость оставшегося времени по старому тарифу:"
   },
+  "waJLKW": {
+    "defaultMessage": "Связано/Соединено"
+  },
+  "waUHa4": {
+    "defaultMessage": "SSH"
+  },
   "wfYHHe": {
     "defaultMessage": "-{daysLeft} оставшиеся дни]"
+  },
+  "wo868v": {
+    "defaultMessage": "Войти с ключом Nostr или бункером →"
   },
   "wz7uSD": {
     "defaultMessage": "включая {amount} налог"
@@ -1016,14 +1523,17 @@
   "x0cZXf": {
     "defaultMessage": "Обновление недоступно."
   },
-  "xLbpvq": {
-    "defaultMessage": "Отправляйте и получайте зашифрованные личные сообщения с поддержкой протокола NIP-17. Сообщения зашифрованы сквозным шифрованием."
+  "xOnplm": {
+    "defaultMessage": "Загрузка доступных способов оплаты…"
   },
-  "xR03Aa": {
-    "defaultMessage": "Настройки уведомлений"
+  "xQ8iOj": {
+    "defaultMessage": "У вас пока нет ни одной подписки."
   },
   "xXbJso": {
     "defaultMessage": "Выйти из системы"
+  },
+  "xhfdqv": {
+    "defaultMessage": "Создание"
   },
   "xj59EM": {
     "defaultMessage": "{proxy} работает без каких-либо изменений в настройках DNS — это полезно, если у вас уже есть сайт, размещенный в этом домене."
@@ -1034,8 +1544,14 @@
   "xmSWcf": {
     "defaultMessage": "Процессор: {cores} ядра"
   },
+  "xuTqgN": {
+    "defaultMessage": "Способы оплаты"
+  },
   "y43e4q": {
     "defaultMessage": "(Изменения в настройках DNS не требуются)"
+  },
+  "y9xHR9": {
+    "defaultMessage": "Выплаты"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -1043,11 +1559,17 @@
   "yJAKR0": {
     "defaultMessage": "Отправить сообщение"
   },
-  "yYs9cj": {
-    "defaultMessage": "Вернуться к обновлению."
+  "yKzuSB": {
+    "defaultMessage": "Оплатить подписку."
+  },
+  "yPgnbL": {
+    "defaultMessage": "Не удалось войти"
   },
   "yr1Ove": {
     "defaultMessage": "Просмотр текущего времени безотказной работы и истории инцидентов для сервисов LNVPS. Узнайте текущий статус работы нашей инфраструктуры Bitcoin Lightning VPS."
+  },
+  "z+hIFs": {
+    "defaultMessage": "Оплата пока не произведена."
   },
   "zAN0RF": {
     "defaultMessage": "Зашифрованные личные сообщения."

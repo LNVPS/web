@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "Nostr 是什么？"
   },
+  "G6nrEF": {
+    "defaultMessage": "已保存，但存在警告信息。"
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "使用自定义发送方密钥。"
   },
+  "GtI0l1": {
+    "defaultMessage": "提现款会转入您已保存的 NWC 钱包。您可以添加或选择一个钱包，系统将默认使用启用的钱包。"
+  },
   "HAlOn1": {
     "defaultMessage": "姓名"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "未检测到任何更改。"
+  },
+  "ID2dFf": {
+    "defaultMessage": "尚未保存任何 NWC 钱包。请在下方添加一个，以便接收付款。"
   },
   "INlWvJ": {
     "defaultMessage": "或者"

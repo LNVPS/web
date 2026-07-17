@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "Nostrとは何ですか？"
   },
+  "G6nrEF": {
+    "defaultMessage": "警告付きで保存されました。"
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "カスタム送信者キーを使用する"
   },
+  "GtI0l1": {
+    "defaultMessage": "支払いは、保存されているNWCウォレットに送られます。以下のいずれかを選択するか、新しいウォレットを追加してください。デフォルトで有効になっているウォレットが使用されます。"
+  },
   "HAlOn1": {
     "defaultMessage": "名前"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "変更は検出されませんでした。"
+  },
+  "ID2dFf": {
+    "defaultMessage": "まだNWCウォレットは登録されていません。報酬を受け取るために、以下の手順でウォレットを登録してください。"
   },
   "INlWvJ": {
     "defaultMessage": "または"

@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "Was ist Nostr?"
   },
+  "G6nrEF": {
+    "defaultMessage": "Mit Warnhinweisen gespeichert."
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "Benutzerdefinierten Absender-Schlüssel verwenden"
   },
+  "GtI0l1": {
+    "defaultMessage": "Die Auszahlungen erfolgen an ein gespeichertes NWC-Wallet. Fügen Sie eines hinzu oder wählen Sie eines aus den folgenden Optionen – standardmäßig wird das aktivierte Wallet verwendet."
+  },
   "HAlOn1": {
     "defaultMessage": "Name"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "Keine Änderungen festgestellt."
+  },
+  "ID2dFf": {
+    "defaultMessage": "Bisher wurde noch keine NWC-Wallet gespeichert. Fügen Sie unten eine hinzu, um Auszahlungen zu erhalten."
   },
   "INlWvJ": {
     "defaultMessage": "ODER"

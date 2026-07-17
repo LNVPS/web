@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "¿qué es Nostr?"
   },
+  "G6nrEF": {
+    "defaultMessage": "Guardado con advertencias."
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "Utilice una clave de remitente personalizada."
   },
+  "GtI0l1": {
+    "defaultMessage": "Los pagos se realizan en una billetera de NWC guardada. Puede agregar una nueva o seleccionar una existente; por defecto, se utilizará la billetera habilitada."
+  },
   "HAlOn1": {
     "defaultMessage": "Nombre"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "No se detectaron cambios."
+  },
+  "ID2dFf": {
+    "defaultMessage": "Aún no se ha guardado ninguna billetera de NWC. Agregue una a continuación para recibir los pagos."
   },
   "INlWvJ": {
     "defaultMessage": "O"

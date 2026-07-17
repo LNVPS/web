@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "Nostr nedir?"
   },
+  "G6nrEF": {
+    "defaultMessage": "Uyarılarla birlikte kaydedildi."
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "Özel gönderen anahtarını kullanın"
   },
+  "GtI0l1": {
+    "defaultMessage": "Ödemeler, kaydedilmiş bir NWC cüzdanına yapılır. Aşağıda yeni bir cüzdan ekleyebilir veya mevcut olanlardan birini seçebilirsiniz; varsayılan olarak etkinleştirilmiş cüzdan kullanılır."
+  },
   "HAlOn1": {
     "defaultMessage": "Ad"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "Herhangi bir değişiklik tespit edilmedi."
+  },
+  "ID2dFf": {
+    "defaultMessage": "Henüz hiçbir NWC cüzdanı kaydedilmedi. Ödemeleri almak için aşağıda bir tane ekleyin."
   },
   "INlWvJ": {
     "defaultMessage": "VEYA"

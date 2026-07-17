@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "노스트르는 무엇인가요?"
   },
+  "G6nrEF": {
+    "defaultMessage": "경고와 함께 저장됨"
+  },
   "GDR0px": {
     "defaultMessage": "노스트르"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "사용자 지정 발신 키를 사용하세요."
   },
+  "GtI0l1": {
+    "defaultMessage": "지급액은 저장된 NWC 지갑으로 전송됩니다. 아래에서 지갑을 추가하거나 선택하세요. 기본적으로 활성화된 지갑이 사용됩니다."
+  },
   "HAlOn1": {
     "defaultMessage": "이름"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "변경 사항 없음"
+  },
+  "ID2dFf": {
+    "defaultMessage": "아직 NWC 지갑이 저장되지 않았습니다. 아래에 지갑을 추가하여 지급을 받으세요."
   },
   "INlWvJ": {
     "defaultMessage": "또는"

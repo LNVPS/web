@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "qu'est-ce que Nostr ?"
   },
+  "G6nrEF": {
+    "defaultMessage": "Enregistré avec des avertissements."
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "Utiliser la clé de l’expéditeur personnalisée."
   },
+  "GtI0l1": {
+    "defaultMessage": "Les paiements sont versés dans un portefeuille NWC enregistré. Ajoutez-en un ou sélectionnez-en un ci-dessous ; le portefeuille par défaut activé sera utilisé."
+  },
   "HAlOn1": {
     "defaultMessage": "Nom"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "Aucun changement détecté."
+  },
+  "ID2dFf": {
+    "defaultMessage": "Aucun portefeuille NWC n’a été enregistré pour le moment. Ajoutez-en un ci-dessous pour pouvoir recevoir les paiements."
   },
   "INlWvJ": {
     "defaultMessage": "OU"

@@ -29,9 +29,6 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Wallet"
   },
-  "0CZsku": {
-    "defaultMessage": "Payouts go to the NWC wallet set in your account settings."
-  },
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
   },
@@ -446,6 +443,9 @@
   "G5cGLJ": {
     "defaultMessage": "Awaiting first payment"
   },
+  "G6nrEF": {
+    "defaultMessage": "Saved with warnings"
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -469,6 +469,9 @@
   },
   "GsCz6b": {
     "defaultMessage": "Use custom sender key"
+  },
+  "GtI0l1": {
+    "defaultMessage": "Payouts go to a saved NWC wallet. Add or pick one below — the default enabled wallet is used."
   },
   "GuLP+V": {
     "defaultMessage": "Renews automatically one day before expiry using your default payment method."
@@ -496,6 +499,9 @@
   },
   "IChMNf": {
     "defaultMessage": "No changes detected"
+  },
+  "ID2dFf": {
+    "defaultMessage": "No NWC wallet saved yet. Add one below to receive payouts."
   },
   "ILTAun": {
     "defaultMessage": "Your VM is being provisioned. This usually takes a minute or two."
@@ -1045,9 +1051,6 @@
   },
   "gc+2Z2": {
     "defaultMessage": "Console"
-  },
-  "gmu1tl": {
-    "defaultMessage": "VM"
   },
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"

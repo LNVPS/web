@@ -299,6 +299,9 @@
   "FrXeQJ": {
     "defaultMessage": "o que é o Nostr?"
   },
+  "G6nrEF": {
+    "defaultMessage": "Guardado com avisos."
+  },
   "GDR0px": {
     "defaultMessage": "Nostr"
   },
@@ -317,6 +320,9 @@
   "GsCz6b": {
     "defaultMessage": "Use uma chave de remetente personalizada."
   },
+  "GtI0l1": {
+    "defaultMessage": "Os pagamentos são efetuados para uma carteira NWC guardada. Adicione ou selecione uma abaixo – a carteira padrão ativada será utilizada."
+  },
   "HAlOn1": {
     "defaultMessage": "Nome"
   },
@@ -331,6 +337,9 @@
   },
   "IChMNf": {
     "defaultMessage": "Nenhuma alteração detetada."
+  },
+  "ID2dFf": {
+    "defaultMessage": "Ainda não foi criada nenhuma carteira NWC. Adicione uma abaixo para receber os pagamentos."
   },
   "INlWvJ": {
     "defaultMessage": "OU"

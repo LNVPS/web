@@ -146,6 +146,16 @@ export interface AccountDetail {
   tax?: Array<AccountTaxInfo>;
 }
 
+/** Response body of `PATCH /api/v1/account`. */
+export interface UpdateAccountResponse {
+  /**
+   * Non-fatal VIES warnings raised when saving billing details — e.g. the
+   * name/address didn't match the VAT number's registered values. The account
+   * is still saved; an invalid VAT number itself is a hard error instead.
+   */
+  warnings?: Array<string>;
+}
+
 /** The VAT that will be charged to the user for a given seller company. */
 export interface AccountTaxInfo {
   company_id: number;
@@ -264,15 +274,13 @@ export interface VmTemplate {
   region: VmHostRegion;
 }
 
-export interface VmStatus {
-  id: number;
-  created: string;
-  expires: string;
-  mac_address: string;
-  image: VmOsImage;
-  template: VmTemplate;
-  ssh_key: UserSshKey;
-  ip_assignments: Array<VmIpAssignment>;
+/**
+ * VM live running-state and metrics — the nested `status` field of a VM object
+ * (see `VmInstance.status`). Metrics may be absent until the first poll.
+ */
+export interface VmRunningState {
+  /** Unix timestamp when this state was collected. */
+  timestamp?: number;
   state: VmState;
   cpu_usage?: number;
   mem_usage?: number;
@@ -281,16 +289,13 @@ export interface VmStatus {
   net_out?: number;
   disk_write?: number;
   disk_read?: number;
-  auto_renewal_enabled: boolean;
-  /** The subscription this VM is billed under; renew via renewSubscription. */
-  subscription_id?: number;
 }
 
 export interface VmInstance {
   id: number;
   created: string;
   expires?: string;
-  status?: VmStatus;
+  status?: VmRunningState;
   mac_address: string;
   template: VmTemplate;
   image: VmOsImage;
@@ -390,7 +395,8 @@ export interface NostrDomain {
   name: string;
   enabled: boolean;
   handles: number;
-  created: Date;
+  /** ISO 8601 datetime */
+  created: string;
   relays: Array<string>;
   activation_hash?: string;
 }
@@ -399,8 +405,11 @@ export interface NostrDomainHandle {
   id: number;
   domain_id: number;
   handle: string;
-  created: Date;
+  /** ISO 8601 datetime */
+  created: string;
   pubkey: string;
+  /** Relay hints advertised for this handle */
+  relays: Array<string>;
 }
 
 export interface VmHistory {
@@ -568,6 +577,11 @@ export interface Referral {
    * rate applies instead.
    */
   referral_rate?: number | null;
+  /**
+   * The rate that currently applies (whole %): the per-referrer override
+   * (`referral_rate`) if set, otherwise the referred VM company's default rate.
+   */
+  effective_referral_rate?: number;
   created: string;
 }
 
@@ -587,9 +601,8 @@ export interface ReferralPayout {
   pre_image?: string;
 }
 
-/** Per-referred-VM breakdown of the commission earned from its first payment. */
+/** Per-referral breakdown of the commission earned from a first payment. */
 export interface ReferralUsage {
-  vm_id: number;
   created: string;
   amount: number;
   currency: string;
@@ -721,9 +734,9 @@ export class LNVpsApi {
   }
 
   async updateAccount(acc: AccountDetail) {
-    const { data } = await this.#handleResponse<ApiResponse<void>>(
-      await this.#req("/api/v1/account", "PATCH", acc),
-    );
+    const { data } = await this.#handleResponse<
+      ApiResponse<UpdateAccountResponse>
+    >(await this.#req("/api/v1/account", "PATCH", acc));
     return data;
   }
 
@@ -1100,10 +1113,17 @@ export class LNVpsApi {
     vm_id: number,
     req: VmUpgradeRequest,
     method?: string,
+    opts?: { paymentMethodId?: number },
   ) {
-    const methodParam = method ? `?method=${method}` : "";
+    const params = new URLSearchParams();
+    if (method !== undefined) params.set("method", method);
+    // For method=saved off-session charges: select a specific saved card.
+    if (opts?.paymentMethodId !== undefined) {
+      params.set("payment_method_id", opts.paymentMethodId.toString());
+    }
+    const query = params.toString() ? `?${params.toString()}` : "";
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
-      await this.#req(`/api/v1/vm/${vm_id}/upgrade${methodParam}`, "POST", req),
+      await this.#req(`/api/v1/vm/${vm_id}/upgrade${query}`, "POST", req),
     );
     return data;
   }
@@ -1194,6 +1214,17 @@ export class LNVpsApi {
     return data;
   }
 
+  /** Toggle a subscription's automatic renewal. Returns the updated subscription. */
+  async patchSubscription(
+    id: number,
+    req: { auto_renewal_enabled?: boolean },
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<Subscription>>(
+      await this.#req(`/api/v1/subscriptions/${id}`, "PATCH", req),
+    );
+    return data;
+  }
+
   async renewSubscription(
     subscriptionId: number,
     method?: string,
@@ -1272,11 +1303,14 @@ export class LNVpsApi {
     return data;
   }
 
-  async getReferralUsage() {
-    const { data } = await this.#handleResponse<ApiResponse<Array<ReferralUsage>>>(
-      await this.#req("/api/v1/referral/usage", "GET"),
+  async getReferralUsage(limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    return await this.#handleResponse<PaginatedResponse<ReferralUsage>>(
+      await this.#req(`/api/v1/referral/usage${query}`, "GET"),
     );
-    return data;
   }
 
   async verifyEmail(token: string) {

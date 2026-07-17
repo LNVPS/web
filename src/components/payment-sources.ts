@@ -131,12 +131,16 @@ export function vmUpgradeSource(
   upgradeRequest: VmUpgradeRequest,
 ): PaymentSource {
   return {
-    createPayment: (method) =>
-      api.createVmUpgradePayment(vm.id, upgradeRequest, method),
+    // Upgrades now support saved methods off-session: method=nwc pays the
+    // Lightning invoice via the saved NWC wallet, method=saved charges a saved
+    // Revolut card (optionally a specific one via paymentMethodId).
+    createPayment: (method, opts) =>
+      api.createVmUpgradePayment(vm.id, upgradeRequest, method, {
+        paymentMethodId: opts.paymentMethodId,
+      }),
     pollPaid: async (paymentId) => {
       const st = await api.paymentStatus(paymentId);
       return st.is_paid;
     },
-    allowSavedMethods: false,
   };
 }

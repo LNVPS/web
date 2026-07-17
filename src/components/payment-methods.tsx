@@ -34,8 +34,16 @@ function isExpired(m: SavedPaymentMethod): boolean {
 /**
  * Manage saved payment methods used for automatic renewals: list, choose the
  * default, enable/disable, delete, and add a Nostr Wallet Connect wallet.
+ *
+ * Pass `providerFilter` to scope the list to a single provider (e.g. `"nwc"`
+ * to show only saved Nostr Wallet Connect wallets). When filtered to NWC the
+ * card-specific footer note is hidden.
  */
-export function PaymentMethods() {
+export function PaymentMethods({
+  providerFilter,
+}: {
+  providerFilter?: SavedPaymentMethod["provider"];
+} = {}) {
   const login = useLogin();
   const { formatMessage } = useIntl();
   const [methods, setMethods] = useState<SavedPaymentMethod[]>([]);
@@ -62,6 +70,10 @@ export function PaymentMethods() {
   useEffect(() => {
     reload();
   }, [reload]);
+
+  const shown = providerFilter
+    ? methods.filter((m) => m.provider === providerFilter)
+    : methods;
 
   async function setDefault(id: number) {
     if (!login?.api) return;
@@ -112,13 +124,17 @@ export function PaymentMethods() {
         <div className="text-sm text-cyber-muted">
           <FormattedMessage defaultMessage="Loading…" />
         </div>
-      ) : methods.length === 0 ? (
+      ) : shown.length === 0 ? (
         <div className="text-sm text-cyber-muted">
-          <FormattedMessage defaultMessage="No saved payment methods yet." />
+          {providerFilter === "nwc" ? (
+            <FormattedMessage defaultMessage="No NWC wallet saved yet. Add one below to receive payouts." />
+          ) : (
+            <FormattedMessage defaultMessage="No saved payment methods yet." />
+          )}
         </div>
       ) : (
         <ul className="flex flex-col gap-2">
-          {methods.map((m) => {
+          {shown.map((m) => {
             const expired = isExpired(m);
             const exp = expiryLabel(m);
             return (
@@ -239,12 +255,14 @@ export function PaymentMethods() {
             <FormattedMessage defaultMessage="Add" />
           </AsyncButton>
         </div>
-        <p className="m-0 text-xs text-cyber-muted">
-          {formatMessage({
-            defaultMessage:
-              "Tick \u201cSave this card\u201d when paying with Revolut to store a card here for future payments and automatic renewals.",
-          })}
-        </p>
+        {providerFilter !== "nwc" && (
+          <p className="m-0 text-xs text-cyber-muted">
+            {formatMessage({
+              defaultMessage:
+                "Tick \u201cSave this card\u201d when paying with Revolut to store a card here for future payments and automatic renewals.",
+            })}
+          </p>
+        )}
       </div>
     </div>
   );

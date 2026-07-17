@@ -54,6 +54,7 @@ export function AccountSubscriptionPage() {
   );
   const [error, setError] = useState<string>();
   const [showPayment, setShowPayment] = useState(false);
+  const [renewSaving, setRenewSaving] = useState(false);
 
   const reload = useCallback(async () => {
     if (!login?.api || !Number.isFinite(id)) return;
@@ -249,6 +250,23 @@ export function AccountSubscriptionPage() {
           <AutoRenewCard
             enabled={subscription.auto_renewal_enabled}
             defaultMethod={defaultMethod}
+            saving={renewSaving}
+            onToggle={async () => {
+              if (!login?.api) return;
+              setError(undefined);
+              setRenewSaving(true);
+              try {
+                const updated = await login.api.patchSubscription(
+                  subscription.id,
+                  { auto_renewal_enabled: !subscription.auto_renewal_enabled },
+                );
+                setSubscription(updated);
+              } catch (e) {
+                if (e instanceof Error) setError(e.message);
+              } finally {
+                setRenewSaving(false);
+              }
+            }}
             description={
               subscription.auto_renewal_enabled ? (
                 <FormattedMessage defaultMessage="Renews automatically one day before expiry using your default payment method." />

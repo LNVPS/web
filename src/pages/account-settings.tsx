@@ -117,6 +117,7 @@ export function AccountSettings() {
   const [channels, setChannels] = useState<NotificationChannels>();
   const [error, setError] = useState<string>();
   const [saved, setSaved] = useState(false);
+  const [warnings, setWarnings] = useState<Array<string>>([]);
   const [waNumber, setWaNumber] = useState<string>("");
   const [waCode, setWaCode] = useState<string>("");
   const [waCodeSent, setWaCodeSent] = useState<boolean>(false);
@@ -528,9 +529,11 @@ export function AccountSettings() {
             if (login?.api && acc) {
               setError(undefined);
               setSaved(false);
+              setWarnings([]);
               try {
-                await login.api.updateAccount(acc);
+                const res = await login.api.updateAccount(acc);
                 await reloadAccount();
+                setWarnings(res?.warnings ?? []);
                 setSaved(true);
               } catch (e: unknown) {
                 setError(e instanceof Error ? e.message : String(e));
@@ -547,6 +550,19 @@ export function AccountSettings() {
         )}
         {error && <span className="text-sm text-cyber-danger">{error}</span>}
       </div>
+
+      {warnings.length > 0 && (
+        <div className="flex flex-col gap-1 rounded-sm border border-cyber-warning/50 bg-cyber-warning/10 px-4 py-3">
+          <span className="text-xs uppercase tracking-wider text-cyber-warning">
+            <FormattedMessage defaultMessage="Saved with warnings" />
+          </span>
+          {warnings.map((w, i) => (
+            <span key={i} className="text-sm text-cyber-text">
+              {w}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -11,6 +11,7 @@ import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import { CopyButton } from "../components/copy-button";
 import { CostAmount } from "../components/cost";
+import { PaymentMethods } from "../components/payment-methods";
 import { FormattedDate, FormattedMessage, FormattedNumber } from "react-intl";
 
 // `account_credit` is a defined-but-unimplemented server mode, so the UI only
@@ -62,7 +63,7 @@ export function AccountReferralPage() {
         applyState(s);
         login.api
           ?.getReferralUsage()
-          .then(setUsage)
+          .then((r) => setUsage(r.data))
           .catch(() => setUsage([]));
       })
       .catch(() => {
@@ -84,7 +85,7 @@ export function AccountReferralPage() {
       setNotEnrolled(false);
       login.api
         .getReferralUsage()
-        .then(setUsage)
+        .then((r) => setUsage(r.data))
         .catch(() => setUsage([]));
     } catch (e) {
       if (e instanceof Error) setError(e.message);
@@ -220,14 +221,14 @@ export function AccountReferralPage() {
             <span className="text-cyber-primary font-bold font-mono text-4xl md:text-5xl select-all break-all [text-shadow:0_0_14px_oklch(0.8_0.3_142_/_0.45)]">
               {state.code}
             </span>
-            {state.referral_rate != null && (
+            {state.effective_referral_rate != null && (
               <span className="ml-auto rounded-sm border border-cyber-border bg-cyber-panel px-2 py-1 text-xs text-cyber-accent">
                 <FormattedMessage
                   defaultMessage="{rate} commission"
                   values={{
                     rate: (
                       <FormattedNumber
-                        value={state.referral_rate / 100}
+                        value={state.effective_referral_rate / 100}
                         style="percent"
                         maximumFractionDigits={2}
                       />
@@ -346,9 +347,6 @@ export function AccountReferralPage() {
               <thead>
                 <tr>
                   <th className="!text-left">
-                    <FormattedMessage defaultMessage="VM" />
-                  </th>
-                  <th className="!text-left">
                     <FormattedMessage defaultMessage="Date" />
                   </th>
                   <th className="!text-right">
@@ -363,8 +361,8 @@ export function AccountReferralPage() {
                 </tr>
               </thead>
               <tbody>
-                {usage.map((u) => (
-                  <UsageRow key={u.vm_id} usage={u} />
+                {usage.map((u, i) => (
+                  <UsageRow key={i} usage={u} />
                 ))}
               </tbody>
             </table>
@@ -506,9 +504,12 @@ function PayoutMethodSelector({
         />
       )}
       {method === "nwc" && (
-        <p className="text-cyber-muted text-sm">
-          <FormattedMessage defaultMessage="Payouts go to the NWC wallet set in your account settings." />
-        </p>
+        <div className="flex flex-col gap-2 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3">
+          <p className="m-0 text-cyber-muted text-sm">
+            <FormattedMessage defaultMessage="Payouts go to a saved NWC wallet. Add or pick one below — the default enabled wallet is used." />
+          </p>
+          <PaymentMethods providerFilter="nwc" />
+        </div>
       )}
     </div>
   );
@@ -536,7 +537,6 @@ function EarningChip({ earning }: { earning: ReferralEarning }) {
 function UsageRow({ usage }: { usage: ReferralUsage }) {
   return (
     <tr>
-      <td className="font-mono text-cyber-accent">#{usage.vm_id}</td>
       <td className="text-cyber-muted">
         <FormattedDate
           value={usage.created}

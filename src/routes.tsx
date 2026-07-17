@@ -5,6 +5,7 @@ import HomePage from "./pages/home.tsx";
 import { OrderPage } from "./pages/order";
 import AccountPage from "./pages/account.tsx";
 import SignUpPage from "./pages/sign-up.tsx";
+import OAuthCompletePage from "./pages/oauth-complete.tsx";
 import { TosPage } from "./pages/terms.tsx";
 import { StatusPage } from "./pages/status.tsx";
 import { AccountSettings } from "./pages/account-settings.tsx";
@@ -55,6 +56,10 @@ export const routes: RouteObject[] = [
       {
         path: "/login",
         element: <SignUpPage />,
+      },
+      {
+        path: "/oauth/complete",
+        element: <OAuthCompletePage />,
       },
       {
         path: "/account",

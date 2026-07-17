@@ -17,9 +17,15 @@ export default function useLogin() {
         ? {
             type: session.type,
             publicKey: session.publicKey,
+            // Token accounts (OAuth provider / passkey) have no Nostr key, so
+            // Nostr-only UI (npub, NIP-17 DMs, NIP-44 tools) must be hidden.
+            isNostrless:
+              session.type === "oauth" || session.type === "webauthn",
             system,
             currency: session.currency,
-            api: new LNVpsApi(ApiUrl, LoginState.getSigner()),
+            api: session.token
+              ? new LNVpsApi(ApiUrl, undefined, undefined, session.token)
+              : new LNVpsApi(ApiUrl, LoginState.getSigner()),
             update: (fx: (ses: LoginSession) => void) =>
               LoginState.updateSession(fx),
             logout: () => LoginState.logout(),

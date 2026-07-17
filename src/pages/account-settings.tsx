@@ -4,6 +4,7 @@ import { AccountDetail, NotificationChannels } from "../api";
 import { AsyncButton } from "../components/button";
 import { Card, CardBody, CardHeader } from "../components/card";
 import { PaymentMethods } from "../components/payment-methods";
+import PasskeysSection from "../components/passkeys-section";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
@@ -232,6 +233,16 @@ export function AccountSettings() {
       </SettingsSection>
 
       <SettingsSection
+        eyebrow="Security"
+        title={<FormattedMessage defaultMessage="Passkeys" />}
+        description={
+          <FormattedMessage defaultMessage="Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account." />
+        }
+      >
+        <PasskeysSection accountType={acc.account_type} />
+      </SettingsSection>
+
+      <SettingsSection
         eyebrow="Renewal"
         title={<FormattedMessage defaultMessage="Payment Methods" />}
         description={
@@ -297,8 +308,11 @@ export function AccountSettings() {
             </ChannelRow>
           )}
 
-          {/* Nostr DM channel */}
-          {(channels?.nip17 ?? true) && (
+          {/* Nostr DM channel — hidden for token accounts (OAuth / passkey),
+              which have no usable Nostr key; the API also rejects enabling
+              contact_nip17 for them. */}
+          {(channels?.nip17 ?? true) &&
+            (acc.account_type ?? "nostr") === "nostr" && (
             <ChannelRow
               name={<FormattedMessage defaultMessage="Nostr DM" />}
               hint={

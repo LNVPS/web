@@ -1,5 +1,11 @@
 import { EventKind, EventPublisher } from "@snort/system";
 import { base64 } from "@scure/base";
+import type {
+  AuthenticationResponseJSON,
+  PublicKeyCredentialCreationOptionsJSON,
+  PublicKeyCredentialRequestOptionsJSON,
+  RegistrationResponseJSON,
+} from "@simplewebauthn/browser";
 
 export interface ApiResponseBase {
   error?: string;
@@ -120,6 +126,12 @@ export type PaymentTypeMethod = "Purchase" | "Renewal" | "Upgrade";
 export interface AccountDetail {
   email?: string;
   email_verified?: boolean;
+  /**
+   * Read-only. Only 'nostr' accounts have a usable Nostr key — hide npub /
+   * NIP-17 UI for 'oauth' and 'webauthn' (passkey) accounts. Defaults to
+   * 'nostr' when omitted by older API versions.
+   */
+  account_type?: "nostr" | "oauth" | "webauthn";
   contact_nip17: boolean;
   contact_email: boolean;
   contact_telegram: boolean;
@@ -719,11 +731,39 @@ export interface FirewallPolicy {
   policy_out?: FirewallAction | null;
 }
 
+/** WebAuthn ceremony options returned by a `.../start` endpoint. */
+export interface WebauthnRegisterStart {
+  challenge: { publicKey: PublicKeyCredentialCreationOptionsJSON };
+  state: string;
+}
+
+export interface WebauthnLoginStart {
+  challenge: { publicKey: PublicKeyCredentialRequestOptionsJSON };
+  state: string;
+}
+
+/** Session token issued by a passkey register/login `finish` endpoint. */
+export interface WebauthnToken {
+  token: string;
+  token_type: string;
+  expires_in: number;
+}
+
+/** A passkey (WebAuthn credential) registered to an account. */
+export interface Passkey {
+  id: number;
+  name?: string;
+  created: string;
+  last_used?: string;
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
     readonly publisher: EventPublisher | undefined,
     readonly timeout?: number,
+    /** OAuth session JWT. When set, requests use `Authorization: Bearer <token>`. */
+    readonly token?: string,
   ) {}
 
   async getAccount() {
@@ -737,6 +777,102 @@ export class LNVpsApi {
     const { data } = await this.#handleResponse<
       ApiResponse<UpdateAccountResponse>
     >(await this.#req("/api/v1/account", "PATCH", acc));
+    return data;
+  }
+
+  // --- Passkey (WebAuthn) authentication -------------------------------------
+  // The register/login ceremonies are unauthenticated: call them on a
+  // token-less client (`new LNVpsApi(ApiUrl, undefined)`).
+
+  /** Begin passkey registration for a NEW account. */
+  async webauthnRegisterStart(name?: string) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<WebauthnRegisterStart>
+    >(
+      await this.#req("/api/v1/webauthn/register/start", "POST", { name }),
+    );
+    return data;
+  }
+
+  /** Complete passkey registration; creates the account and returns a token. */
+  async webauthnRegisterFinish(
+    state: string,
+    credential: RegistrationResponseJSON,
+    name?: string,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<WebauthnToken>>(
+      await this.#req("/api/v1/webauthn/register/finish", "POST", {
+        state,
+        credential,
+        name,
+      }),
+    );
+    return data;
+  }
+
+  /** Begin usernameless passkey login. */
+  async webauthnLoginStart() {
+    const { data } = await this.#handleResponse<ApiResponse<WebauthnLoginStart>>(
+      await this.#req("/api/v1/webauthn/login/start", "POST"),
+    );
+    return data;
+  }
+
+  /** Complete passkey login; returns a session token. */
+  async webauthnLoginFinish(
+    state: string,
+    credential: AuthenticationResponseJSON,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<WebauthnToken>>(
+      await this.#req("/api/v1/webauthn/login/finish", "POST", {
+        state,
+        credential,
+      }),
+    );
+    return data;
+  }
+
+  // --- Passkey management (authenticated) ------------------------------------
+
+  /** List passkeys registered to the current account. */
+  async listPasskeys() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<Passkey>>>(
+      await this.#req("/api/v1/webauthn/credentials", "GET"),
+    );
+    return data;
+  }
+
+  /** Begin adding a passkey to the current account. */
+  async addPasskeyStart(name?: string) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<WebauthnRegisterStart>
+    >(
+      await this.#req("/api/v1/webauthn/credentials/start", "POST", { name }),
+    );
+    return data;
+  }
+
+  /** Complete adding a passkey; returns the created credential. */
+  async addPasskeyFinish(
+    state: string,
+    credential: RegistrationResponseJSON,
+    name?: string,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<Passkey>>(
+      await this.#req("/api/v1/webauthn/credentials/finish", "POST", {
+        state,
+        credential,
+        name,
+      }),
+    );
+    return data;
+  }
+
+  /** Remove a passkey from the current account. */
+  async deletePasskey(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/webauthn/credentials/${id}`, "DELETE"),
+    );
     return data;
   }
 
@@ -988,10 +1124,7 @@ export class LNVpsApi {
 
   async invoiceLink(id: string) {
     const u = `${this.url}/api/v1/payment/${id}/invoice`;
-    const auth = await this.#auth_event(u, "GET");
-    const auth_b64 = base64.encode(
-      new TextEncoder().encode(JSON.stringify(auth)),
-    );
+    const auth_b64 = await this.#authQuery(u);
     return `${u}?auth=${auth_b64}`;
   }
 
@@ -1011,10 +1144,7 @@ export class LNVpsApi {
 
   async connect_terminal(id: number) {
     const u = `${this.url}/api/v1/vm/${id}/console`;
-    const auth = await this.#auth_event(u, "GET");
-    const auth_b64 = base64.encode(
-      new TextEncoder().encode(JSON.stringify(auth)),
-    );
+    const auth_b64 = await this.#authQuery(u);
     // Rewrite http(s):// → ws(s):// so the URL is valid for WebSocket
     const wsUrl = u.replace(/^http(s?):\/\//, "ws$1://");
     const ws = new WebSocket(`${wsUrl}?auth=${auth_b64}`);
@@ -1389,12 +1519,29 @@ export class LNVpsApi {
   }
 
   async #auth(url: string, method: string) {
+    if (this.token) {
+      return `Bearer ${this.token}`;
+    }
     const auth = await this.#auth_event(url, method);
     if (auth) {
       return `Nostr ${base64.encode(
         new TextEncoder().encode(JSON.stringify(auth)),
       )}`;
     }
+  }
+
+  /**
+   * Build the `?auth=` query-string value used by the WebSocket console and the
+   * invoice download link (which cannot send an Authorization header). Returns
+   * the OAuth token directly for Bearer sessions, or a base64 NIP-98 event for
+   * Nostr sessions.
+   */
+  async #authQuery(url: string) {
+    if (this.token) {
+      return this.token;
+    }
+    const auth = await this.#auth_event(url, "GET");
+    return base64.encode(new TextEncoder().encode(JSON.stringify(auth)));
   }
 
   async #req(

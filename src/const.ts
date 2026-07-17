@@ -15,6 +15,29 @@ export const PB = TB * 1000;
 
 export const ApiUrl: string = import.meta.env.VITE_API_URL ?? "";
 
+/**
+ * OAuth/OIDC providers enabled server-side, in the order they should appear on
+ * the login page. Configured via `VITE_OAUTH_PROVIDERS` (comma-separated tags
+ * matching the server config, e.g. "google,github"). Defaults to Google only.
+ */
+export const OAuthProviders: Array<string> = (
+  import.meta.env.VITE_OAUTH_PROVIDERS ?? "google"
+)
+  .split(",")
+  .map((s: string) => s.trim().toLowerCase())
+  .filter((s: string) => s.length > 0);
+
+/** Start the OAuth login redirect for the given provider tag. */
+export function startOAuthLogin(provider: string) {
+  // Tell the API where to send us back to (must be on the server's
+  // `allowed_redirects` list). The API appends the token as `#token=<jwt>`, so
+  // pass a plain path with no fragment of its own.
+  const redirect = `${window.location.origin}/oauth/complete`;
+  window.location.href = `${ApiUrl}/api/v1/oauth/${provider}/login?redirect=${encodeURIComponent(
+    redirect,
+  )}`;
+}
+
 export const Relays = [
   "wss://nos.lol/",
   "wss://relay.primal.net/",

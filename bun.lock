@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "lnvps_web",
@@ -8,6 +9,7 @@
         "@marsidev/react-turnstile": "^1.4.1",
         "@revolut/checkout": "^1.1.24",
         "@scure/base": "^1.2.1",
+        "@simplewebauthn/browser": "^13.3.0",
         "@snort/shared": "^2.0.0-pre.3",
         "@snort/system": "^2.0.0-pre.9",
         "@snort/system-react": "^2.0.0-pre.12",
@@ -266,6 +268,8 @@
     "@rollup/rollup-win32-x64-msvc": ["@rollup/rollup-win32-x64-msvc@4.59.0", "", { "os": "win32", "cpu": "x64" }, "sha512-2HRCml6OztYXyJXAvdDXPKcawukWY2GpR5/nxKp4iBgiO3wcoEGkAaqctIbZcNB6KlUQBIqt8VYkNSj2397EfA=="],
 
     "@scure/base": ["@scure/base@1.2.6", "", {}, "sha512-g/nm5FgUa//MCj1gV09zTJTaM6KBAHqLN907YVQqf7zC49+DcO4B1so4ZX07Ef10Twr6nuqYEH9GEggFXA4Fmg=="],
+
+    "@simplewebauthn/browser": ["@simplewebauthn/browser@13.3.0", "", {}, "sha512-BE/UWv6FOToAdVk0EokzkqQQDOWtNydYlY6+OrmiZ5SCNmb41VehttboTetUM3T/fr6EAFYVXjz4My2wg230rQ=="],
 
     "@snort/shared": ["@snort/shared@2.0.0-pre.3", "", { "dependencies": { "@noble/curves": "^2.0.1", "@noble/hashes": "^2.0.1", "@scure/base": "^2.0.0", "debug": "^4.4.3", "eventemitter3": "^5.0.1", "light-bolt11-decoder": "^3.2.0" } }, "sha512-WR6JXeGuOS7iSAWLdvzSXIb5FpH6APkSzJ911niyKYz3e3xPKJBjMuxvSJALEFvmrOEYTwi/2eWSYoltaSWCcw=="],
 

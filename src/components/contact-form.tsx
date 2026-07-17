@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AsyncButton } from "./button";
 import { Turnstile } from "@marsidev/react-turnstile";
 import useTheme from "../hooks/theme";
@@ -14,15 +14,31 @@ export interface ContactFormData {
 
 interface ContactFormProps {
   onSubmit: (data: ContactFormData) => Promise<void>;
+  /** Prefill values (e.g. from the logged-in account). */
+  initialName?: string;
+  initialEmail?: string;
 }
 
-export default function ContactForm({ onSubmit }: ContactFormProps) {
+export default function ContactForm({
+  onSubmit,
+  initialName,
+  initialEmail,
+}: ContactFormProps) {
   const { theme } = useTheme();
   const { formatMessage } = useIntl();
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState(initialName ?? "");
+  const [email, setEmail] = useState(initialEmail ?? "");
+
+  // Prefill from the account once it loads, without clobbering anything the
+  // user has already typed.
+  useEffect(() => {
+    if (initialName) setName((n) => (n ? n : initialName));
+  }, [initialName]);
+  useEffect(() => {
+    if (initialEmail) setEmail((e) => (e ? e : initialEmail));
+  }, [initialEmail]);
   const [turnstileToken, setTurnstileToken] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -67,8 +83,8 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       setSuccess(true);
       setSubject("");
       setMessage("");
-      setName("");
-      setEmail("");
+      setName(initialName ?? "");
+      setEmail(initialEmail ?? "");
       setTurnstileToken("");
     } catch (e) {
       setError(

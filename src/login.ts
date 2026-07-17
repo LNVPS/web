@@ -7,10 +7,16 @@ import {
 } from "@snort/system";
 
 export interface LoginSession {
-  type: "nip7" | "nsec" | "nip46";
+  type: "nip7" | "nsec" | "nip46" | "oauth" | "webauthn";
+  /**
+   * Nostr pubkey (hex). Empty for token accounts (OAuth / passkey), which have
+   * no Nostr key.
+   */
   publicKey: string;
   privateKey?: string;
   bunker?: string;
+  /** Session JWT (only set for token accounts: `oauth` / `webauthn`). */
+  token?: string;
   currency: string;
 }
 class LoginStore extends ExternalStore<LoginSession | undefined> {
@@ -70,7 +76,31 @@ class LoginStore extends ExternalStore<LoginSession | undefined> {
     this.#save();
   }
 
+  /**
+   * Log in with a Bearer session token from a token account (OAuth provider
+   * redirect or a passkey/WebAuthn ceremony).
+   */
+  loginToken(token: string, type: "oauth" | "webauthn" = "oauth") {
+    this.#session = {
+      type,
+      publicKey: "",
+      token,
+      currency: "EUR",
+    };
+    this.#save();
+  }
+
+  /** True when the active session is a token (non-Nostr) account. */
+  isNostrless() {
+    return (
+      this.#session?.type === "oauth" || this.#session?.type === "webauthn"
+    );
+  }
+
   getSigner() {
+    if (this.isNostrless()) {
+      throw "Token accounts (OAuth / passkey) have no Nostr signer";
+    }
     if (!this.#signer && this.#session) {
       switch (this.#session.type) {
         case "nsec":

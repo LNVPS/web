@@ -52,6 +52,33 @@ export function processingFeeEstimate(
   return pct + base;
 }
 
+/**
+ * Wait for a NIP-07 Nostr extension to inject `window.nostr`. Extensions add it
+ * asynchronously (often after the page's first paint), so reading `window.nostr`
+ * once at render time is unreliable — a direct page load can miss it. Polls
+ * until the extension appears or the timeout elapses.
+ *
+ * @param timeoutMs how long to keep polling before giving up (default 3000ms)
+ * @returns true once `window.nostr` is present, false if it never appears
+ */
+export function waitForNostrExtension(timeoutMs = 3000): Promise<boolean> {
+  if (typeof window === "undefined") return Promise.resolve(false);
+  if (window.nostr) return Promise.resolve(true);
+
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const interval = setInterval(() => {
+      if (window.nostr) {
+        clearInterval(interval);
+        resolve(true);
+      } else if (Date.now() - start >= timeoutMs) {
+        clearInterval(interval);
+        resolve(false);
+      }
+    }, 100);
+  });
+}
+
 export async function openFile(): Promise<File | undefined> {
   return new Promise((resolve) => {
     const elm = document.createElement("input");

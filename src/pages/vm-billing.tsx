@@ -33,6 +33,8 @@ export function VmBillingPage() {
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
+  // An unpaid payment being resumed: reopens the flow at the QR/widget stage.
+  const [resumePayment, setResumePayment] = useState<VmPayment>();
   const [renewSaving, setRenewSaving] = useState(false);
   const [savedMethods, setSavedMethods] = useState<Array<SavedPaymentMethod>>(
     [],
@@ -62,6 +64,7 @@ export function VmBillingPage() {
 
   async function onPaymentComplete() {
     setShowPaymentFlow(false);
+    setResumePayment(undefined);
     const newState = await reloadVmState();
     if (params["action"] === "renew") {
       navigate("/vm", { state: newState });
@@ -126,7 +129,7 @@ export function VmBillingPage() {
     status: a.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
     ) : "onchain" in a.data ? (
-      <FormattedMessage defaultMessage="Awaiting confirmation" />
+      <FormattedMessage defaultMessage="Pending" />
     ) : new Date(a.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
     ) : (
@@ -147,6 +150,20 @@ export function VmBillingPage() {
         }}
       >
         <Icon name="printer" />
+      </div>
+    ) : "onchain" in a.data ||
+      ("lightning" in a.data && new Date(a.expires) > new Date()) ? (
+      // Unpaid but still payable (on-chain deposits are never rejected;
+      // Lightning invoices until they expire): reopen at the QR stage.
+      <div
+        title="Resume payment"
+        className="cursor-pointer"
+        onClick={() => {
+          setResumePayment(a);
+          setShowPaymentFlow(true);
+        }}
+      >
+        <Icon name="qr" />
       </div>
     ) : undefined,
   }));
@@ -262,9 +279,11 @@ export function VmBillingPage() {
       {showPaymentFlow && login?.api && (
         <RenewalFlow
           vm={state}
+          initialPayment={resumePayment}
           onPaymentComplete={onPaymentComplete}
           onCancel={() => {
             setShowPaymentFlow(false);
+            setResumePayment(undefined);
             // A payment may have been created and left pending (e.g. an
             // on-chain deposit awaiting confirmation) — refresh the history
             // so it shows up right away.
@@ -283,10 +302,12 @@ export function VmBillingPage() {
 /** Renew a VM via its underlying subscription. */
 function RenewalFlow({
   vm,
+  initialPayment,
   onPaymentComplete,
   onCancel,
 }: {
   vm: VmInstance;
+  initialPayment?: VmPayment;
   onPaymentComplete: () => void;
   onCancel: () => void;
 }) {
@@ -339,6 +360,7 @@ function RenewalFlow({
         <FormattedMessage defaultMessage="Renew VPS #{id}" values={{ id: vm.id }} />
       }
       source={vmRenewalSource(login.api, vm, subscriptionId)}
+      initialPayment={initialPayment}
       onPaymentComplete={onPaymentComplete}
       onCancel={onCancel}
     />

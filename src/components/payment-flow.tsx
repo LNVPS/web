@@ -33,6 +33,12 @@ interface PaymentFlowProps {
   source: PaymentSource;
   /** Preselect a method and create the payment immediately (skip selection). */
   presetMethod?: string;
+  /**
+   * Resume an existing unpaid payment: open directly at the payment screen
+   * (QR / widget) instead of creating a new payment. Backing out leaves the
+   * flow entirely.
+   */
+  initialPayment?: VmPayment;
   onPaymentComplete: () => void;
   onCancel?: () => void;
 }
@@ -46,6 +52,7 @@ export default function PaymentFlow({
   title,
   source,
   presetMethod,
+  initialPayment,
   onPaymentComplete,
   onCancel,
 }: PaymentFlowProps) {
@@ -53,7 +60,9 @@ export default function PaymentFlow({
   const { formatNumber } = useIntl();
   const { data: methods, loading: methodsLoading } = usePaymentMethods();
 
-  const [payment, setPayment] = useState<VmPayment>();
+  const [payment, setPayment] = useState<VmPayment | undefined>(
+    initialPayment,
+  );
   const [showLnurl, setShowLnurl] = useState(false);
   // The chosen payment option. Selecting is instant; the charge happens from
   // the shared Pay button so the summary can reflect the method's fees first.
@@ -135,13 +144,13 @@ export default function PaymentFlow({
   // clearing the payment just re-triggers the preset auto-create below and traps
   // the user on the payment screen.
   const leavePayment = useCallback(() => {
-    if (presetMethod) {
+    if (presetMethod || initialPayment) {
       onCancel?.();
       return;
     }
     setPayment(undefined);
     setSavedCharge(false);
-  }, [presetMethod, onCancel]);
+  }, [presetMethod, initialPayment, onCancel]);
 
   // Off-session (saved-card) and other non-interactive charges have no widget:
   // poll until settled.

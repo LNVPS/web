@@ -5,13 +5,17 @@ import {
   Subscription,
   SubscriptionLineItem,
   SubscriptionPayment,
+  VmPayment,
 } from "../api";
 import useLogin from "../hooks/login";
 import { CostAmount } from "../components/cost";
 import { Card, CardBody, CardTitle } from "../components/card";
 import { Icon } from "../components/icon";
 import PaymentFlow from "../components/payment-flow";
-import { subscriptionRenewalSource } from "../components/payment-sources";
+import {
+  subscriptionRenewalSource,
+  subscriptionToVmPayment,
+} from "../components/payment-sources";
 import {
   AutoRenewCard,
   BillingPaymentsTable,
@@ -54,6 +58,8 @@ export function AccountSubscriptionPage() {
   );
   const [error, setError] = useState<string>();
   const [showPayment, setShowPayment] = useState(false);
+  // An unpaid payment being resumed: reopens the flow at the QR/widget stage.
+  const [resumePayment, setResumePayment] = useState<VmPayment>();
   const [renewSaving, setRenewSaving] = useState(false);
 
   const reload = useCallback(async () => {
@@ -89,6 +95,7 @@ export function AccountSubscriptionPage() {
 
   async function onPaymentComplete() {
     setShowPayment(false);
+    setResumePayment(undefined);
     await reload();
   }
 
@@ -129,7 +136,7 @@ export function AccountSubscriptionPage() {
     status: p.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
     ) : "onchain" in p.data ? (
-      <FormattedMessage defaultMessage="Awaiting confirmation" />
+      <FormattedMessage defaultMessage="Pending" />
     ) : new Date(p.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
     ) : (
@@ -150,6 +157,20 @@ export function AccountSubscriptionPage() {
         }}
       >
         <Icon name="printer" />
+      </div>
+    ) : "onchain" in p.data ||
+      ("lightning" in p.data && new Date(p.expires) > new Date()) ? (
+      // Unpaid but still payable (on-chain deposits are never rejected;
+      // Lightning invoices until they expire): reopen at the QR stage.
+      <div
+        title="Resume payment"
+        className="cursor-pointer"
+        onClick={() => {
+          setResumePayment(subscriptionToVmPayment(p));
+          setShowPayment(true);
+        }}
+      >
+        <Icon name="qr" />
       </div>
     ) : undefined,
   }));
@@ -175,9 +196,11 @@ export function AccountSubscriptionPage() {
             )
           }
           source={subscriptionRenewalSource(login.api, subscription.id)}
+          initialPayment={resumePayment}
           onPaymentComplete={onPaymentComplete}
           onCancel={() => {
             setShowPayment(false);
+            setResumePayment(undefined);
             // A payment may have been created and left pending (e.g. an
             // on-chain deposit awaiting confirmation) — refresh so it shows
             // in the payment history right away.

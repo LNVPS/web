@@ -1,14 +1,22 @@
 import classNames from "classnames";
 import type { SimpleIcon } from "simple-icons";
 import {
+  siAlmalinux,
+  siAlpinelinux,
   siArchlinux,
   siCentos,
   siDebian,
   siFedora,
   siFreebsd,
+  siGentoo,
+  siNetbsd,
+  siNixos,
+  siOpenbsd,
   siOpensuse,
   siRedhat,
+  siRockylinux,
   siUbuntu,
+  siVoidlinux,
 } from "simple-icons";
 import { OsDistribution } from "../api";
 
@@ -23,6 +31,21 @@ const DISTRIBUTION_ICON: Record<OsDistribution, SimpleIcon> = {
   [OsDistribution.OPENSUSE]: siOpensuse,
   [OsDistribution.ARCHLINUX]: siArchlinux,
   [OsDistribution.REDHATENTERPRISE]: siRedhat,
+  [OsDistribution.ALMALINUX]: siAlmalinux,
+  [OsDistribution.ROCKYLINUX]: siRockylinux,
+  [OsDistribution.ALPINE]: siAlpinelinux,
+  [OsDistribution.NIXOS]: siNixos,
+  [OsDistribution.OPENBSD]: siOpenbsd,
+  [OsDistribution.NETBSD]: siNetbsd,
+  [OsDistribution.GENTOO]: siGentoo,
+  [OsDistribution.VOIDLINUX]: siVoidlinux,
+};
+
+/** Brand colours that don't work on the dark theme (e.g. AlmaLinux's mark is
+ * black in simple-icons); substitute a visible colour from the same brand. */
+const COLOR_OVERRIDE: Partial<Record<OsDistribution, string>> = {
+  // AlmaLinux's logo is multicoloured; its primary brand blue reads well here.
+  [OsDistribution.ALMALINUX]: "0069DA",
 };
 
 export default function OsImageIcon({
@@ -46,7 +69,7 @@ export default function OsImageIcon({
       </span>
     );
   }
-  const color = `#${icon.hex}`;
+  const color = `#${COLOR_OVERRIDE[distribution] ?? icon.hex}`;
   return (
     <span
       aria-hidden

@@ -41,6 +41,14 @@ export enum OsDistribution {
   OPENSUSE = "opensuse",
   ARCHLINUX = "archlinux",
   REDHATENTERPRISE = "redhatenterprise",
+  ALMALINUX = "almalinux",
+  ROCKYLINUX = "rockylinux",
+  ALPINE = "alpine",
+  NIXOS = "nixos",
+  OPENBSD = "openbsd",
+  NETBSD = "netbsd",
+  GENTOO = "gentoo",
+  VOIDLINUX = "voidlinux",
 }
 
 export enum CpuMfg {

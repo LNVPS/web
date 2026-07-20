@@ -11,6 +11,14 @@ const DISTRIBUTION_NAMES: Record<OsDistribution, string> = {
   [OsDistribution.OPENSUSE]: "openSUSE",
   [OsDistribution.ARCHLINUX]: "Arch Linux",
   [OsDistribution.REDHATENTERPRISE]: "Red Hat Enterprise",
+  [OsDistribution.ALMALINUX]: "AlmaLinux",
+  [OsDistribution.ROCKYLINUX]: "Rocky Linux",
+  [OsDistribution.ALPINE]: "Alpine Linux",
+  [OsDistribution.NIXOS]: "NixOS",
+  [OsDistribution.OPENBSD]: "OpenBSD",
+  [OsDistribution.NETBSD]: "NetBSD",
+  [OsDistribution.GENTOO]: "Gentoo",
+  [OsDistribution.VOIDLINUX]: "Void Linux",
 };
 
 function distributionName(distribution: OsDistribution): string {

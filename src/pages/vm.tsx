@@ -1,8 +1,11 @@
 import "@xterm/xterm/css/xterm.css";
 
 import { Link, useLocation } from "react-router-dom";
-import { VmInstance, VmIpAssignment } from "../api";
+import classNames from "classnames";
+import { VmInstance, VmIpAssignment, VmOsImage } from "../api";
 import VmActions from "../components/vps-actions";
+import OsImageName from "../components/os-image-name";
+import OsImagePicker from "../components/os-image-picker";
 import BytesSize from "../components/bytes";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
@@ -41,13 +44,19 @@ function StatBlock({
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
-  const { formatMessage, formatNumber } = useIntl();
+  const { formatNumber } = useIntl();
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
 
   const [editKey, setEditKey] = useState(false);
   const [editReverse, setEditReverse] = useState<VmIpAssignment>();
   const [error, setError] = useState<string>();
   const [key, setKey] = useState(state?.ssh_key?.id ?? -1);
+  const [images, setImages] = useState<Array<VmOsImage>>([]);
+  const [reinstall, setReinstall] = useState(false);
+  const [reinstallAck, setReinstallAck] = useState(false);
+  const [reinstallImage, setReinstallImage] = useState<number>(
+    state?.image?.id ?? -1,
+  );
 
   async function reloadVmState() {
     if (!state) return;
@@ -99,6 +108,10 @@ export default function VmPage() {
     const t = setInterval(() => reloadVmState(), 5000);
     return () => clearInterval(t);
   }, []);
+
+  useEffect(() => {
+    login?.api.listOsImages().then(setImages);
+  }, [login]);
 
   function bestHost() {
     if (!state) return;
@@ -349,29 +362,135 @@ export default function VmPage() {
           >
             <AsyncButton
               className="border-cyber-danger text-cyber-danger hover:border-cyber-danger hover:shadow-neon-danger hover:text-cyber-danger"
-              onClick={async () => {
-                if (
-                  confirm(
-                    formatMessage({
-                      defaultMessage:
-                        "Are you sure you want to re-install your VM?\nTHIS WILL DELETE ALL DATA!!",
-                    }),
-                  )
-                ) {
-                  try {
-                    await login?.api.reinstallVm(state.id);
-                    await reloadVmState();
-                  } catch (e) {
-                    showError(e);
-                  }
-                }
+              onClick={() => {
+                setError(undefined);
+                setReinstallAck(false);
+                setReinstallImage(state.image?.id ?? -1);
+                setReinstall(true);
               }}
             >
-              <FormattedMessage defaultMessage="Reinstall" />
+              <FormattedMessage defaultMessage="Reinstall…" />
             </AsyncButton>
           </SectionCard>
         </>
       )}
+
+      {reinstall &&
+        state &&
+        (() => {
+          const currentImage = images.find((i) => i.id === state.image?.id);
+          const targetImage = images.find((i) => i.id === reinstallImage);
+          const isReimage =
+            reinstallImage > 0 && reinstallImage !== state.image?.id;
+          return (
+            <Modal id="reinstall" onClose={() => setReinstall(false)}>
+              <div className="flex flex-col gap-6">
+                {/* Header */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="text-[0.65rem] uppercase tracking-[0.3em] text-cyber-danger">
+                    <FormattedMessage defaultMessage="Reinstall" />
+                  </div>
+                  <div className="text-xl font-semibold text-cyber-text-bright leading-tight">
+                    <FormattedMessage defaultMessage="Reimage this machine" />
+                  </div>
+                  <p className="m-0 text-sm text-cyber-muted">
+                    <FormattedMessage defaultMessage="Choose an OS image and reinstall. The current disk is wiped and rebuilt from scratch." />
+                  </p>
+                </div>
+
+                {/* OS image grid */}
+                <div className="flex flex-col gap-2">
+                  <div className="text-[0.6rem] uppercase tracking-[0.25em] text-cyber-text">
+                    <FormattedMessage defaultMessage="Select image" />
+                  </div>
+                  <OsImagePicker
+                    images={images}
+                    selected={reinstallImage}
+                    onSelect={setReinstallImage}
+                    currentImageId={state.image?.id}
+                    className="max-h-[40vh] overflow-y-auto pr-1"
+                  />
+                </div>
+
+                {/* Hazard confirmation footer — the deliberate bold moment */}
+                <div className="rounded-sm border border-cyber-danger/60 overflow-hidden">
+                  <div
+                    className="h-1.5 opacity-50 bg-[repeating-linear-gradient(45deg,var(--color-cyber-danger)_0_10px,transparent_10px_20px)]"
+                    aria-hidden
+                  />
+                  <div className="flex flex-col gap-3 p-4 bg-cyber-danger/5">
+                    <div className="flex items-start gap-3">
+                      <span className="shrink-0 grid place-items-center w-6 h-6 rounded-sm bg-cyber-danger/15 text-cyber-danger font-bold leading-none">
+                        !
+                      </span>
+                      <div className="flex flex-col gap-0.5">
+                        <div className="text-sm font-medium text-cyber-text-bright">
+                          <FormattedMessage defaultMessage="This erases everything on the VM." />
+                        </div>
+                        <div className="text-xs font-mono text-cyber-muted">
+                          {isReimage && currentImage ? (
+                            <>
+                              <OsImageName image={currentImage} />
+                              {" → "}
+                              {targetImage && (
+                                <OsImageName image={targetImage} />
+                              )}
+                            </>
+                          ) : (
+                            <FormattedMessage defaultMessage="Rebuilding with the current image." />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <label className="flex items-center gap-2 text-sm text-cyber-text cursor-pointer select-none">
+                      <input
+                        type="checkbox"
+                        checked={reinstallAck}
+                        onChange={(e) => setReinstallAck(e.target.checked)}
+                        className="accent-[var(--color-cyber-danger)] w-4 h-4"
+                      />
+                      <FormattedMessage defaultMessage="I understand all data will be permanently deleted." />
+                    </label>
+                    {error && (
+                      <b className="text-sm text-cyber-danger">{error}</b>
+                    )}
+                    <div className="flex justify-end gap-2 pt-1">
+                      <AsyncButton onClick={async () => setReinstall(false)}>
+                        <FormattedMessage defaultMessage="Cancel" />
+                      </AsyncButton>
+                      <AsyncButton
+                        disabled={!reinstallAck}
+                        className={classNames(
+                          "bg-cyber-danger/10 border-cyber-danger text-cyber-danger",
+                          reinstallAck
+                            ? "hover:border-cyber-danger hover:shadow-neon-danger"
+                            : "opacity-50 cursor-not-allowed",
+                        )}
+                        onClick={async () => {
+                          setError(undefined);
+                          if (!login?.api || !reinstallAck) return;
+                          try {
+                            await login.api.reinstallVm(
+                              state.id,
+                              isReimage ? reinstallImage : undefined,
+                            );
+                            await reloadVmState();
+                            setReinstall(false);
+                          } catch (e) {
+                            if (e instanceof Error) setError(e.message);
+                            else showError(e);
+                          }
+                        }}
+                      >
+                        <FormattedMessage defaultMessage="Wipe & reinstall" />
+                      </AsyncButton>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+          );
+        })()}
 
       {editKey && (
         <Modal id="edit-ssh-key" onClose={() => setEditKey(false)}>

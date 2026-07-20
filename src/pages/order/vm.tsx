@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { LNVpsApi, VmOsImage, VmTemplate } from "../../api";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
 import { AsyncButton } from "../../components/button";
-import classNames from "classnames";
 import VpsResources from "../../components/vps-resources";
-import OsImageName from "../../components/os-image-name";
+import OsImagePicker from "../../components/os-image-picker";
+import { sortOsImages } from "../../os-images";
 import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
 import { ApiUrl } from "../../const";
@@ -26,13 +26,9 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
     const api = new LNVpsApi(ApiUrl, undefined);
     api.listOsImages().then((a) => {
       setImages(a);
-      // Auto-select the first (most recent) image
-      if (a.length > 0) {
-        const sorted = [...a].sort(
-          (x, y) =>
-            new Date(y.release_date).getTime() -
-            new Date(x.release_date).getTime(),
-        );
+      // Auto-select the first image in the canonical order.
+      const sorted = sortOsImages(a);
+      if (sorted.length > 0) {
         setUseImage(sorted[0].id);
       }
     });
@@ -70,16 +66,6 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
     }
   }
 
-  const sortedImages = useMemo(
-    () =>
-      [...images].sort(
-        (a, b) =>
-          new Date(b.release_date).getTime() -
-          new Date(a.release_date).getTime(),
-      ),
-    [images],
-  );
-
   if (!template) {
     return (
       <h3>
@@ -108,20 +94,11 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
             <b>
               <FormattedMessage defaultMessage="Select OS:" />
             </b>
-            {sortedImages.map((a) => (
-              <div
-                className={classNames(
-                  "flex justify-between items-center rounded-sm px-4 py-3 cursor-pointer",
-                  {
-                    "bg-cyber-panel": useImage !== a.id,
-                    "bg-cyber-panel-light": useImage === a.id,
-                  },
-                )}
-                onClick={() => setUseImage(a.id)}
-              >
-                <OsImageName image={a} />
-              </div>
-            ))}
+            <OsImagePicker
+              images={images}
+              selected={useImage}
+              onSelect={setUseImage}
+            />
           </div>
           <hr />
           <SSHKeySelector

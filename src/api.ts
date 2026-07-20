@@ -338,6 +338,8 @@ export interface VmOsImage {
   version: string;
   release_date: string;
   default_username?: string;
+  /** Fraction (0.0–1.0) of active VMs currently using this image. */
+  popularity?: number;
 }
 
 export interface UserSshKey {
@@ -959,9 +961,13 @@ export class LNVpsApi {
     return data;
   }
 
-  async reinstallVm(id: number) {
+  async reinstallVm(id: number, image_id?: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
-      await this.#req(`/api/v1/vm/${id}/re-install`, "PATCH"),
+      await this.#req(
+        `/api/v1/vm/${id}/re-install`,
+        "PATCH",
+        image_id !== undefined ? { image_id } : undefined,
+      ),
     );
     return data;
   }

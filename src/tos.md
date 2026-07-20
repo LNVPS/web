@@ -13,7 +13,7 @@ LNVPS is a trading name of Apex Strata Ltd, a company registered in Ireland.
 
 - **Company Registration Number**: 702423
 - **Registered Office**: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland
-- **Email**: sales@lnvps.net
+- **Email**: support@lnvps.net
 
 ---
 
@@ -94,7 +94,7 @@ If you are a consumer in the European Union, you have a statutory right to withd
 - If you withdraw within the 14-day period after performance has begun, you must pay for the proportion of the Services provided up to the time you inform us of your withdrawal.
 - If the Services have been fully performed within the withdrawal period (e.g. a billing period that has fully elapsed), you lose the right of withdrawal once performance is complete, having consented to immediate performance.
 
-To exercise the right of withdrawal, contact us at sales@lnvps.net with a clear statement of your decision to withdraw.
+To exercise the right of withdrawal, contact us at support@lnvps.net with a clear statement of your decision to withdraw.
 
 ---
 
@@ -110,7 +110,7 @@ To exercise the right of withdrawal, contact us at sales@lnvps.net with a clear 
 
 - **Your Data**: You retain ownership of data uploaded to your VPS. We do not access it except as needed to provide the Services or comply with legal obligations.
 - **Backups**: You are responsible for maintaining backups of your data unless a backup service is included in your plan.
-- **GDPR Compliance**: We process personal data in accordance with the General Data Protection Regulation (GDPR). We collect only the minimal information necessary to provide the Services; accounts may be created without providing personal contact details. For data protection queries, contact sales@lnvps.net.
+- **GDPR Compliance**: We process personal data in accordance with the General Data Protection Regulation (GDPR). We collect only the minimal information necessary to provide the Services; accounts may be created without providing personal contact details. For data protection queries, contact support@lnvps.net.
 
 ---
 
@@ -166,7 +166,7 @@ We may update these Terms from time to time. We will notify you of significant c
 
 For questions or support:
 
-- **Email**: sales@lnvps.net
+- **Email**: support@lnvps.net
 - **Address**: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland
 
 ---

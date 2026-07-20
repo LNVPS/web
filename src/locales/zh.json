@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "虚拟机编号{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "选择一个操作系统镜像并重新安装。当前磁盘将被清除并从头重建。"
+  },
   "/GCoTA": {
     "defaultMessage": "清楚；清晰；明了"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "设置为默认值。"
   },
+  "6nAe2O": {
+    "defaultMessage": "选择镜像"
+  },
   "6uMqL1": {
     "defaultMessage": "未支付"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{天} other{天}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "清除并重新安装"
   },
   "7fbBqG": {
     "defaultMessage": "取消付款。"
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "设置说明"
   },
+  "OS1kG0": {
+    "defaultMessage": "很少使用"
+  },
   "OikYIw": {
     "defaultMessage": "最低要求：{min} GB {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "每月"
+  },
+  "SA61Qp": {
+    "defaultMessage": "重新安装…"
   },
   "SB//YQ": {
     "defaultMessage": "订单摘要。"
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "信用卡或借记卡"
   },
+  "fF376U": {
+    "defaultMessage": "当前"
+  },
   "fHZKQp": {
     "defaultMessage": "增值税（{rate}）"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "已保存。"
+  },
+  "fuzp+C": {
+    "defaultMessage": "使用当前镜像重建。"
   },
   "fxYCqm": {
     "defaultMessage": "地点：{location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "（推荐）"
+  },
+  "ir0wB7": {
+    "defaultMessage": "我了解所有数据将被永久删除。"
   },
   "irRXbS": {
     "defaultMessage": "规格"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "委员会；佣金"
   },
+  "n8cyVk": {
+    "defaultMessage": "操作系统"
+  },
   "n9fdaJ": {
     "defaultMessage": "未经核实"
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "账单详情"
   },
+  "rbrahO": {
+    "defaultMessage": "关闭"
+  },
   "rieTwF": {
     "defaultMessage": "已过期，截止日期为："
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "分解；细分。"
   },
+  "uyWYPH": {
+    "defaultMessage": "这将清除该 VM 上的所有内容。"
+  },
   "v2BRjN": {
     "defaultMessage": "主题 *"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "注销登录"
   },
+  "xfiFx9": {
+    "defaultMessage": "重新镜像此机器"
+  },
   "xhfdqv": {
     "defaultMessage": "创建中"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "条款"
+  },
+  "xmDqRT": {
+    "defaultMessage": "{pct}% 的虚拟机"
   },
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} 个核心"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "登录失败"
+  },
+  "yRwRO8": {
+    "defaultMessage": "{pct}% 的机器"
   },
   "yr1Ove": {
     "defaultMessage": "查看 LNVPS 服务的实时运行时间和历史事件记录。请查看我们比特币闪电 VPS 基础设施的当前运行状态。"

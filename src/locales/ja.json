@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "VM番号{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "OS イメージを選んで再インストールします。現在のディスクは消去され、一から作り直されます。"
+  },
   "/GCoTA": {
     "defaultMessage": "はっきりしている、明確な、晴れた"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "デフォルトを設定する"
   },
+  "6nAe2O": {
+    "defaultMessage": "イメージを選択"
+  },
   "6uMqL1": {
     "defaultMessage": "未払い"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{日} other{日}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "消去して再インストール"
   },
   "7fbBqG": {
     "defaultMessage": "支払いをキャンセルする。"
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
   },
+  "OS1kG0": {
+    "defaultMessage": "ほとんど使われていません"
+  },
   "OikYIw": {
     "defaultMessage": "最小要件：{min} GBの{type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "毎月"
+  },
+  "SA61Qp": {
+    "defaultMessage": "再インストール…"
   },
   "SB//YQ": {
     "defaultMessage": "注文内容のまとめ"
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "クレジットカードまたはデビットカード"
   },
+  "fF376U": {
+    "defaultMessage": "現在"
+  },
   "fHZKQp": {
     "defaultMessage": "付加価値税（{rate}"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "保存しました。"
+  },
+  "fuzp+C": {
+    "defaultMessage": "現在のイメージで再構築します。"
   },
   "fxYCqm": {
     "defaultMessage": "場所：{location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "（おすすめ）"
+  },
+  "ir0wB7": {
+    "defaultMessage": "すべてのデータが完全に削除されることを理解しました。"
   },
   "irRXbS": {
     "defaultMessage": "仕様"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "委員会、手数料"
   },
+  "n8cyVk": {
+    "defaultMessage": "オペレーティングシステム"
+  },
   "n9fdaJ": {
     "defaultMessage": "確認されていません。"
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "お支払いに関する詳細"
   },
+  "rbrahO": {
+    "defaultMessage": "閉じる"
+  },
   "rieTwF": {
     "defaultMessage": "有効期限："
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "内訳"
   },
+  "uyWYPH": {
+    "defaultMessage": "これにより VM 上のすべてが消去されます。"
+  },
   "v2BRjN": {
     "defaultMessage": "件名"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "サインアウト"
   },
+  "xfiFx9": {
+    "defaultMessage": "このマシンを再イメージ化"
+  },
   "xhfdqv": {
     "defaultMessage": "作成中"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "利用規約"
+  },
+  "xmDqRT": {
+    "defaultMessage": "VM の {pct}%"
   },
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} コア"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "サインインに失敗しました"
+  },
+  "yRwRO8": {
+    "defaultMessage": "マシンの {pct}%"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のビットコインライトニングVPSインフラの現在の運用状況をご確認ください。"

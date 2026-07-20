@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "VM n°{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "Choisissez une image d'OS et réinstallez. Le disque actuel est effacé et reconstruit à zéro."
+  },
   "/GCoTA": {
     "defaultMessage": "Clair"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "Définir la valeur par défaut"
   },
+  "6nAe2O": {
+    "defaultMessage": "Sélectionner l'image"
+  },
   "6uMqL1": {
     "defaultMessage": "Non payé"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{jour} other{jours}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "Effacer et réinstaller"
   },
   "7fbBqG": {
     "defaultMessage": "Annuler le paiement."
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "Instructions d’installation"
   },
+  "OS1kG0": {
+    "defaultMessage": "Rarement utilisée"
+  },
   "OikYIw": {
     "defaultMessage": "Minimum : {min} Go de {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "par mois"
+  },
+  "SA61Qp": {
+    "defaultMessage": "Réinstaller…"
   },
   "SB//YQ": {
     "defaultMessage": "Récapitulatif de la commande."
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "Carte de crédit ou carte de débit"
   },
+  "fF376U": {
+    "defaultMessage": "Actuel"
+  },
   "fHZKQp": {
     "defaultMessage": "TVA{rate})"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "Enregistré"
+  },
+  "fuzp+C": {
+    "defaultMessage": "Reconstruction avec l'image actuelle."
   },
   "fxYCqm": {
     "defaultMessage": "Emplacement : {location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommandé)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "Je comprends que toutes les données seront définitivement supprimées."
   },
   "irRXbS": {
     "defaultMessage": "Spécification"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "Commission"
   },
+  "n8cyVk": {
+    "defaultMessage": "Système d'exploitation"
+  },
   "n9fdaJ": {
     "defaultMessage": "Non vérifié"
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "Détails de la facturation"
   },
+  "rbrahO": {
+    "defaultMessage": "Fermer"
+  },
   "rieTwF": {
     "defaultMessage": "Date d’expiration :"
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "Panne."
   },
+  "uyWYPH": {
+    "defaultMessage": "Cela efface tout sur la VM."
+  },
   "v2BRjN": {
     "defaultMessage": "Objet *"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "Déconnexion"
   },
+  "xfiFx9": {
+    "defaultMessage": "Réimager cette machine"
+  },
   "xhfdqv": {
     "defaultMessage": "Création."
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "Conditions générales"
+  },
+  "xmDqRT": {
+    "defaultMessage": "{pct}% des VM"
   },
   "xmSWcf": {
     "defaultMessage": "Processeur : {cores} cœurs"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Échec de la connexion"
+  },
+  "yRwRO8": {
+    "defaultMessage": "{pct}% des machines"
   },
   "yr1Ove": {
     "defaultMessage": "Consultez en temps réel la disponibilité et l’historique des incidents pour les services LNVPS. Vérifiez l’état opérationnel actuel de notre infrastructure VPS Bitcoin Lightning."

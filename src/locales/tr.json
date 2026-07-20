@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "VM numarası{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "Bir işletim sistemi imajı seçin ve yeniden kurun. Mevcut disk silinir ve sıfırdan yeniden oluşturulur."
+  },
   "/GCoTA": {
     "defaultMessage": "Açık"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "Varsayılanı ayarla"
   },
+  "6nAe2O": {
+    "defaultMessage": "İmaj seç"
+  },
   "6uMqL1": {
     "defaultMessage": "Ödenmemiş"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{gün} other{gün}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "Sil ve yeniden kur"
   },
   "7fbBqG": {
     "defaultMessage": "Ödemeyi iptal et"
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "Kurulum Talimatları"
   },
+  "OS1kG0": {
+    "defaultMessage": "Nadiren kullanılır"
+  },
   "OikYIw": {
     "defaultMessage": "En az: {min} GB {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "ayda"
+  },
+  "SA61Qp": {
+    "defaultMessage": "Yeniden kur…"
   },
   "SB//YQ": {
     "defaultMessage": "Sipariş özeti"
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "Kredi veya banka kartı"
   },
+  "fF376U": {
+    "defaultMessage": "Mevcut"
+  },
   "fHZKQp": {
     "defaultMessage": "KDV ({rate}"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "Kaydedildi"
+  },
+  "fuzp+C": {
+    "defaultMessage": "Mevcut imajla yeniden oluşturuluyor."
   },
   "fxYCqm": {
     "defaultMessage": "Konum: {location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Önerilir)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "Tüm verilerin kalıcı olarak silineceğini anlıyorum."
   },
   "irRXbS": {
     "defaultMessage": "Teknik özellikler"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "Komisyon"
   },
+  "n8cyVk": {
+    "defaultMessage": "İşletim sistemi"
+  },
   "n9fdaJ": {
     "defaultMessage": "Doğrulanmamış"
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
   },
+  "rbrahO": {
+    "defaultMessage": "Kapat"
+  },
   "rieTwF": {
     "defaultMessage": "Son kullanma tarihi:"
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "Ayrıntılı açıklama / Parçalara ayırma"
   },
+  "uyWYPH": {
+    "defaultMessage": "Bu, VM'deki her şeyi siler."
+  },
   "v2BRjN": {
     "defaultMessage": "Konu *"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "Oturumu kapat"
   },
+  "xfiFx9": {
+    "defaultMessage": "Bu makineyi yeniden imajla"
+  },
   "xhfdqv": {
     "defaultMessage": "Oluşturma"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "Şartlar"
+  },
+  "xmDqRT": {
+    "defaultMessage": "VM'lerin %{pct}'i"
   },
   "xmSWcf": {
     "defaultMessage": "İşlemci: {cores} çekirdekler"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Giriş başarısız"
+  },
+  "yRwRO8": {
+    "defaultMessage": "Makinelerin %{pct}'i"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorunlar görüntülenebilir. Bitcoin Lightning VPS altyapımızın mevcut çalışma durumunu kontrol edin."

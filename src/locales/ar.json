@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "الآلة الافتراضية رقم{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "اختر صورة نظام تشغيل وأعد التثبيت. يُمسح القرص الحالي ويُعاد بناؤه من الصفر."
+  },
   "/GCoTA": {
     "defaultMessage": "واضح"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "عيّن الإعدادات الافتراضية."
   },
+  "6nAe2O": {
+    "defaultMessage": "اختيار الصورة"
+  },
   "6uMqL1": {
     "defaultMessage": "غير مدفوع الأجر."
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{يوم} other{أيام}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "مسح وإعادة التثبيت"
   },
   "7fbBqG": {
     "defaultMessage": "إلغاء الدفع."
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "تعليمات الإعداد"
   },
+  "OS1kG0": {
+    "defaultMessage": "نادرًا ما تُستخدم"
+  },
   "OikYIw": {
     "defaultMessage": "الحد الأدنى: {min} جيجابايت {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "في الشهر"
+  },
+  "SA61Qp": {
+    "defaultMessage": "إعادة التثبيت…"
   },
   "SB//YQ": {
     "defaultMessage": "ملخص الطلب"
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "بطاقة ائتمان أو بطاقة خصم."
   },
+  "fF376U": {
+    "defaultMessage": "الحالي"
+  },
   "fHZKQp": {
     "defaultMessage": "ضريبة القيمة المضافة ({rate})"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "تم الحفظ."
+  },
+  "fuzp+C": {
+    "defaultMessage": "إعادة البناء بالصورة الحالية."
   },
   "fxYCqm": {
     "defaultMessage": "الموقع: {location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(مُوصًى به)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "أفهم أنه سيتم حذف جميع البيانات نهائيًا."
   },
   "irRXbS": {
     "defaultMessage": "المواصفات"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "لجنة"
   },
+  "n8cyVk": {
+    "defaultMessage": "نظام التشغيل"
+  },
   "n9fdaJ": {
     "defaultMessage": "غير مُؤكَّد."
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "تفاصيل الفاتورة"
   },
+  "rbrahO": {
+    "defaultMessage": "إغلاق"
+  },
   "rieTwF": {
     "defaultMessage": "ينتهي صلاحيته في:"
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "تحليل تفصيلي / شرح مفصل"
   },
+  "uyWYPH": {
+    "defaultMessage": "هذا يمسح كل شيء على الجهاز الافتراضي."
+  },
   "v2BRjN": {
     "defaultMessage": "الموضوع *"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "تسجيل الخروج"
   },
+  "xfiFx9": {
+    "defaultMessage": "إعادة تصوير هذا الجهاز"
+  },
   "xhfdqv": {
     "defaultMessage": "إنشاء"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "الشروط والأحكام"
+  },
+  "xmDqRT": {
+    "defaultMessage": "{pct}% من الأجهزة"
   },
   "xmSWcf": {
     "defaultMessage": "وحدة المعالجة المركزية: {cores} نوى"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "فشل تسجيل الدخول"
+  },
+  "yRwRO8": {
+    "defaultMessage": "{pct}% من الأجهزة"
   },
   "yr1Ove": {
     "defaultMessage": "عرض مباشر لوقت التشغيل وسجل الحوادث لخدمات LNVPS. تحقق من الحالة التشغيلية الحالية للبنية التحتية الخاصة بنا لـ Bitcoin Lightning VPS."

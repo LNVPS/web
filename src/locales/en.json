@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "VM #{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "Choose an OS image and reinstall. The current disk is wiped and rebuilt from scratch."
+  },
   "/GCoTA": {
     "defaultMessage": "Clear"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "Set default"
   },
+  "6nAe2O": {
+    "defaultMessage": "Select image"
+  },
   "6uMqL1": {
     "defaultMessage": "Unpaid"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "Wipe & reinstall"
   },
   "7fbBqG": {
     "defaultMessage": "Cancel payment"
@@ -695,14 +704,14 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "Are you sure you want to re-install your VM? THIS WILL DELETE ALL DATA!!"
-  },
   "OJuBck": {
     "defaultMessage": "Passwordless"
   },
   "OLqOyf": {
     "defaultMessage": "Setup Instructions"
+  },
+  "OS1kG0": {
+    "defaultMessage": "Rarely used"
   },
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
@@ -805,6 +814,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "per month"
+  },
+  "SA61Qp": {
+    "defaultMessage": "Reinstall…"
   },
   "SB//YQ": {
     "defaultMessage": "Order summary"
@@ -1127,6 +1139,9 @@
   "f7+Xwr": {
     "defaultMessage": "Credit or debit card"
   },
+  "fF376U": {
+    "defaultMessage": "Current"
+  },
   "fHZKQp": {
     "defaultMessage": "VAT ({rate})"
   },
@@ -1138,6 +1153,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "Saved"
+  },
+  "fuzp+C": {
+    "defaultMessage": "Rebuilding with the current image."
   },
   "fxYCqm": {
     "defaultMessage": "Location: {location}"
@@ -1204,6 +1222,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "I understand all data will be permanently deleted."
   },
   "irRXbS": {
     "defaultMessage": "Specification"
@@ -1433,6 +1454,9 @@
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
+  "rbrahO": {
+    "defaultMessage": "Close"
+  },
   "rieTwF": {
     "defaultMessage": "Expired on"
   },
@@ -1520,6 +1544,9 @@
   "uqe58g": {
     "defaultMessage": "Breakdown"
   },
+  "uyWYPH": {
+    "defaultMessage": "This erases everything on the VM."
+  },
   "v2BRjN": {
     "defaultMessage": "Subject *"
   },
@@ -1580,6 +1607,9 @@
   "xXbJso": {
     "defaultMessage": "Sign out"
   },
+  "xfiFx9": {
+    "defaultMessage": "Reimage this machine"
+  },
   "xhfdqv": {
     "defaultMessage": "Creating"
   },
@@ -1612,6 +1642,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Sign-in failed"
+  },
+  "yRwRO8": {
+    "defaultMessage": "{pct}% of machines"
   },
   "yr1Ove": {
     "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure."

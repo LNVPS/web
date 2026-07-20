@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "Виртуальная машина №{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "Выберите образ ОС и переустановите. Текущий диск будет стёрт и пересоздан с нуля."
+  },
   "/GCoTA": {
     "defaultMessage": "Понятно/Ясно/Готово/Очистить"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "Установить значение по умолчанию."
   },
+  "6nAe2O": {
+    "defaultMessage": "Выбрать образ"
+  },
   "6uMqL1": {
     "defaultMessage": "Неоплаченный"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{день} other{дней}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "Стереть и переустановить"
   },
   "7fbBqG": {
     "defaultMessage": "Отменить платеж."
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "Инструкция по настройке"
   },
+  "OS1kG0": {
+    "defaultMessage": "Редко используется"
+  },
   "OikYIw": {
     "defaultMessage": "Минимум: {min} ГБ {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "в месяц"
+  },
+  "SA61Qp": {
+    "defaultMessage": "Переустановить…"
   },
   "SB//YQ": {
     "defaultMessage": "Сводка по заказу."
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "Кредитная или дебетовая карта."
   },
+  "fF376U": {
+    "defaultMessage": "Текущий"
+  },
   "fHZKQp": {
     "defaultMessage": "НДС ({rate})"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "Сохранено"
+  },
+  "fuzp+C": {
+    "defaultMessage": "Пересоздание с текущим образом."
   },
   "fxYCqm": {
     "defaultMessage": "Местоположение: {location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Рекомендуется)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "Я понимаю, что все данные будут безвозвратно удалены."
   },
   "irRXbS": {
     "defaultMessage": "Характеристики"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "Комиссия"
   },
+  "n8cyVk": {
+    "defaultMessage": "Операционная система"
+  },
   "n9fdaJ": {
     "defaultMessage": "Не подтверждено."
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "Платежные данные"
   },
+  "rbrahO": {
+    "defaultMessage": "Закрыть"
+  },
   "rieTwF": {
     "defaultMessage": "Срок действия истек."
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "Разбивка (на части) / Анализ по составным частям"
   },
+  "uyWYPH": {
+    "defaultMessage": "Это стирает всё на ВМ."
+  },
   "v2BRjN": {
     "defaultMessage": "Тема сообщения *"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "Выйти из системы"
   },
+  "xfiFx9": {
+    "defaultMessage": "Пересоздать образ этой машины"
+  },
   "xhfdqv": {
     "defaultMessage": "Создание"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "Условия"
+  },
+  "xmDqRT": {
+    "defaultMessage": "{pct}% ВМ"
   },
   "xmSWcf": {
     "defaultMessage": "Процессор: {cores} ядра"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Не удалось войти"
+  },
+  "yRwRO8": {
+    "defaultMessage": "{pct}% машин"
   },
   "yr1Ove": {
     "defaultMessage": "Просмотр текущего времени безотказной работы и истории инцидентов для сервисов LNVPS. Узнайте текущий статус работы нашей инфраструктуры Bitcoin Lightning VPS."

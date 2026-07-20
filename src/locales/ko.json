@@ -26,6 +26,9 @@
   "/2t1lH": {
     "defaultMessage": "VM 번호{id}"
   },
+  "/3HL90": {
+    "defaultMessage": "OS 이미지를 선택하고 다시 설치하세요. 현재 디스크는 지워지고 처음부터 다시 만들어집니다."
+  },
   "/GCoTA": {
     "defaultMessage": "명확하게, 깨끗하게, 분명하게"
   },
@@ -215,6 +218,9 @@
   "6hEevT": {
     "defaultMessage": "기본값으로 설정"
   },
+  "6nAe2O": {
+    "defaultMessage": "이미지 선택"
+  },
   "6uMqL1": {
     "defaultMessage": "미지급"
   },
@@ -235,6 +241,9 @@
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{일} other{일}}"
+  },
+  "7fGyF+": {
+    "defaultMessage": "지우고 다시 설치"
   },
   "7fbBqG": {
     "defaultMessage": "결제 취소"
@@ -710,6 +719,9 @@
   "OLqOyf": {
     "defaultMessage": "설정 방법"
   },
+  "OS1kG0": {
+    "defaultMessage": "거의 사용 안 함"
+  },
   "OikYIw": {
     "defaultMessage": "최소: {min} 기가바이트 {type}"
   },
@@ -811,6 +823,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "매달"
+  },
+  "SA61Qp": {
+    "defaultMessage": "다시 설치…"
   },
   "SB//YQ": {
     "defaultMessage": "주문 내역 요약"
@@ -1136,6 +1151,9 @@
   "f7+Xwr": {
     "defaultMessage": "신용카드 또는 직불카드"
   },
+  "fF376U": {
+    "defaultMessage": "현재"
+  },
   "fHZKQp": {
     "defaultMessage": "부가가치세(VAT){rate})"
   },
@@ -1147,6 +1165,9 @@
   },
   "fsB/4p": {
     "defaultMessage": "저장됨"
+  },
+  "fuzp+C": {
+    "defaultMessage": "현재 이미지로 다시 빌드합니다."
   },
   "fxYCqm": {
     "defaultMessage": "위치: {location}"
@@ -1213,6 +1234,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(추천)"
+  },
+  "ir0wB7": {
+    "defaultMessage": "모든 데이터가 영구적으로 삭제됨을 이해합니다."
   },
   "irRXbS": {
     "defaultMessage": "사양"
@@ -1349,6 +1373,9 @@
   "mznk9z": {
     "defaultMessage": "수수료"
   },
+  "n8cyVk": {
+    "defaultMessage": "운영 체제"
+  },
   "n9fdaJ": {
     "defaultMessage": "확인되지 않음"
   },
@@ -1454,6 +1481,9 @@
   "rF6EmI": {
     "defaultMessage": "결제 정보"
   },
+  "rbrahO": {
+    "defaultMessage": "닫기"
+  },
   "rieTwF": {
     "defaultMessage": "유효 기간 만료일:"
   },
@@ -1541,6 +1571,9 @@
   "uqe58g": {
     "defaultMessage": "분석 결과 / 상세 내역"
   },
+  "uyWYPH": {
+    "defaultMessage": "이 작업은 VM의 모든 것을 지웁니다."
+  },
   "v2BRjN": {
     "defaultMessage": "제목"
   },
@@ -1607,6 +1640,9 @@
   "xXbJso": {
     "defaultMessage": "로그아웃"
   },
+  "xfiFx9": {
+    "defaultMessage": "이 머신 다시 이미징"
+  },
   "xhfdqv": {
     "defaultMessage": "만들기"
   },
@@ -1615,6 +1651,9 @@
   },
   "xkr+zo": {
     "defaultMessage": "약관"
+  },
+  "xmDqRT": {
+    "defaultMessage": "VM의 {pct}%"
   },
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} 코어"
@@ -1639,6 +1678,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "로그인 실패"
+  },
+  "yRwRO8": {
+    "defaultMessage": "머신의 {pct}%"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPS 서비스의 실시간 가동 시간 및 장애 이력을 확인하세요. 현재 비트코인 라이트닝 VPS 인프라의 운영 상태를 확인하세요."

@@ -17,7 +17,16 @@ import {
   serializeHead,
 } from "./components/head-context.tsx";
 import { RequestBuilder, EventKind } from "@snort/system";
-import { NostrProfile, System } from "./const.ts";
+import { NostrProfile, System, OnionWebUrl } from "./const.ts";
+
+/**
+ * Server-relevant config baked in at build time from `VITE_*` env vars. The Bun
+ * production server runs outside Vite and cannot read `import.meta.env`, so it
+ * consumes these values from the (Vite-built) SSR bundle instead.
+ */
+export const serverConfig = {
+  onionWebUrl: OnionWebUrl,
+};
 
 export function startPersistentQueries() {
   const newsReq = new RequestBuilder("server-news");

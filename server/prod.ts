@@ -7,10 +7,21 @@ import { renderPage } from "./ssr-render.ts";
 
 const port = Number(process.env.PORT) || 3000;
 
-// Tor onion address of the web frontend. When set, clearnet responses advertise
-// it via the `Onion-Location` header so Tor Browser can offer/redirect to the
-// onion service. Configured via VITE_WEB_URL_ONION (shared with the client).
-const onionWebUrl = process.env.VITE_WEB_URL_ONION?.replace(/\/$/, "") ?? "";
+const templateHtml = await Bun.file("./dist/client/index.html").text();
+
+const ssr: typeof import("../src/entry-server") =
+  // @ts-ignore built SSR output has no declarations
+  await import("../dist/server/entry-server.js");
+
+// Tor onion address of the web frontend. Clearnet responses advertise it via
+// the `Onion-Location` header so Tor Browser can offer/redirect to the onion
+// service. Sourced from the Vite-built SSR bundle (where VITE_WEB_URL_ONION is
+// baked in at build time), with an optional ONION_WEB_URL runtime override.
+const onionWebUrl = (
+  process.env.ONION_WEB_URL ??
+  ssr.serverConfig?.onionWebUrl ??
+  ""
+).replace(/\/$/, "");
 
 /**
  * Build the `Onion-Location` header value for a request, or `undefined` when it
@@ -21,12 +32,6 @@ function onionLocation(url: URL): string | undefined {
   if (url.hostname.endsWith(".onion")) return undefined;
   return `${onionWebUrl}${url.pathname}${url.search}`;
 }
-
-const templateHtml = await Bun.file("./dist/client/index.html").text();
-
-const ssr: typeof import("../src/entry-server") =
-  // @ts-ignore built SSR output has no declarations
-  await import("../dist/server/entry-server.js");
 
 const server = Bun.serve({
   port,

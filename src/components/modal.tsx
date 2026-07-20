@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { ReactNode, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { AsyncButton } from "./button";
+import { useIntl } from "react-intl";
 
 export interface ModalProps {
   id: string;
@@ -16,6 +16,7 @@ export interface ModalProps {
 }
 
 export default function Modal(props: ModalProps) {
+  const { formatMessage } = useIntl();
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Escape" && props.onClose) {
       props.onClose(e);
@@ -45,8 +46,9 @@ export default function Modal(props: ModalProps) {
   return createPortal(
     <div
       className={classNames(
-        "z-[42] w-screen h-screen top-0 left-0 fixed bg-black/90 flex justify-center overflow-y-auto",
-        "backdrop-blur-xs",
+        "z-[42] w-screen h-screen top-0 left-0 fixed flex justify-center overflow-y-auto",
+        "bg-black/80 backdrop-blur-sm p-4 sm:p-6",
+        "animate-modal-backdrop motion-reduce:animate-none",
       )}
       onMouseDown={handleBackdropClick}
       onClick={(e) => {
@@ -57,7 +59,10 @@ export default function Modal(props: ModalProps) {
         className={
           props.bodyClassName ??
           classNames(
-            "relative bg-cyber-panel border border-cyber-border p-8 transition shadow-neon max-xl:rounded-t-lg lg:rounded-lg max-xl:mt-auto lg:my-auto max-lg:w-full",
+            "relative overflow-hidden bg-cyber-panel border border-cyber-border shadow-neon rounded-lg",
+            "p-6 sm:p-8 h-fit",
+            "animate-modal-panel motion-reduce:animate-none",
+            "max-xl:mt-auto lg:my-auto max-lg:w-full",
             {
               "max-xl:-translate-y-[calc(100vh-100dvh)]": props.ready ?? true,
               "max-xl:translate-y-[50vh]": !(props.ready ?? true),
@@ -72,16 +77,41 @@ export default function Modal(props: ModalProps) {
           props.onClick?.(e);
         }}
       >
+        {/* Quiet neon top hairline — the modal's signature edge */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyber-primary/60 to-transparent"
+        />
         {(props.showClose ?? true) && (
-          <div className="absolute right-4 top-4">
-            <AsyncButton
-              onClick={async (e) => {
-                e.stopPropagation();
-                props.onClose?.(e);
-              }}
-              className="rounded-sm aspect-square bg-cyber-panel-light border-cyber-danger/50 hover:border-cyber-danger hover:shadow-neon-danger p-3 text-cyber-danger"
-            />
-          </div>
+          <button
+            type="button"
+            aria-label={formatMessage({ defaultMessage: "Close" })}
+            onClick={(e) => {
+              e.stopPropagation();
+              props.onClose?.(e);
+            }}
+            className={classNames(
+              "absolute right-3 top-3 grid place-items-center w-8 h-8 rounded-sm",
+              "border border-cyber-border/60 text-cyber-muted transition-colors duration-150",
+              "hover:border-cyber-danger hover:text-cyber-danger",
+              "focus-visible:outline-none focus-visible:border-cyber-danger focus-visible:text-cyber-danger",
+            )}
+          >
+            <svg
+              width={14}
+              height={14}
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 1.5l11 11M12.5 1.5l-11 11"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
         )}
         {props.children}
       </div>

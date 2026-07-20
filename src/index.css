@@ -35,6 +35,27 @@
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
   --animate-scanline: scanline 8s linear infinite;
   --animate-flicker: flicker 3s infinite;
+  --animate-modal-backdrop: modal-backdrop 0.18s ease-out;
+  --animate-modal-panel: modal-panel 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes modal-backdrop {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes modal-panel {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 
   @keyframes pulse-glow {
     0%,

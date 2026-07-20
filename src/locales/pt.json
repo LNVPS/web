@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Gerar chave Nostr"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} para renovar"
+  },
   "/PE1Wn": {
     "defaultMessage": "Nome da chave (ex.: MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Planos recorrentes que mantêm seus serviços ativos."
   },
+  "4hI7OE": {
+    "defaultMessage": "Excluído em {days, plural, one {# dia} other {# dias}} · {date} — renove para manter seus dados."
+  },
   "4j0zpr": {
     "defaultMessage": "Mínimo: {min} núcleos"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Continue para o pagamento."
+  },
+  "5FWCVu": {
+    "defaultMessage": "Seu histórico de mensagens criptografadas NIP-17 com o suporte."
   },
   "5QYdPU": {
     "defaultMessage": "Hora de início"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Chaves SSH"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Produtos"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{dia} other{dias}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "Registo de auditoria"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Zona de perigo"
+  },
   "EKlM8d": {
     "defaultMessage": "Disco (GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} paradas"
   },
   "EUSRTV": {
     "defaultMessage": "As suas mensagens NIP-17 antigas, criptografadas, com o suporte correspondente. Esta caixa de entrada não é mais monitorizada – utilize a secção «Suporte» para nos contactar."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "Não pode remover a sua única chave de acesso numa conta que só usa chaves de acesso."
   },
+  "G3228Y": {
+    "defaultMessage": "Conectado como {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "À espera do primeiro pagamento."
   },
   "G6nrEF": {
     "defaultMessage": "Guardado com avisos."
+  },
+  "GCoWpl": {
+    "defaultMessage": "Fale diretamente com a equipe — retornaremos para você."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Estado do serviço LNVPS e tempo de atividade."
+  },
+  "JiCBWy": {
+    "defaultMessage": "Conecte-se via SSH com a chave selecionada."
   },
   "Jm+fih": {
     "defaultMessage": "Inativo."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "Qiih54": {
+    "defaultMessage": "Cada máquina precisa de atenção — resolva a lista acima para vê-las aqui."
+  },
   "QlsDcr": {
     "defaultMessage": "Ação"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "Gerencie os seus dados de faturação, a renovação automática e a forma como entraremos em contacto consigo."
   },
+  "RQNCao": {
+    "defaultMessage": "Hospedagem de identidade NIP-05"
+  },
   "RXjd0H": {
     "defaultMessage": "Voltar à conta"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
+  "SYYlLP": {
+    "defaultMessage": "Gerencie os handles NIP-05 registrados neste domínio."
+  },
   "Sczo8n": {
     "defaultMessage": "Duração: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "A carregar..."
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Período de carência esgotado — pode ser excluído a qualquer momento. Renove agora para manter seus dados."
   },
   "T7b6ZF": {
     "defaultMessage": "Incidentes resolvidos"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Faturação"
+  },
+  "TgGVeW": {
+    "defaultMessage": "Ação necessária"
   },
   "TqSTI0": {
     "defaultMessage": "Ativar"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "A concluir o início de sessão…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Máquinas"
+  },
   "VJ4xwX": {
     "defaultMessage": "Notícias e atualizações de produtos"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "Incidentes Ativos"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Implante e gerencie servidores"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mês} other{meses}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "Apaga a VM e começa a partir de uma imagem nova. Isso exclui permanentemente todos os dados nela."
   },
   "XD6788": {
     "defaultMessage": "Taxa de instalação:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Hora de término (opcional)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} em execução"
   },
   "cV0ZGf": {
     "defaultMessage": "Análise detalhada dos custos"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(Recomendado)"
   },
+  "irRXbS": {
+    "defaultMessage": "Especificação"
+  },
   "iuQLCB": {
     "defaultMessage": "Os métodos de pagamento guardados são usados para efetuar automaticamente o pagamento das renovações um dia antes do término da validade da máquina virtual. Selecione qual deles será o método padrão."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Falha ao iniciar sessão com a chave de acesso"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Serviços recorrentes e cobrança"
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete o teste de verificação."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# item} other{# itens}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "Assinatura expirada — renove para manter esta máquina."
   },
   "lnaWo/": {
     "defaultMessage": "Região"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "Etiqueta (por exemplo, Visto pessoal)"
   },
+  "qduRZE": {
+    "defaultMessage": "Ainda não ativada — pague para colocá-la online."
+  },
   "qkLHOL": {
     "defaultMessage": "Tem certeza de que deseja excluir a chave SSH «»?{name}?"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "Histórico da VM"
   },
+  "qxg3uo": {
+    "defaultMessage": "Acesso"
+  },
   "r2BhUh": {
     "defaultMessage": "Descriptografar mensagem"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Hospedagem gratuita de identidade NIP-05 em domínios que você controla."
   },
   "rF6EmI": {
     "defaultMessage": "Detalhes da faturação"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "Processador, memória RAM e rede."
+  },
+  "rvNmJQ": {
+    "defaultMessage": "Ainda não há máquinas. Crie uma em menos de um minuto."
   },
   "rvirM2": {
     "defaultMessage": "Localização"

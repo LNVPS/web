@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Nostrキーを生成"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} 件が更新待ち"
+  },
   "/PE1Wn": {
     "defaultMessage": "パスキー名（例：MacBook）"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
   },
+  "4hI7OE": {
+    "defaultMessage": "{days, plural, one {#日} other {#日}}後に削除されます · {date} — データを保持するには更新してください。"
+  },
   "4j0zpr": {
     "defaultMessage": "最小要件：{min} コア"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "お支払い手続きへ進んでください。"
+  },
+  "5FWCVu": {
+    "defaultMessage": "サポートとの暗号化された NIP-17 メッセージ履歴。"
   },
   "5QYdPU": {
     "defaultMessage": "開始時間"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
+  },
+  "7NFfmz": {
+    "defaultMessage": "製品"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{日} other{日}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "監査ログ"
   },
+  "EIJT7Y": {
+    "defaultMessage": "危険な操作"
+  },
   "EKlM8d": {
     "defaultMessage": "ディスク（GB）"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} 件停止中"
   },
   "EUSRTV": {
     "defaultMessage": "過去に暗号化されたNIP-17形式のメッセージは、引き続きサポート対象です。この受信トレイは監視されなくなったため、お問い合わせには「サポート」タブをご利用ください。"
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "パスキーのみのアカウントでは、唯一のパスキーを削除できません。"
   },
+  "G3228Y": {
+    "defaultMessage": "{identity} としてログイン中"
+  },
   "G5cGLJ": {
     "defaultMessage": "初回支払いをお待ちしています。"
   },
   "G6nrEF": {
     "defaultMessage": "警告付きで保存されました。"
+  },
+  "GCoWpl": {
+    "defaultMessage": "チームに直接ご連絡ください — 折り返しご対応します。"
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPSのサービス状況と稼働時間"
+  },
+  "JiCBWy": {
+    "defaultMessage": "選択した鍵で SSH 接続します。"
   },
   "Jm+fih": {
     "defaultMessage": "非アクティブ状態。"
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "Qiih54": {
+    "defaultMessage": "すべてのマシンに対応が必要です — 上のリストを片付けるとここに表示されます。"
+  },
   "QlsDcr": {
     "defaultMessage": "アクション"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "請求情報の管理、自動更新の設定、および弊社からの連絡方法についてご確認ください。"
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05 アイデンティティホスティング"
+  },
   "RXjd0H": {
     "defaultMessage": "アカウントに戻る"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "ニュー・オーダー"
   },
+  "SYYlLP": {
+    "defaultMessage": "このドメインに登録された NIP-05 ハンドルを管理します。"
+  },
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "読み込み中……"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "猶予期間を過ぎています — いつでも削除される可能性があります。データを保持するには今すぐ更新してください。"
   },
   "T7b6ZF": {
     "defaultMessage": "解決済みのインシデント"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "請求"
+  },
+  "TgGVeW": {
+    "defaultMessage": "対応が必要"
   },
   "TqSTI0": {
     "defaultMessage": "有効にする。"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "サインインを完了しています…"
   },
+  "V7tPnC": {
+    "defaultMessage": "マシン"
+  },
   "VJ4xwX": {
     "defaultMessage": "最新ニュースと製品情報"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "現在発生中のインシデント"
   },
+  "WwXOJ8": {
+    "defaultMessage": "サーバーのデプロイと管理"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "VM を消去して新しいイメージから開始します。これにより VM 上のすべてのデータが完全に削除されます。"
   },
   "XD6788": {
     "defaultMessage": "初期設定費用："
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "終了時間（任意）"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} 件稼働中"
   },
   "cV0ZGf": {
     "defaultMessage": "費用内訳"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "（おすすめ）"
   },
+  "irRXbS": {
+    "defaultMessage": "仕様"
+  },
   "iuQLCB": {
     "defaultMessage": "保存された支払い方法を使用して、仮想マシンの有効期限の1日前に行われる自動更新の支払いを処理します。デフォルトで使用するものを選択してください。"
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
+  },
+  "kJpuxD": {
+    "defaultMessage": "継続サービスと請求"
   },
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# 項目} other{# 項目}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "契約期間が終了しました — このマシンを保持するには更新してください。"
   },
   "lnaWo/": {
     "defaultMessage": "地域"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "ラベル（例：個人用ビザ）"
   },
+  "qduRZE": {
+    "defaultMessage": "まだ有効化されていません — 支払ってオンラインにしてください。"
+  },
   "qkLHOL": {
     "defaultMessage": "SSHキー「」を削除してもよろしいですか？{name}「？」"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "VMの履歴"
   },
+  "qxg3uo": {
+    "defaultMessage": "アクセス"
+  },
   "r2BhUh": {
     "defaultMessage": "メッセージを復号化"
+  },
+  "r3V7v4": {
+    "defaultMessage": "あなたが管理するドメインでの無料 NIP-05 アイデンティティホスティング。"
   },
   "rF6EmI": {
     "defaultMessage": "お支払いに関する詳細"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "CPU、RAM、ネットワーク"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "まだマシンがありません。1 分以内に作成できます。"
   },
   "rvirM2": {
     "defaultMessage": "場所"

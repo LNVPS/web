@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Nostr 키 생성"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n}개 갱신 필요"
+  },
   "/PE1Wn": {
     "defaultMessage": "패스키 이름 (예: MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
   },
+  "4hI7OE": {
+    "defaultMessage": "{days, plural, one {#일} other {#일}} 후 삭제됨 · {date} — 데이터를 유지하려면 갱신하세요."
+  },
   "4j0zpr": {
     "defaultMessage": "최소: {min} 코어"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "결제 진행"
+  },
+  "5FWCVu": {
+    "defaultMessage": "지원팀과의 암호화된 NIP-17 메시지 기록입니다."
   },
   "5QYdPU": {
     "defaultMessage": "시작 시간"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 키"
+  },
+  "7NFfmz": {
+    "defaultMessage": "제품"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{일} other{일}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "감사 기록"
   },
+  "EIJT7Y": {
+    "defaultMessage": "위험 구역"
+  },
   "EKlM8d": {
     "defaultMessage": "디스크(GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n}개 중지됨"
   },
   "EUSRTV": {
     "defaultMessage": "이전에 암호화된 NIP-17 메시지를 지원팀에서 확인할 수 있습니다. 이 받은 편지함은 더 이상 모니터링되지 않으므로, 지원 탭을 통해 문의해 주시기 바랍니다."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "패스키 전용 계정에서는 유일한 패스키를 삭제할 수 없습니다."
   },
+  "G3228Y": {
+    "defaultMessage": "{identity}(으)로 로그인됨"
+  },
   "G5cGLJ": {
     "defaultMessage": "첫 번째 결제를 기다리는 중입니다."
   },
   "G6nrEF": {
     "defaultMessage": "경고와 함께 저장됨"
+  },
+  "GCoWpl": {
+    "defaultMessage": "팀에 직접 연락하세요 — 곧 답변드리겠습니다."
   },
   "GDR0px": {
     "defaultMessage": "노스트르"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS 서비스 상태 및 가동 시간"
+  },
+  "JiCBWy": {
+    "defaultMessage": "선택한 키로 SSH에 연결합니다."
   },
   "Jm+fih": {
     "defaultMessage": "비활성 상태입니다."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "중앙 처리 장치"
   },
+  "Qiih54": {
+    "defaultMessage": "모든 머신에 조치가 필요합니다 — 위 목록을 처리하면 여기에 표시됩니다."
+  },
   "QlsDcr": {
     "defaultMessage": "행동하다 / 조치하다"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "결제 정보, 자동 결제 설정 및 연락 방법을 관리하세요."
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05 신원 호스팅"
+  },
   "RXjd0H": {
     "defaultMessage": "계정으로 돌아가기"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "새로운 주문"
   },
+  "SYYlLP": {
+    "defaultMessage": "이 도메인에 등록된 NIP-05 핸들을 관리합니다."
+  },
   "Sczo8n": {
     "defaultMessage": "지속 시간: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "불러오는 중..."
+  },
+  "T7Fjtf": {
+    "defaultMessage": "유예 기간이 지났습니다 — 언제든 삭제될 수 있습니다. 데이터를 유지하려면 지금 갱신하세요."
   },
   "T7b6ZF": {
     "defaultMessage": "해결된 문제들"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "요금 청구"
+  },
+  "TgGVeW": {
+    "defaultMessage": "조치 필요"
   },
   "TqSTI0": {
     "defaultMessage": "활성화합니다."
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "로그인 완료 중…"
   },
+  "V7tPnC": {
+    "defaultMessage": "머신"
+  },
   "VJ4xwX": {
     "defaultMessage": "최신 뉴스 및 제품 업데이트"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "현재 진행 중인 사건"
   },
+  "WwXOJ8": {
+    "defaultMessage": "서버 배포 및 관리"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{달} other{개월}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "VM을 지우고 새 이미지로 시작합니다. 이 작업은 VM의 모든 데이터를 영구적으로 삭제합니다."
   },
   "XD6788": {
     "defaultMessage": "설치 비용:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "종료 시간(선택 사항)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n}개 실행 중"
   },
   "cV0ZGf": {
     "defaultMessage": "비용 내역"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(추천)"
   },
+  "irRXbS": {
+    "defaultMessage": "사양"
+  },
   "iuQLCB": {
     "defaultMessage": "저장된 결제 수단은 가상 머신의 만료일 하루 전에 자동으로 갱신 요금을 지불하는 데 사용됩니다. 기본으로 사용할 결제 수단을 선택하세요."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "패스키 로그인 실패"
+  },
+  "kJpuxD": {
+    "defaultMessage": "정기 서비스 및 청구"
   },
   "kLNEaL": {
     "defaultMessage": "캡차 인증을 완료해 주세요."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# 항목} other{# 항목들}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "임대 기간이 만료되었습니다 — 이 머신을 유지하려면 갱신하세요."
   },
   "lnaWo/": {
     "defaultMessage": "지역"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "라벨(예: 개인 비자)"
   },
+  "qduRZE": {
+    "defaultMessage": "아직 활성화되지 않았습니다 — 온라인으로 전환하려면 결제하세요."
+  },
   "qkLHOL": {
     "defaultMessage": "SSH 키를 삭제하시겠습니까?{name}물음표."
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "VM 기록"
   },
+  "qxg3uo": {
+    "defaultMessage": "접근"
+  },
   "r2BhUh": {
     "defaultMessage": "메시지 해독"
+  },
+  "r3V7v4": {
+    "defaultMessage": "직접 관리하는 도메인에서 무료 NIP-05 신원 호스팅."
   },
   "rF6EmI": {
     "defaultMessage": "결제 정보"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "CPU, RAM 및 네트워크"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "아직 머신이 없습니다. 1분 이내에 하나 만들어 보세요."
   },
   "rvirM2": {
     "defaultMessage": "위치"

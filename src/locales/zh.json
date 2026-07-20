@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "生成 Nostr 密钥"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} 个待续费"
+  },
   "/PE1Wn": {
     "defaultMessage": "通行密钥名称（例如 MacBook）"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
   },
+  "4hI7OE": {
+    "defaultMessage": "将在 {days, plural, one {# 天} other {# 天}}后删除 · {date} — 续费以保留您的数据。"
+  },
   "4j0zpr": {
     "defaultMessage": "最低：{min} 个内核"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "继续支付"
+  },
+  "5FWCVu": {
+    "defaultMessage": "您与支持团队的加密 NIP-17 消息记录。"
   },
   "5QYdPU": {
     "defaultMessage": "开始时间"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
+  },
+  "7NFfmz": {
+    "defaultMessage": "产品"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{天} other{天}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "审计日志"
   },
+  "EIJT7Y": {
+    "defaultMessage": "危险区域"
+  },
   "EKlM8d": {
     "defaultMessage": "磁盘（GB）"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} 个已停止"
   },
   "EUSRTV": {
     "defaultMessage": "您之前发送的已加密的 NIP-17 格式的消息已存档。此收件箱不再进行监控，请使用“支持”选项卡与我们联系。"
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "在仅使用通行密钥的账户中，您无法删除唯一的通行密钥。"
   },
+  "G3228Y": {
+    "defaultMessage": "已登录为 {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "等待第一笔付款。"
   },
   "G6nrEF": {
     "defaultMessage": "已保存，但存在警告信息。"
+  },
+  "GCoWpl": {
+    "defaultMessage": "直接联系团队 — 我们会尽快回复您。"
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS 服务状态和在线时间"
+  },
+  "JiCBWy": {
+    "defaultMessage": "使用所选密钥通过 SSH 连接。"
   },
   "Jm+fih": {
     "defaultMessage": "未激活。"
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "中央处理器"
   },
+  "Qiih54": {
+    "defaultMessage": "每台机器都需要处理 — 处理完上面的列表后即可在此查看。"
+  },
   "QlsDcr": {
     "defaultMessage": "行动；采取措施。"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "管理您的账单信息、自动续订设置以及我们与您联系的方式。"
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05 身份托管"
+  },
   "RXjd0H": {
     "defaultMessage": "返回账户。"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "新秩序"
   },
+  "SYYlLP": {
+    "defaultMessage": "管理在此域名下注册的 NIP-05 handle。"
+  },
   "Sczo8n": {
     "defaultMessage": "时长：{duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "正在加载……"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "已超过宽限期 — 随时可能被删除。立即续费以保留您的数据。"
   },
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "账单"
+  },
+  "TgGVeW": {
+    "defaultMessage": "需要处理"
   },
   "TqSTI0": {
     "defaultMessage": "启用"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "正在完成登录…"
   },
+  "V7tPnC": {
+    "defaultMessage": "机器"
+  },
   "VJ4xwX": {
     "defaultMessage": "新闻和产品更新"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "正在发生的事件"
   },
+  "WwXOJ8": {
+    "defaultMessage": "部署和管理服务器"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "清除该 VM 并从全新镜像开始。这将永久删除其上的所有数据。"
   },
   "XD6788": {
     "defaultMessage": "设置费用："
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "结束时间（可选）"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} 个运行中"
   },
   "cV0ZGf": {
     "defaultMessage": "成本明细"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "（推荐）"
   },
+  "irRXbS": {
+    "defaultMessage": "规格"
+  },
   "iuQLCB": {
     "defaultMessage": "已保存的付款方式将用于自动支付续订费用，续订将在虚拟机到期前一天进行。请选择默认使用的付款方式。"
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
+  },
+  "kJpuxD": {
+    "defaultMessage": "周期性服务与账单"
   },
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# 项目；物品} other{# 项目；物品}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "租期已到期 — 续费以保留此机器。"
   },
   "lnaWo/": {
     "defaultMessage": "地区"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "标签（例如：个人签证）"
   },
+  "qduRZE": {
+    "defaultMessage": "尚未激活 — 付款以使其上线。"
+  },
   "qkLHOL": {
     "defaultMessage": "您确定要删除 SSH 密钥吗？{name}？"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "虚拟机历史记录"
   },
+  "qxg3uo": {
+    "defaultMessage": "访问"
+  },
   "r2BhUh": {
     "defaultMessage": "解密消息"
+  },
+  "r3V7v4": {
+    "defaultMessage": "在您掌控的域名上免费托管 NIP-05 身份。"
   },
   "rF6EmI": {
     "defaultMessage": "账单详情"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "中央处理器、内存和网络。"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "还没有机器。一分钟内即可创建一台。"
   },
   "rvirM2": {
     "defaultMessage": "位置"

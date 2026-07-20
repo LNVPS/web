@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "إنشاء مفتاح نوستر"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} بحاجة إلى التجديد"
+  },
   "/PE1Wn": {
     "defaultMessage": "اسم المفتاح (مثل MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "خطط اشتراك متجددة تحافظ على استمرار خدماتك."
   },
+  "4hI7OE": {
+    "defaultMessage": "يُحذف خلال {days, plural, one {# يوم} other {# أيام}} · {date} — جدِّد للاحتفاظ ببياناتك."
+  },
   "4j0zpr": {
     "defaultMessage": "الحد الأدنى: {min} نوى"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "تابع إلى صفحة الدفع."
+  },
+  "5FWCVu": {
+    "defaultMessage": "سجل رسائلك المشفّرة NIP-17 مع الدعم."
   },
   "5QYdPU": {
     "defaultMessage": "وقت البدء"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "مفاتيح SSH"
+  },
+  "7NFfmz": {
+    "defaultMessage": "المنتجات"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{يوم} other{أيام}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "سجل التدقيق"
   },
+  "EIJT7Y": {
+    "defaultMessage": "منطقة الخطر"
+  },
   "EKlM8d": {
     "defaultMessage": "حجم القرص (جيجابايت)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} متوقفة"
   },
   "EUSRTV": {
     "defaultMessage": "رسائلك المشفرة السابقة بصيغة NIP-17 مع دعم فني. لن يتم مراقبة صندوق الوارد هذا بعد الآن – يرجى استخدام علامة التبويب \"الدعم\" للتواصل معنا."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "لا يمكنك إزالة مفتاح المرور الوحيد في حساب يعتمد على مفاتيح المرور فقط."
   },
+  "G3228Y": {
+    "defaultMessage": "تم تسجيل الدخول باسم {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "في انتظار الدفعة الأولى."
   },
   "G6nrEF": {
     "defaultMessage": "تم الحفظ مع وجود تحذيرات."
+  },
+  "GCoWpl": {
+    "defaultMessage": "تواصل مع الفريق مباشرةً — سنعاود التواصل معك."
   },
   "GDR0px": {
     "defaultMessage": "نوستر"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "حالة خدمة LNVPS ووقت التشغيل."
+  },
+  "JiCBWy": {
+    "defaultMessage": "اتصل عبر SSH باستخدام المفتاح الذي اخترته."
   },
   "Jm+fih": {
     "defaultMessage": "غير نشط."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "وحدة المعالجة المركزية"
   },
+  "Qiih54": {
+    "defaultMessage": "كل جهاز يحتاج إلى انتباه — عالِج القائمة أعلاه لرؤيتها هنا."
+  },
   "QlsDcr": {
     "defaultMessage": "إجراء/فعل"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "يمكنك إدارة تفاصيل الفوترة الخاصة بك، وتجديد الاشتراك تلقائيًا، ومعرفة الطريقة التي نتواصل بها معك."
   },
+  "RQNCao": {
+    "defaultMessage": "استضافة هوية NIP-05"
+  },
   "RXjd0H": {
     "defaultMessage": "العودة إلى الحساب."
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "طلب جديد"
   },
+  "SYYlLP": {
+    "defaultMessage": "أدِر معرّفات NIP-05 المسجّلة على هذا النطاق."
+  },
   "Sczo8n": {
     "defaultMessage": "المدة: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "جاري التحميل…"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "انتهت مهلة السماح — قد يُحذف في أي وقت. جدِّد الآن للاحتفاظ ببياناتك."
   },
   "T7b6ZF": {
     "defaultMessage": "الحوادث التي تم حلها."
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "الفواتير"
+  },
+  "TgGVeW": {
+    "defaultMessage": "إجراء مطلوب"
   },
   "TqSTI0": {
     "defaultMessage": "فعّل/شغّل"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "جارٍ إكمال تسجيل الدخول…"
   },
+  "V7tPnC": {
+    "defaultMessage": "الأجهزة"
+  },
   "VJ4xwX": {
     "defaultMessage": "أخبار وتحديثات حول المنتجات"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "الحوادث الجارية"
   },
+  "WwXOJ8": {
+    "defaultMessage": "انشر الخوادم وأدِرها"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{شهر} other{أشهر}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "يمسح الجهاز الافتراضي ويبدأ من صورة جديدة. هذا يحذف جميع البيانات عليه نهائيًا."
   },
   "XD6788": {
     "defaultMessage": "رسوم التأسيس:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "وقت الانتهاء (اختياري)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} قيد التشغيل"
   },
   "cV0ZGf": {
     "defaultMessage": "تفصيل التكاليف"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(مُوصًى به)"
   },
+  "irRXbS": {
+    "defaultMessage": "المواصفات"
+  },
   "iuQLCB": {
     "defaultMessage": "طرق الدفع المحفوظة تُستخدم للدفع التلقائي لتجديد الاشتراكات قبل يوم واحد من انتهاء صلاحية الجهاز الظاهري. حدد الطريقة الافتراضية."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "فشل تسجيل الدخول بمفتاح المرور"
+  },
+  "kJpuxD": {
+    "defaultMessage": "الخدمات المتكررة والفوترة"
   },
   "kLNEaL": {
     "defaultMessage": "يرجى إكمال عملية التحقق من خلال اختبار الكابتشا."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# عنصر/ بند/ صنف} other{# عناصر}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "انتهت مدة الاشتراك — جدِّد للاحتفاظ بهذا الجهاز."
   },
   "lnaWo/": {
     "defaultMessage": "منطقة"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "تسمية (مثل: تأشيرة شخصية)"
   },
+  "qduRZE": {
+    "defaultMessage": "لم يُفعَّل بعد — ادفع لجعله متصلاً."
+  },
   "qkLHOL": {
     "defaultMessage": "هل أنت متأكد من أنك تريد حذف مفتاح SSH؟{name}؟"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "سجل الأجهزة الافتراضية"
   },
+  "qxg3uo": {
+    "defaultMessage": "الوصول"
+  },
   "r2BhUh": {
     "defaultMessage": "فك تشفير الرسالة"
+  },
+  "r3V7v4": {
+    "defaultMessage": "استضافة مجانية لهوية NIP-05 على النطاقات التي تتحكم بها."
   },
   "rF6EmI": {
     "defaultMessage": "تفاصيل الفاتورة"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "وحدة المعالجة المركزية، وذاكرة الوصول العشوائي والشبكة."
+  },
+  "rvNmJQ": {
+    "defaultMessage": "لا توجد أجهزة بعد. أنشئ واحدًا في أقل من دقيقة."
   },
   "rvirM2": {
     "defaultMessage": "الموقع"

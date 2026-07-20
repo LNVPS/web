@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Générer une clé Nostr"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} à renouveler"
+  },
   "/PE1Wn": {
     "defaultMessage": "Nom de la clé (ex. MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Abonnements renouvelés qui maintiennent vos services actifs."
   },
+  "4hI7OE": {
+    "defaultMessage": "Supprimé dans {days, plural, one {# jour} other {# jours}} · {date} — renouvelez pour conserver vos données."
+  },
   "4j0zpr": {
     "defaultMessage": "Minimum : {min} cœurs"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Passez au paiement."
+  },
+  "5FWCVu": {
+    "defaultMessage": "Votre historique de messages chiffrés NIP-17 avec le support."
   },
   "5QYdPU": {
     "defaultMessage": "Heure de début"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Clés SSH"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Produits"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{jour} other{jours}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "Journal d’audit"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Zone dangereuse"
+  },
   "EKlM8d": {
     "defaultMessage": "Disque dur (Go)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} arrêtées"
   },
   "EUSRTV": {
     "defaultMessage": "Vos anciens messages NIP-17 chiffrés sont accessibles dans cette boîte de réception, mais celle-ci n’est plus surveillée. Veuillez utiliser l’onglet « Assistance » pour nous contacter."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "Vous ne pouvez pas supprimer votre seule clé d'accès sur un compte utilisant uniquement des clés d'accès."
   },
+  "G3228Y": {
+    "defaultMessage": "Connecté en tant que {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "En attente du premier paiement."
   },
   "G6nrEF": {
     "defaultMessage": "Enregistré avec des avertissements."
+  },
+  "GCoWpl": {
+    "defaultMessage": "Contactez l'équipe directement — nous vous répondrons."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "État du service LNVPS et durée de fonctionnement."
+  },
+  "JiCBWy": {
+    "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
   },
   "Jm+fih": {
     "defaultMessage": "Inactif."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "Processeur"
   },
+  "Qiih54": {
+    "defaultMessage": "Chaque machine nécessite votre attention — traitez la liste ci-dessus pour les voir ici."
+  },
   "QlsDcr": {
     "defaultMessage": "Action"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "Gérez vos informations de facturation, le renouvellement automatique et les moyens par lesquels nous pouvons vous contacter."
   },
+  "RQNCao": {
+    "defaultMessage": "Hébergement d'identité NIP-05"
+  },
   "RXjd0H": {
     "defaultMessage": "Retour au compte"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
+  "SYYlLP": {
+    "defaultMessage": "Gérez les handles NIP-05 enregistrés sur ce domaine."
+  },
   "Sczo8n": {
     "defaultMessage": "Durée : {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Chargement en cours…"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Délai de grâce dépassé — peut être supprimé à tout moment. Renouvelez maintenant pour conserver vos données."
   },
   "T7b6ZF": {
     "defaultMessage": "Incidents résolus"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Facturation"
+  },
+  "TgGVeW": {
+    "defaultMessage": "Action requise"
   },
   "TqSTI0": {
     "defaultMessage": "Activer"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "Connexion en cours…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Machines"
+  },
   "VJ4xwX": {
     "defaultMessage": "Actualités et mises à jour des produits"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "Incidents en cours"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Déployer et gérer des serveurs"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mois} other{mois}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "Efface la VM et repart d'une image vierge. Cela supprime définitivement toutes les données qu'elle contient."
   },
   "XD6788": {
     "defaultMessage": "Frais d’installation :"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Heure de fin (facultatif)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} en cours d'exécution"
   },
   "cV0ZGf": {
     "defaultMessage": "Répartition des coûts"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(Recommandé)"
   },
+  "irRXbS": {
+    "defaultMessage": "Spécification"
+  },
   "iuQLCB": {
     "defaultMessage": "Les méthodes de paiement enregistrées sont utilisées pour effectuer automatiquement le renouvellement un jour avant l’expiration de la machine virtuelle. Choisissez celle qui doit être définie par défaut."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Échec de la connexion par clé d'accès"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Services récurrents et facturation"
   },
   "kLNEaL": {
     "defaultMessage": "Veuillez compléter la vérification Captcha."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# élément} other{# articles}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "Abonnement expiré — renouvelez pour conserver cette machine."
   },
   "lnaWo/": {
     "defaultMessage": "Région"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "Libellé (par exemple, visa personnel)"
   },
+  "qduRZE": {
+    "defaultMessage": "Pas encore activée — payez pour la mettre en ligne."
+  },
   "qkLHOL": {
     "defaultMessage": "Êtes-vous sûr de vouloir supprimer la clé SSH «{name}?"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "Historique des machines virtuelles"
   },
+  "qxg3uo": {
+    "defaultMessage": "Accès"
+  },
   "r2BhUh": {
     "defaultMessage": "Décrypter le message"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Hébergement gratuit d'identité NIP-05 sur des domaines que vous contrôlez."
   },
   "rF6EmI": {
     "defaultMessage": "Détails de la facturation"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "Processeur, mémoire vive et réseau."
+  },
+  "rvNmJQ": {
+    "defaultMessage": "Aucune machine pour l'instant. Créez-en une en moins d'une minute."
   },
   "rvirM2": {
     "defaultMessage": "Emplacement"

@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Generar clave Nostr"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} por renovar"
+  },
   "/PE1Wn": {
     "defaultMessage": "Nombre de la clave (p. ej. MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Planes de pago periódico que mantienen activos sus servicios."
   },
+  "4hI7OE": {
+    "defaultMessage": "Se elimina en {days, plural, one {# día} other {# días}} · {date} — renueva para conservar tus datos."
+  },
   "4j0zpr": {
     "defaultMessage": "Mínimo: {min} núcleos."
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Continúe con el pago."
+  },
+  "5FWCVu": {
+    "defaultMessage": "Tu historial de mensajes cifrados NIP-17 con soporte."
   },
   "5QYdPU": {
     "defaultMessage": "Hora de inicio"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Claves SSH"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Productos"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{día} other{días}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "Registro de auditoría"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Zona de peligro"
+  },
   "EKlM8d": {
     "defaultMessage": "Disco (GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} detenidas"
   },
   "EUSRTV": {
     "defaultMessage": "Sus mensajes NIP-17 encriptados anteriores se guardan aquí. Ya no se supervisa esta bandeja de entrada; utilice la pestaña «Soporte» para contactarnos."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "No puede eliminar su única clave de acceso en una cuenta que solo usa claves de acceso."
   },
+  "G3228Y": {
+    "defaultMessage": "Sesión iniciada como {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "En espera del primer pago."
   },
   "G6nrEF": {
     "defaultMessage": "Guardado con advertencias."
+  },
+  "GCoWpl": {
+    "defaultMessage": "Contacta directamente con el equipo — te responderemos."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Estado del servicio LNVPS y tiempo de actividad"
+  },
+  "JiCBWy": {
+    "defaultMessage": "Conéctate por SSH con la clave seleccionada."
   },
   "Jm+fih": {
     "defaultMessage": "Inactivo."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "Qiih54": {
+    "defaultMessage": "Cada máquina necesita atención — resuelve la lista de arriba para verlas aquí."
+  },
   "QlsDcr": {
     "defaultMessage": "Acción."
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "Administre sus datos de facturación, la renovación automática y la forma en que nos comunicamos con usted."
   },
+  "RQNCao": {
+    "defaultMessage": "Alojamiento de identidad NIP-05"
+  },
   "RXjd0H": {
     "defaultMessage": "Volver a la cuenta."
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
+  "SYYlLP": {
+    "defaultMessage": "Gestiona los handles NIP-05 registrados en este dominio."
+  },
   "Sczo8n": {
     "defaultMessage": "Duración: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Cargando…"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Período de gracia vencido — puede eliminarse en cualquier momento. Renueva ahora para conservar tus datos."
   },
   "T7b6ZF": {
     "defaultMessage": "Incidentes resueltos"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Facturación"
+  },
+  "TgGVeW": {
+    "defaultMessage": "Acción requerida"
   },
   "TqSTI0": {
     "defaultMessage": "Activar"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "Completando el inicio de sesión…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Máquinas"
+  },
   "VJ4xwX": {
     "defaultMessage": "Novedades y actualizaciones de productos"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "Incidentes activos"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Despliega y gestiona servidores"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mes} other{meses}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "Borra la VM y empieza desde una imagen nueva. Esto elimina permanentemente todos los datos que contiene."
   },
   "XD6788": {
     "defaultMessage": "Cargo por la configuración:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Hora de finalización (opcional)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} en ejecución"
   },
   "cV0ZGf": {
     "defaultMessage": "Desglose de costos"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(Recomendado)"
   },
+  "irRXbS": {
+    "defaultMessage": "Especificación"
+  },
   "iuQLCB": {
     "defaultMessage": "Los métodos de pago guardados se utilizan para realizar automáticamente los pagos de las renovaciones un día antes de que expire la máquina virtual. Seleccione cuál será el método predeterminado."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Error al iniciar sesión con la clave de acceso"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Servicios recurrentes y facturación"
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete la verificación del CAPTCHA."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# elemento; artículo} other{# artículos}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "Suscripción vencida — renueva para conservar esta máquina."
   },
   "lnaWo/": {
     "defaultMessage": "Región"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "Etiqueta (por ejemplo, visa personal)"
   },
+  "qduRZE": {
+    "defaultMessage": "Aún no activada — paga para ponerla en línea."
+  },
   "qkLHOL": {
     "defaultMessage": "¿Está seguro de que desea eliminar la clave SSH «[nombre de la clave]»?{name}¿?"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "Historial de máquinas virtuales"
   },
+  "qxg3uo": {
+    "defaultMessage": "Acceso"
+  },
   "r2BhUh": {
     "defaultMessage": "Descifrar mensaje"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Alojamiento gratuito de identidad NIP-05 en dominios que tú controlas."
   },
   "rF6EmI": {
     "defaultMessage": "Datos de facturación"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "CPU, memoria RAM y red."
+  },
+  "rvNmJQ": {
+    "defaultMessage": "Aún no hay máquinas. Crea una en menos de un minuto."
   },
   "rvirM2": {
     "defaultMessage": "Ubicación"

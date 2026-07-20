@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Nostr anahtarı oluştur"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} yenileme gerekiyor"
+  },
   "/PE1Wn": {
     "defaultMessage": "Geçiş anahtarı adı (örn. MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Hizmetlerinizin aktif kalmasını sağlayan düzenli abonelik planları."
   },
+  "4hI7OE": {
+    "defaultMessage": "{days, plural, one {# gün} other {# gün}} içinde silinir · {date} — verilerinizi korumak için yenileyin."
+  },
   "4j0zpr": {
     "defaultMessage": "En az: {min} çekirdekler"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Ödemeye Geçin"
+  },
+  "5FWCVu": {
+    "defaultMessage": "Destek ile şifreli NIP-17 mesaj geçmişiniz."
   },
   "5QYdPU": {
     "defaultMessage": "Başlangıç Saati"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Anahtarları"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Ürünler"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{gün} other{gün}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "Denetim kaydı"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Tehlikeli bölge"
+  },
   "EKlM8d": {
     "defaultMessage": "Disk (GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} durduruldu"
   },
   "EUSRTV": {
     "defaultMessage": "Daha önce şifrelenmiş NIP-17 mesajlarınız destek ekibi tarafından inceleniyordu. Bu gelen kutusu artık izlenmiyor; lütfen bize ulaşmak için Destek sekmesini kullanın."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "Yalnızca geçiş anahtarı kullanan bir hesapta tek geçiş anahtarınızı kaldıramazsınız."
   },
+  "G3228Y": {
+    "defaultMessage": "{identity} olarak oturum açıldı"
+  },
   "G5cGLJ": {
     "defaultMessage": "İlk ödemenin yapılmasını bekliyoruz."
   },
   "G6nrEF": {
     "defaultMessage": "Uyarılarla birlikte kaydedildi."
+  },
+  "GCoWpl": {
+    "defaultMessage": "Ekibe doğrudan ulaşın — size geri döneceğiz."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS Hizmet Durumu ve Çalışma Süresi"
+  },
+  "JiCBWy": {
+    "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
   },
   "Jm+fih": {
     "defaultMessage": "Etkin değil"
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "Qiih54": {
+    "defaultMessage": "Her makine ilgilenilmeyi bekliyor — burada görmek için yukarıdaki listeyi temizleyin."
+  },
   "QlsDcr": {
     "defaultMessage": "Eylem"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "Faturalandırma bilgilerinizi, otomatik yenileme ayarlarınızı ve sizinle nasıl iletişim kuracağımızı yönetin."
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05 kimlik barındırma"
+  },
   "RXjd0H": {
     "defaultMessage": "Hesabıma geri dön"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "Yeni Sipariş"
   },
+  "SYYlLP": {
+    "defaultMessage": "Bu alan adında kayıtlı NIP-05 tanıtıcılarını yönetin."
+  },
   "Sczo8n": {
     "defaultMessage": "Süre: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Yükleniyor…"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Ödemesiz süre doldu — her an silinebilir. Verilerinizi korumak için şimdi yenileyin."
   },
   "T7b6ZF": {
     "defaultMessage": "Çözülen Olaylar"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Fatura"
+  },
+  "TgGVeW": {
+    "defaultMessage": "İşlem gerekli"
   },
   "TqSTI0": {
     "defaultMessage": "Etkinleştir"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "Giriş tamamlanıyor…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Makineler"
+  },
   "VJ4xwX": {
     "defaultMessage": "Haberler ve Ürün Güncellemeleri"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "Devam Eden Olaylar"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Sunucuları dağıtın ve yönetin"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{ay} other{aylar}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "VM'yi siler ve yeni bir imajdan başlatır. Bu, üzerindeki tüm verileri kalıcı olarak siler."
   },
   "XD6788": {
     "defaultMessage": "Kurulum ücreti:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Bitiş Saati (isteğe bağlı)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} çalışıyor"
   },
   "cV0ZGf": {
     "defaultMessage": "Maliyetlerin Detaylı Dökümü"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(Önerilir)"
   },
+  "irRXbS": {
+    "defaultMessage": "Teknik özellikler"
+  },
   "iuQLCB": {
     "defaultMessage": "Kaydedilmiş ödeme yöntemleri, sanal makinenin (VM) süresinin dolmasına bir gün kala otomatik olarak yenileme işlemini gerçekleştirmek için kullanılır. Varsayılan olarak kullanılacak olanı seçin."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Yinelenen hizmetler ve faturalandırma"
   },
   "kLNEaL": {
     "defaultMessage": "Lütfen CAPTCHA doğrulamasını tamamlayın."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# öğe} other{# öğeler}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "Kira süresi doldu — bu makineyi korumak için yenileyin."
   },
   "lnaWo/": {
     "defaultMessage": "Bölge"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "Etiket (örneğin, Kişisel Vize)"
   },
+  "qduRZE": {
+    "defaultMessage": "Henüz etkinleştirilmedi — çevrimiçi yapmak için ödeme yapın."
+  },
   "qkLHOL": {
     "defaultMessage": "SSH anahtarını silmek istediğinizden emin misiniz?{name}?"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "VM Geçmişi"
   },
+  "qxg3uo": {
+    "defaultMessage": "Erişim"
+  },
   "r2BhUh": {
     "defaultMessage": "Şifrelenmiş Mesajı Çöz"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Kontrol ettiğiniz alan adlarında ücretsiz NIP-05 kimlik barındırma."
   },
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "İşlemci, RAM ve ağ"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "Henüz makine yok. Bir dakikadan kısa sürede bir tane oluşturun."
   },
   "rvirM2": {
     "defaultMessage": "Konum"

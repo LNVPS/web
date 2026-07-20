@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Nostr-Schlüssel generieren"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} zu verlängern"
+  },
   "/PE1Wn": {
     "defaultMessage": "Passkey-Name (z. B. MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Wiederkehrende Abonnements, die sicherstellen, dass Ihre Dienste aktiv bleiben."
   },
+  "4hI7OE": {
+    "defaultMessage": "Wird in {days, plural, one {# Tag} other {# Tagen}} gelöscht · {date} — verlängern, um deine Daten zu behalten."
+  },
   "4j0zpr": {
     "defaultMessage": "Mindestanzahl: {min} Kerne"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Zur Zahlung übergehen"
+  },
+  "5FWCVu": {
+    "defaultMessage": "Dein verschlüsselter NIP-17-Nachrichtenverlauf mit dem Support."
   },
   "5QYdPU": {
     "defaultMessage": "Startzeit"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH-Schlüssel"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Produkte"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{Tag} other{Tage}}"
@@ -422,8 +434,14 @@
   "ED9RG5": {
     "defaultMessage": "Prüfprotokoll"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Gefahrenzone"
+  },
   "EKlM8d": {
     "defaultMessage": "Festplatte (GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} gestoppt"
   },
   "EUSRTV": {
     "defaultMessage": "Ihre bisher verschlüsselten NIP-17-Nachrichten werden weiterhin unterstützt. Dieses Postfach wird nicht mehr überwacht – bitte nutzen Sie den Bereich „Support“, um uns zu kontaktieren."
@@ -482,11 +500,17 @@
   "G1kGar": {
     "defaultMessage": "Sie können Ihren einzigen Passkey bei einem reinen Passkey-Konto nicht entfernen."
   },
+  "G3228Y": {
+    "defaultMessage": "Angemeldet als {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "Warten auf die erste Zahlung."
   },
   "G6nrEF": {
     "defaultMessage": "Mit Warnhinweisen gespeichert."
+  },
+  "GCoWpl": {
+    "defaultMessage": "Kontaktiere das Team direkt — wir melden uns bei dir."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -580,6 +604,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Status und Verfügbarkeit des LNVPS-Dienstes"
+  },
+  "JiCBWy": {
+    "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
   },
   "Jm+fih": {
     "defaultMessage": "Nicht aktiv."
@@ -731,6 +758,9 @@
   "QgBuiV": {
     "defaultMessage": "Prozessor"
   },
+  "Qiih54": {
+    "defaultMessage": "Jede Maschine benötigt Aufmerksamkeit — arbeite die obige Liste ab, um sie hier zu sehen."
+  },
   "QlsDcr": {
     "defaultMessage": "Aktion"
   },
@@ -764,6 +794,9 @@
   "RCHbbR": {
     "defaultMessage": "Verwalten Sie Ihre Abrechnungsdaten, die automatische Verlängerung und wie wir Sie erreichen können."
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05-Identitäts-Hosting"
+  },
   "RXjd0H": {
     "defaultMessage": "Zurück zum Konto"
   },
@@ -788,6 +821,9 @@
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
+  "SYYlLP": {
+    "defaultMessage": "Verwalte die auf dieser Domain registrierten NIP-05-Handles."
+  },
   "Sczo8n": {
     "defaultMessage": "Dauer: {duration}"
   },
@@ -808,6 +844,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Wird geladen …"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Kulanzfrist abgelaufen — kann jederzeit gelöscht werden. Verlängere jetzt, um deine Daten zu behalten."
   },
   "T7b6ZF": {
     "defaultMessage": "Gelöste Vorfälle"
@@ -832,6 +871,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Rechnungsstellung"
+  },
+  "TgGVeW": {
+    "defaultMessage": "Aktion erforderlich"
   },
   "TqSTI0": {
     "defaultMessage": "Aktivieren"
@@ -878,6 +920,9 @@
   "V7fgpY": {
     "defaultMessage": "Anmeldung wird abgeschlossen…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Maschinen"
+  },
   "VJ4xwX": {
     "defaultMessage": "Neues und Produktaktualisierungen"
   },
@@ -908,8 +953,14 @@
   "Wsj2fc": {
     "defaultMessage": "Aktuelle Vorfälle"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Server bereitstellen & verwalten"
+  },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{Monat} other{Monate}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "Setzt die VM zurück und startet mit einem frischen Image. Dabei werden alle Daten darauf unwiderruflich gelöscht."
   },
   "XD6788": {
     "defaultMessage": "Einrichtungsgebühr:"
@@ -1003,6 +1054,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Endzeit (optional)"
+  },
+  "cQtv0G": {
+    "defaultMessage": "{n} laufend"
   },
   "cV0ZGf": {
     "defaultMessage": "Kostenaufschlüsselung"
@@ -1160,6 +1214,9 @@
   "icn2DS": {
     "defaultMessage": "(Empfohlen)"
   },
+  "irRXbS": {
+    "defaultMessage": "Spezifikation"
+  },
   "iuQLCB": {
     "defaultMessage": "Gespeicherte Zahlungsmethoden werden verwendet, um automatische Zahlungen für Verlängerungen einen Tag vor dem Ablauf einer virtuellen Maschine durchzuführen. Wählen Sie die Methode aus, die als Standard festgelegt werden soll."
   },
@@ -1192,6 +1249,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Passkey-Anmeldung fehlgeschlagen"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Wiederkehrende Dienste & Abrechnung"
   },
   "kLNEaL": {
     "defaultMessage": "Bitte führen Sie die CAPTCHA-Überprüfung durch."
@@ -1243,6 +1303,9 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# Artikel} other{# Artikel}}"
+  },
+  "ln2Syt": {
+    "defaultMessage": "Laufzeit abgelaufen — verlängern, um diese Maschine zu behalten."
   },
   "lnaWo/": {
     "defaultMessage": "Region"
@@ -1364,6 +1427,9 @@
   "qX7u3z": {
     "defaultMessage": "Bezeichnung (z. B. persönliches Visum)"
   },
+  "qduRZE": {
+    "defaultMessage": "Noch nicht aktiviert — bezahle, um sie online zu bringen."
+  },
   "qkLHOL": {
     "defaultMessage": "Sind Sie sicher, dass Sie den SSH-Schlüssel „[Name des Schlüssels]“ löschen möchten?{name}?"
   },
@@ -1376,8 +1442,14 @@
   "quroDq": {
     "defaultMessage": "VM-Historie"
   },
+  "qxg3uo": {
+    "defaultMessage": "Zugriff"
+  },
   "r2BhUh": {
     "defaultMessage": "Nachricht entschlüsseln"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Kostenloses NIP-05-Identitäts-Hosting auf von dir kontrollierten Domains."
   },
   "rF6EmI": {
     "defaultMessage": "Rechnungsinformationen"
@@ -1387,6 +1459,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "Prozessor, Arbeitsspeicher und Netzwerk"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "Noch keine Maschinen. Erstelle in unter einer Minute eine."
   },
   "rvirM2": {
     "defaultMessage": "Standort"

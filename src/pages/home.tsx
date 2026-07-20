@@ -1,7 +1,7 @@
 import { useState, useEffect, ReactNode } from "react";
 import { DiskType, VmHostRegion } from "../api";
 import VpsRow, { VpsTableHeader } from "../components/vps-card";
-import { NostrProfile } from "../const";
+import { NostrProfile, OnionWebUrl, isOnion } from "../const";
 import { Link, useLoaderData } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
 import { LatestNews } from "../components/latest-news";
@@ -100,6 +100,14 @@ export default function HomePage() {
             <a href="SKILL.md" target="_blank">
               <FormattedMessage defaultMessage="SKILL.md" />
             </a>
+            {OnionWebUrl && !isOnion() && (
+              <>
+                {" | "}
+                <a href={OnionWebUrl} target="_blank" rel="noreferrer">
+                  <FormattedMessage defaultMessage="Tor" />
+                </a>
+              </>
+            )}
           </div>
           {import.meta.env.VITE_FOOTER_NOTE_1 && (
             <div className="text-xs text-center text-cyber-muted">

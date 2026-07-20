@@ -13,7 +13,31 @@ export const GB = KB * 1000;
 export const TB = GB * 1000;
 export const PB = TB * 1000;
 
-export const ApiUrl: string = import.meta.env.VITE_API_URL ?? "";
+/**
+ * Returns `true` when the app is being served from a Tor `.onion` hostname.
+ * Always `false` during SSR where there is no `window`.
+ */
+export function isOnion(): boolean {
+  if (import.meta.env.SSR || typeof window === "undefined") return false;
+  return window.location.hostname.endsWith(".onion");
+}
+
+/** Clearnet API base URL. Configured via `VITE_API_URL`. */
+export const ClearnetApiUrl: string = import.meta.env.VITE_API_URL ?? "";
+
+/** Tor `.onion` API base URL. Configured via `VITE_API_URL_ONION`. */
+export const OnionApiUrl: string = import.meta.env.VITE_API_URL_ONION ?? "";
+
+/** Tor `.onion` web (frontend) address. Configured via `VITE_WEB_URL_ONION`. */
+export const OnionWebUrl: string = import.meta.env.VITE_WEB_URL_ONION ?? "";
+
+/**
+ * API base URL to use. When the page is served from a `.onion` origin and an
+ * onion API URL is configured, requests are routed over the onion service to
+ * keep traffic within the Tor network. Otherwise the clearnet API is used.
+ */
+export const ApiUrl: string =
+  isOnion() && OnionApiUrl.length > 0 ? OnionApiUrl : ClearnetApiUrl;
 
 /**
  * OAuth/OIDC providers enabled server-side, in the order they should appear on

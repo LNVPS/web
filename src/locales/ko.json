@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "어떤 라이트닝 지갑에서든 결제하여 이 구독 서비스를 충전할 수 있습니다."
   },
+  "1p8vog": {
+    "defaultMessage": "커스텀 VPS"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostr 도메인 추가"
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "결제, 갱신 및 알림"
-  },
-  "20Sod8": {
-    "defaultMessage": "CPU:"
   },
   "2QrTo0": {
     "defaultMessage": "새로운 IP 주소 할당 방식"
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "이미지 선택"
   },
+  "6sh6sN": {
+    "defaultMessage": "이 페이지를 떠나도 안전합니다. 결제는 청구 내역에 표시되며 확인되는 즉시 적용됩니다."
+  },
   "6uMqL1": {
     "defaultMessage": "미지급"
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "전송 중..."
-  },
-  "89xu1A": {
-    "defaultMessage": "맞춤형 VPS 주문"
   },
   "8BgaUL": {
     "defaultMessage": "현재 사양"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "지금 다시 활성화하세요."
-  },
-  "CHgKgH": {
-    "defaultMessage": "정기적으로 제공되는 서비스"
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
   },
+  "HlAgG9": {
+    "defaultMessage": "결제를 보냈습니다"
+  },
   "HqRNN8": {
     "defaultMessage": "지원"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "비트코인 라이트닝 네트워크를 기반으로 하는 고성능 VPS입니다. 월 몇 사토시부터 이용 가능한 가상 전용 서버를 제공합니다."
   },
-  "MT4qAu": {
-    "defaultMessage": "NIP-44 암호화 도구"
-  },
   "MTnSwY": {
     "defaultMessage": "예: 세금"
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "노스트르: {handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "정말로 가상 머신을 다시 설치하시겠습니까? 이 작업을 수행하면 모든 데이터가 삭제됩니다!!"
-  },
   "OJuBck": {
     "defaultMessage": "비밀번호 없이"
   },
   "OLqOyf": {
     "defaultMessage": "설정 방법"
-  },
-  "OS1kG0": {
-    "defaultMessage": "거의 사용 안 함"
   },
   "OikYIw": {
     "defaultMessage": "최소: {min} 기가바이트 {type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "계정"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "이 주소로 온체인 비트코인을 보내세요. 트랜잭션이 확인되면 받은 금액에 비례하여 시간이 자동으로 적립됩니다. 부분 결제와 초과 결제는 절대 손실되지 않습니다."
+  },
   "U96Gl9": {
     "defaultMessage": "이 카드를 저장하여 다음에 사용할 때 결제에 이용하세요."
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} 권장됩니다. 서버 IP 주소 변경 사항을 자동으로 추적합니다."
-  },
-  "Ue9DHy": {
-    "defaultMessage": "지역:"
   },
   "Uk68vE": {
     "defaultMessage": "보낸 사람의 공개 키(npub/nprofile/16진수):"
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "최신 뉴스 및 제품 업데이트"
+  },
+  "VKfWR3": {
+    "defaultMessage": "권장"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "LNVPS 서비스 약관 — 비트코인 라이트닝 VPS 제공업체. 당사의 사용 정책, 허용되는 사용 지침 및 서비스 약관을 읽어보세요."
   },
+  "ZshmbW": {
+    "defaultMessage": "이 구성 요소는 온체인 결제만 지원합니다"
+  },
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "암호화된 메시지를 여기에 붙여넣으세요."
+  },
+  "bkamRx": {
+    "defaultMessage": "확인 대기 중"
   },
   "bpBvBq": {
     "defaultMessage": "표시할 통화:"
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
   },
+  "e4ehrh": {
+    "defaultMessage": "머신 구성하기"
+  },
   "eClqvz": {
     "defaultMessage": "저장된 결제 수단"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "노스트르 확장 프로그램"
-  },
-  "elhFf1": {
-    "defaultMessage": "[유효 기간 만료]"
   },
   "eq14GY": {
     "defaultMessage": "새로운 개인 키입니다."
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
   },
-  "lPsVOx": {
-    "defaultMessage": "귀하의 가상 머신 및 도메인"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} 남은 날짜"
-  },
   "lcXewt": {
     "defaultMessage": "빠른 청구서 발급"
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "저장된 결제 수단을 통해 요금이 청구됩니다. 확인이 완료되면 자동으로 적용됩니다."
-  },
-  "ltoBql": {
-    "defaultMessage": "[새로운 기능]"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 남은 날짜} other{# 남은 날짜}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "수수료"
-  },
-  "n8cyVk": {
-    "defaultMessage": "운영 체제"
   },
   "n9fdaJ": {
     "defaultMessage": "확인되지 않음"
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
-  },
-  "pY6CgO": {
-    "defaultMessage": "아직 가상 머신이 없습니다."
   },
   "pgLgIU": {
     "defaultMessage": "전체 업데이트 내용을 확인하세요."
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
   },
-  "sXj7R6": {
-    "defaultMessage": "디스크:"
-  },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "상태"
+  },
+  "u+Blek": {
+    "defaultMessage": "스토리지 유형"
   },
   "u/vOPu": {
     "defaultMessage": "유료"
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "연결됨"
   },
-  "waUHa4": {
-    "defaultMessage": "SSH"
-  },
-  "wfYHHe": {
-    "defaultMessage": "-{daysLeft} 남은 날짜"
-  },
   "wo868v": {
     "defaultMessage": "Nostr 키 또는 벙커로 로그인 →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "약관"
   },
-  "xmDqRT": {
-    "defaultMessage": "VM의 {pct}%"
-  },
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} 코어"
+  },
+  "xnmHVe": {
+    "defaultMessage": "비트코인(온체인)"
   },
   "xuTqgN": {
     "defaultMessage": "결제 방법"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "로그인 실패"
-  },
-  "yRwRO8": {
-    "defaultMessage": "머신의 {pct}%"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPS 서비스의 실시간 가동 시간 및 장애 이력을 확인하세요. 현재 비트코인 라이트닝 VPS 인프라의 운영 상태를 확인하세요."

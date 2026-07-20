@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "使用任意闪电网络钱包支付，即可充值此订阅。"
   },
+  "1p8vog": {
+    "defaultMessage": "自定义 VPS"
+  },
   "1v7S+3": {
     "defaultMessage": "添加 Nostr 域名"
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "账单、续订和通知"
-  },
-  "20Sod8": {
-    "defaultMessage": "中央处理器："
   },
   "2QrTo0": {
     "defaultMessage": "新的 IP 地址分配方案"
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "选择镜像"
   },
+  "6sh6sN": {
+    "defaultMessage": "您可以放心离开此页面 — 付款会显示在您的账单历史中，确认后即会生效。"
+  },
   "6uMqL1": {
     "defaultMessage": "未支付"
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "正在发送……"
-  },
-  "89xu1A": {
-    "defaultMessage": "定制虚拟专用服务器订单"
   },
   "8BgaUL": {
     "defaultMessage": "当前规格"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "立即重新激活。"
-  },
-  "CHgKgH": {
-    "defaultMessage": "定期提供的服务"
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "目前还没有消息。请在下方开始新的对话。"
   },
+  "HlAgG9": {
+    "defaultMessage": "我已发送付款"
+  },
   "HqRNN8": {
     "defaultMessage": "支持"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "高性能 VPS，由比特币闪电网络提供支持。虚拟专用服务器，每月只需几枚聪即可使用。"
   },
-  "MT4qAu": {
-    "defaultMessage": "NIP-44 加密工具"
-  },
   "MTnSwY": {
     "defaultMessage": "不含税。"
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "您确定要重新安装虚拟机吗？这将删除所有数据！"
-  },
   "OJuBck": {
     "defaultMessage": "无需密码"
   },
   "OLqOyf": {
     "defaultMessage": "设置说明"
-  },
-  "OS1kG0": {
-    "defaultMessage": "很少使用"
   },
   "OikYIw": {
     "defaultMessage": "最低要求：{min} GB {type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "账户"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入 — 部分支付和超额支付绝不会丢失。"
+  },
   "U96Gl9": {
     "defaultMessage": "请保存此卡，以便今后使用。"
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "建议使用 {cname}，因为它能够自动跟踪服务器 IP 地址的变化。"
-  },
-  "Ue9DHy": {
-    "defaultMessage": "地区："
   },
   "Uk68vE": {
     "defaultMessage": "发送者的公钥（npub/nprofile/十六进制）："
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "新闻和产品更新"
+  },
+  "VKfWR3": {
+    "defaultMessage": "推荐"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "LNVPS 服务条款——比特币闪电网络虚拟专用服务器提供商。请阅读我们的使用政策、可接受的使用指南和服务条款。"
   },
+  "ZshmbW": {
+    "defaultMessage": "此组件仅支持链上支付"
+  },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "请在此处粘贴加密后的消息……"
+  },
+  "bkamRx": {
+    "defaultMessage": "等待确认"
   },
   "bpBvBq": {
     "defaultMessage": "显示货币："
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
+  "e4ehrh": {
+    "defaultMessage": "配置您的机器"
+  },
   "eClqvz": {
     "defaultMessage": "已保存的支付方式。"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展程序"
-  },
-  "elhFf1": {
-    "defaultMessage": "已过期。"
   },
   "eq14GY": {
     "defaultMessage": "您新的密钥。"
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
   },
-  "lPsVOx": {
-    "defaultMessage": "您的虚拟机和域名。"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} 剩余天数"
-  },
   "lcXewt": {
     "defaultMessage": "快速开票"
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "正在使用您保存的付款方式进行扣款。系统会在确认后自动执行此操作。"
-  },
-  "ltoBql": {
-    "defaultMessage": "[新功能]"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 剩余天数} other{# 剩余天数}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "委员会；佣金"
-  },
-  "n8cyVk": {
-    "defaultMessage": "操作系统"
   },
   "n9fdaJ": {
     "defaultMessage": "未经核实"
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "未设置。"
-  },
-  "pY6CgO": {
-    "defaultMessage": "您目前还没有创建任何虚拟机。"
   },
   "pgLgIU": {
     "defaultMessage": "阅读完整更新内容。"
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
   },
-  "sXj7R6": {
-    "defaultMessage": "磁盘："
-  },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "状态"
+  },
+  "u+Blek": {
+    "defaultMessage": "存储类型"
   },
   "u/vOPu": {
     "defaultMessage": "已支付。"
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "已链接。"
   },
-  "waUHa4": {
-    "defaultMessage": "安全外壳协议 (Secure Shell)"
-  },
-  "wfYHHe": {
-    "defaultMessage": "- 剩余 {daysLeft} 天"
-  },
   "wo868v": {
     "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "条款"
   },
-  "xmDqRT": {
-    "defaultMessage": "{pct}% 的虚拟机"
-  },
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} 个核心"
+  },
+  "xnmHVe": {
+    "defaultMessage": "比特币（链上）"
   },
   "xuTqgN": {
     "defaultMessage": "付款方式"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "登录失败"
-  },
-  "yRwRO8": {
-    "defaultMessage": "{pct}% 的机器"
   },
   "yr1Ove": {
     "defaultMessage": "查看 LNVPS 服务的实时运行时间和历史事件记录。请查看我们比特币闪电 VPS 基础设施的当前运行状态。"

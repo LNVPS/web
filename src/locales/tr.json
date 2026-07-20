@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "Bu aboneliği yenilemek için herhangi bir Lightning cüzdanından ödeme yapın."
   },
+  "1p8vog": {
+    "defaultMessage": "Özel VPS"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostr Alan Adı Ekle"
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "Faturalandırma, yenileme ve bildirimler"
-  },
-  "20Sod8": {
-    "defaultMessage": "İşlemci:"
   },
   "2QrTo0": {
     "defaultMessage": "Yeni IP Adresi Atama Talebi"
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "İmaj seç"
   },
+  "6sh6sN": {
+    "defaultMessage": "Bu sayfadan güvenle ayrılabilirsiniz — ödeme fatura geçmişinizde görünür ve onaylandığında uygulanır."
+  },
   "6uMqL1": {
     "defaultMessage": "Ödenmemiş"
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "Gönderiliyor..."
-  },
-  "89xu1A": {
-    "defaultMessage": "Özel VPS Siparişi"
   },
   "8BgaUL": {
     "defaultMessage": "Mevcut Teknik Özellikler"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Şimdi yeniden etkinleştirin."
-  },
-  "CHgKgH": {
-    "defaultMessage": "Düzenli olarak sunulan hizmetler"
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "Henüz mesaj yok. Aşağıda bir sohbet başlatın."
   },
+  "HlAgG9": {
+    "defaultMessage": "Ödemeyi gönderdim"
+  },
   "HqRNN8": {
     "defaultMessage": "Destek"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS. Aylık birkaç satoshi'den başlayan sanal özel sunucular."
   },
-  "MT4qAu": {
-    "defaultMessage": "NIP-44 Şifreleme Araçları"
-  },
   "MTnSwY": {
     "defaultMessage": "örneğin, vergi"
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "Sanal makinenizi yeniden yüklemek istediğinizden emin misiniz? BU İŞLEM TÜM VERİLERİNİZİ SİLECEKTİR!!"
-  },
   "OJuBck": {
     "defaultMessage": "Şifresiz"
   },
   "OLqOyf": {
     "defaultMessage": "Kurulum Talimatları"
-  },
-  "OS1kG0": {
-    "defaultMessage": "Nadiren kullanılır"
   },
   "OikYIw": {
     "defaultMessage": "En az: {min} GB {type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "Hesap"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "Bu adrese zincir üstü Bitcoin gönderin. İşlem onaylandığında süre, alınan tutarla orantılı olarak otomatik eklenir — kısmi ve fazla ödemeler asla kaybolmaz."
+  },
   "U96Gl9": {
     "defaultMessage": "Bu kartı gelecekteki ödemeler için saklayın."
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} önerilir; sunucu IP adresindeki değişiklikleri otomatik olarak takip eder."
-  },
-  "Ue9DHy": {
-    "defaultMessage": "Bölge:"
   },
   "Uk68vE": {
     "defaultMessage": "Gönderenin genel anahtarı (npub/nprofile/onaltılık):"
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "Haberler ve Ürün Güncellemeleri"
+  },
+  "VKfWR3": {
+    "defaultMessage": "Önerilen"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "LNVPS Hizmet Şartları — Bitcoin Lightning VPS sağlayıcısı. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
   },
+  "ZshmbW": {
+    "defaultMessage": "Bu bileşen yalnızca zincir üstü ödemeleri destekler"
+  },
   "aTgjTE": {
     "defaultMessage": "Geçiş anahtarı ekle"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "Şifrelenmiş mesajı buraya yapıştırın..."
+  },
+  "bkamRx": {
+    "defaultMessage": "Onay bekleniyor"
   },
   "bpBvBq": {
     "defaultMessage": "Gösterilecek para birimi:"
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "Bu sanal makine için herhangi bir geçmiş kaydı bulunamadı."
   },
+  "e4ehrh": {
+    "defaultMessage": "Makinenizi oluşturun"
+  },
   "eClqvz": {
     "defaultMessage": "Kaydedilmiş ödeme yöntemleri"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr Uzantısı"
-  },
-  "elhFf1": {
-    "defaultMessage": "[Geçerlilik süresi doldu]"
   },
   "eq14GY": {
     "defaultMessage": "Yeni gizli anahtarınız."
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
   },
-  "lPsVOx": {
-    "defaultMessage": "Sanal makineleriniz ve etki alanlarınız"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} kalan gün sayısı"
-  },
   "lcXewt": {
     "defaultMessage": "Hızlı fatura"
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "Kaydedilmiş ödeme yönteminize para yüklüyoruz. Bu işlem, onaylandıktan sonra otomatik olarak gerçekleştirilecektir."
-  },
-  "ltoBql": {
-    "defaultMessage": "[Yeni]"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# kalan gün sayısı} other{# kalan gün sayısı}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "Komisyon"
-  },
-  "n8cyVk": {
-    "defaultMessage": "İşletim sistemi"
   },
   "n9fdaJ": {
     "defaultMessage": "Doğrulanmamış"
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "Ayarlanmadı"
-  },
-  "pY6CgO": {
-    "defaultMessage": "Şu anda sanal makineniz bulunmuyor."
   },
   "pgLgIU": {
     "defaultMessage": "Güncellemenin tamamını okuyun"
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
   },
-  "sXj7R6": {
-    "defaultMessage": "Disk:"
-  },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Durum"
+  },
+  "u+Blek": {
+    "defaultMessage": "Depolama türü"
   },
   "u/vOPu": {
     "defaultMessage": "Ödendi"
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "Bağlantılı"
   },
-  "waUHa4": {
-    "defaultMessage": "Güvenli Kabuk (Secure Shell)"
-  },
-  "wfYHHe": {
-    "defaultMessage": "-{daysLeft} kalan gün sayısı"
-  },
   "wo868v": {
     "defaultMessage": "Nostr anahtarı veya bunker ile giriş yap →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "Şartlar"
   },
-  "xmDqRT": {
-    "defaultMessage": "VM'lerin %{pct}'i"
-  },
   "xmSWcf": {
     "defaultMessage": "İşlemci: {cores} çekirdekler"
+  },
+  "xnmHVe": {
+    "defaultMessage": "Bitcoin (zincir üstü)"
   },
   "xuTqgN": {
     "defaultMessage": "Ödeme Yöntemleri"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Giriş başarısız"
-  },
-  "yRwRO8": {
-    "defaultMessage": "Makinelerin %{pct}'i"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorunlar görüntülenebilir. Bitcoin Lightning VPS altyapımızın mevcut çalışma durumunu kontrol edin."

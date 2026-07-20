@@ -121,9 +121,15 @@ export function AccountSubscriptionPage() {
         ? "lightning"
         : "revolut" in p.data
           ? "revolut"
-          : "—"),
+          : "onchain" in p.data
+            ? "onchain"
+            : "—"),
+    // On-chain deposits are never rejected — late payments still credit
+    // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: p.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
+    ) : "onchain" in p.data ? (
+      <FormattedMessage defaultMessage="Awaiting confirmation" />
     ) : new Date(p.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
     ) : (
@@ -131,9 +137,9 @@ export function AccountSubscriptionPage() {
     ),
     statusTone: p.is_paid
       ? "primary"
-      : new Date(p.expires) <= new Date()
-        ? "danger"
-        : "warning",
+      : "onchain" in p.data || new Date(p.expires) > new Date()
+        ? "warning"
+        : "danger",
     action: p.is_paid ? (
       <div
         title="Generate invoice"
@@ -170,7 +176,13 @@ export function AccountSubscriptionPage() {
           }
           source={subscriptionRenewalSource(login.api, subscription.id)}
           onPaymentComplete={onPaymentComplete}
-          onCancel={() => setShowPayment(false)}
+          onCancel={() => {
+            setShowPayment(false);
+            // A payment may have been created and left pending (e.g. an
+            // on-chain deposit awaiting confirmation) — refresh so it shows
+            // in the payment history right away.
+            reload();
+          }}
         />
       ) : (
         <>

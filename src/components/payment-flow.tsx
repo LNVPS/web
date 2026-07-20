@@ -12,6 +12,7 @@ import { AsyncButton } from "./button";
 import { FormattedMessage, useIntl } from "react-intl";
 import { accountTaxRate, processingFeeEstimate } from "../utils";
 import VpsPayment from "./vps-payment";
+import OnChainPayment from "./onchain-payment";
 import {
   SectionLabel,
   ReceiptSummary,
@@ -147,7 +148,9 @@ export default function PaymentFlow({
   const isOffSession =
     !!payment &&
     (savedCharge ||
-      (!("lightning" in payment.data) && !("revolut" in payment.data)));
+      (!("lightning" in payment.data) &&
+        !("revolut" in payment.data) &&
+        !("onchain" in payment.data)));
   useEffect(() => {
     if (!payment || !isOffSession) return;
     const tx = setInterval(async () => {
@@ -294,6 +297,16 @@ export default function PaymentFlow({
 
         {"lightning" in payment.data ? (
           <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
+        ) : "onchain" in payment.data ? (
+          <OnChainPayment
+            payment={payment}
+            pollPaid={source.pollPaid}
+            onPaid={handlePaymentComplete}
+            // On-chain confirmation takes 10+ minutes and is credited
+            // server-side, so let the user leave instead of watching a
+            // spinner. The pending payment shows up in billing history.
+            onDone={onCancel ?? leavePayment}
+          />
         ) : "revolut" in payment.data && !savedCharge ? (
           <div className="flex flex-col gap-4">
             <ReceiptSummary

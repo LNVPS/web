@@ -117,7 +117,8 @@ export type PaymentMethodType =
   | "paypal"
   | "stripe"
   | "nwc"
-  | "lnurl";
+  | "lnurl"
+  | "onchain";
 
 export type PaymentTypeValue = "new" | "renew" | "upgrade";
 
@@ -353,7 +354,8 @@ export interface UserSshKey {
 export type PaymentData =
   | { lightning: string }
   | { revolut: { token: string } }
-  | { stripe: { session_id: string } };
+  | { stripe: { session_id: string } }
+  | { onchain: { address: string } };
 
 export interface VmPayment {
   id: string;

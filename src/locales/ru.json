@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "Оплатите подписку с любого кошелька Lightning."
   },
+  "1p8vog": {
+    "defaultMessage": "Индивидуальный VPS"
+  },
   "1v7S+3": {
     "defaultMessage": "Добавить домен Nostr."
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "Выставление счетов, продление подписки и уведомления"
-  },
-  "20Sod8": {
-    "defaultMessage": "Центральный процессор:"
   },
   "2QrTo0": {
     "defaultMessage": "Новый заказ на выделение IP-адресов."
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "Выбрать образ"
   },
+  "6sh6sN": {
+    "defaultMessage": "Вы можете спокойно покинуть эту страницу — платёж появится в истории платежей и будет применён после подтверждения."
+  },
   "6uMqL1": {
     "defaultMessage": "Неоплаченный"
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "Отправка..."
-  },
-  "89xu1A": {
-    "defaultMessage": "Оформление заказа на виртуальный сервер (VPS) с индивидуальными настройками"
   },
   "8BgaUL": {
     "defaultMessage": "Текущие технические характеристики"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Активируйте повторно сейчас."
-  },
-  "CHgKgH": {
-    "defaultMessage": "Регулярные услуги"
   },
   "CYP/Jx": {
     "defaultMessage": "Обратитесь за помощью к команде."
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "Сообщений пока нет. Начните обсуждение ниже."
   },
+  "HlAgG9": {
+    "defaultMessage": "Я отправил платёж"
+  },
   "HqRNN8": {
     "defaultMessage": "Поддержка"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "Высокопроизводительные виртуальные частные серверы, работающие на базе Bitcoin Lightning. Стоимость аренды виртуального частного сервера начинается всего с нескольких сатоши в месяц."
   },
-  "MT4qAu": {
-    "defaultMessage": "Инструменты шифрования NIP-44"
-  },
   "MTnSwY": {
     "defaultMessage": "без учета налогов"
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "Вы уверены, что хотите переустановить свою виртуальную машину? ЭТО ПРИВЕДЕТ К УДАЛЕНИЮ ВСЕХ ДАННЫХ!"
-  },
   "OJuBck": {
     "defaultMessage": "Без пароля"
   },
   "OLqOyf": {
     "defaultMessage": "Инструкция по настройке"
-  },
-  "OS1kG0": {
-    "defaultMessage": "Редко используется"
   },
   "OikYIw": {
     "defaultMessage": "Минимум: {min} ГБ {type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "Аккаунт"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "Отправьте биткоины он-чейн на этот адрес. Время начисляется автоматически после подтверждения транзакции, пропорционально полученной сумме — частичные и избыточные платежи никогда не теряются."
+  },
   "U96Gl9": {
     "defaultMessage": "Сохраните эту карту для будущих платежей."
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} рекомендуется — система автоматически отслеживает изменения IP-адреса сервера."
-  },
-  "Ue9DHy": {
-    "defaultMessage": "Регион:"
   },
   "Uk68vE": {
     "defaultMessage": "Открытый ключ отправителя (в формате npub/nprofile/hex):"
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "Новости и обновления продуктов"
+  },
+  "VKfWR3": {
+    "defaultMessage": "Рекомендуется"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "Условия использования сервиса LNVPS — поставщика услуг виртуальных частных серверов Bitcoin Lightning. Ознакомьтесь с нашими правилами использования, требованиями к допустимому использованию и условиями предоставления услуг."
   },
+  "ZshmbW": {
+    "defaultMessage": "Этот компонент поддерживает только он-чейн платежи"
+  },
   "aTgjTE": {
     "defaultMessage": "Добавить ключ доступа"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "Вставьте зашифрованное сообщение здесь..."
+  },
+  "bkamRx": {
+    "defaultMessage": "Ожидает подтверждения"
   },
   "bpBvBq": {
     "defaultMessage": "Валюта отображения:"
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "Для данной виртуальной машины не найдено записей в истории."
   },
+  "e4ehrh": {
+    "defaultMessage": "Соберите свою машину"
+  },
   "eClqvz": {
     "defaultMessage": "Сохраненные способы оплаты"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Расширение Nostr"
-  },
-  "elhFf1": {
-    "defaultMessage": "[Срок действия истек]"
   },
   "eq14GY": {
     "defaultMessage": "Ваш новый секретный ключ."
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "Данные карты"
   },
-  "lPsVOx": {
-    "defaultMessage": "Ваши виртуальные машины и домены."
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} оставшиеся дни"
-  },
   "lcXewt": {
     "defaultMessage": "Молниеносная выставка счетов."
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "Идёт обработка платежа с использованием сохранённых данных. Эта операция выполняется автоматически после подтверждения."
-  },
-  "ltoBql": {
-    "defaultMessage": "[Новое]"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# осталось один день} other{# осталось дней}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "Комиссия"
-  },
-  "n8cyVk": {
-    "defaultMessage": "Операционная система"
   },
   "n9fdaJ": {
     "defaultMessage": "Не подтверждено."
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "Не задано."
-  },
-  "pY6CgO": {
-    "defaultMessage": "У вас пока нет виртуальных машин."
   },
   "pgLgIU": {
     "defaultMessage": "Ознакомьтесь с полной версией обновления."
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "Зашифрованные сообщения доступны только для аккаунтов Nostr. В вашем аккаунте отсутствует ключ Nostr, необходимый для чтения или отправки сообщений в формате NIP-17. Если вам нужна помощь, воспользуйтесь вкладкой «Поддержка»."
   },
-  "sXj7R6": {
-    "defaultMessage": "Диск:"
-  },
   "sn+Rj5": {
     "defaultMessage": "Войти с ключом доступа"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Статус"
+  },
+  "u+Blek": {
+    "defaultMessage": "Тип накопителя"
   },
   "u/vOPu": {
     "defaultMessage": "Оплачено"
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "Связано/Соединено"
   },
-  "waUHa4": {
-    "defaultMessage": "SSH"
-  },
-  "wfYHHe": {
-    "defaultMessage": "-{daysLeft} оставшиеся дни]"
-  },
   "wo868v": {
     "defaultMessage": "Войти с ключом Nostr или бункером →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "Условия"
   },
-  "xmDqRT": {
-    "defaultMessage": "{pct}% ВМ"
-  },
   "xmSWcf": {
     "defaultMessage": "Процессор: {cores} ядра"
+  },
+  "xnmHVe": {
+    "defaultMessage": "Биткоин (он-чейн)"
   },
   "xuTqgN": {
     "defaultMessage": "Способы оплаты"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Не удалось войти"
-  },
-  "yRwRO8": {
-    "defaultMessage": "{pct}% машин"
   },
   "yr1Ove": {
     "defaultMessage": "Просмотр текущего времени безотказной работы и истории инцидентов для сервисов LNVPS. Узнайте текущий статус работы нашей инфраструктуры Bitcoin Lightning VPS."

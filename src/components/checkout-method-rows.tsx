@@ -8,7 +8,7 @@ import { PaymentOptionRow } from "./checkout";
  * is intentionally excluded: a usable NWC wallet is always a *saved* payment
  * method, so it's listed in the saved-methods section instead of here.
  */
-const KNOWN_METHODS = ["lightning", "lnurl", "revolut"];
+const KNOWN_METHODS = ["lightning", "lnurl", "revolut", "onchain"];
 
 /**
  * Whether a provider method should appear in the list. NWC is only useful once
@@ -35,6 +35,8 @@ function methodLabel(intl: IntlShape, name: string): string {
       return intl.formatMessage({ defaultMessage: "Nostr Wallet Connect" });
     case "revolut":
       return intl.formatMessage({ defaultMessage: "Credit or debit card" });
+    case "onchain":
+      return intl.formatMessage({ defaultMessage: "Bitcoin (on-chain)" });
     default:
       return name.toUpperCase();
   }

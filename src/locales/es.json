@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "Pague desde cualquier billetera Lightning para recargar esta suscripción."
   },
+  "1p8vog": {
+    "defaultMessage": "VPS personalizado"
+  },
   "1v7S+3": {
     "defaultMessage": "Añadir dominio Nostr."
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "Facturación, renovación y notificaciones"
-  },
-  "20Sod8": {
-    "defaultMessage": "CPU:"
   },
   "2QrTo0": {
     "defaultMessage": "Nueva solicitud de espacio de direcciones IP."
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "Seleccionar imagen"
   },
+  "6sh6sN": {
+    "defaultMessage": "Puedes salir de esta página con seguridad — el pago aparece en tu historial de facturación y se aplica una vez confirmado."
+  },
   "6uMqL1": {
     "defaultMessage": "No pagado."
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "Enviando..."
-  },
-  "89xu1A": {
-    "defaultMessage": "Pedido de VPS personalizado"
   },
   "8BgaUL": {
     "defaultMessage": "Especificaciones actuales"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Vuelva a activarlo ahora."
-  },
-  "CHgKgH": {
-    "defaultMessage": "Servicios periódicos"
   },
   "CYP/Jx": {
     "defaultMessage": "Pide ayuda al equipo."
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "Aún no hay mensajes. Inicie una conversación a continuación."
   },
+  "HlAgG9": {
+    "defaultMessage": "He enviado el pago"
+  },
   "HqRNN8": {
     "defaultMessage": "Soporte"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "Servidores privados virtuales de alto rendimiento, impulsados por Bitcoin Lightning. Precios a partir de unos pocos satoshis al mes."
   },
-  "MT4qAu": {
-    "defaultMessage": "Herramientas de cifrado NIP-44"
-  },
   "MTnSwY": {
     "defaultMessage": "impuestos incluidos."
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "¿Está seguro de que desea volver a instalar su máquina virtual? ¡ESTO BORRARÁ TODOS LOS DATOS!"
-  },
   "OJuBck": {
     "defaultMessage": "Sin contraseña"
   },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"
-  },
-  "OS1kG0": {
-    "defaultMessage": "Poco usada"
   },
   "OikYIw": {
     "defaultMessage": "Mínimo: {min} GB {type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "Cuenta"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "Envía Bitcoin on-chain a esta dirección. El tiempo se acredita automáticamente cuando la transacción se confirma, prorrateado según el importe recibido — los pagos parciales y en exceso nunca se pierden."
+  },
   "U96Gl9": {
     "defaultMessage": "Guarde esta tarjeta para futuros pagos."
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "Se recomienda {cname}; detecta automáticamente los cambios en la dirección IP del servidor."
-  },
-  "Ue9DHy": {
-    "defaultMessage": "Región:"
   },
   "Uk68vE": {
     "defaultMessage": "Clave pública del remitente (npub/nprofile/hex):"
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "Novedades y actualizaciones de productos"
+  },
+  "VKfWR3": {
+    "defaultMessage": "Recomendado"
   },
   "VL/B6x": {
     "defaultMessage": "tu@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "Términos de servicio de LNVPS, proveedor de VPS para Bitcoin Lightning. Consulte nuestras políticas de uso, directrices para un uso adecuado y los términos del servicio."
   },
+  "ZshmbW": {
+    "defaultMessage": "Este componente solo admite pagos on-chain"
+  },
   "aTgjTE": {
     "defaultMessage": "Añadir clave de acceso"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "Pegue el mensaje cifrado aquí..."
+  },
+  "bkamRx": {
+    "defaultMessage": "Esperando confirmación"
   },
   "bpBvBq": {
     "defaultMessage": "Mostrar moneda:"
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "No se encontraron entradas de historial para esta máquina virtual."
   },
+  "e4ehrh": {
+    "defaultMessage": "Configura tu máquina"
+  },
   "eClqvz": {
     "defaultMessage": "Métodos de pago guardados"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Extensión de Nostr"
-  },
-  "elhFf1": {
-    "defaultMessage": "[Caducado]"
   },
   "eq14GY": {
     "defaultMessage": "Tu nueva clave secreta."
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "Datos de la tarjeta"
   },
-  "lPsVOx": {
-    "defaultMessage": "Sus máquinas virtuales y dominios"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} días restantes"
-  },
   "lcXewt": {
     "defaultMessage": "Factura rápida"
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "Se está procesando el cargo en el método de pago que tiene guardado. Esto se aplicará automáticamente una vez que se confirme."
-  },
-  "ltoBql": {
-    "defaultMessage": "[Nuevo]"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# día restante} other{# días restantes}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "Comisión"
-  },
-  "n8cyVk": {
-    "defaultMessage": "Sistema operativo"
   },
   "n9fdaJ": {
     "defaultMessage": "No verificado."
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "No configurado."
-  },
-  "pY6CgO": {
-    "defaultMessage": "Todavía no tiene ninguna máquina virtual."
   },
   "pgLgIU": {
     "defaultMessage": "Lea la actualización completa."
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "El servicio de mensajería cifrada solo está disponible para las cuentas de Nostr. Su cuenta no tiene una clave de Nostr necesaria para leer o enviar mensajes NIP-17. Si necesita ayuda, utilice la pestaña de Soporte."
   },
-  "sXj7R6": {
-    "defaultMessage": "Disco:"
-  },
   "sn+Rj5": {
     "defaultMessage": "Iniciar sesión con clave de acceso"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Estado"
+  },
+  "u+Blek": {
+    "defaultMessage": "Tipo de almacenamiento"
   },
   "u/vOPu": {
     "defaultMessage": "Pagado."
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "Enlazado."
   },
-  "waUHa4": {
-    "defaultMessage": "SSH"
-  },
-  "wfYHHe": {
-    "defaultMessage": "- {daysLeft} días restantes"
-  },
   "wo868v": {
     "defaultMessage": "Iniciar sesión con una clave Nostr o bunker →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "Términos y condiciones"
   },
-  "xmDqRT": {
-    "defaultMessage": "{pct}% de las VM"
-  },
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} núcleos"
+  },
+  "xnmHVe": {
+    "defaultMessage": "Bitcoin (on-chain)"
   },
   "xuTqgN": {
     "defaultMessage": "Métodos de pago"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Error al iniciar sesión"
-  },
-  "yRwRO8": {
-    "defaultMessage": "{pct}% de las máquinas"
   },
   "yr1Ove": {
     "defaultMessage": "Consulte el tiempo de actividad en tiempo real y el historial de incidentes de los servicios de LNVPS. Verifique el estado operativo actual de nuestra infraestructura de VPS Bitcoin Lightning."

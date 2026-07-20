@@ -118,9 +118,15 @@ export function VmBillingPage() {
         ? "lightning"
         : "revolut" in a.data
           ? "revolut"
-          : "—"),
+          : "onchain" in a.data
+            ? "onchain"
+            : "—"),
+    // On-chain deposits are never rejected — late payments still credit
+    // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: a.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
+    ) : "onchain" in a.data ? (
+      <FormattedMessage defaultMessage="Awaiting confirmation" />
     ) : new Date(a.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
     ) : (
@@ -128,9 +134,9 @@ export function VmBillingPage() {
     ),
     statusTone: a.is_paid
       ? "primary"
-      : new Date(a.expires) <= new Date()
-        ? "danger"
-        : "warning",
+      : "onchain" in a.data || new Date(a.expires) > new Date()
+        ? "warning"
+        : "danger",
     action: a.is_paid ? (
       <div
         title="Generate Invoice"
@@ -257,7 +263,13 @@ export function VmBillingPage() {
         <RenewalFlow
           vm={state}
           onPaymentComplete={onPaymentComplete}
-          onCancel={() => setShowPaymentFlow(false)}
+          onCancel={() => {
+            setShowPaymentFlow(false);
+            // A payment may have been created and left pending (e.g. an
+            // on-chain deposit awaiting confirmation) — refresh the history
+            // so it shows up right away.
+            listPayments();
+          }}
         />
       )}
 

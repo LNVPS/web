@@ -86,6 +86,9 @@
   "1aBLDj": {
     "defaultMessage": "このサブスクリプションにチャージするには、任意のLightningウォレットからお支払いください。"
   },
+  "1p8vog": {
+    "defaultMessage": "カスタムVPS"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostrドメインを追加"
   },
@@ -94,9 +97,6 @@
   },
   "2/hxXE": {
     "defaultMessage": "請求、更新、および通知"
-  },
-  "20Sod8": {
-    "defaultMessage": "CPU："
   },
   "2QrTo0": {
     "defaultMessage": "新しいIPアドレス範囲の割り当て依頼"
@@ -221,6 +221,9 @@
   "6nAe2O": {
     "defaultMessage": "イメージを選択"
   },
+  "6sh6sN": {
+    "defaultMessage": "このページを離れても問題ありません。支払いは請求履歴に表示され、承認され次第適用されます。"
+  },
   "6uMqL1": {
     "defaultMessage": "未払い"
   },
@@ -268,9 +271,6 @@
   },
   "82Y7Sa": {
     "defaultMessage": "送信中..."
-  },
-  "89xu1A": {
-    "defaultMessage": "カスタムVPSのご注文"
   },
   "8BgaUL": {
     "defaultMessage": "現在の仕様"
@@ -391,9 +391,6 @@
   },
   "Bzv1CO": {
     "defaultMessage": "今すぐ再開してください。"
-  },
-  "CHgKgH": {
-    "defaultMessage": "定期的なサービス"
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
@@ -569,6 +566,9 @@
   "HOWHco": {
     "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
   },
+  "HlAgG9": {
+    "defaultMessage": "支払いを送信しました"
+  },
   "HqRNN8": {
     "defaultMessage": "サポート"
   },
@@ -677,9 +677,6 @@
   "ML7RRt": {
     "defaultMessage": "ビットコインライトニングを活用した高性能VPS。月額わずかなサトシから利用可能な仮想専用サーバーです。"
   },
-  "MT4qAu": {
-    "defaultMessage": "NIP-44暗号化ツール"
-  },
   "MTnSwY": {
     "defaultMessage": "税込み"
   },
@@ -710,17 +707,11 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
-  "O/68ZX": {
-    "defaultMessage": "本当に仮想マシンを再インストールしますか？再インストールすると、すべてのデータが削除されます！"
-  },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
   },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
-  },
-  "OS1kG0": {
-    "defaultMessage": "ほとんど使われていません"
   },
   "OikYIw": {
     "defaultMessage": "最小要件：{min} GBの{type}"
@@ -899,6 +890,12 @@
   "TwyMau": {
     "defaultMessage": "アカウント"
   },
+  "TxS1Nf": {
+    "defaultMessage": "Tor"
+  },
+  "U+Ddsx": {
+    "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
+  },
   "U96Gl9": {
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
   },
@@ -916,9 +913,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname}をお勧めします。サーバーのIPアドレスの変更を自動的に追跡します。"
-  },
-  "Ue9DHy": {
-    "defaultMessage": "地域："
   },
   "Uk68vE": {
     "defaultMessage": "送信者の公開鍵（npub/nprofile/16進数）："
@@ -940,6 +934,9 @@
   },
   "VJ4xwX": {
     "defaultMessage": "最新ニュースと製品情報"
+  },
+  "VKfWR3": {
+    "defaultMessage": "おすすめ"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
@@ -1025,6 +1022,9 @@
   "ZlYFmj": {
     "defaultMessage": "LNVPSの利用規約 — ビットコインライトニングVPSプロバイダー。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条項をお読みください。"
   },
+  "ZshmbW": {
+    "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
+  },
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
   },
@@ -1057,6 +1057,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "暗号化されたメッセージをここに貼り付けてください。"
+  },
+  "bkamRx": {
+    "defaultMessage": "承認待ち"
   },
   "bpBvBq": {
     "defaultMessage": "表示通貨："
@@ -1121,6 +1124,9 @@
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
   },
+  "e4ehrh": {
+    "defaultMessage": "マシンを構成する"
+  },
   "eClqvz": {
     "defaultMessage": "保存された支払い方法"
   },
@@ -1135,9 +1141,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr拡張機能"
-  },
-  "elhFf1": {
-    "defaultMessage": "[有効期限切れ]"
   },
   "eq14GY": {
     "defaultMessage": "新しい秘密鍵です。"
@@ -1310,12 +1313,6 @@
   "lP4qIQ": {
     "defaultMessage": "カード情報"
   },
-  "lPsVOx": {
-    "defaultMessage": "お客様の仮想マシンとドメイン"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} 残り日数"
-  },
   "lcXewt": {
     "defaultMessage": "迅速な請求書発行"
   },
@@ -1336,9 +1333,6 @@
   },
   "lsFKTa": {
     "defaultMessage": "保存済みの支払い方法で決済を行います。確認が完了すると、自動的に処理されます。"
-  },
-  "ltoBql": {
-    "defaultMessage": "【新着】"
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 残り日数} other{# 残り日数}}"
@@ -1372,9 +1366,6 @@
   },
   "mznk9z": {
     "defaultMessage": "委員会、手数料"
-  },
-  "n8cyVk": {
-    "defaultMessage": "オペレーティングシステム"
   },
   "n9fdaJ": {
     "defaultMessage": "確認されていません。"
@@ -1432,9 +1423,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
-  },
-  "pY6CgO": {
-    "defaultMessage": "まだ仮想マシンは作成されていません。"
   },
   "pgLgIU": {
     "defaultMessage": "最新情報をすべてお読みください。"
@@ -1517,9 +1505,6 @@
   "sUw18G": {
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
-  "sXj7R6": {
-    "defaultMessage": "ディスク："
-  },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
   },
@@ -1549,6 +1534,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "状況"
+  },
+  "u+Blek": {
+    "defaultMessage": "ストレージの種類"
   },
   "u/vOPu": {
     "defaultMessage": "有料"
@@ -1616,12 +1604,6 @@
   "waJLKW": {
     "defaultMessage": "リンク済み"
   },
-  "waUHa4": {
-    "defaultMessage": "SSH"
-  },
-  "wfYHHe": {
-    "defaultMessage": "- 残り{daysLeft}日"
-  },
   "wo868v": {
     "defaultMessage": "Nostrキーまたはバンカーでログイン →"
   },
@@ -1652,11 +1634,11 @@
   "xkr+zo": {
     "defaultMessage": "利用規約"
   },
-  "xmDqRT": {
-    "defaultMessage": "VM の {pct}%"
-  },
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} コア"
+  },
+  "xnmHVe": {
+    "defaultMessage": "ビットコイン（オンチェーン）"
   },
   "xuTqgN": {
     "defaultMessage": "お支払い方法"
@@ -1678,9 +1660,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "サインインに失敗しました"
-  },
-  "yRwRO8": {
-    "defaultMessage": "マシンの {pct}%"
   },
   "yr1Ove": {
     "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のビットコインライトニングVPSインフラの現在の運用状況をご確認ください。"

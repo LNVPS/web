@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { VmInstance, VmIpAssignment, VmOsImage } from "../api";
 import VmActions from "../components/vps-actions";
 import OsImageName from "../components/os-image-name";
+import OsImageIcon from "../components/os-image-icon";
 import OsImagePicker from "../components/os-image-picker";
 import BytesSize from "../components/bytes";
 import useLogin from "../hooks/login";
@@ -279,7 +280,12 @@ export default function VmPage() {
           />
           <StatBlock
             label={<FormattedMessage defaultMessage="OS" />}
-            value={`${img.distribution} ${img.flavour} ${img.version}`}
+            value={
+              <span className="flex items-center gap-2">
+                <OsImageIcon distribution={img.distribution} size={20} />
+                <OsImageName image={img} />
+              </span>
+            }
           />
           <StatBlock
             label={<FormattedMessage defaultMessage="Region" />}

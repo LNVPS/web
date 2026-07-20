@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import classNames from "classnames";
 import {
   CostPlanIntervalType,
   CpuArch,
@@ -8,6 +9,7 @@ import {
   DiskType,
   LNVpsApi,
   VmCustomPrice,
+  VmCustomTemplateDiskParams,
   VmCustomTemplateParams,
 } from "../api";
 import { ApiUrl, GiB } from "../const";
@@ -83,6 +85,90 @@ function getCpuConstraintLabel(template: VmCustomTemplateParams): string {
   return parts.join(" ");
 }
 
+/**
+ * Rank disk types so SSD is offered first and selected by default — most
+ * customers want fast storage, HDD is the bulk/cheap exception.
+ */
+function diskRank(type: DiskType): number {
+  return type === DiskType.SSD ? 0 : 1;
+}
+
+function sortDisks(
+  disks: Array<VmCustomTemplateDiskParams>,
+): Array<VmCustomTemplateDiskParams> {
+  return [...disks].sort((a, b) => diskRank(a.disk_type) - diskRank(b.disk_type));
+}
+
+function preferredDisk(
+  disks: Array<VmCustomTemplateDiskParams>,
+): VmCustomTemplateDiskParams | undefined {
+  return sortDisks(disks).at(0);
+}
+
+const DISK_COPY: Record<DiskType, { title: string; blurb: string }> = {
+  [DiskType.SSD]: {
+    title: "SSD",
+    blurb: "Fast solid-state storage",
+  },
+  [DiskType.HDD]: {
+    title: "HDD",
+    blurb: "High-capacity spinning disk",
+  },
+};
+
+/** One compact resource row: label · slider · editable value. */
+function ResourceSlider({
+  label,
+  unit,
+  value,
+  min,
+  max,
+  step = 1,
+  onChange,
+}: {
+  label: string;
+  unit: string;
+  value: number;
+  min: number;
+  max: number;
+  step?: number;
+  onChange: (v: number) => void;
+}) {
+  const clamp = (v: number) => Math.max(min, Math.min(max, v));
+  return (
+    <div className="flex items-center gap-3">
+      <span className="w-16 shrink-0 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+        {label}
+      </span>
+      <input
+        type="range"
+        value={value}
+        onChange={(e) => onChange(e.target.valueAsNumber)}
+        min={min}
+        max={max}
+        step={step}
+        className="grow"
+      />
+      <div className="flex w-28 shrink-0 items-baseline justify-end gap-1.5">
+        <input
+          type="number"
+          value={value}
+          onChange={(e) => {
+            const v = parseInt(e.target.value);
+            if (!isNaN(v)) onChange(clamp(v));
+          }}
+          min={min}
+          max={max}
+          className="w-14 border-none bg-transparent p-0 text-right text-lg leading-none text-cyber-text-bright tabular-nums focus:outline-none focus:ring-0"
+        />
+        <span className="w-10 text-[0.65rem] uppercase tracking-wider text-cyber-muted">
+          {unit}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function VpsCustomOrder({
   templates,
 }: {
@@ -109,9 +195,7 @@ export function VpsCustomOrder({
         seen.set(template.region.id, template);
       }
     }
-    return Array.from(seen.values()).sort(
-      (a, b) => a.region.id - b.region.id,
-    );
+    return Array.from(seen.values()).sort((a, b) => a.region.id - b.region.id);
   }, [templates]);
 
   const [region, setRegion] = useState(regions[0]?.region.id);
@@ -133,11 +217,14 @@ export function VpsCustomOrder({
     return found ?? regionTemplates[0] ?? templates[0];
   }, [regionTemplates, selectedTemplateId, templates]);
 
+  // Disks with SSD first so it is the default the user sees.
+  const sortedDisks = useMemo(() => sortDisks(params.disks), [params.disks]);
+
   const [cpu, setCpu] = useState(params.min_cpu ?? 1);
-  const [diskType, setDiskType] = useState(params.disks.at(0));
+  const [diskType, setDiskType] = useState(preferredDisk(params.disks));
   const [ram, setRam] = useState(Math.floor((params.min_memory ?? GiB) / GiB));
   const [disk, setDisk] = useState(
-    Math.floor((diskType?.min_disk ?? GiB) / GiB),
+    Math.floor((preferredDisk(params.disks)?.min_disk ?? GiB) / GiB),
   );
 
   const [price, setPrice] = useState<VmCustomPrice>();
@@ -163,10 +250,11 @@ export function VpsCustomOrder({
   // Reset parameters when selected template changes
   useEffect(() => {
     if (params) {
+      const disk0 = preferredDisk(params.disks);
       setCpu(params.min_cpu ?? 1);
-      setDiskType(params.disks.at(0));
+      setDiskType(disk0);
       setRam(Math.floor((params.min_memory ?? GiB) / GiB));
-      setDisk(Math.floor((params.disks.at(0)?.min_disk ?? GiB) / GiB));
+      setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
     }
   }, [params]);
 
@@ -198,167 +286,172 @@ export function VpsCustomOrder({
 
   if (templates.length == 0) return;
 
+  const diskUnit = `GB ${diskType?.disk_type.toUpperCase() ?? "SSD"}`;
+
   return (
-    <div className="flex flex-col gap-4 bg-cyber-panel rounded-sm px-4 py-6">
-      <div className="text-lg">
-        <FormattedMessage defaultMessage="Custom VPS Order" />
+    <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
+      <div className="flex items-baseline gap-2 border-b border-cyber-border bg-cyber-panel-light px-4 py-2.5">
+        <span className="text-sm text-cyber-text-bright">
+          <FormattedMessage defaultMessage="Build your machine" />
+        </span>
+        <span className="text-[0.6rem] uppercase tracking-[0.25em] text-cyber-muted">
+          <FormattedMessage defaultMessage="Custom VPS" />
+        </span>
       </div>
-      <div className="flex gap-2 items-center flex-wrap">
-        <div className="text-sm text-cyber-muted py-2">
-          <FormattedMessage defaultMessage="Region:" />
+
+      <div className="flex flex-col gap-4 px-4 py-4">
+        {/* Region + CPU constraints */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+          <div className="flex flex-col gap-2">
+            <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+              <FormattedMessage defaultMessage="Region" />
+            </span>
+            {regions.length > 1 ? (
+              <div className="flex flex-wrap gap-2">
+                {regions.map((template) => (
+                  <FilterButton
+                    key={template.region.id}
+                    active={region === template.region.id}
+                    onClick={() => setRegion(template.region.id)}
+                  >
+                    {template.region.name}
+                  </FilterButton>
+                ))}
+              </div>
+            ) : (
+              <span className="py-1 text-sm text-cyber-text-bright">
+                {regions[0]?.region.name}
+              </span>
+            )}
+          </div>
+
+          {regionTemplates.length > 1 && (
+            <div className="flex flex-col gap-2">
+              <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+                <FormattedMessage defaultMessage="CPU" />
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {regionTemplates.map((template) => (
+                  <FilterButton
+                    key={template.id}
+                    active={selectedTemplateId === template.id}
+                    onClick={() => setSelectedTemplateId(template.id)}
+                  >
+                    {getCpuConstraintLabel(template)}
+                  </FilterButton>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-        {regions.length > 1 ? (
-          regions.map((template) => (
-            <FilterButton
-              key={template.region.id}
-              active={region === template.region.id}
-              onClick={() => setRegion(template.region.id)}
-            >
-              {template.region.name}
-            </FilterButton>
-          ))
-        ) : (
-          <span className="text-sm">{regions[0]?.region.name}</span>
+
+        {/* Storage type — SSD leads, HDD framed as the bulk option */}
+        {sortedDisks.length > 1 && (
+          <div className="flex flex-col gap-2">
+            <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+              <FormattedMessage defaultMessage="Storage type" />
+            </span>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              {sortedDisks.map((d) => {
+                const active = diskType?.disk_type === d.disk_type;
+                const copy = DISK_COPY[d.disk_type];
+                const recommended = d.disk_type === DiskType.SSD;
+                return (
+                  <button
+                    key={d.disk_type}
+                    type="button"
+                    onClick={() => setDiskType(d)}
+                    className={classNames(
+                      "flex flex-1 items-center justify-between gap-2 rounded-sm border px-3 py-2 text-left transition-all duration-200",
+                      active
+                        ? "border-cyber-primary bg-cyber-primary/10 shadow-neon-sm"
+                        : "border-cyber-border bg-cyber-panel hover:border-cyber-primary/60",
+                    )}
+                  >
+                    <div className="flex items-baseline gap-2">
+                      <span
+                        className={classNames(
+                          "text-sm font-bold uppercase tracking-wider",
+                          active ? "text-cyber-primary" : "text-cyber-text",
+                        )}
+                      >
+                        {copy.title}
+                      </span>
+                      <span className="text-[0.65rem] text-cyber-muted">
+                        {copy.blurb}
+                      </span>
+                    </div>
+                    {recommended && (
+                      <span className="shrink-0 rounded-sm border border-cyber-primary/40 px-1.5 py-0.5 text-[0.55rem] uppercase tracking-[0.2em] text-cyber-primary">
+                        <FormattedMessage defaultMessage="Recommended" />
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         )}
-      </div>
-      {regionTemplates.length > 1 && (
-        <div className="flex gap-2 items-center flex-wrap">
-          <div className="text-sm text-cyber-muted py-2">
-            <FormattedMessage defaultMessage="CPU:" />
-          </div>
-          {regionTemplates.map((template) => (
-            <FilterButton
-              key={template.id}
-              active={selectedTemplateId === template.id}
-              onClick={() => setSelectedTemplateId(template.id)}
-            >
-              {getCpuConstraintLabel(template)}
-            </FilterButton>
-          ))}
-        </div>
-      )}
-      {params.disks.length > 1 && (
-        <div className="flex gap-2">
-          <div className="text-sm text-cyber-muted py-2">
-            <FormattedMessage defaultMessage="Disk:" />
-          </div>
-          {params.disks.map((d) => (
-            <FilterButton
-              key={d.disk_type}
-              active={diskType?.disk_type === d.disk_type}
-              onClick={() => setDiskType(d)}
-            >
-              {d.disk_type.toUpperCase()}
-            </FilterButton>
-          ))}
-        </div>
-      )}
-      <div className="flex items-center gap-4">
-        <div className="min-w-[140px] flex items-center gap-2">
-          <input
-            type="number"
+
+        {/* Resources */}
+        <div className="flex flex-col gap-3">
+          <ResourceSlider
+            label="CPU cores"
+            unit="vCPU"
             value={cpu}
-            onChange={(e) => {
-              const v = parseInt(e.target.value);
-              if (!isNaN(v))
-                setCpu(Math.max(params.min_cpu, Math.min(params.max_cpu, v)));
-            }}
             min={params.min_cpu}
             max={params.max_cpu}
-            className="w-20 text-center"
+            onChange={setCpu}
           />
-          <span className="text-cyber-muted text-sm">CPU</span>
-        </div>
-        <input
-          type="range"
-          value={cpu}
-          onChange={(e) => setCpu(e.target.valueAsNumber)}
-          min={params.min_cpu}
-          max={params.max_cpu}
-          step={1}
-          className="grow"
-        />
-      </div>
-      <div className="flex items-center gap-4">
-        <div className="min-w-[140px] flex items-center gap-2">
-          <input
-            type="number"
+          <ResourceSlider
+            label="Memory"
+            unit="GB"
             value={ram}
-            onChange={(e) => {
-              const v = parseInt(e.target.value);
-              const min = Math.floor(params.min_memory / GiB);
-              const max = Math.floor(params.max_memory / GiB);
-              if (!isNaN(v)) setRam(Math.max(min, Math.min(max, v)));
-            }}
             min={Math.floor(params.min_memory / GiB)}
             max={Math.floor(params.max_memory / GiB)}
-            className="w-20 text-center"
+            onChange={setRam}
           />
-          <span className="text-cyber-muted text-sm">GB RAM</span>
-        </div>
-        <input
-          type="range"
-          value={ram}
-          onChange={(e) => setRam(e.target.valueAsNumber)}
-          min={Math.floor(params.min_memory / GiB)}
-          max={Math.floor(params.max_memory / GiB)}
-          step={1}
-          className="grow"
-        />
-      </div>
-      <div className="flex items-center gap-4">
-        <div className="min-w-[160px] flex items-center gap-2">
-          <input
-            type="number"
+          <ResourceSlider
+            label="Storage"
+            unit="GB"
             value={disk}
-            onChange={(e) => {
-              const v = parseInt(e.target.value);
-              const min = Math.floor((diskType?.min_disk ?? 0) / GiB);
-              const max = Math.floor((diskType?.max_disk ?? 0) / GiB);
-              if (!isNaN(v)) setDisk(Math.max(min, Math.min(max, v)));
-            }}
             min={Math.floor((diskType?.min_disk ?? 0) / GiB)}
             max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
-            className="w-24 text-center"
+            onChange={setDisk}
           />
-          <span className="text-cyber-muted text-sm">
-            GB {diskType?.disk_type.toLocaleUpperCase()}
-          </span>
         </div>
-        <input
-          type="range"
-          value={disk}
-          onChange={(e) => setDisk(e.target.valueAsNumber)}
-          min={Math.floor((diskType?.min_disk ?? 0) / GiB)}
-          max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
-          step={1}
-          className="grow"
-        />
       </div>
-      {price && (
-        <div className="flex items-center justify-between">
-          <div className="text-xl flex-1">
-            <CostLabel cost={cost_plan} />
+
+      {/* Summary footer: live build manifest + price + buy */}
+      <div className="flex flex-col gap-3 border-t border-cyber-border bg-cyber-panel-light px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-0.5">
+          <div className="font-mono text-xs text-cyber-muted tabular-nums">
+            {cpu} vCPU · {ram} GB · {disk} {diskUnit} @ {params.region.name}
           </div>
-          <div className="flex-1">
-            <VpsPayButton
-              spec={{
-                id: 0,
-                pricing_id: params.id,
-                cpu,
-                name: "Custom",
-                memory: ram * GiB,
-                disk_size: disk * GiB,
-                disk_type: diskType?.disk_type ?? DiskType.SSD,
-                disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
-                created: new Date().toISOString(),
-                region: params.region,
-                cost_plan,
-              }}
-            />
-          </div>
+          {price && (
+            <div className="text-xl leading-none text-cyber-text-bright">
+              <CostLabel cost={cost_plan} />
+            </div>
+          )}
         </div>
-      )}
+        <div className="sm:w-48">
+          <VpsPayButton
+            spec={{
+              id: 0,
+              pricing_id: params.id,
+              cpu,
+              name: "Custom",
+              memory: ram * GiB,
+              disk_size: disk * GiB,
+              disk_type: diskType?.disk_type ?? DiskType.SSD,
+              disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
+              created: new Date().toISOString(),
+              region: params.region,
+              cost_plan,
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

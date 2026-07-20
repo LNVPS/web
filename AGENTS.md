@@ -36,3 +36,4 @@ Load the appropriate language-specific doc alongside the generic one:
 | [docs/build-and-test.md](docs/build-and-test.md)     | Running builds, type-checking, linting, or verifying changes                                |
 | [docs/code-style.md](docs/code-style.md)             | Writing or reviewing code (formatting, components, hooks, error handling, styling, routing) |
 | [docs/billing-design-system.md](docs/billing-design-system.md) | Building any billing/lease/payment surface (cards, status pills, tones, lease meter, deletion notices) |
+| [docs/api-changes.md](docs/api-changes.md)           | Implementing/adjusting anything backed by the API (new endpoints, fields, request params) — **always start here** |

@@ -1,10 +1,15 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { FormattedDate, FormattedMessage } from "react-intl";
-import { SavedPaymentMethod, Subscription } from "../api";
+import {
+  CostPlanIntervalType,
+  SavedPaymentMethod,
+  Subscription,
+  VmCostPlan,
+} from "../api";
 import { AsyncButton } from "./button";
 import { CostAmount } from "./cost";
-import { Card, CardBody, CardHeader } from "./card";
+import { Card, CardBody, CardTitle } from "./card";
 import { iconColorClass } from "./checkout-method-rows";
 import { Icon } from "./icon";
 
@@ -92,6 +97,21 @@ export function subscriptionStatus(sub: Subscription): {
   return { tone: "primary", label: <FormattedMessage defaultMessage="Active" /> };
 }
 
+/** Length of one billing cycle in days, used to scale the expiry meter. */
+export function planCycleDays(plan: VmCostPlan): number {
+  const n = plan.interval_amount || 1;
+  switch (plan.interval_type) {
+    case CostPlanIntervalType.DAY:
+      return n;
+    case CostPlanIntervalType.MONTH:
+      return n * 30;
+    case CostPlanIntervalType.YEAR:
+      return n * 365;
+    default:
+      return 30;
+  }
+}
+
 /** Derive status/tone/meter from an expiry date and the billing cycle length. */
 export function expiryStatus(
   expires: string | undefined,
@@ -172,15 +192,9 @@ export function BillingStatusCard({
 }) {
   return (
     <Card>
-      <CardHeader
-        strip
-        className="flex items-center justify-between gap-2 px-4 py-2"
-      >
-        <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
-          {eyebrow}
-        </span>
-        <StatusPill tone={tone}>{statusLabel}</StatusPill>
-      </CardHeader>
+      <CardTitle right={<StatusPill tone={tone}>{statusLabel}</StatusPill>}>
+        {eyebrow}
+      </CardTitle>
       <CardBody className="px-4 py-5 flex flex-col gap-5">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="flex flex-col gap-1">
@@ -364,19 +378,17 @@ export function BillingPaymentsTable({
   );
   return (
     <Card>
-      <CardHeader
-        strip
-        className="flex items-center justify-between gap-2 px-4 py-2"
+      <CardTitle
+        right={
+          sorted.length > 0 && (
+            <span className="text-[0.65rem] tabular-nums text-cyber-muted">
+              {sorted.length}
+            </span>
+          )
+        }
       >
-        <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
-          <FormattedMessage defaultMessage="Payment history" />
-        </span>
-        {sorted.length > 0 && (
-          <span className="text-[0.65rem] tabular-nums text-cyber-muted">
-            {sorted.length}
-          </span>
-        )}
-      </CardHeader>
+        <FormattedMessage defaultMessage="Payment history" />
+      </CardTitle>
       <CardBody className="p-0">
         {sorted.length === 0 ? (
           <div className="px-4 py-8 text-center text-sm text-cyber-muted">

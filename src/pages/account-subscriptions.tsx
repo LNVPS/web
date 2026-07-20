@@ -8,6 +8,7 @@ import {
   StatusPill,
   subscriptionStatus,
 } from "../components/billing";
+import { PageHeader } from "../components/section";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
 import { FormattedDate, FormattedMessage } from "react-intl";
@@ -169,14 +170,12 @@ export function AccountSubscriptionsPage() {
   return (
     <div className="flex flex-col gap-4">
       <Seo noindex={true} />
-      <div>
-        <h1 className="m-0 text-2xl text-cyber-primary">
-          <FormattedMessage defaultMessage="Subscriptions" />
-        </h1>
-        <p className="mt-1 text-sm text-cyber-muted">
+      <PageHeader
+        title={<FormattedMessage defaultMessage="Subscriptions" />}
+        description={
           <FormattedMessage defaultMessage="Recurring plans that keep your services active." />
-        </p>
-      </div>
+        }
+      />
 
       {error && <b className="text-cyber-danger">{error}</b>}
 

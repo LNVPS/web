@@ -4,6 +4,7 @@ import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
+import { PageHeader } from "../components/section";
 import { showError } from "../toast";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
 
@@ -67,14 +68,17 @@ export function AccountSshKeysPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div>
-        <h1 className="m-0 text-2xl text-cyber-text-bright">
-          <FormattedMessage defaultMessage="SSH Keys" />
-        </h1>
-        <p className="mt-1 mb-0 text-sm text-cyber-muted">
+      <PageHeader
+        title={<FormattedMessage defaultMessage="SSH Keys" />}
+        description={
           <FormattedMessage defaultMessage="Manage the SSH keys used to access your VMs." />
-        </p>
-      </div>
+        }
+        actions={
+          <AsyncButton onClick={() => setShowAddKey(true)}>
+            <FormattedMessage defaultMessage="Add SSH Key" />
+          </AsyncButton>
+        }
+      />
 
       <div className="flex flex-col gap-2">
         {sshKeys === undefined && (
@@ -138,12 +142,6 @@ export function AccountSshKeysPage() {
             </AsyncButton>
           </div>
         ))}
-      </div>
-
-      <div>
-        <AsyncButton onClick={() => setShowAddKey(true)}>
-          <FormattedMessage defaultMessage="Add SSH Key" />
-        </AsyncButton>
       </div>
 
       {showAddKey && (

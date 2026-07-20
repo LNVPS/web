@@ -35,3 +35,4 @@ Load the appropriate language-specific doc alongside the generic one:
 | [docs/project-overview.md](docs/project-overview.md) | Understanding project structure, modules, API client, deployment                            |
 | [docs/build-and-test.md](docs/build-and-test.md)     | Running builds, type-checking, linting, or verifying changes                                |
 | [docs/code-style.md](docs/code-style.md)             | Writing or reviewing code (formatting, components, hooks, error handling, styling, routing) |
+| [docs/billing-design-system.md](docs/billing-design-system.md) | Building any billing/lease/payment surface (cards, status pills, tones, lease meter, deletion notices) |

@@ -8,7 +8,7 @@ import {
 } from "../api";
 import useLogin from "../hooks/login";
 import { CostAmount } from "../components/cost";
-import { Card, CardBody, CardHeader } from "../components/card";
+import { Card, CardBody, CardTitle } from "../components/card";
 import { Icon } from "../components/icon";
 import PaymentFlow from "../components/payment-flow";
 import { subscriptionRenewalSource } from "../components/payment-sources";
@@ -283,11 +283,9 @@ export function AccountSubscriptionPage() {
           )}
 
           <Card>
-            <CardHeader strip className="px-4 py-2">
-              <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
-                <FormattedMessage defaultMessage="Line items" />
-              </span>
-            </CardHeader>
+            <CardTitle>
+              <FormattedMessage defaultMessage="Line items" />
+            </CardTitle>
             <CardBody className="p-0">
               <div className="divide-y divide-cyber-border/60">
                 {subscription.line_items.map((li) => (

@@ -14,6 +14,7 @@ import { VmGraphsPage } from "./pages/vm-graphs.tsx";
 import { NewsPage } from "./pages/news.tsx";
 import { NewsPost } from "./pages/news-post.tsx";
 import { AccountNostrDomainPage } from "./pages/account-domain.tsx";
+import { AccountDomainsPage } from "./pages/account-domains.tsx";
 import { VmHistoryPage } from "./pages/vm-history.tsx";
 import { VmFirewallPage } from "./pages/vm-firewall.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
@@ -76,6 +77,10 @@ export const routes: RouteObject[] = [
           {
             path: "ssh-keys",
             element: <AccountSshKeysPage />,
+          },
+          {
+            path: "domains",
+            element: <AccountDomainsPage />,
           },
           {
             path: "nostr-domain",

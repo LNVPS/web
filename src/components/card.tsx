@@ -50,6 +50,37 @@ export function CardHeader({
   );
 }
 
+/**
+ * The standard card header bar used across every card: the highlighted `strip`
+ * treatment, a small uppercase label on the left, and an optional slot on the
+ * right (a status pill, a count, actions). This is the single source of truth
+ * for what a card header looks like — billing cards and section cards alike.
+ */
+export function CardTitle({
+  children,
+  right,
+  className,
+}: {
+  children: ReactNode;
+  right?: ReactNode;
+  className?: string;
+}) {
+  return (
+    <CardHeader
+      strip
+      className={classNames(
+        "flex flex-wrap items-center justify-between gap-2 px-4 py-2",
+        className,
+      )}
+    >
+      <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
+        {children}
+      </span>
+      {right}
+    </CardHeader>
+  );
+}
+
 /** A card's body. Padding is supplied by the caller. */
 export function CardBody({
   children,

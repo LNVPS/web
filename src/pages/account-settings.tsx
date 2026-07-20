@@ -2,40 +2,12 @@ import useLogin from "../hooks/login";
 import { ReactNode, useEffect, useState } from "react";
 import { AccountDetail, NotificationChannels } from "../api";
 import { AsyncButton } from "../components/button";
-import { Card, CardBody, CardHeader } from "../components/card";
+import { PageHeader, SectionCard } from "../components/section";
 import { PaymentMethods } from "../components/payment-methods";
 import PasskeysSection from "../components/passkeys-section";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
-
-/** A bordered panel with an uppercase eyebrow, title and optional description. */
-function SettingsSection({
-  eyebrow,
-  title,
-  description,
-  children,
-}: {
-  eyebrow: string;
-  title: ReactNode;
-  description?: ReactNode;
-  children: ReactNode;
-}) {
-  return (
-    <Card className="bg-cyber-panel/40">
-      <CardHeader className="px-5 py-4">
-        <div className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-primary">
-          {eyebrow}
-        </div>
-        <h2 className="m-0 mt-1 text-lg text-cyber-text-bright">{title}</h2>
-        {description && (
-          <p className="mt-1 mb-0 text-sm text-cyber-muted">{description}</p>
-        )}
-      </CardHeader>
-      <CardBody className="p-5">{children}</CardBody>
-    </Card>
-  );
-}
 
 /** Label + control pair, stacked on mobile and aligned in a grid on desktop. */
 function Field({
@@ -141,17 +113,14 @@ export function AccountSettings() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div>
-        <h1 className="m-0 text-2xl text-cyber-primary">
-          <FormattedMessage defaultMessage="Account Settings" />
-        </h1>
-        <p className="mt-1 text-sm text-cyber-muted">
+      <PageHeader
+        title={<FormattedMessage defaultMessage="Account Settings" />}
+        description={
           <FormattedMessage defaultMessage="Manage your billing details, automatic renewal and how we reach you." />
-        </p>
-      </div>
+        }
+      />
 
-      <SettingsSection
-        eyebrow="Billing"
+      <SectionCard
         title={<FormattedMessage defaultMessage="Billing Details" />}
         description={
           <FormattedMessage defaultMessage="Optional. Appears on the invoices we generate for your payments." />
@@ -230,30 +199,27 @@ export function AccountSettings() {
             </select>
           </Field>
         </div>
-      </SettingsSection>
+      </SectionCard>
 
-      <SettingsSection
-        eyebrow="Security"
+      <SectionCard
         title={<FormattedMessage defaultMessage="Passkeys" />}
         description={
           <FormattedMessage defaultMessage="Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account." />
         }
       >
         <PasskeysSection accountType={acc.account_type} />
-      </SettingsSection>
+      </SectionCard>
 
-      <SettingsSection
-        eyebrow="Renewal"
+      <SectionCard
         title={<FormattedMessage defaultMessage="Payment Methods" />}
         description={
           <FormattedMessage defaultMessage="Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default." />
         }
       >
         <PaymentMethods />
-      </SettingsSection>
+      </SectionCard>
 
-      <SettingsSection
-        eyebrow="Notifications"
+      <SectionCard
         title={<FormattedMessage defaultMessage="How We Reach You" />}
         description={
           <FormattedMessage defaultMessage="Account alerts only, such as VM expiration. We never send marketing messages." />
@@ -534,7 +500,7 @@ export function AccountSettings() {
             </ChannelRow>
           )}
         </div>
-      </SettingsSection>
+      </SectionCard>
 
       <div className="flex items-center gap-4">
         <AsyncButton

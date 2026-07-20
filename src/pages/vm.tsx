@@ -10,6 +10,13 @@ import { AsyncButton } from "../components/button";
 import { Icon } from "../components/icon";
 import Modal from "../components/modal";
 import SSHKeySelector from "../components/ssh-keys";
+import {
+  DeletionWarning,
+  StatusPill,
+  expiryStatus,
+  planCycleDays,
+} from "../components/billing";
+import { SectionCard } from "../components/section";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { showError } from "../toast";
@@ -109,12 +116,13 @@ export default function VmPage() {
     );
   }
 
-  const isNew = !state.expires;
-  const expires = state.expires ? new Date(state.expires) : undefined;
-  const now = new Date();
-  const isExpired = expires ? expires <= now : false;
-  const daysLeft = expires
-    ? Math.ceil((expires.getTime() - now.getTime()) / 1000 / 60 / 60 / 24)
+  const t = state.template;
+  const img = state.image;
+  const st = expiryStatus(state.expires, planCycleDays(t.cost_plan));
+  const isNew = st.isNew;
+  const isExpired = st.expired;
+  const deletingOn = state.deleting_on
+    ? new Date(state.deleting_on)
     : undefined;
 
   const vmState = state.status?.state;
@@ -122,13 +130,11 @@ export default function VmPage() {
   const isRunning = vmState === "running";
   const isStopped = vmState === "stopped";
 
-  const t = state.template;
-  const img = state.image;
-
-  // Status pill
-  const statusEl = isCreating ? (
-    <span className="inline-flex items-center gap-1.5 text-yellow-400 text-sm">
-      <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse inline-block" />
+  // Runtime state: whether the machine is powered on right now (orthogonal to
+  // the lease/billing status shown by the pill).
+  const runtimeEl = isCreating ? (
+    <span className="inline-flex items-center gap-1.5 text-cyber-warning text-sm">
+      <span className="w-2 h-2 rounded-full bg-cyber-warning animate-pulse inline-block" />
       <FormattedMessage defaultMessage="Creating" />
     </span>
   ) : isRunning ? (
@@ -163,42 +169,44 @@ export default function VmPage() {
     </span>
   ) : null;
 
-  // Expiry badge
-  const expiryEl = isNew ? (
-    <span className="text-cyber-primary text-sm">
-      <FormattedMessage defaultMessage="Awaiting first payment" />
-    </span>
+  // Lease/billing status, using the shared vocabulary.
+  const leaseLabel = isNew ? (
+    <FormattedMessage defaultMessage="New" />
   ) : isExpired ? (
-    <span className="text-cyber-danger text-sm">
-      <FormattedMessage defaultMessage="Expired" />
-    </span>
-  ) : daysLeft !== undefined ? (
-    <span
-      className={`text-sm ${daysLeft <= 3 ? "text-cyber-danger" : daysLeft <= 7 ? "text-yellow-400" : "text-cyber-muted"}`}
-    >
-      <FormattedMessage
-        defaultMessage="{daysLeft} days remaining"
-        values={{ daysLeft }}
-      />
-    </span>
-  ) : null;
+    <FormattedMessage defaultMessage="Expired" />
+  ) : st.expiringSoon ? (
+    <FormattedMessage defaultMessage="Expiring soon" />
+  ) : (
+    <FormattedMessage defaultMessage="Active" />
+  );
 
   return (
     <div className="flex flex-col gap-6">
       <Seo noindex={true} />
 
-      {/* Header row: name + actions */}
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex flex-col gap-1">
-          <div className="text-2xl font-semibold text-cyber-text-bright">
+      {/* Header row: name, runtime + lease status, actions */}
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="flex flex-col gap-1.5 min-w-0">
+          <div className="text-2xl font-semibold text-cyber-text-bright truncate">
             {state.ip_assignments?.[0]?.reverse_dns ?? t.name}
           </div>
           <div className="flex items-center gap-3 flex-wrap">
-            {statusEl}
-            {statusEl && expiryEl && (
-              <span className="text-cyber-border">|</span>
+            {runtimeEl}
+            <StatusPill tone={st.tone}>{leaseLabel}</StatusPill>
+            {isNew ? (
+              <span className="text-xs text-cyber-muted">
+                <FormattedMessage defaultMessage="Awaiting first payment" />
+              </span>
+            ) : (
+              !isExpired && (
+                <span className="text-xs text-cyber-muted tabular-nums">
+                  <FormattedMessage
+                    defaultMessage="{days, plural, one {# day left} other {# days left}}"
+                    values={{ days: st.daysLeft }}
+                  />
+                </span>
+              )
             )}
-            {expiryEl}
           </div>
         </div>
         <div className="flex items-center gap-3 shrink-0">
@@ -226,68 +234,76 @@ export default function VmPage() {
         </div>
       </div>
 
-      {/* Spec grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        <StatBlock
-          label={<FormattedMessage defaultMessage="CPU" />}
-          value={
-            <FormattedMessage defaultMessage="{n} vCPU" values={{ n: t.cpu }} />
-          }
-        />
-        <StatBlock
-          label={<FormattedMessage defaultMessage="Memory" />}
-          value={<BytesSize value={t.memory} />}
-        />
-        <StatBlock
-          label={<FormattedMessage defaultMessage="Disk" />}
-          value={
-            <>
-              <BytesSize value={t.disk_size} />{" "}
-              <span className="text-cyber-muted text-xs">
-                {t.disk_type.toUpperCase()}
-              </span>
-            </>
-          }
-        />
-        <StatBlock
-          label={<FormattedMessage defaultMessage="OS" />}
-          value={`${img.distribution} ${img.flavour} ${img.version}`}
-        />
-        <StatBlock
-          label={<FormattedMessage defaultMessage="Region" />}
-          value={t.region.name}
-        />
-        <StatBlock
-          label={<FormattedMessage defaultMessage="SSH Key" />}
-          value={
-            <span className="flex items-center gap-2">
-              {state.ssh_key?.name ?? "—"}
-              <Icon
-                name="pencil"
-                className="inline shrink-0"
-                size={13}
-                onClick={() => setEditKey(true)}
+      {/* Lapsed lease: surface the deletion deadline. */}
+      {isExpired && deletingOn && <DeletionWarning deletingOn={deletingOn} />}
+
+      {/* Specification */}
+      <SectionCard title={<FormattedMessage defaultMessage="Specification" />}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <StatBlock
+            label={<FormattedMessage defaultMessage="CPU" />}
+            value={
+              <FormattedMessage
+                defaultMessage="{n} vCPU"
+                values={{ n: t.cpu }}
               />
-            </span>
-          }
-        />
-      </div>
+            }
+          />
+          <StatBlock
+            label={<FormattedMessage defaultMessage="Memory" />}
+            value={<BytesSize value={t.memory} />}
+          />
+          <StatBlock
+            label={<FormattedMessage defaultMessage="Disk" />}
+            value={
+              <>
+                <BytesSize value={t.disk_size} />{" "}
+                <span className="text-cyber-muted text-xs">
+                  {t.disk_type.toUpperCase()}
+                </span>
+              </>
+            }
+          />
+          <StatBlock
+            label={<FormattedMessage defaultMessage="OS" />}
+            value={`${img.distribution} ${img.flavour} ${img.version}`}
+          />
+          <StatBlock
+            label={<FormattedMessage defaultMessage="Region" />}
+            value={t.region.name}
+          />
+          <StatBlock
+            label={<FormattedMessage defaultMessage="SSH Key" />}
+            value={
+              <span className="flex items-center gap-2">
+                {state.ssh_key?.name ?? "—"}
+                <Icon
+                  name="pencil"
+                  className="inline shrink-0"
+                  size={13}
+                  onClick={() => setEditKey(true)}
+                />
+              </span>
+            }
+          />
+        </div>
+      </SectionCard>
 
       {/* Creating state — loader */}
       {isCreating && (
-        <div className="flex flex-col items-center gap-4 py-10 border border-dashed border-yellow-400/40 rounded-sm">
+        <div className="flex flex-col items-center gap-4 py-10 border border-dashed border-cyber-warning/40 rounded-sm">
           <div className="flex gap-1.5">
             {[0, 1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="w-2 h-2 rounded-full bg-yellow-400"
+                className="w-2 h-2 rounded-full bg-cyber-warning"
                 style={{
                   animation: `pulse 1.2s ease-in-out ${i * 0.2}s infinite`,
                 }}
               />
             ))}
           </div>
-          <div className="text-yellow-400 text-sm">
+          <div className="text-cyber-warning text-sm">
             <FormattedMessage defaultMessage="Your VM is being provisioned. This usually takes a minute or two." />
           </div>
           <div className="text-cyber-muted text-xs">
@@ -296,13 +312,10 @@ export default function VmPage() {
         </div>
       )}
 
-      {/* Network + SSH — hidden while creating */}
+      {/* Network + Access — hidden while creating */}
       {!isCreating && (
         <>
-          <div>
-            <div className="text-sm text-cyber-muted uppercase tracking-wide mb-3">
-              <FormattedMessage defaultMessage="Network" />
-            </div>
+          <SectionCard title={<FormattedMessage defaultMessage="Network" />}>
             {(state.ip_assignments?.length ?? 0) === 0 ? (
               <div className="text-sm text-cyber-danger">
                 <FormattedMessage defaultMessage="No IPs assigned" />
@@ -312,22 +325,28 @@ export default function VmPage() {
                 {state.ip_assignments.map((a) => ipRow(a))}
               </div>
             )}
-          </div>
+          </SectionCard>
 
           {(state.ip_assignments?.length ?? 0) > 0 && (
-            <div>
-              <div className="text-sm text-cyber-muted uppercase tracking-wide mb-3">
-                <FormattedMessage defaultMessage="SSH" />
-              </div>
-              <pre className="select-all bg-cyber-panel px-4 py-3 rounded-sm font-mono text-sm text-cyber-text-bright w-fit">
+            <SectionCard
+              title={<FormattedMessage defaultMessage="Access" />}
+              description={
+                <FormattedMessage defaultMessage="Connect over SSH with your selected key." />
+              }
+            >
+              <pre className="select-all bg-cyber-panel px-4 py-3 rounded-sm font-mono text-sm text-cyber-text-bright w-fit max-w-full overflow-x-auto">
                 ssh {state.image.default_username}@{bestHost()}
               </pre>
-            </div>
+            </SectionCard>
           )}
 
-          <hr />
-
-          <div className="flex gap-4 flex-wrap">
+          <SectionCard
+            eyebrow={<FormattedMessage defaultMessage="Danger zone" />}
+            title={<FormattedMessage defaultMessage="Reinstall" />}
+            description={
+              <FormattedMessage defaultMessage="Wipe the VM and start from a fresh image. This permanently deletes all data on it." />
+            }
+          >
             <AsyncButton
               className="border-cyber-danger text-cyber-danger hover:border-cyber-danger hover:shadow-neon-danger hover:text-cyber-danger"
               onClick={async () => {
@@ -350,7 +369,7 @@ export default function VmPage() {
             >
               <FormattedMessage defaultMessage="Reinstall" />
             </AsyncButton>
-          </div>
+          </SectionCard>
         </>
       )}
 

@@ -1,5 +1,6 @@
 import Nip17DM from "../components/nip17-dm";
 import useLogin from "../hooks/login";
+import { PageHeader } from "../components/section";
 import { FormattedMessage } from "react-intl";
 
 export function AccountMessagesPage() {
@@ -7,9 +8,12 @@ export function AccountMessagesPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="text-xl">
-        <FormattedMessage defaultMessage="Messages" />
-      </div>
+      <PageHeader
+        title={<FormattedMessage defaultMessage="Messages" />}
+        description={
+          <FormattedMessage defaultMessage="Your encrypted NIP-17 message history with support." />
+        }
+      />
       {login?.isNostrless ? (
         <div className="rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
           <FormattedMessage defaultMessage="Encrypted messaging is only available for Nostr accounts. Your account has no Nostr key to read or send NIP-17 messages. For help, please use the Support tab." />

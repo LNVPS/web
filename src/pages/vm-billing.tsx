@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import {
-  VmCostPlan,
-  VmInstance,
-  VmPayment,
-  CostPlanIntervalType,
-  SavedPaymentMethod,
-} from "../api";
+import { VmInstance, VmPayment, SavedPaymentMethod } from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import CostLabel, { IntervalSuffix } from "../components/cost";
@@ -21,6 +15,7 @@ import {
   BillingStatusCard,
   DeletionWarning,
   expiryStatus,
+  planCycleDays,
   type PaymentRow,
 } from "../components/billing";
 import { Icon } from "../components/icon";
@@ -271,21 +266,6 @@ export function VmBillingPage() {
       )}
     </div>
   );
-}
-
-/** Length of one billing cycle in days, used to scale the expiry meter. */
-function planCycleDays(plan: VmCostPlan): number {
-  const n = plan.interval_amount || 1;
-  switch (plan.interval_type) {
-    case CostPlanIntervalType.DAY:
-      return n;
-    case CostPlanIntervalType.MONTH:
-      return n * 30;
-    case CostPlanIntervalType.YEAR:
-      return n * 365;
-    default:
-      return 30;
-  }
 }
 
 /** Renew a VM via its underlying subscription. */

@@ -32,6 +32,9 @@
   "/K+qGR": {
     "defaultMessage": "Generate Nostr key"
   },
+  "/Og1HF": {
+    "defaultMessage": "{n} need renewal"
+  },
   "/PE1Wn": {
     "defaultMessage": "Passkey name (e.g. MacBook)"
   },
@@ -158,6 +161,9 @@
   "4cMKIO": {
     "defaultMessage": "Recurring plans that keep your services active."
   },
+  "4hI7OE": {
+    "defaultMessage": "Deletes in {days, plural, one {# day} other {# days}} · {date} — renew to keep your data."
+  },
   "4j0zpr": {
     "defaultMessage": "Minimum: {min} cores"
   },
@@ -175,6 +181,9 @@
   },
   "53RN0g": {
     "defaultMessage": "Proceed to Payment"
+  },
+  "5FWCVu": {
+    "defaultMessage": "Your encrypted NIP-17 message history with support."
   },
   "5QYdPU": {
     "defaultMessage": "Start Time"
@@ -220,6 +229,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
+  },
+  "7NFfmz": {
+    "defaultMessage": "Products"
   },
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
@@ -371,9 +383,6 @@
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
   },
-  "CHgKgH": {
-    "defaultMessage": "Recurring services"
-  },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
   },
@@ -422,8 +431,14 @@
   "ED9RG5": {
     "defaultMessage": "Audit log"
   },
+  "EIJT7Y": {
+    "defaultMessage": "Danger zone"
+  },
   "EKlM8d": {
     "defaultMessage": "Disk (GB)"
+  },
+  "EUDyqt": {
+    "defaultMessage": "{n} stopped"
   },
   "EUSRTV": {
     "defaultMessage": "Your past encrypted NIP-17 messages with support. This inbox is no longer monitored — please use the Support tab to reach us."
@@ -482,11 +497,17 @@
   "G1kGar": {
     "defaultMessage": "You can't remove your only passkey on a passkey-only account."
   },
+  "G3228Y": {
+    "defaultMessage": "Signed in as {identity}"
+  },
   "G5cGLJ": {
     "defaultMessage": "Awaiting first payment"
   },
   "G6nrEF": {
     "defaultMessage": "Saved with warnings"
+  },
+  "GCoWpl": {
+    "defaultMessage": "Reach the team directly — we'll get back to you."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
@@ -581,6 +602,9 @@
   "JVClQM": {
     "defaultMessage": "LNVPS Service Status and Uptime"
   },
+  "JiCBWy": {
+    "defaultMessage": "Connect over SSH with your selected key."
+  },
   "Jm+fih": {
     "defaultMessage": "Not active"
   },
@@ -640,9 +664,6 @@
   },
   "ML7RRt": {
     "defaultMessage": "High-performance VPS powered by Bitcoin Lightning. Virtual private servers starting from a few sats per month."
-  },
-  "MT4qAu": {
-    "defaultMessage": "NIP-44 Encryption Tools"
   },
   "MTnSwY": {
     "defaultMessage": "ex. tax"
@@ -731,6 +752,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "Qiih54": {
+    "defaultMessage": "Every machine needs attention — clear the list above to see them here."
+  },
   "QlsDcr": {
     "defaultMessage": "Action"
   },
@@ -764,6 +788,9 @@
   "RCHbbR": {
     "defaultMessage": "Manage your billing details, automatic renewal and how we reach you."
   },
+  "RQNCao": {
+    "defaultMessage": "NIP-05 identity hosting"
+  },
   "RXjd0H": {
     "defaultMessage": "Back to account"
   },
@@ -788,6 +815,9 @@
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
+  "SYYlLP": {
+    "defaultMessage": "Manage the NIP-05 handles registered on this domain."
+  },
   "Sczo8n": {
     "defaultMessage": "Duration: {duration}"
   },
@@ -808,6 +838,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Loading…"
+  },
+  "T7Fjtf": {
+    "defaultMessage": "Past grace period — may be deleted at any time. Renew now to keep your data."
   },
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
@@ -832,6 +865,9 @@
   },
   "Tbo377": {
     "defaultMessage": "Billing"
+  },
+  "TgGVeW": {
+    "defaultMessage": "Action required"
   },
   "TqSTI0": {
     "defaultMessage": "Enable"
@@ -878,6 +914,9 @@
   "V7fgpY": {
     "defaultMessage": "Completing sign-in…"
   },
+  "V7tPnC": {
+    "defaultMessage": "Machines"
+  },
   "VJ4xwX": {
     "defaultMessage": "News and Product Updates"
   },
@@ -908,8 +947,14 @@
   "Wsj2fc": {
     "defaultMessage": "Active Incidents"
   },
+  "WwXOJ8": {
+    "defaultMessage": "Deploy & manage servers"
+  },
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
+  },
+  "X4VESO": {
+    "defaultMessage": "Wipe the VM and start from a fresh image. This permanently deletes all data on it."
   },
   "XD6788": {
     "defaultMessage": "Setup fee:"
@@ -1004,6 +1049,9 @@
   "cM5n1C": {
     "defaultMessage": "End Time (optional)"
   },
+  "cQtv0G": {
+    "defaultMessage": "{n} running"
+  },
   "cV0ZGf": {
     "defaultMessage": "Cost Breakdown"
   },
@@ -1066,9 +1114,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr Extension"
-  },
-  "elhFf1": {
-    "defaultMessage": "[Expired]"
   },
   "eq14GY": {
     "defaultMessage": "Your new secret key"
@@ -1160,6 +1205,9 @@
   "icn2DS": {
     "defaultMessage": "(Recommended)"
   },
+  "irRXbS": {
+    "defaultMessage": "Specification"
+  },
   "iuQLCB": {
     "defaultMessage": "Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default."
   },
@@ -1192,6 +1240,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Passkey sign-in failed"
+  },
+  "kJpuxD": {
+    "defaultMessage": "Recurring services & billing"
   },
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
@@ -1226,12 +1277,6 @@
   "lP4qIQ": {
     "defaultMessage": "Card details"
   },
-  "lPsVOx": {
-    "defaultMessage": "Your VMs and domains"
-  },
-  "lTtWDY": {
-    "defaultMessage": "{daysLeft} days remaining"
-  },
   "lcXewt": {
     "defaultMessage": "Lightning invoice"
   },
@@ -1244,14 +1289,14 @@
   "lmac7x": {
     "defaultMessage": "{n, plural, one {# item} other {# items}}"
   },
+  "ln2Syt": {
+    "defaultMessage": "Lease expired — renew to keep this machine."
+  },
   "lnaWo/": {
     "defaultMessage": "Region"
   },
   "lsFKTa": {
     "defaultMessage": "Charging your saved payment method. This is applied automatically once it confirms."
-  },
-  "ltoBql": {
-    "defaultMessage": "[New]"
   },
   "m4QgXr": {
     "defaultMessage": "{days, plural, one {# day left} other {# days left}}"
@@ -1343,9 +1388,6 @@
   "p5LNtB": {
     "defaultMessage": "Not set"
   },
-  "pY6CgO": {
-    "defaultMessage": "You have no virtual machines yet."
-  },
   "pgLgIU": {
     "defaultMessage": "Read the full update"
   },
@@ -1364,6 +1406,9 @@
   "qX7u3z": {
     "defaultMessage": "Label (e.g. Personal Visa)"
   },
+  "qduRZE": {
+    "defaultMessage": "Not activated yet — pay to bring it online."
+  },
   "qkLHOL": {
     "defaultMessage": "Are you sure you want to delete SSH key \"{name}\"?"
   },
@@ -1376,8 +1421,14 @@
   "quroDq": {
     "defaultMessage": "VM History"
   },
+  "qxg3uo": {
+    "defaultMessage": "Access"
+  },
   "r2BhUh": {
     "defaultMessage": "Decrypt Message"
+  },
+  "r3V7v4": {
+    "defaultMessage": "Free NIP-05 identity hosting on domains you control."
   },
   "rF6EmI": {
     "defaultMessage": "Billing Details"
@@ -1387,6 +1438,9 @@
   },
   "rv2p0H": {
     "defaultMessage": "CPU, RAM & network"
+  },
+  "rvNmJQ": {
+    "defaultMessage": "No machines yet. Spin one up in under a minute."
   },
   "rvirM2": {
     "defaultMessage": "Location"
@@ -1507,12 +1561,6 @@
   },
   "waJLKW": {
     "defaultMessage": "Linked"
-  },
-  "waUHa4": {
-    "defaultMessage": "SSH"
-  },
-  "wfYHHe": {
-    "defaultMessage": "- [{daysLeft} days remaining]"
   },
   "wo868v": {
     "defaultMessage": "Sign in with a Nostr key or bunker →"

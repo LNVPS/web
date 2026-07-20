@@ -8,6 +8,7 @@ import Modal from "../components/modal";
 import { tryParseNostrLink } from "@snort/system";
 import { hexToBech32 } from "@snort/shared";
 import { Icon } from "../components/icon";
+import { Eyebrow, PageHeader } from "../components/section";
 import { showError } from "../toast";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -30,13 +31,27 @@ export function AccountNostrDomainPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={"/account"}>
+      <Link
+        to={"/account/domains"}
+        className="w-fit text-sm text-cyber-muted hover:text-cyber-text transition-all"
+      >
         &lt; <FormattedMessage defaultMessage="Back" />
       </Link>
+      <PageHeader
+        title={domain.name}
+        description={
+          <FormattedMessage defaultMessage="Manage the NIP-05 handles registered on this domain." />
+        }
+        actions={
+          <AsyncButton onClick={() => setAddHandle(true)}>
+            <FormattedMessage defaultMessage="Add Handle" />
+          </AsyncButton>
+        }
+      />
       <NostrDomainRow domain={domain} />
-      <div className="text-xl">
+      <Eyebrow>
         <FormattedMessage defaultMessage="Handles" />
-      </div>
+      </Eyebrow>
       <div className="flex flex-col gap-1">
         {handles !== undefined && handles.length === 0 && (
           <div className="text-cyber-danger text-sm">
@@ -85,9 +100,6 @@ export function AccountNostrDomainPage() {
           </div>
         ))}
       </div>
-      <AsyncButton onClick={() => setAddHandle(true)}>
-        <FormattedMessage defaultMessage="Add Handle" />
-      </AsyncButton>
       {addHandle && (
         <Modal id="add-handle" onClose={() => setAddHandle(false)}>
           <div className="flex flex-col gap-4">

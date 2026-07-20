@@ -5,10 +5,19 @@ import {
   WebAuthnError,
 } from "@simplewebauthn/browser";
 import { LNVpsApi } from "./api";
-import { ApiUrl } from "./const";
+import { ApiUrl, isOnion } from "./const";
 import { LoginState } from "./login";
 
 export { browserSupportsWebAuthn };
+
+/**
+ * Whether passkeys (WebAuthn) should be offered. Requires browser support and
+ * disables passkeys on Tor `.onion` origins, where WebAuthn is unavailable /
+ * unreliable in Tor Browser.
+ */
+export function passkeysAvailable(): boolean {
+  return browserSupportsWebAuthn() && !isOnion();
+}
 
 /** True when the user cancelled or dismissed the passkey prompt. */
 export function isWebauthnCancellation(e: unknown): boolean {

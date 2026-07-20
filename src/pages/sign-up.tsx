@@ -9,7 +9,7 @@ import { LoginState } from "../login";
 import Login from "../components/login";
 import PasskeyIcon from "../components/passkey-icon";
 import {
-  browserSupportsWebAuthn,
+  passkeysAvailable,
   isWebauthnCancellation,
   passkeyRegister,
 } from "../webauthn";
@@ -175,7 +175,7 @@ export default function SignUpPage() {
                 genKey={() => setKey(PrivateKeySigner.random())}
                 spawnAccount={spawnAccount}
                 registerPasskey={registerPasskey}
-                hasPasskeys={browserSupportsWebAuthn()}
+                hasPasskeys={passkeysAvailable()}
                 theKey={key}
                 formatMessage={formatMessage}
               />

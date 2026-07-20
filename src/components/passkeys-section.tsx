@@ -4,7 +4,7 @@ import useLogin from "../hooks/login";
 import { Passkey } from "../api";
 import { AsyncButton } from "./button";
 import PasskeyIcon from "./passkey-icon";
-import { addPasskey, browserSupportsWebAuthn, isWebauthnCancellation } from "../webauthn";
+import { addPasskey, passkeysAvailable, isWebauthnCancellation } from "../webauthn";
 
 /**
  * Manage the passkeys registered to the current account: list, add and remove.
@@ -22,7 +22,7 @@ export default function PasskeysSection({
   const [passkeys, setPasskeys] = useState<Array<Passkey>>();
   const [name, setName] = useState("");
   const [error, setError] = useState<string>();
-  const supported = browserSupportsWebAuthn();
+  const supported = passkeysAvailable();
 
   async function reload() {
     if (!login?.api) return;

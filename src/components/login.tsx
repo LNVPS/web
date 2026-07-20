@@ -9,7 +9,7 @@ import NostrIcon from "./nostrich-icon";
 import { OAuthProviders } from "../const";
 import { waitForNostrExtension } from "../utils";
 import {
-  browserSupportsWebAuthn,
+  passkeysAvailable,
   isWebauthnCancellation,
   passkeyLogin,
 } from "../webauthn";
@@ -31,7 +31,7 @@ export default function Login({ onLogin }: { onLogin?: () => void }) {
   const [hasPasskeys, setHasPasskeys] = useState(false);
 
   useEffect(() => {
-    setHasPasskeys(browserSupportsWebAuthn());
+    setHasPasskeys(passkeysAvailable());
     let active = true;
     waitForNostrExtension().then((found) => {
       if (active && found) setHasExtension(true);

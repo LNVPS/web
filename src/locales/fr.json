@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Recommandation"
   },
+  "DUIDEq": {
+    "defaultMessage": "Stockage"
+  },
   "DYDzPa": {
     "defaultMessage": "Conversation en cours."
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Mémoire"
   },
+  "dW0//Q": {
+    "defaultMessage": "Disque dur haute capacité"
+  },
   "dXTCjA": {
     "defaultMessage": "Non vérifié."
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Échec de la connexion par clé d'accès"
   },
+  "k9Pskm": {
+    "defaultMessage": "Stockage SSD rapide"
+  },
   "kJpuxD": {
     "defaultMessage": "Services récurrents et facturation"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Ajouter une clé."
+  },
+  "oPvhhB": {
+    "defaultMessage": "Cœurs CPU"
   },
   "oQY0a2": {
     "defaultMessage": "Adresse, ligne 2."

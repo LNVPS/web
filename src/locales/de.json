@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Empfehlung"
   },
+  "DUIDEq": {
+    "defaultMessage": "Speicher"
+  },
   "DYDzPa": {
     "defaultMessage": "Chat verknüpft"
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Speicher"
   },
+  "dW0//Q": {
+    "defaultMessage": "Hohe Kapazität, klassische Festplatte"
+  },
   "dXTCjA": {
     "defaultMessage": "Nicht verifiziert."
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Passkey-Anmeldung fehlgeschlagen"
   },
+  "k9Pskm": {
+    "defaultMessage": "Schneller Solid-State-Speicher"
+  },
   "kJpuxD": {
     "defaultMessage": "Wiederkehrende Dienste & Abrechnung"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Schlüssel hinzufügen"
+  },
+  "oPvhhB": {
+    "defaultMessage": "CPU-Kerne"
   },
   "oQY0a2": {
     "defaultMessage": "Adresszeile 2"

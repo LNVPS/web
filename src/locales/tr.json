@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Yönlendirme"
   },
+  "DUIDEq": {
+    "defaultMessage": "Depolama"
+  },
   "DYDzPa": {
     "defaultMessage": "Sohbet bağlantısı kuruldu."
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Bellek"
   },
+  "dW0//Q": {
+    "defaultMessage": "Yüksek kapasiteli sabit disk"
+  },
   "dXTCjA": {
     "defaultMessage": "Doğrulanmadı"
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
   },
+  "k9Pskm": {
+    "defaultMessage": "Hızlı katı hal depolama (SSD)"
+  },
   "kJpuxD": {
     "defaultMessage": "Yinelenen hizmetler ve faturalandırma"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Anahtar Ekle"
+  },
+  "oPvhhB": {
+    "defaultMessage": "CPU çekirdekleri"
   },
   "oQY0a2": {
     "defaultMessage": "Adres satırı 2"

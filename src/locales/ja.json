@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "紹介"
   },
+  "DUIDEq": {
+    "defaultMessage": "ストレージ"
+  },
   "DYDzPa": {
     "defaultMessage": "チャットが連携されました。"
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "記憶"
   },
+  "dW0//Q": {
+    "defaultMessage": "大容量のハードディスク"
+  },
   "dXTCjA": {
     "defaultMessage": "確認されていません。"
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
   },
+  "k9Pskm": {
+    "defaultMessage": "高速なソリッドステートストレージ"
+  },
   "kJpuxD": {
     "defaultMessage": "継続サービスと請求"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "キーを追加"
+  },
+  "oPvhhB": {
+    "defaultMessage": "CPUコア"
   },
   "oQY0a2": {
     "defaultMessage": "住所の2行目"

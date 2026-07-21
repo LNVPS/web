@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Recomendación."
   },
+  "DUIDEq": {
+    "defaultMessage": "Almacenamiento"
+  },
   "DYDzPa": {
     "defaultMessage": "Chat conectado."
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Memoria"
   },
+  "dW0//Q": {
+    "defaultMessage": "Disco duro de gran capacidad"
+  },
   "dXTCjA": {
     "defaultMessage": "No verificado."
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Error al iniciar sesión con la clave de acceso"
   },
+  "k9Pskm": {
+    "defaultMessage": "Almacenamiento SSD rápido"
+  },
   "kJpuxD": {
     "defaultMessage": "Servicios recurrentes y facturación"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Añadir clave"
+  },
+  "oPvhhB": {
+    "defaultMessage": "Núcleos de CPU"
   },
   "oQY0a2": {
     "defaultMessage": "Dirección, línea 2."

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
 import {
@@ -105,14 +105,14 @@ function preferredDisk(
   return sortDisks(disks).at(0);
 }
 
-const DISK_COPY: Record<DiskType, { title: string; blurb: string }> = {
+const DISK_COPY: Record<DiskType, { title: string; blurb: ReactNode }> = {
   [DiskType.SSD]: {
     title: "SSD",
-    blurb: "Fast solid-state storage",
+    blurb: <FormattedMessage defaultMessage="Fast solid-state storage" />,
   },
   [DiskType.HDD]: {
     title: "HDD",
-    blurb: "High-capacity spinning disk",
+    blurb: <FormattedMessage defaultMessage="High-capacity spinning disk" />,
   },
 };
 
@@ -126,7 +126,7 @@ function ResourceSlider({
   step = 1,
   onChange,
 }: {
-  label: string;
+  label: ReactNode;
   unit: string;
   value: number;
   min: number;
@@ -147,9 +147,9 @@ function ResourceSlider({
         min={min}
         max={max}
         step={step}
-        className="grow"
+        className="min-w-0 grow"
       />
-      <div className="flex w-28 shrink-0 items-baseline justify-end gap-1.5">
+      <div className="flex shrink-0 items-baseline justify-end gap-1.5">
         <input
           type="number"
           value={value}
@@ -159,7 +159,14 @@ function ResourceSlider({
           }}
           min={min}
           max={max}
-          className="w-14 border-none bg-transparent p-0 text-right text-lg leading-none text-cyber-text-bright tabular-nums focus:outline-none focus:ring-0"
+          // Inline padding/border override the higher-specificity global
+          // `input` rule; width sizes to the digit count (4-digit floor).
+          style={{
+            width: `${Math.max(4, String(value).length) + 1}ch`,
+            padding: 0,
+            border: "none",
+          }}
+          className="bg-transparent text-right text-lg leading-none text-cyber-text-bright tabular-nums focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         />
         <span className="w-10 text-[0.65rem] uppercase tracking-wider text-cyber-muted">
           {unit}
@@ -396,7 +403,7 @@ export function VpsCustomOrder({
         {/* Resources */}
         <div className="flex flex-col gap-3">
           <ResourceSlider
-            label="CPU cores"
+            label={<FormattedMessage defaultMessage="CPU cores" />}
             unit="vCPU"
             value={cpu}
             min={params.min_cpu}
@@ -404,7 +411,7 @@ export function VpsCustomOrder({
             onChange={setCpu}
           />
           <ResourceSlider
-            label="Memory"
+            label={<FormattedMessage defaultMessage="Memory" />}
             unit="GB"
             value={ram}
             min={Math.floor(params.min_memory / GiB)}
@@ -412,7 +419,7 @@ export function VpsCustomOrder({
             onChange={setRam}
           />
           <ResourceSlider
-            label="Storage"
+            label={<FormattedMessage defaultMessage="Storage" />}
             unit="GB"
             value={disk}
             min={Math.floor((diskType?.min_disk ?? 0) / GiB)}

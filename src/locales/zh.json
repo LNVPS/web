@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "推荐"
   },
+  "DUIDEq": {
+    "defaultMessage": "存储"
+  },
   "DYDzPa": {
     "defaultMessage": "聊天已关联。"
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "记忆"
   },
+  "dW0//Q": {
+    "defaultMessage": "大容量机械硬盘"
+  },
   "dXTCjA": {
     "defaultMessage": "未经验证。"
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
   },
+  "k9Pskm": {
+    "defaultMessage": "高速固态存储"
+  },
   "kJpuxD": {
     "defaultMessage": "周期性服务与账单"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "添加密钥"
+  },
+  "oPvhhB": {
+    "defaultMessage": "CPU 核心"
   },
   "oQY0a2": {
     "defaultMessage": "地址行 2"

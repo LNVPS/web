@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Referral"
   },
+  "DUIDEq": {
+    "defaultMessage": "Storage"
+  },
   "DYDzPa": {
     "defaultMessage": "Chat linked"
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Memory"
   },
+  "dW0//Q": {
+    "defaultMessage": "High-capacity spinning disk"
+  },
   "dXTCjA": {
     "defaultMessage": "Not verified"
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Passkey sign-in failed"
   },
+  "k9Pskm": {
+    "defaultMessage": "Fast solid-state storage"
+  },
   "kJpuxD": {
     "defaultMessage": "Recurring services & billing"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Add Key"
+  },
+  "oPvhhB": {
+    "defaultMessage": "CPU cores"
   },
   "oQY0a2": {
     "defaultMessage": "Address line 2"

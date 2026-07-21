@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "Indicação"
   },
+  "DUIDEq": {
+    "defaultMessage": "Armazenamento"
+  },
   "DYDzPa": {
     "defaultMessage": "Chat conectado/vinculado."
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "Memória"
   },
+  "dW0//Q": {
+    "defaultMessage": "Disco rígido de alta capacidade"
+  },
   "dXTCjA": {
     "defaultMessage": "Não verificado."
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "Falha ao iniciar sessão com a chave de acesso"
   },
+  "k9Pskm": {
+    "defaultMessage": "Armazenamento SSD rápido"
+  },
   "kJpuxD": {
     "defaultMessage": "Serviços recorrentes e cobrança"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Adicionar chave."
+  },
+  "oPvhhB": {
+    "defaultMessage": "Núcleos de CPU"
   },
   "oQY0a2": {
     "defaultMessage": "Endereço, linha 2"

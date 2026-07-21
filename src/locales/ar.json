@@ -422,6 +422,9 @@
   "DU+LLZ": {
     "defaultMessage": "إحالة"
   },
+  "DUIDEq": {
+    "defaultMessage": "التخزين"
+  },
   "DYDzPa": {
     "defaultMessage": "تم ربط الدردشة."
   },
@@ -1133,6 +1136,9 @@
   "dVx3yz": {
     "defaultMessage": "ذاكرة"
   },
+  "dW0//Q": {
+    "defaultMessage": "قرص صلب عالي السعة"
+  },
   "dXTCjA": {
     "defaultMessage": "لم يتم التحقق منه."
   },
@@ -1298,6 +1304,9 @@
   "jwt9EL": {
     "defaultMessage": "فشل تسجيل الدخول بمفتاح المرور"
   },
+  "k9Pskm": {
+    "defaultMessage": "تخزين SSD سريع"
+  },
   "kJpuxD": {
     "defaultMessage": "الخدمات المتكررة والفوترة"
   },
@@ -1420,6 +1429,9 @@
   },
   "oCc8Oq": {
     "defaultMessage": "أضف مفتاحًا."
+  },
+  "oPvhhB": {
+    "defaultMessage": "أنوية المعالج"
   },
   "oQY0a2": {
     "defaultMessage": "السطر الثاني من العنوان"

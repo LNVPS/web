@@ -296,9 +296,13 @@ function VpsOffersSection() {
           </div>
         </div>
       ) : offers?.templates !== undefined && offers.templates.length === 0 ? (
-        <div className="text-cyber-danger bold text-xl uppercase">
-          <FormattedMessage defaultMessage="No offers available" />
-        </div>
+        // With custom pricing available below, an empty template list isn't
+        // "no offers" — stay quiet and let the custom order section speak.
+        (offers.custom_template?.length ?? 0) > 0 ? null : (
+          <div className="text-cyber-danger bold text-xl uppercase">
+            <FormattedMessage defaultMessage="No offers available" />
+          </div>
+        )
       ) : (
         <div className="overflow-x-auto">
           <table>
@@ -323,7 +327,7 @@ function VpsOffersSection() {
         <VpsCustomOrder templates={offers.custom_template} />
       )}
       <small className="text-cyber-muted text-center">
-        <FormattedMessage defaultMessage="All VPS come with 1x IPv4 and 1x IPv6 address and unmetered traffic, all prices are excluding taxes." />
+        <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees." />
       </small>
     </>
   );

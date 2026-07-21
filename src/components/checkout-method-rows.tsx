@@ -23,22 +23,53 @@ export function shouldShowMethod(
   return true;
 }
 
+/**
+ * Checkout groups methods by settlement rail so the three bitcoin options
+ * read as variants of one choice, not unrelated products. Order = immediacy.
+ */
+export const BITCOIN_METHODS = ["lightning", "lnurl", "onchain"];
+
 // Human-facing name for each provider, so rows read like choices a person
 // recognizes rather than internal method ids.
 function methodLabel(intl: IntlShape, name: string): string {
   switch (name) {
     case "lightning":
-      return intl.formatMessage({ defaultMessage: "Lightning invoice" });
+      return intl.formatMessage({ defaultMessage: "Lightning" });
     case "lnurl":
-      return intl.formatMessage({ defaultMessage: "Lightning address" });
+      return intl.formatMessage({ defaultMessage: "LNURL" });
     case "nwc":
       return intl.formatMessage({ defaultMessage: "Nostr Wallet Connect" });
     case "revolut":
       return intl.formatMessage({ defaultMessage: "Credit or debit card" });
     case "onchain":
-      return intl.formatMessage({ defaultMessage: "Bitcoin (on-chain)" });
+      return intl.formatMessage({ defaultMessage: "On-chain Bitcoin" });
     default:
       return name.toUpperCase();
+  }
+}
+
+// What actually happens when you pick this method — the differentiator the
+// bare method names don't communicate.
+function methodDescription(intl: IntlShape, m: PaymentMethod): string {
+  switch (m.name) {
+    case "lightning":
+      return intl.formatMessage({
+        defaultMessage: "Instant — scan or pay a one-time invoice",
+      });
+    case "lnurl":
+      return intl.formatMessage({
+        defaultMessage: "Pay any amount, whenever — time is added pro-rata",
+      });
+    case "onchain":
+      return intl.formatMessage({
+        defaultMessage: "Standard BTC transaction — credits after confirmation",
+      });
+    case "revolut":
+      return intl.formatMessage({
+        defaultMessage: "Visa or Mastercard, billed via Revolut",
+      });
+    default:
+      return m.currencies.join(", ");
   }
 }
 
@@ -58,6 +89,9 @@ function methodIconName(name: string): string {
       return "nwc";
     case "revolut":
       return "revolut";
+    case "lightning":
+    case "lnurl":
+      return "zap";
     default:
       return "bitcoin";
   }
@@ -95,14 +129,14 @@ function methodFee(intl: IntlShape, m: PaymentMethod): string | undefined {
 }
 
 function methodSubtitle(intl: IntlShape, m: PaymentMethod): string {
-  const currencies = m.currencies.join(", ");
+  const description = methodDescription(intl, m);
   const fee = methodFee(intl, m);
   return fee
-    ? `${currencies} · ${intl.formatMessage(
-        { defaultMessage: "Fee {fee}" },
+    ? `${description} · ${intl.formatMessage(
+        { defaultMessage: "{fee} fee" },
         { fee },
       )}`
-    : currencies;
+    : description;
 }
 
 /** One selectable provider payment method. */

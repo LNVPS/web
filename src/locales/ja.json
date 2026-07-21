@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "プロトコル"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "お客様のIPアドレス範囲のサブスクリプションが作成されました。最初の支払いをお済ませください。お支払いが完了すると、指定されたIPアドレス範囲が割り当てられ、サブスクリプションが有効になります。"
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
+  },
+  "4eCXO1": {
+    "defaultMessage": "手数料 {fee}"
   },
   "4hI7OE": {
     "defaultMessage": "{days, plural, one {#日} other {#日}}後に削除されます · {date} — データを保持するには更新してください。"
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "現在の仕様"
   },
+  "8EkkgC": {
+    "defaultMessage": "VisaまたはMastercard、Revolut経由で請求"
+  },
   "8HYfsO": {
     "defaultMessage": "名称未設定のパスキー"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "メッセージ*"
   },
-  "BVTni9": {
-    "defaultMessage": "お支払い方法"
-  },
   "BXmJ0S": {
     "defaultMessage": "（代替案）"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "設定"
+  },
+  "D9mck8": {
+    "defaultMessage": "いつでも任意の金額を支払い — 時間は比例配分で追加されます"
   },
   "DATKpj": {
     "defaultMessage": "このページは自動的に更新されます。"
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "LNVPSの最新ニュースと製品情報"
   },
-  "FOEu1B": {
-    "defaultMessage": "ライトニング・アドレス"
+  "FPbLFA": {
+    "defaultMessage": "保存済みの支払い方法"
   },
   "FZeQlc": {
     "defaultMessage": "接続が切断されました。"
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "確認する。"
   },
-  "N4e/Yn": {
-    "defaultMessage": "料金 {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "毎月"
   },
+  "S5oncX": {
+    "defaultMessage": "すべてのプランにIPv4アドレス1つ、IPv6アドレス1つ、無制限のトラフィックが含まれます。価格には税金および決済手数料は含まれていません。"
+  },
+  "S5s+VN": {
+    "defaultMessage": "ライトニング"
+  },
   "SA61Qp": {
     "defaultMessage": "再インストール…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} の {total} 紹介による報酬"
+  },
+  "TaUfJI": {
+    "defaultMessage": "LNURLを表示"
   },
   "Tbo377": {
     "defaultMessage": "請求"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
   },
+  "XyIrRh": {
+    "defaultMessage": "ビットコインで支払う"
+  },
   "Y+LcmX": {
     "defaultMessage": "DNSを変更できない場合は、既存のサーバーで{path}のプロキシを{target}に設定してください。"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "確認済み"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "カードで支払う"
   },
   "ZdCdo5": {
     "defaultMessage": "最終更新日：{date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "DNSの変更が反映されるまでには、最大で24～48時間かかる場合があります。"
+  },
+  "cGedMc": {
+    "defaultMessage": "即時 — 一回限りのインボイスをスキャンまたは支払い"
   },
   "cM5n1C": {
     "defaultMessage": "終了時間（任意）"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
-  },
-  "eClqvz": {
-    "defaultMessage": "保存された支払い方法"
   },
   "eKEL/g": {
     "defaultMessage": "保留中"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "通常のBTCトランザクション — 承認後に反映されます"
+  },
   "jM8W7d": {
     "defaultMessage": "国を選択してください。"
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "カード情報"
   },
-  "lcXewt": {
-    "defaultMessage": "迅速な請求書発行"
-  },
   "lhCavK": {
     "defaultMessage": "Revolutで支払いをする際に「このカードを保存」にチェックを入れると、このカードが登録され、今後の支払いや自動更新に使用できるようになります。"
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 残り日数} other{# 残り日数}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "ライトニング・アドレスを表示"
   },
   "mIuuiJ": {
     "defaultMessage": "サービスの状況と稼働時間"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "VMのスペックを変更する。"
-  },
-  "qq7WMq": {
-    "defaultMessage": "すべてのVPSには、IPv4アドレス1つとIPv6アドレス1つが付属しており、データ通信量に制限はありません。すべての価格は税抜きです。"
   },
   "quroDq": {
     "defaultMessage": "VMの履歴"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "サインアウト"
   },
+  "xf2LGD": {
+    "defaultMessage": "{date}に自動更新"
+  },
   "xfiFx9": {
     "defaultMessage": "このマシンを再イメージ化"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} コア"
   },
-  "xnmHVe": {
-    "defaultMessage": "ビットコイン（オンチェーン）"
-  },
   "xuTqgN": {
     "defaultMessage": "お支払い方法"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "オンチェーンビットコイン"
   },
   "y43e4q": {
     "defaultMessage": "（DNSの変更は不要です）"

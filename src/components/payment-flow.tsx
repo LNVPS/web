@@ -20,6 +20,7 @@ import {
   type ReceiptLine,
 } from "./checkout";
 import {
+  BITCOIN_METHODS,
   ProviderMethodRow,
   SavedMethodRow,
   shouldShowMethod,
@@ -369,7 +370,7 @@ export default function PaymentFlow({
     return (
       <div className="flex flex-col gap-5">
         <CheckoutHeader
-          title={<FormattedMessage defaultMessage="Lightning address" />}
+          title={<FormattedMessage defaultMessage="LNURL" />}
           onBack={() => setShowLnurl(false)}
         />
         <div className="flex flex-col items-center gap-4 rounded-sm border border-cyber-border bg-cyber-panel p-4">
@@ -428,6 +429,18 @@ export default function PaymentFlow({
     .filter((m) => shouldShowMethod(m, hasNwc))
     // The LNURL row only makes sense when the source offers a Lightning address.
     .filter((m) => m.name !== "lnurl" || !!source.lnurl);
+
+  // Group by settlement rail so the three bitcoin options read as variants of
+  // one choice; within the group, fastest first.
+  const bitcoinRows = providerRows
+    .filter((m) => BITCOIN_METHODS.includes(m.name))
+    .sort(
+      (a, b) =>
+        BITCOIN_METHODS.indexOf(a.name) - BITCOIN_METHODS.indexOf(b.name),
+    );
+  const cardRows = providerRows.filter(
+    (m) => !BITCOIN_METHODS.includes(m.name),
+  );
 
   // The provider method whose fee config applies to the current selection.
   // A saved revolut method bills through revolut; a saved NWC wallet as lightning.
@@ -556,28 +569,10 @@ export default function PaymentFlow({
 
       {receipt}
 
-      <div className="flex flex-col gap-3">
-        <SectionLabel>
-          <FormattedMessage defaultMessage="Payment method" />
-        </SectionLabel>
-        <div className="flex flex-col gap-2">
-          {providerRows.map((method) => (
-            <ProviderMethodRow
-              key={method.name}
-              method={method}
-              selected={
-                selection?.kind === "method" && selection.name === method.name
-              }
-              onSelect={(m) => setSelection({ kind: "method", name: m.name })}
-            />
-          ))}
-        </div>
-      </div>
-
       {source.allowSavedMethods !== false && savedMethods.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
-            <FormattedMessage defaultMessage="Saved payment methods" />
+            <FormattedMessage defaultMessage="Saved methods" />
           </SectionLabel>
           <div className="flex flex-col gap-2">
             {savedMethods.map((m) => (
@@ -594,6 +589,46 @@ export default function PaymentFlow({
         </div>
       )}
 
+      {bitcoinRows.length > 0 && (
+        <div className="flex flex-col gap-3">
+          <SectionLabel>
+            <FormattedMessage defaultMessage="Pay with Bitcoin" />
+          </SectionLabel>
+          <div className="flex flex-col gap-2">
+            {bitcoinRows.map((method) => (
+              <ProviderMethodRow
+                key={method.name}
+                method={method}
+                selected={
+                  selection?.kind === "method" && selection.name === method.name
+                }
+                onSelect={(m) => setSelection({ kind: "method", name: m.name })}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {cardRows.length > 0 && (
+        <div className="flex flex-col gap-3">
+          <SectionLabel>
+            <FormattedMessage defaultMessage="Pay by card" />
+          </SectionLabel>
+          <div className="flex flex-col gap-2">
+            {cardRows.map((method) => (
+              <ProviderMethodRow
+                key={method.name}
+                method={method}
+                selected={
+                  selection?.kind === "method" && selection.name === method.name
+                }
+                onSelect={(m) => setSelection({ kind: "method", name: m.name })}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col gap-3">
         <AsyncButton
           onClick={paySelected}
@@ -601,7 +636,7 @@ export default function PaymentFlow({
           className="w-full justify-center bg-cyber-primary/20 text-base"
         >
           {lnurlSelected ? (
-            <FormattedMessage defaultMessage="Show Lightning address" />
+            <FormattedMessage defaultMessage="Show LNURL" />
           ) : orderTotal ? (
             <FormattedMessage
               defaultMessage="Pay {amount}"

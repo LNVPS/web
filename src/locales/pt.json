@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "Protocolo"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "A sua subscrição do espaço de endereços IP foi criada. Efetue o primeiro pagamento para alocar o espaço de endereços e ativar a subscrição."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "Planos recorrentes que mantêm seus serviços ativos."
+  },
+  "4eCXO1": {
+    "defaultMessage": "{fee} de taxa"
   },
   "4hI7OE": {
     "defaultMessage": "Excluído em {days, plural, one {# dia} other {# dias}} · {date} — renove para manter seus dados."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "Especificações Atuais"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa ou Mastercard, cobrado via Revolut"
+  },
   "8HYfsO": {
     "defaultMessage": "Chave de acesso sem nome"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "Mensagem *"
   },
-  "BVTni9": {
-    "defaultMessage": "Método de pagamento"
-  },
   "BXmJ0S": {
     "defaultMessage": "(Alternativa)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Definições"
+  },
+  "D9mck8": {
+    "defaultMessage": "Pague qualquer valor, quando quiser — o tempo é adicionado proporcionalmente"
   },
   "DATKpj": {
     "defaultMessage": "Esta página será atualizada automaticamente."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "Notícias e atualizações de produtos da LNVPS"
   },
-  "FOEu1B": {
-    "defaultMessage": "Endereço Lightning"
+  "FPbLFA": {
+    "defaultMessage": "Métodos salvos"
   },
   "FZeQlc": {
     "defaultMessage": "Desligado/a"
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "Confirme."
   },
-  "N4e/Yn": {
-    "defaultMessage": "Taxa {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "Definições da Conta"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "por mês"
   },
+  "S5oncX": {
+    "defaultMessage": "Todos os planos incluem um endereço IPv4, um IPv6 e tráfego ilimitado. Os preços não incluem impostos nem taxas de processamento de pagamento."
+  },
+  "S5s+VN": {
+    "defaultMessage": "Lightning"
+  },
   "SA61Qp": {
     "defaultMessage": "Reinstalar…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} de {total} indicações remuneradas"
+  },
+  "TaUfJI": {
+    "defaultMessage": "Mostrar LNURL"
   },
   "Tbo377": {
     "defaultMessage": "Faturação"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "Não foi possível enviar a mensagem. Tente novamente."
   },
+  "XyIrRh": {
+    "defaultMessage": "Pagar com Bitcoin"
+  },
   "Y+LcmX": {
     "defaultMessage": "Se não puder alterar o seu DNS, configure um proxy no caminho {path} do seu servidor atual para {target}."
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Verificado"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "Pagar com cartão"
   },
   "ZdCdo5": {
     "defaultMessage": "Última atualização: {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "As alterações do DNS podem levar até 24 a 48 horas para serem propagadas."
+  },
+  "cGedMc": {
+    "defaultMessage": "Instantâneo — escaneie ou pague uma fatura única"
   },
   "cM5n1C": {
     "defaultMessage": "Hora de término (opcional)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "Monte a sua máquina"
-  },
-  "eClqvz": {
-    "defaultMessage": "Métodos de pagamento guardados"
   },
   "eKEL/g": {
     "defaultMessage": "Pendente"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "Transação BTC padrão — creditada após confirmação"
+  },
   "jM8W7d": {
     "defaultMessage": "Selecione o país."
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "Dados do cartão"
   },
-  "lcXewt": {
-    "defaultMessage": "Fatura rápida"
-  },
   "lhCavK": {
     "defaultMessage": "Marque a opção «Guardar este cartão» ao efetuar pagamentos com o Revolut para guardar um cartão neste local, de forma a poder utilizá-lo em pagamentos futuros e renovações automáticas."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# dia restante} other{# dias restantes}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "Mostrar endereço do Lightning"
   },
   "mIuuiJ": {
     "defaultMessage": "Estado do serviço e tempo de atividade."
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "Redimensione as especificações da máquina virtual."
-  },
-  "qq7WMq": {
-    "defaultMessage": "Todos os VPS incluem 1 endereço IPv4 e 1 endereço IPv6, além de tráfego ilimitado. Todos os preços indicados não incluem impostos."
   },
   "quroDq": {
     "defaultMessage": "Histórico da VM"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "Desconectar-se"
   },
+  "xf2LGD": {
+    "defaultMessage": "renova automaticamente em {date}"
+  },
   "xfiFx9": {
     "defaultMessage": "Recriar a imagem desta máquina"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} núcleos"
   },
-  "xnmHVe": {
-    "defaultMessage": "Bitcoin (on-chain)"
-  },
   "xuTqgN": {
     "defaultMessage": "Métodos de Pagamento"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "Bitcoin on-chain"
   },
   "y43e4q": {
     "defaultMessage": "(Não é necessário alterar as configurações de DNS)"

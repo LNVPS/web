@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "Protocole"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "Votre abonnement à l’espace d’adresses IP a été créé. Effectuez le premier paiement pour allouer l’espace d’adresses et activer l’abonnement."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "Abonnements renouvelés qui maintiennent vos services actifs."
+  },
+  "4eCXO1": {
+    "defaultMessage": "{fee} de frais"
   },
   "4hI7OE": {
     "defaultMessage": "Supprimé dans {days, plural, one {# jour} other {# jours}} · {date} — renouvelez pour conserver vos données."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "Spécifications actuelles"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa ou Mastercard, facturé via Revolut"
+  },
   "8HYfsO": {
     "defaultMessage": "Clé d'accès sans nom"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "Message *"
   },
-  "BVTni9": {
-    "defaultMessage": "Mode de paiement"
-  },
   "BXmJ0S": {
     "defaultMessage": "(Option alternative)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Paramètres"
+  },
+  "D9mck8": {
+    "defaultMessage": "Payez n'importe quel montant, à tout moment — le temps est ajouté au prorata"
   },
   "DATKpj": {
     "defaultMessage": "Cette page se mettra à jour automatiquement."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "Actualités et mises à jour des produits LNVPS"
   },
-  "FOEu1B": {
-    "defaultMessage": "Adresse Lightning"
+  "FPbLFA": {
+    "defaultMessage": "Méthodes enregistrées"
   },
   "FZeQlc": {
     "defaultMessage": "Déconnecté"
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "Confirmer"
   },
-  "N4e/Yn": {
-    "defaultMessage": "Frais {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "Paramètres du compte"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "par mois"
   },
+  "S5oncX": {
+    "defaultMessage": "Chaque offre inclut une adresse IPv4, une adresse IPv6 et un trafic illimité. Les prix s'entendent hors taxes et hors frais de traitement de paiement."
+  },
+  "S5s+VN": {
+    "defaultMessage": "Lightning"
+  },
   "SA61Qp": {
     "defaultMessage": "Réinstaller…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} de {total} références rémunérées"
+  },
+  "TaUfJI": {
+    "defaultMessage": "Afficher le LNURL"
   },
   "Tbo377": {
     "defaultMessage": "Facturation"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "L’envoi du message a échoué. Veuillez réessayer."
   },
+  "XyIrRh": {
+    "defaultMessage": "Payer en Bitcoin"
+  },
   "Y+LcmX": {
     "defaultMessage": "Si vous ne pouvez pas modifier votre DNS, configurez un serveur proxy à l’adresse {path} sur votre serveur actuel et redirigez-le vers {target}."
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Vérifié"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "Payer par carte"
   },
   "ZdCdo5": {
     "defaultMessage": "Dernière mise à jour : {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "Les modifications du DNS peuvent prendre jusqu’à 24 à 48 heures pour être prises en compte."
+  },
+  "cGedMc": {
+    "defaultMessage": "Instantané — scannez ou payez une facture unique"
   },
   "cM5n1C": {
     "defaultMessage": "Heure de fin (facultatif)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "Configurez votre machine"
-  },
-  "eClqvz": {
-    "defaultMessage": "Modes de paiement enregistrés"
   },
   "eKEL/g": {
     "defaultMessage": "En attente"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "Transaction BTC standard — créditée après confirmation"
+  },
   "jM8W7d": {
     "defaultMessage": "Sélectionnez le pays."
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "Informations sur la carte de crédit"
   },
-  "lcXewt": {
-    "defaultMessage": "Facture instantanée"
-  },
   "lhCavK": {
     "defaultMessage": "Cochez la case « Enregistrer cette carte » lorsque vous effectuez un paiement avec Revolut pour enregistrer une carte et l’utiliser pour les prochains paiements et renouvellements automatiques."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# jour restant} other{# jours restants}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "Afficher l’adresse Lightning."
   },
   "mIuuiJ": {
     "defaultMessage": "État du service et temps de fonctionnement."
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "Redimensionner les spécifications de la machine virtuelle."
-  },
-  "qq7WMq": {
-    "defaultMessage": "Tous les serveurs VPS sont fournis avec une adresse IPv4 et une adresse IPv6, ainsi qu’un volume de données illimité. Tous les prix indiqués sont hors taxes."
   },
   "quroDq": {
     "defaultMessage": "Historique des machines virtuelles"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "Déconnexion"
   },
+  "xf2LGD": {
+    "defaultMessage": "renouvellement automatique le {date}"
+  },
   "xfiFx9": {
     "defaultMessage": "Réimager cette machine"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "Processeur : {cores} cœurs"
   },
-  "xnmHVe": {
-    "defaultMessage": "Bitcoin (on-chain)"
-  },
   "xuTqgN": {
     "defaultMessage": "Modes de paiement"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "Bitcoin on-chain"
   },
   "y43e4q": {
     "defaultMessage": "(Aucune modification du DNS n’est nécessaire)"

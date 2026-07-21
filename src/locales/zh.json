@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "协议"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "您的 IP 地址段订阅已创建。请完成首次付款，以便分配地址空间并激活该订阅。"
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
+  },
+  "4eCXO1": {
+    "defaultMessage": "手续费 {fee}"
   },
   "4hI7OE": {
     "defaultMessage": "将在 {days, plural, one {# 天} other {# 天}}后删除 · {date} — 续费以保留您的数据。"
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "当前规格"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa 或 Mastercard，通过 Revolut 扣款"
+  },
   "8HYfsO": {
     "defaultMessage": "未命名的通行密钥"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "消息 *"
   },
-  "BVTni9": {
-    "defaultMessage": "支付方式"
-  },
   "BXmJ0S": {
     "defaultMessage": "（备选方案）"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "设置"
+  },
+  "D9mck8": {
+    "defaultMessage": "随时支付任意金额 — 时长按比例增加"
   },
   "DATKpj": {
     "defaultMessage": "此页面将自动更新。"
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "LNVPS 新闻与产品更新"
   },
-  "FOEu1B": {
-    "defaultMessage": "闪电地址"
+  "FPbLFA": {
+    "defaultMessage": "已保存的支付方式"
   },
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "确认。"
   },
-  "N4e/Yn": {
-    "defaultMessage": "费用 {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "账户设置"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "每月"
   },
+  "S5oncX": {
+    "defaultMessage": "每个套餐均包含一个 IPv4 地址、一个 IPv6 地址和不限流量。价格不含税费及支付手续费。"
+  },
+  "S5s+VN": {
+    "defaultMessage": "闪电网络"
+  },
   "SA61Qp": {
     "defaultMessage": "重新安装…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} 的 {total} 已支付的推荐费用。"
+  },
+  "TaUfJI": {
+    "defaultMessage": "显示 LNURL"
   },
   "Tbo377": {
     "defaultMessage": "账单"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "消息发送失败。请稍后重试。"
   },
+  "XyIrRh": {
+    "defaultMessage": "使用比特币支付"
+  },
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "已验证"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "使用银行卡支付"
   },
   "ZdCdo5": {
     "defaultMessage": "上次更新：{date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
+  },
+  "cGedMc": {
+    "defaultMessage": "即时 — 扫描或支付一次性发票"
   },
   "cM5n1C": {
     "defaultMessage": "结束时间（可选）"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "配置您的机器"
-  },
-  "eClqvz": {
-    "defaultMessage": "已保存的支付方式。"
   },
   "eKEL/g": {
     "defaultMessage": "待处理"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "技能.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "标准 BTC 交易 — 确认后到账"
+  },
   "jM8W7d": {
     "defaultMessage": "请选择国家。"
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
   },
-  "lcXewt": {
-    "defaultMessage": "快速开票"
-  },
   "lhCavK": {
     "defaultMessage": "使用Revolut付款时，请勾选“保存此卡”，以便将该卡保存在此处，用于未来的支付和自动续订。"
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 剩余天数} other{# 剩余天数}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "显示闪电地址。"
   },
   "mIuuiJ": {
     "defaultMessage": "服务状态和正常运行时间。"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "调整虚拟机规格。"
-  },
-  "qq7WMq": {
-    "defaultMessage": "所有虚拟专用服务器（VPS）都配备一个 IPv4 地址和一个 IPv6 地址，并且提供无限流量，所有价格均不含税。"
   },
   "quroDq": {
     "defaultMessage": "虚拟机历史记录"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "注销登录"
   },
+  "xf2LGD": {
+    "defaultMessage": "{date}自动续费"
+  },
   "xfiFx9": {
     "defaultMessage": "重新镜像此机器"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "CPU：{cores} 个核心"
   },
-  "xnmHVe": {
-    "defaultMessage": "比特币（链上）"
-  },
   "xuTqgN": {
     "defaultMessage": "付款方式"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "链上比特币"
   },
   "y43e4q": {
     "defaultMessage": "（无需更改 DNS 设置）"

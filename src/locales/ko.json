@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "프로토콜"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "귀하의 IP 주소 구독이 생성되었습니다. 첫 번째 결제를 완료하여 주소 공간을 할당하고 구독을 활성화하십시오."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
+  },
+  "4eCXO1": {
+    "defaultMessage": "수수료 {fee}"
   },
   "4hI7OE": {
     "defaultMessage": "{days, plural, one {#일} other {#일}} 후 삭제됨 · {date} — 데이터를 유지하려면 갱신하세요."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "현재 사양"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa 또는 Mastercard, Revolut를 통해 청구"
+  },
   "8HYfsO": {
     "defaultMessage": "이름 없는 패스키"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "메시지 *"
   },
-  "BVTni9": {
-    "defaultMessage": "결제 방법"
-  },
   "BXmJ0S": {
     "defaultMessage": "(대안)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "설정"
+  },
+  "D9mck8": {
+    "defaultMessage": "언제든 원하는 금액 결제 — 시간이 비례하여 추가됩니다"
   },
   "DATKpj": {
     "defaultMessage": "이 페이지는 자동으로 업데이트됩니다."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "LNVPS 뉴스 및 제품 업데이트"
   },
-  "FOEu1B": {
-    "defaultMessage": "라이트닝 주소"
+  "FPbLFA": {
+    "defaultMessage": "저장된 결제 수단"
   },
   "FZeQlc": {
     "defaultMessage": "연결이 끊어졌습니다."
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "확인합니다."
   },
-  "N4e/Yn": {
-    "defaultMessage": "수수료 {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "계정 설정"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "매달"
   },
+  "S5oncX": {
+    "defaultMessage": "모든 플랜에는 IPv4 주소 1개, IPv6 주소 1개와 무제한 트래픽이 포함됩니다. 가격에는 세금 및 결제 처리 수수료가 포함되어 있지 않습니다."
+  },
+  "S5s+VN": {
+    "defaultMessage": "라이트닝"
+  },
   "SA61Qp": {
     "defaultMessage": "다시 설치…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} ~의 {total} 소개 건에 대한 수수료 지급"
+  },
+  "TaUfJI": {
+    "defaultMessage": "LNURL 표시"
   },
   "Tbo377": {
     "defaultMessage": "요금 청구"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
   },
+  "XyIrRh": {
+    "defaultMessage": "비트코인으로 결제"
+  },
   "Y+LcmX": {
     "defaultMessage": "DNS 설정을 변경할 수 없는 경우, 프록시 설정을 사용하세요. {path} 기존 서버에서 {target}"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "확인됨"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "카드로 결제"
   },
   "ZdCdo5": {
     "defaultMessage": "최종 업데이트 날짜: {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "DNS 변경 사항은 적용되는 데 최대 24~48시간이 걸릴 수 있습니다."
+  },
+  "cGedMc": {
+    "defaultMessage": "즉시 — 일회성 인보이스를 스캔하거나 결제"
   },
   "cM5n1C": {
     "defaultMessage": "종료 시간(선택 사항)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
-  },
-  "eClqvz": {
-    "defaultMessage": "저장된 결제 수단"
   },
   "eKEL/g": {
     "defaultMessage": "대기 중"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "기술.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "표준 BTC 트랜잭션 — 확인 후 반영됩니다"
+  },
   "jM8W7d": {
     "defaultMessage": "국가 선택"
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
   },
-  "lcXewt": {
-    "defaultMessage": "빠른 청구서 발급"
-  },
   "lhCavK": {
     "defaultMessage": "Revolut으로 결제할 때 ‘이 카드를 저장’을 선택하면 해당 카드를 저장하여 향후 결제 및 자동 갱신에 사용할 수 있습니다."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 남은 날짜} other{# 남은 날짜}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "라이트닝 주소 표시"
   },
   "mIuuiJ": {
     "defaultMessage": "서비스 상태 및 가동 시간"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "VM 사양 크기 조정"
-  },
-  "qq7WMq": {
-    "defaultMessage": "모든 VPS에는 IPv4 주소 1개와 IPv6 주소 1개가 포함되어 있으며 트래픽 제한이 없습니다. 모든 가격은 세금을 제외한 금액입니다."
   },
   "quroDq": {
     "defaultMessage": "VM 기록"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "로그아웃"
   },
+  "xf2LGD": {
+    "defaultMessage": "{date}에 자동 갱신"
+  },
   "xfiFx9": {
     "defaultMessage": "이 머신 다시 이미징"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "CPU: {cores} 코어"
   },
-  "xnmHVe": {
-    "defaultMessage": "비트코인(온체인)"
-  },
   "xuTqgN": {
     "defaultMessage": "결제 방법"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "온체인 비트코인"
   },
   "y43e4q": {
     "defaultMessage": "(DNS 변경이 필요하지 않음)"

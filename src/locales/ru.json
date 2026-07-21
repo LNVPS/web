@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "Протокол"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "Ваша подписка на выделенный блок IP-адресов создана. Чтобы получить доступ к выделенному блоку адресов и активировать подписку, выполните первую оплату."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "Планы с автоматическим продлением, обеспечивающие непрерывную работу ваших услуг."
+  },
+  "4eCXO1": {
+    "defaultMessage": "комиссия {fee}"
   },
   "4hI7OE": {
     "defaultMessage": "Удаление через {days, plural, one {# день} other {# дней}} · {date} — продлите, чтобы сохранить данные."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "Текущие технические характеристики"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa или Mastercard, списание через Revolut"
+  },
   "8HYfsO": {
     "defaultMessage": "Ключ доступа без названия"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "Сообщение *"
   },
-  "BVTni9": {
-    "defaultMessage": "Способ оплаты."
-  },
   "BXmJ0S": {
     "defaultMessage": "(Альтернативный вариант)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Настройки"
+  },
+  "D9mck8": {
+    "defaultMessage": "Платите любую сумму в любое время — время добавляется пропорционально"
   },
   "DATKpj": {
     "defaultMessage": "Эта страница будет автоматически обновляться."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "Новости и обновления продуктов LNVPS"
   },
-  "FOEu1B": {
-    "defaultMessage": "Адрес Lightning Network."
+  "FPbLFA": {
+    "defaultMessage": "Сохранённые способы"
   },
   "FZeQlc": {
     "defaultMessage": "Отключено."
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "Подтвердите."
   },
-  "N4e/Yn": {
-    "defaultMessage": "Плата / комиссия {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "Настройки учётной записи"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "в месяц"
   },
+  "S5oncX": {
+    "defaultMessage": "Каждый тариф включает один адрес IPv4, один адрес IPv6 и безлимитный трафик. Цены указаны без учёта налогов и комиссий за обработку платежа."
+  },
+  "S5s+VN": {
+    "defaultMessage": "Lightning"
+  },
   "SA61Qp": {
     "defaultMessage": "Переустановить…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} из {total} оплаченные направления (пациентов)"
+  },
+  "TaUfJI": {
+    "defaultMessage": "Показать LNURL"
   },
   "Tbo377": {
     "defaultMessage": "Выставление счетов"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "Не удалось отправить сообщение. Пожалуйста, повторите попытку."
   },
+  "XyIrRh": {
+    "defaultMessage": "Оплатить биткоином"
+  },
   "Y+LcmX": {
     "defaultMessage": "Если вы не можете изменить настройки DNS, используйте прокси-сервер. {path} на вашем существующем сервере {target}"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Подтверждено"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "Оплатить картой"
   },
   "ZdCdo5": {
     "defaultMessage": "Последнее обновление: {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "Для распространения изменений в DNS может потребоваться от 24 до 48 часов."
+  },
+  "cGedMc": {
+    "defaultMessage": "Мгновенно — отсканируйте или оплатите разовый инвойс"
   },
   "cM5n1C": {
     "defaultMessage": "Время окончания (необязательно)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "Соберите свою машину"
-  },
-  "eClqvz": {
-    "defaultMessage": "Сохраненные способы оплаты"
   },
   "eKEL/g": {
     "defaultMessage": "В ожидании"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "Обычная BTC-транзакция — зачисляется после подтверждения"
+  },
   "jM8W7d": {
     "defaultMessage": "Выберите страну."
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "Данные карты"
   },
-  "lcXewt": {
-    "defaultMessage": "Молниеносная выставка счетов."
-  },
   "lhCavK": {
     "defaultMessage": "При оплате через Revolut установите флажок «Сохранить эту карту», чтобы сохранить данные карты для будущих платежей и автоматического продления подписки."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# осталось один день} other{# осталось дней}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "Показать адрес доставки Amazon"
   },
   "mIuuiJ": {
     "defaultMessage": "Статус сервиса и время безотказной работы"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "Измените параметры виртуальной машины."
-  },
-  "qq7WMq": {
-    "defaultMessage": "Все виртуальные серверы предоставляются с одним IPv4-адресом и одним IPv6-адресом, а также с неограниченным объёмом трафика. Все цены указаны без учёта налогов."
   },
   "quroDq": {
     "defaultMessage": "История виртуальных машин"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "Выйти из системы"
   },
+  "xf2LGD": {
+    "defaultMessage": "автопродление {date}"
+  },
   "xfiFx9": {
     "defaultMessage": "Пересоздать образ этой машины"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "Процессор: {cores} ядра"
   },
-  "xnmHVe": {
-    "defaultMessage": "Биткоин (он-чейн)"
-  },
   "xuTqgN": {
     "defaultMessage": "Способы оплаты"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "Биткоин on-chain"
   },
   "y43e4q": {
     "defaultMessage": "(Изменения в настройках DNS не требуются)"

@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "بروتوكول."
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "تم إنشاء اشتراكك في نطاق عناوين الإنترنت (IP). أكمل الدفعة الأولى لتخصيص نطاق العناوين وتفعيل الاشتراك."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "خطط اشتراك متجددة تحافظ على استمرار خدماتك."
+  },
+  "4eCXO1": {
+    "defaultMessage": "رسوم {fee}"
   },
   "4hI7OE": {
     "defaultMessage": "يُحذف خلال {days, plural, one {# يوم} other {# أيام}} · {date} — جدِّد للاحتفاظ ببياناتك."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "المواصفات الحالية"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa أو Mastercard، تُحصَّل عبر Revolut"
+  },
   "8HYfsO": {
     "defaultMessage": "مفتاح مرور بدون اسم"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "رسالة *"
   },
-  "BVTni9": {
-    "defaultMessage": "طريقة الدفع"
-  },
   "BXmJ0S": {
     "defaultMessage": "(بديل)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "إعدادات"
+  },
+  "D9mck8": {
+    "defaultMessage": "ادفع أي مبلغ في أي وقت — يُضاف الوقت بالتناسب"
   },
   "DATKpj": {
     "defaultMessage": "سيتم تحديث هذه الصفحة تلقائيًا."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "أخبار LNVPS وتحديثات المنتجات"
   },
-  "FOEu1B": {
-    "defaultMessage": "عنوان البرق"
+  "FPbLFA": {
+    "defaultMessage": "طرق الدفع المحفوظة"
   },
   "FZeQlc": {
     "defaultMessage": "غير متصل."
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "أكّد."
   },
-  "N4e/Yn": {
-    "defaultMessage": "رسوم. {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "إعدادات الحساب"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "في الشهر"
   },
+  "S5oncX": {
+    "defaultMessage": "تتضمن كل خطة عنوان IPv4 وعنوان IPv6 وحركة مرور غير محدودة. الأسعار لا تشمل الضرائب ورسوم معالجة الدفع."
+  },
+  "S5s+VN": {
+    "defaultMessage": "Lightning"
+  },
   "SA61Qp": {
     "defaultMessage": "إعادة التثبيت…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} من {total} المدفوعات مقابل الإحالات."
+  },
+  "TaUfJI": {
+    "defaultMessage": "عرض LNURL"
   },
   "Tbo377": {
     "defaultMessage": "الفواتير"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
   },
+  "XyIrRh": {
+    "defaultMessage": "الدفع بالبيتكوين"
+  },
   "Y+LcmX": {
     "defaultMessage": "إذا لم تتمكن من تغيير إعدادات نظام أسماء النطاقات (DNS)، فاستخدم خادم وكيل. {path} على الخادم الحالي لديك لـ {target}"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "تم التحقق منه."
+  },
+  "ZTj6ca": {
+    "defaultMessage": "الدفع بالبطاقة"
   },
   "ZdCdo5": {
     "defaultMessage": "آخر تحديث: {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "قد يستغرق تفعيل تغييرات نظام أسماء النطاقات (DNS) ما يصل إلى 24-48 ساعة."
+  },
+  "cGedMc": {
+    "defaultMessage": "فوري — امسح أو ادفع فاتورة لمرة واحدة"
   },
   "cM5n1C": {
     "defaultMessage": "وقت الانتهاء (اختياري)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "قم بتكوين جهازك"
-  },
-  "eClqvz": {
-    "defaultMessage": "طرق الدفع المحفوظة"
   },
   "eKEL/g": {
     "defaultMessage": "قيد الانتظار."
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "ملف SKILL.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "معاملة BTC عادية — تُضاف بعد التأكيد"
+  },
   "jM8W7d": {
     "defaultMessage": "اختر الدولة."
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "تفاصيل البطاقة"
   },
-  "lcXewt": {
-    "defaultMessage": "فاتورة سريعة"
-  },
   "lhCavK": {
     "defaultMessage": "عند الدفع باستخدام تطبيق ريفولوت، حدّد مربع \"حفظ هذه البطاقة\" لتخزين معلومات البطاقة هنا لاستخدامها في عمليات الدفع المستقبلية والتجديدات التلقائية."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# يوم متبقي} other{# الأيام المتبقية}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "اعرض عنوان التوصيل السريع."
   },
   "mIuuiJ": {
     "defaultMessage": "حالة الخدمة ووقت التشغيل"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "تغيير حجم مواصفات الجهاز الظاهري."
-  },
-  "qq7WMq": {
-    "defaultMessage": "تأتي جميع خوادم VPS مع عنوان IPv4 واحد وعنوان IPv6 واحد وحركة مرور بيانات غير محدودة، والأسعار المذكورة لا تشمل الضرائب."
   },
   "quroDq": {
     "defaultMessage": "سجل الأجهزة الافتراضية"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "تسجيل الخروج"
   },
+  "xf2LGD": {
+    "defaultMessage": "يتجدد تلقائيًا في {date}"
+  },
   "xfiFx9": {
     "defaultMessage": "إعادة تصوير هذا الجهاز"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "وحدة المعالجة المركزية: {cores} نوى"
   },
-  "xnmHVe": {
-    "defaultMessage": "بيتكوين (على السلسلة)"
-  },
   "xuTqgN": {
     "defaultMessage": "طرق الدفع"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "بيتكوين على السلسلة (on-chain)"
   },
   "y43e4q": {
     "defaultMessage": "(لا يلزم إجراء أي تغييرات في إعدادات نظام أسماء النطاقات)"

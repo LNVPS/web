@@ -53,6 +53,9 @@
   "0QLzxo": {
     "defaultMessage": "Protokol"
   },
+  "0RxidJ": {
+    "defaultMessage": "LNURL"
+  },
   "0gkn9c": {
     "defaultMessage": "IP adres alanı aboneliğiniz oluşturuldu. Adres alanını tahsis etmek ve aboneliği etkinleştirmek için ilk ödemeyi tamamlayın."
   },
@@ -163,6 +166,9 @@
   },
   "4cMKIO": {
     "defaultMessage": "Hizmetlerinizin aktif kalmasını sağlayan düzenli abonelik planları."
+  },
+  "4eCXO1": {
+    "defaultMessage": "{fee} işlem ücreti"
   },
   "4hI7OE": {
     "defaultMessage": "{days, plural, one {# gün} other {# gün}} içinde silinir · {date} — verilerinizi korumak için yenileyin."
@@ -275,6 +281,9 @@
   "8BgaUL": {
     "defaultMessage": "Mevcut Teknik Özellikler"
   },
+  "8EkkgC": {
+    "defaultMessage": "Visa veya Mastercard, Revolut üzerinden tahsil edilir"
+  },
   "8HYfsO": {
     "defaultMessage": "Adsız geçiş anahtarı"
   },
@@ -374,9 +383,6 @@
   "BLZbXj": {
     "defaultMessage": "Mesaj *"
   },
-  "BVTni9": {
-    "defaultMessage": "Ödeme yöntemi"
-  },
   "BXmJ0S": {
     "defaultMessage": "(Alternatif)"
   },
@@ -400,6 +406,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
+  },
+  "D9mck8": {
+    "defaultMessage": "İstediğiniz zaman istediğiniz tutarı ödeyin — süre orantılı olarak eklenir"
   },
   "DATKpj": {
     "defaultMessage": "Bu sayfa otomatik olarak güncellenecektir."
@@ -485,8 +494,8 @@
   "FMHDSp": {
     "defaultMessage": "LNVPS Haberleri ve Ürün Güncellemeleri"
   },
-  "FOEu1B": {
-    "defaultMessage": "Şimşek adresi"
+  "FPbLFA": {
+    "defaultMessage": "Kayıtlı yöntemler"
   },
   "FZeQlc": {
     "defaultMessage": "Bağlantı kesildi"
@@ -686,9 +695,6 @@
   "N2IrpM": {
     "defaultMessage": "Onayla"
   },
-  "N4e/Yn": {
-    "defaultMessage": "Ücret {fee}"
-  },
   "NQgbYA": {
     "defaultMessage": "Hesap Ayarları"
   },
@@ -815,6 +821,12 @@
   "Rw82/V": {
     "defaultMessage": "ayda"
   },
+  "S5oncX": {
+    "defaultMessage": "Her plan bir IPv4 ve bir IPv6 adresi ile sınırsız trafik içerir. Fiyatlara vergiler ve ödeme işlem ücretleri dahil değildir."
+  },
+  "S5s+VN": {
+    "defaultMessage": "Lightning"
+  },
   "SA61Qp": {
     "defaultMessage": "Yeniden kur…"
   },
@@ -874,6 +886,9 @@
   },
   "TVBZb8": {
     "defaultMessage": "{success} -den {total} yapılan yönlendirmeler için ödeme yapıldı"
+  },
+  "TaUfJI": {
+    "defaultMessage": "LNURL'yi göster"
   },
   "Tbo377": {
     "defaultMessage": "Fatura"
@@ -980,6 +995,9 @@
   "XNiOLB": {
     "defaultMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
   },
+  "XyIrRh": {
+    "defaultMessage": "Bitcoin ile öde"
+  },
   "Y+LcmX": {
     "defaultMessage": "DNS ayarlarınızı değiştiremiyorsanız, proxy kullanın. {path} mevcut sunucunuzda {target}"
   },
@@ -1012,6 +1030,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Doğrulandı"
+  },
+  "ZTj6ca": {
+    "defaultMessage": "Kartla öde"
   },
   "ZdCdo5": {
     "defaultMessage": "Son güncelleme: {date}"
@@ -1066,6 +1087,9 @@
   },
   "c78ZVJ": {
     "defaultMessage": "DNS değişikliklerinin uygulanması 24–48 saat sürebilir."
+  },
+  "cGedMc": {
+    "defaultMessage": "Anında — tek seferlik faturayı tarayın veya ödeyin"
   },
   "cM5n1C": {
     "defaultMessage": "Bitiş Saati (isteğe bağlı)"
@@ -1123,9 +1147,6 @@
   },
   "e4ehrh": {
     "defaultMessage": "Makinenizi oluşturun"
-  },
-  "eClqvz": {
-    "defaultMessage": "Kaydedilmiş ödeme yöntemleri"
   },
   "eKEL/g": {
     "defaultMessage": "Beklemede"
@@ -1247,6 +1268,9 @@
   "j4RCJW": {
     "defaultMessage": "BECERİLER.md"
   },
+  "j7VE/p": {
+    "defaultMessage": "Standart BTC işlemi — onaydan sonra hesaba geçer"
+  },
   "jM8W7d": {
     "defaultMessage": "Ülke seçin"
   },
@@ -1310,9 +1334,6 @@
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
   },
-  "lcXewt": {
-    "defaultMessage": "Hızlı fatura"
-  },
   "lhCavK": {
     "defaultMessage": "Revolut ile ödeme yaparken, bu kartı gelecekteki ödemeler ve otomatik yenilemeler için saklamak üzere \"Bu kartı kaydet\" seçeneğini işaretleyin."
   },
@@ -1333,9 +1354,6 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# kalan gün sayısı} other{# kalan gün sayısı}}"
-  },
-  "mBP5Sb": {
-    "defaultMessage": "Lightning adresini göster."
   },
   "mIuuiJ": {
     "defaultMessage": "Hizmet Durumu ve Çalışma Süresi"
@@ -1447,9 +1465,6 @@
   },
   "qpBS29": {
     "defaultMessage": "Sanal makine özelliklerini yeniden boyutlandırın."
-  },
-  "qq7WMq": {
-    "defaultMessage": "Tüm VPS sunucuları 1 adet IPv4 ve 1 adet IPv6 adresiyle birlikte gelir ve sınırsız trafik sunar; tüm fiyatlar vergiler hariçtir."
   },
   "quroDq": {
     "defaultMessage": "VM Geçmişi"
@@ -1619,6 +1634,9 @@
   "xXbJso": {
     "defaultMessage": "Oturumu kapat"
   },
+  "xf2LGD": {
+    "defaultMessage": "{date} tarihinde otomatik yenilenir"
+  },
   "xfiFx9": {
     "defaultMessage": "Bu makineyi yeniden imajla"
   },
@@ -1634,11 +1652,11 @@
   "xmSWcf": {
     "defaultMessage": "İşlemci: {cores} çekirdekler"
   },
-  "xnmHVe": {
-    "defaultMessage": "Bitcoin (zincir üstü)"
-  },
   "xuTqgN": {
     "defaultMessage": "Ödeme Yöntemleri"
+  },
+  "y0mVUJ": {
+    "defaultMessage": "Zincir üstü Bitcoin"
   },
   "y43e4q": {
     "defaultMessage": "(DNS değişikliğine gerek yoktur)"

@@ -414,8 +414,14 @@ export default function PaymentFlow({
 
   // --- Method selection (checkout) -------------------------------------
   const duration = source.duration;
+  // Sensible renewal lengths per billing cadence — yearly plans renew one
+  // year at a time (no slider), nobody needs to prepay 12 years ahead.
   const steps =
-    duration?.intervalType === "day" ? [1, 7, 14, 30] : [1, 3, 6, 12];
+    duration?.intervalType === "day"
+      ? [1, 7, 14, 30]
+      : duration?.intervalType === "year"
+        ? [1]
+        : [1, 3, 6, 12];
   const currentIndex = Math.max(0, steps.indexOf(intervals));
 
   const providerRows = (methods ?? [])
@@ -528,19 +534,23 @@ export default function PaymentFlow({
               className="text-xs text-cyber-muted"
             />
           </div>
-          <input
-            type="range"
-            min={0}
-            max={steps.length - 1}
-            step={1}
-            value={currentIndex}
-            onChange={(e) => setIntervals(steps[e.target.valueAsNumber])}
-          />
-          <div className="flex justify-between text-xs text-cyber-muted">
-            {steps.map((s) => (
-              <span key={s}>{s}</span>
-            ))}
-          </div>
+          {steps.length > 1 && (
+            <>
+              <input
+                type="range"
+                min={0}
+                max={steps.length - 1}
+                step={1}
+                value={currentIndex}
+                onChange={(e) => setIntervals(steps[e.target.valueAsNumber])}
+              />
+              <div className="flex justify-between text-xs text-cyber-muted">
+                {steps.map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       )}
 

@@ -55,11 +55,13 @@ export interface PaymentSource {
   /** Resolve true once the given payment has settled. */
   pollPaid: (paymentId: string) => Promise<boolean>;
   /**
-   * Resolve true once an on-chain deposit has been *seen* (0-conf, `outpoint`
-   * set) but not yet confirmed. Lets the UI show "received, confirming".
-   * Optional — sources without on-chain support can omit it.
+   * Resolve the amended payment once an on-chain deposit has been *seen*
+   * (0-conf) but not yet confirmed. The server re-prices at discovery time, so
+   * the returned payment carries the re-calculated `time`/amount the deposit
+   * actually buys — plus the `outpoint` ("{txid}:{vout}") for the txid link.
+   * `undefined` until a deposit is seen. Optional for non-on-chain sources.
    */
-  pollDetected?: (paymentId: string) => Promise<boolean>;
+  pollDetected?: (paymentId: string) => Promise<VmPayment | undefined>;
   /** Optional interval (duration) selector for renewals. */
   duration?: {
     /** cost-plan interval type, e.g. "month" | "day" */
@@ -124,9 +126,10 @@ export function subscriptionRenewalSource(
     pollDetected: async (paymentId) => {
       const list = await api.listSubscriptionPayments(subscriptionId);
       const p = list.find((x) => x.id === paymentId);
-      return (
-        !!p && !p.is_paid && "onchain" in p.data && !!p.data.onchain.outpoint
-      );
+      if (p && !p.is_paid && "onchain" in p.data && p.data.onchain.outpoint) {
+        return subscriptionToVmPayment(p);
+      }
+      return undefined;
     },
     ...extra,
   };

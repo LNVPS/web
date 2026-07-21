@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Pague através de qualquer carteira Lightning para renovar esta assinatura."
   },
+  "1kZ3H0": {
+    "defaultMessage": "Ver transação"
+  },
   "1p8vog": {
     "defaultMessage": "VPS personalizado"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "Mínimo: {min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Pagamento recebido — aguardando confirmação. Pode sair desta página com segurança."
+  },
   "Olq7Wf": {
     "defaultMessage": "Digite a sua mensagem aqui..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "gerar"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Pagamento recebido — aguardando confirmação. O tempo é creditado após a confirmação; pode sair desta página com segurança."
   },
   "QEuWMk": {
     "defaultMessage": "As contas LNVPS utilizam o protocolo Nostr ou um fornecedor de serviços de autenticação. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Credita {days, plural, one {# dia} other {# dias}} à taxa do momento em que o depósito foi detetado, proporcional ao valor recebido."
   },
   "ciFSHC": {
     "defaultMessage": "Pagamento {amount}"

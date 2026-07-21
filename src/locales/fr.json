@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Effectuez un paiement depuis n’importe quel portefeuille Lightning pour renouveler cet abonnement."
   },
+  "1kZ3H0": {
+    "defaultMessage": "Voir la transaction"
+  },
   "1p8vog": {
     "defaultMessage": "VPS personnalisé"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "Minimum : {min} Go de {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Paiement reçu — en attente de confirmation. Vous pouvez quitter cette page en toute sécurité."
+  },
   "Olq7Wf": {
     "defaultMessage": "Tapez votre message ici..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "générer"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Paiement reçu — en attente de confirmation. Le temps est crédité une fois confirmé ; vous pouvez quitter cette page en toute sécurité."
   },
   "QEuWMk": {
     "defaultMessage": "Les comptes LNVPS utilisent le protocole Nostr ou un fournisseur d’authentification. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM : {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Crédite {days, plural, one {# jour} other {# jours}} au taux constaté à la réception du dépôt, au prorata du montant reçu."
   },
   "ciFSHC": {
     "defaultMessage": "Salaire {amount}"

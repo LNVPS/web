@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "어떤 라이트닝 지갑에서든 결제하여 이 구독 서비스를 충전할 수 있습니다."
   },
+  "1kZ3H0": {
+    "defaultMessage": "거래 보기"
+  },
   "1p8vog": {
     "defaultMessage": "커스텀 VPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "최소: {min} 기가바이트 {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "결제가 접수되었습니다 — 확인을 기다리는 중입니다. 이 페이지를 나가셔도 됩니다."
+  },
   "Olq7Wf": {
     "defaultMessage": "여기에 메시지를 입력하세요."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "생성"
-  },
-  "Q/My+S": {
-    "defaultMessage": "결제가 접수되었습니다 — 확인을 기다리는 중입니다. 확인되면 시간이 적립되며, 이 페이지를 나가셔도 됩니다."
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS 계정은 Nostr 또는 로그인 서비스를 사용합니다. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "입금이 확인된 시점의 환율로 {days, plural, one {#일} other {#일}}을 적립하며, 받은 금액에 비례해 계산됩니다."
   },
   "ciFSHC": {
     "defaultMessage": "지급하다 {amount}"

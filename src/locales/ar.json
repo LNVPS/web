@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "ادفع من أي محفظة تدعم شبكة لايتنينغ لتجديد الاشتراك."
   },
+  "1kZ3H0": {
+    "defaultMessage": "عرض المعاملة"
+  },
   "1p8vog": {
     "defaultMessage": "خادم VPS مخصص"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "الحد الأدنى: {min} جيجابايت {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "تم استلام الدفعة — في انتظار التأكيد. يمكنك مغادرة هذه الصفحة بأمان."
+  },
   "Olq7Wf": {
     "defaultMessage": "اكتب رسالتك هنا..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "إنشاء"
-  },
-  "Q/My+S": {
-    "defaultMessage": "تم استلام الدفعة — في انتظار التأكيد. يُضاف الوقت بمجرد التأكيد؛ يمكنك مغادرة هذه الصفحة بأمان."
   },
   "QEuWMk": {
     "defaultMessage": "تستخدم حسابات LNVPS بروتوكول نوستر أو مزود خدمة تسجيل الدخول. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "الآلة الافتراضية: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "يضيف {days, plural, one {# يوم} other {# يومًا}} بسعر الصرف وقت رصد الإيداع، بالتناسب مع المبلغ المستلَم."
   },
   "ciFSHC": {
     "defaultMessage": "ادفع/سدّد {amount}"

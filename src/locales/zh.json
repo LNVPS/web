@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "使用任意闪电网络钱包支付，即可充值此订阅。"
   },
+  "1kZ3H0": {
+    "defaultMessage": "查看交易"
+  },
   "1p8vog": {
     "defaultMessage": "自定义 VPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "最低要求：{min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "已收到付款 — 等待确认。您可以安全离开此页面。"
+  },
   "Olq7Wf": {
     "defaultMessage": "请在此处输入您的消息……"
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "生成"
-  },
-  "Q/My+S": {
-    "defaultMessage": "已收到付款 — 等待确认。确认后即会计入时长；您可以安全离开此页面。"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS 账户使用 Nostr 或登录服务提供商。 {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "按检测到存款时的汇率计入 {days, plural, one {# 天} other {# 天}}，并根据收到的金额按比例计算。"
   },
   "ciFSHC": {
     "defaultMessage": "付款；工资 {amount}"

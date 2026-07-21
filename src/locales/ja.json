@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "このサブスクリプションにチャージするには、任意のLightningウォレットからお支払いください。"
   },
+  "1kZ3H0": {
+    "defaultMessage": "取引を表示"
+  },
   "1p8vog": {
     "defaultMessage": "カスタムVPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "最小要件：{min} GBの{type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "支払いを受け取りました — 確認を待っています。このページを離れても問題ありません。"
+  },
   "Olq7Wf": {
     "defaultMessage": "ここにメッセージを入力してください。"
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "生成"
-  },
-  "Q/My+S": {
-    "defaultMessage": "支払いを受け取りました — 確認を待っています。確認され次第、時間が反映されます。このページを離れても問題ありません。"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPSアカウントでは、Nostrまたはログインプロバイダーを使用します。 {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM：{name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "入金が検出された時点のレートで{days, plural, one {#日} other {#日}}分を、受け取った金額に応じて按分して付与します。"
   },
   "ciFSHC": {
     "defaultMessage": "支払い {amount}"

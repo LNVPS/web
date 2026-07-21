@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Zahlen Sie mit einer beliebigen Lightning-Wallet, um dieses Abonnement aufzuladen."
   },
+  "1kZ3H0": {
+    "defaultMessage": "Transaktion ansehen"
+  },
   "1p8vog": {
     "defaultMessage": "Individueller VPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Zahlung eingegangen — warten auf Bestätigung. Sie können diese Seite bedenkenlos verlassen."
+  },
   "Olq7Wf": {
     "defaultMessage": "Geben Sie hier Ihre Nachricht ein …"
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "erzeugen"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Zahlung eingegangen — warten auf Bestätigung. Die Zeit wird nach der Bestätigung gutgeschrieben; Sie können diese Seite bedenkenlos verlassen."
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS-Konten verwenden entweder Nostr oder einen Anbieterdienst für die Anmeldung. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Schreibt {days, plural, one {# Tag} other {# Tage}} zum Kurs beim Eingang der Einzahlung gut — anteilig zum erhaltenen Betrag."
   },
   "ciFSHC": {
     "defaultMessage": "Bezahlung {amount}"

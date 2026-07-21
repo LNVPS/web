@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Pay from any Lightning wallet to top up this subscription."
   },
+  "1kZ3H0": {
+    "defaultMessage": "View transaction"
+  },
   "1p8vog": {
     "defaultMessage": "Custom VPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Payment received — waiting for confirmation. You can safely leave this page."
+  },
   "Olq7Wf": {
     "defaultMessage": "Type your message here..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "generate"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Payment received — waiting for confirmation. Time is credited once it confirms; you can safely leave this page."
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS accounts use Nostr or a login provider. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Credits {days, plural, one {# day} other {# days}} at the rate when the deposit was seen — pro-rated by the amount received."
   },
   "ciFSHC": {
     "defaultMessage": "Pay {amount}"

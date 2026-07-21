@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Pague desde cualquier billetera Lightning para recargar esta suscripción."
   },
+  "1kZ3H0": {
+    "defaultMessage": "Ver transacción"
+  },
   "1p8vog": {
     "defaultMessage": "VPS personalizado"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "Mínimo: {min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Pago recibido — esperando confirmación. Puedes salir de esta página con seguridad."
+  },
   "Olq7Wf": {
     "defaultMessage": "Escribe tu mensaje aquí..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "generar"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Pago recibido — esperando confirmación. El tiempo se acredita al confirmarse; puedes salir de esta página con seguridad."
   },
   "QEuWMk": {
     "defaultMessage": "Las cuentas de LNVPS utilizan Nostr o un proveedor de servicios de inicio de sesión. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Acredita {days, plural, one {# día} other {# días}} al tipo de cambio del momento en que se detectó el depósito, prorrateado según el importe recibido."
   },
   "ciFSHC": {
     "defaultMessage": "Pago. {amount}"

@@ -89,6 +89,9 @@
   "1aBLDj": {
     "defaultMessage": "Bu aboneliği yenilemek için herhangi bir Lightning cüzdanından ödeme yapın."
   },
+  "1kZ3H0": {
+    "defaultMessage": "İşlemi görüntüle"
+  },
   "1p8vog": {
     "defaultMessage": "Özel VPS"
   },
@@ -728,6 +731,9 @@
   "OikYIw": {
     "defaultMessage": "En az: {min} GB {type}"
   },
+  "OjzGyg": {
+    "defaultMessage": "Ödeme alındı — onay bekleniyor. Bu sayfadan güvenle ayrılabilirsiniz."
+  },
   "Olq7Wf": {
     "defaultMessage": "Mesajınızı buraya yazın..."
   },
@@ -763,9 +769,6 @@
   },
   "PujK1s": {
     "defaultMessage": "oluştur"
-  },
-  "Q/My+S": {
-    "defaultMessage": "Ödeme alındı — onay bekleniyor. Süre, onaylandığında hesaba geçer; bu sayfadan güvenle ayrılabilirsiniz."
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS hesapları, Nostr veya bir oturum açma sağlayıcısı kullanır. {link}"
@@ -1114,6 +1117,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "cdG1p6": {
+    "defaultMessage": "Yatırma işleminin görüldüğü andaki kurdan {days, plural, one {# gün} other {# gün}} ekler — alınan tutara göre orantılanır."
   },
   "ciFSHC": {
     "defaultMessage": "Ödeme {amount}"

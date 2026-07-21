@@ -21,8 +21,8 @@ export default function OnChainPayment({
   payment: VmPayment;
   /** Resolve true once the payment has settled (source-specific lookup). */
   pollPaid: (paymentId: string) => Promise<boolean>;
-  /** Resolve true once a deposit is seen but not yet confirmed (0-conf). */
-  pollDetected?: (paymentId: string) => Promise<boolean>;
+  /** Resolve the amended payment once a deposit is seen (0-conf, re-priced). */
+  pollDetected?: (paymentId: string) => Promise<VmPayment | undefined>;
   onPaid?: () => void;
   /**
    * Leave the flow once the user has broadcast their transaction. On-chain
@@ -31,10 +31,27 @@ export default function OnChainPayment({
    */
   onDone?: () => void;
 }) {
-  // Seen in the mempool (0-conf) but not yet confirmed. Set from `outpoint`.
-  const [detected, setDetected] = useState(
-    "onchain" in payment.data && !!payment.data.onchain.outpoint,
+  // The amended payment once a deposit is seen in the mempool (0-conf) but not
+  // yet confirmed. The server re-prices on discovery, so this carries the
+  // re-calculated credited `time` the deposit actually buys.
+  const initialSeen =
+    "onchain" in payment.data && payment.data.onchain.outpoint
+      ? payment
+      : undefined;
+  const [detectedPayment, setDetectedPayment] = useState<VmPayment | undefined>(
+    initialSeen,
   );
+  const detected = !!detectedPayment;
+  const outpoint =
+    detectedPayment && "onchain" in detectedPayment.data
+      ? detectedPayment.data.onchain.outpoint
+      : undefined;
+  const txid = outpoint?.split(":")[0];
+  // Re-priced duration this deposit credits (may differ from the quote on a
+  // partial/over-payment or an exchange-rate move since the invoice).
+  const creditedDays = detectedPayment
+    ? Math.max(1, Math.round(detectedPayment.time / 86_400))
+    : undefined;
 
   useEffect(() => {
     const tx = setInterval(async () => {
@@ -44,15 +61,16 @@ export default function OnChainPayment({
           onPaid?.();
           return;
         }
-        if (!detected && pollDetected && (await pollDetected(payment.id))) {
-          setDetected(true);
+        if (!detectedPayment && pollDetected) {
+          const seen = await pollDetected(payment.id);
+          if (seen) setDetectedPayment(seen);
         }
       } catch (e) {
         console.error(e);
       }
     }, 5_000);
     return () => clearInterval(tx);
-  }, [payment.id, pollPaid, pollDetected, detected, onPaid]);
+  }, [payment.id, pollPaid, pollDetected, detectedPayment, onPaid]);
 
   if (!("onchain" in payment.data)) {
     return (
@@ -70,14 +88,17 @@ export default function OnChainPayment({
 
   return (
     <div className="flex flex-col gap-4 rounded-sm border border-cyber-border p-3 bg-cyber-panel items-center">
-      <QrCode
-        data={uri}
-        link={uri}
-        width={512}
-        height={512}
-        avatar="/logo.jpg"
-        className="cursor-pointer rounded-sm overflow-hidden"
-      />
+      {/* Once the deposit is seen there's nothing left to scan — drop the QR. */}
+      {!detected && (
+        <QrCode
+          data={uri}
+          link={uri}
+          width={512}
+          height={512}
+          avatar="/logo.jpg"
+          className="cursor-pointer rounded-sm overflow-hidden"
+        />
+      )}
       <div className="flex flex-col items-center">
         <div className="text-cyber-primary">
           <CostAmount
@@ -123,9 +144,30 @@ export default function OnChainPayment({
         {address}
       </div>
       {detected ? (
-        <div className="flex items-center justify-center gap-2 rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-3 py-2 text-center text-xs text-cyber-primary">
-          <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-cyber-primary" />
-          <FormattedMessage defaultMessage="Payment received — waiting for confirmation. Time is credited once it confirms; you can safely leave this page." />
+        <div className="flex flex-col items-center gap-1.5 rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-3 py-2 text-center text-xs text-cyber-primary">
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-cyber-primary" />
+            <FormattedMessage defaultMessage="Payment received — waiting for confirmation. You can safely leave this page." />
+          </div>
+          {creditedDays !== undefined && (
+            <div className="text-cyber-text">
+              <FormattedMessage
+                defaultMessage="Credits {days, plural, one {# day} other {# days}} at the rate when the deposit was seen — pro-rated by the amount received."
+                values={{ days: creditedDays }}
+              />
+            </div>
+          )}
+          {txid && (
+            <a
+              href={`https://mempool.space/tx/${txid}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="font-mono break-all underline decoration-dotted underline-offset-2 hover:text-cyber-text-bright"
+            >
+              <FormattedMessage defaultMessage="View transaction" />{" ↗"}
+            </a>
+          )}
         </div>
       ) : (
         <div className="text-center text-xs text-cyber-muted">

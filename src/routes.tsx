@@ -40,6 +40,10 @@ const VmPage = lazy(() => import("./pages/vm.tsx"));
 const VmConsolePage = lazy(() =>
   import("./pages/vm-console.tsx").then((m) => ({ default: m.VmConsolePage })),
 );
+// Dev-only component catalogue; pulls in the browser-only QR lib.
+const ComponentGalleryPage = lazy(
+  () => import("./pages/component-gallery.tsx"),
+);
 
 function Lazy({ children }: { children: React.ReactNode }) {
   return <Suspense fallback={null}>{children}</Suspense>;
@@ -157,6 +161,14 @@ export const routes: RouteObject[] = [
             element: <VmUpgradePage />,
           },
         ],
+      },
+      {
+        path: "/gallery",
+        element: (
+          <Lazy>
+            <ComponentGalleryPage />
+          </Lazy>
+        ),
       },
       {
         path: "/tos",

@@ -99,7 +99,12 @@ export default function VpsInstanceRow({
       </div>
 
       {/* Lease footer: healthy = countdown meter; lapsed = deletion notice */}
-      <LeaseFooter st={st} expires={vm.expires} deletingOn={deletingOn} />
+      <LeaseFooter
+        st={st}
+        expires={vm.expires}
+        deletingOn={deletingOn}
+        autoRenew={vm.auto_renewal_enabled ?? false}
+      />
     </div>
   );
 }
@@ -108,10 +113,12 @@ function LeaseFooter({
   st,
   expires,
   deletingOn,
+  autoRenew,
 }: {
   st: ReturnType<typeof expiryStatus>;
   expires?: string;
   deletingOn?: Date;
+  autoRenew: boolean;
 }) {
   // Lapsed lease in its deletion grace period — the fact that matters most.
   if (st.expired) {
@@ -170,7 +177,29 @@ function LeaseFooter({
         {expires && (
           <>
             {" · "}
-            <FormattedDate value={expires} month="short" day="numeric" />
+            {autoRenew ? (
+              <span className="inline-flex items-center gap-1 align-bottom text-cyber-primary">
+                <Icon
+                  name="refresh-1"
+                  size={11}
+                  className="shrink-0 pointer-events-none"
+                />
+                <FormattedMessage
+                  defaultMessage="auto-renews {date}"
+                  values={{
+                    date: (
+                      <FormattedDate
+                        value={expires}
+                        month="short"
+                        day="numeric"
+                      />
+                    ),
+                  }}
+                />
+              </span>
+            ) : (
+              <FormattedDate value={expires} month="short" day="numeric" />
+            )}
           </>
         )}
       </span>

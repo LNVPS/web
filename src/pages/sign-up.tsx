@@ -15,6 +15,7 @@ import {
 } from "../webauthn";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { Relays } from "../const";
 
 type Mode = "signin" | "create";
 
@@ -100,7 +101,12 @@ export default function SignUpPage() {
       name: name,
       picture: pic,
     });
+    // NIP-65 relay list so other clients know where to find this account.
+    const relayList = await pub.relayList(
+      Object.fromEntries(Relays.map((r) => [r, { read: true, write: true }])),
+    );
     system.BroadcastEvent(ev);
+    system.BroadcastEvent(relayList);
     LoginState.loginPrivateKey(key.privateKey);
     window.history.back();
   }

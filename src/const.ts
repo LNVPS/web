@@ -87,4 +87,4 @@ export const System = new NostrSystem({
   automaticOutboxModel: false,
   buildFollowGraph: false,
 });
-Relays.forEach((r) => System.ConnectToRelay(r, { read: true, write: false }));
+Relays.forEach((r) => System.ConnectToRelay(r, { read: true, write: true }));

@@ -271,6 +271,29 @@ export function DeletionWarning({ deletingOn }: { deletingOn: Date }) {
   );
 }
 
+/** Host-decommission notice: the VM's host is being retired, so the user must
+ * migrate before `sunsetOn` (renewals are blocked once expiry reaches it). */
+export function SunsetWarning({ sunsetOn }: { sunsetOn: Date }) {
+  return (
+    <div className="flex items-center gap-2 rounded-sm border border-cyber-warning/40 bg-cyber-warning/10 px-3 py-2 text-xs text-cyber-warning">
+      <Icon name="refresh-1" size={14} className="shrink-0 pointer-events-none" />
+      <FormattedMessage
+        defaultMessage="This host is being retired. Move to a new VPS before {date} — renewals stop then and you'll need to migrate."
+        values={{
+          date: (
+            <FormattedDate
+              value={sunsetOn}
+              year="numeric"
+              month="short"
+              day="numeric"
+            />
+          ),
+        }}
+      />
+    </div>
+  );
+}
+
 /** Auto-renew control with the default saved payment method. Read-only when no
  * `onToggle` is supplied (e.g. where there's no endpoint to change it). */
 export function AutoRenewCard({

@@ -6,6 +6,36 @@ import {
   VmUpgradeRequest,
 } from "../api";
 import { ApiUrl } from "../const";
+import { planCycleDays } from "./billing";
+
+const MS_PER_DAY = 86_400_000;
+
+/**
+ * How many billing cycles the server will accept in one renewal, bounded by
+ * the prepay window (`max_prepay_days`) and the host's sunset date. A renewal
+ * is rejected once it would push `expires` past `now + max_prepay_days` (or the
+ * sunset date, whichever is sooner), so the interval selector must cap to this.
+ */
+export function maxRenewalIntervals(vm: VmInstance): number | undefined {
+  const cycleDays = planCycleDays(vm.template.cost_plan);
+  if (!cycleDays) return undefined;
+  const now = Date.now();
+  // Renewal extends from the later of "now" and the current expiry.
+  const base = vm.expires ? Math.max(now, new Date(vm.expires).getTime()) : now;
+
+  const ceilings: Array<number> = [];
+  if (vm.max_prepay_days !== undefined) {
+    ceilings.push(now + vm.max_prepay_days * MS_PER_DAY);
+  }
+  if (vm.host_sunset_date) {
+    ceilings.push(new Date(vm.host_sunset_date).getTime());
+  }
+  if (ceilings.length === 0) return undefined;
+
+  const remainingDays = (Math.min(...ceilings) - base) / MS_PER_DAY;
+  // Always offer at least one cycle; the server has the final say.
+  return Math.max(1, Math.floor(remainingDays / cycleDays));
+}
 
 /**
  * A "payment source" describes the one thing that differs between checkout
@@ -24,6 +54,12 @@ export interface PaymentSource {
   ) => Promise<VmPayment>;
   /** Resolve true once the given payment has settled. */
   pollPaid: (paymentId: string) => Promise<boolean>;
+  /**
+   * Resolve true once an on-chain deposit has been *seen* (0-conf, `outpoint`
+   * set) but not yet confirmed. Lets the UI show "received, confirming".
+   * Optional — sources without on-chain support can omit it.
+   */
+  pollDetected?: (paymentId: string) => Promise<boolean>;
   /** Optional interval (duration) selector for renewals. */
   duration?: {
     /** cost-plan interval type, e.g. "month" | "day" */
@@ -32,6 +68,8 @@ export interface PaymentSource {
     cost: { currency: string; amount: number };
     /** seller company id, to pick the applicable VAT rate from the account */
     taxCompanyId?: number;
+    /** Cap on selectable intervals (prepay window / sunset). Unbounded if unset. */
+    maxIntervals?: number;
   };
   /** Optional Lightning address (LNURL) the user can pay from any wallet. */
   lnurl?: { lud16: string };
@@ -83,6 +121,13 @@ export function subscriptionRenewalSource(
       const list = await api.listSubscriptionPayments(subscriptionId);
       return list.some((p) => p.id === paymentId && p.is_paid);
     },
+    pollDetected: async (paymentId) => {
+      const list = await api.listSubscriptionPayments(subscriptionId);
+      const p = list.find((x) => x.id === paymentId);
+      return (
+        !!p && !p.is_paid && "onchain" in p.data && !!p.data.onchain.outpoint
+      );
+    },
     ...extra,
   };
 }
@@ -119,6 +164,7 @@ export function vmRenewalSource(
       intervalType: costPlan.interval_type,
       cost: { currency: costPlan.currency, amount: costPlan.amount },
       taxCompanyId: vm.template.region?.company_id,
+      maxIntervals: maxRenewalIntervals(vm),
     },
     lnurl: { lud16: `${vm.id}@${new URL(ApiUrl).host}` },
   });

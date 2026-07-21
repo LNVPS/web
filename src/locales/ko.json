@@ -323,6 +323,9 @@
   "9dOxDN": {
     "defaultMessage": "결제 및 갱신"
   },
+  "9p3I3O": {
+    "defaultMessage": "확인 중"
+  },
   "9uOFF3": {
     "defaultMessage": "개요"
   },
@@ -761,6 +764,9 @@
   "PujK1s": {
     "defaultMessage": "생성"
   },
+  "Q/My+S": {
+    "defaultMessage": "결제가 접수되었습니다 — 확인을 기다리는 중입니다. 확인되면 시간이 적립되며, 이 페이지를 나가셔도 됩니다."
+  },
   "QEuWMk": {
     "defaultMessage": "LNVPS 계정은 Nostr 또는 로그인 서비스를 사용합니다. {link}"
   },
@@ -880,6 +886,9 @@
   },
   "TH1fFo": {
     "defaultMessage": "텔레그램"
+  },
+  "TKgu8P": {
+    "defaultMessage": "이 호스트는 곧 종료됩니다. {date} 전에 새 VPS로 이전하세요 — 이후에는 갱신이 중단되며 마이그레이션이 필요합니다."
   },
   "TNSbi4": {
     "defaultMessage": "역방향 DNS:"
@@ -1408,6 +1417,9 @@
   },
   "nm81YC": {
     "defaultMessage": "VPS 로딩 중..."
+  },
+  "nrTBF4": {
+    "defaultMessage": "호스트 종료 예정"
   },
   "nx5ZnY": {
     "defaultMessage": "전화번호를 인증하여 기능을 활성화하세요."

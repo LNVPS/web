@@ -270,6 +270,8 @@ export interface VmCustomTemplateRequest {
 export interface VmCustomPrice {
   currency: string;
   amount: number;
+  /** The same quote converted into the other supported currencies. */
+  other_price?: Array<Price>;
 }
 
 export interface VmTemplateResponse {
@@ -330,6 +332,17 @@ export interface VmInstance {
   deleting_on?: string;
   /** The subscription this VM is billed under; renew via renewSubscription. */
   subscription_id?: number;
+  /**
+   * Set when the VM's host is being decommissioned — migrate before this date.
+   * Renewals are blocked once `expires` reaches it. Omitted otherwise.
+   */
+  host_sunset_date?: string;
+  /**
+   * Max days this VM may be prepaid/renewed in advance. A renewal is rejected
+   * once it would push `expires` beyond now + this window; cap the renewal
+   * interval selector accordingly.
+   */
+  max_prepay_days?: number;
 }
 
 export interface VmIpAssignment {
@@ -363,7 +376,18 @@ export type PaymentData =
   | { lightning: string }
   | { revolut: { token: string } }
   | { stripe: { session_id: string } }
-  | { onchain: { address: string } };
+  | {
+      onchain: {
+        address: string;
+        /**
+         * "{txid}:{vout}", set as soon as a deposit is seen in the mempool
+         * (0-conf) before it confirms — lets the UI show "received, waiting
+         * for confirmation". Absent until a deposit is detected; confirmed
+         * once `is_paid` is true.
+         */
+        outpoint?: string;
+      };
+    };
 
 export interface VmPayment {
   id: string;
@@ -407,6 +431,11 @@ export interface PaymentMethod {
   processing_fee_rate?: number;
   processing_fee_base?: number;
   processing_fee_currency?: string;
+  /** Minimum processable amount in smallest currency units; payments below
+   * this are rejected for this method. */
+  min_amount?: number;
+  /** Currency for `min_amount` (e.g. "EUR"). */
+  min_amount_currency?: string;
 }
 
 export interface NostrDomainsResponse {

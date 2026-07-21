@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { VmPayment } from "../api";
 import QrCode from "./qr";
 import { CostAmount } from "./cost";
@@ -14,12 +14,15 @@ import { AsyncButton } from "./button";
 export default function OnChainPayment({
   payment,
   pollPaid,
+  pollDetected,
   onPaid,
   onDone,
 }: {
   payment: VmPayment;
   /** Resolve true once the payment has settled (source-specific lookup). */
   pollPaid: (paymentId: string) => Promise<boolean>;
+  /** Resolve true once a deposit is seen but not yet confirmed (0-conf). */
+  pollDetected?: (paymentId: string) => Promise<boolean>;
   onPaid?: () => void;
   /**
    * Leave the flow once the user has broadcast their transaction. On-chain
@@ -28,19 +31,28 @@ export default function OnChainPayment({
    */
   onDone?: () => void;
 }) {
+  // Seen in the mempool (0-conf) but not yet confirmed. Set from `outpoint`.
+  const [detected, setDetected] = useState(
+    "onchain" in payment.data && !!payment.data.onchain.outpoint,
+  );
+
   useEffect(() => {
     const tx = setInterval(async () => {
       try {
         if (await pollPaid(payment.id)) {
           clearInterval(tx);
           onPaid?.();
+          return;
+        }
+        if (!detected && pollDetected && (await pollDetected(payment.id))) {
+          setDetected(true);
         }
       } catch (e) {
         console.error(e);
       }
     }, 5_000);
     return () => clearInterval(tx);
-  }, [payment.id, pollPaid, onPaid]);
+  }, [payment.id, pollPaid, pollDetected, detected, onPaid]);
 
   if (!("onchain" in payment.data)) {
     return (
@@ -110,9 +122,16 @@ export default function OnChainPayment({
       <div className="monospace select-all break-all text-center text-sm text-cyber-text">
         {address}
       </div>
-      <div className="text-center text-xs text-cyber-muted">
-        <FormattedMessage defaultMessage="Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost." />
-      </div>
+      {detected ? (
+        <div className="flex items-center justify-center gap-2 rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-3 py-2 text-center text-xs text-cyber-primary">
+          <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-cyber-primary" />
+          <FormattedMessage defaultMessage="Payment received — waiting for confirmation. Time is credited once it confirms; you can safely leave this page." />
+        </div>
+      ) : (
+        <div className="text-center text-xs text-cyber-muted">
+          <FormattedMessage defaultMessage="Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost." />
+        </div>
+      )}
       {onDone && (
         <div className="flex w-full flex-col items-center gap-2">
           <AsyncButton

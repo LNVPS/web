@@ -14,6 +14,7 @@ import {
   BillingPaymentsTable,
   BillingStatusCard,
   DeletionWarning,
+  SunsetWarning,
   expiryStatus,
   planCycleDays,
   type PaymentRow,
@@ -103,6 +104,9 @@ export function VmBillingPage() {
   const deletingOn = state.deleting_on
     ? new Date(state.deleting_on)
     : undefined;
+  const sunsetOn = state.host_sunset_date
+    ? new Date(state.host_sunset_date)
+    : undefined;
   const defaultMethod =
     savedMethods.find((m) => m.is_default && m.enabled) ??
     savedMethods.find((m) => m.is_default);
@@ -129,7 +133,11 @@ export function VmBillingPage() {
     status: a.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
     ) : "onchain" in a.data ? (
-      <FormattedMessage defaultMessage="Pending" />
+      a.data.onchain.outpoint ? (
+        <FormattedMessage defaultMessage="Confirming" />
+      ) : (
+        <FormattedMessage defaultMessage="Pending" />
+      )
     ) : new Date(a.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
     ) : (
@@ -243,6 +251,8 @@ export function VmBillingPage() {
             warning={
               st.expired && deletingOn ? (
                 <DeletionWarning deletingOn={deletingOn} />
+              ) : sunsetOn ? (
+                <SunsetWarning sunsetOn={sunsetOn} />
               ) : undefined
             }
             cta={{

@@ -323,6 +323,9 @@
   "9dOxDN": {
     "defaultMessage": "Ödemeler ve yenileme"
   },
+  "9p3I3O": {
+    "defaultMessage": "Onaylanıyor"
+  },
   "9uOFF3": {
     "defaultMessage": "Genel Bakış"
   },
@@ -761,6 +764,9 @@
   "PujK1s": {
     "defaultMessage": "oluştur"
   },
+  "Q/My+S": {
+    "defaultMessage": "Ödeme alındı — onay bekleniyor. Süre, onaylandığında hesaba geçer; bu sayfadan güvenle ayrılabilirsiniz."
+  },
   "QEuWMk": {
     "defaultMessage": "LNVPS hesapları, Nostr veya bir oturum açma sağlayıcısı kullanır. {link}"
   },
@@ -880,6 +886,9 @@
   },
   "TH1fFo": {
     "defaultMessage": "Telegram (mesajlaşma uygulaması)"
+  },
+  "TKgu8P": {
+    "defaultMessage": "Bu sunucu hizmetten kaldırılıyor. {date} tarihinden önce yeni bir VPS'e geçin — yenilemeler o zaman durur ve taşınmanız gerekir."
   },
   "TNSbi4": {
     "defaultMessage": "Ters DNS:"
@@ -1408,6 +1417,9 @@
   },
   "nm81YC": {
     "defaultMessage": "VPS yükleme işlemleri şu seçenekleri sunar..."
+  },
+  "nrTBF4": {
+    "defaultMessage": "Sunucu kapanıyor"
   },
   "nx5ZnY": {
     "defaultMessage": "Etkinleştirmek için bir telefon numarasını doğrulayın."

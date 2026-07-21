@@ -24,6 +24,9 @@ export default function VpsInstanceRow({
   const navigate = useNavigate();
   const st = expiryStatus(vm.expires, planCycleDays(vm.template.cost_plan));
   const deletingOn = vm.deleting_on ? new Date(vm.deleting_on) : undefined;
+  const sunsetOn = vm.host_sunset_date
+    ? new Date(vm.host_sunset_date)
+    : undefined;
   const name = vm.ip_assignments?.[0]?.reverse_dns ?? vm.template?.name;
   const showLiveActions = !st.isNew && !st.expired && (actions ?? true);
 
@@ -56,6 +59,11 @@ export default function VpsInstanceRow({
           <span className="truncate text-cyber-text-bright">{name}</span>
         </div>
         <div className="flex items-center gap-2 shrink-0">
+          {sunsetOn && !st.expired && (
+            <StatusPill tone="warning">
+              <FormattedMessage defaultMessage="Host retiring" />
+            </StatusPill>
+          )}
           {st.isNew && (
             <Link
               to="/vm/billing/renew"

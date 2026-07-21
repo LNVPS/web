@@ -323,6 +323,9 @@
   "9dOxDN": {
     "defaultMessage": "Zahlungen und Verlängerung"
   },
+  "9p3I3O": {
+    "defaultMessage": "Wird bestätigt"
+  },
   "9uOFF3": {
     "defaultMessage": "Überblick"
   },
@@ -761,6 +764,9 @@
   "PujK1s": {
     "defaultMessage": "erzeugen"
   },
+  "Q/My+S": {
+    "defaultMessage": "Zahlung eingegangen — warten auf Bestätigung. Die Zeit wird nach der Bestätigung gutgeschrieben; Sie können diese Seite bedenkenlos verlassen."
+  },
   "QEuWMk": {
     "defaultMessage": "LNVPS-Konten verwenden entweder Nostr oder einen Anbieterdienst für die Anmeldung. {link}"
   },
@@ -880,6 +886,9 @@
   },
   "TH1fFo": {
     "defaultMessage": "Telegram"
+  },
+  "TKgu8P": {
+    "defaultMessage": "Dieser Host wird stillgelegt. Wechseln Sie vor dem {date} zu einem neuen VPS — danach sind keine Verlängerungen mehr möglich und Sie müssen migrieren."
   },
   "TNSbi4": {
     "defaultMessage": "Umgekehrte DNS-Abfrage:"
@@ -1408,6 +1417,9 @@
   },
   "nm81YC": {
     "defaultMessage": "Wir laden gerade die VPS-Angebote..."
+  },
+  "nrTBF4": {
+    "defaultMessage": "Host wird stillgelegt"
   },
   "nx5ZnY": {
     "defaultMessage": "Überprüfen Sie eine Telefonnummer, um die Funktion zu aktivieren."

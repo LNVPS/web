@@ -1,5 +1,10 @@
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { AccountDetail, SavedPaymentMethod, VmPayment } from "../api";
+import {
+  AccountDetail,
+  PaymentMethod,
+  SavedPaymentMethod,
+  VmPayment,
+} from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import { CostAmount, IntervalSuffix } from "./cost";
@@ -311,6 +316,7 @@ export default function PaymentFlow({
           <OnChainPayment
             payment={payment}
             pollPaid={source.pollPaid}
+            pollDetected={source.pollDetected}
             onPaid={handlePaymentComplete}
             // On-chain confirmation takes 10+ minutes and is credited
             // server-side, so let the user leave instead of watching a
@@ -417,18 +423,43 @@ export default function PaymentFlow({
   const duration = source.duration;
   // Sensible renewal lengths per billing cadence — yearly plans renew one
   // year at a time (no slider), nobody needs to prepay 12 years ahead.
-  const steps =
+  const baseSteps =
     duration?.intervalType === "day"
       ? [1, 7, 14, 30]
       : duration?.intervalType === "year"
         ? [1]
         : [1, 3, 6, 12];
+  // Cap to what the server will accept (prepay window / host sunset), always
+  // leaving at least the single-cycle option.
+  const maxIntervals = duration?.maxIntervals;
+  const steps =
+    maxIntervals !== undefined
+      ? baseSteps.filter((s, i) => s <= maxIntervals || i === 0)
+      : baseSteps;
   const currentIndex = Math.max(0, steps.indexOf(intervals));
+
+  // A method is rejected server-side when the gross total (net + tax + its own
+  // processing fee) is below its configured minimum. Mirror that here so we
+  // never offer a method the payment would bounce on. We can only compare when
+  // the minimum is quoted in the order currency; otherwise defer to the server.
+  function meetsMinimum(m: PaymentMethod): boolean {
+    if (m.min_amount === undefined || !duration) return true;
+    if (m.min_amount_currency && m.min_amount_currency !== duration.cost.currency)
+      return true;
+    const subtotal = duration.cost.amount * intervals;
+    const tax = Math.round(
+      subtotal * accountTaxRate(account, duration.taxCompanyId),
+    );
+    const fee = processingFeeEstimate(m, duration.cost.currency, subtotal + tax);
+    return subtotal + tax + fee >= m.min_amount;
+  }
 
   const providerRows = (methods ?? [])
     .filter((m) => shouldShowMethod(m, hasNwc))
     // The LNURL row only makes sense when the source offers a Lightning address.
-    .filter((m) => m.name !== "lnurl" || !!source.lnurl);
+    .filter((m) => m.name !== "lnurl" || !!source.lnurl)
+    // Drop methods whose minimum the order can't meet.
+    .filter(meetsMinimum);
 
   // Group by settlement rail so the three bitcoin options read as variants of
   // one choice; within the group, fastest first.

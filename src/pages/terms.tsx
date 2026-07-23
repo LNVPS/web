@@ -14,7 +14,7 @@ export function TosPage() {
         canonical="/tos"
         description={formatMessage({
           defaultMessage:
-            "Terms of Service for LNVPS — Bitcoin Lightning VPS provider. Read our usage policies, acceptable use guidelines, and service terms.",
+            "Terms of Service for LNVPS. Read our usage policies, acceptable use guidelines, and service terms.",
         })}
       />
       <Markdown content={TOS} />

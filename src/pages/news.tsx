@@ -33,7 +33,7 @@ export function NewsPage() {
         canonical="/news"
         description={formatMessage({
           defaultMessage:
-            "Latest news, updates, and announcements from LNVPS — your Bitcoin Lightning VPS provider.",
+            "Latest news, updates, and announcements from LNVPS — Bitcoin Lightning VPS hosting with card payments too.",
         })}
       />
       <h1 className="text-2xl">

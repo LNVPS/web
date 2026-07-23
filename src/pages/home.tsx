@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactNode } from "react";
 import { DiskType, VmHostRegion } from "../api";
-import VpsRow, { VpsTableHeader } from "../components/vps-card";
+import VpsRow, { VpsPlanCard, VpsTableHeader } from "../components/vps-card";
 import { NostrProfile, OnionWebUrl, isOnion } from "../const";
 import { Link, useLoaderData } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
@@ -18,6 +18,13 @@ import type { HomeLoaderData } from "../loaders";
 export default function HomePage() {
   const login = useLogin();
   const { formatMessage } = useIntl();
+  const { offers } = useLoaderData<HomeLoaderData>();
+
+  // All regions with capacity — standard templates plus custom builder.
+  const regionNames = dedupe([
+    ...(offers?.templates.map((t) => t.region.name) ?? []),
+    ...(offers?.custom_template?.map((t) => t.region.name) ?? []),
+  ]).sort();
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -27,7 +34,7 @@ export default function HomePage() {
     logo: "https://lnvps.net/logo.jpg",
     description: formatMessage({
       defaultMessage:
-        "Bitcoin Lightning VPS provider with high-performance virtual private servers and streamlined account management.",
+        "High-performance VPS hosting with flexible payments — Bitcoin Lightning or card.",
     }),
     sameAs: ["https://github.com/LNVPS"],
   };
@@ -48,14 +55,26 @@ export default function HomePage() {
         canonical="/"
         description={formatMessage({
           defaultMessage:
-            "High-performance VPS powered by Bitcoin Lightning. Virtual private servers starting from a few sats per month.",
+            "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, or card — no long-term contracts.",
         })}
         jsonLd={[organizationSchema, webSiteSchema]}
       />
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl text-cyber-text-bright">
-          <FormattedMessage defaultMessage="Bitcoin Lightning VPS Hosting" />
-        </h1>
+        <header className="flex flex-col gap-2">
+          <h1 className="text-3xl text-cyber-text-bright">
+            <FormattedMessage defaultMessage="High-Performance VPS Hosting" />
+          </h1>
+          <p className="text-cyber-text">
+            <FormattedMessage defaultMessage="Deploy in minutes. Pay with Lightning, Bitcoin, or card — no long-term contracts." />
+          </p>
+          {regionNames.length > 0 && (
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-cyber-muted">
+              <FormattedMessage defaultMessage="Regions" />
+              {" — "}
+              {regionNames.join(" · ")}
+            </div>
+          )}
+        </header>
         <LatestNews />
         <VpsOffersSection />
         <IpSpaceSection />
@@ -140,6 +159,17 @@ export default function HomePage() {
         </div>
       </div>
     </>
+  );
+}
+
+/** Section heading in the billing/checkout eyebrow style: short dash + small
+ * tracked uppercase label, kept as an h2 for document structure. */
+function SectionHeading({ children }: { children: ReactNode }) {
+  return (
+    <h2 className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-cyber-muted">
+      <span className="h-px w-3 bg-cyber-border-bright" />
+      {children}
+    </h2>
   );
 }
 
@@ -236,56 +266,59 @@ function VpsOffersSection() {
 
   return (
     <>
-      <h2 className="text-2xl">
+      <SectionHeading>
         <FormattedMessage defaultMessage="VPS Offers" />
-      </h2>
-      <p>
-        <FormattedMessage defaultMessage="High-performance VPS powered by Bitcoin Lightning." />
-      </p>
-      <div className="flex gap-4 items-center">
-        {Object.keys(regions).length > 1 && (
-          <FilterSection header={<FormattedMessage defaultMessage="Region" />}>
-            {Object.values(regions).map((r) => {
-              return (
-                <FilterButton
-                  active={region.includes(r.id)}
-                  onClick={() =>
-                    setRegion((x) => {
-                      if (x.includes(r.id)) {
-                        return x.filter((y) => y != r.id);
-                      } else {
-                        return appendDedupe(x, [r.id]);
-                      }
-                    })
-                  }
-                >
-                  {r.name}
-                </FilterButton>
-              );
-            })}
-          </FilterSection>
-        )}
-        {diskTypes.length > 1 && (
-          <FilterSection header={<FormattedMessage defaultMessage="Disk" />}>
-            {diskTypes.map((d) => (
-              <FilterButton
-                active={diskType.includes(d)}
-                onClick={() => {
-                  setDiskType((s) => {
-                    if (s?.includes(d)) {
-                      return s.filter((y) => y !== d);
-                    } else {
-                      return appendDedupe(s, [d]);
+      </SectionHeading>
+      {/* Skip the wrapper entirely when no filters render — an empty div
+          still costs two gaps in the parent flex-col. */}
+      {(Object.keys(regions).length > 1 || diskTypes.length > 1) && (
+        <div className="flex gap-4 items-center">
+          {Object.keys(regions).length > 1 && (
+            <FilterSection
+              header={<FormattedMessage defaultMessage="Region" />}
+            >
+              {Object.values(regions).map((r) => {
+                return (
+                  <FilterButton
+                    active={region.includes(r.id)}
+                    onClick={() =>
+                      setRegion((x) => {
+                        if (x.includes(r.id)) {
+                          return x.filter((y) => y != r.id);
+                        } else {
+                          return appendDedupe(x, [r.id]);
+                        }
+                      })
                     }
-                  });
-                }}
-              >
-                {d.toUpperCase()}
-              </FilterButton>
-            ))}
-          </FilterSection>
-        )}
-      </div>
+                  >
+                    {r.name}
+                  </FilterButton>
+                );
+              })}
+            </FilterSection>
+          )}
+          {diskTypes.length > 1 && (
+            <FilterSection header={<FormattedMessage defaultMessage="Disk" />}>
+              {diskTypes.map((d) => (
+                <FilterButton
+                  active={diskType.includes(d)}
+                  onClick={() => {
+                    setDiskType((s) => {
+                      if (s?.includes(d)) {
+                        return s.filter((y) => y !== d);
+                      } else {
+                        return appendDedupe(s, [d]);
+                      }
+                    });
+                  }}
+                >
+                  {d.toUpperCase()}
+                </FilterButton>
+              ))}
+            </FilterSection>
+          )}
+        </div>
+      )}
       {loading ? (
         <div className="text-center p-8">
           <div className="flex items-center justify-center gap-3">
@@ -303,6 +336,20 @@ function VpsOffersSection() {
             <FormattedMessage defaultMessage="No offers available" />
           </div>
         )
+      ) : (offers?.templates.length ?? 0) <= 2 ? (
+        // A 7-column table is empty scaffolding for one or two plans —
+        // show them as cards that mirror the custom builder below.
+        <div className="grid gap-3 sm:grid-cols-2">
+          {offers?.templates
+            .filter(
+              (t) =>
+                region.includes(t.region.id) && diskType.includes(t.disk_type),
+            )
+            .sort((a, b) => a.cost_plan.amount - b.cost_plan.amount)
+            .map((a) => (
+              <VpsPlanCard spec={a} key={a.id} />
+            ))}
+        </div>
       ) : (
         <div className="overflow-x-auto">
           <table>
@@ -341,9 +388,9 @@ function IpSpaceSection() {
 
   return (
     <div className="flex flex-col gap-4 mt-8">
-      <h2 className="text-2xl">
+      <SectionHeading>
         <FormattedMessage defaultMessage="Available IP Blocks" />
-      </h2>
+      </SectionHeading>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {ipLoading ? (
           <div className="col-span-full text-center p-8">

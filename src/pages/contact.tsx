@@ -25,7 +25,7 @@ export function ContactPage() {
         canonical="/contact"
         description={formatMessage({
           defaultMessage:
-            "Get in touch with the LNVPS team. Have questions about our Bitcoin Lightning VPS service? We're here to help.",
+            "Get in touch with the LNVPS team. Have questions about our VPS hosting or payment options? We're here to help.",
         })}
       />
       <h1 className="text-xl">

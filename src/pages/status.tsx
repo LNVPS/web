@@ -570,7 +570,7 @@ export function StatusPage() {
         canonical="/status"
         description={formatMessage({
           defaultMessage:
-            "Live uptime and incident history for LNVPS services. Check the current operational status of our Bitcoin Lightning VPS infrastructure.",
+            "Live uptime and incident history for LNVPS services. Check the current operational status of our VPS infrastructure.",
         })}
       />
       <h1 className="text-2xl">

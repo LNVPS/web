@@ -1,12 +1,17 @@
 import { VmOsImage } from "./api";
 
 /** Canonical OS image ordering used everywhere images are listed: most popular
- * first, with the newest release as a tiebreak. */
+ * first, with the newest release as a tiebreak (so 0-popularity images are
+ * ordered newest-first). Missing/invalid release dates sort last. */
 export function sortOsImages(images: Array<VmOsImage>): Array<VmOsImage> {
+  const releaseTime = (i: VmOsImage) => {
+    const t = new Date(i.release_date).getTime();
+    return Number.isNaN(t) ? 0 : t;
+  };
   return [...images].sort(
     (a, b) =>
       (b.popularity ?? 0) - (a.popularity ?? 0) ||
-      new Date(b.release_date).getTime() - new Date(a.release_date).getTime(),
+      releaseTime(b) - releaseTime(a),
   );
 }
 

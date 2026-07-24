@@ -343,6 +343,12 @@ export interface VmInstance {
    * interval selector accordingly.
    */
   max_prepay_days?: number;
+  /**
+   * CPU architecture of the host this VM runs on. Unlike the optional
+   * `template.cpu_arch` constraint, this is present whenever the host arch is
+   * known — use it to filter OS images for a reinstall. Omitted if unknown.
+   */
+  cpu_arch?: CpuArch;
 }
 
 export interface VmIpAssignment {
@@ -631,6 +637,13 @@ export interface Referral {
   /** Payout method: `lightning_address`, `nwc`, `account_credit`, or `on_chain`. */
   mode: ReferralPayoutMode;
   /**
+   * Chosen minimum accrued commission (in **satoshis**) before an automated
+   * payout is made — raise it to avoid many tiny payouts (useful on-chain).
+   * `null`/undefined uses the system minimum; effective threshold is
+   * `max(system minimum, this value)`.
+   */
+  payout_threshold?: number | null;
+  /**
    * Per-referrer commission override, as a whole percentage of a referred VM's
    * first payment. `null`/undefined means the referred VM's company default
    * rate applies instead.
@@ -703,6 +716,11 @@ export interface ReferralSignupRequest {
   address?: string;
   /** Payout method: `lightning_address` (default), `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
+  /**
+   * Minimum accrued commission (satoshis) before an automated payout. Must be
+   * at least the system minimum. Omit to use the system minimum.
+   */
+  payout_threshold?: number;
 }
 
 export interface ReferralPatchRequest {
@@ -713,6 +731,11 @@ export interface ReferralPatchRequest {
   address?: string | null;
   /** Payout method: `lightning_address`, `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
+  /**
+   * Set (sats) or clear (null) the minimum-payout threshold; omit to leave
+   * unchanged. When set it must be at least the system minimum.
+   */
+  payout_threshold?: number | null;
 }
 
 export type PaginatedResponse<T> = ApiResponseBase & {

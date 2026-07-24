@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "Opcional. Aparece nas faturas que emitimos para os seus pagamentos."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Mantenha a comissão até que atinja este valor antes de efetuar o pagamento — útil para evitar pagamentos muito pequenos. Deixe em branco para usar o valor mínimo do sistema; pode aumentá-lo, mas não pode reduzi-lo."
+  },
   "FBjXEw": {
     "defaultMessage": "Atualize o VPS nº{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Tempo de atividade nos últimos 30 dias: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "última utilização {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "A carregar o firewall..."
+  },
+  "auFzJF": {
+    "defaultMessage": "Valor mínimo de pagamento (opcional)"
   },
   "b1zuN9": {
     "defaultMessage": "Preço"

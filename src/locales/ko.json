@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "선택 사항입니다. 귀하의 결제에 대해 저희가 생성하는 청구서에 표시됩니다."
   },
+  "FBPfJ7": {
+    "defaultMessage": "지급액이 이 금액에 도달할 때까지 수수료를 보류한 후 지급합니다. 소액 지급을 피하기 위해 유용한 온체인 기능입니다. 기본값을 사용하려면 비워두세요. 값을 높일 수는 있지만, 기본값보다 낮게 설정할 수는 없습니다."
+  },
   "FBjXEw": {
     "defaultMessage": "VPS 업그레이드하기{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "최근 30일 동안의 가동 시간: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "마지막으로 사용한 날짜/시간 {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "방화벽을 로드하는 중입니다."
+  },
+  "auFzJF": {
+    "defaultMessage": "최소 지급액(선택 사항)"
   },
   "b1zuN9": {
     "defaultMessage": "가격"

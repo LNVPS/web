@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "可选。将显示在为您的付款而生成的发票上。"
   },
+  "FBPfJ7": {
+    "defaultMessage": "在达到此金额之前，暂不支付佣金——这在链上操作时非常方便，可以避免支付少量佣金。如果留空，则使用系统设定的最低金额；您可以提高此金额，但不能低于该值。"
+  },
   "FBjXEw": {
     "defaultMessage": "升级虚拟专用服务器。{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "过去 30 天的正常运行时间： {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "上次使用时间 {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "正在加载防火墙……"
+  },
+  "auFzJF": {
+    "defaultMessage": "最低支付额（可选）"
   },
   "b1zuN9": {
     "defaultMessage": "价格"

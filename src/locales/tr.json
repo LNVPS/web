@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "İsteğe bağlıdır. Ödemeleriniz için oluşturduğumuz faturalarda görünür."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Bu miktara ulaşana kadar komisyonu bekletin ve ardından ödeme yapın; bu, küçük ödemelerden kaçınmak için zincir üzerinde kullanışlı bir yöntemdir. Sistemdeki minimum değeri kullanmak için boş bırakın; bu değeri artırabilirsiniz ancak minimum değerin altına indiremezsiniz."
+  },
   "FBjXEw": {
     "defaultMessage": "VPS'nizi yükseltin.{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Son 30 Gün İçindeki Çalışma Süresi: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "en son kullanıldı {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "Güvenlik duvarı yükleniyor..."
+  },
+  "auFzJF": {
+    "defaultMessage": "Minimum ödeme tutarı (isteğe bağlı)"
   },
   "b1zuN9": {
     "defaultMessage": "Fiyat"

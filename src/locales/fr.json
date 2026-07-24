@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "Facultatif. S’affiche sur les factures que nous générons pour vos paiements."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Conservez la commission jusqu’à ce qu’elle atteigne ce montant avant d’effectuer le paiement. Cette option est pratique pour éviter les petits paiements sur la chaîne. Laissez le champ vide pour utiliser le minimum du système ; vous pouvez augmenter cette valeur, mais pas la diminuer."
+  },
   "FBjXEw": {
     "defaultMessage": "Améliorer le VPS n°{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Disponibilité au cours des 30 derniers jours : {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "dernière utilisation {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "Chargement du pare-feu…"
+  },
+  "auFzJF": {
+    "defaultMessage": "Montant minimum de paiement (facultatif)"
   },
   "b1zuN9": {
     "defaultMessage": "Prix"

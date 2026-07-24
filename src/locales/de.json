@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "Optional. Wird auf den Rechnungen angezeigt, die wir für Ihre Zahlungen erstellen."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Halten Sie die Provision ein, bis sie diesen Betrag erreicht, bevor Sie sie auszahlen – dies ist besonders bei On-Chain-Transaktionen nützlich, um kleine Auszahlungen zu vermeiden. Lassen Sie das Feld leer, um das Systemminimum zu verwenden; Sie können es erhöhen, aber nicht unter diesen Wert senken."
+  },
   "FBjXEw": {
     "defaultMessage": "VPS-Paket upgraden{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Systemverfügbarkeit der letzten 30 Tage: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "zuletzt verwendet {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "Firewall wird geladen …"
+  },
+  "auFzJF": {
+    "defaultMessage": "Mindestauszahlung (optional)"
   },
   "b1zuN9": {
     "defaultMessage": "Preis"

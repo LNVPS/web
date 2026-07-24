@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "任意項目。お客様への請求書に表示されます。"
   },
+  "FBPfJ7": {
+    "defaultMessage": "この金額に達するまで手数料を保留し、その後で支払うように設定します。少額の支払いを避けるために便利です。空白のままにすると、システムで設定された最小値が使用されます。必要に応じて値を高くすることはできますが、最小値より低くすることはできません。"
+  },
   "FBjXEw": {
     "defaultMessage": "VPSをアップグレードします。{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "過去30日間の稼働時間： {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "前回使用日 {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "ファイアウォールの読み込み中…"
+  },
+  "auFzJF": {
+    "defaultMessage": "最低払い戻し額（オプション）"
   },
   "b1zuN9": {
     "defaultMessage": "価格"

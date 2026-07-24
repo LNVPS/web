@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "Opcional. Aparece en las facturas que generamos para sus pagos."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Mantenga la comisión hasta que alcance esta cantidad antes de realizar el pago; esto es útil en la cadena de bloques para evitar pagos mínimos. Deje este campo en blanco para utilizar el mínimo del sistema; puede aumentarlo, pero no disminuirlo."
+  },
   "FBjXEw": {
     "defaultMessage": "Actualizar el VPS nº{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Tiempo de actividad en los últimos 30 días: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "último uso {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "Cargando el cortafuegos…"
+  },
+  "auFzJF": {
+    "defaultMessage": "Importe mínimo de pago (opcional)"
   },
   "b1zuN9": {
     "defaultMessage": "Precio"

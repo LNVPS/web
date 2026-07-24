@@ -112,7 +112,9 @@ export default function VmPage() {
 
   // When the VM's CPU architecture is known, only offer compatible images in
   // the reinstall picker — an incompatible image would fail to provision.
-  const vmArch = state?.template?.cpu_arch;
+  // Prefer the host arch (always present when known) over the optional
+  // template constraint.
+  const vmArch = state?.cpu_arch ?? state?.template?.cpu_arch;
   useEffect(() => {
     login?.api
       .listOsImages(vmArch !== CpuArch.UNKNOWN ? vmArch : undefined)

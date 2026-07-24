@@ -497,6 +497,9 @@
   "F8RFcI": {
     "defaultMessage": "Optional. Appears on the invoices we generate for your payments."
   },
+  "FBPfJ7": {
+    "defaultMessage": "Hold commission until it reaches this amount before paying out — handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below."
+  },
   "FBjXEw": {
     "defaultMessage": "Upgrade VPS #{id}"
   },
@@ -983,6 +986,9 @@
   "VLRCfi": {
     "defaultMessage": "Past 30 Days Uptime: {uptime}"
   },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
   "VffztH": {
     "defaultMessage": "last used {date}"
   },
@@ -1087,6 +1093,9 @@
   },
   "aoXv6v": {
     "defaultMessage": "Loading firewall..."
+  },
+  "auFzJF": {
+    "defaultMessage": "Minimum payout (optional)"
   },
   "b1zuN9": {
     "defaultMessage": "Price"

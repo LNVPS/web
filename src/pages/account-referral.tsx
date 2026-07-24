@@ -56,16 +56,19 @@ export function AccountReferralPage() {
   const [signupMethod, setSignupMethod] =
     useState<SelectableMode>("lightning_address");
   const [signupAddress, setSignupAddress] = useState("");
+  const [signupThreshold, setSignupThreshold] = useState("");
 
   const [patchMethod, setPatchMethod] =
     useState<SelectableMode>("lightning_address");
   const [patchAddress, setPatchAddress] = useState("");
+  const [patchThreshold, setPatchThreshold] = useState("");
 
   function applyState(s: ReferralState) {
     setState(s);
     const m = toSelectable(s.mode);
     setPatchMethod(m);
     setPatchAddress(addressFor(m, s));
+    setPatchThreshold(s.payout_threshold ? String(s.payout_threshold) : "");
   }
 
   useEffect(() => {
@@ -87,10 +90,15 @@ export function AccountReferralPage() {
   async function handleEnroll() {
     if (!login?.api) return;
     setError(undefined);
-    const req: ReferralSignupRequest =
-      signupMethod === "nwc"
+    const threshold = parseInt(signupThreshold.trim());
+    const req: ReferralSignupRequest = {
+      ...(signupMethod === "nwc"
         ? { mode: "nwc" }
-        : { mode: signupMethod, address: signupAddress.trim() };
+        : { mode: signupMethod, address: signupAddress.trim() }),
+      ...(signupThreshold.trim() && !isNaN(threshold)
+        ? { payout_threshold: threshold }
+        : {}),
+    };
     try {
       await login.api.enrollReferral(req);
       const s = await login.api.getReferralState();
@@ -109,11 +117,16 @@ export function AccountReferralPage() {
     if (!login?.api) return;
     setError(undefined);
     try {
-      const updated = await login.api.updateReferral(
-        patchMethod === "nwc"
+      const threshold = parseInt(patchThreshold.trim());
+      const updated = await login.api.updateReferral({
+        ...(patchMethod === "nwc"
           ? { mode: "nwc", address: null }
-          : { mode: patchMethod, address: patchAddress.trim() || null },
-      );
+          : { mode: patchMethod, address: patchAddress.trim() || null }),
+        // Send the threshold (or null to clear); the field is always shown, so
+        // an empty box means "use system minimum".
+        payout_threshold:
+          patchThreshold.trim() && !isNaN(threshold) ? threshold : null,
+      });
       setState((prev) =>
         prev
           ? {
@@ -121,11 +134,15 @@ export function AccountReferralPage() {
               address: updated.address,
               mode: updated.mode,
               referral_rate: updated.referral_rate,
+              payout_threshold: updated.payout_threshold,
             }
           : prev,
       );
       setPatchMethod(toSelectable(updated.mode));
       setPatchAddress(updated.address ?? "");
+      setPatchThreshold(
+        updated.payout_threshold ? String(updated.payout_threshold) : "",
+      );
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -173,6 +190,10 @@ export function AccountReferralPage() {
               setSignupAddress("");
             }}
             onAddressChange={setSignupAddress}
+          />
+          <PayoutThresholdInput
+            value={signupThreshold}
+            onChange={setSignupThreshold}
           />
           <div>
             <AsyncButton
@@ -428,6 +449,10 @@ export function AccountReferralPage() {
           }}
           onAddressChange={setPatchAddress}
         />
+        <PayoutThresholdInput
+          value={patchThreshold}
+          onChange={setPatchThreshold}
+        />
         <div>
           <AsyncButton onClick={handleUpdate}>
             <FormattedMessage defaultMessage="Save Payout Route" />
@@ -463,6 +488,42 @@ export function AccountReferralPage() {
           </p>
         )}
       </div>
+    </div>
+  );
+}
+
+/** Optional per-referrer minimum-payout threshold (satoshis). Empty = use the
+ * system minimum; the server rejects values below it. */
+function PayoutThresholdInput({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <span className="text-xs uppercase tracking-[0.25em] text-cyber-muted">
+        <FormattedMessage defaultMessage="Minimum payout (optional)" />
+      </span>
+      <div className="flex items-center gap-2">
+        <input
+          type="number"
+          min={0}
+          step={1}
+          inputMode="numeric"
+          placeholder="1000"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="max-w-40"
+        />
+        <span className="text-sm text-cyber-muted">
+          <FormattedMessage defaultMessage="sats" />
+        </span>
+      </div>
+      <p className="m-0 text-cyber-muted text-xs">
+        <FormattedMessage defaultMessage="Hold commission until it reaches this amount before paying out — handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below." />
+      </p>
     </div>
   );
 }

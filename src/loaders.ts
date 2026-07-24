@@ -71,9 +71,10 @@ export async function homeLoader({
 
   const news = getNews();
 
-  const [offers, ipSpaces, paymentMethods] = await Promise.all([
+  // IP ranges are not production-ready yet, so don't fetch available IP space
+  // (or render it — see IpSpaceSection in home.tsx).
+  const [offers, paymentMethods] = await Promise.all([
     cached("offers", () => api.listOffers()),
-    cached("ipSpaces", () => api.listAvailableIpSpace()),
     cached("payment_methods", () => api.getPaymentMethods()),
   ]);
 
@@ -82,7 +83,7 @@ export async function homeLoader({
       ? filterArticlesByLocale(news, locale).slice(0, 1)
       : undefined;
 
-  return { offers, ipSpaces, paymentMethods, latestNews };
+  return { offers, paymentMethods, latestNews };
 }
 
 export async function newsLoader({

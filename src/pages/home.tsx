@@ -11,7 +11,8 @@ import useLogin from "../hooks/login";
 import { useTaxRates } from "../hooks/tax";
 import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
-import IpBlockCard from "../components/ip-block-card";
+// IP ranges are not production-ready yet; keep the import for when re-enabled.
+// import IpBlockCard from "../components/ip-block-card";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import type { HomeLoaderData } from "../loaders";
@@ -78,7 +79,8 @@ export default function HomePage() {
         </header>
         <LatestNews />
         <VpsOffersSection />
-        <IpSpaceSection />
+        {/* IP ranges are not production-ready yet — hidden from the homepage. */}
+        {/* <IpSpaceSection /> */}
         <hr />
         <div className="flex flex-col gap-4">
           <div className="text-center">
@@ -389,6 +391,10 @@ function VpsOffersSection() {
   );
 }
 
+// IP ranges are not production-ready yet — hidden from the homepage. Restore
+// this section (and the IpBlockCard import + <IpSpaceSection /> render) when it
+// is ready to ship.
+/*
 function IpSpaceSection() {
   const { ipSpaces } = useLoaderData<HomeLoaderData>();
   const ipLoading = false;
@@ -425,3 +431,4 @@ function IpSpaceSection() {
     </div>
   );
 }
+*/

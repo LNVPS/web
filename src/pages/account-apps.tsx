@@ -64,7 +64,10 @@ function DeploymentRow({
 }) {
   const st = deploymentStatus(deployment.status);
   return (
-    <div className="flex items-center justify-between gap-4 px-4 py-3">
+    <Link
+      to={`/account/apps/deployments/${deployment.id}`}
+      className="flex items-center justify-between gap-4 px-4 py-3 hover:bg-cyber-panel-light/50 transition-colors"
+    >
       <div className="flex min-w-0 items-center gap-3">
         {app && <AppIcon app={app} size={32} />}
         <div className="flex min-w-0 flex-col">
@@ -72,19 +75,14 @@ function DeploymentRow({
             {deployment.name || app?.display_name || `#${deployment.id}`}
           </span>
           {deployment.hostname && (
-            <a
-              href={`https://${deployment.hostname}`}
-              target="_blank"
-              rel="noreferrer"
-              className="truncate font-mono text-xs text-cyber-accent"
-            >
+            <span className="truncate font-mono text-xs text-cyber-accent">
               {deployment.hostname}
-            </a>
+            </span>
           )}
         </div>
       </div>
       <StatusPill tone={st.tone}>{st.label}</StatusPill>
-    </div>
+    </Link>
   );
 }
 

@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Manage"
+  },
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
   },
+  "6FbX6y": {
+    "defaultMessage": "Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes."
+  },
   "6SfJaf": {
     "defaultMessage": "Upgrade To"
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "Send Verification"
+  },
+  "8PkqNN": {
+    "defaultMessage": "Pay to activate"
   },
   "8Q504V": {
     "defaultMessage": "Metadata"
@@ -442,6 +451,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
+  },
+  "DnX0aY": {
+    "defaultMessage": "Confirm delete"
   },
   "DpNZQY": {
     "defaultMessage": "Processing fee"
@@ -635,6 +647,9 @@
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
+  "JAJV1y": {
+    "defaultMessage": "Assigned once running"
+  },
   "JBWS0c": {
     "defaultMessage": "Link"
   },
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "View subscription"
+  },
   "OJuBck": {
     "defaultMessage": "Passwordless"
   },
   "OLqOyf": {
     "defaultMessage": "Setup Instructions"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Created"
   },
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disk"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Deployment"
   },
   "P+08xT": {
     "defaultMessage": "Get Quote"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Delete permanently?"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "Display name"
   },
+  "dPEbZd": {
+    "defaultMessage": "This deployment is awaiting payment. Pay its subscription to activate it."
+  },
   "dUQeuG": {
     "defaultMessage": "Create a passkey account"
   },
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
   },
+  "ljmS5P": {
+    "defaultMessage": "Endpoint"
+  },
   "lloEWi": {
     "defaultMessage": "What is this regarding?"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "earned · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Start"
   },
   "mOR+qH": {
     "defaultMessage": "Copy to Clipboard"
@@ -1525,6 +1561,9 @@
   },
   "pus6h6": {
     "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
+  },
+  "q/uwLT": {
+    "defaultMessage": "Stop"
   },
   "q6sstZ": {
     "defaultMessage": "Deployment coming soon"
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Status"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Status detail"
   },
   "u+Blek": {
     "defaultMessage": "Storage type"

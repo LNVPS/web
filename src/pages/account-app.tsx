@@ -104,23 +104,19 @@ export function AccountAppPage() {
                 {deployments.map((d) => {
                   const st = deploymentStatus(d.status);
                   return (
-                    <div
+                    <Link
                       key={d.id}
-                      className="flex items-center justify-between gap-4 px-4 py-3"
+                      to={`/account/apps/deployments/${d.id}`}
+                      className="flex items-center justify-between gap-4 px-4 py-3 hover:bg-cyber-panel-light/50 transition-colors"
                     >
                       <div className="flex min-w-0 flex-col">
                         <span className="truncate text-cyber-text-bright">
                           {d.name || `#${d.id}`}
                         </span>
                         {d.hostname && (
-                          <a
-                            href={`https://${d.hostname}`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="truncate font-mono text-xs text-cyber-accent"
-                          >
+                          <span className="truncate font-mono text-xs text-cyber-accent">
                             {d.hostname}
-                          </a>
+                          </span>
                         )}
                         {d.status_message && (
                           <span className="text-xs text-cyber-muted">
@@ -129,7 +125,7 @@ export function AccountAppPage() {
                         )}
                       </div>
                       <StatusPill tone={st.tone}>{st.label}</StatusPill>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>

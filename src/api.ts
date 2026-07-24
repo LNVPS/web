@@ -626,6 +626,16 @@ export interface App {
   setup_amount: number;
 }
 
+export interface CreateAppDeploymentRequest {
+  app_id: number;
+  /** DNS-safe label (lowercase letters/digits/hyphens, ≤40); becomes the subdomain. */
+  name: string;
+  /** Region to deploy in; a cluster there with capacity is chosen. */
+  region_id: number;
+  /** Values for the app's compose `config` fields. */
+  config?: Record<string, string>;
+}
+
 export type AppDeploymentState = "running" | "stopped";
 export type AppDeploymentStatus =
   | "pending"
@@ -939,6 +949,39 @@ export class LNVpsApi {
   async getAppDeployment(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
       await this.#req(`/api/v1/app-deployments/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * Order an app deployment. Returns the deployment in `pending` state with a
+   * billing subscription — pay the subscription to activate it.
+   */
+  async createAppDeployment(req: CreateAppDeploymentRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req("/api/v1/app-deployments", "POST", req),
+    );
+    return data;
+  }
+
+  async startAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}/start`, "PATCH"),
+    );
+    return data;
+  }
+
+  async stopAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}/stop`, "PATCH"),
+    );
+    return data;
+  }
+
+  /** Stop billing and tear the deployment down (namespace + volumes removed). */
+  async deleteAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<boolean>>(
+      await this.#req(`/api/v1/app-deployments/${id}`, "DELETE"),
     );
     return data;
   }

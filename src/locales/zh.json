@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "使用 {provider} 继续"
   },
+  "0Azlrb": {
+    "defaultMessage": "管理"
+  },
   "0HkBaC": {
     "defaultMessage": "请选择以下其中一种方法来验证您的域名："
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "我们无法完成登录。请重试。"
   },
+  "6FbX6y": {
+    "defaultMessage": "停止操作会将应用程序缩减至零，并保留其数据。删除操作会停止计费，并永久删除部署及其卷。"
+  },
   "6SfJaf": {
     "defaultMessage": "升级至"
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "发送验证码"
+  },
+  "8PkqNN": {
+    "defaultMessage": "支付以激活。"
   },
   "8Q504V": {
     "defaultMessage": "元数据"
@@ -443,6 +452,9 @@
   "Dfuz87": {
     "defaultMessage": "目前尚未添加任何域名。请在上方添加您的第一个域名，开始使用。"
   },
+  "DnX0aY": {
+    "defaultMessage": "确认删除"
+  },
   "DpNZQY": {
     "defaultMessage": "手续费。"
   },
@@ -549,7 +561,7 @@
     "defaultMessage": "其他联系方式："
   },
   "GOdq5V": {
-    "defaultMessage": "Catalog"
+    "defaultMessage": "目录"
   },
   "GQNYob": {
     "defaultMessage": "分享链接"
@@ -594,7 +606,7 @@
     "defaultMessage": "目前还没有消息。请在下方开始新的对话。"
   },
   "HPBE7M": {
-    "defaultMessage": "Back to apps"
+    "defaultMessage": "返回应用列表"
   },
   "HlAgG9": {
     "defaultMessage": "我已发送付款"
@@ -634,6 +646,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "订阅"
+  },
+  "JAJV1y": {
+    "defaultMessage": "启动后自动分配。"
   },
   "JBWS0c": {
     "defaultMessage": "链接"
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "查看订阅信息"
+  },
   "OJuBck": {
     "defaultMessage": "无需密码"
   },
   "OLqOyf": {
     "defaultMessage": "设置说明"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "已创建"
   },
   "OikYIw": {
     "defaultMessage": "最低要求：{min} GB {type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "磁盘"
+  },
+  "OyvHWp": {
+    "defaultMessage": "部署"
   },
   "P+08xT": {
     "defaultMessage": "获取报价。"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "解析 JSON 时出错：{msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "永久删除吗？"
   },
   "QgBuiV": {
     "defaultMessage": "中央处理器"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "显示名称"
   },
+  "dPEbZd": {
+    "defaultMessage": "此部署正在等待付款。请支付订阅费用以激活它。"
+  },
   "dUQeuG": {
     "defaultMessage": "创建通行密钥账户"
   },
@@ -1215,7 +1245,7 @@
     "defaultMessage": "选择语言。"
   },
   "eVuHpt": {
-    "defaultMessage": "No apps are available yet."
+    "defaultMessage": "目前还没有可用的应用程序。"
   },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展程序"
@@ -1311,7 +1341,7 @@
     "defaultMessage": "目前还没有帖子。"
   },
   "iVkpyZ": {
-    "defaultMessage": "One-click Docker apps from a managed catalog."
+    "defaultMessage": "通过受管理的应用程序目录，只需单击一下即可部署 Docker 应用程序。"
   },
   "iXNbPf": {
     "defaultMessage": "重命名"
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "使用Revolut付款时，请勾选“保存此卡”，以便将该卡保存在此处，用于未来的支付和自动续订。"
   },
+  "ljmS5P": {
+    "defaultMessage": "端点"
+  },
   "lloEWi": {
     "defaultMessage": "这是关于什么的？"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "已获得；赚取。 {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "开始"
   },
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
@@ -1473,7 +1509,7 @@
     "defaultMessage": "主机即将停用"
   },
   "nvJ5bE": {
-    "defaultMessage": "One-click Docker apps"
+    "defaultMessage": "一键部署 Docker 应用程序。"
   },
   "nx5ZnY": {
     "defaultMessage": "验证电话号码以启用该功能。"
@@ -1526,8 +1562,11 @@
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
   },
+  "q/uwLT": {
+    "defaultMessage": "停止。"
+  },
   "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
+    "defaultMessage": "即将部署。"
   },
   "qV+TFm": {
     "defaultMessage": "支付失败。"
@@ -1617,7 +1656,7 @@
     "defaultMessage": "港口（或码头）"
   },
   "tPwWRH": {
-    "defaultMessage": "Your deployments"
+    "defaultMessage": "您的部署情况"
   },
   "tTpLsN": {
     "defaultMessage": "未关联。"
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "状态"
+  },
+  "u+3iRA": {
+    "defaultMessage": "状态详情"
   },
   "u+Blek": {
     "defaultMessage": "存储类型"

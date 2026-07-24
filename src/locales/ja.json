@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "{provider} で続ける"
   },
+  "0Azlrb": {
+    "defaultMessage": "管理する"
+  },
   "0HkBaC": {
     "defaultMessage": "以下のいずれかの方法でドメインの所有権を確認してください。"
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "ログインに失敗しました。もう一度お試しください。"
   },
+  "6FbX6y": {
+    "defaultMessage": "停止すると、アプリケーションは初期状態に戻り、データは保持されます。削除すると、課金が停止し、デプロイメントとそのボリュームが完全に削除されます。"
+  },
   "6SfJaf": {
     "defaultMessage": "アップグレードするには"
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "確認コードを送信"
+  },
+  "8PkqNN": {
+    "defaultMessage": "有効化するには料金をお支払いください。"
   },
   "8Q504V": {
     "defaultMessage": "メタデータ"
@@ -443,6 +452,9 @@
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
   },
+  "DnX0aY": {
+    "defaultMessage": "削除を確定します。"
+  },
   "DpNZQY": {
     "defaultMessage": "処理手数料"
   },
@@ -549,7 +561,7 @@
     "defaultMessage": "その他のご連絡方法："
   },
   "GOdq5V": {
-    "defaultMessage": "Catalog"
+    "defaultMessage": "カタログ"
   },
   "GQNYob": {
     "defaultMessage": "リンクを共有"
@@ -594,7 +606,7 @@
     "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
   },
   "HPBE7M": {
-    "defaultMessage": "Back to apps"
+    "defaultMessage": "アプリに戻る"
   },
   "HlAgG9": {
     "defaultMessage": "支払いを送信しました"
@@ -634,6 +646,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "購読"
+  },
+  "JAJV1y": {
+    "defaultMessage": "実行時に一度割り当て"
   },
   "JBWS0c": {
     "defaultMessage": "リンク"
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "購読プランを確認する"
+  },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
   },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "作成済み"
   },
   "OikYIw": {
     "defaultMessage": "最小要件：{min} GBの{type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "ディスク"
+  },
+  "OyvHWp": {
+    "defaultMessage": "展開、配置"
   },
   "P+08xT": {
     "defaultMessage": "見積もりを依頼する"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "JSONの解析中にエラーが発生しました：{msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "完全に削除しますか？"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "表示名"
   },
+  "dPEbZd": {
+    "defaultMessage": "この設定は、お支払いをお待ちの状態です。サブスクリプションにお支払いいただくことで、設定が有効になります。"
+  },
   "dUQeuG": {
     "defaultMessage": "パスキーアカウントを作成"
   },
@@ -1215,7 +1245,7 @@
     "defaultMessage": "言語を選択してください。"
   },
   "eVuHpt": {
-    "defaultMessage": "No apps are available yet."
+    "defaultMessage": "まだ利用できるアプリはありません。"
   },
   "ebmhes": {
     "defaultMessage": "Nostr拡張機能"
@@ -1311,7 +1341,7 @@
     "defaultMessage": "まだ投稿はありません。"
   },
   "iVkpyZ": {
-    "defaultMessage": "One-click Docker apps from a managed catalog."
+    "defaultMessage": "管理されたカタログから、ワンクリックでDockerアプリケーションを起動できます。"
   },
   "iXNbPf": {
     "defaultMessage": "名前を変更する。"
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "Revolutで支払いをする際に「このカードを保存」にチェックを入れると、このカードが登録され、今後の支払いや自動更新に使用できるようになります。"
   },
+  "ljmS5P": {
+    "defaultMessage": "終点"
+  },
   "lloEWi": {
     "defaultMessage": "これは何についてですか？"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "獲得した {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "開始"
   },
   "mOR+qH": {
     "defaultMessage": "クリップボードにコピー"
@@ -1473,7 +1509,7 @@
     "defaultMessage": "ホスト廃止予定"
   },
   "nvJ5bE": {
-    "defaultMessage": "One-click Docker apps"
+    "defaultMessage": "ワンクリックで起動できるDockerアプリケーション"
   },
   "nx5ZnY": {
     "defaultMessage": "電話番号を認証して、機能を有効にします。"
@@ -1526,8 +1562,11 @@
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
   },
+  "q/uwLT": {
+    "defaultMessage": "止まれ"
+  },
   "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
+    "defaultMessage": "近日公開予定"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
@@ -1617,7 +1656,7 @@
     "defaultMessage": "ポート（複数形）"
   },
   "tPwWRH": {
-    "defaultMessage": "Your deployments"
+    "defaultMessage": "お客様のデプロイメント状況"
   },
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "状況"
+  },
+  "u+3iRA": {
+    "defaultMessage": "状況の詳細"
   },
   "u+Blek": {
     "defaultMessage": "ストレージの種類"

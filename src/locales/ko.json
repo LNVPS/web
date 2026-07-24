@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "{provider}(으)로 계속하기"
   },
+  "0Azlrb": {
+    "defaultMessage": "관리하다"
+  },
   "0HkBaC": {
     "defaultMessage": "다음 방법 중 하나를 선택하여 도메인을 확인하세요."
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "로그인하는 데 실패했습니다. 다시 시도해 주세요."
   },
+  "6FbX6y": {
+    "defaultMessage": "중지하면 앱의 규모가 0으로 축소되고 데이터는 보존됩니다. 삭제하면 과금이 중지되고 배포 및 관련 볼륨이 영구적으로 제거됩니다."
+  },
   "6SfJaf": {
     "defaultMessage": "업그레이드하세요."
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "인증 전송"
+  },
+  "8PkqNN": {
+    "defaultMessage": "활성화하려면 요금을 지불하세요."
   },
   "8Q504V": {
     "defaultMessage": "메타데이터"
@@ -443,6 +452,9 @@
   "Dfuz87": {
     "defaultMessage": "아직 도메인이 추가되지 않았습니다. 위에서 첫 번째 도메인을 추가하여 시작하세요."
   },
+  "DnX0aY": {
+    "defaultMessage": "삭제를 확인합니다."
+  },
   "DpNZQY": {
     "defaultMessage": "처리 수수료"
   },
@@ -549,7 +561,7 @@
     "defaultMessage": "저희에게 연락할 수 있는 다른 방법은 다음과 같습니다."
   },
   "GOdq5V": {
-    "defaultMessage": "Catalog"
+    "defaultMessage": "카탈로그"
   },
   "GQNYob": {
     "defaultMessage": "링크 공유"
@@ -594,7 +606,7 @@
     "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
   },
   "HPBE7M": {
-    "defaultMessage": "Back to apps"
+    "defaultMessage": "앱으로 돌아가기"
   },
   "HlAgG9": {
     "defaultMessage": "결제를 보냈습니다"
@@ -634,6 +646,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
+  },
+  "JAJV1y": {
+    "defaultMessage": "실행 시 한 번 할당됨"
   },
   "JBWS0c": {
     "defaultMessage": "링크"
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "노스트르: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "구독 내역 보기"
+  },
   "OJuBck": {
     "defaultMessage": "비밀번호 없이"
   },
   "OLqOyf": {
     "defaultMessage": "설정 방법"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "생성됨"
   },
   "OikYIw": {
     "defaultMessage": "최소: {min} 기가바이트 {type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "디스크"
+  },
+  "OyvHWp": {
+    "defaultMessage": "배포"
   },
   "P+08xT": {
     "defaultMessage": "견적 받기"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "JSON 구문 분석 오류: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "영구적으로 삭제하시겠습니까?"
   },
   "QgBuiV": {
     "defaultMessage": "중앙 처리 장치"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "표시 이름"
   },
+  "dPEbZd": {
+    "defaultMessage": "이 배포는 결제를 기다리고 있습니다. 구독료를 지불하여 활성화하세요."
+  },
   "dUQeuG": {
     "defaultMessage": "패스키 계정 만들기"
   },
@@ -1215,7 +1245,7 @@
     "defaultMessage": "언어 선택"
   },
   "eVuHpt": {
-    "defaultMessage": "No apps are available yet."
+    "defaultMessage": "현재 앱이 없습니다."
   },
   "ebmhes": {
     "defaultMessage": "노스트르 확장 프로그램"
@@ -1311,7 +1341,7 @@
     "defaultMessage": "아직 게시물이 없습니다."
   },
   "iVkpyZ": {
-    "defaultMessage": "One-click Docker apps from a managed catalog."
+    "defaultMessage": "관리되는 카탈로그에서 원클릭으로 Docker 앱을 사용할 수 있습니다."
   },
   "iXNbPf": {
     "defaultMessage": "이름 변경"
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "Revolut으로 결제할 때 ‘이 카드를 저장’을 선택하면 해당 카드를 저장하여 향후 결제 및 자동 갱신에 사용할 수 있습니다."
   },
+  "ljmS5P": {
+    "defaultMessage": "최종 지점"
+  },
   "lloEWi": {
     "defaultMessage": "이것은 어떤 건에 관한 것인가요?"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "획득했습니다. {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "시작"
   },
   "mOR+qH": {
     "defaultMessage": "클립보드로 복사"
@@ -1473,7 +1509,7 @@
     "defaultMessage": "호스트 종료 예정"
   },
   "nvJ5bE": {
-    "defaultMessage": "One-click Docker apps"
+    "defaultMessage": "원클릭으로 Docker 앱 실행"
   },
   "nx5ZnY": {
     "defaultMessage": "전화번호를 인증하여 기능을 활성화하세요."
@@ -1526,8 +1562,11 @@
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
   },
+  "q/uwLT": {
+    "defaultMessage": "멈추세요."
+  },
   "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
+    "defaultMessage": "곧 배포될 예정입니다."
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -1617,7 +1656,7 @@
     "defaultMessage": "포트(들)"
   },
   "tPwWRH": {
-    "defaultMessage": "Your deployments"
+    "defaultMessage": "귀하의 배포 내역"
   },
   "tTpLsN": {
     "defaultMessage": "연결되지 않음"
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "상태"
+  },
+  "u+3iRA": {
+    "defaultMessage": "상세 상태 정보"
   },
   "u+Blek": {
     "defaultMessage": "스토리지 유형"

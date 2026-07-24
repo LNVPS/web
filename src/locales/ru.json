@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Продолжить с {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Управляйте."
+  },
   "0HkBaC": {
     "defaultMessage": "Выберите один из предложенных способов подтверждения прав на ваш домен:"
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "Не удалось выполнить вход в систему. Пожалуйста, повторите попытку."
   },
+  "6FbX6y": {
+    "defaultMessage": "При остановке весов приложение сбрасывается до начальных значений и сохраняет свои данные. При удалении прекращается начисление платы и окончательно удаляется развертывание и все связанные с ним ресурсы."
+  },
   "6SfJaf": {
     "defaultMessage": "Обновите до"
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "Отправить код подтверждения"
+  },
+  "8PkqNN": {
+    "defaultMessage": "Оплатите, чтобы активировать."
   },
   "8Q504V": {
     "defaultMessage": "Метаданные"
@@ -443,6 +452,9 @@
   "Dfuz87": {
     "defaultMessage": "Пока не добавлено ни одного домена. Добавьте свой первый домен выше, чтобы начать работу."
   },
+  "DnX0aY": {
+    "defaultMessage": "Подтвердите удаление."
+  },
   "DpNZQY": {
     "defaultMessage": "Комиссия за обработку."
   },
@@ -549,7 +561,7 @@
     "defaultMessage": "Другие способы связи с нами:"
   },
   "GOdq5V": {
-    "defaultMessage": "Catalog"
+    "defaultMessage": "Каталог"
   },
   "GQNYob": {
     "defaultMessage": "Поделиться ссылкой"
@@ -594,7 +606,7 @@
     "defaultMessage": "Сообщений пока нет. Начните обсуждение ниже."
   },
   "HPBE7M": {
-    "defaultMessage": "Back to apps"
+    "defaultMessage": "Вернуться к приложениям"
   },
   "HlAgG9": {
     "defaultMessage": "Я отправил платёж"
@@ -634,6 +646,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "Подписки"
+  },
+  "JAJV1y": {
+    "defaultMessage": "Назначается после запуска."
   },
   "JBWS0c": {
     "defaultMessage": "Ссылка"
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "Просмотреть подписку"
+  },
   "OJuBck": {
     "defaultMessage": "Без пароля"
   },
   "OLqOyf": {
     "defaultMessage": "Инструкция по настройке"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Создано"
   },
   "OikYIw": {
     "defaultMessage": "Минимум: {min} ГБ {type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Диск"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Развертывание"
   },
   "P+08xT": {
     "defaultMessage": "Получить расценку"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Ошибка при разборе JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Удалить без возможности восстановления?"
   },
   "QgBuiV": {
     "defaultMessage": "центральный процессор"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "Отображаемое имя"
   },
+  "dPEbZd": {
+    "defaultMessage": "Для активации этой версии необходимо произвести оплату. Оплатите подписку, чтобы начать использовать её."
+  },
   "dUQeuG": {
     "defaultMessage": "Создать аккаунт с ключом доступа"
   },
@@ -1215,7 +1245,7 @@
     "defaultMessage": "Выберите язык."
   },
   "eVuHpt": {
-    "defaultMessage": "No apps are available yet."
+    "defaultMessage": "В настоящее время приложения недоступны."
   },
   "ebmhes": {
     "defaultMessage": "Расширение Nostr"
@@ -1311,7 +1341,7 @@
     "defaultMessage": "Пока нет ни одной записи."
   },
   "iVkpyZ": {
-    "defaultMessage": "One-click Docker apps from a managed catalog."
+    "defaultMessage": "Приложения Docker, доступные в один клик, из управляемого каталога."
   },
   "iXNbPf": {
     "defaultMessage": "Переименовать"
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "При оплате через Revolut установите флажок «Сохранить эту карту», чтобы сохранить данные карты для будущих платежей и автоматического продления подписки."
   },
+  "ljmS5P": {
+    "defaultMessage": "Конечная точка"
+  },
   "lloEWi": {
     "defaultMessage": "О чём это? / Что это такое? / К чему это относится?"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "получено · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Начать"
   },
   "mOR+qH": {
     "defaultMessage": "Скопировать в буфер обмена"
@@ -1473,7 +1509,7 @@
     "defaultMessage": "Хост выводится"
   },
   "nvJ5bE": {
-    "defaultMessage": "One-click Docker apps"
+    "defaultMessage": "Приложения Docker, которые можно запустить в один клик."
   },
   "nx5ZnY": {
     "defaultMessage": "Подтвердите номер телефона, чтобы включить функцию."
@@ -1526,8 +1562,11 @@
   "pus6h6": {
     "defaultMessage": "Вы можете прекратить участие в любое время. После этого ваш код перестанет приносить доход и его нельзя будет использовать повторно."
   },
+  "q/uwLT": {
+    "defaultMessage": "Стоп"
+  },
   "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
+    "defaultMessage": "В ближайшее время будет запущено обновление."
   },
   "qV+TFm": {
     "defaultMessage": "Оплата не прошла."
@@ -1617,7 +1656,7 @@
     "defaultMessage": "Порт(ы)"
   },
   "tPwWRH": {
-    "defaultMessage": "Your deployments"
+    "defaultMessage": "Ваши развертывания."
   },
   "tTpLsN": {
     "defaultMessage": "Не связаны."
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Статус"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Подробная информация о статусе"
   },
   "u+Blek": {
     "defaultMessage": "Тип накопителя"

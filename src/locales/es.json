@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Continuar con {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Administrar"
+  },
   "0HkBaC": {
     "defaultMessage": "Elija uno de los siguientes métodos para verificar su dominio:"
   },
@@ -221,6 +224,9 @@
   "6Auf1w": {
     "defaultMessage": "No pudimos completar el proceso de inicio de sesión. Por favor, inténtelo de nuevo."
   },
+  "6FbX6y": {
+    "defaultMessage": "Al detener la función, la aplicación se recalibra a cero y conserva sus datos. Al eliminarla, se detiene la facturación y se elimina permanentemente la implementación y sus volúmenes."
+  },
   "6SfJaf": {
     "defaultMessage": "Actualizar a"
   },
@@ -301,6 +307,9 @@
   },
   "8Jfsz3": {
     "defaultMessage": "Enviar código de verificación"
+  },
+  "8PkqNN": {
+    "defaultMessage": "Pague para activar."
   },
   "8Q504V": {
     "defaultMessage": "Metadatos"
@@ -443,6 +452,9 @@
   "Dfuz87": {
     "defaultMessage": "Aún no se han añadido dominios. Añada su primer dominio en el espacio indicado para empezar."
   },
+  "DnX0aY": {
+    "defaultMessage": "Confirmar eliminación"
+  },
   "DpNZQY": {
     "defaultMessage": "Cargo por tramitación."
   },
@@ -549,7 +561,7 @@
     "defaultMessage": "Otras formas de contactarnos:"
   },
   "GOdq5V": {
-    "defaultMessage": "Catalog"
+    "defaultMessage": "Catálogo"
   },
   "GQNYob": {
     "defaultMessage": "Compartir enlace"
@@ -594,7 +606,7 @@
     "defaultMessage": "Aún no hay mensajes. Inicie una conversación a continuación."
   },
   "HPBE7M": {
-    "defaultMessage": "Back to apps"
+    "defaultMessage": "Volver a las aplicaciones"
   },
   "HlAgG9": {
     "defaultMessage": "He enviado el pago"
@@ -634,6 +646,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "Suscripciones"
+  },
+  "JAJV1y": {
+    "defaultMessage": "Se asigna una vez que se inicia el proceso."
   },
   "JBWS0c": {
     "defaultMessage": "Enlace"
@@ -737,11 +752,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "Ver suscripción"
+  },
   "OJuBck": {
     "defaultMessage": "Sin contraseña"
   },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Creado"
   },
   "OikYIw": {
     "defaultMessage": "Mínimo: {min} GB {type}"
@@ -760,6 +781,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disco"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Despliegue"
   },
   "P+08xT": {
     "defaultMessage": "Solicitar presupuesto"
@@ -796,6 +820,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Error al analizar el archivo JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "¿Eliminar definitivamente?"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -1175,6 +1202,9 @@
   "dOQCL8": {
     "defaultMessage": "Nombre que se muestra"
   },
+  "dPEbZd": {
+    "defaultMessage": "Esta implementación está pendiente de pago. Pague la suscripción para activarla."
+  },
   "dUQeuG": {
     "defaultMessage": "Crear cuenta con clave de acceso"
   },
@@ -1215,7 +1245,7 @@
     "defaultMessage": "Seleccione el idioma."
   },
   "eVuHpt": {
-    "defaultMessage": "No apps are available yet."
+    "defaultMessage": "Por el momento, no hay aplicaciones disponibles."
   },
   "ebmhes": {
     "defaultMessage": "Extensión de Nostr"
@@ -1311,7 +1341,7 @@
     "defaultMessage": "Aún no hay publicaciones."
   },
   "iVkpyZ": {
-    "defaultMessage": "One-click Docker apps from a managed catalog."
+    "defaultMessage": "Aplicaciones Docker de un solo clic, disponibles en un catálogo gestionado."
   },
   "iXNbPf": {
     "defaultMessage": "Cambiar nombre."
@@ -1403,6 +1433,9 @@
   "lhCavK": {
     "defaultMessage": "Marque la casilla «Guardar esta tarjeta» al pagar con Revolut para guardar una tarjeta aquí y poder utilizarla en futuros pagos y renovaciones automáticas."
   },
+  "ljmS5P": {
+    "defaultMessage": "Punto final"
+  },
   "lloEWi": {
     "defaultMessage": "¿De qué se trata?"
   },
@@ -1429,6 +1462,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "obtenido/a · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Comenzar"
   },
   "mOR+qH": {
     "defaultMessage": "Copiar al portapapeles"
@@ -1473,7 +1509,7 @@
     "defaultMessage": "Host en retirada"
   },
   "nvJ5bE": {
-    "defaultMessage": "One-click Docker apps"
+    "defaultMessage": "Aplicaciones de Docker que se instalan con un solo clic."
   },
   "nx5ZnY": {
     "defaultMessage": "Verifique un número de teléfono para habilitar."
@@ -1526,8 +1562,11 @@
   "pus6h6": {
     "defaultMessage": "Puede utilizar el código cuando quiera. Una vez utilizado, dejará de generar beneficios y no podrá volver a usarse."
   },
+  "q/uwLT": {
+    "defaultMessage": "¡Pare!"
+  },
   "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
+    "defaultMessage": "Próximamente estará disponible."
   },
   "qV+TFm": {
     "defaultMessage": "El pago no se realizó."
@@ -1617,7 +1656,7 @@
     "defaultMessage": "Puerto(s)"
   },
   "tPwWRH": {
-    "defaultMessage": "Your deployments"
+    "defaultMessage": "Sus implementaciones"
   },
   "tTpLsN": {
     "defaultMessage": "No está vinculado."
@@ -1630,6 +1669,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Estado"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Detalle del estado"
   },
   "u+Blek": {
     "defaultMessage": "Tipo de almacenamiento"

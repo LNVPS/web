@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "선택된 가상 머신이 없습니다."
   },
+  "SknxDs": {
+    "defaultMessage": "소스 저장소"
+  },
   "SnyOdn": {
     "defaultMessage": "변환됨"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "로그인 실패"
+  },
+  "yRz1m6": {
+    "defaultMessage": "사용 설명서"
   },
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."

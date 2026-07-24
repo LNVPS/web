@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "لم يتم تحديد أي جهاز افتراضي."
   },
+  "SknxDs": {
+    "defaultMessage": "المستودع المصدر"
+  },
   "SnyOdn": {
     "defaultMessage": "تم تحويله"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "فشل تسجيل الدخول"
+  },
+  "yRz1m6": {
+    "defaultMessage": "اقرأ هذا الملف."
   },
   "z+hIFs": {
     "defaultMessage": "لم يتم إجراء أي مدفوعات حتى الآن."

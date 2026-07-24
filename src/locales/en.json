@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "No VM selected"
   },
+  "SknxDs": {
+    "defaultMessage": "Source repository"
+  },
   "SnyOdn": {
     "defaultMessage": "converted"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Sign-in failed"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Readme"
   },
   "z+hIFs": {
     "defaultMessage": "No payments yet."

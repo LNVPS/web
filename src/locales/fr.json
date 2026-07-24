@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "Aucune machine virtuelle sélectionnée."
   },
+  "SknxDs": {
+    "defaultMessage": "Dépôt source"
+  },
   "SnyOdn": {
     "defaultMessage": "converti"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Échec de la connexion"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Lisez-moi."
   },
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."

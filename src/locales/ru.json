@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "Не выбрана виртуальная машина."
   },
+  "SknxDs": {
+    "defaultMessage": "Исходный репозиторий"
+  },
   "SnyOdn": {
     "defaultMessage": "преобразован(о) / конвертирован(о)"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Не удалось войти"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Прочтите меня."
   },
   "z+hIFs": {
     "defaultMessage": "Оплата пока не произведена."

@@ -617,6 +617,8 @@ export interface App {
   icon?: string;
   /** docker-compose-style YAML; the config form (ports/env) is rendered from this. */
   compose: string;
+  /** Canonical source repository URL (e.g. https://github.com/owner/repo). */
+  repo_url?: string;
   /** Recurring price in smallest currency units. */
   amount: number;
   currency: string;

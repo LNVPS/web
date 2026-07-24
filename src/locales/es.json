@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "No se ha seleccionado ninguna máquina virtual."
   },
+  "SknxDs": {
+    "defaultMessage": "Repositorio de origen"
+  },
   "SnyOdn": {
     "defaultMessage": "convertido"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Error al iniciar sesión"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Leer primero"
   },
   "z+hIFs": {
     "defaultMessage": "Aún no se han realizado pagos."

@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "Keine virtuelle Maschine ausgewählt."
   },
+  "SknxDs": {
+    "defaultMessage": "Quell-Repository"
+  },
   "SnyOdn": {
     "defaultMessage": "konvertiert"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Anmeldung fehlgeschlagen"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Lies mich"
   },
   "z+hIFs": {
     "defaultMessage": "Bisher wurden keine Zahlungen geleistet."

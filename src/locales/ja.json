@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "選択された仮想マシンはありません。"
   },
+  "SknxDs": {
+    "defaultMessage": "ソースリポジトリ"
+  },
   "SnyOdn": {
     "defaultMessage": "変換済み"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "サインインに失敗しました"
+  },
+  "yRz1m6": {
+    "defaultMessage": "取扱説明書"
   },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"

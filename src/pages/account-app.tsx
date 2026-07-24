@@ -10,6 +10,8 @@ import { Eyebrow, SectionCard } from "../components/section";
 import { StatusPill } from "../components/billing";
 import CostLabel, { CostAmount } from "../components/cost";
 import DeployAppForm from "../components/deploy-app-form";
+import Markdown from "../components/markdown";
+import { fetchReadme } from "../utils/readme";
 import { AppIcon, deploymentStatus } from "./account-apps";
 
 export function AccountAppPage() {
@@ -19,6 +21,7 @@ export function AccountAppPage() {
 
   const [app, setApp] = useState<App>();
   const [deployments, setDeployments] = useState<Array<AppDeployment>>([]);
+  const [readme, setReadme] = useState<string>();
   const [error, setError] = useState<string>();
 
   useEffect(() => {
@@ -28,7 +31,10 @@ export function AccountAppPage() {
     const api = login?.api ?? new LNVpsApi(ApiUrl, undefined);
     api
       .getApp(appId)
-      .then(setApp)
+      .then((a) => {
+        setApp(a);
+        if (a.repo_url) fetchReadme(a.repo_url).then(setReadme).catch(() => {});
+      })
       .catch((e) => e instanceof Error && setError(e.message));
     if (login?.api) {
       login.api
@@ -98,6 +104,17 @@ export function AccountAppPage() {
             <p className="m-0 max-w-prose text-cyber-text">{app.description}</p>
           )}
 
+          {app.repo_url && (
+            <a
+              href={app.repo_url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-cyber-primary hover:underline"
+            >
+              <FormattedMessage defaultMessage="Source repository" /> ↗
+            </a>
+          )}
+
           <SectionCard title={<FormattedMessage defaultMessage="Deploy" />}>
             {login ? (
               <DeployAppForm app={app} />
@@ -149,6 +166,17 @@ export function AccountAppPage() {
                     </Link>
                   );
                 })}
+              </div>
+            </div>
+          )}
+
+          {readme && (
+            <div className="flex flex-col gap-2">
+              <Eyebrow>
+                <FormattedMessage defaultMessage="Readme" />
+              </Eyebrow>
+              <div className="max-w-prose overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel p-4">
+                <Markdown content={readme} />
               </div>
             </div>
           )}

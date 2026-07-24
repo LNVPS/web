@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "未选择虚拟机。"
   },
+  "SknxDs": {
+    "defaultMessage": "源仓库"
+  },
   "SnyOdn": {
     "defaultMessage": "已转换。"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "登录失败"
+  },
+  "yRz1m6": {
+    "defaultMessage": "请阅读说明。"
   },
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"

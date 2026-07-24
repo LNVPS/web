@@ -923,6 +923,9 @@
   "Sg3z1C": {
     "defaultMessage": "Herhangi bir sanal makine seçilmedi."
   },
+  "SknxDs": {
+    "defaultMessage": "Kaynak deposu"
+  },
   "SnyOdn": {
     "defaultMessage": "dönüştürüldü"
   },
@@ -1825,6 +1828,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Giriş başarısız"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Okuma Talimatları"
   },
   "z+hIFs": {
     "defaultMessage": "Henüz hiçbir ödeme yapılmadı."

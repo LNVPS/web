@@ -234,10 +234,13 @@ export function AccountSubscriptionPage() {
                 <CostAmount
                   cost={{ currency, amount: totalAmount, interval_type: "month" }}
                   converted={false}
+                  taxable
                 />
-                <span className="text-xs text-cyber-muted">
-                  <FormattedMessage defaultMessage="ex. tax" />
-                </span>
+                {!login?.incTax && (
+                  <span className="text-xs text-cyber-muted">
+                    <FormattedMessage defaultMessage="ex. tax" />
+                  </span>
+                )}
               </>
             }
             dateLabel={
@@ -342,6 +345,7 @@ export function AccountSubscriptionPage() {
                         <CostAmount
                           cost={{ ...li.price, interval_type: "month" }}
                           converted={false}
+                          taxable
                         />
                       </span>
                       {li.setup_fee.amount > 0 && (
@@ -353,6 +357,7 @@ export function AccountSubscriptionPage() {
                                 <CostAmount
                                   cost={li.setup_fee}
                                   converted={false}
+                                  taxable
                                 />
                               ),
                             }}
@@ -371,11 +376,14 @@ export function AccountSubscriptionPage() {
                   <CostAmount
                     cost={{ currency, amount: totalAmount, interval_type: "month" }}
                     converted={false}
+                    taxable
                   />
-                  <span className="text-xs text-cyber-muted">
-                    {" "}
-                    <FormattedMessage defaultMessage="ex. tax" />
-                  </span>
+                  {!login?.incTax && (
+                    <span className="text-xs text-cyber-muted">
+                      {" "}
+                      <FormattedMessage defaultMessage="ex. tax" />
+                    </span>
+                  )}
                 </span>
               </div>
             </CardBody>

@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import LoginButton from "../components/login-button";
 import ThemeToggle from "../components/theme-toggle";
+import TaxToggle from "../components/tax-toggle";
 import LanguageSwitcher from "../components/language-switcher";
 import { saveRefCode } from "../ref";
 import Toaster from "../components/toaster";
@@ -21,6 +22,7 @@ export default function Layout() {
           LNVPS
         </Link>
         <div className="flex items-center gap-3">
+          <TaxToggle />
           <LanguageSwitcher />
           <ThemeToggle />
           <LoginButton />

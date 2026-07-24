@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "Hébergement VPS pour Bitcoin Lightning"
   },
+  "Kffxdm": {
+    "defaultMessage": "Chaque forfait comprend une adresse IPv4 et une adresse IPv6, ainsi qu’un volume de données illimité. Les prix indiqués incluent la TVA ; les frais de traitement des paiements sont exclus."
+  },
   "KuX7em": {
     "defaultMessage": "Actif pendant {duration}."
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "générer"
+  },
+  "QDOm6e": {
+    "defaultMessage": "y compris {rate} impôt"
   },
   "QEuWMk": {
     "defaultMessage": "Les comptes LNVPS utilisent le protocole Nostr ou un fournisseur d’authentification. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "Type de stockage"
+  },
+  "u+zbkg": {
+    "defaultMessage": "Afficher/masquer les prix, taxes comprises."
   },
   "u/vOPu": {
     "defaultMessage": "Payé"

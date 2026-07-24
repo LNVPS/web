@@ -18,6 +18,8 @@ export interface LoginSession {
   /** Session JWT (only set for token accounts: `oauth` / `webauthn`). */
   token?: string;
   currency: string;
+  /** Display prices grossed-up with the account's VAT rate. */
+  incTax?: boolean;
 }
 class LoginStore extends ExternalStore<LoginSession | undefined> {
   #session?: LoginSession;

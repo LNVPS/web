@@ -86,7 +86,12 @@ export function VpsPlanCard({ spec }: { spec: VmTemplate }) {
       </div>
       <div className="flex items-center justify-between gap-3 border-t border-cyber-border bg-cyber-panel-light px-4 py-3">
         <div className="text-xl leading-none text-cyber-text-bright">
-          {spec.cost_plan && <CostLabel cost={spec.cost_plan} />}
+          {spec.cost_plan && (
+            <CostLabel
+              cost={spec.cost_plan}
+              companyId={spec.region?.company_id}
+            />
+          )}
         </div>
         <AsyncButton
           className="text-sm uppercase rounded-sm px-4 py-1.5 font-bold cursor-pointer select-none bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon whitespace-nowrap"
@@ -128,7 +133,9 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
       </td>
       <td>{spec.region?.name}</td>
       <td className="text-cyber-accent">
-        {spec.cost_plan && <CostLabel cost={spec.cost_plan} />}
+        {spec.cost_plan && (
+          <CostLabel cost={spec.cost_plan} companyId={spec.region?.company_id} />
+        )}
       </td>
       <td>
         <AsyncButton

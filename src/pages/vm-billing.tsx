@@ -203,10 +203,16 @@ export function VmBillingPage() {
             priceLabel={<FormattedMessage defaultMessage="Renews at" />}
             price={
               <>
-                <CostLabel cost={plan} />
-                <span className="text-xs text-cyber-muted">
-                  <FormattedMessage defaultMessage="ex. tax" />
-                </span>
+                <CostLabel
+                  cost={plan}
+                  companyId={state.template.region?.company_id}
+                />
+                {!login?.incTax && (
+                  <span className="text-xs text-cyber-muted">
+                    {" "}
+                    <FormattedMessage defaultMessage="ex. tax" />
+                  </span>
+                )}
               </>
             }
             dateLabel={

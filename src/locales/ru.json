@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "Виртуальный хостинг для Bitcoin Lightning."
   },
+  "Kffxdm": {
+    "defaultMessage": "В каждый тарифный план включены один IPv4-адрес и один IPv6-адрес, а также безлимитный трафик. Цены указаны с учетом НДС; комиссия за обработку платежей не включена."
+  },
   "KuX7em": {
     "defaultMessage": "Активен в течение {duration}"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "генерация"
+  },
+  "QDOm6e": {
+    "defaultMessage": "включая {rate} налог"
   },
   "QEuWMk": {
     "defaultMessage": "Для доступа к учетным записям LNVPS используются протокол Nostr или поставщик услуг аутентификации. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "Тип накопителя"
+  },
+  "u+zbkg": {
+    "defaultMessage": "Включить/исключить отображение цен с учетом налога."
   },
   "u/vOPu": {
     "defaultMessage": "Оплачено"

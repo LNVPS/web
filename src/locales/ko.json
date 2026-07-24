@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "비트코인 라이트닝 VPS 호스팅"
   },
+  "Kffxdm": {
+    "defaultMessage": "모든 요금제에는 IPv4 주소 1개와 IPv6 주소 1개가 포함되어 있으며, 트래픽 사용량 제한이 없습니다. 가격에는 부가가치세가 포함되어 있으며, 결제 수수료는 별도입니다."
+  },
   "KuX7em": {
     "defaultMessage": "활성 상태 {duration}"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "생성"
+  },
+  "QDOm6e": {
+    "defaultMessage": "포함 {rate} 세금"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS 계정은 Nostr 또는 로그인 서비스를 사용합니다. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "스토리지 유형"
+  },
+  "u+zbkg": {
+    "defaultMessage": "세금이 포함된 가격을 표시/숨김"
   },
   "u/vOPu": {
     "defaultMessage": "유료"

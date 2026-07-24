@@ -437,7 +437,7 @@ export function VpsCustomOrder({
           </div>
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
-              <CostLabel cost={cost_plan} />
+              <CostLabel cost={cost_plan} companyId={params.region.company_id} />
             </div>
           )}
         </div>

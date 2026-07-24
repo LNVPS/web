@@ -8,6 +8,7 @@ import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
 import { appendDedupe, dedupe } from "@snort/shared";
 import useLogin from "../hooks/login";
+import { useTaxRates } from "../hooks/tax";
 import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
 import IpBlockCard from "../components/ip-block-card";
@@ -238,6 +239,10 @@ function PaymentMethodsFooter() {
 
 function VpsOffersSection() {
   const { offers } = useLoaderData<HomeLoaderData>();
+  const login = useLogin();
+  const rates = useTaxRates();
+  const showInclTax =
+    (login?.incTax ?? false) && (rates?.length ?? 0) > 0;
   const loading = false;
   const [region, setRegion] = useState<Array<number>>(() =>
     dedupe(offers?.templates.map((z) => z.region.id) ?? []),
@@ -374,7 +379,11 @@ function VpsOffersSection() {
         <VpsCustomOrder templates={offers.custom_template} />
       )}
       <small className="text-cyber-muted text-center">
-        <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees." />
+        {showInclTax ? (
+          <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices include VAT; payment processing fees are excluded." />
+        ) : (
+          <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees." />
+        )}
       </small>
     </>
   );

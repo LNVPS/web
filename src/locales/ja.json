@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "ビットコインライトニングVPSホスティング"
   },
+  "Kffxdm": {
+    "defaultMessage": "すべてのプランには、IPv4アドレス1つとIPv6アドレス1つが含まれており、データ通信量に制限はありません。価格にはVAT（付加価値税）が含まれますが、決済手数料は含まれません。"
+  },
   "KuX7em": {
     "defaultMessage": "{duration}の間、アクティブでした。"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "生成"
+  },
+  "QDOm6e": {
+    "defaultMessage": "含む。 {rate} 税"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPSアカウントでは、Nostrまたはログインプロバイダーを使用します。 {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "ストレージの種類"
+  },
+  "u+zbkg": {
+    "defaultMessage": "税込み価格を表示/非表示する"
   },
   "u/vOPu": {
     "defaultMessage": "有料"

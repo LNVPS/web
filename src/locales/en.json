@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
+  "Kffxdm": {
+    "defaultMessage": "Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices include VAT; payment processing fees are excluded."
+  },
   "KuX7em": {
     "defaultMessage": "Active for {duration}"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "generate"
+  },
+  "QDOm6e": {
+    "defaultMessage": "incl. {rate} tax"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS accounts use Nostr or a login provider. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "Storage type"
+  },
+  "u+zbkg": {
+    "defaultMessage": "Toggle prices inclusive of tax"
   },
   "u/vOPu": {
     "defaultMessage": "Paid"

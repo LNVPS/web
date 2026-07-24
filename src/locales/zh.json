@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "比特币闪电网络虚拟专用服务器托管"
   },
+  "Kffxdm": {
+    "defaultMessage": "每个套餐都包含一个 IPv4 地址和一个 IPv6 地址，并且流量不限。价格已包含增值税；不包括支付处理费。"
+  },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "生成"
+  },
+  "QDOm6e": {
+    "defaultMessage": "包括。 {rate} 税"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS 账户使用 Nostr 或登录服务提供商。 {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "存储类型"
+  },
+  "u+zbkg": {
+    "defaultMessage": "切换显示含税价格。"
   },
   "u/vOPu": {
     "defaultMessage": "已支付。"

@@ -91,7 +91,12 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
           <div>{template.name}</div>
           <VpsResources vm={template} />
         </div>
-        {template.cost_plan && <CostLabel cost={template.cost_plan} />}
+        {template.cost_plan && (
+          <CostLabel
+            cost={template.cost_plan}
+            companyId={template.region?.company_id}
+          />
+        )}
       </div>
       <hr />
       {login && (

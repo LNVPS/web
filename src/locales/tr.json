@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
+  "Kffxdm": {
+    "defaultMessage": "Her plan, bir IPv4 ve bir IPv6 adresi ile sınırsız veri kullanımını içerir. Fiyatlara KDV dahildir; ödeme işleme ücretleri fiyata dahil değildir."
+  },
   "KuX7em": {
     "defaultMessage": "Etkin olduğu süre {duration}"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "oluştur"
+  },
+  "QDOm6e": {
+    "defaultMessage": "dahil {rate} vergi"
   },
   "QEuWMk": {
     "defaultMessage": "LNVPS hesapları, Nostr veya bir oturum açma sağlayıcısı kullanır. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "Depolama türü"
+  },
+  "u+zbkg": {
+    "defaultMessage": "Vergi dahil fiyatları göster/gizle"
   },
   "u/vOPu": {
     "defaultMessage": "Ödendi"

@@ -668,6 +668,9 @@
   "Kd8VbI": {
     "defaultMessage": "استضافة خوادم افتراضية خاصة (VPS) لشبكة بيتكوين لايتنينغ"
   },
+  "Kffxdm": {
+    "defaultMessage": "تتضمن كل باقة عنوان IPv4 واحد وعنوان IPv6 واحد، وحركة مرور بيانات غير محدودة. الأسعار تشمل ضريبة القيمة المضافة؛ وتُستثنى رسوم معالجة الدفع."
+  },
   "KuX7em": {
     "defaultMessage": "نشط منذ {duration}"
   },
@@ -775,6 +778,9 @@
   },
   "PujK1s": {
     "defaultMessage": "إنشاء"
+  },
+  "QDOm6e": {
+    "defaultMessage": "يشمل. {rate} ضريبة"
   },
   "QEuWMk": {
     "defaultMessage": "تستخدم حسابات LNVPS بروتوكول نوستر أو مزود خدمة تسجيل الدخول. {link}"
@@ -1600,6 +1606,9 @@
   },
   "u+Blek": {
     "defaultMessage": "نوع التخزين"
+  },
+  "u+zbkg": {
+    "defaultMessage": "عرض/إخفاء الأسعار شاملة الضريبة"
   },
   "u/vOPu": {
     "defaultMessage": "مدفوع الأجر"

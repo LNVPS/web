@@ -95,6 +95,7 @@ function SubscriptionRow({ sub }: { sub: Subscription }) {
           <CostAmount
             cost={{ ...total, interval_type: "month" }}
             converted={false}
+            taxable
           />
         </span>
         <span className="text-[0.6rem] uppercase tracking-[0.2em] text-cyber-muted">
@@ -246,6 +247,7 @@ export function AccountSubscriptionsPage() {
                         <CostAmount
                           cost={{ currency, amount, interval_type: "month" }}
                           converted={false}
+                          taxable
                         />
                       </span>
                     ))}

@@ -23,6 +23,7 @@ export default function useLogin() {
               session.type === "oauth" || session.type === "webauthn",
             system,
             currency: session.currency,
+            incTax: session.incTax ?? false,
             api: session.token
               ? new LNVpsApi(ApiUrl, undefined, undefined, session.token)
               : new LNVpsApi(ApiUrl, LoginState.getSigner()),

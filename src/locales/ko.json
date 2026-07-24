@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "가상 머신 시작"
   },
-  "9QV3cp": {
-    "defaultMessage": "사용 가능한 IP 블록"
-  },
   "9d9svQ": {
     "defaultMessage": "아직 패스키가 없습니다. 키 없이 로그인하려면 하나를 추가하세요."
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "저희에게 연락할 수 있는 다른 방법은 다음과 같습니다."
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "링크 공유"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "결제를 보냈습니다"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "저장된 결제 수단이 아직 없습니다."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "깃"
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "언어 선택"
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "노스트르 확장 프로그램"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} 한 번도 지불하지 않음"
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "아직 게시물이 없습니다."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "이름 변경"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "호스트 종료 예정"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "전화번호를 인증하여 기능을 활성화하세요."
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "전체 업데이트 내용을 확인하세요."
   },
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
   },
-  "qJRR8N": {
-    "defaultMessage": "IP 주소 차단 목록을 불러오는 중입니다..."
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "포트(들)"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "연결되지 않음"

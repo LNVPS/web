@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "VMを起動します。"
   },
-  "9QV3cp": {
-    "defaultMessage": "利用可能なIPアドレス範囲"
-  },
   "9d9svQ": {
     "defaultMessage": "パスキーはまだありません。追加すると、キーなしでサインインできます。"
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "その他のご連絡方法："
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "リンクを共有"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "支払いを送信しました"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "まだ支払い方法が登録されていません。"
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "言語を選択してください。"
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "Nostr拡張機能"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} 支払われなかった。"
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "まだ投稿はありません。"
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "名前を変更する。"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "ホスト廃止予定"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "電話番号を認証して、機能を有効にします。"
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "最新情報をすべてお読みください。"
   },
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
   },
-  "qJRR8N": {
-    "defaultMessage": "IPアドレスのブロックを読み込んでいます..."
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "ポート（複数形）"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"

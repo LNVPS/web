@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "启动虚拟机。"
   },
-  "9QV3cp": {
-    "defaultMessage": "可用的 IP 地址段"
-  },
   "9d9svQ": {
     "defaultMessage": "还没有通行密钥。添加一个即可无需密钥登录。"
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "其他联系方式："
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "分享链接"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "目前还没有消息。请在下方开始新的对话。"
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "我已发送付款"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "尚未保存任何支付方式。"
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "配置您的机器"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "选择语言。"
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展程序"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} 从未支付过。"
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "目前还没有帖子。"
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "重命名"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "主机即将停用"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "验证电话号码以启用该功能。"
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "阅读完整更新内容。"
   },
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
   },
-  "qJRR8N": {
-    "defaultMessage": "正在加载 IP 屏蔽列表……"
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "支付失败。"
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "港口（或码头）"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "未关联。"

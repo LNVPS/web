@@ -607,6 +607,51 @@ export interface SubscriptionSummary {
   currency: string;
 }
 
+/** A predefined, Docker-deployed app from the managed catalog. */
+export interface App {
+  id: number;
+  /** URL/DNS-safe slug. */
+  name: string;
+  display_name: string;
+  description?: string;
+  icon?: string;
+  /** docker-compose-style YAML; the config form (ports/env) is rendered from this. */
+  compose: string;
+  /** Recurring price in smallest currency units. */
+  amount: number;
+  currency: string;
+  interval_amount: number;
+  interval_type: CostPlanIntervalType;
+  /** One-off setup fee in smallest currency units (0 = none). */
+  setup_amount: number;
+}
+
+export type AppDeploymentState = "running" | "stopped";
+export type AppDeploymentStatus =
+  | "pending"
+  | "running"
+  | "stopped"
+  | "error"
+  | "deleting";
+
+/** A user's running instance of a catalog app. */
+export interface AppDeployment {
+  id: number;
+  /** Catalog app being run. */
+  app_id: number;
+  /** The user's instance name. */
+  name: string;
+  /** Public endpoint host once assigned (absent until reconciled, or if the app has no ingress). */
+  hostname?: string;
+  desired_state: AppDeploymentState;
+  status: AppDeploymentStatus;
+  /** Operator status/error detail when present. */
+  status_message?: string;
+  /** Subscription this deployment is billed under (renew via the subscription endpoints). */
+  subscription_id?: number;
+  created: string;
+}
+
 export interface CreateSubscriptionRequest {
   name?: string;
   description?: string;
@@ -864,6 +909,36 @@ export class LNVpsApi {
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
       await this.#req("/api/v1/account", "GET"),
+    );
+    return data;
+  }
+
+  /** Managed app catalog (read-only). */
+  async listApps() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<App>>>(
+      await this.#req("/api/v1/apps", "GET"),
+    );
+    return data;
+  }
+
+  async getApp(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<App>>(
+      await this.#req(`/api/v1/apps/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /** The caller's app deployments (most recent first). */
+  async listAppDeployments() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<AppDeployment>>
+    >(await this.#req("/api/v1/app-deployments", "GET"));
+    return data;
+  }
+
+  async getAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}`, "GET"),
     );
     return data;
   }

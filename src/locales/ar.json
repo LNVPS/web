@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "ابدأ تشغيل الجهاز الظاهري."
   },
-  "9QV3cp": {
-    "defaultMessage": "كتل عناوين IP المتاحة"
-  },
   "9d9svQ": {
     "defaultMessage": "لا توجد مفاتيح مرور بعد. أضف واحدًا لتسجيل الدخول دون مفتاح."
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "طرق أخرى للتواصل معنا:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "مشاركة الرابط"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "لا توجد رسائل حتى الآن. ابدأ محادثة أدناه."
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "لقد أرسلت الدفعة"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "لم يتم حفظ أي طرق دفع حتى الآن."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "جيت"
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "لم يتم العثور على أي سجلات تاريخية لهذه الآلة الافتراضية."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "قم بتكوين جهازك"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "اختر اللغة."
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "إضافة نوستر"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "قم بتفعيل هذا العامل وأضف مسارًا لـ. {route}"
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} لم يتم الدفع أبدًا."
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "لا توجد منشورات حتى الآن."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "إعادة تسمية"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "إيقاف المضيف"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "تحقق من رقم الهاتف لتفعيله."
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "لم يتم تعيينه."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "اقرأ التحديث بالكامل."
   },
   "pus6h6": {
     "defaultMessage": "يمكنك المغادرة في أي وقت. سيتوقف الكود عن توليد المزيد من الأرباح، ولن يمكن إعادة استخدامه."
   },
-  "qJRR8N": {
-    "defaultMessage": "جارٍ تحميل قائمة عناوين IP المحظورة..."
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "فشل الدفع."
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "المنفذ/المنافذ"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "غير مرتبط."

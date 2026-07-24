@@ -23,6 +23,8 @@ import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
+import { AccountAppsPage } from "./pages/account-apps.tsx";
+import { AccountAppPage } from "./pages/account-app.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
@@ -101,6 +103,14 @@ export const routes: RouteObject[] = [
           {
             path: "referral",
             element: <AccountReferralPage />,
+          },
+          {
+            path: "apps",
+            element: <AccountAppsPage />,
+          },
+          {
+            path: "apps/:id",
+            element: <AccountAppPage />,
           },
           {
             path: "subscriptions",

@@ -41,6 +41,11 @@ const SECTIONS: Array<NavSection> = [
         label: <FormattedMessage defaultMessage="Nostr Domains" />,
         hint: <FormattedMessage defaultMessage="NIP-05 identity hosting" />,
       },
+      {
+        to: "/account/apps",
+        label: <FormattedMessage defaultMessage="Apps" />,
+        hint: <FormattedMessage defaultMessage="One-click Docker apps" />,
+      },
       // New product offerings slot in here.
     ],
   },

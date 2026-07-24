@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "Sanal makineyi başlat"
   },
-  "9QV3cp": {
-    "defaultMessage": "Kullanılabilir IP Blokları"
-  },
   "9d9svQ": {
     "defaultMessage": "Henüz geçiş anahtarı yok. Anahtar olmadan giriş yapmak için bir tane ekleyin."
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "Bize ulaşabileceğiniz diğer yollar:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "Bağlantıyı paylaş"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "Henüz mesaj yok. Aşağıda bir sohbet başlatın."
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "Ödemeyi gönderdim"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "Şu anda kayıtlı ödeme yöntemi bulunmuyor."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git."
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "Bu sanal makine için herhangi bir geçmiş kaydı bulunamadı."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Makinenizi oluşturun"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "Dil seçin"
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "Nostr Uzantısı"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "Bu İşçi'yi devreye alın ve şu rota için bir yapılandırma ekleyin: {route}"
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} asla ödenmedi"
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "Henüz hiçbir gönderi yok."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "Yeniden adlandır"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "Sunucu kapanıyor"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "Etkinleştirmek için bir telefon numarasını doğrulayın."
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "Ayarlanmadı"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Güncellemenin tamamını okuyun"
   },
   "pus6h6": {
     "defaultMessage": "İstediğiniz zaman çıkış yapabilirsiniz. Kodunuz artık geçerli olmayacak ve yeniden kullanılamayacaktır."
   },
-  "qJRR8N": {
-    "defaultMessage": "IP adresleri yükleniyor..."
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "Bağlantı noktası/noktaları"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "Bağlantı yok."

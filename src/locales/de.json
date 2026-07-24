@@ -326,9 +326,6 @@
   "90f82/": {
     "defaultMessage": "VM starten"
   },
-  "9QV3cp": {
-    "defaultMessage": "Verfügbare IP-Adressbereiche"
-  },
   "9d9svQ": {
     "defaultMessage": "Noch keine Passkeys. Fügen Sie einen hinzu, um sich ohne Schlüssel anzumelden."
   },
@@ -551,6 +548,9 @@
   "GLA+G9": {
     "defaultMessage": "Weitere Möglichkeiten, uns zu erreichen:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "Link teilen"
   },
@@ -592,6 +592,9 @@
   },
   "HOWHco": {
     "defaultMessage": "Bisher keine Nachrichten. Beginnen Sie unten eine Unterhaltung."
+  },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
   },
   "HlAgG9": {
     "defaultMessage": "Ich habe die Zahlung gesendet"
@@ -661,6 +664,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "Bisher sind keine Zahlungsmethoden gespeichert."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -1193,6 +1199,9 @@
   "duElEE": {
     "defaultMessage": "Für diese virtuelle Maschine wurden keine Verlaufseinträge gefunden."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Stelle deine Maschine zusammen"
   },
@@ -1204,6 +1213,9 @@
   },
   "eVlu1R": {
     "defaultMessage": "Sprache auswählen"
+  },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
   },
   "ebmhes": {
     "defaultMessage": "Nostr-Erweiterung"
@@ -1250,6 +1262,9 @@
   "gPsMm7": {
     "defaultMessage": "Setzen Sie diesen Worker ein und fügen Sie eine Route für {route} hinzu."
   },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
+  },
   "gWp9QV": {
     "defaultMessage": "{failed} nie bezahlt"
   },
@@ -1294,6 +1309,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "Bisher keine Beiträge."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "Umbenennen"
@@ -1454,6 +1472,9 @@
   "nrTBF4": {
     "defaultMessage": "Host wird stillgelegt"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "Überprüfen Sie eine Telefonnummer, um die Funktion zu aktivieren."
   },
@@ -1496,14 +1517,17 @@
   "p5LNtB": {
     "defaultMessage": "Nicht festgelegt."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Lesen Sie die vollständige Aktualisierung."
   },
   "pus6h6": {
     "defaultMessage": "Sie können dies jederzeit tun. Ihr Code generiert ab diesem Zeitpunkt keine weiteren Prämien und kann nicht mehr verwendet werden."
   },
-  "qJRR8N": {
-    "defaultMessage": "IP-Blöcke werden geladen …"
+  "q6sstZ": {
+    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "Zahlung fehlgeschlagen."
@@ -1591,6 +1615,9 @@
   },
   "tNmjzW": {
     "defaultMessage": "Anschluss/Anschlüsse"
+  },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
   },
   "tTpLsN": {
     "defaultMessage": "Nicht verknüpft."

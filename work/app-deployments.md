@@ -30,6 +30,6 @@ file tracks the remaining ordering/lifecycle work as increments.
 
 ## Follow-up
 
-- [ ] Public catalog: `GET /api/v1/apps` + `/apps/{id}` should be **unauthenticated** like `/api/v1/vm/templates`, so the catalog can live on the homepage. Filed backend issue; then move catalog → homepage (AppsSection in homeLoader) and make app detail public, keeping deploy/manage authed.
+- [x] Public catalog: catalog moved to the homepage (`AppsSection`, fetched in `homeLoader`), app detail is public at `/apps/:id` (deploy form guarded on login), deployments/manage stay under `/account`. **Depends on LNVPS/api#227** to drop auth on `GET /api/v1/apps` + `/apps/{id}` — until merged the homepage section stays empty (loader 401 → undefined, graceful).
 
 Status: increments 1-5 done on `feat/app-deployments`.

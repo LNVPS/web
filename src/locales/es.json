@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "Conectando..."
   },
+  "62gWV4": {
+    "defaultMessage": "Aplicaciones de Docker que se implementan con un solo clic en una infraestructura gestionada."
+  },
   "6Auf1w": {
     "defaultMessage": "No pudimos completar el proceso de inicio de sesión. Por favor, inténtelo de nuevo."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Pide ayuda al equipo."
+  },
+  "Cououe": {
+    "defaultMessage": "Inicie sesión para implementar esta aplicación."
   },
   "D3idYv": {
     "defaultMessage": "Configuración"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Volver al inicio de sesión"
+  },
+  "odXlk8": {
+    "defaultMessage": "Iniciar sesión"
   },
   "oswGmn": {
     "defaultMessage": "No puede salir mientras exista un historial de pagos."

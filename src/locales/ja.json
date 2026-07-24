@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "接続中です。"
   },
+  "62gWV4": {
+    "defaultMessage": "ワンクリックで、管理されたインフラ上にDockerアプリケーションをデプロイできます。"
+  },
   "6Auf1w": {
     "defaultMessage": "ログインに失敗しました。もう一度お試しください。"
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
+  },
+  "Cououe": {
+    "defaultMessage": "このアプリを公開するには、ログインしてください。"
   },
   "D3idYv": {
     "defaultMessage": "設定"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "ログインに戻る"
+  },
+  "odXlk8": {
+    "defaultMessage": "ログイン"
   },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"

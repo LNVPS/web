@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "Verbinde..."
   },
+  "62gWV4": {
+    "defaultMessage": "Docker-Anwendungen mit nur einem Klick auf verwalteter Infrastruktur bereitstellen."
+  },
   "6Auf1w": {
     "defaultMessage": "Die Anmeldung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
+  },
+  "Cououe": {
+    "defaultMessage": "Melden Sie sich an, um diese App zu installieren."
   },
   "D3idYv": {
     "defaultMessage": "Einstellungen"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Zurück zur Anmeldung"
+  },
+  "odXlk8": {
+    "defaultMessage": "Anmelden"
   },
   "oswGmn": {
     "defaultMessage": "Sie können nicht abmelden, solange Auszahlungsdaten vorhanden sind."

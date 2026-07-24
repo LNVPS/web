@@ -114,10 +114,6 @@ export const routes: RouteObject[] = [
             element: <AccountAppDeploymentPage />,
           },
           {
-            path: "apps/:id",
-            element: <AccountAppPage />,
-          },
-          {
             path: "subscriptions",
             element: <AccountSubscriptionsPage />,
           },
@@ -134,6 +130,10 @@ export const routes: RouteObject[] = [
       {
         path: "/order",
         element: <OrderPage />,
+      },
+      {
+        path: "/apps/:id",
+        element: <AccountAppPage />,
       },
       {
         path: "/vm",

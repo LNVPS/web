@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "正在连接……"
   },
+  "62gWV4": {
+    "defaultMessage": "一键部署 Docker 应用程序，并将其部署在托管基础设施上。"
+  },
   "6Auf1w": {
     "defaultMessage": "我们无法完成登录。请重试。"
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
+  },
+  "Cououe": {
+    "defaultMessage": "登录以部署此应用程序。"
   },
   "D3idYv": {
     "defaultMessage": "设置"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "返回登录"
+  },
+  "odXlk8": {
+    "defaultMessage": "登录"
   },
   "oswGmn": {
     "defaultMessage": "在未完成所有提现记录的情况下，您不能离开。"

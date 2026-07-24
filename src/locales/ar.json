@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "جارٍ الاتصال..."
   },
+  "62gWV4": {
+    "defaultMessage": "تطبيقات Docker يمكن نشرها بنقرة واحدة على بنية تحتية مُدارة."
+  },
   "6Auf1w": {
     "defaultMessage": "لم نتمكن من إكمال عملية تسجيل الدخول. يرجى المحاولة مرة أخرى."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
+  },
+  "Cououe": {
+    "defaultMessage": "سجّل الدخول لتفعيل هذا التطبيق."
   },
   "D3idYv": {
     "defaultMessage": "إعدادات"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "العودة إلى تسجيل الدخول"
+  },
+  "odXlk8": {
+    "defaultMessage": "تسجيل الدخول"
   },
   "oswGmn": {
     "defaultMessage": "لا يمكنك المغادرة طالما أن سجل المدفوعات موجود."

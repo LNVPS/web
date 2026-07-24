@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "Bağlanıyor..."
   },
+  "62gWV4": {
+    "defaultMessage": "Tek tıklamayla, yönetilen altyapı üzerinde dağıtılan Docker uygulamaları."
+  },
   "6Auf1w": {
     "defaultMessage": "Giriş işlemi tamamlanamadı. Lütfen tekrar deneyin."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
+  },
+  "Cououe": {
+    "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
   },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Girişe geri dön"
+  },
+  "odXlk8": {
+    "defaultMessage": "Giriş yapın"
   },
   "oswGmn": {
     "defaultMessage": "Ödeme geçmişi varken buradan ayrılamazsınız."

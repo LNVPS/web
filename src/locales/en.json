@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "Connecting..."
   },
+  "62gWV4": {
+    "defaultMessage": "One-click Docker apps deployed on managed infrastructure."
+  },
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
+  },
+  "Cououe": {
+    "defaultMessage": "Log in to deploy this app."
   },
   "D3idYv": {
     "defaultMessage": "Settings"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Back to sign in"
+  },
+  "odXlk8": {
+    "defaultMessage": "Log in"
   },
   "oswGmn": {
     "defaultMessage": "You can't leave while payout history exists."

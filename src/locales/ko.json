@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "연결 중..."
   },
+  "62gWV4": {
+    "defaultMessage": "원클릭으로 관리형 인프라에 Docker 애플리케이션을 배포합니다."
+  },
   "6Auf1w": {
     "defaultMessage": "로그인하는 데 실패했습니다. 다시 시도해 주세요."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
+  },
+  "Cououe": {
+    "defaultMessage": "이 앱을 배포하려면 로그인하세요."
   },
   "D3idYv": {
     "defaultMessage": "설정"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "로그인으로 돌아가기"
+  },
+  "odXlk8": {
+    "defaultMessage": "로그인하세요."
   },
   "oswGmn": {
     "defaultMessage": "지급 내역이 남아 있는 동안에는 출금할 수 없습니다."

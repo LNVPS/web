@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "Connexion en cours..."
   },
+  "62gWV4": {
+    "defaultMessage": "Déploiement d’applications Docker en un seul clic sur une infrastructure gérée."
+  },
   "6Auf1w": {
     "defaultMessage": "Nous n’avons pas pu effectuer l’opération de connexion. Veuillez réessayer."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
+  },
+  "Cououe": {
+    "defaultMessage": "Connectez-vous pour déployer cette application."
   },
   "D3idYv": {
     "defaultMessage": "Paramètres"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Retour à la connexion"
+  },
+  "odXlk8": {
+    "defaultMessage": "Se connecter"
   },
   "oswGmn": {
     "defaultMessage": "Vous ne pouvez pas quitter le système tant que l’historique des paiements est disponible."

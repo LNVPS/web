@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { App, AppDeployment } from "../api";
+import { App, AppDeployment, LNVpsApi } from "../api";
+import { ApiUrl } from "../const";
 import useLogin from "../hooks/login";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
@@ -21,22 +22,27 @@ export function AccountAppPage() {
   const [error, setError] = useState<string>();
 
   useEffect(() => {
-    if (!login?.api || !Number.isFinite(appId)) return;
-    login.api
+    if (!Number.isFinite(appId)) return;
+    // The catalog is public; browse with an unauthenticated client when logged
+    // out. Deployments are user-owned, so only fetch those when logged in.
+    const api = login?.api ?? new LNVpsApi(ApiUrl, undefined);
+    api
       .getApp(appId)
       .then(setApp)
       .catch((e) => e instanceof Error && setError(e.message));
-    login.api
-      .listAppDeployments()
-      .then((d) => setDeployments(d.filter((x) => x.app_id === appId)))
-      .catch(() => setDeployments([]));
+    if (login?.api) {
+      login.api
+        .listAppDeployments()
+        .then((d) => setDeployments(d.filter((x) => x.app_id === appId)))
+        .catch(() => setDeployments([]));
+    }
   }, [login?.api, appId]);
 
   return (
     <div className="flex flex-col gap-6">
       <Seo noindex={true} />
       <Link
-        to="/account/apps"
+        to={login ? "/account/apps" : "/"}
         className="text-sm text-cyber-muted hover:text-cyber-primary transition-colors"
       >
         &lsaquo; <FormattedMessage defaultMessage="Back to apps" />
@@ -93,7 +99,21 @@ export function AccountAppPage() {
           )}
 
           <SectionCard title={<FormattedMessage defaultMessage="Deploy" />}>
-            <DeployAppForm app={app} />
+            {login ? (
+              <DeployAppForm app={app} />
+            ) : (
+              <div className="flex flex-col items-start gap-3">
+                <p className="m-0 text-sm text-cyber-muted">
+                  <FormattedMessage defaultMessage="Log in to deploy this app." />
+                </p>
+                <Link
+                  to="/login"
+                  className="rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-1.5 text-sm font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+                >
+                  <FormattedMessage defaultMessage="Log in" />
+                </Link>
+              </div>
+            )}
           </SectionCard>
 
           {deployments.length > 0 && (

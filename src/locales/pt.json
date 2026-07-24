@@ -224,6 +224,9 @@
   "5y2qWO": {
     "defaultMessage": "A conectar..."
   },
+  "62gWV4": {
+    "defaultMessage": "Aplicativos Docker implantados com um único clique em uma infraestrutura gerenciada."
+  },
   "6Auf1w": {
     "defaultMessage": "Não foi possível efetuar o início de sessão. Tente novamente."
   },
@@ -427,6 +430,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
+  },
+  "Cououe": {
+    "defaultMessage": "Faça o login para implementar este aplicativo."
   },
   "D3idYv": {
     "defaultMessage": "Definições"
@@ -1555,6 +1561,9 @@
   },
   "odTkf5": {
     "defaultMessage": "Voltar ao início de sessão"
+  },
+  "odXlk8": {
+    "defaultMessage": "Iniciar sessão"
   },
   "oswGmn": {
     "defaultMessage": "Não pode sair enquanto houver um histórico de pagamentos pendente."

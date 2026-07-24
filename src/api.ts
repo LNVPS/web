@@ -655,8 +655,18 @@ export interface ReferralPayout {
   currency: string;
   created: string;
   is_paid: boolean;
-  invoice?: string;
-  /** Payment preimage (hex), present once the payout has settled. */
+  /**
+   * How this payout was made; tells you how to interpret `output`:
+   * `lightning_address`/`nwc` → BOLT11 invoice, `on_chain` → outpoint.
+   */
+  mode: ReferralPayoutMode;
+  /**
+   * Payout output reference: a BOLT11 invoice for a Lightning payout, or the
+   * on-chain outpoint "{txid}:{vout}" for an on-chain payout (batches share the
+   * txid, distinct vouts).
+   */
+  output?: string;
+  /** Payment preimage (hex), present once a Lightning payout has settled. */
   pre_image?: string;
   /**
    * Network/routing fee charged to the referrer for this payout (smallest
@@ -664,12 +674,6 @@ export interface ReferralPayout {
    * payout batches split the transaction fee proportionally.
    */
   fee: number;
-  /**
-   * On-chain payout outpoint "{txid}:{vout}", present once an on-chain payout
-   * has been broadcast. Payouts batched into the same transaction share the
-   * txid but carry distinct vouts.
-   */
-  outpoint?: string;
 }
 
 /** Per-referral breakdown of the commission earned from a first payment. */

@@ -602,8 +602,10 @@ function UsageRow({ usage }: { usage: ReferralUsage }) {
 }
 
 function PayoutRow({ payout }: { payout: ReferralPayout }) {
-  // Batched on-chain payouts share a txid; link it for verification.
-  const txid = payout.outpoint?.split(":")[0];
+  // For on-chain payouts, `output` is the "{txid}:{vout}" outpoint — link the
+  // txid for verification. For Lightning payouts `output` is a BOLT11 invoice.
+  const txid =
+    payout.mode === "on_chain" ? payout.output?.split(":")[0] : undefined;
   return (
     <tr>
       <td className="text-cyber-muted">

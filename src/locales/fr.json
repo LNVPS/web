@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{an} other{ans}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "Adresse sur la chaîne"
+  },
   "+SM72m": {
     "defaultMessage": "Clé publique du destinataire (npub/nprofile/hex) :"
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "Inactif"
   },
+  "6UfYVI": {
+    "defaultMessage": "Hébergement VPS haute performance avec options de paiement flexibles : Bitcoin Lightning ou carte de crédit."
+  },
   "6hEevT": {
     "defaultMessage": "Définir la valeur par défaut"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Envoyez-nous un message directement et notre équipe vous répondra dans les plus brefs délais."
+  },
+  "7xme6K": {
+    "defaultMessage": "Hébergement VPS haute performance"
   },
   "7yPJTW": {
     "defaultMessage": "Bientôt expiré."
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "Domaines Nostr"
   },
-  "BlFeZA": {
-    "defaultMessage": "Dernières nouvelles"
+  "BnoVvl": {
+    "defaultMessage": "Conditions d’utilisation de LNVPS. Veuillez consulter nos règles d’utilisation, nos directives concernant l’utilisation acceptable et nos conditions de service."
   },
   "Bwqhmd": {
     "defaultMessage": "Pare-feu"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
-  },
-  "CjLFf2": {
-    "defaultMessage": "Contactez l’équipe LNVPS. Vous avez des questions concernant notre service VPS Bitcoin Lightning ? Nous sommes là pour vous aider."
   },
   "D3idYv": {
     "defaultMessage": "Paramètres"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
   },
+  "JlGNV+": {
+    "defaultMessage": "Mise en service en quelques minutes. Paiement possible avec Lightning, Bitcoin ou par carte — pas de contrats à long terme."
+  },
   "Jm+fih": {
     "defaultMessage": "Inactif."
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "Pays"
-  },
-  "LvkbFg": {
-    "defaultMessage": "Fournisseur de VPS Bitcoin Lightning offrant des serveurs privés virtuels performants et une gestion de compte simplifiée."
-  },
-  "ML7RRt": {
-    "defaultMessage": "Serveurs privés virtuels (VPS) haute performance alimentés par Bitcoin Lightning. Les VPS sont disponibles à partir de quelques satoshis par mois."
   },
   "MTnSwY": {
     "defaultMessage": "hors taxes"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "Les comptes LNVPS utilisent le protocole Nostr ou un fournisseur d’authentification. {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "−{fee} frais"
+  },
   "QN/rCc": {
     "defaultMessage": "Erreur lors de l’analyse du fichier JSON : {msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "Ajoutez un portefeuille compatible avec Nostr Wallet Connect."
+  },
+  "RumeRz": {
+    "defaultMessage": "Régions"
   },
   "Rw7iI7": {
     "defaultMessage": "Désactiver"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "En attente du paiement. Cette opération est effectuée automatiquement une fois le paiement confirmé."
   },
-  "YH46Fd": {
-    "defaultMessage": "Les dernières nouvelles, mises à jour et annonces de LNVPS, votre fournisseur de VPS Bitcoin Lightning."
-  },
   "YWjrby": {
     "defaultMessage": "Nous vous envoyons uniquement des alertes concernant votre compte, par exemple l’expiration de la période d’essai. Nous n’envoyons jamais de messages publicitaires."
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "Payer par carte"
   },
+  "ZbOD+W": {
+    "defaultMessage": "Consultez en temps réel les statistiques de disponibilité et l’historique des incidents pour les services LNVPS. Vérifiez l’état opérationnel actuel de notre infrastructure VPS."
+  },
   "ZdCdo5": {
     "defaultMessage": "Dernière mise à jour : {date}"
   },
   "ZewCpX": {
     "defaultMessage": "Ajouter un domaine"
   },
-  "ZlYFmj": {
-    "defaultMessage": "Conditions d’utilisation de LNVPS — fournisseur de VPS Bitcoin Lightning. Veuillez consulter nos règles d’utilisation, nos directives concernant l’utilisation autorisée et nos conditions de service."
+  "ZmOSyB": {
+    "defaultMessage": "Contactez l’équipe LNVPS. Vous avez des questions sur notre service d’hébergement VPS ou sur les options de paiement? Nous sommes là pour vous aider."
   },
   "ZshmbW": {
     "defaultMessage": "Ce composant ne prend en charge que les paiements on-chain"
+  },
+  "aPcXT9": {
+    "defaultMessage": "Les paiements sont regroupés avec les autres références sur la chaîne dans une seule transaction une fois que votre solde atteint le minimum requis. Votre part des frais du réseau est déduite de votre solde. Uniquement pour les adresses du réseau principal."
   },
   "aTgjTE": {
     "defaultMessage": "Ajouter une clé d'accès"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} poignées"
-  },
-  "gCrKqH": {
-    "defaultMessage": "Serveurs privés virtuels (VPS) performants, alimentés par Bitcoin Lightning."
   },
   "gH4VcS": {
     "defaultMessage": "Coût de la mise à niveau, calculé au prorata :"
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "Chargement des offres VPS…"
   },
+  "nqdKy7": {
+    "defaultMessage": "Hébergement VPS Bitcoin Lightning haute performance. Payez avec Lightning, Bitcoin ou par carte – pas de contrats à long terme."
+  },
   "nrTBF4": {
     "defaultMessage": "Hôte en retrait"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "Cela efface tout sur la VM."
   },
+  "uybUiI": {
+    "defaultMessage": "Dernières nouvelles, mises à jour et annonces de LNVPS : hébergement de serveurs VPS Bitcoin Lightning, avec possibilité de paiement par carte."
+  },
   "v2BRjN": {
     "defaultMessage": "Objet *"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Échec de la connexion"
-  },
-  "yr1Ove": {
-    "defaultMessage": "Consultez en temps réel la disponibilité et l’historique des incidents pour les services LNVPS. Vérifiez l’état opérationnel actuel de notre infrastructure VPS Bitcoin Lightning."
   },
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."

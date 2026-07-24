@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "链上地址"
+  },
   "+SM72m": {
     "defaultMessage": "收件人的公钥（npub/nprofile/十六进制）："
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "未激活；不活跃"
   },
+  "6UfYVI": {
+    "defaultMessage": "高性能 VPS 虚拟主机，支持灵活的支付方式——比特币闪电网络或信用卡。"
+  },
   "6hEevT": {
     "defaultMessage": "设置为默认值。"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
+  },
+  "7xme6K": {
+    "defaultMessage": "高性能虚拟专用服务器托管"
   },
   "7yPJTW": {
     "defaultMessage": "即将到期。"
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr 域名"
   },
-  "BlFeZA": {
-    "defaultMessage": "最新消息"
+  "BnoVvl": {
+    "defaultMessage": "LNVPS 服务条款。请阅读我们的使用政策、可接受的使用规范和服务条款。"
   },
   "Bwqhmd": {
     "defaultMessage": "防火墙"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
-  },
-  "CjLFf2": {
-    "defaultMessage": "请与 LNVPS 团队联系。您对我们的比特币闪电网络 VPS 服务有疑问吗？我们随时为您提供帮助。"
   },
   "D3idYv": {
     "defaultMessage": "设置"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
   },
+  "JlGNV+": {
+    "defaultMessage": "几分钟内即可部署。您可以使用闪电网络、比特币或信用卡进行支付，无需签订长期合同。"
+  },
   "Jm+fih": {
     "defaultMessage": "未激活。"
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "国家/地区"
-  },
-  "LvkbFg": {
-    "defaultMessage": "提供高性能虚拟专用服务器和简化的账户管理服务的比特币闪电网络 VPS 服务商。"
-  },
-  "ML7RRt": {
-    "defaultMessage": "高性能 VPS，由比特币闪电网络提供支持。虚拟专用服务器，每月只需几枚聪即可使用。"
   },
   "MTnSwY": {
     "defaultMessage": "不含税。"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "LNVPS 账户使用 Nostr 或登录服务提供商。 {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "负号{fee} 费用"
+  },
   "QN/rCc": {
     "defaultMessage": "解析 JSON 时出错：{msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "添加一个 Nostr 钱包连接。"
+  },
+  "RumeRz": {
+    "defaultMessage": "地区"
   },
   "Rw7iI7": {
     "defaultMessage": "禁用"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
-  "YH46Fd": {
-    "defaultMessage": "LNVPS 最新消息、更新和公告——您值得信赖的比特币闪电网络 VPS 服务提供商。"
-  },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "使用银行卡支付"
   },
+  "ZbOD+W": {
+    "defaultMessage": "查看 LNVPS 服务的实时运行状态和历史事件记录。了解我们虚拟专用服务器 (VPS) 基础设施的当前运行状况。"
+  },
   "ZdCdo5": {
     "defaultMessage": "上次更新：{date}"
   },
   "ZewCpX": {
     "defaultMessage": "添加域名"
   },
-  "ZlYFmj": {
-    "defaultMessage": "LNVPS 服务条款——比特币闪电网络虚拟专用服务器提供商。请阅读我们的使用政策、可接受的使用指南和服务条款。"
+  "ZmOSyB": {
+    "defaultMessage": "请联系 LNVPS 团队。如果您对我们的虚拟专用服务器托管服务或付款方式有任何疑问，我们随时为您提供帮助。"
   },
   "ZshmbW": {
     "defaultMessage": "此组件仅支持链上支付"
+  },
+  "aPcXT9": {
+    "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
   },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} 个把手"
-  },
-  "gCrKqH": {
-    "defaultMessage": "高性能虚拟专用服务器，由比特币闪电网络提供支持。"
   },
   "gH4VcS": {
     "defaultMessage": "按比例计算的升级费用："
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "正在加载 VPS 服务……"
   },
+  "nqdKy7": {
+    "defaultMessage": "高性能比特币闪电网络虚拟专用服务器（VPS）托管服务。您可以使用闪电网络、比特币或信用卡支付，无需签订长期合同。"
+  },
   "nrTBF4": {
     "defaultMessage": "主机即将停用"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "这将清除该 VM 上的所有内容。"
   },
+  "uybUiI": {
+    "defaultMessage": "LNVPS 的最新消息、更新和公告——现在提供比特币闪电网络虚拟专用服务器（VPS）托管服务，并支持信用卡支付。"
+  },
   "v2BRjN": {
     "defaultMessage": "主题 *"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "登录失败"
-  },
-  "yr1Ove": {
-    "defaultMessage": "查看 LNVPS 服务的实时运行时间和历史事件记录。请查看我们比特币闪电 VPS 基础设施的当前运行状态。"
   },
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"

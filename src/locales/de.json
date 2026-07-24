@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "On-Chain-Adresse"
+  },
   "+SM72m": {
     "defaultMessage": "Öffentlicher Schlüssel des Empfängers (npub/nprofile/hex):"
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "Inaktiv"
   },
+  "6UfYVI": {
+    "defaultMessage": "Hochleistungsfähiges VPS-Hosting mit flexiblen Zahlungsoptionen – Bitcoin Lightning oder Kreditkarte."
+  },
   "6hEevT": {
     "defaultMessage": "Standardwert festlegen"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Senden Sie uns eine direkte Nachricht, und unser Team wird sich bei Ihnen melden."
+  },
+  "7xme6K": {
+    "defaultMessage": "Hochleistungsfähiges VPS-Hosting"
   },
   "7yPJTW": {
     "defaultMessage": "Läuft bald ab."
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr-Domänen"
   },
-  "BlFeZA": {
-    "defaultMessage": "Neueste Nachrichten"
+  "BnoVvl": {
+    "defaultMessage": "Nutzungsbedingungen für LNVPS. Bitte lesen Sie unsere Nutzungsrichtlinien, Richtlinien für die zulässige Nutzung und die Servicebedingungen."
   },
   "Bwqhmd": {
     "defaultMessage": "Firewall"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
-  },
-  "CjLFf2": {
-    "defaultMessage": "Nehmen Sie Kontakt mit dem LNVPS-Team auf. Haben Sie Fragen zu unserem Bitcoin Lightning VPS-Dienst? Wir sind für Sie da."
   },
   "D3idYv": {
     "defaultMessage": "Einstellungen"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
   },
+  "JlGNV+": {
+    "defaultMessage": "In wenigen Minuten einsetzen. Bezahlen Sie mit Lightning, Bitcoin oder per Kreditkarte – ohne langfristige Verträge."
+  },
   "Jm+fih": {
     "defaultMessage": "Nicht aktiv."
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "Land *"
-  },
-  "LvkbFg": {
-    "defaultMessage": "Bitcoin Lightning VPS-Anbieter mit leistungsstarken virtuellen privaten Servern und einer effizienten Kontoverwaltung."
-  },
-  "ML7RRt": {
-    "defaultMessage": "Hochleistungsfähige virtuelle Privatserver (VPS), die mit Bitcoin Lightning betrieben werden. Virtuelle Privatserver bereits ab wenigen Sats pro Monat."
   },
   "MTnSwY": {
     "defaultMessage": "zzgl. Steuer"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "LNVPS-Konten verwenden entweder Nostr oder einen Anbieterdienst für die Anmeldung. {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "−{fee} Gebühr"
+  },
   "QN/rCc": {
     "defaultMessage": "Fehler beim Parsen von JSON: {msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "Fügen Sie eine Nostr-Wallet hinzu, die das Wallet Connect-Protokoll unterstützt."
+  },
+  "RumeRz": {
+    "defaultMessage": "Regionen"
   },
   "Rw7iI7": {
     "defaultMessage": "Deaktivieren"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "Warten auf die Zahlung. Dies wird automatisch angewendet, sobald diese bestätigt wurde."
   },
-  "YH46Fd": {
-    "defaultMessage": "Die neuesten Nachrichten, Aktualisierungen und Ankündigungen von LNVPS – Ihrem Anbieter von Bitcoin Lightning VPS."
-  },
   "YWjrby": {
     "defaultMessage": "Es werden nur Benachrichtigungen zum Konto gesendet, z. B. über das Ablaufdatum einer virtuellen Maschine (VM). Wir versenden niemals Werbenachrichten."
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "Mit Karte bezahlen"
   },
+  "ZbOD+W": {
+    "defaultMessage": "Echtzeit-Verfügbarkeits- und Ereignisprotokolle für LNVPS-Dienste. Überprüfen Sie den aktuellen Betriebszustand unserer VPS-Infrastruktur."
+  },
   "ZdCdo5": {
     "defaultMessage": "Zuletzt aktualisiert: {date}"
   },
   "ZewCpX": {
     "defaultMessage": "Domäne hinzufügen"
   },
-  "ZlYFmj": {
-    "defaultMessage": "Nutzungsbedingungen für LNVPS – ein Anbieter von Bitcoin Lightning VPS. Bitte lesen Sie unsere Nutzungsrichtlinien, Richtlinien für die zulässige Nutzung und Servicebedingungen."
+  "ZmOSyB": {
+    "defaultMessage": "Nehmen Sie Kontakt mit dem LNVPS-Team auf. Haben Sie Fragen zu unserem VPS-Hosting oder den Zahlungsmöglichkeiten? Wir sind für Sie da."
   },
   "ZshmbW": {
     "defaultMessage": "Diese Komponente unterstützt nur On-Chain-Zahlungen"
+  },
+  "aPcXT9": {
+    "defaultMessage": "Auszahlungen werden zusammen mit anderen On-Chain-Referenzen zu einer einzigen Transaktion gebündelt, sobald Ihr Guthaben den Mindestbetrag erreicht. Ihr Anteil an der Netzwerkgebühr wird von Ihrem Guthaben abgezogen. Nur für Mainnet-Adressen."
   },
   "aTgjTE": {
     "defaultMessage": "Passkey hinzufügen"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} Griffe"
-  },
-  "gCrKqH": {
-    "defaultMessage": "Hochleistungsfähiger VPS, der mit Bitcoin Lightning betrieben wird."
   },
   "gH4VcS": {
     "defaultMessage": "Der Preis für ein Upgrade, berechnet anteilig:"
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "Wir laden gerade die VPS-Angebote..."
   },
+  "nqdKy7": {
+    "defaultMessage": "Hochleistungsfähiges Bitcoin Lightning VPS-Hosting. Bezahlen Sie mit Lightning, Bitcoin oder per Kreditkarte – keine langfristigen Verträge."
+  },
   "nrTBF4": {
     "defaultMessage": "Host wird stillgelegt"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "Dies löscht alles auf der VM."
   },
+  "uybUiI": {
+    "defaultMessage": "Neueste Nachrichten, Updates und Ankündigungen von LNVPS – Bitcoin Lightning VPS-Hosting, auch mit Kartenzahlung."
+  },
   "v2BRjN": {
     "defaultMessage": "Betreff *"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Anmeldung fehlgeschlagen"
-  },
-  "yr1Ove": {
-    "defaultMessage": "Echtzeit-Verfügbarkeits- und Ereignisprotokolle für LNVPS-Dienste. Überprüfen Sie den aktuellen Betriebszustand unserer Bitcoin Lightning VPS-Infrastruktur."
   },
   "z+hIFs": {
     "defaultMessage": "Bisher wurden keine Zahlungen geleistet."

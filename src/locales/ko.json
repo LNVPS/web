@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{년} other{년}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "온체인 주소"
+  },
   "+SM72m": {
     "defaultMessage": "받는 사람의 공개 키(npub/nprofile/16진수):"
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "비활성 상태"
   },
+  "6UfYVI": {
+    "defaultMessage": "유연한 결제 방식을 제공하는 고성능 VPS 호스팅 서비스입니다. 비트코인 라이트닝 또는 신용카드로 결제할 수 있습니다."
+  },
   "6hEevT": {
     "defaultMessage": "기본값으로 설정"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "메시지를 보내주시면 담당 팀에서 연락을 드릴 것입니다."
+  },
+  "7xme6K": {
+    "defaultMessage": "고성능 VPS 호스팅"
   },
   "7yPJTW": {
     "defaultMessage": "곧 만료됩니다."
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "노스트르 도메인"
   },
-  "BlFeZA": {
-    "defaultMessage": "최신 뉴스"
+  "BnoVvl": {
+    "defaultMessage": "LNVPS 이용 약관. 당사의 이용 정책, 허용되는 사용 지침 및 서비스 약관을 읽어보세요."
   },
   "Bwqhmd": {
     "defaultMessage": "방화벽"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
-  },
-  "CjLFf2": {
-    "defaultMessage": "LNVPS 팀에 문의하세요. 저희의 비트코인 라이트닝 VPS 서비스에 대해 궁금한 점이 있으신가요? 언제든지 도움을 드릴 준비가 되어 있습니다."
   },
   "D3idYv": {
     "defaultMessage": "설정"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
   },
+  "JlGNV+": {
+    "defaultMessage": "몇 분 안에 배포를 완료하세요. 라이트닝, 비트코인 또는 신용카드로 결제하세요. 장기 계약은 필요하지 않습니다."
+  },
   "Jm+fih": {
     "defaultMessage": "비활성 상태입니다."
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "국가"
-  },
-  "LvkbFg": {
-    "defaultMessage": "고성능 가상 전용 서버와 간편한 계정 관리 기능을 제공하는 비트코인 라이트닝 VPS 서비스입니다."
-  },
-  "ML7RRt": {
-    "defaultMessage": "비트코인 라이트닝 네트워크를 기반으로 하는 고성능 VPS입니다. 월 몇 사토시부터 이용 가능한 가상 전용 서버를 제공합니다."
   },
   "MTnSwY": {
     "defaultMessage": "예: 세금"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "LNVPS 계정은 Nostr 또는 로그인 서비스를 사용합니다. {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "음수{fee} 수수료"
+  },
   "QN/rCc": {
     "defaultMessage": "JSON 구문 분석 오류: {msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "Nostr 지갑 연결 기능을 추가합니다."
+  },
+  "RumeRz": {
+    "defaultMessage": "지역"
   },
   "Rw7iI7": {
     "defaultMessage": "사용 중지"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "결제를 기다리는 중입니다. 결제가 확인되면 자동으로 적용됩니다."
   },
-  "YH46Fd": {
-    "defaultMessage": "LNVPS의 최신 뉴스, 업데이트 및 공지사항을 확인하세요. LNVPS는 여러분의 비트코인 라이트닝 VPS를 제공합니다."
-  },
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "카드로 결제"
   },
+  "ZbOD+W": {
+    "defaultMessage": "LNVPS 서비스의 현재 가동 시간 및 발생 이력을 확인하세요. 당사의 VPS 인프라의 현재 운영 상태를 확인하십시오."
+  },
   "ZdCdo5": {
     "defaultMessage": "최종 업데이트 날짜: {date}"
   },
   "ZewCpX": {
     "defaultMessage": "도메인 추가"
   },
-  "ZlYFmj": {
-    "defaultMessage": "LNVPS 서비스 약관 — 비트코인 라이트닝 VPS 제공업체. 당사의 사용 정책, 허용되는 사용 지침 및 서비스 약관을 읽어보세요."
+  "ZmOSyB": {
+    "defaultMessage": "LNVPS 팀에 문의하세요. VPS 호스팅 또는 결제 옵션에 대해 궁금한 점이 있으신가요? 언제든지 도움을 드릴 준비가 되어 있습니다."
   },
   "ZshmbW": {
     "defaultMessage": "이 구성 요소는 온체인 결제만 지원합니다"
+  },
+  "aPcXT9": {
+    "defaultMessage": "지급은 다른 온체인 추천인들과 함께 묶여 하나의 거래로 처리되며, 귀하의 잔액이 최소 금액을 초과하면 지급이 이루어집니다. 네트워크 수수료 중 귀하의 몫은 귀하의 잔액에서 차감됩니다. 메인넷 주소만 해당됩니다."
   },
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} 손잡이"
-  },
-  "gCrKqH": {
-    "defaultMessage": "비트코인 라이트닝 네트워크를 기반으로 하는 고성능 VPS."
   },
   "gH4VcS": {
     "defaultMessage": "비율에 따라 계산된 업그레이드 비용:"
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "VPS 로딩 중..."
   },
+  "nqdKy7": {
+    "defaultMessage": "고성능 비트코인 라이트닝 VPS 호스팅을 이용하세요. 라이트닝, 비트코인 또는 카드로 결제 가능하며, 장기 계약은 필요하지 않습니다."
+  },
   "nrTBF4": {
     "defaultMessage": "호스트 종료 예정"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "이 작업은 VM의 모든 것을 지웁니다."
   },
+  "uybUiI": {
+    "defaultMessage": "LNVPS의 최신 뉴스, 업데이트 및 공지사항 — 비트코인 라이트닝 VPS 호스팅을 제공하며, 카드 결제도 지원합니다."
+  },
   "v2BRjN": {
     "defaultMessage": "제목"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "로그인 실패"
-  },
-  "yr1Ove": {
-    "defaultMessage": "LNVPS 서비스의 실시간 가동 시간 및 장애 이력을 확인하세요. 현재 비트코인 라이트닝 VPS 인프라의 운영 상태를 확인하세요."
   },
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."

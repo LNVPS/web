@@ -622,12 +622,12 @@ export type ReferralPayoutMode =
 
 export interface Referral {
   code: string;
-  lightning_address?: string;
   /**
-   * On-chain Bitcoin payout address (used when mode is `on_chain`). Must be a
-   * mainnet address.
+   * Payout target address; its type is implied by `mode`: a Lightning address
+   * for `lightning_address`, an on-chain Bitcoin (mainnet) address for
+   * `on_chain`, absent for `nwc`.
    */
-  onchain_address?: string;
+  address?: string;
   /** Payout method: `lightning_address`, `nwc`, `account_credit`, or `on_chain`. */
   mode: ReferralPayoutMode;
   /**
@@ -663,7 +663,7 @@ export interface ReferralPayout {
    * currency unit), debited from the balance alongside `amount`. On-chain
    * payout batches split the transaction fee proportionally.
    */
-  fee?: number;
+  fee: number;
   /**
    * On-chain payout outpoint "{txid}:{vout}", present once an on-chain payout
    * has been broadcast. Payouts batched into the same transaction share the
@@ -691,17 +691,22 @@ export interface ReferralState extends Referral {
 }
 
 export interface ReferralSignupRequest {
-  lightning_address?: string;
-  /** On-chain Bitcoin payout address (required when mode is `on_chain`). */
-  onchain_address?: string;
+  /**
+   * Payout target address, validated according to `mode`: a Lightning address
+   * for `lightning_address`, an on-chain Bitcoin address for `on_chain`. Not
+   * needed for `nwc`.
+   */
+  address?: string;
   /** Payout method: `lightning_address` (default), `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
 }
 
 export interface ReferralPatchRequest {
-  lightning_address?: string | null;
-  /** Set (string) or clear (null) the on-chain address; omit to leave unchanged. */
-  onchain_address?: string | null;
+  /**
+   * Set (string) or clear (null) the payout address; omit to leave unchanged.
+   * Validated against the effective `mode`.
+   */
+  address?: string | null;
   /** Payout method: `lightning_address`, `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
 }

@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "オンチェーンアドレス"
+  },
   "+SM72m": {
     "defaultMessage": "受信者の公開鍵（npub/nprofile/16進数）："
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "非アクティブ"
   },
+  "6UfYVI": {
+    "defaultMessage": "高性能なVPSホスティングで、柔軟な支払い方法をご利用いただけます。ビットコインライトニングまたはクレジットカードでどうぞ。"
+  },
   "6hEevT": {
     "defaultMessage": "デフォルトを設定する"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
+  },
+  "7xme6K": {
+    "defaultMessage": "高性能VPSホスティング"
   },
   "7yPJTW": {
     "defaultMessage": "まもなく期限切れになります。"
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "Nostrドメイン"
   },
-  "BlFeZA": {
-    "defaultMessage": "最新ニュース"
+  "BnoVvl": {
+    "defaultMessage": "LNVPSの利用規約。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条件をお読みください。"
   },
   "Bwqhmd": {
     "defaultMessage": "ファイアウォール"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
-  },
-  "CjLFf2": {
-    "defaultMessage": "LNVPSチームまでお気軽にご連絡ください。当社のビットコインライトニングVPSサービスについてご質問がございましたら、お気軽にお問い合わせください。"
   },
   "D3idYv": {
     "defaultMessage": "設定"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "選択した鍵で SSH 接続します。"
   },
+  "JlGNV+": {
+    "defaultMessage": "数分で導入できます。支払い方法は、Lightning、ビットコイン、またはクレジットカードをご利用いただけます。長期契約は一切ありません。"
+  },
   "Jm+fih": {
     "defaultMessage": "非アクティブ状態。"
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "国"
-  },
-  "LvkbFg": {
-    "defaultMessage": "高性能な仮想専用サーバーと効率的なアカウント管理を提供する、ビットコインのライトニングネットワークに対応したVPSプロバイダーです。"
-  },
-  "ML7RRt": {
-    "defaultMessage": "ビットコインライトニングを活用した高性能VPS。月額わずかなサトシから利用可能な仮想専用サーバーです。"
   },
   "MTnSwY": {
     "defaultMessage": "税込み"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "LNVPSアカウントでは、Nostrまたはログインプロバイダーを使用します。 {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "-{fee} 料金、手数料"
+  },
   "QN/rCc": {
     "defaultMessage": "JSONの解析中にエラーが発生しました：{msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "Nostrウォレット接続機能を有効にする。"
+  },
+  "RumeRz": {
+    "defaultMessage": "地域"
   },
   "Rw7iI7": {
     "defaultMessage": "無効にする"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "お支払いをお待ちしています。確認が完了すると、自動的に適用されます。"
   },
-  "YH46Fd": {
-    "defaultMessage": "LNVPS（ビットコインのライトニングVPSプロバイダー）からの最新ニュース、アップデート、およびお知らせ。"
-  },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
   },
+  "ZbOD+W": {
+    "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のVPSインフラの現在の運用状況をご確認ください。"
+  },
   "ZdCdo5": {
     "defaultMessage": "最終更新日：{date}"
   },
   "ZewCpX": {
     "defaultMessage": "ドメインを追加"
   },
-  "ZlYFmj": {
-    "defaultMessage": "LNVPSの利用規約 — ビットコインライトニングVPSプロバイダー。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条項をお読みください。"
+  "ZmOSyB": {
+    "defaultMessage": "LNVPSチームまでお気軽にお問い合わせください。VPSホスティングや支払い方法についてご質問がございましたら、お気軽にご連絡ください。喜んでお手伝いさせていただきます。"
   },
   "ZshmbW": {
     "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
+  },
+  "aPcXT9": {
+    "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
   },
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} 個のハンドル"
-  },
-  "gCrKqH": {
-    "defaultMessage": "ビットコイン・ライトニングを活用した高性能VPS。"
   },
   "gH4VcS": {
     "defaultMessage": "按分計算されたアップグレード費用："
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "VPSのロード中..."
   },
+  "nqdKy7": {
+    "defaultMessage": "高性能なビットコインライトニングVPSホスティング。ライトニング、ビットコイン、またはクレジットカードで支払い可能。長期契約は不要です。"
+  },
   "nrTBF4": {
     "defaultMessage": "ホスト廃止予定"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "これにより VM 上のすべてが消去されます。"
   },
+  "uybUiI": {
+    "defaultMessage": "LNVPSからの最新ニュース、アップデート、およびお知らせ — ビットコインのライトニングネットワークに対応したVPSホスティング。クレジットカードでの支払いも可能です。"
+  },
   "v2BRjN": {
     "defaultMessage": "件名"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "サインインに失敗しました"
-  },
-  "yr1Ove": {
-    "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のビットコインライトニングVPSインフラの現在の運用状況をご確認ください。"
   },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"

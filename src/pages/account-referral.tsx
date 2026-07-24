@@ -22,10 +22,15 @@ function toSelectable(mode: ReferralPayoutMode): SelectableMode {
   return mode === "nwc" || mode === "on_chain" ? mode : "lightning_address";
 }
 
-/** The stored address matching a payout method (the input's prefill). */
+/**
+ * The stored address to prefill for a payout method. The server keeps a single
+ * `address` whose type follows `mode`, so it only carries over when the
+ * selected method matches the enrolled one.
+ */
 function addressFor(m: SelectableMode, s?: ReferralState): string {
-  if (m === "on_chain") return s?.onchain_address ?? "";
-  if (m === "lightning_address") return s?.lightning_address ?? "";
+  if (m !== "nwc" && m === toSelectable(s?.mode ?? "lightning_address")) {
+    return s?.address ?? "";
+  }
   return "";
 }
 
@@ -85,12 +90,7 @@ export function AccountReferralPage() {
     const req: ReferralSignupRequest =
       signupMethod === "nwc"
         ? { mode: "nwc" }
-        : signupMethod === "on_chain"
-          ? { mode: "on_chain", onchain_address: signupAddress.trim() }
-          : {
-              mode: "lightning_address",
-              lightning_address: signupAddress.trim(),
-            };
+        : { mode: signupMethod, address: signupAddress.trim() };
     try {
       await login.api.enrollReferral(req);
       const s = await login.api.getReferralState();
@@ -111,32 +111,21 @@ export function AccountReferralPage() {
     try {
       const updated = await login.api.updateReferral(
         patchMethod === "nwc"
-          ? { mode: "nwc", lightning_address: null }
-          : patchMethod === "on_chain"
-            ? { mode: "on_chain", onchain_address: patchAddress.trim() || null }
-            : {
-                mode: "lightning_address",
-                lightning_address: patchAddress.trim() || null,
-              },
+          ? { mode: "nwc", address: null }
+          : { mode: patchMethod, address: patchAddress.trim() || null },
       );
       setState((prev) =>
         prev
           ? {
               ...prev,
-              lightning_address: updated.lightning_address,
-              onchain_address: updated.onchain_address,
+              address: updated.address,
               mode: updated.mode,
               referral_rate: updated.referral_rate,
             }
           : prev,
       );
-      const m = toSelectable(updated.mode);
-      setPatchMethod(m);
-      setPatchAddress(
-        m === "on_chain"
-          ? (updated.onchain_address ?? "")
-          : (updated.lightning_address ?? ""),
-      );
+      setPatchMethod(toSelectable(updated.mode));
+      setPatchAddress(updated.address ?? "");
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }

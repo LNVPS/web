@@ -8,6 +8,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
   },
+  "+Qebzr": {
+    "defaultMessage": "Zincir Üzerindeki Adres"
+  },
   "+SM72m": {
     "defaultMessage": "Alıcının genel anahtarı (npub/nprofile/onaltılık):"
   },
@@ -224,6 +227,9 @@
   "6Tps09": {
     "defaultMessage": "Etkin değil"
   },
+  "6UfYVI": {
+    "defaultMessage": "Yüksek performanslı VPS hosting hizmeti, esnek ödeme seçenekleriyle: Bitcoin Lightning veya kredi kartı."
+  },
   "6hEevT": {
     "defaultMessage": "Varsayılanı ayarla"
   },
@@ -271,6 +277,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin, ekip en kısa sürede size dönüş yapacaktır."
+  },
+  "7xme6K": {
+    "defaultMessage": "Yüksek Performanslı Sanal Özel Sunucu (VPS) Barındırma"
   },
   "7yPJTW": {
     "defaultMessage": "Yakında sona erecek."
@@ -395,8 +404,8 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr Alan Adları"
   },
-  "BlFeZA": {
-    "defaultMessage": "Son Haberler"
+  "BnoVvl": {
+    "defaultMessage": "LNVPS Hizmet Şartları. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
   },
   "Bwqhmd": {
     "defaultMessage": "Güvenlik duvarı"
@@ -406,9 +415,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
-  },
-  "CjLFf2": {
-    "defaultMessage": "LNVPS ekibiyle iletişime geçin. Bitcoin Lightning VPS hizmetimizle ilgili sorularınız mı var? Size yardımcı olmak için buradayız."
   },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
@@ -635,6 +641,9 @@
   "JiCBWy": {
     "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
   },
+  "JlGNV+": {
+    "defaultMessage": "Birkaç dakika içinde kullanıma başlayın. Lightning, Bitcoin veya kredi kartıyla ödeme yapın; uzun vadeli sözleşmelere gerek yok."
+  },
   "Jm+fih": {
     "defaultMessage": "Etkin değil"
   },
@@ -688,12 +697,6 @@
   },
   "LqFfRA": {
     "defaultMessage": "Ülke"
-  },
-  "LvkbFg": {
-    "defaultMessage": "Yüksek performanslı sanal özel sunucular ve kolaylaştırılmış hesap yönetimi sunan Bitcoin Lightning VPS sağlayıcısı."
-  },
-  "ML7RRt": {
-    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS. Aylık birkaç satoshi'den başlayan sanal özel sunucular."
   },
   "MTnSwY": {
     "defaultMessage": "örneğin, vergi"
@@ -773,6 +776,9 @@
   "QEuWMk": {
     "defaultMessage": "LNVPS hesapları, Nostr veya bir oturum açma sağlayıcısı kullanır. {link}"
   },
+  "QFNCnX": {
+    "defaultMessage": "-{fee} ücret"
+  },
   "QN/rCc": {
     "defaultMessage": "JSON ayrıştırma hatası: {msg}"
   },
@@ -826,6 +832,9 @@
   },
   "Ru62sn": {
     "defaultMessage": "Bir Nostr Cüzdan Bağlantı cüzdanı ekleyin."
+  },
+  "RumeRz": {
+    "defaultMessage": "Bölgeler"
   },
   "Rw7iI7": {
     "defaultMessage": "Devre dışı bırak"
@@ -1019,9 +1028,6 @@
   "Y/tMXU": {
     "defaultMessage": "Ödeme bekleniyor. Onaylandıktan sonra bu işlem otomatik olarak uygulanır."
   },
-  "YH46Fd": {
-    "defaultMessage": "LNVPS'den en son haberler, güncellemeler ve duyurular — Bitcoin Lightning VPS hizmet sağlayıcınız."
-  },
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
   },
@@ -1049,17 +1055,23 @@
   "ZTj6ca": {
     "defaultMessage": "Kartla öde"
   },
+  "ZbOD+W": {
+    "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorun kayıtlarını görüntüleyin. VPS altyapımızın mevcut çalışma durumunu kontrol edin."
+  },
   "ZdCdo5": {
     "defaultMessage": "Son güncelleme: {date}"
   },
   "ZewCpX": {
     "defaultMessage": "Alan Adı Ekle"
   },
-  "ZlYFmj": {
-    "defaultMessage": "LNVPS Hizmet Şartları — Bitcoin Lightning VPS sağlayıcısı. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
+  "ZmOSyB": {
+    "defaultMessage": "LNVPS ekibiyle iletişime geçin. VPS hosting hizmetimiz veya ödeme seçenekleri hakkında sorularınız mı var? Size yardımcı olmak için buradayız."
   },
   "ZshmbW": {
     "defaultMessage": "Bu bileşen yalnızca zincir üstü ödemeleri destekler"
+  },
+  "aPcXT9": {
+    "defaultMessage": "Ödemeler, diğer zincir içi yönlendirenlerle birlikte birleştirilerek tek bir işlemde gerçekleştirilir; bu işlem, bakiyeniz minimum tutarı aştığında gerçekleşir. Ağ ücretinden düşülecek olan payınız, bakiyenizden kesilir. Yalnızca ana ağ adresleri geçerlidir."
   },
   "aTgjTE": {
     "defaultMessage": "Geçiş anahtarı ekle"
@@ -1216,9 +1228,6 @@
   },
   "gBvImw": {
     "defaultMessage": "{count} sapları"
-  },
-  "gCrKqH": {
-    "defaultMessage": "Bitcoin Lightning teknolojisiyle desteklenen yüksek performanslı VPS."
   },
   "gH4VcS": {
     "defaultMessage": "Oransal olarak hesaplanan yükseltme maliyeti:"
@@ -1424,6 +1433,9 @@
   "nm81YC": {
     "defaultMessage": "VPS yükleme işlemleri şu seçenekleri sunar..."
   },
+  "nqdKy7": {
+    "defaultMessage": "Yüksek performanslı Bitcoin Lightning VPS barındırma hizmeti. Lightning, Bitcoin veya kredi kartı ile ödeme yapın; uzun vadeli sözleşme gerekmiyor."
+  },
   "nrTBF4": {
     "defaultMessage": "Sunucu kapanıyor"
   },
@@ -1604,6 +1616,9 @@
   "uyWYPH": {
     "defaultMessage": "Bu, VM'deki her şeyi siler."
   },
+  "uybUiI": {
+    "defaultMessage": "LNVPS'den en son haberler, güncellemeler ve duyurular — ayrıca kredi kartıyla ödeme seçeneği de sunan Bitcoin Lightning VPS barındırma hizmeti."
+  },
   "v2BRjN": {
     "defaultMessage": "Konu *"
   },
@@ -1705,9 +1720,6 @@
   },
   "yPgnbL": {
     "defaultMessage": "Giriş başarısız"
-  },
-  "yr1Ove": {
-    "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorunlar görüntülenebilir. Bitcoin Lightning VPS altyapımızın mevcut çalışma durumunu kontrol edin."
   },
   "z+hIFs": {
     "defaultMessage": "Henüz hiçbir ödeme yapılmadı."

@@ -15,11 +15,18 @@ import { PaymentMethods } from "../components/payment-methods";
 import { FormattedDate, FormattedMessage, FormattedNumber } from "react-intl";
 
 // `account_credit` is a defined-but-unimplemented server mode, so the UI only
-// offers the two selectable payout methods.
-type SelectableMode = "lightning_address" | "nwc";
+// offers the three selectable payout methods.
+type SelectableMode = "lightning_address" | "nwc" | "on_chain";
 
 function toSelectable(mode: ReferralPayoutMode): SelectableMode {
-  return mode === "nwc" ? "nwc" : "lightning_address";
+  return mode === "nwc" || mode === "on_chain" ? mode : "lightning_address";
+}
+
+/** The stored address matching a payout method (the input's prefill). */
+function addressFor(m: SelectableMode, s?: ReferralState): string {
+  if (m === "on_chain") return s?.onchain_address ?? "";
+  if (m === "lightning_address") return s?.lightning_address ?? "";
+  return "";
 }
 
 /** Small uppercase section marker used to label each block of the page. */
@@ -51,8 +58,9 @@ export function AccountReferralPage() {
 
   function applyState(s: ReferralState) {
     setState(s);
-    setPatchMethod(toSelectable(s.mode));
-    setPatchAddress(s.lightning_address ?? "");
+    const m = toSelectable(s.mode);
+    setPatchMethod(m);
+    setPatchAddress(addressFor(m, s));
   }
 
   useEffect(() => {
@@ -77,7 +85,12 @@ export function AccountReferralPage() {
     const req: ReferralSignupRequest =
       signupMethod === "nwc"
         ? { mode: "nwc" }
-        : { mode: "lightning_address", lightning_address: signupAddress.trim() };
+        : signupMethod === "on_chain"
+          ? { mode: "on_chain", onchain_address: signupAddress.trim() }
+          : {
+              mode: "lightning_address",
+              lightning_address: signupAddress.trim(),
+            };
     try {
       await login.api.enrollReferral(req);
       const s = await login.api.getReferralState();
@@ -99,23 +112,31 @@ export function AccountReferralPage() {
       const updated = await login.api.updateReferral(
         patchMethod === "nwc"
           ? { mode: "nwc", lightning_address: null }
-          : {
-              mode: "lightning_address",
-              lightning_address: patchAddress.trim() || null,
-            },
+          : patchMethod === "on_chain"
+            ? { mode: "on_chain", onchain_address: patchAddress.trim() || null }
+            : {
+                mode: "lightning_address",
+                lightning_address: patchAddress.trim() || null,
+              },
       );
       setState((prev) =>
         prev
           ? {
               ...prev,
               lightning_address: updated.lightning_address,
+              onchain_address: updated.onchain_address,
               mode: updated.mode,
               referral_rate: updated.referral_rate,
             }
           : prev,
       );
-      setPatchMethod(toSelectable(updated.mode));
-      setPatchAddress(updated.lightning_address ?? "");
+      const m = toSelectable(updated.mode);
+      setPatchMethod(m);
+      setPatchAddress(
+        m === "on_chain"
+          ? (updated.onchain_address ?? "")
+          : (updated.lightning_address ?? ""),
+      );
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -158,7 +179,10 @@ export function AccountReferralPage() {
           <PayoutMethodSelector
             method={signupMethod}
             address={signupAddress}
-            onMethodChange={setSignupMethod}
+            onMethodChange={(m) => {
+              setSignupMethod(m);
+              setSignupAddress("");
+            }}
             onAddressChange={setSignupAddress}
           />
           <div>
@@ -409,7 +433,10 @@ export function AccountReferralPage() {
         <PayoutMethodSelector
           method={patchMethod}
           address={patchAddress}
-          onMethodChange={setPatchMethod}
+          onMethodChange={(m) => {
+            setPatchMethod(m);
+            setPatchAddress(addressFor(m, state));
+          }}
           onAddressChange={setPatchAddress}
         />
         <div>
@@ -468,12 +495,16 @@ function PayoutMethodSelector({
       label: <FormattedMessage defaultMessage="Lightning Address" />,
     },
     { value: "nwc", label: <FormattedMessage defaultMessage="NWC Wallet" /> },
+    {
+      value: "on_chain",
+      label: <FormattedMessage defaultMessage="On-chain Address" />,
+    },
   ];
   return (
     <div className="flex flex-col gap-3">
       <div
         role="radiogroup"
-        className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-cyber-border bg-cyber-border"
+        className="grid grid-cols-1 sm:grid-cols-3 gap-px overflow-hidden rounded-sm border border-cyber-border bg-cyber-border"
       >
         {options.map((o) => {
           const active = method === o.value;
@@ -502,6 +533,19 @@ function PayoutMethodSelector({
           value={address}
           onChange={(e) => onAddressChange(e.target.value)}
         />
+      )}
+      {method === "on_chain" && (
+        <div className="flex flex-col gap-2">
+          <input
+            type="text"
+            placeholder="bc1…"
+            value={address}
+            onChange={(e) => onAddressChange(e.target.value)}
+          />
+          <p className="m-0 text-cyber-muted text-xs">
+            <FormattedMessage defaultMessage="Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only." />
+          </p>
+        </div>
       )}
       {method === "nwc" && (
         <div className="flex flex-col gap-2 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3">
@@ -569,6 +613,8 @@ function UsageRow({ usage }: { usage: ReferralUsage }) {
 }
 
 function PayoutRow({ payout }: { payout: ReferralPayout }) {
+  // Batched on-chain payouts share a txid; link it for verification.
+  const txid = payout.outpoint?.split(":")[0];
   return (
     <tr>
       <td className="text-cyber-muted">
@@ -580,12 +626,37 @@ function PayoutRow({ payout }: { payout: ReferralPayout }) {
           hour="2-digit"
           minute="2-digit"
         />
+        {txid && (
+          <a
+            href={`https://mempool.space/tx/${txid}`}
+            target="_blank"
+            rel="noreferrer"
+            className="block font-mono text-[0.65rem] text-cyber-accent"
+          >
+            {txid.slice(0, 8)}…{txid.slice(-8)}
+          </a>
+        )}
       </td>
       <td className="text-right font-mono">
         <CostAmount
           cost={{ currency: payout.currency, amount: payout.amount }}
           converted={false}
         />
+        {(payout.fee ?? 0) > 0 && (
+          <div className="text-[0.65rem] text-cyber-muted">
+            <FormattedMessage
+              defaultMessage="−{fee} fee"
+              values={{
+                fee: (
+                  <CostAmount
+                    cost={{ currency: payout.currency, amount: payout.fee! }}
+                    converted={false}
+                  />
+                ),
+              }}
+            />
+          </div>
+        )}
       </td>
       <td className="text-right">
         {payout.is_paid ? (

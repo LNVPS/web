@@ -617,12 +617,18 @@ export type CreateSubscriptionLineItemRequest =
 export type ReferralPayoutMode =
   | "lightning_address"
   | "nwc"
-  | "account_credit";
+  | "account_credit"
+  | "on_chain";
 
 export interface Referral {
   code: string;
   lightning_address?: string;
-  /** Payout method: `lightning_address`, `nwc`, or `account_credit`. */
+  /**
+   * On-chain Bitcoin payout address (used when mode is `on_chain`). Must be a
+   * mainnet address.
+   */
+  onchain_address?: string;
+  /** Payout method: `lightning_address`, `nwc`, `account_credit`, or `on_chain`. */
   mode: ReferralPayoutMode;
   /**
    * Per-referrer commission override, as a whole percentage of a referred VM's
@@ -652,6 +658,18 @@ export interface ReferralPayout {
   invoice?: string;
   /** Payment preimage (hex), present once the payout has settled. */
   pre_image?: string;
+  /**
+   * Network/routing fee charged to the referrer for this payout (smallest
+   * currency unit), debited from the balance alongside `amount`. On-chain
+   * payout batches split the transaction fee proportionally.
+   */
+  fee?: number;
+  /**
+   * On-chain payout outpoint "{txid}:{vout}", present once an on-chain payout
+   * has been broadcast. Payouts batched into the same transaction share the
+   * txid but carry distinct vouts.
+   */
+  outpoint?: string;
 }
 
 /** Per-referral breakdown of the commission earned from a first payment. */
@@ -674,13 +692,17 @@ export interface ReferralState extends Referral {
 
 export interface ReferralSignupRequest {
   lightning_address?: string;
-  /** Payout method: `lightning_address` (default) or `nwc`. */
+  /** On-chain Bitcoin payout address (required when mode is `on_chain`). */
+  onchain_address?: string;
+  /** Payout method: `lightning_address` (default), `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
 }
 
 export interface ReferralPatchRequest {
   lightning_address?: string | null;
-  /** Payout method: `lightning_address`, `nwc`, or `account_credit`. */
+  /** Set (string) or clear (null) the on-chain address; omit to leave unchanged. */
+  onchain_address?: string | null;
+  /** Payout method: `lightning_address`, `nwc`, or `on_chain`. */
   mode?: ReferralPayoutMode;
 }
 
@@ -1064,9 +1086,17 @@ export class LNVpsApi {
     return data;
   }
 
-  async listOsImages() {
+  /**
+   * List OS images. Pass `arch` to return only images compatible with that
+   * CPU architecture (plus architecture-agnostic images).
+   */
+  async listOsImages(arch?: CpuArch) {
+    const q =
+      arch && arch !== CpuArch.UNKNOWN
+        ? `?arch=${encodeURIComponent(arch)}`
+        : "";
     const { data } = await this.#handleResponse<ApiResponse<Array<VmOsImage>>>(
-      await this.#req("/api/v1/image", "GET"),
+      await this.#req(`/api/v1/image${q}`, "GET"),
     );
     return data;
   }

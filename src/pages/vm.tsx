@@ -2,7 +2,7 @@ import "@xterm/xterm/css/xterm.css";
 
 import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
-import { VmInstance, VmIpAssignment, VmOsImage } from "../api";
+import { CpuArch, VmInstance, VmIpAssignment, VmOsImage } from "../api";
 import VmActions from "../components/vps-actions";
 import OsImageName from "../components/os-image-name";
 import OsImageIcon from "../components/os-image-icon";
@@ -110,9 +110,14 @@ export default function VmPage() {
     return () => clearInterval(t);
   }, []);
 
+  // When the VM's CPU architecture is known, only offer compatible images in
+  // the reinstall picker — an incompatible image would fail to provision.
+  const vmArch = state?.template?.cpu_arch;
   useEffect(() => {
-    login?.api.listOsImages().then(setImages);
-  }, [login]);
+    login?.api
+      .listOsImages(vmArch !== CpuArch.UNKNOWN ? vmArch : undefined)
+      .then(setImages);
+  }, [login, vmArch]);
 
   function bestHost() {
     if (!state) return;

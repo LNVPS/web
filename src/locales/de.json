@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Zur Zahlung übergehen"
   },
+  "556JQK": {
+    "defaultMessage": "Bereitstellen"
+  },
   "5FWCVu": {
     "defaultMessage": "Dein verschlüsselter NIP-17-Nachrichtenverlauf mit dem Support."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr-Wallet verbinden"
+  },
+  "AVkjIn": {
+    "defaultMessage": "voll"
   },
   "AfmrGS": {
     "defaultMessage": "Code senden"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "Automatische Verlängerung"
   },
+  "exrlwL": {
+    "defaultMessage": "Kleinbuchstaben, Ziffern und Bindestriche. Dies wird Ihre Subdomain."
+  },
   "f00p/7": {
     "defaultMessage": "Hochladen fehlgeschlagen."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Anmelden, um eine Bestellung aufzugeben"
+  },
+  "fblXmJ": {
+    "defaultMessage": "Instanzname"
   },
   "fnWV0M": {
     "defaultMessage": "Für ausgehende Regeln stimmt die Quell-CIDR mit der eigenen Adresse dieser virtuellen Maschine überein. Der entfernte Zielhost kann nicht eingeschränkt werden – nur das Protokoll und der Zielport können festgelegt werden."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "Stopp"
-  },
-  "q6sstZ": {
-    "defaultMessage": "Die Einführung erfolgt in Kürze."
   },
   "qV+TFm": {
     "defaultMessage": "Zahlung fehlgeschlagen."

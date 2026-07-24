@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "결제 진행"
   },
+  "556JQK": {
+    "defaultMessage": "배포하다"
+  },
   "5FWCVu": {
     "defaultMessage": "지원팀과의 암호화된 NIP-17 메시지 기록입니다."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "노스트르 지갑 연결"
+  },
+  "AVkjIn": {
+    "defaultMessage": "완전한, 가득 찬"
   },
   "AfmrGS": {
     "defaultMessage": "코드 전송"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "자동으로 갱신"
   },
+  "exrlwL": {
+    "defaultMessage": "소문자, 숫자, 하이픈을 사용합니다. 이것이 귀하의 서브도메인이 됩니다."
+  },
   "f00p/7": {
     "defaultMessage": "업로드에 실패했습니다."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "주문하려면 로그인하세요."
+  },
+  "fblXmJ": {
+    "defaultMessage": "인스턴스 이름"
   },
   "fnWV0M": {
     "defaultMessage": "아웃바운드 규칙의 경우, 소스 CIDR은 해당 가상 머신의 자체 주소와 일치합니다. 원격 대상 호스트는 제한할 수 없으며, 프로토콜과 대상 포트만 제한할 수 있습니다."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "멈추세요."
-  },
-  "q6sstZ": {
-    "defaultMessage": "곧 배포될 예정입니다."
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."

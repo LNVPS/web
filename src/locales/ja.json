@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "お支払い手続きへ進んでください。"
   },
+  "556JQK": {
+    "defaultMessage": "展開する、配備する"
+  },
   "5FWCVu": {
     "defaultMessage": "サポートとの暗号化された NIP-17 メッセージ履歴。"
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostrウォレット接続"
+  },
+  "AVkjIn": {
+    "defaultMessage": "満タン、いっぱい、完全な、完全な状態の、完全な形で。"
   },
   "AfmrGS": {
     "defaultMessage": "コードを送信"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "自動更新"
   },
+  "exrlwL": {
+    "defaultMessage": "小文字、数字、ハイフンを使用します。これがあなたのサブドメインになります。"
+  },
   "f00p/7": {
     "defaultMessage": "アップロードに失敗しました。"
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "ご注文にはログインが必要です。"
+  },
+  "fblXmJ": {
+    "defaultMessage": "インスタンス名"
   },
   "fnWV0M": {
     "defaultMessage": "送信ルールの場合、ソースCIDRは、この仮想マシンの自身のIPアドレスと一致します。リモートの宛先ホストを制限することはできません。制限できるのは、プロトコルと宛先ポートのみです。"
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "止まれ"
-  },
-  "q6sstZ": {
-    "defaultMessage": "近日公開予定"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"

@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Proceed to Payment"
   },
+  "556JQK": {
+    "defaultMessage": "Deploy"
+  },
   "5FWCVu": {
     "defaultMessage": "Your encrypted NIP-17 message history with support."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr Wallet Connect"
+  },
+  "AVkjIn": {
+    "defaultMessage": "full"
   },
   "AfmrGS": {
     "defaultMessage": "Send Code"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "Auto-renew"
   },
+  "exrlwL": {
+    "defaultMessage": "Lowercase letters, digits and hyphens. Becomes your subdomain."
+  },
   "f00p/7": {
     "defaultMessage": "Upload failed"
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Login To Order"
+  },
+  "fblXmJ": {
+    "defaultMessage": "Instance name"
   },
   "fnWV0M": {
     "defaultMessage": "For outbound rules, Source CIDR matches this VM's own address. The remote destination host cannot be restricted — only protocol and destination port."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "Stop"
-  },
-  "q6sstZ": {
-    "defaultMessage": "Deployment coming soon"
   },
   "qV+TFm": {
     "defaultMessage": "Payment failed"

@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Ödemeye Geçin"
   },
+  "556JQK": {
+    "defaultMessage": "Dağıt"
+  },
   "5FWCVu": {
     "defaultMessage": "Destek ile şifreli NIP-17 mesaj geçmişiniz."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr Cüzdan Bağlantısı"
+  },
+  "AVkjIn": {
+    "defaultMessage": "dolu"
   },
   "AfmrGS": {
     "defaultMessage": "Kodu Gönder"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "Otomatik olarak yenile"
   },
+  "exrlwL": {
+    "defaultMessage": "Küçük harfler, sayılar ve tireler. Bu, alt alan adınız haline gelir."
+  },
   "f00p/7": {
     "defaultMessage": "Yükleme başarısız oldu."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Sipariş Vermek İçin Giriş Yapın"
+  },
+  "fblXmJ": {
+    "defaultMessage": "Örnek adı"
   },
   "fnWV0M": {
     "defaultMessage": "Giden kurallar için Kaynak CIDR, bu sanal makinenin kendi adresiyle eşleşir. Uzak hedef ana bilgisayar kısıtlanamaz; yalnızca protokol ve hedef bağlantı noktası belirtilebilir."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "Durun"
-  },
-  "q6sstZ": {
-    "defaultMessage": "Yakında kullanıma sunulacak."
   },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."

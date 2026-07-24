@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Passez au paiement."
   },
+  "556JQK": {
+    "defaultMessage": "Déployer"
+  },
   "5FWCVu": {
     "defaultMessage": "Votre historique de messages chiffrés NIP-17 avec le support."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Connexion au portefeuille Nostr"
+  },
+  "AVkjIn": {
+    "defaultMessage": "complet"
   },
   "AfmrGS": {
     "defaultMessage": "Envoyer le code."
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "Renouvellement automatique"
   },
+  "exrlwL": {
+    "defaultMessage": "Utilisez des lettres minuscules, des chiffres et des tirets. Cela deviendra votre sous-domaine."
+  },
   "f00p/7": {
     "defaultMessage": "Le téléchargement a échoué."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Connectez-vous pour passer votre commande."
+  },
+  "fblXmJ": {
+    "defaultMessage": "Nom de l’instance"
   },
   "fnWV0M": {
     "defaultMessage": "Pour les règles de sortie, le CIDR source correspond à l’adresse propre de cette machine virtuelle. L’hôte de destination distant ne peut pas être restreint ; seuls le protocole et le port de destination peuvent l’être."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "Arrêtez."
-  },
-  "q6sstZ": {
-    "defaultMessage": "Le déploiement aura lieu prochainement."
   },
   "qV+TFm": {
     "defaultMessage": "Le paiement a échoué."

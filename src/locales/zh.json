@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "继续支付"
   },
+  "556JQK": {
+    "defaultMessage": "部署"
+  },
   "5FWCVu": {
     "defaultMessage": "您与支持团队的加密 NIP-17 消息记录。"
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr 钱包连接"
+  },
+  "AVkjIn": {
+    "defaultMessage": "满的；完整的；充分的"
   },
   "AfmrGS": {
     "defaultMessage": "发送代码。"
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "自动续订"
   },
+  "exrlwL": {
+    "defaultMessage": "使用小写字母、数字和连字符。这将成为您的子域名。"
+  },
   "f00p/7": {
     "defaultMessage": "上传失败。"
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "登录以进行订购。"
+  },
+  "fblXmJ": {
+    "defaultMessage": "实例名称"
   },
   "fnWV0M": {
     "defaultMessage": "对于出站规则，源 CIDR 应与该虚拟机的自身地址匹配。无法限制远程目标主机——只能限制协议和目标端口。"
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "停止。"
-  },
-  "q6sstZ": {
-    "defaultMessage": "即将部署。"
   },
   "qV+TFm": {
     "defaultMessage": "支付失败。"

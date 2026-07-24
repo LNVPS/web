@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "تابع إلى صفحة الدفع."
   },
+  "556JQK": {
+    "defaultMessage": "انشر/وزّع."
+  },
   "5FWCVu": {
     "defaultMessage": "سجل رسائلك المشفّرة NIP-17 مع الدعم."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "تطبيق نوستر للاتصال بالمحفظة الرقمية"
+  },
+  "AVkjIn": {
+    "defaultMessage": "كامل"
   },
   "AfmrGS": {
     "defaultMessage": "أرسل الرمز."
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "التجديد التلقائي."
   },
+  "exrlwL": {
+    "defaultMessage": "أحرف صغيرة، وأرقام، وواصلات. سيصبح هذا اسم النطاق الفرعي الخاص بك."
+  },
   "f00p/7": {
     "defaultMessage": "فشل التحميل."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "سجّل الدخول لتقديم طلبك"
+  },
+  "fblXmJ": {
+    "defaultMessage": "اسم المثيل"
   },
   "fnWV0M": {
     "defaultMessage": "بالنسبة للقواعد الخاصة بالاتصالات الصادرة، يتطابق عنوان مصدر الشبكة (CIDR) مع عنوان هذه الآلة الافتراضية. لا يمكن تقييد المضيف الوجهة البعيد؛ بل يمكن فقط تحديد البروتوكول ومنفذ الوجهة."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "توقف"
-  },
-  "q6sstZ": {
-    "defaultMessage": "سيتم طرحه قريبًا."
   },
   "qV+TFm": {
     "defaultMessage": "فشل الدفع."

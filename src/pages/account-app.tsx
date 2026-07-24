@@ -5,9 +5,10 @@ import { App, AppDeployment } from "../api";
 import useLogin from "../hooks/login";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
-import { Eyebrow } from "../components/section";
+import { Eyebrow, SectionCard } from "../components/section";
 import { StatusPill } from "../components/billing";
 import CostLabel, { CostAmount } from "../components/cost";
+import DeployAppForm from "../components/deploy-app-form";
 import { AppIcon, deploymentStatus } from "./account-apps";
 
 export function AccountAppPage() {
@@ -85,15 +86,15 @@ export function AccountAppPage() {
                 </div>
               </div>
             </div>
-            {/* Ordering + lifecycle land in a later backend release. */}
-            <span className="rounded-sm border border-cyber-border bg-cyber-panel-light px-3 py-1.5 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-muted">
-              <FormattedMessage defaultMessage="Deployment coming soon" />
-            </span>
           </div>
 
           {app.description && (
             <p className="m-0 max-w-prose text-cyber-text">{app.description}</p>
           )}
+
+          <SectionCard title={<FormattedMessage defaultMessage="Deploy" />}>
+            <DeployAppForm app={app} />
+          </SectionCard>
 
           {deployments.length > 0 && (
             <div className="flex flex-col gap-3">

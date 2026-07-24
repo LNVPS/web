@@ -636,6 +636,14 @@ export interface CreateAppDeploymentRequest {
   config?: Record<string, string>;
 }
 
+/** A region an app can be deployed into. */
+export interface AppRegion {
+  id: number;
+  name: string;
+  /** Whether a cluster in this region currently has free capacity for the app. */
+  available: boolean;
+}
+
 export type AppDeploymentState = "running" | "stopped";
 export type AppDeploymentStatus =
   | "pending"
@@ -934,6 +942,14 @@ export class LNVpsApi {
   async getApp(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<App>>(
       await this.#req(`/api/v1/apps/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /** Regions an app can deploy in; `available` reflects current free capacity. */
+  async listAppRegions(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<AppRegion>>>(
+      await this.#req(`/api/v1/apps/${id}/regions`, "GET"),
     );
     return data;
   }

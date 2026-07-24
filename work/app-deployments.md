@@ -24,8 +24,12 @@ file tracks the remaining ordering/lifecycle work as increments.
 - [x] 1. Client methods: `createAppDeployment`, `startAppDeployment`, `stopAppDeployment`, `deleteAppDeployment` + `CreateAppDeploymentRequest` type.
 - [x] 2. Lifecycle actions: Start/Stop (status-gated) + Delete with inline confirm.
 - [x] 3. Deployment detail page (`/account/apps/deployments/:id`) with status, hostname, subscription link, 'Pay to activate' for pending, lifecycle actions. Deployment rows link to it.
-- [ ] 4. Deploy form: parse compose `config:` (js-yaml), render typed inputs + DNS-safe `name` + region picker. **BLOCKED on region discovery (LNVPS/api#225).**
-- [ ] 5. Activation: after order, route into the subscription payment flow to pay & activate.
+- [x] 4. Deploy form: parse compose `config:` (js-yaml), typed inputs + DNS-safe `name` + region picker (`/apps/{id}/regions`, full regions shown-disabled). #225 shipped.
+- [x] 5. Activation: order → navigate to deployment detail, which prompts 'Pay to activate' (subscription flow).
 - [ ] 6. Translations (all 10 locales) + build/lint pass; update this file.
 
-Status: increments 1-3 done on `feat/app-deployments`. 4-5 blocked on #225.
+## Follow-up
+
+- [ ] Public catalog: `GET /api/v1/apps` + `/apps/{id}` should be **unauthenticated** like `/api/v1/vm/templates`, so the catalog can live on the homepage. Filed backend issue; then move catalog → homepage (AppsSection in homeLoader) and make app detail public, keeping deploy/manage authed.
+
+Status: increments 1-5 done on `feat/app-deployments`.

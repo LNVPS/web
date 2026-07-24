@@ -200,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Continue para o pagamento."
   },
+  "556JQK": {
+    "defaultMessage": "Implementar"
+  },
   "5FWCVu": {
     "defaultMessage": "Seu histórico de mensagens criptografadas NIP-17 com o suporte."
   },
@@ -367,6 +370,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Conexão da carteira Nostr"
+  },
+  "AVkjIn": {
+    "defaultMessage": "cheio; completo"
   },
   "AfmrGS": {
     "defaultMessage": "Enviar código."
@@ -1256,6 +1262,9 @@
   "evMlX9": {
     "defaultMessage": "Renovação automática"
   },
+  "exrlwL": {
+    "defaultMessage": "Use letras minúsculas, números e hífens. Isso será o seu subdomínio."
+  },
   "f00p/7": {
     "defaultMessage": "O envio falhou."
   },
@@ -1270,6 +1279,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Inicie sessão para fazer o seu pedido."
+  },
+  "fblXmJ": {
+    "defaultMessage": "Nome da instância"
   },
   "fnWV0M": {
     "defaultMessage": "Para as regras de saída, o CIDR de origem corresponde ao endereço desta máquina virtual. O host de destino remoto não pode ser restrito – apenas o protocolo e a porta de destino podem ser definidos."
@@ -1564,9 +1576,6 @@
   },
   "q/uwLT": {
     "defaultMessage": "Pare"
-  },
-  "q6sstZ": {
-    "defaultMessage": "Em breve estará disponível."
   },
   "qV+TFm": {
     "defaultMessage": "O pagamento não foi efetuado."

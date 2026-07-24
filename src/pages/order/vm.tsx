@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { LNVpsApi, VmOsImage, VmTemplate } from "../../api";
+import { CpuArch, LNVpsApi, VmOsImage, VmTemplate } from "../../api";
 import { useEffect, useState } from "react";
 import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
@@ -21,18 +21,25 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
   const [images, setImages] = useState<Array<VmOsImage>>([]);
   const [orderError, setOrderError] = useState("");
 
-  // Fetch images without auth (public endpoint) to reduce signer burden
+  // Fetch images without auth (public endpoint) to reduce signer burden.
+  // When the template pins a CPU architecture, filter to compatible images so
+  // we don't offer ones that would fail to provision (#183).
+  const templateArch = template.cpu_arch;
   useEffect(() => {
     const api = new LNVpsApi(ApiUrl, undefined);
-    api.listOsImages().then((a) => {
-      setImages(a);
-      // Auto-select the first image in the canonical order.
-      const sorted = sortOsImages(a);
-      if (sorted.length > 0) {
-        setUseImage(sorted[0].id);
-      }
-    });
-  }, []);
+    api
+      .listOsImages(
+        templateArch !== CpuArch.UNKNOWN ? templateArch : undefined,
+      )
+      .then((a) => {
+        setImages(a);
+        // Auto-select the first image in the canonical order.
+        const sorted = sortOsImages(a);
+        if (sorted.length > 0) {
+          setUseImage(sorted[0].id);
+        }
+      });
+  }, [templateArch]);
 
   async function createOrder() {
     if (!login?.api || !template) return;

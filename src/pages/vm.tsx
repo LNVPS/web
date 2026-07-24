@@ -391,7 +391,9 @@ export default function VmPage() {
       {reinstall &&
         state &&
         (() => {
-          const currentImage = images.find((i) => i.id === state.image?.id);
+          // Use the VM's own image object (always present) rather than looking
+          // it up in the arch-filtered picker list, which may not contain it.
+          const currentImage = state.image;
           const targetImage = images.find((i) => i.id === reinstallImage);
           const isReimage =
             reinstallImage > 0 && reinstallImage !== state.image?.id;
@@ -441,10 +443,14 @@ export default function VmPage() {
                           <FormattedMessage defaultMessage="This erases everything on the VM." />
                         </div>
                         <div className="text-xs font-mono text-cyber-muted">
-                          {isReimage && currentImage ? (
+                          {isReimage ? (
                             <>
-                              <OsImageName image={currentImage} />
-                              {" → "}
+                              {currentImage && (
+                                <>
+                                  <OsImageName image={currentImage} />
+                                  {" → "}
+                                </>
+                              )}
                               {targetImage && (
                                 <OsImageName image={targetImage} />
                               )}

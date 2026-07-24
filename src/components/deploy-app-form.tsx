@@ -82,7 +82,13 @@ export default function DeployAppForm({ app }: { app: App }) {
       .catch((e) => e instanceof Error && setError(e.message));
   }, [login?.api, app.id]);
 
+  const selectedRegion = regions?.find((r) => r.id === regionId);
   const nameValid = DEPLOYMENT_NAME_RE.test(name);
+  // Preview the eventual public hostname: `{name}.{cluster ingress domain}`.
+  const hostnamePreview =
+    nameValid && selectedRegion?.ingress_domain
+      ? `${name}.${selectedRegion.ingress_domain}`
+      : undefined;
   const missingRequired = fields.some(
     (f) => f.required && !values[f.name]?.trim(),
   );
@@ -121,6 +127,11 @@ export default function DeployAppForm({ app }: { app: App }) {
         <span className="text-xs text-cyber-muted">
           <FormattedMessage defaultMessage="Lowercase letters, digits and hyphens. Becomes your subdomain." />
         </span>
+        {hostnamePreview && (
+          <span className="font-mono text-xs text-cyber-accent">
+            {hostnamePreview}
+          </span>
+        )}
       </label>
 
       <label className="flex flex-col gap-1">

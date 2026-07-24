@@ -642,6 +642,8 @@ export interface AppRegion {
   name: string;
   /** Whether a cluster in this region currently has free capacity for the app. */
   available: boolean;
+  /** Wildcard base domain; a deployment's host is `{name}.{ingress_domain}`. */
+  ingress_domain?: string;
 }
 
 export type AppDeploymentState = "running" | "stopped";

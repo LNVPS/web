@@ -1,6 +1,8 @@
 import { FormattedMessage, FormattedNumber } from "react-intl";
 import useLogin from "../hooks/login";
 import { taxRateFor, useTaxRates } from "../hooks/tax";
+import useExchangeRates from "../hooks/useExchangeRates";
+import { convertAmount } from "../utils/currency";
 
 interface Price {
   currency: string;
@@ -21,44 +23,43 @@ export default function CostLabel({
   companyId?: number;
 }) {
   const login = useLogin();
-  const rates = useTaxRates();
-  const rate = login?.incTax ? taxRateFor(rates, companyId) : undefined;
+  const taxRates = useTaxRates();
+  const { data: fx } = useExchangeRates();
+  const rate = login?.incTax ? taxRateFor(taxRates, companyId) : undefined;
 
-  // Gross-up the base price and every converted price by the same rate. The
-  // header toggle communicates the inclusive/exclusive state, so no per-price
-  // hint is needed here.
-  if (rate && rate > 0) {
-    cost = {
-      ...grossPrice(cost, rate),
-      other_price: cost.other_price?.map((p) => grossPrice(p, rate)),
-    };
+  // Gross-up the base price by the VAT rate (the header toggle communicates
+  // the inclusive/exclusive state, so no per-price hint is needed).
+  const base = rate && rate > 0 ? grossPrice(cost, rate) : cost;
+
+  const target = login?.currency;
+  if (!target || base.currency === target) {
+    return <CostAmount cost={base} converted={false} />;
   }
 
-  if (cost.currency === login?.currency) {
-    return <CostAmount cost={cost} converted={false} />;
-  } else {
-    const converted_price = cost.other_price?.find(
-      (p) => p.currency === login?.currency,
-    );
-    if (converted_price) {
-      return (
-        <div>
-          <CostAmount
-            cost={{
-              ...converted_price,
-              interval_type: cost.interval_type,
-            }}
-            converted={true}
-          />{" "}
-          <span className="text-xs text-cyber-muted">
-            (<CostAmount cost={cost} converted={false} />)
-          </span>
-        </div>
-      );
-    } else {
-      return <CostAmount cost={cost} converted={false} />;
-    }
+  // Convert to the display currency from the exchange-rate cache (replacing the
+  // now-deprecated `other_price` conversions). Defer to the base figure when
+  // rates aren't loaded or the pair is unknown.
+  const converted = fx
+    ? convertAmount(base.amount, base.currency, target, fx)
+    : undefined;
+  if (converted === undefined) {
+    return <CostAmount cost={base} converted={false} />;
   }
+  return (
+    <div>
+      <CostAmount
+        cost={{
+          currency: target,
+          amount: Math.round(converted),
+          interval_type: base.interval_type,
+        }}
+        converted={true}
+      />{" "}
+      <span className="text-xs text-cyber-muted">
+        (<CostAmount cost={base} converted={false} />)
+      </span>
+    </div>
+  );
 }
 
 export function IntervalSuffix({

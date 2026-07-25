@@ -430,6 +430,16 @@ export interface TimeSeriesData {
   disk_read: number;
 }
 
+/** Public exchange-rate snapshot (issue #230). */
+export interface ExchangeRates {
+  /** ISO 8601 server read time (rates refresh on a ~5 min cache). */
+  updated: string;
+  /** Base currency; `rates` excludes it (implicit rate 1). */
+  base: string;
+  /** `1 unit of base = rates[X] units of X` (standard units). */
+  rates: Record<string, number>;
+}
+
 export interface PaymentMethod {
   name: PaymentMethodType;
   metadata?: Record<string, string>;
@@ -935,6 +945,15 @@ export class LNVpsApi {
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
       await this.#req("/api/v1/account", "GET"),
+    );
+    return data;
+  }
+
+  /** Public exchange rates. Convert A→B as `rates[B] / rates[A]` (base = 1). */
+  async getExchangeRates(base?: string) {
+    const q = base ? `?base=${encodeURIComponent(base)}` : "";
+    const { data } = await this.#handleResponse<ApiResponse<ExchangeRates>>(
+      await this.#req(`/api/v1/exchange-rate${q}`, "GET"),
     );
     return data;
   }

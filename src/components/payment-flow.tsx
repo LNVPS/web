@@ -7,6 +7,8 @@ import {
 } from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
+import useExchangeRates from "../hooks/useExchangeRates";
+import { convertAmount } from "../utils/currency";
 import { CostAmount, IntervalSuffix } from "./cost";
 import { RevolutPayWidget } from "./revolut";
 import type { Mode } from "@revolut/checkout";
@@ -65,6 +67,7 @@ export default function PaymentFlow({
   const login = useLogin();
   const { formatNumber } = useIntl();
   const { data: methods, loading: methodsLoading } = usePaymentMethods();
+  const { data: rates } = useExchangeRates();
 
   const [payment, setPayment] = useState<VmPayment | undefined>(
     initialPayment,
@@ -444,14 +447,26 @@ export default function PaymentFlow({
   // the minimum is quoted in the order currency; otherwise defer to the server.
   function meetsMinimum(m: PaymentMethod): boolean {
     if (m.min_amount === undefined || !duration) return true;
-    if (m.min_amount_currency && m.min_amount_currency !== duration.cost.currency)
-      return true;
+    const orderCurrency = duration.cost.currency;
+    const minCurrency = m.min_amount_currency ?? orderCurrency;
+    // Express the method's minimum in the order currency so the comparison is
+    // apples-to-apples. Same-currency is trivial; otherwise convert via the
+    // exchange-rate snapshot. If we can't convert (rates not loaded / currency
+    // missing), defer to the server rather than hide a method wrongly.
+    let min = m.min_amount;
+    if (minCurrency !== orderCurrency) {
+      const converted = rates
+        ? convertAmount(m.min_amount, minCurrency, orderCurrency, rates)
+        : undefined;
+      if (converted === undefined) return true;
+      min = converted;
+    }
     const subtotal = duration.cost.amount * intervals;
     const tax = Math.round(
       subtotal * accountTaxRate(account, duration.taxCompanyId),
     );
-    const fee = processingFeeEstimate(m, duration.cost.currency, subtotal + tax);
-    return subtotal + tax + fee >= m.min_amount;
+    const fee = processingFeeEstimate(m, orderCurrency, subtotal + tax);
+    return subtotal + tax + fee >= min;
   }
 
   const providerRows = (methods ?? [])

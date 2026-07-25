@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { App, AppDeployment, LNVpsApi } from "../api";
@@ -12,9 +12,61 @@ import CostLabel, { CostAmount } from "../components/cost";
 import DeployAppForm from "../components/deploy-app-form";
 import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
+import { highlightYaml } from "../utils/yaml-highlight";
 import { AppIcon, deploymentStatus } from "./account-apps";
 
-export function AccountAppPage() {
+/** README, clamped to 50dvh with a fade + 'view full' link when it overflows. */
+function ReadmeSection({
+  content,
+  repoUrl,
+}: {
+  content: string;
+  repoUrl?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [overflowing, setOverflowing] = useState(false);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const check = () =>
+      setOverflowing(el.scrollHeight > window.innerHeight * 0.5);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [content]);
+
+  return (
+    <div className="flex flex-col gap-2">
+      <Eyebrow>
+        <FormattedMessage defaultMessage="Readme" />
+      </Eyebrow>
+      <div className="relative overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
+        <div
+          ref={ref}
+          className={overflowing ? "max-h-[50dvh] overflow-hidden p-4" : "p-4"}
+        >
+          <Markdown content={content} />
+        </div>
+        {overflowing && (
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cyber-panel to-transparent" />
+        )}
+      </div>
+      {overflowing && repoUrl && (
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="self-start text-sm text-cyber-primary hover:underline"
+        >
+          <FormattedMessage defaultMessage="View full README" /> ↗
+        </a>
+      )}
+    </div>
+  );
+}
+
+export function AppPage() {
   const login = useLogin();
   const { id } = useParams<{ id: string }>();
   const appId = Number(id);
@@ -171,14 +223,7 @@ export function AccountAppPage() {
           )}
 
           {readme && (
-            <div className="flex flex-col gap-2">
-              <Eyebrow>
-                <FormattedMessage defaultMessage="Readme" />
-              </Eyebrow>
-              <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel p-4">
-                <Markdown content={readme} />
-              </div>
-            </div>
+            <ReadmeSection content={readme} repoUrl={app.repo_url} />
           )}
 
           <div className="flex flex-col gap-2">
@@ -186,7 +231,7 @@ export function AccountAppPage() {
               <FormattedMessage defaultMessage="Compose" />
             </Eyebrow>
             <pre className="overflow-x-auto rounded-sm border border-cyber-border bg-cyber-panel p-4 font-mono text-xs text-cyber-text">
-              {app.compose}
+              {highlightYaml(app.compose)}
             </pre>
           </div>
         </>

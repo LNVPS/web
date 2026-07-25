@@ -36,7 +36,6 @@ export default function IpBlockCard({
             cost={{
               interval_type: "month",
               ...price.price,
-              other_price: price.other_price,
             }}
           />
         )}
@@ -44,12 +43,7 @@ export default function IpBlockCard({
       {price.setup_fee.amount !== 0 && (
         <div className="text-cyber-muted">
           <FormattedMessage defaultMessage="Setup fee:" />{" "}
-          <CostLabel
-            cost={{
-              ...price.setup_fee,
-              other_price: price.other_setup_fee,
-            }}
-          />
+          <CostLabel cost={price.setup_fee} />
         </div>
       )}
       <div className="mt-2">

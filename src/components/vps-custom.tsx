@@ -241,7 +241,6 @@ export function VpsCustomOrder({
     name: "custom",
     amount: price?.amount ?? 0,
     currency: (price?.currency as "BTC" | "EUR" | "USD") ?? "USD",
-    other_price: price?.other_price ?? [],
     interval_amount: 1,
     interval_type: CostPlanIntervalType.MONTH,
   };

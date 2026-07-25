@@ -101,7 +101,6 @@ const COST_PLAN = {
   amount: 799,
   interval_amount: 1,
   interval_type: CostPlanIntervalType.MONTH,
-  other_price: [{ currency: "USD", amount: 899 }],
 };
 
 function mkVm(over: Partial<VmInstance>): VmInstance {

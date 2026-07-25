@@ -18,7 +18,7 @@ export default function CostLabel({
   cost,
   companyId,
 }: {
-  cost: Cost & { other_price?: Array<Price> };
+  cost: Cost;
   /** Seller company for the VAT rate; falls back to the primary rate. */
   companyId?: number;
 }) {
@@ -36,9 +36,8 @@ export default function CostLabel({
     return <CostAmount cost={base} converted={false} />;
   }
 
-  // Convert to the display currency from the exchange-rate cache (replacing the
-  // now-deprecated `other_price` conversions). Defer to the base figure when
-  // rates aren't loaded or the pair is unknown.
+  // Convert to the display currency from the exchange-rate cache. Defer to the
+  // base figure when rates aren't loaded or the pair is unknown.
   const converted = fx
     ? convertAmount(base.amount, base.currency, target, fx)
     : undefined;

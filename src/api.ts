@@ -225,7 +225,6 @@ export interface VmCostPlan {
   name: string;
   currency: "BTC" | "EUR" | "USD";
   amount: number;
-  other_price?: Array<Price>;
   interval_amount: number;
   interval_type: CostPlanIntervalType;
 }
@@ -270,8 +269,6 @@ export interface VmCustomTemplateRequest {
 export interface VmCustomPrice {
   currency: string;
   amount: number;
-  /** The same quote converted into the other supported currencies. */
-  other_price?: Array<Price>;
 }
 
 export interface VmTemplateResponse {
@@ -540,8 +537,6 @@ export interface IpSpacePricing {
   prefix_size: number;
   price: Price;
   setup_fee: Price;
-  other_price?: Array<Price>;
-  other_setup_fee?: Array<Price>;
 }
 
 export interface AvailableIpSpace {

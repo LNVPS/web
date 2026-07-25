@@ -112,12 +112,7 @@ export default function OrderIpSpacePage({
                 {price.setup_fee.amount !== 0 && (
                   <div className="text-cyber-muted text-sm">
                     <FormattedMessage defaultMessage="Setup fee:" />{" "}
-                    <CostLabel
-                      cost={{
-                        ...price.setup_fee,
-                        other_price: price.other_setup_fee,
-                      }}
-                    />
+                    <CostLabel cost={price.setup_fee} />
                   </div>
                 )}
               </div>
@@ -125,7 +120,6 @@ export default function OrderIpSpacePage({
                 cost={{
                   interval_type: "month",
                   ...price.price,
-                  other_price: price.other_price,
                 }}
               />
             </div>

@@ -175,7 +175,7 @@ export function AccountAppPage() {
               <Eyebrow>
                 <FormattedMessage defaultMessage="Readme" />
               </Eyebrow>
-              <div className="max-w-prose overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel p-4">
+              <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel p-4">
                 <Markdown content={readme} />
               </div>
             </div>

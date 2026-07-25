@@ -584,7 +584,9 @@ export interface SubscriptionLineItem {
 // from the line item's subscription type (null when there is no linked resource).
 export type SubscriptionLineItemResource =
   | { type: "vps"; vm_id: number }
-  | { type: "ip_range"; ip_range_subscription_id: number };
+  | { type: "ip_range"; ip_range_subscription_id: number }
+  | { type: "asn"; asn_subscription_id: number }
+  | { type: "app"; app_deployment_id: number };
 
 export interface SubscriptionPayment {
   id: string;
@@ -607,6 +609,73 @@ export interface SubscriptionSummary {
   active_subscriptions: number;
   total_monthly_cost: number;
   currency: string;
+}
+
+/** A predefined, Docker-deployed app from the managed catalog. */
+export interface App {
+  id: number;
+  /** URL/DNS-safe slug. */
+  name: string;
+  display_name: string;
+  description?: string;
+  icon?: string;
+  /** docker-compose-style YAML; the config form (ports/env) is rendered from this. */
+  compose: string;
+  /** Canonical source repository URL (e.g. https://github.com/owner/repo). */
+  repo_url?: string;
+  /** Recurring price in smallest currency units. */
+  amount: number;
+  currency: string;
+  interval_amount: number;
+  interval_type: CostPlanIntervalType;
+  /** One-off setup fee in smallest currency units (0 = none). */
+  setup_amount: number;
+}
+
+export interface CreateAppDeploymentRequest {
+  app_id: number;
+  /** DNS-safe label (lowercase letters/digits/hyphens, ≤40); becomes the subdomain. */
+  name: string;
+  /** Region to deploy in; a cluster there with capacity is chosen. */
+  region_id: number;
+  /** Values for the app's compose `config` fields. */
+  config?: Record<string, string>;
+}
+
+/** A region an app can be deployed into. */
+export interface AppRegion {
+  id: number;
+  name: string;
+  /** Whether a cluster in this region currently has free capacity for the app. */
+  available: boolean;
+  /** Wildcard base domain; a deployment's host is `{name}.{ingress_domain}`. */
+  ingress_domain: string;
+}
+
+export type AppDeploymentState = "running" | "stopped";
+export type AppDeploymentStatus =
+  | "pending"
+  | "running"
+  | "stopped"
+  | "error"
+  | "deleting";
+
+/** A user's running instance of a catalog app. */
+export interface AppDeployment {
+  id: number;
+  /** Catalog app being run. */
+  app_id: number;
+  /** The user's instance name. */
+  name: string;
+  /** Public endpoint host once assigned (absent until reconciled, or if the app has no ingress). */
+  hostname?: string;
+  desired_state: AppDeploymentState;
+  status: AppDeploymentStatus;
+  /** Operator status/error detail when present. */
+  status_message?: string;
+  /** Subscription this deployment is billed under (renew via the subscription endpoints). */
+  subscription_id?: number;
+  created: string;
 }
 
 export interface CreateSubscriptionRequest {
@@ -866,6 +935,77 @@ export class LNVpsApi {
   async getAccount() {
     const { data } = await this.#handleResponse<ApiResponse<AccountDetail>>(
       await this.#req("/api/v1/account", "GET"),
+    );
+    return data;
+  }
+
+  /** Managed app catalog (read-only). */
+  async listApps() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<App>>>(
+      await this.#req("/api/v1/apps", "GET"),
+    );
+    return data;
+  }
+
+  async getApp(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<App>>(
+      await this.#req(`/api/v1/apps/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /** Regions an app can deploy in; `available` reflects current free capacity. */
+  async listAppRegions(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<AppRegion>>>(
+      await this.#req(`/api/v1/apps/${id}/regions`, "GET"),
+    );
+    return data;
+  }
+
+  /** The caller's app deployments (most recent first). */
+  async listAppDeployments() {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<AppDeployment>>
+    >(await this.#req("/api/v1/app-deployments", "GET"));
+    return data;
+  }
+
+  async getAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * Order an app deployment. Returns the deployment in `pending` state with a
+   * billing subscription — pay the subscription to activate it.
+   */
+  async createAppDeployment(req: CreateAppDeploymentRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req("/api/v1/app-deployments", "POST", req),
+    );
+    return data;
+  }
+
+  async startAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}/start`, "PATCH"),
+    );
+    return data;
+  }
+
+  async stopAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}/stop`, "PATCH"),
+    );
+    return data;
+  }
+
+  /** Stop billing and tear the deployment down (namespace + volumes removed). */
+  async deleteAppDeployment(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<boolean>>(
+      await this.#req(`/api/v1/app-deployments/${id}`, "DELETE"),
     );
     return data;
   }

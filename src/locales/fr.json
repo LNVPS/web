@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Continuer avec {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Gérer"
+  },
   "0HkBaC": {
     "defaultMessage": "Choisissez l’une des méthodes suivantes pour vérifier votre domaine :"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Passez au paiement."
   },
+  "556JQK": {
+    "defaultMessage": "Déployer"
+  },
   "5FWCVu": {
     "defaultMessage": "Votre historique de messages chiffrés NIP-17 avec le support."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "Connexion en cours..."
   },
+  "62gWV4": {
+    "defaultMessage": "Déploiement d’applications Docker en un seul clic sur une infrastructure gérée."
+  },
   "6Auf1w": {
     "defaultMessage": "Nous n’avons pas pu effectuer l’opération de connexion. Veuillez réessayer."
+  },
+  "6FbX6y": {
+    "defaultMessage": "L’arrêt de la fonction de pesage remet à zéro l’application et conserve ses données. La suppression arrête la facturation et supprime définitivement le déploiement et ses volumes."
   },
   "6SfJaf": {
     "defaultMessage": "Mettez à niveau vers"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Envoyer le code de vérification"
   },
+  "8PkqNN": {
+    "defaultMessage": "Payez pour activer."
+  },
   "8Q504V": {
     "defaultMessage": "Métadonnées"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "Démarrer la machine virtuelle"
-  },
-  "9QV3cp": {
-    "defaultMessage": "Blocs d’adresses IP disponibles"
   },
   "9d9svQ": {
     "defaultMessage": "Aucune clé d'accès pour le moment. Ajoutez-en une pour vous connecter sans clé."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Connexion au portefeuille Nostr"
+  },
+  "AVkjIn": {
+    "defaultMessage": "complet"
   },
   "AfmrGS": {
     "defaultMessage": "Envoyer le code."
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
   },
+  "Cououe": {
+    "defaultMessage": "Connectez-vous pour déployer cette application."
+  },
   "D3idYv": {
     "defaultMessage": "Paramètres"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "Aucun domaine n’a été ajouté pour le moment. Ajoutez votre premier domaine ci-dessus pour commencer."
+  },
+  "DnX0aY": {
+    "defaultMessage": "Confirmer la suppression."
   },
   "DpNZQY": {
     "defaultMessage": "Frais de traitement."
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "Autres moyens de nous contacter :"
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalogue"
+  },
   "GQNYob": {
     "defaultMessage": "Partager le lien"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "Aucun message pour le moment. Démarrez une conversation ci-dessous."
   },
+  "HPBE7M": {
+    "defaultMessage": "Retour aux applications"
+  },
   "HlAgG9": {
     "defaultMessage": "J'ai envoyé le paiement"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
+  "JAJV1y": {
+    "defaultMessage": "Attribué une fois l’opération lancée."
+  },
   "JBWS0c": {
     "defaultMessage": "Lien"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "Aucun moyen de paiement n’a été enregistré pour le moment."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr : {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "Consulter l’abonnement"
+  },
   "OJuBck": {
     "defaultMessage": "Sans mot de passe"
   },
   "OLqOyf": {
     "defaultMessage": "Instructions d’installation"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Créé"
   },
   "OikYIw": {
     "defaultMessage": "Minimum : {min} Go de {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disque"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Déploiement"
   },
   "P+08xT": {
     "defaultMessage": "Obtenir un devis"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Erreur lors de l’analyse du fichier JSON : {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Supprimer définitivement ?"
   },
   "QgBuiV": {
     "defaultMessage": "Processeur"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "Aucune machine virtuelle sélectionnée."
+  },
+  "SknxDs": {
+    "defaultMessage": "Dépôt source"
   },
   "SnyOdn": {
     "defaultMessage": "converti"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "Nom affiché"
   },
+  "dPEbZd": {
+    "defaultMessage": "Ce déploiement est en attente de paiement. Veuillez régler l’abonnement pour l’activer."
+  },
   "dUQeuG": {
     "defaultMessage": "Créer un compte avec une clé d'accès"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "Aucune entrée d’historique n’a été trouvée pour cette machine virtuelle."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Configurez votre machine"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "Sélectionnez la langue."
   },
+  "eVuHpt": {
+    "defaultMessage": "Aucune application n’est disponible pour le moment."
+  },
   "ebmhes": {
     "defaultMessage": "Extension Nostr"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Renouvellement automatique"
+  },
+  "exrlwL": {
+    "defaultMessage": "Utilisez des lettres minuscules, des chiffres et des tirets. Cela deviendra votre sous-domaine."
   },
   "f00p/7": {
     "defaultMessage": "Le téléchargement a échoué."
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Connectez-vous pour passer votre commande."
+  },
+  "fblXmJ": {
+    "defaultMessage": "Nom de l’instance"
   },
   "fnWV0M": {
     "defaultMessage": "Pour les règles de sortie, le CIDR source correspond à l’adresse propre de cette machine virtuelle. L’hôte de destination distant ne peut pas être restreint ; seuls le protocole et le port de destination peuvent l’être."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "Déployez ce worker et ajoutez une route pour {route}."
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} jamais payé"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "Créer un compte"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Aucun message pour le moment."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "Applications Docker en un seul clic, disponibles dans un catalogue géré."
   },
   "iXNbPf": {
     "defaultMessage": "Renommer"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "Cochez la case « Enregistrer cette carte » lorsque vous effectuez un paiement avec Revolut pour enregistrer une carte et l’utiliser pour les prochains paiements et renouvellements automatiques."
   },
+  "ljmS5P": {
+    "defaultMessage": "Point d’extrémité"
+  },
   "lloEWi": {
     "defaultMessage": "De quoi s’agit-il ?"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "gagné(e) · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Débuter"
   },
   "mOR+qH": {
     "defaultMessage": "Copier dans le presse-papiers"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "Hôte en retrait"
   },
+  "nvJ5bE": {
+    "defaultMessage": "Applications Docker en un seul clic."
+  },
   "nx5ZnY": {
     "defaultMessage": "Vérifiez un numéro de téléphone pour activer."
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "Retour à la connexion"
   },
+  "odXlk8": {
+    "defaultMessage": "Se connecter"
+  },
   "oswGmn": {
     "defaultMessage": "Vous ne pouvez pas quitter le système tant que l’historique des paiements est disponible."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "Non défini."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Lisez la mise à jour complète."
   },
   "pus6h6": {
     "defaultMessage": "Vous pouvez quitter le jeu à tout moment. Votre code cessera de générer des récompenses et ne pourra plus être utilisé."
   },
-  "qJRR8N": {
-    "defaultMessage": "Chargement des blocs d’adresses IP…"
+  "q/uwLT": {
+    "defaultMessage": "Arrêtez."
   },
   "qV+TFm": {
     "defaultMessage": "Le paiement a échoué."
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "Port(s)"
   },
+  "tPwWRH": {
+    "defaultMessage": "Vos déploiements"
+  },
   "tTpLsN": {
     "defaultMessage": "Non lié."
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Statut"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Détails de l’état"
   },
   "u+Blek": {
     "defaultMessage": "Type de stockage"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Connectez votre conversation, puis appuyez sur Démarrer dans le robot."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Historique des paiements"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Échec de la connexion"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Lisez-moi."
   },
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."

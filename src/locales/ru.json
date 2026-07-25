@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Продолжить с {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Управляйте."
+  },
   "0HkBaC": {
     "defaultMessage": "Выберите один из предложенных способов подтверждения прав на ваш домен:"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Перейти к оплате."
   },
+  "556JQK": {
+    "defaultMessage": "Развернуть"
+  },
   "5FWCVu": {
     "defaultMessage": "История ваших зашифрованных сообщений NIP-17 с поддержкой."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "Выполняется подключение..."
   },
+  "62gWV4": {
+    "defaultMessage": "Развертывание приложений Docker в один клик на управляемой инфраструктуре."
+  },
   "6Auf1w": {
     "defaultMessage": "Не удалось выполнить вход в систему. Пожалуйста, повторите попытку."
+  },
+  "6FbX6y": {
+    "defaultMessage": "При остановке весов приложение сбрасывается до начальных значений и сохраняет свои данные. При удалении прекращается начисление платы и окончательно удаляется развертывание и все связанные с ним ресурсы."
   },
   "6SfJaf": {
     "defaultMessage": "Обновите до"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Отправить код подтверждения"
   },
+  "8PkqNN": {
+    "defaultMessage": "Оплатите, чтобы активировать."
+  },
   "8Q504V": {
     "defaultMessage": "Метаданные"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "Запустить виртуальную машину."
-  },
-  "9QV3cp": {
-    "defaultMessage": "Доступные IP-адреса."
   },
   "9d9svQ": {
     "defaultMessage": "Ключей доступа пока нет. Добавьте один, чтобы входить без ключа."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Подключение к кошельку Nostr."
+  },
+  "AVkjIn": {
+    "defaultMessage": "полный"
   },
   "AfmrGS": {
     "defaultMessage": "Отправить код."
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "Обратитесь за помощью к команде."
   },
+  "Cououe": {
+    "defaultMessage": "Войдите в систему, чтобы установить это приложение."
+  },
   "D3idYv": {
     "defaultMessage": "Настройки"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "Пока не добавлено ни одного домена. Добавьте свой первый домен выше, чтобы начать работу."
+  },
+  "DnX0aY": {
+    "defaultMessage": "Подтвердите удаление."
   },
   "DpNZQY": {
     "defaultMessage": "Комиссия за обработку."
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "Другие способы связи с нами:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Каталог"
+  },
   "GQNYob": {
     "defaultMessage": "Поделиться ссылкой"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "Сообщений пока нет. Начните обсуждение ниже."
   },
+  "HPBE7M": {
+    "defaultMessage": "Вернуться к приложениям"
+  },
   "HlAgG9": {
     "defaultMessage": "Я отправил платёж"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "Подписки"
   },
+  "JAJV1y": {
+    "defaultMessage": "Назначается после запуска."
+  },
   "JBWS0c": {
     "defaultMessage": "Ссылка"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "Пока не сохранено ни одного способа оплаты."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "Просмотреть подписку"
+  },
   "OJuBck": {
     "defaultMessage": "Без пароля"
   },
   "OLqOyf": {
     "defaultMessage": "Инструкция по настройке"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Создано"
   },
   "OikYIw": {
     "defaultMessage": "Минимум: {min} ГБ {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Диск"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Развертывание"
   },
   "P+08xT": {
     "defaultMessage": "Получить расценку"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Ошибка при разборе JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Удалить без возможности восстановления?"
   },
   "QgBuiV": {
     "defaultMessage": "центральный процессор"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "Не выбрана виртуальная машина."
+  },
+  "SknxDs": {
+    "defaultMessage": "Исходный репозиторий"
   },
   "SnyOdn": {
     "defaultMessage": "преобразован(о) / конвертирован(о)"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "Отображаемое имя"
   },
+  "dPEbZd": {
+    "defaultMessage": "Для активации этой версии необходимо произвести оплату. Оплатите подписку, чтобы начать использовать её."
+  },
   "dUQeuG": {
     "defaultMessage": "Создать аккаунт с ключом доступа"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "Для данной виртуальной машины не найдено записей в истории."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Соберите свою машину"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "Выберите язык."
   },
+  "eVuHpt": {
+    "defaultMessage": "В настоящее время приложения недоступны."
+  },
   "ebmhes": {
     "defaultMessage": "Расширение Nostr"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Автоматическое продление."
+  },
+  "exrlwL": {
+    "defaultMessage": "Используйте строчные буквы, цифры и дефисы. Это станет вашим поддоменом."
   },
   "f00p/7": {
     "defaultMessage": "Загрузка не удалась."
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Войдите, чтобы сделать заказ."
+  },
+  "fblXmJ": {
+    "defaultMessage": "Имя экземпляра"
   },
   "fnWV0M": {
     "defaultMessage": "Для исходящих правил источник CIDR должен соответствовать адресу этой виртуальной машины. Нельзя ограничить удаленный хост назначения — можно ограничить только протокол и порт назначения."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "Разверните этого работника и добавьте маршрут для {route}"
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} ни разу не заплатили"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "Создать аккаунт"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Пока нет ни одной записи."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "Приложения Docker, доступные в один клик, из управляемого каталога."
   },
   "iXNbPf": {
     "defaultMessage": "Переименовать"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "При оплате через Revolut установите флажок «Сохранить эту карту», чтобы сохранить данные карты для будущих платежей и автоматического продления подписки."
   },
+  "ljmS5P": {
+    "defaultMessage": "Конечная точка"
+  },
   "lloEWi": {
     "defaultMessage": "О чём это? / Что это такое? / К чему это относится?"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "получено · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Начать"
   },
   "mOR+qH": {
     "defaultMessage": "Скопировать в буфер обмена"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "Хост выводится"
   },
+  "nvJ5bE": {
+    "defaultMessage": "Приложения Docker, которые можно запустить в один клик."
+  },
   "nx5ZnY": {
     "defaultMessage": "Подтвердите номер телефона, чтобы включить функцию."
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "Вернуться ко входу"
   },
+  "odXlk8": {
+    "defaultMessage": "Войти"
+  },
   "oswGmn": {
     "defaultMessage": "Вы не можете выйти, пока существует история выплат."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "Не задано."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Ознакомьтесь с полной версией обновления."
   },
   "pus6h6": {
     "defaultMessage": "Вы можете прекратить участие в любое время. После этого ваш код перестанет приносить доход и его нельзя будет использовать повторно."
   },
-  "qJRR8N": {
-    "defaultMessage": "Загрузка списка IP-адресов..."
+  "q/uwLT": {
+    "defaultMessage": "Стоп"
   },
   "qV+TFm": {
     "defaultMessage": "Оплата не прошла."
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "Порт(ы)"
   },
+  "tPwWRH": {
+    "defaultMessage": "Ваши развертывания."
+  },
   "tTpLsN": {
     "defaultMessage": "Не связаны."
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Статус"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Подробная информация о статусе"
   },
   "u+Blek": {
     "defaultMessage": "Тип накопителя"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Подключите свой чат, затем нажмите кнопку «Начать» в боте."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "История платежей."
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Не удалось войти"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Прочтите меня."
   },
   "z+hIFs": {
     "defaultMessage": "Оплата пока не произведена."

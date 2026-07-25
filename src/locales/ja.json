@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "{provider} で続ける"
   },
+  "0Azlrb": {
+    "defaultMessage": "管理する"
+  },
   "0HkBaC": {
     "defaultMessage": "以下のいずれかの方法でドメインの所有権を確認してください。"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "お支払い手続きへ進んでください。"
   },
+  "556JQK": {
+    "defaultMessage": "展開する、配備する"
+  },
   "5FWCVu": {
     "defaultMessage": "サポートとの暗号化された NIP-17 メッセージ履歴。"
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "接続中です。"
   },
+  "62gWV4": {
+    "defaultMessage": "ワンクリックで、管理されたインフラ上にDockerアプリケーションをデプロイできます。"
+  },
   "6Auf1w": {
     "defaultMessage": "ログインに失敗しました。もう一度お試しください。"
+  },
+  "6FbX6y": {
+    "defaultMessage": "停止すると、アプリケーションは初期状態に戻り、データは保持されます。削除すると、課金が停止し、デプロイメントとそのボリュームが完全に削除されます。"
   },
   "6SfJaf": {
     "defaultMessage": "アップグレードするには"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "確認コードを送信"
   },
+  "8PkqNN": {
+    "defaultMessage": "有効化するには料金をお支払いください。"
+  },
   "8Q504V": {
     "defaultMessage": "メタデータ"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "VMを起動します。"
-  },
-  "9QV3cp": {
-    "defaultMessage": "利用可能なIPアドレス範囲"
   },
   "9d9svQ": {
     "defaultMessage": "パスキーはまだありません。追加すると、キーなしでサインインできます。"
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostrウォレット接続"
+  },
+  "AVkjIn": {
+    "defaultMessage": "満タン、いっぱい、完全な、完全な状態の、完全な形で。"
   },
   "AfmrGS": {
     "defaultMessage": "コードを送信"
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
   },
+  "Cououe": {
+    "defaultMessage": "このアプリを公開するには、ログインしてください。"
+  },
   "D3idYv": {
     "defaultMessage": "設定"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
+  },
+  "DnX0aY": {
+    "defaultMessage": "削除を確定します。"
   },
   "DpNZQY": {
     "defaultMessage": "処理手数料"
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "その他のご連絡方法："
   },
+  "GOdq5V": {
+    "defaultMessage": "カタログ"
+  },
   "GQNYob": {
     "defaultMessage": "リンクを共有"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
   },
+  "HPBE7M": {
+    "defaultMessage": "アプリに戻る"
+  },
   "HlAgG9": {
     "defaultMessage": "支払いを送信しました"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "購読"
   },
+  "JAJV1y": {
+    "defaultMessage": "実行時に一度割り当て"
+  },
   "JBWS0c": {
     "defaultMessage": "リンク"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "まだ支払い方法が登録されていません。"
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "購読プランを確認する"
+  },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
   },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "作成済み"
   },
   "OikYIw": {
     "defaultMessage": "最小要件：{min} GBの{type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "ディスク"
+  },
+  "OyvHWp": {
+    "defaultMessage": "展開、配置"
   },
   "P+08xT": {
     "defaultMessage": "見積もりを依頼する"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "JSONの解析中にエラーが発生しました：{msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "完全に削除しますか？"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "選択された仮想マシンはありません。"
+  },
+  "SknxDs": {
+    "defaultMessage": "ソースリポジトリ"
   },
   "SnyOdn": {
     "defaultMessage": "変換済み"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "表示名"
   },
+  "dPEbZd": {
+    "defaultMessage": "この設定は、お支払いをお待ちの状態です。サブスクリプションにお支払いいただくことで、設定が有効になります。"
+  },
   "dUQeuG": {
     "defaultMessage": "パスキーアカウントを作成"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "言語を選択してください。"
   },
+  "eVuHpt": {
+    "defaultMessage": "まだ利用できるアプリはありません。"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr拡張機能"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "自動更新"
+  },
+  "exrlwL": {
+    "defaultMessage": "小文字、数字、ハイフンを使用します。これがあなたのサブドメインになります。"
   },
   "f00p/7": {
     "defaultMessage": "アップロードに失敗しました。"
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "ご注文にはログインが必要です。"
+  },
+  "fblXmJ": {
+    "defaultMessage": "インスタンス名"
   },
   "fnWV0M": {
     "defaultMessage": "送信ルールの場合、ソースCIDRは、この仮想マシンの自身のIPアドレスと一致します。リモートの宛先ホストを制限することはできません。制限できるのは、プロトコルと宛先ポートのみです。"
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 支払われなかった。"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "まだ投稿はありません。"
+  },
+  "iVkpyZ": {
+    "defaultMessage": "管理されたカタログから、ワンクリックでDockerアプリケーションを起動できます。"
   },
   "iXNbPf": {
     "defaultMessage": "名前を変更する。"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "Revolutで支払いをする際に「このカードを保存」にチェックを入れると、このカードが登録され、今後の支払いや自動更新に使用できるようになります。"
   },
+  "ljmS5P": {
+    "defaultMessage": "終点"
+  },
   "lloEWi": {
     "defaultMessage": "これは何についてですか？"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "獲得した {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "開始"
   },
   "mOR+qH": {
     "defaultMessage": "クリップボードにコピー"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "ホスト廃止予定"
   },
+  "nvJ5bE": {
+    "defaultMessage": "ワンクリックで起動できるDockerアプリケーション"
+  },
   "nx5ZnY": {
     "defaultMessage": "電話番号を認証して、機能を有効にします。"
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "ログインに戻る"
   },
+  "odXlk8": {
+    "defaultMessage": "ログイン"
+  },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "最新情報をすべてお読みください。"
   },
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
   },
-  "qJRR8N": {
-    "defaultMessage": "IPアドレスのブロックを読み込んでいます..."
+  "q/uwLT": {
+    "defaultMessage": "止まれ"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "ポート（複数形）"
   },
+  "tPwWRH": {
+    "defaultMessage": "お客様のデプロイメント状況"
+  },
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "状況"
+  },
+  "u+3iRA": {
+    "defaultMessage": "状況の詳細"
   },
   "u+Blek": {
     "defaultMessage": "ストレージの種類"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "チャットを連携させたら、ボットの「開始」ボタンを押してください。"
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "支払い履歴"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "サインインに失敗しました"
+  },
+  "yRz1m6": {
+    "defaultMessage": "取扱説明書"
   },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"

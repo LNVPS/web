@@ -13,6 +13,7 @@ import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
 // IP ranges are not production-ready yet; keep the import for when re-enabled.
 // import IpBlockCard from "../components/ip-block-card";
+import { AppCard } from "./account-apps";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import type { HomeLoaderData } from "../loaders";
@@ -79,6 +80,7 @@ export default function HomePage() {
         </header>
         <LatestNews />
         <VpsOffersSection />
+        <AppsSection />
         {/* IP ranges are not production-ready yet — hidden from the homepage. */}
         {/* <IpSpaceSection /> */}
         <hr />
@@ -387,6 +389,26 @@ function VpsOffersSection() {
           <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees." />
         )}
       </small>
+    </>
+  );
+}
+
+function AppsSection() {
+  const { apps } = useLoaderData<HomeLoaderData>();
+  if (!apps || apps.length === 0) return null;
+  return (
+    <>
+      <SectionHeading>
+        <FormattedMessage defaultMessage="Apps" />
+      </SectionHeading>
+      <p className="text-cyber-muted">
+        <FormattedMessage defaultMessage="One-click Docker apps deployed on managed infrastructure." />
+      </p>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {apps.map((a) => (
+          <AppCard key={a.id} app={a} />
+        ))}
+      </div>
     </>
   );
 }

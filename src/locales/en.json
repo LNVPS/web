@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Manage"
+  },
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Proceed to Payment"
   },
+  "556JQK": {
+    "defaultMessage": "Deploy"
+  },
   "5FWCVu": {
     "defaultMessage": "Your encrypted NIP-17 message history with support."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "Connecting..."
   },
+  "62gWV4": {
+    "defaultMessage": "One-click Docker apps deployed on managed infrastructure."
+  },
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
+  },
+  "6FbX6y": {
+    "defaultMessage": "Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes."
   },
   "6SfJaf": {
     "defaultMessage": "Upgrade To"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Send Verification"
   },
+  "8PkqNN": {
+    "defaultMessage": "Pay to activate"
+  },
   "8Q504V": {
     "defaultMessage": "Metadata"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "Start VM"
-  },
-  "9QV3cp": {
-    "defaultMessage": "Available IP Blocks"
   },
   "9d9svQ": {
     "defaultMessage": "No passkeys yet. Add one to sign in without a key."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr Wallet Connect"
+  },
+  "AVkjIn": {
+    "defaultMessage": "full"
   },
   "AfmrGS": {
     "defaultMessage": "Send Code"
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
   },
+  "Cououe": {
+    "defaultMessage": "Log in to deploy this app."
+  },
   "D3idYv": {
     "defaultMessage": "Settings"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
+  },
+  "DnX0aY": {
+    "defaultMessage": "Confirm delete"
   },
   "DpNZQY": {
     "defaultMessage": "Processing fee"
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "Other ways to reach us:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Catalog"
+  },
   "GQNYob": {
     "defaultMessage": "Share link"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "No messages yet. Start a conversation below."
   },
+  "HPBE7M": {
+    "defaultMessage": "Back to apps"
+  },
   "HlAgG9": {
     "defaultMessage": "I've sent the payment"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
+  "JAJV1y": {
+    "defaultMessage": "Assigned once running"
+  },
   "JBWS0c": {
     "defaultMessage": "Link"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "No saved payment methods yet."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "View subscription"
+  },
   "OJuBck": {
     "defaultMessage": "Passwordless"
   },
   "OLqOyf": {
     "defaultMessage": "Setup Instructions"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Created"
   },
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disk"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Deployment"
   },
   "P+08xT": {
     "defaultMessage": "Get Quote"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Delete permanently?"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "No VM selected"
+  },
+  "SknxDs": {
+    "defaultMessage": "Source repository"
   },
   "SnyOdn": {
     "defaultMessage": "converted"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "Display name"
   },
+  "dPEbZd": {
+    "defaultMessage": "This deployment is awaiting payment. Pay its subscription to activate it."
+  },
   "dUQeuG": {
     "defaultMessage": "Create a passkey account"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "No history entries found for this VM."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Build your machine"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "Select language"
   },
+  "eVuHpt": {
+    "defaultMessage": "No apps are available yet."
+  },
   "ebmhes": {
     "defaultMessage": "Nostr Extension"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Auto-renew"
+  },
+  "exrlwL": {
+    "defaultMessage": "Lowercase letters, digits and hyphens. Becomes your subdomain."
   },
   "f00p/7": {
     "defaultMessage": "Upload failed"
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Login To Order"
+  },
+  "fblXmJ": {
+    "defaultMessage": "Instance name"
   },
   "fnWV0M": {
     "defaultMessage": "For outbound rules, Source CIDR matches this VM's own address. The remote destination host cannot be restricted — only protocol and destination port."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} never paid"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "Create account"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "No posts yet.."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "One-click Docker apps from a managed catalog."
   },
   "iXNbPf": {
     "defaultMessage": "Rename"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
   },
+  "ljmS5P": {
+    "defaultMessage": "Endpoint"
+  },
   "lloEWi": {
     "defaultMessage": "What is this regarding?"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "earned · {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Start"
   },
   "mOR+qH": {
     "defaultMessage": "Copy to Clipboard"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "Host retiring"
   },
+  "nvJ5bE": {
+    "defaultMessage": "One-click Docker apps"
+  },
   "nx5ZnY": {
     "defaultMessage": "Verify a phone number to enable"
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "Back to sign in"
   },
+  "odXlk8": {
+    "defaultMessage": "Log in"
+  },
   "oswGmn": {
     "defaultMessage": "You can't leave while payout history exists."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "Not set"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Read the full update"
   },
   "pus6h6": {
     "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
   },
-  "qJRR8N": {
-    "defaultMessage": "Loading IP blocks..."
+  "q/uwLT": {
+    "defaultMessage": "Stop"
   },
   "qV+TFm": {
     "defaultMessage": "Payment failed"
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "Port(s)"
   },
+  "tPwWRH": {
+    "defaultMessage": "Your deployments"
+  },
   "tTpLsN": {
     "defaultMessage": "Not linked"
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Status"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Status detail"
   },
   "u+Blek": {
     "defaultMessage": "Storage type"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Link your chat, then press Start in the bot"
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Payment history"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Sign-in failed"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Readme"
   },
   "z+hIFs": {
     "defaultMessage": "No payments yet."

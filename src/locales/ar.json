@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "المتابعة باستخدام {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "يدير"
+  },
   "0HkBaC": {
     "defaultMessage": "اختر إحدى الطرق التالية للتحقق من نطاقك:"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "تابع إلى صفحة الدفع."
   },
+  "556JQK": {
+    "defaultMessage": "انشر/وزّع."
+  },
   "5FWCVu": {
     "defaultMessage": "سجل رسائلك المشفّرة NIP-17 مع الدعم."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "جارٍ الاتصال..."
   },
+  "62gWV4": {
+    "defaultMessage": "تطبيقات Docker يمكن نشرها بنقرة واحدة على بنية تحتية مُدارة."
+  },
   "6Auf1w": {
     "defaultMessage": "لم نتمكن من إكمال عملية تسجيل الدخول. يرجى المحاولة مرة أخرى."
+  },
+  "6FbX6y": {
+    "defaultMessage": "عند إيقاف الميزان، تتم إعادة تعيين التطبيق إلى الصفر ويتم الاحتفاظ ببياناته. يؤدي الحذف إلى إيقاف الفوترة وإزالة النشر وجميع وحدات التخزين التابعة له بشكل دائم."
   },
   "6SfJaf": {
     "defaultMessage": "قم بالترقية إلى"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "أرسل رمز التحقق."
   },
+  "8PkqNN": {
+    "defaultMessage": "ادفع لتفعيل الخدمة."
+  },
   "8Q504V": {
     "defaultMessage": "البيانات الوصفية"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "ابدأ تشغيل الجهاز الظاهري."
-  },
-  "9QV3cp": {
-    "defaultMessage": "كتل عناوين IP المتاحة"
   },
   "9d9svQ": {
     "defaultMessage": "لا توجد مفاتيح مرور بعد. أضف واحدًا لتسجيل الدخول دون مفتاح."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "تطبيق نوستر للاتصال بالمحفظة الرقمية"
+  },
+  "AVkjIn": {
+    "defaultMessage": "كامل"
   },
   "AfmrGS": {
     "defaultMessage": "أرسل الرمز."
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
   },
+  "Cououe": {
+    "defaultMessage": "سجّل الدخول لتفعيل هذا التطبيق."
+  },
   "D3idYv": {
     "defaultMessage": "إعدادات"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "لم تتم إضافة أي نطاقات حتى الآن. أضف نطاقك الأول أعلاه للبدء."
+  },
+  "DnX0aY": {
+    "defaultMessage": "تأكيد الحذف"
   },
   "DpNZQY": {
     "defaultMessage": "رسوم المعالجة"
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "طرق أخرى للتواصل معنا:"
   },
+  "GOdq5V": {
+    "defaultMessage": "كتالوج"
+  },
   "GQNYob": {
     "defaultMessage": "مشاركة الرابط"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "لا توجد رسائل حتى الآن. ابدأ محادثة أدناه."
   },
+  "HPBE7M": {
+    "defaultMessage": "العودة إلى التطبيقات"
+  },
   "HlAgG9": {
     "defaultMessage": "لقد أرسلت الدفعة"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "الاشتراكات"
   },
+  "JAJV1y": {
+    "defaultMessage": "يتم تعيينه بمجرد بدء التشغيل."
+  },
   "JBWS0c": {
     "defaultMessage": "رابط"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "لم يتم حفظ أي طرق دفع حتى الآن."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "جيت"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "نوستر: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "عرض الاشتراك"
+  },
   "OJuBck": {
     "defaultMessage": "بدون كلمة مرور"
   },
   "OLqOyf": {
     "defaultMessage": "تعليمات الإعداد"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "تم إنشاؤه"
   },
   "OikYIw": {
     "defaultMessage": "الحد الأدنى: {min} جيجابايت {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "قرص"
+  },
+  "OyvHWp": {
+    "defaultMessage": "نشر، توزيع"
   },
   "P+08xT": {
     "defaultMessage": "احصل على عرض أسعار."
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "حدث خطأ أثناء تحليل بيانات JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "هل تريد حذف الملف نهائيًا؟"
   },
   "QgBuiV": {
     "defaultMessage": "وحدة المعالجة المركزية"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "لم يتم تحديد أي جهاز افتراضي."
+  },
+  "SknxDs": {
+    "defaultMessage": "المستودع المصدر"
   },
   "SnyOdn": {
     "defaultMessage": "تم تحويله"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "اسم العرض"
   },
+  "dPEbZd": {
+    "defaultMessage": "هذا التفعيل معلّق في انتظار الدفع. يرجى دفع رسوم الاشتراك لتفعيله."
+  },
   "dUQeuG": {
     "defaultMessage": "إنشاء حساب بمفتاح مرور"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "لم يتم العثور على أي سجلات تاريخية لهذه الآلة الافتراضية."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "قم بتكوين جهازك"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "اختر اللغة."
   },
+  "eVuHpt": {
+    "defaultMessage": "لا توجد تطبيقات متاحة حتى الآن."
+  },
   "ebmhes": {
     "defaultMessage": "إضافة نوستر"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "التجديد التلقائي."
+  },
+  "exrlwL": {
+    "defaultMessage": "أحرف صغيرة، وأرقام، وواصلات. سيصبح هذا اسم النطاق الفرعي الخاص بك."
   },
   "f00p/7": {
     "defaultMessage": "فشل التحميل."
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "سجّل الدخول لتقديم طلبك"
+  },
+  "fblXmJ": {
+    "defaultMessage": "اسم المثيل"
   },
   "fnWV0M": {
     "defaultMessage": "بالنسبة للقواعد الخاصة بالاتصالات الصادرة، يتطابق عنوان مصدر الشبكة (CIDR) مع عنوان هذه الآلة الافتراضية. لا يمكن تقييد المضيف الوجهة البعيد؛ بل يمكن فقط تحديد البروتوكول ومنفذ الوجهة."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "قم بتفعيل هذا العامل وأضف مسارًا لـ. {route}"
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} لم يتم الدفع أبدًا."
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "إنشاء حساب"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "لا توجد منشورات حتى الآن."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "تطبيقات Docker بنقرة واحدة من خلال كتالوج مُدار."
   },
   "iXNbPf": {
     "defaultMessage": "إعادة تسمية"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "عند الدفع باستخدام تطبيق ريفولوت، حدّد مربع \"حفظ هذه البطاقة\" لتخزين معلومات البطاقة هنا لاستخدامها في عمليات الدفع المستقبلية والتجديدات التلقائية."
   },
+  "ljmS5P": {
+    "defaultMessage": "نقطة النهاية"
+  },
   "lloEWi": {
     "defaultMessage": "ما هو موضوع هذا؟"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "حصل على / كسب {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "ابدأ"
   },
   "mOR+qH": {
     "defaultMessage": "نسخ إلى الحافظة"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "إيقاف المضيف"
   },
+  "nvJ5bE": {
+    "defaultMessage": "تطبيقات Docker بنقرة واحدة."
+  },
   "nx5ZnY": {
     "defaultMessage": "تحقق من رقم الهاتف لتفعيله."
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "العودة إلى تسجيل الدخول"
   },
+  "odXlk8": {
+    "defaultMessage": "تسجيل الدخول"
+  },
   "oswGmn": {
     "defaultMessage": "لا يمكنك المغادرة طالما أن سجل المدفوعات موجود."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "لم يتم تعيينه."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "اقرأ التحديث بالكامل."
   },
   "pus6h6": {
     "defaultMessage": "يمكنك المغادرة في أي وقت. سيتوقف الكود عن توليد المزيد من الأرباح، ولن يمكن إعادة استخدامه."
   },
-  "qJRR8N": {
-    "defaultMessage": "جارٍ تحميل قائمة عناوين IP المحظورة..."
+  "q/uwLT": {
+    "defaultMessage": "توقف"
   },
   "qV+TFm": {
     "defaultMessage": "فشل الدفع."
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "المنفذ/المنافذ"
   },
+  "tPwWRH": {
+    "defaultMessage": "عمليات النشر الخاصة بك"
+  },
   "tTpLsN": {
     "defaultMessage": "غير مرتبط."
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "الحالة"
+  },
+  "u+3iRA": {
+    "defaultMessage": "تفاصيل الحالة"
   },
   "u+Blek": {
     "defaultMessage": "نوع التخزين"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "اربط حساب الدردشة الخاص بك، ثم اضغط على \"ابدأ\" في الروبوت."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "سجل الدفعات"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "فشل تسجيل الدخول"
+  },
+  "yRz1m6": {
+    "defaultMessage": "اقرأ هذا الملف."
   },
   "z+hIFs": {
     "defaultMessage": "لم يتم إجراء أي مدفوعات حتى الآن."

@@ -5,6 +5,7 @@ import {
   PaymentMethod,
   VmTemplateResponse,
   AvailableIpSpace,
+  App,
 } from "./api";
 import { ApiUrl, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
@@ -38,6 +39,7 @@ export interface HomeLoaderData {
   ipSpaces?: AvailableIpSpace[];
   paymentMethods?: PaymentMethod[];
   latestNews?: TaggedNostrEvent[];
+  apps?: App[];
 }
 
 export interface NewsLoaderData {
@@ -73,9 +75,12 @@ export async function homeLoader({
 
   // IP ranges are not production-ready yet, so don't fetch available IP space
   // (or render it — see IpSpaceSection in home.tsx).
-  const [offers, paymentMethods] = await Promise.all([
+  // The app catalog is a public browse surface (like VM templates), fetched
+  // unauthenticated here for SSR on the homepage.
+  const [offers, paymentMethods, apps] = await Promise.all([
     cached("offers", () => api.listOffers()),
     cached("payment_methods", () => api.getPaymentMethods()),
+    cached("apps", () => api.listApps()),
   ]);
 
   const latestNews =
@@ -83,7 +88,7 @@ export async function homeLoader({
       ? filterArticlesByLocale(news, locale).slice(0, 1)
       : undefined;
 
-  return { offers, paymentMethods, latestNews };
+  return { offers, paymentMethods, latestNews, apps };
 }
 
 export async function newsLoader({

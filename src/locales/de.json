@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Weiter mit {provider}"
   },
+  "0Azlrb": {
+    "defaultMessage": "Verwalten"
+  },
   "0HkBaC": {
     "defaultMessage": "Wählen Sie eine der folgenden Methoden, um Ihre Domain zu verifizieren:"
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "Zur Zahlung übergehen"
   },
+  "556JQK": {
+    "defaultMessage": "Bereitstellen"
+  },
   "5FWCVu": {
     "defaultMessage": "Dein verschlüsselter NIP-17-Nachrichtenverlauf mit dem Support."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "Verbinde..."
   },
+  "62gWV4": {
+    "defaultMessage": "Docker-Anwendungen mit nur einem Klick auf verwalteter Infrastruktur bereitstellen."
+  },
   "6Auf1w": {
     "defaultMessage": "Die Anmeldung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut."
+  },
+  "6FbX6y": {
+    "defaultMessage": "Wenn Sie die Skalierung stoppen, wird die Anwendung auf Null zurückgesetzt, und die Daten bleiben erhalten. Durch das Löschen wird die Abrechnung beendet und die Bereitstellung sowie die zugehörigen Speicherbereiche werden dauerhaft entfernt."
   },
   "6SfJaf": {
     "defaultMessage": "Upgrade auf"
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Bestätigung senden"
   },
+  "8PkqNN": {
+    "defaultMessage": "Zahlung zur Aktivierung erforderlich."
+  },
   "8Q504V": {
     "defaultMessage": "Metadaten"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "VM starten"
-  },
-  "9QV3cp": {
-    "defaultMessage": "Verfügbare IP-Adressbereiche"
   },
   "9d9svQ": {
     "defaultMessage": "Noch keine Passkeys. Fügen Sie einen hinzu, um sich ohne Schlüssel anzumelden."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "Nostr-Wallet verbinden"
+  },
+  "AVkjIn": {
+    "defaultMessage": "voll"
   },
   "AfmrGS": {
     "defaultMessage": "Code senden"
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
   },
+  "Cououe": {
+    "defaultMessage": "Melden Sie sich an, um diese App zu installieren."
+  },
   "D3idYv": {
     "defaultMessage": "Einstellungen"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "Bisher wurden keine Domains hinzugefügt. Fügen Sie Ihre erste Domain oben hinzu, um loszulegen."
+  },
+  "DnX0aY": {
+    "defaultMessage": "Löschen bestätigen"
   },
   "DpNZQY": {
     "defaultMessage": "Bearbeitungsgebühr"
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "Weitere Möglichkeiten, uns zu erreichen:"
   },
+  "GOdq5V": {
+    "defaultMessage": "Katalog"
+  },
   "GQNYob": {
     "defaultMessage": "Link teilen"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "Bisher keine Nachrichten. Beginnen Sie unten eine Unterhaltung."
   },
+  "HPBE7M": {
+    "defaultMessage": "Zurück zu den Apps"
+  },
   "HlAgG9": {
     "defaultMessage": "Ich habe die Zahlung gesendet"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
+  "JAJV1y": {
+    "defaultMessage": "Einmal zugewiesen, bleibt es zugewiesen."
+  },
   "JBWS0c": {
     "defaultMessage": "Verknüpfung"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "Bisher sind keine Zahlungsmethoden gespeichert."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "Abonnement anzeigen"
+  },
   "OJuBck": {
     "defaultMessage": "Ohne Passwort"
   },
   "OLqOyf": {
     "defaultMessage": "Anleitung zur Einrichtung"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "Erstellt"
   },
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Festplatte"
+  },
+  "OyvHWp": {
+    "defaultMessage": "Bereitstellung"
   },
   "P+08xT": {
     "defaultMessage": "Angebot anfordern"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "Fehler beim Parsen von JSON: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "Endgültig löschen?"
   },
   "QgBuiV": {
     "defaultMessage": "Prozessor"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "Keine virtuelle Maschine ausgewählt."
+  },
+  "SknxDs": {
+    "defaultMessage": "Quell-Repository"
   },
   "SnyOdn": {
     "defaultMessage": "konvertiert"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "Anzeigename"
   },
+  "dPEbZd": {
+    "defaultMessage": "Diese Installation wartet auf die Zahlung. Zahlen Sie das Abonnement, um sie zu aktivieren."
+  },
   "dUQeuG": {
     "defaultMessage": "Passkey-Konto erstellen"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "Für diese virtuelle Maschine wurden keine Verlaufseinträge gefunden."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "Stelle deine Maschine zusammen"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "Sprache auswählen"
   },
+  "eVuHpt": {
+    "defaultMessage": "Derzeit sind keine Apps verfügbar."
+  },
   "ebmhes": {
     "defaultMessage": "Nostr-Erweiterung"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Automatische Verlängerung"
+  },
+  "exrlwL": {
+    "defaultMessage": "Kleinbuchstaben, Ziffern und Bindestriche. Dies wird Ihre Subdomain."
   },
   "f00p/7": {
     "defaultMessage": "Hochladen fehlgeschlagen."
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Anmelden, um eine Bestellung aufzugeben"
+  },
+  "fblXmJ": {
+    "defaultMessage": "Instanzname"
   },
   "fnWV0M": {
     "defaultMessage": "Für ausgehende Regeln stimmt die Quell-CIDR mit der eigenen Adresse dieser virtuellen Maschine überein. Der entfernte Zielhost kann nicht eingeschränkt werden – nur das Protokoll und der Zielport können festgelegt werden."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "Setzen Sie diesen Worker ein und fügen Sie eine Route für {route} hinzu."
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} nie bezahlt"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "Konto erstellen"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Bisher keine Beiträge."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "Docker-Anwendungen mit nur einem Klick aus einem verwalteten Katalog installieren."
   },
   "iXNbPf": {
     "defaultMessage": "Umbenennen"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "Aktivieren Sie die Option „Diese Karte speichern“, wenn Sie mit Revolut bezahlen, um eine Karte für zukünftige Zahlungen und automatische Verlängerungen zu speichern."
   },
+  "ljmS5P": {
+    "defaultMessage": "Endpunkt"
+  },
   "lloEWi": {
     "defaultMessage": "Worauf bezieht sich das?"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "erwirtschaftet {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "Start"
   },
   "mOR+qH": {
     "defaultMessage": "In die Zwischenablage kopieren"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "Host wird stillgelegt"
   },
+  "nvJ5bE": {
+    "defaultMessage": "Docker-Anwendungen mit nur einem Klick installieren"
+  },
   "nx5ZnY": {
     "defaultMessage": "Überprüfen Sie eine Telefonnummer, um die Funktion zu aktivieren."
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "Zurück zur Anmeldung"
   },
+  "odXlk8": {
+    "defaultMessage": "Anmelden"
+  },
   "oswGmn": {
     "defaultMessage": "Sie können nicht abmelden, solange Auszahlungsdaten vorhanden sind."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "Nicht festgelegt."
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "Lesen Sie die vollständige Aktualisierung."
   },
   "pus6h6": {
     "defaultMessage": "Sie können dies jederzeit tun. Ihr Code generiert ab diesem Zeitpunkt keine weiteren Prämien und kann nicht mehr verwendet werden."
   },
-  "qJRR8N": {
-    "defaultMessage": "IP-Blöcke werden geladen …"
+  "q/uwLT": {
+    "defaultMessage": "Stopp"
   },
   "qV+TFm": {
     "defaultMessage": "Zahlung fehlgeschlagen."
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "Anschluss/Anschlüsse"
   },
+  "tPwWRH": {
+    "defaultMessage": "Ihre Bereitstellungen"
+  },
   "tTpLsN": {
     "defaultMessage": "Nicht verknüpft."
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "Status"
+  },
+  "u+3iRA": {
+    "defaultMessage": "Statusdetails"
   },
   "u+Blek": {
     "defaultMessage": "Speichertyp"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Verknüpfen Sie Ihren Chat und drücken Sie dann im Bot auf „Start“."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Zahlungshistorie"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "Anmeldung fehlgeschlagen"
+  },
+  "yRz1m6": {
+    "defaultMessage": "Lies mich"
   },
   "z+hIFs": {
     "defaultMessage": "Bisher wurden keine Zahlungen geleistet."

@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "{provider}(으)로 계속하기"
   },
+  "0Azlrb": {
+    "defaultMessage": "관리하다"
+  },
   "0HkBaC": {
     "defaultMessage": "다음 방법 중 하나를 선택하여 도메인을 확인하세요."
   },
@@ -197,6 +200,9 @@
   "53RN0g": {
     "defaultMessage": "결제 진행"
   },
+  "556JQK": {
+    "defaultMessage": "배포하다"
+  },
   "5FWCVu": {
     "defaultMessage": "지원팀과의 암호화된 NIP-17 메시지 기록입니다."
   },
@@ -218,8 +224,14 @@
   "5y2qWO": {
     "defaultMessage": "연결 중..."
   },
+  "62gWV4": {
+    "defaultMessage": "원클릭으로 관리형 인프라에 Docker 애플리케이션을 배포합니다."
+  },
   "6Auf1w": {
     "defaultMessage": "로그인하는 데 실패했습니다. 다시 시도해 주세요."
+  },
+  "6FbX6y": {
+    "defaultMessage": "중지하면 앱의 규모가 0으로 축소되고 데이터는 보존됩니다. 삭제하면 과금이 중지되고 배포 및 관련 볼륨이 영구적으로 제거됩니다."
   },
   "6SfJaf": {
     "defaultMessage": "업그레이드하세요."
@@ -302,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "인증 전송"
   },
+  "8PkqNN": {
+    "defaultMessage": "활성화하려면 요금을 지불하세요."
+  },
   "8Q504V": {
     "defaultMessage": "메타데이터"
   },
@@ -325,9 +340,6 @@
   },
   "90f82/": {
     "defaultMessage": "가상 머신 시작"
-  },
-  "9QV3cp": {
-    "defaultMessage": "사용 가능한 IP 블록"
   },
   "9d9svQ": {
     "defaultMessage": "아직 패스키가 없습니다. 키 없이 로그인하려면 하나를 추가하세요."
@@ -361,6 +373,9 @@
   },
   "AUlRcp": {
     "defaultMessage": "노스트르 지갑 연결"
+  },
+  "AVkjIn": {
+    "defaultMessage": "완전한, 가득 찬"
   },
   "AfmrGS": {
     "defaultMessage": "코드 전송"
@@ -416,6 +431,9 @@
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
   },
+  "Cououe": {
+    "defaultMessage": "이 앱을 배포하려면 로그인하세요."
+  },
   "D3idYv": {
     "defaultMessage": "설정"
   },
@@ -445,6 +463,9 @@
   },
   "Dfuz87": {
     "defaultMessage": "아직 도메인이 추가되지 않았습니다. 위에서 첫 번째 도메인을 추가하여 시작하세요."
+  },
+  "DnX0aY": {
+    "defaultMessage": "삭제를 확인합니다."
   },
   "DpNZQY": {
     "defaultMessage": "처리 수수료"
@@ -551,6 +572,9 @@
   "GLA+G9": {
     "defaultMessage": "저희에게 연락할 수 있는 다른 방법은 다음과 같습니다."
   },
+  "GOdq5V": {
+    "defaultMessage": "카탈로그"
+  },
   "GQNYob": {
     "defaultMessage": "링크 공유"
   },
@@ -593,6 +617,9 @@
   "HOWHco": {
     "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
   },
+  "HPBE7M": {
+    "defaultMessage": "앱으로 돌아가기"
+  },
   "HlAgG9": {
     "defaultMessage": "결제를 보냈습니다"
   },
@@ -632,6 +659,9 @@
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
   },
+  "JAJV1y": {
+    "defaultMessage": "실행 시 한 번 할당됨"
+  },
   "JBWS0c": {
     "defaultMessage": "링크"
   },
@@ -661,6 +691,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "저장된 결제 수단이 아직 없습니다."
+  },
+  "KN7zKn": {
+    "defaultMessage": "Error"
   },
   "KaSlC8": {
     "defaultMessage": "깃"
@@ -731,11 +764,17 @@
   "Ny9qbm": {
     "defaultMessage": "노스트르: {handle}"
   },
+  "OEZ5v2": {
+    "defaultMessage": "구독 내역 보기"
+  },
   "OJuBck": {
     "defaultMessage": "비밀번호 없이"
   },
   "OLqOyf": {
     "defaultMessage": "설정 방법"
+  },
+  "ORGv1Q": {
+    "defaultMessage": "생성됨"
   },
   "OikYIw": {
     "defaultMessage": "최소: {min} 기가바이트 {type}"
@@ -754,6 +793,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "디스크"
+  },
+  "OyvHWp": {
+    "defaultMessage": "배포"
   },
   "P+08xT": {
     "defaultMessage": "견적 받기"
@@ -790,6 +832,9 @@
   },
   "QN/rCc": {
     "defaultMessage": "JSON 구문 분석 오류: {msg}"
+  },
+  "QT2jf3": {
+    "defaultMessage": "영구적으로 삭제하시겠습니까?"
   },
   "QgBuiV": {
     "defaultMessage": "중앙 처리 장치"
@@ -877,6 +922,9 @@
   },
   "Sg3z1C": {
     "defaultMessage": "선택된 가상 머신이 없습니다."
+  },
+  "SknxDs": {
+    "defaultMessage": "소스 저장소"
   },
   "SnyOdn": {
     "defaultMessage": "변환됨"
@@ -1169,6 +1217,9 @@
   "dOQCL8": {
     "defaultMessage": "표시 이름"
   },
+  "dPEbZd": {
+    "defaultMessage": "이 배포는 결제를 기다리고 있습니다. 구독료를 지불하여 활성화하세요."
+  },
   "dUQeuG": {
     "defaultMessage": "패스키 계정 만들기"
   },
@@ -1193,6 +1244,9 @@
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
   },
+  "e+P4zS": {
+    "defaultMessage": "Compose"
+  },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
   },
@@ -1205,6 +1259,9 @@
   "eVlu1R": {
     "defaultMessage": "언어 선택"
   },
+  "eVuHpt": {
+    "defaultMessage": "현재 앱이 없습니다."
+  },
   "ebmhes": {
     "defaultMessage": "노스트르 확장 프로그램"
   },
@@ -1213,6 +1270,9 @@
   },
   "evMlX9": {
     "defaultMessage": "자동으로 갱신"
+  },
+  "exrlwL": {
+    "defaultMessage": "소문자, 숫자, 하이픈을 사용합니다. 이것이 귀하의 서브도메인이 됩니다."
   },
   "f00p/7": {
     "defaultMessage": "업로드에 실패했습니다."
@@ -1228,6 +1288,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "주문하려면 로그인하세요."
+  },
+  "fblXmJ": {
+    "defaultMessage": "인스턴스 이름"
   },
   "fnWV0M": {
     "defaultMessage": "아웃바운드 규칙의 경우, 소스 CIDR은 해당 가상 머신의 자체 주소와 일치합니다. 원격 대상 호스트는 제한할 수 없으며, 프로토콜과 대상 포트만 제한할 수 있습니다."
@@ -1249,6 +1312,9 @@
   },
   "gPsMm7": {
     "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
+  },
+  "gRiKLf": {
+    "defaultMessage": "Apps"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 한 번도 지불하지 않음"
@@ -1292,8 +1358,14 @@
   "huqKGl": {
     "defaultMessage": "계정 만들기"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "아직 게시물이 없습니다."
+  },
+  "iVkpyZ": {
+    "defaultMessage": "관리되는 카탈로그에서 원클릭으로 Docker 앱을 사용할 수 있습니다."
   },
   "iXNbPf": {
     "defaultMessage": "이름 변경"
@@ -1385,6 +1457,9 @@
   "lhCavK": {
     "defaultMessage": "Revolut으로 결제할 때 ‘이 카드를 저장’을 선택하면 해당 카드를 저장하여 향후 결제 및 자동 갱신에 사용할 수 있습니다."
   },
+  "ljmS5P": {
+    "defaultMessage": "최종 지점"
+  },
   "lloEWi": {
     "defaultMessage": "이것은 어떤 건에 관한 것인가요?"
   },
@@ -1411,6 +1486,9 @@
   },
   "mMug3Z": {
     "defaultMessage": "획득했습니다. {currency}"
+  },
+  "mOFG3K": {
+    "defaultMessage": "시작"
   },
   "mOR+qH": {
     "defaultMessage": "클립보드로 복사"
@@ -1454,6 +1532,9 @@
   "nrTBF4": {
     "defaultMessage": "호스트 종료 예정"
   },
+  "nvJ5bE": {
+    "defaultMessage": "원클릭으로 Docker 앱 실행"
+  },
   "nx5ZnY": {
     "defaultMessage": "전화번호를 인증하여 기능을 활성화하세요."
   },
@@ -1487,6 +1568,9 @@
   "odTkf5": {
     "defaultMessage": "로그인으로 돌아가기"
   },
+  "odXlk8": {
+    "defaultMessage": "로그인하세요."
+  },
   "oswGmn": {
     "defaultMessage": "지급 내역이 남아 있는 동안에는 출금할 수 없습니다."
   },
@@ -1496,14 +1580,17 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
+  "pYX859": {
+    "defaultMessage": "Deleting"
+  },
   "pgLgIU": {
     "defaultMessage": "전체 업데이트 내용을 확인하세요."
   },
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
   },
-  "qJRR8N": {
-    "defaultMessage": "IP 주소 차단 목록을 불러오는 중입니다..."
+  "q/uwLT": {
+    "defaultMessage": "멈추세요."
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -1592,6 +1679,9 @@
   "tNmjzW": {
     "defaultMessage": "포트(들)"
   },
+  "tPwWRH": {
+    "defaultMessage": "귀하의 배포 내역"
+  },
   "tTpLsN": {
     "defaultMessage": "연결되지 않음"
   },
@@ -1603,6 +1693,9 @@
   },
   "tzMNF3": {
     "defaultMessage": "상태"
+  },
+  "u+3iRA": {
+    "defaultMessage": "상세 상태 정보"
   },
   "u+Blek": {
     "defaultMessage": "스토리지 유형"
@@ -1660,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "채팅을 연결한 다음 봇에서 '시작' 버튼을 누르세요."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "결제 내역"
@@ -1738,6 +1834,9 @@
   },
   "yPgnbL": {
     "defaultMessage": "로그인 실패"
+  },
+  "yRz1m6": {
+    "defaultMessage": "사용 설명서"
   },
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."

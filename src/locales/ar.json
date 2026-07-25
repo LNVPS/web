@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "إنشاء حساب"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "لا توجد منشورات حتى الآن."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "اربط حساب الدردشة الخاص بك، ثم اضغط على \"ابدأ\" في الروبوت."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "سجل الدفعات"

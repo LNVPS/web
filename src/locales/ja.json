@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "まだ投稿はありません。"
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "チャットを連携させたら、ボットの「開始」ボタンを押してください。"
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "支払い履歴"

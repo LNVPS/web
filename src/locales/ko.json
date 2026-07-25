@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "계정 만들기"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "아직 게시물이 없습니다."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "채팅을 연결한 다음 봇에서 '시작' 버튼을 누르세요."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "결제 내역"

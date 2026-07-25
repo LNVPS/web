@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "Créer un compte"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Aucun message pour le moment."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Connectez votre conversation, puis appuyez sur Démarrer dans le robot."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Historique des paiements"

@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "Создать аккаунт"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Пока нет ни одной записи."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Подключите свой чат, затем нажмите кнопку «Начать» в боте."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "История платежей."

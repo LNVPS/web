@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "Crear cuenta"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Aún no hay publicaciones."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Vincula tu conversación y luego presiona Iniciar en el bot."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Historial de pagos"

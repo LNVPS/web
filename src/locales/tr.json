@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Henüz hiçbir gönderi yok."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Sohbetinizi bağlayın, ardından botta Başlat düğmesine basın."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Ödeme geçmişi"

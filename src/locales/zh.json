@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "创建账户"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "目前还没有帖子。"
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "将您的聊天记录连接起来，然后点击机器人中的“开始”按钮。"
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "付款记录"

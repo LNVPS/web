@@ -1358,6 +1358,9 @@
   "huqKGl": {
     "defaultMessage": "Konto erstellen"
   },
+  "i5j1QG": {
+    "defaultMessage": "App #{id}"
+  },
   "iO1K6D": {
     "defaultMessage": "Bisher keine Beiträge."
   },
@@ -1750,6 +1753,9 @@
   },
   "vo0Z8o": {
     "defaultMessage": "Verknüpfen Sie Ihren Chat und drücken Sie dann im Bot auf „Start“."
+  },
+  "vq/fvN": {
+    "defaultMessage": "ASN #{id}"
   },
   "vtStU2": {
     "defaultMessage": "Zahlungshistorie"

@@ -28,18 +28,37 @@ import Seo from "../components/seo";
 import { FormattedMessage, useIntl } from "react-intl";
 
 function ResourceBadge({ item }: { item: SubscriptionLineItem }) {
-  if (!item.resource) return null;
-  return (
-    <span className="inline-flex w-fit items-center rounded-sm border border-cyber-border bg-cyber-panel-light px-1.5 py-0.5 text-[0.6rem] uppercase tracking-wider text-cyber-muted">
-      {item.resource.type === "vps" ? (
+  const r = item.resource;
+  if (!r) return null;
+  const badge =
+    "inline-flex w-fit items-center rounded-sm border border-cyber-border bg-cyber-panel-light px-1.5 py-0.5 text-[0.6rem] uppercase tracking-wider text-cyber-muted";
+  // Apps link to their deployment; other resources are informational badges.
+  if (r.type === "app") {
+    return (
+      <Link
+        to={`/account/apps/deployments/${r.app_deployment_id}`}
+        className={`${badge} hover:border-cyber-primary hover:text-cyber-primary transition-colors`}
+      >
         <FormattedMessage
-          defaultMessage="VM #{id}"
-          values={{ id: item.resource.vm_id }}
+          defaultMessage="App #{id}"
+          values={{ id: r.app_deployment_id }}
+        />
+      </Link>
+    );
+  }
+  return (
+    <span className={badge}>
+      {r.type === "vps" ? (
+        <FormattedMessage defaultMessage="VM #{id}" values={{ id: r.vm_id }} />
+      ) : r.type === "asn" ? (
+        <FormattedMessage
+          defaultMessage="ASN #{id}"
+          values={{ id: r.asn_subscription_id }}
         />
       ) : (
         <FormattedMessage
           defaultMessage="IP range #{id}"
-          values={{ id: item.resource.ip_range_subscription_id }}
+          values={{ id: r.ip_range_subscription_id }}
         />
       )}
     </span>

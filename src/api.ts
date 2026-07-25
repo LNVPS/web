@@ -582,7 +582,9 @@ export interface SubscriptionLineItem {
 // from the line item's subscription type (null when there is no linked resource).
 export type SubscriptionLineItemResource =
   | { type: "vps"; vm_id: number }
-  | { type: "ip_range"; ip_range_subscription_id: number };
+  | { type: "ip_range"; ip_range_subscription_id: number }
+  | { type: "asn"; asn_subscription_id: number }
+  | { type: "app"; app_deployment_id: number };
 
 export interface SubscriptionPayment {
   id: string;

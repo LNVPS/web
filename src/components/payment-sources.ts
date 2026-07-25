@@ -134,25 +134,7 @@ export function subscriptionRenewalSource(
   };
 }
 
-/**
- * Find the subscription a VM is billed under. Prefers the `subscription_id`
- * exposed on the VM, and otherwise looks it up from the subscription list by
- * matching the VPS line item — so renewal works even against older API payloads
- * that don't include the id yet.
- */
-export async function resolveVmSubscriptionId(
-  api: LNVpsApi,
-  vm: VmInstance,
-): Promise<number | undefined> {
-  if (vm.subscription_id !== undefined) return vm.subscription_id;
-  const subs = await api.listSubscriptions();
-  const match = subs.find((s) =>
-    s.line_items?.some(
-      (li) => li.resource?.type === "vps" && li.resource.vm_id === vm.id,
-    ),
-  );
-  return match?.id;
-}
+
 
 /** Renew a VM by renewing the subscription it's billed under. */
 export function vmRenewalSource(
@@ -172,11 +154,18 @@ export function vmRenewalSource(
   });
 }
 
-/** Pay for a VM resource upgrade (one-time, not a subscription renewal). */
+/**
+ * Pay for a VM resource upgrade (one-time, not a subscription renewal).
+ *
+ * The upgrade charge is still recorded as a payment on the VM's subscription
+ * (`payment_type: "Upgrade"`), so it is polled through the subscription payment
+ * item endpoint like every other payment.
+ */
 export function vmUpgradeSource(
   api: LNVpsApi,
   vm: VmInstance,
   upgradeRequest: VmUpgradeRequest,
+  subscriptionId: number,
 ): PaymentSource {
   return {
     // Upgrades now support saved methods off-session: method=nwc pays the
@@ -187,8 +176,8 @@ export function vmUpgradeSource(
         paymentMethodId: opts.paymentMethodId,
       }),
     pollPaid: async (paymentId) => {
-      const st = await api.paymentStatus(paymentId);
-      return st.is_paid;
+      const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
+      return p.is_paid;
     },
   };
 }

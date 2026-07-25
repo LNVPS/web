@@ -29,6 +29,8 @@ export default function VmUpgradePage() {
   const [selectedMethod, setSelectedMethod] = useState<string>("");
   const [account, setAccount] = useState<AccountDetail>();
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
+  // Upgrade payments live on the VM's subscription; needed to poll settlement.
+  const subscriptionId = state?.subscription_id;
 
   useEffect(() => {
     login?.api
@@ -36,6 +38,7 @@ export default function VmUpgradePage() {
       .then(setAccount)
       .catch((e) => console.error("Failed to load account:", e));
   }, [login?.api]);
+
 
   // Only methods the upgrade endpoint can charge (Lightning, cards). NWC,
   // LNURL and saved methods have no interactive upgrade-payment path.
@@ -137,7 +140,15 @@ export default function VmUpgradePage() {
     return request;
   }
 
+  // The upgrade charge is a payment on the VM's subscription.
   if (showPaymentFlow && state && quote && login?.api) {
+    if (subscriptionId === undefined) {
+      return (
+        <div className="rounded-sm bg-cyber-danger/20 p-4 text-sm text-cyber-danger">
+          <FormattedMessage defaultMessage="Couldn't find a subscription to bill this upgrade to." />
+        </div>
+      );
+    }
     return (
       <div className="flex flex-col gap-4">
         <PaymentFlow
@@ -147,7 +158,12 @@ export default function VmUpgradePage() {
               values={{ id: state.id }}
             />
           }
-          source={vmUpgradeSource(login.api, state, getUpgradeRequest())}
+          source={vmUpgradeSource(
+            login.api,
+            state,
+            getUpgradeRequest(),
+            subscriptionId,
+          )}
           onPaymentComplete={() => {
             setShowPaymentFlow(false);
             setQuote(undefined);

@@ -7,7 +7,6 @@ import CostLabel, { IntervalSuffix } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
 import {
   vmRenewalSource,
-  resolveVmSubscriptionId,
   subscriptionToVmPayment,
 } from "../components/payment-sources";
 import {
@@ -45,13 +44,13 @@ export function VmBillingPage() {
   // A VM is billed by a subscription, so its history comes from the
   // subscription payments list (the VM-only endpoint is deprecated).
   async function loadPayments() {
-    if (!state || !login?.api) return;
-    const subscriptionId = await resolveVmSubscriptionId(login.api, state);
-    if (subscriptionId === undefined) {
+    if (!state?.subscription_id || !login?.api) {
       setPayments([]);
       return;
     }
-    const history = await login.api.listSubscriptionPayments(subscriptionId);
+    const history = await login.api.listSubscriptionPayments(
+      state.subscription_id,
+    );
     setPayments((history ?? []).map(subscriptionToVmPayment));
   }
 
@@ -336,25 +335,9 @@ function RenewalFlow({
   onCancel: () => void;
 }) {
   const login = useLogin();
-  const [subscriptionId, setSubscriptionId] = useState<number>();
-  const [error, setError] = useState(false);
+  const subscriptionId = vm.subscription_id;
 
-  useEffect(() => {
-    if (!login?.api) return;
-    let active = true;
-    resolveVmSubscriptionId(login.api, vm)
-      .then((id) => {
-        if (!active) return;
-        if (id === undefined) setError(true);
-        else setSubscriptionId(id);
-      })
-      .catch(() => active && setError(true));
-    return () => {
-      active = false;
-    };
-  }, [login?.api, vm]);
-
-  if (error) {
+  if (subscriptionId === undefined) {
     return (
       <div className="flex flex-col gap-3">
         <div className="rounded-sm bg-cyber-danger/20 p-4 text-cyber-danger text-sm">
@@ -370,7 +353,7 @@ function RenewalFlow({
     );
   }
 
-  if (!login?.api || subscriptionId === undefined) {
+  if (!login?.api) {
     return (
       <div className="py-8 text-center text-cyber-muted">
         <FormattedMessage defaultMessage="Loading renewal…" />

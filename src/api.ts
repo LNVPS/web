@@ -1389,31 +1389,10 @@ export class LNVpsApi {
     return data;
   }
 
-  /**
-   * @deprecated VM-only; resolves nothing for app/IP-range subscriptions.
-   * Use `getSubscriptionPayment(subscription_id, id)` instead.
-   */
-  async paymentStatus(id: string) {
-    const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
-      await this.#req(`/api/v1/payment/${id}`, "GET"),
-    );
-    return data;
-  }
-
   async invoiceLink(id: string) {
     const u = `${this.url}/api/v1/payment/${id}/invoice`;
     const auth_b64 = await this.#authQuery(u);
     return `${u}?auth=${auth_b64}`;
-  }
-
-  /**
-   * @deprecated Use `listSubscriptionPayments(vm.subscription_id)`.
-   */
-  async listPayments(id: number) {
-    const { data } = await this.#handleResponse<ApiResponse<Array<VmPayment>>>(
-      await this.#req(`/api/v1/vm/${id}/payments`, "GET"),
-    );
-    return data;
   }
 
   async getPaymentMethods() {

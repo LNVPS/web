@@ -314,7 +314,11 @@ export default function PaymentFlow({
         <CheckoutHeader title={title} onBack={leavePayment} />
 
         {"lightning" in payment.data ? (
-          <VpsPayment payment={payment} onPaid={handlePaymentComplete} />
+          <VpsPayment
+            payment={payment}
+            pollPaid={source.pollPaid}
+            onPaid={handlePaymentComplete}
+          />
         ) : "onchain" in payment.data ? (
           <OnChainPayment
             payment={payment}
@@ -337,6 +341,7 @@ export default function PaymentFlow({
               mode={import.meta.env.VITE_REVOLUT_MODE as Mode | undefined}
               payment={payment}
               account={account}
+              pollPaid={source.pollPaid}
               onPaid={handlePaymentComplete}
               saveCard={saveCard}
               onSaveCardChange={async (v) => {

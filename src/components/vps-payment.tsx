@@ -1,41 +1,42 @@
-import { useEffect } from "react";
-import { LNVpsApi, VmPayment } from "../api";
+import { useEffect, useRef } from "react";
+import { VmPayment } from "../api";
 import QrCode from "./qr";
-import useLogin from "../hooks/login";
 import { CostAmount } from "./cost";
 import { FormattedMessage } from "react-intl";
 
 export default function VpsPayment({
   payment,
+  pollPaid,
   onPaid,
 }: {
   payment: VmPayment;
+  /**
+   * Settlement check from the payment source (subscription payment item
+   * endpoint), so this works for every subscription type, not just VMs.
+   */
+  pollPaid: (paymentId: string) => Promise<boolean>;
   onPaid?: () => void;
 }) {
-  const login = useLogin();
+  // Kept in a ref so a parent re-render (which rebuilds the payment source)
+  // doesn't restart the poll timer.
+  const pollRef = useRef(pollPaid);
+  pollRef.current = pollPaid;
+  const paidRef = useRef(onPaid);
+  paidRef.current = onPaid;
 
-  async function checkPayment(api: LNVpsApi) {
-    try {
-      const st = await api.paymentStatus(payment.id);
-      if (st.is_paid) {
-        onPaid?.();
-        return true;
-      }
-    } catch (e) {
-      console.error(e);
-    }
-    return false;
-  }
   useEffect(() => {
-    if (!login?.api) return;
-
     const tx = setInterval(async () => {
-      if (await checkPayment(login.api)) {
-        clearInterval(tx);
+      try {
+        if (await pollRef.current(payment.id)) {
+          clearInterval(tx);
+          paidRef.current?.();
+        }
+      } catch (e) {
+        console.error(e);
       }
     }, 2_000);
     return () => clearInterval(tx);
-  }, [login, onPaid]);
+  }, [payment.id]);
 
   // Only works for Lightning payments
   if (!("lightning" in payment.data)) {

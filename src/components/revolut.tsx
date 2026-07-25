@@ -13,6 +13,11 @@ import { FormattedMessage, useIntl } from "react-intl";
 interface RevolutProps {
   payment: VmPayment;
   account?: AccountDetail;
+  /**
+   * Settlement check from the payment source (subscription payment item
+   * endpoint), so this works for every subscription type, not just VMs.
+   */
+  pollPaid: (paymentId: string) => Promise<boolean>;
   onPaid: () => void;
   onCancel?: () => void;
   mode?: Mode;
@@ -30,6 +35,7 @@ interface RevolutProps {
 export function RevolutPayWidget({
   payment,
   account,
+  pollPaid,
   onPaid,
   onCancel,
   mode,
@@ -126,22 +132,28 @@ export function RevolutPayWidget({
     };
   }, [payment, mode, theme]);
 
+  // Kept in a ref so a parent re-render (which rebuilds the payment source)
+  // doesn't restart the poll timer.
+  const pollRef = useRef(pollPaid);
+  pollRef.current = pollPaid;
+  const paidRef = useRef(onPaid);
+  paidRef.current = onPaid;
+
   useEffect(() => {
-    if (!login?.api || !submitting) return;
+    if (!submitting) return;
 
     const tx = setInterval(async () => {
       try {
-        const st = await login.api.paymentStatus(payment.id);
-        if (st.is_paid) {
+        if (await pollRef.current(payment.id)) {
           clearInterval(tx);
-          onPaid();
+          paidRef.current();
         }
       } catch (e) {
         console.error(e);
       }
     }, 2_000);
     return () => clearInterval(tx);
-  }, [login, payment.id, onPaid, submitting]);
+  }, [payment.id, submitting]);
 
   async function handleSubmit() {
     if (!cardFieldRef.current) return;

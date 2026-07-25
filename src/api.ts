@@ -1389,31 +1389,10 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewVm(
-    vm_id: number,
-    method: string,
-    intervals?: number,
-    opts?: { saveCard?: boolean; paymentMethodId?: number },
-  ) {
-    const params = new URLSearchParams({ method });
-    if (intervals !== undefined && intervals > 1) {
-      params.set("intervals", intervals.toString());
-    }
-    // Explicitly tokenize the entered card as a reusable payment method,
-    // independent of auto-renewal.
-    if (opts?.saveCard) {
-      params.set("save_card", "true");
-    }
-    // For method=saved off-session charges: select a specific saved payment method.
-    if (opts?.paymentMethodId !== undefined) {
-      params.set("payment_method_id", opts.paymentMethodId.toString());
-    }
-    const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
-      await this.#req(`/api/v1/vm/${vm_id}/renew?${params.toString()}`, "GET"),
-    );
-    return data;
-  }
-
+  /**
+   * @deprecated VM-only; resolves nothing for app/IP-range subscriptions.
+   * Use `getSubscriptionPayment(subscription_id, id)` instead.
+   */
   async paymentStatus(id: string) {
     const { data } = await this.#handleResponse<ApiResponse<VmPayment>>(
       await this.#req(`/api/v1/payment/${id}`, "GET"),
@@ -1427,6 +1406,9 @@ export class LNVpsApi {
     return `${u}?auth=${auth_b64}`;
   }
 
+  /**
+   * @deprecated Use `listSubscriptionPayments(vm.subscription_id)`.
+   */
   async listPayments(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<Array<VmPayment>>>(
       await this.#req(`/api/v1/vm/${id}/payments`, "GET"),
@@ -1698,6 +1680,22 @@ export class LNVpsApi {
     >(
       await this.#req(
         `/api/v1/subscriptions/${subscriptionId}/payments${query}`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  /**
+   * Fetch a single subscription payment — the item form of
+   * `listSubscriptionPayments`, for polling a checkout awaiting settlement.
+   */
+  async getSubscriptionPayment(subscriptionId: number, paymentId: string) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<SubscriptionPayment>
+    >(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/payments/${paymentId}`,
         "GET",
       ),
     );

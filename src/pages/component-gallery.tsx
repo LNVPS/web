@@ -321,7 +321,7 @@ const noDetect = async () => undefined;
 function PaymentFlowDemo({ state }: { state: FlowState }) {
   switch (state) {
     case "lightning":
-      return <VpsPayment payment={lightningPayment} />;
+      return <VpsPayment payment={lightningPayment} pollPaid={noop} />;
     case "lnurl":
       return (
         <div className="flex flex-col items-center gap-4 rounded-sm border border-cyber-border bg-cyber-panel p-4">
@@ -364,6 +364,7 @@ function PaymentFlowDemo({ state }: { state: FlowState }) {
           payment={revolutPayment}
           account={DEMO_ACCOUNT}
           mode="sandbox"
+          pollPaid={noop}
           onPaid={() => {}}
         />
       );

@@ -8,6 +8,7 @@ import PaymentFlow from "../components/payment-flow";
 import {
   vmRenewalSource,
   resolveVmSubscriptionId,
+  subscriptionToVmPayment,
 } from "../components/payment-sources";
 import {
   AutoRenewCard,
@@ -41,10 +42,17 @@ export function VmBillingPage() {
     [],
   );
 
-  async function listPayments() {
-    if (!state) return;
-    const history = await login?.api.listPayments(state.id);
-    setPayments(history ?? []);
+  // A VM is billed by a subscription, so its history comes from the
+  // subscription payments list (the VM-only endpoint is deprecated).
+  async function loadPayments() {
+    if (!state || !login?.api) return;
+    const subscriptionId = await resolveVmSubscriptionId(login.api, state);
+    if (subscriptionId === undefined) {
+      setPayments([]);
+      return;
+    }
+    const history = await login.api.listSubscriptionPayments(subscriptionId);
+    setPayments((history ?? []).map(subscriptionToVmPayment));
   }
 
   async function loadSavedMethods() {
@@ -93,7 +101,7 @@ export function VmBillingPage() {
       setShowPaymentFlow(true);
     }
     if (login && state) {
-      listPayments();
+      loadPayments();
       loadSavedMethods();
     }
   }, [login, state, params]);
@@ -303,7 +311,7 @@ export function VmBillingPage() {
             // A payment may have been created and left pending (e.g. an
             // on-chain deposit awaiting confirmation) — refresh the history
             // so it shows up right away.
-            listPayments();
+            loadPayments();
           }}
         />
       )}

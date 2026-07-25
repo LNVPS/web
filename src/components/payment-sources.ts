@@ -118,15 +118,14 @@ export function subscriptionRenewalSource(
         }),
       ),
     pollPaid: async (paymentId) => {
-      // The generic /payment/{id} status endpoint doesn't resolve every
-      // subscription payment, so check the subscription's own payment list.
-      const list = await api.listSubscriptionPayments(subscriptionId);
-      return list.some((p) => p.id === paymentId && p.is_paid);
+      // The deprecated /payment/{id} status endpoint only resolves VM
+      // payments, so poll the subscription's own payment item endpoint.
+      const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
+      return p.is_paid;
     },
     pollDetected: async (paymentId) => {
-      const list = await api.listSubscriptionPayments(subscriptionId);
-      const p = list.find((x) => x.id === paymentId);
-      if (p && !p.is_paid && "onchain" in p.data && p.data.onchain.outpoint) {
+      const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
+      if (!p.is_paid && "onchain" in p.data && p.data.onchain.outpoint) {
         return subscriptionToVmPayment(p);
       }
       return undefined;

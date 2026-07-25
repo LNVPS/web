@@ -96,6 +96,7 @@ function SubscriptionRow({ sub }: { sub: Subscription }) {
             cost={{ ...total, interval_type: "month" }}
             converted={false}
             taxable
+            companyId={sub.company_id}
           />
         </span>
         <span className="text-[0.6rem] uppercase tracking-[0.2em] text-cyber-muted">

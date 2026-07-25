@@ -564,6 +564,8 @@ export interface Subscription {
   expires?: string;
   is_active: boolean;
   auto_renewal_enabled: boolean;
+  /** Seller company; match against `account.tax[].company_id` for the VAT rate. */
+  company_id: number;
   line_items: Array<SubscriptionLineItem>;
 }
 

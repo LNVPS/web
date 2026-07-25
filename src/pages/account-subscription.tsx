@@ -235,6 +235,7 @@ export function AccountSubscriptionPage() {
                   cost={{ currency, amount: totalAmount, interval_type: "month" }}
                   converted={false}
                   taxable
+                  companyId={subscription.company_id}
                 />
                 {!login?.incTax && (
                   <span className="text-xs text-cyber-muted">
@@ -346,6 +347,7 @@ export function AccountSubscriptionPage() {
                           cost={{ ...li.price, interval_type: "month" }}
                           converted={false}
                           taxable
+                          companyId={subscription.company_id}
                         />
                       </span>
                       {li.setup_fee.amount > 0 && (
@@ -358,6 +360,7 @@ export function AccountSubscriptionPage() {
                                   cost={li.setup_fee}
                                   converted={false}
                                   taxable
+                                  companyId={subscription.company_id}
                                 />
                               ),
                             }}
@@ -377,6 +380,7 @@ export function AccountSubscriptionPage() {
                     cost={{ currency, amount: totalAmount, interval_type: "month" }}
                     converted={false}
                     taxable
+                    companyId={subscription.company_id}
                   />
                   {!login?.incTax && (
                     <span className="text-xs text-cyber-muted">

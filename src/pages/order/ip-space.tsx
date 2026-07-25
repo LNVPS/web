@@ -64,7 +64,19 @@ export default function OrderIpSpacePage({
         {login?.api && (
           <PaymentFlow
             title={<FormattedMessage defaultMessage="Complete Payment" />}
-            source={subscriptionRenewalSource(login.api, subscription.id)}
+            source={subscriptionRenewalSource(login.api, subscription.id, {
+              duration: {
+                intervalType: "month",
+                cost: {
+                  currency: subscription.line_items[0]?.price.currency ?? "EUR",
+                  amount: subscription.line_items.reduce(
+                    (t, li) => t + li.price.amount,
+                    0,
+                  ),
+                },
+                taxCompanyId: subscription.company_id,
+              },
+            })}
             onPaymentComplete={() =>
               navigate(`/account/subscriptions/${subscription.id}`)
             }

@@ -195,7 +195,15 @@ export function AccountSubscriptionPage() {
               <FormattedMessage defaultMessage="Pay subscription" />
             )
           }
-          source={subscriptionRenewalSource(login.api, subscription.id)}
+          source={subscriptionRenewalSource(login.api, subscription.id, {
+            // Feed the monthly total so PaymentFlow can gate methods whose
+            // minimum the payment can't meet (e.g. card min on a tiny sub).
+            duration: {
+              intervalType: "month",
+              cost: { currency, amount: totalAmount },
+              taxCompanyId: subscription.company_id,
+            },
+          })}
           initialPayment={resumePayment}
           onPaymentComplete={onPaymentComplete}
           onCancel={() => {

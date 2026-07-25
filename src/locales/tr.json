@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Doğrulama isteği gönder"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "Etkinleştirmek için ödeme yapın."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "Onaylanıyor"
   },
+  "9t1iiv": {
+    "defaultMessage": "Yapılandır"
+  },
   "9uOFF3": {
     "defaultMessage": "Genel Bakış"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "Geçiş anahtarları"
+  },
+  "ATH3LP": {
+    "defaultMessage": "Yeniden adlandırma genel ana bilgisayar adını değiştirir."
   },
   "AUlRcp": {
     "defaultMessage": "Nostr Cüzdan Bağlantısı"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "Bu alan adı için bir CNAME kaydını {hostname} adresine yönlendirin ve kaydedin. DNS çözümlendiğinde HTTPS çalışmaya başlar. Kaldırmak için boş bırakın."
+  },
   "F8RFcI": {
     "defaultMessage": "İsteğe bağlıdır. Ödemeleriniz için oluşturduğumuz faturalarda görünür."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "Uygulamalara geri dön"
+  },
+  "HVtxik": {
+    "defaultMessage": "Özel alan adı"
   },
   "HlAgG9": {
     "defaultMessage": "Ödemeyi gönderdim"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{ay} other{aylar}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "Değişiklikleri kaydet"
+  },
   "X4VESO": {
     "defaultMessage": "VM'yi siler ve yeni bir imajdan başlatır. Bu, üzerindeki tüm verileri kalıcı olarak siler."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "E-posta Adresinin Doğrulanması Gerekli"
   },
+  "Z3gKpL": {
+    "defaultMessage": "depolama"
+  },
   "Z5yzel": {
     "defaultMessage": "Fatura bilgilerini hesaba kaydedin"
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "Bu bileşen yalnızca zincir üstü ödemeleri destekler"
+  },
+  "a60eIK": {
+    "defaultMessage": "Kaydetmek yapılandırmayı yeniden uygular ve uygulamayı yeniden başlatır."
   },
   "aPcXT9": {
     "defaultMessage": "Ödemeler, diğer zincir içi yönlendirenlerle birlikte birleştirilerek tek bir işlemde gerçekleştirilir; bu işlem, bakiyeniz minimum tutarı aştığında gerçekleşir. Ağ ücretinden düşülecek olan payınız, bakiyenizden kesilir. Yalnızca ana ağ adresleri geçerlidir."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} sanal CPU"
   },
+  "hADOUq": {
+    "defaultMessage": "Kaydedildi. Uygulama kısa süre içinde yeniden başlatılacak."
+  },
   "hMzcSq": {
     "defaultMessage": "Mesajlar"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "Hiçbiri ayarlanmamış – bir tane ekleyin."
+  },
+  "jhBqwg": {
+    "defaultMessage": "Dağıtım ana bilgisayar adı atandığında bu alan adı için bir CNAME kaydını o adrese yönlendirin. Kaldırmak için boş bırakın."
   },
   "jmVweB": {
     "defaultMessage": "SSH anahtarları yükleniyor..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "KDV ve diğer ücretler tahmini olarak belirtilmiştir; kesin tutar ödeme sırasında doğrulanacaktır."
+  },
+  "sOF2lj": {
+    "defaultMessage": "README dosyasının tamamını görüntüle"
   },
   "sQu9nL": {
     "defaultMessage": "SSH Anahtarı"

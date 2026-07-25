@@ -9,6 +9,7 @@ import { PageHeader, Eyebrow } from "../components/section";
 import { StatusPill } from "../components/billing";
 import type { BillingTone } from "../components/billing";
 import CostLabel from "../components/cost";
+import BytesSize from "../components/bytes";
 
 /** Map an operator deployment status to a billing tone + label. */
 export function deploymentStatus(status: AppDeploymentStatus): {
@@ -17,16 +18,31 @@ export function deploymentStatus(status: AppDeploymentStatus): {
 } {
   switch (status) {
     case "running":
-      return { tone: "primary", label: <FormattedMessage defaultMessage="Running" /> };
+      return {
+        tone: "primary",
+        label: <FormattedMessage defaultMessage="Running" />,
+      };
     case "pending":
-      return { tone: "warning", label: <FormattedMessage defaultMessage="Pending" /> };
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Pending" />,
+      };
     case "stopped":
-      return { tone: "muted", label: <FormattedMessage defaultMessage="Stopped" /> };
+      return {
+        tone: "muted",
+        label: <FormattedMessage defaultMessage="Stopped" />,
+      };
     case "deleting":
-      return { tone: "danger", label: <FormattedMessage defaultMessage="Deleting" /> };
+      return {
+        tone: "danger",
+        label: <FormattedMessage defaultMessage="Deleting" />,
+      };
     case "error":
     default:
-      return { tone: "danger", label: <FormattedMessage defaultMessage="Error" /> };
+      return {
+        tone: "danger",
+        label: <FormattedMessage defaultMessage="Error" />,
+      };
   }
 }
 
@@ -74,15 +90,69 @@ function DeploymentRow({
           <span className="truncate text-cyber-text-bright">
             {deployment.name || app?.display_name || `#${deployment.id}`}
           </span>
-          {deployment.hostname && (
+          {(deployment.custom_domain || deployment.hostname) && (
             <span className="truncate font-mono text-xs text-cyber-accent">
-              {deployment.hostname}
+              {deployment.custom_domain || deployment.hostname}
             </span>
           )}
         </div>
       </div>
       <StatusPill tone={st.tone}>{st.label}</StatusPill>
     </Link>
+  );
+}
+
+function vcpu(milli: number): string | number {
+  const cores = milli / 1000;
+  return Number.isInteger(cores) ? cores : cores.toFixed(cores < 1 ? 2 : 1);
+}
+
+/** Compact CPU · RAM · storage footprint line. */
+export function AppResources({
+  app,
+  className,
+}: {
+  app: App;
+  className?: string;
+}) {
+  const parts: Array<ReactNode> = [];
+  if (app.cpu_milli) {
+    parts.push(
+      <FormattedMessage
+        key="cpu"
+        defaultMessage="{cores} vCPU"
+        values={{ cores: vcpu(app.cpu_milli) }}
+      />,
+    );
+  }
+  if (app.memory_bytes) {
+    parts.push(
+      <span key="mem">
+        <BytesSize value={app.memory_bytes} />{" "}
+        <FormattedMessage defaultMessage="RAM" />
+      </span>,
+    );
+  }
+  if (app.storage_bytes) {
+    parts.push(
+      <span key="disk">
+        <BytesSize value={app.storage_bytes} />{" "}
+        <FormattedMessage defaultMessage="storage" />
+      </span>,
+    );
+  }
+  if (parts.length === 0) return null;
+  return (
+    <div
+      className={className ?? "font-mono text-xs text-cyber-muted tabular-nums"}
+    >
+      {parts.map((p, i) => (
+        <span key={i}>
+          {i > 0 && " · "}
+          {p}
+        </span>
+      ))}
+    </div>
   );
 }
 

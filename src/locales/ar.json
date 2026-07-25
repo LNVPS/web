@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "أرسل رمز التحقق."
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "ادفع لتفعيل الخدمة."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "جارٍ التأكيد"
   },
+  "9t1iiv": {
+    "defaultMessage": "تهيئة"
+  },
   "9uOFF3": {
     "defaultMessage": "نظرة عامة"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "مفاتيح المرور"
+  },
+  "ATH3LP": {
+    "defaultMessage": "إعادة التسمية تُغيّر اسم المضيف العام."
   },
   "AUlRcp": {
     "defaultMessage": "تطبيق نوستر للاتصال بالمحفظة الرقمية"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "وجّه سجل CNAME لهذا النطاق إلى {hostname} ثم احفظ. سيعمل HTTPS بمجرد تحديث DNS. اتركه فارغًا للإزالة."
+  },
   "F8RFcI": {
     "defaultMessage": "اختياري. يظهر في الفواتير التي نُصدرها بشأن مدفوعاتك."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "العودة إلى التطبيقات"
+  },
+  "HVtxik": {
+    "defaultMessage": "نطاق مخصص"
   },
   "HlAgG9": {
     "defaultMessage": "لقد أرسلت الدفعة"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{شهر} other{أشهر}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "حفظ التغييرات"
+  },
   "X4VESO": {
     "defaultMessage": "يمسح الجهاز الافتراضي ويبدأ من صورة جديدة. هذا يحذف جميع البيانات عليه نهائيًا."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "يجب التحقق من عنوان البريد الإلكتروني."
   },
+  "Z3gKpL": {
+    "defaultMessage": "التخزين"
+  },
   "Z5yzel": {
     "defaultMessage": "احفظ تفاصيل الفوترة في الحساب."
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "هذا المكوّن يدعم المدفوعات على السلسلة فقط"
+  },
+  "a60eIK": {
+    "defaultMessage": "الحفظ يعيد تطبيق الإعدادات ويعيد تشغيل التطبيق."
   },
   "aPcXT9": {
     "defaultMessage": "يتم تجميع المدفوعات مع عمليات الإحالة الأخرى على الشبكة في معاملة واحدة، وذلك بعد تجاوز رصيدك الحد الأدنى المطلوب. ويتم خصم حصتك من رسوم الشبكة من رصيدك. هذا ينطبق فقط على عناوين الشبكة الرئيسية."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} وحدة معالجة مركزية افتراضية"
   },
+  "hADOUq": {
+    "defaultMessage": "تم الحفظ. سيُعاد تشغيل التطبيق قريبًا."
+  },
   "hMzcSq": {
     "defaultMessage": "رسائل"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "لم يتم تعيين أي منها — أضف واحدة."
+  },
+  "jhBqwg": {
+    "defaultMessage": "وجّه سجل CNAME لهذا النطاق إلى اسم مضيف النشر بمجرد تعيينه. اتركه فارغًا للإزالة."
   },
   "jmVweB": {
     "defaultMessage": "جارٍ تحميل مفاتيح SSH..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "يتم تقدير ضريبة القيمة المضافة والرسوم؛ وسيتم تحديد المبلغ الدقيق عند الدفع."
+  },
+  "sOF2lj": {
+    "defaultMessage": "عرض ملف README كاملاً"
   },
   "sQu9nL": {
     "defaultMessage": "مفتاح SSH"

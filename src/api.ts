@@ -635,6 +635,22 @@ export interface App {
   interval_type: CostPlanIntervalType;
   /** One-off setup fee in smallest currency units (0 = none). */
   setup_amount: number;
+  /** Total requested CPU in millicores (Σ service resources). */
+  cpu_milli: number;
+  /** Total requested memory in bytes. */
+  memory_bytes: number;
+  /** Total persistent storage in bytes (Σ volume sizes). */
+  storage_bytes: number;
+  /** Per-service footprint breakdown (sums to the totals above). */
+  services: Array<AppServiceResources>;
+}
+
+/** One service's share of an app's resource footprint. */
+export interface AppServiceResources {
+  name: string;
+  cpu_milli: number;
+  memory_bytes: number;
+  storage_bytes: number;
 }
 
 export interface CreateAppDeploymentRequest {
@@ -674,13 +690,25 @@ export interface AppDeployment {
   name: string;
   /** Public endpoint host once assigned (absent until reconciled, or if the app has no ingress). */
   hostname?: string;
+  /** Customer-owned domain CNAME'd at `hostname`, served alongside it with its own TLS cert. */
+  custom_domain?: string;
   desired_state: AppDeploymentState;
   status: AppDeploymentStatus;
   /** Operator status/error detail when present. */
   status_message?: string;
   /** Subscription this deployment is billed under (renew via the subscription endpoints). */
   subscription_id?: number;
+  /** Current customer-supplied config field values (secrets never exposed). */
+  config?: Record<string, string>;
   created: string;
+}
+
+/** Update a deployment's name, custom domain and/or config (config replaces wholesale). */
+export interface PatchAppDeploymentRequest {
+  name?: string;
+  config?: Record<string, string>;
+  /** Customer-owned hostname; `""`/`null` clears it, omit to leave unchanged. */
+  custom_domain?: string | null;
 }
 
 export interface CreateSubscriptionRequest {
@@ -998,6 +1026,14 @@ export class LNVpsApi {
   async createAppDeployment(req: CreateAppDeploymentRequest) {
     const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
       await this.#req("/api/v1/app-deployments", "POST", req),
+    );
+    return data;
+  }
+
+  /** Update a deployment's name, custom domain and/or config; operator re-applies it. */
+  async patchAppDeployment(id: number, req: PatchAppDeploymentRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
+      await this.#req(`/api/v1/app-deployments/${id}`, "PATCH", req),
     );
     return data;
   }

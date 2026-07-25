@@ -320,6 +320,9 @@
   "8Jfsz3": {
     "defaultMessage": "Send Verification"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "Pay to activate"
   },
@@ -356,6 +359,9 @@
   "9p3I3O": {
     "defaultMessage": "Confirming"
   },
+  "9t1iiv": {
+    "defaultMessage": "Configure"
+  },
   "9uOFF3": {
     "defaultMessage": "Overview"
   },
@@ -379,6 +385,9 @@
   },
   "ATA6lA": {
     "defaultMessage": "Running in Dublin, Ireland. If you want the whole machine rather than the app on it, the <vps>VPS</vps> is still there — Managed Apps do not replace it."
+  },
+  "ATH3LP": {
+    "defaultMessage": "Renaming changes the public hostname."
   },
   "AUlRcp": {
     "defaultMessage": "Nostr Wallet Connect"
@@ -530,6 +539,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "Point a CNAME for this domain at {hostname}, then save. HTTPS starts working once DNS resolves. Leave empty to remove."
+  },
   "F8RFcI": {
     "defaultMessage": "Optional. Appears on the invoices we generate for your payments."
   },
@@ -637,6 +649,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "Back to apps"
+  },
+  "HVtxik": {
+    "defaultMessage": "Custom domain"
   },
   "HlAgG9": {
     "defaultMessage": "I've sent the payment"
@@ -1088,6 +1103,9 @@
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "Save changes"
+  },
   "X4VESO": {
     "defaultMessage": "Wipe the VM and start from a fresh image. This permanently deletes all data on it."
   },
@@ -1124,6 +1142,9 @@
   "Z+AMVE": {
     "defaultMessage": "Email Verification Required"
   },
+  "Z3gKpL": {
+    "defaultMessage": "storage"
+  },
   "Z5yzel": {
     "defaultMessage": "Save billing details to account"
   },
@@ -1147,6 +1168,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
+  },
+  "a60eIK": {
+    "defaultMessage": "Saving re-applies the config and restarts the app."
   },
   "aPcXT9": {
     "defaultMessage": "Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only."
@@ -1370,6 +1394,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} vCPU"
   },
+  "hADOUq": {
+    "defaultMessage": "Saved. The app will restart shortly."
+  },
   "hMzcSq": {
     "defaultMessage": "Messages"
   },
@@ -1432,6 +1459,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "None set — add one"
+  },
+  "jhBqwg": {
+    "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
   },
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."

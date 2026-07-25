@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Enviar código de verificación"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "Pague para activar."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "Confirmando"
   },
+  "9t1iiv": {
+    "defaultMessage": "Configurar"
+  },
   "9uOFF3": {
     "defaultMessage": "Resumen"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "Claves de acceso"
+  },
+  "ATH3LP": {
+    "defaultMessage": "Cambiar el nombre modifica el nombre de host público."
   },
   "AUlRcp": {
     "defaultMessage": "Conexión con la billetera Nostr."
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "Apunte un CNAME de este dominio a {hostname} y guarde. HTTPS funcionará cuando el DNS se resuelva. Déjelo vacío para eliminarlo."
+  },
   "F8RFcI": {
     "defaultMessage": "Opcional. Aparece en las facturas que generamos para sus pagos."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "Volver a las aplicaciones"
+  },
+  "HVtxik": {
+    "defaultMessage": "Dominio personalizado"
   },
   "HlAgG9": {
     "defaultMessage": "He enviado el pago"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mes} other{meses}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "Guardar cambios"
+  },
   "X4VESO": {
     "defaultMessage": "Borra la VM y empieza desde una imagen nueva. Esto elimina permanentemente todos los datos que contiene."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "Se requiere la verificación del correo electrónico."
   },
+  "Z3gKpL": {
+    "defaultMessage": "almacenamiento"
+  },
   "Z5yzel": {
     "defaultMessage": "Guarde los datos de facturación en la cuenta."
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "Este componente solo admite pagos on-chain"
+  },
+  "a60eIK": {
+    "defaultMessage": "Al guardar se vuelve a aplicar la configuración y se reinicia la aplicación."
   },
   "aPcXT9": {
     "defaultMessage": "Los pagos se agrupan con los de otros remitentes en la cadena de bloques y se realizan en una sola transacción una vez que su saldo supera el mínimo requerido. Su parte de la comisión de la red se deduce de su saldo. Solo se aceptan direcciones de la red principal."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} CPU virtual"
   },
+  "hADOUq": {
+    "defaultMessage": "Guardado. La aplicación se reiniciará en breve."
+  },
   "hMzcSq": {
     "defaultMessage": "Mensajes"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "Ninguno establecido; añada uno."
+  },
+  "jhBqwg": {
+    "defaultMessage": "Apunte un CNAME de este dominio al nombre de host del despliegue cuando esté asignado. Déjelo vacío para eliminarlo."
   },
   "jmVweB": {
     "defaultMessage": "Cargando las claves SSH..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "El IVA y los cargos son estimados; el importe exacto se confirmará al realizar el pago."
+  },
+  "sOF2lj": {
+    "defaultMessage": "Ver README completo"
   },
   "sQu9nL": {
     "defaultMessage": "Clave SSH"

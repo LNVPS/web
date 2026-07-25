@@ -14,8 +14,9 @@ import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
 import { appJsonLd } from "../utils/app-seo";
 import { highlightYaml } from "../utils/yaml-highlight";
-import { AppIcon, deploymentStatus } from "./account-apps";
 import type { AppLoaderData } from "../loaders";
+import BytesSize from "../components/bytes";
+import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
 
 /** README, clamped to 50dvh with a fade + 'view full' link when it overflows. */
 function ReadmeSection({
@@ -177,6 +178,33 @@ export function AppPage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <AppResources app={app} />
+            {app.services.length > 1 && (
+              <div className="flex flex-col gap-0.5">
+                {app.services.map((s) => (
+                  <div
+                    key={s.name}
+                    className="font-mono text-xs text-cyber-muted tabular-nums"
+                  >
+                    <span className="text-cyber-text">{s.name}</span>{" "}
+                    <FormattedMessage
+                      defaultMessage="{cores} vCPU"
+                      values={{
+                        cores:
+                          s.cpu_milli / 1000 === Math.round(s.cpu_milli / 1000)
+                            ? Math.round(s.cpu_milli / 1000)
+                            : (s.cpu_milli / 1000).toFixed(2),
+                      }}
+                    />{" · "}
+                    <BytesSize value={s.memory_bytes} />{" · "}
+                    <BytesSize value={s.storage_bytes} />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {app.description && (

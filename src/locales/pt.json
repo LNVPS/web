@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Enviar Código de Verificação"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "Pague para ativar."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "Confirmando"
   },
+  "9t1iiv": {
+    "defaultMessage": "Configurar"
+  },
   "9uOFF3": {
     "defaultMessage": "Visão geral"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "Chaves de acesso"
+  },
+  "ATH3LP": {
+    "defaultMessage": "Renomear altera o nome de host público."
   },
   "AUlRcp": {
     "defaultMessage": "Conexão da carteira Nostr"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "Aponte um CNAME deste domínio para {hostname} e guarde. O HTTPS passa a funcionar assim que o DNS resolver. Deixe vazio para remover."
+  },
   "F8RFcI": {
     "defaultMessage": "Opcional. Aparece nas faturas que emitimos para os seus pagamentos."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "Voltar para os aplicativos"
+  },
+  "HVtxik": {
+    "defaultMessage": "Domínio personalizado"
   },
   "HlAgG9": {
     "defaultMessage": "Enviei o pagamento"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mês} other{meses}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "Guardar alterações"
+  },
   "X4VESO": {
     "defaultMessage": "Apaga a VM e começa a partir de uma imagem nova. Isso exclui permanentemente todos os dados nela."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "É necessário verificar o endereço de e-mail."
   },
+  "Z3gKpL": {
+    "defaultMessage": "armazenamento"
+  },
   "Z5yzel": {
     "defaultMessage": "Guarde os dados de faturação na sua conta."
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "Este componente só suporta pagamentos on-chain"
+  },
+  "a60eIK": {
+    "defaultMessage": "Guardar reaplica a configuração e reinicia a aplicação."
   },
   "aPcXT9": {
     "defaultMessage": "Os pagamentos são agrupados com outros participantes da rede e processados em uma única transação, assim que o seu saldo atingir o valor mínimo. A sua parte da taxa da rede é deduzida do seu saldo. Apenas endereços da rede principal."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} CPU virtual"
   },
+  "hADOUq": {
+    "defaultMessage": "Guardado. A aplicação será reiniciada em breve."
+  },
   "hMzcSq": {
     "defaultMessage": "Mensagens"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "Nenhum definido — adicione um."
+  },
+  "jhBqwg": {
+    "defaultMessage": "Aponte um CNAME deste domínio para o nome de host da implementação assim que este for atribuído. Deixe vazio para remover."
   },
   "jmVweB": {
     "defaultMessage": "A carregar as chaves SSH..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "O IVA e as taxas são valores estimados; o montante exato será confirmado no momento do pagamento."
+  },
+  "sOF2lj": {
+    "defaultMessage": "Ver README completo"
   },
   "sQu9nL": {
     "defaultMessage": "Chave SSH"

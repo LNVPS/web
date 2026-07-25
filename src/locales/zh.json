@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "发送验证码"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} 个 vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "支付以激活。"
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "确认中"
   },
+  "9t1iiv": {
+    "defaultMessage": "配置"
+  },
   "9uOFF3": {
     "defaultMessage": "概述"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "通行密钥"
+  },
+  "ATH3LP": {
+    "defaultMessage": "重命名会更改公开主机名。"
   },
   "AUlRcp": {
     "defaultMessage": "Nostr 钱包连接"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "将该域名的 CNAME 指向 {hostname}，然后保存。DNS 解析生效后 HTTPS 即可使用。留空可移除。"
+  },
   "F8RFcI": {
     "defaultMessage": "可选。将显示在为您的付款而生成的发票上。"
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "返回应用列表"
+  },
+  "HVtxik": {
+    "defaultMessage": "自定义域名"
   },
   "HlAgG9": {
     "defaultMessage": "我已发送付款"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "保存更改"
+  },
   "X4VESO": {
     "defaultMessage": "清除该 VM 并从全新镜像开始。这将永久删除其上的所有数据。"
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "需要验证电子邮件地址。"
   },
+  "Z3gKpL": {
+    "defaultMessage": "存储"
+  },
   "Z5yzel": {
     "defaultMessage": "将账单信息保存到账户中"
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "此组件仅支持链上支付"
+  },
+  "a60eIK": {
+    "defaultMessage": "保存后将重新应用配置并重启应用。"
   },
   "aPcXT9": {
     "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} 虚拟 CPU"
   },
+  "hADOUq": {
+    "defaultMessage": "已保存。应用即将重启。"
+  },
   "hMzcSq": {
     "defaultMessage": "消息"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "未设置——添加一个。"
+  },
+  "jhBqwg": {
+    "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "增值税和各项费用为预估金额，确切金额将在付款时确认。"
+  },
+  "sOF2lj": {
+    "defaultMessage": "查看完整 README"
   },
   "sQu9nL": {
     "defaultMessage": "SSH 密钥"

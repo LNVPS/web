@@ -1,14 +1,146 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FormattedDate, FormattedMessage } from "react-intl";
 import { App, AppDeployment } from "../api";
 import useLogin from "../hooks/login";
+import { ConfigInput } from "../components/deploy-app-form";
+import { parseAppConfig } from "../utils/app-compose";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
 import { PageHeader, SectionCard } from "../components/section";
 import { StatusPill } from "../components/billing";
 import { AsyncButton } from "../components/button";
 import { AppIcon, deploymentStatus } from "./account-apps";
+
+/** Edit a deployment's instance name and config field values. */
+function ConfigEditor({
+  app,
+  deployment,
+  onSaved,
+  onError,
+}: {
+  app: App;
+  deployment: AppDeployment;
+  onSaved: (d: AppDeployment) => void;
+  onError: (msg: string) => void;
+}) {
+  const login = useLogin();
+  const fields = useMemo(() => parseAppConfig(app.compose), [app.compose]);
+  const [name, setName] = useState(deployment.name);
+  const [customDomain, setCustomDomain] = useState(
+    deployment.custom_domain ?? "",
+  );
+  const [values, setValues] = useState<Record<string, string>>(() => ({
+    ...deployment.config,
+  }));
+  const [saved, setSaved] = useState(false);
+
+  const nameChanged = name.trim() !== deployment.name;
+  const domainChanged =
+    customDomain.trim() !== (deployment.custom_domain ?? "");
+  const canSave = nameChanged || domainChanged || fields.length > 0;
+
+  async function save() {
+    if (!login?.api) return;
+    onError("");
+    setSaved(false);
+    try {
+      const updated = await login.api.patchAppDeployment(deployment.id, {
+        name: nameChanged ? name.trim() : undefined,
+        custom_domain: domainChanged ? customDomain.trim() : undefined,
+        config: fields.length > 0 ? values : undefined,
+      });
+      onSaved(updated);
+      setSaved(true);
+    } catch (e) {
+      if (e instanceof Error) onError(e.message);
+    }
+  }
+
+  return (
+    <div className="flex flex-col gap-4">
+      <label className="flex flex-col gap-1">
+        <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+          <FormattedMessage defaultMessage="Instance name" />
+        </span>
+        <input
+          type="text"
+          value={name}
+          maxLength={40}
+          onChange={(e) => setName(e.target.value.toLowerCase())}
+        />
+        {nameChanged && (
+          <span className="text-xs text-cyber-warning">
+            <FormattedMessage defaultMessage="Renaming changes the public hostname." />
+          </span>
+        )}
+      </label>
+
+      <label className="flex flex-col gap-1">
+        <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+          <FormattedMessage defaultMessage="Custom domain" />
+        </span>
+        <input
+          type="text"
+          value={customDomain}
+          placeholder="blog.example.com"
+          onChange={(e) => setCustomDomain(e.target.value.toLowerCase())}
+        />
+        <span className="text-xs text-cyber-muted">
+          {deployment.hostname ? (
+            <FormattedMessage
+              defaultMessage="Point a CNAME for this domain at {hostname}, then save. HTTPS starts working once DNS resolves. Leave empty to remove."
+              values={{
+                hostname: (
+                  <span className="font-mono text-cyber-accent">
+                    {deployment.hostname}
+                  </span>
+                ),
+              }}
+            />
+          ) : (
+            <FormattedMessage defaultMessage="Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove." />
+          )}
+        </span>
+      </label>
+
+      {fields.length > 0 && (
+        <div className="flex flex-col gap-3 border-t border-cyber-border pt-4">
+          {fields.map((f) => (
+            <ConfigInput
+              key={f.name}
+              field={f}
+              value={values[f.name] ?? f.default ?? ""}
+              onChange={(v) => setValues((s) => ({ ...s, [f.name]: v }))}
+            />
+          ))}
+          <p className="m-0 text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Saving re-applies the config and restarts the app." />
+          </p>
+        </div>
+      )}
+
+      <div className="flex items-center gap-3">
+        <AsyncButton
+          disabled={!canSave}
+          className={
+            canSave
+              ? "bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+              : "opacity-50 cursor-not-allowed"
+          }
+          onClick={save}
+        >
+          <FormattedMessage defaultMessage="Save changes" />
+        </AsyncButton>
+        {saved && (
+          <span className="text-xs text-cyber-primary">
+            <FormattedMessage defaultMessage="Saved. The app will restart shortly." />
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export function AccountAppDeploymentPage() {
   const login = useLogin();
@@ -25,7 +157,10 @@ export function AccountAppDeploymentPage() {
     if (!login?.api || !Number.isFinite(deploymentId)) return;
     const d = await login.api.getAppDeployment(deploymentId);
     setDeployment(d);
-    login.api.getApp(d.app_id).then(setApp).catch(() => {});
+    login.api
+      .getApp(d.app_id)
+      .then(setApp)
+      .catch(() => {});
   }
 
   useEffect(() => {
@@ -136,6 +271,23 @@ export function AccountAppDeploymentPage() {
             )}
           </dd>
 
+          {deployment.custom_domain && (
+            <>
+              <dt className="text-cyber-muted">
+                <FormattedMessage defaultMessage="Custom domain" />
+              </dt>
+              <dd className="m-0 min-w-0 break-all font-mono text-cyber-accent">
+                <a
+                  href={`https://${deployment.custom_domain}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {deployment.custom_domain}
+                </a>
+              </dd>
+            </>
+          )}
+
           {deployment.status_message && (
             <>
               <dt className="text-cyber-muted">
@@ -177,18 +329,37 @@ export function AccountAppDeploymentPage() {
         </dl>
       </SectionCard>
 
+      {/* Config + rename */}
+      {app && (
+        <SectionCard title={<FormattedMessage defaultMessage="Configure" />}>
+          <ConfigEditor
+            key={`${deployment.id}-${deployment.name}-${deployment.custom_domain ?? ""}`}
+            app={app}
+            deployment={deployment}
+            onSaved={setDeployment}
+            onError={(m) => setError(m || undefined)}
+          />
+        </SectionCard>
+      )}
+
       {/* Lifecycle */}
       <SectionCard title={<FormattedMessage defaultMessage="Manage" />}>
         <div className="flex flex-wrap items-center gap-2">
           {isRunning && (
-            <AsyncButton onClick={() => act(() => login.api.stopAppDeployment(deployment.id))}>
+            <AsyncButton
+              onClick={() =>
+                act(() => login.api.stopAppDeployment(deployment.id))
+              }
+            >
               <FormattedMessage defaultMessage="Stop" />
             </AsyncButton>
           )}
           {isStopped && (
             <AsyncButton
               className="bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
-              onClick={() => act(() => login.api.startAppDeployment(deployment.id))}
+              onClick={() =>
+                act(() => login.api.startAppDeployment(deployment.id))
+              }
             >
               <FormattedMessage defaultMessage="Start" />
             </AsyncButton>

@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "Bestätigung senden"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "Zahlung zur Aktivierung erforderlich."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "Wird bestätigt"
   },
+  "9t1iiv": {
+    "defaultMessage": "Konfigurieren"
+  },
   "9uOFF3": {
     "defaultMessage": "Überblick"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "Passkeys"
+  },
+  "ATH3LP": {
+    "defaultMessage": "Das Umbenennen ändert den öffentlichen Hostnamen."
   },
   "AUlRcp": {
     "defaultMessage": "Nostr-Wallet verbinden"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "Richten Sie einen CNAME für diese Domain auf {hostname} und speichern Sie. HTTPS funktioniert, sobald DNS auflöst. Leer lassen zum Entfernen."
+  },
   "F8RFcI": {
     "defaultMessage": "Optional. Wird auf den Rechnungen angezeigt, die wir für Ihre Zahlungen erstellen."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "Zurück zu den Apps"
+  },
+  "HVtxik": {
+    "defaultMessage": "Eigene Domain"
   },
   "HlAgG9": {
     "defaultMessage": "Ich habe die Zahlung gesendet"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{Monat} other{Monate}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "Änderungen speichern"
+  },
   "X4VESO": {
     "defaultMessage": "Setzt die VM zurück und startet mit einem frischen Image. Dabei werden alle Daten darauf unwiderruflich gelöscht."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "E-Mail-Bestätigung erforderlich"
   },
+  "Z3gKpL": {
+    "defaultMessage": "Speicher"
+  },
   "Z5yzel": {
     "defaultMessage": "Rechnungsdetails für das Konto speichern"
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "Diese Komponente unterstützt nur On-Chain-Zahlungen"
+  },
+  "a60eIK": {
+    "defaultMessage": "Beim Speichern wird die Konfiguration neu angewendet und die App neu gestartet."
   },
   "aPcXT9": {
     "defaultMessage": "Auszahlungen werden zusammen mit anderen On-Chain-Referenzen zu einer einzigen Transaktion gebündelt, sobald Ihr Guthaben den Mindestbetrag erreicht. Ihr Anteil an der Netzwerkgebühr wird von Ihrem Guthaben abgezogen. Nur für Mainnet-Adressen."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} virtuelle CPU"
   },
+  "hADOUq": {
+    "defaultMessage": "Gespeichert. Die App wird in Kürze neu gestartet."
+  },
   "hMzcSq": {
     "defaultMessage": "Nachrichten"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "Keine festgelegt – eine hinzufügen."
+  },
+  "jhBqwg": {
+    "defaultMessage": "Richten Sie einen CNAME für diese Domain auf den Hostnamen der Bereitstellung, sobald dieser zugewiesen ist. Leer lassen zum Entfernen."
   },
   "jmVweB": {
     "defaultMessage": "SSH-Schlüssel werden geladen ..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "Die Mehrwertsteuer und die Gebühren sind Schätzungen; der genaue Betrag wird bei der Zahlung bestätigt."
+  },
+  "sOF2lj": {
+    "defaultMessage": "Vollständige README anzeigen"
   },
   "sQu9nL": {
     "defaultMessage": "SSH-Schlüssel"

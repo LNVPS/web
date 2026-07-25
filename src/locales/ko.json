@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "인증 전송"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "활성화하려면 요금을 지불하세요."
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "확인 중"
   },
+  "9t1iiv": {
+    "defaultMessage": "구성"
+  },
   "9uOFF3": {
     "defaultMessage": "개요"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "패스키"
+  },
+  "ATH3LP": {
+    "defaultMessage": "이름을 변경하면 공개 호스트 이름도 변경됩니다."
   },
   "AUlRcp": {
     "defaultMessage": "노스트르 지갑 연결"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "이 도메인의 CNAME을 {hostname}(으)로 지정한 뒤 저장하세요. DNS가 반영되면 HTTPS가 작동합니다. 제거하려면 비워 두세요."
+  },
   "F8RFcI": {
     "defaultMessage": "선택 사항입니다. 귀하의 결제에 대해 저희가 생성하는 청구서에 표시됩니다."
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "앱으로 돌아가기"
+  },
+  "HVtxik": {
+    "defaultMessage": "사용자 지정 도메인"
   },
   "HlAgG9": {
     "defaultMessage": "결제를 보냈습니다"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{달} other{개월}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "변경사항 저장"
+  },
   "X4VESO": {
     "defaultMessage": "VM을 지우고 새 이미지로 시작합니다. 이 작업은 VM의 모든 데이터를 영구적으로 삭제합니다."
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "이메일 인증이 필요합니다."
   },
+  "Z3gKpL": {
+    "defaultMessage": "스토리지"
+  },
   "Z5yzel": {
     "defaultMessage": "결제 정보를 계정에 저장합니다."
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "이 구성 요소는 온체인 결제만 지원합니다"
+  },
+  "a60eIK": {
+    "defaultMessage": "저장하면 구성이 다시 적용되고 앱이 재시작됩니다."
   },
   "aPcXT9": {
     "defaultMessage": "지급은 다른 온체인 추천인들과 함께 묶여 하나의 거래로 처리되며, 귀하의 잔액이 최소 금액을 초과하면 지급이 이루어집니다. 네트워크 수수료 중 귀하의 몫은 귀하의 잔액에서 차감됩니다. 메인넷 주소만 해당됩니다."
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} 가상 CPU"
   },
+  "hADOUq": {
+    "defaultMessage": "저장했습니다. 앱이 곧 재시작됩니다."
+  },
   "hMzcSq": {
     "defaultMessage": "메시지"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "설정된 항목이 없습니다. 하나 추가하세요."
+  },
+  "jhBqwg": {
+    "defaultMessage": "배포 호스트 이름이 할당되면 이 도메인의 CNAME을 해당 호스트 이름으로 지정하세요. 제거하려면 비워 두세요."
   },
   "jmVweB": {
     "defaultMessage": "SSH 키를 불러오는 중..."
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "부가가치세와 수수료는 대략적인 금액으로 산정되며, 정확한 금액은 결제 시 확인됩니다."
+  },
+  "sOF2lj": {
+    "defaultMessage": "전체 README 보기"
   },
   "sQu9nL": {
     "defaultMessage": "SSH 키"

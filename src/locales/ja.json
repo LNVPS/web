@@ -314,6 +314,9 @@
   "8Jfsz3": {
     "defaultMessage": "確認コードを送信"
   },
+  "8N3Anf": {
+    "defaultMessage": "{cores} vCPU"
+  },
   "8PkqNN": {
     "defaultMessage": "有効化するには料金をお支払いください。"
   },
@@ -350,6 +353,9 @@
   "9p3I3O": {
     "defaultMessage": "確認中"
   },
+  "9t1iiv": {
+    "defaultMessage": "設定"
+  },
   "9uOFF3": {
     "defaultMessage": "概要"
   },
@@ -370,6 +376,9 @@
   },
   "ASrBq8": {
     "defaultMessage": "パスキー"
+  },
+  "ATH3LP": {
+    "defaultMessage": "名前を変更すると公開ホスト名も変わります。"
   },
   "AUlRcp": {
     "defaultMessage": "Nostrウォレット接続"
@@ -515,6 +524,9 @@
   "ErHVHe": {
     "defaultMessage": "satoshi"
   },
+  "EuHjPy": {
+    "defaultMessage": "このドメインの CNAME を {hostname} に向けてから保存してください。DNS が解決されると HTTPS が有効になります。削除するには空にしてください。"
+  },
   "F8RFcI": {
     "defaultMessage": "任意項目。お客様への請求書に表示されます。"
   },
@@ -619,6 +631,9 @@
   },
   "HPBE7M": {
     "defaultMessage": "アプリに戻る"
+  },
+  "HVtxik": {
+    "defaultMessage": "カスタムドメイン"
   },
   "HlAgG9": {
     "defaultMessage": "支払いを送信しました"
@@ -1070,6 +1085,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
+  "X0ha1a": {
+    "defaultMessage": "変更を保存"
+  },
   "X4VESO": {
     "defaultMessage": "VM を消去して新しいイメージから開始します。これにより VM 上のすべてのデータが完全に削除されます。"
   },
@@ -1106,6 +1124,9 @@
   "Z+AMVE": {
     "defaultMessage": "メールアドレスの認証が必要です。"
   },
+  "Z3gKpL": {
+    "defaultMessage": "ストレージ"
+  },
   "Z5yzel": {
     "defaultMessage": "お支払い情報をアカウントに保存"
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
+  },
+  "a60eIK": {
+    "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
   },
   "aPcXT9": {
     "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
@@ -1346,6 +1370,9 @@
   "h9Vgyc": {
     "defaultMessage": "{n} 仮想CPU"
   },
+  "hADOUq": {
+    "defaultMessage": "保存しました。まもなくアプリが再起動します。"
+  },
   "hMzcSq": {
     "defaultMessage": "メッセージ"
   },
@@ -1402,6 +1429,9 @@
   },
   "jf7fbc": {
     "defaultMessage": "設定されていません。— 設定を追加してください。"
+  },
+  "jhBqwg": {
+    "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
   },
   "jmVweB": {
     "defaultMessage": "SSHキーを読み込んでいます。"
@@ -1651,6 +1681,9 @@
   },
   "sAJryD": {
     "defaultMessage": "付加価値税と手数料は概算であり、実際の金額は支払い時に確定します。"
+  },
+  "sOF2lj": {
+    "defaultMessage": "README 全文を表示"
   },
   "sQu9nL": {
     "defaultMessage": "SSHキー"

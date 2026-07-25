@@ -11,7 +11,7 @@ import {
   parseAppConfig,
 } from "../utils/app-compose";
 
-function ConfigInput({
+export function ConfigInput({
   field,
   value,
   onChange,

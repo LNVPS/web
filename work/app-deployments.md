@@ -28,6 +28,15 @@ file tracks the remaining ordering/lifecycle work as increments.
 - [x] 5. Activation: order → navigate to deployment detail, which prompts 'Pay to activate' (subscription flow).
 - [ ] 6. Translations (all 10 locales) + build/lint pass; update this file.
 
+## Backend deps — all merged
+
+- #225 deployable regions per app — **merged** (region picker).
+- #227 public catalog (`GET /api/v1/apps` + `/apps/{id}` + `/regions`) — **merged** (homepage catalog; awaiting prod deploy).
+- #228 `ingress_domain` on app regions — **merged** (hostname preview).
+- #229 `repo_url` on app — **merged** (source link + README render).
+
+Frontend consumes all of these and degrades gracefully until prod deploys.
+
 ## Follow-up
 
 - [x] Public catalog: catalog moved to the homepage (`AppsSection`, fetched in `homeLoader`), app detail is public at `/apps/:id` (deploy form guarded on login), deployments/manage stay under `/account`. **Depends on LNVPS/api#227** to drop auth on `GET /api/v1/apps` + `/apps/{id}` — until merged the homepage section stays empty (loader 401 → undefined, graceful).

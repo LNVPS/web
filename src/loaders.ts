@@ -75,9 +75,8 @@ export async function homeLoader({
 
   // IP ranges are not production-ready yet, so don't fetch available IP space
   // (or render it — see IpSpaceSection in home.tsx).
-  // The app catalog is a public browse surface (like VM templates). Until the
-  // catalog endpoint is unauthenticated (LNVPS/api#227) this 401s and `cached`
-  // returns undefined, so the section simply doesn't render.
+  // The app catalog is a public browse surface (like VM templates), fetched
+  // unauthenticated here for SSR on the homepage.
   const [offers, paymentMethods, apps] = await Promise.all([
     cached("offers", () => api.listOffers()),
     cached("payment_methods", () => api.getPaymentMethods()),

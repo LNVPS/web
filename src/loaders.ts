@@ -54,6 +54,10 @@ export interface StatusLoaderData {
   events?: TaggedNostrEvent[];
 }
 
+export interface AppLoaderData {
+  app?: App;
+}
+
 export function getNews() {
   return System.GetQuery("server-news")?.snapshot;
 }
@@ -124,4 +128,21 @@ export async function newsPostLoader({
 export async function statusLoader(): Promise<StatusLoaderData> {
   const status = getStatus();
   return { events: status };
+}
+
+/**
+ * `/apps/:id` is the public product page for an orderable managed app, so it
+ * has to server-render a real title and h1 rather than fetch the app in an
+ * effect. The catalog is public, so fetch unauthenticated — the same client the
+ * homepage uses for its app section.
+ */
+export async function appLoader({
+  params,
+}: LoaderFunctionArgs): Promise<AppLoaderData> {
+  const id = Number(params.id);
+  if (!Number.isFinite(id)) return { app: undefined };
+
+  const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
+  const app = await cached(`app_${id}`, () => api.getApp(id));
+  return { app };
 }

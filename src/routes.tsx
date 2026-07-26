@@ -31,6 +31,7 @@ import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
 import VmLayout from "./pages/vm-layout.tsx";
 import {
+  appLoader,
   homeLoader,
   newsLoader,
   newsPostLoader,
@@ -134,6 +135,7 @@ export const routes: RouteObject[] = [
       {
         path: "/apps/:id",
         element: <AppPage />,
+        loader: appLoader,
       },
       {
         path: "/vm",

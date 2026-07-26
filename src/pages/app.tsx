@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import { FormattedMessage, useIntl } from "react-intl";
 import { App, AppDeployment, LNVpsApi } from "../api";
 import { ApiUrl } from "../const";
 import useLogin from "../hooks/login";
@@ -14,6 +14,7 @@ import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
 import { highlightYaml } from "../utils/yaml-highlight";
 import { AppIcon, deploymentStatus } from "./account-apps";
+import type { AppLoaderData } from "../loaders";
 
 /** README, clamped to 50dvh with a fade + 'view full' link when it overflows. */
 function ReadmeSection({
@@ -68,10 +69,14 @@ function ReadmeSection({
 
 export function AppPage() {
   const login = useLogin();
+  const { formatMessage } = useIntl();
   const { id } = useParams<{ id: string }>();
   const appId = Number(id);
+  // Seeded by appLoader so the first (server) render already has the app, and
+  // therefore a real title and h1. The effect below still refreshes it.
+  const { app: loadedApp } = useLoaderData<AppLoaderData>();
 
-  const [app, setApp] = useState<App>();
+  const [app, setApp] = useState<App | undefined>(loadedApp);
   const [deployments, setDeployments] = useState<Array<AppDeployment>>([]);
   const [readme, setReadme] = useState<string>();
   const [error, setError] = useState<string>();
@@ -98,7 +103,27 @@ export function AppPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <Seo noindex={true} />
+      {app ? (
+        <Seo
+          title={app.display_name}
+          canonical={`/apps/${app.id}`}
+          description={
+            app.description ??
+            formatMessage(
+              {
+                defaultMessage:
+                  "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card.",
+              },
+              { name: app.display_name },
+            )
+          }
+        />
+      ) : (
+        // The loader found no app: either the id does not exist or the catalog
+        // was unreachable. Both render an empty shell, so keep those out of the
+        // index rather than letting a soft 404 be crawled.
+        <Seo noindex={true} />
+      )}
       <Link
         to={login ? "/account/apps" : "/"}
         className="text-sm text-cyber-muted hover:text-cyber-primary transition-colors"

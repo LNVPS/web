@@ -227,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "Connecting..."
   },
-  "62gWV4": {
-    "defaultMessage": "One-click Docker apps deployed on managed infrastructure."
-  },
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
   },
@@ -1493,6 +1490,9 @@
   "lP4qIQ": {
     "defaultMessage": "Card details"
   },
+  "lYEj5M": {
+    "defaultMessage": "Managed Apps"
+  },
   "lhCavK": {
     "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
   },
@@ -1558,6 +1558,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Renew"
+  },
+  "nWxtS5": {
+    "defaultMessage": "Nostr relays and Blossom media servers, run for you — each on its own hostname with TLS already working, no server to patch. See the full <catalog>catalog</catalog>."
   },
   "nidU9E": {
     "defaultMessage": "{rate} commission"

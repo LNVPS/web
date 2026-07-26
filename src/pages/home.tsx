@@ -403,11 +403,20 @@ function AppsSection() {
     <>
       <SectionHeading>
         <Link to="/apps" className="hover:text-cyber-primary transition-colors">
-          <FormattedMessage defaultMessage="Apps" />
+          <FormattedMessage defaultMessage="Managed Apps" />
         </Link>
       </SectionHeading>
       <p className="text-cyber-muted">
-        <FormattedMessage defaultMessage="One-click Docker apps deployed on managed infrastructure." />
+        <FormattedMessage
+          defaultMessage="Nostr relays and Blossom media servers, run for you — each on its own hostname with TLS already working, no server to patch. See the full <catalog>catalog</catalog>."
+          values={{
+            catalog: (chunks: ReactNode) => (
+              <Link to="/apps" className="text-cyber-primary hover:underline">
+                {chunks}
+              </Link>
+            ),
+          }}
+        />
       </p>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {catalog.map((a) => (

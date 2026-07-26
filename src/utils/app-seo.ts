@@ -98,15 +98,29 @@ const APP_SEO: Record<string, AppSeoEntry> = {
 };
 
 /**
- * Billing period unit for `UnitPriceSpecification.unitText`, one per interval
- * the API can return (`src/api.ts:29-33`). Typed on the enum, so a new interval
- * type there is a type error here rather than an undefined in the markup.
+ * Billing period unit per interval the API can return (`src/api.ts:29-33`).
+ *
+ * `code` is the UN/CEFACT Common Code for `unitCode`, which is the property
+ * schema.org names for this job: `billingDuration` is "a Duration or a Number
+ * (in which case the unit of measurement … is specified by the `unitCode`
+ * property)", and `billingIncrement`'s "unit of measurement is specified by the
+ * `unitCode` property". We emit Numbers, so the code is the carrier and
+ * `unitText` is the documented fallback for when a code is unavailable — kept
+ * alongside because it costs nothing and is what a human reading the markup
+ * sees.
+ *
+ * Codes from UN/CEFACT Rec 20 Annex I, quantity "time": `DAY` day, `MON`
+ * month, `ANN` year.
+ *
+ * Typed on the enum, so a new interval type is a type error here rather than
+ * an undefined in the markup.
  */
-const BILLING_UNIT_TEXT: Record<CostPlanIntervalType, string> = {
-  [CostPlanIntervalType.DAY]: "DAY",
-  [CostPlanIntervalType.MONTH]: "MONTH",
-  [CostPlanIntervalType.YEAR]: "YEAR",
-};
+const BILLING_UNIT: Record<CostPlanIntervalType, { code: string; text: string }> =
+  {
+    [CostPlanIntervalType.DAY]: { code: "DAY", text: "DAY" },
+    [CostPlanIntervalType.MONTH]: { code: "MON", text: "MONTH" },
+    [CostPlanIntervalType.YEAR]: { code: "ANN", text: "YEAR" },
+  };
 
 /**
  * Whether the app bills at exactly one month, so "/month" means what it says.
@@ -219,7 +233,8 @@ export function appSeo(app: App, intl: IntlShape): AppSeo {
               // false rather than merely weaker.
               billingDuration: app.interval_amount,
               billingIncrement: 1,
-              unitText: BILLING_UNIT_TEXT[app.interval_type],
+              unitCode: BILLING_UNIT[app.interval_type].code,
+              unitText: BILLING_UNIT[app.interval_type].text,
             },
           },
         }

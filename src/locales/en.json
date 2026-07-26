@@ -50,6 +50,9 @@
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
+  "0ALykI": {
+    "defaultMessage": "Managed Apps — One-Click Nostr and Blossom Hosting"
+  },
   "0Azlrb": {
     "defaultMessage": "Manage"
   },
@@ -242,6 +245,9 @@
   "6UfYVI": {
     "defaultMessage": "High-performance VPS hosting with flexible payments — Bitcoin Lightning or card."
   },
+  "6axKu6": {
+    "defaultMessage": "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card."
+  },
   "6hEevT": {
     "defaultMessage": "Set default"
   },
@@ -277,6 +283,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Cancel payment"
+  },
+  "7jdMye": {
+    "defaultMessage": "Stopping keeps your data"
   },
   "7q/bs/": {
     "defaultMessage": "Renew now"
@@ -371,6 +380,9 @@
   "ASrBq8": {
     "defaultMessage": "Passkeys"
   },
+  "ATA6lA": {
+    "defaultMessage": "Running in Dublin, Ireland. If you want the whole machine rather than the app on it, the <vps>VPS</vps> is still there — Managed Apps do not replace it."
+  },
   "AUlRcp": {
     "defaultMessage": "Nostr Wallet Connect"
   },
@@ -422,6 +434,9 @@
   "BnoVvl": {
     "defaultMessage": "Terms of Service for LNVPS. Read our usage policies, acceptable use guidelines, and service terms."
   },
+  "BnvK83": {
+    "defaultMessage": "From {price}."
+  },
   "Bwqhmd": {
     "defaultMessage": "Firewall"
   },
@@ -448,6 +463,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "New monthly renewal cost: {cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "Lightning, on-chain, or card"
   },
   "DU+LLZ": {
     "defaultMessage": "Referral"
@@ -1088,6 +1106,9 @@
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
   },
+  "YSgfWQ": {
+    "defaultMessage": "Managed Apps: run a relay without running a server"
+  },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },
@@ -1129,6 +1150,9 @@
   },
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
+  },
+  "ZvAN+v": {
+    "defaultMessage": "Stopping a deployment scales it to zero and keeps the storage. Your relay's database is still there when you start it again. Only deleting removes it."
   },
   "aPcXT9": {
     "defaultMessage": "Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only."
@@ -1175,11 +1199,17 @@
   "c0b5XV": {
     "defaultMessage": "Rate"
   },
+  "c5aQL+": {
+    "defaultMessage": "Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working — no OS to patch, no Docker to configure, no certificate to renew."
+  },
   "c78ZVJ": {
     "defaultMessage": "DNS changes may take up to 24–48 hours to propagate"
   },
   "cGedMc": {
     "defaultMessage": "Instant — scan or pay a one-time invoice"
+  },
+  "cJzoWc": {
+    "defaultMessage": "Its own hostname, TLS included"
   },
   "cM5n1C": {
     "defaultMessage": "End Time (optional)"
@@ -1358,6 +1388,9 @@
   "huqKGl": {
     "defaultMessage": "Create account"
   },
+  "i2/SmH": {
+    "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1400,6 +1433,9 @@
   "jYLOYR": {
     "defaultMessage": "{n, plural, one {# day} other {# days}}"
   },
+  "jd19T+": {
+    "defaultMessage": "Every deployment gets {host} with a certificate issued automatically. Bring your own domain and point a CNAME at it — we serve that too, with its own certificate, issued once DNS resolves."
+  },
   "jf7fbc": {
     "defaultMessage": "None set — add one"
   },
@@ -1429,6 +1465,9 @@
   },
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
+  },
+  "kdK1BE": {
+    "defaultMessage": "Deploy a Nostr relay or a Blossom media server as a managed app on LNVPS. Provisioned in minutes with storage and TLS included — pay with Lightning, Bitcoin, or card."
   },
   "kfr95E": {
     "defaultMessage": "Address Line 1"
@@ -1651,6 +1690,9 @@
   },
   "sAJryD": {
     "defaultMessage": "VAT and fees are estimated; the exact amount is confirmed at payment."
+  },
+  "sOF2lj": {
+    "defaultMessage": "View full README"
   },
   "sQu9nL": {
     "defaultMessage": "SSH Key"

@@ -30,3 +30,6 @@ dist-ssr
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# tsc -b artifact (this project type-checks with `tsc --noEmit`)
+tsconfig.tsbuildinfo

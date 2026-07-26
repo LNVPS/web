@@ -396,16 +396,21 @@ function VpsOffersSection() {
 function AppsSection() {
   const { apps } = useLoaderData<HomeLoaderData>();
   if (!apps || apps.length === 0) return null;
+  // Same sort as /apps — the API returns the catalog unordered, and the two
+  // pages showing it in different orders reads as a broken site.
+  const catalog = [...apps].sort((a, b) => a.id - b.id);
   return (
     <>
       <SectionHeading>
-        <FormattedMessage defaultMessage="Apps" />
+        <Link to="/apps" className="hover:text-cyber-primary transition-colors">
+          <FormattedMessage defaultMessage="Apps" />
+        </Link>
       </SectionHeading>
       <p className="text-cyber-muted">
         <FormattedMessage defaultMessage="One-click Docker apps deployed on managed infrastructure." />
       </p>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {apps.map((a) => (
+        {catalog.map((a) => (
           <AppCard key={a.id} app={a} />
         ))}
       </div>

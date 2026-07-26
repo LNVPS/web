@@ -25,6 +25,7 @@ import { AccountReferralPage } from "./pages/account-referral.tsx";
 import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
 import { AccountAppsPage } from "./pages/account-apps.tsx";
 import { AppPage } from "./pages/app.tsx";
+import { AppsPage } from "./pages/apps.tsx";
 import { AccountAppDeploymentPage } from "./pages/account-app-deployment.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
@@ -32,6 +33,7 @@ import AccountLayout from "./pages/account-layout.tsx";
 import VmLayout from "./pages/vm-layout.tsx";
 import {
   appLoader,
+  appsLoader,
   homeLoader,
   newsLoader,
   newsPostLoader,
@@ -131,6 +133,11 @@ export const routes: RouteObject[] = [
       {
         path: "/order",
         element: <OrderPage />,
+      },
+      {
+        path: "/apps",
+        element: <AppsPage />,
+        loader: appsLoader,
       },
       {
         path: "/apps/:id",

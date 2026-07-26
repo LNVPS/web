@@ -97,7 +97,22 @@ const APP_SEO: Record<string, AppSeoEntry> = {
   },
 };
 
-/** Whether the app bills at exactly one month, so "/month" means what it says. */
+/**
+ * Billing period unit for `UnitPriceSpecification.unitText`, one per interval
+ * the API can return (`src/api.ts:29-33`). Typed on the enum, so a new interval
+ * type there is a type error here rather than an undefined in the markup.
+ */
+const BILLING_UNIT_TEXT: Record<CostPlanIntervalType, string> = {
+  [CostPlanIntervalType.DAY]: "DAY",
+  [CostPlanIntervalType.MONTH]: "MONTH",
+  [CostPlanIntervalType.YEAR]: "YEAR",
+};
+
+/**
+ * Whether the app bills at exactly one month, so "/month" means what it says.
+ * Only the written price clause needs this — the structured data derives its
+ * period from the interval instead of dropping it.
+ */
 function isMonthly(app: App): boolean {
   return (
     app.interval_type === CostPlanIntervalType.MONTH && app.interval_amount === 1
@@ -197,16 +212,14 @@ export function appSeo(app: App, intl: IntlShape): AppSeo {
               // Ex-VAT, matching what the page shows logged out. Never
               // conditional on the VAT toggle: this is what a crawler sees.
               valueAddedTaxIncluded: false,
-              // Billing period only when it is exactly one month. A
-              // monthly-labelled figure that is really annual is worse than
-              // a bare price, which is still valid on its own.
-              ...(isMonthly(app)
-                ? {
-                    billingDuration: 1,
-                    billingIncrement: 1,
-                    unitText: "MONTH",
-                  }
-                : {}),
+              // The billing period is derived, not guessed: `interval_type`
+              // and `interval_amount` say exactly what it is. Omitting it for
+              // a yearly app would advertise a bare recurring figure with no
+              // period, which reads as a total — the one drop that would be
+              // false rather than merely weaker.
+              billingDuration: app.interval_amount,
+              billingIncrement: 1,
+              unitText: BILLING_UNIT_TEXT[app.interval_type],
             },
           },
         }

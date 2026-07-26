@@ -186,4 +186,4 @@ The client groups articles by canonical slug (stripping the `-<lang>` suffix) us
 - Auto-generated message IDs (no `id` or `defaultMessage` in `defineMessage`)
 - Never use `defineMessage`/`Messages` constant pattern except for API error messages
 - All dynamic strings in JSX should be wrapped in `<FormattedMessage>`
-- Translation files: `src/locales/{locale}.json` (auto-generated via `yarn locale:extract`)
+- Translation files: `src/locales/{locale}.json` (auto-generated via `bun run locale:extract`)

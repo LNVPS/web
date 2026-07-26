@@ -58,6 +58,10 @@ export interface AppLoaderData {
   app?: App;
 }
 
+export interface AppsLoaderData {
+  apps?: App[];
+}
+
 export function getNews() {
   return System.GetQuery("server-news")?.snapshot;
 }
@@ -145,4 +149,15 @@ export async function appLoader({
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
   const app = await cached(`app_${id}`, () => api.getApp(id));
   return { app };
+}
+
+/**
+ * `/apps` is the public catalog listing, so like `/apps/:id` it has to
+ * server-render its content rather than fetch in an effect. Shares the `apps`
+ * cache entry with `homeLoader`, which fetches the same unauthenticated list.
+ */
+export async function appsLoader(): Promise<AppsLoaderData> {
+  const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
+  const apps = await cached("apps", () => api.listApps());
+  return { apps };
 }

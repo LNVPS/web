@@ -107,12 +107,16 @@ function vcpu(milli: number): string | number {
   return Number.isInteger(cores) ? cores : cores.toFixed(cores < 1 ? 2 : 1);
 }
 
-/** Compact CPU · RAM · storage footprint line. */
+/**
+ * Compact CPU · RAM · storage footprint line. Takes the three figures rather
+ * than an `App` so a deployment's *effective* resources (already multiplied by
+ * the API) can use it too.
+ */
 export function AppResources({
   app,
   className,
 }: {
-  app: App;
+  app: Pick<App, "cpu_milli" | "memory_bytes" | "storage_bytes">;
   className?: string;
 }) {
   const parts: Array<ReactNode> = [];

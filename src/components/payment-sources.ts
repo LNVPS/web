@@ -1,4 +1,5 @@
 import {
+  AppUpgradeRequest,
   LNVpsApi,
   SubscriptionPayment,
   VmInstance,
@@ -175,6 +176,37 @@ export function vmUpgradeSource(
       api.createVmUpgradePayment(vm.id, upgradeRequest, method, {
         paymentMethodId: opts.paymentMethodId,
       }),
+    pollPaid: async (paymentId) => {
+      const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
+      return p.is_paid;
+    },
+  };
+}
+
+/**
+ * Pay for an app deployment resize (one-time, not a renewal).
+ *
+ * Like the VM upgrade, the charge is recorded as a payment on the deployment's
+ * subscription, so it polls through the subscription payment item endpoint.
+ */
+export function appUpgradeSource(
+  api: LNVpsApi,
+  deploymentId: number,
+  upgradeRequest: AppUpgradeRequest,
+  subscriptionId: number,
+): PaymentSource {
+  return {
+    createPayment: async (method, opts) =>
+      subscriptionToVmPayment(
+        await api.createAppUpgradePayment(
+          deploymentId,
+          upgradeRequest,
+          method,
+          {
+            paymentMethodId: opts.paymentMethodId,
+          },
+        ),
+      ),
     pollPaid: async (paymentId) => {
       const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
       return p.is_paid;

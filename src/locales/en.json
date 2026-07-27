@@ -878,6 +878,9 @@
   "LwGAe6": {
     "defaultMessage": "Also on LNVPS"
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Total"
+  },
   "MTnSwY": {
     "defaultMessage": "ex. tax"
   },
@@ -1553,6 +1556,9 @@
   "fxYCqm": {
     "defaultMessage": "Location: {location}"
   },
+  "g1GUs5": {
+    "defaultMessage": "vCPU"
+  },
   "gBvImw": {
     "defaultMessage": "{count} handles"
   },
@@ -1810,6 +1816,9 @@
   },
   "mznk9z": {
     "defaultMessage": "Commission"
+  },
+  "n7yYXG": {
+    "defaultMessage": "Service"
   },
   "n9fdaJ": {
     "defaultMessage": "Unverified"

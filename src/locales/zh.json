@@ -263,14 +263,8 @@
   "6Auf1w": {
     "defaultMessage": "我们无法完成登录。请重试。"
   },
-  "6BD6eg": {
-    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费："
-  },
   "6FbX6y": {
     "defaultMessage": "停止操作会将应用程序缩减至零，并保留其数据。删除操作会停止计费，并永久删除部署及其卷。"
-  },
-  "6IQOPN": {
-    "defaultMessage": "20GB"
   },
   "6SfJaf": {
     "defaultMessage": "升级至"
@@ -1739,9 +1733,6 @@
   "lKv8ex": {
     "defaultMessage": "默认"
   },
-  "lLGBVr": {
-    "defaultMessage": "10 吉字节"
-  },
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
   },
@@ -2162,9 +2153,6 @@
   "xQ8iOj": {
     "defaultMessage": "您目前还没有订阅任何内容。"
   },
-  "xRkAD7": {
-    "defaultMessage": "10GB 事件数据 + 20GB 多媒体数据"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2239,5 +2227,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>不限制流量。</b>路由节点会持续进行数据交换。您无需关注带宽使用情况。"
+  },
+  "C8Qzcv": {
+    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费。"
   }
 }

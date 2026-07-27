@@ -269,14 +269,8 @@
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
   },
-  "6BD6eg": {
-    "defaultMessage": "Four relay implementations, all {price}/month, no setup fee:"
-  },
   "6FbX6y": {
     "defaultMessage": "Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes."
-  },
-  "6IQOPN": {
-    "defaultMessage": "20 GB"
   },
   "6SfJaf": {
     "defaultMessage": "Upgrade To"
@@ -517,6 +511,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Four relay implementations, all {price}/month, no setup fee."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -1748,9 +1745,6 @@
   "lKv8ex": {
     "defaultMessage": "Default"
   },
-  "lLGBVr": {
-    "defaultMessage": "10 GB"
-  },
   "lP4qIQ": {
     "defaultMessage": "Card details"
   },
@@ -2173,9 +2167,6 @@
   },
   "xQ8iOj": {
     "defaultMessage": "You don't have any subscriptions yet."
-  },
-  "xRkAD7": {
-    "defaultMessage": "10 GB events + 20 GB media"
   },
   "xUdVjn": {
     "defaultMessage": "Route96"

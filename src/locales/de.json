@@ -269,9 +269,6 @@
   "6Auf1w": {
     "defaultMessage": "Die Anmeldung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut."
   },
-  "6BD6eg": {
-    "defaultMessage": "Vier verschiedene Relais-Implementierungen, jeweils {price} pro Monat, ohne Einrichtungskosten:"
-  },
   "6FbX6y": {
     "defaultMessage": "Wenn Sie die Skalierung stoppen, wird die Anwendung auf Null zurückgesetzt, und die Daten bleiben erhalten. Durch das Löschen wird die Abrechnung beendet und die Bereitstellung sowie die zugehörigen Speicherbereiche werden dauerhaft entfernt."
   },
@@ -2165,9 +2162,6 @@
   "xQ8iOj": {
     "defaultMessage": "Sie haben noch keine Abonnements abgeschlossen."
   },
-  "xRkAD7": {
-    "defaultMessage": "10 GB für Ereignisse + 20 GB für Medien"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2242,5 +2236,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Unbegrenztes Datenvolumen.</b> Ein Routing-Knoten kommuniziert ständig mit anderen Knoten. Sie sollten nicht ständig die Bandbreitennutzung überwachen."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Vier verschiedene Relais-Implementierungen, jeweils {price} pro Monat, ohne Einrichtungskosten."
   }
 }

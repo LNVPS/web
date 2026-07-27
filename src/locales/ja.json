@@ -266,14 +266,8 @@
   "6Auf1w": {
     "defaultMessage": "ログインに失敗しました。もう一度お試しください。"
   },
-  "6BD6eg": {
-    "defaultMessage": "4つのリレー実装方法をご用意。いずれも月額{price}で、初期費用は一切かかりません。"
-  },
   "6FbX6y": {
     "defaultMessage": "停止すると、アプリケーションは初期状態に戻り、データは保持されます。削除すると、課金が停止し、デプロイメントとそのボリュームが完全に削除されます。"
-  },
-  "6IQOPN": {
-    "defaultMessage": "20GB"
   },
   "6SfJaf": {
     "defaultMessage": "アップグレードするには"
@@ -1745,9 +1739,6 @@
   "lKv8ex": {
     "defaultMessage": "デフォルト"
   },
-  "lLGBVr": {
-    "defaultMessage": "10GB"
-  },
   "lP4qIQ": {
     "defaultMessage": "カード情報"
   },
@@ -2168,9 +2159,6 @@
   "xQ8iOj": {
     "defaultMessage": "まだ購読していません。"
   },
-  "xRkAD7": {
-    "defaultMessage": "イベントデータ10GB＋メディアデータ20GB"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2245,5 +2233,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
+  },
+  "C8Qzcv": {
+    "defaultMessage": "4つのリレー実装方法をご用意。いずれも月額{price}で、初期費用は一切かかりません。"
   }
 }

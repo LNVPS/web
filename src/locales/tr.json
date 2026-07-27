@@ -266,9 +266,6 @@
   "6Auf1w": {
     "defaultMessage": "Giriş işlemi tamamlanamadı. Lütfen tekrar deneyin."
   },
-  "6BD6eg": {
-    "defaultMessage": "Dört farklı röle uygulaması, hepsi aylık {price}, kurulum ücreti yok:"
-  },
   "6FbX6y": {
     "defaultMessage": "Durdurma işlemi, uygulamanın ölçeğini sıfıra indirir ve verilerini saklar. Silme işlemi, faturalandırmayı durdurur ve dağıtımı ve ilgili depolama alanlarını kalıcı olarak kaldırır."
   },
@@ -2159,9 +2156,6 @@
   "xQ8iOj": {
     "defaultMessage": "Henüz herhangi bir aboneliğiniz bulunmuyor."
   },
-  "xRkAD7": {
-    "defaultMessage": "10 GB etkinlik verisi + 20 GB medya"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2236,5 +2230,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Sınırsız veri trafiği.</b> Bir yönlendirme düğümü sürekli olarak bilgi alışverişinde bulunur. Bant genişliği ölçüm cihazına bakmanız gerekmez."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Dört farklı röle uygulaması, hepsi aylık {price}, kurulum ücreti yok."
   }
 }

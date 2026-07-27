@@ -162,10 +162,12 @@ export const routes: RouteObject[] = [
         loader: appsLoader,
       },
       {
-        // No loader — every string on this page is fixed copy, and there is
-        // no managed Lightning node in the catalog to fetch.
         path: "/lightning-node-vps",
         element: <LightningNodeVpsPage />,
+        // Shares `appsLoader` with `/apps`: the page sells a VPS, not a
+        // managed app, but its relay cross-sell quotes the relays' catalog
+        // price rather than a number written into the page.
+        loader: appsLoader,
       },
       {
         path: "/vm",

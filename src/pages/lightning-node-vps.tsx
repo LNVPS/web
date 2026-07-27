@@ -1,22 +1,11 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
-
-/**
- * The relay price this page's cross-sell quotes, in minor units. `200` is
- * €2.00.
- *
- * This page has no loader — every other string on it is fixed copy and there
- * is no managed Lightning node in the catalog to fetch — so unlike
- * `/nostr-relay-hosting` there is nothing to derive from here. It is still a
- * constant rather than a number inside a `defaultMessage`: a price in a
- * translatable string cannot be localised and gets copied into eleven locale
- * files. Keep it in step with `FALLBACK_PRICE` in `nostr-relay-hosting.tsx`.
- */
-const RELAY_PRICE = { currency: "EUR", amount: 200 };
+import { relayApps, relayPrice } from "../utils/relay-catalog";
+import type { AppsLoaderData } from "../loaders";
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
  * Mirrors `SectionHeading` in `home.tsx:172`. */
@@ -54,10 +43,15 @@ function Section({
  * `/nostr-relay-hosting`, and the three regions named below are the VPS
  * regions — the other two pages are Dublin only.
  *
- * No loader: every string on the page is fixed copy. The `Offer`-on-VPS-plans
- * schema this page wants is `LNVPS/web#20`, still open — Alejandra's call was
- * to ship the page now and add the product markup with #20 rather than hold a
- * ranking surface for a markup nicety. The `FAQPage` block ships today.
+ * It shares `appsLoader` with `/apps` and `/nostr-relay-hosting` for one
+ * reason: the relay cross-sell near the bottom quotes a price, and that price
+ * comes from the catalog like every other price on the site. Nothing else on
+ * the page is fetched.
+ *
+ * The `Offer`-on-VPS-plans schema this page wants is `LNVPS/web#20`, still
+ * open — Alejandra's call was to ship the page now and add the product markup
+ * with #20 rather than hold a ranking surface for a markup nicety. The
+ * `FAQPage` block ships today.
  *
  * The Tor and no-KYC lines are policy statements. They are true today, and
  * they are the two claims on this page that go silently wrong if policy
@@ -65,6 +59,12 @@ function Section({
  */
 export function LightningNodeVpsPage() {
   const { formatMessage } = useIntl();
+  const { apps } = useLoaderData<AppsLoaderData>();
+
+  // The cross-sell quotes the relay apps' price, so read it off the same
+  // catalog rows `/nostr-relay-hosting` reads — including its "only claim it
+  // when all four agree" rule, so the two pages cannot quote different money.
+  const relayCost = relayPrice(relayApps(apps));
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the markup a
   // crawler reads and the text a visitor reads cannot drift. On this page the
@@ -224,7 +224,7 @@ export function LightningNodeVpsPage() {
             <FormattedMessage
               defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
               values={{
-                price: <CostAmount cost={RELAY_PRICE} converted={false} />,
+                price: <CostAmount cost={relayCost} converted={false} />,
                 a: (chunks) => (
                   <Link
                     to="/nostr-relay-hosting"

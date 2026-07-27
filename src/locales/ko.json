@@ -269,14 +269,8 @@
   "6Auf1w": {
     "defaultMessage": "로그인하는 데 실패했습니다. 다시 시도해 주세요."
   },
-  "6BD6eg": {
-    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
-  },
   "6FbX6y": {
     "defaultMessage": "중지하면 앱의 규모가 0으로 축소되고 데이터는 보존됩니다. 삭제하면 과금이 중지되고 배포 및 관련 볼륨이 영구적으로 제거됩니다."
-  },
-  "6IQOPN": {
-    "defaultMessage": "20GB"
   },
   "6SfJaf": {
     "defaultMessage": "업그레이드하세요."
@@ -1745,9 +1739,6 @@
   "lKv8ex": {
     "defaultMessage": "기본값"
   },
-  "lLGBVr": {
-    "defaultMessage": "10GB"
-  },
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
   },
@@ -2168,9 +2159,6 @@
   "xQ8iOj": {
     "defaultMessage": "아직 구독 중인 서비스가 없습니다."
   },
-  "xRkAD7": {
-    "defaultMessage": "10GB 이벤트 데이터 + 20GB 미디어 데이터"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2245,5 +2233,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>무제한 트래픽입니다.</b> 라우팅 노드는 끊임없이 정보를 주고받습니다. 대역폭 사용량을 계속 확인하지 않아도 됩니다."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
   }
 }

@@ -266,14 +266,8 @@
   "6Auf1w": {
     "defaultMessage": "Nous n’avons pas pu effectuer l’opération de connexion. Veuillez réessayer."
   },
-  "6BD6eg": {
-    "defaultMessage": "Quatre options de relais, toutes à {price} par mois, sans frais d’installation :"
-  },
   "6FbX6y": {
     "defaultMessage": "L’arrêt de la fonction de pesage remet à zéro l’application et conserve ses données. La suppression arrête la facturation et supprime définitivement le déploiement et ses volumes."
-  },
-  "6IQOPN": {
-    "defaultMessage": "20 Go"
   },
   "6SfJaf": {
     "defaultMessage": "Mettez à niveau vers"
@@ -1742,9 +1736,6 @@
   "lKv8ex": {
     "defaultMessage": "Par défaut"
   },
-  "lLGBVr": {
-    "defaultMessage": "10 Go"
-  },
   "lP4qIQ": {
     "defaultMessage": "Informations sur la carte de crédit"
   },
@@ -2165,9 +2156,6 @@
   "xQ8iOj": {
     "defaultMessage": "Vous n’avez encore aucun abonnement actif."
   },
-  "xRkAD7": {
-    "defaultMessage": "10 Go pour les événements + 20 Go pour les fichiers multimédias."
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2242,5 +2230,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Volume de données illimité.</b> Un nœud de routage communique en permanence. Vous n’avez pas besoin de surveiller un compteur de bande passante."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Quatre options de relais, toutes à {price} par mois, sans frais d’installation."
   }
 }

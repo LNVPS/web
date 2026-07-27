@@ -269,9 +269,6 @@
   "6Auf1w": {
     "defaultMessage": "Não foi possível efetuar o início de sessão. Tente novamente."
   },
-  "6BD6eg": {
-    "defaultMessage": "Quatro implementações de retransmissão, todas a {price} por mês, sem taxa de instalação:"
-  },
   "6FbX6y": {
     "defaultMessage": "Ao interromper a execução, a aplicação é reiniciada e os dados são preservados. Ao eliminar, a cobrança é interrompida e a implementação e os seus volumes são removidos permanentemente."
   },
@@ -2165,9 +2162,6 @@
   "xQ8iOj": {
     "defaultMessage": "Ainda não tem nenhuma assinatura ativa."
   },
-  "xRkAD7": {
-    "defaultMessage": "10 GB para eventos + 20 GB para conteúdo multimídia"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2242,5 +2236,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Tráfego ilimitado.</b> Um nó de roteamento transmite dados constantemente. Não deverá estar a monitorizar um medidor de largura de banda."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Quatro implementações de retransmissão, todas a {price} por mês, sem taxa de instalação."
   }
 }

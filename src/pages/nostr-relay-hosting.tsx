@@ -6,20 +6,9 @@ import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { appJsonLd } from "../utils/app-seo";
 import { formatPriceText } from "../utils/currency";
-import { RelayAppIds } from "../const";
+import { relayApps, relayPrice } from "../utils/relay-catalog";
+import BytesSize from "../components/bytes";
 import type { AppsLoaderData } from "../loaders";
-
-/**
- * The relay price as this page claims it, for the render where the catalog is
- * unreachable or the four relays have drifted apart.
- *
- * Same rule as `FALLBACK_PRICE` in `blossom-server-hosting.tsx`: the page has
- * to keep its headline when the API is down, so the price cannot be *only*
- * derived — but it must not sit inside a translatable string either, or eleven
- * locale files end up carrying a number only `src/api.ts` should decide. `200`
- * is €2.00.
- */
-const FALLBACK_PRICE = { currency: "EUR", amount: 200 };
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
  * Mirrors `SectionHeading` in `home.tsx:172`. */
@@ -51,86 +40,51 @@ function Section({
  * `/nostr-relay-hosting` — use-case landing page for the four relay apps in
  * the managed app catalog (`LNVPS/web#49`).
  *
- * The relay names in the table are copy, not API `display_name`s: the catalog
- * shows `Strfry` and the project styles itself `strfry`, and the storage
- * column is per-volume, which `storage_bytes` cannot express (HAVEN's 30 GiB
- * is 10 GiB of events plus 20 GiB of media). Only the price is derived.
+ * The table is the catalog: one row per app `relayApps` found, with the
+ * catalog's `display_name` and `storage_bytes`. The only column written here
+ * is "Best for" — an editorial judgement with no field behind it — and it is
+ * keyed by slug so a row's copy stays matched to its relay.
  *
  * Every price on the page — title, meta description, h1, the "all {price}"
  * line and the CTA — is a `{price}` placeholder fed from the catalog, falling
- * back to `FALLBACK_PRICE`. So the copy, the `Offer` markup and the `<title>`
- * cannot disagree, and no locale file carries the number.
+ * back to `RelayFallbackPrice` only when the API is unreachable or the relays
+ * disagree. So the copy, the `Offer` markup and the `<title>` cannot disagree,
+ * and no locale file carries the number.
  */
 export function NostrRelayHostingPage() {
   const intl = useIntl();
   const { formatMessage } = intl;
   const { apps } = useLoaderData<AppsLoaderData>();
 
-  // The four relays are one price, which is what the copy says. Derive it
-  // rather than hardcoding minor units — but only claim it when every relay
-  // really does agree, otherwise fall back to the written figure.
-  const relays = RelayAppIds.map((id) => apps?.find((a) => a.id === id)).filter(
-    (a) => a !== undefined,
-  );
-  const uniformPrice =
-    relays.length === RelayAppIds.length &&
-    relays.every(
-      (a) =>
-        a.amount === relays[0].amount &&
-        a.currency === relays[0].currency &&
-        a.setup_amount === 0,
-    )
-      ? relays[0]
-      : undefined;
+  const relays = relayApps(apps);
 
   // Ex-VAT and unconverted, matching the `Offer`'s `valueAddedTaxIncluded:
   // false` and what a crawler is served. No `interval_type`: the period is
   // part of the sentence around the placeholder, so "/month" and "a month"
   // stay translatable rather than being appended in a fixed position.
-  const price = uniformPrice
-    ? { currency: uniformPrice.currency, amount: uniformPrice.amount }
-    : FALLBACK_PRICE;
+  const price = relayPrice(relays);
   const priceText = formatPriceText(intl, price);
   const priceNode = <CostAmount cost={price} converted={false} />;
 
-  // The relay table is four rows of copy: "Best for" and "Storage" are
-  // editorial judgements and per-volume figures, neither of which is on the
-  // API. Keys are stable so a row's strings stay matched to its relay.
-  const table = [
-    {
-      key: "strfry",
-      name: "strfry",
-      bestFor: formatMessage({
-        defaultMessage: "High throughput, large event volume",
-      }),
-      storage: formatMessage({ defaultMessage: "10 GB" }),
-    },
-    {
-      key: "nostr-rs-relay",
-      name: "nostr-rs-relay",
-      bestFor: formatMessage({
-        defaultMessage: "Small, simple, Rust + SQLite",
-      }),
-      storage: formatMessage({ defaultMessage: "10 GB" }),
-    },
-    {
-      key: "pyramid",
-      name: "Pyramid",
-      bestFor: formatMessage({
-        defaultMessage: "Community relays with invite hierarchy",
-      }),
-      storage: formatMessage({ defaultMessage: "20 GB" }),
-    },
-    {
-      key: "haven",
-      name: "HAVEN",
-      bestFor: formatMessage({
-        defaultMessage:
-          "Personal vault-style relay, with its own Blossom media store",
-      }),
-      storage: formatMessage({ defaultMessage: "10 GB events + 20 GB media" }),
-    },
-  ];
+  // "Best for" is the one column with no API field behind it — which relay
+  // suits which job is an editorial call. Keyed by catalog slug so it stays
+  // matched to its row; a relay the map does not know still renders, without
+  // a recommendation, rather than dropping out of the table.
+  const bestFor: Record<string, string> = {
+    strfry: formatMessage({
+      defaultMessage: "High throughput, large event volume",
+    }),
+    "nostr-rs-relay": formatMessage({
+      defaultMessage: "Small, simple, Rust + SQLite",
+    }),
+    "pyramid-relay": formatMessage({
+      defaultMessage: "Community relays with invite hierarchy",
+    }),
+    "haven-relay": formatMessage({
+      defaultMessage:
+        "Personal vault-style relay, with its own Blossom media store",
+    }),
+  };
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the markup a
   // crawler reads and the text a visitor reads cannot drift. Answers ship as
@@ -217,12 +171,12 @@ export function NostrRelayHostingPage() {
             {/*
               One string, not a derived/literal pair. `price` already carries
               the "only claim it when all four agree" rule — it is the catalog
-              figure when they do and `FALLBACK_PRICE` when they do not — so
-              the copy no longer needs a second `defaultMessage` holding the
-              written number.
+              figure when they do and `RelayFallbackPrice` when they do not —
+              so the copy no longer needs a second `defaultMessage` holding
+              the written number.
             */}
             <FormattedMessage
-              defaultMessage="Four relay implementations, all {price}/month, no setup fee:"
+              defaultMessage="Four relay implementations, all {price}/month, no setup fee."
               values={{
                 price: (
                   <CostAmount
@@ -234,35 +188,49 @@ export function NostrRelayHostingPage() {
               }}
             />
           </p>
-          <div className="max-w-3xl overflow-x-auto">
-            <table className="w-full border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-cyber-border text-xs uppercase tracking-[0.15em] text-cyber-muted">
-                  <th className="py-2 pr-4 font-normal">
-                    <FormattedMessage defaultMessage="Relay" />
-                  </th>
-                  <th className="py-2 pr-4 font-normal">
-                    <FormattedMessage defaultMessage="Best for" />
-                  </th>
-                  <th className="py-2 font-normal">
-                    <FormattedMessage defaultMessage="Storage" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-cyber-border/60">
-                {table.map((r) => (
-                  <tr key={r.key}>
-                    {/* `nostr-rs-relay` otherwise breaks at its hyphens. */}
-                    <td className="whitespace-nowrap py-2 pr-4 font-bold text-cyber-text-bright">
-                      {r.name}
-                    </td>
-                    <td className="py-2 pr-4 text-cyber-text">{r.bestFor}</td>
-                    <td className="py-2 text-cyber-text">{r.storage}</td>
+          {/*
+            The table is the catalog, so it only exists when the catalog does.
+            On a cold server start with the API unreachable `relays` is empty —
+            the same state in which `/apps` renders no catalog — and a header
+            row over nothing reads as a broken page, so drop the table instead.
+            The sentence above ends in a full stop for that reason: it has to
+            stand on its own when there is no table under it.
+          */}
+          {relays.length > 0 && (
+            <div className="max-w-3xl overflow-x-auto">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-cyber-border text-xs uppercase tracking-[0.15em] text-cyber-muted">
+                    <th className="py-2 pr-4 font-normal">
+                      <FormattedMessage defaultMessage="Relay" />
+                    </th>
+                    <th className="py-2 pr-4 font-normal">
+                      <FormattedMessage defaultMessage="Best for" />
+                    </th>
+                    <th className="py-2 font-normal">
+                      <FormattedMessage defaultMessage="Storage" />
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-cyber-border/60">
+                  {relays.map((a) => (
+                    <tr key={a.name}>
+                      {/* `nostr-rs-relay` otherwise breaks at its hyphens. */}
+                      <td className="whitespace-nowrap py-2 pr-4 font-bold text-cyber-text-bright">
+                        {a.display_name}
+                      </td>
+                      <td className="py-2 pr-4 text-cyber-text">
+                        {bestFor[a.name]}
+                      </td>
+                      <td className="py-2 text-cyber-text">
+                        <BytesSize value={a.storage_bytes} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
               defaultMessage="Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the only one of the four that also gives you a Blossom media store, so your images live under the same key as your notes."

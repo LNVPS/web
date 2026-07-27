@@ -269,9 +269,6 @@
   "6Auf1w": {
     "defaultMessage": "No pudimos completar el proceso de inicio de sesión. Por favor, inténtelo de nuevo."
   },
-  "6BD6eg": {
-    "defaultMessage": "Cuatro implementaciones de retransmisión, todas a {price} al mes, sin cargo por configuración:"
-  },
   "6FbX6y": {
     "defaultMessage": "Al detener la función, la aplicación se recalibra a cero y conserva sus datos. Al eliminarla, se detiene la facturación y se elimina permanentemente la implementación y sus volúmenes."
   },
@@ -2165,9 +2162,6 @@
   "xQ8iOj": {
     "defaultMessage": "Aún no tienes ninguna suscripción."
   },
-  "xRkAD7": {
-    "defaultMessage": "10 GB para eventos + 20 GB para contenido multimedia"
-  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2242,5 +2236,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Tráfico sin límite de uso.</b> Un nodo de enrutamiento intercambia información constantemente. No debería estar controlando un medidor de ancho de banda."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Cuatro implementaciones de retransmisión, todas a {price} al mes, sin cargo por configuración."
   }
 }

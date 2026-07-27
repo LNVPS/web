@@ -34,7 +34,9 @@ export default function HomePage() {
     "@type": "Organization",
     name: "LNVPS",
     url: "https://lnvps.net",
-    logo: "https://lnvps.net/logo.jpg",
+    // Square avatar rather than a lockup: search surfaces render this on
+    // backgrounds we don't control, and the avatar carries its own navy tile.
+    logo: "https://lnvps.net/avatar.png",
     description: formatMessage({
       defaultMessage:
         "High-performance VPS hosting with flexible payments — Bitcoin Lightning or card.",

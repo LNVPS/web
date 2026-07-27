@@ -5,7 +5,12 @@ const SITE_NAME = "LNVPS";
 const SITE_URL = "https://lnvps.net";
 const DEFAULT_DESCRIPTION =
   "Bitcoin Lightning VPS hosting — pay with Lightning, Bitcoin, or card";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.jpg`;
+/**
+ * Social-card image. Must stay a wide banner: every platform that renders a
+ * card fits the image to a landscape slot, so a square gets centre-cropped or
+ * letterboxed. `banner.png` is the brand bundle's 3:1 export, sized for this.
+ */
+const DEFAULT_OG_IMAGE = `${SITE_URL}/banner.png`;
 
 interface SeoProps {
   title?: string;

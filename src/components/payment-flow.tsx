@@ -392,7 +392,7 @@ export default function PaymentFlow({
             data={`lightning:${new LNURL(lud16).lnurl}`}
             width={512}
             height={512}
-            avatar="/logo.jpg"
+            avatar="/avatar.png"
             className="cursor-pointer rounded-sm overflow-hidden"
           />
           <div className="select-all break-all text-center text-sm text-cyber-text">

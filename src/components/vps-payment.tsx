@@ -56,7 +56,7 @@ export default function VpsPayment({
         link={ln}
         width={512}
         height={512}
-        avatar="/logo.jpg"
+        avatar="/avatar.png"
         className="cursor-pointer rounded-sm overflow-hidden"
       />
       <div className="flex flex-col items-center">

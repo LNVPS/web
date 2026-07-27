@@ -329,7 +329,7 @@ function PaymentFlowDemo({ state }: { state: FlowState }) {
             data={`lightning:${new LNURL("42@lnvps.net").lnurl}`}
             width={512}
             height={512}
-            avatar="/logo.jpg"
+            avatar="/avatar.png"
             className="cursor-pointer rounded-sm overflow-hidden"
           />
           <div className="select-all break-all text-center text-sm text-cyber-text">

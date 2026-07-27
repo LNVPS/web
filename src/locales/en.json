@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "Outbound"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+  },
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
@@ -127,6 +130,9 @@
   },
   "2l2y5p": {
     "defaultMessage": "Create Order"
+  },
+  "2lKQfH": {
+    "defaultMessage": "How much can I store?"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -343,6 +349,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "Save Payout Route"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
   },
   "8ecw1u": {
     "defaultMessage": "Handles"
@@ -584,6 +593,9 @@
   "FZeQlc": {
     "defaultMessage": "Disconnected"
   },
+  "FZup6q": {
+    "defaultMessage": "Where does it run?"
+  },
   "FazwRl": {
     "defaultMessage": "Try again"
   },
@@ -668,6 +680,9 @@
   "HPBE7M": {
     "defaultMessage": "Back to apps"
   },
+  "HVEPWR": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for €3.50/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "HVtxik": {
     "defaultMessage": "Custom domain"
   },
@@ -691,6 +706,9 @@
   },
   "IZFEUg": {
     "defaultMessage": "Ready"
+  },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, Ireland."
   },
   "Id24hd": {
     "defaultMessage": "Name *"
@@ -872,6 +890,9 @@
   "PfSZy5": {
     "defaultMessage": "No order found"
   },
+  "Pk14hW": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+  },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
   },
@@ -935,6 +956,9 @@
   "RCHbbR": {
     "defaultMessage": "Manage your billing details, automatic renewal and how we reach you."
   },
+  "RETAQj": {
+    "defaultMessage": "€3.50/month, no setup fee. 20 GB for your files."
+  },
   "RQNCao": {
     "defaultMessage": "NIP-05 identity hosting"
   },
@@ -979,6 +1003,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "Manage the NIP-05 handles registered on this domain."
+  },
+  "SZwp5S": {
+    "defaultMessage": "How large a file can I upload?"
   },
   "Sczo8n": {
     "defaultMessage": "Duration: {duration}"
@@ -1040,6 +1067,9 @@
   "TgGVeW": {
     "defaultMessage": "Action required"
   },
+  "TlSf60": {
+    "defaultMessage": "Can I use my own domain?"
+  },
   "TqSTI0": {
     "defaultMessage": "Enable"
   },
@@ -1055,8 +1085,14 @@
   "U+Ddsx": {
     "defaultMessage": "Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost."
   },
+  "U0GEAC": {
+    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
   "U96Gl9": {
     "defaultMessage": "Save this card for future payments"
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
   },
   "UPP+wZ": {
     "defaultMessage": "In use by {count, plural, one {VM} other {VMs}}: {vms}"
@@ -1115,6 +1151,9 @@
   "VzzYJk": {
     "defaultMessage": "Create"
   },
+  "W8nHSd": {
+    "defaultMessage": "FAQ"
+  },
   "WEoZhh": {
     "defaultMessage": "Couldn't find a subscription to bill this upgrade to."
   },
@@ -1136,6 +1175,9 @@
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "Isolated environment with its own database"
+  },
   "X0ha1a": {
     "defaultMessage": "Save changes"
   },
@@ -1154,11 +1196,17 @@
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "Bring your own domain via CNAME — separate certificate issued automatically"
+  },
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
   },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
+  },
+  "Yc91CY": {
+    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "Contact Support"
@@ -1174,6 +1222,9 @@
   },
   "Z+AMVE": {
     "defaultMessage": "Email Verification Required"
+  },
+  "Z+US89": {
+    "defaultMessage": "Host your own media server — €3.50 a month"
   },
   "Z3gKpL": {
     "defaultMessage": "storage"
@@ -1204,6 +1255,12 @@
   },
   "a60eIK": {
     "defaultMessage": "Saving re-applies the config and restarts the app."
+  },
+  "aHQFgG": {
+    "defaultMessage": "Blossom Media Server Hosting from €3.50/month"
+  },
+  "aLe15X": {
+    "defaultMessage": "Pay how you like"
   },
   "aPcXT9": {
     "defaultMessage": "Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only."
@@ -1478,6 +1535,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Why self-host media"
+  },
   "j7VE/p": {
     "defaultMessage": "Standard BTC transaction — credits after confirmation"
   },
@@ -1499,8 +1559,14 @@
   "jf7fbc": {
     "defaultMessage": "None set — add one"
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
+  },
+  "jhyC12": {
+    "defaultMessage": "What is included"
   },
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."
@@ -1514,6 +1580,9 @@
   "jwt9EL": {
     "defaultMessage": "Passkey sign-in failed"
   },
+  "k2S+Z0": {
+    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+  },
   "k9Pskm": {
     "defaultMessage": "Fast solid-state storage"
   },
@@ -1522,6 +1591,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
+  },
+  "kNIWoA": {
+    "defaultMessage": "Uploads up to 100 MB each"
   },
   "kRFEho": {
     "defaultMessage": "Add SSH Key"
@@ -1582,6 +1654,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "Managed Apps: run the software without running the server"
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
   "mIuuiJ": {
     "defaultMessage": "Service Status and Uptime"
@@ -1697,6 +1772,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "ps4K9r": {
+    "defaultMessage": "What is Blossom?"
+  },
   "pus6h6": {
     "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
   },
@@ -1777,6 +1855,9 @@
   },
   "sUw18G": {
     "defaultMessage": "Encrypted messaging is only available for Nostr accounts. Your account has no Nostr key to read or send NIP-17 messages. For help, please use the Support tab."
+  },
+  "si4AIj": {
+    "defaultMessage": "Deploy Route96 — €3.50/month"
   },
   "sn+Rj5": {
     "defaultMessage": "Sign in with a passkey"
@@ -1907,11 +1988,20 @@
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
+  "xExBHw": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
   "xOnplm": {
     "defaultMessage": "Loading payment methods…"
   },
   "xQ8iOj": {
     "defaultMessage": "You don't have any subscriptions yet."
+  },
+  "xUdVjn": {
+    "defaultMessage": "Route96"
   },
   "xXbJso": {
     "defaultMessage": "Sign out"

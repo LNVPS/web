@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "صادر"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+  },
   "+EHk4e": {
     "defaultMessage": "نعم. هذا جهازك، لذا قم بتثبيت ما تريد."
   },
@@ -86,6 +89,9 @@
   "0t1qvq": {
     "defaultMessage": "أضف قاعدة."
   },
+  "12+5NG": {
+    "defaultMessage": "Pro-rated upgrade"
+  },
   "13cluZ": {
     "defaultMessage": "أضف مفتاح SSH:"
   },
@@ -130,6 +136,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "إنشاء طلب شراء"
+  },
+  "2lKQfH": {
+    "defaultMessage": "How much can I store?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Quote currency"
   },
   "2nfKZI": {
     "defaultMessage": "هل يمكنني تغيير برنامج الترحيل لاحقًا؟"
@@ -254,6 +266,9 @@
   "6Auf1w": {
     "defaultMessage": "لم نتمكن من إكمال عملية تسجيل الدخول. يرجى المحاولة مرة أخرى."
   },
+  "6BD6eg": {
+    "defaultMessage": "أربعة تطبيقات مختلفة لنظام الترحيل، جميعها بتكلفة {price} شهريًا، ولا توجد رسوم إعداد:"
+  },
   "6FbX6y": {
     "defaultMessage": "عند إيقاف الميزان، تتم إعادة تعيين التطبيق إلى الصفر ويتم الاحتفاظ ببياناته. يؤدي الحذف إلى إيقاف الفوترة وإزالة النشر وجميع وحدات التخزين التابعة له بشكل دائم."
   },
@@ -296,6 +311,9 @@
   "7Cdpiv": {
     "defaultMessage": "مفاتيح SSH"
   },
+  "7Iag/E": {
+    "defaultMessage": "Total due now"
+  },
   "7L4D8/": {
     "defaultMessage": "اختر التتابع الذي تريده."
   },
@@ -325,6 +343,9 @@
   },
   "7tOz+m": {
     "defaultMessage": "ادفع الآن."
+  },
+  "7v5vj0": {
+    "defaultMessage": "Host your own media server — {price} a month"
   },
   "7wbySo": {
     "defaultMessage": "أرسل لنا رسالة مباشرة وسيتواصل معك فريق الدعم."
@@ -367,6 +388,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "حفظ مسار الدفع"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
   },
   "8ecw1u": {
     "defaultMessage": "مقابض"
@@ -491,14 +515,23 @@
   "Bzv1CO": {
     "defaultMessage": "أعد التفعيل الآن."
   },
+  "CBHTGe": {
+    "defaultMessage": "Credit for time already paid"
+  },
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
   },
   "Cououe": {
     "defaultMessage": "سجّل الدخول لتفعيل هذا التطبيق."
   },
+  "CwmTc6": {
+    "defaultMessage": "New renewal price"
+  },
   "D3idYv": {
     "defaultMessage": "إعدادات"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× base app"
   },
   "D9mck8": {
     "defaultMessage": "ادفع أي مبلغ في أي وقت — يُضاف الوقت بالتناسب"
@@ -617,6 +650,9 @@
   "FZeQlc": {
     "defaultMessage": "غير متصل."
   },
+  "FZup6q": {
+    "defaultMessage": "Where does it run?"
+  },
   "FazwRl": {
     "defaultMessage": "حاول مرة أخرى."
   },
@@ -661,6 +697,9 @@
   },
   "GSye7T": {
     "defaultMessage": "عنوان Lightning"
+  },
+  "GXNK11": {
+    "defaultMessage": "قم بتشغيل خادم النوسترا الخاص بك مقابل {price} شهريًا — باستخدام strfry أو nostr-rs-relay أو Pyramid أو HAVEN، وقم بإعداده في دقائق معدودة على اسم المضيف الخاص به مع تضمين بروتوكول TLS ومساحة التخزين."
   },
   "Gd6Kbk": {
     "defaultMessage": "غير نشط بعد."
@@ -725,6 +764,9 @@
   "IZFEUg": {
     "defaultMessage": "جاهز."
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, Ireland."
+  },
   "Id24hd": {
     "defaultMessage": "الاسم *"
   },
@@ -742,6 +784,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "الاشتراكات"
+  },
+  "J+pWCM": {
+    "defaultMessage": "New size"
   },
   "JAJV1y": {
     "defaultMessage": "يتم تعيينه بمجرد بدء التشغيل."
@@ -794,6 +839,9 @@
   "Kffxdm": {
     "defaultMessage": "تتضمن كل باقة عنوان IPv4 واحد وعنوان IPv6 واحد، وحركة مرور بيانات غير محدودة. الأسعار تشمل ضريبة القيمة المضافة؛ وتُستثنى رسوم معالجة الدفع."
   },
+  "KkHYsy": {
+    "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
   "KuX7em": {
     "defaultMessage": "نشط منذ {duration}"
   },
@@ -811,6 +859,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "ينتهي الصلاحية {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "يتم تجديده في"
@@ -920,6 +971,12 @@
   "PfSZy5": {
     "defaultMessage": "لم يتم العثور على أي طلب."
   },
+  "Pk14hW": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
   "PucUfl": {
     "defaultMessage": "اختر مفتاح SSH:"
   },
@@ -1016,6 +1073,9 @@
   "SB//YQ": {
     "defaultMessage": "ملخص الطلب"
   },
+  "SMbDTG": {
+    "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
+  },
   "SQJto2": {
     "defaultMessage": "تسجيل الدخول"
   },
@@ -1024,6 +1084,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "أدِر معرّفات NIP-05 المسجّلة على هذا النطاق."
+  },
+  "SZwp5S": {
+    "defaultMessage": "How large a file can I upload?"
   },
   "Sczo8n": {
     "defaultMessage": "المدة: {duration}"
@@ -1085,6 +1148,9 @@
   "TgGVeW": {
     "defaultMessage": "إجراء مطلوب"
   },
+  "TlSf60": {
+    "defaultMessage": "هل يمكنني استخدام نطاقي الخاص؟"
+  },
   "TqSTI0": {
     "defaultMessage": "فعّل/شغّل"
   },
@@ -1103,11 +1169,17 @@
   "U/W38H": {
     "defaultMessage": "ماذا يحدث لفعالياتي إذا توقفت عن الدفع؟"
   },
+  "U0GEAC": {
+    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
   "U7fZs8": {
     "defaultMessage": "كم يستغرق؟"
   },
   "U96Gl9": {
     "defaultMessage": "احتفظ بهذه البطاقة لاستخدامها في عمليات الدفع المستقبلية."
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
   },
   "UPP+wZ": {
     "defaultMessage": "يستخدم بواسطة {count,plural,one{الآلة الافتراضية.} other{الأجهزة الافتراضية}} {vms}"
@@ -1169,6 +1241,9 @@
   "VzzYJk": {
     "defaultMessage": "أنشئ"
   },
+  "W8nHSd": {
+    "defaultMessage": "FAQ"
+  },
   "WEoZhh": {
     "defaultMessage": "تعذر العثور على اشتراك لتحصيل تكلفة هذه الترقية."
   },
@@ -1189,6 +1264,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{شهر} other{أشهر}}"
+  },
+  "X/xmPf": {
+    "defaultMessage": "بيئة معزولة تحتوي على قاعدة بيانات خاصة بها."
   },
   "X0ha1a": {
     "defaultMessage": "حفظ التغييرات"
@@ -1211,6 +1289,9 @@
   "Y+LcmX": {
     "defaultMessage": "إذا لم تتمكن من تغيير إعدادات نظام أسماء النطاقات (DNS)، فاستخدم خادم وكيل. {path} على الخادم الحالي لديك لـ {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "استخدم نطاقك الخاص عبر CNAME – سيتم إصدار الشهادة بشكل منفصل تلقائيًا."
+  },
   "Y/tMXU": {
     "defaultMessage": "في انتظار استلام الدفعة. سيتم تطبيق ذلك تلقائيًا بمجرد التأكيد."
   },
@@ -1220,8 +1301,14 @@
   "YWjrby": {
     "defaultMessage": "تنبيهات الحساب فقط، مثل تاريخ انتهاء صلاحية الجهاز الظاهري. نحن لا نرسل رسائل تسويقية أبدًا."
   },
+  "Yc91CY": {
+    "defaultMessage": "Up to 100 MB per upload."
+  },
   "YdQxfw": {
     "defaultMessage": "اتصل بالدعم الفني"
+  },
+  "Yiyf5n": {
+    "defaultMessage": "خدمة استضافة شبكة نوستر ابتداءً من {price} شهريًا."
   },
   "Yl8GBP": {
     "defaultMessage": "رقم التعريف الضريبي"
@@ -1268,14 +1355,23 @@
   "a60eIK": {
     "defaultMessage": "الحفظ يعيد تطبيق الإعدادات ويعيد تشغيل التطبيق."
   },
+  "aLe15X": {
+    "defaultMessage": "Pay how you like"
+  },
   "aPcXT9": {
     "defaultMessage": "يتم تجميع المدفوعات مع عمليات الإحالة الأخرى على الشبكة في معاملة واحدة، وذلك بعد تجاوز رصيدك الحد الأدنى المطلوب. ويتم خصم حصتك من رسوم الشبكة من رصيدك. هذا ينطبق فقط على عناوين الشبكة الرئيسية."
   },
   "aTgjTE": {
     "defaultMessage": "إضافة مفتاح مرور"
   },
+  "aUuDGj": {
+    "defaultMessage": "قم بتفعيل جهاز إعادة الإرسال الخاص بك — {price} شهريًا."
+  },
   "acrOoz": {
     "defaultMessage": "استمر."
+  },
+  "agOXPD": {
+    "defaultMessage": "Size"
   },
   "alJZVR": {
     "defaultMessage": "حساب نوستر"
@@ -1354,6 +1450,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "جارٍ تحميل سجل العمليات..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "Cost at new size for the rest of this period"
   },
   "dHltrI": {
     "defaultMessage": "يتم تحصيل الرسوم كل"
@@ -1541,6 +1640,9 @@
   "j4RCJW": {
     "defaultMessage": "ملف SKILL.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Why self-host media"
+  },
   "j7VE/p": {
     "defaultMessage": "معاملة BTC عادية — تُضاف بعد التأكيد"
   },
@@ -1568,8 +1670,14 @@
   "jf7fbc": {
     "defaultMessage": "لم يتم تعيين أي منها — أضف واحدة."
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "وجّه سجل CNAME لهذا النطاق إلى اسم مضيف النشر بمجرد تعيينه. اتركه فارغًا للإزالة."
+  },
+  "jhyC12": {
+    "defaultMessage": "What is included"
   },
   "jmVweB": {
     "defaultMessage": "جارٍ تحميل مفاتيح SSH..."
@@ -1583,6 +1691,12 @@
   "jwt9EL": {
     "defaultMessage": "فشل تسجيل الدخول بمفتاح المرور"
   },
+  "jzU8se": {
+    "defaultMessage": "Deploy Route96 — {price}/month"
+  },
+  "k2S+Z0": {
+    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+  },
   "k9Pskm": {
     "defaultMessage": "تخزين SSD سريع"
   },
@@ -1591,6 +1705,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "يرجى إكمال عملية التحقق من خلال اختبار الكابتشا."
+  },
+  "kNIWoA": {
+    "defaultMessage": "Uploads up to 100 MB each"
   },
   "kRFEho": {
     "defaultMessage": "أضف مفتاح SSH."
@@ -1660,6 +1777,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "التطبيقات المُدارة: قم بتشغيل البرنامج دون تشغيل الخادم."
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
   "mIuuiJ": {
     "defaultMessage": "حالة الخدمة ووقت التشغيل"
@@ -1733,6 +1853,9 @@
   "o2AdrJ": {
     "defaultMessage": "تستخدم هذه الآلة الافتراضية قالبًا مخصصًا ولا يمكن تحديثها. تدعم فقط الآلات الافتراضية التي تستخدم قوالب قياسية التحديثات."
   },
+  "o2v6Fy": {
+    "defaultMessage": "شغّل خادمك الخاص من نوع نوستر — مقابل {price} شهريًا."
+  },
   "o9lOhm": {
     "defaultMessage": "يدعم المفتاح العام: {npub}"
   },
@@ -1778,11 +1901,20 @@
   "p5LNtB": {
     "defaultMessage": "لم يتم تعيينه."
   },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
   "pgLgIU": {
     "defaultMessage": "اقرأ التحديث بالكامل."
+  },
+  "pgl1gp": {
+    "defaultMessage": "Resize to {size}× base"
+  },
+  "ps4K9r": {
+    "defaultMessage": "What is Blossom?"
   },
   "pus6h6": {
     "defaultMessage": "يمكنك المغادرة في أي وقت. سيتوقف الكود عن توليد المزيد من الأرباح، ولن يمكن إعادة استخدامه."
@@ -1868,6 +2000,9 @@
   "sUw18G": {
     "defaultMessage": "تتوفر خدمة المراسلة المشفرة فقط لحسابات نوستر. لا يمتلك حسابك مفتاح نوستر لقراءة رسائل NIP-17 أو إرسالها. للحصول على المساعدة، يرجى استخدام علامة التبويب \"الدعم\"."
   },
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+  },
   "sn+Rj5": {
     "defaultMessage": "تسجيل الدخول بمفتاح مرور"
   },
@@ -1937,6 +2072,9 @@
   "ubXbwc": {
     "defaultMessage": "السياسة الافتراضية"
   },
+  "uby/fm": {
+    "defaultMessage": "Get quote"
+  },
   "ujaB7H": {
     "defaultMessage": "أين؟"
   },
@@ -2000,6 +2138,9 @@
   "wLwJ9Q": {
     "defaultMessage": "قيمة الوقت المتبقي بالسعر القديم:"
   },
+  "wa/t9c": {
+    "defaultMessage": "Pay and resize"
+  },
   "waJLKW": {
     "defaultMessage": "مرتبط."
   },
@@ -2012,6 +2153,12 @@
   "x0cZXf": {
     "defaultMessage": "لا يمكن إجراء الترقية."
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
+  "xExBHw": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
   "xOnplm": {
     "defaultMessage": "جارٍ تحميل طرق الدفع…"
   },
@@ -2020,6 +2167,9 @@
   },
   "xRkAD7": {
     "defaultMessage": "10 جيجابايت من الأحداث + 20 جيجابايت من الوسائط."
+  },
+  "xUdVjn": {
+    "defaultMessage": "Route96"
   },
   "xXbJso": {
     "defaultMessage": "تسجيل الخروج"

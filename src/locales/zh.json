@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "外发；已发出。"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+  },
   "+EHk4e": {
     "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
   },
@@ -86,6 +89,9 @@
   "0t1qvq": {
     "defaultMessage": "添加规则。"
   },
+  "12+5NG": {
+    "defaultMessage": "Pro-rated upgrade"
+  },
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
   },
@@ -130,6 +136,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "创建订单"
+  },
+  "2lKQfH": {
+    "defaultMessage": "How much can I store?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Quote currency"
   },
   "2nfKZI": {
     "defaultMessage": "我之后可以更换中继软件吗？"
@@ -251,6 +263,9 @@
   "6Auf1w": {
     "defaultMessage": "我们无法完成登录。请重试。"
   },
+  "6BD6eg": {
+    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费："
+  },
   "6FbX6y": {
     "defaultMessage": "停止操作会将应用程序缩减至零，并保留其数据。删除操作会停止计费，并永久删除部署及其卷。"
   },
@@ -293,6 +308,9 @@
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
   },
+  "7Iag/E": {
+    "defaultMessage": "Total due now"
+  },
   "7L4D8/": {
     "defaultMessage": "选择你的接力队员。"
   },
@@ -322,6 +340,9 @@
   },
   "7tOz+m": {
     "defaultMessage": "立即付款。"
+  },
+  "7v5vj0": {
+    "defaultMessage": "Host your own media server — {price} a month"
   },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
@@ -364,6 +385,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "保存提款方式。"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
   },
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
@@ -488,14 +512,23 @@
   "Bzv1CO": {
     "defaultMessage": "立即重新激活。"
   },
+  "CBHTGe": {
+    "defaultMessage": "Credit for time already paid"
+  },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
   },
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
   },
+  "CwmTc6": {
+    "defaultMessage": "New renewal price"
+  },
   "D3idYv": {
     "defaultMessage": "设置"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× base app"
   },
   "D9mck8": {
     "defaultMessage": "随时支付任意金额 — 时长按比例增加"
@@ -614,6 +647,9 @@
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
+  "FZup6q": {
+    "defaultMessage": "Where does it run?"
+  },
   "FazwRl": {
     "defaultMessage": "请重试。"
   },
@@ -658,6 +694,9 @@
   },
   "GSye7T": {
     "defaultMessage": "闪电地址"
+  },
+  "GXNK11": {
+    "defaultMessage": "每月只需支付 {price}，即可搭建并运行您自己的 Nostr 中继服务器——选择 strfry、nostr-rs-relay、Pyramid 或 HAVEN。几分钟内即可在您自己的域名下完成部署，并且已包含 TLS 加密和存储空间。"
   },
   "Gd6Kbk": {
     "defaultMessage": "尚未激活。"
@@ -722,6 +761,9 @@
   "IZFEUg": {
     "defaultMessage": "准备好了。"
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, Ireland."
+  },
   "Id24hd": {
     "defaultMessage": "姓名 *"
   },
@@ -739,6 +781,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "订阅"
+  },
+  "J+pWCM": {
+    "defaultMessage": "New size"
   },
   "JAJV1y": {
     "defaultMessage": "启动后自动分配。"
@@ -791,6 +836,9 @@
   "Kffxdm": {
     "defaultMessage": "每个套餐都包含一个 IPv4 地址和一个 IPv6 地址，并且流量不限。价格已包含增值税；不包括支付处理费。"
   },
+  "KkHYsy": {
+    "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
   },
@@ -808,6 +856,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "续订时间："
@@ -917,6 +968,12 @@
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
+  "Pk14hW": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
   "PucUfl": {
     "defaultMessage": "选择 SSH 密钥："
   },
@@ -1013,6 +1070,9 @@
   "SB//YQ": {
     "defaultMessage": "订单摘要。"
   },
+  "SMbDTG": {
+    "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
+  },
   "SQJto2": {
     "defaultMessage": "登录"
   },
@@ -1021,6 +1081,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "管理在此域名下注册的 NIP-05 handle。"
+  },
+  "SZwp5S": {
+    "defaultMessage": "How large a file can I upload?"
   },
   "Sczo8n": {
     "defaultMessage": "时长：{duration}"
@@ -1082,6 +1145,9 @@
   "TgGVeW": {
     "defaultMessage": "需要处理"
   },
+  "TlSf60": {
+    "defaultMessage": "我可以使用自己的域名吗？"
+  },
   "TqSTI0": {
     "defaultMessage": "启用"
   },
@@ -1100,11 +1166,17 @@
   "U/W38H": {
     "defaultMessage": "如果我停止付费，我的活动会怎样？"
   },
+  "U0GEAC": {
+    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
   "U7fZs8": {
     "defaultMessage": "需要多长时间？"
   },
   "U96Gl9": {
     "defaultMessage": "请保存此卡，以便今后使用。"
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
   },
   "UPP+wZ": {
     "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
@@ -1166,6 +1238,9 @@
   "VzzYJk": {
     "defaultMessage": "创建"
   },
+  "W8nHSd": {
+    "defaultMessage": "FAQ"
+  },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
   },
@@ -1186,6 +1261,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
+  },
+  "X/xmPf": {
+    "defaultMessage": "拥有独立数据库的隔离环境。"
   },
   "X0ha1a": {
     "defaultMessage": "保存更改"
@@ -1208,6 +1286,9 @@
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "通过 CNAME 将您自己的域名连接到这里——系统会自动颁发单独的证书。"
+  },
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
@@ -1217,8 +1298,14 @@
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
   },
+  "Yc91CY": {
+    "defaultMessage": "Up to 100 MB per upload."
+  },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
+  },
+  "Yiyf5n": {
+    "defaultMessage": "从每月 {price}起即可托管 Nostr 中继服务器。"
   },
   "Yl8GBP": {
     "defaultMessage": "税务识别号"
@@ -1265,14 +1352,23 @@
   "a60eIK": {
     "defaultMessage": "保存后将重新应用配置并重启应用。"
   },
+  "aLe15X": {
+    "defaultMessage": "Pay how you like"
+  },
   "aPcXT9": {
     "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
   },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
   },
+  "aUuDGj": {
+    "defaultMessage": "部署您的中继服务器——每月 {price}。"
+  },
   "acrOoz": {
     "defaultMessage": "继续。"
+  },
+  "agOXPD": {
+    "defaultMessage": "Size"
   },
   "alJZVR": {
     "defaultMessage": "Nostr 账户"
@@ -1351,6 +1447,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "正在加载历史记录……"
+  },
+  "dHfOPB": {
+    "defaultMessage": "Cost at new size for the rest of this period"
   },
   "dHltrI": {
     "defaultMessage": "每月计费。"
@@ -1538,6 +1637,9 @@
   "j4RCJW": {
     "defaultMessage": "技能.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Why self-host media"
+  },
   "j7VE/p": {
     "defaultMessage": "标准 BTC 交易 — 确认后到账"
   },
@@ -1565,8 +1667,14 @@
   "jf7fbc": {
     "defaultMessage": "未设置——添加一个。"
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
+  },
+  "jhyC12": {
+    "defaultMessage": "What is included"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
@@ -1580,6 +1688,12 @@
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
   },
+  "jzU8se": {
+    "defaultMessage": "Deploy Route96 — {price}/month"
+  },
+  "k2S+Z0": {
+    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+  },
   "k9Pskm": {
     "defaultMessage": "高速固态存储"
   },
@@ -1588,6 +1702,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
+  },
+  "kNIWoA": {
+    "defaultMessage": "Uploads up to 100 MB each"
   },
   "kRFEho": {
     "defaultMessage": "添加 SSH 密钥。"
@@ -1657,6 +1774,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "已管理的应用：运行软件，无需运行服务器。"
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
   "mIuuiJ": {
     "defaultMessage": "服务状态和正常运行时间。"
@@ -1730,6 +1850,9 @@
   "o2AdrJ": {
     "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
   },
+  "o2v6Fy": {
+    "defaultMessage": "自行搭建您的 Nostr 中继节点——每月 {price}。"
+  },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
   },
@@ -1775,11 +1898,20 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
   "pgLgIU": {
     "defaultMessage": "阅读完整更新内容。"
+  },
+  "pgl1gp": {
+    "defaultMessage": "Resize to {size}× base"
+  },
+  "ps4K9r": {
+    "defaultMessage": "What is Blossom?"
   },
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
@@ -1865,6 +1997,9 @@
   "sUw18G": {
     "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
   },
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+  },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
   },
@@ -1934,6 +2069,9 @@
   "ubXbwc": {
     "defaultMessage": "默认策略"
   },
+  "uby/fm": {
+    "defaultMessage": "Get quote"
+  },
   "ujaB7H": {
     "defaultMessage": "在哪里"
   },
@@ -1997,6 +2135,9 @@
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
   },
+  "wa/t9c": {
+    "defaultMessage": "Pay and resize"
+  },
   "waJLKW": {
     "defaultMessage": "已链接。"
   },
@@ -2009,6 +2150,12 @@
   "x0cZXf": {
     "defaultMessage": "无法升级。"
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
+  "xExBHw": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"
   },
@@ -2017,6 +2164,9 @@
   },
   "xRkAD7": {
     "defaultMessage": "10GB 事件数据 + 20GB 多媒体数据"
+  },
+  "xUdVjn": {
+    "defaultMessage": "Route96"
   },
   "xXbJso": {
     "defaultMessage": "注销登录"

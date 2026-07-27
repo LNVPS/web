@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "발신"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+  },
   "+EHk4e": {
     "defaultMessage": "네, 맞습니다. 사용하시는 컴퓨터이므로 원하는 대로 설치하세요."
   },
@@ -86,6 +89,9 @@
   "0t1qvq": {
     "defaultMessage": "규칙 추가"
   },
+  "12+5NG": {
+    "defaultMessage": "Pro-rated upgrade"
+  },
   "13cluZ": {
     "defaultMessage": "SSH 키 추가:"
   },
@@ -133,6 +139,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "주문 생성"
+  },
+  "2lKQfH": {
+    "defaultMessage": "How much can I store?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Quote currency"
   },
   "2nfKZI": {
     "defaultMessage": "나중에 릴레이 소프트웨어를 변경할 수 있나요?"
@@ -257,6 +269,9 @@
   "6Auf1w": {
     "defaultMessage": "로그인하는 데 실패했습니다. 다시 시도해 주세요."
   },
+  "6BD6eg": {
+    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
+  },
   "6FbX6y": {
     "defaultMessage": "중지하면 앱의 규모가 0으로 축소되고 데이터는 보존됩니다. 삭제하면 과금이 중지되고 배포 및 관련 볼륨이 영구적으로 제거됩니다."
   },
@@ -299,6 +314,9 @@
   "7Cdpiv": {
     "defaultMessage": "SSH 키"
   },
+  "7Iag/E": {
+    "defaultMessage": "Total due now"
+  },
   "7L4D8/": {
     "defaultMessage": "원하는 릴레이를 선택하세요."
   },
@@ -328,6 +346,9 @@
   },
   "7tOz+m": {
     "defaultMessage": "지금 결제하세요."
+  },
+  "7v5vj0": {
+    "defaultMessage": "Host your own media server — {price} a month"
   },
   "7wbySo": {
     "defaultMessage": "메시지를 보내주시면 담당 팀에서 연락을 드릴 것입니다."
@@ -370,6 +391,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "지급 경로 저장"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
   },
   "8ecw1u": {
     "defaultMessage": "손잡이"
@@ -494,14 +518,23 @@
   "Bzv1CO": {
     "defaultMessage": "지금 다시 활성화하세요."
   },
+  "CBHTGe": {
+    "defaultMessage": "Credit for time already paid"
+  },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
   },
   "Cououe": {
     "defaultMessage": "이 앱을 배포하려면 로그인하세요."
   },
+  "CwmTc6": {
+    "defaultMessage": "New renewal price"
+  },
   "D3idYv": {
     "defaultMessage": "설정"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× base app"
   },
   "D9mck8": {
     "defaultMessage": "언제든 원하는 금액 결제 — 시간이 비례하여 추가됩니다"
@@ -620,6 +653,9 @@
   "FZeQlc": {
     "defaultMessage": "연결이 끊어졌습니다."
   },
+  "FZup6q": {
+    "defaultMessage": "Where does it run?"
+  },
   "FazwRl": {
     "defaultMessage": "다시 시도해 보세요."
   },
@@ -664,6 +700,9 @@
   },
   "GSye7T": {
     "defaultMessage": "라이트닝 주소"
+  },
+  "GXNK11": {
+    "defaultMessage": "자체 노스트르 릴레이를 구축하여 매달 {price}에 운영하세요. strfry, nostr-rs-relay, Pyramid 또는 HAVEN을 선택하고 몇 분 안에 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 설정할 수 있습니다."
   },
   "Gd6Kbk": {
     "defaultMessage": "아직 활성화되지 않음"
@@ -728,6 +767,9 @@
   "IZFEUg": {
     "defaultMessage": "준비 완료."
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, Ireland."
+  },
   "Id24hd": {
     "defaultMessage": "이름 *"
   },
@@ -745,6 +787,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
+  },
+  "J+pWCM": {
+    "defaultMessage": "New size"
   },
   "JAJV1y": {
     "defaultMessage": "실행 시 한 번 할당됨"
@@ -797,6 +842,9 @@
   "Kffxdm": {
     "defaultMessage": "모든 요금제에는 IPv4 주소 1개와 IPv6 주소 1개가 포함되어 있으며, 트래픽 사용량 제한이 없습니다. 가격에는 부가가치세가 포함되어 있으며, 결제 수수료는 별도입니다."
   },
+  "KkHYsy": {
+    "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
   "KuX7em": {
     "defaultMessage": "활성 상태 {duration}"
   },
@@ -814,6 +862,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "갱신일:"
@@ -923,6 +974,12 @@
   "PfSZy5": {
     "defaultMessage": "해당 주문을 찾을 수 없습니다."
   },
+  "Pk14hW": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
   "PucUfl": {
     "defaultMessage": "SSH 키 선택:"
   },
@@ -1019,6 +1076,9 @@
   "SB//YQ": {
     "defaultMessage": "주문 내역 요약"
   },
+  "SMbDTG": {
+    "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
+  },
   "SQJto2": {
     "defaultMessage": "로그인"
   },
@@ -1027,6 +1087,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "이 도메인에 등록된 NIP-05 핸들을 관리합니다."
+  },
+  "SZwp5S": {
+    "defaultMessage": "How large a file can I upload?"
   },
   "Sczo8n": {
     "defaultMessage": "지속 시간: {duration}"
@@ -1088,6 +1151,9 @@
   "TgGVeW": {
     "defaultMessage": "조치 필요"
   },
+  "TlSf60": {
+    "defaultMessage": "제가 직접 소유한 도메인을 사용할 수 있나요?"
+  },
   "TqSTI0": {
     "defaultMessage": "활성화합니다."
   },
@@ -1106,11 +1172,17 @@
   "U/W38H": {
     "defaultMessage": "결제를 중단하면 내 이벤트는 어떻게 되나요?"
   },
+  "U0GEAC": {
+    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
   "U7fZs8": {
     "defaultMessage": "얼마나 걸립니까?"
   },
   "U96Gl9": {
     "defaultMessage": "이 카드를 저장하여 다음에 사용할 때 결제에 이용하세요."
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
   },
   "UPP+wZ": {
     "defaultMessage": "사용 중인 항목은 다음과 같습니다. {count,plural,one{가상 머신} other{가상 머신}}: {vms}"
@@ -1172,6 +1244,9 @@
   "VzzYJk": {
     "defaultMessage": "만들기"
   },
+  "W8nHSd": {
+    "defaultMessage": "FAQ"
+  },
   "WEoZhh": {
     "defaultMessage": "이 업그레이드를 청구할 구독을 찾을 수 없습니다."
   },
@@ -1192,6 +1267,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{달} other{개월}}"
+  },
+  "X/xmPf": {
+    "defaultMessage": "독립된 환경으로 자체 데이터베이스를 갖춤"
   },
   "X0ha1a": {
     "defaultMessage": "변경사항 저장"
@@ -1214,6 +1292,9 @@
   "Y+LcmX": {
     "defaultMessage": "DNS 설정을 변경할 수 없는 경우, 프록시 설정을 사용하세요. {path} 기존 서버에서 {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "CNAME을 통해 자체 도메인을 사용하고, 자동으로 발급되는 별도의 인증서를 적용하세요."
+  },
   "Y/tMXU": {
     "defaultMessage": "결제를 기다리는 중입니다. 결제가 확인되면 자동으로 적용됩니다."
   },
@@ -1223,8 +1304,14 @@
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
   },
+  "Yc91CY": {
+    "defaultMessage": "Up to 100 MB per upload."
+  },
   "YdQxfw": {
     "defaultMessage": "고객 지원팀에 문의하세요."
+  },
+  "Yiyf5n": {
+    "defaultMessage": "노스트르 릴레이 호스팅, 월 {price}부터 이용 가능"
   },
   "Yl8GBP": {
     "defaultMessage": "세금 식별 번호"
@@ -1271,14 +1358,23 @@
   "a60eIK": {
     "defaultMessage": "저장하면 구성이 다시 적용되고 앱이 재시작됩니다."
   },
+  "aLe15X": {
+    "defaultMessage": "Pay how you like"
+  },
   "aPcXT9": {
     "defaultMessage": "지급은 다른 온체인 추천인들과 함께 묶여 하나의 거래로 처리되며, 귀하의 잔액이 최소 금액을 초과하면 지급이 이루어집니다. 네트워크 수수료 중 귀하의 몫은 귀하의 잔액에서 차감됩니다. 메인넷 주소만 해당됩니다."
   },
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
   },
+  "aUuDGj": {
+    "defaultMessage": "릴레이 서버를 배포하세요. 월 {price}입니다."
+  },
   "acrOoz": {
     "defaultMessage": "계속 진행하세요."
+  },
+  "agOXPD": {
+    "defaultMessage": "Size"
   },
   "alJZVR": {
     "defaultMessage": "Nostr 계정"
@@ -1357,6 +1453,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "불러오는 기록..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "Cost at new size for the rest of this period"
   },
   "dHltrI": {
     "defaultMessage": "매번 청구됩니다."
@@ -1544,6 +1643,9 @@
   "j4RCJW": {
     "defaultMessage": "기술.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Why self-host media"
+  },
   "j7VE/p": {
     "defaultMessage": "표준 BTC 트랜잭션 — 확인 후 반영됩니다"
   },
@@ -1571,8 +1673,14 @@
   "jf7fbc": {
     "defaultMessage": "설정된 항목이 없습니다. 하나 추가하세요."
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "배포 호스트 이름이 할당되면 이 도메인의 CNAME을 해당 호스트 이름으로 지정하세요. 제거하려면 비워 두세요."
+  },
+  "jhyC12": {
+    "defaultMessage": "What is included"
   },
   "jmVweB": {
     "defaultMessage": "SSH 키를 불러오는 중..."
@@ -1586,6 +1694,12 @@
   "jwt9EL": {
     "defaultMessage": "패스키 로그인 실패"
   },
+  "jzU8se": {
+    "defaultMessage": "Deploy Route96 — {price}/month"
+  },
+  "k2S+Z0": {
+    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+  },
   "k9Pskm": {
     "defaultMessage": "빠른 솔리드 스테이트 스토리지"
   },
@@ -1594,6 +1708,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "캡차 인증을 완료해 주세요."
+  },
+  "kNIWoA": {
+    "defaultMessage": "Uploads up to 100 MB each"
   },
   "kRFEho": {
     "defaultMessage": "SSH 키 추가"
@@ -1663,6 +1780,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "관리형 앱: 서버를 실행하지 않고 소프트웨어를 실행합니다."
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
   "mIuuiJ": {
     "defaultMessage": "서비스 상태 및 가동 시간"
@@ -1736,6 +1856,9 @@
   "o2AdrJ": {
     "defaultMessage": "이 가상 머신은 사용자 지정 템플릿을 사용하므로 업그레이드할 수 없습니다. 표준 템플릿을 사용하는 가상 머신만 업그레이드를 지원합니다."
   },
+  "o2v6Fy": {
+    "defaultMessage": "자체 노스트르 릴레이를 운영하세요 — 월 {price}"
+  },
   "o9lOhm": {
     "defaultMessage": "공개 키 지원: {npub}"
   },
@@ -1781,11 +1904,20 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
   "pgLgIU": {
     "defaultMessage": "전체 업데이트 내용을 확인하세요."
+  },
+  "pgl1gp": {
+    "defaultMessage": "Resize to {size}× base"
+  },
+  "ps4K9r": {
+    "defaultMessage": "What is Blossom?"
   },
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
@@ -1871,6 +2003,9 @@
   "sUw18G": {
     "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
   },
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+  },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"
   },
@@ -1940,6 +2075,9 @@
   "ubXbwc": {
     "defaultMessage": "기본 정책"
   },
+  "uby/fm": {
+    "defaultMessage": "Get quote"
+  },
   "ujaB7H": {
     "defaultMessage": "어디에"
   },
@@ -2003,6 +2141,9 @@
   "wLwJ9Q": {
     "defaultMessage": "기존 요금으로 남은 시간에 대한 가치:"
   },
+  "wa/t9c": {
+    "defaultMessage": "Pay and resize"
+  },
   "waJLKW": {
     "defaultMessage": "연결됨"
   },
@@ -2015,6 +2156,12 @@
   "x0cZXf": {
     "defaultMessage": "업그레이드 불가"
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
+  "xExBHw": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
   "xOnplm": {
     "defaultMessage": "결제 수단을 불러오는 중입니다…"
   },
@@ -2023,6 +2170,9 @@
   },
   "xRkAD7": {
     "defaultMessage": "10GB 이벤트 데이터 + 20GB 미디어 데이터"
+  },
+  "xUdVjn": {
+    "defaultMessage": "Route96"
   },
   "xXbJso": {
     "defaultMessage": "로그아웃"

@@ -42,6 +42,14 @@ function Section({
  * empty shell to keep out of the index. The loader exists only to supply the
  * app's real price to the `Product`/`Offer` schema; without it the page simply
  * ships no product markup.
+ *
+ * **If Route96's price changes, the strings here change too.** The `Offer`
+ * price is derived, but the title, meta description, h1 and CTA all carry a
+ * literal `€3.50` — deliberately, because a headline that reads from the
+ * catalog would vanish when the catalog is down. The cost of that choice is
+ * this coupling: leave the copy stale and the JSON-LD and the visible text
+ * disagree, which is what disqualifies the rich result. Search this file for
+ * `3.50`.
  */
 export function BlossomServerHostingPage() {
   const { formatMessage } = useIntl();

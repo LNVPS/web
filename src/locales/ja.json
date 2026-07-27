@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Nostrキー"
   },
+  "+1wksq": {
+    "defaultMessage": "デプロイを停止すると、リソースはゼロに縮小され、ストレージは保持されます。再度デプロイを開始すると、データはそのまま残っています。完全に削除した場合のみ、データが削除されます。"
+  },
   "+3NyB6": {
     "defaultMessage": "発信。"
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "接続中です。"
   },
-  "62gWV4": {
-    "defaultMessage": "ワンクリックで、管理されたインフラ上にDockerアプリケーションをデプロイできます。"
-  },
   "6Auf1w": {
     "defaultMessage": "ログインに失敗しました。もう一度お試しください。"
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "高性能なVPSホスティングで、柔軟な支払い方法をご利用いただけます。ビットコインライトニングまたはクレジットカードでどうぞ。"
+  },
+  "6axKu6": {
+    "defaultMessage": "展開する、配備する {name} LNVPSで管理されているアプリとして提供 — Lightning、ビットコイン、またはクレジットカードで支払い。"
   },
   "6hEevT": {
     "defaultMessage": "デフォルトを設定する"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "支払いをキャンセルする。"
+  },
+  "7jdMye": {
+    "defaultMessage": "停止すると、データが保持されます。"
   },
   "7q/bs/": {
     "defaultMessage": "今すぐ更新してください。"
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "パスキー"
   },
+  "ATA6lA": {
+    "defaultMessage": "アイルランドのダブリンで稼働中です。アプリではなく、完全なシステムが必要な場合は、<vps>VPS</vps>が引き続き利用可能です。マネージドアプリは、これを置き換えるものではありません。"
+  },
   "ATH3LP": {
     "defaultMessage": "名前を変更すると公開ホスト名も変わります。"
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "LNVPSの利用規約。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条件をお読みください。"
   },
+  "BnvK83": {
+    "defaultMessage": "{price} から。"
+  },
   "Bwqhmd": {
     "defaultMessage": "ファイアウォール"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "新しい月額料金：{cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "ライトニング、オンチェーン、またはカード"
   },
   "DU+LLZ": {
     "defaultMessage": "紹介"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "もう一度試してください。"
+  },
+  "Ff9LAg": {
+    "defaultMessage": "お客様のために運用するソフトウェアです。各アプリケーションはそれぞれ独自のホスト名を持ち、TLSが既に有効になっています。サーバーのパッチを当てる必要はありません。NostrリレーとBlossomメディアサーバーは、本日<catalog>カタログ</catalog>で公開されます。"
   },
   "FlypmR": {
     "defaultMessage": "以下の欄にメールアドレスを入力してください。"
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "レート、割合"
   },
+  "c5aQL+": {
+    "defaultMessage": "アプリを選び、名前を付け、料金を支払います。すると、TLSがすでに有効になっている状態で、独自のホスト名で自動的に起動します。OSのパッチを当てたり、Dockerを設定したり、証明書を更新したりする必要はありません。"
+  },
   "c78ZVJ": {
     "defaultMessage": "DNSの変更が反映されるまでには、最大で24～48時間かかる場合があります。"
   },
   "cGedMc": {
     "defaultMessage": "即時 — 一回限りのインボイスをスキャンまたは支払い"
+  },
+  "cJzoWc": {
+    "defaultMessage": "独自のホスト名（TLSを含む）"
   },
   "cM5n1C": {
     "defaultMessage": "終了時間（任意）"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
   },
+  "i2/SmH": {
+    "defaultMessage": "課金システムはVPSのサブスクリプションと同様に機能し、どのアプリにも初期費用はかかりません。"
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 日} other{# 日}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "すべてのデプロイメントには、以下が含まれます。 {host} 自動的に証明書が発行されます。ご自身でドメインを用意し、CNAMEレコードを設定してください。当社でもそのドメインに対応し、独自の証明書を発行します（DNS解決後に一度だけ）。"
   },
   "jf7fbc": {
     "defaultMessage": "設定されていません。— 設定を追加してください。"
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "カード情報"
   },
+  "lYEj5M": {
+    "defaultMessage": "管理対象のアプリ"
+  },
   "lhCavK": {
     "defaultMessage": "Revolutで支払いをする際に「このカードを保存」にチェックを入れると、このカードが登録され、今後の支払いや自動更新に使用できるようになります。"
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 残り日数} other{# 残り日数}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "管理対象アプリ：サーバーを起動せずにソフトウェアを実行します。"
   },
   "mIuuiJ": {
     "defaultMessage": "サービスの状況と稼働時間"
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "更新する"
+  },
+  "naCpPX": {
+    "defaultMessage": "LNVPSにアプリをデプロイします。独自のホスト名、TLS、ストレージがすべて含まれており、数分で起動します。OSのパッチも不要です。本日、NostrリレーとBlossomメディアサーバーを公開します。"
   },
   "nidU9E": {
     "defaultMessage": "{rate} 手数料、委託"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "付加価値税と手数料は概算であり、実際の金額は支払い時に確定します。"
+  },
+  "sE5lVR": {
+    "defaultMessage": "マネージドアプリホスティング — サーバーの管理は不要"
   },
   "sOF2lj": {
     "defaultMessage": "README 全文を表示"

@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Nostr anahtarı"
   },
+  "+1wksq": {
+    "defaultMessage": "Bir dağıtımı durdurmak, ölçeğini sıfıra indirir ve depolama alanını korur. Dağıtımı yeniden başlattığınızda verileriniz hala orada bulunur. Yalnızca silmek, verileri tamamen kaldırır."
+  },
   "+3NyB6": {
     "defaultMessage": "Giden"
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "Bağlanıyor..."
   },
-  "62gWV4": {
-    "defaultMessage": "Tek tıklamayla, yönetilen altyapı üzerinde dağıtılan Docker uygulamaları."
-  },
   "6Auf1w": {
     "defaultMessage": "Giriş işlemi tamamlanamadı. Lütfen tekrar deneyin."
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "Yüksek performanslı VPS hosting hizmeti, esnek ödeme seçenekleriyle: Bitcoin Lightning veya kredi kartı."
+  },
+  "6axKu6": {
+    "defaultMessage": "Dağıt {name} LNVPS üzerinde yönetilen bir uygulama olarak kullanın — Lightning, Bitcoin veya kredi kartıyla ödeme yapın."
   },
   "6hEevT": {
     "defaultMessage": "Varsayılanı ayarla"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Ödemeyi iptal et"
+  },
+  "7jdMye": {
+    "defaultMessage": "Durdurmak, verilerinizi korur."
   },
   "7q/bs/": {
     "defaultMessage": "Şimdi yenileyin."
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "Geçiş anahtarları"
   },
+  "ATA6lA": {
+    "defaultMessage": "Dublin, İrlanda'da çalışıyor. Eğer cihazdaki uygulamadan ziyade tüm sisteme ihtiyacınız varsa, <vps>VPS</vps> hala mevcut — Yönetilen Uygulamalar bunun yerine geçmiyor."
+  },
   "ATH3LP": {
     "defaultMessage": "Yeniden adlandırma genel ana bilgisayar adını değiştirir."
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "LNVPS Hizmet Şartları. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
   },
+  "BnvK83": {
+    "defaultMessage": "{price} fiyatından itibaren."
+  },
   "Bwqhmd": {
     "defaultMessage": "Güvenlik duvarı"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "Yeni aylık yenileme ücreti: {cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "Lightning, zincir üstü veya kart"
   },
   "DU+LLZ": {
     "defaultMessage": "Yönlendirme"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Tekrar deneyin."
+  },
+  "Ff9LAg": {
+    "defaultMessage": "Sizin için çalıştırdığımız yazılımlar: Her uygulama kendi alan adıyla ve TLS'nin zaten etkin olduğu şekilde çalışır, herhangi bir sunucuya yama uygulamaya gerek kalmaz. Nostr röleleri ve Blossom medya sunucuları bugün <catalog>katalog</catalog> içinde."
   },
   "FlypmR": {
     "defaultMessage": "Aşağıya bir e-posta adresi ekleyin."
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "Oran"
   },
+  "c5aQL+": {
+    "defaultMessage": "Bir uygulama seçin, ona bir ad verin ve ödeme yapın. Uygulama, TLS'nin zaten etkin olduğu kendi alan adı altında otomatik olarak çalışmaya başlar; herhangi bir işletim sistemi güncellemesi yapmanıza, Docker yapılandırması yapmanıza veya sertifika yenilemenize gerek kalmaz."
+  },
   "c78ZVJ": {
     "defaultMessage": "DNS değişikliklerinin uygulanması 24–48 saat sürebilir."
   },
   "cGedMc": {
     "defaultMessage": "Anında — tek seferlik faturayı tarayın veya ödeyin"
+  },
+  "cJzoWc": {
+    "defaultMessage": "Kendi ana bilgisayar adı, TLS dahil."
   },
   "cM5n1C": {
     "defaultMessage": "Bitiş Saati (isteğe bağlı)"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
   },
+  "i2/SmH": {
+    "defaultMessage": "Fatura sistemi, bir VPS aboneliği gibi çalışır ve hiçbir uygulamada kurulum ücreti alınmaz."
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# gün} other{# gün}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "Her dağıtım işleminde şunlar gerçekleşir: {host} Otomatik olarak oluşturulan bir sertifika ile. Kendi alan adınızı getirin ve bir CNAME kaydı oluşturarak bu alana yönlendirin; biz de bu alana yönelik hizmeti, kendi sertifikasıyla sunarız; bu sertifika, DNS çözümlemesi tamamlandıktan sonra oluşturulur."
   },
   "jf7fbc": {
     "defaultMessage": "Hiçbiri ayarlanmamış – bir tane ekleyin."
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
   },
+  "lYEj5M": {
+    "defaultMessage": "Yönetilen Uygulamalar"
+  },
   "lhCavK": {
     "defaultMessage": "Revolut ile ödeme yaparken, bu kartı gelecekteki ödemeler ve otomatik yenilemeler için saklamak üzere \"Bu kartı kaydet\" seçeneğini işaretleyin."
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# kalan gün sayısı} other{# kalan gün sayısı}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "Yönetilen Uygulamalar: yazılımı sunucu çalıştırmadan çalıştırın."
   },
   "mIuuiJ": {
     "defaultMessage": "Hizmet Durumu ve Çalışma Süresi"
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Yenile"
+  },
+  "naCpPX": {
+    "defaultMessage": "LNVPS üzerinde bir uygulama dağıtın; kendi alan adı, TLS ve depolama alanı dahil olmak üzere birkaç dakika içinde kullanıma hazır hale getirin, işletim sistemi güncellemeleriyle uğraşmanıza gerek kalmaz. Bugün Nostr röleleri ve Blossom medya sunucuları kullanıma sunuldu."
   },
   "nidU9E": {
     "defaultMessage": "{rate} komisyon"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "KDV ve diğer ücretler tahmini olarak belirtilmiştir; kesin tutar ödeme sırasında doğrulanacaktır."
+  },
+  "sE5lVR": {
+    "defaultMessage": "Yönetilen Uygulama Barındırma — Çalıştırılacak Sunucu Yok"
   },
   "sOF2lj": {
     "defaultMessage": "README dosyasının tamamını görüntüle"

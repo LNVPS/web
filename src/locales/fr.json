@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Clé Nostr"
   },
+  "+1wksq": {
+    "defaultMessage": "L’arrêt d’un déploiement le ramène à zéro, mais conserve le stockage. Vos données restent disponibles lorsque vous le redémarrez. Seule la suppression les efface complètement."
+  },
   "+3NyB6": {
     "defaultMessage": "Sortant(e) / En direction de la destination"
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "Connexion en cours..."
   },
-  "62gWV4": {
-    "defaultMessage": "Déploiement d’applications Docker en un seul clic sur une infrastructure gérée."
-  },
   "6Auf1w": {
     "defaultMessage": "Nous n’avons pas pu effectuer l’opération de connexion. Veuillez réessayer."
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "Hébergement VPS haute performance avec options de paiement flexibles : Bitcoin Lightning ou carte de crédit."
+  },
+  "6axKu6": {
+    "defaultMessage": "Déployer {name} en tant qu’application gérée sur LNVPS, vous pouvez payer avec Lightning, Bitcoin ou par carte."
   },
   "6hEevT": {
     "defaultMessage": "Définir la valeur par défaut"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Annuler le paiement."
+  },
+  "7jdMye": {
+    "defaultMessage": "L’arrêt de l’opération permet de conserver vos données."
   },
   "7q/bs/": {
     "defaultMessage": "Renouvelez dès maintenant."
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "Clés d'accès"
   },
+  "ATA6lA": {
+    "defaultMessage": "Je cours à Dublin, en Irlande. Si vous souhaitez utiliser la machine dans son intégralité plutôt que l’application qui y est installée, le <vps>VPS</vps> est toujours disponible ; les applications gérées ne le remplacent pas."
+  },
   "ATH3LP": {
     "defaultMessage": "Le renommage modifie le nom d'hôte public."
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "Conditions d’utilisation de LNVPS. Veuillez consulter nos règles d’utilisation, nos directives concernant l’utilisation acceptable et nos conditions de service."
   },
+  "BnvK83": {
+    "defaultMessage": "À partir de {price}."
+  },
   "Bwqhmd": {
     "defaultMessage": "Pare-feu"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "Nouveau coût mensuel de renouvellement : {cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "Lightning, on-chain ou carte"
   },
   "DU+LLZ": {
     "defaultMessage": "Recommandation"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Réessayez."
+  },
+  "Ff9LAg": {
+    "defaultMessage": "Logiciels que nous mettons en service pour vous : chaque application dispose de son propre nom de domaine, avec TLS déjà configuré, et il n’est pas nécessaire de mettre à jour les serveurs. Les relais Nostr et les serveurs de médias Blossom sont disponibles dans le <catalog>catalogue</catalog> dès aujourd’hui."
   },
   "FlypmR": {
     "defaultMessage": "Veuillez indiquer une adresse courriel ci-dessous."
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "Taux"
   },
+  "c5aQL+": {
+    "defaultMessage": "Choisissez une application, donnez-lui un nom, effectuez le paiement. Elle sera accessible via son propre nom de domaine, avec TLS déjà configuré – aucune mise à jour du système d’exploitation à effectuer, aucune configuration de Docker, aucun certificat à renouveler."
+  },
   "c78ZVJ": {
     "defaultMessage": "Les modifications du DNS peuvent prendre jusqu’à 24 à 48 heures pour être prises en compte."
   },
   "cGedMc": {
     "defaultMessage": "Instantané — scannez ou payez une facture unique"
+  },
+  "cJzoWc": {
+    "defaultMessage": "Son propre nom d’hôte, y compris le protocole TLS."
   },
   "cM5n1C": {
     "defaultMessage": "Heure de fin (facultatif)"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "Créer un compte"
   },
+  "i2/SmH": {
+    "defaultMessage": "La facturation fonctionne comme un abonnement VPS, sans frais d’installation pour aucune application."
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# jour} other{# jours}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "Chaque déploiement reçoit {host} avec un certificat généré automatiquement. Utilisez votre propre nom de domaine et configurez un enregistrement CNAME pour qu’il y pointe ; nous nous occupons également de cela, en fournissant un certificat spécifique, une fois que la résolution DNS est effectuée."
   },
   "jf7fbc": {
     "defaultMessage": "Aucun paramètre défini ; veuillez en ajouter un."
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "Informations sur la carte de crédit"
   },
+  "lYEj5M": {
+    "defaultMessage": "Applications gérées"
+  },
   "lhCavK": {
     "defaultMessage": "Cochez la case « Enregistrer cette carte » lorsque vous effectuez un paiement avec Revolut pour enregistrer une carte et l’utiliser pour les prochains paiements et renouvellements automatiques."
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# jour restant} other{# jours restants}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "Applications gérées : exécutez le logiciel sans démarrer le serveur."
   },
   "mIuuiJ": {
     "defaultMessage": "État du service et temps de fonctionnement."
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Renouveler"
+  },
+  "naCpPX": {
+    "defaultMessage": "Déployez une application sur LNVPS : en quelques minutes, elle sera opérationnelle avec son propre nom de domaine, le protocole TLS et l’espace de stockage inclus, sans qu’il soit nécessaire de mettre à jour le système d’exploitation. Les relais Nostr et les serveurs multimédias Blossom sont disponibles dès aujourd’hui."
   },
   "nidU9E": {
     "defaultMessage": "{rate} commission"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "La TVA et les frais sont estimés ; le montant exact sera confirmé au moment du paiement."
+  },
+  "sE5lVR": {
+    "defaultMessage": "Gestion d’hébergement d’applications : pas besoin de serveur."
   },
   "sOF2lj": {
     "defaultMessage": "Voir le README complet"

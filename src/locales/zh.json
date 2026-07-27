@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Nostr 密钥"
   },
+  "+1wksq": {
+    "defaultMessage": "停止部署会将其缩减至零，但会保留存储数据。当您再次启动时，您的数据仍然存在。只有删除操作才会彻底清除数据。"
+  },
   "+3NyB6": {
     "defaultMessage": "外发；已发出。"
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "正在连接……"
   },
-  "62gWV4": {
-    "defaultMessage": "一键部署 Docker 应用程序，并将其部署在托管基础设施上。"
-  },
   "6Auf1w": {
     "defaultMessage": "我们无法完成登录。请重试。"
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "高性能 VPS 虚拟主机，支持灵活的支付方式——比特币闪电网络或信用卡。"
+  },
+  "6axKu6": {
+    "defaultMessage": "部署 {name} 作为在 LNVPS 上提供的应用，您可以使用闪电网络、比特币或信用卡进行支付。"
   },
   "6hEevT": {
     "defaultMessage": "设置为默认值。"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "取消付款。"
+  },
+  "7jdMye": {
+    "defaultMessage": "停止操作可保留您的数据。"
   },
   "7q/bs/": {
     "defaultMessage": "立即续订。"
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "通行密钥"
   },
+  "ATA6lA": {
+    "defaultMessage": "在爱尔兰都柏林进行测试。如果您需要整个虚拟机，而不是其中的应用程序，那么<vps>VPS</vps>仍然可用——“托管应用程序”并不会取代它。"
+  },
   "ATH3LP": {
     "defaultMessage": "重命名会更改公开主机名。"
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "LNVPS 服务条款。请阅读我们的使用政策、可接受的使用规范和服务条款。"
   },
+  "BnvK83": {
+    "defaultMessage": "{price} 起。"
+  },
   "Bwqhmd": {
     "defaultMessage": "防火墙"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "新的每月续费价格：{cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "闪电网络、链上或信用卡"
   },
   "DU+LLZ": {
     "defaultMessage": "推荐"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "请重试。"
+  },
+  "Ff9LAg": {
+    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 `<catalog>目录</catalog>` 中提供。"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "费率"
   },
+  "c5aQL+": {
+    "defaultMessage": "选择一个应用程序，为其命名，然后付费。它会自动在自己的主机名上运行，并且已启用 TLS 加密，无需修复操作系统、配置 Docker 或更新证书。"
+  },
   "c78ZVJ": {
     "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
   },
   "cGedMc": {
     "defaultMessage": "即时 — 扫描或支付一次性发票"
+  },
+  "cJzoWc": {
+    "defaultMessage": "包括 TLS 在内的其主机名。"
   },
   "cM5n1C": {
     "defaultMessage": "结束时间（可选）"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "创建账户"
   },
+  "i2/SmH": {
+    "defaultMessage": "计费方式类似于虚拟专用服务器（VPS）的订阅模式，任何应用程序都不收取设置费用。"
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "每次部署都会获得 {host} 系统会自动颁发证书。请使用您自己的域名，并将 CNAME 记录指向该域名——我们也会为该域名提供服务，并为其颁发独立的证书，证书将在 DNS 解析完成后颁发。"
   },
   "jf7fbc": {
     "defaultMessage": "未设置——添加一个。"
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
   },
+  "lYEj5M": {
+    "defaultMessage": "已管理的应用"
+  },
   "lhCavK": {
     "defaultMessage": "使用Revolut付款时，请勾选“保存此卡”，以便将该卡保存在此处，用于未来的支付和自动续订。"
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# 剩余天数} other{# 剩余天数}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "已管理的应用：运行软件，无需运行服务器。"
   },
   "mIuuiJ": {
     "defaultMessage": "服务状态和正常运行时间。"
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "续订"
+  },
+  "naCpPX": {
+    "defaultMessage": "在 LNVPS 上部署应用程序——几分钟内即可完成，应用程序将拥有自己的主机名，并包含 TLS 和存储，无需进行操作系统补丁。现在即可使用 Nostr 中继和 Blossom 媒体服务器。"
   },
   "nidU9E": {
     "defaultMessage": "{rate} 佣金；委托"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "增值税和各项费用为预估金额，确切金额将在付款时确认。"
+  },
+  "sE5lVR": {
+    "defaultMessage": "托管式应用程序——无需管理服务器。"
   },
   "sOF2lj": {
     "defaultMessage": "查看完整 README"

@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Chave Nostr"
   },
+  "+1wksq": {
+    "defaultMessage": "Ao interromper uma implementação, esta é reduzida a zero, mas o armazenamento é mantido. Os seus dados permanecem disponíveis quando a voltar a iniciar. Apenas a eliminação remove os dados."
+  },
   "+3NyB6": {
     "defaultMessage": "De saída / Em direção ao destino."
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "A conectar..."
   },
-  "62gWV4": {
-    "defaultMessage": "Aplicativos Docker implantados com um único clique em uma infraestrutura gerenciada."
-  },
   "6Auf1w": {
     "defaultMessage": "Não foi possível efetuar o início de sessão. Tente novamente."
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "Serviços de hospedagem VPS de alto desempenho com opções de pagamento flexíveis — Bitcoin Lightning ou cartão."
+  },
+  "6axKu6": {
+    "defaultMessage": "Implementar {name} como um aplicativo gerenciado na LNVPS — pague com Lightning, Bitcoin ou cartão."
   },
   "6hEevT": {
     "defaultMessage": "Definir como padrão"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Cancelar pagamento"
+  },
+  "7jdMye": {
+    "defaultMessage": "Ao parar, os seus dados são preservados."
   },
   "7q/bs/": {
     "defaultMessage": "Renove agora."
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "Chaves de acesso"
   },
+  "ATA6lA": {
+    "defaultMessage": "A funcionar em Dublin, na Irlanda. Se pretende ter acesso a toda a máquina e não apenas à aplicação, o <vps>VPS</vps> continua disponível — os aplicativos gerenciados não o substituem."
+  },
   "ATH3LP": {
     "defaultMessage": "Renomear altera o nome de host público."
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "Termos de Serviço do LNVPS. Leia as nossas políticas de utilização, diretrizes de uso aceitável e termos de serviço."
   },
+  "BnvK83": {
+    "defaultMessage": "A partir de {price}."
+  },
   "Bwqhmd": {
     "defaultMessage": "Firewall (firewall)"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "Novo custo mensal de renovação: {cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "Lightning, on-chain ou cartão"
   },
   "DU+LLZ": {
     "defaultMessage": "Indicação"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Tente novamente."
+  },
+  "Ff9LAg": {
+    "defaultMessage": "Software que executamos para si — cada aplicação no seu próprio nome de domínio, com TLS já configurado, sem necessidade de aplicar atualizações ao servidor. Relays Nostr e servidores de media Blossom disponíveis no <catalog>catálogo</catalog> hoje."
   },
   "FlypmR": {
     "defaultMessage": "Adicione um endereço de e-mail abaixo."
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "Taxa/Avaliação"
   },
+  "c5aQL+": {
+    "defaultMessage": "Escolha um aplicativo, dê-lhe um nome e efetue o pagamento. Ele será disponibilizado no seu próprio nome de domínio, com o TLS já configurado — não é necessário aplicar patches no sistema operativo, configurar o Docker ou renovar certificados."
+  },
   "c78ZVJ": {
     "defaultMessage": "As alterações do DNS podem levar até 24 a 48 horas para serem propagadas."
   },
   "cGedMc": {
     "defaultMessage": "Instantâneo — escaneie ou pague uma fatura única"
+  },
+  "cJzoWc": {
+    "defaultMessage": "O próprio nome de host, incluindo o TLS."
   },
   "cM5n1C": {
     "defaultMessage": "Hora de término (opcional)"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "Criar conta"
   },
+  "i2/SmH": {
+    "defaultMessage": "A cobrança funciona como uma assinatura de VPS, sem taxas de configuração para nenhum aplicativo."
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# dia} other{# dias}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "Cada implementação recebe {host} com um certificado emitido automaticamente. Utilize o seu próprio domínio e configure um registo CNAME para ele — nós também lidamos com isso, com o seu próprio certificado, que é emitido assim que o DNS for resolvido."
   },
   "jf7fbc": {
     "defaultMessage": "Nenhum definido — adicione um."
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "Dados do cartão"
   },
+  "lYEj5M": {
+    "defaultMessage": "Aplicativos Gerenciados"
+  },
   "lhCavK": {
     "defaultMessage": "Marque a opção «Guardar este cartão» ao efetuar pagamentos com o Revolut para guardar um cartão neste local, de forma a poder utilizá-lo em pagamentos futuros e renovações automáticas."
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# dia restante} other{# dias restantes}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "Aplicações Gerenciadas: execute o software sem executar o servidor."
   },
   "mIuuiJ": {
     "defaultMessage": "Estado do serviço e tempo de atividade."
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Renovar"
+  },
+  "naCpPX": {
+    "defaultMessage": "Implemente uma aplicação no LNVPS — em poucos minutos, com o seu próprio nome de domínio, TLS e armazenamento incluídos, sem necessidade de atualizações do sistema operativo. Já pode utilizar os retransmissores Nostr e os servidores de media Blossom."
   },
   "nidU9E": {
     "defaultMessage": "{rate} comissão"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "O IVA e as taxas são valores estimados; o montante exato será confirmado no momento do pagamento."
+  },
+  "sE5lVR": {
+    "defaultMessage": "Gerenciamento de hospedagem de aplicativos — sem necessidade de gerenciar servidores."
   },
   "sOF2lj": {
     "defaultMessage": "Ver README completo"

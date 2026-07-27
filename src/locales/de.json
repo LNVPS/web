@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Nostr-Schlüssel"
   },
+  "+1wksq": {
+    "defaultMessage": "Wenn Sie eine Bereitstellung stoppen, wird sie auf Null reduziert, aber der Speicherplatz bleibt erhalten. Ihre Daten sind weiterhin vorhanden, wenn Sie die Bereitstellung erneut starten. Nur durch Löschen werden die Daten endgültig entfernt."
+  },
   "+3NyB6": {
     "defaultMessage": "Abgehend/ausgehend"
   },
@@ -224,9 +227,6 @@
   "5y2qWO": {
     "defaultMessage": "Verbinde..."
   },
-  "62gWV4": {
-    "defaultMessage": "Docker-Anwendungen mit nur einem Klick auf verwalteter Infrastruktur bereitstellen."
-  },
   "6Auf1w": {
     "defaultMessage": "Die Anmeldung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut."
   },
@@ -241,6 +241,9 @@
   },
   "6UfYVI": {
     "defaultMessage": "Hochleistungsfähiges VPS-Hosting mit flexiblen Zahlungsoptionen – Bitcoin Lightning oder Kreditkarte."
+  },
+  "6axKu6": {
+    "defaultMessage": "Bereitstellen {name} als verwaltete App auf LNVPS – Zahlung mit Lightning, Bitcoin oder Kreditkarte."
   },
   "6hEevT": {
     "defaultMessage": "Standardwert festlegen"
@@ -277,6 +280,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Zahlung stornieren."
+  },
+  "7jdMye": {
+    "defaultMessage": "Wenn Sie das Anhalten aktivieren, bleiben Ihre Daten erhalten."
   },
   "7q/bs/": {
     "defaultMessage": "Jetzt verlängern."
@@ -377,6 +383,9 @@
   "ASrBq8": {
     "defaultMessage": "Passkeys"
   },
+  "ATA6lA": {
+    "defaultMessage": "Laufen in Dublin, Irland. Wenn Sie die gesamte Maschine und nicht nur die darauf installierte App benötigen, ist die <vps>VPS</vps> weiterhin verfügbar – verwaltete Apps ersetzen sie nicht."
+  },
   "ATH3LP": {
     "defaultMessage": "Das Umbenennen ändert den öffentlichen Hostnamen."
   },
@@ -431,6 +440,9 @@
   "BnoVvl": {
     "defaultMessage": "Nutzungsbedingungen für LNVPS. Bitte lesen Sie unsere Nutzungsrichtlinien, Richtlinien für die zulässige Nutzung und die Servicebedingungen."
   },
+  "BnvK83": {
+    "defaultMessage": "Ab {price}."
+  },
   "Bwqhmd": {
     "defaultMessage": "Firewall"
   },
@@ -457,6 +469,9 @@
   },
   "DFLJpz": {
     "defaultMessage": "Neue monatliche Kosten für die Verlängerung: {cost}"
+  },
+  "DTd1bi": {
+    "defaultMessage": "Lightning, On-Chain oder Karte"
   },
   "DU+LLZ": {
     "defaultMessage": "Empfehlung"
@@ -553,6 +568,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Versuchen Sie es noch einmal."
+  },
+  "Ff9LAg": {
+    "defaultMessage": "Die Software, die wir für Sie betreiben – jede Anwendung mit einem eigenen Hostnamen und bereits aktiviertem TLS, keine Server, die gepatcht werden müssen. Nostr-Relays und Blossom-Medienserver sind heute im <catalog>Katalog</catalog> verfügbar."
   },
   "FlypmR": {
     "defaultMessage": "Fügen Sie unten eine E-Mail-Adresse hinzu."
@@ -1202,11 +1220,17 @@
   "c0b5XV": {
     "defaultMessage": "Bewertung"
   },
+  "c5aQL+": {
+    "defaultMessage": "Wählen Sie eine App aus, geben Sie ihr einen Namen und bezahlen Sie. Sie wird auf ihrem eigenen Hostnamen bereitgestellt, wobei TLS bereits aktiviert ist – es sind keine Betriebssystem-Updates erforderlich, keine Docker-Konfigurationen notwendig und keine Zertifikate müssen erneuert werden."
+  },
   "c78ZVJ": {
     "defaultMessage": "DNS-Änderungen können bis zu 24–48 Stunden benötigen, bis sie sich im gesamten Netzwerk verbreitet haben."
   },
   "cGedMc": {
     "defaultMessage": "Sofort — einmalige Rechnung scannen oder bezahlen"
+  },
+  "cJzoWc": {
+    "defaultMessage": "Eigener Hostname, einschließlich TLS."
   },
   "cM5n1C": {
     "defaultMessage": "Endzeit (optional)"
@@ -1388,6 +1412,9 @@
   "huqKGl": {
     "defaultMessage": "Konto erstellen"
   },
+  "i2/SmH": {
+    "defaultMessage": "Die Abrechnung funktioniert wie ein VPS-Abonnement, wobei für keine der Apps eine Einrichtungsgebühr anfällt."
+  },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
   },
@@ -1429,6 +1456,9 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# Tag} other{# Tage}}"
+  },
+  "jd19T+": {
+    "defaultMessage": "Jede Bereitstellung erhält {host} mit einem automatisch ausgestellten Zertifikat. Verwenden Sie Ihre eigene Domain und richten Sie einen CNAME-Eintrag darauf ein – wir übernehmen auch das Hosting, mit einem eigenen Zertifikat, das nach der DNS-Auflösung ausgestellt wird."
   },
   "jf7fbc": {
     "defaultMessage": "Keine festgelegt – eine hinzufügen."
@@ -1487,6 +1517,9 @@
   "lP4qIQ": {
     "defaultMessage": "Kartendetails"
   },
+  "lYEj5M": {
+    "defaultMessage": "Verwaltete Apps"
+  },
   "lhCavK": {
     "defaultMessage": "Aktivieren Sie die Option „Diese Karte speichern“, wenn Sie mit Revolut bezahlen, um eine Karte für zukünftige Zahlungen und automatische Verlängerungen zu speichern."
   },
@@ -1510,6 +1543,9 @@
   },
   "m4QgXr": {
     "defaultMessage": "{days,plural,one{# verbleibender Tag} other{# verbleibende Tage}}"
+  },
+  "m4xBT/": {
+    "defaultMessage": "Verwaltete Apps: Führen Sie die Software aus, ohne den Server zu starten."
   },
   "mIuuiJ": {
     "defaultMessage": "Service-Status und Verfügbarkeit"
@@ -1552,6 +1588,9 @@
   },
   "nWQFic": {
     "defaultMessage": "Verlängern"
+  },
+  "naCpPX": {
+    "defaultMessage": "Stellen Sie eine App auf LNVPS bereit – innerhalb von Minuten ist sie unter ihrem eigenen Hostnamen verfügbar, einschließlich TLS und Speicher, ohne dass Betriebssystem-Updates erforderlich sind. Heute: Nostr-Relays und Blossom-Medienserver."
   },
   "nidU9E": {
     "defaultMessage": "{rate} Provision; beauftragen"
@@ -1684,6 +1723,9 @@
   },
   "sAJryD": {
     "defaultMessage": "Die Mehrwertsteuer und die Gebühren sind Schätzungen; der genaue Betrag wird bei der Zahlung bestätigt."
+  },
+  "sE5lVR": {
+    "defaultMessage": "Verwaltetes App-Hosting – kein Server, den Sie selbst betreiben müssen."
   },
   "sOF2lj": {
     "defaultMessage": "Vollständige README anzeigen"

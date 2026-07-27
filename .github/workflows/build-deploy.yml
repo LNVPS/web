@@ -30,6 +30,45 @@ jobs:
       - name: Type check
         run: bun run typecheck
 
+  # `typecheck` and `build` both leave server/dev.ts untouched, which is how a
+  # missing `express` dependency stayed green through CI (#44). Actually start
+  # the documented dev entry point and require a rendered page back.
+  dev-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Start dev server and wait for a 200
+        run: |
+          bun server/dev.ts > dev-server.log 2>&1 &
+          pid=$!
+          for _ in $(seq 1 30); do
+            if ! kill -0 "$pid" 2>/dev/null; then
+              echo "dev server exited before serving a request"
+              cat dev-server.log
+              exit 1
+            fi
+            code=$(curl -fsS -o /dev/null -w '%{http_code}' http://localhost:3000/ || true)
+            if [ "$code" = "200" ]; then
+              kill "$pid"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "dev server did not serve a 200 within 60s (last code: ${code:-none})"
+          cat dev-server.log
+          kill "$pid" 2>/dev/null || true
+          exit 1
+
   build:
     runs-on: ubuntu-latest
     steps:

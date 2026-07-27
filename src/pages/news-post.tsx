@@ -47,7 +47,7 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
           jsonLd={newsArticleSchema}
         />
       )}
-      <h1 className="text-2xl">{title}</h1>
+      <h1 className="text-3xl text-cyber-text-bright">{title}</h1>
       <div className="flex items-center justify-between py-8">
         <Profile link={NostrLink.profile(ev.pubkey)} />
         <div>

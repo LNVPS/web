@@ -573,7 +573,7 @@ export function StatusPage() {
             "Live uptime and incident history for LNVPS services. Check the current operational status of our VPS infrastructure.",
         })}
       />
-      <h1 className="text-2xl">
+      <h1 className="text-3xl text-cyber-text-bright">
         <FormattedMessage defaultMessage="LNVPS Service Status and Uptime" />
       </h1>
       <div className="text-xl flex flex-col gap-2">

@@ -28,7 +28,7 @@ export function ContactPage() {
             "Get in touch with the LNVPS team. Have questions about our VPS hosting or payment options? We're here to help.",
         })}
       />
-      <h1 className="text-xl">
+      <h1 className="text-3xl text-cyber-text-bright">
         <FormattedMessage defaultMessage="Contact LNVPS Support" />
       </h1>
 

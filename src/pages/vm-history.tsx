@@ -171,7 +171,7 @@ export function VmHistoryPage() {
   if (!state) {
     return (
       <div className="flex flex-col gap-2">
-        <h1>
+        <h1 className="text-3xl text-cyber-text-bright">
           <FormattedMessage defaultMessage="VM History" />
         </h1>
         <div className="text-cyber-danger">

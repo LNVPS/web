@@ -380,7 +380,7 @@ export default function ComponentGalleryPage() {
   return (
     <div className="flex flex-col gap-6 py-6 max-w-2xl mx-auto">
       <Seo noindex title="Component gallery" />
-      <h1 className="text-xl text-cyber-text-bright">
+      <h1 className="text-3xl text-cyber-text-bright">
         Component gallery
         <span className="ml-2 text-xs text-cyber-muted">
           dev preview — not linked in nav

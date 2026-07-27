@@ -146,7 +146,7 @@ export function AppPage() {
             <div className="flex items-center gap-4">
               <AppIcon app={app} size={56} />
               <div>
-                <h1 className="m-0 text-2xl text-cyber-text-bright">
+                <h1 className="m-0 text-3xl text-cyber-text-bright">
                   {app.display_name}
                 </h1>
                 <div className="mt-1 text-cyber-primary tabular-nums">

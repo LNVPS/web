@@ -18,7 +18,11 @@
   --color-cyber-danger: #ff0040;
   --color-cyber-danger-dim: oklch(0.55 0.25 15 / 0.4);
   --color-cyber-success: oklch(0.8 0.3 142);
-  --color-cyber-muted: #4a5568;
+  /* Secondary text. Must clear WCAG AA (4.5:1) against every surface it can
+     land on — cyber-darker #050505, cyber-dark #0a0a0a, cyber-panel #0d1117
+     and cyber-panel-light #161b22. The old #4a5568 was 2.30–2.71:1 on those,
+     i.e. failing everywhere. Worst case now is 5.67:1 on cyber-panel-light. */
+  --color-cyber-muted: #8695a8;
   --color-cyber-text: #b8c4d0;
   --color-cyber-text-bright: #e2e8f0;
 
@@ -113,7 +117,10 @@
   --color-cyber-danger: #dc2626;
   --color-cyber-danger-dim: oklch(0.5 0.2 25 / 0.27);
   --color-cyber-success: #16a34a;
-  --color-cyber-muted: #9ca3af;
+  /* Same rule as the dark token: the light surfaces run from #f3f4f6 down to
+     cyber-panel-light #d1d5db, and #9ca3af was 1.72–2.31:1 on them. Worst case
+     now is 5.13:1, still lighter than cyber-text #374151 so the hierarchy holds. */
+  --color-cyber-muted: #4b5563;
   --color-cyber-text: #374151;
   --color-cyber-text-bright: #111827;
 

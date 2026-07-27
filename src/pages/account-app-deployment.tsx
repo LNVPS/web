@@ -326,10 +326,28 @@ function UpgradeSection({
 
       {quote && (
         <dl className="grid grid-cols-[max-content_1fr] gap-x-6 gap-y-2 border-t border-cyber-border pt-4 text-sm tabular-nums">
+          {/* The API returns `cost_difference` already net of `discount`
+              (lnvps_api_common/src/pricing.rs:1466). Showing the gross first
+              makes the credit visibly subtract into it, the same derivation
+              the VM upgrade quote shows. */}
+          <dt className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Cost at new size for the rest of this period" />
+          </dt>
+          <dd className="m-0">
+            <CostAmount
+              cost={{
+                currency: quote.cost_difference.currency,
+                amount: quote.cost_difference.amount + quote.discount.amount,
+              }}
+              converted={false}
+            />
+          </dd>
+
           <dt className="text-cyber-muted">
             <FormattedMessage defaultMessage="Credit for time already paid" />
           </dt>
           <dd className="m-0">
+            &minus;&nbsp;
             <CostAmount cost={quote.discount} converted={false} />
           </dd>
 

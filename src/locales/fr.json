@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "Sortant(e) / En direction de la destination"
   },
+  "+EHk4e": {
+    "defaultMessage": "Oui. C’est votre ordinateur, installez ce que vous voulez."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{an} other{ans}}"
   },
@@ -104,6 +107,9 @@
   "1p8vog": {
     "defaultMessage": "VPS personnalisé"
   },
+  "1szy7r": {
+    "defaultMessage": "Votre propre nom d’hôte, soit <code>your-name.ie.apps.lnvps.cloud</code>, avec un certificat TLS émis automatiquement."
+  },
   "1v7S+3": {
     "defaultMessage": "Ajouter un domaine Nostr"
   },
@@ -112,6 +118,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "Facturation, renouvellement et notifications"
+  },
+  "24piVc": {
+    "defaultMessage": "<b>Vous pouvez utiliser votre propre nom de domaine si vous le souhaitez.</b> Indiquez un enregistrement CNAME vers votre serveur relais et nous l’utiliserons avec le nom d’hôte par défaut, en lui attribuant son propre certificat. Aucune étape de vérification n’est nécessaire : le certificat est émis lorsque votre DNS se résout."
   },
   "2QrTo0": {
     "defaultMessage": "Nouvelle commande d’adresses IP."
@@ -124,6 +133,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "Créer une commande"
+  },
+  "2nfKZI": {
+    "defaultMessage": "Puis-je modifier le logiciel de relais plus tard ?"
+  },
+  "35johu": {
+    "defaultMessage": "Paiement par bitcoin (sur la chaîne), ou par carte bancaire. Aucune information personnelle n’est requise pour l’inscription. Connectez-vous avec votre clé Nostr : NIP-07 dans le navigateur, NIP-98 pour l’API."
   },
   "36aVfS": {
     "defaultMessage": "Message privé Nostr"
@@ -158,6 +173,9 @@
   "3zEByO": {
     "defaultMessage": "Activer le code de parrainage."
   },
+  "41rhjs": {
+    "defaultMessage": "Petit, simple, en Rust et avec SQLite."
+  },
   "43xNq5": {
     "defaultMessage": "Renouveler le VPS n°{id}"
   },
@@ -166,6 +184,9 @@
   },
   "48dUkY": {
     "defaultMessage": "+ {fee} configuration; installation; préparation"
+  },
+  "4D+xAI": {
+    "defaultMessage": "Pourquoi choisir ce serveur virtuel privé (VPS) pour un nœud Lightning ?"
   },
   "4PKxPs": {
     "defaultMessage": "Dissocier"
@@ -218,6 +239,9 @@
   "5elgIe": {
     "defaultMessage": "Erreur :"
   },
+  "5h1V4e": {
+    "defaultMessage": "Non. Inscrivez-vous en utilisant une clé Nostr et effectuez le paiement en satoshis."
+  },
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
   },
@@ -232,6 +256,9 @@
   },
   "6FbX6y": {
     "defaultMessage": "L’arrêt de la fonction de pesage remet à zéro l’application et conserve ses données. La suppression arrête la facturation et supprime définitivement le déploiement et ses volumes."
+  },
+  "6IQOPN": {
+    "defaultMessage": "20 Go"
   },
   "6SfJaf": {
     "defaultMessage": "Mettez à niveau vers"
@@ -269,11 +296,17 @@
   "7Cdpiv": {
     "defaultMessage": "Clés SSH"
   },
+  "7L4D8/": {
+    "defaultMessage": "Choisissez votre relais."
+  },
   "7NFfmz": {
     "defaultMessage": "Produits"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{jour} other{jours}}"
+  },
+  "7agV2X": {
+    "defaultMessage": "Relais"
   },
   "7fGyF+": {
     "defaultMessage": "Effacer et réinstaller"
@@ -344,6 +377,9 @@
   "8lK3rQ": {
     "defaultMessage": "Renouvelez avant le... {date} ou alors, ces données et les données qui y sont associées seront supprimées de façon permanente."
   },
+  "8vDeUP": {
+    "defaultMessage": "Non installé – déployez la nouvelle version et effectuez la migration. Il s’agit de déploiements distincts."
+  },
   "8xIysb": {
     "defaultMessage": "Prolongez maintenant."
   },
@@ -355,6 +391,9 @@
   },
   "9dOxDN": {
     "defaultMessage": "Paiements et renouvellement"
+  },
+  "9gB0vq": {
+    "defaultMessage": "Créez le serveur virtuel privé (VPS) de votre nœud."
   },
   "9p3I3O": {
     "defaultMessage": "Confirmation en cours"
@@ -373,6 +412,9 @@
   },
   "ABL6b+": {
     "defaultMessage": "Transformez votre code en revenus."
+  },
+  "AGa2G5": {
+    "defaultMessage": "Quand vous voulez l’ensemble de la machine."
   },
   "AL9+3/": {
     "defaultMessage": "Impossible de trouver un abonnement à renouveler pour cette machine virtuelle."
@@ -485,8 +527,14 @@
   "DZ2Koj": {
     "defaultMessage": "Direction"
   },
+  "DbJIBd": {
+    "defaultMessage": "Relais communautaires avec hiérarchie d’invitations."
+  },
   "Dfuz87": {
     "defaultMessage": "Aucun domaine n’a été ajouté pour le moment. Ajoutez votre premier domaine ci-dessus pour commencer."
+  },
+  "DjPPFA": {
+    "defaultMessage": "Un serveur virtuel privé (VPS) conçu pour un nœud Lightning : adresse IPv4 et IPv6 statiques, bande passante illimitée, utilisation de Tor autorisée, pas d’exigences en matière de vérification d’identité. Localisation à Dublin, Londres ou Québec. Paiement possible directement avec Lightning."
   },
   "DnX0aY": {
     "defaultMessage": "Confirmer la suppression."
@@ -523,6 +571,9 @@
   },
   "Ecfndm": {
     "defaultMessage": "Facture"
+  },
+  "EffI8i": {
+    "defaultMessage": "Environnement isolé, pas une simple boîte partagée."
   },
   "Eg11ZY": {
     "defaultMessage": "Reconnectez-vous"
@@ -713,6 +764,9 @@
   "Jm+fih": {
     "defaultMessage": "Inactif."
   },
+  "JykdTz": {
+    "defaultMessage": "Autorisez-vous l’utilisation du réseau Tor ?"
+  },
   "K/zU0+": {
     "defaultMessage": "+ Déployer une nouvelle version"
   },
@@ -727,6 +781,9 @@
   },
   "KN7zKn": {
     "defaultMessage": "Error"
+  },
+  "KP5gy4": {
+    "defaultMessage": "<b>Paiement avec Lightning.</b> Il y a une certaine cohérence à financer votre nœud Lightning en utilisant le réseau Lightning, et nous effectuons cette opération via notre propre nœud LND plutôt que par l’intermédiaire d’un processeur tiers."
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -770,11 +827,20 @@
   "LqFfRA": {
     "defaultMessage": "Pays"
   },
+  "LwGAe6": {
+    "defaultMessage": "Également disponible sur LNVPS."
+  },
   "MTnSwY": {
     "defaultMessage": "hors taxes"
   },
   "Mp+zDS": {
     "defaultMessage": "Ce composant prend en charge uniquement les paiements Lightning."
+  },
+  "MqbiJp": {
+    "defaultMessage": "Oui. Configurez un enregistrement CNAME qui pointe vers le nom d’hôte de votre serveur relais. Nous émettons automatiquement un certificat distinct une fois que la résolution DNS est effectuée."
+  },
+  "Mw9USY": {
+    "defaultMessage": "Vous n’êtes pas sûr(e) ? <b>strfry</b> est l’outil de base – c’est celui que la plupart des relais publics utilisent. <b>HAVEN</b>, si ce relais est personnel plutôt qu’un relais communautaire ; il s’agit du seul des quatre qui vous offre également un espace de stockage multimédia Blossom, afin que vos images et vos notes soient stockées sous la même clé."
   },
   "N2IrpM": {
     "defaultMessage": "Confirmer"
@@ -784,6 +850,9 @@
   },
   "NZyhSX": {
     "defaultMessage": "Actualités"
+  },
+  "NdrIUl": {
+    "defaultMessage": "Pas besoin de louer un serveur. Pas besoin d’appliquer des correctifs au système d’exploitation. Plus besoin de renouveler les certificats. Choisissez un relais, donnez-lui un nom, effectuez le paiement et il se mettra en ligne avec son propre nom de domaine, le protocole TLS étant déjà opérationnel."
   },
   "Niq27F": {
     "defaultMessage": "Nom de l’abonnement (facultatif)"
@@ -845,6 +914,9 @@
   "PT4sD/": {
     "defaultMessage": "Sélectionnez le système d’exploitation :"
   },
+  "PeOVdM": {
+    "defaultMessage": "Dublin (Irlande), Londres (Royaume-Uni) ou Québec (Canada). Dublin offre la plus grande capacité si vous avez besoin d’un grand nœud, avec jusqu’à 64 cœurs virtuels et 128 Go de mémoire vive."
+  },
   "PfSZy5": {
     "defaultMessage": "Aucune commande n’a été trouvée."
   },
@@ -853,6 +925,9 @@
   },
   "PujK1s": {
     "defaultMessage": "générer"
+  },
+  "QB3YLi": {
+    "defaultMessage": "L’arrêt de la balance remet le relais à zéro et conserve vos données ; votre base de données d’événements reste intacte lorsque vous redémarrez. La suppression est ce qui efface les données."
   },
   "QDOm6e": {
     "defaultMessage": "y compris {rate} impôt"
@@ -1025,6 +1100,12 @@
   "U+Ddsx": {
     "defaultMessage": "Envoyez des bitcoins on-chain à cette adresse. Le temps est crédité automatiquement une fois la transaction confirmée, au prorata du montant reçu — les paiements partiels ou excédentaires ne sont jamais perdus."
   },
+  "U/W38H": {
+    "defaultMessage": "Que se passe-t-il avec mes événements si j’arrête de payer ?"
+  },
+  "U7fZs8": {
+    "defaultMessage": "Combien de temps cela prend-il ?"
+  },
   "U96Gl9": {
     "defaultMessage": "Conservez cette carte pour les prochains paiements."
   },
@@ -1042,6 +1123,9 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} est recommandé, car il suit automatiquement les changements d’adresse IP du serveur."
+  },
+  "UhIOEO": {
+    "defaultMessage": "Avez-vous besoin de mes pièces d’identité ?"
   },
   "Uk68vE": {
     "defaultMessage": "Clé publique de l’expéditeur (npub/nprofile/hex) :"
@@ -1118,6 +1202,9 @@
   "XNiOLB": {
     "defaultMessage": "L’envoi du message a échoué. Veuillez réessayer."
   },
+  "XW9RGA": {
+    "defaultMessage": "Est-ce que je dois créer un compte ?"
+  },
   "XyIrRh": {
     "defaultMessage": "Payer en Bitcoin"
   },
@@ -1126,6 +1213,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "En attente du paiement. Cette opération est effectuée automatiquement une fois le paiement confirmé."
+  },
+  "YLoN96": {
+    "defaultMessage": "<b>Adresse IPv4 et IPv6 statique pour chaque forfait.</b> Un nœud annoncé a besoin d’une adresse fixe. Les deux sont inclus dans le forfait de base, il n’y a pas de frais supplémentaires."
   },
   "YWjrby": {
     "defaultMessage": "Nous vous envoyons uniquement des alertes concernant votre compte, par exemple l’expiration de la période d’essai. Nous n’envoyons jamais de messages publicitaires."
@@ -1172,6 +1262,9 @@
   "ZshmbW": {
     "defaultMessage": "Ce composant ne prend en charge que les paiements on-chain"
   },
+  "ZvCgZf": {
+    "defaultMessage": "Une clé Nostr suffit. Pas d’adresse courriel, pas de nom, pas de vérification d’identité. Les notifications peuvent être envoyées par message privé chiffré sur Nostr, par courriel, via Telegram ou WhatsApp, vous choisissez."
+  },
   "a60eIK": {
     "defaultMessage": "L'enregistrement réapplique la configuration et redémarre l'application."
   },
@@ -1204,6 +1297,9 @@
   },
   "bMQUWl": {
     "defaultMessage": "CIDR source (cette machine virtuelle)"
+  },
+  "bO+E2G": {
+    "defaultMessage": "Non. Chaque forfait comprend une quantité illimitée de données."
   },
   "bW7B87": {
     "defaultMessage": "Nouveau"
@@ -1379,6 +1475,9 @@
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
+  "gjvoQG": {
+    "defaultMessage": "Tailles"
+  },
   "gtGLdm": {
     "defaultMessage": "y compris des frais de traitement de {amount}"
   },
@@ -1445,6 +1544,12 @@
   "j7VE/p": {
     "defaultMessage": "Transaction BTC standard — créditée après confirmation"
   },
+  "j9/hqS": {
+    "defaultMessage": "Configurez précisément ce dont vous avez besoin : le processeur, la mémoire et le stockage sont configurés indépendamment, avec des options SSD ou HDD plutôt que des configurations prédéfinies."
+  },
+  "jGSUnR": {
+    "defaultMessage": "Est-ce que je vais avoir une adresse IP statique ?"
+  },
   "jM8W7d": {
     "defaultMessage": "Sélectionnez le pays."
   },
@@ -1493,11 +1598,17 @@
   "kSjQ3a": {
     "defaultMessage": "par {initiatedBy}"
   },
+  "kesoZ1": {
+    "defaultMessage": "Nous exploitons notre propre nœud Lightning. Vos satoshis ne transitent pas par un processeur tiers."
+  },
   "kfr95E": {
     "defaultMessage": "Adresse, ligne 1"
   },
   "ku+mDU": {
     "defaultMessage": "État"
+  },
+  "l0VA3b": {
+    "defaultMessage": "Le trafic est-il limité ?"
   },
   "l4RUua": {
     "defaultMessage": "Service : {service}"
@@ -1513,6 +1624,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "Par défaut"
+  },
+  "lLGBVr": {
+    "defaultMessage": "10 Go"
   },
   "lP4qIQ": {
     "defaultMessage": "Informations sur la carte de crédit"
@@ -1625,6 +1739,9 @@
   "oBSxZS": {
     "defaultMessage": "Devis pour une mise à niveau"
   },
+  "oC2JR/": {
+    "defaultMessage": "<b>L’arrêt conserve vos données.</b> Si vous mettez une relève en pause, la base de données des événements sera toujours disponible lorsque vous la redémarrerez. Seule la suppression efface les données stockées."
+  },
   "oCc8Oq": {
     "defaultMessage": "Ajouter une clé."
   },
@@ -1637,14 +1754,23 @@
   "oXGNZ+": {
     "defaultMessage": "VM n° {id} : terminal :"
   },
+  "oawN/U": {
+    "defaultMessage": "Débit élevé, grand nombre d’événements."
+  },
   "odTkf5": {
     "defaultMessage": "Retour à la connexion"
   },
   "odXlk8": {
     "defaultMessage": "Se connecter"
   },
+  "oezJ0C": {
+    "defaultMessage": "Adresse IP statique, volume de données illimité, utilisation du réseau Tor autorisée et aucune vérification d’identité requise. Paiement accepté via Lightning : nous exploitons notre propre nœud, ce qui garantit que votre paiement ne passe jamais par un processeur tiers."
+  },
   "oswGmn": {
     "defaultMessage": "Vous ne pouvez pas quitter le système tant que l’historique des paiements est disponible."
+  },
+  "oxq33u": {
+    "defaultMessage": "Idéal pour / Le mieux pour"
   },
   "p4N05H": {
     "defaultMessage": "Télécharger"
@@ -1702,6 +1828,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Date d’expiration :"
+  },
+  "rr0r/W": {
+    "defaultMessage": "<b>L’utilisation de Tor est autorisée.</b> Si vous le souhaitez, vous pouvez faire fonctionner votre nœud via Tor – nous ne bloquons pas cette possibilité et nous n’utilisons pas les systèmes Captcha de Google."
   },
   "rv2p0H": {
     "defaultMessage": "Processeur, mémoire vive et réseau."
@@ -1763,11 +1892,20 @@
   "tTpLsN": {
     "defaultMessage": "Non lié."
   },
+  "tV5m13": {
+    "defaultMessage": "Puis-je utiliser LND, Core Lightning ou Eclair ?"
+  },
+  "tZ+Hzu": {
+    "defaultMessage": "Exécutez votre nœud Lightning sur un serveur virtuel privé (VPS) spécialement conçu à cet effet."
+  },
   "tngc9N": {
     "defaultMessage": "CIDR source"
   },
   "tthToS": {
     "defaultMessage": "Personne handicapée / Personne en situation de handicap"
+  },
+  "tuJeaZ": {
+    "defaultMessage": "Oui."
   },
   "tzMNF3": {
     "defaultMessage": "Statut"
@@ -1790,11 +1928,17 @@
   "uJV0wU": {
     "defaultMessage": "Adresse IP"
   },
+  "uNhj6T": {
+    "defaultMessage": "Oui, chaque forfait comprend une adresse IPv4 et une adresse IPv6."
+  },
   "uPNlBw": {
     "defaultMessage": "Courriel : {email}"
   },
   "ubXbwc": {
     "defaultMessage": "Politique par défaut."
+  },
+  "ujaB7H": {
+    "defaultMessage": "Où"
   },
   "uqUeK9": {
     "defaultMessage": "Décodez le message que le service d’assistance vous a envoyé."
@@ -1838,8 +1982,14 @@
   "vtStU2": {
     "defaultMessage": "Historique des paiements"
   },
+  "vuTMNa": {
+    "defaultMessage": "Système de relais personnel du type « coffre-fort », doté de son propre espace de stockage multimédia Blossom."
+  },
   "vy2rlX": {
     "defaultMessage": "Frais de traitement :"
+  },
+  "w3i5cX": {
+    "defaultMessage": "Mémoire persistante – capacité par relais, comme indiqué ci-dessus."
   },
   "wEQDC6": {
     "defaultMessage": "Modifier"
@@ -1867,6 +2017,9 @@
   },
   "xQ8iOj": {
     "defaultMessage": "Vous n’avez encore aucun abonnement actif."
+  },
+  "xRkAD7": {
+    "defaultMessage": "10 Go pour les événements + 20 Go pour les fichiers multimédias."
   },
   "xXbJso": {
     "defaultMessage": "Déconnexion"
@@ -1916,6 +2069,12 @@
   "yRz1m6": {
     "defaultMessage": "Lisez-moi."
   },
+  "yUD6jT": {
+    "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."
+  },
+  "ys3Bzn": {
+    "defaultMessage": "Hébergement VPS Lightning Node : paiement accepté en utilisant le protocole Lightning."
+  },
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."
   },
@@ -1930,5 +2089,8 @@
   },
   "zRPHCo": {
     "defaultMessage": "Mémoire (Go)"
+  },
+  "zbyKVt": {
+    "defaultMessage": "<b>Volume de données illimité.</b> Un nœud de routage communique en permanence. Vous n’avez pas besoin de surveiller un compteur de bande passante."
   }
 }

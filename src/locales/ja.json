@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "発信。"
   },
+  "+EHk4e": {
+    "defaultMessage": "はい。これはあなたのコンピューターです。好きなものをインストールしてください。"
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
@@ -104,6 +107,9 @@
   "1p8vog": {
     "defaultMessage": "カスタムVPS"
   },
+  "1szy7r": {
+    "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、自動的に発行されたTLS証明書が設定されます。"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostrドメインを追加"
   },
@@ -124,6 +130,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
+  },
+  "2nfKZI": {
+    "defaultMessage": "後でリレーソフトを切り替えることはできますか？"
+  },
+  "35johu": {
+    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはクレジットカードで支払い。アカウント登録には個人情報は不要です。Nostrキーを使ってログインしてください。ブラウザ版ではNIP-07、API版ではNIP-98を使用します。"
   },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
@@ -146,6 +158,9 @@
   "3aeXvu": {
     "defaultMessage": "紹介コードを取得して共有してください。誰かがそのコードを使って登録し、そのユーザーの仮想マシンが最初の支払いを行うと、あなたは報酬を得ることができます。報酬の受け取り先を設定してから、機能を有効にしてください。"
   },
+  "3eEn1+": {
+    "defaultMessage": "<b>本人確認（KYC）は不要です。</b> アカウント登録には個人情報が一切必要ありません。ノード、キー、ビジネスはすべてあなたのものであり、自由に管理できます。"
+  },
   "3vxkus": {
     "defaultMessage": "保存する必要はありません。お使いのデバイス（Face ID、Touch ID、Windows Hello、またはセキュリティキー）がアカウントを保護します。"
   },
@@ -158,6 +173,9 @@
   "3zEByO": {
     "defaultMessage": "紹介コードを有効にする。"
   },
+  "41rhjs": {
+    "defaultMessage": "小さくてシンプルな、RustとSQLiteを使用したプログラム。"
+  },
   "43xNq5": {
     "defaultMessage": "VPSを更新します。{id}"
   },
@@ -166,6 +184,9 @@
   },
   "48dUkY": {
     "defaultMessage": "＋ {fee} 設定、準備"
+  },
+  "4D+xAI": {
+    "defaultMessage": "なぜ、このVPSをライトニングノードに使うのか？"
   },
   "4PKxPs": {
     "defaultMessage": "リンクを解除する。"
@@ -218,6 +239,9 @@
   "5elgIe": {
     "defaultMessage": "エラー："
   },
+  "5h1V4e": {
+    "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
+  },
   "5ow6dg": {
     "defaultMessage": "ワッツアップ"
   },
@@ -232,6 +256,9 @@
   },
   "6FbX6y": {
     "defaultMessage": "停止すると、アプリケーションは初期状態に戻り、データは保持されます。削除すると、課金が停止し、デプロイメントとそのボリュームが完全に削除されます。"
+  },
+  "6IQOPN": {
+    "defaultMessage": "20GB"
   },
   "6SfJaf": {
     "defaultMessage": "アップグレードするには"
@@ -269,11 +296,17 @@
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
   },
+  "7L4D8/": {
+    "defaultMessage": "リレーで使うものを選択してください。"
+  },
   "7NFfmz": {
     "defaultMessage": "製品"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{日} other{日}}"
+  },
+  "7agV2X": {
+    "defaultMessage": "リレー"
   },
   "7fGyF+": {
     "defaultMessage": "消去して再インストール"
@@ -344,6 +377,9 @@
   "8lK3rQ": {
     "defaultMessage": "期限切れの前に更新してください。 {date} または、これと関連するデータが完全に削除されます。"
   },
+  "8vDeUP": {
+    "defaultMessage": "現在使用中のものは置き換え、新しいものを展開して移行してください。これらは別々の展開作業です。"
+  },
   "8xIysb": {
     "defaultMessage": "今すぐ延長します。"
   },
@@ -355,6 +391,9 @@
   },
   "9dOxDN": {
     "defaultMessage": "お支払いと更新について"
+  },
+  "9gB0vq": {
+    "defaultMessage": "ノード用のVPSを構築します。"
   },
   "9p3I3O": {
     "defaultMessage": "確認中"
@@ -373,6 +412,9 @@
   },
   "ABL6b+": {
     "defaultMessage": "あなたのコードを収益に変えましょう。"
+  },
+  "AGa2G5": {
+    "defaultMessage": "機械全体が必要な場合。"
   },
   "AL9+3/": {
     "defaultMessage": "この仮想マシンに対して更新できる有効なサブスクリプションが見つかりませんでした。"
@@ -485,8 +527,14 @@
   "DZ2Koj": {
     "defaultMessage": "方向"
   },
+  "DbJIBd": {
+    "defaultMessage": "招待階層を持つコミュニティリレー"
+  },
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
+  },
+  "DjPPFA": {
+    "defaultMessage": "ライトニングネットワークのノード用に構築されたVPSです。固定IPアドレス（IPv4およびIPv6）、無制限のトラフィック、Torの使用許可、本人確認不要。サーバーの所在地はダブリン、ロンドン、またはケベックから選択できます。支払いにはライトニングネットワーク自体を使用します。"
   },
   "DnX0aY": {
     "defaultMessage": "削除を確定します。"
@@ -523,6 +571,9 @@
   },
   "Ecfndm": {
     "defaultMessage": "請求書"
+  },
+  "EffI8i": {
+    "defaultMessage": "隔離された環境であり、共有のボックスではありません。"
   },
   "Eg11ZY": {
     "defaultMessage": "再接続する"
@@ -713,6 +764,9 @@
   "Jm+fih": {
     "defaultMessage": "非アクティブ状態。"
   },
+  "JykdTz": {
+    "defaultMessage": "Torの使用は許可されていますか？"
+  },
   "K/zU0+": {
     "defaultMessage": "+ 新しいものを展開"
   },
@@ -727,6 +781,9 @@
   },
   "KN7zKn": {
     "defaultMessage": "Error"
+  },
+  "KP5gy4": {
+    "defaultMessage": "<b>ライトニングで支払いましょう。</b> ライトニングネットワークを通じてライトニングノードに資金を供給することは、ある種の整合性があり、第三者の決済サービスを利用するのではなく、独自のLNDノードを使用して処理します。"
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -770,11 +827,20 @@
   "LqFfRA": {
     "defaultMessage": "国"
   },
+  "LwGAe6": {
+    "defaultMessage": "また、LNVPSでも。"
+  },
   "MTnSwY": {
     "defaultMessage": "税込み"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
+  },
+  "MqbiJp": {
+    "defaultMessage": "はい。CNAMEレコードを作成し、リレーサーバーのホスト名に設定してください。DNSが解決されると、自動的に別の証明書を発行します。"
+  },
+  "Mw9USY": {
+    "defaultMessage": "よくわからない？<0xE2><0x80><0x8A><b>strfry</b>は、最も一般的な公開リレーで使われる設定です。<0xE2><0x80><0x8A>もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。4つの設定の中で、Blossomメディアストアも提供されるのはこれだけなので、画像とメモを同じキーの下にまとめて管理できます。"
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
@@ -784,6 +850,9 @@
   },
   "NZyhSX": {
     "defaultMessage": "ニュース"
+  },
+  "NdrIUl": {
+    "defaultMessage": "サーバーをレンタルする必要はありません。OSのパッチを当てる必要もありません。証明書を更新する手間もかかりません。リレーを選び、名前を付け、料金を支払うだけで、TLSが有効になった状態で独自のホスト名で自動的に起動します。"
   },
   "Niq27F": {
     "defaultMessage": "購読者名（任意）"
@@ -839,11 +908,17 @@
   "P7PLVj": {
     "defaultMessage": "日付"
   },
+  "PJKhfR": {
+    "defaultMessage": "リレーが重要な要素となる場合は、マネージドアプリが最適なソリューションです。カスタムビルドを実行したり、他のサービスを同じ場所に配置したり、サーバーの管理を自分で行いたい場合は、ダブリン、ロンドン、ケベックに拠点を置く弊社の<a>VPSホスティング</a>をご利用ください。すべてのプランで、無制限のトラフィックと固定IPアドレス（IPv4およびIPv6）を提供しています。"
+  },
   "PJtOx7": {
     "defaultMessage": "報告すべき事象はありません。"
   },
   "PT4sD/": {
     "defaultMessage": "OSを選択してください。"
+  },
+  "PeOVdM": {
+    "defaultMessage": "ダブリン（アイルランド）、ロンドン（イギリス）、またはケベック（カナダ）から選択できます。大規模なノードが必要な場合は、ダブリンが最も優れた性能を発揮します。最大で64の仮想CPUと128GBのRAMを搭載できます。"
   },
   "PfSZy5": {
     "defaultMessage": "該当する注文は見つかりませんでした。"
@@ -853,6 +928,9 @@
   },
   "PujK1s": {
     "defaultMessage": "生成"
+  },
+  "QB3YLi": {
+    "defaultMessage": "停止すると、リレーがゼロにリセットされ、保存データは保持されます。再起動してもイベントデータベースはそのままです。削除を行うと、データが消去されます。"
   },
   "QDOm6e": {
     "defaultMessage": "含む。 {rate} 税"
@@ -1025,6 +1103,12 @@
   "U+Ddsx": {
     "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
   },
+  "U/W38H": {
+    "defaultMessage": "支払いを停止した場合、登録したイベントはどうなりますか？"
+  },
+  "U7fZs8": {
+    "defaultMessage": "どれくらいの時間がかかりますか？"
+  },
   "U96Gl9": {
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
   },
@@ -1042,6 +1126,9 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname}をお勧めします。サーバーのIPアドレスの変更を自動的に追跡します。"
+  },
+  "UhIOEO": {
+    "defaultMessage": "私の身分証明書が必要ですか？"
   },
   "Uk68vE": {
     "defaultMessage": "送信者の公開鍵（npub/nprofile/16進数）："
@@ -1118,6 +1205,9 @@
   "XNiOLB": {
     "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
   },
+  "XW9RGA": {
+    "defaultMessage": "アカウントは必要ですか？"
+  },
   "XyIrRh": {
     "defaultMessage": "ビットコインで支払う"
   },
@@ -1126,6 +1216,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "お支払いをお待ちしています。確認が完了すると、自動的に適用されます。"
+  },
+  "YLoN96": {
+    "defaultMessage": "<b>すべてのプランで、固定のIPv4アドレスとIPv6アドレスをご利用いただけます。</b> 公開されるノードには、変更されないアドレスが必要です。どちらも追加料金なしで含まれています。"
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
@@ -1172,6 +1265,9 @@
   "ZshmbW": {
     "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
   },
+  "ZvCgZf": {
+    "defaultMessage": "Nostrキーがあれば十分です。メールアドレス、氏名、本人確認は不要です。通知は暗号化されたNostrのダイレクトメッセージ、メール、Telegram、またはWhatsAppに送信できます。お好きな方法をお選びください。"
+  },
   "a60eIK": {
     "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
   },
@@ -1204,6 +1300,9 @@
   },
   "bMQUWl": {
     "defaultMessage": "送信元CIDR（この仮想マシン）"
+  },
+  "bO+E2G": {
+    "defaultMessage": "いいえ。すべてのプランには、データ通信量制限がないものが含まれています。"
   },
   "bW7B87": {
     "defaultMessage": "新しい"
@@ -1379,6 +1478,9 @@
   "gc+2Z2": {
     "defaultMessage": "コンソール"
   },
+  "gjvoQG": {
+    "defaultMessage": "サイズ調整"
+  },
   "gtGLdm": {
     "defaultMessage": "手数料{amount}を含む"
   },
@@ -1445,6 +1547,12 @@
   "j7VE/p": {
     "defaultMessage": "通常のBTCトランザクション — 承認後に反映されます"
   },
+  "j9/hqS": {
+    "defaultMessage": "必要なものを正確に構築できます。CPU、メモリ、ストレージはそれぞれ独立して構成でき、SSDまたはHDDを選択できるため、固定されたグレードに縛られることはありません。"
+  },
+  "jGSUnR": {
+    "defaultMessage": "固定IPアドレスは割り当てられますか？"
+  },
   "jM8W7d": {
     "defaultMessage": "国を選択してください。"
   },
@@ -1493,11 +1601,17 @@
   "kSjQ3a": {
     "defaultMessage": "{initiatedBy} によって開始"
   },
+  "kesoZ1": {
+    "defaultMessage": "当社は独自のライトニングノードを運用しています。お客様のサトシ（ビットコインの最小単位）は、第三者の決済サービスを経由しません。"
+  },
   "kfr95E": {
     "defaultMessage": "住所1行目"
   },
   "ku+mDU": {
     "defaultMessage": "州"
+  },
+  "l0VA3b": {
+    "defaultMessage": "交通量は規制されていますか？"
   },
   "l4RUua": {
     "defaultMessage": "サービス：{service}"
@@ -1513,6 +1627,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "デフォルト"
+  },
+  "lLGBVr": {
+    "defaultMessage": "10GB"
   },
   "lP4qIQ": {
     "defaultMessage": "カード情報"
@@ -1625,6 +1742,9 @@
   "oBSxZS": {
     "defaultMessage": "アップグレードの見積もり"
   },
+  "oC2JR/": {
+    "defaultMessage": "<b>停止するとデータは保持されます。</b> リレーを一時停止しても、再開したときにイベントデータベースはそのまま残ります。データを削除した場合のみ、ストレージから消去されます。"
+  },
   "oCc8Oq": {
     "defaultMessage": "キーを追加"
   },
@@ -1637,14 +1757,23 @@
   "oXGNZ+": {
     "defaultMessage": "VM #{id} のターミナル："
   },
+  "oawN/U": {
+    "defaultMessage": "高い処理能力、大量のイベント処理"
+  },
   "odTkf5": {
     "defaultMessage": "ログインに戻る"
   },
   "odXlk8": {
     "defaultMessage": "ログイン"
   },
+  "oezJ0C": {
+    "defaultMessage": "固定IPアドレス、無制限のデータ通信量、Torの使用許可、KYC（顧客確認）は不要。支払いにはライトニングネットワークをご利用ください。当社独自のノードを運用しているため、お客様のお支払いは決済処理業者を経由することはありません。"
+  },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"
+  },
+  "oxq33u": {
+    "defaultMessage": "最適なもの"
   },
   "p4N05H": {
     "defaultMessage": "アップロード"
@@ -1702,6 +1831,9 @@
   },
   "rieTwF": {
     "defaultMessage": "有効期限："
+  },
+  "rr0r/W": {
+    "defaultMessage": "<b>Torの使用は許可されています。</b> 必要であれば、ノードをTor経由で実行してください。当社はその使用を妨げることも、GoogleのCAPTCHAを使用することもしません。"
   },
   "rv2p0H": {
     "defaultMessage": "CPU、RAM、ネットワーク"
@@ -1763,11 +1895,20 @@
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"
   },
+  "tV5m13": {
+    "defaultMessage": "LND、Core Lightning、Eclairは実行できますか？"
+  },
+  "tZ+Hzu": {
+    "defaultMessage": "Lightningノードを、その目的に特化したVPSで運用しましょう。"
+  },
   "tngc9N": {
     "defaultMessage": "送信元CIDR"
   },
   "tthToS": {
     "defaultMessage": "無効化された、使用不能の。"
+  },
+  "tuJeaZ": {
+    "defaultMessage": "はい。"
   },
   "tzMNF3": {
     "defaultMessage": "状況"
@@ -1790,11 +1931,17 @@
   "uJV0wU": {
     "defaultMessage": "IPアドレス"
   },
+  "uNhj6T": {
+    "defaultMessage": "はい、すべてのプランでIPv4アドレスとIPv6アドレスをそれぞれ1つずつ提供します。"
+  },
   "uPNlBw": {
     "defaultMessage": "メールアドレス：{email}"
   },
   "ubXbwc": {
     "defaultMessage": "デフォルトポリシー"
+  },
+  "ujaB7H": {
+    "defaultMessage": "どこで"
   },
   "uqUeK9": {
     "defaultMessage": "サポートから送信されたメッセージを復号化します。"
@@ -1838,8 +1985,14 @@
   "vtStU2": {
     "defaultMessage": "支払い履歴"
   },
+  "vuTMNa": {
+    "defaultMessage": "個人の保管庫のような形式の共有機能で、独自の「Blossom」メディアストレージが利用可能。"
+  },
   "vy2rlX": {
     "defaultMessage": "処理手数料："
+  },
+  "w3i5cX": {
+    "defaultMessage": "永続ストレージ：上記の各リレーごとにサイズが設定されます。"
   },
   "wEQDC6": {
     "defaultMessage": "編集"
@@ -1867,6 +2020,9 @@
   },
   "xQ8iOj": {
     "defaultMessage": "まだ購読していません。"
+  },
+  "xRkAD7": {
+    "defaultMessage": "イベントデータ10GB＋メディアデータ20GB"
   },
   "xXbJso": {
     "defaultMessage": "サインアウト"
@@ -1916,6 +2072,12 @@
   "yRz1m6": {
     "defaultMessage": "取扱説明書"
   },
+  "yUD6jT": {
+    "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
+  },
+  "ys3Bzn": {
+    "defaultMessage": "ライトニングノードVPSホスティング – ライトニングで支払い"
+  },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"
   },
@@ -1930,5 +2092,8 @@
   },
   "zRPHCo": {
     "defaultMessage": "メモリ（GB）"
+  },
+  "zbyKVt": {
+    "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
   }
 }

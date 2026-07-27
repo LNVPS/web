@@ -119,11 +119,26 @@ export function serializeHead(tags: HeadTags): string {
   }
   for (const json of tags.scripts) {
     parts.push(
-      `<script ${MANAGED_ATTR}="true" type="application/ld+json">${json}</script>`,
+      `<script ${MANAGED_ATTR}="true" type="application/ld+json">${escapeJsonLd(json)}</script>`,
     );
   }
 
   return parts.join("\n");
+}
+
+/**
+ * Escape `<` for injection inside a `<script>` element.
+ *
+ * HTML entities are not decoded inside `<script>`, so `escapeHtml` cannot be
+ * used here — only the JSON string escape works. `JSON.stringify` leaves `<`
+ * alone, so a value containing `</script>` would otherwise close the element
+ * early. It also only ever emits `<` inside a string literal, where the escape
+ * is legal and decodes back to the same character, so consumers see no change.
+ *
+ * The client path needs nothing: it assigns `el.textContent` (see above).
+ */
+function escapeJsonLd(json: string): string {
+  return json.replace(/</g, "\\u003c");
 }
 
 function escapeHtml(s: string): string {

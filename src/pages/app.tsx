@@ -12,6 +12,7 @@ import CostLabel, { CostAmount } from "../components/cost";
 import DeployAppForm from "../components/deploy-app-form";
 import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
+import { appJsonLd } from "../utils/app-seo";
 import { highlightYaml } from "../utils/yaml-highlight";
 import { AppIcon, deploymentStatus } from "./account-apps";
 import type { AppLoaderData } from "../loaders";
@@ -117,6 +118,7 @@ export function AppPage() {
               { name: app.display_name },
             )
           }
+          jsonLd={appJsonLd(app)}
         />
       ) : (
         // The loader found no app: either the id does not exist or the catalog

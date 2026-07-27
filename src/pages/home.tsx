@@ -408,7 +408,7 @@ function AppsSection() {
       </SectionHeading>
       <p className="text-cyber-muted">
         <FormattedMessage
-          defaultMessage="Nostr relays and Blossom media servers, run for you — each on its own hostname with TLS already working, no server to patch. See the full <catalog>catalog</catalog>."
+          defaultMessage="Software we run for you — each app on its own hostname with TLS already working, no server to patch. Nostr relays and Blossom media servers in the <catalog>catalog</catalog> today."
           values={{
             catalog: (chunks: ReactNode) => (
               <Link to="/apps" className="text-cyber-primary hover:underline">

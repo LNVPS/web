@@ -26,6 +26,7 @@ import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
 import { AccountAppsPage } from "./pages/account-apps.tsx";
 import { AppPage } from "./pages/app.tsx";
 import { AppsPage } from "./pages/apps.tsx";
+import { BlossomServerHostingPage } from "./pages/blossom-server-hosting.tsx";
 import { AccountAppDeploymentPage } from "./pages/account-app-deployment.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
@@ -34,6 +35,7 @@ import VmLayout from "./pages/vm-layout.tsx";
 import {
   appLoader,
   appsLoader,
+  blossomHostingLoader,
   homeLoader,
   newsLoader,
   newsPostLoader,
@@ -143,6 +145,11 @@ export const routes: RouteObject[] = [
         path: "/apps/:id",
         element: <AppPage />,
         loader: appLoader,
+      },
+      {
+        path: "/blossom-server-hosting",
+        element: <BlossomServerHostingPage />,
+        loader: blossomHostingLoader,
       },
       {
         path: "/vm",

@@ -7,7 +7,7 @@ import {
   AvailableIpSpace,
   App,
 } from "./api";
-import { ApiUrl, System } from "./const";
+import { ApiUrl, BlossomAppId, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
 import { detectLocale } from "./utils/locale";
 
@@ -160,4 +160,21 @@ export async function appsLoader(): Promise<AppsLoaderData> {
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
   const apps = await cached("apps", () => api.listApps());
   return { apps };
+}
+
+/**
+ * `/blossom-server-hosting` sells one app, so it fetches that app alone —
+ * only to build its `Product`/`Offer` schema from the real price rather than a
+ * hardcoded one. The page's copy is static, so an undefined app costs the
+ * structured data and nothing else.
+ *
+ * Shares the `app_2` cache entry with `appLoader`, which fetches the same
+ * unauthenticated record for `/apps/2`.
+ */
+export async function blossomHostingLoader(): Promise<AppLoaderData> {
+  const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
+  const app = await cached(`app_${BlossomAppId}`, () =>
+    api.getApp(BlossomAppId),
+  );
+  return { app };
 }

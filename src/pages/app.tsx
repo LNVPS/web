@@ -12,7 +12,7 @@ import CostLabel, { CostAmount } from "../components/cost";
 import DeployAppForm from "../components/deploy-app-form";
 import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
-import { appSeo } from "../utils/app-seo";
+import { appJsonLd } from "../utils/app-seo";
 import { highlightYaml } from "../utils/yaml-highlight";
 import { AppIcon, deploymentStatus } from "./account-apps";
 import type { AppLoaderData } from "../loaders";
@@ -70,7 +70,7 @@ function ReadmeSection({
 
 export function AppPage() {
   const login = useLogin();
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const { id } = useParams<{ id: string }>();
   const appId = Number(id);
   // Seeded by appLoader so the first (server) render already has the app, and
@@ -102,20 +102,15 @@ export function AppPage() {
     }
   }, [login?.api, appId]);
 
-  // Search-facing strings for the apps we have written them for; the API's own
-  // display_name and description are the fallback for anything else.
-  const seo = app ? appSeo(app, intl) : undefined;
-
   return (
     <div className="flex flex-col gap-6">
       {app ? (
         <Seo
-          title={seo?.title ?? app.display_name}
+          title={app.display_name}
           canonical={`/apps/${app.id}`}
           description={
-            seo?.description ??
             app.description ??
-            intl.formatMessage(
+            formatMessage(
               {
                 defaultMessage:
                   "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card.",
@@ -123,7 +118,7 @@ export function AppPage() {
               { name: app.display_name },
             )
           }
-          jsonLd={seo?.jsonLd}
+          jsonLd={appJsonLd(app)}
         />
       ) : (
         // The loader found no app: either the id does not exist or the catalog

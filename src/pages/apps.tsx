@@ -71,7 +71,7 @@ export function AppsPage() {
       )}
 
       <div className="flex flex-col gap-2">
-        <h1 className="m-0 text-2xl">
+        <h1 className="m-0 text-3xl text-cyber-text-bright">
           <FormattedMessage defaultMessage="Managed Apps: run the software without running the server" />
         </h1>
         <p className="m-0 max-w-prose text-cyber-muted">

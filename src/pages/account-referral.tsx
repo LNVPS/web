@@ -171,7 +171,7 @@ export function AccountReferralPage() {
           <FormattedMessage defaultMessage="Referral Program" />
         </Eyebrow>
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl text-cyber-text-bright">
+          <h1 className="text-3xl text-cyber-text-bright">
             <FormattedMessage defaultMessage="Turn your code into commission" />
           </h1>
           <p className="text-cyber-muted text-sm max-w-prose">

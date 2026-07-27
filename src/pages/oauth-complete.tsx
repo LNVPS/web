@@ -42,7 +42,7 @@ export default function OAuthCompletePage() {
       <Seo noindex={true} />
       {error ? (
         <>
-          <h1 className="text-cyber-danger">
+          <h1 className="text-3xl text-cyber-danger">
             <FormattedMessage defaultMessage="Sign-in failed" />
           </h1>
           <p className="text-cyber-text text-center max-w-md">

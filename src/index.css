@@ -169,40 +169,42 @@ body:has(.light)::after {
   display: none;
 }
 
-h1 {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-weight-medium);
-  margin-block: 0.5rem;
-  color: var(--color-cyber-primary);
-}
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    margin-block: 0.5rem;
+    color: var(--color-cyber-primary);
+  }
 
-h2 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-medium);
-  margin-block: 0.5rem;
-  color: var(--color-cyber-primary);
-}
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    margin-block: 0.5rem;
+    color: var(--color-cyber-primary);
+  }
 
-h3 {
-  font-size: var(--text-lg);
-  font-weight: var(--font-weight-medium);
-  margin-block: 0.5rem;
-  color: var(--color-cyber-primary);
-}
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    margin-block: 0.5rem;
+    color: var(--color-cyber-primary);
+  }
 
-a {
-  text-decoration: none;
-  color: var(--color-cyber-accent);
-  transition: color 0.15s;
-}
+  a {
+    text-decoration: none;
+    color: var(--color-cyber-accent);
+    transition: color 0.15s;
+  }
 
-a:hover {
-  text-decoration: none;
-  color: var(--color-cyber-primary);
-}
+  a:hover {
+    text-decoration: none;
+    color: var(--color-cyber-primary);
+  }
 
-:root:not(.light) a:hover {
-  text-shadow: 0 0 8px oklch(0.8 0.3 142 / 0.4);
+  :root:not(.light) a:hover {
+    text-shadow: 0 0 8px oklch(0.8 0.3 142 / 0.4);
+  }
 }
 
 hr {

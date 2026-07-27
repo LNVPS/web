@@ -36,7 +36,7 @@ export function NewsPage() {
             "Latest news, updates, and announcements from LNVPS — Bitcoin Lightning VPS hosting with card payments too.",
         })}
       />
-      <h1 className="text-2xl">
+      <h1 className="text-3xl text-cyber-text-bright">
         <FormattedMessage defaultMessage="LNVPS News and Product Updates" />
       </h1>
       {posts.map((a) => (

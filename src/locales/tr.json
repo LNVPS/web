@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "Şimdi öde"
   },
+  "7v5vj0": {
+    "defaultMessage": "Kendi medya sunucunuzu oluşturun. {price} bir ay"
+  },
   "7wbySo": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin, ekip en kısa sürede size dönüş yapacaktır."
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "Uygulamalara geri dön"
   },
-  "HVEPWR": {
-    "defaultMessage": "Blossom ve NIP-96 medya sunucunuzu kendiniz çalıştırın; aylık ücreti sadece 3,50 €. Route96'yı kendi alan adınızda birkaç dakika içinde kurun, 20 GB depolama alanı ve TLS desteğiyle birlikte."
-  },
   "HVtxik": {
     "defaultMessage": "Özel alan adı"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Son kullanma tarihi {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/ay, kurulum ücreti yok. Dosyalarınız için 20 GB depolama alanı."
   },
   "LR754a": {
     "defaultMessage": "Yenilenme tarihi:"
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "Faturalandırma bilgilerinizi, otomatik yenileme ayarlarınızı ve sizinle nasıl iletişim kuracağımızı yönetin."
-  },
-  "RETAQj": {
-    "defaultMessage": "Aylık 3,50 €, kurulum ücreti yok. Dosyalarınız için 20 GB depolama alanı."
   },
   "RQNCao": {
     "defaultMessage": "NIP-05 kimlik barındırma"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "E-posta Adresinin Doğrulanması Gerekli"
   },
-  "Z+US89": {
-    "defaultMessage": "Kendi medya sunucunuzu barındırın – ayda 3,50 €."
-  },
   "Z3gKpL": {
     "defaultMessage": "depolama"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "Kaydetmek yapılandırmayı yeniden uygular ve uygulamayı yeniden başlatır."
-  },
-  "aHQFgG": {
-    "defaultMessage": "Blossom Medya Sunucusu, aylık 3,50 Euro'dan başlayan fiyatlarla hizmetinizde."
   },
   "aLe15X": {
     "defaultMessage": "İstediğiniz şekilde ödeme yapın."
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
   },
+  "jzU8se": {
+    "defaultMessage": "Route96'yı kullanıma sunun. {price}ayda"
+  },
   "k2S+Z0": {
     "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "Ayarlanmadı"
   },
+  "pJmk+U": {
+    "defaultMessage": "Kendi Blossom ve NIP-96 medya sunucunuzu çalıştırın. {price}/ay. Route96, kendi alan adında birkaç dakika içinde kullanıma hazır hale geliyor ve 20 GB depolama alanı ile birlikte TLS desteği sunuyor."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
   },
-  "si4AIj": {
-    "defaultMessage": "Route96 oyununu kullanıma sunun — ayda 3,50 €."
+  "sehISV": {
+    "defaultMessage": "Blossom Medya Sunucusu Barındırma hizmeti {price}ayda"
   },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"
@@ -1992,7 +1992,7 @@
     "defaultMessage": "Dosyalarınız için 20 GB kalıcı depolama alanı ve ek olarak 5 GB kapasiteli bir veritabanı – toplamda 25 GB alan."
   },
   "xExBHw": {
-    "defaultMessage": "Kendi alan adınız — `<code>your-name.ie.apps.lnvps.cloud</code>` — otomatik TLS ile"
+    "defaultMessage": "Kendi alan adınız — <code>your-name.ie.apps.lnvps.cloud</code> — otomatik TLS ile"
   },
   "xOnplm": {
     "defaultMessage": "Ödeme yöntemleri yükleniyor…"

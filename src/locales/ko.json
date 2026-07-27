@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "지금 결제하세요."
   },
+  "7v5vj0": {
+    "defaultMessage": "나만의 미디어 서버를 구축하여 운영하세요. {price} 한 달"
+  },
   "7wbySo": {
     "defaultMessage": "메시지를 보내주시면 담당 팀에서 연락을 드릴 것입니다."
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "앱으로 돌아가기"
   },
-  "HVEPWR": {
-    "defaultMessage": "매달 3.50유로에 직접 블러섬 및 NIP-96 미디어 서버를 운영하세요. Route96은 자체 호스트 이름으로 몇 분 안에 설정할 수 있으며, 파일 저장 공간 20GB와 TLS가 포함되어 있습니다."
-  },
   "HVtxik": {
     "defaultMessage": "사용자 지정 도메인"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}월 구독료, 초기 설치 비용 없음. 파일 저장 공간 20GB 제공."
   },
   "LR754a": {
     "defaultMessage": "갱신일:"
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "결제 정보, 자동 결제 설정 및 연락 방법을 관리하세요."
-  },
-  "RETAQj": {
-    "defaultMessage": "월 3.50유로, 초기 설정 비용 없음. 파일 저장 공간은 20GB입니다."
   },
   "RQNCao": {
     "defaultMessage": "NIP-05 신원 호스팅"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "이메일 인증이 필요합니다."
   },
-  "Z+US89": {
-    "defaultMessage": "자체 미디어 서버를 구축하여 운영하세요 — 월 3.50유로"
-  },
   "Z3gKpL": {
     "defaultMessage": "스토리지"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "저장하면 구성이 다시 적용되고 앱이 재시작됩니다."
-  },
-  "aHQFgG": {
-    "defaultMessage": "블로섬 미디어 서버 호스팅, 월 3.50유로부터"
   },
   "aLe15X": {
     "defaultMessage": "원하는 방식으로 결제하세요."
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "패스키 로그인 실패"
   },
+  "jzU8se": {
+    "defaultMessage": "Route96 배포 — {price}/월"
+  },
   "k2S+Z0": {
     "defaultMessage": "해시값을 기준으로 파일을 저장하고 검색하는 프로토콜로, 노스트르(Nostr)와 함께 작동하도록 설계되었습니다. NIP-96은 이전 버전의 HTTP 파일 저장 방식이며, Route96은 두 가지 방식을 모두 지원합니다."
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
+  "pJmk+U": {
+    "defaultMessage": "Blossom 및 NIP-96 미디어 서버를 직접 운영하여 {price}/월. Route96은 자체 호스트 이름으로 몇 분 안에 설정할 수 있으며, 20GB의 저장 공간과 TLS를 제공합니다."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1773,7 +1773,7 @@
     "defaultMessage": "크기를 조정하여 {size}× 기준"
   },
   "ps4K9r": {
-    "defaultMessage": "블로섬이란 무엇인가요?"
+    "defaultMessage": "Blossom이란 무엇인가요?"
   },
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
   },
-  "si4AIj": {
-    "defaultMessage": "Route96 배포 — 월 3.50유로"
+  "sehISV": {
+    "defaultMessage": "Blossom 미디어 서버 호스팅 서비스 {price}/월"
   },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"
@@ -1992,7 +1992,7 @@
     "defaultMessage": "귀하의 파일을 위한 20GB 용량의 영구 저장 공간과 별도로 5GB 용량의 데이터베이스를 제공합니다. 총 25GB가 할당됩니다."
   },
   "xExBHw": {
-    "defaultMessage": "사용자님의 호스트 이름은 다음과 같습니다. `<code>your-name.ie.apps.lnvps.cloud</code>`, 자동으로 TLS가 적용됩니다."
+    "defaultMessage": "사용자님의 호스트 이름은 다음과 같습니다. <code>your-name.ie.apps.lnvps.cloud</code>, 자동으로 TLS가 적용됩니다."
   },
   "xOnplm": {
     "defaultMessage": "결제 수단을 불러오는 중입니다…"

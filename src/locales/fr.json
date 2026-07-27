@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "Payer maintenant."
   },
+  "7v5vj0": {
+    "defaultMessage": "Hébergez votre propre serveur multimédia. {price} un mois"
+  },
   "7wbySo": {
     "defaultMessage": "Envoyez-nous un message directement et notre équipe vous répondra dans les plus brefs délais."
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "Retour aux applications"
   },
-  "HVEPWR": {
-    "defaultMessage": "Installez et gérez votre propre serveur multimédia Blossom et NIP-96 pour seulement 3,50 € par mois. Route96 est prêt en quelques minutes sur son propre nom de domaine, avec 20 Go d’espace pour vos fichiers et une sécurité TLS intégrée."
-  },
   "HVtxik": {
     "defaultMessage": "Domaine personnalisé"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Date d’expiration {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/mois, sans frais d’installation. 20 Go pour vos fichiers."
   },
   "LR754a": {
     "defaultMessage": "Le renouvellement aura lieu le :"
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "Gérez vos informations de facturation, le renouvellement automatique et les moyens par lesquels nous pouvons vous contacter."
-  },
-  "RETAQj": {
-    "defaultMessage": "3,50 € par mois, sans frais d’installation. 20 Go pour vos fichiers."
   },
   "RQNCao": {
     "defaultMessage": "Hébergement d'identité NIP-05"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "Veuillez confirmer votre adresse électronique."
   },
-  "Z+US89": {
-    "defaultMessage": "Hébergez votre propre serveur multimédia – 3,50 € par mois."
-  },
   "Z3gKpL": {
     "defaultMessage": "stockage"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "L'enregistrement réapplique la configuration et redémarre l'application."
-  },
-  "aHQFgG": {
-    "defaultMessage": "Hébergement du serveur multimédia Blossom à partir de 3,50 € par mois."
   },
   "aLe15X": {
     "defaultMessage": "Payez comme vous le souhaitez."
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "Échec de la connexion par clé d'accès"
   },
+  "jzU8se": {
+    "defaultMessage": "Déployez Route96. {price}par mois"
+  },
   "k2S+Z0": {
     "defaultMessage": "Il s’agit d’un protocole permettant de stocker et de récupérer des fichiers en utilisant leur hachage, conçu pour fonctionner avec Nostr. La norme NIP-96 est la spécification plus ancienne pour le stockage de fichiers via HTTP ; Route96 prend en charge les deux normes."
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "Non défini."
   },
+  "pJmk+U": {
+    "defaultMessage": "Exploitez votre propre serveur multimédia Blossom et NIP-96 pour {price}/mois. Route96, mise en ligne en quelques minutes sur votre propre nom de domaine, avec 20 Go d’espace pour vos fichiers et le protocole TLS inclus."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "Le chiffrement des messages n’est disponible que pour les comptes Nostr. Votre compte ne dispose pas de clé Nostr permettant de lire ou d’envoyer des messages NIP-17. Pour obtenir de l’aide, veuillez utiliser l’onglet Assistance."
   },
-  "si4AIj": {
-    "defaultMessage": "Déployez Route96 – 3,50 € par mois."
+  "sehISV": {
+    "defaultMessage": "Hébergement de serveurs multimédias Blossom à partir de {price}/mois"
   },
   "sn+Rj5": {
     "defaultMessage": "Se connecter avec une clé d'accès"

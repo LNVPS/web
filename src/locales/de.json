@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "Jetzt bezahlen."
   },
+  "7v5vj0": {
+    "defaultMessage": "Richten Sie Ihren eigenen Medienserver ein – {price} ein Monat"
+  },
   "7wbySo": {
     "defaultMessage": "Senden Sie uns eine direkte Nachricht, und unser Team wird sich bei Ihnen melden."
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "Zurück zu den Apps"
   },
-  "HVEPWR": {
-    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für nur 3,50 € pro Monat. Route96 lässt sich innerhalb weniger Minuten auf einem eigenen Hostnamen installieren und bietet 20 GB Speicherplatz für Ihre Dateien sowie integriertes TLS."
-  },
   "HVtxik": {
     "defaultMessage": "Eigene Domain"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Gültig bis {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}pro Monat, ohne Einrichtungskosten. 20 GB Speicherplatz für Ihre Dateien."
   },
   "LR754a": {
     "defaultMessage": "Wird automatisch verlängert am"
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "Verwalten Sie Ihre Abrechnungsdaten, die automatische Verlängerung und wie wir Sie erreichen können."
-  },
-  "RETAQj": {
-    "defaultMessage": "3,50 € pro Monat, keine Einrichtungsgebühr. 20 GB Speicherplatz für Ihre Dateien."
   },
   "RQNCao": {
     "defaultMessage": "NIP-05-Identitäts-Hosting"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "E-Mail-Bestätigung erforderlich"
   },
-  "Z+US89": {
-    "defaultMessage": "Betreiben Sie Ihren eigenen Medienserver – 3,50 € pro Monat."
-  },
   "Z3gKpL": {
     "defaultMessage": "Speicher"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "Beim Speichern wird die Konfiguration neu angewendet und die App neu gestartet."
-  },
-  "aHQFgG": {
-    "defaultMessage": "Hosting für den Blossom Media Server ab 3,50 € pro Monat."
   },
   "aLe15X": {
     "defaultMessage": "Bezahlen Sie so, wie es Ihnen am besten passt."
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "Passkey-Anmeldung fehlgeschlagen"
   },
+  "jzU8se": {
+    "defaultMessage": "Route96 bereitstellen – {price}pro Monat"
+  },
   "k2S+Z0": {
     "defaultMessage": "Ein Protokoll zum Speichern und Abrufen von Dateien, das auf deren Hash-Wert basiert und für die Verwendung mit Nostr entwickelt wurde. NIP-96 ist die ältere HTTP-Spezifikation für die Dateispeicherung – Route96 unterstützt beide."
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "Nicht festgelegt."
   },
+  "pJmk+U": {
+    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96: In wenigen Minuten können Sie es auf Ihrem eigenen Hostnamen einrichten. Es bietet 20 GB Speicherplatz für Ihre Dateien und beinhaltet TLS."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "Verschlüsselte Nachrichten sind nur für Nostr-Konten verfügbar. Ihr Konto verfügt über keinen Nostr-Schlüssel, um NIP-17-Nachrichten zu lesen oder zu senden. Bei Fragen wenden Sie sich bitte an den Support."
   },
-  "si4AIj": {
-    "defaultMessage": "Route96 bereitstellen – 3,50 € pro Monat"
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server – Hosting von {price}pro Monat"
   },
   "sn+Rj5": {
     "defaultMessage": "Mit Passkey anmelden"
@@ -1992,7 +1992,7 @@
     "defaultMessage": "20 GB persistenter Speicher für Ihre Dateien sowie ein zusätzliches Datenbankvolumen von 5 GB – insgesamt stehen Ihnen also 25 GB zur Verfügung."
   },
   "xExBHw": {
-    "defaultMessage": "Ihr eigener Hostname – `<code>your-name.ie.apps.lnvps.cloud</code>` – mit automatischer TLS-Verschlüsselung."
+    "defaultMessage": "Ihr eigener Hostname – <code>your-name.ie.apps.lnvps.cloud</code> – mit automatischer TLS-Verschlüsselung."
   },
   "xOnplm": {
     "defaultMessage": "Zahlungsmethoden werden geladen …"

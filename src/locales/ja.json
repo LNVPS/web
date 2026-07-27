@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "今すぐお支払いください。"
   },
+  "7v5vj0": {
+    "defaultMessage": "独自のメディアサーバーを構築しましょう。 {price} 1か月"
+  },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "アプリに戻る"
   },
-  "HVEPWR": {
-    "defaultMessage": "月額3.50ユーロで、BlossomとNIP-96メディアサーバーを自分で運用できます。Route96は、独自のホスト名で数分以内にセットアップでき、ファイルを保存するための20GBの容量とTLSが含まれています。"
-  },
   "HVtxik": {
     "defaultMessage": "カスタムドメイン"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}月額料金制で、初期費用は無料。ファイルは20GBまで保存できます。"
   },
   "LR754a": {
     "defaultMessage": "更新日："
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "請求情報の管理、自動更新の設定、および弊社からの連絡方法についてご確認ください。"
-  },
-  "RETAQj": {
-    "defaultMessage": "月額3.50ユーロ、初期費用は無料。ファイル保存容量は20GB。"
   },
   "RQNCao": {
     "defaultMessage": "NIP-05 アイデンティティホスティング"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "メールアドレスの認証が必要です。"
   },
-  "Z+US89": {
-    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。月額3.50ユーロです。"
-  },
   "Z3gKpL": {
     "defaultMessage": "ストレージ"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
-  },
-  "aHQFgG": {
-    "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額3.50ユーロから。"
   },
   "aLe15X": {
     "defaultMessage": "好きな支払い方法でどうぞ。"
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
   },
+  "jzU8se": {
+    "defaultMessage": "Route96をデプロイします。 {price}月あたり"
+  },
   "k2S+Z0": {
     "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
   },
+  "pJmk+U": {
+    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用して、 {price}/月。Route96では、独自のホスト名で数分以内にセットアップが完了し、20GBのストレージとTLSが利用可能です。"
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
-  "si4AIj": {
-    "defaultMessage": "Route96をデプロイ — 月額3.50ユーロ"
+  "sehISV": {
+    "defaultMessage": "Blossomメディアサーバーのホスティングサービス {price}月間"
   },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
@@ -1992,7 +1992,7 @@
     "defaultMessage": "お客様のファイル用に20GBの永続ストレージ、さらに5GBの専用データベースボリュームをご用意。合計で25GBを割り当てます。"
   },
   "xExBHw": {
-    "defaultMessage": "お客様ご自身のホスト名（`<code>your-name.ie.apps.lnvps.cloud</code>`）に、TLSが自動的に適用されます。"
+    "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、TLSが自動的に適用されます。"
   },
   "xOnplm": {
     "defaultMessage": "支払い方法を読み込んでいます…。"

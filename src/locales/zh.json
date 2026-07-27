@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "立即付款。"
   },
+  "7v5vj0": {
+    "defaultMessage": "搭建您自己的媒体服务器—— {price} 一个月"
+  },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
   },
@@ -600,7 +603,7 @@
     "defaultMessage": "请重试。"
   },
   "Ff9LAg": {
-    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 `<catalog>目录</catalog>` 中提供。"
+    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -679,9 +682,6 @@
   },
   "HPBE7M": {
     "defaultMessage": "返回应用列表"
-  },
-  "HVEPWR": {
-    "defaultMessage": "只需每月 3.50 欧元，即可搭建并运行您自己的 Blossom 和 NIP-96 多媒体服务器。Route96 可以在几分钟内通过其专用域名设置完成，并提供 20GB 的存储空间供您存放文件，同时还包含 TLS 加密功能。"
   },
   "HVtxik": {
     "defaultMessage": "自定义域名"
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}每月，无需支付设置费。为您提供 20 GB 的存储空间，用于存放您的文件。"
   },
   "LR754a": {
     "defaultMessage": "续订时间："
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "管理您的账单信息、自动续订设置以及我们与您联系的方式。"
-  },
-  "RETAQj": {
-    "defaultMessage": "每月 3.50 欧元，无需支付初始设置费用。提供 20GB 的存储空间供您存放文件。"
   },
   "RQNCao": {
     "defaultMessage": "NIP-05 身份托管"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "需要验证电子邮件地址。"
   },
-  "Z+US89": {
-    "defaultMessage": "搭建您自己的媒体服务器——每月只需 3.50 欧元。"
-  },
   "Z3gKpL": {
     "defaultMessage": "存储"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "保存后将重新应用配置并重启应用。"
-  },
-  "aHQFgG": {
-    "defaultMessage": "Blossom 媒体服务器，每月起价 3.50 欧元。"
   },
   "aLe15X": {
     "defaultMessage": "选择您喜欢的支付方式。"
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
   },
+  "jzU8se": {
+    "defaultMessage": "部署 Route96 —— {price}每月"
+  },
   "k2S+Z0": {
     "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范——Route96 同时支持这两种规范。"
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
+  "pJmk+U": {
+    "defaultMessage": "运行您自己的 Blossom 和 NIP-96 媒体服务器，时长为 {price}每月。Route96，只需几分钟即可在其自有域名上部署，并提供 20 GB 存储空间供您存放文件，同时包含 TLS 加密。"
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
   },
-  "si4AIj": {
-    "defaultMessage": "部署《Route96》——每月 3.50 欧元。"
+  "sehISV": {
+    "defaultMessage": "Blossom 媒体服务器托管，{price}/月起"
   },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
@@ -1992,7 +1992,7 @@
     "defaultMessage": "为您的文件提供 20GB 的持久存储空间，此外还拥有 5GB 的独立数据库容量——总计分配 25GB。"
   },
   "xExBHw": {
-    "defaultMessage": "您自己的主机名——`<code>your-name.ie.apps.lnvps.cloud</code>`，并已启用自动 TLS。"
+    "defaultMessage": "您自己的主机名——<code>your-name.ie.apps.lnvps.cloud</code>，并已启用自动 TLS。"
   },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"

@@ -8,6 +8,12 @@
   "+3NyB6": {
     "defaultMessage": "発信。"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+  },
+  "+EHk4e": {
+    "defaultMessage": "はい。これはあなたのコンピューターです。好きなものをインストールしてください。"
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
@@ -83,6 +89,9 @@
   "0t1qvq": {
     "defaultMessage": "ルールを追加"
   },
+  "12+5NG": {
+    "defaultMessage": "Pro-rated upgrade"
+  },
   "13cluZ": {
     "defaultMessage": "SSHキーを追加："
   },
@@ -103,6 +112,9 @@
   },
   "1p8vog": {
     "defaultMessage": "カスタムVPS"
+  },
+  "1szy7r": {
+    "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、自動的に発行されたTLS証明書が設定されます。"
   },
   "1v7S+3": {
     "defaultMessage": "Nostrドメインを追加"
@@ -125,6 +137,18 @@
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
   },
+  "2lKQfH": {
+    "defaultMessage": "How much can I store?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Quote currency"
+  },
+  "2nfKZI": {
+    "defaultMessage": "後でリレーソフトを切り替えることはできますか？"
+  },
+  "35johu": {
+    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはクレジットカードで支払い。アカウント登録には個人情報は不要です。Nostrキーを使ってログインしてください。ブラウザ版ではNIP-07、API版ではNIP-98を使用します。"
+  },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
   },
@@ -146,6 +170,9 @@
   "3aeXvu": {
     "defaultMessage": "紹介コードを取得して共有してください。誰かがそのコードを使って登録し、そのユーザーの仮想マシンが最初の支払いを行うと、あなたは報酬を得ることができます。報酬の受け取り先を設定してから、機能を有効にしてください。"
   },
+  "3eEn1+": {
+    "defaultMessage": "<b>本人確認（KYC）は不要です。</b> アカウント登録には個人情報が一切必要ありません。ノード、キー、ビジネスはすべてあなたのものであり、自由に管理できます。"
+  },
   "3vxkus": {
     "defaultMessage": "保存する必要はありません。お使いのデバイス（Face ID、Touch ID、Windows Hello、またはセキュリティキー）がアカウントを保護します。"
   },
@@ -158,6 +185,9 @@
   "3zEByO": {
     "defaultMessage": "紹介コードを有効にする。"
   },
+  "41rhjs": {
+    "defaultMessage": "小さくてシンプルな、RustとSQLiteを使用したプログラム。"
+  },
   "43xNq5": {
     "defaultMessage": "VPSを更新します。{id}"
   },
@@ -166,6 +196,9 @@
   },
   "48dUkY": {
     "defaultMessage": "＋ {fee} 設定、準備"
+  },
+  "4D+xAI": {
+    "defaultMessage": "なぜ、このVPSをライトニングノードに使うのか？"
   },
   "4PKxPs": {
     "defaultMessage": "リンクを解除する。"
@@ -218,6 +251,9 @@
   "5elgIe": {
     "defaultMessage": "エラー："
   },
+  "5h1V4e": {
+    "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
+  },
   "5ow6dg": {
     "defaultMessage": "ワッツアップ"
   },
@@ -269,11 +305,20 @@
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
   },
+  "7Iag/E": {
+    "defaultMessage": "Total due now"
+  },
+  "7L4D8/": {
+    "defaultMessage": "リレーで使うものを選択してください。"
+  },
   "7NFfmz": {
     "defaultMessage": "製品"
   },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{日} other{日}}"
+  },
+  "7agV2X": {
+    "defaultMessage": "リレー"
   },
   "7fGyF+": {
     "defaultMessage": "消去して再インストール"
@@ -292,6 +337,9 @@
   },
   "7tOz+m": {
     "defaultMessage": "今すぐお支払いください。"
+  },
+  "7v5vj0": {
+    "defaultMessage": "Host your own media server — {price} a month"
   },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
@@ -335,6 +383,9 @@
   "8cnlb5": {
     "defaultMessage": "支払い方法を保存する"
   },
+  "8dAKuZ": {
+    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+  },
   "8ecw1u": {
     "defaultMessage": "ハンドル"
   },
@@ -343,6 +394,9 @@
   },
   "8lK3rQ": {
     "defaultMessage": "期限切れの前に更新してください。 {date} または、これと関連するデータが完全に削除されます。"
+  },
+  "8vDeUP": {
+    "defaultMessage": "現在使用中のものは置き換え、新しいものを展開して移行してください。これらは別々の展開作業です。"
   },
   "8xIysb": {
     "defaultMessage": "今すぐ延長します。"
@@ -355,6 +409,9 @@
   },
   "9dOxDN": {
     "defaultMessage": "お支払いと更新について"
+  },
+  "9gB0vq": {
+    "defaultMessage": "ノード用のVPSを構築します。"
   },
   "9p3I3O": {
     "defaultMessage": "確認中"
@@ -373,6 +430,9 @@
   },
   "ABL6b+": {
     "defaultMessage": "あなたのコードを収益に変えましょう。"
+  },
+  "AGa2G5": {
+    "defaultMessage": "機械全体が必要な場合。"
   },
   "AL9+3/": {
     "defaultMessage": "この仮想マシンに対して更新できる有効なサブスクリプションが見つかりませんでした。"
@@ -449,14 +509,23 @@
   "Bzv1CO": {
     "defaultMessage": "今すぐ再開してください。"
   },
+  "CBHTGe": {
+    "defaultMessage": "Credit for time already paid"
+  },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
   },
   "Cououe": {
     "defaultMessage": "このアプリを公開するには、ログインしてください。"
   },
+  "CwmTc6": {
+    "defaultMessage": "New renewal price"
+  },
   "D3idYv": {
     "defaultMessage": "設定"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× base app"
   },
   "D9mck8": {
     "defaultMessage": "いつでも任意の金額を支払い — 時間は比例配分で追加されます"
@@ -485,8 +554,14 @@
   "DZ2Koj": {
     "defaultMessage": "方向"
   },
+  "DbJIBd": {
+    "defaultMessage": "招待階層を持つコミュニティリレー"
+  },
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
+  },
+  "DjPPFA": {
+    "defaultMessage": "ライトニングネットワークのノード用に構築されたVPSです。固定IPアドレス（IPv4およびIPv6）、無制限のトラフィック、Torの使用許可、本人確認不要。サーバーの所在地はダブリン、ロンドン、またはケベックから選択できます。支払いにはライトニングネットワーク自体を使用します。"
   },
   "DnX0aY": {
     "defaultMessage": "削除を確定します。"
@@ -523,6 +598,9 @@
   },
   "Ecfndm": {
     "defaultMessage": "請求書"
+  },
+  "EffI8i": {
+    "defaultMessage": "隔離された環境であり、共有のボックスではありません。"
   },
   "Eg11ZY": {
     "defaultMessage": "再接続する"
@@ -565,6 +643,9 @@
   },
   "FZeQlc": {
     "defaultMessage": "接続が切断されました。"
+  },
+  "FZup6q": {
+    "defaultMessage": "Where does it run?"
   },
   "FazwRl": {
     "defaultMessage": "もう一度試してください。"
@@ -610,6 +691,9 @@
   },
   "GSye7T": {
     "defaultMessage": "ライトニングアドレス"
+  },
+  "GXNK11": {
+    "defaultMessage": "独自のNostrリレーを月額{price}で運用できます。strfry、nostr-rs-relay、Pyramid、HAVENなどのソフトウェアを使用すれば、TLSとストレージ込みで、数分以内に独自のホスト名で簡単にセットアップできます。"
   },
   "Gd6Kbk": {
     "defaultMessage": "まだ有効になっていません。"
@@ -674,6 +758,9 @@
   "IZFEUg": {
     "defaultMessage": "準備完了。"
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, Ireland."
+  },
   "Id24hd": {
     "defaultMessage": "名前 *"
   },
@@ -691,6 +778,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "購読"
+  },
+  "J+pWCM": {
+    "defaultMessage": "New size"
   },
   "JAJV1y": {
     "defaultMessage": "実行時に一度割り当て"
@@ -713,6 +803,9 @@
   "Jm+fih": {
     "defaultMessage": "非アクティブ状態。"
   },
+  "JykdTz": {
+    "defaultMessage": "Torの使用は許可されていますか？"
+  },
   "K/zU0+": {
     "defaultMessage": "+ 新しいものを展開"
   },
@@ -728,6 +821,9 @@
   "KN7zKn": {
     "defaultMessage": "Error"
   },
+  "KP5gy4": {
+    "defaultMessage": "<b>ライトニングで支払いましょう。</b> ライトニングネットワークを通じてライトニングノードに資金を供給することは、ある種の整合性があり、第三者の決済サービスを利用するのではなく、独自のLNDノードを使用して処理します。"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
@@ -736,6 +832,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "すべてのプランには、IPv4アドレス1つとIPv6アドレス1つが含まれており、データ通信量に制限はありません。価格にはVAT（付加価値税）が含まれますが、決済手数料は含まれません。"
+  },
+  "KkHYsy": {
+    "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
   "KuX7em": {
     "defaultMessage": "{duration}の間、アクティブでした。"
@@ -755,6 +854,9 @@
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
   },
+  "LKipQw": {
+    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
+  },
   "LR754a": {
     "defaultMessage": "更新日："
   },
@@ -770,11 +872,20 @@
   "LqFfRA": {
     "defaultMessage": "国"
   },
+  "LwGAe6": {
+    "defaultMessage": "また、LNVPSでも。"
+  },
   "MTnSwY": {
     "defaultMessage": "税込み"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
+  },
+  "MqbiJp": {
+    "defaultMessage": "はい。CNAMEレコードを作成し、リレーサーバーのホスト名に設定してください。DNSが解決されると、自動的に別の証明書を発行します。"
+  },
+  "Mw9USY": {
+    "defaultMessage": "よくわからない？<0xE2><0x80><0x8A><b>strfry</b>は、最も一般的な公開リレーで使われる設定です。<0xE2><0x80><0x8A>もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。4つの設定の中で、Blossomメディアストアも提供されるのはこれだけなので、画像とメモを同じキーの下にまとめて管理できます。"
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
@@ -784,6 +895,9 @@
   },
   "NZyhSX": {
     "defaultMessage": "ニュース"
+  },
+  "NdrIUl": {
+    "defaultMessage": "サーバーをレンタルする必要はありません。OSのパッチを当てる必要もありません。証明書を更新する手間もかかりません。リレーを選び、名前を付け、料金を支払うだけで、TLSが有効になった状態で独自のホスト名で自動的に起動します。"
   },
   "Niq27F": {
     "defaultMessage": "購読者名（任意）"
@@ -839,20 +953,35 @@
   "P7PLVj": {
     "defaultMessage": "日付"
   },
+  "PJKhfR": {
+    "defaultMessage": "リレーが重要な要素となる場合は、マネージドアプリが最適なソリューションです。カスタムビルドを実行したり、他のサービスを同じ場所に配置したり、サーバーの管理を自分で行いたい場合は、ダブリン、ロンドン、ケベックに拠点を置く弊社の<a>VPSホスティング</a>をご利用ください。すべてのプランで、無制限のトラフィックと固定IPアドレス（IPv4およびIPv6）を提供しています。"
+  },
   "PJtOx7": {
     "defaultMessage": "報告すべき事象はありません。"
   },
   "PT4sD/": {
     "defaultMessage": "OSを選択してください。"
   },
+  "PeOVdM": {
+    "defaultMessage": "ダブリン（アイルランド）、ロンドン（イギリス）、またはケベック（カナダ）から選択できます。大規模なノードが必要な場合は、ダブリンが最も優れた性能を発揮します。最大で64の仮想CPUと128GBのRAMを搭載できます。"
+  },
   "PfSZy5": {
     "defaultMessage": "該当する注文は見つかりませんでした。"
+  },
+  "Pk14hW": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
   },
   "PucUfl": {
     "defaultMessage": "SSHキーを選択してください。"
   },
   "PujK1s": {
     "defaultMessage": "生成"
+  },
+  "QB3YLi": {
+    "defaultMessage": "停止すると、リレーがゼロにリセットされ、保存データは保持されます。再起動してもイベントデータベースはそのままです。削除を行うと、データが消去されます。"
   },
   "QDOm6e": {
     "defaultMessage": "含む。 {rate} 税"
@@ -941,6 +1070,9 @@
   "SB//YQ": {
     "defaultMessage": "注文内容のまとめ"
   },
+  "SMbDTG": {
+    "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
+  },
   "SQJto2": {
     "defaultMessage": "サインイン"
   },
@@ -949,6 +1081,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "このドメインに登録された NIP-05 ハンドルを管理します。"
+  },
+  "SZwp5S": {
+    "defaultMessage": "How large a file can I upload?"
   },
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
@@ -1010,6 +1145,9 @@
   "TgGVeW": {
     "defaultMessage": "対応が必要"
   },
+  "TlSf60": {
+    "defaultMessage": "自分のドメインを使用できますか？"
+  },
   "TqSTI0": {
     "defaultMessage": "有効にする。"
   },
@@ -1025,8 +1163,20 @@
   "U+Ddsx": {
     "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
   },
+  "U/W38H": {
+    "defaultMessage": "支払いを停止した場合、登録したイベントはどうなりますか？"
+  },
+  "U0GEAC": {
+    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
+  "U7fZs8": {
+    "defaultMessage": "どれくらいの時間がかかりますか？"
+  },
   "U96Gl9": {
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
   },
   "UPP+wZ": {
     "defaultMessage": "使用状況： {count,plural,one{仮想マシン} other{仮想マシン}}： {vms}"
@@ -1042,6 +1192,9 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname}をお勧めします。サーバーのIPアドレスの変更を自動的に追跡します。"
+  },
+  "UhIOEO": {
+    "defaultMessage": "私の身分証明書が必要ですか？"
   },
   "Uk68vE": {
     "defaultMessage": "送信者の公開鍵（npub/nprofile/16進数）："
@@ -1085,6 +1238,9 @@
   "VzzYJk": {
     "defaultMessage": "作成する"
   },
+  "W8nHSd": {
+    "defaultMessage": "FAQ"
+  },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
   },
@@ -1106,6 +1262,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "独自のデータベースを備えた隔離された環境。"
+  },
   "X0ha1a": {
     "defaultMessage": "変更を保存"
   },
@@ -1118,20 +1277,35 @@
   "XNiOLB": {
     "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
   },
+  "XW9RGA": {
+    "defaultMessage": "アカウントは必要ですか？"
+  },
   "XyIrRh": {
     "defaultMessage": "ビットコインで支払う"
   },
   "Y+LcmX": {
     "defaultMessage": "DNSを変更できない場合は、既存のサーバーで{path}のプロキシを{target}に設定してください。"
   },
+  "Y+P9PL": {
+    "defaultMessage": "CNAMEを使用して、ご自身のドメインをご利用ください。証明書は自動的に発行されます。"
+  },
   "Y/tMXU": {
     "defaultMessage": "お支払いをお待ちしています。確認が完了すると、自動的に適用されます。"
+  },
+  "YLoN96": {
+    "defaultMessage": "<b>すべてのプランで、固定のIPv4アドレスとIPv6アドレスをご利用いただけます。</b> 公開されるノードには、変更されないアドレスが必要です。どちらも追加料金なしで含まれています。"
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
   },
+  "Yc91CY": {
+    "defaultMessage": "Up to 100 MB per upload."
+  },
   "YdQxfw": {
     "defaultMessage": "サポートにお問い合わせください。"
+  },
+  "Yiyf5n": {
+    "defaultMessage": "ノストリレーのホスティングサービスを月額{price}から。"
   },
   "Yl8GBP": {
     "defaultMessage": "納税者番号"
@@ -1172,8 +1346,14 @@
   "ZshmbW": {
     "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
   },
+  "ZvCgZf": {
+    "defaultMessage": "Nostrキーがあれば十分です。メールアドレス、氏名、本人確認は不要です。通知は暗号化されたNostrのダイレクトメッセージ、メール、Telegram、またはWhatsAppに送信できます。お好きな方法をお選びください。"
+  },
   "a60eIK": {
     "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
+  },
+  "aLe15X": {
+    "defaultMessage": "Pay how you like"
   },
   "aPcXT9": {
     "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
@@ -1181,8 +1361,14 @@
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
   },
+  "aUuDGj": {
+    "defaultMessage": "リレーをデプロイ — 月額{price}"
+  },
   "acrOoz": {
     "defaultMessage": "続行してください。"
+  },
+  "agOXPD": {
+    "defaultMessage": "Size"
   },
   "alJZVR": {
     "defaultMessage": "Nostrアカウント"
@@ -1204,6 +1390,9 @@
   },
   "bMQUWl": {
     "defaultMessage": "送信元CIDR（この仮想マシン）"
+  },
+  "bO+E2G": {
+    "defaultMessage": "いいえ。すべてのプランには、データ通信量制限がないものが含まれています。"
   },
   "bW7B87": {
     "defaultMessage": "新しい"
@@ -1258,6 +1447,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "履歴の読み込み中..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "Cost at new size for the rest of this period"
   },
   "dHltrI": {
     "defaultMessage": "毎月請求されます。"
@@ -1379,6 +1571,9 @@
   "gc+2Z2": {
     "defaultMessage": "コンソール"
   },
+  "gjvoQG": {
+    "defaultMessage": "サイズ調整"
+  },
   "gtGLdm": {
     "defaultMessage": "手数料{amount}を含む"
   },
@@ -1442,8 +1637,17 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Why self-host media"
+  },
   "j7VE/p": {
     "defaultMessage": "通常のBTCトランザクション — 承認後に反映されます"
+  },
+  "j9/hqS": {
+    "defaultMessage": "必要なものを正確に構築できます。CPU、メモリ、ストレージはそれぞれ独立して構成でき、SSDまたはHDDを選択できるため、固定されたグレードに縛られることはありません。"
+  },
+  "jGSUnR": {
+    "defaultMessage": "固定IPアドレスは割り当てられますか？"
   },
   "jM8W7d": {
     "defaultMessage": "国を選択してください。"
@@ -1463,8 +1667,14 @@
   "jf7fbc": {
     "defaultMessage": "設定されていません。— 設定を追加してください。"
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
+  },
+  "jhyC12": {
+    "defaultMessage": "What is included"
   },
   "jmVweB": {
     "defaultMessage": "SSHキーを読み込んでいます。"
@@ -1478,6 +1688,12 @@
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
   },
+  "jzU8se": {
+    "defaultMessage": "Deploy Route96 — {price}/month"
+  },
+  "k2S+Z0": {
+    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+  },
   "k9Pskm": {
     "defaultMessage": "高速なソリッドステートストレージ"
   },
@@ -1487,17 +1703,26 @@
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
   },
+  "kNIWoA": {
+    "defaultMessage": "Uploads up to 100 MB each"
+  },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
   },
   "kSjQ3a": {
     "defaultMessage": "{initiatedBy} によって開始"
   },
+  "kesoZ1": {
+    "defaultMessage": "当社は独自のライトニングノードを運用しています。お客様のサトシ（ビットコインの最小単位）は、第三者の決済サービスを経由しません。"
+  },
   "kfr95E": {
     "defaultMessage": "住所1行目"
   },
   "ku+mDU": {
     "defaultMessage": "州"
+  },
+  "l0VA3b": {
+    "defaultMessage": "交通量は規制されていますか？"
   },
   "l4RUua": {
     "defaultMessage": "サービス：{service}"
@@ -1546,6 +1771,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "管理対象アプリ：サーバーを起動せずにソフトウェアを実行します。"
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
   "mIuuiJ": {
     "defaultMessage": "サービスの状況と稼働時間"
@@ -1619,11 +1847,17 @@
   "o2AdrJ": {
     "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
   },
+  "o2v6Fy": {
+    "defaultMessage": "独自のNostrリレーを運用しましょう。月額{price}です。"
+  },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
   },
   "oBSxZS": {
     "defaultMessage": "アップグレードの見積もり"
+  },
+  "oC2JR/": {
+    "defaultMessage": "<b>停止するとデータは保持されます。</b> リレーを一時停止しても、再開したときにイベントデータベースはそのまま残ります。データを削除した場合のみ、ストレージから消去されます。"
   },
   "oCc8Oq": {
     "defaultMessage": "キーを追加"
@@ -1637,14 +1871,23 @@
   "oXGNZ+": {
     "defaultMessage": "VM #{id} のターミナル："
   },
+  "oawN/U": {
+    "defaultMessage": "高い処理能力、大量のイベント処理"
+  },
   "odTkf5": {
     "defaultMessage": "ログインに戻る"
   },
   "odXlk8": {
     "defaultMessage": "ログイン"
   },
+  "oezJ0C": {
+    "defaultMessage": "固定IPアドレス、無制限のデータ通信量、Torの使用許可、KYC（顧客確認）は不要。支払いにはライトニングネットワークをご利用ください。当社独自のノードを運用しているため、お客様のお支払いは決済処理業者を経由することはありません。"
+  },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"
+  },
+  "oxq33u": {
+    "defaultMessage": "最適なもの"
   },
   "p4N05H": {
     "defaultMessage": "アップロード"
@@ -1652,11 +1895,20 @@
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
   },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
   "pgLgIU": {
     "defaultMessage": "最新情報をすべてお読みください。"
+  },
+  "pgl1gp": {
+    "defaultMessage": "Resize to {size}× base"
+  },
+  "ps4K9r": {
+    "defaultMessage": "What is Blossom?"
   },
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
@@ -1703,6 +1955,9 @@
   "rieTwF": {
     "defaultMessage": "有効期限："
   },
+  "rr0r/W": {
+    "defaultMessage": "<b>Torの使用は許可されています。</b> 必要であれば、ノードをTor経由で実行してください。当社はその使用を妨げることも、GoogleのCAPTCHAを使用することもしません。"
+  },
   "rv2p0H": {
     "defaultMessage": "CPU、RAM、ネットワーク"
   },
@@ -1739,6 +1994,9 @@
   "sUw18G": {
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+  },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
   },
@@ -1763,11 +2021,20 @@
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"
   },
+  "tV5m13": {
+    "defaultMessage": "LND、Core Lightning、Eclairは実行できますか？"
+  },
+  "tZ+Hzu": {
+    "defaultMessage": "Lightningノードを、その目的に特化したVPSで運用しましょう。"
+  },
   "tngc9N": {
     "defaultMessage": "送信元CIDR"
   },
   "tthToS": {
     "defaultMessage": "無効化された、使用不能の。"
+  },
+  "tuJeaZ": {
+    "defaultMessage": "はい。"
   },
   "tzMNF3": {
     "defaultMessage": "状況"
@@ -1790,11 +2057,20 @@
   "uJV0wU": {
     "defaultMessage": "IPアドレス"
   },
+  "uNhj6T": {
+    "defaultMessage": "はい、すべてのプランでIPv4アドレスとIPv6アドレスをそれぞれ1つずつ提供します。"
+  },
   "uPNlBw": {
     "defaultMessage": "メールアドレス：{email}"
   },
   "ubXbwc": {
     "defaultMessage": "デフォルトポリシー"
+  },
+  "uby/fm": {
+    "defaultMessage": "Get quote"
+  },
+  "ujaB7H": {
+    "defaultMessage": "どこで"
   },
   "uqUeK9": {
     "defaultMessage": "サポートから送信されたメッセージを復号化します。"
@@ -1838,8 +2114,14 @@
   "vtStU2": {
     "defaultMessage": "支払い履歴"
   },
+  "vuTMNa": {
+    "defaultMessage": "個人の保管庫のような形式の共有機能で、独自の「Blossom」メディアストレージが利用可能。"
+  },
   "vy2rlX": {
     "defaultMessage": "処理手数料："
+  },
+  "w3i5cX": {
+    "defaultMessage": "永続ストレージ：上記の各リレーごとにサイズが設定されます。"
   },
   "wEQDC6": {
     "defaultMessage": "編集"
@@ -1849,6 +2131,9 @@
   },
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："
+  },
+  "wa/t9c": {
+    "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "リンク済み"
@@ -1862,11 +2147,20 @@
   "x0cZXf": {
     "defaultMessage": "アップグレードは利用できません。"
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
+  "xExBHw": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
   "xOnplm": {
     "defaultMessage": "支払い方法を読み込んでいます…。"
   },
   "xQ8iOj": {
     "defaultMessage": "まだ購読していません。"
+  },
+  "xUdVjn": {
+    "defaultMessage": "Route96"
   },
   "xXbJso": {
     "defaultMessage": "サインアウト"
@@ -1916,6 +2210,12 @@
   "yRz1m6": {
     "defaultMessage": "取扱説明書"
   },
+  "yUD6jT": {
+    "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
+  },
+  "ys3Bzn": {
+    "defaultMessage": "ライトニングノードVPSホスティング – ライトニングで支払い"
+  },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"
   },
@@ -1930,5 +2230,11 @@
   },
   "zRPHCo": {
     "defaultMessage": "メモリ（GB）"
+  },
+  "zbyKVt": {
+    "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
+  },
+  "C8Qzcv": {
+    "defaultMessage": "4つのリレー実装方法をご用意。いずれも月額{price}で、初期費用は一切かかりません。"
   }
 }

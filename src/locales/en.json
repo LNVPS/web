@@ -11,6 +11,9 @@
   "+Bj8tM": {
     "defaultMessage": "Stopping retains your uploads; only deleting removes them"
   },
+  "+EHk4e": {
+    "defaultMessage": "Yes. It is your machine — install what you like."
+  },
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
@@ -110,6 +113,9 @@
   "1p8vog": {
     "defaultMessage": "Custom VPS"
   },
+  "1szy7r": {
+    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with a TLS certificate issued automatically"
+  },
   "1v7S+3": {
     "defaultMessage": "Add Nostr Domain"
   },
@@ -118,6 +124,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "Billing, renewal & notifications"
+  },
+  "24piVc": {
+    "defaultMessage": "<b>Your own domain if you want it.</b> Point a CNAME at your relay and we serve it alongside the default hostname with its own certificate. No verification step — the certificate is issued when your DNS resolves."
   },
   "2QrTo0": {
     "defaultMessage": "New IP Space Order"
@@ -136,6 +145,12 @@
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
+  },
+  "2nfKZI": {
+    "defaultMessage": "Can I switch relay software later?"
+  },
+  "35johu": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key — NIP-07 in the browser, NIP-98 for the API."
   },
   "36aVfS": {
     "defaultMessage": "Nostr DM"
@@ -158,6 +173,9 @@
   "3aeXvu": {
     "defaultMessage": "Get a referral code to share. You earn a commission when someone signs up with it and their VM makes its first payment. Pick where payouts should land, then activate."
   },
+  "3eEn1+": {
+    "defaultMessage": "<b>No KYC.</b> No personal information to sign up. Your node, your keys, your business."
+  },
   "3vxkus": {
     "defaultMessage": "Nothing to save — your device (Face ID, Touch ID, Windows Hello or a security key) secures the account."
   },
@@ -170,6 +188,9 @@
   "3zEByO": {
     "defaultMessage": "Activate Referral Code"
   },
+  "41rhjs": {
+    "defaultMessage": "Small, simple, Rust + SQLite"
+  },
   "43xNq5": {
     "defaultMessage": "Renew VPS #{id}"
   },
@@ -178,6 +199,9 @@
   },
   "48dUkY": {
     "defaultMessage": "+ {fee} setup"
+  },
+  "4D+xAI": {
+    "defaultMessage": "Why this VPS for a Lightning node"
   },
   "4PKxPs": {
     "defaultMessage": "Unlink"
@@ -229,6 +253,9 @@
   },
   "5elgIe": {
     "defaultMessage": "Error:"
+  },
+  "5h1V4e": {
+    "defaultMessage": "No. Sign up with a Nostr key and pay in sats."
   },
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
@@ -284,11 +311,17 @@
   "7Iag/E": {
     "defaultMessage": "Total due now"
   },
+  "7L4D8/": {
+    "defaultMessage": "Pick your relay"
+  },
   "7NFfmz": {
     "defaultMessage": "Products"
   },
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
+  },
+  "7agV2X": {
+    "defaultMessage": "Relay"
   },
   "7fGyF+": {
     "defaultMessage": "Wipe & reinstall"
@@ -365,6 +398,9 @@
   "8lK3rQ": {
     "defaultMessage": "Renew before {date} or this and its data will be permanently deleted."
   },
+  "8vDeUP": {
+    "defaultMessage": "Not in place — deploy the new one and migrate. They are separate deployments."
+  },
   "8xIysb": {
     "defaultMessage": "Extend now"
   },
@@ -376,6 +412,9 @@
   },
   "9dOxDN": {
     "defaultMessage": "Payments & renewal"
+  },
+  "9gB0vq": {
+    "defaultMessage": "Build your node's VPS"
   },
   "9p3I3O": {
     "defaultMessage": "Confirming"
@@ -394,6 +433,9 @@
   },
   "ABL6b+": {
     "defaultMessage": "Turn your code into commission"
+  },
+  "AGa2G5": {
+    "defaultMessage": "When you want the whole machine instead"
   },
   "AL9+3/": {
     "defaultMessage": "Couldn't find a subscription to renew for this VM."
@@ -470,6 +512,9 @@
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
   },
+  "C8Qzcv": {
+    "defaultMessage": "Four relay implementations, all {price}/month, no setup fee."
+  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -515,8 +560,14 @@
   "DZ2Koj": {
     "defaultMessage": "Direction"
   },
+  "DbJIBd": {
+    "defaultMessage": "Community relays with invite hierarchy"
+  },
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
+  },
+  "DjPPFA": {
+    "defaultMessage": "A VPS built for a Lightning node — static IPv4 and IPv6, unmetered traffic, Tor permitted, no KYC. Dublin, London or Quebec. Pay with Lightning itself."
   },
   "DnX0aY": {
     "defaultMessage": "Confirm delete"
@@ -553,6 +604,9 @@
   },
   "Ecfndm": {
     "defaultMessage": "Invoice"
+  },
+  "EffI8i": {
+    "defaultMessage": "Isolated environment, not a shared box"
   },
   "Eg11ZY": {
     "defaultMessage": "Reconnect"
@@ -643,6 +697,9 @@
   },
   "GSye7T": {
     "defaultMessage": "Lightning Address"
+  },
+  "GXNK11": {
+    "defaultMessage": "Run your own Nostr relay for {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
   },
   "Gd6Kbk": {
     "defaultMessage": "Not yet active"
@@ -752,6 +809,9 @@
   "Jm+fih": {
     "defaultMessage": "Not active"
   },
+  "JykdTz": {
+    "defaultMessage": "Do you allow Tor?"
+  },
   "K/zU0+": {
     "defaultMessage": "+ Deploy new"
   },
@@ -766,6 +826,9 @@
   },
   "KN7zKn": {
     "defaultMessage": "Error"
+  },
+  "KP5gy4": {
+    "defaultMessage": "<b>Pay with Lightning.</b> There is a certain symmetry to funding your Lightning node over Lightning, and we settle it through our own LND node rather than a third-party processor."
   },
   "KaSlC8": {
     "defaultMessage": "Git"
@@ -815,11 +878,20 @@
   "LqFfRA": {
     "defaultMessage": "Country *"
   },
+  "LwGAe6": {
+    "defaultMessage": "Also on LNVPS"
+  },
   "MTnSwY": {
     "defaultMessage": "ex. tax"
   },
   "Mp+zDS": {
     "defaultMessage": "This component only supports Lightning payments"
+  },
+  "MqbiJp": {
+    "defaultMessage": "Yes. Point a CNAME at your relay's hostname. We issue a separate certificate for it automatically once DNS resolves."
+  },
+  "Mw9USY": {
+    "defaultMessage": "Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the only one of the four that also gives you a Blossom media store, so your images live under the same key as your notes."
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
@@ -829,6 +901,9 @@
   },
   "NZyhSX": {
     "defaultMessage": "News"
+  },
+  "NdrIUl": {
+    "defaultMessage": "No server to rent. No OS to patch. No certificates to renew. Pick a relay, give it a name, pay, and it comes up on its own hostname with TLS already working."
   },
   "Niq27F": {
     "defaultMessage": "Subscription name (optional)"
@@ -884,11 +959,17 @@
   "P7PLVj": {
     "defaultMessage": "Date"
   },
+  "PJKhfR": {
+    "defaultMessage": "A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with unmetered traffic and a static IPv4 and IPv6 on every plan."
+  },
   "PJtOx7": {
     "defaultMessage": "No incidents to report."
   },
   "PT4sD/": {
     "defaultMessage": "Select OS:"
+  },
+  "PeOVdM": {
+    "defaultMessage": "Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node — up to 64 vCPU and 128 GB RAM."
   },
   "PfSZy5": {
     "defaultMessage": "No order found"
@@ -904,6 +985,9 @@
   },
   "PujK1s": {
     "defaultMessage": "generate"
+  },
+  "QB3YLi": {
+    "defaultMessage": "Stopping scales the relay to zero and retains your storage — your event database is intact when you restart. Deleting is what removes data."
   },
   "QDOm6e": {
     "defaultMessage": "incl. {rate} tax"
@@ -1085,8 +1169,14 @@
   "U+Ddsx": {
     "defaultMessage": "Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost."
   },
+  "U/W38H": {
+    "defaultMessage": "What happens to my events if I stop paying?"
+  },
   "U0GEAC": {
     "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+  },
+  "U7fZs8": {
+    "defaultMessage": "How long does it take?"
   },
   "U96Gl9": {
     "defaultMessage": "Save this card for future payments"
@@ -1108,6 +1198,9 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} is recommended — it automatically follows server IP changes"
+  },
+  "UhIOEO": {
+    "defaultMessage": "Do you need my identity?"
   },
   "Uk68vE": {
     "defaultMessage": "Sender's public key (npub/nprofile/hex):"
@@ -1190,6 +1283,9 @@
   "XNiOLB": {
     "defaultMessage": "Failed to send message. Please try again."
   },
+  "XW9RGA": {
+    "defaultMessage": "Do I need an account?"
+  },
   "XyIrRh": {
     "defaultMessage": "Pay with Bitcoin"
   },
@@ -1202,6 +1298,9 @@
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
   },
+  "YLoN96": {
+    "defaultMessage": "<b>Static IPv4 and IPv6 on every plan.</b> An announced node needs an address that does not move. Both are included, not an add-on."
+  },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },
@@ -1210,6 +1309,9 @@
   },
   "YdQxfw": {
     "defaultMessage": "Contact Support"
+  },
+  "Yiyf5n": {
+    "defaultMessage": "Nostr Relay Hosting from {price}/month"
   },
   "Yl8GBP": {
     "defaultMessage": "Tax ID"
@@ -1250,6 +1352,9 @@
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
   },
+  "ZvCgZf": {
+    "defaultMessage": "A Nostr key is enough. No email, no name, no KYC. Notifications can go to encrypted Nostr DM, email, Telegram or WhatsApp — your choice."
+  },
   "a60eIK": {
     "defaultMessage": "Saving re-applies the config and restarts the app."
   },
@@ -1261,6 +1366,9 @@
   },
   "aTgjTE": {
     "defaultMessage": "Add passkey"
+  },
+  "aUuDGj": {
+    "defaultMessage": "Deploy your relay — {price}/month"
   },
   "acrOoz": {
     "defaultMessage": "Continue"
@@ -1288,6 +1396,9 @@
   },
   "bMQUWl": {
     "defaultMessage": "Source CIDR (this VM)"
+  },
+  "bO+E2G": {
+    "defaultMessage": "No. Every plan includes unmetered traffic."
   },
   "bW7B87": {
     "defaultMessage": "New"
@@ -1466,6 +1577,9 @@
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
+  "gjvoQG": {
+    "defaultMessage": "Sizing"
+  },
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"
   },
@@ -1535,6 +1649,12 @@
   "j7VE/p": {
     "defaultMessage": "Standard BTC transaction — credits after confirmation"
   },
+  "j9/hqS": {
+    "defaultMessage": "Build exactly what you need — CPU, memory and storage are configured independently, SSD or HDD, rather than forced into fixed tiers."
+  },
+  "jGSUnR": {
+    "defaultMessage": "Do I get a static IP?"
+  },
   "jM8W7d": {
     "defaultMessage": "Select country"
   },
@@ -1598,11 +1718,17 @@
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
   },
+  "kesoZ1": {
+    "defaultMessage": "We run our own Lightning node. Your sats do not route through a third-party processor."
+  },
   "kfr95E": {
     "defaultMessage": "Address Line 1"
   },
   "ku+mDU": {
     "defaultMessage": "State"
+  },
+  "l0VA3b": {
+    "defaultMessage": "Is traffic metered?"
   },
   "l4RUua": {
     "defaultMessage": "Service: {service}"
@@ -1727,11 +1853,17 @@
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
+  "o2v6Fy": {
+    "defaultMessage": "Run your own Nostr relay — {price} a month"
+  },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
   },
   "oBSxZS": {
     "defaultMessage": "Upgrade Quote"
+  },
+  "oC2JR/": {
+    "defaultMessage": "<b>Stopping keeps your data.</b> Pause a relay and the event database is still there when you start it again. Only deleting removes storage."
   },
   "oCc8Oq": {
     "defaultMessage": "Add Key"
@@ -1745,14 +1877,23 @@
   "oXGNZ+": {
     "defaultMessage": "VM #{id} Terminal:"
   },
+  "oawN/U": {
+    "defaultMessage": "High throughput, large event volume"
+  },
   "odTkf5": {
     "defaultMessage": "Back to sign in"
   },
   "odXlk8": {
     "defaultMessage": "Log in"
   },
+  "oezJ0C": {
+    "defaultMessage": "Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning — we run our own node, so your payment never touches a processor."
+  },
   "oswGmn": {
     "defaultMessage": "You can't leave while payout history exists."
+  },
+  "oxq33u": {
+    "defaultMessage": "Best for"
   },
   "p4N05H": {
     "defaultMessage": "Upload"
@@ -1814,11 +1955,17 @@
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
+  "rOtXKf": {
+    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
+  },
   "rbrahO": {
     "defaultMessage": "Close"
   },
   "rieTwF": {
     "defaultMessage": "Expired on"
+  },
+  "rr0r/W": {
+    "defaultMessage": "<b>Tor is permitted.</b> Run your node over Tor if you want to — we do not block it, and we do not use Google captchas."
   },
   "rv2p0H": {
     "defaultMessage": "CPU, RAM & network"
@@ -1883,11 +2030,20 @@
   "tTpLsN": {
     "defaultMessage": "Not linked"
   },
+  "tV5m13": {
+    "defaultMessage": "Can I run LND / Core Lightning / Eclair?"
+  },
+  "tZ+Hzu": {
+    "defaultMessage": "Run your Lightning node on a VPS built for it"
+  },
   "tngc9N": {
     "defaultMessage": "Source CIDR"
   },
   "tthToS": {
     "defaultMessage": "Disabled"
+  },
+  "tuJeaZ": {
+    "defaultMessage": "Yes."
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -1910,6 +2066,9 @@
   "uJV0wU": {
     "defaultMessage": "IP Address"
   },
+  "uNhj6T": {
+    "defaultMessage": "Yes — one IPv4 and one IPv6 on every plan."
+  },
   "uPNlBw": {
     "defaultMessage": "Email: {email}"
   },
@@ -1918,6 +2077,9 @@
   },
   "uby/fm": {
     "defaultMessage": "Get quote"
+  },
+  "ujaB7H": {
+    "defaultMessage": "Where"
   },
   "uqUeK9": {
     "defaultMessage": "Decrypt a message sent to you by support."
@@ -1961,8 +2123,14 @@
   "vtStU2": {
     "defaultMessage": "Payment history"
   },
+  "vuTMNa": {
+    "defaultMessage": "Personal vault-style relay, with its own Blossom media store"
+  },
   "vy2rlX": {
     "defaultMessage": "Processing fee:"
+  },
+  "w3i5cX": {
+    "defaultMessage": "Persistent storage — sized per relay above"
   },
   "wEQDC6": {
     "defaultMessage": "Edit"
@@ -2051,6 +2219,12 @@
   "yRz1m6": {
     "defaultMessage": "Readme"
   },
+  "yUD6jT": {
+    "defaultMessage": "Minutes. It provisions once payment settles."
+  },
+  "ys3Bzn": {
+    "defaultMessage": "Lightning Node VPS Hosting — Pay with Lightning"
+  },
   "z+hIFs": {
     "defaultMessage": "No payments yet."
   },
@@ -2065,5 +2239,8 @@
   },
   "zRPHCo": {
     "defaultMessage": "Memory (GB)"
+  },
+  "zbyKVt": {
+    "defaultMessage": "<b>Unmetered traffic.</b> A routing node gossips constantly. You should not be watching a bandwidth meter."
   }
 }

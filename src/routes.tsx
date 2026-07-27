@@ -27,6 +27,8 @@ import { AccountAppsPage } from "./pages/account-apps.tsx";
 import { AppPage } from "./pages/app.tsx";
 import { AppsPage } from "./pages/apps.tsx";
 import { BlossomServerHostingPage } from "./pages/blossom-server-hosting.tsx";
+import { NostrRelayHostingPage } from "./pages/nostr-relay-hosting.tsx";
+import { LightningNodeVpsPage } from "./pages/lightning-node-vps.tsx";
 import { AccountAppDeploymentPage } from "./pages/account-app-deployment.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
@@ -150,6 +152,22 @@ export const routes: RouteObject[] = [
         path: "/blossom-server-hosting",
         element: <BlossomServerHostingPage />,
         loader: blossomHostingLoader,
+      },
+      {
+        path: "/nostr-relay-hosting",
+        element: <NostrRelayHostingPage />,
+        // Shares `appsLoader` with `/apps`: the page needs the catalog only
+        // to derive the relays' price, which is the same list and the same
+        // cache entry.
+        loader: appsLoader,
+      },
+      {
+        path: "/lightning-node-vps",
+        element: <LightningNodeVpsPage />,
+        // Shares `appsLoader` with `/apps`: the page sells a VPS, not a
+        // managed app, but its relay cross-sell quotes the relays' catalog
+        // price rather than a number written into the page.
+        loader: appsLoader,
       },
       {
         path: "/vm",

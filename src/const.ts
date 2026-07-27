@@ -93,6 +93,27 @@ export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
  */
 export const BlossomAppId = 2;
 
+/**
+ * Catalog `name` slugs of the four relay implementations
+ * `/nostr-relay-hosting` sells, in the order the page lists them.
+ *
+ * `GET /api/v1/apps` returns a flat list with no category or tag field, so a
+ * page that sells a subset of the catalog has to name that subset somewhere.
+ * This is that list, and it is the only thing about those apps written into
+ * the front end: display name, price, storage and the `/apps/:id` link all
+ * come from the catalog row. Slugs rather than the numeric ids this used to
+ * hold — a slug is checkable against the API response by eye, an id is not.
+ *
+ * If the API ever grows app categories, this becomes a category filter and
+ * nothing else on the page has to change.
+ */
+export const RelayAppSlugs = [
+  "strfry",
+  "nostr-rs-relay",
+  "pyramid-relay",
+  "haven-relay",
+];
+
 export const System = new NostrSystem({
   automaticOutboxModel: false,
   buildFollowGraph: false,

@@ -6,6 +6,7 @@ import { CostAmount } from "../components/cost";
 import { appJsonLd } from "../utils/app-seo";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { formatPriceText } from "../utils/currency";
+import { formatBytesText } from "../utils/bytes";
 import { BlossomAppId } from "../const";
 import type { AppLoaderData } from "../loaders";
 
@@ -65,6 +66,13 @@ function Section({
  * `FALLBACK_PRICE` when the loader has nothing. So the copy, the `Offer`
  * markup and the `<title>` cannot disagree, and no locale file carries the
  * number.
+ *
+ * Storage is the same rule with no fallback (`LNVPS/web#60`): the total comes
+ * off `app.storage_bytes` or the page does not claim a size. The 20GB files /
+ * 5GB database split it used to print is not something the client can derive —
+ * the volumes are `blobs` and `data` on two services and nothing in the API
+ * says which is which — so the page states the total and `LNVPS/api#260` is
+ * what would let it state the breakdown.
  */
 export function BlossomServerHostingPage() {
   const intl = useIntl();
@@ -82,6 +90,12 @@ export function BlossomServerHostingPage() {
   const priceText = formatPriceText(intl, price);
   const priceNode = <CostAmount cost={price} converted={false} />;
 
+  // The catalog's figure or nothing — unlike the price there is no fallback
+  // constant, because a storage size written into the front end is product
+  // data the client has no business holding. With the API unreachable the two
+  // slots below simply do not render; the rest of the page is unaffected.
+  const storage = app ? formatBytesText(intl, app.storage_bytes) : undefined;
+
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the two can
   // never say different things. Answers ship as written — expanding one
   // usually costs `FAQPage` eligibility.
@@ -97,13 +111,26 @@ export function BlossomServerHostingPage() {
           "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both.",
       }),
     },
-    {
-      question: formatMessage({ defaultMessage: "How much can I store?" }),
-      answer: formatMessage({
-        defaultMessage:
-          "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further.",
-      }),
-    },
+    // The answer *is* `storage_bytes`, so with the catalog unreachable there
+    // is nothing honest to put in it and the question is not asked. Dropping
+    // the item drops it from the rendered `<dl>` and from `faqJsonLd`
+    // together, which is why the two share this array.
+    ...(storage
+      ? [
+          {
+            question: formatMessage({
+              defaultMessage: "How much can I store?",
+            }),
+            answer: formatMessage(
+              {
+                defaultMessage:
+                  "{storage} in total, shared between your files and the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further.",
+              },
+              { storage },
+            ),
+          },
+        ]
+      : []),
     {
       question: formatMessage({
         defaultMessage: "How large a file can I upload?",
@@ -136,7 +163,7 @@ export function BlossomServerHostingPage() {
         description={formatMessage(
           {
             defaultMessage:
-              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included.",
+              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
           },
           { price: priceText },
         )}
@@ -156,9 +183,16 @@ export function BlossomServerHostingPage() {
         </header>
 
         <Section title={<FormattedMessage defaultMessage="Route96" />}>
+          {/*
+            The size that used to close this line is now in the "What is
+            included" bullet below, where it can be conditional on the catalog
+            having answered. A bold headline sentence cannot be — it would
+            need a second `defaultMessage` in eleven locales for the render
+            where the API is down.
+          */}
           <p className="m-0 font-bold text-cyber-primary">
             <FormattedMessage
-              defaultMessage="{price}/month, no setup fee. 20 GB for your files."
+              defaultMessage="{price}/month, no setup fee."
               values={{ price: priceNode }}
             />
           </p>
@@ -183,9 +217,14 @@ export function BlossomServerHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="What is included" />}>
           <ul className="m-0 flex max-w-prose list-disc flex-col gap-1 pl-5 text-cyber-text">
-            <li>
-              <FormattedMessage defaultMessage="20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total" />
-            </li>
+            {storage ? (
+              <li>
+                <FormattedMessage
+                  defaultMessage="{storage} of persistent storage, shared between your files and the database"
+                  values={{ storage }}
+                />
+              </li>
+            ) : null}
             <li>
               <FormattedMessage defaultMessage="Uploads up to 100 MB each" />
             </li>

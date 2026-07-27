@@ -1,24 +1,11 @@
 import { useIntl } from "react-intl";
-import { GiB, KiB, MiB, TiB } from "../const";
+import { formatBytesText } from "../utils/bytes";
 
 interface BytesSizeProps {
   value: number;
   precision?: number;
 }
 export default function BytesSize(props: BytesSizeProps) {
-  const { formatNumber } = useIntl();
-  const fmt = (n: number) =>
-    formatNumber(n, { maximumFractionDigits: props.precision ?? 0 });
-
-  if (props.value >= TiB) {
-    return fmt(props.value / TiB) + "TB";
-  } else if (props.value >= GiB) {
-    return fmt(props.value / GiB) + "GB";
-  } else if (props.value >= MiB) {
-    return fmt(props.value / MiB) + "MB";
-  } else if (props.value >= KiB) {
-    return fmt(props.value / KiB) + "KB";
-  } else {
-    return fmt(props.value) + "B";
-  }
+  const intl = useIntl();
+  return formatBytesText(intl, props.value, props.precision);
 }

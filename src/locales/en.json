@@ -308,6 +308,9 @@
   "7tOz+m": {
     "defaultMessage": "Pay now"
   },
+  "7v5vj0": {
+    "defaultMessage": "Host your own media server — {price} a month"
+  },
   "7wbySo": {
     "defaultMessage": "Send us a message directly and the team will get back to you."
   },
@@ -680,9 +683,6 @@
   "HPBE7M": {
     "defaultMessage": "Back to apps"
   },
-  "HVEPWR": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for €3.50/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "HVtxik": {
     "defaultMessage": "Custom domain"
   },
@@ -796,6 +796,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Expires {exp}"
+  },
+  "LKipQw": {
+    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "Renews at"
@@ -955,9 +958,6 @@
   },
   "RCHbbR": {
     "defaultMessage": "Manage your billing details, automatic renewal and how we reach you."
-  },
-  "RETAQj": {
-    "defaultMessage": "€3.50/month, no setup fee. 20 GB for your files."
   },
   "RQNCao": {
     "defaultMessage": "NIP-05 identity hosting"
@@ -1223,9 +1223,6 @@
   "Z+AMVE": {
     "defaultMessage": "Email Verification Required"
   },
-  "Z+US89": {
-    "defaultMessage": "Host your own media server — €3.50 a month"
-  },
   "Z3gKpL": {
     "defaultMessage": "storage"
   },
@@ -1255,9 +1252,6 @@
   },
   "a60eIK": {
     "defaultMessage": "Saving re-applies the config and restarts the app."
-  },
-  "aHQFgG": {
-    "defaultMessage": "Blossom Media Server Hosting from €3.50/month"
   },
   "aLe15X": {
     "defaultMessage": "Pay how you like"
@@ -1580,6 +1574,9 @@
   "jwt9EL": {
     "defaultMessage": "Passkey sign-in failed"
   },
+  "jzU8se": {
+    "defaultMessage": "Deploy Route96 — {price}/month"
+  },
   "k2S+Z0": {
     "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
   },
@@ -1763,6 +1760,9 @@
   "p5LNtB": {
     "defaultMessage": "Not set"
   },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1856,8 +1856,8 @@
   "sUw18G": {
     "defaultMessage": "Encrypted messaging is only available for Nostr accounts. Your account has no Nostr key to read or send NIP-17 messages. For help, please use the Support tab."
   },
-  "si4AIj": {
-    "defaultMessage": "Deploy Route96 — €3.50/month"
+  "sehISV": {
+    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
   },
   "sn+Rj5": {
     "defaultMessage": "Sign in with a passkey"

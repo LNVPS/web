@@ -2,10 +2,27 @@ import { ReactNode } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { CostAmount } from "../components/cost";
 import { appJsonLd } from "../utils/app-seo";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
+import { formatPriceText } from "../utils/currency";
 import { BlossomAppId } from "../const";
 import type { AppLoaderData } from "../loaders";
+
+/**
+ * Route96's price as this page claims it, for the render where the catalog is
+ * unreachable.
+ *
+ * The page has to keep its headline when the API is down (web#38), so the
+ * price cannot be *only* derived — but it must not sit inside a translatable
+ * string either, or eleven locale files end up carrying a number that only
+ * `src/api.ts` should decide. So it lives here, once, in minor units, and is
+ * painted by the same code that paints the live figure. `350` is €3.50.
+ *
+ * If Route96's catalog price changes this is the only line to change; the
+ * copy, the `Offer` markup and the `<title>` all follow from it.
+ */
+const FALLBACK_PRICE = { currency: "EUR", amount: 350 };
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
  * Mirrors `SectionHeading` in `home.tsx:172`. */
@@ -43,17 +60,27 @@ function Section({
  * app's real price to the `Product`/`Offer` schema; without it the page simply
  * ships no product markup.
  *
- * **If Route96's price changes, the strings here change too.** The `Offer`
- * price is derived, but the title, meta description, h1 and CTA all carry a
- * literal `€3.50` — deliberately, because a headline that reads from the
- * catalog would vanish when the catalog is down. The cost of that choice is
- * this coupling: leave the copy stale and the JSON-LD and the visible text
- * disagree, which is what disqualifies the rich result. Search this file for
- * `3.50`.
+ * Every price on the page — title, meta description, h1, the Route96 line and
+ * the CTA — is a `{price}` placeholder fed from the catalog, falling back to
+ * `FALLBACK_PRICE` when the loader has nothing. So the copy, the `Offer`
+ * markup and the `<title>` cannot disagree, and no locale file carries the
+ * number.
  */
 export function BlossomServerHostingPage() {
-  const { formatMessage } = useIntl();
+  const intl = useIntl();
+  const { formatMessage } = intl;
   const { app } = useLoaderData<AppLoaderData>();
+
+  // Ex-VAT and unconverted, matching the `Offer`'s `valueAddedTaxIncluded:
+  // false` and what a crawler is served. `interval_type` is left off on
+  // purpose: the period is part of the sentence around the placeholder, so
+  // "/month" and "a month" stay translatable instead of being appended by
+  // `CostAmount` in a fixed position.
+  const price = app
+    ? { currency: app.currency, amount: app.amount }
+    : FALLBACK_PRICE;
+  const priceText = formatPriceText(intl, price);
+  const priceNode = <CostAmount cost={price} converted={false} />;
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the two can
   // never say different things. Answers ship as written — expanding one
@@ -99,20 +126,29 @@ export function BlossomServerHostingPage() {
   return (
     <>
       <Seo
-        title={formatMessage({
-          defaultMessage: "Blossom Media Server Hosting from €3.50/month",
-        })}
+        title={formatMessage(
+          {
+            defaultMessage: "Blossom Media Server Hosting from {price}/month",
+          },
+          { price: priceText },
+        )}
         canonical="/blossom-server-hosting"
-        description={formatMessage({
-          defaultMessage:
-            "Run your own Blossom and NIP-96 media server for €3.50/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included.",
-        })}
+        description={formatMessage(
+          {
+            defaultMessage:
+              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included.",
+          },
+          { price: priceText },
+        )}
         jsonLd={[...(app ? [appJsonLd(app)] : []), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">
           <h1 className="m-0 text-3xl text-cyber-text-bright">
-            <FormattedMessage defaultMessage="Host your own media server — €3.50 a month" />
+            <FormattedMessage
+              defaultMessage="Host your own media server — {price} a month"
+              values={{ price: priceNode }}
+            />
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included." />
@@ -121,7 +157,10 @@ export function BlossomServerHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="Route96" />}>
           <p className="m-0 font-bold text-cyber-primary">
-            <FormattedMessage defaultMessage="€3.50/month, no setup fee. 20 GB for your files." />
+            <FormattedMessage
+              defaultMessage="{price}/month, no setup fee. 20 GB for your files."
+              values={{ price: priceNode }}
+            />
           </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
@@ -174,7 +213,9 @@ export function BlossomServerHostingPage() {
           </ul>
         </Section>
 
-        <Section title={<FormattedMessage defaultMessage="Why self-host media" />}>
+        <Section
+          title={<FormattedMessage defaultMessage="Why self-host media" />}
+        >
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key." />
           </p>
@@ -204,7 +245,10 @@ export function BlossomServerHostingPage() {
             to={`/apps/${BlossomAppId}`}
             className="inline-block rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-2 font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
           >
-            <FormattedMessage defaultMessage="Deploy Route96 — €3.50/month" />
+            <FormattedMessage
+              defaultMessage="Deploy Route96 — {price}/month"
+              values={{ price: priceNode }}
+            />
           </Link>
         </div>
       </div>

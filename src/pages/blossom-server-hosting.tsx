@@ -155,7 +155,9 @@ export function BlossomServerHostingPage() {
           </p>
         </header>
 
-        <Section title={<FormattedMessage defaultMessage="Route96" />}>
+        {/* Product name, not copy — putting it through `react-intl` got it
+            translated to "Ruta 96", "ルート96" and "《公路96号》". */}
+        <Section title="Route96">
           <p className="m-0 font-bold text-cyber-primary">
             <FormattedMessage
               defaultMessage="{price}/month, no setup fee. 20 GB for your files."

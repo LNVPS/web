@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "外发；已发出。"
   },
+  "+Bj8tM": {
+    "defaultMessage": "停止操作会保留您已上传的内容；只有删除操作才会将其移除。"
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
@@ -83,6 +86,9 @@
   "0t1qvq": {
     "defaultMessage": "添加规则。"
   },
+  "12+5NG": {
+    "defaultMessage": "按比例升级"
+  },
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
   },
@@ -124,6 +130,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "创建订单"
+  },
+  "2lKQfH": {
+    "defaultMessage": "我可以存储多少数据？"
+  },
+  "2mZOHz": {
+    "defaultMessage": "报价货币。"
   },
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
@@ -269,6 +281,9 @@
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
   },
+  "7Iag/E": {
+    "defaultMessage": "目前应付总额。"
+  },
   "7NFfmz": {
     "defaultMessage": "产品"
   },
@@ -334,6 +349,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "保存提款方式。"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "是的，使用 CNAME。一旦 DNS 解析成功，证书就会自动颁发。"
   },
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
@@ -449,14 +467,23 @@
   "Bzv1CO": {
     "defaultMessage": "立即重新激活。"
   },
+  "CBHTGe": {
+    "defaultMessage": "已支付时间可抵扣。"
+  },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
   },
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
   },
+  "CwmTc6": {
+    "defaultMessage": "新的续订价格。"
+  },
   "D3idYv": {
     "defaultMessage": "设置"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× 基本应用"
   },
   "D9mck8": {
     "defaultMessage": "随时支付任意金额 — 时长按比例增加"
@@ -566,6 +593,9 @@
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
+  "FZup6q": {
+    "defaultMessage": "它运行在哪里？"
+  },
   "FazwRl": {
     "defaultMessage": "请重试。"
   },
@@ -650,6 +680,9 @@
   "HPBE7M": {
     "defaultMessage": "返回应用列表"
   },
+  "HVEPWR": {
+    "defaultMessage": "只需每月 3.50 欧元，即可搭建并运行您自己的 Blossom 和 NIP-96 多媒体服务器。Route96 可以在几分钟内通过其专用域名设置完成，并提供 20GB 的存储空间供您存放文件，同时还包含 TLS 加密功能。"
+  },
   "HVtxik": {
     "defaultMessage": "自定义域名"
   },
@@ -674,6 +707,9 @@
   "IZFEUg": {
     "defaultMessage": "准备好了。"
   },
+  "IbWc3k": {
+    "defaultMessage": "爱尔兰都柏林。"
+  },
   "Id24hd": {
     "defaultMessage": "姓名 *"
   },
@@ -691,6 +727,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "订阅"
+  },
+  "J+pWCM": {
+    "defaultMessage": "新尺寸。"
   },
   "JAJV1y": {
     "defaultMessage": "启动后自动分配。"
@@ -736,6 +775,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "每个套餐都包含一个 IPv4 地址和一个 IPv6 地址，并且流量不限。价格已包含增值税；不包括支付处理费。"
+  },
+  "KkHYsy": {
+    "defaultMessage": "正在运行。 {current}×（乘以）基础应用。调整大小会产生费用，即在本计费周期剩余时间内应支付的差额，然后从下一次续订开始按新的价格收费。新配置生效后，只有增加配置大小是允许的。"
   },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
@@ -848,6 +890,12 @@
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
+  "Pk14hW": {
+    "defaultMessage": "可以使用闪电网络、链上比特币或银行卡进行支付。请使用您的 Nostr 私钥登录。无需进行身份验证（KYC）。"
+  },
+  "PlcGQq": {
+    "defaultMessage": "在调整大小之前，请先支付本次部署的费用——升级费将按剩余时间按比例计算。"
+  },
   "PucUfl": {
     "defaultMessage": "选择 SSH 密钥："
   },
@@ -908,6 +956,9 @@
   "RCHbbR": {
     "defaultMessage": "管理您的账单信息、自动续订设置以及我们与您联系的方式。"
   },
+  "RETAQj": {
+    "defaultMessage": "每月 3.50 欧元，无需支付初始设置费用。提供 20GB 的存储空间供您存放文件。"
+  },
   "RQNCao": {
     "defaultMessage": "NIP-05 身份托管"
   },
@@ -941,6 +992,9 @@
   "SB//YQ": {
     "defaultMessage": "订单摘要。"
   },
+  "SMbDTG": {
+    "defaultMessage": "目前的部署规模已经达到了我们所能提供的最大规模。{max}×（基础应用）。如果您需要更多，请与我们联系。"
+  },
   "SQJto2": {
     "defaultMessage": "登录"
   },
@@ -949,6 +1003,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "管理在此域名下注册的 NIP-05 handle。"
+  },
+  "SZwp5S": {
+    "defaultMessage": "我可以上传多大的文件？"
   },
   "Sczo8n": {
     "defaultMessage": "时长：{duration}"
@@ -1010,6 +1067,9 @@
   "TgGVeW": {
     "defaultMessage": "需要处理"
   },
+  "TlSf60": {
+    "defaultMessage": "我可以使用自己的域名吗？"
+  },
   "TqSTI0": {
     "defaultMessage": "启用"
   },
@@ -1025,8 +1085,14 @@
   "U+Ddsx": {
     "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入 — 部分支付和超额支付绝不会丢失。"
   },
+  "U0GEAC": {
+    "defaultMessage": "停止将您的图片和视频上传到其他人的服务器。Route96 是一款由 Blossom 和 NIP-96 开发的媒体服务器，可在 LNVPS 上几分钟内部署完成，并包含存储空间和 TLS 加密功能。"
+  },
   "U96Gl9": {
     "defaultMessage": "请保存此卡，以便今后使用。"
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96 是一款高性能的 Blossom/NIP-96 服务器。它是<a>开源</a>的，并且由我们开发和维护。您无需依赖一个无法了解其内部机制的“黑盒”；您可以查看每一行代码，并且可以随时带着您的数据离开。"
   },
   "UPP+wZ": {
     "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
@@ -1085,6 +1151,9 @@
   "VzzYJk": {
     "defaultMessage": "创建"
   },
+  "W8nHSd": {
+    "defaultMessage": "常见问题解答"
+  },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
   },
@@ -1106,6 +1175,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "独立的运行环境，拥有自己的数据库。"
+  },
   "X0ha1a": {
     "defaultMessage": "保存更改"
   },
@@ -1124,11 +1196,17 @@
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "通过 CNAME 将您自己的域名连接到此处——系统会自动颁发单独的证书。"
+  },
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
+  },
+  "Yc91CY": {
+    "defaultMessage": "每次上传最多可达 100MB。"
   },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
@@ -1144,6 +1222,9 @@
   },
   "Z+AMVE": {
     "defaultMessage": "需要验证电子邮件地址。"
+  },
+  "Z+US89": {
+    "defaultMessage": "搭建您自己的媒体服务器——每月只需 3.50 欧元。"
   },
   "Z3gKpL": {
     "defaultMessage": "存储"
@@ -1175,6 +1256,12 @@
   "a60eIK": {
     "defaultMessage": "保存后将重新应用配置并重启应用。"
   },
+  "aHQFgG": {
+    "defaultMessage": "Blossom 媒体服务器，每月起价 3.50 欧元。"
+  },
+  "aLe15X": {
+    "defaultMessage": "选择您喜欢的支付方式。"
+  },
   "aPcXT9": {
     "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
   },
@@ -1183,6 +1270,9 @@
   },
   "acrOoz": {
     "defaultMessage": "继续。"
+  },
+  "agOXPD": {
+    "defaultMessage": "尺寸"
   },
   "alJZVR": {
     "defaultMessage": "Nostr 账户"
@@ -1258,6 +1348,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "正在加载历史记录……"
+  },
+  "dHfOPB": {
+    "defaultMessage": "在本期间剩余时间内，调整到新尺寸后的成本。"
   },
   "dHltrI": {
     "defaultMessage": "每月计费。"
@@ -1442,6 +1535,9 @@
   "j4RCJW": {
     "defaultMessage": "技能.md"
   },
+  "j52BNh": {
+    "defaultMessage": "为什么要自己搭建媒体服务器？"
+  },
   "j7VE/p": {
     "defaultMessage": "标准 BTC 交易 — 确认后到账"
   },
@@ -1463,8 +1559,14 @@
   "jf7fbc": {
     "defaultMessage": "未设置——添加一个。"
   },
+  "jgrdHK": {
+    "defaultMessage": "总共有 20GB 的文件，数据库单独占用 5GB。对于个人媒体服务器来说，这个容量已经足够；如果需要更多存储空间，可以自行安装 Route96 到虚拟专用服务器 (VPS) 上，以进一步扩展存储能力。"
+  },
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
+  },
+  "jhyC12": {
+    "defaultMessage": "包含哪些内容？"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
@@ -1478,6 +1580,9 @@
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
   },
+  "k2S+Z0": {
+    "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范——Route96 同时支持这两种规范。"
+  },
   "k9Pskm": {
     "defaultMessage": "高速固态存储"
   },
@@ -1486,6 +1591,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
+  },
+  "kNIWoA": {
+    "defaultMessage": "每次上传文件大小不超过 100MB。"
   },
   "kRFEho": {
     "defaultMessage": "添加 SSH 密钥。"
@@ -1546,6 +1654,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "已管理的应用：运行软件，无需运行服务器。"
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr 使您的身份信息可以自由转移。目前，媒体内容往往存在一个问题，即无法完全自主掌控——您的图片存储在其他人的服务器上，受其规则约束，一旦对方停止服务，这些图片就会消失。Blossom 服务器可以将控制权重新交还给您。"
   },
   "mIuuiJ": {
     "defaultMessage": "服务状态和正常运行时间。"
@@ -1658,6 +1769,12 @@
   "pgLgIU": {
     "defaultMessage": "阅读完整更新内容。"
   },
+  "pgl1gp": {
+    "defaultMessage": "调整大小至 {size}× 基数"
+  },
+  "ps4K9r": {
+    "defaultMessage": "什么是Blossom？"
+  },
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
   },
@@ -1739,6 +1856,9 @@
   "sUw18G": {
     "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
   },
+  "si4AIj": {
+    "defaultMessage": "部署《Route96》——每月 3.50 欧元。"
+  },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
   },
@@ -1796,6 +1916,9 @@
   "ubXbwc": {
     "defaultMessage": "默认策略"
   },
+  "uby/fm": {
+    "defaultMessage": "获取报价。"
+  },
   "uqUeK9": {
     "defaultMessage": "解密收到的来自技术支持部门的消息。"
   },
@@ -1850,6 +1973,9 @@
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
   },
+  "wa/t9c": {
+    "defaultMessage": "调整大小并支付。"
+  },
   "waJLKW": {
     "defaultMessage": "已链接。"
   },
@@ -1861,6 +1987,12 @@
   },
   "x0cZXf": {
     "defaultMessage": "无法升级。"
+  },
+  "x27Qqd": {
+    "defaultMessage": "为您的文件提供 20GB 的持久存储空间，此外还拥有 5GB 的独立数据库容量——总计分配 25GB。"
+  },
+  "xExBHw": {
+    "defaultMessage": "您自己的主机名——`<code>your-name.ie.apps.lnvps.cloud</code>`，并已启用自动 TLS。"
   },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"

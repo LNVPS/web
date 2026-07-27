@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "Giden"
   },
+  "+Bj8tM": {
+    "defaultMessage": "Durdurma işlemi yüklemelerinizi saklar; yalnızca silme işlemi yüklemeleri tamamen kaldırır."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
   },
@@ -83,6 +86,9 @@
   "0t1qvq": {
     "defaultMessage": "Kural Ekle"
   },
+  "12+5NG": {
+    "defaultMessage": "Oransal olarak hesaplanan yükseltme"
+  },
   "13cluZ": {
     "defaultMessage": "SSH Anahtarını Ekle:"
   },
@@ -124,6 +130,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "Sipariş Oluştur"
+  },
+  "2lKQfH": {
+    "defaultMessage": "Ne kadar veri depolayabilirim?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "İşlem döviz birimi"
   },
   "36aVfS": {
     "defaultMessage": "Nostr Özel Mesaj"
@@ -269,6 +281,9 @@
   "7Cdpiv": {
     "defaultMessage": "SSH Anahtarları"
   },
+  "7Iag/E": {
+    "defaultMessage": "Şu anda ödenmesi gereken toplam tutar"
+  },
   "7NFfmz": {
     "defaultMessage": "Ürünler"
   },
@@ -334,6 +349,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "Ödeme Yöntemini Kaydet"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Evet, doğru – CNAME ve sertifika, DNS çözüldükten sonra otomatik olarak yayınlanır."
   },
   "8ecw1u": {
     "defaultMessage": "Kollar"
@@ -449,14 +467,23 @@
   "Bzv1CO": {
     "defaultMessage": "Şimdi yeniden etkinleştirin."
   },
+  "CBHTGe": {
+    "defaultMessage": "Daha önce ödenen süre için kredi"
+  },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
   },
   "Cououe": {
     "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
   },
+  "CwmTc6": {
+    "defaultMessage": "Yeni yenileme fiyatı"
+  },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× temel uygulama"
   },
   "D9mck8": {
     "defaultMessage": "İstediğiniz zaman istediğiniz tutarı ödeyin — süre orantılı olarak eklenir"
@@ -566,6 +593,9 @@
   "FZeQlc": {
     "defaultMessage": "Bağlantı kesildi"
   },
+  "FZup6q": {
+    "defaultMessage": "Nerede çalıştırılıyor/uygulanıyor?"
+  },
   "FazwRl": {
     "defaultMessage": "Tekrar deneyin."
   },
@@ -650,6 +680,9 @@
   "HPBE7M": {
     "defaultMessage": "Uygulamalara geri dön"
   },
+  "HVEPWR": {
+    "defaultMessage": "Blossom ve NIP-96 medya sunucunuzu kendiniz çalıştırın; aylık ücreti sadece 3,50 €. Route96'yı kendi alan adınızda birkaç dakika içinde kurun, 20 GB depolama alanı ve TLS desteğiyle birlikte."
+  },
   "HVtxik": {
     "defaultMessage": "Özel alan adı"
   },
@@ -674,6 +707,9 @@
   "IZFEUg": {
     "defaultMessage": "Hazır."
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublin, İrlanda."
+  },
   "Id24hd": {
     "defaultMessage": "Ad *"
   },
@@ -691,6 +727,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
+  },
+  "J+pWCM": {
+    "defaultMessage": "Yeni boyut"
   },
   "JAJV1y": {
     "defaultMessage": "Çalıştırıldıktan sonra atanır."
@@ -736,6 +775,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "Her plan, bir IPv4 ve bir IPv6 adresi ile sınırsız veri kullanımını içerir. Fiyatlara KDV dahildir; ödeme işleme ücretleri fiyata dahil değildir."
+  },
+  "KkHYsy": {
+    "defaultMessage": "Çalışıyor. {current}× temel uygulamayı ölçeklendirme. Ölçeklendirme işlemi, bu dönemin geri kalanında oluşan fark kadar maliyetlidir; ardından bir sonraki yenileme döneminde yeni fiyat uygulanır. Yeni boyut, ödeme tamamlandıktan sonra geçerli olur ve boyutlar yalnızca artırılabilir."
   },
   "KuX7em": {
     "defaultMessage": "Etkin olduğu süre {duration}"
@@ -848,6 +890,12 @@
   "PfSZy5": {
     "defaultMessage": "Herhangi bir sipariş bulunamadı."
   },
+  "Pk14hW": {
+    "defaultMessage": "Şimşek Ağı, zincir üzerindeki Bitcoin veya kredi kartı ile ödeme yapabilirsiniz. Nostr anahtarınızla giriş yapın. Kimlik doğrulama gerekmiyor."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Bu yapılandırmayı yeniden boyutlandırmadan önce ücretini ödeyin; yükseltme için, mevcut dönemin kalan süresi dikkate alınarak orantılı bir ücret uygulanacaktır."
+  },
   "PucUfl": {
     "defaultMessage": "SSH Anahtarını Seçin:"
   },
@@ -908,6 +956,9 @@
   "RCHbbR": {
     "defaultMessage": "Faturalandırma bilgilerinizi, otomatik yenileme ayarlarınızı ve sizinle nasıl iletişim kuracağımızı yönetin."
   },
+  "RETAQj": {
+    "defaultMessage": "Aylık 3,50 €, kurulum ücreti yok. Dosyalarınız için 20 GB depolama alanı."
+  },
   "RQNCao": {
     "defaultMessage": "NIP-05 kimlik barındırma"
   },
@@ -941,6 +992,9 @@
   "SB//YQ": {
     "defaultMessage": "Sipariş özeti"
   },
+  "SMbDTG": {
+    "defaultMessage": "Bu dağıtım, sunduğumuz en büyük boyutta zaten uygulanmış durumda.{max}× temel uygulama. Daha fazla yardıma ihtiyacınız olursa bizimle iletişime geçin."
+  },
   "SQJto2": {
     "defaultMessage": "Giriş yap"
   },
@@ -949,6 +1003,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "Bu alan adında kayıtlı NIP-05 tanıtıcılarını yönetin."
+  },
+  "SZwp5S": {
+    "defaultMessage": "Ne kadar büyük bir dosyayı yükleyebilirim?"
   },
   "Sczo8n": {
     "defaultMessage": "Süre: {duration}"
@@ -1010,6 +1067,9 @@
   "TgGVeW": {
     "defaultMessage": "İşlem gerekli"
   },
+  "TlSf60": {
+    "defaultMessage": "Kendi alan adımı kullanabilir miyim?"
+  },
   "TqSTI0": {
     "defaultMessage": "Etkinleştir"
   },
@@ -1025,8 +1085,14 @@
   "U+Ddsx": {
     "defaultMessage": "Bu adrese zincir üstü Bitcoin gönderin. İşlem onaylandığında süre, alınan tutarla orantılı olarak otomatik eklenir — kısmi ve fazla ödemeler asla kaybolmaz."
   },
+  "U0GEAC": {
+    "defaultMessage": "Resimlerinizi ve videolarınızı başka birinin sunucusuna yüklemeyi bırakın. Route96, LNVPS üzerinde dakikalar içinde kurulabilen, depolama alanı ve TLS içeren Blossom ve NIP-96 medya sunucusudur."
+  },
   "U96Gl9": {
     "defaultMessage": "Bu kartı gelecekteki ödemeler için saklayın."
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96, yüksek performanslı bir Blossom/NIP-96 sunucusudur. <a>Açık kaynaklıdır</a> ve bize aittir; biz yazdık ve biz yönetiyoruz. Güvenmediğiniz bir kara kutu değil; her satırını okuyabilir ve istediğiniz zaman verilerinizle buradan ayrılabilirsiniz."
   },
   "UPP+wZ": {
     "defaultMessage": "Kullanımda olan {count,plural,one{Sanal Makine} other{Sanal makineler}}: {vms}"
@@ -1085,6 +1151,9 @@
   "VzzYJk": {
     "defaultMessage": "Oluşturun"
   },
+  "W8nHSd": {
+    "defaultMessage": "Sıkça Sorulan Sorular"
+  },
   "WEoZhh": {
     "defaultMessage": "Bu yükseltmenin faturalandırılacağı bir abonelik bulunamadı."
   },
@@ -1106,6 +1175,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{ay} other{aylar}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "Kendi veri tabanına sahip, izole bir ortam."
+  },
   "X0ha1a": {
     "defaultMessage": "Değişiklikleri kaydet"
   },
@@ -1124,11 +1196,17 @@
   "Y+LcmX": {
     "defaultMessage": "DNS ayarlarınızı değiştiremiyorsanız, proxy kullanın. {path} mevcut sunucunuzda {target}"
   },
+  "Y+P9PL": {
+    "defaultMessage": "CNAME aracılığıyla kendi alan adınızı getirin; sertifika otomatik olarak oluşturulacak ve ayrı olarak sağlanacaktır."
+  },
   "Y/tMXU": {
     "defaultMessage": "Ödeme bekleniyor. Onaylandıktan sonra bu işlem otomatik olarak uygulanır."
   },
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
+  },
+  "Yc91CY": {
+    "defaultMessage": "Her yükleme başına en fazla 100 MB."
   },
   "YdQxfw": {
     "defaultMessage": "Destekle İletişime Geçin"
@@ -1144,6 +1222,9 @@
   },
   "Z+AMVE": {
     "defaultMessage": "E-posta Adresinin Doğrulanması Gerekli"
+  },
+  "Z+US89": {
+    "defaultMessage": "Kendi medya sunucunuzu barındırın – ayda 3,50 €."
   },
   "Z3gKpL": {
     "defaultMessage": "depolama"
@@ -1175,6 +1256,12 @@
   "a60eIK": {
     "defaultMessage": "Kaydetmek yapılandırmayı yeniden uygular ve uygulamayı yeniden başlatır."
   },
+  "aHQFgG": {
+    "defaultMessage": "Blossom Medya Sunucusu, aylık 3,50 Euro'dan başlayan fiyatlarla hizmetinizde."
+  },
+  "aLe15X": {
+    "defaultMessage": "İstediğiniz şekilde ödeme yapın."
+  },
   "aPcXT9": {
     "defaultMessage": "Ödemeler, diğer zincir içi yönlendirenlerle birlikte birleştirilerek tek bir işlemde gerçekleştirilir; bu işlem, bakiyeniz minimum tutarı aştığında gerçekleşir. Ağ ücretinden düşülecek olan payınız, bakiyenizden kesilir. Yalnızca ana ağ adresleri geçerlidir."
   },
@@ -1183,6 +1270,9 @@
   },
   "acrOoz": {
     "defaultMessage": "Devam et."
+  },
+  "agOXPD": {
+    "defaultMessage": "Boyut"
   },
   "alJZVR": {
     "defaultMessage": "Nostr hesabı"
@@ -1258,6 +1348,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "Yükleme geçmişi yükleniyor..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "Bu dönemin geri kalanında yeni boyut için maliyet"
   },
   "dHltrI": {
     "defaultMessage": "Her [belirli bir zaman aralığında] faturalandırılır."
@@ -1442,6 +1535,9 @@
   "j4RCJW": {
     "defaultMessage": "BECERİLER.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Neden medya içeriklerini kendi sunucunuzda barındırasınız?"
+  },
   "j7VE/p": {
     "defaultMessage": "Standart BTC işlemi — onaydan sonra hesaba geçer"
   },
@@ -1463,8 +1559,14 @@
   "jf7fbc": {
     "defaultMessage": "Hiçbiri ayarlanmamış – bir tane ekleyin."
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB boyutunda dosyalar ve ayrıca veritabanı için ayrı olarak 5 GB depolama alanı. Kişisel bir medya sunucusu için bu yeterli olacaktır; daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz Route96 ile çalışan bir VPS kullanarak kapasiteyi artırabilirsiniz."
+  },
   "jhBqwg": {
     "defaultMessage": "Dağıtım ana bilgisayar adı atandığında bu alan adı için bir CNAME kaydını o adrese yönlendirin. Kaldırmak için boş bırakın."
+  },
+  "jhyC12": {
+    "defaultMessage": "Neler dahil?"
   },
   "jmVweB": {
     "defaultMessage": "SSH anahtarları yükleniyor..."
@@ -1478,6 +1580,9 @@
   "jwt9EL": {
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
   },
+  "k2S+Z0": {
+    "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
+  },
   "k9Pskm": {
     "defaultMessage": "Hızlı katı hal depolama (SSD)"
   },
@@ -1486,6 +1591,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "Lütfen CAPTCHA doğrulamasını tamamlayın."
+  },
+  "kNIWoA": {
+    "defaultMessage": "Her biri en fazla 100 MB olmak üzere yükleme yapabilirsiniz."
   },
   "kRFEho": {
     "defaultMessage": "SSH Anahtarını Ekle"
@@ -1546,6 +1654,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "Yönetilen Uygulamalar: yazılımı sunucu çalıştırmadan çalıştırın."
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostr, kimliğinizin taşınabilir kalmasını sağlar. Medya ise bu konuda farklı davranır; görselleriniz başka bir sunucuda, başkasının belirlediği koşullar altında saklanır ve o sunucu kapatıldığında kaybolur. Blossom sunucusu, bunları tekrar kontrolünüz altına almanızı sağlar."
   },
   "mIuuiJ": {
     "defaultMessage": "Hizmet Durumu ve Çalışma Süresi"
@@ -1658,6 +1769,12 @@
   "pgLgIU": {
     "defaultMessage": "Güncellemenin tamamını okuyun"
   },
+  "pgl1gp": {
+    "defaultMessage": "Boyutunu değiştir ve şunu yap: {size}× taban"
+  },
+  "ps4K9r": {
+    "defaultMessage": "Blossom nedir?"
+  },
   "pus6h6": {
     "defaultMessage": "İstediğiniz zaman çıkış yapabilirsiniz. Kodunuz artık geçerli olmayacak ve yeniden kullanılamayacaktır."
   },
@@ -1739,6 +1856,9 @@
   "sUw18G": {
     "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
   },
+  "si4AIj": {
+    "defaultMessage": "Route96 oyununu kullanıma sunun — ayda 3,50 €."
+  },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"
   },
@@ -1796,6 +1916,9 @@
   "ubXbwc": {
     "defaultMessage": "Varsayılan İlke"
   },
+  "uby/fm": {
+    "defaultMessage": "Fiyat teklifi alın"
+  },
   "uqUeK9": {
     "defaultMessage": "Destek ekibi tarafından size gönderilen mesajı çözün."
   },
@@ -1850,6 +1973,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Eski tarifeye göre kalan sürenin değeri:"
   },
+  "wa/t9c": {
+    "defaultMessage": "Öde ve yeniden boyutlandır"
+  },
   "waJLKW": {
     "defaultMessage": "Bağlantılı"
   },
@@ -1861,6 +1987,12 @@
   },
   "x0cZXf": {
     "defaultMessage": "Yükseltme Mevcut Değil"
+  },
+  "x27Qqd": {
+    "defaultMessage": "Dosyalarınız için 20 GB kalıcı depolama alanı ve ek olarak 5 GB kapasiteli bir veritabanı – toplamda 25 GB alan."
+  },
+  "xExBHw": {
+    "defaultMessage": "Kendi alan adınız — `<code>your-name.ie.apps.lnvps.cloud</code>` — otomatik TLS ile"
   },
   "xOnplm": {
     "defaultMessage": "Ödeme yöntemleri yükleniyor…"

@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "De saída / Em direção ao destino."
   },
+  "+Bj8tM": {
+    "defaultMessage": "Interromper mantém os seus ficheiros carregados; apenas apagá-los remove-os."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{ano} other{anos}}"
   },
@@ -83,6 +86,9 @@
   "0t1qvq": {
     "defaultMessage": "Adicionar Regra"
   },
+  "12+5NG": {
+    "defaultMessage": "Atualização com desconto proporcional"
+  },
   "13cluZ": {
     "defaultMessage": "Adicionar chave SSH:"
   },
@@ -124,6 +130,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "Criar Pedido"
+  },
+  "2lKQfH": {
+    "defaultMessage": "Qual é a capacidade de armazenamento disponível?"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Moeda de cotação"
   },
   "36aVfS": {
     "defaultMessage": "Mensagem direta no Nostr."
@@ -269,6 +281,9 @@
   "7Cdpiv": {
     "defaultMessage": "Chaves SSH"
   },
+  "7Iag/E": {
+    "defaultMessage": "Valor total a pagar agora."
+  },
   "7NFfmz": {
     "defaultMessage": "Produtos"
   },
@@ -334,6 +349,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "Guardar rota de pagamento"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "Sim — CNAME e o certificado é emitido automaticamente assim que o DNS for resolvido."
   },
   "8ecw1u": {
     "defaultMessage": "Maçanetas/Puxadores"
@@ -449,14 +467,23 @@
   "Bzv1CO": {
     "defaultMessage": "Reative agora."
   },
+  "CBHTGe": {
+    "defaultMessage": "Crédito pelo tempo já pago."
+  },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
   },
   "Cououe": {
     "defaultMessage": "Faça o login para implementar este aplicativo."
   },
+  "CwmTc6": {
+    "defaultMessage": "Novo preço de renovação"
+  },
   "D3idYv": {
     "defaultMessage": "Definições"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× aplicação principal"
   },
   "D9mck8": {
     "defaultMessage": "Pague qualquer valor, quando quiser — o tempo é adicionado proporcionalmente"
@@ -566,6 +593,9 @@
   "FZeQlc": {
     "defaultMessage": "Desligado/a"
   },
+  "FZup6q": {
+    "defaultMessage": "Onde é que ele funciona/é exibido?"
+  },
   "FazwRl": {
     "defaultMessage": "Tente novamente."
   },
@@ -650,6 +680,9 @@
   "HPBE7M": {
     "defaultMessage": "Voltar para os aplicativos"
   },
+  "HVEPWR": {
+    "defaultMessage": "Crie o seu próprio servidor de mídia Blossom e NIP-96 por apenas 3,50 € por mês. O Route96 fica pronto em poucos minutos, com o seu próprio nome de domínio, 20 GB de espaço para os seus ficheiros e TLS incluído."
+  },
   "HVtxik": {
     "defaultMessage": "Domínio personalizado"
   },
@@ -674,6 +707,9 @@
   "IZFEUg": {
     "defaultMessage": "Pronto."
   },
+  "IbWc3k": {
+    "defaultMessage": "Dublim, Irlanda."
+  },
   "Id24hd": {
     "defaultMessage": "Nome *"
   },
@@ -691,6 +727,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "Assinaturas"
+  },
+  "J+pWCM": {
+    "defaultMessage": "Novo tamanho"
   },
   "JAJV1y": {
     "defaultMessage": "Atribuído após o início da execução."
@@ -736,6 +775,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "Todos os planos incluem um endereço IPv4 e um endereço IPv6, além de tráfego ilimitado. Os preços incluem o IVA; as taxas de processamento de pagamento não estão incluídas."
+  },
+  "KkHYsy": {
+    "defaultMessage": "Em execução em: {current}× a aplicação básica. Alterar o tamanho implica um custo correspondente à diferença pelo restante deste período e, em seguida, será aplicada a nova tarifa na próxima renovação. O novo tamanho entra em vigor após a confirmação do pagamento, e os tamanhos só podem aumentar."
   },
   "KuX7em": {
     "defaultMessage": "Ativo durante {duration}."
@@ -848,6 +890,12 @@
   "PfSZy5": {
     "defaultMessage": "Nenhuma encomenda encontrada."
   },
+  "Pk14hW": {
+    "defaultMessage": "Pagamento com Lightning Network, diretamente na blockchain do Bitcoin ou por cartão. Inicie sessão com a sua chave Nostr. Sem necessidade de verificação de identidade (KYC)."
+  },
+  "PlcGQq": {
+    "defaultMessage": "Efetue o pagamento desta implementação antes de alterar o tamanho – a atualização será cobrada proporcionalmente ao tempo restante do período atual."
+  },
   "PucUfl": {
     "defaultMessage": "Selecione a chave SSH:"
   },
@@ -908,6 +956,9 @@
   "RCHbbR": {
     "defaultMessage": "Gerencie os seus dados de faturação, a renovação automática e a forma como entraremos em contacto consigo."
   },
+  "RETAQj": {
+    "defaultMessage": "3,50 € por mês, sem taxa de configuração. 20 GB para os seus ficheiros."
+  },
   "RQNCao": {
     "defaultMessage": "Hospedagem de identidade NIP-05"
   },
@@ -941,6 +992,9 @@
   "SB//YQ": {
     "defaultMessage": "Resumo do pedido"
   },
+  "SMbDTG": {
+    "defaultMessage": "Esta implementação já atingiu o tamanho máximo que oferecemos.{max}× o aplicativo principal). Entre em contato conosco se precisar de mais informações."
+  },
   "SQJto2": {
     "defaultMessage": "Iniciar sessão"
   },
@@ -949,6 +1003,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "Gerencie os handles NIP-05 registrados neste domínio."
+  },
+  "SZwp5S": {
+    "defaultMessage": "Qual é o tamanho máximo de um ficheiro que posso enviar?"
   },
   "Sczo8n": {
     "defaultMessage": "Duração: {duration}"
@@ -1010,6 +1067,9 @@
   "TgGVeW": {
     "defaultMessage": "Ação necessária"
   },
+  "TlSf60": {
+    "defaultMessage": "Posso usar o meu próprio domínio?"
+  },
   "TqSTI0": {
     "defaultMessage": "Ativar"
   },
@@ -1025,8 +1085,14 @@
   "U+Ddsx": {
     "defaultMessage": "Envie Bitcoin on-chain para este endereço. O tempo é creditado automaticamente assim que a transação for confirmada, proporcional ao valor recebido — pagamentos parciais e em excesso nunca são perdidos."
   },
+  "U0GEAC": {
+    "defaultMessage": "Pare de enviar suas imagens e vídeos para o servidor de outra pessoa. O Route96 é um servidor de mídia Blossom e NIP-96, implementado no LNVPS em poucos minutos, com armazenamento e TLS incluídos."
+  },
   "U96Gl9": {
     "defaultMessage": "Guarde este cartão para pagamentos futuros."
+  },
+  "UANa+W": {
+    "defaultMessage": "O Route96 é um servidor Blossom/NIP-96 de alto desempenho. É um projeto de <a>código aberto</a> e pertence a nós — nós o desenvolvemos e somos responsáveis por sua operação. Não se trata de uma «caixa preta»; você pode ler cada linha do código e, quando quiser, poderá sair com seus dados."
   },
   "UPP+wZ": {
     "defaultMessage": "Em uso por: {count,plural,one{VM} other{Máquinas virtuais}}: {vms}"
@@ -1085,6 +1151,9 @@
   "VzzYJk": {
     "defaultMessage": "Criar"
   },
+  "W8nHSd": {
+    "defaultMessage": "Perguntas frequentes"
+  },
   "WEoZhh": {
     "defaultMessage": "Não foi possível encontrar uma subscrição para faturar esta atualização."
   },
@@ -1106,6 +1175,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mês} other{meses}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "Ambiente isolado com o seu próprio banco de dados."
+  },
   "X0ha1a": {
     "defaultMessage": "Guardar alterações"
   },
@@ -1124,11 +1196,17 @@
   "Y+LcmX": {
     "defaultMessage": "Se não puder alterar o seu DNS, configure um proxy no caminho {path} do seu servidor atual para {target}."
   },
+  "Y+P9PL": {
+    "defaultMessage": "Utilize o seu próprio domínio através de CNAME – certificado emitido automaticamente e separado."
+  },
   "Y/tMXU": {
     "defaultMessage": "Aguardando o pagamento. Este processo é aplicado automaticamente após a confirmação."
   },
   "YWjrby": {
     "defaultMessage": "Apenas alertas de conta, como o prazo de validade do certificado digital. Nunca enviamos mensagens de marketing."
+  },
+  "Yc91CY": {
+    "defaultMessage": "Até 100 MB por carregamento."
   },
   "YdQxfw": {
     "defaultMessage": "Contacte o suporte."
@@ -1144,6 +1222,9 @@
   },
   "Z+AMVE": {
     "defaultMessage": "É necessário verificar o endereço de e-mail."
+  },
+  "Z+US89": {
+    "defaultMessage": "Crie o seu próprio servidor de mídia — 3,50 € por mês."
   },
   "Z3gKpL": {
     "defaultMessage": "armazenamento"
@@ -1175,6 +1256,12 @@
   "a60eIK": {
     "defaultMessage": "Guardar reaplica a configuração e reinicia a aplicação."
   },
+  "aHQFgG": {
+    "defaultMessage": "Serviço de alojamento do Blossom Media Server a partir de 3,50 € por mês."
+  },
+  "aLe15X": {
+    "defaultMessage": "Pague como preferir."
+  },
   "aPcXT9": {
     "defaultMessage": "Os pagamentos são agrupados com outros participantes da rede e processados em uma única transação, assim que o seu saldo atingir o valor mínimo. A sua parte da taxa da rede é deduzida do seu saldo. Apenas endereços da rede principal."
   },
@@ -1183,6 +1270,9 @@
   },
   "acrOoz": {
     "defaultMessage": "Continue."
+  },
+  "agOXPD": {
+    "defaultMessage": "Tamanho"
   },
   "alJZVR": {
     "defaultMessage": "Conta Nostr"
@@ -1258,6 +1348,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "A carregar o histórico..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "Custo com o novo tamanho para o restante deste período."
   },
   "dHltrI": {
     "defaultMessage": "Faturado a cada"
@@ -1442,6 +1535,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j52BNh": {
+    "defaultMessage": "Por que hospedar seus próprios arquivos de mídia?"
+  },
   "j7VE/p": {
     "defaultMessage": "Transação BTC padrão — creditada após confirmação"
   },
@@ -1463,8 +1559,14 @@
   "jf7fbc": {
     "defaultMessage": "Nenhum definido — adicione um."
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB de ficheiros, com um volume separado de 5 GB para a base de dados. Para um servidor multimédia pessoal, isso é suficiente; se precisar de mais, pode optar por um VPS e instalar o Route96 para aumentar ainda mais a capacidade."
+  },
   "jhBqwg": {
     "defaultMessage": "Aponte um CNAME deste domínio para o nome de host da implementação assim que este for atribuído. Deixe vazio para remover."
+  },
+  "jhyC12": {
+    "defaultMessage": "O que está incluído?"
   },
   "jmVweB": {
     "defaultMessage": "A carregar as chaves SSH..."
@@ -1478,6 +1580,9 @@
   "jwt9EL": {
     "defaultMessage": "Falha ao iniciar sessão com a chave de acesso"
   },
+  "k2S+Z0": {
+    "defaultMessage": "Um protocolo para armazenar e recuperar arquivos identificados pelo seu hash, projetado para funcionar com o Nostr. O NIP-96 é a especificação mais antiga para armazenamento de arquivos via HTTP – o Route96 suporta ambos."
+  },
   "k9Pskm": {
     "defaultMessage": "Armazenamento SSD rápido"
   },
@@ -1486,6 +1591,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete o teste de verificação."
+  },
+  "kNIWoA": {
+    "defaultMessage": "Envie arquivos de até 100 MB cada."
   },
   "kRFEho": {
     "defaultMessage": "Adicionar chave SSH"
@@ -1546,6 +1654,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "Aplicações Gerenciadas: execute o software sem executar o servidor."
+  },
+  "mDRXDi": {
+    "defaultMessage": "O Nostr mantém a sua identidade portátil. Os conteúdos multimédia são o aspeto que não o fazem: as suas imagens ficam armazenadas nos servidores de terceiros, sujeitas aos termos destes, e desaparecem quando estes decidem fazê-lo. Um servidor Blossom permite que volte a ter controlo sobre esses dados."
   },
   "mIuuiJ": {
     "defaultMessage": "Estado do serviço e tempo de atividade."
@@ -1658,6 +1769,12 @@
   "pgLgIU": {
     "defaultMessage": "Leia a atualização completa."
   },
+  "pgl1gp": {
+    "defaultMessage": "Redimensionar para {size}× base"
+  },
+  "ps4K9r": {
+    "defaultMessage": "O que é o Blossom?"
+  },
   "pus6h6": {
     "defaultMessage": "Pode sair a qualquer momento. O seu código deixa de gerar créditos e não poderá ser reutilizado."
   },
@@ -1739,6 +1856,9 @@
   "sUw18G": {
     "defaultMessage": "As mensagens criptografadas estão disponíveis apenas para contas Nostr. A sua conta não tem uma chave Nostr para ler ou enviar mensagens NIP-17. Para obter ajuda, utilize o separador «Suporte»."
   },
+  "si4AIj": {
+    "defaultMessage": "Implementar o Route96 — 3,50 € por mês"
+  },
   "sn+Rj5": {
     "defaultMessage": "Iniciar sessão com chave de acesso"
   },
@@ -1796,6 +1916,9 @@
   "ubXbwc": {
     "defaultMessage": "Política padrão"
   },
+  "uby/fm": {
+    "defaultMessage": "Solicite um orçamento."
+  },
   "uqUeK9": {
     "defaultMessage": "Descodifique uma mensagem que lhe foi enviada pelo suporte."
   },
@@ -1850,6 +1973,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Valor do tempo restante à tarifa antiga:"
   },
+  "wa/t9c": {
+    "defaultMessage": "Pague e redimensione."
+  },
   "waJLKW": {
     "defaultMessage": "Ligado(s)/Conectado(s)"
   },
@@ -1861,6 +1987,12 @@
   },
   "x0cZXf": {
     "defaultMessage": "Atualização indisponível."
+  },
+  "x27Qqd": {
+    "defaultMessage": "20 GB de armazenamento persistente para os seus ficheiros, mais um volume de base de dados de 5 GB — no total, são alocados 25 GB."
+  },
+  "xExBHw": {
+    "defaultMessage": "O seu próprio nome de domínio — `<code>seu-nome.ie.apps.lnvps.cloud</code>` — com TLS ativado automaticamente."
   },
   "xOnplm": {
     "defaultMessage": "A carregar os métodos de pagamento…"

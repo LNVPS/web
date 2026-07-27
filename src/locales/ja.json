@@ -8,6 +8,9 @@
   "+3NyB6": {
     "defaultMessage": "発信。"
   },
+  "+Bj8tM": {
+    "defaultMessage": "停止してもアップロードしたデータは保持されます。削除した場合のみ、データが完全に消去されます。"
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
@@ -83,6 +86,9 @@
   "0t1qvq": {
     "defaultMessage": "ルールを追加"
   },
+  "12+5NG": {
+    "defaultMessage": "按日計算のアップグレード料金"
+  },
   "13cluZ": {
     "defaultMessage": "SSHキーを追加："
   },
@@ -124,6 +130,12 @@
   },
   "2l2y5p": {
     "defaultMessage": "注文を作成する"
+  },
+  "2lKQfH": {
+    "defaultMessage": "どれくらいのデータを保存できますか？"
+  },
+  "2mZOHz": {
+    "defaultMessage": "換算通貨"
   },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
@@ -269,6 +281,9 @@
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
   },
+  "7Iag/E": {
+    "defaultMessage": "現在のお支払い合計額"
+  },
   "7NFfmz": {
     "defaultMessage": "製品"
   },
@@ -334,6 +349,9 @@
   },
   "8cnlb5": {
     "defaultMessage": "支払い方法を保存する"
+  },
+  "8dAKuZ": {
+    "defaultMessage": "はい、CNAMEレコードを設定し、DNSが解決されると証明書は自動的に発行されます。"
   },
   "8ecw1u": {
     "defaultMessage": "ハンドル"
@@ -449,14 +467,23 @@
   "Bzv1CO": {
     "defaultMessage": "今すぐ再開してください。"
   },
+  "CBHTGe": {
+    "defaultMessage": "すでに支払われた時間に対するクレジット"
+  },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
   },
   "Cououe": {
     "defaultMessage": "このアプリを公開するには、ログインしてください。"
   },
+  "CwmTc6": {
+    "defaultMessage": "新しい更新価格"
+  },
   "D3idYv": {
     "defaultMessage": "設定"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× 基本アプリ"
   },
   "D9mck8": {
     "defaultMessage": "いつでも任意の金額を支払い — 時間は比例配分で追加されます"
@@ -566,6 +593,9 @@
   "FZeQlc": {
     "defaultMessage": "接続が切断されました。"
   },
+  "FZup6q": {
+    "defaultMessage": "どこで（プログラムなどが）実行されますか？"
+  },
   "FazwRl": {
     "defaultMessage": "もう一度試してください。"
   },
@@ -650,6 +680,9 @@
   "HPBE7M": {
     "defaultMessage": "アプリに戻る"
   },
+  "HVEPWR": {
+    "defaultMessage": "月額3.50ユーロで、BlossomとNIP-96メディアサーバーを自分で運用できます。Route96は、独自のホスト名で数分以内にセットアップでき、ファイルを保存するための20GBの容量とTLSが含まれています。"
+  },
   "HVtxik": {
     "defaultMessage": "カスタムドメイン"
   },
@@ -674,6 +707,9 @@
   "IZFEUg": {
     "defaultMessage": "準備完了。"
   },
+  "IbWc3k": {
+    "defaultMessage": "アイルランドのダブリン。"
+  },
   "Id24hd": {
     "defaultMessage": "名前 *"
   },
@@ -691,6 +727,9 @@
   },
   "J+dIsA": {
     "defaultMessage": "購読"
+  },
+  "J+pWCM": {
+    "defaultMessage": "新しいサイズ"
   },
   "JAJV1y": {
     "defaultMessage": "実行時に一度割り当て"
@@ -736,6 +775,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "すべてのプランには、IPv4アドレス1つとIPv6アドレス1つが含まれており、データ通信量に制限はありません。価格にはVAT（付加価値税）が含まれますが、決済手数料は含まれません。"
+  },
+  "KkHYsy": {
+    "defaultMessage": "実行中 {current}× 基本プラン。サイズ変更には、残りの期間分の差額が発生し、次回の更新から新しい料金が適用されます。新しいサイズは支払い完了後に適用され、サイズは縮小できません。"
   },
   "KuX7em": {
     "defaultMessage": "{duration}の間、アクティブでした。"
@@ -848,6 +890,12 @@
   "PfSZy5": {
     "defaultMessage": "該当する注文は見つかりませんでした。"
   },
+  "Pk14hW": {
+    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはカードで支払い。Nostrキーを使ってログインしてください。本人確認は不要です。"
+  },
+  "PlcGQq": {
+    "defaultMessage": "サイズ変更を行う前に、このデプロイメントの料金を支払ってください。アップグレード費用は、現在の期間の残りの時間に応じて按分して請求されます。"
+  },
   "PucUfl": {
     "defaultMessage": "SSHキーを選択してください。"
   },
@@ -908,6 +956,9 @@
   "RCHbbR": {
     "defaultMessage": "請求情報の管理、自動更新の設定、および弊社からの連絡方法についてご確認ください。"
   },
+  "RETAQj": {
+    "defaultMessage": "月額3.50ユーロ、初期費用は無料。ファイル保存容量は20GB。"
+  },
   "RQNCao": {
     "defaultMessage": "NIP-05 アイデンティティホスティング"
   },
@@ -941,6 +992,9 @@
   "SB//YQ": {
     "defaultMessage": "注文内容のまとめ"
   },
+  "SMbDTG": {
+    "defaultMessage": "今回の展開は、当社が提供する中で最大の規模となっています。{max}×（基本アプリ）。もし追加が必要な場合は、ご連絡ください。"
+  },
   "SQJto2": {
     "defaultMessage": "サインイン"
   },
@@ -949,6 +1003,9 @@
   },
   "SYYlLP": {
     "defaultMessage": "このドメインに登録された NIP-05 ハンドルを管理します。"
+  },
+  "SZwp5S": {
+    "defaultMessage": "どのくらいのサイズのファイルをアップロードできますか？"
   },
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
@@ -1010,6 +1067,9 @@
   "TgGVeW": {
     "defaultMessage": "対応が必要"
   },
+  "TlSf60": {
+    "defaultMessage": "自分のドメインを使用できますか？"
+  },
   "TqSTI0": {
     "defaultMessage": "有効にする。"
   },
@@ -1025,8 +1085,14 @@
   "U+Ddsx": {
     "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
   },
+  "U0GEAC": {
+    "defaultMessage": "他人のサーバーに画像や動画をアップロードするのをやめましょう。Route96は、BlossomとNIP-96メディアサーバーであり、LNVPS上に数分で展開でき、ストレージとTLSが含まれています。"
+  },
   "U96Gl9": {
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
+  },
+  "UANa+W": {
+    "defaultMessage": "Route96は、高性能なBlossom/NIP-96サーバーです。これは<a>オープンソース</a>であり、私たち自身で開発し、運用しています。つまり、ブラックボックスに頼る必要はありません。すべてのコードを閲覧でき、いつでも好きなときにデータを持ち出すことができます。"
   },
   "UPP+wZ": {
     "defaultMessage": "使用状況： {count,plural,one{仮想マシン} other{仮想マシン}}： {vms}"
@@ -1085,6 +1151,9 @@
   "VzzYJk": {
     "defaultMessage": "作成する"
   },
+  "W8nHSd": {
+    "defaultMessage": "よくある質問"
+  },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
   },
@@ -1106,6 +1175,9 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
   },
+  "X/xmPf": {
+    "defaultMessage": "独自のデータベースを備えた隔離された環境。"
+  },
   "X0ha1a": {
     "defaultMessage": "変更を保存"
   },
@@ -1124,11 +1196,17 @@
   "Y+LcmX": {
     "defaultMessage": "DNSを変更できない場合は、既存のサーバーで{path}のプロキシを{target}に設定してください。"
   },
+  "Y+P9PL": {
+    "defaultMessage": "CNAME を使用して、ご自身でドメインを設定してください。証明書は自動的に発行されます。"
+  },
   "Y/tMXU": {
     "defaultMessage": "お支払いをお待ちしています。確認が完了すると、自動的に適用されます。"
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
+  },
+  "Yc91CY": {
+    "defaultMessage": "1回のアップロードにつき、最大100MBまで。"
   },
   "YdQxfw": {
     "defaultMessage": "サポートにお問い合わせください。"
@@ -1144,6 +1222,9 @@
   },
   "Z+AMVE": {
     "defaultMessage": "メールアドレスの認証が必要です。"
+  },
+  "Z+US89": {
+    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。月額3.50ユーロです。"
   },
   "Z3gKpL": {
     "defaultMessage": "ストレージ"
@@ -1175,6 +1256,12 @@
   "a60eIK": {
     "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
   },
+  "aHQFgG": {
+    "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額3.50ユーロから。"
+  },
+  "aLe15X": {
+    "defaultMessage": "好きな支払い方法でどうぞ。"
+  },
   "aPcXT9": {
     "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
   },
@@ -1183,6 +1270,9 @@
   },
   "acrOoz": {
     "defaultMessage": "続行してください。"
+  },
+  "agOXPD": {
+    "defaultMessage": "サイズ"
   },
   "alJZVR": {
     "defaultMessage": "Nostrアカウント"
@@ -1258,6 +1348,9 @@
   },
   "d3wxHm": {
     "defaultMessage": "履歴の読み込み中..."
+  },
+  "dHfOPB": {
+    "defaultMessage": "この期間の残りの期間における、新しいサイズでのコスト。"
   },
   "dHltrI": {
     "defaultMessage": "毎月請求されます。"
@@ -1442,6 +1535,9 @@
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
+  "j52BNh": {
+    "defaultMessage": "なぜ自分でメディアをホストするのか。"
+  },
   "j7VE/p": {
     "defaultMessage": "通常のBTCトランザクション — 承認後に反映されます"
   },
@@ -1463,8 +1559,14 @@
   "jf7fbc": {
     "defaultMessage": "設定されていません。— 設定を追加してください。"
   },
+  "jgrdHK": {
+    "defaultMessage": "ファイルは合計20GBで、データベース用に別途5GBの容量を確保します。個人的なメディアサーバーとしては十分な量ですが、さらに多くの容量が必要な場合は、Route96をインストールしたVPSを利用すれば、より拡張できます。"
+  },
   "jhBqwg": {
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
+  },
+  "jhyC12": {
+    "defaultMessage": "何が含まれていますか？"
   },
   "jmVweB": {
     "defaultMessage": "SSHキーを読み込んでいます。"
@@ -1478,6 +1580,9 @@
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
   },
+  "k2S+Z0": {
+    "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
+  },
   "k9Pskm": {
     "defaultMessage": "高速なソリッドステートストレージ"
   },
@@ -1486,6 +1591,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
+  },
+  "kNIWoA": {
+    "defaultMessage": "各ファイルにつき、最大100MBまでアップロードできます。"
   },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
@@ -1546,6 +1654,9 @@
   },
   "m4xBT/": {
     "defaultMessage": "管理対象アプリ：サーバーを起動せずにソフトウェアを実行します。"
+  },
+  "mDRXDi": {
+    "defaultMessage": "Nostrは、あなたのアイデンティティをどこでも利用できるようにします。従来のメディアでは、画像が他のサーバーに保存され、そのサーバーのルールに従い、必要に応じて削除されるため、自分の管理下にはありませんでした。Blossomサーバーを使用すれば、画像を再び自分の管理下に置くことができます。"
   },
   "mIuuiJ": {
     "defaultMessage": "サービスの状況と稼働時間"
@@ -1658,6 +1769,12 @@
   "pgLgIU": {
     "defaultMessage": "最新情報をすべてお読みください。"
   },
+  "pgl1gp": {
+    "defaultMessage": "サイズを調整して {size}× ベース"
+  },
+  "ps4K9r": {
+    "defaultMessage": "Blossomとは何ですか？"
+  },
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
   },
@@ -1739,6 +1856,9 @@
   "sUw18G": {
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
+  "si4AIj": {
+    "defaultMessage": "Route96をデプロイ — 月額3.50ユーロ"
+  },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
   },
@@ -1796,6 +1916,9 @@
   "ubXbwc": {
     "defaultMessage": "デフォルトポリシー"
   },
+  "uby/fm": {
+    "defaultMessage": "見積もりを依頼する"
+  },
   "uqUeK9": {
     "defaultMessage": "サポートから送信されたメッセージを復号化します。"
   },
@@ -1850,6 +1973,9 @@
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："
   },
+  "wa/t9c": {
+    "defaultMessage": "支払いを済ませ、サイズを変更する。"
+  },
   "waJLKW": {
     "defaultMessage": "リンク済み"
   },
@@ -1861,6 +1987,12 @@
   },
   "x0cZXf": {
     "defaultMessage": "アップグレードは利用できません。"
+  },
+  "x27Qqd": {
+    "defaultMessage": "お客様のファイル用に20GBの永続ストレージ、さらに5GBの専用データベースボリュームをご用意。合計で25GBを割り当てます。"
+  },
+  "xExBHw": {
+    "defaultMessage": "お客様ご自身のホスト名（`<code>your-name.ie.apps.lnvps.cloud</code>`）に、TLSが自動的に適用されます。"
   },
   "xOnplm": {
     "defaultMessage": "支払い方法を読み込んでいます…。"

@@ -54,12 +54,12 @@ export function AppsPage() {
       {catalog.length > 0 ? (
         <Seo
           title={formatMessage({
-            defaultMessage: "Managed Apps — One-Click Nostr and Blossom Hosting",
+            defaultMessage: "Managed App Hosting — No Server to Run",
           })}
           canonical="/apps"
           description={formatMessage({
             defaultMessage:
-              "Deploy a Nostr relay or a Blossom media server as a managed app on LNVPS. Provisioned in minutes with storage and TLS included — pay with Lightning, Bitcoin, or card.",
+              "Deploy an app on LNVPS — up in minutes on its own hostname, TLS and storage included, no OS to patch. Nostr relays and Blossom media servers today.",
           })}
         />
       ) : (
@@ -72,7 +72,7 @@ export function AppsPage() {
 
       <div className="flex flex-col gap-2">
         <h1 className="m-0 text-2xl">
-          <FormattedMessage defaultMessage="Managed Apps: run a relay without running a server" />
+          <FormattedMessage defaultMessage="Managed Apps: run the software without running the server" />
         </h1>
         <p className="m-0 max-w-prose text-cyber-muted">
           <FormattedMessage defaultMessage="Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working — no OS to patch, no Docker to configure, no certificate to renew." />
@@ -128,7 +128,7 @@ export function AppsPage() {
         <Block
           title={<FormattedMessage defaultMessage="Stopping keeps your data" />}
         >
-          <FormattedMessage defaultMessage="Stopping a deployment scales it to zero and keeps the storage. Your relay's database is still there when you start it again. Only deleting removes it." />
+          <FormattedMessage defaultMessage="Stopping a deployment scales it to zero and keeps the storage. Your data is still there when you start it again. Only deleting removes it." />
         </Block>
         <Block
           title={

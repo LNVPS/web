@@ -2,6 +2,9 @@
   "++XeyK": {
     "defaultMessage": "Nostr key"
   },
+  "+1wksq": {
+    "defaultMessage": "Stopping a deployment scales it to zero and keeps the storage. Your data is still there when you start it again. Only deleting removes it."
+  },
   "+3NyB6": {
     "defaultMessage": "Outbound"
   },
@@ -49,9 +52,6 @@
   },
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
-  },
-  "0ALykI": {
-    "defaultMessage": "Managed Apps — One-Click Nostr and Blossom Hosting"
   },
   "0Azlrb": {
     "defaultMessage": "Manage"
@@ -556,6 +556,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Try again"
+  },
+  "Ff9LAg": {
+    "defaultMessage": "Software we run for you — each app on its own hostname with TLS already working, no server to patch. Nostr relays and Blossom media servers in the <catalog>catalog</catalog> today."
   },
   "FlypmR": {
     "defaultMessage": "Add an email address below"
@@ -1103,9 +1106,6 @@
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
   },
-  "YSgfWQ": {
-    "defaultMessage": "Managed Apps: run a relay without running a server"
-  },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },
@@ -1147,9 +1147,6 @@
   },
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
-  },
-  "ZvAN+v": {
-    "defaultMessage": "Stopping a deployment scales it to zero and keeps the storage. Your relay's database is still there when you start it again. Only deleting removes it."
   },
   "aPcXT9": {
     "defaultMessage": "Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only."
@@ -1463,9 +1460,6 @@
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
   },
-  "kdK1BE": {
-    "defaultMessage": "Deploy a Nostr relay or a Blossom media server as a managed app on LNVPS. Provisioned in minutes with storage and TLS included — pay with Lightning, Bitcoin, or card."
-  },
   "kfr95E": {
     "defaultMessage": "Address Line 1"
   },
@@ -1517,6 +1511,9 @@
   "m4QgXr": {
     "defaultMessage": "{days, plural, one {# day left} other {# days left}}"
   },
+  "m4xBT/": {
+    "defaultMessage": "Managed Apps: run the software without running the server"
+  },
   "mIuuiJ": {
     "defaultMessage": "Service Status and Uptime"
   },
@@ -1559,8 +1556,8 @@
   "nWQFic": {
     "defaultMessage": "Renew"
   },
-  "nWxtS5": {
-    "defaultMessage": "Nostr relays and Blossom media servers, run for you — each on its own hostname with TLS already working, no server to patch. See the full <catalog>catalog</catalog>."
+  "naCpPX": {
+    "defaultMessage": "Deploy an app on LNVPS — up in minutes on its own hostname, TLS and storage included, no OS to patch. Nostr relays and Blossom media servers today."
   },
   "nidU9E": {
     "defaultMessage": "{rate} commission"
@@ -1693,6 +1690,9 @@
   },
   "sAJryD": {
     "defaultMessage": "VAT and fees are estimated; the exact amount is confirmed at payment."
+  },
+  "sE5lVR": {
+    "defaultMessage": "Managed App Hosting — No Server to Run"
   },
   "sOF2lj": {
     "defaultMessage": "View full README"

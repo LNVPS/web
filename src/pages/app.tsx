@@ -18,6 +18,86 @@ import type { AppLoaderData } from "../loaders";
 import BytesSize from "../components/bytes";
 import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
 
+/**
+ * Per-service resource breakdown for an app that has more than one container.
+ *
+ * These are the same figures the page always had. They rendered as one
+ * `·`-joined line per service — `route96 0.5 vCPU · 512MB · 20GB` — with no
+ * header row, so nothing said which of the last two numbers was memory and
+ * which was disk, and Buzz Relay's four services came out as a block of
+ * monospace text (`LNVPS/web#59`). A table names each column once and puts the
+ * app total under the column it sums.
+ *
+ * `services` is the API's per-*service* split, computed from the compose. A
+ * service with two volumes still reports one storage figure; per-volume detail
+ * is `LNVPS/api#260`.
+ *
+ * Both figures are printed more precisely here than `AppResources` prints them
+ * in a footprint line, because a column invites the reader to add it up: with
+ * `vcpu`'s one decimal, Buzz Relay's 0.5 + 0.25 + 1 + 0.5 totals a printed 2.3,
+ * and at `BytesSize`'s default precision 4.5GB of RAM totals 5GB. Rounding that
+ * nobody can check is fine in a summary line and wrong in a table.
+ */
+function AppServiceTable({ app }: { app: App }) {
+  const { formatNumber } = useIntl();
+
+  // 0 means the service declares none of that resource. `0B` under a column of
+  // real sizes reads as a measurement rather than an absence, so print a dash.
+  const size = (bytes: number) =>
+    bytes > 0 ? <BytesSize value={bytes} precision={2} /> : "—";
+  // Millicores exactly as the API sent them, trailing zeros stripped, and
+  // through `formatNumber` so the decimal separator is the locale's — `vcpu`
+  // uses `toFixed`, which is always a full stop.
+  const cores = (milli: number) =>
+    milli > 0 ? formatNumber(milli / 1000, { maximumFractionDigits: 3 }) : "—";
+
+  return (
+    <div className="max-w-md overflow-x-auto">
+      <table className="w-full border-collapse text-left font-mono text-xs tabular-nums">
+        <thead>
+          <tr className="border-b border-cyber-border uppercase tracking-[0.15em] text-cyber-muted">
+            <th className="py-1 pr-4 font-normal">
+              <FormattedMessage defaultMessage="Service" />
+            </th>
+            <th className="py-1 pr-4 text-right font-normal">
+              <FormattedMessage defaultMessage="vCPU" />
+            </th>
+            <th className="py-1 pr-4 text-right font-normal">
+              <FormattedMessage defaultMessage="RAM" />
+            </th>
+            <th className="py-1 text-right font-normal">
+              <FormattedMessage defaultMessage="Storage" />
+            </th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-cyber-border/60 text-cyber-muted">
+          {app.services.map((s) => (
+            <tr key={s.name}>
+              <td className="py-1 pr-4 text-cyber-text">{s.name}</td>
+              <td className="py-1 pr-4 text-right">{cores(s.cpu_milli)}</td>
+              <td className="py-1 pr-4 text-right">{size(s.memory_bytes)}</td>
+              <td className="py-1 text-right">{size(s.storage_bytes)}</td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr className="border-t border-cyber-border text-cyber-text">
+            <th
+              scope="row"
+              className="py-1 pr-4 text-left font-normal uppercase tracking-[0.15em] text-cyber-muted"
+            >
+              <FormattedMessage defaultMessage="Total" />
+            </th>
+            <td className="py-1 pr-4 text-right">{cores(app.cpu_milli)}</td>
+            <td className="py-1 pr-4 text-right">{size(app.memory_bytes)}</td>
+            <td className="py-1 text-right">{size(app.storage_bytes)}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  );
+}
+
 /** README, clamped to 50dvh with a fade + 'view full' link when it overflows. */
 function ReadmeSection({
   content,
@@ -180,32 +260,15 @@ export function AppPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-1">
+          {/* One service: the compact footprint line says everything there is
+              to say. More than one: the same numbers, but they need column
+              headers to mean anything, and the total belongs under what it
+              sums rather than floating above the breakdown. */}
+          {app.services.length > 1 ? (
+            <AppServiceTable app={app} />
+          ) : (
             <AppResources app={app} />
-            {app.services.length > 1 && (
-              <div className="flex flex-col gap-0.5">
-                {app.services.map((s) => (
-                  <div
-                    key={s.name}
-                    className="font-mono text-xs text-cyber-muted tabular-nums"
-                  >
-                    <span className="text-cyber-text">{s.name}</span>{" "}
-                    <FormattedMessage
-                      defaultMessage="{cores} vCPU"
-                      values={{
-                        cores:
-                          s.cpu_milli / 1000 === Math.round(s.cpu_milli / 1000)
-                            ? Math.round(s.cpu_milli / 1000)
-                            : (s.cpu_milli / 1000).toFixed(2),
-                      }}
-                    />{" · "}
-                    <BytesSize value={s.memory_bytes} />{" · "}
-                    <BytesSize value={s.storage_bytes} />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          )}
 
           {app.description && (
             <p className="m-0 max-w-prose text-cyber-text">{app.description}</p>

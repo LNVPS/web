@@ -93,6 +93,16 @@ export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
  */
 export const BlossomAppId = 2;
 
+/**
+ * Catalog ids of the four relay implementations `/nostr-relay-hosting` sells:
+ * strfry, nostr-rs-relay, Pyramid, HAVEN.
+ *
+ * A use-case landing page is about a specific set of apps, so the ids are part
+ * of what the page *is*. Kept here so the page and anything else that needs
+ * the same set cannot drift apart.
+ */
+export const RelayAppIds = [1, 3, 4, 5];
+
 export const System = new NostrSystem({
   automaticOutboxModel: false,
   buildFollowGraph: false,

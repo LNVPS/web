@@ -45,6 +45,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://lnvps.net/nostr-relay-hosting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lnvps.net/lightning-node-vps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lnvps.net/news</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

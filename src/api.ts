@@ -698,9 +698,45 @@ export interface AppDeployment {
   status_message?: string;
   /** Subscription this deployment is billed under (renew via the subscription endpoints). */
   subscription_id?: number;
+  /**
+   * Size as a multiple of the catalog app's base footprint and price; `1` is
+   * the base app. Raised via the upgrade endpoints, never lowered.
+   */
+  resource_multiplier: number;
+  /**
+   * Effective resources with `resource_multiplier` already applied — the API
+   * pre-multiplies so the UI never has to. Showing the catalog app's figures
+   * for an upgraded deployment displays a size the customer is not running.
+   */
+  cpu_milli: number;
+  memory_bytes: number;
+  storage_bytes: number;
   /** Current customer-supplied config field values (secrets never exposed). */
   config?: Record<string, string>;
   created: string;
+}
+
+/** Resize a deployment to a larger multiple of its app's base size. */
+export interface AppUpgradeRequest {
+  resource_multiplier: number;
+}
+
+/**
+ * Largest size a deployment may be upgraded to, as a multiple of the base app.
+ * Mirrors `MAX_RESOURCE_MULTIPLIER` in the API (`lnvps_api/src/api/apps.rs`),
+ * which rejects anything above it with a 400.
+ */
+export const MAX_RESOURCE_MULTIPLIER = 16;
+
+export interface AppUpgradeQuote {
+  /** Net pro-rated amount payable now (before tax/fees) for the rest of the period. */
+  cost_difference: Price;
+  /** What a full period costs at the new size, from the next renewal. */
+  new_renewal_cost: Price;
+  /** Credit for time already paid for at the current size. */
+  discount: Price;
+  tax: Price;
+  processing_fee: Price;
 }
 
 /** Update a deployment's name, custom domain and/or config (config replaces wholesale). */
@@ -1048,6 +1084,56 @@ export class LNVpsApi {
   async stopAppDeployment(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<AppDeployment>>(
       await this.#req(`/api/v1/app-deployments/${id}/stop`, "PATCH"),
+    );
+    return data;
+  }
+
+  /**
+   * Price a resize without charging anything. `method` sets the currency the
+   * quote comes back in. Rejects a multiplier that is not strictly greater than
+   * the current one, is above {@link MAX_RESOURCE_MULTIPLIER}, or belongs to a
+   * deployment with no paid period to prorate against.
+   */
+  async getAppUpgradeQuote(
+    id: number,
+    req: AppUpgradeRequest,
+    method?: string,
+  ) {
+    const methodParam = method ? `?method=${method}` : "";
+    const { data } = await this.#handleResponse<ApiResponse<AppUpgradeQuote>>(
+      await this.#req(
+        `/api/v1/app-deployments/${id}/upgrade-quote${methodParam}`,
+        "POST",
+        req,
+      ),
+    );
+    return data;
+  }
+
+  /**
+   * Start a resize by creating its payment. The deployment is only resized once
+   * this settles, so an abandoned upgrade leaves it untouched.
+   */
+  async createAppUpgradePayment(
+    id: number,
+    req: AppUpgradeRequest,
+    method?: string,
+    opts?: { paymentMethodId?: number },
+  ) {
+    const params = new URLSearchParams();
+    if (method !== undefined) params.set("method", method);
+    if (opts?.paymentMethodId !== undefined) {
+      params.set("payment_method_id", opts.paymentMethodId.toString());
+    }
+    const query = params.toString() ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<
+      ApiResponse<SubscriptionPayment>
+    >(
+      await this.#req(
+        `/api/v1/app-deployments/${id}/upgrade${query}`,
+        "POST",
+        req,
+      ),
     );
     return data;
   }

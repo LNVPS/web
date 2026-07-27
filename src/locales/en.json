@@ -83,6 +83,9 @@
   "0t1qvq": {
     "defaultMessage": "Add Rule"
   },
+  "12+5NG": {
+    "defaultMessage": "Pro-rated upgrade"
+  },
   "13cluZ": {
     "defaultMessage": "Add SSH Key:"
   },
@@ -124,6 +127,9 @@
   },
   "2l2y5p": {
     "defaultMessage": "Create Order"
+  },
+  "2mZOHz": {
+    "defaultMessage": "Quote currency"
   },
   "36aVfS": {
     "defaultMessage": "Nostr DM"
@@ -268,6 +274,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
+  },
+  "7Iag/E": {
+    "defaultMessage": "Total due now"
   },
   "7NFfmz": {
     "defaultMessage": "Products"
@@ -449,14 +458,23 @@
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
   },
+  "CBHTGe": {
+    "defaultMessage": "Credit for time already paid"
+  },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
   },
   "Cououe": {
     "defaultMessage": "Log in to deploy this app."
   },
+  "CwmTc6": {
+    "defaultMessage": "New renewal price"
+  },
   "D3idYv": {
     "defaultMessage": "Settings"
+  },
+  "D4ANpe": {
+    "defaultMessage": "{multiplier}× base app"
   },
   "D9mck8": {
     "defaultMessage": "Pay any amount, whenever — time is added pro-rata"
@@ -692,6 +710,9 @@
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
+  "J+pWCM": {
+    "defaultMessage": "New size"
+  },
   "JAJV1y": {
     "defaultMessage": "Assigned once running"
   },
@@ -736,6 +757,9 @@
   },
   "Kffxdm": {
     "defaultMessage": "Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices include VAT; payment processing fees are excluded."
+  },
+  "KkHYsy": {
+    "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
   "KuX7em": {
     "defaultMessage": "Active for {duration}"
@@ -848,6 +872,9 @@
   "PfSZy5": {
     "defaultMessage": "No order found"
   },
+  "PlcGQq": {
+    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
   "PucUfl": {
     "defaultMessage": "Select SSH Key:"
   },
@@ -940,6 +967,9 @@
   },
   "SB//YQ": {
     "defaultMessage": "Order summary"
+  },
+  "SMbDTG": {
+    "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
   },
   "SQJto2": {
     "defaultMessage": "Sign in"
@@ -1183,6 +1213,9 @@
   },
   "acrOoz": {
     "defaultMessage": "Continue"
+  },
+  "agOXPD": {
+    "defaultMessage": "Size"
   },
   "alJZVR": {
     "defaultMessage": "Nostr account"
@@ -1658,6 +1691,9 @@
   "pgLgIU": {
     "defaultMessage": "Read the full update"
   },
+  "pgl1gp": {
+    "defaultMessage": "Resize to {size}× base"
+  },
   "pus6h6": {
     "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
   },
@@ -1796,6 +1832,9 @@
   "ubXbwc": {
     "defaultMessage": "Default Policy"
   },
+  "uby/fm": {
+    "defaultMessage": "Get quote"
+  },
   "uqUeK9": {
     "defaultMessage": "Decrypt a message sent to you by support."
   },
@@ -1849,6 +1888,9 @@
   },
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"
+  },
+  "wa/t9c": {
+    "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Linked"

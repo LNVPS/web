@@ -1,8 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FormattedDate, FormattedMessage } from "react-intl";
-import { App, AppDeployment } from "../api";
+import {
+  App,
+  AppDeployment,
+  AppUpgradeQuote,
+  MAX_RESOURCE_MULTIPLIER,
+} from "../api";
 import useLogin from "../hooks/login";
+import usePaymentMethods from "../hooks/usePaymentMethods";
 import { ConfigInput } from "../components/deploy-app-form";
 import { parseAppConfig } from "../utils/app-compose";
 import Spinner from "../components/spinner";
@@ -10,7 +16,10 @@ import Seo from "../components/seo";
 import { PageHeader, SectionCard } from "../components/section";
 import { StatusPill } from "../components/billing";
 import { AsyncButton } from "../components/button";
-import { AppIcon, deploymentStatus } from "./account-apps";
+import { CostAmount } from "../components/cost";
+import PaymentFlow from "../components/payment-flow";
+import { appUpgradeSource } from "../components/payment-sources";
+import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
 
 /** Edit a deployment's instance name and config field values. */
 function ConfigEditor({
@@ -136,6 +145,255 @@ function ConfigEditor({
           <span className="text-xs text-cyber-primary">
             <FormattedMessage defaultMessage="Saved. The app will restart shortly." />
           </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Payment methods the upgrade endpoint can charge interactively. Same set as
+ * the VM upgrade flow — NWC and LNURL have no interactive upgrade path.
+ */
+const UPGRADE_METHODS = ["lightning", "revolut", "paypal", "stripe"];
+
+/**
+ * Resize a deployment to a larger multiple of its app's base size: quote first,
+ * then pay. The API applies the resize only once that payment settles, so an
+ * abandoned upgrade leaves the deployment untouched.
+ */
+function UpgradeSection({
+  deployment,
+  onUpgraded,
+}: {
+  deployment: AppDeployment;
+  onUpgraded: () => void;
+}) {
+  const login = useLogin();
+  // Only used to pick the currency the quote comes back in; the method actually
+  // charged is chosen inside the payment flow.
+  const { data: paymentMethods } = usePaymentMethods();
+  // An API predating the resource multiplier omits the field; treat that as the
+  // base size rather than putting NaN in the controls.
+  const current = Math.max(1, deployment.resource_multiplier || 1);
+  const atMax = current >= MAX_RESOURCE_MULTIPLIER;
+
+  const [target, setTarget] = useState(
+    Math.min(current + 1, MAX_RESOURCE_MULTIPLIER),
+  );
+  const [quote, setQuote] = useState<AppUpgradeQuote>();
+  const [error, setError] = useState<string>();
+  const [selectedMethod, setSelectedMethod] = useState<string>("");
+  const [showPaymentFlow, setShowPaymentFlow] = useState(false);
+
+  const upgradeMethods = paymentMethods?.filter((m) =>
+    UPGRADE_METHODS.includes(m.name),
+  );
+
+  // Prefer a method settling in the user's currency so the quote is shown in
+  // it; otherwise the first available.
+  useEffect(() => {
+    if (selectedMethod || !upgradeMethods?.length) return;
+    const match = upgradeMethods.find((m) =>
+      (m.currencies as Array<string>).includes(login?.currency ?? ""),
+    );
+    setSelectedMethod((match ?? upgradeMethods[0]).name);
+  }, [selectedMethod, upgradeMethods, login?.currency]);
+
+  // The API prorates against the remaining paid period, so a deployment that
+  // has never been paid for has nothing to quote against. It answers with a 400
+  // saying so; say it up front instead of on submit.
+  if (
+    deployment.status === "pending" ||
+    deployment.subscription_id === undefined
+  ) {
+    return (
+      <p className="m-0 text-sm text-cyber-muted">
+        <FormattedMessage defaultMessage="Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period." />
+      </p>
+    );
+  }
+
+  if (atMax) {
+    return (
+      <p className="m-0 text-sm text-cyber-muted">
+        <FormattedMessage
+          defaultMessage="This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
+          values={{ max: MAX_RESOURCE_MULTIPLIER }}
+        />
+      </p>
+    );
+  }
+
+  if (showPaymentFlow && quote && login?.api) {
+    return (
+      <PaymentFlow
+        title={
+          <FormattedMessage
+            defaultMessage="Resize to {size}× base"
+            values={{ size: target }}
+          />
+        }
+        source={appUpgradeSource(
+          login.api,
+          deployment.id,
+          { resource_multiplier: target },
+          deployment.subscription_id,
+        )}
+        onPaymentComplete={() => {
+          setShowPaymentFlow(false);
+          setQuote(undefined);
+          onUpgraded();
+        }}
+        onCancel={() => setShowPaymentFlow(false)}
+      />
+    );
+  }
+
+  async function getQuote() {
+    if (!login?.api) return;
+    setError(undefined);
+    setQuote(undefined);
+    try {
+      setQuote(
+        await login.api.getAppUpgradeQuote(
+          deployment.id,
+          { resource_multiplier: target },
+          selectedMethod || undefined,
+        ),
+      );
+    } catch (e) {
+      if (e instanceof Error) setError(e.message);
+    }
+  }
+
+  // Sizes above the current one, up to the API's cap. Downgrades don't exist —
+  // volumes cannot shrink — so they are never offered.
+  const sizes: Array<number> = [];
+  for (let m = current + 1; m <= MAX_RESOURCE_MULTIPLIER; m++) sizes.push(m);
+
+  return (
+    <div className="flex flex-col gap-4">
+      <p className="m-0 text-sm text-cyber-muted">
+        <FormattedMessage
+          defaultMessage="Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+          values={{ current }}
+        />
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <label className="flex flex-col gap-1">
+          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+            <FormattedMessage defaultMessage="New size" />
+          </span>
+          <select
+            value={target}
+            onChange={(e) => {
+              setTarget(Number(e.target.value));
+              setQuote(undefined);
+            }}
+          >
+            {sizes.map((m) => (
+              <option key={m} value={m}>
+                {`${m}×`}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="flex flex-col gap-1">
+          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+            <FormattedMessage defaultMessage="Quote currency" />
+          </span>
+          <select
+            value={selectedMethod}
+            onChange={(e) => {
+              setSelectedMethod(e.target.value);
+              setQuote(undefined);
+            }}
+          >
+            {upgradeMethods?.map((m) => (
+              <option key={m.name} value={m.name}>
+                {m.name.charAt(0).toUpperCase() + m.name.slice(1)}
+                {m.currencies.length > 0 && ` (${m.currencies.join(", ")})`}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {error && <b className="text-cyber-danger">{error}</b>}
+
+      {quote && (
+        <dl className="grid grid-cols-[max-content_1fr] gap-x-6 gap-y-2 border-t border-cyber-border pt-4 text-sm tabular-nums">
+          <dt className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Credit for time already paid" />
+          </dt>
+          <dd className="m-0">
+            <CostAmount cost={quote.discount} converted={false} />
+          </dd>
+
+          <dt className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Pro-rated upgrade" />
+          </dt>
+          <dd className="m-0">
+            <CostAmount cost={quote.cost_difference} converted={false} />
+          </dd>
+
+          <dt className="text-cyber-muted">
+            <FormattedMessage defaultMessage="VAT" />
+          </dt>
+          <dd className="m-0">
+            <CostAmount cost={quote.tax} converted={false} />
+          </dd>
+
+          {quote.processing_fee.amount > 0 && (
+            <>
+              <dt className="text-cyber-muted">
+                <FormattedMessage defaultMessage="Processing fee" />
+              </dt>
+              <dd className="m-0">
+                <CostAmount cost={quote.processing_fee} converted={false} />
+              </dd>
+            </>
+          )}
+
+          <dt className="text-cyber-text-bright">
+            <FormattedMessage defaultMessage="Total due now" />
+          </dt>
+          <dd className="m-0 text-cyber-text-bright">
+            <CostAmount
+              cost={{
+                currency: quote.cost_difference.currency,
+                amount:
+                  quote.cost_difference.amount +
+                  quote.tax.amount +
+                  quote.processing_fee.amount,
+              }}
+              converted={false}
+            />
+          </dd>
+
+          <dt className="text-cyber-muted">
+            <FormattedMessage defaultMessage="New renewal price" />
+          </dt>
+          <dd className="m-0">
+            <CostAmount cost={quote.new_renewal_cost} converted={false} />
+          </dd>
+        </dl>
+      )}
+
+      <div className="flex items-center gap-3">
+        <AsyncButton onClick={getQuote}>
+          <FormattedMessage defaultMessage="Get quote" />
+        </AsyncButton>
+        {quote && (
+          <AsyncButton
+            className="bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+            onClick={async () => setShowPaymentFlow(true)}
+          >
+            <FormattedMessage defaultMessage="Pay and resize" />
+          </AsyncButton>
         )}
       </div>
     </div>
@@ -288,6 +546,34 @@ export function AccountAppDeploymentPage() {
             </>
           )}
 
+          {/* The deployment's own figures, not the catalog app's: these already
+              have the resource multiplier applied. Skipped entirely against an
+              API old enough not to send them, rather than shown as an empty
+              row. */}
+          {(deployment.cpu_milli > 0 ||
+            deployment.memory_bytes > 0 ||
+            deployment.storage_bytes > 0) && (
+            <>
+              <dt className="text-cyber-muted">
+                <FormattedMessage defaultMessage="Size" />
+              </dt>
+              <dd className="m-0 flex flex-wrap items-center gap-x-3 text-cyber-text">
+                <AppResources
+                  app={deployment}
+                  className="font-mono text-xs text-cyber-text tabular-nums"
+                />
+                {deployment.resource_multiplier > 1 && (
+                  <span className="text-xs text-cyber-primary">
+                    <FormattedMessage
+                      defaultMessage="{multiplier}× base app"
+                      values={{ multiplier: deployment.resource_multiplier }}
+                    />
+                  </span>
+                )}
+              </dd>
+            </>
+          )}
+
           {deployment.status_message && (
             <>
               <dt className="text-cyber-muted">
@@ -341,6 +627,19 @@ export function AccountAppDeploymentPage() {
           />
         </SectionCard>
       )}
+
+      {/* Resize */}
+      <SectionCard title={<FormattedMessage defaultMessage="Size" />}>
+        <UpgradeSection
+          // Remount when the size changes so the selector re-bases off the new
+          // multiplier instead of offering a size that is no longer an upgrade.
+          key={`${deployment.id}-${deployment.resource_multiplier}`}
+          deployment={deployment}
+          onUpgraded={() =>
+            reload().catch((e) => e instanceof Error && setError(e.message))
+          }
+        />
+      </SectionCard>
 
       {/* Lifecycle */}
       <SectionCard title={<FormattedMessage defaultMessage="Manage" />}>

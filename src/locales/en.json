@@ -860,9 +860,6 @@
   "LHX6Oo": {
     "defaultMessage": "Expires {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
-  },
   "LR754a": {
     "defaultMessage": "Renews at"
   },
@@ -1144,6 +1141,9 @@
   },
   "TaUfJI": {
     "defaultMessage": "Show LNURL"
+  },
+  "Tb1zdK": {
+    "defaultMessage": "{price}/month, no setup fee."
   },
   "Tbo377": {
     "defaultMessage": "Billing"

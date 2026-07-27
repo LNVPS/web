@@ -65,6 +65,15 @@ function Section({
  * `FALLBACK_PRICE` when the loader has nothing. So the copy, the `Offer`
  * markup and the `<title>` cannot disagree, and no locale file carries the
  * number.
+ *
+ * Storage is deliberately NOT that shape, and this is the one place on the site
+ * where a written figure beats a derived one (`LNVPS/web#60`). `storage_bytes`
+ * is 25 GiB — the sum of two fixed volumes, `blobs` 20Gi for uploads and `data`
+ * 5Gi for the database — and nothing in the API says which is which. Rendering
+ * the sum tells a buyer they have 25 GB for files when they have 20; rendering
+ * the sum next to a written split is the one version that can contradict itself
+ * the day the app is resized. So both slots stay literal until `LNVPS/api#260`
+ * gives volumes a label, and web#60 stays open on it.
  */
 export function BlossomServerHostingPage() {
   const intl = useIntl();
@@ -97,6 +106,9 @@ export function BlossomServerHostingPage() {
           "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both.",
       }),
     },
+    // Written, not derived, and unconditional with it: `storage_bytes` only
+    // knows the 25 GiB total, and "25GB" here reads as 25 GB of room for
+    // uploads when the answer is 20. See the note on the component above.
     {
       question: formatMessage({ defaultMessage: "How much can I store?" }),
       answer: formatMessage({
@@ -156,9 +168,14 @@ export function BlossomServerHostingPage() {
         </header>
 
         <Section title={<FormattedMessage defaultMessage="Route96" />}>
+          {/*
+            No size on this line: the "What is included" bullet three lines
+            down states it, and a figure written in two slots is a figure that
+            can be corrected in one of them.
+          */}
           <p className="m-0 font-bold text-cyber-primary">
             <FormattedMessage
-              defaultMessage="{price}/month, no setup fee. 20 GB for your files."
+              defaultMessage="{price}/month, no setup fee."
               values={{ price: priceNode }}
             />
           </p>

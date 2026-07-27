@@ -14,9 +14,6 @@
   "+EHk4e": {
     "defaultMessage": "Yes. It is your machine — install what you like."
   },
-  "+H6Rvj": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included."
-  },
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
@@ -1676,6 +1673,9 @@
   "jf7fbc": {
     "defaultMessage": "None set — add one"
   },
+  "jgrdHK": {
+    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "jhBqwg": {
     "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
   },
@@ -1900,6 +1900,9 @@
   },
   "p5LNtB": {
     "defaultMessage": "Not set"
+  },
+  "pJmk+U": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -2138,9 +2141,6 @@
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"
   },
-  "wVT7Mm": {
-    "defaultMessage": "{storage} of persistent storage, shared between your files and the database"
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -2156,6 +2156,9 @@
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
   },
+  "x27Qqd": {
+    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
+  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2170,9 +2173,6 @@
   },
   "xXbJso": {
     "defaultMessage": "Sign out"
-  },
-  "xbKCvF": {
-    "defaultMessage": "{storage} in total, shared between your files and the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "xf2LGD": {
     "defaultMessage": "auto-renews {date}"

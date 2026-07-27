@@ -95,7 +95,7 @@ export default function OnChainPayment({
           link={uri}
           width={512}
           height={512}
-          avatar="/logo.jpg"
+          avatar="/avatar.png"
           className="cursor-pointer rounded-sm overflow-hidden"
         />
       )}

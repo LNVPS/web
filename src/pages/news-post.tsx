@@ -30,7 +30,7 @@ export function NewsPostContent({ ev }: { ev: NostrEvent }) {
       name: "LNVPS",
       logo: {
         "@type": "ImageObject",
-        url: "https://lnvps.net/logo.jpg",
+        url: "https://lnvps.net/avatar.png",
       },
     },
   };

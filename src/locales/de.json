@@ -309,7 +309,7 @@
     "defaultMessage": "Jetzt bezahlen."
   },
   "7v5vj0": {
-    "defaultMessage": "Richten Sie Ihren eigenen Medienserver ein – {price} ein Monat"
+    "defaultMessage": "Betreiben Sie Ihren eigenen Medienserver – {price} pro Monat."
   },
   "7wbySo": {
     "defaultMessage": "Senden Sie uns eine direkte Nachricht, und unser Team wird sich bei Ihnen melden."
@@ -798,7 +798,7 @@
     "defaultMessage": "Gültig bis {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}pro Monat, ohne Einrichtungskosten. 20 GB Speicherplatz für Ihre Dateien."
+    "defaultMessage": "{price} pro Monat, keine Einrichtungsgebühr. 20 GB Speicherplatz für Ihre Dateien."
   },
   "LR754a": {
     "defaultMessage": "Wird automatisch verlängert am"
@@ -1575,7 +1575,7 @@
     "defaultMessage": "Passkey-Anmeldung fehlgeschlagen"
   },
   "jzU8se": {
-    "defaultMessage": "Route96 bereitstellen – {price}pro Monat"
+    "defaultMessage": "Route96 bereitstellen – {price} pro Monat"
   },
   "k2S+Z0": {
     "defaultMessage": "Ein Protokoll zum Speichern und Abrufen von Dateien, das auf deren Hash-Wert basiert und für die Verwendung mit Nostr entwickelt wurde. NIP-96 ist die ältere HTTP-Spezifikation für die Dateispeicherung – Route96 unterstützt beide."
@@ -1761,7 +1761,7 @@
     "defaultMessage": "Nicht festgelegt."
   },
   "pJmk+U": {
-    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96: In wenigen Minuten können Sie es auf Ihrem eigenen Hostnamen einrichten. Es bietet 20 GB Speicherplatz für Ihre Dateien und beinhaltet TLS."
+    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für nur {price} pro Monat. Route96 lässt sich innerhalb weniger Minuten auf einem eigenen Hostnamen installieren und bietet 20 GB Speicherplatz für Ihre Dateien sowie integriertes TLS."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "Verschlüsselte Nachrichten sind nur für Nostr-Konten verfügbar. Ihr Konto verfügt über keinen Nostr-Schlüssel, um NIP-17-Nachrichten zu lesen oder zu senden. Bei Fragen wenden Sie sich bitte an den Support."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server – Hosting von {price}pro Monat"
+    "defaultMessage": "Hosting für den Blossom Media Server ab {price} pro Monat."
   },
   "sn+Rj5": {
     "defaultMessage": "Mit Passkey anmelden"

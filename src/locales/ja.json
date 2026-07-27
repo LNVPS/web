@@ -309,7 +309,7 @@
     "defaultMessage": "今すぐお支払いください。"
   },
   "7v5vj0": {
-    "defaultMessage": "独自のメディアサーバーを構築しましょう。 {price} 1か月"
+    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。月額{price}です。"
   },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
@@ -798,7 +798,7 @@
     "defaultMessage": "有効期限切れ {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}月額料金制で、初期費用は無料。ファイルは20GBまで保存できます。"
+    "defaultMessage": "月額{price}、初期費用は無料。ファイル保存容量は20GB。"
   },
   "LR754a": {
     "defaultMessage": "更新日："
@@ -1575,7 +1575,7 @@
     "defaultMessage": "パスキーでのサインインに失敗しました"
   },
   "jzU8se": {
-    "defaultMessage": "Route96をデプロイします。 {price}月あたり"
+    "defaultMessage": "Route96をデプロイ — 月額{price}"
   },
   "k2S+Z0": {
     "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
@@ -1761,7 +1761,7 @@
     "defaultMessage": "設定されていません。"
   },
   "pJmk+U": {
-    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用して、 {price}/月。Route96では、独自のホスト名で数分以内にセットアップが完了し、20GBのストレージとTLSが利用可能です。"
+    "defaultMessage": "月額{price}で、BlossomとNIP-96メディアサーバーを自分で運用できます。Route96は、独自のホスト名で数分以内にセットアップでき、ファイルを保存するための20GBの容量とTLSが含まれています。"
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
   "sehISV": {
-    "defaultMessage": "Blossomメディアサーバーのホスティングサービス {price}月間"
+    "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額{price}から。"
   },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"

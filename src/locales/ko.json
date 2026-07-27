@@ -309,7 +309,7 @@
     "defaultMessage": "지금 결제하세요."
   },
   "7v5vj0": {
-    "defaultMessage": "나만의 미디어 서버를 구축하여 운영하세요. {price} 한 달"
+    "defaultMessage": "자체 미디어 서버를 구축하여 운영하세요 — 월 {price}"
   },
   "7wbySo": {
     "defaultMessage": "메시지를 보내주시면 담당 팀에서 연락을 드릴 것입니다."
@@ -798,7 +798,7 @@
     "defaultMessage": "만료됨 {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}월 구독료, 초기 설치 비용 없음. 파일 저장 공간 20GB 제공."
+    "defaultMessage": "월 {price}, 초기 설정 비용 없음. 파일 저장 공간은 20GB입니다."
   },
   "LR754a": {
     "defaultMessage": "갱신일:"
@@ -1575,7 +1575,7 @@
     "defaultMessage": "패스키 로그인 실패"
   },
   "jzU8se": {
-    "defaultMessage": "Route96 배포 — {price}/월"
+    "defaultMessage": "Route96 배포 — 월 {price}"
   },
   "k2S+Z0": {
     "defaultMessage": "해시값을 기준으로 파일을 저장하고 검색하는 프로토콜로, 노스트르(Nostr)와 함께 작동하도록 설계되었습니다. NIP-96은 이전 버전의 HTTP 파일 저장 방식이며, Route96은 두 가지 방식을 모두 지원합니다."
@@ -1761,7 +1761,7 @@
     "defaultMessage": "설정되지 않음"
   },
   "pJmk+U": {
-    "defaultMessage": "Blossom 및 NIP-96 미디어 서버를 직접 운영하여 {price}/월. Route96은 자체 호스트 이름으로 몇 분 안에 설정할 수 있으며, 20GB의 저장 공간과 TLS를 제공합니다."
+    "defaultMessage": "매달 {price}에 직접 블러섬 및 NIP-96 미디어 서버를 운영하세요. Route96은 자체 호스트 이름으로 몇 분 안에 설정할 수 있으며, 파일 저장 공간 20GB와 TLS가 포함되어 있습니다."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
   },
   "sehISV": {
-    "defaultMessage": "Blossom 미디어 서버 호스팅 서비스 {price}/월"
+    "defaultMessage": "블로섬 미디어 서버 호스팅, 월 {price}부터"
   },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"

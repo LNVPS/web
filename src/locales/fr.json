@@ -309,7 +309,7 @@
     "defaultMessage": "Payer maintenant."
   },
   "7v5vj0": {
-    "defaultMessage": "Hébergez votre propre serveur multimédia. {price} un mois"
+    "defaultMessage": "Hébergez votre propre serveur multimédia – {price} par mois."
   },
   "7wbySo": {
     "defaultMessage": "Envoyez-nous un message directement et notre équipe vous répondra dans les plus brefs délais."
@@ -798,7 +798,7 @@
     "defaultMessage": "Date d’expiration {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}/mois, sans frais d’installation. 20 Go pour vos fichiers."
+    "defaultMessage": "{price} par mois, sans frais d’installation. 20 Go pour vos fichiers."
   },
   "LR754a": {
     "defaultMessage": "Le renouvellement aura lieu le :"
@@ -1575,7 +1575,7 @@
     "defaultMessage": "Échec de la connexion par clé d'accès"
   },
   "jzU8se": {
-    "defaultMessage": "Déployez Route96. {price}par mois"
+    "defaultMessage": "Déployez Route96 – {price} par mois."
   },
   "k2S+Z0": {
     "defaultMessage": "Il s’agit d’un protocole permettant de stocker et de récupérer des fichiers en utilisant leur hachage, conçu pour fonctionner avec Nostr. La norme NIP-96 est la spécification plus ancienne pour le stockage de fichiers via HTTP ; Route96 prend en charge les deux normes."
@@ -1761,7 +1761,7 @@
     "defaultMessage": "Non défini."
   },
   "pJmk+U": {
-    "defaultMessage": "Exploitez votre propre serveur multimédia Blossom et NIP-96 pour {price}/mois. Route96, mise en ligne en quelques minutes sur votre propre nom de domaine, avec 20 Go d’espace pour vos fichiers et le protocole TLS inclus."
+    "defaultMessage": "Installez et gérez votre propre serveur multimédia Blossom et NIP-96 pour seulement {price} par mois. Route96 est prêt en quelques minutes sur son propre nom de domaine, avec 20 Go d’espace pour vos fichiers et une sécurité TLS intégrée."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "Le chiffrement des messages n’est disponible que pour les comptes Nostr. Votre compte ne dispose pas de clé Nostr permettant de lire ou d’envoyer des messages NIP-17. Pour obtenir de l’aide, veuillez utiliser l’onglet Assistance."
   },
   "sehISV": {
-    "defaultMessage": "Hébergement de serveurs multimédias Blossom à partir de {price}/mois"
+    "defaultMessage": "Hébergement du serveur multimédia Blossom à partir de {price} par mois."
   },
   "sn+Rj5": {
     "defaultMessage": "Se connecter avec une clé d'accès"

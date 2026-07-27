@@ -309,7 +309,7 @@
     "defaultMessage": "Şimdi öde"
   },
   "7v5vj0": {
-    "defaultMessage": "Kendi medya sunucunuzu oluşturun. {price} bir ay"
+    "defaultMessage": "Kendi medya sunucunuzu barındırın – ayda {price}."
   },
   "7wbySo": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin, ekip en kısa sürede size dönüş yapacaktır."
@@ -798,7 +798,7 @@
     "defaultMessage": "Son kullanma tarihi {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}/ay, kurulum ücreti yok. Dosyalarınız için 20 GB depolama alanı."
+    "defaultMessage": "Aylık {price}, kurulum ücreti yok. Dosyalarınız için 20 GB depolama alanı."
   },
   "LR754a": {
     "defaultMessage": "Yenilenme tarihi:"
@@ -1575,7 +1575,7 @@
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
   },
   "jzU8se": {
-    "defaultMessage": "Route96'yı kullanıma sunun. {price}ayda"
+    "defaultMessage": "Route96 oyununu kullanıma sunun — ayda {price}."
   },
   "k2S+Z0": {
     "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
@@ -1761,7 +1761,7 @@
     "defaultMessage": "Ayarlanmadı"
   },
   "pJmk+U": {
-    "defaultMessage": "Kendi Blossom ve NIP-96 medya sunucunuzu çalıştırın. {price}/ay. Route96, kendi alan adında birkaç dakika içinde kullanıma hazır hale geliyor ve 20 GB depolama alanı ile birlikte TLS desteği sunuyor."
+    "defaultMessage": "Blossom ve NIP-96 medya sunucunuzu kendiniz çalıştırın; aylık ücreti sadece {price}. Route96'yı kendi alan adınızda birkaç dakika içinde kurun, 20 GB depolama alanı ve TLS desteğiyle birlikte."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Medya Sunucusu Barındırma hizmeti {price}ayda"
+    "defaultMessage": "Blossom Medya Sunucusu, aylık {price}'dan başlayan fiyatlarla hizmetinizde."
   },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"

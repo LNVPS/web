@@ -309,7 +309,7 @@
     "defaultMessage": "Pague agora."
   },
   "7v5vj0": {
-    "defaultMessage": "Crie o seu próprio servidor de mídia. {price} um mês"
+    "defaultMessage": "Crie o seu próprio servidor de mídia — {price} por mês."
   },
   "7wbySo": {
     "defaultMessage": "Envie-nos uma mensagem diretamente e a nossa equipa entrará em contacto consigo."
@@ -798,7 +798,7 @@
     "defaultMessage": "Validade até {exp}"
   },
   "LKipQw": {
-    "defaultMessage": "{price}Por mês, sem taxa de configuração. 20 GB para os seus ficheiros."
+    "defaultMessage": "{price} por mês, sem taxa de configuração. 20 GB para os seus ficheiros."
   },
   "LR754a": {
     "defaultMessage": "Renova em"
@@ -1575,7 +1575,7 @@
     "defaultMessage": "Falha ao iniciar sessão com a chave de acesso"
   },
   "jzU8se": {
-    "defaultMessage": "Implementar o Route96 — {price}/mês"
+    "defaultMessage": "Implementar o Route96 — {price} por mês"
   },
   "k2S+Z0": {
     "defaultMessage": "Um protocolo para armazenar e recuperar arquivos identificados pelo seu hash, projetado para funcionar com o Nostr. O NIP-96 é a especificação mais antiga para armazenamento de arquivos via HTTP – o Route96 suporta ambos."
@@ -1761,7 +1761,7 @@
     "defaultMessage": "Não definido."
   },
   "pJmk+U": {
-    "defaultMessage": "Configure o seu próprio servidor de mídia Blossom e NIP-96 para {price}/mês. Route96, disponível em minutos no seu próprio servidor, com 20 GB para os seus ficheiros e TLS incluído."
+    "defaultMessage": "Crie o seu próprio servidor de mídia Blossom e NIP-96 por apenas {price} por mês. O Route96 fica pronto em poucos minutos, com o seu próprio nome de domínio, 20 GB de espaço para os seus ficheiros e TLS incluído."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1857,7 +1857,7 @@
     "defaultMessage": "As mensagens criptografadas estão disponíveis apenas para contas Nostr. A sua conta não tem uma chave Nostr para ler ou enviar mensagens NIP-17. Para obter ajuda, utilize o separador «Suporte»."
   },
   "sehISV": {
-    "defaultMessage": "Serviço de hospedagem do servidor de mídia Blossom a partir de {price}/mês"
+    "defaultMessage": "Serviço de alojamento do Blossom Media Server a partir de {price} por mês."
   },
   "sn+Rj5": {
     "defaultMessage": "Iniciar sessão com chave de acesso"

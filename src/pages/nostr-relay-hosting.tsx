@@ -42,6 +42,14 @@ function Section({
  * shows `Strfry` and the project styles itself `strfry`, and the storage
  * column is per-volume, which `storage_bytes` cannot express (HAVEN's 30 GiB
  * is 10 GiB of events plus 20 GiB of media). Only the price is derived.
+ *
+ * **If the relay price changes, the strings here change too.** The `Offer`
+ * price is derived, but the title, meta description, h1 and CTA all carry a
+ * literal `€2` — deliberately, because a headline that reads from the catalog
+ * would vanish when the catalog is down. The cost of that choice is this
+ * coupling: leave the copy stale and the JSON-LD and the visible text
+ * disagree, which is what disqualifies the rich result. Search this file for
+ * `€2`.
  */
 export function NostrRelayHostingPage() {
   const { formatMessage } = useIntl();

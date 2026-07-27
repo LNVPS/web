@@ -77,9 +77,6 @@
   "0h/lPM": {
     "defaultMessage": "Upgrade"
   },
-  "0l2yQh": {
-    "defaultMessage": "Four relay implementations, all {price}, no setup fee:"
-  },
   "0oL1zz": {
     "defaultMessage": "Copied!"
   },
@@ -271,6 +268,9 @@
   },
   "6Auf1w": {
     "defaultMessage": "We couldn't complete the login. Please try again."
+  },
+  "6BD6eg": {
+    "defaultMessage": "Four relay implementations, all {price}/month, no setup fee:"
   },
   "6FbX6y": {
     "defaultMessage": "Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes."
@@ -701,6 +701,9 @@
   "GSye7T": {
     "defaultMessage": "Lightning Address"
   },
+  "GXNK11": {
+    "defaultMessage": "Run your own Nostr relay for {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
+  },
   "Gd6Kbk": {
     "defaultMessage": "Not yet active"
   },
@@ -742,9 +745,6 @@
   },
   "HVtxik": {
     "defaultMessage": "Custom domain"
-  },
-  "HeoZvC": {
-    "defaultMessage": "Run your own Nostr relay — €2 a month"
   },
   "HlAgG9": {
     "defaultMessage": "I've sent the payment"
@@ -1313,6 +1313,9 @@
   "YdQxfw": {
     "defaultMessage": "Contact Support"
   },
+  "Yiyf5n": {
+    "defaultMessage": "Nostr Relay Hosting from {price}/month"
+  },
   "Yl8GBP": {
     "defaultMessage": "Tax ID"
   },
@@ -1367,6 +1370,9 @@
   "aTgjTE": {
     "defaultMessage": "Add passkey"
   },
+  "aUuDGj": {
+    "defaultMessage": "Deploy your relay — {price}/month"
+  },
   "acrOoz": {
     "defaultMessage": "Continue"
   },
@@ -1399,9 +1405,6 @@
   },
   "bW7B87": {
     "defaultMessage": "New"
-  },
-  "bgiR04": {
-    "defaultMessage": "Deploy your relay — €2/month"
   },
   "bh3pad": {
     "defaultMessage": "Please login first before making a purchase"
@@ -1499,9 +1502,6 @@
   "e4ehrh": {
     "defaultMessage": "Build your machine"
   },
-  "eFBGHk": {
-    "defaultMessage": "Nostr Relay Hosting from €2/month"
-  },
   "eKEL/g": {
     "defaultMessage": "Pending"
   },
@@ -1516,9 +1516,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr Extension"
-  },
-  "eo246q": {
-    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>€2 a month as a Managed App</a>."
   },
   "eq14GY": {
     "defaultMessage": "Your new secret key"
@@ -1862,6 +1859,9 @@
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
+  "o2v6Fy": {
+    "defaultMessage": "Run your own Nostr relay — {price} a month"
+  },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
   },
@@ -1961,6 +1961,9 @@
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
+  "rOtXKf": {
+    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
+  },
   "rbrahO": {
     "defaultMessage": "Close"
   },
@@ -2042,9 +2045,6 @@
   "tngc9N": {
     "defaultMessage": "Source CIDR"
   },
-  "tpWE34": {
-    "defaultMessage": "Four relay implementations, all €2.00/month, no setup fee:"
-  },
   "tthToS": {
     "defaultMessage": "Disabled"
   },
@@ -2092,9 +2092,6 @@
   },
   "uqe58g": {
     "defaultMessage": "Breakdown"
-  },
-  "urT8Bc": {
-    "defaultMessage": "Run your own Nostr relay for €2/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
   },
   "uyWYPH": {
     "defaultMessage": "This erases everything on the VM."

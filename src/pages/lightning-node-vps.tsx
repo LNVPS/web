@@ -2,7 +2,21 @@ import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
+
+/**
+ * The relay price this page's cross-sell quotes, in minor units. `200` is
+ * €2.00.
+ *
+ * This page has no loader — every other string on it is fixed copy and there
+ * is no managed Lightning node in the catalog to fetch — so unlike
+ * `/nostr-relay-hosting` there is nothing to derive from here. It is still a
+ * constant rather than a number inside a `defaultMessage`: a price in a
+ * translatable string cannot be localised and gets copied into eleven locale
+ * files. Keep it in step with `FALLBACK_PRICE` in `nostr-relay-hosting.tsx`.
+ */
+const RELAY_PRICE = { currency: "EUR", amount: 200 };
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
  * Mirrors `SectionHeading` in `home.tsx:172`. */
@@ -208,8 +222,9 @@ export function LightningNodeVpsPage() {
         <Section title={<FormattedMessage defaultMessage="Also on LNVPS" />}>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>€2 a month as a Managed App</a>."
+              defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
               values={{
+                price: <CostAmount cost={RELAY_PRICE} converted={false} />,
                 a: (chunks) => (
                   <Link
                     to="/nostr-relay-hosting"

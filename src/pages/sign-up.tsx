@@ -13,11 +13,26 @@ import {
   isWebauthnCancellation,
   passkeyRegister,
 } from "../webauthn";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { Relays } from "../const";
 
 type Mode = "signin" | "create";
+
+/**
+ * Is `next` a path on this site?
+ *
+ * `?next=` is attacker-controllable and this is the login page, so only a
+ * same-origin *path* is ever followed: one leading slash, and no second slash
+ * or backslash after it — a browser reads both `//evil.com` and `/\evil.com`
+ * as protocol-relative URLs and would leave the site. Anything else is
+ * ignored rather than rejected loudly; the user still gets signed in and lands
+ * somewhere sensible.
+ */
+function isInternalPath(next: string): boolean {
+  return /^\/(?![/\\])/.test(next);
+}
 
 /**
  * Types out a shell command one character at a time. Re-types whenever `text`
@@ -60,6 +75,36 @@ export default function SignUpPage() {
   const [key, setKey] = useState<PrivateKeySigner>();
   const system = useContext(SnortContext);
   const { formatMessage } = useIntl();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+
+  /**
+   * Where to send someone who has just signed in or created an account.
+   *
+   * This used to be `window.history.back()` unconditionally, which is right
+   * only when `/login` was reached from another LNVPS page. When the login
+   * page is the first entry in the tab — a shared link, a bookmark, a search
+   * result, a link from a Nostr client — going back leaves the site entirely,
+   * so a successful sign-in reads as a failed one (`LNVPS/web#42`).
+   *
+   * `location.key` is React Router's answer to "did this app render a page
+   * before this one": it is `"default"` for whatever the tab landed on and a
+   * generated id for anything pushed since, and it survives a reload because
+   * the id lives in the history entry's state. `document.referrer` would not
+   * do — a referrer policy can strip it, and having one does not put the page
+   * in this tab's history.
+   */
+  function onAuthenticated() {
+    const next = searchParams.get("next");
+    if (next && isInternalPath(next)) {
+      navigate(next, { replace: true });
+    } else if (location.key !== "default") {
+      navigate(-1);
+    } else {
+      navigate("/account", { replace: true });
+    }
+  }
 
   async function uploadImage() {
     const f = await openFile();
@@ -70,7 +115,7 @@ export default function SignUpPage() {
     setError("");
     try {
       await passkeyRegister(name || undefined);
-      window.history.back();
+      onAuthenticated();
     } catch (e) {
       if (isWebauthnCancellation(e)) return;
       setError(
@@ -108,7 +153,7 @@ export default function SignUpPage() {
     system.BroadcastEvent(ev);
     system.BroadcastEvent(relayList);
     LoginState.loginPrivateKey(key.privateKey);
-    window.history.back();
+    onAuthenticated();
   }
 
   return (
@@ -166,11 +211,7 @@ export default function SignUpPage() {
             </div>
 
             {mode === "signin" ? (
-              <Login
-                onLogin={() => {
-                  window.history.back();
-                }}
-              />
+              <Login onLogin={onAuthenticated} />
             ) : (
               <CreateAccount
                 name={name}

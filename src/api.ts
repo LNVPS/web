@@ -659,6 +659,20 @@ export interface App {
   seo_title?: string;
   /** Per-app override for the meta description; null for almost every app. */
   seo_description?: string;
+  /**
+   * Grouping labels for filtering and tag landing pages (LNVPS/api#258). An
+   * app carrying none arrives as `[]`; optional here only for an API build
+   * older than that release.
+   */
+  tags?: Array<AppTag>;
+}
+
+/** A grouping label as it appears on an app. */
+export interface AppTag {
+  /** URL-safe; also the value to send back as `?tag=`. */
+  slug: string;
+  /** Ready to render. Never derived from `slug` — `nip-96` is `NIP-96`. */
+  display_name: string;
 }
 
 /** One persistent volume of an app (LNVPS/api#260). */

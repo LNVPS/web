@@ -93,31 +93,6 @@ export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
  */
 export const BlossomAppId = 2;
 
-/**
- * Catalog `name` slugs of the four relay implementations
- * `/nostr-relay-hosting` sells, in the order the page lists them.
- *
- * A page that sells a subset of the catalog has to name that subset
- * somewhere. This is that list, and it is the only thing about those apps
- * written into the front end: display name, price, storage and the
- * `/apps/:id` link all come from the catalog row. Slugs rather than the
- * numeric ids this used to hold — a slug is checkable against the API
- * response by eye, an id is not.
- *
- * This used to say the API has no category or tag field. It has both as of
- * `lnvps_db/migrations/20260727090000_app_tags.sql`, which seeds a `relay`
- * tag: `App` in `src/api.ts:620` does not model either field yet, so nothing
- * here can filter on them today. Whether that tag picks out exactly these
- * four on the live catalog is `LNVPS/api#258` — if it does, this list becomes
- * a tag filter and nothing else on the page has to change.
- */
-export const RelayAppSlugs = [
-  "strfry",
-  "nostr-rs-relay",
-  "pyramid-relay",
-  "haven-relay",
-];
-
 export const System = new NostrSystem({
   automaticOutboxModel: false,
   buildFollowGraph: false,

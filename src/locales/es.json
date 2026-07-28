@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Mensaje descifrado:"
   },
-  "4bBT6e": {
-    "defaultMessage": "Cuatro implementaciones de retransmisión. Pague con Lightning."
-  },
   "4cMKIO": {
     "defaultMessage": "Planes de pago periódico que mantienen activos sus servicios."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Claves SSH"
+  },
+  "7EjXDp": {
+    "defaultMessage": "Espacios de trabajo compartidos para personas y agentes."
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "El importe exacto del impuesto se confirma cuando realiza el pago."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Alojamiento de relés de Nostr: strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "Los {records} apuntan directamente a las direcciones IP y es posible que deban actualizarse si estas cambian."
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Entrante"
   },
-  "H7JNFX": {
-    "defaultMessage": "Cuatro implementaciones de retransmisión, desde {price}/mes, sin cargo por configuración."
-  },
   "H9Az5Z": {
     "defaultMessage": "Datos de facturación"
   },
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Sí. Configure un registro CNAME que apunte al nombre de host de su servidor retransmisor. Emitiremos automáticamente un certificado independiente una vez que se resuelva el DNS."
   },
-  "Mw9USY": {
-    "defaultMessage": "¿No estás seguro? <b>strfry</b> es la opción más utilizada: es el sistema en el que se ejecutan la mayoría de los servidores públicos. <b>HAVEN</b> si este es tu servidor personal y no uno comunitario; es el único de los cuatro que también te ofrece un espacio de almacenamiento multimedia Blossom, por lo que tus imágenes estarán almacenadas bajo la misma clave que tus notas."
-  },
   "N2IrpM": {
     "defaultMessage": "Confirmar"
-  },
-  "N7elAL": {
-    "defaultMessage": "Instala tu propio relé Nostr: strfry, nostr-rs-relay, Pyramid o HAVEN, y ponlo en funcionamiento en cuestión de minutos, utilizando su propio nombre de dominio, con TLS y almacenamiento incluidos."
   },
   "NQgbYA": {
     "defaultMessage": "Configuración de la cuenta"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "Se recomienda {cname}; detecta automáticamente los cambios en la dirección IP del servidor."
   },
+  "Ude0W6": {
+    "defaultMessage": "Instala tu propio relé de Nostr y ponlo en funcionamiento en cuestión de minutos, utilizando su propio nombre de dominio, con TLS y almacenamiento incluidos."
+  },
   "UhIOEO": {
     "defaultMessage": "¿Necesita mi identificación?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Alojamiento de servidores de medios Blossom — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Administré los servidores de retransmisión de Nostr. Pague con Lightning."
   },
   "XyIrRh": {
     "defaultMessage": "Pagar con Bitcoin"
@@ -1715,6 +1709,12 @@
   "iuQLCB": {
     "defaultMessage": "Los métodos de pago guardados se utilizan para realizar automáticamente los pagos de las renovaciones un día antes de que expire la máquina virtual. Seleccione cuál será el método predeterminado."
   },
+  "iuZoh0": {
+    "defaultMessage": "Configura tu propio relé de Nostr desde {price}/mes, con el tiempo medido en minutos y utilizando su propio nombre de dominio con TLS e incluyendo almacenamiento."
+  },
+  "iv8nNj": {
+    "defaultMessage": "¿No estás seguro? <b>strfry</b> es la opción más utilizada: es el sistema en el que se ejecutan la mayoría de los servidores públicos. <b>HAVEN</b> si este es tu servidor personal y no uno comunitario; además, te proporciona un espacio de almacenamiento multimedia de Blossom, por lo que tus imágenes y notas estarán almacenadas bajo la misma clave."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "Configure exactamente lo que necesitas: la CPU, la memoria y el almacenamiento se configuran de forma independiente; puedes elegir entre un SSD o un disco duro, en lugar de tener que optar por configuraciones predefinidas."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Cuatro implementaciones de relé, desde {price}por mes."
   },
   "jGSUnR": {
     "defaultMessage": "¿Se me asignará una dirección IP estática?"
@@ -1783,6 +1780,9 @@
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete la verificación del CAPTCHA."
+  },
+  "kNiZu3": {
+    "defaultMessage": "{count,plural,one{# implementación del relé} other{# implementaciones de retransmisión}}, desde {price}por mes."
   },
   "kRFEho": {
     "defaultMessage": "Añadir clave SSH."
@@ -1933,9 +1933,6 @@
   },
   "o2AdrJ": {
     "defaultMessage": "Esta máquina virtual utiliza una plantilla personalizada y no se puede actualizar. Solo las máquinas virtuales que utilizan plantillas estándar admiten actualizaciones."
-  },
-  "o8mtsy": {
-    "defaultMessage": "Ejecuta tu propio relé de Nostr desde {price}/mes — strfry, nostr-rs-relay, Pyramid o HAVEN; se configura en cuestión de minutos en su propio nombre de dominio, con TLS y almacenamiento incluidos."
   },
   "o9lOhm": {
     "defaultMessage": "Soporte para la clave pública: {npub}"
@@ -2219,6 +2216,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Valor del tiempo restante a la tarifa anterior:"
   },
+  "wVEeSx": {
+    "defaultMessage": "{count,plural,one{# implementación del relé} other{# implementaciones de relés}}, desde {price}Por mes, sin cargo por configuración."
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "Aún no se han realizado pagos."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Administré el alojamiento de los servidores de retransmisión de Nostr."
   },
   "zAN0RF": {
     "defaultMessage": "Mensajes directos cifrados."

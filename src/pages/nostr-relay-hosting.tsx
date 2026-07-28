@@ -41,8 +41,9 @@ function Section({
 }
 
 /**
- * `/nostr-relay-hosting` — use-case landing page for the four relay apps in
- * the managed app catalog (`LNVPS/web#49`).
+ * `/nostr-relay-hosting` — use-case landing page for the relay apps in the
+ * managed app catalog (`LNVPS/web#49`), which are the ones the catalog tags
+ * `relay` (`LNVPS/web#77`).
  *
  * The table is the catalog: one row per app `relayApps` found, with the
  * catalog's `display_name` and `storage_bytes`. The only column written here
@@ -54,7 +55,7 @@ function Section({
  * constant to fall back to (`LNVPS/web#67`). Two states:
  *
  * - **the catalog quoted a price** — the page says "from {price}/month", which
- *   is `relayPriceFrom`: the lowest of the rows we have. True whether the four
+ *   is `relayPriceFrom`: the lowest of the rows we have. True whether the
  *   relays agree or not, so changing one relay's price in admin no longer
  *   makes this page claim a figure that is nobody's price.
  * - **no catalog** — no price anywhere on the page, rather than a number
@@ -103,6 +104,9 @@ export function NostrRelayHostingPage() {
     "haven-relay": formatMessage({
       defaultMessage:
         "Personal vault-style relay, with its own Blossom media store",
+    }),
+    "buzz-relay": formatMessage({
+      defaultMessage: "Shared workspaces for people and agents",
     }),
   };
 
@@ -165,10 +169,7 @@ export function NostrRelayHostingPage() {
                 },
                 { price: priceText },
               )
-            : formatMessage({
-                defaultMessage:
-                  "Nostr Relay Hosting — strfry, nostr-rs-relay, Pyramid, HAVEN",
-              })
+            : formatMessage({ defaultMessage: "Managed Nostr Relay Hosting" })
         }
         canonical="/nostr-relay-hosting"
         description={
@@ -176,13 +177,13 @@ export function NostrRelayHostingPage() {
             ? formatMessage(
                 {
                   defaultMessage:
-                    "Run your own Nostr relay from {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
+                    "Run your own Nostr relay from {price}/month, up in minutes on its own hostname with TLS and storage included.",
                 },
                 { price: priceText },
               )
             : formatMessage({
                 defaultMessage:
-                  "Run your own Nostr relay — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
+                  "Run your own Nostr relay — up in minutes on its own hostname with TLS and storage included.",
               })
         }
         jsonLd={[...relays.map((r) => appJsonLd(r, intl)), faqJsonLd(faq)]}
@@ -216,8 +217,9 @@ export function NostrRelayHostingPage() {
             {price ? (
               noSetupFee ? (
                 <FormattedMessage
-                  defaultMessage="Four relay implementations, from {price}/month, no setup fee."
+                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month, no setup fee."
                   values={{
+                    count: relays.length,
                     price: (
                       <CostAmount
                         cost={price}
@@ -229,8 +231,9 @@ export function NostrRelayHostingPage() {
                 />
               ) : (
                 <FormattedMessage
-                  defaultMessage="Four relay implementations, from {price}/month."
+                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month."
                   values={{
+                    count: relays.length,
                     price: (
                       <CostAmount
                         cost={price}
@@ -242,7 +245,7 @@ export function NostrRelayHostingPage() {
                 />
               )
             ) : (
-              <FormattedMessage defaultMessage="Four relay implementations. Pay with Lightning." />
+              <FormattedMessage defaultMessage="Managed Nostr relays. Pay with Lightning." />
             )}
           </p>
           {/*
@@ -303,7 +306,7 @@ export function NostrRelayHostingPage() {
           )}
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the only one of the four that also gives you a Blossom media store, so your images live under the same key as your notes."
+              defaultMessage="Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
               values={{
                 b: (chunks) => (
                   <b className="text-cyber-text-bright">{chunks}</b>

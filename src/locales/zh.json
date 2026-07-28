@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "已解密的消息："
   },
-  "4bBT6e": {
-    "defaultMessage": "采用四种中继实现方式。支持使用闪电网络支付。"
-  },
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
+  },
+  "7EjXDp": {
+    "defaultMessage": "供人和智能客服共享的工作空间。"
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "确切的税额会在您付款时确认。"
-  },
-  "BEs2cn": {
-    "defaultMessage": "Nostr 中继服务器托管 — strfry、nostr-rs-relay、Pyramid、HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "{records} 中的记录直接指向 IP 地址，如果 IP 地址发生更改，可能需要更新。"
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "入站；进入"
   },
-  "H7JNFX": {
-    "defaultMessage": "四种继电器实现方式，从 {price}每月，无需支付设置费用。"
-  },
   "H9Az5Z": {
     "defaultMessage": "账单详情。"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "最低：{min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "部署您的中继站——从……开始 {price}每月"
-  },
   "J+dIsA": {
     "defaultMessage": "订阅"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
+  },
+  "JcmOUh": {
+    "defaultMessage": "从这里开始搭建并运行您自己的 Nostr 中继节点。 {price} 每月，在自己的主机名上以分钟为单位进行计费，包含 TLS 和存储。"
   },
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "是的。将一个 CNAME 指向您的中继服务器的主机名。一旦 DNS 解析成功，我们会自动为其颁发单独的证书。"
   },
-  "Mw9USY": {
-    "defaultMessage": "不确定吗？<b>strfry</b> 是主力服务器——大多数公共中继都使用它。<b>HAVEN</b> 如果这是您的个人中继，而不是社区中继；它是这四个服务器中的唯一一个，同时还提供 Blossom 媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
-  },
   "N2IrpM": {
     "defaultMessage": "确认。"
-  },
-  "N7elAL": {
-    "defaultMessage": "您可以自行搭建 Nostr 中继服务器——例如 strfry、nostr-rs-relay、Pyramid 或 HAVEN，只需几分钟即可完成，并且它将使用您自己的域名，并包含 TLS 加密和存储功能。"
   },
   "NQgbYA": {
     "defaultMessage": "账户设置"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "建议使用 {cname}，因为它能够自动跟踪服务器 IP 地址的变化。"
   },
+  "Ude0W6": {
+    "defaultMessage": "搭建您自己的 Nostr 中继服务器——只需几分钟即可完成，它将使用您指定的域名，并包含 TLS 加密和存储功能。"
+  },
   "UhIOEO": {
     "defaultMessage": "您需要我的身份信息吗？"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Blossom 媒体服务器托管服务——Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "管理 Nostr 中继节点。使用闪电网络支付。"
   },
   "XyIrRh": {
     "defaultMessage": "使用比特币支付"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "成本明细"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起。"
   },
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "已保存的付款方式将用于自动支付续订费用，续订将在虚拟机到期前一天进行。请选择默认使用的付款方式。"
   },
+  "iv8nNj": {
+    "defaultMessage": "不确定吗？<b>strfry</b>是主要的运行程序——大多数公共中继服务器都使用它。<b>HAVEN</b>如果这是一个个人中继服务器，而不是社区中继服务器；它还提供一个Blossom媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
+  },
   "j4RCJW": {
     "defaultMessage": "技能.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "您可以根据自己的需求定制配置——CPU、内存和存储可以独立配置，可以选择固态硬盘（SSD）或机械硬盘（HDD），而不是被限制在固定的等级中。"
-  },
-  "jCOJxe": {
-    "defaultMessage": "四种继电器实现方式，从…… {price}每月。"
   },
   "jGSUnR": {
     "defaultMessage": "我会获得一个固定的 IP 地址吗？"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
   },
-  "o8mtsy": {
-    "defaultMessage": "从这里开始搭建您自己的 Nostr 中继节点。 {price}每月——strfry、nostr-rs-relay、Pyramid 或 HAVEN，可在其自身的主机名上运行，并包含 TLS 和存储功能，设置时间仅需几分钟。"
-  },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "在专门为此目的而设计的虚拟专用服务器（VPS）上运行您的闪电网络节点。"
   },
+  "tiWuG8": {
+    "defaultMessage": "部署您的中继节点 — 从 {price} 每月起"
+  },
   "tngc9N": {
     "defaultMessage": "源 CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "已链接。"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起，无需支付设置费用。"
+  },
   "wo868v": {
     "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"
+  },
+  "z4e/Em": {
+    "defaultMessage": "负责管理 Nostr 中继服务器的托管服务。"
   },
   "zAN0RF": {
     "defaultMessage": "加密的私信"

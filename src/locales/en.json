@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Decrypted message:"
   },
-  "4bBT6e": {
-    "defaultMessage": "Four relay implementations. Pay with Lightning."
-  },
   "4cMKIO": {
     "defaultMessage": "Recurring plans that keep your services active."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
+  },
+  "7EjXDp": {
+    "defaultMessage": "Shared workspaces for people and agents"
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "The exact tax is confirmed when you pay."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Nostr Relay Hosting — strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "{records} point directly to IPs and may need updating if they change"
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Inbound"
   },
-  "H7JNFX": {
-    "defaultMessage": "Four relay implementations, from {price}/month, no setup fee."
-  },
   "H9Az5Z": {
     "defaultMessage": "Billing details"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Deploy your relay — from {price}/month"
-  },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again."
+  },
+  "JcmOUh": {
+    "defaultMessage": "Run your own Nostr relay from {price} per month, up in minutes on its own hostname with TLS and storage included."
   },
   "JiCBWy": {
     "defaultMessage": "Connect over SSH with your selected key."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Yes. Point a CNAME at your relay's hostname. We issue a separate certificate for it automatically once DNS resolves."
   },
-  "Mw9USY": {
-    "defaultMessage": "Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the only one of the four that also gives you a Blossom media store, so your images live under the same key as your notes."
-  },
   "N2IrpM": {
     "defaultMessage": "Confirm"
-  },
-  "N7elAL": {
-    "defaultMessage": "Run your own Nostr relay — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
   },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} is recommended — it automatically follows server IP changes"
   },
+  "Ude0W6": {
+    "defaultMessage": "Run your own Nostr relay — up in minutes on its own hostname with TLS and storage included."
+  },
   "UhIOEO": {
     "defaultMessage": "Do you need my identity?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Blossom Media Server Hosting — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Managed Nostr relays. Pay with Lightning."
   },
   "XyIrRh": {
     "defaultMessage": "Pay with Bitcoin"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Cost Breakdown"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default."
   },
+  "iv8nNj": {
+    "defaultMessage": "Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "Build exactly what you need — CPU, memory and storage are configured independently, SSD or HDD, rather than forced into fixed tiers."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Four relay implementations, from {price}/month."
   },
   "jGSUnR": {
     "defaultMessage": "Do I get a static IP?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
-  "o8mtsy": {
-    "defaultMessage": "Run your own Nostr relay from {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
-  },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Run your Lightning node on a VPS built for it"
   },
+  "tiWuG8": {
+    "defaultMessage": "Deploy your relay — from {price} per month"
+  },
   "tngc9N": {
     "defaultMessage": "Source CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "Linked"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month, no setup fee."
+  },
   "wo868v": {
     "defaultMessage": "Sign in with a Nostr key or bunker →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "No payments yet."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Managed Nostr Relay Hosting"
   },
   "zAN0RF": {
     "defaultMessage": "Encrypted direct messages"

@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
   },
-  "4bBT6e": {
-    "defaultMessage": "4가지 릴레이 구현 방식. 라이트닝으로 결제하세요."
-  },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 키"
+  },
+  "7EjXDp": {
+    "defaultMessage": "사람과 상담원이 함께 사용하는 공용 업무 공간입니다."
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "정확한 세금은 결제할 때 확인됩니다."
-  },
-  "BEs2cn": {
-    "defaultMessage": "노스트르 릴레이 호스팅 — 스트르프라이, 노스트르-RS-릴레이, 피라미드, 헤이븐"
   },
   "BFqlLP": {
     "defaultMessage": "{records} IP 주소를 직접 가리키므로, IP 주소가 변경될 경우 업데이트가 필요할 수 있습니다."
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "유입되는"
   },
-  "H7JNFX": {
-    "defaultMessage": "다음부터 총 4가지 릴레이 구현 방식을 소개합니다. {price}월간 요금이며, 초기 설치 비용은 없습니다."
-  },
   "H9Az5Z": {
     "defaultMessage": "결제 정보"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "최소: {min} 기가바이트"
   },
-  "IzzIw7": {
-    "defaultMessage": "릴레이를 배치하세요. {price}/월"
-  },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "이번 배포의 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 다시 서비스를 시작할 수 있습니다."
+  },
+  "JcmOUh": {
+    "defaultMessage": "직접 노스트르 릴레이를 운영하세요. {price} 매달 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 동안 사용 가능합니다."
   },
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "네, 중계 서버의 호스트 이름으로 CNAME 레코드를 설정하세요. DNS가 제대로 작동하면 자동으로 별도의 인증서를 발급해 드립니다."
   },
-  "Mw9USY": {
-    "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 활용합니다. 만약 개인적인 릴레이를 운영하신다면 <b>HAVEN</b>을 사용하세요. 네 가지 프로그램 중 유일하게 Blossom 미디어 저장소를 제공하므로, 이미지와 노트가 동일한 키 아래에 저장됩니다."
-  },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
-  },
-  "N7elAL": {
-    "defaultMessage": "자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 안에 자체 Nostr 릴레이(strfry, nostr-rs-relay, Pyramid 또는 HAVEN)를 실행하세요."
   },
   "NQgbYA": {
     "defaultMessage": "계정 설정"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} 권장됩니다. 서버 IP 주소 변경 사항을 자동으로 추적합니다."
   },
+  "Ude0W6": {
+    "defaultMessage": "자체 호스트 이름으로 Nostr 릴레이를 직접 실행하세요. TLS와 스토리지가 포함되어 있어 몇 분 안에 설정할 수 있습니다."
+  },
   "UhIOEO": {
     "defaultMessage": "제 신분증이 필요하신가요?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "블로섬 미디어 서버 호스팅 — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Nostr 릴레이 서버를 관리합니다. 라이트닝 네트워크로 결제하세요."
   },
   "XyIrRh": {
     "defaultMessage": "비트코인으로 결제"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "비용 내역"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price} 매달."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "저장된 결제 수단은 가상 머신의 만료일 하루 전에 자동으로 갱신 요금을 지불하는 데 사용됩니다. 기본으로 사용할 결제 수단을 선택하세요."
   },
+  "iv8nNj": {
+    "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 활용합니다. 만약 개인적인 릴레이를 운영하신다면 <b>HAVEN</b>을 사용하세요. Blossom 미디어 저장소도 함께 제공하므로, 이미지와 노트가 동일한 키 아래에 저장됩니다."
+  },
   "j4RCJW": {
     "defaultMessage": "기술.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "필요한 대로 정확하게 구성하세요. CPU, 메모리, 저장 장치를 독립적으로 설정할 수 있으며, 고정된 등급으로 제한되는 대신 SSD 또는 HDD를 선택할 수 있습니다."
-  },
-  "jCOJxe": {
-    "defaultMessage": "총 4가지 릴레이 구현 방식, 그중 {price}/월."
   },
   "jGSUnR": {
     "defaultMessage": "고정 IP 주소를 할당받을 수 있나요?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "이 가상 머신은 사용자 지정 템플릿을 사용하므로 업그레이드할 수 없습니다. 표준 템플릿을 사용하는 가상 머신만 업그레이드를 지원합니다."
   },
-  "o8mtsy": {
-    "defaultMessage": "이곳에서 직접 노스트르 릴레이를 운영하세요. {price}/월 — strfry, nostr-rs-relay, Pyramid 또는 HAVEN을 사용하며, TLS와 스토리지를 포함하여 자체 호스트 이름으로 몇 분 안에 설정할 수 있습니다."
-  },
   "o9lOhm": {
     "defaultMessage": "공개 키 지원: {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "라이트닝 노드를 위해 특별히 구축된 VPS에서 실행하세요."
   },
+  "tiWuG8": {
+    "defaultMessage": "릴레이를 배치하세요. {price} 매월"
+  },
   "tngc9N": {
     "defaultMessage": "소스 CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "연결됨"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}~부터 {price} 매월 부과되며, 초기 설정 비용은 없습니다."
+  },
   "wo868v": {
     "defaultMessage": "Nostr 키 또는 벙커로 로그인 →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Nostr 릴레이 호스팅 관리"
   },
   "zAN0RF": {
     "defaultMessage": "암호화된 직접 메시지"

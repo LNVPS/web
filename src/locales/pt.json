@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Mensagem descriptografada:"
   },
-  "4bBT6e": {
-    "defaultMessage": "Quatro implementações de retransmissão. Pague com Lightning."
-  },
   "4cMKIO": {
     "defaultMessage": "Planos recorrentes que mantêm seus serviços ativos."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Chaves SSH"
+  },
+  "7EjXDp": {
+    "defaultMessage": "Espaços de trabalho partilhados para pessoas e agentes."
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "O valor exato do imposto é confirmado no momento do pagamento."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Serviços de alojamento de retransmissão Nostr — strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "Os {records} apontam diretamente para os endereços IP e podem precisar de ser atualizados caso estes mudem."
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Entrada."
   },
-  "H7JNFX": {
-    "defaultMessage": "Quatro implementações de retransmissão, a partir de {price}por mês, sem taxa de configuração."
-  },
   "H9Az5Z": {
     "defaultMessage": "Detalhes da faturação"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Implemente o seu repetidor — a partir de {price}/mês"
-  },
   "J+dIsA": {
     "defaultMessage": "Assinaturas"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "A subscrição desta implementação expirou e foi reduzida a zero. Os seus dados ainda estão aqui – renove para voltar a iniciá-la."
+  },
+  "JcmOUh": {
+    "defaultMessage": "Configure o seu próprio nó de retransmissão Nostr a partir de {price} por mês, com tempo de utilização em minutos no próprio nome de domínio, incluindo TLS e armazenamento."
   },
   "JiCBWy": {
     "defaultMessage": "Conecte-se via SSH com a chave selecionada."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Sim. Configure um registro CNAME para que ele aponte para o nome de host do seu servidor de retransmissão. Emitiremos automaticamente um certificado separado assim que o DNS for resolvido."
   },
-  "Mw9USY": {
-    "defaultMessage": "Não tem certeza? O <b>strfry</b> é o servidor principal — é o que a maioria dos servidores públicos utiliza. Se este for o seu servidor pessoal e não um servidor comunitário, use o <b>HAVEN</b>; é o único dos quatro que também oferece um repositório de mídia Blossom, para que suas imagens e notas fiquem armazenadas no mesmo local."
-  },
   "N2IrpM": {
     "defaultMessage": "Confirme."
-  },
-  "N7elAL": {
-    "defaultMessage": "Configure o seu próprio nó de retransmissão Nostr — strfry, nostr-rs-relay, Pyramid ou HAVEN — em poucos minutos, utilizando o seu próprio nome de domínio, com TLS e armazenamento incluídos."
   },
   "NQgbYA": {
     "defaultMessage": "Definições da Conta"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "Recomenda-se o uso de {cname}, pois ele acompanha automaticamente as alterações do endereço IP do servidor."
   },
+  "Ude0W6": {
+    "defaultMessage": "Crie o seu próprio nó de retransmissão Nostr — em poucos minutos, utilizando o seu próprio nome de domínio, com TLS e armazenamento incluídos."
+  },
   "UhIOEO": {
     "defaultMessage": "Precisa da minha identificação?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Serviço de hospedagem do servidor multimídia Blossom — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Gerenciei os retransmissores Nostr. Pagamento com Lightning."
   },
   "XyIrRh": {
     "defaultMessage": "Pagar com Bitcoin"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Análise detalhada dos custos"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "Os métodos de pagamento guardados são usados para efetuar automaticamente o pagamento das renovações um dia antes do término da validade da máquina virtual. Selecione qual deles será o método padrão."
   },
+  "iv8nNj": {
+    "defaultMessage": "Não tem certeza? O <b>strfry</b> é a ferramenta principal — é o que a maioria dos servidores públicos usa. Se este for o seu servidor pessoal e não um servidor comunitário, use o <b>HAVEN</b>; ele também oferece um espaço de armazenamento multimídia Blossom, para que suas imagens e notas fiquem no mesmo local."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "Configure exatamente o que precisa: a CPU, a memória e o armazenamento são configurados de forma independente, podendo optar por SSD ou HDD, em vez de serem limitados a configurações predefinidas."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Quatro implementações de relé, a partir de {price}por mês."
   },
   "jGSUnR": {
     "defaultMessage": "Recebo um endereço IP fixo?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "Esta máquina virtual utiliza um modelo personalizado e não pode ser atualizada. Apenas as máquinas virtuais que utilizam modelos padrão suportam atualizações."
   },
-  "o8mtsy": {
-    "defaultMessage": "Configure o seu próprio nó de retransmissão Nostr a partir de {price}/mês — strfry, nostr-rs-relay, Pyramid ou HAVEN; configuração em minutos, utilizando o próprio nome de domínio, com TLS e armazenamento incluídos."
-  },
   "o9lOhm": {
     "defaultMessage": "Suporte para chave pública: {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Execute o seu nó Lightning num servidor virtual privado (VPS) otimizado para essa finalidade."
   },
+  "tiWuG8": {
+    "defaultMessage": "Implante o seu repetidor – a partir de {price} por mês"
+  },
   "tngc9N": {
     "defaultMessage": "CIDR de origem"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "Ligado(s)/Conectado(s)"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês, sem taxa de configuração."
+  },
   "wo868v": {
     "defaultMessage": "Iniciar sessão com uma chave Nostr ou bunker →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "Ainda não foram efetuados pagamentos."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Gerenciamento do serviço de hospedagem do relay Nostr."
   },
   "zAN0RF": {
     "defaultMessage": "Mensagens diretas criptografadas"

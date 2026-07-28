@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Entschlüsselte Nachricht:"
   },
-  "4bBT6e": {
-    "defaultMessage": "Vier verschiedene Relay-Implementierungen. Zahlung mit Lightning möglich."
-  },
   "4cMKIO": {
     "defaultMessage": "Wiederkehrende Abonnements, die sicherstellen, dass Ihre Dienste aktiv bleiben."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH-Schlüssel"
+  },
+  "7EjXDp": {
+    "defaultMessage": "Gemeinsame Arbeitsbereiche für Mitarbeiter und Agenten."
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "Die genaue Höhe der Steuer wird Ihnen bei der Zahlung mitgeteilt."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Nostr-Relay-Hosting – strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "Die {records} verweisen direkt auf IP-Adressen und müssen möglicherweise aktualisiert werden, falls sich diese ändern."
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Eingehend"
   },
-  "H7JNFX": {
-    "defaultMessage": "Vier verschiedene Implementierungen von Relais, beginnend mit {price}pro Monat, ohne Einrichtungskosten."
-  },
   "H9Az5Z": {
     "defaultMessage": "Abrechnungsdetails"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Setzen Sie Ihre Relais ein – ab {price}pro Monat"
-  },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "Das Abonnement für diese Bereitstellung ist abgelaufen, und die Kapazität wurde auf null reduziert. Ihre Daten sind weiterhin vorhanden – verlängern Sie das Abonnement, um die Bereitstellung wieder zu aktivieren."
+  },
+  "JcmOUh": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay ab {price} pro Monat, mit einer Laufzeit in Minuten auf dem eigenen Hostnamen, inklusive TLS und Speicherplatz."
   },
   "JiCBWy": {
     "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Ja. Richten Sie einen CNAME-Eintrag ein, der auf den Hostnamen Ihres Relay-Servers verweist. Sobald die DNS-Auflösung erfolgt ist, stellen wir automatisch ein separates Zertifikat aus."
   },
-  "Mw9USY": {
-    "defaultMessage": "Sind Sie sich nicht sicher? <b>strfry</b> ist das Arbeitstier – die meisten öffentlichen Relays verwenden es. <b>HAVEN</b>, wenn dies Ihr persönliches Relay und nicht ein gemeinschaftliches ist; es ist das einzige der vier, das Ihnen auch einen Blossom-Medienserver bietet, sodass Ihre Bilder unter demselben Schlüssel wie Ihre Notizen gespeichert werden."
-  },
   "N2IrpM": {
     "defaultMessage": "Bestätigen"
-  },
-  "N7elAL": {
-    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay – etwa strfry, nostr-rs-relay, Pyramid oder HAVEN – und richten Sie es innerhalb weniger Minuten auf einem eigenen Hostnamen mit TLS und integriertem Speicher ein."
   },
   "NQgbYA": {
     "defaultMessage": "Kontoeinstellungen"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} wird empfohlen – es verfolgt Änderungen der Server-IP-Adresse automatisch."
   },
+  "Ude0W6": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay – die Einrichtung dauert nur wenige Minuten und erfolgt auf Ihrem eigenen Hostnamen mit integriertem TLS und Speicher."
+  },
   "UhIOEO": {
     "defaultMessage": "Benötigen Sie meine Ausweisdokumente?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Blossom Media Server – Hosting – Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Verwaltung von Nostr-Relays. Zahlung mit Lightning möglich."
   },
   "XyIrRh": {
     "defaultMessage": "Mit Bitcoin bezahlen"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Kostenaufschlüsselung"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "Gespeicherte Zahlungsmethoden werden verwendet, um automatische Zahlungen für Verlängerungen einen Tag vor dem Ablauf einer virtuellen Maschine durchzuführen. Wählen Sie die Methode aus, die als Standard festgelegt werden soll."
   },
+  "iv8nNj": {
+    "defaultMessage": "Sind Sie sich nicht sicher? <b>strfry</b> ist das Arbeitspferd – die meisten öffentlichen Relays verwenden es. <b>HAVEN</b>, wenn dies Ihr persönlicher Relay und kein gemeinschaftlicher ist; es bietet Ihnen auch einen Blossom-Medienserver, sodass Ihre Bilder unter demselben Schlüssel wie Ihre Notizen gespeichert werden."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "Konfigurieren Sie genau das, was Sie benötigen – CPU, Arbeitsspeicher und Speicher werden unabhängig voneinander eingestellt; wählen Sie zwischen SSD oder HDD, anstatt auf feste Leistungsklassen beschränkt zu sein."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Vier verschiedene Implementierungen von Relais, beginnend mit {price}pro Monat."
   },
   "jGSUnR": {
     "defaultMessage": "Erhalte ich eine statische IP-Adresse?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "Diese virtuelle Maschine verwendet eine benutzerdefinierte Vorlage und kann nicht aktualisiert werden. Nur virtuelle Maschinen, die Standardvorlagen verwenden, unterstützen Aktualisierungen."
   },
-  "o8mtsy": {
-    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay ab {price}/Monat – strfry, nostr-rs-Relay, Pyramid oder HAVEN, innerhalb von Minuten auf dem eigenen Hostnamen eingerichtet, inklusive TLS und Speicher."
-  },
   "o9lOhm": {
     "defaultMessage": "Unterstützte Public-Key-Adresse: {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Betreiben Sie Ihren Lightning-Knoten auf einem speziell dafür entwickelten virtuellen Privaten Server (VPS)."
   },
+  "tiWuG8": {
+    "defaultMessage": "Setzen Sie Ihre Relais ein – ab {price} pro Monat"
+  },
   "tngc9N": {
     "defaultMessage": "Quell-CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "Verknüpft"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat, ohne Einrichtungskosten."
+  },
   "wo868v": {
     "defaultMessage": "Mit Nostr-Schlüssel oder Bunker anmelden →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "Bisher wurden keine Zahlungen geleistet."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Verwaltung des Hostings für Nostr-Relays."
   },
   "zAN0RF": {
     "defaultMessage": "Ende-zu-Ende-verschlüsselte Direktnachrichten"

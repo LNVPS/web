@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Message déchiffré :"
   },
-  "4bBT6e": {
-    "defaultMessage": "Quatre implémentations de relais. Paiement accepté avec Lightning."
-  },
   "4cMKIO": {
     "defaultMessage": "Abonnements renouvelés qui maintiennent vos services actifs."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Clés SSH"
+  },
+  "7EjXDp": {
+    "defaultMessage": "Espaces de travail partagés pour les employés et les représentants."
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "Le montant exact de la taxe vous sera confirmé au moment du paiement."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Hébergement de relais Nostr : strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "Les {records} point directement vers les adresses IP et il peut être nécessaire de les mettre à jour si celles-ci changent."
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Entrant/entrant(e)"
   },
-  "H7JNFX": {
-    "defaultMessage": "Quatre implémentations de relais, à partir de {price}par mois, sans frais d’installation."
-  },
   "H9Az5Z": {
     "defaultMessage": "Détails de la facturation"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum : {min} Go"
   },
-  "IzzIw7": {
-    "defaultMessage": "Déployez votre relais — à partir de {price}par mois"
-  },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "L’abonnement de ce déploiement a expiré et il a été réduit à zéro. Vos données sont toujours disponibles ici ; renouvelez votre abonnement pour le relancer."
+  },
+  "JcmOUh": {
+    "defaultMessage": "Exploitez votre propre relais Nostr à partir de {price} par mois, avec une augmentation en minutes sur son propre nom d’hôte, le chiffrement TLS et l’espace de stockage inclus."
   },
   "JiCBWy": {
     "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Oui. Configurez un enregistrement CNAME qui pointe vers le nom d’hôte de votre serveur relais. Nous émettons automatiquement un certificat distinct une fois que la résolution DNS est effectuée."
   },
-  "Mw9USY": {
-    "defaultMessage": "Vous n’êtes pas sûr(e) ? <b>strfry</b> est l’outil de base – c’est celui que la plupart des relais publics utilisent. <b>HAVEN</b>, si ce relais est personnel plutôt qu’un relais communautaire ; il s’agit du seul des quatre qui vous offre également un espace de stockage multimédia Blossom, afin que vos images et vos notes soient stockées sous la même clé."
-  },
   "N2IrpM": {
     "defaultMessage": "Confirmer"
-  },
-  "N7elAL": {
-    "defaultMessage": "Mettez en place votre propre relais Nostr – strfry, nostr-rs-relay, Pyramid ou HAVEN – en quelques minutes, en l’hébergeant sur votre propre nom de domaine, avec TLS et espace de stockage inclus."
   },
   "NQgbYA": {
     "defaultMessage": "Paramètres du compte"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} est recommandé, car il suit automatiquement les changements d’adresse IP du serveur."
   },
+  "Ude0W6": {
+    "defaultMessage": "Mettez en place votre propre relais Nostr : l’opération ne prend que quelques minutes et peut se faire sur votre propre nom de domaine, avec le chiffrement TLS et l’espace de stockage inclus."
+  },
   "UhIOEO": {
     "defaultMessage": "Avez-vous besoin de mes pièces d’identité ?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Hébergement du serveur multimédia Blossom — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Gestion des relais Nostr. Paiement accepté via Lightning."
   },
   "XyIrRh": {
     "defaultMessage": "Payer en Bitcoin"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Répartition des coûts"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM : {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "Les méthodes de paiement enregistrées sont utilisées pour effectuer automatiquement le renouvellement un jour avant l’expiration de la machine virtuelle. Choisissez celle qui doit être définie par défaut."
   },
+  "iv8nNj": {
+    "defaultMessage": "Vous n’êtes pas sûr(e) ? <b>strfry</b> est l’outil principal : c’est celui que la plupart des relais publics utilisent. <b>HAVEN</b> si c’est votre relais personnel plutôt qu’un relais communautaire ; il vous donne également accès à un espace de stockage multimédia Blossom, ce qui permet de regrouper vos images et vos notes sous la même clé."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "Configurez précisément ce dont vous avez besoin : le processeur, la mémoire et le stockage sont configurés indépendamment, avec des options SSD ou HDD plutôt que des configurations prédéfinies."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Quatre implémentations de relais, à partir de {price}par mois."
   },
   "jGSUnR": {
     "defaultMessage": "Est-ce que je vais avoir une adresse IP statique ?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "Cette machine virtuelle utilise un modèle personnalisé et ne peut pas être mise à niveau. Seules les machines virtuelles utilisant des modèles standard prennent en charge les mises à niveau."
   },
-  "o8mtsy": {
-    "defaultMessage": "Lancez votre propre relais Nostr à partir de {price}/mois — strfry, nostr-rs-relay, Pyramid ou HAVEN, installation en quelques minutes sur son propre nom d’hôte, avec TLS et espace de stockage inclus."
-  },
   "o9lOhm": {
     "defaultMessage": "Clé publique prise en charge : {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Exécutez votre nœud Lightning sur un serveur virtuel privé (VPS) spécialement conçu à cet effet."
   },
+  "tiWuG8": {
+    "defaultMessage": "Déployez votre relais – à partir de {price} par mois"
+  },
   "tngc9N": {
     "defaultMessage": "CIDR source"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "Lié(e)"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois, sans frais d’installation."
+  },
   "wo868v": {
     "defaultMessage": "Se connecter avec une clé Nostr ou un bunker →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Gestion de l’hébergement des relais Nostr."
   },
   "zAN0RF": {
     "defaultMessage": "Messages directs chiffrés."

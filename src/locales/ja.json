@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
   },
-  "4bBT6e": {
-    "defaultMessage": "4つのリレー実装。ライトニングで支払い。"
-  },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
+  },
+  "7EjXDp": {
+    "defaultMessage": "人とAIエージェントが共有できるワークスペース"
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "正確な税額は、お支払い時に確認されます。"
-  },
-  "BEs2cn": {
-    "defaultMessage": "Nostrリレーのホスティング — strfry、nostr-rs-relay、Pyramid、HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "{records}にはIPアドレスが直接記載されているため、IPアドレスが変更された場合は更新が必要になる場合があります。"
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "インバウンド"
   },
-  "H7JNFX": {
-    "defaultMessage": "4つのリレー実装について。 {price}月額料金で、初期費用はかかりません。"
-  },
   "H9Az5Z": {
     "defaultMessage": "お支払いに関する詳細"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "最小要件：{min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "リレーを配置してください — から {price}月"
-  },
   "J+dIsA": {
     "defaultMessage": "購読"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、再開するにはサブスクリプションを更新してください。"
+  },
+  "JcmOUh": {
+    "defaultMessage": "あなた自身のNostrリレーを、ここから運用しましょう。 {price} 1か月に付き、独自のホスト名でTLSとストレージを含む状態で数分間利用できます。"
   },
   "JiCBWy": {
     "defaultMessage": "選択した鍵で SSH 接続します。"
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "はい。CNAMEレコードを作成し、リレーサーバーのホスト名に設定してください。DNSが解決されると、自動的に別の証明書を発行します。"
   },
-  "Mw9USY": {
-    "defaultMessage": "よくわからない？<0xE2><0x80><0x8A><b>strfry</b>は、最も一般的な公開リレーで使われる設定です。<0xE2><0x80><0x8A>もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。4つの設定の中で、Blossomメディアストアも提供されるのはこれだけなので、画像とメモを同じキーの下にまとめて管理できます。"
-  },
   "N2IrpM": {
     "defaultMessage": "確認する。"
-  },
-  "N7elAL": {
-    "defaultMessage": "独自のNostrリレーを構築しましょう。strfry、nostr-rs-relay、Pyramid、またはHAVENなどを、TLSとストレージを組み合わせて、独自のホスト名で数分以内に起動できます。"
   },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname}をお勧めします。サーバーのIPアドレスの変更を自動的に追跡します。"
   },
+  "Ude0W6": {
+    "defaultMessage": "独自のNostrリレーを構築し、TLSとストレージを含め、数分で独自のホスト名上に立ち上げることができます。"
+  },
   "UhIOEO": {
     "defaultMessage": "私の身分証明書が必要ですか？"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Blossomメディアサーバーのホスティング — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Nostrリレーを管理。支払いにはライトニングネットワークを使用。"
   },
   "XyIrRh": {
     "defaultMessage": "ビットコインで支払う"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "費用内訳"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price} 1か月に。"
   },
   "cbZ7Ix": {
     "defaultMessage": "VM：{name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "保存された支払い方法を使用して、仮想マシンの有効期限の1日前に行われる自動更新の支払いを処理します。デフォルトで使用するものを選択してください。"
   },
+  "iv8nNj": {
+    "defaultMessage": "よくわからない？ <b>strfry</b>は、最も一般的な公開リレーで使われる設定です。 もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。Blossomメディアストアも提供されるので、画像とメモを同じキーの下にまとめて管理できます。"
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "必要なものを正確に構築できます。CPU、メモリ、ストレージはそれぞれ独立して構成でき、SSDまたはHDDを選択できるため、固定されたグレードに縛られることはありません。"
-  },
-  "jCOJxe": {
-    "defaultMessage": "4つの異なるリレー実装方法について。 {price}月あたり。"
   },
   "jGSUnR": {
     "defaultMessage": "固定IPアドレスは割り当てられますか？"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
   },
-  "o8mtsy": {
-    "defaultMessage": "ここから独自のNostrリレーを起動 {price}1か月に1回 — strfry、nostr-rs-relay、Pyramid、またはHAVENを、TLSとストレージを組み込み、独自のホスト名で数分以内に起動します。"
-  },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Lightningノードを、その目的に特化したVPSで運用しましょう。"
   },
+  "tiWuG8": {
+    "defaultMessage": "リレーを配置してください。 {price} 1か月あたり"
+  },
   "tngc9N": {
     "defaultMessage": "送信元CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "リンク済み"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}〜から {price} 月額料金制で、初期費用はかかりません。"
+  },
   "wo868v": {
     "defaultMessage": "Nostrキーまたはバンカーでログイン →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"
+  },
+  "z4e/Em": {
+    "defaultMessage": "Nostrリレーのホスティングを管理。"
   },
   "zAN0RF": {
     "defaultMessage": "暗号化されたダイレクトメッセージ"

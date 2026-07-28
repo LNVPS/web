@@ -221,9 +221,6 @@
   "4X/Ixq": {
     "defaultMessage": "Şifresi çözülmüş mesaj:"
   },
-  "4bBT6e": {
-    "defaultMessage": "Dört farklı röle uygulaması. Lightning ile ödeme yapın."
-  },
   "4cMKIO": {
     "defaultMessage": "Hizmetlerinizin aktif kalmasını sağlayan düzenli abonelik planları."
   },
@@ -319,6 +316,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Anahtarları"
+  },
+  "7EjXDp": {
+    "defaultMessage": "İnsanlar ve temsilciler için ortak çalışma alanları"
   },
   "7Iag/E": {
     "defaultMessage": "Total due now"
@@ -505,9 +505,6 @@
   },
   "BD6I/Z": {
     "defaultMessage": "Kesin vergi miktarı, ödeme yaptığınızda belirlenir."
-  },
-  "BEs2cn": {
-    "defaultMessage": "Nostr Röle Barındırma — strfry, nostr-rs-röle, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "{records} doğrudan IP adreslerini gösterir ve bu adresler değişirse güncellenmesi gerekebilir"
@@ -755,9 +752,6 @@
   "H4Ucn0": {
     "defaultMessage": "Gelen"
   },
-  "H7JNFX": {
-    "defaultMessage": "Dört farklı röle uygulaması, şuradan {price}/ay, kurulum ücreti yok."
-  },
   "H9Az5Z": {
     "defaultMessage": "Fatura detayları"
   },
@@ -818,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "En az: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Rölenizi konuşlandırın — şu konumdan: {price}ayda"
-  },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
   },
@@ -841,6 +832,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "Bu uygulamanın aboneliği sona erdi ve ölçeklendirme sıfıra düşürüldü. Verileriniz hala burada bulunuyor; uygulamayı yeniden başlatmak için aboneliğinizi yenileyin."
+  },
+  "JcmOUh": {
+    "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price} Ayda, kendi alan adında ve TLS ile depolama hizmeti dahil olmak üzere, dakika cinsinden kullanım süresiyle."
   },
   "JiCBWy": {
     "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
@@ -941,14 +935,8 @@
   "MqbiJp": {
     "defaultMessage": "Evet. CNAME kaydını, aktarım sunucunuzun ana bilgisayar adına yönlendirin. DNS çözümlemesi tamamlandığında, bu kayıt için otomatik olarak ayrı bir sertifika düzenleyeceğiz."
   },
-  "Mw9USY": {
-    "defaultMessage": "Emin değil misiniz? <b>strfry</b> en çok kullanılan ve güvenilir yöntemdir; çoğu genel amaçlı röle bu şekilde çalışır. Eğer bu kişisel bir röle ise (topluluk rölesi değil), <b>HAVEN</b> kullanın; dört seçenekten yalnızca bu, size aynı zamanda Blossom medya deposu da sunar, böylece resimleriniz notlarınızla aynı anahtar altında saklanır."
-  },
   "N2IrpM": {
     "defaultMessage": "Onayla"
-  },
-  "N7elAL": {
-    "defaultMessage": "Kendi Nostr rölenizi çalıştırın: strfry, nostr-rs-relay, Pyramid veya HAVEN. Bunları, TLS ve depolama alanı dahil olmak üzere, kendi alan adınızda birkaç dakika içinde kolayca kurabilirsiniz."
   },
   "NQgbYA": {
     "defaultMessage": "Hesap Ayarları"
@@ -1256,6 +1244,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} önerilir; sunucu IP adresindeki değişiklikleri otomatik olarak takip eder."
   },
+  "Ude0W6": {
+    "defaultMessage": "Kendi Nostr rölenizi çalıştırın; birkaç dakika içinde kendi alan adınızda, TLS ve depolama alanı dahil olmak üzere kullanıma hazır hale getirin."
+  },
   "UhIOEO": {
     "defaultMessage": "Kimliğime ihtiyacınız var mı?"
   },
@@ -1351,6 +1342,9 @@
   },
   "XdLEro": {
     "defaultMessage": "Blossom Medya Sunucusu Barındırma — Route96"
+  },
+  "XdcFgv": {
+    "defaultMessage": "Nostr rölelerini yönetti. Ödemeler Lightning ile yapıldı."
   },
   "XyIrRh": {
     "defaultMessage": "Bitcoin ile öde"
@@ -1498,6 +1492,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Maliyetlerin Detaylı Dökümü"
+  },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} ayda."
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
@@ -1715,6 +1712,9 @@
   "iuQLCB": {
     "defaultMessage": "Kaydedilmiş ödeme yöntemleri, sanal makinenin (VM) süresinin dolmasına bir gün kala otomatik olarak yenileme işlemini gerçekleştirmek için kullanılır. Varsayılan olarak kullanılacak olanı seçin."
   },
+  "iv8nNj": {
+    "defaultMessage": "Emin değil misiniz? <b>strfry</b>, işin yükünü çeken ana uygulamadır; çoğu genel amaçlı röle bu uygulama ile çalışır. Eğer bu kişisel bir röle ise (topluluk rölesi değil), <b>HAVEN</b> kullanın; bu uygulama aynı zamanda size Blossom medya deposu da sağlar, böylece resimleriniz notlarınızla aynı anahtar altında saklanır."
+  },
   "j4RCJW": {
     "defaultMessage": "BECERİLER.md"
   },
@@ -1726,9 +1726,6 @@
   },
   "j9/hqS": {
     "defaultMessage": "İhtiyacınız olanı tam olarak oluşturun; işlemci, bellek ve depolama alanı birbirinden bağımsız olarak yapılandırılır, böylece sabit kategorlara zorlanmak yerine istediğiniz gibi özelleştirebilirsiniz (SSD veya HDD seçenekleriyle)."
-  },
-  "jCOJxe": {
-    "defaultMessage": "Dört farklı röle uygulaması, şuradan {price}ayda."
   },
   "jGSUnR": {
     "defaultMessage": "Sabit bir IP adresi alacak mıyım?"
@@ -1934,9 +1931,6 @@
   "o2AdrJ": {
     "defaultMessage": "Bu sanal makine, özel bir şablon kullanır ve yükseltilemez. Yalnızca standart şablonlar kullanan sanal makineler yükseltmeyi destekler."
   },
-  "o8mtsy": {
-    "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price}/ay — strfry, nostr-rs-relay, Pyramid veya HAVEN, kendi alan adında birkaç dakika içinde TLS ve depolama alanı ile birlikte kurulabilir."
-  },
   "o9lOhm": {
     "defaultMessage": "Desteklenen genel anahtar: {npub}"
   },
@@ -2114,6 +2108,9 @@
   "tZ+Hzu": {
     "defaultMessage": "Lightning düğümünüzü, özellikle bu amaç için tasarlanmış bir sanal özel sunucuda (VPS) çalıştırın."
   },
+  "tiWuG8": {
+    "defaultMessage": "Rölenizi konuşlandırın — şu konumdan: {price} ayda bir"
+  },
   "tngc9N": {
     "defaultMessage": "Kaynak CIDR"
   },
@@ -2225,6 +2222,9 @@
   "waJLKW": {
     "defaultMessage": "Bağlantılı"
   },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} aylık olarak, kurulum ücreti yok."
+  },
   "wo868v": {
     "defaultMessage": "Nostr anahtarı veya bunker ile giriş yap →"
   },
@@ -2302,6 +2302,9 @@
   },
   "z+hIFs": {
     "defaultMessage": "Henüz hiçbir ödeme yapılmadı."
+  },
+  "z4e/Em": {
+    "defaultMessage": "Nostr Röle Sunucu Hizmetlerini Yönetti"
   },
   "zAN0RF": {
     "defaultMessage": "Şifrelenmiş özel mesajlar"

@@ -187,7 +187,9 @@ export function BlossomServerHostingPage() {
                 },
                 { price: priceText },
               )
-            : formatMessage({ defaultMessage: "Blossom Media Server Hosting" })
+            : formatMessage({
+                defaultMessage: "Blossom Media Server Hosting — Route96",
+              })
         }
         canonical="/blossom-server-hosting"
         description={
@@ -229,12 +231,12 @@ export function BlossomServerHostingPage() {
             down states it, and a figure written in two slots is a figure that
             can be corrected in one of them.
           */}
-          {/* No price, no line: with the catalog unreachable there is nothing
-              here to say, and "no setup fee" on its own is a claim about a row
-              we could not read. */}
-          {priceNode ? (
-            <p className="m-0 font-bold text-cyber-primary">
-              {noSetupFee ? (
+          {/* With the catalog unreachable the line keeps its slot but drops
+              every claim behind it — including "no setup fee", which is a
+              statement about a row we could not read. */}
+          <p className="m-0 font-bold text-cyber-primary">
+            {priceNode ? (
+              noSetupFee ? (
                 <FormattedMessage
                   defaultMessage="{price}/month, no setup fee."
                   values={{ price: priceNode }}
@@ -244,9 +246,11 @@ export function BlossomServerHostingPage() {
                   defaultMessage="{price}/month."
                   values={{ price: priceNode }}
                 />
-              )}
-            </p>
-          ) : null}
+              )
+            ) : (
+              <FormattedMessage defaultMessage="Pay monthly with Lightning." />
+            )}
+          </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
               defaultMessage="Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."

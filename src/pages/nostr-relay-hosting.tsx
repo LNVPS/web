@@ -165,7 +165,10 @@ export function NostrRelayHostingPage() {
                 },
                 { price: priceText },
               )
-            : formatMessage({ defaultMessage: "Nostr Relay Hosting" })
+            : formatMessage({
+                defaultMessage:
+                  "Nostr Relay Hosting — strfry, nostr-rs-relay, Pyramid, HAVEN",
+              })
         }
         canonical="/nostr-relay-hosting"
         description={
@@ -239,7 +242,7 @@ export function NostrRelayHostingPage() {
                 />
               )
             ) : (
-              <FormattedMessage defaultMessage="Four relay implementations." />
+              <FormattedMessage defaultMessage="Four relay implementations. Pay with Lightning." />
             )}
           </p>
           {/*

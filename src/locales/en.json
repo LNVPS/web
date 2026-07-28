@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "Decrypted message:"
   },
+  "4bBT6e": {
+    "defaultMessage": "Four relay implementations. Pay with Lightning."
+  },
   "4cMKIO": {
     "defaultMessage": "Recurring plans that keep your services active."
   },
@@ -496,6 +499,9 @@
   },
   "BD6I/Z": {
     "defaultMessage": "The exact tax is confirmed when you pay."
+  },
+  "BEs2cn": {
+    "defaultMessage": "Nostr Relay Hosting — strfry, nostr-rs-relay, Pyramid, HAVEN"
   },
   "BFqlLP": {
     "defaultMessage": "{records} point directly to IPs and may need updating if they change"
@@ -1196,6 +1202,9 @@
   "TtNbPG": {
     "defaultMessage": "Total per month"
   },
+  "TtrONG": {
+    "defaultMessage": "Pay monthly with Lightning."
+  },
   "TwyMau": {
     "defaultMessage": "Account"
   },
@@ -1234,9 +1243,6 @@
   },
   "UbzBlr": {
     "defaultMessage": "{cname} is recommended — it automatically follows server IP changes"
-  },
-  "Ue1ts1": {
-    "defaultMessage": "Nostr Relay Hosting"
   },
   "UhIOEO": {
     "defaultMessage": "Do you need my identity?"
@@ -1322,9 +1328,6 @@
   "XD6788": {
     "defaultMessage": "Setup fee:"
   },
-  "XDhuE3": {
-    "defaultMessage": "Blossom Media Server Hosting"
-  },
   "XNiOLB": {
     "defaultMessage": "Failed to send message. Please try again."
   },
@@ -1333,6 +1336,9 @@
   },
   "XW9RGA": {
     "defaultMessage": "Do I need an account?"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossom Media Server Hosting — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "Pay with Bitcoin"
@@ -2074,9 +2080,6 @@
   },
   "srgk8m": {
     "defaultMessage": "Sets the currency used for the quote and payment."
-  },
-  "swt4if": {
-    "defaultMessage": "Four relay implementations."
   },
   "sy+pv5": {
     "defaultMessage": "Email"

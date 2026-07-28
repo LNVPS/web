@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
-import { relayApps, relayPrice } from "../utils/relay-catalog";
+import { relayApps, relayPriceFrom } from "../utils/relay-catalog";
 import type { AppsLoaderData } from "../loaders";
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
@@ -62,9 +62,11 @@ export function LightningNodeVpsPage() {
   const { apps } = useLoaderData<AppsLoaderData>();
 
   // The cross-sell quotes the relay apps' price, so read it off the same
-  // catalog rows `/nostr-relay-hosting` reads — including its "only claim it
-  // when all four agree" rule, so the two pages cannot quote different money.
-  const relayCost = relayPrice(relayApps(apps));
+  // catalog rows `/nostr-relay-hosting` reads, through the same helper — the
+  // two pages cannot quote different money. Undefined when the catalog gave us
+  // nothing, and the sentence then drops the figure rather than stating one
+  // the front end cannot verify (`LNVPS/web#67`).
+  const relayCost = relayPriceFrom(relayApps(apps));
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the markup a
   // crawler reads and the text a visitor reads cannot drift. On this page the
@@ -221,20 +223,36 @@ export function LightningNodeVpsPage() {
 
         <Section title={<FormattedMessage defaultMessage="Also on LNVPS" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage
-              defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
-              values={{
-                price: <CostAmount cost={relayCost} converted={false} />,
-                a: (chunks) => (
-                  <Link
-                    to="/nostr-relay-hosting"
-                    className="text-cyber-primary hover:underline"
-                  >
-                    {chunks}
-                  </Link>
-                ),
-              }}
-            />
+            {relayCost ? (
+              <FormattedMessage
+                defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>from {price} a month as a Managed App</a>."
+                values={{
+                  price: <CostAmount cost={relayCost} converted={false} />,
+                  a: (chunks) => (
+                    <Link
+                      to="/nostr-relay-hosting"
+                      className="text-cyber-primary hover:underline"
+                    >
+                      {chunks}
+                    </Link>
+                  ),
+                }}
+              />
+            ) : (
+              <FormattedMessage
+                defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>available as a Managed App</a>."
+                values={{
+                  a: (chunks) => (
+                    <Link
+                      to="/nostr-relay-hosting"
+                      className="text-cyber-primary hover:underline"
+                    >
+                      {chunks}
+                    </Link>
+                  ),
+                }}
+              />
+            )}
           </p>
         </Section>
       </div>

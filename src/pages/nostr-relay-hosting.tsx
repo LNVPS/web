@@ -6,7 +6,11 @@ import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { appJsonLd } from "../utils/app-seo";
 import { formatPriceText } from "../utils/currency";
-import { relayApps, relayPrice } from "../utils/relay-catalog";
+import {
+  relayApps,
+  relayPriceFrom,
+  relaysHaveNoSetupFee,
+} from "../utils/relay-catalog";
 import BytesSize from "../components/bytes";
 import type { AppsLoaderData } from "../loaders";
 
@@ -45,11 +49,21 @@ function Section({
  * is "Best for" — an editorial judgement with no field behind it — and it is
  * keyed by slug so a row's copy stays matched to its relay.
  *
- * Every price on the page — title, meta description, h1, the "all {price}"
- * line and the CTA — is a `{price}` placeholder fed from the catalog, falling
- * back to `RelayFallbackPrice` only when the API is unreachable or the relays
- * disagree. So the copy, the `Offer` markup and the `<title>` cannot disagree,
- * and no locale file carries the number.
+ * Every price on the page — title, meta description, h1, the "from {price}"
+ * line, the table column and the CTA — comes from the catalog, and there is no
+ * constant to fall back to (`LNVPS/web#67`). Two states:
+ *
+ * - **the catalog quoted a price** — the page says "from {price}/month", which
+ *   is `relayPriceFrom`: the lowest of the rows we have. True whether the four
+ *   relays agree or not, so changing one relay's price in admin no longer
+ *   makes this page claim a figure that is nobody's price.
+ * - **no catalog** — no price anywhere on the page, rather than a number
+ *   written into the front end. The page still renders: the copy is prose and
+ *   the h1, the description and the CTA all have price-free wording.
+ *
+ * The per-relay price sits in the table next to the storage, so "from" is
+ * backed by what each relay actually costs instead of leaving a visitor to
+ * guess which one is the cheap one.
  */
 export function NostrRelayHostingPage() {
   const intl = useIntl();
@@ -62,9 +76,15 @@ export function NostrRelayHostingPage() {
   // false` and what a crawler is served. No `interval_type`: the period is
   // part of the sentence around the placeholder, so "/month" and "a month"
   // stay translatable rather than being appended in a fixed position.
-  const price = relayPrice(relays);
-  const priceText = formatPriceText(intl, price);
-  const priceNode = <CostAmount cost={price} converted={false} />;
+  //
+  // Undefined when the catalog gave us nothing to quote, and every use below
+  // is branched on that — a price the front end cannot verify is not stated.
+  const price = relayPriceFrom(relays);
+  const priceText = price ? formatPriceText(intl, price) : undefined;
+  const priceNode = price ? (
+    <CostAmount cost={price} converted={false} />
+  ) : null;
+  const noSetupFee = relaysHaveNoSetupFee(relays);
 
   // "Best for" is the one column with no API field behind it — which relay
   // suits which job is an editorial call. Keyed by catalog slug so it stays
@@ -137,29 +157,44 @@ export function NostrRelayHostingPage() {
   return (
     <>
       <Seo
-        title={formatMessage(
-          {
-            defaultMessage: "Nostr Relay Hosting from {price}/month",
-          },
-          { price: priceText },
-        )}
+        title={
+          priceText
+            ? formatMessage(
+                {
+                  defaultMessage: "Nostr Relay Hosting from {price}/month",
+                },
+                { price: priceText },
+              )
+            : formatMessage({ defaultMessage: "Nostr Relay Hosting" })
+        }
         canonical="/nostr-relay-hosting"
-        description={formatMessage(
-          {
-            defaultMessage:
-              "Run your own Nostr relay for {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
-          },
-          { price: priceText },
-        )}
+        description={
+          priceText
+            ? formatMessage(
+                {
+                  defaultMessage:
+                    "Run your own Nostr relay from {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
+                },
+                { price: priceText },
+              )
+            : formatMessage({
+                defaultMessage:
+                  "Run your own Nostr relay — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
+              })
+        }
         jsonLd={[...relays.map(appJsonLd), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">
           <h1 className="m-0 text-3xl text-cyber-text-bright">
-            <FormattedMessage
-              defaultMessage="Run your own Nostr relay — {price} a month"
-              values={{ price: priceNode }}
-            />
+            {priceNode ? (
+              <FormattedMessage
+                defaultMessage="Run your own Nostr relay — from {price} a month"
+                values={{ price: priceNode }}
+              />
+            ) : (
+              <FormattedMessage defaultMessage="Run your own Nostr relay" />
+            )}
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="No server to rent. No OS to patch. No certificates to renew. Pick a relay, give it a name, pay, and it comes up on its own hostname with TLS already working." />
@@ -169,24 +204,43 @@ export function NostrRelayHostingPage() {
         <Section title={<FormattedMessage defaultMessage="Pick your relay" />}>
           <p className="m-0 text-cyber-text">
             {/*
-              One string, not a derived/literal pair. `price` already carries
-              the "only claim it when all four agree" rule — it is the catalog
-              figure when they do and `RelayFallbackPrice` when they do not —
-              so the copy no longer needs a second `defaultMessage` holding
-              the written number.
+              Three whole strings rather than one sentence assembled from
+              clauses: the price is the catalog's lowest or absent, and "no
+              setup fee" is only said when every relay row really has none.
+              Fragments would translate badly and would let the page make a
+              claim no row backs.
             */}
-            <FormattedMessage
-              defaultMessage="Four relay implementations, all {price}/month, no setup fee."
-              values={{
-                price: (
-                  <CostAmount
-                    cost={price}
-                    converted={false}
-                    className="font-bold text-cyber-primary"
-                  />
-                ),
-              }}
-            />
+            {price ? (
+              noSetupFee ? (
+                <FormattedMessage
+                  defaultMessage="Four relay implementations, from {price}/month, no setup fee."
+                  values={{
+                    price: (
+                      <CostAmount
+                        cost={price}
+                        converted={false}
+                        className="font-bold text-cyber-primary"
+                      />
+                    ),
+                  }}
+                />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="Four relay implementations, from {price}/month."
+                  values={{
+                    price: (
+                      <CostAmount
+                        cost={price}
+                        converted={false}
+                        className="font-bold text-cyber-primary"
+                      />
+                    ),
+                  }}
+                />
+              )
+            ) : (
+              <FormattedMessage defaultMessage="Four relay implementations." />
+            )}
           </p>
           {/*
             The table is the catalog, so it only exists when the catalog does.
@@ -207,8 +261,15 @@ export function NostrRelayHostingPage() {
                     <th className="py-2 pr-4 font-normal">
                       <FormattedMessage defaultMessage="Best for" />
                     </th>
-                    <th className="py-2 font-normal">
+                    <th className="py-2 pr-4 font-normal">
                       <FormattedMessage defaultMessage="Storage" />
+                    </th>
+                    {/* The backing for "from {price}/month" above: with the
+                        price per relay on the page, a relay priced away from
+                        the others reads as its own figure instead of quietly
+                        changing the headline. */}
+                    <th className="py-2 font-normal">
+                      <FormattedMessage defaultMessage="Price" />
                     </th>
                   </tr>
                 </thead>
@@ -222,8 +283,14 @@ export function NostrRelayHostingPage() {
                       <td className="py-2 pr-4 text-cyber-text">
                         {bestFor[a.name]}
                       </td>
-                      <td className="py-2 text-cyber-text">
+                      <td className="py-2 pr-4 text-cyber-text">
                         <BytesSize value={a.storage_bytes} />
+                      </td>
+                      <td className="whitespace-nowrap py-2 text-cyber-text">
+                        <CostAmount
+                          cost={{ currency: a.currency, amount: a.amount }}
+                          converted={false}
+                        />
                       </td>
                     </tr>
                   ))}
@@ -337,10 +404,14 @@ export function NostrRelayHostingPage() {
             to="/apps"
             className="inline-block rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-2 font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
           >
-            <FormattedMessage
-              defaultMessage="Deploy your relay — {price}/month"
-              values={{ price: priceNode }}
-            />
+            {priceNode ? (
+              <FormattedMessage
+                defaultMessage="Deploy your relay — from {price}/month"
+                values={{ price: priceNode }}
+              />
+            ) : (
+              <FormattedMessage defaultMessage="Deploy your relay" />
+            )}
           </Link>
         </div>
       </div>

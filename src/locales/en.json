@@ -524,9 +524,6 @@
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
   },
-  "C8Qzcv": {
-    "defaultMessage": "Four relay implementations, all {price}/month, no setup fee."
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -541,6 +538,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Settings"
+  },
+  "D45G/S": {
+    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>from {price} a month as a Managed App</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -641,6 +641,9 @@
   "F8RFcI": {
     "defaultMessage": "Optional. Appears on the invoices we generate for your payments."
   },
+  "FAmKDH": {
+    "defaultMessage": "Deploy your relay"
+  },
   "FBPfJ7": {
     "defaultMessage": "Hold commission until it reaches this amount before paying out — handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below."
   },
@@ -710,9 +713,6 @@
   "GSye7T": {
     "defaultMessage": "Lightning Address"
   },
-  "GXNK11": {
-    "defaultMessage": "Run your own Nostr relay for {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
-  },
   "Gd6Kbk": {
     "defaultMessage": "Not yet active"
   },
@@ -721,6 +721,9 @@
   },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
+  },
+  "GriRJo": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server. Route96, up in minutes on its own hostname with persistent storage and TLS included."
   },
   "GsCz6b": {
     "defaultMessage": "Use custom sender key"
@@ -739,6 +742,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Inbound"
+  },
+  "H7JNFX": {
+    "defaultMessage": "Four relay implementations, from {price}/month, no setup fee."
   },
   "H9Az5Z": {
     "defaultMessage": "Billing details"
@@ -796,6 +802,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
+  },
+  "IzzIw7": {
+    "defaultMessage": "Deploy your relay — from {price}/month"
   },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
@@ -875,6 +884,9 @@
   "LAMeIi": {
     "defaultMessage": "Contact LNVPS Support"
   },
+  "LCAAZu": {
+    "defaultMessage": "Host your own media server"
+  },
   "LHX6Oo": {
     "defaultMessage": "Expires {exp}"
   },
@@ -916,6 +928,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
+  },
+  "N7elAL": {
+    "defaultMessage": "Run your own Nostr relay — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
   },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
@@ -1109,9 +1124,6 @@
   "SYYlLP": {
     "defaultMessage": "Manage the NIP-05 handles registered on this domain."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "Duration: {duration}"
   },
@@ -1223,6 +1235,9 @@
   "UbzBlr": {
     "defaultMessage": "{cname} is recommended — it automatically follows server IP changes"
   },
+  "Ue1ts1": {
+    "defaultMessage": "Nostr Relay Hosting"
+  },
   "UhIOEO": {
     "defaultMessage": "Do you need my identity?"
   },
@@ -1307,8 +1322,14 @@
   "XD6788": {
     "defaultMessage": "Setup fee:"
   },
+  "XDhuE3": {
+    "defaultMessage": "Blossom Media Server Hosting"
+  },
   "XNiOLB": {
     "defaultMessage": "Failed to send message. Please try again."
+  },
+  "XO5rF3": {
+    "defaultMessage": "Run your own Nostr relay"
   },
   "XW9RGA": {
     "defaultMessage": "Do I need an account?"
@@ -1330,9 +1351,6 @@
   },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "Contact Support"
@@ -1360,6 +1378,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Verified"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>available as a Managed App</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Pay by card"
@@ -1393,9 +1414,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "Add passkey"
-  },
-  "aUuDGj": {
-    "defaultMessage": "Deploy your relay — {price}/month"
   },
   "acrOoz": {
     "defaultMessage": "Continue"
@@ -1613,6 +1631,9 @@
   "gjvoQG": {
     "defaultMessage": "Sizing"
   },
+  "grcWs1": {
+    "defaultMessage": "Run your own Nostr relay — from {price} a month"
+  },
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"
   },
@@ -1685,6 +1706,9 @@
   "j9/hqS": {
     "defaultMessage": "Build exactly what you need — CPU, memory and storage are configured independently, SSD or HDD, rather than forced into fixed tiers."
   },
+  "jCOJxe": {
+    "defaultMessage": "Four relay implementations, from {price}/month."
+  },
   "jGSUnR": {
     "defaultMessage": "Do I get a static IP?"
   },
@@ -1739,9 +1763,6 @@
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "Add SSH Key"
   },
@@ -1753,6 +1774,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Address Line 1"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}/month."
   },
   "ku+mDU": {
     "defaultMessage": "State"
@@ -1889,8 +1913,8 @@
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
-  "o2v6Fy": {
-    "defaultMessage": "Run your own Nostr relay — {price} a month"
+  "o8mtsy": {
+    "defaultMessage": "Run your own Nostr relay from {price}/month — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included."
   },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
@@ -1988,14 +2012,14 @@
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
-  "rOtXKf": {
-    "defaultMessage": "Running a Nostr relay too? That one does not need a whole server — it is <a>{price} a month as a Managed App</a>."
-  },
   "rbrahO": {
     "defaultMessage": "Close"
   },
   "rieTwF": {
     "defaultMessage": "Expired on"
+  },
+  "rneMhE": {
+    "defaultMessage": "Deploy Route96"
   },
   "rr0r/W": {
     "defaultMessage": "<b>Tor is permitted.</b> Run your node over Tor if you want to — we do not block it, and we do not use Google captchas."
@@ -2050,6 +2074,9 @@
   },
   "srgk8m": {
     "defaultMessage": "Sets the currency used for the quote and payment."
+  },
+  "swt4if": {
+    "defaultMessage": "Four relay implementations."
   },
   "sy+pv5": {
     "defaultMessage": "Email"

@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "はい。これはあなたのコンピューターです。好きなものをインストールしてください。"
   },
+  "+H6Rvj": {
+    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用して {price}1か月に1回。Route96は、独自のホスト名を使用して数分で起動し、永続ストレージとTLSが組み込まれています。"
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
@@ -101,6 +104,9 @@
   "1M3SKY": {
     "defaultMessage": "ご質問や問題について、できるだけ詳しくご説明ください。"
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} 永続ストレージに関して {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 時間} other{# 時間}} {m,plural,one{# 分} other{# 分}}"
   },
@@ -124,6 +130,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "請求、更新、および通知"
+  },
+  "24piVc": {
+    "defaultMessage": "必要であれば、独自のドメインを使用できます。CNAMEレコードをリレーサーバーに設定すると、デフォルトのホスト名とともに、独自の証明書を使用してサービスを提供します。検証の手続きは不要で、DNSが解決されると証明書が発行されます。"
   },
   "2QrTo0": {
     "defaultMessage": "新しいIPアドレス範囲の割り当て依頼"
@@ -151,6 +160,9 @@
   },
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
+  },
+  "375584": {
+    "defaultMessage": "支払が必要です。"
   },
   "3GLHv9": {
     "defaultMessage": "認証"
@@ -208,6 +220,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
+  },
+  "4bBT6e": {
+    "defaultMessage": "4つのリレー実装。ライトニングで支払い。"
   },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
@@ -319,6 +334,9 @@
   },
   "7agV2X": {
     "defaultMessage": "リレー"
+  },
+  "7bTzvm": {
+    "defaultMessage": "セットアップ — 通常、1分程度で完了します。セットアップが完了すると、エンドポイントが表示されます。"
   },
   "7fGyF+": {
     "defaultMessage": "消去して再インストール"
@@ -482,6 +500,9 @@
   "BD6I/Z": {
     "defaultMessage": "正確な税額は、お支払い時に確認されます。"
   },
+  "BEs2cn": {
+    "defaultMessage": "Nostrリレーのホスティング — strfry、nostr-rs-relay、Pyramid、HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "{records}にはIPアドレスが直接記載されているため、IPアドレスが変更された場合は更新が必要になる場合があります。"
   },
@@ -523,6 +544,9 @@
   },
   "D3idYv": {
     "defaultMessage": "設定"
+  },
+  "D45G/S": {
+    "defaultMessage": "Nostrのリレーも運営しているのですね？あれは、専用のサーバー全体を必要としません。 <a>から {price} 1か月間、マネージドアプリとして利用</a>。"
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -623,6 +647,9 @@
   "F8RFcI": {
     "defaultMessage": "任意項目。お客様への請求書に表示されます。"
   },
+  "FAmKDH": {
+    "defaultMessage": "リレーを配置する。"
+  },
   "FBPfJ7": {
     "defaultMessage": "この金額に達するまで手数料を保留し、その後で支払うように設定します。少額の支払いを避けるために便利です。空白のままにすると、システムで設定された最小値が使用されます。必要に応じて値を高くすることはできますが、最小値より低くすることはできません。"
   },
@@ -692,9 +719,6 @@
   "GSye7T": {
     "defaultMessage": "ライトニングアドレス"
   },
-  "GXNK11": {
-    "defaultMessage": "独自のNostrリレーを月額{price}で運用できます。strfry、nostr-rs-relay、Pyramid、HAVENなどのソフトウェアを使用すれば、TLSとストレージ込みで、数分以内に独自のホスト名で簡単にセットアップできます。"
-  },
   "Gd6Kbk": {
     "defaultMessage": "まだ有効になっていません。"
   },
@@ -703,6 +727,9 @@
   },
   "GqRat5": {
     "defaultMessage": "ご注文を完了するには、お客様のメールアドレスをご確認ください。"
+  },
+  "GriRJo": {
+    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用しましょう。Route96は、独自のホスト名で数分で起動でき、永続ストレージとTLSが組み込まれています。"
   },
   "GsCz6b": {
     "defaultMessage": "カスタム送信者キーを使用する"
@@ -721,6 +748,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "インバウンド"
+  },
+  "H7JNFX": {
+    "defaultMessage": "4つのリレー実装について。 {price}月額料金で、初期費用はかかりません。"
   },
   "H9Az5Z": {
     "defaultMessage": "お支払いに関する詳細"
@@ -752,6 +782,9 @@
   "ID2dFf": {
     "defaultMessage": "まだNWCウォレットは登録されていません。報酬を受け取るために、以下の手順でウォレットを登録してください。"
   },
+  "IDpruN": {
+    "defaultMessage": "展開中"
+  },
   "ILTAun": {
     "defaultMessage": "仮想マシンのプロビジョニングを行っています。通常、1分から2分程度かかります。"
   },
@@ -776,6 +809,9 @@
   "Iz4veS": {
     "defaultMessage": "最小要件：{min} GB"
   },
+  "IzzIw7": {
+    "defaultMessage": "リレーを配置してください — から {price}月"
+  },
   "J+dIsA": {
     "defaultMessage": "購読"
   },
@@ -793,6 +829,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPSのサービス状況と稼働時間"
+  },
+  "JVZcdC": {
+    "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、サブスクリプションを更新して、再度開始してください。"
   },
   "JiCBWy": {
     "defaultMessage": "選択した鍵で SSH 接続します。"
@@ -851,11 +890,11 @@
   "LAMeIi": {
     "defaultMessage": "LNVPSサポートにお問い合わせください。"
   },
+  "LCAAZu": {
+    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。"
+  },
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
-  },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "更新日："
@@ -875,8 +914,14 @@
   "LwGAe6": {
     "defaultMessage": "また、LNVPSでも。"
   },
+  "MJ2jZQ": {
+    "defaultMessage": "合計"
+  },
   "MTnSwY": {
     "defaultMessage": "税込み"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} 合計で。快適な個人的なメディアサーバーを構築する場合、さらに容量が必要であれば、Route96を自分でインストールしたVPSを利用することで、より拡張できます。"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
@@ -889,6 +934,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
+  },
+  "N7elAL": {
+    "defaultMessage": "独自のNostrリレーを構築しましょう。strfry、nostr-rs-relay、Pyramid、またはHAVENなどを、TLSとストレージを組み合わせて、独自のホスト名で数分以内に起動できます。"
   },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
@@ -1082,9 +1130,6 @@
   "SYYlLP": {
     "defaultMessage": "このドメインに登録された NIP-05 ハンドルを管理します。"
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
   },
@@ -1139,6 +1184,9 @@
   "TaUfJI": {
     "defaultMessage": "LNURLを表示"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}月額料金で、初期費用はかかりません。"
+  },
   "Tbo377": {
     "defaultMessage": "請求"
   },
@@ -1153,6 +1201,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "月間の合計額"
+  },
+  "TtrONG": {
+    "defaultMessage": "Lightningで月額料金をお支払いください。"
   },
   "TwyMau": {
     "defaultMessage": "アカウント"
@@ -1238,6 +1289,9 @@
   "VzzYJk": {
     "defaultMessage": "作成する"
   },
+  "W16obH": {
+    "defaultMessage": "{breakdown}、 {storage} 合計で。快適な個人的なメディアサーバーを構築する場合、さらに多くのリソースが必要であれば、Route96を自分でインストールしたVPSを利用することで、さらに拡張できます。"
+  },
   "W8nHSd": {
     "defaultMessage": "FAQ"
   },
@@ -1277,8 +1331,14 @@
   "XNiOLB": {
     "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
   },
+  "XO5rF3": {
+    "defaultMessage": "独自のNostrリレーを運用しましょう。"
+  },
   "XW9RGA": {
     "defaultMessage": "アカウントは必要ですか？"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossomメディアサーバーのホスティング — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "ビットコインで支払う"
@@ -1297,9 +1357,6 @@
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "サポートにお問い合わせください。"
@@ -1327,6 +1384,9 @@
   },
   "Z8971h": {
     "defaultMessage": "確認済み"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "Nostrリレーも運用しているのですね？あれは、専用のサーバーは必要ありません。マネージドアプリとして提供されています。"
   },
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
@@ -1360,9 +1420,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
-  },
-  "aUuDGj": {
-    "defaultMessage": "リレーをデプロイ — 月額{price}"
   },
   "acrOoz": {
     "defaultMessage": "続行してください。"
@@ -1517,6 +1574,9 @@
   "exrlwL": {
     "defaultMessage": "小文字、数字、ハイフンを使用します。これがあなたのサブドメインになります。"
   },
+  "f+jGyB": {
+    "defaultMessage": "削除すると、課金が停止され、デプロイメントとそのボリュームが完全に削除されます。"
+  },
   "f00p/7": {
     "defaultMessage": "アップロードに失敗しました。"
   },
@@ -1547,6 +1607,9 @@
   "fxYCqm": {
     "defaultMessage": "場所：{location}"
   },
+  "g1GUs5": {
+    "defaultMessage": "仮想CPU"
+  },
   "gBvImw": {
     "defaultMessage": "{count} 個のハンドル"
   },
@@ -1573,6 +1636,9 @@
   },
   "gjvoQG": {
     "defaultMessage": "サイズ調整"
+  },
+  "grcWs1": {
+    "defaultMessage": "独自のNostrリレーを運用しましょう {price} 1か月"
   },
   "gtGLdm": {
     "defaultMessage": "手数料{amount}を含む"
@@ -1646,6 +1712,9 @@
   "j9/hqS": {
     "defaultMessage": "必要なものを正確に構築できます。CPU、メモリ、ストレージはそれぞれ独立して構成でき、SSDまたはHDDを選択できるため、固定されたグレードに縛られることはありません。"
   },
+  "jCOJxe": {
+    "defaultMessage": "4つの異なるリレー実装方法について。 {price}月あたり。"
+  },
   "jGSUnR": {
     "defaultMessage": "固定IPアドレスは割り当てられますか？"
   },
@@ -1666,9 +1735,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "設定されていません。— 設定を追加してください。"
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
@@ -1703,9 +1769,6 @@
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
   },
@@ -1717,6 +1780,9 @@
   },
   "kfr95E": {
     "defaultMessage": "住所1行目"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}月あたり。"
   },
   "ku+mDU": {
     "defaultMessage": "州"
@@ -1805,6 +1871,9 @@
   "mznk9z": {
     "defaultMessage": "委員会、手数料"
   },
+  "n7yYXG": {
+    "defaultMessage": "サービス"
+  },
   "n9fdaJ": {
     "defaultMessage": "確認されていません。"
   },
@@ -1813,6 +1882,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "支払い方法"
+  },
+  "nQHBG0": {
+    "defaultMessage": "このデプロイメントに対して料金が支払われ、運用が開始された後は、設定を変更できます。"
   },
   "nWQFic": {
     "defaultMessage": "更新する"
@@ -1847,8 +1919,8 @@
   "o2AdrJ": {
     "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
   },
-  "o2v6Fy": {
-    "defaultMessage": "独自のNostrリレーを運用しましょう。月額{price}です。"
+  "o8mtsy": {
+    "defaultMessage": "ここから独自のNostrリレーを起動 {price}1か月に1回 — strfry、nostr-rs-relay、Pyramid、またはHAVENを、TLSとストレージを組み込み、独自のホスト名で数分以内に起動します。"
   },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
@@ -1894,9 +1966,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "設定されていません。"
-  },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1954,6 +2023,9 @@
   },
   "rieTwF": {
     "defaultMessage": "有効期限："
+  },
+  "rneMhE": {
+    "defaultMessage": "Route96をデプロイします。"
   },
   "rr0r/W": {
     "defaultMessage": "<b>Torの使用は許可されています。</b> 必要であれば、ノードをTor経由で実行してください。当社はその使用を妨げることも、GoogleのCAPTCHAを使用することもしません。"
@@ -2147,9 +2219,6 @@
   "x0cZXf": {
     "defaultMessage": "アップグレードは利用できません。"
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2234,7 +2303,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
   },
-  "C8Qzcv": {
-    "defaultMessage": "4つのリレー実装方法をご用意。いずれも月額{price}で、初期費用は一切かかりません。"
+  "zzkKCh": {
+    "defaultMessage": "{storage} 永続ストレージ"
   }
 }

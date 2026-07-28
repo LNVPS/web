@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "Sí. Es tu computadora, así que instala lo que quieras."
   },
+  "+H6Rvj": {
+    "defaultMessage": "Ejecute su propio servidor de medios Blossom y NIP-96 para {price}/mes. Route96 se puede implementar en cuestión de minutos en su propio servidor, con almacenamiento persistente y TLS incluido."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{año} other{años}}"
   },
@@ -101,6 +104,9 @@
   "1M3SKY": {
     "defaultMessage": "Por favor, describa su pregunta o problema con detalle."
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} de almacenamiento persistente — {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# hora} other{# horas}} {m,plural,one{# min.} other{# min.}}"
   },
@@ -154,6 +160,9 @@
   },
   "36aVfS": {
     "defaultMessage": "Mensaje directo de Nostr."
+  },
+  "375584": {
+    "defaultMessage": "Requiere pago."
   },
   "3GLHv9": {
     "defaultMessage": "autenticar"
@@ -211,6 +220,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "Mensaje descifrado:"
+  },
+  "4bBT6e": {
+    "defaultMessage": "Cuatro implementaciones de retransmisión. Pague con Lightning."
   },
   "4cMKIO": {
     "defaultMessage": "Planes de pago periódico que mantienen activos sus servicios."
@@ -322,6 +334,9 @@
   },
   "7agV2X": {
     "defaultMessage": "Relevo."
+  },
+  "7bTzvm": {
+    "defaultMessage": "Configuración: este proceso suele tardar un minuto. El punto final aparece una vez que se está ejecutando."
   },
   "7fGyF+": {
     "defaultMessage": "Borrar y reinstalar"
@@ -485,6 +500,9 @@
   "BD6I/Z": {
     "defaultMessage": "El importe exacto del impuesto se confirma cuando realiza el pago."
   },
+  "BEs2cn": {
+    "defaultMessage": "Alojamiento de relés de Nostr: strfry, nostr-rs-relay, Pyramid, HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "Los {records} apuntan directamente a las direcciones IP y es posible que deban actualizarse si estas cambian."
   },
@@ -526,6 +544,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Configuración"
+  },
+  "D45G/S": {
+    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, es... <a>desde {price} un mes como aplicación gestionada</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -626,6 +647,9 @@
   "F8RFcI": {
     "defaultMessage": "Opcional. Aparece en las facturas que generamos para sus pagos."
   },
+  "FAmKDH": {
+    "defaultMessage": "Implemente su repetidor."
+  },
   "FBPfJ7": {
     "defaultMessage": "Mantenga la comisión hasta que alcance esta cantidad antes de realizar el pago; esto es útil en la cadena de bloques para evitar pagos mínimos. Deje este campo en blanco para utilizar el mínimo del sistema; puede aumentarlo, pero no disminuirlo."
   },
@@ -695,9 +719,6 @@
   "GSye7T": {
     "defaultMessage": "Dirección Lightning"
   },
-  "GXNK11": {
-    "defaultMessage": "Pon en marcha tu propio servidor de retransmisión Nostr por solo {price} al mes: strfry, nostr-rs-relay, Pyramid o HAVEN. Puedes configurarlo en cuestión de minutos en tu propio nombre de dominio, con TLS y almacenamiento incluidos."
-  },
   "Gd6Kbk": {
     "defaultMessage": "Aún no está activo."
   },
@@ -706,6 +727,9 @@
   },
   "GqRat5": {
     "defaultMessage": "Por favor, verifique su dirección de correo electrónico para completar su pedido."
+  },
+  "GriRJo": {
+    "defaultMessage": "Instala y gestiona tu propio servidor de medios Blossom y NIP-96. Route96 se puede configurar en cuestión de minutos en su propio nombre de dominio, con almacenamiento persistente y TLS incluido."
   },
   "GsCz6b": {
     "defaultMessage": "Utilice una clave de remitente personalizada."
@@ -724,6 +748,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Entrante"
+  },
+  "H7JNFX": {
+    "defaultMessage": "Cuatro implementaciones de retransmisión, desde {price}/mes, sin cargo por configuración."
   },
   "H9Az5Z": {
     "defaultMessage": "Datos de facturación"
@@ -755,6 +782,9 @@
   "ID2dFf": {
     "defaultMessage": "Aún no se ha guardado ninguna billetera de NWC. Agregue una a continuación para recibir los pagos."
   },
+  "IDpruN": {
+    "defaultMessage": "Implementando"
+  },
   "ILTAun": {
     "defaultMessage": "Su máquina virtual está en proceso de configuración. Normalmente, este proceso tarda uno o dos minutos."
   },
@@ -779,6 +809,9 @@
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
+  "IzzIw7": {
+    "defaultMessage": "Implemente su sistema de retransmisión — desde {price}/mes"
+  },
   "J+dIsA": {
     "defaultMessage": "Suscripciones"
   },
@@ -796,6 +829,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Estado del servicio LNVPS y tiempo de actividad"
+  },
+  "JVZcdC": {
+    "defaultMessage": "La suscripción de esta implementación ha caducado y se ha reducido a cero. Sus datos siguen aquí; renueve la suscripción para volver a ponerla en marcha."
   },
   "JiCBWy": {
     "defaultMessage": "Conéctate por SSH con la clave seleccionada."
@@ -854,11 +890,11 @@
   "LAMeIi": {
     "defaultMessage": "Póngase en contacto con el servicio de asistencia de LNVPS."
   },
+  "LCAAZu": {
+    "defaultMessage": "Aloja tu propio servidor de medios."
+  },
   "LHX6Oo": {
     "defaultMessage": "Fecha de caducidad. {exp}"
-  },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "Se renueva en:"
@@ -878,8 +914,14 @@
   "LwGAe6": {
     "defaultMessage": "También disponible en LNVPS."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Total"
+  },
   "MTnSwY": {
     "defaultMessage": "impuestos incluidos."
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} en total. Para un servidor multimedia personal, esto es suficiente; si necesita más capacidad, puede ampliarla instalando Route96 en un VPS."
   },
   "Mp+zDS": {
     "defaultMessage": "Este componente solo admite pagos con Lightning."
@@ -892,6 +934,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirmar"
+  },
+  "N7elAL": {
+    "defaultMessage": "Instala tu propio relé Nostr: strfry, nostr-rs-relay, Pyramid o HAVEN, y ponlo en funcionamiento en cuestión de minutos, utilizando su propio nombre de dominio, con TLS y almacenamiento incluidos."
   },
   "NQgbYA": {
     "defaultMessage": "Configuración de la cuenta"
@@ -1085,9 +1130,6 @@
   "SYYlLP": {
     "defaultMessage": "Gestiona los handles NIP-05 registrados en este dominio."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "Duración: {duration}"
   },
@@ -1142,6 +1184,9 @@
   "TaUfJI": {
     "defaultMessage": "Mostrar LNURL"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}/mes, sin cargo por configuración."
+  },
   "Tbo377": {
     "defaultMessage": "Facturación"
   },
@@ -1156,6 +1201,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "Total mensual."
+  },
+  "TtrONG": {
+    "defaultMessage": "Pague mensualmente con Lightning."
   },
   "TwyMau": {
     "defaultMessage": "Cuenta"
@@ -1241,6 +1289,9 @@
   "VzzYJk": {
     "defaultMessage": "Crear"
   },
+  "W16obH": {
+    "defaultMessage": "{breakdown} {storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más, puede ampliar la capacidad instalando Route96 en un VPS."
+  },
   "W8nHSd": {
     "defaultMessage": "FAQ"
   },
@@ -1280,8 +1331,14 @@
   "XNiOLB": {
     "defaultMessage": "No se pudo enviar el mensaje. Por favor, inténtelo de nuevo."
   },
+  "XO5rF3": {
+    "defaultMessage": "Gestiona tu propio relé de Nostr."
+  },
   "XW9RGA": {
     "defaultMessage": "¿Necesito crear una cuenta?"
+  },
+  "XdLEro": {
+    "defaultMessage": "Alojamiento de servidores de medios Blossom — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "Pagar con Bitcoin"
@@ -1300,9 +1357,6 @@
   },
   "YWjrby": {
     "defaultMessage": "Solo se enviarán alertas de la cuenta, como el aviso de vencimiento de la máquina virtual. Nunca enviaremos mensajes publicitarios."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "Póngase en contacto con el servicio de asistencia."
@@ -1330,6 +1384,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Verificado"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, ya que está <a>disponible como una aplicación gestionada</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Pagar con tarjeta"
@@ -1363,9 +1420,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "Añadir clave de acceso"
-  },
-  "aUuDGj": {
-    "defaultMessage": "Implemente su repetidor: {price} al mes."
   },
   "acrOoz": {
     "defaultMessage": "Continúe."
@@ -1520,6 +1574,9 @@
   "exrlwL": {
     "defaultMessage": "Letras minúsculas, números y guiones. Esto será tu subdominio."
   },
+  "f+jGyB": {
+    "defaultMessage": "Eliminar una instancia detiene la facturación y elimina de forma permanente la implementación y sus volúmenes."
+  },
   "f00p/7": {
     "defaultMessage": "La carga no se completó."
   },
@@ -1550,6 +1607,9 @@
   "fxYCqm": {
     "defaultMessage": "Ubicación: {location}"
   },
+  "g1GUs5": {
+    "defaultMessage": "CPU virtual"
+  },
   "gBvImw": {
     "defaultMessage": "{count} manijas"
   },
@@ -1576,6 +1636,9 @@
   },
   "gjvoQG": {
     "defaultMessage": "Tallas"
+  },
+  "grcWs1": {
+    "defaultMessage": "Pon en marcha tu propio relé de Nostr, a partir de {price} un mes"
   },
   "gtGLdm": {
     "defaultMessage": "incluido el cargo de procesamiento de {amount}"
@@ -1649,6 +1712,9 @@
   "j9/hqS": {
     "defaultMessage": "Configure exactamente lo que necesitas: la CPU, la memoria y el almacenamiento se configuran de forma independiente; puedes elegir entre un SSD o un disco duro, en lugar de tener que optar por configuraciones predefinidas."
   },
+  "jCOJxe": {
+    "defaultMessage": "Cuatro implementaciones de relé, desde {price}por mes."
+  },
   "jGSUnR": {
     "defaultMessage": "¿Se me asignará una dirección IP estática?"
   },
@@ -1669,9 +1735,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "Ninguno establecido; añada uno."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "Apunte un CNAME de este dominio al nombre de host del despliegue cuando esté asignado. Déjelo vacío para eliminarlo."
@@ -1706,9 +1769,6 @@
   "kLNEaL": {
     "defaultMessage": "Por favor, complete la verificación del CAPTCHA."
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "Añadir clave SSH."
   },
@@ -1720,6 +1780,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Dirección, línea 1"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}/mes."
   },
   "ku+mDU": {
     "defaultMessage": "Estado"
@@ -1808,6 +1871,9 @@
   "mznk9z": {
     "defaultMessage": "Comisión"
   },
+  "n7yYXG": {
+    "defaultMessage": "Servicio"
+  },
   "n9fdaJ": {
     "defaultMessage": "No verificado."
   },
@@ -1816,6 +1882,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Método de pago"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Los ajustes se pueden modificar una vez que se haya realizado el pago por esta implementación y esta esté en funcionamiento."
   },
   "nWQFic": {
     "defaultMessage": "Renovar"
@@ -1850,8 +1919,8 @@
   "o2AdrJ": {
     "defaultMessage": "Esta máquina virtual utiliza una plantilla personalizada y no se puede actualizar. Solo las máquinas virtuales que utilizan plantillas estándar admiten actualizaciones."
   },
-  "o2v6Fy": {
-    "defaultMessage": "Gestiona tu propio servidor de retransmisión de Nostr: {price} al mes."
+  "o8mtsy": {
+    "defaultMessage": "Ejecuta tu propio relé de Nostr desde {price}/mes — strfry, nostr-rs-relay, Pyramid o HAVEN; se configura en cuestión de minutos en su propio nombre de dominio, con TLS y almacenamiento incluidos."
   },
   "o9lOhm": {
     "defaultMessage": "Soporte para la clave pública: {npub}"
@@ -1897,9 +1966,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "No configurado."
-  },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1957,6 +2023,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Fecha de caducidad:"
+  },
+  "rneMhE": {
+    "defaultMessage": "Implementar Route96."
   },
   "rr0r/W": {
     "defaultMessage": "<b>Se permite el uso de Tor.</b> Si lo desea, puede ejecutar su nodo a través de Tor; no lo bloqueamos y tampoco utilizamos los sistemas de verificación de Google (captchas)."
@@ -2150,9 +2219,6 @@
   "x0cZXf": {
     "defaultMessage": "No se puede realizar la actualización."
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2237,7 +2303,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>Tráfico sin límite de uso.</b> Un nodo de enrutamiento intercambia información constantemente. No debería estar controlando un medidor de ancho de banda."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Cuatro implementaciones de retransmisión, todas a {price} al mes, sin cargo por configuración."
+  "zzkKCh": {
+    "defaultMessage": "{storage} de almacenamiento persistente"
   }
 }

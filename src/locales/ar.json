@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "نعم. هذا جهازك، لذا قم بتثبيت ما تريد."
   },
+  "+H6Rvj": {
+    "defaultMessage": "قم بتشغيل خادم الوسائط الخاص بك من نوع Blossom وNIP-96 لـ {price}/شهريًا. يمكن تشغيل Route96 في غضون دقائق على اسم النطاق الخاص به، مع توفير مساحة تخزين دائمة وبروتوكول TLS."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{عام} other{سنوات}}"
   },
@@ -101,6 +104,9 @@
   "1M3SKY": {
     "defaultMessage": "يرجى وصف سؤالك أو المشكلة التي تواجهك بالتفصيل..."
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} من الذاكرة الدائمة — {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# ساعة} other{# ساعات}} {m,plural,one{# دقيقة} other{# دقائق}}"
   },
@@ -124,6 +130,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "الفواتير، والتجديد، والإشعارات"
+  },
+  "24piVc": {
+    "defaultMessage": "يمكنك استخدام نطاقك الخاص إذا أردت ذلك. قم بتوجيه سجل CNAME إلى خادمك، وسنقوم بتوفير الخدمة باستخدام نطاقك الخاص مع شهادة خاصة به. لن تحتاج إلى خطوة تحقق إضافية؛ فسيتم إصدار الشهادة بمجرد أن يتم حل سجل DNS الخاص بك."
   },
   "2QrTo0": {
     "defaultMessage": "طلب تخصيص نطاق عنوان بروتوكول الإنترنت الجديد."
@@ -151,6 +160,9 @@
   },
   "36aVfS": {
     "defaultMessage": "رسالة مباشرة على منصة نوستر."
+  },
+  "375584": {
+    "defaultMessage": "يتطلب دفع المبلغ."
   },
   "3GLHv9": {
     "defaultMessage": "مصادقة"
@@ -208,6 +220,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "الرسالة بعد فك تشفيرها:"
+  },
+  "4bBT6e": {
+    "defaultMessage": "أربعة تطبيقات مختلفة لنظام الترحيل. الدفع باستخدام شبكة لايتنينغ."
   },
   "4cMKIO": {
     "defaultMessage": "خطط اشتراك متجددة تحافظ على استمرار خدماتك."
@@ -319,6 +334,9 @@
   },
   "7agV2X": {
     "defaultMessage": "يُمرِّر/ينقل"
+  },
+  "7bTzvm": {
+    "defaultMessage": "التهيئة — عادةً ما تستغرق دقيقة واحدة. يظهر البرنامج بمجرد تشغيله."
   },
   "7fGyF+": {
     "defaultMessage": "مسح وإعادة التثبيت"
@@ -482,6 +500,9 @@
   "BD6I/Z": {
     "defaultMessage": "يتم تحديد المبلغ الدقيق للضريبة عند الدفع."
   },
+  "BEs2cn": {
+    "defaultMessage": "استضافة شبكة نوستر – ستر فراي، نوستر-آر إس-ريلاي، بيراميد، هيفن."
+  },
   "BFqlLP": {
     "defaultMessage": "{records} يشير مباشرةً إلى عناوين بروتوكول الإنترنت (IP)، وقد يحتاج إلى تحديث في حالة تغييرها."
   },
@@ -523,6 +544,9 @@
   },
   "D3idYv": {
     "defaultMessage": "إعدادات"
+  },
+  "D45G/S": {
+    "defaultMessage": "هل تقوم بتشغيل خادم \"نوستر\" أيضًا؟ هذا الخادم لا يحتاج إلى جهاز كامل — إنه... <a>من {price} شهر واحد كتطبيق مُدار.</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -623,6 +647,9 @@
   "F8RFcI": {
     "defaultMessage": "اختياري. يظهر في الفواتير التي نُصدرها بشأن مدفوعاتك."
   },
+  "FAmKDH": {
+    "defaultMessage": "انشر جهاز الإرسال والاستقبال الخاص بك."
+  },
   "FBPfJ7": {
     "defaultMessage": "احتفظ بالعمولة حتى تصل إلى هذا المبلغ قبل البدء في الدفع؛ هذا مفيد عند استخدام سلسلة الكتل لتجنب عمليات الدفع الصغيرة جدًا. اترك الحقل فارغًا لاستخدام الحد الأدنى للنظام؛ يمكنك زيادته، ولكن لا يمكنك تخفيضه."
   },
@@ -692,9 +719,6 @@
   "GSye7T": {
     "defaultMessage": "عنوان Lightning"
   },
-  "GXNK11": {
-    "defaultMessage": "قم بتشغيل خادم النوسترا الخاص بك مقابل {price} شهريًا — باستخدام strfry أو nostr-rs-relay أو Pyramid أو HAVEN، وقم بإعداده في دقائق معدودة على اسم المضيف الخاص به مع تضمين بروتوكول TLS ومساحة التخزين."
-  },
   "Gd6Kbk": {
     "defaultMessage": "غير نشط بعد."
   },
@@ -703,6 +727,9 @@
   },
   "GqRat5": {
     "defaultMessage": "يرجى التحقق من عنوان بريدك الإلكتروني لإتمام طلبك."
+  },
+  "GriRJo": {
+    "defaultMessage": "قم بتشغيل خادم الوسائط الخاص بك من نوع \"Blossom\" و\"NIP-96\". يمكن إعداد \"Route96\" في غضون دقائق باستخدام اسم النطاق الخاص به، مع توفير مساحة تخزين دائمة وبروتوكول TLS."
   },
   "GsCz6b": {
     "defaultMessage": "استخدم مفتاح المرسل المخصص."
@@ -721,6 +748,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "وارد"
+  },
+  "H7JNFX": {
+    "defaultMessage": "أربعة تطبيقات مختلفة لتقنية التتابع، بدءًا من {price}شهريًا، بدون رسوم إعداد."
   },
   "H9Az5Z": {
     "defaultMessage": "تفاصيل الفاتورة"
@@ -752,6 +782,9 @@
   "ID2dFf": {
     "defaultMessage": "لم يتم حفظ أي محفظة من نوع NWC حتى الآن. أضف واحدة أدناه لتلقي المدفوعات."
   },
+  "IDpruN": {
+    "defaultMessage": "يتم نشره/توزيعه."
+  },
   "ILTAun": {
     "defaultMessage": "يتم حاليًا تجهيز جهازك الافتراضي. عادةً ما تستغرق هذه العملية دقيقة أو دقيقتين."
   },
@@ -776,6 +809,9 @@
   "Iz4veS": {
     "defaultMessage": "الحد الأدنى: {min} جيجابايت"
   },
+  "IzzIw7": {
+    "defaultMessage": "انشر جهاز الإرسال والاستقبال الخاص بك — بدءًا من {price}/شهر"
+  },
   "J+dIsA": {
     "defaultMessage": "الاشتراكات"
   },
@@ -793,6 +829,9 @@
   },
   "JVClQM": {
     "defaultMessage": "حالة خدمة LNVPS ووقت التشغيل."
+  },
+  "JVZcdC": {
+    "defaultMessage": "انتهت صلاحية الاشتراك الخاص بهذا الإصدار، وتم تقليصه إلى صفر. لا تزال بياناتك موجودة هنا — قم بتجديد الاشتراك لإعادة تشغيله."
   },
   "JiCBWy": {
     "defaultMessage": "اتصل عبر SSH باستخدام المفتاح الذي اخترته."
@@ -851,11 +890,11 @@
   "LAMeIi": {
     "defaultMessage": "اتصل بفريق دعم LNVPS."
   },
+  "LCAAZu": {
+    "defaultMessage": "استضف خادم الوسائط الخاص بك."
+  },
   "LHX6Oo": {
     "defaultMessage": "ينتهي الصلاحية {exp}"
-  },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
   },
   "LR754a": {
     "defaultMessage": "يتم تجديده في"
@@ -875,8 +914,14 @@
   "LwGAe6": {
     "defaultMessage": "وكذلك على موقع LNVPS."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "المجموع"
+  },
   "MTnSwY": {
     "defaultMessage": "مثال: ضريبة"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} إجمالاً. وبالنسبة لخادم وسائط شخصي، فهذا يعد حلاً مناسبًا؛ وإذا كنت بحاجة إلى المزيد، يمكنك استخدام خادم افتراضي خاص (VPS) وتثبيت برنامج Route96 بنفسك لتوسيع نطاق الخادم."
   },
   "Mp+zDS": {
     "defaultMessage": "يدعم هذا المكون عمليات الدفع عبر نظام \"لايتنينغ\" فقط."
@@ -889,6 +934,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "أكّد."
+  },
+  "N7elAL": {
+    "defaultMessage": "قم بتشغيل خادم \"نوستر\" خاص بك — مثل \"سترفراي\" أو \"نوستر-آر إس-ريلاي\" أو \"بيراميد\" أو \"هافين\" — في غضون دقائق على اسم النطاق الخاص بك، مع تفعيل بروتوكول \"تي إل إس\" وتوفير مساحة تخزين."
   },
   "NQgbYA": {
     "defaultMessage": "إعدادات الحساب"
@@ -952,6 +1000,9 @@
   },
   "P7PLVj": {
     "defaultMessage": "تاريخ"
+  },
+  "PJKhfR": {
+    "defaultMessage": "يُعدّ \"التطبيق المُدار\" هو الحل الأمثل عندما يكون \"التوزيع\" هو الهدف. إذا كنت ترغب في تشغيل نسخة مُعدّلة، أو دمج خدمات أخرى، أو إدارة الخادم بنفسك، فإن خدمة \"استضافة الخوادم الافتراضية الخاصة\" (VPS) الخاصة بنا تبدأ في مدن دبلن ولندن وكيبيك، وتوفر حركة مرور غير محدودة وعنوان IP ثابت من نوع IPv4 وIPv6 في كل باقة."
   },
   "PJtOx7": {
     "defaultMessage": "لا توجد حوادث للإبلاغ عنها."
@@ -1079,9 +1130,6 @@
   "SYYlLP": {
     "defaultMessage": "أدِر معرّفات NIP-05 المسجّلة على هذا النطاق."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "المدة: {duration}"
   },
@@ -1136,6 +1184,9 @@
   "TaUfJI": {
     "defaultMessage": "عرض LNURL"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}شهريًا، بدون رسوم إعداد."
+  },
   "Tbo377": {
     "defaultMessage": "الفواتير"
   },
@@ -1150,6 +1201,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "المجموع الشهري"
+  },
+  "TtrONG": {
+    "defaultMessage": "ادفع شهريًا باستخدام خدمة \"Lightning\"."
   },
   "TwyMau": {
     "defaultMessage": "حساب."
@@ -1235,6 +1289,9 @@
   "VzzYJk": {
     "defaultMessage": "أنشئ"
   },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} إجمالاً. بالنسبة لخادم وسائط شخصي، فهذا مناسب؛ وإذا كنت بحاجة إلى المزيد، يمكنك استخدام خادم افتراضي خاص (VPS) وتثبيت برنامج Route96 بنفسك لتوسيع نطاقه بشكل أكبر."
+  },
   "W8nHSd": {
     "defaultMessage": "FAQ"
   },
@@ -1274,8 +1331,14 @@
   "XNiOLB": {
     "defaultMessage": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
   },
+  "XO5rF3": {
+    "defaultMessage": "قم بتشغيل خادم النوسترا الخاص بك."
+  },
   "XW9RGA": {
     "defaultMessage": "هل أحتاج إلى إنشاء حساب؟"
+  },
+  "XdLEro": {
+    "defaultMessage": "استضافة خادم وسائط بلوسوم — رووت 96"
   },
   "XyIrRh": {
     "defaultMessage": "الدفع بالبيتكوين"
@@ -1294,9 +1357,6 @@
   },
   "YWjrby": {
     "defaultMessage": "تنبيهات الحساب فقط، مثل تاريخ انتهاء صلاحية الجهاز الظاهري. نحن لا نرسل رسائل تسويقية أبدًا."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "اتصل بالدعم الفني"
@@ -1324,6 +1384,9 @@
   },
   "Z8971h": {
     "defaultMessage": "تم التحقق منه."
+  },
+  "ZOt2+K": {
+    "defaultMessage": "هل تقوم بتشغيل خادم \"نوستر\" أيضًا؟ هذا الخادم لا يحتاج إلى جهاز كامل؛ فهو <a>متاح كتطبيق مُدار</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "الدفع بالبطاقة"
@@ -1357,9 +1420,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "إضافة مفتاح مرور"
-  },
-  "aUuDGj": {
-    "defaultMessage": "قم بتفعيل جهاز إعادة الإرسال الخاص بك — {price} شهريًا."
   },
   "acrOoz": {
     "defaultMessage": "استمر."
@@ -1514,6 +1574,9 @@
   "exrlwL": {
     "defaultMessage": "أحرف صغيرة، وأرقام، وواصلات. سيصبح هذا اسم النطاق الفرعي الخاص بك."
   },
+  "f+jGyB": {
+    "defaultMessage": "عند حذف نقطة النهاية، يتوقف نظام الفوترة ويتم حذف النشر وجميع وحدات التخزين التابعة له بشكل دائم."
+  },
   "f00p/7": {
     "defaultMessage": "فشل التحميل."
   },
@@ -1544,6 +1607,9 @@
   "fxYCqm": {
     "defaultMessage": "الموقع: {location}"
   },
+  "g1GUs5": {
+    "defaultMessage": "وحدة معالجة مركزية افتراضية"
+  },
   "gBvImw": {
     "defaultMessage": "{count} يتعامل مع/ يعالج"
   },
@@ -1570,6 +1636,9 @@
   },
   "gjvoQG": {
     "defaultMessage": "تحديد المقاسات"
+  },
+  "grcWs1": {
+    "defaultMessage": "قم بتشغيل خادم Nostr الخاص بك — بدءًا من {price} شهر"
   },
   "gtGLdm": {
     "defaultMessage": "بما في ذلك {amount} رسوم المعالجة"
@@ -1643,6 +1712,9 @@
   "j9/hqS": {
     "defaultMessage": "صمّم بالضبط ما تحتاجه؛ يمكن تهيئة وحدة المعالجة المركزية والذاكرة والتخزين بشكل مستقل، ويمكنك الاختيار بين محركات الأقراص ذات الحالة الصلبة (SSD) أو محركات الأقراص الثابتة (HDD)، بدلاً من إجبارك على استخدام فئات محددة مسبقًا."
   },
+  "jCOJxe": {
+    "defaultMessage": "أربعة تطبيقات للتقنية القائمة على التتابع، بدءًا من {price}في الشهر."
+  },
   "jGSUnR": {
     "defaultMessage": "هل سيتم تخصيص عنوان IP ثابت لي؟"
   },
@@ -1663,9 +1735,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "لم يتم تعيين أي منها — أضف واحدة."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "وجّه سجل CNAME لهذا النطاق إلى اسم مضيف النشر بمجرد تعيينه. اتركه فارغًا للإزالة."
@@ -1700,9 +1769,6 @@
   "kLNEaL": {
     "defaultMessage": "يرجى إكمال عملية التحقق من خلال اختبار الكابتشا."
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "أضف مفتاح SSH."
   },
@@ -1714,6 +1780,9 @@
   },
   "kfr95E": {
     "defaultMessage": "السطر الأول من العنوان"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}في الشهر."
   },
   "ku+mDU": {
     "defaultMessage": "ولاية"
@@ -1802,6 +1871,9 @@
   "mznk9z": {
     "defaultMessage": "لجنة"
   },
+  "n7yYXG": {
+    "defaultMessage": "خدمة"
+  },
   "n9fdaJ": {
     "defaultMessage": "غير مُؤكَّد."
   },
@@ -1810,6 +1882,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "طريقة الدفع"
+  },
+  "nQHBG0": {
+    "defaultMessage": "يمكن تغيير الإعدادات بعد دفع تكاليف هذا التوزيع وتشغيله."
   },
   "nWQFic": {
     "defaultMessage": "جدد"
@@ -1844,8 +1919,8 @@
   "o2AdrJ": {
     "defaultMessage": "تستخدم هذه الآلة الافتراضية قالبًا مخصصًا ولا يمكن تحديثها. تدعم فقط الآلات الافتراضية التي تستخدم قوالب قياسية التحديثات."
   },
-  "o2v6Fy": {
-    "defaultMessage": "شغّل خادمك الخاص من نوع نوستر — مقابل {price} شهريًا."
+  "o8mtsy": {
+    "defaultMessage": "شغّل خادم \"نوستر\" خاص بك من خلال {price}‏/شهر — ‏strfry أو nostr-rs-relay أو Pyramid أو HAVEN، يتم إعدادها في دقائق على اسم المضيف الخاص بها مع تضمين دعم TLS والتخزين."
   },
   "o9lOhm": {
     "defaultMessage": "يدعم المفتاح العام: {npub}"
@@ -1891,9 +1966,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "لم يتم تعيينه."
-  },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -1951,6 +2023,9 @@
   },
   "rieTwF": {
     "defaultMessage": "ينتهي صلاحيته في:"
+  },
+  "rneMhE": {
+    "defaultMessage": "نشر Route96."
   },
   "rr0r/W": {
     "defaultMessage": "<b>يُسمح باستخدام شبكة تور.</b> يمكنك تشغيل عقدتك عبر شبكة تور إذا أردت ذلك – نحن لا نحظرها، ولا نستخدم اختبارات جوجل للتحقق من أن المستخدم إنسان."
@@ -2144,9 +2219,6 @@
   "x0cZXf": {
     "defaultMessage": "لا يمكن إجراء الترقية."
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2231,7 +2303,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>حركة مرور بيانات غير محدودة.</b> تقوم عقدة التوجيه بإرسال البيانات باستمرار. يجب ألا تراقب مقياس عرض النطاق الترددي."
   },
-  "C8Qzcv": {
-    "defaultMessage": "أربعة تطبيقات مختلفة لنظام الترحيل، جميعها بتكلفة {price} شهريًا، ولا توجد رسوم إعداد."
+  "zzkKCh": {
+    "defaultMessage": "{storage} من الذاكرة الدائمة"
   }
 }

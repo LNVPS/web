@@ -15,7 +15,7 @@
     "defaultMessage": "네, 맞습니다. 사용하시는 컴퓨터이므로 원하는 대로 설치하세요."
   },
   "+H6Rvj": {
-    "defaultMessage": "Blossom 및 NIP-96 미디어 서버를 직접 운영하여 {price}/월. Route96은 자체 호스트 이름으로 몇 분 안에 실행되며, 지속적인 스토리지를 지원하고 TLS가 포함되어 있습니다."
+    "defaultMessage": "Blossom과 NIP-96 미디어 서버를 직접 운영하여 {price}/월. Route96은 자체 호스트 이름으로 몇 분 안에 실행되며, 영구 저장 공간과 TLS가 포함되어 있습니다."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{년} other{년}}"
@@ -105,7 +105,7 @@
     "defaultMessage": "질문이나 문제점을 자세히 설명해 주십시오."
   },
   "1R0JfT": {
-    "defaultMessage": "{storage} 영구 저장 장치에서 {breakdown}"
+    "defaultMessage": "{storage} 영구 저장 장치의 경우 — {breakdown}"
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 시간} other{# 시간}} {m,plural,one{# 분} other{# 분}}"
@@ -336,7 +336,7 @@
     "defaultMessage": "릴레이"
   },
   "7bTzvm": {
-    "defaultMessage": "설정 — 일반적으로 1분 정도 걸립니다. 설정이 완료되면 해당 프로그램이 실행됩니다."
+    "defaultMessage": "설정하는 데 시간이 조금 걸립니다. 보통 1분 정도 소요됩니다. 설정이 완료되면 엔드포인트가 나타납니다."
   },
   "7fGyF+": {
     "defaultMessage": "지우고 다시 설치"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "노드용 가상 사설 서버(VPS)를 구축하세요."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} 호스팅 — 관리형 {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "확인 중"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}매달 라이트닝으로 결제하세요."
   },
   "9t1iiv": {
     "defaultMessage": "구성"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "지원"
   },
+  "HzgGfH": {
+    "defaultMessage": "라이트닝, 비트코인 또는 신용카드로 결제하세요."
+  },
   "I3JhPS": {
     "defaultMessage": "네트워크"
   },
@@ -831,7 +840,7 @@
     "defaultMessage": "LNVPS 서비스 상태 및 가동 시간"
   },
   "JVZcdC": {
-    "defaultMessage": "이번 배포에 대한 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 서비스를 다시 시작하십시오."
+    "defaultMessage": "이번 배포의 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 다시 서비스를 시작할 수 있습니다."
   },
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS 사용 시 — 자체 호스트 이름 사용, TLS 포함, 서버 패치 불필요."
+  },
   "LR754a": {
     "defaultMessage": "갱신일:"
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "예: 세금"
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} 전체적으로 보면 그렇습니다. 편리한 개인 미디어 서버를 구축하려면, 더 많은 기능이 필요할 경우 직접 Route96을 설치한 VPS를 사용하여 확장할 수 있습니다."
+    "defaultMessage": "{storage} 전체적으로 봤을 때입니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치하여 사용할 수 있는 VPS로 확장할 수 있습니다."
   },
   "Mp+zDS": {
     "defaultMessage": "이 구성 요소는 라이트닝 결제만 지원합니다."
@@ -930,7 +942,7 @@
     "defaultMessage": "네, 중계 서버의 호스트 이름으로 CNAME 레코드를 설정하세요. DNS가 제대로 작동하면 자동으로 별도의 인증서를 발급해 드립니다."
   },
   "Mw9USY": {
-    "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 사용합니다. 만약 이 릴레이가 개인용이고 커뮤니티용이 아니라면 <b>HAVEN</b>을 사용하세요. 이 네 가지 프로그램 중 유일하게 블로섬 미디어 저장소를 제공하므로 이미지와 메모를 동일한 키로 관리할 수 있습니다."
+    "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 활용합니다. 만약 개인적인 릴레이를 운영하신다면 <b>HAVEN</b>을 사용하세요. 네 가지 프로그램 중 유일하게 Blossom 미디어 저장소를 제공하므로, 이미지와 노트가 동일한 키 아래에 저장됩니다."
   },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
@@ -1185,7 +1197,7 @@
     "defaultMessage": "LNURL 표시"
   },
   "Tb1zdK": {
-    "defaultMessage": "{price}월간 요금이며, 초기 설치 비용은 없습니다."
+    "defaultMessage": "{price}월별 요금이며, 초기 설치 비용은 없습니다."
   },
   "Tbo377": {
     "defaultMessage": "요금 청구"
@@ -1290,7 +1302,7 @@
     "defaultMessage": "만들기"
   },
   "W16obH": {
-    "defaultMessage": "{breakdown}. {storage} 전체적으로 보면 그렇습니다. 사용하기 편리한 개인용 미디어 서버를 원하신다면, 필요에 따라 Route96을 직접 설치한 VPS를 사용하여 확장할 수 있습니다."
+    "defaultMessage": "{breakdown}. {storage} 전체적으로 보면 그렇습니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치한 VPS를 사용하여 확장할 수 있습니다."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1386,7 +1398,7 @@
     "defaultMessage": "확인됨"
   },
   "ZOt2+K": {
-    "defaultMessage": "노스트르 릴레이도 운영하시나요? 해당 릴레이는 전체 서버가 필요하지 않습니다. 관리형 앱으로 제공됩니다."
+    "defaultMessage": "노스트르 릴레이도 운영하시나요? 해당 릴레이는 전체 서버가 필요하지 않습니다. <a>관리형 앱으로 제공됩니다</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "카드로 결제"
@@ -1547,6 +1559,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS에서 — 자체 호스트 이름 사용, TLS 포함 {storage} 저장 공간만 있으면 되므로, 서버를 업데이트할 필요가 없습니다."
+  },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
   },
@@ -1575,7 +1590,7 @@
     "defaultMessage": "소문자, 숫자, 하이픈을 사용합니다. 이것이 귀하의 서브도메인이 됩니다."
   },
   "f+jGyB": {
-    "defaultMessage": "중단을 삭제하면 과금이 중지되고 배포와 해당 볼륨이 영구적으로 제거됩니다."
+    "defaultMessage": "삭제하면 요금이 부과되지 않고 배포와 해당 볼륨이 영구적으로 제거됩니다."
   },
   "f00p/7": {
     "defaultMessage": "업로드에 실패했습니다."
@@ -1884,7 +1899,7 @@
     "defaultMessage": "결제 방법"
   },
   "nQHBG0": {
-    "defaultMessage": "해당 배포에 대한 비용을 지불하고 배포가 시작되면 설정을 변경할 수 있습니다."
+    "defaultMessage": "배포가 완료되고 서비스가 시작되면 설정을 한 번 변경할 수 있습니다."
   },
   "nWQFic": {
     "defaultMessage": "갱신하다"
@@ -2187,7 +2202,7 @@
     "defaultMessage": "결제 내역"
   },
   "vuTMNa": {
-    "defaultMessage": "개인용 금고 스타일의 릴레이 방식으로, 자체적인 블로섬 미디어 저장소를 갖춤"
+    "defaultMessage": "개인용 금고 스타일의 릴레이 방식으로, 자체적인 Blossom 미디어 저장소를 갖춤"
   },
   "vy2rlX": {
     "defaultMessage": "수수료:"

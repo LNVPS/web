@@ -15,7 +15,7 @@
     "defaultMessage": "Sim. É o seu computador, instale o que quiser."
   },
   "+H6Rvj": {
-    "defaultMessage": "Configure o seu próprio servidor de mídia Blossom e NIP-96 para {price}/mês. Route96, implementado em minutos no seu próprio servidor, com armazenamento persistente e TLS incluídos."
+    "defaultMessage": "Configure o seu próprio servidor de mídia Blossom e NIP-96 para {price}/mês. Route96, disponível em minutos no seu próprio nome de domínio, com armazenamento persistente e TLS incluídos."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{ano} other{anos}}"
@@ -336,7 +336,7 @@
     "defaultMessage": "Revezamento / Transmitir / Relé"
   },
   "7bTzvm": {
-    "defaultMessage": "Configuração — geralmente leva cerca de um minuto. O ponto de extremidade aparece quando o processo estiver em execução."
+    "defaultMessage": "Configuração — normalmente, este processo demora cerca de um minuto. O ponto final aparece quando o programa estiver em execução."
   },
   "7fGyF+": {
     "defaultMessage": "Apagar e reinstalar"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "Crie o seu servidor virtual privado (VPS) para o nó."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Serviços de hospedagem — Gerenciados {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Confirmando"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}Por mês, pague com o Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Configurar"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "Suporte"
   },
+  "HzgGfH": {
+    "defaultMessage": "Pague com Lightning, Bitcoin ou cartão."
+  },
   "I3JhPS": {
     "defaultMessage": "Rede"
   },
@@ -831,7 +840,7 @@
     "defaultMessage": "Estado do serviço LNVPS e tempo de atividade."
   },
   "JVZcdC": {
-    "defaultMessage": "A subscrição desta implementação expirou e foi reduzida a zero. Os seus dados ainda estão aqui — renove a subscrição para voltar a utilizá-la."
+    "defaultMessage": "A subscrição desta implementação expirou e foi reduzida a zero. Os seus dados ainda estão aqui – renove para voltar a iniciá-la."
   },
   "JiCBWy": {
     "defaultMessage": "Conecte-se via SSH com a chave selecionada."
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "Validade até {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "Executar {name} como um serviço gerenciado {category} no LNVPS — nome de host próprio, TLS incluído, sem necessidade de aplicar correções no servidor."
+  },
   "LR754a": {
     "defaultMessage": "Renova em"
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "por exemplo, imposto"
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} no total. Para um servidor de mídia pessoal, isso é suficiente; se precisar de mais, pode instalar o Route96 num VPS e expandir a capacidade conforme necessário."
+    "defaultMessage": "{storage} no total. Para um servidor de mídia pessoal, isso é suficiente; se precisar de mais, pode instalar o Route96 num VPS e aumentar a capacidade conforme necessário."
   },
   "Mp+zDS": {
     "defaultMessage": "Este componente suporta apenas pagamentos Lightning."
@@ -1185,7 +1197,7 @@
     "defaultMessage": "Mostrar LNURL"
   },
   "Tb1zdK": {
-    "defaultMessage": "{price}por mês, sem taxa de configuração."
+    "defaultMessage": "{price}Por mês, sem taxa de configuração."
   },
   "Tbo377": {
     "defaultMessage": "Faturação"
@@ -1386,7 +1398,7 @@
     "defaultMessage": "Verificado"
   },
   "ZOt2+K": {
-    "defaultMessage": "Também está a gerir um nó Nostr? Nesse caso, não precisa de um servidor completo, pois está <a href=\"#\">disponível como uma aplicação gerida</a>."
+    "defaultMessage": "Também está a gerir um nó Nostr? Nesse caso, não precisa de um servidor completo, pois está <a>disponível como uma aplicação gerida</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Pagar com cartão"
@@ -1547,6 +1559,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "Executar {name} como um serviço gerenciado {category} no LNVPS — nome de host próprio, com TLS incluído. {storage} armazenamento, sem necessidade de atualizar nenhum servidor."
+  },
   "e4ehrh": {
     "defaultMessage": "Monte a sua máquina"
   },
@@ -1575,7 +1590,7 @@
     "defaultMessage": "Use letras minúsculas, números e hífens. Isso será o seu subdomínio."
   },
   "f+jGyB": {
-    "defaultMessage": "Ao eliminar, a cobrança é interrompida e a implementação e os seus volumes são removidos permanentemente."
+    "defaultMessage": "Ao eliminar, interrompe-se a cobrança e remove-se permanentemente a implementação e os respetivos volumes."
   },
   "f00p/7": {
     "defaultMessage": "O envio falhou."
@@ -1608,7 +1623,7 @@
     "defaultMessage": "Localização: {location}"
   },
   "g1GUs5": {
-    "defaultMessage": "vCPU"
+    "defaultMessage": "CPU virtual"
   },
   "gBvImw": {
     "defaultMessage": "{count} maçanetas"

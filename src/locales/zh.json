@@ -15,7 +15,7 @@
     "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
   },
   "+H6Rvj": {
-    "defaultMessage": "运行您自己的 Blossom 和 NIP-96 媒体服务器，以供使用。 {price}每月。Route96，可在几分钟内通过其自身的域名部署，并包含持久存储和 TLS。"
+    "defaultMessage": "运行您自己的 Blossom 和 NIP-96 媒体服务器，用于…… {price}每月。Route96，可在几分钟内通过其自身的域名进行部署，并包含持久性存储和 TLS 加密。"
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
@@ -132,7 +132,7 @@
     "defaultMessage": "账单、续订和通知"
   },
   "24piVc": {
-    "defaultMessage": "如果您需要，您可以拥有自己的域名。将 CNAME 指向您的中继服务器，我们将同时提供默认主机名和您自己的域名，并为您的域名配置证书。无需验证步骤，证书将在您的 DNS 解析后自动颁发。"
+    "defaultMessage": "<b>如果您需要，您可以拥有自己的域名。</b>将一个 CNAME 指向您的中继服务器，我们将与默认主机名一起提供服务，并为其配备单独的证书。无需验证步骤——当您的 DNS 解析时，系统会自动颁发证书。"
   },
   "2QrTo0": {
     "defaultMessage": "新的 IP 地址分配方案"
@@ -183,7 +183,7 @@
     "defaultMessage": "获取推荐码，以便与他人分享。当有人使用该推荐码注册，并且他们的虚拟机（VM）完成首次支付时，您将获得佣金。选择希望接收付款的账户，然后激活即可。"
   },
   "3eEn1+": {
-    "defaultMessage": "<b>无需身份验证。</b>注册时无需提供个人信息。您的节点、您的密钥、您的业务，一切由您掌控。"
+    "defaultMessage": "<b>无需进行身份验证。</b>注册时无需提供个人信息。您的节点、您的密钥，一切由您掌控。"
   },
   "3vxkus": {
     "defaultMessage": "无需保存任何内容——您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
@@ -336,7 +336,7 @@
     "defaultMessage": "中继；传递"
   },
   "7bTzvm": {
-    "defaultMessage": "设置过程——通常需要一分钟。设置完成后，终端就会显示出来。"
+    "defaultMessage": "设置过程——这通常需要一分钟。一旦开始运行，终端就会出现。"
   },
   "7fGyF+": {
     "defaultMessage": "清除并重新安装"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "搭建您的节点服务器（VPS）。"
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} 托管服务——由我们管理 {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "确认中"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}每月支付，使用闪电支付。"
   },
   "9t1iiv": {
     "defaultMessage": "配置"
@@ -678,7 +684,7 @@
     "defaultMessage": "请重试。"
   },
   "Ff9LAg": {
-    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 `<catalog>目录</catalog>` 中提供。"
+    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "支持"
   },
+  "HzgGfH": {
+    "defaultMessage": "可以使用莱特币、比特币或银行卡进行支付。"
+  },
   "I3JhPS": {
     "defaultMessage": "网络"
   },
@@ -783,7 +792,7 @@
     "defaultMessage": "尚未保存任何 NWC 钱包。请在下方添加一个，以便接收付款。"
   },
   "IDpruN": {
-    "defaultMessage": "正在部署。"
+    "defaultMessage": "部署中"
   },
   "ILTAun": {
     "defaultMessage": "您的虚拟机正在配置中。通常需要一两分钟的时间。"
@@ -831,7 +840,7 @@
     "defaultMessage": "LNVPS 服务状态和在线时间"
   },
   "JVZcdC": {
-    "defaultMessage": "本次部署的订阅已过期，并且已缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
+    "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
   },
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "运行 {name} 作为一项管理项目 {category} 使用 LNVPS 时，您可以拥有自己的主机名，并且已启用 TLS，无需更新服务器。"
+  },
   "LR754a": {
     "defaultMessage": "续订时间："
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "不含税。"
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} 总而言之。对于个人媒体服务器来说，这已经足够了；如果需要更多，您可以自行安装 Route96，然后使用 VPS 来进一步扩展。"
+    "defaultMessage": "{storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到一个虚拟专用服务器（VPS）上，以进一步提升。"
   },
   "Mp+zDS": {
     "defaultMessage": "此组件仅支持闪电网络支付。"
@@ -1002,7 +1014,7 @@
     "defaultMessage": "日期"
   },
   "PJKhfR": {
-    "defaultMessage": "当重点在于中继服务器时，使用托管应用是最合适的方案。如果您想运行修改后的版本、将其他服务部署在同一服务器上，或者自行管理服务器，我们的虚拟专用服务器托管服务将从都柏林、伦敦和魁北克开始提供，所有套餐均包含无限流量以及每个套餐都配备静态 IPv4 和 IPv6 地址。"
+    "defaultMessage": "当需要通过中继进行操作时，使用受管应用是最合适的解决方案。如果您想运行修改后的版本、将其他服务部署在同一服务器上，或者自行管理服务器，我们的<a>虚拟专用服务器（VPS）托管服务</a>将在都柏林、伦敦和魁北克提供无限流量以及每个套餐的静态 IPv4 和 IPv6 地址。"
   },
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
@@ -1290,7 +1302,7 @@
     "defaultMessage": "创建"
   },
   "W16obH": {
-    "defaultMessage": "{breakdown}， {storage} 总的来说，对于个人媒体服务器来说，这样的配置已经足够；如果需要更多资源，您可以自行安装 Route96 到 VPS 上，以进一步扩展。"
+    "defaultMessage": "{breakdown}…… {storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到虚拟专用服务器 (VPS) 上，以进一步提升。"
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1386,7 +1398,7 @@
     "defaultMessage": "已验证"
   },
   "ZOt2+K": {
-    "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器——它<a href=\"#\">可以作为托管应用提供</a>。"
+    "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器——它<a>可以作为托管应用提供</a>。"
   },
   "ZTj6ca": {
     "defaultMessage": "使用银行卡支付"
@@ -1546,6 +1558,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "运行 {name} 作为一种受管理的 {category} 在 LNVPS 上——使用自定义主机名，并启用 TLS。 {storage} 存储，无需更新服务器。"
   },
   "e4ehrh": {
     "defaultMessage": "配置您的机器"

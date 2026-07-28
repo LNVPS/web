@@ -15,7 +15,7 @@
     "defaultMessage": "はい。これはあなたのコンピューターです。好きなものをインストールしてください。"
   },
   "+H6Rvj": {
-    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用して {price}1か月に1回。Route96は、独自のホスト名を使用して数分で起動し、永続ストレージとTLSが組み込まれています。"
+    "defaultMessage": "BlossomおよびNIP-96メディアサーバーを自分で運用して、 {price}1か月に1回。Route96は、独自のホスト名で数分以内に起動し、永続ストレージとTLSが組み込まれています。"
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
@@ -105,7 +105,7 @@
     "defaultMessage": "ご質問や問題について、できるだけ詳しくご説明ください。"
   },
   "1R0JfT": {
-    "defaultMessage": "{storage} 永続ストレージに関して {breakdown}"
+    "defaultMessage": "{storage} 永続ストレージについて {breakdown}"
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 時間} other{# 時間}} {m,plural,one{# 分} other{# 分}}"
@@ -132,7 +132,7 @@
     "defaultMessage": "請求、更新、および通知"
   },
   "24piVc": {
-    "defaultMessage": "必要であれば、独自のドメインを使用できます。CNAMEレコードをリレーサーバーに設定すると、デフォルトのホスト名とともに、独自の証明書を使用してサービスを提供します。検証の手続きは不要で、DNSが解決されると証明書が発行されます。"
+    "defaultMessage": "<b>必要な場合は、独自のドメインを使用できます。</b>CNAMEレコードをリレーサーバーに設定すると、デフォルトのホスト名とともに、そのドメイン用の証明書を提供します。検証の手続きは不要で、DNSが解決されると証明書が発行されます。"
   },
   "2QrTo0": {
     "defaultMessage": "新しいIPアドレス範囲の割り当て依頼"
@@ -336,7 +336,7 @@
     "defaultMessage": "リレー"
   },
   "7bTzvm": {
-    "defaultMessage": "セットアップ — 通常、1分程度で完了します。セットアップが完了すると、エンドポイントが表示されます。"
+    "defaultMessage": "セットアップ—通常、1分程度かかります。セットアップが完了すると、エンドポイントが表示されます。"
   },
   "7fGyF+": {
     "defaultMessage": "消去して再インストール"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "ノード用のVPSを構築します。"
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} ホスティング—マネージド {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "確認中"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}月額制で、Lightningを使ってお支払いください。"
   },
   "9t1iiv": {
     "defaultMessage": "設定"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "サポート"
   },
+  "HzgGfH": {
+    "defaultMessage": "ライトニング、ビットコイン、またはクレジットカードでお支払いください。"
+  },
   "I3JhPS": {
     "defaultMessage": "ネットワーク"
   },
@@ -831,7 +840,7 @@
     "defaultMessage": "LNVPSのサービス状況と稼働時間"
   },
   "JVZcdC": {
-    "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、サブスクリプションを更新して、再度開始してください。"
+    "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、再開するにはサブスクリプションを更新してください。"
   },
   "JiCBWy": {
     "defaultMessage": "選択した鍵で SSH 接続します。"
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPSを使用 — 独自のホスト名、TLS対応、サーバーのパッチ適用は不要。"
+  },
   "LR754a": {
     "defaultMessage": "更新日："
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "税込み"
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} 合計で。快適な個人的なメディアサーバーを構築する場合、さらに容量が必要であれば、Route96を自分でインストールしたVPSを利用することで、より拡張できます。"
+    "defaultMessage": "{storage} 合計で。快適なパーソナルメディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用すれば、さらに拡張できます。"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
@@ -1185,7 +1197,7 @@
     "defaultMessage": "LNURLを表示"
   },
   "Tb1zdK": {
-    "defaultMessage": "{price}月額料金で、初期費用はかかりません。"
+    "defaultMessage": "{price}月額料金制で、初期費用はかかりません。"
   },
   "Tbo377": {
     "defaultMessage": "請求"
@@ -1290,7 +1302,7 @@
     "defaultMessage": "作成する"
   },
   "W16obH": {
-    "defaultMessage": "{breakdown}、 {storage} 合計で。快適な個人的なメディアサーバーを構築する場合、さらに多くのリソースが必要であれば、Route96を自分でインストールしたVPSを利用することで、さらに拡張できます。"
+    "defaultMessage": "{breakdown}、 {storage} 合計で。快適な個人用メディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用することで、さらに拡張できます。"
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1386,7 +1398,7 @@
     "defaultMessage": "確認済み"
   },
   "ZOt2+K": {
-    "defaultMessage": "Nostrリレーも運用しているのですね？あれは、専用のサーバーは必要ありません。マネージドアプリとして提供されています。"
+    "defaultMessage": "Nostrリレーも運用しているのですね？あれは、専用のサーバーは必要ありません。<a>マネージドアプリとして提供されています</a>。"
   },
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
@@ -1546,6 +1558,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPS上で — 独自のホスト名を使用し、TLSを有効にする。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
   },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
@@ -1884,7 +1899,7 @@
     "defaultMessage": "支払い方法"
   },
   "nQHBG0": {
-    "defaultMessage": "このデプロイメントに対して料金が支払われ、運用が開始された後は、設定を変更できます。"
+    "defaultMessage": "このデプロイメントの費用が支払われ、実行状態になった後であれば、設定を変更できます。"
   },
   "nWQFic": {
     "defaultMessage": "更新する"
@@ -2304,6 +2319,6 @@
     "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
   },
   "zzkKCh": {
-    "defaultMessage": "{storage} 永続ストレージ"
+    "defaultMessage": "{storage} 永続的なストレージについて。"
   }
 }

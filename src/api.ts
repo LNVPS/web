@@ -650,6 +650,15 @@ export interface App {
    * not because an app may have no volumes, which arrives as `[]`.
    */
   volumes?: Array<AppVolume>;
+  /**
+   * Class of software, sentence case — "Nostr relay" (LNVPS/api#241). Always
+   * sent by that release and later; optional here only for an older build.
+   */
+  category?: string;
+  /** Per-app override for the page `<title>`; null for almost every app. */
+  seo_title?: string;
+  /** Per-app override for the meta description; null for almost every app. */
+  seo_description?: string;
 }
 
 /** One persistent volume of an app (LNVPS/api#260). */

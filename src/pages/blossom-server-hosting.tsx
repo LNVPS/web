@@ -206,7 +206,7 @@ export function BlossomServerHostingPage() {
                   "Run your own Blossom and NIP-96 media server. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
               })
         }
-        jsonLd={[...(app ? [appJsonLd(app)] : []), faqJsonLd(faq)]}
+        jsonLd={[...(app ? [appJsonLd(app, intl)] : []), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">

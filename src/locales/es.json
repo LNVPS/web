@@ -15,7 +15,7 @@
     "defaultMessage": "Sí. Es tu computadora, así que instala lo que quieras."
   },
   "+H6Rvj": {
-    "defaultMessage": "Ejecute su propio servidor de medios Blossom y NIP-96 para {price}/mes. Route96 se puede implementar en cuestión de minutos en su propio servidor, con almacenamiento persistente y TLS incluido."
+    "defaultMessage": "Ejecute su propio servidor de medios Blossom y NIP-96. {price}/mes. Route96 se puede implementar en cuestión de minutos en su propio servidor, con almacenamiento persistente y TLS incluido."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{año} other{años}}"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "Cree el servidor privado virtual (VPS) para su nodo."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Alojamiento — Gestionado {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Confirmando"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}/mes, paga con Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Configurar"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "Soporte"
   },
+  "HzgGfH": {
+    "defaultMessage": "Pague con Lightning, Bitcoin o tarjeta."
+  },
   "I3JhPS": {
     "defaultMessage": "Red"
   },
@@ -831,7 +840,7 @@
     "defaultMessage": "Estado del servicio LNVPS y tiempo de actividad"
   },
   "JVZcdC": {
-    "defaultMessage": "La suscripción de esta implementación ha caducado y se ha reducido a cero. Sus datos siguen aquí; renueve la suscripción para volver a ponerla en marcha."
+    "defaultMessage": "La suscripción de esta implementación ha caducado y se ha reducido a cero. Sus datos siguen aquí; renueve la suscripción para volver a activarla."
   },
   "JiCBWy": {
     "defaultMessage": "Conéctate por SSH con la clave seleccionada."
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "Fecha de caducidad. {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido, no es necesario aplicar parches al servidor."
+  },
   "LR754a": {
     "defaultMessage": "Se renueva en:"
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "impuestos incluidos."
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} en total. Para un servidor multimedia personal, esto es suficiente; si necesita más capacidad, puede ampliarla instalando Route96 en un VPS."
+    "defaultMessage": "{storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más capacidad, puede ampliarla instalando Route96 en un VPS."
   },
   "Mp+zDS": {
     "defaultMessage": "Este componente solo admite pagos con Lightning."
@@ -1185,7 +1197,7 @@
     "defaultMessage": "Mostrar LNURL"
   },
   "Tb1zdK": {
-    "defaultMessage": "{price}/mes, sin cargo por configuración."
+    "defaultMessage": "{price}por mes, sin costo de instalación."
   },
   "Tbo377": {
     "defaultMessage": "Facturación"
@@ -1290,7 +1302,7 @@
     "defaultMessage": "Crear"
   },
   "W16obH": {
-    "defaultMessage": "{breakdown} {storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más, puede ampliar la capacidad instalando Route96 en un VPS."
+    "defaultMessage": "{breakdown}. {storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más capacidad, puede instalar Route96 en un VPS y ampliarlo según sus necesidades."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1547,6 +1559,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar el servidor."
+  },
   "e4ehrh": {
     "defaultMessage": "Configura tu máquina"
   },
@@ -1575,7 +1590,7 @@
     "defaultMessage": "Letras minúsculas, números y guiones. Esto será tu subdominio."
   },
   "f+jGyB": {
-    "defaultMessage": "Eliminar una instancia detiene la facturación y elimina de forma permanente la implementación y sus volúmenes."
+    "defaultMessage": "Eliminar la configuración detiene la facturación y elimina de forma permanente el entorno y sus volúmenes."
   },
   "f00p/7": {
     "defaultMessage": "La carga no se completó."
@@ -1872,7 +1887,7 @@
     "defaultMessage": "Comisión"
   },
   "n7yYXG": {
-    "defaultMessage": "Servicio"
+    "defaultMessage": "Servicio."
   },
   "n9fdaJ": {
     "defaultMessage": "No verificado."

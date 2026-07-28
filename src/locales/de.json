@@ -15,7 +15,7 @@
     "defaultMessage": "Ja. Das ist Ihr Gerät – installieren Sie, was immer Sie möchten."
   },
   "+H6Rvj": {
-    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96 kann innerhalb von Minuten auf seinem eigenen Hostnamen mit persistentem Speicher und aktiviertem TLS eingerichtet werden."
+    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96 lässt sich innerhalb von Minuten auf seinem eigenen Hostnamen installieren und bietet persistente Datenspeicherung sowie TLS-Unterstützung."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
@@ -431,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "Erstellen Sie ein virtuelles privates Server (VPS) für Ihren Knoten."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Hosting – Verwaltetes {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Wird bestätigt"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}pro Monat bezahlen mit Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Konfigurieren"
@@ -773,6 +779,9 @@
   "HqRNN8": {
     "defaultMessage": "Unterstützung"
   },
+  "HzgGfH": {
+    "defaultMessage": "Bezahlen Sie mit Lightning, Bitcoin oder per Karte."
+  },
   "I3JhPS": {
     "defaultMessage": "Netzwerk"
   },
@@ -831,7 +840,7 @@
     "defaultMessage": "Status und Verfügbarkeit des LNVPS-Dienstes"
   },
   "JVZcdC": {
-    "defaultMessage": "Die Gültigkeitsdauer des Abonnements für diese Bereitstellung ist abgelaufen, und die Bereitstellung wurde auf Null reduziert. Ihre Daten sind weiterhin vorhanden – verlängern Sie das Abonnement, um die Bereitstellung wieder zu aktivieren."
+    "defaultMessage": "Das Abonnement für diese Bereitstellung ist abgelaufen, und die Kapazität wurde auf null reduziert. Ihre Daten sind weiterhin vorhanden – verlängern Sie das Abonnement, um die Bereitstellung wieder zu aktivieren."
   },
   "JiCBWy": {
     "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
@@ -896,6 +905,9 @@
   "LHX6Oo": {
     "defaultMessage": "Gültig bis {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "Betreiben Sie {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS inklusive, keine Server-Updates erforderlich."
+  },
   "LR754a": {
     "defaultMessage": "Wird automatisch verlängert am"
   },
@@ -921,7 +933,7 @@
     "defaultMessage": "zzgl. Steuer"
   },
   "MfiEGP": {
-    "defaultMessage": "{storage} insgesamt. Für einen persönlichen Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem VPS die Kapazität weiter erhöhen."
+    "defaultMessage": "{storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
   },
   "Mp+zDS": {
     "defaultMessage": "Diese Komponente unterstützt ausschließlich Lightning-Zahlungen."
@@ -1290,7 +1302,7 @@
     "defaultMessage": "Erstellen Sie"
   },
   "W16obH": {
-    "defaultMessage": "{breakdown} {storage} insgesamt. Für einen persönlichen Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem VPS die Kapazität weiter ausbauen."
+    "defaultMessage": "{breakdown}. {storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1386,7 +1398,7 @@
     "defaultMessage": "Bestätigt"
   },
   "ZOt2+K": {
-    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Für diesen ist kein ganzer Server erforderlich – er ist als verwaltete App verfügbar."
+    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Für diesen ist kein ganzer Server erforderlich – er ist <a>als verwaltete App verfügbar</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Mit Karte bezahlen"
@@ -1547,6 +1559,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "Betreiben Sie {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Verschlüsselung inklusive {storage} Speicher, kein Server, der gepatcht werden muss."
+  },
   "e4ehrh": {
     "defaultMessage": "Stelle deine Maschine zusammen"
   },
@@ -1575,7 +1590,7 @@
     "defaultMessage": "Kleinbuchstaben, Ziffern und Bindestriche. Dies wird Ihre Subdomain."
   },
   "f+jGyB": {
-    "defaultMessage": "Wenn Sie die Bereitstellung löschen, wird die Abrechnung beendet und die Bereitstellung sowie die zugehörigen Volumes werden dauerhaft entfernt."
+    "defaultMessage": "Durch das Löschen wird die Abrechnung beendet und die Bereitstellung sowie die zugehörigen Speicherbereiche werden dauerhaft entfernt."
   },
   "f00p/7": {
     "defaultMessage": "Hochladen fehlgeschlagen."
@@ -1884,7 +1899,7 @@
     "defaultMessage": "Zahlungsmethode"
   },
   "nQHBG0": {
-    "defaultMessage": "Die Einstellungen können geändert werden, sobald die Zahlung für diese Bereitstellung erfolgt ist und diese in Betrieb ist."
+    "defaultMessage": "Die Einstellungen können geändert werden, sobald die Kosten für diese Bereitstellung beglichen und der Prozess gestartet wurde."
   },
   "nWQFic": {
     "defaultMessage": "Verlängern"
@@ -2304,6 +2319,6 @@
     "defaultMessage": "<b>Unbegrenztes Datenvolumen.</b> Ein Routing-Knoten kommuniziert ständig mit anderen Knoten. Sie sollten nicht ständig die Bandbreitennutzung überwachen."
   },
   "zzkKCh": {
-    "defaultMessage": "{storage} des dauerhaften Speichers"
+    "defaultMessage": "{storage} von permanentem Speicher"
   }
 }

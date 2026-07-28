@@ -185,7 +185,7 @@ export function NostrRelayHostingPage() {
                   "Run your own Nostr relay — strfry, nostr-rs-relay, Pyramid or HAVEN, up in minutes on its own hostname with TLS and storage included.",
               })
         }
-        jsonLd={[...relays.map(appJsonLd), faqJsonLd(faq)]}
+        jsonLd={[...relays.map((r) => appJsonLd(r, intl)), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">

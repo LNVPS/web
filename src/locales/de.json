@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "Ohne Passwort"
   },
+  "OKXlev": {
+    "defaultMessage": "Laufen {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Unterstützung inklusive {storage} Speicher, kein Server, der gepatcht werden muss."
+  },
   "OLqOyf": {
     "defaultMessage": "Anleitung zur Einrichtung"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "Ort: {location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "Laufen {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Verschlüsselung inklusive. {storage} GB Speicherplatz, kein Server, der gepatcht werden muss."
   },
   "g1GUs5": {
     "defaultMessage": "virtuelle CPU"

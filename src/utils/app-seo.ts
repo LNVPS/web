@@ -1,7 +1,8 @@
 import type { IntlShape } from "react-intl";
 import { CostPlanIntervalType, type App } from "../api";
 import { GiB } from "../const";
-import { smallestUnitScale } from "./currency";
+import { formatBytesText } from "./bytes";
+import { formatPriceText, smallestUnitScale } from "./currency";
 
 /** Matches `SITE_URL` in `src/components/seo.tsx:5`, for absolute schema URLs. */
 const SITE_URL = "https://lnvps.net";
@@ -46,12 +47,11 @@ function standardUnitPrice(app: App): string | undefined {
  *
  * Templated from `display_name` + `category` rather than written per app: the
  * catalog is a database table, so copy for a sixth app has to arrive as a row,
- * not as a frontend deploy. `seo_title` is the escape hatch for an app the
- * template does not serve, and is English-only by construction — it arrives
- * over the wire and so is never extracted for translation.
+ * not as a frontend deploy.
  *
- * Falls back to the bare `display_name` when `category` is missing, which only
- * happens against an API build older than LNVPS/api#241.
+ * `category` and `seo_title` are both wire data, so neither is extracted for
+ * translation: only the sentence around them is localised, and the class of
+ * software stays English until the API serves it per locale (LNVPS/api#285).
  */
 export function appSeoTitle(app: App, intl: IntlShape): string {
   if (app.seo_title) return app.seo_title;
@@ -66,14 +66,9 @@ export function appSeoTitle(app: App, intl: IntlShape): string {
  * The meta description, templated from the app's structured fields.
  *
  * Deliberately does **not** interpolate `app.description`: that is admin free
- * text with no length or grammatical contract ("A feature-rich hierarchical
- * community relay"), so dropping it into a sentence produces a broken one
- * about half the time. It keeps its existing jobs — the catalog card blurb and
- * the paragraph under the h1.
- *
- * Each optional clause is guarded independently and every branch ends on a
- * complete sentence, so an app with no volumes, a yearly plan or a BTC price
- * still reads as prose rather than as a template with holes in it.
+ * text with no length or grammatical contract, so dropping it into a sentence
+ * produces a broken one about half the time. Every branch here ends on a
+ * complete sentence instead.
  */
 export function appSeoDescription(
   app: App,
@@ -82,18 +77,17 @@ export function appSeoDescription(
   if (app.seo_description) return app.seo_description;
   if (!app.category) return app.description;
 
-  const storage = app.storage_bytes >= GiB ? app.storage_bytes / GiB : undefined;
   const lede =
-    storage !== undefined
+    app.storage_bytes >= GiB
       ? intl.formatMessage(
           {
             defaultMessage:
-              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} GB storage, no server to patch.",
+              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch.",
           },
           {
             name: app.display_name,
             category: app.category,
-            storage: intl.formatNumber(storage, { maximumFractionDigits: 0 }),
+            storage: formatBytesText(intl, app.storage_bytes),
           },
         )
       : intl.formatMessage(
@@ -104,24 +98,17 @@ export function appSeoDescription(
           { name: app.display_name, category: app.category },
         );
 
-  // A figure is only quotable when it is a monthly price in a currency
-  // `formatNumber` can render. BTC amounts are millisats, and a yearly plan's
-  // amount is not a monthly one — either way, quote the payment options
-  // instead of a number that would be wrong.
+  // A figure is only quotable when it is a monthly price in a currency that
+  // renders as one. BTC amounts are millisats and a yearly plan's amount is
+  // not a monthly one — either way, quote the payment options instead.
   const monthly =
     app.interval_amount === 1 &&
     app.interval_type === CostPlanIntervalType.MONTH;
-  const price = standardUnitPrice(app);
   const priceClause =
-    monthly && price !== undefined
+    monthly && standardUnitPrice(app) !== undefined
       ? intl.formatMessage(
           { defaultMessage: "{price}/month, pay with Lightning." },
-          {
-            price: intl.formatNumber(Number(price), {
-              style: "currency",
-              currency: app.currency,
-            }),
-          },
+          { price: formatPriceText(intl, app) },
         )
       : intl.formatMessage({
           defaultMessage: "Pay with Lightning, Bitcoin, or card.",

@@ -13,6 +13,7 @@
     "serve": "bun run build && bun server/prod.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test": "bun test",
     "preview": "bunx vite preview",
     "locale:extract": "bunx formatjs extract 'src/**/*.tsx' 'src/**/*.ts' '!src/vite-env.d.ts' --out-file src/locales/en.json",
     "locale:compile": "mkdir -p dist/client/locales && bunx formatjs compile-folder src/locales dist/client/locales",

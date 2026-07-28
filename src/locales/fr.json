@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "Sans mot de passe"
   },
+  "OKXlev": {
+    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS — nom d’hôte personnalisé, avec TLS inclus. {storage} stockage, pas de serveur à mettre à jour."
+  },
   "OLqOyf": {
     "defaultMessage": "Instructions d’installation"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "Emplacement : {location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS – nom d’hôte personnalisé, avec prise en charge de TLS. {storage} Stockage de 1 Go, pas besoin de mettre à jour le serveur."
   },
   "g1GUs5": {
     "defaultMessage": "vCPU"

@@ -678,7 +678,7 @@
     "defaultMessage": "请重试。"
   },
   "Ff9LAg": {
-    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 `<catalog>目录</catalog>` 中提供。"
+    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -955,6 +955,9 @@
   },
   "OJuBck": {
     "defaultMessage": "无需密码"
+  },
+  "OKXlev": {
+    "defaultMessage": "跑 {name} 作为一种管理方式 {category} 在 LNVPS 上——使用自定义主机名，已启用 TLS。 {storage} 存储，无需更新服务器。"
   },
   "OLqOyf": {
     "defaultMessage": "设置说明"
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "地点：{location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "运行。 {name} 作为一项管理项目 {category} 在 LNVPS 上——使用自定义主机名，并启用 TLS。 {storage} 采用 GB 级别的存储空间，无需进行服务器补丁更新。"
   },
   "g1GUs5": {
     "defaultMessage": "虚拟 CPU"

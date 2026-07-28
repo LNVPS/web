@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "Passwordless"
   },
+  "OKXlev": {
+    "defaultMessage": "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch."
+  },
   "OLqOyf": {
     "defaultMessage": "Setup Instructions"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "Location: {location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} GB storage, no server to patch."
   },
   "g1GUs5": {
     "defaultMessage": "vCPU"

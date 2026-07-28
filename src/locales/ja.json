@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "パスワード不要"
   },
+  "OKXlev": {
+    "defaultMessage": "走る {name} 管理されたものとして {category} LNVPSで — 独自のホスト名を使用し、TLSを有効にします。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
+  },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "場所：{location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPS上で——独自のホスト名を使用し、TLSを有効にする。 {storage} ストレージ容量は数ギガバイトで、サーバーのパッチを当てる必要はありません。"
   },
   "g1GUs5": {
     "defaultMessage": "仮想CPU"

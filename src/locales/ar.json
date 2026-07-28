@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "بدون كلمة مرور"
   },
+  "OKXlev": {
+    "defaultMessage": "اركض {name} بصفتها مُدارة {category} على شبكة LNVPS — اسم مضيف خاص، مع دعم بروتوكول TLS. {storage} تخزين، لا حاجة لتحديث الخادم."
+  },
   "OLqOyf": {
     "defaultMessage": "تعليمات الإعداد"
   },
@@ -1595,9 +1598,6 @@
   "fxYCqm": {
     "defaultMessage": "الموقع: {location}"
   },
-  "g/bMVf": {
-    "defaultMessage": "تشغيل {name} بصفتها مُدارة {category} على نظام LNVPS — اسم مضيف مخصص، مع تفعيل بروتوكول TLS. {storage} ذاكرة تخزين بحجم ١ جيجابايت، ولا حاجة لتحديثات الخادم."
-  },
   "g1GUs5": {
     "defaultMessage": "وحدة معالجة مركزية افتراضية"
   },
@@ -2172,7 +2172,7 @@
     "defaultMessage": "سجل الدفعات"
   },
   "vuTMNa": {
-    "defaultMessage": "نظام تخزين شخصي على شكل خزنة، مع مساحة مخصصة لتخزين الوسائط المتعددة من نوع \"بلوسوم\"."
+    "defaultMessage": "نظام تخزين شخصي على شكل خزنة، مع مساحة مخصصة لتخزين الوسائط المتعددة من نوع \"Blossom\"."
   },
   "vy2rlX": {
     "defaultMessage": "رسوم المعالجة:"

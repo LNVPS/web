@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "Şifresiz"
   },
+  "OKXlev": {
+    "defaultMessage": "Koş {name} yönetilen bir şekilde {category} LNVPS üzerinde — kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
+  },
   "OLqOyf": {
     "defaultMessage": "Kurulum Talimatları"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "Konum: {location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde — özel alan adı, TLS dahil. {storage} GB depolama alanı, herhangi bir sunucuya yama uygulama gerekmiyor."
   },
   "g1GUs5": {
     "defaultMessage": "sanal CPU"

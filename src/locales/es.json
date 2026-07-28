@@ -1,4 +1,7 @@
 {
+  "375584": {
+    "defaultMessage": "Requiere pago."
+  },
   "++XeyK": {
     "defaultMessage": "Clave Nostr"
   },
@@ -160,9 +163,6 @@
   },
   "36aVfS": {
     "defaultMessage": "Mensaje directo de Nostr."
-  },
-  "375584": {
-    "defaultMessage": "Requiere pago."
   },
   "3GLHv9": {
     "defaultMessage": "autenticar"
@@ -956,6 +956,9 @@
   "OJuBck": {
     "defaultMessage": "Sin contraseña"
   },
+  "OKXlev": {
+    "defaultMessage": "Corre {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar ningún servidor."
+  },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"
   },
@@ -1594,9 +1597,6 @@
   },
   "fxYCqm": {
     "defaultMessage": "Ubicación: {location}"
-  },
-  "g/bMVf": {
-    "defaultMessage": "Ejecutar / Correr {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} Almacenamiento de GB, sin necesidad de aplicar parches al servidor."
   },
   "g1GUs5": {
     "defaultMessage": "CPU virtual"

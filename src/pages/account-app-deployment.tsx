@@ -71,7 +71,7 @@ function LifecycleProgress({ lifecycle }: { lifecycle: DeploymentLifecycle }) {
                     ? "text-cyber-text-bright"
                     : "text-cyber-muted"
               }
-              aria-current={state === "current" ? "step" : undefined}
+              aria-current={i === at ? "step" : undefined}
             >
               {s.label}
             </span>

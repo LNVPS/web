@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { App, AppDeployment, AppDeploymentStatus } from "../api";
+import { App, AppDeployment } from "../api";
 import useLogin from "../hooks/login";
 import Spinner from "../components/spinner";
 import Seo from "../components/seo";
@@ -10,22 +10,47 @@ import { StatusPill } from "../components/billing";
 import type { BillingTone } from "../components/billing";
 import CostLabel from "../components/cost";
 import BytesSize from "../components/bytes";
+import {
+  DeploymentLifecycle,
+  deploymentLifecycle,
+} from "../utils/app-deployment";
 
-/** Map an operator deployment status to a billing tone + label. */
-export function deploymentStatus(status: AppDeploymentStatus): {
+/**
+ * Tone + label for a deployment's lifecycle state, wherever one is shown.
+ *
+ * Keyed on the lifecycle rather than the operator `status` it used to take
+ * (`LNVPS/web#69`): a never-paid deployment is written back as `stopped`, so
+ * status alone labelled it "Stopped" in every list while its own page said
+ * "Needs payment" — two names for one state, one click apart.
+ *
+ * Callers derive the state with `deploymentLifecycle()` and pass it here, so
+ * the page that gates its sections on that value and the list that labels from
+ * it cannot drift.
+ */
+export function deploymentStatus(lifecycle: DeploymentLifecycle): {
   tone: BillingTone;
   label: ReactNode;
 } {
-  switch (status) {
+  switch (lifecycle) {
+    case "unpaid":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Needs payment" />,
+      };
+    case "expired":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Expired" />,
+      };
+    case "deploying":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Deploying" />,
+      };
     case "running":
       return {
         tone: "primary",
         label: <FormattedMessage defaultMessage="Running" />,
-      };
-    case "pending":
-      return {
-        tone: "warning",
-        label: <FormattedMessage defaultMessage="Pending" />,
       };
     case "stopped":
       return {
@@ -38,7 +63,6 @@ export function deploymentStatus(status: AppDeploymentStatus): {
         label: <FormattedMessage defaultMessage="Deleting" />,
       };
     case "error":
-    default:
       return {
         tone: "danger",
         label: <FormattedMessage defaultMessage="Error" />,
@@ -78,7 +102,7 @@ function DeploymentRow({
   deployment: AppDeployment;
   app?: App;
 }) {
-  const st = deploymentStatus(deployment.status);
+  const st = deploymentStatus(deploymentLifecycle(deployment));
   return (
     <Link
       to={`/account/apps/deployments/${deployment.id}`}

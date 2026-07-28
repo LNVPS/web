@@ -17,6 +17,7 @@ import { highlightYaml } from "../utils/yaml-highlight";
 import type { AppLoaderData } from "../loaders";
 import BytesSize from "../components/bytes";
 import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
+import { deploymentLifecycle } from "../utils/app-deployment";
 
 /**
  * Per-service resource breakdown for an app that has more than one container.
@@ -310,7 +311,7 @@ export function AppPage() {
               </Eyebrow>
               <div className="overflow-hidden rounded-sm border border-cyber-border divide-y divide-cyber-border/60">
                 {deployments.map((d) => {
-                  const st = deploymentStatus(d.status);
+                  const st = deploymentStatus(deploymentLifecycle(d));
                   return (
                     <Link
                       key={d.id}

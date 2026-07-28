@@ -19,57 +19,12 @@ import { AsyncButton } from "../components/button";
 import { CostAmount } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
 import { appUpgradeSource } from "../components/payment-sources";
-import { AppIcon, AppResources } from "./account-apps";
+import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
 import {
   DeploymentLifecycle,
   deploymentLifecycle,
   deploymentPermissions,
 } from "../utils/app-deployment";
-import type { BillingTone } from "../components/billing";
-
-/** Pill tone and label for a lifecycle state. */
-function lifecyclePill(lifecycle: DeploymentLifecycle): {
-  tone: BillingTone;
-  label: ReactNode;
-} {
-  switch (lifecycle) {
-    case "unpaid":
-      return {
-        tone: "warning",
-        label: <FormattedMessage defaultMessage="Needs payment" />,
-      };
-    case "expired":
-      return {
-        tone: "warning",
-        label: <FormattedMessage defaultMessage="Expired" />,
-      };
-    case "deploying":
-      return {
-        tone: "warning",
-        label: <FormattedMessage defaultMessage="Deploying" />,
-      };
-    case "running":
-      return {
-        tone: "primary",
-        label: <FormattedMessage defaultMessage="Running" />,
-      };
-    case "stopped":
-      return {
-        tone: "muted",
-        label: <FormattedMessage defaultMessage="Stopped" />,
-      };
-    case "deleting":
-      return {
-        tone: "danger",
-        label: <FormattedMessage defaultMessage="Deleting" />,
-      };
-    case "error":
-      return {
-        tone: "danger",
-        label: <FormattedMessage defaultMessage="Error" />,
-      };
-  }
-}
 
 /**
  * The three steps a deployment walks on its way to serving traffic, which is
@@ -607,7 +562,7 @@ export function AccountAppDeploymentPage() {
   // underneath.
   const lifecycle = deploymentLifecycle(deployment);
   const can = deploymentPermissions(lifecycle);
-  const st = lifecyclePill(lifecycle);
+  const st = deploymentStatus(lifecycle);
 
   return (
     <div className="flex flex-col gap-6">

@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "最低：{min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "部署您的中继站——从……开始 {price}每月"
-  },
   "J+dIsA": {
     "defaultMessage": "订阅"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "在专门为此目的而设计的虚拟专用服务器（VPS）上运行您的闪电网络节点。"
+  },
+  "tiWuG8": {
+    "defaultMessage": "部署您的中继节点 — 从 {price} 每月起"
   },
   "tngc9N": {
     "defaultMessage": "源 CIDR"

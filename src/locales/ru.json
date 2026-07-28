@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Минимум: {min} ГБ"
   },
-  "IzzIw7": {
-    "defaultMessage": "Разверните ретранслятор — начиная с {price}в месяц"
-  },
   "J+dIsA": {
     "defaultMessage": "Подписки"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Запустите свой узел Lightning на виртуальном частном сервере, специально предназначенном для этого."
+  },
+  "tiWuG8": {
+    "defaultMessage": "Разверните свою ретрансляционную станцию — начиная с {price} в месяц"
   },
   "tngc9N": {
     "defaultMessage": "Исходный CIDR-блок."

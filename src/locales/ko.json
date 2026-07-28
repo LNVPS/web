@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "최소: {min} 기가바이트"
   },
-  "IzzIw7": {
-    "defaultMessage": "릴레이를 배치하세요. {price}/월"
-  },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "라이트닝 노드를 위해 특별히 구축된 VPS에서 실행하세요."
+  },
+  "tiWuG8": {
+    "defaultMessage": "릴레이를 배치하세요. {price} 매월"
   },
   "tngc9N": {
     "defaultMessage": "소스 CIDR"

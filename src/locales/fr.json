@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum : {min} Go"
   },
-  "IzzIw7": {
-    "defaultMessage": "Déployez votre relais — à partir de {price}par mois"
-  },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Exécutez votre nœud Lightning sur un serveur virtuel privé (VPS) spécialement conçu à cet effet."
+  },
+  "tiWuG8": {
+    "defaultMessage": "Déployez votre relais – à partir de {price} par mois"
   },
   "tngc9N": {
     "defaultMessage": "CIDR source"

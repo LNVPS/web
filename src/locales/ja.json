@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "最小要件：{min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "リレーを配置してください — から {price}月"
-  },
   "J+dIsA": {
     "defaultMessage": "購読"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Lightningノードを、その目的に特化したVPSで運用しましょう。"
+  },
+  "tiWuG8": {
+    "defaultMessage": "リレーを配置してください。 {price} 1か月あたり"
   },
   "tngc9N": {
     "defaultMessage": "送信元CIDR"

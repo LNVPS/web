@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Deploy your relay — from {price}/month"
-  },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Run your Lightning node on a VPS built for it"
+  },
+  "tiWuG8": {
+    "defaultMessage": "Deploy your relay — from {price} per month"
   },
   "tngc9N": {
     "defaultMessage": "Source CIDR"

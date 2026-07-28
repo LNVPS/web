@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Setzen Sie Ihre Relais ein – ab {price}pro Monat"
-  },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Betreiben Sie Ihren Lightning-Knoten auf einem speziell dafür entwickelten virtuellen Privaten Server (VPS)."
+  },
+  "tiWuG8": {
+    "defaultMessage": "Setzen Sie Ihre Relais ein – ab {price} pro Monat"
   },
   "tngc9N": {
     "defaultMessage": "Quell-CIDR"

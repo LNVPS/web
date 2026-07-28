@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "Mínimo: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Implemente su sistema de retransmisión — desde {price}/mes"
-  },
   "J+dIsA": {
     "defaultMessage": "Suscripciones"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Ejecute su nodo de Lightning en un servidor privado virtual (VPS) diseñado específicamente para ello."
+  },
+  "tiWuG8": {
+    "defaultMessage": "Implemente su sistema de retransmisión — desde {price} por mes"
   },
   "tngc9N": {
     "defaultMessage": "CIDR de origen"

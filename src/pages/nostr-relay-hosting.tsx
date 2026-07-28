@@ -412,7 +412,7 @@ export function NostrRelayHostingPage() {
           >
             {priceNode ? (
               <FormattedMessage
-                defaultMessage="Deploy your relay — from {price}/month"
+                defaultMessage="Deploy your relay — from {price} per month"
                 values={{ price: priceNode }}
               />
             ) : (

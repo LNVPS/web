@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "الحد الأدنى: {min} جيجابايت"
   },
-  "IzzIw7": {
-    "defaultMessage": "انشر جهاز الإرسال والاستقبال الخاص بك — بدءًا من {price}/شهر"
-  },
   "J+dIsA": {
     "defaultMessage": "الاشتراكات"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "شغّل عقدة لايتنينغ الخاصة بك على خادم افتراضي خاص (VPS) مُصمّم خصيصًا لهذا الغرض."
+  },
+  "tiWuG8": {
+    "defaultMessage": "انشر جهاز الإرسال والاستقبال الخاص بك — بدءًا من {price} في الشهر"
   },
   "tngc9N": {
     "defaultMessage": "مصدر شبكة CIDR"

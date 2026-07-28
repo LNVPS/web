@@ -812,9 +812,6 @@
   "Iz4veS": {
     "defaultMessage": "En az: {min} GB"
   },
-  "IzzIw7": {
-    "defaultMessage": "Rölenizi konuşlandırın — şu konumdan: {price}ayda"
-  },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
   },
@@ -2110,6 +2107,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Lightning düğümünüzü, özellikle bu amaç için tasarlanmış bir sanal özel sunucuda (VPS) çalıştırın."
+  },
+  "tiWuG8": {
+    "defaultMessage": "Rölenizi konuşlandırın — şu konumdan: {price} ayda bir"
   },
   "tngc9N": {
     "defaultMessage": "Kaynak CIDR"

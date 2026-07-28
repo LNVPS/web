@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>所有套餐均提供静态 IPv4 和 IPv6 地址。</b>已注册的节点需要一个不会更改的地址。两者都包含在内，无需额外付费。"
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} 虚拟 CPU，{memory} 内存，{disk} {diskType} 存储，位于 {region}。"
+  },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
   },

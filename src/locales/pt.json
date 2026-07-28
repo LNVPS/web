@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Endereço IPv4 e IPv6 estático em todos os planos.</b> Um nó anunciado precisa de um endereço que não seja alterado. Ambos estão incluídos, sem custo adicional."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} CPU virtual, {memory} Memória RAM. {disk} {diskType} armazenamento em {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Apenas alertas de conta, como o prazo de validade do certificado digital. Nunca enviamos mensagens de marketing."
   },

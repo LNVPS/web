@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Statische IPv4- und IPv6-Adressen sind in allen Tarifen enthalten.</b> Ein angekündigter Knoten benötigt eine Adresse, die sich nicht ändert. Beide Adresstypen sind inklusive, es fallen keine zusätzlichen Kosten an."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} vCPU, {memory} RAM, {disk} {diskType} Speicher in {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Es werden nur Benachrichtigungen zum Konto gesendet, z. B. über das Ablaufdatum einer virtuellen Maschine (VM). Wir versenden niemals Werbenachrichten."
   },

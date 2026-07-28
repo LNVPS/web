@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>すべてのプランで、固定のIPv4アドレスとIPv6アドレスをご利用いただけます。</b> 公開されるノードには、変更されないアドレスが必要です。どちらも追加料金なしで含まれています。"
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} 仮想CPU、 {memory} RAM、 {disk} {diskType} ～に保存 {region}。"
+  },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
   },

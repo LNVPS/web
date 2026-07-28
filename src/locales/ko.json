@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>모든 요금제에 고정 IPv4 및 IPv6 주소가 포함됩니다.</b> 네트워크에 연결된 노드는 변경되지 않는 주소가 필요합니다. 두 가지 모두 기본으로 제공되며 추가 요금이 부과되지 않습니다."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} 가상 CPU {memory} 램(RAM) {disk} {diskType} 저장 위치 {region}."
+  },
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
   },

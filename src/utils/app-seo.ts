@@ -2,45 +2,8 @@ import type { IntlShape } from "react-intl";
 import { CostPlanIntervalType, type App } from "../api";
 import { GiB } from "../const";
 import { formatBytesText } from "./bytes";
-import { formatPriceText, smallestUnitScale } from "./currency";
-
-/** Matches `SITE_URL` in `src/components/seo.tsx:5`, for absolute schema URLs. */
-const SITE_URL = "https://lnvps.net";
-
-/**
- * Billing period unit per interval the API can return (`src/api.ts:29-33`).
- *
- * `code` is the UN/CEFACT Common Code for `unitCode`, which is the property
- * schema.org names for this job: `billingDuration` is "a Duration or a Number
- * (in which case the unit of measurement … is specified by the `unitCode`
- * property)", and `billingIncrement`'s "unit of measurement is specified by the
- * `unitCode` property". We emit Numbers, so the code is the carrier and
- * `unitText` is the documented fallback for when a code is unavailable — kept
- * alongside because it costs nothing and is what a human reading the markup
- * sees.
- *
- * Codes from UN/CEFACT Rec 20 Annex I, quantity "time": `DAY` day, `MON`
- * month, `ANN` year.
- *
- * Typed on the enum, so a new interval type is a type error here rather than
- * an undefined in the markup.
- */
-const BILLING_UNIT: Record<CostPlanIntervalType, { code: string; text: string }> =
-  {
-    [CostPlanIntervalType.DAY]: { code: "DAY", text: "DAY" },
-    [CostPlanIntervalType.MONTH]: { code: "MON", text: "MONTH" },
-    [CostPlanIntervalType.YEAR]: { code: "ANN", text: "YEAR" },
-  };
-
-/**
- * The recurring price in standard units as a plain decimal, for structured
- * data. Undefined for BTC: amounts there are millisats, which two decimal
- * places cannot express — better no `price` than "0.00".
- */
-function standardUnitPrice(app: App): string | undefined {
-  if (app.currency === "BTC") return undefined;
-  return (app.amount / smallestUnitScale(app.currency)).toFixed(2);
-}
+import { formatPriceText } from "./currency";
+import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
 
 /**
  * The page `<title>`, without the `" | LNVPS"` that `Seo` appends.
@@ -109,7 +72,7 @@ export function appSeoDescription(
     app.interval_amount === 1 &&
     app.interval_type === CostPlanIntervalType.MONTH;
   const priceClause =
-    monthly && standardUnitPrice(app) !== undefined
+    monthly && standardUnitPrice(app.amount, app.currency) !== undefined
       ? intl.formatMessage(
           { defaultMessage: "{price}/month, pay with Lightning." },
           { price: formatPriceText(intl, app) },
@@ -131,7 +94,7 @@ export function appSeoDescription(
  */
 export function appJsonLd(app: App, intl: IntlShape): object {
   const url = `${SITE_URL}/apps/${app.id}`;
-  const offerPrice = standardUnitPrice(app);
+  const offerPrice = standardUnitPrice(app.amount, app.currency);
   const description = appSeoDescription(app, intl);
   return {
     "@context": "https://schema.org",

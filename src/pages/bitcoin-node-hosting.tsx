@@ -8,7 +8,11 @@ import { DiskType } from "../api";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { formatBytesText } from "../utils/bytes";
 import { formatPriceText } from "../utils/currency";
-import { regionCustomTemplate, regionDisk } from "../utils/regions";
+import {
+  regionCustomTemplate,
+  regionDisk,
+  regionMaxDisk,
+} from "../utils/regions";
 import { DublinRegionId } from "../const";
 import type { RegionLoaderData } from "../loaders";
 
@@ -35,6 +39,7 @@ export function BitcoinNodeHostingPage() {
   const dublin = regionCustomTemplate(offers, DublinRegionId);
   const hdd = regionDisk(dublin, DiskType.HDD);
   const ssd = regionDisk(dublin, DiskType.SSD);
+  const maxDisk = regionMaxDisk(dublin);
   const fromText = from ? formatPriceText(intl, from) : undefined;
 
   // The regions we actually offer a build in, named as the catalog names them
@@ -104,8 +109,8 @@ export function BitcoinNodeHostingPage() {
           <Section
             title={<FormattedMessage defaultMessage="Room for the chain" />}
           >
-            <p className="m-0 max-w-prose text-cyber-text">
-              {hdd && ssd ? (
+            {hdd && ssd ? (
+              <p className="m-0 max-w-prose text-cyber-text">
                 <FormattedMessage
                   defaultMessage="In {region}, disk goes up to {hdd} HDD or {ssd} SSD, with {cpu} vCPU and {memory} at the top end."
                   values={{
@@ -116,21 +121,20 @@ export function BitcoinNodeHostingPage() {
                     memory: <BytesSize value={dublin.max_memory} />,
                   }}
                 />
-              ) : (
+              </p>
+            ) : maxDisk ? (
+              <p className="m-0 max-w-prose text-cyber-text">
                 <FormattedMessage
                   defaultMessage="In {region}, disk goes up to {disk}, with {cpu} vCPU and {memory} at the top end."
                   values={{
                     region: dublin.region.name,
-                    disk: formatBytesText(
-                      intl,
-                      Math.max(...dublin.disks.map((d) => d.max_disk)),
-                    ),
+                    disk: formatBytesText(intl, maxDisk.max_disk),
                     cpu: dublin.max_cpu,
                     memory: <BytesSize value={dublin.max_memory} />,
                   }}
                 />
-              )}
-            </p>
+              </p>
+            ) : null}
             <RegionSpecs template={dublin} />
             {from && (
               <p className="m-0 max-w-prose text-cyber-text">

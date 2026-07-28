@@ -101,5 +101,6 @@ describe("regionDisk / regionMaxDisk", () => {
     expect(regionMaxDisk(dublin)?.disk_type).toBe(DiskType.HDD);
     expect(regionMaxDisk(london)?.max_disk).toBe(500 * GiB);
     expect(regionMaxDisk(undefined)).toBeUndefined();
+    expect(regionMaxDisk({ ...dublin, disks: [] })).toBeUndefined();
   });
 });

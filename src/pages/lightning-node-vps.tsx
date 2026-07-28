@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { CostAmount } from "../components/cost";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
-import { relayApps, relayPriceFrom } from "../utils/relay-catalog";
+import { relayApps, catalogPriceFrom } from "../utils/relay-catalog";
 import type { AppsLoaderData } from "../loaders";
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
@@ -66,7 +66,7 @@ export function LightningNodeVpsPage() {
   // two pages cannot quote different money. Undefined when the catalog gave us
   // nothing, and the sentence then drops the figure rather than stating one
   // the front end cannot verify (`LNVPS/web#67`).
-  const relayCost = relayPriceFrom(relayApps(apps));
+  const relayCost = catalogPriceFrom(relayApps(apps));
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the markup a
   // crawler reads and the text a visitor reads cannot drift. On this page the

@@ -33,6 +33,25 @@ export function VpsIrelandPage() {
   // and the sentence then drops the figure.
   const appPrice = catalogPriceFrom(apps ?? []);
 
+  const appLinks = {
+    relay: (chunks: React.ReactNode) => (
+      <Link
+        to="/nostr-relay-hosting"
+        className="text-cyber-primary hover:underline"
+      >
+        {chunks}
+      </Link>
+    ),
+    blossom: (chunks: React.ReactNode) => (
+      <Link
+        to="/blossom-server-hosting"
+        className="text-cyber-primary hover:underline"
+      >
+        {chunks}
+      </Link>
+    ),
+  };
+
   const description =
     fromText && template
       ? intl.formatMessage(
@@ -79,46 +98,14 @@ export function VpsIrelandPage() {
             <FormattedMessage
               defaultMessage="Dublin is also where our managed <relay>Nostr relays</relay> and <blossom>Blossom servers</blossom> run, from {price} a month."
               values={{
+                ...appLinks,
                 price: <CostAmount cost={appPrice} converted={false} />,
-                relay: (chunks) => (
-                  <Link
-                    to="/nostr-relay-hosting"
-                    className="text-cyber-primary hover:underline"
-                  >
-                    {chunks}
-                  </Link>
-                ),
-                blossom: (chunks) => (
-                  <Link
-                    to="/blossom-server-hosting"
-                    className="text-cyber-primary hover:underline"
-                  >
-                    {chunks}
-                  </Link>
-                ),
               }}
             />
           ) : (
             <FormattedMessage
               defaultMessage="Dublin is also where our managed <relay>Nostr relays</relay> and <blossom>Blossom servers</blossom> run."
-              values={{
-                relay: (chunks) => (
-                  <Link
-                    to="/nostr-relay-hosting"
-                    className="text-cyber-primary hover:underline"
-                  >
-                    {chunks}
-                  </Link>
-                ),
-                blossom: (chunks) => (
-                  <Link
-                    to="/blossom-server-hosting"
-                    className="text-cyber-primary hover:underline"
-                  >
-                    {chunks}
-                  </Link>
-                ),
-              }}
+              values={appLinks}
             />
           )}
         </p>

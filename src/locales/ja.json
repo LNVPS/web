@@ -29,6 +29,9 @@
   "+UjQFc": {
     "defaultMessage": "規則と方針"
   },
+  "+lH372": {
+    "defaultMessage": "ダブリンのVPSを構築しましょう。"
+  },
   "+sQCsu": {
     "defaultMessage": "お支払い完了"
   },
@@ -59,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWCウォレット"
   },
+  "/kXbXW": {
+    "defaultMessage": "何を作ることができますか。"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider} で続ける"
   },
@@ -73,6 +79,12 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
+  },
+  "0eyb8X": {
+    "defaultMessage": "VPS上でビットコインのフルノードを稼働させる。 {regions}ビットコインで、ライトニングネットワークまたはオンチェーンで支払いを受け付けます。 {price}月額料金（税別）。"
+  },
+  "0gAiqM": {
+    "defaultMessage": "アイルランドでのVPSホスティング"
   },
   "0gkn9c": {
     "defaultMessage": "お客様のIPアドレス範囲のサブスクリプションが作成されました。最初の支払いをお済ませください。お支払いが完了すると、指定されたIPアドレス範囲が割り当てられ、サブスクリプションが有効になります。"
@@ -97,6 +109,12 @@
   },
   "13cluZ": {
     "defaultMessage": "SSHキーを追加："
+  },
+  "18wON0": {
+    "defaultMessage": "VPSカナダ — ケベックのVPS。ビットコインで支払い可能。"
+  },
+  "1HKX0H": {
+    "defaultMessage": "はい。ライトニングネットワークまたはオンチェーンで決済できます。更新は毎月行われます。"
   },
   "1LBny5": {
     "defaultMessage": "停止しました。"
@@ -134,6 +152,9 @@
   "24piVc": {
     "defaultMessage": "<b>必要な場合は、独自のドメインを使用できます。</b>CNAMEレコードをリレーサーバーに設定すると、デフォルトのホスト名とともに、そのドメイン用の証明書を提供します。検証の手続きは不要で、DNSが解決されると証明書が発行されます。"
   },
+  "2Aa625": {
+    "defaultMessage": "～で {region}、ディスクは最大で {disk}とともに {cpu} 仮想CPUおよび {memory} 最上位に。"
+  },
   "2QrTo0": {
     "defaultMessage": "新しいIPアドレス範囲の割り当て依頼"
   },
@@ -154,6 +175,9 @@
   },
   "2nfKZI": {
     "defaultMessage": "後でリレーソフトを切り替えることはできますか？"
+  },
+  "2xMlQF": {
+    "defaultMessage": "VPS上で、ブロックチェーン全体を保存できるだけの容量を持つBitcoinのフルノードを運用してください。支払い方法として、LightningネットワークまたはオンチェーンでのBitcoin決済をご利用いただけます。"
   },
   "35johu": {
     "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはクレジットカードで支払い。アカウント登録には個人情報は不要です。Nostrキーを使ってログインしてください。ブラウザ版ではNIP-07、API版ではNIP-98を使用します。"
@@ -188,6 +212,9 @@
   "3vxkus": {
     "defaultMessage": "保存する必要はありません。お使いのデバイス（Face ID、Touch ID、Windows Hello、またはセキュリティキー）がアカウントを保護します。"
   },
+  "3wJI0g": {
+    "defaultMessage": "ダブリンは、当社が管理する<relay>Nostrリレー</relay>と<blossom>Blossomサーバー</blossom>が稼働している場所でもあります。"
+  },
   "3woNJO": {
     "defaultMessage": "デフォルトのポリシーが適用される前に、ルールは優先順位に従って評価されます（優先度の低いものから）。スプーフィング対策は常にホストによって強制的に実行されます。"
   },
@@ -217,6 +244,9 @@
   },
   "4PkXEE": {
     "defaultMessage": "シリアルターミナル"
+  },
+  "4Sczsm": {
+    "defaultMessage": "チェーンをかけるためのスペース。"
   },
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
@@ -692,6 +722,9 @@
   "G/yZLu": {
     "defaultMessage": "削除する"
   },
+  "G0Z48e": {
+    "defaultMessage": "ヨーロッパ以外の場所で機械を使用したい場合は、当社のケベック拠点をご利用ください。組み立てはご自身で行い、月額料金はこれまでと同様で、お支払いはビットコインで行います。"
+  },
   "G1kGar": {
     "defaultMessage": "パスキーのみのアカウントでは、唯一のパスキーを削除できません。"
   },
@@ -800,6 +833,9 @@
   "Id24hd": {
     "defaultMessage": "名前 *"
   },
+  "IiNYda": {
+    "defaultMessage": "組み込んでください。 {regions}。"
+  },
   "Ij0H43": {
     "defaultMessage": "グラフ"
   },
@@ -832,6 +868,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、再開するにはサブスクリプションを更新してください。"
+  },
+  "JcR1r1": {
+    "defaultMessage": "ビットコインノードのホスティング"
   },
   "JcmOUh": {
     "defaultMessage": "あなた自身のNostrリレーを、ここから運用しましょう。 {price} 1か月に付き、独自のホスト名でTLSとストレージを含む状態で数分間利用できます。"
@@ -938,6 +977,9 @@
   "N2IrpM": {
     "defaultMessage": "確認する。"
   },
+  "N6XokP": {
+    "defaultMessage": "いいえ。これは、root権限が付与されたシンプルなVPSであり、お客様ご自身でノードをインストールして実行する必要があります。当社が提供するワンクリックで簡単にセットアップできるアプリケーションは、NostrリレーとBlossomメディアサーバーであり、これらはダブリンリージョンでのみ利用可能です。"
+  },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
   },
@@ -1021,6 +1063,9 @@
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
+  "Ppjs/C": {
+    "defaultMessage": "ロンドンでのVPSホスティング"
   },
   "PucUfl": {
     "defaultMessage": "SSHキーを選択してください。"
@@ -1133,6 +1178,9 @@
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
   },
+  "SdeZbs": {
+    "defaultMessage": "ビットコインで支払ってもいいですか？"
+  },
   "Sg3z1C": {
     "defaultMessage": "選択された仮想マシンはありません。"
   },
@@ -1162,6 +1210,9 @@
   },
   "TE4fIS": {
     "defaultMessage": "都市"
+  },
+  "TF6JQf": {
+    "defaultMessage": "お客様のご要望に応じて構築されるVPS {region}： {minCpu}{maxCpu} 仮想CPUおよび {minMemory}{maxMemory} メモリ、支払いはビットコインで。"
   },
   "TGPQYT": {
     "defaultMessage": "{success} 支払い済み、報酬が支払われた。"
@@ -1310,6 +1361,9 @@
   "WhLfzM": {
     "defaultMessage": "住所2行目"
   },
+  "WhmAMo": {
+    "defaultMessage": "ビットコインノードのホスティング"
+  },
   "Wsj2fc": {
     "defaultMessage": "現在発生中のインシデント"
   },
@@ -1318,6 +1372,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月}}"
+  },
+  "X/4SWn": {
+    "defaultMessage": "カナダのケベック州でVPSホスティングをご利用いただけます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでのビットコイン決済でお願いします。"
   },
   "X/xmPf": {
     "defaultMessage": "独自のデータベースを備えた隔離された環境。"
@@ -1430,6 +1487,9 @@
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
   },
+  "aW+dvb": {
+    "defaultMessage": "{min}{max} 仮想CPU"
+  },
   "acrOoz": {
     "defaultMessage": "続行してください。"
   },
@@ -1475,6 +1535,9 @@
   "c0b5XV": {
     "defaultMessage": "レート、割合"
   },
+  "c3o/3B": {
+    "defaultMessage": "～から {price} 月額料金で、消費税は含まれません。"
+  },
   "c5aQL+": {
     "defaultMessage": "アプリを選び、名前を付け、料金を支払います。すると、TLSがすでに有効になっている状態で、独自のホスト名で自動的に起動します。OSのパッチを当てたり、Dockerを設定したり、証明書を更新したりする必要はありません。"
   },
@@ -1499,6 +1562,9 @@
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price} 1か月に。"
   },
+  "cZIa8g": {
+    "defaultMessage": "ロンドンにVPSを構築しましょう。"
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM：{name}"
   },
@@ -1517,6 +1583,9 @@
   "d3wxHm": {
     "defaultMessage": "履歴の読み込み中..."
   },
+  "d6JhA/": {
+    "defaultMessage": "ケベック州にVPSを構築しましょう。"
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1531,6 +1600,12 @@
   },
   "dPEbZd": {
     "defaultMessage": "この設定は、お支払いをお待ちの状態です。サブスクリプションにお支払いいただくことで、設定が有効になります。"
+  },
+  "dSDJft": {
+    "defaultMessage": "当社のダブリン拠点。お客様がご希望の機械を組み立てます。 {minCpu}{maxCpu} vCPUおよび {minMemory}–{maxMemory}そして、ビットコインで支払います。"
+  },
+  "dTTuZ+": {
+    "defaultMessage": "アイルランドのダブリンにあるVPSホスティング（仮想専用サーバー）サービス {price}月額料金（税別）。お客様のニーズに合わせて仕様をカスタマイズできます。 {maxCpu} vCPU。ライトニングネットワークまたはオンチェーンでビットコインで支払ってください。"
   },
   "dUQeuG": {
     "defaultMessage": "パスキーアカウントを作成"
@@ -1582,6 +1657,9 @@
   },
   "eq14GY": {
     "defaultMessage": "新しい秘密鍵です。"
+  },
+  "eqv4wu": {
+    "defaultMessage": "ダブリンでも。"
   },
   "evMlX9": {
     "defaultMessage": "自動更新"
@@ -1658,6 +1736,9 @@
   "gtGLdm": {
     "defaultMessage": "手数料{amount}を含む"
   },
+  "gu3xKo": {
+    "defaultMessage": "ビットコインで支払うVPSで、ブロックチェーンを運用するための十分な容量を確保できます。必要なスペックを選択し、独自のノードソフトウェアをインストールしてください。rootアクセス権が付与され、操作を妨げるコントロールパネルは一切ありません。"
+  },
   "gv8O1e": {
     "defaultMessage": "VPSの特典"
   },
@@ -1688,6 +1769,9 @@
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
   },
+  "i/LmLC": {
+    "defaultMessage": "ロンドンでのVPSホスティングは、[価格]から {price}月額、税別。 {minCpu}{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンで支払ってください。"
+  },
   "i2/SmH": {
     "defaultMessage": "課金システムはVPSのサブスクリプションと同様に機能し、どのアプリにも初期費用はかかりません。"
   },
@@ -1702,6 +1786,9 @@
   },
   "iXNbPf": {
     "defaultMessage": "名前を変更する。"
+  },
+  "ia14kg": {
+    "defaultMessage": "カナダにおけるVPSホスティング"
   },
   "icn2DS": {
     "defaultMessage": "（おすすめ）"
@@ -1823,6 +1910,9 @@
   "lP4qIQ": {
     "defaultMessage": "カード情報"
   },
+  "lPXSYN": {
+    "defaultMessage": "{min}–{max} メモリ、記憶"
+  },
   "lYEj5M": {
     "defaultMessage": "管理対象のアプリ"
   },
@@ -1855,6 +1945,9 @@
   },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+  },
+  "mHEBOr": {
+    "defaultMessage": "私にBitcoin Coreをインストールしてもらえますか？"
   },
   "mIuuiJ": {
     "defaultMessage": "サービスの状況と稼働時間"
@@ -1946,6 +2039,9 @@
   "oCc8Oq": {
     "defaultMessage": "キーを追加"
   },
+  "oOdFIC": {
+    "defaultMessage": "当社のダブリン拠点。お客様が希望する仕様の機械を組み立て、ビットコインで支払うことができます。"
+  },
   "oPvhhB": {
     "defaultMessage": "CPUコア"
   },
@@ -1966,6 +2062,9 @@
   },
   "oezJ0C": {
     "defaultMessage": "固定IPアドレス、無制限のデータ通信量、Torの使用許可、KYC（顧客確認）は不要。支払いにはライトニングネットワークをご利用ください。当社独自のノードを運用しているため、お客様のお支払いは決済処理業者を経由することはありません。"
+  },
+  "ooCqJa": {
+    "defaultMessage": "～で {region}ディスクの容量は最大で {hdd} HDDまたは {ssd} SSD、および {cpu} vCPUおよび {memory} 最上位に。"
   },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"
@@ -1996,6 +2095,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "止まれ"
+  },
+  "qA0DQR": {
+    "defaultMessage": "ロンドンでVPSホスティングを利用できます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでビットコインで行えます。"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
@@ -2096,6 +2198,9 @@
   "sy+pv5": {
     "defaultMessage": "メール"
   },
+  "tG2iXV": {
+    "defaultMessage": "{min}–{max} {type} 保存、保管、貯蔵"
+  },
   "tNmjzW": {
     "defaultMessage": "ポート（複数形）"
   },
@@ -2117,11 +2222,17 @@
   "tngc9N": {
     "defaultMessage": "送信元CIDR"
   },
+  "toaNGS": {
+    "defaultMessage": "VPSがインストールされている場所 {region}"
+  },
   "tthToS": {
     "defaultMessage": "無効化された、使用不能の。"
   },
   "tuJeaZ": {
     "defaultMessage": "はい。"
+  },
+  "twd6jC": {
+    "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービスです。お客様のニーズに合わせて、CPU、メモリ、ストレージなどのスペックを自由に選択いただけます。お支払いには、ライトニングネットワークまたはオンチェーンのビットコインをご利用いただけます。"
   },
   "tzMNF3": {
     "defaultMessage": "状況"
@@ -2149,6 +2260,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "メールアドレス：{email}"
+  },
+  "uYtOL7": {
+    "defaultMessage": "アイルランドのVPS — ダブリンのVPS。ビットコインで支払い可能。"
   },
   "ubXbwc": {
     "defaultMessage": "デフォルトポリシー"
@@ -2179,6 +2293,9 @@
   },
   "v4Sg0C": {
     "defaultMessage": "カスタム受信者キーを使用する"
+  },
+  "vIv3vC": {
+    "defaultMessage": "カナダのケベック州におけるVPSホスティング（提供元：） {price}月額、税別。 {minCpu}–{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンで支払ってください。"
   },
   "vONi+O": {
     "defaultMessage": "国"
@@ -2300,6 +2417,12 @@
   "yUD6jT": {
     "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
   },
+  "yracY5": {
+    "defaultMessage": "VPSロンドン — イギリスのVPS。ビットコインで支払い可能。"
+  },
+  "yrsDLO": {
+    "defaultMessage": "英国のサーバーで、月額料金制で、支払い通貨はビットコインです。CPU、メモリ、ディスクをお選びください。ご希望のもの以外は一切含まれません。"
+  },
   "ys3Bzn": {
     "defaultMessage": "ライトニングノードVPSホスティング – ライトニングで支払い"
   },
@@ -2308,6 +2431,9 @@
   },
   "z4e/Em": {
     "defaultMessage": "Nostrリレーのホスティングを管理。"
+  },
+  "z8VosU": {
+    "defaultMessage": "ダブリンは、当社が管理する施設の所在地でもあります。 <relay>Nostrリレー</relay> および <blossom>Blossomサーバー</blossom> ～から実行 {price} 1か月。"
   },
   "zAN0RF": {
     "defaultMessage": "暗号化されたダイレクトメッセージ"

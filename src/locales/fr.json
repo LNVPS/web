@@ -29,6 +29,9 @@
   "+UjQFc": {
     "defaultMessage": "Règles et politique"
   },
+  "+lH372": {
+    "defaultMessage": "Créez votre serveur virtuel privé (VPS) à Dublin."
+  },
   "+sQCsu": {
     "defaultMessage": "Paiement intégral"
   },
@@ -59,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "Portefeuille NWC"
   },
+  "/kXbXW": {
+    "defaultMessage": "Ce que vous pouvez créer."
+  },
   "/tiBYY": {
     "defaultMessage": "Continuer avec {provider}"
   },
@@ -73,6 +79,12 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
+  },
+  "0eyb8X": {
+    "defaultMessage": "Exécutez un nœud Bitcoin complet sur un serveur virtuel privé (VPS) situé à {regions}. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs. À partir de {price}par mois, hors TVA."
+  },
+  "0gAiqM": {
+    "defaultMessage": "Hébergement VPS en Irlande."
   },
   "0gkn9c": {
     "defaultMessage": "Votre abonnement à l’espace d’adresses IP a été créé. Effectuez le premier paiement pour allouer l’espace d’adresses et activer l’abonnement."
@@ -97,6 +109,12 @@
   },
   "13cluZ": {
     "defaultMessage": "Ajouter une clé SSH :"
+  },
+  "18wON0": {
+    "defaultMessage": "VPS Canada – Serveurs VPS au Québec, paiement en Bitcoin."
+  },
+  "1HKX0H": {
+    "defaultMessage": "Oui, soit via Lightning, soit directement sur la chaîne. Le renouvellement se fait chaque mois."
   },
   "1LBny5": {
     "defaultMessage": "Arrêté"
@@ -134,6 +152,9 @@
   "24piVc": {
     "defaultMessage": "<b>Vous pouvez utiliser votre propre nom de domaine si vous le souhaitez.</b> Indiquez un enregistrement CNAME vers votre serveur relais et nous l’utiliserons avec le nom d’hôte par défaut, en lui attribuant son propre certificat. Aucune étape de vérification n’est nécessaire : le certificat est émis lorsque votre DNS se résout."
   },
+  "2Aa625": {
+    "defaultMessage": "Dans {region}, le disque monte jusqu’à {disk}, avec {cpu} vCPU et {memory} en haut de la gamme."
+  },
   "2QrTo0": {
     "defaultMessage": "Nouvelle commande d’adresses IP."
   },
@@ -154,6 +175,9 @@
   },
   "2nfKZI": {
     "defaultMessage": "Puis-je modifier le logiciel de relais plus tard ?"
+  },
+  "2xMlQF": {
+    "defaultMessage": "Exécutez un nœud Bitcoin complet sur un serveur virtuel privé (VPS) avec suffisamment d’espace pour la chaîne de blocs. Payez en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
   },
   "35johu": {
     "defaultMessage": "Paiement par bitcoin (sur la chaîne), ou par carte bancaire. Aucune information personnelle n’est requise pour l’inscription. Connectez-vous avec votre clé Nostr : NIP-07 dans le navigateur, NIP-98 pour l’API."
@@ -188,6 +212,9 @@
   "3vxkus": {
     "defaultMessage": "Rien à enregistrer : votre appareil (Face ID, Touch ID, Windows Hello ou une clé de sécurité) protège le compte."
   },
+  "3wJI0g": {
+    "defaultMessage": "Dublin est également l’endroit où nos serveurs <relay>Nostr</relay> et <blossom>Blossom</blossom> sont hébergés."
+  },
   "3woNJO": {
     "defaultMessage": "Les règles sont évaluées par ordre de priorité (de la plus basse à la plus élevée) avant l’application de la politique par défaut. La protection contre le dévoiement est toujours appliquée par l’hôte."
   },
@@ -217,6 +244,9 @@
   },
   "4PkXEE": {
     "defaultMessage": "Terminal série"
+  },
+  "4Sczsm": {
+    "defaultMessage": "Espace pour la chaîne."
   },
   "4X/Ixq": {
     "defaultMessage": "Message déchiffré :"
@@ -692,6 +722,9 @@
   "G/yZLu": {
     "defaultMessage": "Supprimer"
   },
+  "G0Z48e": {
+    "defaultMessage": "Notre site du Québec est là pour vous si vous souhaitez que la machine soit située en dehors de l’Europe. Les mêmes spécifications pour l’assemblage, la même facturation mensuelle, le paiement se fait en Bitcoin."
+  },
   "G1kGar": {
     "defaultMessage": "Vous ne pouvez pas supprimer votre seule clé d'accès sur un compte utilisant uniquement des clés d'accès."
   },
@@ -800,6 +833,9 @@
   "Id24hd": {
     "defaultMessage": "Nom *"
   },
+  "IiNYda": {
+    "defaultMessage": "Intégrez-le. {regions}."
+  },
   "Ij0H43": {
     "defaultMessage": "Graphiques"
   },
@@ -832,6 +868,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "L’abonnement de ce déploiement a expiré et il a été réduit à zéro. Vos données sont toujours disponibles ici ; renouvelez votre abonnement pour le relancer."
+  },
+  "JcR1r1": {
+    "defaultMessage": "Hébergement d’un nœud Bitcoin"
   },
   "JcmOUh": {
     "defaultMessage": "Exploitez votre propre relais Nostr à partir de {price} par mois, avec une augmentation en minutes sur son propre nom d’hôte, le chiffrement TLS et l’espace de stockage inclus."
@@ -938,6 +977,9 @@
   "N2IrpM": {
     "defaultMessage": "Confirmer"
   },
+  "N6XokP": {
+    "defaultMessage": "Non. Il s’agit d’un simple serveur virtuel privé (VPS) avec accès root ; vous installez et exécutez le nœud. Nos applications gérées, accessibles en un seul clic, sont les relais Nostr et les serveurs multimédias Blossom, et ceux-ci sont uniquement disponibles sur le serveur de Dublin."
+  },
   "NQgbYA": {
     "defaultMessage": "Paramètres du compte"
   },
@@ -1021,6 +1063,9 @@
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
+  "Ppjs/C": {
+    "defaultMessage": "Hébergement VPS à Londres."
   },
   "PucUfl": {
     "defaultMessage": "Sélectionnez la clé SSH :"
@@ -1133,6 +1178,9 @@
   "Sczo8n": {
     "defaultMessage": "Durée : {duration}"
   },
+  "SdeZbs": {
+    "defaultMessage": "Puis-je payer en Bitcoin ?"
+  },
   "Sg3z1C": {
     "defaultMessage": "Aucune machine virtuelle sélectionnée."
   },
@@ -1162,6 +1210,9 @@
   },
   "TE4fIS": {
     "defaultMessage": "Ville"
+  },
+  "TF6JQf": {
+    "defaultMessage": "Un serveur virtuel privé (VPS) configuré sur mesure en {region}: {minCpu}–{maxCpu} vCPU et {minMemory}–{maxMemory} mémoire, paiement en Bitcoin."
   },
   "TGPQYT": {
     "defaultMessage": "{success} payé"
@@ -1310,6 +1361,9 @@
   "WhLfzM": {
     "defaultMessage": "Adresse, ligne 2"
   },
+  "WhmAMo": {
+    "defaultMessage": "Hébergement de nœuds Bitcoin"
+  },
   "Wsj2fc": {
     "defaultMessage": "Incidents en cours"
   },
@@ -1318,6 +1372,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{mois} other{mois}}"
+  },
+  "X/4SWn": {
+    "defaultMessage": "Hébergement VPS au Québec, au Canada. Choisissez votre processeur, votre mémoire et votre disque dur. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs."
   },
   "X/xmPf": {
     "defaultMessage": "Environnement isolé doté de sa propre base de données."
@@ -1430,6 +1487,9 @@
   "aTgjTE": {
     "defaultMessage": "Ajouter une clé d'accès"
   },
+  "aW+dvb": {
+    "defaultMessage": "{min}–{max} vCPU"
+  },
   "acrOoz": {
     "defaultMessage": "Continuez."
   },
@@ -1475,6 +1535,9 @@
   "c0b5XV": {
     "defaultMessage": "Taux"
   },
+  "c3o/3B": {
+    "defaultMessage": "De {price} par mois, hors TVA."
+  },
   "c5aQL+": {
     "defaultMessage": "Choisissez une application, donnez-lui un nom, effectuez le paiement. Elle sera accessible via son propre nom de domaine, avec TLS déjà configuré – aucune mise à jour du système d’exploitation à effectuer, aucune configuration de Docker, aucun certificat à renouveler."
   },
@@ -1499,6 +1562,9 @@
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois."
   },
+  "cZIa8g": {
+    "defaultMessage": "Créez votre serveur virtuel privé à Londres."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM : {name}"
   },
@@ -1517,6 +1583,9 @@
   "d3wxHm": {
     "defaultMessage": "Chargement de l’historique…"
   },
+  "d6JhA/": {
+    "defaultMessage": "Créez votre serveur virtuel privé (VPS) au Québec."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1531,6 +1600,12 @@
   },
   "dPEbZd": {
     "defaultMessage": "Ce déploiement est en attente de paiement. Veuillez régler l’abonnement pour l’activer."
+  },
+  "dSDJft": {
+    "defaultMessage": "Notre site de Dublin. Créez la machine que vous souhaitez. {minCpu}–{maxCpu} vCPU et {minMemory}–{maxMemory}et payez-le en Bitcoin."
+  },
+  "dTTuZ+": {
+    "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de {price}/mois, hors TVA. Configurez les spécifications de votre choix. {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la blockchain."
   },
   "dUQeuG": {
     "defaultMessage": "Créer un compte avec une clé d'accès"
@@ -1582,6 +1657,9 @@
   },
   "eq14GY": {
     "defaultMessage": "Votre nouvelle clé secrète."
+  },
+  "eqv4wu": {
+    "defaultMessage": "Également à Dublin."
   },
   "evMlX9": {
     "defaultMessage": "Renouvellement automatique"
@@ -1658,6 +1736,9 @@
   "gtGLdm": {
     "defaultMessage": "y compris des frais de traitement de {amount}"
   },
+  "gu3xKo": {
+    "defaultMessage": "Un serveur virtuel privé (VPS) avec suffisamment d’espace pour la chaîne, dont le paiement s’effectue en Bitcoin. Vous choisissez les spécifications et installez votre propre logiciel de nœud : accès root, sans panneau de contrôle encombrant."
+  },
   "gv8O1e": {
     "defaultMessage": "Offres de VPS"
   },
@@ -1688,6 +1769,9 @@
   "huqKGl": {
     "defaultMessage": "Créer un compte"
   },
+  "i/LmLC": {
+    "defaultMessage": "Hébergement VPS à Londres à partir de {price}par mois, hors taxes. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}Vous pouvez payer en Bitcoin, soit via le réseau Lightning, soit directement sur la chaîne principale."
+  },
   "i2/SmH": {
     "defaultMessage": "La facturation fonctionne comme un abonnement VPS, sans frais d’installation pour aucune application."
   },
@@ -1702,6 +1786,9 @@
   },
   "iXNbPf": {
     "defaultMessage": "Renommer"
+  },
+  "ia14kg": {
+    "defaultMessage": "Hébergement VPS au Canada"
   },
   "icn2DS": {
     "defaultMessage": "(Recommandé)"
@@ -1823,6 +1910,9 @@
   "lP4qIQ": {
     "defaultMessage": "Informations sur la carte de crédit"
   },
+  "lPXSYN": {
+    "defaultMessage": "{min}–{max} mémoire"
+  },
   "lYEj5M": {
     "defaultMessage": "Applications gérées"
   },
@@ -1855,6 +1945,9 @@
   },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+  },
+  "mHEBOr": {
+    "defaultMessage": "Pouvez-vous installer Bitcoin Core pour moi ?"
   },
   "mIuuiJ": {
     "defaultMessage": "État du service et temps de fonctionnement."
@@ -1946,6 +2039,9 @@
   "oCc8Oq": {
     "defaultMessage": "Ajouter une clé."
   },
+  "oOdFIC": {
+    "defaultMessage": "Notre site de Dublin. Configurez la machine que vous souhaitez et payez-la en Bitcoin."
+  },
   "oPvhhB": {
     "defaultMessage": "Cœurs CPU"
   },
@@ -1966,6 +2062,9 @@
   },
   "oezJ0C": {
     "defaultMessage": "Adresse IP statique, volume de données illimité, utilisation du réseau Tor autorisée et aucune vérification d’identité requise. Paiement accepté via Lightning : nous exploitons notre propre nœud, ce qui garantit que votre paiement ne passe jamais par un processeur tiers."
+  },
+  "ooCqJa": {
+    "defaultMessage": "Dans {region}, le disque monte jusqu’à {hdd} Disque dur ou {ssd} SSD, avec {cpu} vCPU et {memory} en haut de la gamme."
   },
   "oswGmn": {
     "defaultMessage": "Vous ne pouvez pas quitter le système tant que l’historique des paiements est disponible."
@@ -1996,6 +2095,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "Arrêtez."
+  },
+  "qA0DQR": {
+    "defaultMessage": "Hébergement VPS à Londres. Choisissez votre processeur, votre mémoire et votre espace disque. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs."
   },
   "qV+TFm": {
     "defaultMessage": "Le paiement a échoué."
@@ -2096,6 +2198,9 @@
   "sy+pv5": {
     "defaultMessage": "Courriel"
   },
+  "tG2iXV": {
+    "defaultMessage": "{min}–{max} {type} stockage"
+  },
   "tNmjzW": {
     "defaultMessage": "Port(s)"
   },
@@ -2117,11 +2222,17 @@
   "tngc9N": {
     "defaultMessage": "CIDR source"
   },
+  "toaNGS": {
+    "defaultMessage": "VPS dans {region}"
+  },
   "tthToS": {
     "defaultMessage": "Personne handicapée / Personne en situation de handicap"
   },
   "tuJeaZ": {
     "defaultMessage": "Oui."
+  },
+  "twd6jC": {
+    "defaultMessage": "Hébergement VPS à Dublin, en Irlande. Configurez votre propre serveur : choisissez le processeur, la mémoire et l’espace de stockage dont vous avez besoin. Payez en Bitcoin via Lightning Network ou directement sur la chaîne."
   },
   "tzMNF3": {
     "defaultMessage": "Statut"
@@ -2149,6 +2260,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "Courriel : {email}"
+  },
+  "uYtOL7": {
+    "defaultMessage": "VPS Irlande — VPS de Dublin, paiement en Bitcoin."
   },
   "ubXbwc": {
     "defaultMessage": "Politique par défaut."
@@ -2179,6 +2293,9 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Utiliser une clé de destinataire personnalisée."
+  },
+  "vIv3vC": {
+    "defaultMessage": "Hébergement VPS au Québec, Canada, à partir de {price}par mois, hors TVA. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}. Payez en Bitcoin via Lightning Network ou directement sur la chaîne principale."
   },
   "vONi+O": {
     "defaultMessage": "Pays"
@@ -2300,6 +2417,12 @@
   "yUD6jT": {
     "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."
   },
+  "yracY5": {
+    "defaultMessage": "VPS Londres – VPS au Royaume-Uni, paiement en Bitcoin."
+  },
+  "yrsDLO": {
+    "defaultMessage": "Il s’agit d’un serveur situé au Royaume-Uni, facturé mensuellement et payé en Bitcoin. Choisissez votre processeur, votre mémoire et votre disque dur ; aucun élément supplémentaire ne sera inclus si vous ne l’avez pas demandé."
+  },
   "ys3Bzn": {
     "defaultMessage": "Hébergement VPS Lightning Node : paiement accepté en utilisant le protocole Lightning."
   },
@@ -2308,6 +2431,9 @@
   },
   "z4e/Em": {
     "defaultMessage": "Gestion de l’hébergement des relais Nostr."
+  },
+  "z8VosU": {
+    "defaultMessage": "Dublin est également le lieu où nous gérons nos <relay>Relais Nostr</relay> et <blossom>Serveurs Blossom</blossom> exécuter, à partir de {price} un mois."
   },
   "zAN0RF": {
     "defaultMessage": "Messages directs chiffrés."

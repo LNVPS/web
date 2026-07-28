@@ -42,10 +42,24 @@ export function relayApps(apps: Array<App> | undefined): Array<App> {
 export function relayPriceFrom(
   relays: Array<App>,
 ): { currency: string; amount: number } | undefined {
-  if (relays.length === 0) return undefined;
-  const currency = relays[0].currency;
-  if (!relays.every((a) => a.currency === currency)) return undefined;
-  return { currency, amount: Math.min(...relays.map((a) => a.amount)) };
+  return catalogPriceFrom(relays);
+}
+
+/**
+ * The lowest price a set of catalog rows quotes, on the same terms as
+ * `relayPriceFrom` — ex-VAT, unconverted, and `undefined` rather than a
+ * fallback when there is nothing honest to quote.
+ *
+ * Split out for the pages that say "from" about the catalog as a whole rather
+ * than about the relays.
+ */
+export function catalogPriceFrom(
+  apps: Array<App>,
+): { currency: string; amount: number } | undefined {
+  if (apps.length === 0) return undefined;
+  const currency = apps[0].currency;
+  if (!apps.every((a) => a.currency === currency)) return undefined;
+  return { currency, amount: Math.min(...apps.map((a) => a.amount)) };
 }
 
 /**

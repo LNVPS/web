@@ -4,9 +4,11 @@ import {
   LNVpsApi,
   PaymentMethod,
   VmTemplateResponse,
+  VmCustomPrice,
   AvailableIpSpace,
   App,
 } from "./api";
+import { regionCustomTemplate, regionEntrySpec } from "./utils/regions";
 import { ApiUrl, BlossomAppId, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
 import { mergeNewsWithArchive } from "./utils/news-archive";
@@ -60,6 +62,14 @@ export interface AppLoaderData {
 }
 
 export interface AppsLoaderData {
+  apps?: App[];
+}
+
+export interface RegionLoaderData {
+  /** The whole catalog: the Bitcoin page names every region, not just one. */
+  offers?: VmTemplateResponse;
+  /** Entry price for this region's smallest build, ex-VAT and unconverted. */
+  from?: VmCustomPrice;
   apps?: App[];
 }
 
@@ -163,6 +173,39 @@ export async function appsLoader(): Promise<AppsLoaderData> {
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
   const apps = await cached("apps", () => api.listApps());
   return { apps };
+}
+
+/**
+ * Loader for a region landing page (`/vps-ireland`, `/vps-london`,
+ * `/vps-canada`) and for `/bitcoin-node-hosting`, which is Dublin's.
+ *
+ * These are SSR ranking surfaces, so the specs and the price have to be in the
+ * server-rendered HTML rather than fetched in an effect. Two calls, both
+ * cached: the catalog for the region's ranges, and one price for the smallest
+ * machine that region can build.
+ *
+ * The price call is a POST, so it is not cacheable by URL — the entry spec is
+ * derived from the same catalog row, so the request is identical for every
+ * visitor and the response is cached per region like any other loader fetch.
+ *
+ * `apps` is fetched only for the page that cross-sells the managed apps, and
+ * shares `appsLoader`'s cache entry.
+ */
+export function regionLoader(regionId: number, opts?: { apps?: boolean }) {
+  return async function loadRegion(): Promise<RegionLoaderData> {
+    const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
+    const [offers, apps] = await Promise.all([
+      cached("offers", () => api.listOffers()),
+      opts?.apps ? cached("apps", () => api.listApps()) : undefined,
+    ]);
+
+    const spec = regionEntrySpec(regionCustomTemplate(offers, regionId));
+    const from = spec
+      ? await cached(`region_from_${regionId}`, () => api.customPrice(spec))
+      : undefined;
+
+    return { offers, from, apps };
+  };
 }
 
 /**

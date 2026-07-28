@@ -514,6 +514,28 @@ export function AccountAppDeploymentPage() {
 
   useEffect(() => {
     reload().catch((e) => e instanceof Error && setError(e.message));
+
+    // The lifecycle moves on its own — a payment lands, the operator
+    // provisions, the pod comes up — and none of it is a click on this page
+    // (`LNVPS/web#71`). Refetching the deployment lets `deploymentLifecycle`
+    // re-derive, so the banner, the pill and the section gates all follow.
+    // Same 5s interval as the VM page (`vm.tsx:108-110`).
+    //
+    // Only the deployment: the catalog app it renders alongside does not
+    // change while the page is open.
+    //
+    // Poll failures are dropped rather than shown. This runs every 5s against
+    // a page the customer is reading; one dropped request should not paint an
+    // error over data that is still on screen and still correct, and the next
+    // tick recovers. The initial load above still surfaces its failure.
+    const t = setInterval(() => {
+      if (!login?.api || !Number.isFinite(deploymentId)) return;
+      login.api
+        .getAppDeployment(deploymentId)
+        .then(setDeployment)
+        .catch(() => {});
+    }, 5_000);
+    return () => clearInterval(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [login?.api, deploymentId]);
 

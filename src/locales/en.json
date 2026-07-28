@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Static IPv4 and IPv6 on every plan.</b> An announced node needs an address that does not move. Both are included, not an add-on."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} vCPU, {memory} RAM, {disk} {diskType} storage in {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },

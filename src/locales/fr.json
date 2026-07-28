@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Adresse IPv4 et IPv6 statique pour chaque forfait.</b> Un nœud annoncé a besoin d’une adresse fixe. Les deux sont inclus dans le forfait de base, il n’y a pas de frais supplémentaires."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} vCPU, {memory} RAM, {disk} {diskType} stockage dans {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Nous vous envoyons uniquement des alertes concernant votre compte, par exemple l’expiration de la période d’essai. Nous n’envoyons jamais de messages publicitaires."
   },

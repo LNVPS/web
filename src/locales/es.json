@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Dirección IPv4 e IPv6 estática en todos los planes.</b> Un nodo anunciado necesita una dirección que no cambie. Ambas direcciones están incluidas y no se ofrecen como un servicio adicional."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} CPU virtual, {memory} Memoria RAM. {disk} {diskType} almacenamiento en {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Solo se enviarán alertas de la cuenta, como el aviso de vencimiento de la máquina virtual. Nunca enviaremos mensajes publicitarios."
   },

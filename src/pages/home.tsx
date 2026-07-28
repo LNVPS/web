@@ -16,11 +16,13 @@ import { Icon } from "../components/icon";
 import { AppCard } from "./account-apps";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
+import { vpsTemplateJsonLd } from "../utils/vps-seo";
 import type { HomeLoaderData } from "../loaders";
 
 export default function HomePage() {
   const login = useLogin();
-  const { formatMessage } = useIntl();
+  const intl = useIntl();
+  const { formatMessage } = intl;
   const { offers } = useLoaderData<HomeLoaderData>();
 
   // All regions with capacity — standard templates plus custom builder.
@@ -51,6 +53,13 @@ export default function HomePage() {
     url: "https://lnvps.net",
   };
 
+  // One `Product` per plan the catalog returned, and none when it returned
+  // nothing: a price the front end cannot read from the API is not asserted in
+  // markup a crawler will cache.
+  const planSchemas = (offers?.templates ?? []).map((t) =>
+    vpsTemplateJsonLd(t, intl),
+  );
+
   return (
     <>
       <Seo
@@ -62,7 +71,7 @@ export default function HomePage() {
           defaultMessage:
             "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, or card — no long-term contracts.",
         })}
-        jsonLd={[organizationSchema, webSiteSchema]}
+        jsonLd={[organizationSchema, webSiteSchema, ...planSchemas]}
       />
       <div className="flex flex-col gap-4">
         <header className="flex flex-col gap-2">

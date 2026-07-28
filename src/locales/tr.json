@@ -1361,6 +1361,9 @@
   "YLoN96": {
     "defaultMessage": "<b>Her planda statik IPv4 ve IPv6 adresleri bulunur.</b> Duyurulmuş bir düğümün değişmeyen bir adrese ihtiyacı vardır. Her ikisi de standart olarak sunulur, ek bir ücret talep edilmez."
   },
+  "YOTQyL": {
+    "defaultMessage": "{cpu} sanal CPU {memory} RAM (Rastgele Erişimli Bellek), {disk} {diskType} içinde depolama {region}."
+  },
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
   },

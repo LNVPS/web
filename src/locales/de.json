@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "Netzwerk"
   },
+  "I90sbW": {
+    "defaultMessage": "gerade eben"
+  },
   "IChMNf": {
     "defaultMessage": "Keine Änderungen festgestellt."
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "Benötige ich ein Benutzerkonto?"
   },
+  "XYkq4n": {
+    "defaultMessage": "Gebraucht"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom Media Server – Hosting – Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Endzeit (optional)"
+  },
+  "cOyGo6": {
+    "defaultMessage": "Durch den Dienst."
   },
   "cQtv0G": {
     "defaultMessage": "{n} laufend"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "Sind Sie sich nicht sicher? <b>strfry</b> ist das Arbeitspferd – die meisten öffentlichen Relays verwenden es. <b>HAVEN</b>, wenn dies Ihr persönlicher Relay und kein gemeinschaftlicher ist; es bietet Ihnen auch einen Blossom-Medienserver, sodass Ihre Bilder unter demselben Schlüssel wie Ihre Notizen gespeichert werden."
   },
+  "iw5cTf": {
+    "defaultMessage": "Nach Volumen."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "Zahlungsmethode"
   },
+  "nLgLHn": {
+    "defaultMessage": "Gesammelt {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "Die Einstellungen können geändert werden, sobald die Kosten für diese Bereitstellung beglichen und der Prozess gestartet wurde."
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "Stellen Sie eine App auf LNVPS bereit – innerhalb von Minuten ist sie unter ihrem eigenen Hostnamen verfügbar, einschließlich TLS und Speicher, ohne dass Betriebssystem-Updates erforderlich sind. Heute: Nostr-Relays und Blossom-Medienserver."
+  },
+  "ndu6sH": {
+    "defaultMessage": "Noch nicht gemessen."
   },
   "nidU9E": {
     "defaultMessage": "{rate} Provision; beauftragen"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "Verknüpft"
   },
+  "wbsq7O": {
+    "defaultMessage": "Anwendung"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat, ohne Einrichtungskosten."
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(Keine DNS-Änderung erforderlich)"
+  },
+  "y867Vs": {
+    "defaultMessage": "Volumen"
   },
   "y9xHR9": {
     "defaultMessage": "Auszahlungen"

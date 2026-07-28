@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "Network"
   },
+  "I90sbW": {
+    "defaultMessage": "just now"
+  },
   "IChMNf": {
     "defaultMessage": "No changes detected"
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "Do I need an account?"
   },
+  "XYkq4n": {
+    "defaultMessage": "Used"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom Media Server Hosting — Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "End Time (optional)"
+  },
+  "cOyGo6": {
+    "defaultMessage": "By service"
   },
   "cQtv0G": {
     "defaultMessage": "{n} running"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
   },
+  "iw5cTf": {
+    "defaultMessage": "By volume"
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "Payment Method"
   },
+  "nLgLHn": {
+    "defaultMessage": "Collected {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "Settings can be changed once this deployment is paid for and running."
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "Deploy an app on LNVPS — up in minutes on its own hostname, TLS and storage included, no OS to patch. Nostr relays and Blossom media servers today."
+  },
+  "ndu6sH": {
+    "defaultMessage": "Not yet measured."
   },
   "nidU9E": {
     "defaultMessage": "{rate} commission"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "Linked"
   },
+  "wbsq7O": {
+    "defaultMessage": "Usage"
+  },
   "wgMz3h": {
     "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month, no setup fee."
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(No DNS change required)"
+  },
+  "y867Vs": {
+    "defaultMessage": "Volume"
   },
   "y9xHR9": {
     "defaultMessage": "Payouts"

@@ -98,3 +98,30 @@ export function deploymentPermissions(
       lifecycle === "error",
   };
 }
+
+/**
+ * A usage bar's colour tier: steady below 70% of quota, worth a glance from
+ * 70%, and the reading a customer needs to act on from 90%.
+ */
+export type UsageLevel = "normal" | "warning" | "critical";
+
+export interface UsageBarReading {
+  /** 0-100, clamped so a reading past quota still draws a full bar. */
+  pct: number;
+  level: UsageLevel;
+}
+
+/**
+ * A usage bar's percentage and colour tier, or `null` when the quota side is
+ * zero and there is no proportion to show.
+ */
+export function usageBarReading(
+  used: number,
+  quota: number,
+): UsageBarReading | null {
+  if (quota <= 0) return null;
+  const pct = Math.min(100, Math.round((used / quota) * 100));
+  const level: UsageLevel =
+    pct >= 90 ? "critical" : pct >= 70 ? "warning" : "normal";
+  return { pct, level };
+}

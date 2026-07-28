@@ -126,7 +126,7 @@ function DeploymentRow({
   );
 }
 
-function vcpu(milli: number): string | number {
+export function vcpu(milli: number): string | number {
   const cores = milli / 1000;
   return Number.isInteger(cores) ? cores : cores.toFixed(cores < 1 ? 2 : 1);
 }

@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "ネットワーク"
   },
+  "I90sbW": {
+    "defaultMessage": "ついさっき"
+  },
   "IChMNf": {
     "defaultMessage": "変更は検出されませんでした。"
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "アカウントは必要ですか？"
   },
+  "XYkq4n": {
+    "defaultMessage": "使用済み"
+  },
   "XdLEro": {
     "defaultMessage": "Blossomメディアサーバーのホスティング — Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "終了時間（任意）"
+  },
+  "cOyGo6": {
+    "defaultMessage": "サービスによる"
   },
   "cQtv0G": {
     "defaultMessage": "{n} 件稼働中"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "よくわからない？ <b>strfry</b>は、最も一般的な公開リレーで使われる設定です。 もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。Blossomメディアストアも提供されるので、画像とメモを同じキーの下にまとめて管理できます。"
   },
+  "iw5cTf": {
+    "defaultMessage": "容量で。"
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "支払い方法"
   },
+  "nLgLHn": {
+    "defaultMessage": "収集された {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "このデプロイメントの費用が支払われ、実行状態になった後であれば、設定を変更できます。"
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "LNVPSにアプリをデプロイします。独自のホスト名、TLS、ストレージがすべて含まれており、数分で起動します。OSのパッチも不要です。本日、NostrリレーとBlossomメディアサーバーを公開します。"
+  },
+  "ndu6sH": {
+    "defaultMessage": "まだ測定されていません。"
   },
   "nidU9E": {
     "defaultMessage": "{rate} 手数料、委託"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "リンク済み"
   },
+  "wbsq7O": {
+    "defaultMessage": "使用方法"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}〜から {price} 月額料金制で、初期費用はかかりません。"
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "（DNSの変更は不要です）"
+  },
+  "y867Vs": {
+    "defaultMessage": "音量"
   },
   "y9xHR9": {
     "defaultMessage": "支払い額"

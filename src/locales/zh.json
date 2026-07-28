@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "网络"
   },
+  "I90sbW": {
+    "defaultMessage": "刚才"
+  },
   "IChMNf": {
     "defaultMessage": "未检测到任何更改。"
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "我需要注册一个账户吗？"
   },
+  "XYkq4n": {
+    "defaultMessage": "已使用。"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom 媒体服务器托管服务——Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "结束时间（可选）"
+  },
+  "cOyGo6": {
+    "defaultMessage": "按服务项目。"
   },
   "cQtv0G": {
     "defaultMessage": "{n} 个运行中"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "不确定吗？<b>strfry</b>是主要的运行程序——大多数公共中继服务器都使用它。<b>HAVEN</b>如果这是一个个人中继服务器，而不是社区中继服务器；它还提供一个Blossom媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
   },
+  "iw5cTf": {
+    "defaultMessage": "按体积计算。"
+  },
   "j4RCJW": {
     "defaultMessage": "技能.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "支付方式"
   },
+  "nLgLHn": {
+    "defaultMessage": "已收集。 {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "在完成部署并支付费用后，可以更改设置。"
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "在 LNVPS 上部署应用程序——几分钟内即可完成，应用程序将拥有自己的主机名，并包含 TLS 和存储，无需进行操作系统补丁。现在即可使用 Nostr 中继和 Blossom 媒体服务器。"
+  },
+  "ndu6sH": {
+    "defaultMessage": "尚未测量。"
   },
   "nidU9E": {
     "defaultMessage": "{rate} 佣金；委托"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "已链接。"
   },
+  "wbsq7O": {
+    "defaultMessage": "使用方法"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起，无需支付设置费用。"
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "（无需更改 DNS 设置）"
+  },
+  "y867Vs": {
+    "defaultMessage": "音量"
   },
   "y9xHR9": {
     "defaultMessage": "支付款项"

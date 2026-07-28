@@ -24,6 +24,7 @@ import {
   DeploymentLifecycle,
   deploymentLifecycle,
   deploymentPermissions,
+  lifecycleStepState,
 } from "../utils/app-deployment";
 
 /**
@@ -49,30 +50,34 @@ function LifecycleProgress({ lifecycle }: { lifecycle: DeploymentLifecycle }) {
 
   return (
     <ol className="m-0 flex list-none flex-wrap items-center gap-2 p-0 text-[0.65rem] uppercase tracking-[0.2em]">
-      {steps.map((s, i) => (
-        <li key={String(s.key)} className="flex items-center gap-2">
-          {i > 0 && (
+      {steps.map((s, i) => {
+        const state = lifecycleStepState(i, at, steps.length);
+        return (
+          <li key={String(s.key)} className="flex items-center gap-2">
+            {i > 0 && (
+              <span
+                aria-hidden
+                className={
+                  "h-px w-6 " +
+                  (i <= at ? "bg-cyber-primary" : "bg-cyber-border")
+                }
+              />
+            )}
             <span
-              aria-hidden
               className={
-                "h-px w-6 " + (i <= at ? "bg-cyber-primary" : "bg-cyber-border")
+                state === "done"
+                  ? "text-cyber-primary"
+                  : state === "current"
+                    ? "text-cyber-text-bright"
+                    : "text-cyber-muted"
               }
-            />
-          )}
-          <span
-            className={
-              i < at
-                ? "text-cyber-primary"
-                : i === at
-                  ? "text-cyber-text-bright"
-                  : "text-cyber-muted"
-            }
-            aria-current={i === at ? "step" : undefined}
-          >
-            {s.label}
-          </span>
-        </li>
-      ))}
+              aria-current={state === "current" ? "step" : undefined}
+            >
+              {s.label}
+            </span>
+          </li>
+        );
+      })}
     </ol>
   );
 }

@@ -643,6 +643,29 @@ export interface App {
   storage_bytes: number;
   /** Per-service footprint breakdown (sums to the totals above). */
   services: Array<AppServiceResources>;
+  /**
+   * Per-volume storage breakdown, summing to `storage_bytes` (LNVPS/api#260).
+   *
+   * Optional because an API older than that release does not send it at all —
+   * not because an app may have no volumes, which arrives as `[]`.
+   */
+  volumes?: Array<AppVolume>;
+}
+
+/** One persistent volume of an app (LNVPS/api#260). */
+export interface AppVolume {
+  /** Compose service it belongs to; a volume name is only unique within one. */
+  service: string;
+  /** Compose volume name — internal plumbing. Render `label`, not this. */
+  name: string;
+  /**
+   * What the buyer gets from it: `events`, `media`, `database`. Authored per
+   * app, so it arrives over the wire in English and is never translated.
+   * Absent for volumes nobody shops for (`run`, `packs`).
+   */
+  label?: string;
+  /** Size in bytes. These sum to `storage_bytes`. */
+  size_bytes: number;
 }
 
 /** One service's share of an app's resource footprint. */

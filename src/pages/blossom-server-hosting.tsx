@@ -6,6 +6,7 @@ import { CostAmount } from "../components/cost";
 import { appJsonLd } from "../utils/app-seo";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { formatPriceText } from "../utils/currency";
+import { formatBytesText } from "../utils/bytes";
 import { BlossomAppId } from "../const";
 import type { AppLoaderData } from "../loaders";
 
@@ -66,14 +67,22 @@ function Section({
  * markup and the `<title>` cannot disagree, and no locale file carries the
  * number.
  *
- * Storage is deliberately NOT that shape, and this is the one place on the site
- * where a written figure beats a derived one (`LNVPS/web#60`). `storage_bytes`
- * is 25 GiB — the sum of two fixed volumes, `blobs` 20Gi for uploads and `data`
- * 5Gi for the database — and nothing in the API says which is which. Rendering
- * the sum tells a buyer they have 25 GB for files when they have 20; rendering
- * the sum next to a written split is the one version that can contradict itself
- * the day the app is resized. So both slots stay literal until `LNVPS/api#260`
- * gives volumes a label, and web#60 stays open on it.
+ * Storage now works the same way (`LNVPS/web#60`). It could not before:
+ * `storage_bytes` is only the 25 GiB total, and printing that where the copy
+ * says "for your files" tells a buyer they have 25 GB of room for uploads when
+ * they have 20. The split lives in the compose volumes, which the client is
+ * not allowed to read. `LNVPS/api#260` fixed that at the source — each volume
+ * now arrives with the purpose its app authored — so the page renders what the
+ * catalog says and no locale file carries a size.
+ *
+ * Three states, in order:
+ *
+ * - **labelled volumes** — the total and the breakdown, e.g. "25GB of
+ *   persistent storage — 20GB files and 5GB database".
+ * - **no labels** (an app that authored none, or a catalog row not yet
+ *   patched) — the plain total. Honest, less specific.
+ * - **no catalog** (API unreachable) — no storage claim at all, rather than a
+ *   size written into the front end.
  */
 export function BlossomServerHostingPage() {
   const intl = useIntl();
@@ -91,6 +100,25 @@ export function BlossomServerHostingPage() {
   const priceText = formatPriceText(intl, price);
   const priceNode = <CostAmount cost={price} converted={false} />;
 
+  // The catalog's storage, or no claim at all — there is no fallback constant,
+  // because a size written into the front end is product data the client has
+  // no business holding.
+  const storage = app ? formatBytesText(intl, app.storage_bytes) : undefined;
+
+  // Only volumes the app gave a purpose. An unlabelled one is still real
+  // storage and still inside `storage_bytes`; it is simply not something to
+  // name, so it is counted in the total and left out of the breakdown.
+  // `label` is authored per app and arrives in English, which is why it is
+  // interpolated rather than translated — the sizes around it are formatted
+  // for the locale.
+  const named = (app?.volumes ?? []).filter((v) => v.label);
+  const breakdown = named.length
+    ? intl.formatList(
+        named.map((v) => `${formatBytesText(intl, v.size_bytes)} ${v.label}`),
+        { type: "conjunction" },
+      )
+    : undefined;
+
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the two can
   // never say different things. Answers ship as written — expanding one
   // usually costs `FAQPage` eligibility.
@@ -106,16 +134,34 @@ export function BlossomServerHostingPage() {
           "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both.",
       }),
     },
-    // Written, not derived, and unconditional with it: `storage_bytes` only
-    // knows the 25 GiB total, and "25GB" here reads as 25 GB of room for
-    // uploads when the answer is 20. See the note on the component above.
-    {
-      question: formatMessage({ defaultMessage: "How much can I store?" }),
-      answer: formatMessage({
-        defaultMessage:
-          "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further.",
-      }),
-    },
+    // The answer *is* the catalog's storage, so with the catalog unreachable
+    // there is nothing honest to put in it and the question is not asked.
+    // Dropping the item drops it from the rendered `<dl>` and from `faqJsonLd`
+    // together, which is why the two share this array.
+    ...(storage
+      ? [
+          {
+            question: formatMessage({
+              defaultMessage: "How much can I store?",
+            }),
+            answer: breakdown
+              ? formatMessage(
+                  {
+                    defaultMessage:
+                      "{breakdown}, {storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further.",
+                  },
+                  { breakdown, storage },
+                )
+              : formatMessage(
+                  {
+                    defaultMessage:
+                      "{storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further.",
+                  },
+                  { storage },
+                ),
+          },
+        ]
+      : []),
     {
       question: formatMessage({
         defaultMessage: "How large a file can I upload?",
@@ -148,7 +194,7 @@ export function BlossomServerHostingPage() {
         description={formatMessage(
           {
             defaultMessage:
-              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included.",
+              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
           },
           { price: priceText },
         )}
@@ -200,9 +246,21 @@ export function BlossomServerHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="What is included" />}>
           <ul className="m-0 flex max-w-prose list-disc flex-col gap-1 pl-5 text-cyber-text">
-            <li>
-              <FormattedMessage defaultMessage="20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total" />
-            </li>
+            {storage ? (
+              <li>
+                {breakdown ? (
+                  <FormattedMessage
+                    defaultMessage="{storage} of persistent storage — {breakdown}"
+                    values={{ storage, breakdown }}
+                  />
+                ) : (
+                  <FormattedMessage
+                    defaultMessage="{storage} of persistent storage"
+                    values={{ storage }}
+                  />
+                )}
+              </li>
+            ) : null}
             <li>
               <FormattedMessage defaultMessage="Uploads up to 100 MB each" />
             </li>

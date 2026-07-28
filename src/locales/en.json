@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "Yes. It is your machine — install what you like."
   },
+  "+H6Rvj": {
+    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included."
+  },
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
@@ -100,6 +103,9 @@
   },
   "1M3SKY": {
     "defaultMessage": "Please describe your question or issue in detail..."
+  },
+  "1R0JfT": {
+    "defaultMessage": "{storage} of persistent storage — {breakdown}"
   },
   "1VQrBL": {
     "defaultMessage": "{h, plural, one {# hr} other {# hrs}} {m, plural, one {# min} other {# mins}}"
@@ -884,6 +890,9 @@
   "MTnSwY": {
     "defaultMessage": "ex. tax"
   },
+  "MfiEGP": {
+    "defaultMessage": "{storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
   "Mp+zDS": {
     "defaultMessage": "This component only supports Lightning payments"
   },
@@ -1246,6 +1255,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "Create"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}, {storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1679,9 +1691,6 @@
   "jf7fbc": {
     "defaultMessage": "None set — add one"
   },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
-  },
   "jhBqwg": {
     "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
   },
@@ -1909,9 +1918,6 @@
   },
   "p5LNtB": {
     "defaultMessage": "Not set"
-  },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
   },
   "pYX859": {
     "defaultMessage": "Deleting"
@@ -2165,9 +2171,6 @@
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2251,5 +2254,8 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Unmetered traffic.</b> A routing node gossips constantly. You should not be watching a bandwidth meter."
+  },
+  "zzkKCh": {
+    "defaultMessage": "{storage} of persistent storage"
   }
 }

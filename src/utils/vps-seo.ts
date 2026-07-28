@@ -41,19 +41,6 @@ export function vpsTemplateJsonLd(t: VmTemplate, intl: IntlShape): object {
     ),
     url: SITE_URL,
     brand: { "@type": "Brand", name: "LNVPS" },
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "vCPU", value: String(t.cpu) },
-      {
-        "@type": "PropertyValue",
-        name: "RAM",
-        value: formatBytesText(intl, t.memory),
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Storage",
-        value: formatBytesText(intl, t.disk_size),
-      },
-    ],
     ...(offerPrice
       ? {
           offers: {

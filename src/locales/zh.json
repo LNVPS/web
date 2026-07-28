@@ -213,7 +213,7 @@
     "defaultMessage": "无需保存任何内容——您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
   },
   "3wJI0g": {
-    "defaultMessage": "我们的托管的中继节点和服务器也位于都柏林。"
+    "defaultMessage": "都柏林也是我们托管的 <relay>Nostr 中继</relay> 以及 <blossom>Blossom 服务器</blossom> 的运行地。"
   },
   "3woNJO": {
     "defaultMessage": "在应用默认策略之前，系统会按照优先级顺序（从低到高）评估规则。防欺骗保护始终由主机强制执行。"

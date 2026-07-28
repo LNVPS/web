@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { CostAmount } from "../components/cost";
@@ -34,7 +35,7 @@ export function VpsIrelandPage() {
   const appPrice = catalogPriceFrom(apps ?? []);
 
   const appLinks = {
-    relay: (chunks: React.ReactNode) => (
+    relay: (chunks: ReactNode) => (
       <Link
         to="/nostr-relay-hosting"
         className="text-cyber-primary hover:underline"
@@ -42,7 +43,7 @@ export function VpsIrelandPage() {
         {chunks}
       </Link>
     ),
-    blossom: (chunks: React.ReactNode) => (
+    blossom: (chunks: ReactNode) => (
       <Link
         to="/blossom-server-hosting"
         className="text-cyber-primary hover:underline"

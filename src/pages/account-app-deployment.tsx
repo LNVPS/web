@@ -36,6 +36,7 @@ import {
   deploymentLifecycle,
   deploymentPermissions,
   lifecycleStepState,
+  usageBarReading,
 } from "../utils/app-deployment";
 
 /**
@@ -522,10 +523,10 @@ function UsageBar({
   quota: number;
   renderValue: (n: number) => ReactNode;
 }) {
-  if (quota <= 0) return null;
-  const pct = Math.min(100, Math.round((used / quota) * 100));
-  const high = pct >= 90;
-  const mid = pct >= 70;
+  const reading = usageBarReading(used, quota);
+  if (!reading) return null;
+  const high = reading.level === "critical";
+  const mid = reading.level === "warning";
   return (
     <div className="flex items-center gap-3">
       <span className="w-16 text-xs font-bold uppercase tracking-[0.15em] text-cyber-muted flex-shrink-0">
@@ -534,7 +535,7 @@ function UsageBar({
       <div className="flex-1 h-2 rounded-full border border-cyber-border bg-cyber-panel-light overflow-hidden">
         <div
           className={`h-full rounded-full transition-all ${high ? "bg-cyber-danger" : mid ? "bg-cyber-warning" : "bg-cyber-primary"}`}
-          style={{ width: `${pct}%` }}
+          style={{ width: `${reading.pct}%` }}
         />
       </div>
       <span
@@ -602,7 +603,7 @@ function DeploymentUsageCard({
           quota={quotaMemBytes}
           renderValue={(n) => <BytesSize value={n} />}
         />
-        {usage.storage_bytes !== undefined && usage.storage_bytes !== null && (
+        {usage.storage_bytes != null && (
           <UsageBar
             label={<FormattedMessage defaultMessage="Storage" />}
             used={usage.storage_bytes}

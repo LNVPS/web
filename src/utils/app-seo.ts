@@ -82,7 +82,7 @@ export function appSeoDescription(
       ? intl.formatMessage(
           {
             defaultMessage:
-              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch.",
+              "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch.",
           },
           {
             name: app.display_name,
@@ -93,7 +93,7 @@ export function appSeoDescription(
       : intl.formatMessage(
           {
             defaultMessage:
-              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, no server to patch.",
+              "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, no server to patch.",
           },
           { name: app.display_name, category: app.category },
         );

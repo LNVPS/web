@@ -1,7 +1,4 @@
 {
-  "375584": {
-    "defaultMessage": "Requiere pago."
-  },
   "++XeyK": {
     "defaultMessage": "Clave Nostr"
   },
@@ -164,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "Mensaje directo de Nostr."
   },
+  "375584": {
+    "defaultMessage": "Requiere pago."
+  },
   "3GLHv9": {
     "defaultMessage": "autenticar"
   },
@@ -220,9 +220,6 @@
   },
   "4X/Ixq": {
     "defaultMessage": "Mensaje descifrado:"
-  },
-  "4axuAp": {
-    "defaultMessage": "Ejecutar / Correr {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, incluye TLS, no hay necesidad de aplicar parches al servidor."
   },
   "4cMKIO": {
     "defaultMessage": "Planes de pago periódico que mantienen activos sus servicios."
@@ -890,6 +887,9 @@
   "LHX6Oo": {
     "defaultMessage": "Fecha de caducidad. {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido, no es necesario aplicar parches al servidor."
+  },
   "LR754a": {
     "defaultMessage": "Se renueva en:"
   },
@@ -955,9 +955,6 @@
   },
   "OJuBck": {
     "defaultMessage": "Sin contraseña"
-  },
-  "OKXlev": {
-    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar ningún servidor."
   },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"
@@ -1537,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar el servidor."
   },
   "e4ehrh": {
     "defaultMessage": "Configura tu máquina"

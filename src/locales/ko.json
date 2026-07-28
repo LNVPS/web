@@ -1,7 +1,4 @@
 {
-  "375584": {
-    "defaultMessage": "결제가 필요합니다."
-  },
   "++XeyK": {
     "defaultMessage": "Nostr 키"
   },
@@ -164,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "노스트르 다이렉트 메시지"
   },
+  "375584": {
+    "defaultMessage": "결제가 필요합니다."
+  },
   "3GLHv9": {
     "defaultMessage": "인증"
   },
@@ -220,9 +220,6 @@
   },
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
-  },
-  "4axuAp": {
-    "defaultMessage": "실행하다. {name} 관리되는 방식으로 {category} LNVPS 사용 시 — 자체 호스트 이름, TLS 포함, 서버 패치 불필요."
   },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
@@ -890,6 +887,9 @@
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS 사용 시 — 자체 호스트 이름 사용, TLS 포함, 서버 패치 불필요."
+  },
   "LR754a": {
     "defaultMessage": "갱신일:"
   },
@@ -955,9 +955,6 @@
   },
   "OJuBck": {
     "defaultMessage": "비밀번호 없이"
-  },
-  "OKXlev": {
-    "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS에서 — 자체 호스트 이름 사용, TLS 포함 {storage} 저장 공간만 있으면 되므로 서버를 업데이트할 필요가 없습니다."
   },
   "OLqOyf": {
     "defaultMessage": "설정 방법"
@@ -1537,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS에서 — 자체 호스트 이름 사용, TLS 포함 {storage} 저장 공간만 있으면 되므로, 서버를 업데이트할 필요가 없습니다."
   },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"

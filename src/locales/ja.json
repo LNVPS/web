@@ -1,7 +1,4 @@
 {
-  "375584": {
-    "defaultMessage": "支払が必要です。"
-  },
   "++XeyK": {
     "defaultMessage": "Nostrキー"
   },
@@ -164,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "Nostrのダイレクトメッセージ"
   },
+  "375584": {
+    "defaultMessage": "支払が必要です。"
+  },
   "3GLHv9": {
     "defaultMessage": "認証"
   },
@@ -220,9 +220,6 @@
   },
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
-  },
-  "4axuAp": {
-    "defaultMessage": "実行する。 {name} 管理されたものとして {category} LNVPSを使用すると、独自のホスト名でTLSを利用でき、サーバーのパッチを適用する必要がありません。"
   },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
@@ -890,6 +887,9 @@
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPSを使用 — 独自のホスト名、TLS対応、サーバーのパッチ適用は不要。"
+  },
   "LR754a": {
     "defaultMessage": "更新日："
   },
@@ -955,9 +955,6 @@
   },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
-  },
-  "OKXlev": {
-    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPSで — 独自のホスト名を使用し、TLSを有効にします。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
   },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"
@@ -1537,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPS上で — 独自のホスト名を使用し、TLSを有効にする。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
   },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"

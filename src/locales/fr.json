@@ -1,7 +1,4 @@
 {
-  "375584": {
-    "defaultMessage": "Paiement requis."
-  },
   "++XeyK": {
     "defaultMessage": "Clé Nostr"
   },
@@ -164,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "Message privé Nostr"
   },
+  "375584": {
+    "defaultMessage": "Paiement requis."
+  },
   "3GLHv9": {
     "defaultMessage": "authentifier"
   },
@@ -220,9 +220,6 @@
   },
   "4X/Ixq": {
     "defaultMessage": "Message déchiffré :"
-  },
-  "4axuAp": {
-    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS – nom d’hôte personnalisé, avec TLS inclus, aucun serveur à mettre à jour."
   },
   "4cMKIO": {
     "defaultMessage": "Abonnements renouvelés qui maintiennent vos services actifs."
@@ -890,6 +887,9 @@
   "LHX6Oo": {
     "defaultMessage": "Date d’expiration {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS : nom d’hôte personnalisé, TLS inclus, aucun serveur à mettre à jour."
+  },
   "LR754a": {
     "defaultMessage": "Le renouvellement aura lieu le :"
   },
@@ -955,9 +955,6 @@
   },
   "OJuBck": {
     "defaultMessage": "Sans mot de passe"
-  },
-  "OKXlev": {
-    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS — nom d’hôte personnalisé, avec TLS inclus. {storage} stockage, pas de serveur à mettre à jour."
   },
   "OLqOyf": {
     "defaultMessage": "Instructions d’installation"
@@ -1537,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS — nom d’hôte personnalisé, avec TLS inclus. {storage} stockage, pas de serveur à mettre à jour."
   },
   "e4ehrh": {
     "defaultMessage": "Configurez votre machine"

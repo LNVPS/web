@@ -1,7 +1,4 @@
 {
-  "375584": {
-    "defaultMessage": "يتطلب دفع المبلغ."
-  },
   "++XeyK": {
     "defaultMessage": "مفتاح نوستر"
   },
@@ -164,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "رسالة مباشرة على منصة نوستر."
   },
+  "375584": {
+    "defaultMessage": "يتطلب دفع المبلغ."
+  },
   "3GLHv9": {
     "defaultMessage": "مصادقة"
   },
@@ -220,9 +220,6 @@
   },
   "4X/Ixq": {
     "defaultMessage": "الرسالة بعد فك تشفيرها:"
-  },
-  "4axuAp": {
-    "defaultMessage": "شغّل/نفّذ {name} بصفتها مُدارة. {category} على نظام LNVPS — اسم مضيف خاص، يتضمن بروتوكول TLS، ولا حاجة لتحديث الخادم."
   },
   "4cMKIO": {
     "defaultMessage": "خطط اشتراك متجددة تحافظ على استمرار خدماتك."
@@ -890,6 +887,9 @@
   "LHX6Oo": {
     "defaultMessage": "ينتهي الصلاحية {exp}"
   },
+  "LJljHH": {
+    "defaultMessage": "تشغيل {name} بصفتها مُدارة {category} على نظام LNVPS — اسم مضيف خاص، يتضمن بروتوكول TLS، ولا حاجة لتحديث الخادم."
+  },
   "LR754a": {
     "defaultMessage": "يتم تجديده في"
   },
@@ -955,9 +955,6 @@
   },
   "OJuBck": {
     "defaultMessage": "بدون كلمة مرور"
-  },
-  "OKXlev": {
-    "defaultMessage": "تشغيل {name} بصفتها مُدارة {category} على شبكة LNVPS — اسم مضيف خاص، مع دعم بروتوكول TLS. {storage} تخزين، لا حاجة لتحديث الخادم."
   },
   "OLqOyf": {
     "defaultMessage": "تعليمات الإعداد"
@@ -1537,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "تشغيل {name} بصفتها مُدارة {category} على LNVPS — اسم مضيف مخصص، مع دعم بروتوكول TLS. {storage} تخزين، لا حاجة لتحديث الخادم."
   },
   "e4ehrh": {
     "defaultMessage": "قم بتكوين جهازك"

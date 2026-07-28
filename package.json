@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "bun@1.3.14",
   "scripts": {
-    "dev": "bun run news:archive && bun server/dev.ts",
+    "dev": "bun server/dev.ts",
     "build": "bun run news:archive && bun run build:client && bun run build:server && bun run locale:compile && bun run skill:index && bun run sitemap",
     "skill:index": "bun server/gen-skill-index.ts",
     "build:client": "bunx vite build --mode ${MODE:-production} --outDir dist/client",

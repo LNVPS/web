@@ -12,7 +12,8 @@
  * render input for the loaders, never republished and never fed to the Nostr
  * system.
  *
- * Run via `bun server/gen-news-archive.ts` (wired into the build script).
+ * Run via `bun server/gen-news-archive.ts` (wired into the build script, and
+ * called by the dev server so `bun server/dev.ts` works in a fresh checkout).
  */
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -67,19 +68,25 @@ function readArticle(dir: string, lang: string): ArchiveEvent | undefined {
   };
 }
 
-const events: Array<ArchiveEvent> = [];
-for (const entry of readdirSync(NEWS_DIR).sort()) {
-  const dir = join(NEWS_DIR, entry);
-  if (!statSync(dir).isDirectory()) continue;
+export function generateNewsArchive(): number {
+  const events: Array<ArchiveEvent> = [];
+  for (const entry of readdirSync(NEWS_DIR).sort()) {
+    const dir = join(NEWS_DIR, entry);
+    if (!statSync(dir).isDirectory()) continue;
 
-  for (const file of readdirSync(dir).sort()) {
-    const lang = file.match(/^([a-z]{2})\.metadata\.json$/)?.[1];
-    if (!lang) continue;
-    const ev = readArticle(dir, lang);
-    if (ev) events.push(ev);
+    for (const file of readdirSync(dir).sort()) {
+      const lang = file.match(/^([a-z]{2})\.metadata\.json$/)?.[1];
+      if (!lang) continue;
+      const ev = readArticle(dir, lang);
+      if (ev) events.push(ev);
+    }
   }
+
+  events.sort((a, b) => b.created_at - a.created_at);
+  writeFileSync(OUT_PATH, `${JSON.stringify(events, null, 2)}\n`);
+  return events.length;
 }
 
-events.sort((a, b) => b.created_at - a.created_at);
-writeFileSync(OUT_PATH, `${JSON.stringify(events, null, 2)}\n`);
-console.log(`wrote ${OUT_PATH} (${events.length} events)`);
+if (import.meta.main) {
+  console.log(`wrote ${OUT_PATH} (${generateNewsArchive()} events)`);
+}

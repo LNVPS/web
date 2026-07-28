@@ -704,6 +704,16 @@ export type AppDeploymentStatus =
   | "error"
   | "deleting";
 
+/**
+ * Billing verdict on a deployment's subscription (LNVPS/api#253).
+ *
+ * `unpaid` is "the first payment has never been confirmed", not "overdue" —
+ * a subscription never paid for reports `unpaid` whatever its expiry says,
+ * because asking someone to renew what they never bought is worse than asking
+ * them to buy it.
+ */
+export type AppDeploymentBillingState = "unpaid" | "active" | "expired";
+
 /** A user's running instance of a catalog app. */
 export interface AppDeployment {
   id: number;
@@ -721,6 +731,20 @@ export interface AppDeployment {
   status_message?: string;
   /** Subscription this deployment is billed under (renew via the subscription endpoints). */
   subscription_id?: number;
+  /**
+   * Whether the subscription behind this deployment has ever been paid, and
+   * whether it has lapsed (LNVPS/api#253).
+   *
+   * Independent of `status` and `desired_state` on purpose: a never-paid
+   * deployment is written back by the operator as `stopped`, so status alone
+   * cannot tell "never paid for" from "the customer stopped it".
+   *
+   * `null`/absent means the subscription could not be resolved — the same
+   * condition that leaves `subscription_id` unset. That is an operational
+   * fault, not a billing verdict: treat it as unknown, never as `unpaid`, or
+   * a paying customer gets asked for money again.
+   */
+  billing_state?: AppDeploymentBillingState | null;
   /**
    * Size as a multiple of the catalog app's base footprint and price; `1` is
    * the base app. Raised via the upgrade endpoints, never lowered.

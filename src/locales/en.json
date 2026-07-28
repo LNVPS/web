@@ -161,6 +161,9 @@
   "36aVfS": {
     "defaultMessage": "Nostr DM"
   },
+  "375584": {
+    "defaultMessage": "Needs payment"
+  },
   "3GLHv9": {
     "defaultMessage": "authenticate"
   },
@@ -328,6 +331,9 @@
   },
   "7agV2X": {
     "defaultMessage": "Relay"
+  },
+  "7bTzvm": {
+    "defaultMessage": "Setting up — this usually takes a minute. The endpoint appears once it is running."
   },
   "7fGyF+": {
     "defaultMessage": "Wipe & reinstall"
@@ -764,6 +770,9 @@
   "ID2dFf": {
     "defaultMessage": "No NWC wallet saved yet. Add one below to receive payouts."
   },
+  "IDpruN": {
+    "defaultMessage": "Deploying"
+  },
   "ILTAun": {
     "defaultMessage": "Your VM is being provisioned. This usually takes a minute or two."
   },
@@ -805,6 +814,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS Service Status and Uptime"
+  },
+  "JVZcdC": {
+    "defaultMessage": "This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again."
   },
   "JiCBWy": {
     "defaultMessage": "Connect over SSH with your selected key."
@@ -1538,6 +1550,9 @@
   "exrlwL": {
     "defaultMessage": "Lowercase letters, digits and hyphens. Becomes your subdomain."
   },
+  "f+jGyB": {
+    "defaultMessage": "Deleting stops billing and permanently removes the deployment and its volumes."
+  },
   "f00p/7": {
     "defaultMessage": "Upload failed"
   },
@@ -1837,6 +1852,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Payment Method"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Settings can be changed once this deployment is paid for and running."
   },
   "nWQFic": {
     "defaultMessage": "Renew"

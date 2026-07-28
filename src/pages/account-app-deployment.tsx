@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FormattedDate, FormattedMessage } from "react-intl";
 import {
@@ -19,17 +19,126 @@ import { AsyncButton } from "../components/button";
 import { CostAmount } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
 import { appUpgradeSource } from "../components/payment-sources";
-import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
+import { AppIcon, AppResources } from "./account-apps";
+import {
+  DeploymentLifecycle,
+  deploymentLifecycle,
+  deploymentPermissions,
+} from "../utils/app-deployment";
+import type { BillingTone } from "../components/billing";
 
-/** Edit a deployment's instance name and config field values. */
+/** Pill tone and label for a lifecycle state. */
+function lifecyclePill(lifecycle: DeploymentLifecycle): {
+  tone: BillingTone;
+  label: ReactNode;
+} {
+  switch (lifecycle) {
+    case "unpaid":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Needs payment" />,
+      };
+    case "expired":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Expired" />,
+      };
+    case "deploying":
+      return {
+        tone: "warning",
+        label: <FormattedMessage defaultMessage="Deploying" />,
+      };
+    case "running":
+      return {
+        tone: "primary",
+        label: <FormattedMessage defaultMessage="Running" />,
+      };
+    case "stopped":
+      return {
+        tone: "muted",
+        label: <FormattedMessage defaultMessage="Stopped" />,
+      };
+    case "deleting":
+      return {
+        tone: "danger",
+        label: <FormattedMessage defaultMessage="Deleting" />,
+      };
+    case "error":
+      return {
+        tone: "danger",
+        label: <FormattedMessage defaultMessage="Error" />,
+      };
+  }
+}
+
+/**
+ * The three steps a deployment walks on its way to serving traffic, which is
+ * what Kieran asked to see: needs payment → deploying → running.
+ *
+ * Only rendered on that path. Stopped, expired, errored and deleting are not
+ * points along it — a progress bar reading "2 of 3" on a deployment the
+ * customer stopped on purpose says nothing true — so those states show the
+ * status pill alone.
+ */
+function LifecycleProgress({ lifecycle }: { lifecycle: DeploymentLifecycle }) {
+  const steps: Array<{ key: DeploymentLifecycle; label: ReactNode }> = [
+    { key: "unpaid", label: <FormattedMessage defaultMessage="Payment" /> },
+    {
+      key: "deploying",
+      label: <FormattedMessage defaultMessage="Deploying" />,
+    },
+    { key: "running", label: <FormattedMessage defaultMessage="Running" /> },
+  ];
+  const at = steps.findIndex((s) => s.key === lifecycle);
+  if (at === -1) return null;
+
+  return (
+    <ol className="m-0 flex list-none flex-wrap items-center gap-2 p-0 text-[0.65rem] uppercase tracking-[0.2em]">
+      {steps.map((s, i) => (
+        <li key={String(s.key)} className="flex items-center gap-2">
+          {i > 0 && (
+            <span
+              aria-hidden
+              className={
+                "h-px w-6 " + (i <= at ? "bg-cyber-primary" : "bg-cyber-border")
+              }
+            />
+          )}
+          <span
+            className={
+              i < at
+                ? "text-cyber-primary"
+                : i === at
+                  ? "text-cyber-text-bright"
+                  : "text-cyber-muted"
+            }
+            aria-current={i === at ? "step" : undefined}
+          >
+            {s.label}
+          </span>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+/**
+ * Edit a deployment's instance name and config field values.
+ *
+ * `readOnly` shows the same values without letting them be changed, for the
+ * states where there is nothing to apply them to yet — the settings are worth
+ * reading before paying, and a save that the API would refuse is not.
+ */
 function ConfigEditor({
   app,
   deployment,
+  readOnly,
   onSaved,
   onError,
 }: {
   app: App;
   deployment: AppDeployment;
+  readOnly?: boolean;
   onSaved: (d: AppDeployment) => void;
   onError: (msg: string) => void;
 }) {
@@ -76,6 +185,7 @@ function ConfigEditor({
           type="text"
           value={name}
           maxLength={40}
+          disabled={readOnly}
           onChange={(e) => setName(e.target.value.toLowerCase())}
         />
         {nameChanged && (
@@ -93,6 +203,7 @@ function ConfigEditor({
           type="text"
           value={customDomain}
           placeholder="blog.example.com"
+          disabled={readOnly}
           onChange={(e) => setCustomDomain(e.target.value.toLowerCase())}
         />
         <span className="text-xs text-cyber-muted">
@@ -120,6 +231,7 @@ function ConfigEditor({
               key={f.name}
               field={f}
               value={values[f.name] ?? f.default ?? ""}
+              disabled={readOnly}
               onChange={(v) => setValues((s) => ({ ...s, [f.name]: v }))}
             />
           ))}
@@ -129,24 +241,30 @@ function ConfigEditor({
         </div>
       )}
 
-      <div className="flex items-center gap-3">
-        <AsyncButton
-          disabled={!canSave}
-          className={
-            canSave
-              ? "bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
-              : "opacity-50 cursor-not-allowed"
-          }
-          onClick={save}
-        >
-          <FormattedMessage defaultMessage="Save changes" />
-        </AsyncButton>
-        {saved && (
-          <span className="text-xs text-cyber-primary">
-            <FormattedMessage defaultMessage="Saved. The app will restart shortly." />
-          </span>
-        )}
-      </div>
+      {readOnly ? (
+        <p className="m-0 text-xs text-cyber-muted">
+          <FormattedMessage defaultMessage="Settings can be changed once this deployment is paid for and running." />
+        </p>
+      ) : (
+        <div className="flex items-center gap-3">
+          <AsyncButton
+            disabled={!canSave}
+            className={
+              canSave
+                ? "bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+                : "opacity-50 cursor-not-allowed"
+            }
+            onClick={save}
+          >
+            <FormattedMessage defaultMessage="Save changes" />
+          </AsyncButton>
+          {saved && (
+            <span className="text-xs text-cyber-primary">
+              <FormattedMessage defaultMessage="Saved. The app will restart shortly." />
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -484,10 +602,12 @@ export function AccountAppDeploymentPage() {
     );
   }
 
-  const st = deploymentStatus(deployment.status);
-  const isPending = deployment.status === "pending";
-  const isRunning = deployment.status === "running";
-  const isStopped = deployment.status === "stopped";
+  // One derived state drives the pill, the banner and every section gate, so
+  // the page cannot say "stopped" in the header and offer a resize quote
+  // underneath.
+  const lifecycle = deploymentLifecycle(deployment);
+  const can = deploymentPermissions(lifecycle);
+  const st = lifecyclePill(lifecycle);
 
   return (
     <div className="flex flex-col gap-6">
@@ -510,9 +630,15 @@ export function AccountAppDeploymentPage() {
         actions={<StatusPill tone={st.tone}>{st.label}</StatusPill>}
       />
 
+      <LifecycleProgress lifecycle={lifecycle} />
+
       {error && <b className="text-cyber-danger">{error}</b>}
 
-      {isPending && deployment.subscription_id && (
+      {/* The banner is the state's one call to action, so at most one shows.
+          `unpaid` and `expired` both need the subscription to act on; without
+          a `subscription_id` there is nowhere to send the customer, so the
+          pill carries the state alone rather than offering a dead link. */}
+      {lifecycle === "unpaid" && deployment.subscription_id && (
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-sm border border-cyber-warning/50 bg-cyber-warning/10 px-4 py-3">
           <span className="text-sm text-cyber-text">
             <FormattedMessage defaultMessage="This deployment is awaiting payment. Pay its subscription to activate it." />
@@ -523,6 +649,38 @@ export function AccountAppDeploymentPage() {
           >
             <FormattedMessage defaultMessage="Pay to activate" />
           </Link>
+        </div>
+      )}
+
+      {lifecycle === "expired" && deployment.subscription_id && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-sm border border-cyber-warning/50 bg-cyber-warning/10 px-4 py-3">
+          {/* "Your data is still here" is the load-bearing half: the operator
+              keeps the volumes on expiry, and a customer who believes they are
+              gone has no reason to renew. */}
+          <span className="text-sm text-cyber-text">
+            <FormattedMessage defaultMessage="This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again." />
+          </span>
+          <Link
+            to={`/account/subscriptions/${deployment.subscription_id}`}
+            className="rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-1.5 text-sm font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+          >
+            <FormattedMessage defaultMessage="Renew" />
+          </Link>
+        </div>
+      )}
+
+      {lifecycle === "deploying" && (
+        <div className="flex flex-wrap items-center gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3">
+          <Spinner width={16} height={16} />
+          <span className="text-sm text-cyber-text">
+            <FormattedMessage defaultMessage="Setting up — this usually takes a minute. The endpoint appears once it is running." />
+          </span>
+        </div>
+      )}
+
+      {lifecycle === "error" && deployment.status_message && (
+        <div className="rounded-sm border border-cyber-danger/50 bg-cyber-danger/10 px-4 py-3 text-sm text-cyber-text">
+          {deployment.status_message}
         </div>
       )}
 
@@ -592,7 +750,10 @@ export function AccountAppDeploymentPage() {
             </>
           )}
 
-          {deployment.status_message && (
+          {/* The error banner above already carries this message, so the row
+              would repeat it verbatim. Every other state keeps it — it is
+              detail there, not the headline. */}
+          {deployment.status_message && lifecycle !== "error" && (
             <>
               <dt className="text-cyber-muted">
                 <FormattedMessage defaultMessage="Status detail" />
@@ -633,85 +794,103 @@ export function AccountAppDeploymentPage() {
         </dl>
       </SectionCard>
 
-      {/* Config + rename */}
+      {/* Config + rename. Shown in every state — the values are worth reading
+          even when they cannot be changed — but only saveable once there is a
+          deployment to apply them to. */}
       {app && (
         <SectionCard title={<FormattedMessage defaultMessage="Configure" />}>
           <ConfigEditor
             key={`${deployment.id}-${deployment.name}-${deployment.custom_domain ?? ""}`}
             app={app}
             deployment={deployment}
+            readOnly={!can.configEditable}
             onSaved={setDeployment}
             onError={(m) => setError(m || undefined)}
           />
         </SectionCard>
       )}
 
-      {/* Resize */}
-      <SectionCard title={<FormattedMessage defaultMessage="Size" />}>
-        <UpgradeSection
-          // Remount when the size changes so the selector re-bases off the new
-          // multiplier instead of offering a size that is no longer an upgrade.
-          key={`${deployment.id}-${deployment.resource_multiplier}`}
-          deployment={deployment}
-          onUpgraded={() =>
-            reload().catch((e) => e instanceof Error && setError(e.message))
-          }
-        />
-      </SectionCard>
+      {/* Resize. Hidden unless there is a paid period to prorate against —
+          the API answers 400 otherwise, and quoting against a period nobody
+          bought was the second half of web#54. */}
+      {can.size && (
+        <SectionCard title={<FormattedMessage defaultMessage="Size" />}>
+          <UpgradeSection
+            // Remount when the size changes so the selector re-bases off the new
+            // multiplier instead of offering a size that is no longer an upgrade.
+            key={`${deployment.id}-${deployment.resource_multiplier}`}
+            deployment={deployment}
+            onUpgraded={() =>
+              reload().catch((e) => e instanceof Error && setError(e.message))
+            }
+          />
+        </SectionCard>
+      )}
 
       {/* Lifecycle */}
-      <SectionCard title={<FormattedMessage defaultMessage="Manage" />}>
-        <div className="flex flex-wrap items-center gap-2">
-          {isRunning && (
-            <AsyncButton
-              onClick={() =>
-                act(() => login.api.stopAppDeployment(deployment.id))
-              }
-            >
-              <FormattedMessage defaultMessage="Stop" />
-            </AsyncButton>
-          )}
-          {isStopped && (
-            <AsyncButton
-              className="bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
-              onClick={() =>
-                act(() => login.api.startAppDeployment(deployment.id))
-              }
-            >
-              <FormattedMessage defaultMessage="Start" />
-            </AsyncButton>
-          )}
-
-          <div className="ml-auto flex items-center gap-2">
-            {confirmDelete ? (
-              <>
-                <span className="text-xs text-cyber-muted">
-                  <FormattedMessage defaultMessage="Delete permanently?" />
-                </span>
-                <AsyncButton onClick={async () => setConfirmDelete(false)}>
-                  <FormattedMessage defaultMessage="Cancel" />
-                </AsyncButton>
-                <AsyncButton
-                  className="!bg-cyber-danger/15 !border-cyber-danger !text-cyber-danger hover:!bg-cyber-danger/25"
-                  onClick={onDelete}
-                >
-                  <FormattedMessage defaultMessage="Confirm delete" />
-                </AsyncButton>
-              </>
-            ) : (
+      {(can.stop || can.start || can.delete) && (
+        <SectionCard title={<FormattedMessage defaultMessage="Manage" />}>
+          <div className="flex flex-wrap items-center gap-2">
+            {can.stop && (
               <AsyncButton
-                className="!bg-cyber-danger/15 !border-cyber-danger !text-cyber-danger hover:!bg-cyber-danger/25"
-                onClick={async () => setConfirmDelete(true)}
+                onClick={() =>
+                  act(() => login.api.stopAppDeployment(deployment.id))
+                }
               >
-                <FormattedMessage defaultMessage="Delete" />
+                <FormattedMessage defaultMessage="Stop" />
               </AsyncButton>
             )}
+            {can.start && (
+              <AsyncButton
+                className="bg-cyber-primary/20 border-cyber-primary text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
+                onClick={() =>
+                  act(() => login.api.startAppDeployment(deployment.id))
+                }
+              >
+                <FormattedMessage defaultMessage="Start" />
+              </AsyncButton>
+            )}
+
+            {/* Delete stays available in every state but `deleting`: someone who
+              ordered by mistake and never paid must be able to remove it
+              without paying first, and an expired one without renewing. */}
+            {can.delete && (
+              <div className="ml-auto flex items-center gap-2">
+                {confirmDelete ? (
+                  <>
+                    <span className="text-xs text-cyber-muted">
+                      <FormattedMessage defaultMessage="Delete permanently?" />
+                    </span>
+                    <AsyncButton onClick={async () => setConfirmDelete(false)}>
+                      <FormattedMessage defaultMessage="Cancel" />
+                    </AsyncButton>
+                    <AsyncButton
+                      className="!bg-cyber-danger/15 !border-cyber-danger !text-cyber-danger hover:!bg-cyber-danger/25"
+                      onClick={onDelete}
+                    >
+                      <FormattedMessage defaultMessage="Confirm delete" />
+                    </AsyncButton>
+                  </>
+                ) : (
+                  <AsyncButton
+                    className="!bg-cyber-danger/15 !border-cyber-danger !text-cyber-danger hover:!bg-cyber-danger/25"
+                    onClick={async () => setConfirmDelete(true)}
+                  >
+                    <FormattedMessage defaultMessage="Delete" />
+                  </AsyncButton>
+                )}
+              </div>
+            )}
           </div>
-        </div>
-        <p className="m-0 mt-3 text-xs text-cyber-muted">
-          <FormattedMessage defaultMessage="Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes." />
-        </p>
-      </SectionCard>
+          <p className="m-0 mt-3 text-xs text-cyber-muted">
+            {can.stop || can.start ? (
+              <FormattedMessage defaultMessage="Stopping scales the app to zero and retains its data. Deleting stops billing and permanently removes the deployment and its volumes." />
+            ) : (
+              <FormattedMessage defaultMessage="Deleting stops billing and permanently removes the deployment and its volumes." />
+            )}
+          </p>
+        </SectionCard>
+      )}
     </div>
   );
 }

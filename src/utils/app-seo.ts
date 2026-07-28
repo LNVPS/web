@@ -77,6 +77,10 @@ export function appSeoDescription(
   if (app.seo_description) return app.seo_description;
   if (!app.category) return app.description;
 
+  // The translations of both ledes deliberately keep the operate verb rather
+  // than "host": the model renders it as the receive-guests sense in all ten,
+  // so the verb is lifted from the prior id by hand. Re-translating these two
+  // strings puts a party host back in the meta description.
   const lede =
     app.storage_bytes >= GiB
       ? intl.formatMessage(

@@ -957,7 +957,7 @@
     "defaultMessage": "Şifresiz"
   },
   "OKXlev": {
-    "defaultMessage": "Koş {name} yönetilen bir şekilde {category} LNVPS üzerinde — kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
+    "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde — kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
   },
   "OLqOyf": {
     "defaultMessage": "Kurulum Talimatları"

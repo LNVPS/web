@@ -651,14 +651,13 @@ export interface App {
    */
   volumes?: Array<AppVolume>;
   /**
-   * Class of software, sentence case — "Nostr relay" (LNVPS/api#241). These
-   * three are required on the API side; optional here only because an API
-   * build older than that release does not send them at all.
+   * Class of software, sentence case — "Nostr relay" (LNVPS/api#241). Always
+   * sent by that release and later; optional here only for an older build.
    */
   category?: string;
-  /** Per-app override for the page `<title>`. */
+  /** Per-app override for the page `<title>`; null for almost every app. */
   seo_title?: string;
-  /** Per-app override for the meta description. */
+  /** Per-app override for the meta description; null for almost every app. */
   seo_description?: string;
 }
 

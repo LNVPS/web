@@ -957,7 +957,7 @@
     "defaultMessage": "بدون كلمة مرور"
   },
   "OKXlev": {
-    "defaultMessage": "اركض {name} بصفتها مُدارة {category} على شبكة LNVPS — اسم مضيف خاص، مع دعم بروتوكول TLS. {storage} تخزين، لا حاجة لتحديث الخادم."
+    "defaultMessage": "تشغيل {name} بصفتها مُدارة {category} على شبكة LNVPS — اسم مضيف خاص، مع دعم بروتوكول TLS. {storage} تخزين، لا حاجة لتحديث الخادم."
   },
   "OLqOyf": {
     "defaultMessage": "تعليمات الإعداد"

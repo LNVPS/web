@@ -957,7 +957,7 @@
     "defaultMessage": "Sem necessidade de senha"
   },
   "OKXlev": {
-    "defaultMessage": "Correr {name} como um serviço gerenciado {category} no LNVPS — nome de host próprio, TLS incluído. {storage} armazenamento, sem necessidade de atualizar o servidor."
+    "defaultMessage": "Executar {name} como um serviço gerenciado {category} no LNVPS — nome de host próprio, TLS incluído. {storage} armazenamento, sem necessidade de atualizar o servidor."
   },
   "OLqOyf": {
     "defaultMessage": "Instruções de instalação"

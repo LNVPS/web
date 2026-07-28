@@ -957,7 +957,7 @@
     "defaultMessage": "无需密码"
   },
   "OKXlev": {
-    "defaultMessage": "跑 {name} 作为一种管理方式 {category} 在 LNVPS 上——使用自定义主机名，已启用 TLS。 {storage} 存储，无需更新服务器。"
+    "defaultMessage": "运行 {name} 作为一种管理方式 {category} 在 LNVPS 上——使用自定义主机名，已启用 TLS。 {storage} 存储，无需更新服务器。"
   },
   "OLqOyf": {
     "defaultMessage": "设置说明"

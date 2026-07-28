@@ -957,7 +957,7 @@
     "defaultMessage": "パスワード不要"
   },
   "OKXlev": {
-    "defaultMessage": "走る {name} 管理されたものとして {category} LNVPSで — 独自のホスト名を使用し、TLSを有効にします。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
+    "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPSで — 独自のホスト名を使用し、TLSを有効にします。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
   },
   "OLqOyf": {
     "defaultMessage": "セットアップ方法"

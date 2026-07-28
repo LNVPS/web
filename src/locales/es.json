@@ -957,7 +957,7 @@
     "defaultMessage": "Sin contraseña"
   },
   "OKXlev": {
-    "defaultMessage": "Corre {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar ningún servidor."
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar ningún servidor."
   },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"

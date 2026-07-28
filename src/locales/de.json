@@ -957,7 +957,7 @@
     "defaultMessage": "Ohne Passwort"
   },
   "OKXlev": {
-    "defaultMessage": "Laufen {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Unterstützung inklusive {storage} Speicher, kein Server, der gepatcht werden muss."
+    "defaultMessage": "Betreiben Sie {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Unterstützung inklusive {storage} Speicher, kein Server, der gepatcht werden muss."
   },
   "OLqOyf": {
     "defaultMessage": "Anleitung zur Einrichtung"

@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "Réseau"
   },
+  "I90sbW": {
+    "defaultMessage": "il y a quelques instants / tout à l’heure"
+  },
   "IChMNf": {
     "defaultMessage": "Aucun changement détecté."
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "Est-ce que je dois créer un compte ?"
   },
+  "XYkq4n": {
+    "defaultMessage": "Utilisé"
+  },
   "XdLEro": {
     "defaultMessage": "Hébergement du serveur multimédia Blossom — Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Heure de fin (facultatif)"
+  },
+  "cOyGo6": {
+    "defaultMessage": "Par service."
   },
   "cQtv0G": {
     "defaultMessage": "{n} en cours d'exécution"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "Vous n’êtes pas sûr(e) ? <b>strfry</b> est l’outil principal : c’est celui que la plupart des relais publics utilisent. <b>HAVEN</b> si c’est votre relais personnel plutôt qu’un relais communautaire ; il vous donne également accès à un espace de stockage multimédia Blossom, ce qui permet de regrouper vos images et vos notes sous la même clé."
   },
+  "iw5cTf": {
+    "defaultMessage": "En termes de volume."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "Mode de paiement"
   },
+  "nLgLHn": {
+    "defaultMessage": "Recueillis {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "Les paramètres peuvent être modifiés une fois que le déploiement a été payé et est en cours d’exécution."
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "Déployez une application sur LNVPS : en quelques minutes, elle sera opérationnelle avec son propre nom de domaine, le protocole TLS et l’espace de stockage inclus, sans qu’il soit nécessaire de mettre à jour le système d’exploitation. Les relais Nostr et les serveurs multimédias Blossom sont disponibles dès aujourd’hui."
+  },
+  "ndu6sH": {
+    "defaultMessage": "Non encore mesuré."
   },
   "nidU9E": {
     "defaultMessage": "{rate} commission"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "Lié(e)"
   },
+  "wbsq7O": {
+    "defaultMessage": "Utilisation"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois, sans frais d’installation."
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(Aucune modification du DNS n’est nécessaire)"
+  },
+  "y867Vs": {
+    "defaultMessage": "Volume"
   },
   "y9xHR9": {
     "defaultMessage": "Versements"

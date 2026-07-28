@@ -737,6 +737,41 @@ export type AppDeploymentStatus =
  */
 export type AppDeploymentBillingState = "unpaid" | "active" | "expired";
 
+/** One service's share of a deployment's observed CPU and memory. */
+export interface AppDeploymentServiceUsage {
+  /** Compose service name. */
+  service: string;
+  cpu_milli: number;
+  memory_bytes: number;
+}
+
+/** One volume's observed use. */
+export interface AppDeploymentVolumeUsage {
+  /** Compose service this volume belongs to. */
+  service: string;
+  /** Compose volume name. */
+  name: string;
+  storage_bytes: number;
+}
+
+/**
+ * Live resource usage the cluster reports for a deployment. Sampled on the
+ * operator's reconcile interval, not on request — always somewhat stale, so
+ * render it with the age of the reading.
+ */
+export interface AppDeploymentUsage {
+  cpu_milli: number;
+  memory_bytes: number;
+  /** Total volume usage; absent when no volumes exist or kubelet stats are unavailable. */
+  storage_bytes?: number;
+  /** When the reading was taken. */
+  collected: string;
+  /** Per-service CPU and memory behind the totals. */
+  services: AppDeploymentServiceUsage[];
+  /** Per-volume storage behind the total. */
+  volumes: AppDeploymentVolumeUsage[];
+}
+
 /** A user's running instance of a catalog app. */
 export interface AppDeployment {
   id: number;
@@ -781,6 +816,8 @@ export interface AppDeployment {
   cpu_milli: number;
   memory_bytes: number;
   storage_bytes: number;
+  /** Live resource usage, absent for a deployment that has not been measured yet. */
+  usage?: AppDeploymentUsage;
   /** Current customer-supplied config field values (secrets never exposed). */
   config?: Record<string, string>;
   created: string;

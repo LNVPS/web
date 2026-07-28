@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "Rede"
   },
+  "I90sbW": {
+    "defaultMessage": "agora mesmo"
+  },
   "IChMNf": {
     "defaultMessage": "Nenhuma alteração detetada."
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "Preciso criar uma conta?"
   },
+  "XYkq4n": {
+    "defaultMessage": "Usado(a)"
+  },
   "XdLEro": {
     "defaultMessage": "Serviço de hospedagem do servidor multimídia Blossom — Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Hora de término (opcional)"
+  },
+  "cOyGo6": {
+    "defaultMessage": "Por serviço"
   },
   "cQtv0G": {
     "defaultMessage": "{n} em execução"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "Não tem certeza? O <b>strfry</b> é a ferramenta principal — é o que a maioria dos servidores públicos usa. Se este for o seu servidor pessoal e não um servidor comunitário, use o <b>HAVEN</b>; ele também oferece um espaço de armazenamento multimídia Blossom, para que suas imagens e notas fiquem no mesmo local."
   },
+  "iw5cTf": {
+    "defaultMessage": "Em termos de volume."
+  },
   "j4RCJW": {
     "defaultMessage": "SKILL.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "Método de Pagamento"
   },
+  "nLgLHn": {
+    "defaultMessage": "Coletado(s) / Recolhido(s) {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "As configurações podem ser alteradas após o pagamento e a implementação do sistema."
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "Implemente uma aplicação no LNVPS — em poucos minutos, com o seu próprio nome de domínio, TLS e armazenamento incluídos, sem necessidade de atualizações do sistema operativo. Já pode utilizar os retransmissores Nostr e os servidores de media Blossom."
+  },
+  "ndu6sH": {
+    "defaultMessage": "Ainda não foi medido."
   },
   "nidU9E": {
     "defaultMessage": "{rate} comissão"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "Ligado(s)/Conectado(s)"
   },
+  "wbsq7O": {
+    "defaultMessage": "Utilização"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês, sem taxa de configuração."
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(Não é necessário alterar as configurações de DNS)"
+  },
+  "y867Vs": {
+    "defaultMessage": "Volume"
   },
   "y9xHR9": {
     "defaultMessage": "Pagamentos"

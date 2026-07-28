@@ -812,6 +812,9 @@
   "I3JhPS": {
     "defaultMessage": "Ağ"
   },
+  "I90sbW": {
+    "defaultMessage": "az önce"
+  },
   "IChMNf": {
     "defaultMessage": "Herhangi bir değişiklik tespit edilmedi."
   },
@@ -1397,6 +1400,9 @@
   "XW9RGA": {
     "defaultMessage": "Bir hesaba ihtiyacım var mı?"
   },
+  "XYkq4n": {
+    "defaultMessage": "Kullanılmış"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom Medya Sunucusu Barındırma — Route96"
   },
@@ -1552,6 +1558,9 @@
   },
   "cM5n1C": {
     "defaultMessage": "Bitiş Saati (isteğe bağlı)"
+  },
+  "cOyGo6": {
+    "defaultMessage": "Hizmet yoluyla"
   },
   "cQtv0G": {
     "defaultMessage": "{n} çalışıyor"
@@ -1805,6 +1814,9 @@
   "iv8nNj": {
     "defaultMessage": "Emin değil misiniz? <b>strfry</b>, işin yükünü çeken ana uygulamadır; çoğu genel amaçlı röle bu uygulama ile çalışır. Eğer bu kişisel bir röle ise (topluluk rölesi değil), <b>HAVEN</b> kullanın; bu uygulama aynı zamanda size Blossom medya deposu da sağlar, böylece resimleriniz notlarınızla aynı anahtar altında saklanır."
   },
+  "iw5cTf": {
+    "defaultMessage": "Hacim olarak"
+  },
   "j4RCJW": {
     "defaultMessage": "BECERİLER.md"
   },
@@ -1991,6 +2003,9 @@
   "nFQbxh": {
     "defaultMessage": "Ödeme Yöntemi"
   },
+  "nLgLHn": {
+    "defaultMessage": "Toplandı {when}"
+  },
   "nQHBG0": {
     "defaultMessage": "Bu uygulamanın ücreti ödenip kullanıma sunulduktan sonra ayarlar değiştirilebilir."
   },
@@ -1999,6 +2014,9 @@
   },
   "naCpPX": {
     "defaultMessage": "LNVPS üzerinde bir uygulama dağıtın; kendi alan adı, TLS ve depolama alanı dahil olmak üzere birkaç dakika içinde kullanıma hazır hale getirin, işletim sistemi güncellemeleriyle uğraşmanıza gerek kalmaz. Bugün Nostr röleleri ve Blossom medya sunucuları kullanıma sunuldu."
+  },
+  "ndu6sH": {
+    "defaultMessage": "Henüz ölçülmedi."
   },
   "nidU9E": {
     "defaultMessage": "{rate} komisyon"
@@ -2342,6 +2360,9 @@
   "waJLKW": {
     "defaultMessage": "Bağlantılı"
   },
+  "wbsq7O": {
+    "defaultMessage": "Kullanım"
+  },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} aylık olarak, kurulum ücreti yok."
   },
@@ -2395,6 +2416,9 @@
   },
   "y43e4q": {
     "defaultMessage": "(DNS değişikliğine gerek yoktur)"
+  },
+  "y867Vs": {
+    "defaultMessage": "Hacim"
   },
   "y9xHR9": {
     "defaultMessage": "Ödemeler"

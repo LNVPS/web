@@ -1,9 +1,14 @@
-import { ReactNode, useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { FormattedDate, FormattedMessage } from "react-intl";
+import {
+  FormattedDate,
+  FormattedMessage,
+  FormattedRelativeTime,
+} from "react-intl";
 import {
   App,
   AppDeployment,
+  AppDeploymentUsage,
   AppUpgradeQuote,
   MAX_RESOURCE_MULTIPLIER,
 } from "../api";
@@ -12,6 +17,7 @@ import usePaymentMethods from "../hooks/usePaymentMethods";
 import { ConfigInput } from "../components/deploy-app-form";
 import { parseAppConfig } from "../utils/app-compose";
 import Spinner from "../components/spinner";
+import BytesSize from "../components/bytes";
 import Seo from "../components/seo";
 import { PageHeader, SectionCard } from "../components/section";
 import { StatusPill } from "../components/billing";
@@ -19,7 +25,12 @@ import { AsyncButton } from "../components/button";
 import { CostAmount } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
 import { appUpgradeSource } from "../components/payment-sources";
-import { AppIcon, AppResources, deploymentStatus } from "./account-apps";
+import {
+  AppIcon,
+  AppResources,
+  deploymentStatus,
+  vcpu,
+} from "./account-apps";
 import {
   DeploymentLifecycle,
   deploymentLifecycle,
@@ -496,6 +507,187 @@ function UpgradeSection({
   );
 }
 
+/**
+ * A horizontal percentage bar with a label, the proportion used, and absolute
+ * figures. Shows nothing when the quota side is zero (no limit declared).
+ */
+function UsageBar({
+  label,
+  used,
+  quota,
+  renderValue,
+}: {
+  label: ReactNode;
+  used: number;
+  quota: number;
+  renderValue: (n: number) => ReactNode;
+}) {
+  if (quota <= 0) return null;
+  const pct = Math.min(100, Math.round((used / quota) * 100));
+  const high = pct >= 90;
+  const mid = pct >= 70;
+  return (
+    <div className="flex items-center gap-3">
+      <span className="w-16 text-xs font-bold uppercase tracking-[0.15em] text-cyber-muted flex-shrink-0">
+        {label}
+      </span>
+      <div className="flex-1 h-2 rounded-full border border-cyber-border bg-cyber-panel-light overflow-hidden">
+        <div
+          className={`h-full rounded-full transition-all ${high ? "bg-cyber-danger" : mid ? "bg-cyber-warning" : "bg-cyber-primary"}`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+      <span
+        className={`min-w-[5.5rem] text-right font-mono text-xs tabular-nums ${high ? "text-cyber-danger" : mid ? "text-cyber-warning" : "text-cyber-text"}`}
+      >
+        {renderValue(used)}&nbsp;/&nbsp;{renderValue(quota)}
+      </span>
+    </div>
+  );
+}
+
+/** Readable age for a usage reading. */
+function UsageAge({ collected }: { collected: string }) {
+  const now = useRef(Date.now()).current;
+  const collectedMs = Date.parse(collected);
+  const seconds = Math.round((now - collectedMs) / 1000);
+
+  // Under a minute: render as "just now" to avoid flashing "0 seconds ago".
+  if (seconds < 60) {
+    return <FormattedMessage defaultMessage="just now" />;
+  }
+  return (
+    <FormattedRelativeTime
+      value={-Math.round(seconds)}
+      unit="second"
+      updateIntervalInSeconds={30}
+    />
+  );
+}
+
+/** A `cpu_milli` figure in vCPU, translated the same way {@link AppResources} renders one. */
+function cpuLabel(milli: number): ReactNode {
+  return (
+    <FormattedMessage
+      defaultMessage="{cores} vCPU"
+      values={{ cores: vcpu(milli) }}
+    />
+  );
+}
+
+/** Live resource usage for a deployment showing totals, breakdown, and age. */
+function DeploymentUsageCard({
+  usage,
+  quotaCpuMilli,
+  quotaMemBytes,
+  quotaStorageBytes,
+}: {
+  usage: AppDeploymentUsage;
+  quotaCpuMilli: number;
+  quotaMemBytes: number;
+  quotaStorageBytes: number;
+}) {
+  return (
+    <SectionCard title={<FormattedMessage defaultMessage="Usage" />}>
+      <div className="flex flex-col gap-3">
+        <UsageBar
+          label={<FormattedMessage defaultMessage="CPU" />}
+          used={usage.cpu_milli}
+          quota={quotaCpuMilli}
+          renderValue={cpuLabel}
+        />
+        <UsageBar
+          label={<FormattedMessage defaultMessage="RAM" />}
+          used={usage.memory_bytes}
+          quota={quotaMemBytes}
+          renderValue={(n) => <BytesSize value={n} />}
+        />
+        {usage.storage_bytes !== undefined && usage.storage_bytes !== null && (
+          <UsageBar
+            label={<FormattedMessage defaultMessage="Storage" />}
+            used={usage.storage_bytes}
+            quota={quotaStorageBytes}
+            renderValue={(n) => <BytesSize value={n} />}
+          />
+        )}
+
+        <p className="m-0 mt-1 text-xs text-cyber-muted">
+          <FormattedMessage
+            defaultMessage="Collected {when}"
+            values={{ when: <UsageAge collected={usage.collected} /> }}
+          />
+        </p>
+
+        {usage.services.length > 0 && (
+          <div className="border-t border-cyber-border pt-3 mt-1">
+            <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+              <FormattedMessage defaultMessage="By service" />
+            </p>
+            <table className="w-full text-xs tabular-nums">
+              <thead>
+                <tr className="text-left text-cyber-muted">
+                  <th className="font-normal pb-1 pr-3">
+                    <FormattedMessage defaultMessage="Service" />
+                  </th>
+                  <th className="font-normal pb-1 pr-3">
+                    <FormattedMessage defaultMessage="CPU" />
+                  </th>
+                  <th className="font-normal pb-1">
+                    <FormattedMessage defaultMessage="RAM" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {usage.services.map((s) => (
+                  <tr key={s.service} className="text-cyber-text">
+                    <td className="py-0.5 pr-3 font-mono">{s.service}</td>
+                    <td className="py-0.5 pr-3">{cpuLabel(s.cpu_milli)}</td>
+                    <td className="py-0.5">
+                      <BytesSize value={s.memory_bytes} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {usage.volumes.length > 0 && (
+          <div className="border-t border-cyber-border pt-3 mt-1">
+            <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+              <FormattedMessage defaultMessage="By volume" />
+            </p>
+            <table className="w-full text-xs tabular-nums">
+              <thead>
+                <tr className="text-left text-cyber-muted">
+                  <th className="font-normal pb-1 pr-3">
+                    <FormattedMessage defaultMessage="Volume" />
+                  </th>
+                  <th className="font-normal pb-1">
+                    <FormattedMessage defaultMessage="Used" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {usage.volumes.map((v) => (
+                  <tr key={`${v.service}/${v.name}`} className="text-cyber-text">
+                    <td className="py-0.5 pr-3 font-mono">
+                      {v.service}/{v.name}
+                    </td>
+                    <td className="py-0.5">
+                      <BytesSize value={v.storage_bytes} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </SectionCard>
+  );
+}
+
 export function AccountAppDeploymentPage() {
   const login = useLogin();
   const navigate = useNavigate();
@@ -775,6 +967,25 @@ export function AccountAppDeploymentPage() {
           </dd>
         </dl>
       </SectionCard>
+
+      {/* Usage */}
+      {(deployment.cpu_milli > 0 ||
+        deployment.memory_bytes > 0 ||
+        deployment.storage_bytes > 0) &&
+        (deployment.usage ? (
+          <DeploymentUsageCard
+            usage={deployment.usage}
+            quotaCpuMilli={deployment.cpu_milli}
+            quotaMemBytes={deployment.memory_bytes}
+            quotaStorageBytes={deployment.storage_bytes}
+          />
+        ) : (
+          <SectionCard title={<FormattedMessage defaultMessage="Usage" />}>
+            <p className="m-0 text-sm text-cyber-muted">
+              <FormattedMessage defaultMessage="Not yet measured." />
+            </p>
+          </SectionCard>
+        ))}
 
       {/* Config + rename. Shown in every state — the values are worth reading
           even when they cannot be changed — but only saveable once there is a

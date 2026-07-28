@@ -10,21 +10,6 @@ import { formatBytesText } from "../utils/bytes";
 import { BlossomAppId } from "../const";
 import type { AppLoaderData } from "../loaders";
 
-/**
- * Route96's price as this page claims it, for the render where the catalog is
- * unreachable.
- *
- * The page has to keep its headline when the API is down (web#38), so the
- * price cannot be *only* derived — but it must not sit inside a translatable
- * string either, or eleven locale files end up carrying a number that only
- * `src/api.ts` should decide. So it lives here, once, in minor units, and is
- * painted by the same code that paints the live figure. `350` is €3.50.
- *
- * If Route96's catalog price changes this is the only line to change; the
- * copy, the `Offer` markup and the `<title>` all follow from it.
- */
-const FALLBACK_PRICE = { currency: "EUR", amount: 350 };
-
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
  * Mirrors `SectionHeading` in `home.tsx:172`. */
 function SectionHeading({ children }: { children: ReactNode }) {
@@ -62,10 +47,16 @@ function Section({
  * ships no product markup.
  *
  * Every price on the page — title, meta description, h1, the Route96 line and
- * the CTA — is a `{price}` placeholder fed from the catalog, falling back to
- * `FALLBACK_PRICE` when the loader has nothing. So the copy, the `Offer`
- * markup and the `<title>` cannot disagree, and no locale file carries the
- * number.
+ * the CTA — is a `{price}` placeholder fed from the catalog, and there is no
+ * constant behind it (`LNVPS/web#67`): with the catalog unreachable the page
+ * makes no price claim at all rather than repeating a €3.50 that was written
+ * here in April and cannot be checked. Same rule as the storage below. The
+ * copy, the `Offer` markup and the `<title>` therefore cannot disagree, and no
+ * locale file carries the number.
+ *
+ * "No setup fee" is its own claim and gated on `setup_amount` for the same
+ * reason — it was asserted unconditionally, including for a render where the
+ * catalog says there is one.
  *
  * Storage now works the same way (`LNVPS/web#60`). It could not before:
  * `storage_bytes` is only the 25 GiB total, and printing that where the copy
@@ -96,9 +87,12 @@ export function BlossomServerHostingPage() {
   // `CostAmount` in a fixed position.
   const price = app
     ? { currency: app.currency, amount: app.amount }
-    : FALLBACK_PRICE;
-  const priceText = formatPriceText(intl, price);
-  const priceNode = <CostAmount cost={price} converted={false} />;
+    : undefined;
+  const priceText = price ? formatPriceText(intl, price) : undefined;
+  const priceNode = price ? (
+    <CostAmount cost={price} converted={false} />
+  ) : null;
+  const noSetupFee = app?.setup_amount === 0;
 
   // The catalog's storage, or no claim at all — there is no fallback constant,
   // because a size written into the front end is product data the client has
@@ -162,12 +156,12 @@ export function BlossomServerHostingPage() {
           },
         ]
       : []),
-    {
-      question: formatMessage({
-        defaultMessage: "How large a file can I upload?",
-      }),
-      answer: formatMessage({ defaultMessage: "Up to 100 MB per upload." }),
-    },
+    // "How large a file can I upload?" was asked and answered "Up to 100 MB
+    // per upload." — Route96's own `max_upload_bytes`, true when it was written
+    // and frozen since. It is gone for good (`LNVPS/web#66`), and deliberately
+    // not replaced by a pending API field: a landing page states what LNVPS
+    // sells — resources, price, region, support — and how the app is
+    // configured is the app's business, not this FAQ's.
     {
       question: formatMessage({ defaultMessage: "Can I use my own domain?" }),
       answer: formatMessage({
@@ -184,29 +178,47 @@ export function BlossomServerHostingPage() {
   return (
     <>
       <Seo
-        title={formatMessage(
-          {
-            defaultMessage: "Blossom Media Server Hosting from {price}/month",
-          },
-          { price: priceText },
-        )}
+        title={
+          priceText
+            ? formatMessage(
+                {
+                  defaultMessage:
+                    "Blossom Media Server Hosting from {price}/month",
+                },
+                { price: priceText },
+              )
+            : formatMessage({
+                defaultMessage: "Blossom Media Server Hosting — Route96",
+              })
+        }
         canonical="/blossom-server-hosting"
-        description={formatMessage(
-          {
-            defaultMessage:
-              "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
-          },
-          { price: priceText },
-        )}
+        description={
+          priceText
+            ? formatMessage(
+                {
+                  defaultMessage:
+                    "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
+                },
+                { price: priceText },
+              )
+            : formatMessage({
+                defaultMessage:
+                  "Run your own Blossom and NIP-96 media server. Route96, up in minutes on its own hostname with persistent storage and TLS included.",
+              })
+        }
         jsonLd={[...(app ? [appJsonLd(app, intl)] : []), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">
           <h1 className="m-0 text-3xl text-cyber-text-bright">
-            <FormattedMessage
-              defaultMessage="Host your own media server — {price} a month"
-              values={{ price: priceNode }}
-            />
+            {priceNode ? (
+              <FormattedMessage
+                defaultMessage="Host your own media server — {price} a month"
+                values={{ price: priceNode }}
+              />
+            ) : (
+              <FormattedMessage defaultMessage="Host your own media server" />
+            )}
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included." />
@@ -219,11 +231,25 @@ export function BlossomServerHostingPage() {
             down states it, and a figure written in two slots is a figure that
             can be corrected in one of them.
           */}
+          {/* With the catalog unreachable the line keeps its slot but drops
+              every claim behind it — including "no setup fee", which is a
+              statement about a row we could not read. */}
           <p className="m-0 font-bold text-cyber-primary">
-            <FormattedMessage
-              defaultMessage="{price}/month, no setup fee."
-              values={{ price: priceNode }}
-            />
+            {priceNode ? (
+              noSetupFee ? (
+                <FormattedMessage
+                  defaultMessage="{price}/month, no setup fee."
+                  values={{ price: priceNode }}
+                />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="{price}/month."
+                  values={{ price: priceNode }}
+                />
+              )
+            ) : (
+              <FormattedMessage defaultMessage="Pay monthly with Lightning." />
+            )}
           </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
@@ -261,9 +287,9 @@ export function BlossomServerHostingPage() {
                 )}
               </li>
             ) : null}
-            <li>
-              <FormattedMessage defaultMessage="Uploads up to 100 MB each" />
-            </li>
+            {/* The per-upload cap was a bullet here — see the FAQ note above.
+                It is Route96's setting, not something LNVPS sells, so the
+                bullets list what we do sell and it is not coming back. */}
             <li>
               <FormattedMessage
                 defaultMessage="Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
@@ -320,10 +346,14 @@ export function BlossomServerHostingPage() {
             to={`/apps/${BlossomAppId}`}
             className="inline-block rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-2 font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
           >
-            <FormattedMessage
-              defaultMessage="Deploy Route96 — {price}/month"
-              values={{ price: priceNode }}
-            />
+            {priceNode ? (
+              <FormattedMessage
+                defaultMessage="Deploy Route96 — {price}/month"
+                values={{ price: priceNode }}
+              />
+            ) : (
+              <FormattedMessage defaultMessage="Deploy Route96" />
+            )}
           </Link>
         </div>
       </div>

@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "Entschlüsselte Nachricht:"
   },
+  "4bBT6e": {
+    "defaultMessage": "Vier verschiedene Relay-Implementierungen. Zahlung mit Lightning möglich."
+  },
   "4cMKIO": {
     "defaultMessage": "Wiederkehrende Abonnements, die sicherstellen, dass Ihre Dienste aktiv bleiben."
   },
@@ -503,6 +506,9 @@
   "BD6I/Z": {
     "defaultMessage": "Die genaue Höhe der Steuer wird Ihnen bei der Zahlung mitgeteilt."
   },
+  "BEs2cn": {
+    "defaultMessage": "Nostr-Relay-Hosting – strfry, nostr-rs-relay, Pyramid, HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "Die {records} verweisen direkt auf IP-Adressen und müssen möglicherweise aktualisiert werden, falls sich diese ändern."
   },
@@ -530,9 +536,6 @@
   "Bzv1CO": {
     "defaultMessage": "Jetzt wieder aktivieren."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Vier verschiedene Relais-Implementierungen, jeweils {price} pro Monat, ohne Einrichtungskosten."
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -547,6 +550,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Einstellungen"
+  },
+  "D45G/S": {
+    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Dieser benötigt keinen kompletten Server – er ist <a>von {price} ein Monat als verwaltete App</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -647,6 +653,9 @@
   "F8RFcI": {
     "defaultMessage": "Optional. Wird auf den Rechnungen angezeigt, die wir für Ihre Zahlungen erstellen."
   },
+  "FAmKDH": {
+    "defaultMessage": "Setzen Sie Ihr Relais ein."
+  },
   "FBPfJ7": {
     "defaultMessage": "Halten Sie die Provision ein, bis sie diesen Betrag erreicht, bevor Sie sie auszahlen – dies ist besonders bei On-Chain-Transaktionen nützlich, um kleine Auszahlungen zu vermeiden. Lassen Sie das Feld leer, um das Systemminimum zu verwenden; Sie können es erhöhen, aber nicht unter diesen Wert senken."
   },
@@ -716,9 +725,6 @@
   "GSye7T": {
     "defaultMessage": "Lightning-Adresse"
   },
-  "GXNK11": {
-    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay für {price} pro Monat – wählen Sie zwischen strfry, nostr-rs-relay, Pyramid oder HAVEN und richten Sie es innerhalb weniger Minuten auf einem eigenen Hostnamen mit TLS und Speicherplatz ein."
-  },
   "Gd6Kbk": {
     "defaultMessage": "Noch nicht aktiviert."
   },
@@ -727,6 +733,9 @@
   },
   "GqRat5": {
     "defaultMessage": "Bitte bestätigen Sie Ihre E-Mail-Adresse, um Ihre Bestellung abzuschließen."
+  },
+  "GriRJo": {
+    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver. Route96 lässt sich innerhalb weniger Minuten auf einem eigenen Hostnamen mit persistentem Speicher und TLS einrichten."
   },
   "GsCz6b": {
     "defaultMessage": "Benutzerdefinierten Absender-Schlüssel verwenden"
@@ -745,6 +754,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Eingehend"
+  },
+  "H7JNFX": {
+    "defaultMessage": "Vier verschiedene Implementierungen von Relais, beginnend mit {price}pro Monat, ohne Einrichtungskosten."
   },
   "H9Az5Z": {
     "defaultMessage": "Abrechnungsdetails"
@@ -805,6 +817,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "Minimum: {min} GB"
+  },
+  "IzzIw7": {
+    "defaultMessage": "Setzen Sie Ihre Relais ein – ab {price}pro Monat"
   },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
@@ -884,6 +899,9 @@
   "LAMeIi": {
     "defaultMessage": "Wenden Sie sich an den LNVPS-Support."
   },
+  "LCAAZu": {
+    "defaultMessage": "Richten Sie Ihren eigenen Medienserver ein."
+  },
   "LHX6Oo": {
     "defaultMessage": "Gültig bis {exp}"
   },
@@ -928,6 +946,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Bestätigen"
+  },
+  "N7elAL": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay – etwa strfry, nostr-rs-relay, Pyramid oder HAVEN – und richten Sie es innerhalb weniger Minuten auf einem eigenen Hostnamen mit TLS und integriertem Speicher ein."
   },
   "NQgbYA": {
     "defaultMessage": "Kontoeinstellungen"
@@ -1121,9 +1142,6 @@
   "SYYlLP": {
     "defaultMessage": "Verwalte die auf dieser Domain registrierten NIP-05-Handles."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "Dauer: {duration}"
   },
@@ -1195,6 +1213,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "Gesamtbetrag pro Monat"
+  },
+  "TtrONG": {
+    "defaultMessage": "Bezahlen Sie monatlich mit Lightning."
   },
   "TwyMau": {
     "defaultMessage": "Konto"
@@ -1322,8 +1343,14 @@
   "XNiOLB": {
     "defaultMessage": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
   },
+  "XO5rF3": {
+    "defaultMessage": "Betreiben Sie Ihren eigenen Nostr-Relay-Server."
+  },
   "XW9RGA": {
     "defaultMessage": "Benötige ich ein Benutzerkonto?"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossom Media Server – Hosting – Route96"
   },
   "XyIrRh": {
     "defaultMessage": "Mit Bitcoin bezahlen"
@@ -1342,9 +1369,6 @@
   },
   "YWjrby": {
     "defaultMessage": "Es werden nur Benachrichtigungen zum Konto gesendet, z. B. über das Ablaufdatum einer virtuellen Maschine (VM). Wir versenden niemals Werbenachrichten."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "Kontaktieren Sie den Support."
@@ -1372,6 +1396,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Bestätigt"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Für diesen ist kein ganzer Server erforderlich – er ist <a>als verwaltete App verfügbar</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Mit Karte bezahlen"
@@ -1405,9 +1432,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "Passkey hinzufügen"
-  },
-  "aUuDGj": {
-    "defaultMessage": "Schalten Sie Ihr Relais ein – {price} pro Monat."
   },
   "acrOoz": {
     "defaultMessage": "Weiter."
@@ -1628,6 +1652,9 @@
   "gjvoQG": {
     "defaultMessage": "Größenbestimmung"
   },
+  "grcWs1": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay – ab {price} ein Monat"
+  },
   "gtGLdm": {
     "defaultMessage": "einschließlich einer Bearbeitungsgebühr von {amount}"
   },
@@ -1700,6 +1727,9 @@
   "j9/hqS": {
     "defaultMessage": "Konfigurieren Sie genau das, was Sie benötigen – CPU, Arbeitsspeicher und Speicher werden unabhängig voneinander eingestellt; wählen Sie zwischen SSD oder HDD, anstatt auf feste Leistungsklassen beschränkt zu sein."
   },
+  "jCOJxe": {
+    "defaultMessage": "Vier verschiedene Implementierungen von Relais, beginnend mit {price}pro Monat."
+  },
   "jGSUnR": {
     "defaultMessage": "Erhalte ich eine statische IP-Adresse?"
   },
@@ -1754,9 +1784,6 @@
   "kLNEaL": {
     "defaultMessage": "Bitte führen Sie die CAPTCHA-Überprüfung durch."
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "SSH-Schlüssel hinzufügen."
   },
@@ -1768,6 +1795,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Adresse, Zeile 1"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}pro Monat."
   },
   "ku+mDU": {
     "defaultMessage": "Bundesland"
@@ -1904,8 +1934,8 @@
   "o2AdrJ": {
     "defaultMessage": "Diese virtuelle Maschine verwendet eine benutzerdefinierte Vorlage und kann nicht aktualisiert werden. Nur virtuelle Maschinen, die Standardvorlagen verwenden, unterstützen Aktualisierungen."
   },
-  "o2v6Fy": {
-    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay – {price} pro Monat."
+  "o8mtsy": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay ab {price}/Monat – strfry, nostr-rs-Relay, Pyramid oder HAVEN, innerhalb von Minuten auf dem eigenen Hostnamen eingerichtet, inklusive TLS und Speicher."
   },
   "o9lOhm": {
     "defaultMessage": "Unterstützte Public-Key-Adresse: {npub}"
@@ -2003,14 +2033,14 @@
   "rF6EmI": {
     "defaultMessage": "Rechnungsinformationen"
   },
-  "rOtXKf": {
-    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Für diesen ist kein ganzer Server erforderlich – er ist <a>{price} ein Monat als verwaltete Anwendung</a>."
-  },
   "rbrahO": {
     "defaultMessage": "Schließen"
   },
   "rieTwF": {
     "defaultMessage": "Gültig bis"
+  },
+  "rneMhE": {
+    "defaultMessage": "Route96 bereitstellen"
   },
   "rr0r/W": {
     "defaultMessage": "<b>Die Nutzung von Tor ist erlaubt.</b> Wenn Sie möchten, können Sie Ihren Knoten über Tor betreiben – wir blockieren dies nicht und verwenden auch keine Google-Captcha-Abfragen."

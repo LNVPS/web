@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
   },
+  "4bBT6e": {
+    "defaultMessage": "4가지 릴레이 구현 방식. 라이트닝으로 결제하세요."
+  },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
   },
@@ -503,6 +506,9 @@
   "BD6I/Z": {
     "defaultMessage": "정확한 세금은 결제할 때 확인됩니다."
   },
+  "BEs2cn": {
+    "defaultMessage": "노스트르 릴레이 호스팅 — 스트르프라이, 노스트르-RS-릴레이, 피라미드, 헤이븐"
+  },
   "BFqlLP": {
     "defaultMessage": "{records} IP 주소를 직접 가리키므로, IP 주소가 변경될 경우 업데이트가 필요할 수 있습니다."
   },
@@ -530,9 +536,6 @@
   "Bzv1CO": {
     "defaultMessage": "지금 다시 활성화하세요."
   },
-  "C8Qzcv": {
-    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -547,6 +550,9 @@
   },
   "D3idYv": {
     "defaultMessage": "설정"
+  },
+  "D45G/S": {
+    "defaultMessage": "Nostr 릴레이도 운영하시나요? 그 릴레이는 전체 서버가 필요하지 않습니다. <a>~에서 {price} 한 달 동안 관리형 앱으로 사용</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -647,6 +653,9 @@
   "F8RFcI": {
     "defaultMessage": "선택 사항입니다. 귀하의 결제에 대해 저희가 생성하는 청구서에 표시됩니다."
   },
+  "FAmKDH": {
+    "defaultMessage": "릴레이 서버를 배포하세요."
+  },
   "FBPfJ7": {
     "defaultMessage": "지급액이 이 금액에 도달할 때까지 수수료를 보류한 후 지급합니다. 소액 지급을 피하기 위해 유용한 온체인 기능입니다. 기본값을 사용하려면 비워두세요. 값을 높일 수는 있지만, 기본값보다 낮게 설정할 수는 없습니다."
   },
@@ -716,9 +725,6 @@
   "GSye7T": {
     "defaultMessage": "라이트닝 주소"
   },
-  "GXNK11": {
-    "defaultMessage": "자체 노스트르 릴레이를 구축하여 매달 {price}에 운영하세요. strfry, nostr-rs-relay, Pyramid 또는 HAVEN을 선택하고 몇 분 안에 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 설정할 수 있습니다."
-  },
   "Gd6Kbk": {
     "defaultMessage": "아직 활성화되지 않음"
   },
@@ -727,6 +733,9 @@
   },
   "GqRat5": {
     "defaultMessage": "주문 완료를 위해 이메일 주소를 확인해 주시기 바랍니다."
+  },
+  "GriRJo": {
+    "defaultMessage": "Blossom과 NIP-96 미디어 서버를 직접 운영하세요. Route96은 자체 호스트 이름으로 몇 분 안에 설정할 수 있으며, 영구 저장 공간과 TLS가 포함되어 있습니다."
   },
   "GsCz6b": {
     "defaultMessage": "사용자 지정 발신 키를 사용하세요."
@@ -745,6 +754,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "유입되는"
+  },
+  "H7JNFX": {
+    "defaultMessage": "다음부터 총 4가지 릴레이 구현 방식을 소개합니다. {price}월간 요금이며, 초기 설치 비용은 없습니다."
   },
   "H9Az5Z": {
     "defaultMessage": "결제 정보"
@@ -805,6 +817,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "최소: {min} 기가바이트"
+  },
+  "IzzIw7": {
+    "defaultMessage": "릴레이를 배치하세요. {price}/월"
   },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
@@ -884,6 +899,9 @@
   "LAMeIi": {
     "defaultMessage": "LNVPS 지원팀에 문의하세요."
   },
+  "LCAAZu": {
+    "defaultMessage": "나만의 미디어 서버를 구축하세요."
+  },
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
   },
@@ -928,6 +946,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
+  },
+  "N7elAL": {
+    "defaultMessage": "자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 안에 자체 Nostr 릴레이(strfry, nostr-rs-relay, Pyramid 또는 HAVEN)를 실행하세요."
   },
   "NQgbYA": {
     "defaultMessage": "계정 설정"
@@ -1121,9 +1142,6 @@
   "SYYlLP": {
     "defaultMessage": "이 도메인에 등록된 NIP-05 핸들을 관리합니다."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "지속 시간: {duration}"
   },
@@ -1195,6 +1213,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "월별 총액"
+  },
+  "TtrONG": {
+    "defaultMessage": "Lightning을 통해 매달 결제하세요."
   },
   "TwyMau": {
     "defaultMessage": "계정"
@@ -1322,8 +1343,14 @@
   "XNiOLB": {
     "defaultMessage": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
   },
+  "XO5rF3": {
+    "defaultMessage": "나만의 Nostr 릴레이 서버를 운영하세요."
+  },
   "XW9RGA": {
     "defaultMessage": "계정을 만들어야 하나요?"
+  },
+  "XdLEro": {
+    "defaultMessage": "블로섬 미디어 서버 호스팅 — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "비트코인으로 결제"
@@ -1342,9 +1369,6 @@
   },
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "고객 지원팀에 문의하세요."
@@ -1372,6 +1396,9 @@
   },
   "Z8971h": {
     "defaultMessage": "확인됨"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "노스트르 릴레이도 운영하시나요? 해당 릴레이는 전체 서버가 필요하지 않습니다. <a>관리형 앱으로 제공됩니다</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "카드로 결제"
@@ -1405,9 +1432,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
-  },
-  "aUuDGj": {
-    "defaultMessage": "릴레이 서버를 배포하세요. 월 {price}입니다."
   },
   "acrOoz": {
     "defaultMessage": "계속 진행하세요."
@@ -1628,6 +1652,9 @@
   "gjvoQG": {
     "defaultMessage": "사이즈 조정"
   },
+  "grcWs1": {
+    "defaultMessage": "자체 Nostr 릴레이를 운영하세요. {price} 한 달"
+  },
   "gtGLdm": {
     "defaultMessage": "다음 포함 {amount} 처리 수수료"
   },
@@ -1700,6 +1727,9 @@
   "j9/hqS": {
     "defaultMessage": "필요한 대로 정확하게 구성하세요. CPU, 메모리, 저장 장치를 독립적으로 설정할 수 있으며, 고정된 등급으로 제한되는 대신 SSD 또는 HDD를 선택할 수 있습니다."
   },
+  "jCOJxe": {
+    "defaultMessage": "총 4가지 릴레이 구현 방식, 그중 {price}/월."
+  },
   "jGSUnR": {
     "defaultMessage": "고정 IP 주소를 할당받을 수 있나요?"
   },
@@ -1754,9 +1784,6 @@
   "kLNEaL": {
     "defaultMessage": "캡차 인증을 완료해 주세요."
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "SSH 키 추가"
   },
@@ -1768,6 +1795,9 @@
   },
   "kfr95E": {
     "defaultMessage": "주소 1번 줄"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}/월."
   },
   "ku+mDU": {
     "defaultMessage": "상태"
@@ -1904,8 +1934,8 @@
   "o2AdrJ": {
     "defaultMessage": "이 가상 머신은 사용자 지정 템플릿을 사용하므로 업그레이드할 수 없습니다. 표준 템플릿을 사용하는 가상 머신만 업그레이드를 지원합니다."
   },
-  "o2v6Fy": {
-    "defaultMessage": "자체 노스트르 릴레이를 운영하세요 — 월 {price}"
+  "o8mtsy": {
+    "defaultMessage": "이곳에서 직접 노스트르 릴레이를 운영하세요. {price}/월 — strfry, nostr-rs-relay, Pyramid 또는 HAVEN을 사용하며, TLS와 스토리지를 포함하여 자체 호스트 이름으로 몇 분 안에 설정할 수 있습니다."
   },
   "o9lOhm": {
     "defaultMessage": "공개 키 지원: {npub}"
@@ -2003,14 +2033,14 @@
   "rF6EmI": {
     "defaultMessage": "결제 정보"
   },
-  "rOtXKf": {
-    "defaultMessage": "Nostr 릴레이도 운영하시나요? 그럴 경우 전체 서버가 필요하지 않습니다. <a>{price} 한 달 동안 관리형 앱으로 사용</a>."
-  },
   "rbrahO": {
     "defaultMessage": "닫기"
   },
   "rieTwF": {
     "defaultMessage": "유효 기간 만료일:"
+  },
+  "rneMhE": {
+    "defaultMessage": "Route96을 배포합니다."
   },
   "rr0r/W": {
     "defaultMessage": "<b>토르(Tor) 사용이 허용됩니다.</b> 원하신다면 토르를 통해 노드를 실행하셔도 됩니다. 저희는 이를 차단하지 않으며, 구글 CAPTCHA를 사용하지 않습니다."

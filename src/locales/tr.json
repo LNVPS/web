@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "Şifresi çözülmüş mesaj:"
   },
+  "4bBT6e": {
+    "defaultMessage": "Dört farklı röle uygulaması. Lightning ile ödeme yapın."
+  },
   "4cMKIO": {
     "defaultMessage": "Hizmetlerinizin aktif kalmasını sağlayan düzenli abonelik planları."
   },
@@ -503,6 +506,9 @@
   "BD6I/Z": {
     "defaultMessage": "Kesin vergi miktarı, ödeme yaptığınızda belirlenir."
   },
+  "BEs2cn": {
+    "defaultMessage": "Nostr Röle Barındırma — strfry, nostr-rs-röle, Pyramid, HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "{records} doğrudan IP adreslerini gösterir ve bu adresler değişirse güncellenmesi gerekebilir"
   },
@@ -530,9 +536,6 @@
   "Bzv1CO": {
     "defaultMessage": "Şimdi yeniden etkinleştirin."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Dört farklı röle uygulaması, hepsi aylık {price}, kurulum ücreti yok."
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -547,6 +550,9 @@
   },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
+  },
+  "D45G/S": {
+    "defaultMessage": "Aynı zamanda bir Nostr rölesi mi çalıştırıyorsunuz? Bu röle için tüm bir sunucuya gerek yok; çünkü o... <a>-den {price} bir ay boyunca yönetilen bir uygulama olarak</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -647,6 +653,9 @@
   "F8RFcI": {
     "defaultMessage": "İsteğe bağlıdır. Ödemeleriniz için oluşturduğumuz faturalarda görünür."
   },
+  "FAmKDH": {
+    "defaultMessage": "Rölenizi devreye alın"
+  },
   "FBPfJ7": {
     "defaultMessage": "Bu miktara ulaşana kadar komisyonu bekletin ve ardından ödeme yapın; bu, küçük ödemelerden kaçınmak için zincir üzerinde kullanışlı bir yöntemdir. Sistemdeki minimum değeri kullanmak için boş bırakın; bu değeri artırabilirsiniz ancak minimum değerin altına indiremezsiniz."
   },
@@ -716,9 +725,6 @@
   "GSye7T": {
     "defaultMessage": "Şimşek Hızlı Adres"
   },
-  "GXNK11": {
-    "defaultMessage": "Kendi Nostr rölenizi aylık {price} karşılığında çalıştırın: strfry, nostr-rs-relay, Pyramid veya HAVEN gibi seçenekleri kullanarak, kendi alan adınızda ve TLS ile depolama alanı dahil olmak üzere birkaç dakika içinde kullanıma hazır hale getirin."
-  },
   "Gd6Kbk": {
     "defaultMessage": "Henüz etkin değil."
   },
@@ -727,6 +733,9 @@
   },
   "GqRat5": {
     "defaultMessage": "Lütfen siparişinizi tamamlamak için e-posta adresinizi doğrulayın."
+  },
+  "GriRJo": {
+    "defaultMessage": "Kendi Blossom ve NIP-96 medya sunucunuzu çalıştırın. Route96, kendi alan adıyla birkaç dakika içinde kurulabilir, kalıcı depolama ve TLS desteği içerir."
   },
   "GsCz6b": {
     "defaultMessage": "Özel gönderen anahtarını kullanın"
@@ -745,6 +754,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Gelen"
+  },
+  "H7JNFX": {
+    "defaultMessage": "Dört farklı röle uygulaması, şuradan {price}/ay, kurulum ücreti yok."
   },
   "H9Az5Z": {
     "defaultMessage": "Fatura detayları"
@@ -805,6 +817,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "En az: {min} GB"
+  },
+  "IzzIw7": {
+    "defaultMessage": "Rölenizi konuşlandırın — şu konumdan: {price}ayda"
   },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
@@ -884,6 +899,9 @@
   "LAMeIi": {
     "defaultMessage": "LNVPS Destek ile iletişime geçin"
   },
+  "LCAAZu": {
+    "defaultMessage": "Kendi medya sunucunuzu oluşturun"
+  },
   "LHX6Oo": {
     "defaultMessage": "Son kullanma tarihi {exp}"
   },
@@ -928,6 +946,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Onayla"
+  },
+  "N7elAL": {
+    "defaultMessage": "Kendi Nostr rölenizi çalıştırın: strfry, nostr-rs-relay, Pyramid veya HAVEN. Bunları, TLS ve depolama alanı dahil olmak üzere, kendi alan adınızda birkaç dakika içinde kolayca kurabilirsiniz."
   },
   "NQgbYA": {
     "defaultMessage": "Hesap Ayarları"
@@ -1121,9 +1142,6 @@
   "SYYlLP": {
     "defaultMessage": "Bu alan adında kayıtlı NIP-05 tanıtıcılarını yönetin."
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "Süre: {duration}"
   },
@@ -1195,6 +1213,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "Aylık toplam"
+  },
+  "TtrONG": {
+    "defaultMessage": "Lightning ile aylık ödeme yapın."
   },
   "TwyMau": {
     "defaultMessage": "Hesap"
@@ -1322,8 +1343,14 @@
   "XNiOLB": {
     "defaultMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
   },
+  "XO5rF3": {
+    "defaultMessage": "Kendi Nostr rölenizi çalıştırın"
+  },
   "XW9RGA": {
     "defaultMessage": "Bir hesaba ihtiyacım var mı?"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossom Medya Sunucusu Barındırma — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "Bitcoin ile öde"
@@ -1342,9 +1369,6 @@
   },
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "Destekle İletişime Geçin"
@@ -1372,6 +1396,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Doğrulandı"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "Aynı zamanda bir Nostr rölesi mi çalıştırıyorsunuz? Bunun için tam bir sunucuya gerek yok; <a>yönetilen bir uygulama olarak kullanıma sunulmuştur</a>."
   },
   "ZTj6ca": {
     "defaultMessage": "Kartla öde"
@@ -1405,9 +1432,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "Geçiş anahtarı ekle"
-  },
-  "aUuDGj": {
-    "defaultMessage": "Rölenizi kullanıma alın – ayda {price}."
   },
   "acrOoz": {
     "defaultMessage": "Devam et."
@@ -1628,6 +1652,9 @@
   "gjvoQG": {
     "defaultMessage": "Boyutlandırma"
   },
+  "grcWs1": {
+    "defaultMessage": "Kendi Nostr rölenizi çalıştırın — şu adresten: {price} bir ay"
+  },
   "gtGLdm": {
     "defaultMessage": "dahil olmak üzere {amount} işlem ücreti"
   },
@@ -1700,6 +1727,9 @@
   "j9/hqS": {
     "defaultMessage": "İhtiyacınız olanı tam olarak oluşturun; işlemci, bellek ve depolama alanı birbirinden bağımsız olarak yapılandırılır, böylece sabit kategorlara zorlanmak yerine istediğiniz gibi özelleştirebilirsiniz (SSD veya HDD seçenekleriyle)."
   },
+  "jCOJxe": {
+    "defaultMessage": "Dört farklı röle uygulaması, şuradan {price}ayda."
+  },
   "jGSUnR": {
     "defaultMessage": "Sabit bir IP adresi alacak mıyım?"
   },
@@ -1754,9 +1784,6 @@
   "kLNEaL": {
     "defaultMessage": "Lütfen CAPTCHA doğrulamasını tamamlayın."
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "SSH Anahtarını Ekle"
   },
@@ -1768,6 +1795,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Adres Satırı 1"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}ayda."
   },
   "ku+mDU": {
     "defaultMessage": "Durum"
@@ -1904,8 +1934,8 @@
   "o2AdrJ": {
     "defaultMessage": "Bu sanal makine, özel bir şablon kullanır ve yükseltilemez. Yalnızca standart şablonlar kullanan sanal makineler yükseltmeyi destekler."
   },
-  "o2v6Fy": {
-    "defaultMessage": "Kendi Nostr rölenizi çalıştırın – ayda {price}."
+  "o8mtsy": {
+    "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price}/ay — strfry, nostr-rs-relay, Pyramid veya HAVEN, kendi alan adında birkaç dakika içinde TLS ve depolama alanı ile birlikte kurulabilir."
   },
   "o9lOhm": {
     "defaultMessage": "Desteklenen genel anahtar: {npub}"
@@ -2003,14 +2033,14 @@
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
   },
-  "rOtXKf": {
-    "defaultMessage": "Aynı zamanda bir Nostr rölesi mi işletiyorsunuz? Bu durumda tam teşekküllü bir sunucuya ihtiyaç duyulmaz; çünkü bu işlem... <a>{price} bir ay boyunca yönetilen bir uygulama olarak</a>."
-  },
   "rbrahO": {
     "defaultMessage": "Kapat"
   },
   "rieTwF": {
     "defaultMessage": "Son kullanma tarihi:"
+  },
+  "rneMhE": {
+    "defaultMessage": "Route96'yı kullanıma sunun."
   },
   "rr0r/W": {
     "defaultMessage": "<b>Tor kullanımı serbesttir.</b> İsterseniz düğümünüzü Tor üzerinden çalıştırabilirsiniz; biz bunu engellemiyoruz ve Google CAPTCHA kullanmıyoruz."

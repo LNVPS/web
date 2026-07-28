@@ -2,18 +2,6 @@ import type { App } from "../api";
 import { RelayAppSlugs } from "../const";
 
 /**
- * The relay price to claim when the catalog is unreachable or the four relays
- * have drifted apart. `200` is €2.00.
- *
- * Two pages quote this price, so the figure lives here rather than once per
- * page — a landing page has to keep its headline when the API is down, so the
- * price cannot be *only* derived, but it must not sit inside a translatable
- * string either or eleven locale files end up carrying a number only
- * `src/api.ts` should decide.
- */
-export const RelayFallbackPrice = { currency: "EUR", amount: 200 };
-
-/**
  * The relay apps from the catalog, in the order `RelayAppSlugs` lists them.
  * Rows the catalog did not return are dropped, so this is shorter than
  * `RelayAppSlugs` when the API is unreachable — empty on a cold server start,
@@ -26,25 +14,42 @@ export function relayApps(apps: Array<App> | undefined): Array<App> {
 }
 
 /**
- * The one price the relays share, ex-VAT and unconverted.
+ * The lowest price the catalog quotes for a relay, ex-VAT and unconverted, or
+ * `undefined` when there is nothing to quote (`LNVPS/web#67`).
  *
- * The copy says "all {price}/month, no setup fee", so only claim a catalog
- * figure when every relay really does agree on it — otherwise fall back, and
- * let whoever changed one relay's price notice the page still reads €2.00.
+ * The pages that use this phrase it as "from", which is why this is a minimum
+ * and not a uniformity test. The previous version returned a written-in
+ * constant whenever the four relays disagreed on price, so raising one relay's
+ * price in admin — an ordinary action, with the API perfectly healthy — made
+ * two landing pages claim a €2.00 that was no longer anyone's price. A minimum
+ * off the rows we actually have is true whether the relays agree or not, and
+ * the price column on `/nostr-relay-hosting` shows what each one really costs.
+ *
+ * `undefined`, not a fallback, in the two cases where there is no honest
+ * figure:
+ *
+ * - **no rows** — the catalog is unreachable, so we know no prices at all.
+ * - **mixed currencies** — a minimum across currencies would need a conversion
+ *   the caller has not asked for and cannot do without rates.
+ *
+ * Deliberately not gated on having all of `RelayAppSlugs`: "from" the lowest
+ * of the three rows we got is still true, and dropping the page's price
+ * because one catalog row is missing helps nobody.
  */
-export function relayPrice(relays: Array<App>): {
-  currency: string;
-  amount: number;
-} {
-  const uniform =
-    relays.length === RelayAppSlugs.length &&
-    relays.every(
-      (a) =>
-        a.amount === relays[0].amount &&
-        a.currency === relays[0].currency &&
-        a.setup_amount === 0,
-    );
-  return uniform
-    ? { currency: relays[0].currency, amount: relays[0].amount }
-    : RelayFallbackPrice;
+export function relayPriceFrom(
+  relays: Array<App>,
+): { currency: string; amount: number } | undefined {
+  if (relays.length === 0) return undefined;
+  const currency = relays[0].currency;
+  if (!relays.every((a) => a.currency === currency)) return undefined;
+  return { currency, amount: Math.min(...relays.map((a) => a.amount)) };
+}
+
+/**
+ * Whether every relay we have a row for really has no setup fee, so the copy
+ * can say so. Unknown counts as "cannot claim it": with no rows there is
+ * nothing behind the sentence.
+ */
+export function relaysHaveNoSetupFee(relays: Array<App>): boolean {
+  return relays.length > 0 && relays.every((a) => a.setup_amount === 0);
 }

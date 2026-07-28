@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "已解密的消息："
   },
+  "4bBT6e": {
+    "defaultMessage": "采用四种中继实现方式。支持使用闪电网络支付。"
+  },
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
   },
@@ -503,6 +506,9 @@
   "BD6I/Z": {
     "defaultMessage": "确切的税额会在您付款时确认。"
   },
+  "BEs2cn": {
+    "defaultMessage": "Nostr 中继服务器托管 — strfry、nostr-rs-relay、Pyramid、HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "{records} 中的记录直接指向 IP 地址，如果 IP 地址发生更改，可能需要更新。"
   },
@@ -530,9 +536,6 @@
   "Bzv1CO": {
     "defaultMessage": "立即重新激活。"
   },
-  "C8Qzcv": {
-    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费。"
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -547,6 +550,9 @@
   },
   "D3idYv": {
     "defaultMessage": "设置"
+  },
+  "D45G/S": {
+    "defaultMessage": "您也在运行 Nostr 中继节点吗？这个中继节点不需要整台服务器——它只是 <a>来自 {price} 一个月的使用期限，作为受管理的应用程序。</a>."
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -647,6 +653,9 @@
   "F8RFcI": {
     "defaultMessage": "可选。将显示在为您的付款而生成的发票上。"
   },
+  "FAmKDH": {
+    "defaultMessage": "部署您的中继站。"
+  },
   "FBPfJ7": {
     "defaultMessage": "在达到此金额之前，暂不支付佣金——这在链上操作时非常方便，可以避免支付少量佣金。如果留空，则使用系统设定的最低金额；您可以提高此金额，但不能低于该值。"
   },
@@ -716,9 +725,6 @@
   "GSye7T": {
     "defaultMessage": "闪电地址"
   },
-  "GXNK11": {
-    "defaultMessage": "每月只需支付 {price}，即可搭建并运行您自己的 Nostr 中继服务器——选择 strfry、nostr-rs-relay、Pyramid 或 HAVEN。几分钟内即可在您自己的域名下完成部署，并且已包含 TLS 加密和存储空间。"
-  },
   "Gd6Kbk": {
     "defaultMessage": "尚未激活。"
   },
@@ -727,6 +733,9 @@
   },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
+  },
+  "GriRJo": {
+    "defaultMessage": "搭建您自己的 Blossom 和 NIP-96 媒体服务器。Route96 可以在几分钟内通过其专属域名搭建完成，并提供持久存储和 TLS 加密。"
   },
   "GsCz6b": {
     "defaultMessage": "使用自定义发送方密钥。"
@@ -745,6 +754,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "入站；进入"
+  },
+  "H7JNFX": {
+    "defaultMessage": "四种继电器实现方式，从 {price}每月，无需支付设置费用。"
   },
   "H9Az5Z": {
     "defaultMessage": "账单详情。"
@@ -805,6 +817,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "最低：{min} GB"
+  },
+  "IzzIw7": {
+    "defaultMessage": "部署您的中继站——从……开始 {price}每月"
   },
   "J+dIsA": {
     "defaultMessage": "订阅"
@@ -884,6 +899,9 @@
   "LAMeIi": {
     "defaultMessage": "联系 LNVPS 技术支持。"
   },
+  "LCAAZu": {
+    "defaultMessage": "搭建您自己的媒体服务器。"
+  },
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
   },
@@ -928,6 +946,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "确认。"
+  },
+  "N7elAL": {
+    "defaultMessage": "您可以自行搭建 Nostr 中继服务器——例如 strfry、nostr-rs-relay、Pyramid 或 HAVEN，只需几分钟即可完成，并且它将使用您自己的域名，并包含 TLS 加密和存储功能。"
   },
   "NQgbYA": {
     "defaultMessage": "账户设置"
@@ -1121,9 +1142,6 @@
   "SYYlLP": {
     "defaultMessage": "管理在此域名下注册的 NIP-05 handle。"
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "时长：{duration}"
   },
@@ -1195,6 +1213,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "每月总计"
+  },
+  "TtrONG": {
+    "defaultMessage": "使用 Lightning 每月支付。"
   },
   "TwyMau": {
     "defaultMessage": "账户"
@@ -1322,8 +1343,14 @@
   "XNiOLB": {
     "defaultMessage": "消息发送失败。请稍后重试。"
   },
+  "XO5rF3": {
+    "defaultMessage": "搭建并运行您自己的 Nostr 中继节点。"
+  },
   "XW9RGA": {
     "defaultMessage": "我需要注册一个账户吗？"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossom 媒体服务器托管服务——Route96"
   },
   "XyIrRh": {
     "defaultMessage": "使用比特币支付"
@@ -1342,9 +1369,6 @@
   },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
@@ -1372,6 +1396,9 @@
   },
   "Z8971h": {
     "defaultMessage": "已验证"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器——它<a>可以作为托管应用提供</a>。"
   },
   "ZTj6ca": {
     "defaultMessage": "使用银行卡支付"
@@ -1405,9 +1432,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
-  },
-  "aUuDGj": {
-    "defaultMessage": "部署您的中继服务器——每月 {price}。"
   },
   "acrOoz": {
     "defaultMessage": "继续。"
@@ -1628,6 +1652,9 @@
   "gjvoQG": {
     "defaultMessage": "尺寸选择。"
   },
+  "grcWs1": {
+    "defaultMessage": "搭建并运行您自己的 Nostr 中继服务器——从这里开始。 {price} 一个月"
+  },
   "gtGLdm": {
     "defaultMessage": "包括 {amount} 的手续费。"
   },
@@ -1700,6 +1727,9 @@
   "j9/hqS": {
     "defaultMessage": "您可以根据自己的需求定制配置——CPU、内存和存储可以独立配置，可以选择固态硬盘（SSD）或机械硬盘（HDD），而不是被限制在固定的等级中。"
   },
+  "jCOJxe": {
+    "defaultMessage": "四种继电器实现方式，从…… {price}每月。"
+  },
   "jGSUnR": {
     "defaultMessage": "我会获得一个固定的 IP 地址吗？"
   },
@@ -1754,9 +1784,6 @@
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "添加 SSH 密钥。"
   },
@@ -1768,6 +1795,9 @@
   },
   "kfr95E": {
     "defaultMessage": "地址行 1"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}每月。"
   },
   "ku+mDU": {
     "defaultMessage": "状态；州"
@@ -1904,8 +1934,8 @@
   "o2AdrJ": {
     "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
   },
-  "o2v6Fy": {
-    "defaultMessage": "自行搭建您的 Nostr 中继节点——每月 {price}。"
+  "o8mtsy": {
+    "defaultMessage": "从这里开始搭建您自己的 Nostr 中继节点。 {price}每月——strfry、nostr-rs-relay、Pyramid 或 HAVEN，可在其自身的主机名上运行，并包含 TLS 和存储功能，设置时间仅需几分钟。"
   },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
@@ -2003,14 +2033,14 @@
   "rF6EmI": {
     "defaultMessage": "账单详情"
   },
-  "rOtXKf": {
-    "defaultMessage": "您也在运行一个 Nostr 中继节点吗？这个中继节点不需要整个服务器——它只是…… <a>{price} 一个月作为受管应用。</a>……"
-  },
   "rbrahO": {
     "defaultMessage": "关闭"
   },
   "rieTwF": {
     "defaultMessage": "已过期，截止日期为："
+  },
+  "rneMhE": {
+    "defaultMessage": "部署 Route96。"
   },
   "rr0r/W": {
     "defaultMessage": "<b>允许使用 Tor。</b>如果您想通过 Tor 网络运行您的节点，请随意这样做——我们不会阻止它，也不会使用谷歌验证码。"

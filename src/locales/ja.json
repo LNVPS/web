@@ -221,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
   },
+  "4bBT6e": {
+    "defaultMessage": "4つのリレー実装。ライトニングで支払い。"
+  },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
   },
@@ -503,6 +506,9 @@
   "BD6I/Z": {
     "defaultMessage": "正確な税額は、お支払い時に確認されます。"
   },
+  "BEs2cn": {
+    "defaultMessage": "Nostrリレーのホスティング — strfry、nostr-rs-relay、Pyramid、HAVEN"
+  },
   "BFqlLP": {
     "defaultMessage": "{records}にはIPアドレスが直接記載されているため、IPアドレスが変更された場合は更新が必要になる場合があります。"
   },
@@ -530,9 +536,6 @@
   "Bzv1CO": {
     "defaultMessage": "今すぐ再開してください。"
   },
-  "C8Qzcv": {
-    "defaultMessage": "4つのリレー実装方法をご用意。いずれも月額{price}で、初期費用は一切かかりません。"
-  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -547,6 +550,9 @@
   },
   "D3idYv": {
     "defaultMessage": "設定"
+  },
+  "D45G/S": {
+    "defaultMessage": "Nostrのリレーも運営しているのですね？あれは、専用のサーバー全体を必要としません。 <a>から {price} 1か月間、マネージドアプリとして利用</a>。"
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
@@ -647,6 +653,9 @@
   "F8RFcI": {
     "defaultMessage": "任意項目。お客様への請求書に表示されます。"
   },
+  "FAmKDH": {
+    "defaultMessage": "リレーを配置する。"
+  },
   "FBPfJ7": {
     "defaultMessage": "この金額に達するまで手数料を保留し、その後で支払うように設定します。少額の支払いを避けるために便利です。空白のままにすると、システムで設定された最小値が使用されます。必要に応じて値を高くすることはできますが、最小値より低くすることはできません。"
   },
@@ -716,9 +725,6 @@
   "GSye7T": {
     "defaultMessage": "ライトニングアドレス"
   },
-  "GXNK11": {
-    "defaultMessage": "独自のNostrリレーを月額{price}で運用できます。strfry、nostr-rs-relay、Pyramid、HAVENなどのソフトウェアを使用すれば、TLSとストレージ込みで、数分以内に独自のホスト名で簡単にセットアップできます。"
-  },
   "Gd6Kbk": {
     "defaultMessage": "まだ有効になっていません。"
   },
@@ -727,6 +733,9 @@
   },
   "GqRat5": {
     "defaultMessage": "ご注文を完了するには、お客様のメールアドレスをご確認ください。"
+  },
+  "GriRJo": {
+    "defaultMessage": "BlossomとNIP-96のメディアサーバーを自分で運用しましょう。Route96は、独自のホスト名で数分で起動でき、永続ストレージとTLSが組み込まれています。"
   },
   "GsCz6b": {
     "defaultMessage": "カスタム送信者キーを使用する"
@@ -745,6 +754,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "インバウンド"
+  },
+  "H7JNFX": {
+    "defaultMessage": "4つのリレー実装について。 {price}月額料金で、初期費用はかかりません。"
   },
   "H9Az5Z": {
     "defaultMessage": "お支払いに関する詳細"
@@ -805,6 +817,9 @@
   },
   "Iz4veS": {
     "defaultMessage": "最小要件：{min} GB"
+  },
+  "IzzIw7": {
+    "defaultMessage": "リレーを配置してください — から {price}月"
   },
   "J+dIsA": {
     "defaultMessage": "購読"
@@ -884,6 +899,9 @@
   "LAMeIi": {
     "defaultMessage": "LNVPSサポートにお問い合わせください。"
   },
+  "LCAAZu": {
+    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。"
+  },
   "LHX6Oo": {
     "defaultMessage": "有効期限切れ {exp}"
   },
@@ -928,6 +946,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
+  },
+  "N7elAL": {
+    "defaultMessage": "独自のNostrリレーを構築しましょう。strfry、nostr-rs-relay、Pyramid、またはHAVENなどを、TLSとストレージを組み合わせて、独自のホスト名で数分以内に起動できます。"
   },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
@@ -1121,9 +1142,6 @@
   "SYYlLP": {
     "defaultMessage": "このドメインに登録された NIP-05 ハンドルを管理します。"
   },
-  "SZwp5S": {
-    "defaultMessage": "How large a file can I upload?"
-  },
   "Sczo8n": {
     "defaultMessage": "期間：{duration}"
   },
@@ -1195,6 +1213,9 @@
   },
   "TtNbPG": {
     "defaultMessage": "月間の合計額"
+  },
+  "TtrONG": {
+    "defaultMessage": "Lightningで月額料金をお支払いください。"
   },
   "TwyMau": {
     "defaultMessage": "アカウント"
@@ -1322,8 +1343,14 @@
   "XNiOLB": {
     "defaultMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
   },
+  "XO5rF3": {
+    "defaultMessage": "独自のNostrリレーを運用しましょう。"
+  },
   "XW9RGA": {
     "defaultMessage": "アカウントは必要ですか？"
+  },
+  "XdLEro": {
+    "defaultMessage": "Blossomメディアサーバーのホスティング — Route96"
   },
   "XyIrRh": {
     "defaultMessage": "ビットコインで支払う"
@@ -1342,9 +1369,6 @@
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
-  },
-  "Yc91CY": {
-    "defaultMessage": "Up to 100 MB per upload."
   },
   "YdQxfw": {
     "defaultMessage": "サポートにお問い合わせください。"
@@ -1372,6 +1396,9 @@
   },
   "Z8971h": {
     "defaultMessage": "確認済み"
+  },
+  "ZOt2+K": {
+    "defaultMessage": "Nostrリレーも運用しているのですね？あれは、専用のサーバーは必要ありません。<a>マネージドアプリとして提供されています</a>。"
   },
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
@@ -1405,9 +1432,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
-  },
-  "aUuDGj": {
-    "defaultMessage": "リレーをデプロイ — 月額{price}"
   },
   "acrOoz": {
     "defaultMessage": "続行してください。"
@@ -1628,6 +1652,9 @@
   "gjvoQG": {
     "defaultMessage": "サイズ調整"
   },
+  "grcWs1": {
+    "defaultMessage": "独自のNostrリレーを運用しましょう {price} 1か月"
+  },
   "gtGLdm": {
     "defaultMessage": "手数料{amount}を含む"
   },
@@ -1700,6 +1727,9 @@
   "j9/hqS": {
     "defaultMessage": "必要なものを正確に構築できます。CPU、メモリ、ストレージはそれぞれ独立して構成でき、SSDまたはHDDを選択できるため、固定されたグレードに縛られることはありません。"
   },
+  "jCOJxe": {
+    "defaultMessage": "4つの異なるリレー実装方法について。 {price}月あたり。"
+  },
   "jGSUnR": {
     "defaultMessage": "固定IPアドレスは割り当てられますか？"
   },
@@ -1754,9 +1784,6 @@
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
   },
-  "kNIWoA": {
-    "defaultMessage": "Uploads up to 100 MB each"
-  },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
   },
@@ -1768,6 +1795,9 @@
   },
   "kfr95E": {
     "defaultMessage": "住所1行目"
+  },
+  "kr8jZp": {
+    "defaultMessage": "{price}月あたり。"
   },
   "ku+mDU": {
     "defaultMessage": "州"
@@ -1904,8 +1934,8 @@
   "o2AdrJ": {
     "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
   },
-  "o2v6Fy": {
-    "defaultMessage": "独自のNostrリレーを運用しましょう。月額{price}です。"
+  "o8mtsy": {
+    "defaultMessage": "ここから独自のNostrリレーを起動 {price}1か月に1回 — strfry、nostr-rs-relay、Pyramid、またはHAVENを、TLSとストレージを組み込み、独自のホスト名で数分以内に起動します。"
   },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
@@ -2003,14 +2033,14 @@
   "rF6EmI": {
     "defaultMessage": "お支払いに関する詳細"
   },
-  "rOtXKf": {
-    "defaultMessage": "Nostrリレーも運用しているのですか？ あれは、必ずしもサーバー全体を必要とするものではありません。 <a>{price} 1か月間、マネージドアプリとして利用</a>。"
-  },
   "rbrahO": {
     "defaultMessage": "閉じる"
   },
   "rieTwF": {
     "defaultMessage": "有効期限："
+  },
+  "rneMhE": {
+    "defaultMessage": "Route96をデプロイします。"
   },
   "rr0r/W": {
     "defaultMessage": "<b>Torの使用は許可されています。</b> 必要であれば、ノードをTor経由で実行してください。当社はその使用を妨げることも、GoogleのCAPTCHAを使用することもしません。"

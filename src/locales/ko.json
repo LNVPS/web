@@ -1,4 +1,7 @@
 {
+  "375584": {
+    "defaultMessage": "결제가 필요합니다."
+  },
   "++XeyK": {
     "defaultMessage": "Nostr 키"
   },
@@ -13,6 +16,9 @@
   },
   "+EHk4e": {
     "defaultMessage": "네, 맞습니다. 사용하시는 컴퓨터이므로 원하는 대로 설치하세요."
+  },
+  "+H6Rvj": {
+    "defaultMessage": "Blossom과 NIP-96 미디어 서버를 직접 운영하여 {price}/월. Route96은 자체 호스트 이름으로 몇 분 안에 실행되며, 영구 저장 공간과 TLS가 포함되어 있습니다."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{년} other{년}}"
@@ -100,6 +106,9 @@
   },
   "1M3SKY": {
     "defaultMessage": "질문이나 문제점을 자세히 설명해 주십시오."
+  },
+  "1R0JfT": {
+    "defaultMessage": "{storage} 영구 저장 장치의 경우 — {breakdown}"
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 시간} other{# 시간}} {m,plural,one{# 분} other{# 분}}"
@@ -212,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
   },
+  "4axuAp": {
+    "defaultMessage": "실행하다. {name} 관리되는 방식으로 {category} LNVPS 사용 시 — 자체 호스트 이름, TLS 포함, 서버 패치 불필요."
+  },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
   },
@@ -323,6 +335,9 @@
   "7agV2X": {
     "defaultMessage": "릴레이"
   },
+  "7bTzvm": {
+    "defaultMessage": "설정하는 데 시간이 조금 걸립니다. 보통 1분 정도 소요됩니다. 설정이 완료되면 엔드포인트가 나타납니다."
+  },
   "7fGyF+": {
     "defaultMessage": "지우고 다시 설치"
   },
@@ -416,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "노드용 가상 사설 서버(VPS)를 구축하세요."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} 호스팅 — 관리형 {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "확인 중"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}매달 라이트닝으로 결제하세요."
   },
   "9t1iiv": {
     "defaultMessage": "구성"
@@ -511,6 +532,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "지금 다시 활성화하세요."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -746,6 +770,9 @@
   "HqRNN8": {
     "defaultMessage": "지원"
   },
+  "HzgGfH": {
+    "defaultMessage": "라이트닝, 비트코인 또는 신용카드로 결제하세요."
+  },
   "I3JhPS": {
     "defaultMessage": "네트워크"
   },
@@ -754,6 +781,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "아직 NWC 지갑이 저장되지 않았습니다. 아래에 지갑을 추가하여 지급을 받으세요."
+  },
+  "IDpruN": {
+    "defaultMessage": "배포 중"
   },
   "ILTAun": {
     "defaultMessage": "가상 머신이 프로비저닝되고 있습니다. 이 과정은 보통 1~2분 정도 소요됩니다."
@@ -796,6 +826,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS 서비스 상태 및 가동 시간"
+  },
+  "JVZcdC": {
+    "defaultMessage": "이번 배포의 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 다시 서비스를 시작할 수 있습니다."
   },
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
@@ -857,9 +890,6 @@
   "LHX6Oo": {
     "defaultMessage": "만료됨 {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
-  },
   "LR754a": {
     "defaultMessage": "갱신일:"
   },
@@ -878,14 +908,23 @@
   "LwGAe6": {
     "defaultMessage": "또한 LNVPS에서도 제공됩니다."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "총계"
+  },
   "MTnSwY": {
     "defaultMessage": "예: 세금"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} 전체적으로 봤을 때입니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치하여 사용할 수 있는 VPS로 확장할 수 있습니다."
   },
   "Mp+zDS": {
     "defaultMessage": "이 구성 요소는 라이트닝 결제만 지원합니다."
   },
   "MqbiJp": {
     "defaultMessage": "네, 중계 서버의 호스트 이름으로 CNAME 레코드를 설정하세요. DNS가 제대로 작동하면 자동으로 별도의 인증서를 발급해 드립니다."
+  },
+  "Mw9USY": {
+    "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 활용합니다. 만약 개인적인 릴레이를 운영하신다면 <b>HAVEN</b>을 사용하세요. 네 가지 프로그램 중 유일하게 Blossom 미디어 저장소를 제공하므로, 이미지와 노트가 동일한 키 아래에 저장됩니다."
   },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
@@ -1139,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "LNURL 표시"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}월별 요금이며, 초기 설치 비용은 없습니다."
+  },
   "Tbo377": {
     "defaultMessage": "요금 청구"
   },
@@ -1237,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "만들기"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} 전체적으로 보면 그렇습니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치한 VPS를 사용하여 확장할 수 있습니다."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1517,6 +1562,9 @@
   "exrlwL": {
     "defaultMessage": "소문자, 숫자, 하이픈을 사용합니다. 이것이 귀하의 서브도메인이 됩니다."
   },
+  "f+jGyB": {
+    "defaultMessage": "삭제하면 요금이 부과되지 않고 배포와 해당 볼륨이 영구적으로 제거됩니다."
+  },
   "f00p/7": {
     "defaultMessage": "업로드에 실패했습니다."
   },
@@ -1546,6 +1594,12 @@
   },
   "fxYCqm": {
     "defaultMessage": "위치: {location}"
+  },
+  "g/bMVf": {
+    "defaultMessage": "실행하다. {name} 관리되는 방식으로 {category} LNVPS에서 — 자체 호스트 이름 사용, TLS 포함. {storage} 수십 기가바이트의 저장 공간, 서버 패치 불필요."
+  },
+  "g1GUs5": {
+    "defaultMessage": "가상 CPU"
   },
   "gBvImw": {
     "defaultMessage": "{count} 손잡이"
@@ -1666,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "설정된 항목이 없습니다. 하나 추가하세요."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "배포 호스트 이름이 할당되면 이 도메인의 CNAME을 해당 호스트 이름으로 지정하세요. 제거하려면 비워 두세요."
@@ -1805,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "수수료"
   },
+  "n7yYXG": {
+    "defaultMessage": "서비스"
+  },
   "n9fdaJ": {
     "defaultMessage": "확인되지 않음"
   },
@@ -1813,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "결제 방법"
+  },
+  "nQHBG0": {
+    "defaultMessage": "배포가 완료되고 서비스가 시작되면 설정을 한 번 변경할 수 있습니다."
   },
   "nWQFic": {
     "defaultMessage": "갱신하다"
@@ -1895,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1948,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "결제 정보"
+  },
+  "rOtXKf": {
+    "defaultMessage": "Nostr 릴레이도 운영하시나요? 그럴 경우 전체 서버가 필요하지 않습니다. <a>{price} 한 달 동안 관리형 앱으로 사용</a>."
   },
   "rbrahO": {
     "defaultMessage": "닫기"
@@ -2147,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "업그레이드 불가"
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2234,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>무제한 트래픽입니다.</b> 라우팅 노드는 끊임없이 정보를 주고받습니다. 대역폭 사용량을 계속 확인하지 않아도 됩니다."
   },
-  "C8Qzcv": {
-    "defaultMessage": "총 4개의 릴레이 구현 방식이며, 모두 월 {price}이고 초기 설정 비용은 없습니다."
+  "zzkKCh": {
+    "defaultMessage": "{storage} 영구 저장 장치"
   }
 }

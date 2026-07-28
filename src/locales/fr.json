@@ -1,4 +1,7 @@
 {
+  "375584": {
+    "defaultMessage": "Paiement requis."
+  },
   "++XeyK": {
     "defaultMessage": "Clé Nostr"
   },
@@ -13,6 +16,9 @@
   },
   "+EHk4e": {
     "defaultMessage": "Oui. C’est votre ordinateur, installez ce que vous voulez."
+  },
+  "+H6Rvj": {
+    "defaultMessage": "Exploitez votre propre serveur multimédia Blossom et NIP-96 pour {price}/mois. Route96 peut être déployé en quelques minutes sur son propre nom de domaine, avec un stockage persistant et le protocole TLS inclus."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{an} other{ans}}"
@@ -101,6 +107,9 @@
   "1M3SKY": {
     "defaultMessage": "Veuillez décrire votre question ou votre problème de manière détaillée..."
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} de stockage persistant — {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# h} other{# h}} {m,plural,one{# min} other{# min}}"
   },
@@ -173,6 +182,9 @@
   "3aeXvu": {
     "defaultMessage": "Obtenez un code de parrainage à partager. Vous gagnez une commission lorsqu’une personne s’inscrit en utilisant ce code et que sa machine virtuelle effectue son premier paiement. Choisissez où les paiements doivent être versés, puis activez le service."
   },
+  "3eEn1+": {
+    "defaultMessage": "<b>Aucune vérification d’identité (KYC) requise.</b> Pas besoin de fournir d’informations personnelles pour vous inscrire. Votre nœud, vos clés, votre entreprise."
+  },
   "3vxkus": {
     "defaultMessage": "Rien à enregistrer : votre appareil (Face ID, Touch ID, Windows Hello ou une clé de sécurité) protège le compte."
   },
@@ -208,6 +220,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "Message déchiffré :"
+  },
+  "4axuAp": {
+    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS – nom d’hôte personnalisé, avec TLS inclus, aucun serveur à mettre à jour."
   },
   "4cMKIO": {
     "defaultMessage": "Abonnements renouvelés qui maintiennent vos services actifs."
@@ -320,6 +335,9 @@
   "7agV2X": {
     "defaultMessage": "Relais"
   },
+  "7bTzvm": {
+    "defaultMessage": "Configuration – cette opération prend généralement une minute. Le point de terminaison apparaît une fois qu’il est en fonctionnement."
+  },
   "7fGyF+": {
     "defaultMessage": "Effacer et réinstaller"
   },
@@ -413,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "Créez le serveur virtuel privé (VPS) de votre nœud."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Hébergement – Géré {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Confirmation en cours"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}/mois, paiement possible avec Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Configurer"
@@ -508,6 +532,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Réactivez maintenant."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Quatre options de relais, toutes à {price} par mois, sans frais d’installation."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -743,6 +770,9 @@
   "HqRNN8": {
     "defaultMessage": "Assistance"
   },
+  "HzgGfH": {
+    "defaultMessage": "Payez avec Lightning, Bitcoin ou par carte."
+  },
   "I3JhPS": {
     "defaultMessage": "Réseau"
   },
@@ -751,6 +781,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "Aucun portefeuille NWC n’a été enregistré pour le moment. Ajoutez-en un ci-dessous pour pouvoir recevoir les paiements."
+  },
+  "IDpruN": {
+    "defaultMessage": "Déploiement en cours."
   },
   "ILTAun": {
     "defaultMessage": "Votre machine virtuelle est en cours de configuration. Cette opération prend généralement une ou deux minutes."
@@ -793,6 +826,9 @@
   },
   "JVClQM": {
     "defaultMessage": "État du service LNVPS et durée de fonctionnement."
+  },
+  "JVZcdC": {
+    "defaultMessage": "L’abonnement de ce déploiement a expiré et il a été réduit à zéro. Vos données sont toujours disponibles ici ; renouvelez votre abonnement pour le relancer."
   },
   "JiCBWy": {
     "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
@@ -854,9 +890,6 @@
   "LHX6Oo": {
     "defaultMessage": "Date d’expiration {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
-  },
   "LR754a": {
     "defaultMessage": "Le renouvellement aura lieu le :"
   },
@@ -875,8 +908,14 @@
   "LwGAe6": {
     "defaultMessage": "Également disponible sur LNVPS."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Total"
+  },
   "MTnSwY": {
     "defaultMessage": "hors taxes"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} au total. Pour un serveur multimédia personnel, c’est suffisant ; si vous avez besoin de plus de ressources, vous pouvez installer Route96 sur un VPS et augmenter la capacité en fonction de vos besoins."
   },
   "Mp+zDS": {
     "defaultMessage": "Ce composant prend en charge uniquement les paiements Lightning."
@@ -952,6 +991,9 @@
   },
   "P7PLVj": {
     "defaultMessage": "Date"
+  },
+  "PJKhfR": {
+    "defaultMessage": "Une application gérée est la solution idéale lorsque le relais est l’élément central. Si vous souhaitez exécuter une version modifiée, regrouper d’autres services ou gérer vous-même le serveur, notre offre <a>d’hébergement VPS</a> commence à Dublin, Londres et Québec, avec un trafic illimité et une adresse IP statique IPv4 et IPv6 pour chaque forfait."
   },
   "PJtOx7": {
     "defaultMessage": "Aucun incident à signaler."
@@ -1136,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "Afficher le LNURL"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}par mois, sans frais d’installation."
+  },
   "Tbo377": {
     "defaultMessage": "Facturation"
   },
@@ -1234,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "Créer"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} au total. Pour un serveur multimédia personnel, c’est suffisant ; si vous avez besoin de plus de ressources, vous pouvez installer Route96 sur un serveur virtuel privé (VPS) et ainsi augmenter sa capacité."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1514,6 +1562,9 @@
   "exrlwL": {
     "defaultMessage": "Utilisez des lettres minuscules, des chiffres et des tirets. Cela deviendra votre sous-domaine."
   },
+  "f+jGyB": {
+    "defaultMessage": "La suppression interrompt la facturation et supprime définitivement le déploiement ainsi que ses volumes."
+  },
   "f00p/7": {
     "defaultMessage": "Le téléchargement a échoué."
   },
@@ -1543,6 +1594,12 @@
   },
   "fxYCqm": {
     "defaultMessage": "Emplacement : {location}"
+  },
+  "g/bMVf": {
+    "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS – nom d’hôte personnalisé, avec prise en charge de TLS. {storage} Stockage de 1 Go, pas besoin de mettre à jour le serveur."
+  },
+  "g1GUs5": {
+    "defaultMessage": "vCPU"
   },
   "gBvImw": {
     "defaultMessage": "{count} poignées"
@@ -1663,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "Aucun paramètre défini ; veuillez en ajouter un."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "Faites pointer un CNAME de ce domaine vers le nom d'hôte du déploiement une fois celui-ci attribué. Laissez vide pour supprimer."
@@ -1802,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "Commission"
   },
+  "n7yYXG": {
+    "defaultMessage": "Service."
+  },
   "n9fdaJ": {
     "defaultMessage": "Non vérifié"
   },
@@ -1810,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Mode de paiement"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Les paramètres peuvent être modifiés une fois que le déploiement a été payé et est en cours d’exécution."
   },
   "nWQFic": {
     "defaultMessage": "Renouveler"
@@ -1892,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "Non défini."
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1945,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Détails de la facturation"
+  },
+  "rOtXKf": {
+    "defaultMessage": "Vous faites également fonctionner un relais Nostr ? Celui-ci n’a pas besoin d’un serveur complet, il est… <a>{price} un mois en tant qu’application gérée</a>."
   },
   "rbrahO": {
     "defaultMessage": "Fermer"
@@ -2144,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "Mise à niveau non disponible."
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2231,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>Volume de données illimité.</b> Un nœud de routage communique en permanence. Vous n’avez pas besoin de surveiller un compteur de bande passante."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Quatre options de relais, toutes à {price} par mois, sans frais d’installation."
+  "zzkKCh": {
+    "defaultMessage": "{storage} de stockage persistant"
   }
 }

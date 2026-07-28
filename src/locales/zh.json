@@ -1,4 +1,7 @@
 {
+  "375584": {
+    "defaultMessage": "需要付款。"
+  },
   "++XeyK": {
     "defaultMessage": "Nostr 密钥"
   },
@@ -13,6 +16,9 @@
   },
   "+EHk4e": {
     "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
+  },
+  "+H6Rvj": {
+    "defaultMessage": "运行您自己的 Blossom 和 NIP-96 媒体服务器，用于…… {price}每月。Route96，可在几分钟内通过其自身的域名进行部署，并包含持久性存储和 TLS 加密。"
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
@@ -101,6 +107,9 @@
   "1M3SKY": {
     "defaultMessage": "请详细描述您的问题或遇到的情况……"
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} 持久存储方面—— {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 小时} other{# 小时}} {m,plural,one{# 分钟} other{# 分钟}}"
   },
@@ -124,6 +133,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "账单、续订和通知"
+  },
+  "24piVc": {
+    "defaultMessage": "<b>如果您需要，您可以拥有自己的域名。</b>将一个 CNAME 指向您的中继服务器，我们将与默认主机名一起提供服务，并为其配备单独的证书。无需验证步骤——当您的 DNS 解析时，系统会自动颁发证书。"
   },
   "2QrTo0": {
     "defaultMessage": "新的 IP 地址分配方案"
@@ -170,6 +182,9 @@
   "3aeXvu": {
     "defaultMessage": "获取推荐码，以便与他人分享。当有人使用该推荐码注册，并且他们的虚拟机（VM）完成首次支付时，您将获得佣金。选择希望接收付款的账户，然后激活即可。"
   },
+  "3eEn1+": {
+    "defaultMessage": "<b>无需进行身份验证。</b>注册时无需提供个人信息。您的节点、您的密钥，一切由您掌控。"
+  },
   "3vxkus": {
     "defaultMessage": "无需保存任何内容——您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
   },
@@ -205,6 +220,9 @@
   },
   "4X/Ixq": {
     "defaultMessage": "已解密的消息："
+  },
+  "4axuAp": {
+    "defaultMessage": "运行。 {name} 作为一项受管理的 {category} 在 LNVPS 上——使用自定义主机名，已启用 TLS，无需进行服务器补丁更新。"
   },
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
@@ -317,6 +335,9 @@
   "7agV2X": {
     "defaultMessage": "中继；传递"
   },
+  "7bTzvm": {
+    "defaultMessage": "设置过程——这通常需要一分钟。一旦开始运行，终端就会出现。"
+  },
   "7fGyF+": {
     "defaultMessage": "清除并重新安装"
   },
@@ -410,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "搭建您的节点服务器（VPS）。"
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} 托管服务——由我们管理 {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "确认中"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}每月支付，使用闪电支付。"
   },
   "9t1iiv": {
     "defaultMessage": "配置"
@@ -505,6 +532,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "立即重新激活。"
+  },
+  "C8Qzcv": {
+    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费。"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -740,6 +770,9 @@
   "HqRNN8": {
     "defaultMessage": "支持"
   },
+  "HzgGfH": {
+    "defaultMessage": "可以使用莱特币、比特币或银行卡进行支付。"
+  },
   "I3JhPS": {
     "defaultMessage": "网络"
   },
@@ -748,6 +781,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "尚未保存任何 NWC 钱包。请在下方添加一个，以便接收付款。"
+  },
+  "IDpruN": {
+    "defaultMessage": "部署中"
   },
   "ILTAun": {
     "defaultMessage": "您的虚拟机正在配置中。通常需要一两分钟的时间。"
@@ -790,6 +826,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS 服务状态和在线时间"
+  },
+  "JVZcdC": {
+    "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
   },
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
@@ -851,9 +890,6 @@
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
-  },
   "LR754a": {
     "defaultMessage": "续订时间："
   },
@@ -872,8 +908,14 @@
   "LwGAe6": {
     "defaultMessage": "此外，还可在 LNVPS 上找到。"
   },
+  "MJ2jZQ": {
+    "defaultMessage": "总计"
+  },
   "MTnSwY": {
     "defaultMessage": "不含税。"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到一个虚拟专用服务器（VPS）上，以进一步提升。"
   },
   "Mp+zDS": {
     "defaultMessage": "此组件仅支持闪电网络支付。"
@@ -949,6 +991,9 @@
   },
   "P7PLVj": {
     "defaultMessage": "日期"
+  },
+  "PJKhfR": {
+    "defaultMessage": "当需要通过中继进行操作时，使用受管应用是最合适的解决方案。如果您想运行修改后的版本、将其他服务部署在同一服务器上，或者自行管理服务器，我们的<a>虚拟专用服务器（VPS）托管服务</a>将在都柏林、伦敦和魁北克提供无限流量以及每个套餐的静态 IPv4 和 IPv6 地址。"
   },
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
@@ -1133,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "显示 LNURL"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}每月，无需支付设置费。"
+  },
   "Tbo377": {
     "defaultMessage": "账单"
   },
@@ -1231,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "创建"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}…… {storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到虚拟专用服务器 (VPS) 上，以进一步提升。"
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1511,6 +1562,9 @@
   "exrlwL": {
     "defaultMessage": "使用小写字母、数字和连字符。这将成为您的子域名。"
   },
+  "f+jGyB": {
+    "defaultMessage": "删除后，将停止计费，并永久移除部署及其关联的存储卷。"
+  },
   "f00p/7": {
     "defaultMessage": "上传失败。"
   },
@@ -1540,6 +1594,12 @@
   },
   "fxYCqm": {
     "defaultMessage": "地点：{location}"
+  },
+  "g/bMVf": {
+    "defaultMessage": "运行。 {name} 作为一项管理项目 {category} 在 LNVPS 上——使用自定义主机名，并启用 TLS。 {storage} 采用 GB 级别的存储空间，无需进行服务器补丁更新。"
+  },
+  "g1GUs5": {
+    "defaultMessage": "虚拟 CPU"
   },
   "gBvImw": {
     "defaultMessage": "{count} 个把手"
@@ -1660,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "未设置——添加一个。"
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
@@ -1799,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "委员会；佣金"
   },
+  "n7yYXG": {
+    "defaultMessage": "服务"
+  },
   "n9fdaJ": {
     "defaultMessage": "未经核实"
   },
@@ -1807,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "支付方式"
+  },
+  "nQHBG0": {
+    "defaultMessage": "在完成部署并支付费用后，可以更改设置。"
   },
   "nWQFic": {
     "defaultMessage": "续订"
@@ -1889,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1942,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "账单详情"
+  },
+  "rOtXKf": {
+    "defaultMessage": "您也在运行一个 Nostr 中继节点吗？这个中继节点不需要整个服务器——它只是…… <a>{price} 一个月作为受管应用。</a>……"
   },
   "rbrahO": {
     "defaultMessage": "关闭"
@@ -2141,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "无法升级。"
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2228,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>不限制流量。</b>路由节点会持续进行数据交换。您无需关注带宽使用情况。"
   },
-  "C8Qzcv": {
-    "defaultMessage": "四种继电器解决方案，均为每月 {price}，无需设置费。"
+  "zzkKCh": {
+    "defaultMessage": "{storage} 持久性存储"
   }
 }

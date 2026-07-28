@@ -1,4 +1,7 @@
 {
+  "375584": {
+    "defaultMessage": "Требуется оплата."
+  },
   "++XeyK": {
     "defaultMessage": "Ключ Nostr"
   },
@@ -13,6 +16,9 @@
   },
   "+EHk4e": {
     "defaultMessage": "Да. Это ваш компьютер, устанавливайте всё, что хотите."
+  },
+  "+H6Rvj": {
+    "defaultMessage": "Запустите собственный медиасервер Blossom и NIP-96 для {price}В месяц. Route96 — развертывание занимает всего несколько минут на собственном сервере с использованием постоянного хранилища и поддержкой TLS."
   },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{год} other{лет}}"
@@ -100,6 +106,9 @@
   },
   "1M3SKY": {
     "defaultMessage": "Пожалуйста, подробно опишите свой вопрос или проблему..."
+  },
+  "1R0JfT": {
+    "defaultMessage": "{storage} об объёме постоянной памяти — {breakdown}"
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# час} other{# час.}} {m,plural,one{# мин.} other{# мин.}}"
@@ -212,6 +221,9 @@
   "4X/Ixq": {
     "defaultMessage": "Расшифрованное сообщение:"
   },
+  "4axuAp": {
+    "defaultMessage": "Запустить {name} в качестве управляемого {category} на LNVPS — используется собственное имя хоста, включена поддержка TLS, нет необходимости в обновлении сервера."
+  },
   "4cMKIO": {
     "defaultMessage": "Планы с автоматическим продлением, обеспечивающие непрерывную работу ваших услуг."
   },
@@ -323,6 +335,9 @@
   "7agV2X": {
     "defaultMessage": "Эстафета"
   },
+  "7bTzvm": {
+    "defaultMessage": "Настройка занимает обычно около минуты. После запуска появится конечная точка."
+  },
   "7fGyF+": {
     "defaultMessage": "Стереть и переустановить"
   },
@@ -416,8 +431,14 @@
   "9gB0vq": {
     "defaultMessage": "Создайте виртуальный частный сервер для своего узла."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Хостинг — управляемый {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Подтверждается"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}Оплата ежемесячно с помощью Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Настроить"
@@ -511,6 +532,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Активируйте повторно сейчас."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Четыре варианта реализации ретранслятора, стоимость каждого — {price} в месяц, без платы за настройку."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -746,6 +770,9 @@
   "HqRNN8": {
     "defaultMessage": "Поддержка"
   },
+  "HzgGfH": {
+    "defaultMessage": "Оплачивайте с помощью Lightning, биткойна или банковской карты."
+  },
   "I3JhPS": {
     "defaultMessage": "Сеть"
   },
@@ -754,6 +781,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "Пока не создан ни один кошелек NWC. Добавьте его, чтобы начать получать выплаты."
+  },
+  "IDpruN": {
+    "defaultMessage": "Развертывание"
   },
   "ILTAun": {
     "defaultMessage": "В настоящее время выполняется настройка вашей виртуальной машины. Обычно это занимает одну-две минуты."
@@ -796,6 +826,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Статус и время безотказной работы сервиса LNVPS."
+  },
+  "JVZcdC": {
+    "defaultMessage": "Срок действия подписки для данной версии развертывания истек, и она была сведена к нулю. Ваши данные все еще здесь — продлите подписку, чтобы снова запустить ее."
   },
   "JiCBWy": {
     "defaultMessage": "Подключайтесь по SSH с выбранным ключом."
@@ -857,9 +890,6 @@
   "LHX6Oo": {
     "defaultMessage": "Срок действия истекает. {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
-  },
   "LR754a": {
     "defaultMessage": "Продлевается в"
   },
@@ -878,8 +908,14 @@
   "LwGAe6": {
     "defaultMessage": "Также на платформе LNVPS."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Всего"
+  },
   "MTnSwY": {
     "defaultMessage": "без учета налогов"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} в целом. Для личного медиасервера этого вполне достаточно; если вам нужно больше, вы можете установить Route96 на виртуальный частный сервер (VPS) и расширить его возможности по мере необходимости."
   },
   "Mp+zDS": {
     "defaultMessage": "Этот компонент поддерживает только платежи через Lightning."
@@ -955,6 +991,9 @@
   },
   "P7PLVj": {
     "defaultMessage": "Дата"
+  },
+  "PJKhfR": {
+    "defaultMessage": "Управляемое приложение — это оптимальное решение, когда основной задачей является передача данных. Если вам нужно запускать измененную версию, размещать другие сервисы на одном сервере или самостоятельно управлять сервером, наши услуги <a>VPS-хостинга</a> доступны в Дублине, Лондоне и Квебеке с неограниченным трафиком и статическим IPv4- и IPv6-адресом для каждого тарифного плана."
   },
   "PJtOx7": {
     "defaultMessage": "Не было никаких происшествий, о которых следовало бы сообщить."
@@ -1139,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "Показать LNURL"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}в месяц, без платы за установку."
+  },
   "Tbo377": {
     "defaultMessage": "Выставление счетов"
   },
@@ -1237,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "Создать"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} в целом. Для личного медиасервера этого вполне достаточно; если вам нужно больше, вы можете установить Route96 на виртуальный частный сервер (VPS) и масштабировать его по мере необходимости."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1517,6 +1562,9 @@
   "exrlwL": {
     "defaultMessage": "Используйте строчные буквы, цифры и дефисы. Это станет вашим поддоменом."
   },
+  "f+jGyB": {
+    "defaultMessage": "Удаление прекращает начисление платы и полностью удаляет развертывание и связанные с ним тома."
+  },
   "f00p/7": {
     "defaultMessage": "Загрузка не удалась."
   },
@@ -1546,6 +1594,12 @@
   },
   "fxYCqm": {
     "defaultMessage": "Местоположение: {location}"
+  },
+  "g/bMVf": {
+    "defaultMessage": "Запустить {name} в качестве управляемого {category} на сервере LNVPS — используется собственное имя хоста, включена поддержка TLS. {storage} Объем памяти – несколько гигабайт, сервер не требует обновления."
+  },
+  "g1GUs5": {
+    "defaultMessage": "виртуальный процессор"
   },
   "gBvImw": {
     "defaultMessage": "{count} ручки"
@@ -1666,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "Ничего не выбрано — добавьте один пункт."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "Направьте CNAME этого домена на имя хоста развёртывания, когда оно будет назначено. Оставьте пустым, чтобы удалить."
@@ -1805,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "Комиссия"
   },
+  "n7yYXG": {
+    "defaultMessage": "Обслуживание"
+  },
   "n9fdaJ": {
     "defaultMessage": "Не подтверждено."
   },
@@ -1813,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Способ оплаты"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Настройки можно изменить после оплаты и запуска данной версии программного обеспечения."
   },
   "nWQFic": {
     "defaultMessage": "Продлить"
@@ -1895,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "Не задано."
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1948,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Платежные данные"
+  },
+  "rOtXKf": {
+    "defaultMessage": "Вы тоже запускаете ретранслятор Nostr? Для него не нужен целый сервер, достаточно... <a>{price} месяц использования в качестве управляемого приложения.</a>."
   },
   "rbrahO": {
     "defaultMessage": "Закрыть"
@@ -2147,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "Обновление недоступно."
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2234,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>Неограниченный трафик.</b> Узел маршрутизации постоянно обменивается данными. Вам не нужно следить за показаниями счётчика пропускной способности."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Четыре варианта реализации ретранслятора, стоимость каждого — {price} в месяц, без платы за настройку."
+  "zzkKCh": {
+    "defaultMessage": "{storage} постоянная память"
   }
 }

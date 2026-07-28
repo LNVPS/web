@@ -8,12 +8,12 @@
  * the relay copies win when they are there — the site's own archive should not
  * depend on someone else's retention policy.
  *
- * The generated events carry a real event id but no signature: they are render
- * input for the loaders, never republished and never fed to the Nostr system.
+ * The generated events carry the `d` tag as their id and no signature: they are
+ * render input for the loaders, never republished and never fed to the Nostr
+ * system.
  *
  * Run via `bun server/gen-news-archive.ts` (wired into the build script).
  */
-import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
@@ -22,7 +22,8 @@ const NEWS_DIR = join(ROOT, "docs", "news");
 const OUT_PATH = join(ROOT, "src", "news-archive.json");
 
 /** Hex public key of the LNVPS account the posts are published under. */
-const PUBKEY = "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7";
+const PUBKEY =
+  "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7";
 
 interface ArchiveEvent {
   id: string;
@@ -32,18 +33,6 @@ interface ArchiveEvent {
   tags: Array<Array<string>>;
   content: string;
   sig: string;
-}
-
-function eventId(ev: Omit<ArchiveEvent, "id" | "sig">): string {
-  const serialized = JSON.stringify([
-    0,
-    ev.pubkey,
-    ev.created_at,
-    ev.kind,
-    ev.tags,
-    ev.content,
-  ]);
-  return createHash("sha256").update(serialized).digest("hex");
 }
 
 function readArticle(dir: string, lang: string): ArchiveEvent | undefined {
@@ -61,14 +50,21 @@ function readArticle(dir: string, lang: string): ArchiveEvent | undefined {
     return undefined;
   }
 
-  const base = {
+  const d = meta.tags.find((t) => t[0] === "d")?.[1];
+  if (!d) {
+    console.warn(`skipped ${metaPath}: no d tag`);
+    return undefined;
+  }
+
+  return {
+    id: d,
     pubkey: PUBKEY,
     created_at: Number(publishedAt),
     kind: meta.kind,
     tags: meta.tags,
     content,
+    sig: "",
   };
-  return { id: eventId(base), ...base, sig: "" };
 }
 
 const events: Array<ArchiveEvent> = [];

@@ -1,49 +1,46 @@
 /**
- * Generates sitemap.xml from the static routes plus every news article in
- * `docs/news/`.
+ * Generates sitemap.xml from the static routes, the app catalog and every news
+ * article in `docs/news/`.
  *
- * The news half is generated because the archive grows on its own: a
- * hand-maintained file listed five URLs and none of the posts, so the only
- * non-transactional content we publish was undiscoverable. Static entries stay
- * written here; the app catalog is still a hand-kept list rather than the API
- * (`LNVPS/web#18`).
+ * The hand-maintained file listed none of the articles and went stale against
+ * the catalog, so both moving parts are read from their source: the articles
+ * from `src/news-archive.json`, the app ids from the public catalog endpoint.
+ * A build with no catalog fails rather than publishing a sitemap that quietly
+ * drops product pages.
  *
  * Run via `bun server/gen-sitemap.ts` (wired into the build script).
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const ROOT = join(dirname(new URL(import.meta.url).pathname), "..");
 const ARCHIVE_PATH = join(ROOT, "src", "news-archive.json");
 const SITE_URL = "https://lnvps.net";
+const APPS_URL =
+  process.env.SITEMAP_APPS_URL ?? "https://api.lnvps.net/api/v1/apps";
 
 // Directories that should receive the generated sitemap.
 const OUT_DIRS = [join(ROOT, "public"), join(ROOT, "dist", "client")];
 
-interface StaticEntry {
+export interface StaticEntry {
   path: string;
   changefreq: string;
   priority: string;
 }
 
-const STATIC_ENTRIES: Array<StaticEntry> = [
+export const STATIC_ENTRIES: Array<StaticEntry> = [
   { path: "/", changefreq: "daily", priority: "1.0" },
   { path: "/apps", changefreq: "weekly", priority: "0.9" },
-  // One entry per app in the catalog, hand-maintained: add a line when an app
-  // is added. LNVPS/web#18 wants these sourced from /api/v1/apps.
-  { path: "/apps/1", changefreq: "monthly", priority: "0.8" },
-  { path: "/apps/2", changefreq: "monthly", priority: "0.8" },
-  { path: "/apps/3", changefreq: "monthly", priority: "0.8" },
-  { path: "/apps/4", changefreq: "monthly", priority: "0.8" },
-  { path: "/apps/5", changefreq: "monthly", priority: "0.8" },
   { path: "/blossom-server-hosting", changefreq: "monthly", priority: "0.9" },
+  { path: "/nostr-relay-hosting", changefreq: "monthly", priority: "0.9" },
+  { path: "/lightning-node-vps", changefreq: "monthly", priority: "0.9" },
   { path: "/news", changefreq: "weekly", priority: "0.8" },
   { path: "/status", changefreq: "hourly", priority: "0.7" },
   { path: "/contact", changefreq: "monthly", priority: "0.6" },
   { path: "/tos", changefreq: "monthly", priority: "0.4" },
 ];
 
-interface ArchiveEvent {
+export interface ArchiveEvent {
   tags: Array<Array<string>>;
 }
 
@@ -56,92 +53,126 @@ function lang(ev: ArchiveEvent): string | undefined {
   return ev.tags.find((t) => t[0] === "l" && t[2] === "ISO-639-1")?.[1];
 }
 
-const archive = JSON.parse(
-  readFileSync(ARCHIVE_PATH, "utf-8"),
-) as Array<ArchiveEvent>;
-
-// A translated article is a distinct `d` tag and so a distinct URL, but it is
-// the same page in another language: list the originals and hang the
-// translations off them as hreflang alternates.
-const originals = archive.filter((ev) => lang(ev) === undefined);
-const alternates = new Map<string, Array<[string, string]>>();
-for (const ev of archive) {
-  const code = lang(ev);
-  const d = tag(ev, "d");
-  if (!code || !d) continue;
-  const slug = d.endsWith(`-${code}`) ? d.slice(0, -(code.length + 1)) : d;
-  alternates.set(slug, [...(alternates.get(slug) ?? []), [code, d]]);
-}
-
-function urlEntry(
+function xmlEntry(
   path: string,
   opts: {
     changefreq: string;
     priority: string;
     lastmod?: string;
-    links?: Array<[string, string]>;
+    alternates?: Array<[string, string]>;
   },
 ): string {
-  const links = (opts.links ?? [])
-    .map(
-      ([code, slug]) =>
-        `    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}/news/${slug}"/>`,
-    )
-    .join("\n");
+  const links = (opts.alternates ?? []).map(
+    ([code, href]) =>
+      `    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${href}"/>`,
+  );
   return [
     "  <url>",
     `    <loc>${SITE_URL}${path}</loc>`,
     opts.lastmod ? `    <lastmod>${opts.lastmod}</lastmod>` : undefined,
     `    <changefreq>${opts.changefreq}</changefreq>`,
     `    <priority>${opts.priority}</priority>`,
-    links.length > 0 ? links : undefined,
+    ...links,
     "  </url>",
   ]
     .filter((l) => l !== undefined)
     .join("\n");
 }
 
-const entries = [
-  ...STATIC_ENTRIES.map((e) =>
-    urlEntry(e.path, { changefreq: e.changefreq, priority: e.priority }),
-  ),
-  ...originals
-    .map((ev) => {
-      const slug = tag(ev, "d");
+/**
+ * Every language variant is its own URL, and each one carries the whole
+ * alternate set including itself: hreflang without a return tag on the target
+ * page is discarded, which would leave the translations undiscoverable.
+ */
+function newsEntries(archive: Array<ArchiveEvent>): Array<string> {
+  const groups = new Map<string, Array<ArchiveEvent>>();
+  for (const ev of archive) {
+    const d = tag(ev, "d");
+    if (!d) continue;
+    const code = lang(ev);
+    const slug =
+      code && d.endsWith(`-${code}`) ? d.slice(0, -(code.length + 1)) : d;
+    groups.set(slug, [...(groups.get(slug) ?? []), ev]);
+  }
+
+  const entries: Array<string> = [];
+  for (const [slug, group] of groups) {
+    const original = group.find((ev) => lang(ev) === undefined);
+    const alternates: Array<[string, string]> = group
+      .map((ev): [string, string] => [
+        lang(ev) ?? "en",
+        `/news/${tag(ev, "d")}`,
+      ])
+      .sort(([a], [b]) => a.localeCompare(b));
+    if (original) {
+      alternates.push(["x-default", `/news/${slug}`]);
+    }
+
+    for (const ev of group) {
+      const d = tag(ev, "d");
       const publishedAt = tag(ev, "published_at");
-      if (!slug || !publishedAt) return undefined;
-      return urlEntry(`/news/${slug}`, {
-        changefreq: "monthly",
-        priority: "0.7",
-        lastmod: new Date(Number(publishedAt) * 1000)
-          .toISOString()
-          .slice(0, 10),
-        links: [
-          ["en", slug],
-          ...(alternates.get(slug) ?? []).sort(([a], [b]) =>
-            a.localeCompare(b),
-          ),
-        ],
-      });
-    })
-    .filter((e) => e !== undefined),
-];
-
-const xml = [
-  '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
-  ...entries,
-  "</urlset>",
-  "",
-].join("\n");
-
-for (const dir of OUT_DIRS) {
-  if (!existsSync(dir)) continue;
-  mkdirSync(dir, { recursive: true });
-  const out = join(dir, "sitemap.xml");
-  writeFileSync(out, xml);
-  console.log(`wrote ${out}`);
+      if (!d || !publishedAt) continue;
+      entries.push(
+        xmlEntry(`/news/${d}`, {
+          changefreq: "monthly",
+          priority: lang(ev) === undefined ? "0.7" : "0.5",
+          lastmod: new Date(Number(publishedAt) * 1000)
+            .toISOString()
+            .slice(0, 10),
+          alternates,
+        }),
+      );
+    }
+  }
+  return entries;
 }
-console.log(
-  `sitemap: ${STATIC_ENTRIES.length} static + ${entries.length - STATIC_ENTRIES.length} news URLs`,
-);
+
+export function buildSitemapXml(
+  archive: Array<ArchiveEvent>,
+  appIds: Array<number>,
+): string {
+  const entries = [
+    ...STATIC_ENTRIES.map((e) =>
+      xmlEntry(e.path, { changefreq: e.changefreq, priority: e.priority }),
+    ),
+    ...appIds.map((id) =>
+      xmlEntry(`/apps/${id}`, { changefreq: "monthly", priority: "0.8" }),
+    ),
+    ...newsEntries(archive),
+  ];
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    ...entries,
+    "</urlset>",
+    "",
+  ].join("\n");
+}
+
+async function fetchAppIds(): Promise<Array<number>> {
+  const res = await fetch(APPS_URL, { signal: AbortSignal.timeout(15000) });
+  if (!res.ok) throw new Error(`${APPS_URL} returned ${res.status}`);
+  const body = (await res.json()) as { data?: Array<{ id: number }> };
+  const ids = (body.data ?? []).map((a) => a.id).sort((a, b) => a - b);
+  if (ids.length === 0) throw new Error(`${APPS_URL} returned no apps`);
+  return ids;
+}
+
+if (import.meta.main) {
+  const archive = JSON.parse(
+    readFileSync(ARCHIVE_PATH, "utf-8"),
+  ) as Array<ArchiveEvent>;
+  const appIds = await fetchAppIds();
+  const xml = buildSitemapXml(archive, appIds);
+
+  for (const dir of OUT_DIRS) {
+    if (!existsSync(dir)) continue;
+    const out = join(dir, "sitemap.xml");
+    writeFileSync(out, xml);
+    console.log(`wrote ${out}`);
+  }
+  console.log(
+    `sitemap: ${STATIC_ENTRIES.length} static + ${appIds.length} apps + ${archive.length} news URLs`,
+  );
+}

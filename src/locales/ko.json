@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "이번 배포의 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 다시 서비스를 시작할 수 있습니다."
   },
+  "JcmOUh": {
+    "defaultMessage": "직접 노스트르 릴레이를 운영하세요. {price} 매달 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 동안 사용 가능합니다."
+  },
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "비용 내역"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price} 매달."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "저장된 결제 수단은 가상 머신의 만료일 하루 전에 자동으로 갱신 요금을 지불하는 데 사용됩니다. 기본으로 사용할 결제 수단을 선택하세요."
   },
-  "iuZoh0": {
-    "defaultMessage": "이곳에서 직접 노스트르 릴레이를 운영하세요. {price}매월 사용량에 따라 자체 호스트 이름으로 분 단위 요금이 부과되며, TLS 및 스토리지가 포함됩니다."
-  },
   "iv8nNj": {
     "defaultMessage": "확실하지 않으신가요? <b>strfry</b>가 가장 많이 사용되는 프로그램입니다. 대부분의 공개 릴레이에서 이 프로그램을 활용합니다. 만약 개인적인 릴레이를 운영하신다면 <b>HAVEN</b>을 사용하세요. Blossom 미디어 저장소도 함께 제공하므로, 이미지와 노트가 동일한 키 아래에 저장됩니다."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "캡차 인증을 완료해 주세요."
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price}월간."
   },
   "kRFEho": {
     "defaultMessage": "SSH 키 추가"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "기존 요금으로 남은 시간에 대한 가치:"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price}월별 요금이며, 초기 설정 비용은 없습니다."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "연결됨"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}~부터 {price} 매월 부과되며, 초기 설정 비용은 없습니다."
   },
   "wo868v": {
     "defaultMessage": "Nostr 키 또는 벙커로 로그인 →"

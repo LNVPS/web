@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "Bu uygulamanın aboneliği sona erdi ve ölçeklendirme sıfıra düşürüldü. Verileriniz hala burada bulunuyor; uygulamayı yeniden başlatmak için aboneliğinizi yenileyin."
   },
+  "JcmOUh": {
+    "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price} Ayda, kendi alan adında ve TLS ile depolama hizmeti dahil olmak üzere, dakika cinsinden kullanım süresiyle."
+  },
   "JiCBWy": {
     "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "Maliyetlerin Detaylı Dökümü"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} ayda."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "Kaydedilmiş ödeme yöntemleri, sanal makinenin (VM) süresinin dolmasına bir gün kala otomatik olarak yenileme işlemini gerçekleştirmek için kullanılır. Varsayılan olarak kullanılacak olanı seçin."
   },
-  "iuZoh0": {
-    "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price}/ay, kendi alan adında TLS ve depolama alanı dahil olmak üzere dakikalar cinsinden artış gösterir."
-  },
   "iv8nNj": {
     "defaultMessage": "Emin değil misiniz? <b>strfry</b>, işin yükünü çeken ana uygulamadır; çoğu genel amaçlı röle bu uygulama ile çalışır. Eğer bu kişisel bir röle ise (topluluk rölesi değil), <b>HAVEN</b> kullanın; bu uygulama aynı zamanda size Blossom medya deposu da sağlar, böylece resimleriniz notlarınızla aynı anahtar altında saklanır."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "Lütfen CAPTCHA doğrulamasını tamamlayın."
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, -den {price}ayda."
   },
   "kRFEho": {
     "defaultMessage": "SSH Anahtarını Ekle"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "Eski tarifeye göre kalan sürenin değeri:"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, -den itibaren {price}aylık, kurulum ücreti yok."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Bağlantılı"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} aylık olarak, kurulum ücreti yok."
   },
   "wo868v": {
     "defaultMessage": "Nostr anahtarı veya bunker ile giriş yap →"

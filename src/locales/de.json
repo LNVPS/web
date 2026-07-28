@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "Das Abonnement für diese Bereitstellung ist abgelaufen, und die Kapazität wurde auf null reduziert. Ihre Daten sind weiterhin vorhanden – verlängern Sie das Abonnement, um die Bereitstellung wieder zu aktivieren."
   },
+  "JcmOUh": {
+    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay ab {price} pro Monat, mit einer Laufzeit in Minuten auf dem eigenen Hostnamen, inklusive TLS und Speicherplatz."
+  },
   "JiCBWy": {
     "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "Kostenaufschlüsselung"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "Gespeicherte Zahlungsmethoden werden verwendet, um automatische Zahlungen für Verlängerungen einen Tag vor dem Ablauf einer virtuellen Maschine durchzuführen. Wählen Sie die Methode aus, die als Standard festgelegt werden soll."
   },
-  "iuZoh0": {
-    "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay von {price}pro Monat, mit einer Laufzeitmessung in Minuten auf dem eigenen Hostnamen, einschließlich TLS und Speicherplatz."
-  },
   "iv8nNj": {
     "defaultMessage": "Sind Sie sich nicht sicher? <b>strfry</b> ist das Arbeitspferd – die meisten öffentlichen Relays verwenden es. <b>HAVEN</b>, wenn dies Ihr persönlicher Relay und kein gemeinschaftlicher ist; es bietet Ihnen auch einen Blossom-Medienserver, sodass Ihre Bilder unter demselben Schlüssel wie Ihre Notizen gespeichert werden."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "Bitte führen Sie die CAPTCHA-Überprüfung durch."
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Implementierungen von Relais}}von {price}pro Monat."
   },
   "kRFEho": {
     "defaultMessage": "SSH-Schlüssel hinzufügen."
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "Wert der verbleibenden Zeit zum alten Tarif:"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Implementierungen von Relais}}, von {price}pro Monat, ohne Einrichtungskosten."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Verknüpft"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat, ohne Einrichtungskosten."
   },
   "wo868v": {
     "defaultMessage": "Mit Nostr-Schlüssel oder Bunker anmelden →"

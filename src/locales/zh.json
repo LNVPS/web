@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
   },
+  "JcmOUh": {
+    "defaultMessage": "从这里开始搭建并运行您自己的 Nostr 中继节点。 {price} 每月，在自己的主机名上以分钟为单位进行计费，包含 TLS 和存储。"
+  },
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "成本明细"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起。"
+  },
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "已保存的付款方式将用于自动支付续订费用，续订将在虚拟机到期前一天进行。请选择默认使用的付款方式。"
   },
-  "iuZoh0": {
-    "defaultMessage": "从这里开始搭建您自己的 Nostr 中继服务器。 {price}每月，在自己的主机名上以分钟为单位进行计费，包含 TLS 和存储。"
-  },
   "iv8nNj": {
     "defaultMessage": "不确定吗？<b>strfry</b>是主要的运行程序——大多数公共中继服务器都使用它。<b>HAVEN</b>如果这是一个个人中继服务器，而不是社区中继服务器；它还提供一个Blossom媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# 中继实施} other{# 继电器实现方案}}，来自 {price}每月。"
   },
   "kRFEho": {
     "defaultMessage": "添加 SSH 密钥。"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# 继电器实现} other{# 中继功能的实现}}，来自 {price}每月，无需支付设置费。"
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "已链接。"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起，无需支付设置费用。"
   },
   "wo868v": {
     "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"

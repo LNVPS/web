@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "A subscrição desta implementação expirou e foi reduzida a zero. Os seus dados ainda estão aqui – renove para voltar a iniciá-la."
   },
+  "JcmOUh": {
+    "defaultMessage": "Configure o seu próprio nó de retransmissão Nostr a partir de {price} por mês, com tempo de utilização em minutos no próprio nome de domínio, incluindo TLS e armazenamento."
+  },
   "JiCBWy": {
     "defaultMessage": "Conecte-se via SSH com a chave selecionada."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "Análise detalhada dos custos"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "Os métodos de pagamento guardados são usados para efetuar automaticamente o pagamento das renovações um dia antes do término da validade da máquina virtual. Selecione qual deles será o método padrão."
   },
-  "iuZoh0": {
-    "defaultMessage": "Configure o seu próprio nó de retransmissão Nostr a partir de {price}por mês, com aumento em minutos no próprio nome de domínio, incluindo TLS e armazenamento."
-  },
   "iv8nNj": {
     "defaultMessage": "Não tem certeza? O <b>strfry</b> é a ferramenta principal — é o que a maioria dos servidores públicos usa. Se este for o seu servidor pessoal e não um servidor comunitário, use o <b>HAVEN</b>; ele também oferece um espaço de armazenamento multimídia Blossom, para que suas imagens e notas fiquem no mesmo local."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "Por favor, complete o teste de verificação."
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# implementação do retransmissor} other{# implementações de relés}}, de {price}por mês."
   },
   "kRFEho": {
     "defaultMessage": "Adicionar chave SSH"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "Valor do tempo restante à tarifa antiga:"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price}por mês, sem taxa de configuração."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Ligado(s)/Conectado(s)"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês, sem taxa de configuração."
   },
   "wo868v": {
     "defaultMessage": "Iniciar sessão com uma chave Nostr ou bunker →"

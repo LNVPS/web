@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、再開するにはサブスクリプションを更新してください。"
   },
+  "JcmOUh": {
+    "defaultMessage": "あなた自身のNostrリレーを、ここから運用しましょう。 {price} 1か月に付き、独自のホスト名でTLSとストレージを含む状態で数分間利用できます。"
+  },
   "JiCBWy": {
     "defaultMessage": "選択した鍵で SSH 接続します。"
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "費用内訳"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price} 1か月に。"
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM：{name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "保存された支払い方法を使用して、仮想マシンの有効期限の1日前に行われる自動更新の支払いを処理します。デフォルトで使用するものを選択してください。"
   },
-  "iuZoh0": {
-    "defaultMessage": "あなた自身のNostrリレーを、ここから実行しましょう。 {price}1か月あたり、独自のホスト名でTLSとストレージを含む状態で、数分以内にセットアップが完了します。"
-  },
   "iv8nNj": {
     "defaultMessage": "よくわからない？ <b>strfry</b>は、最も一般的な公開リレーで使われる設定です。 もしこれがコミュニティではなく個人的なリレーであれば、<b>HAVEN</b>を使用してください。Blossomメディアストアも提供されるので、画像とメモを同じキーの下にまとめて管理できます。"
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price}1か月あたり。"
   },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price}月額制、初期費用はかかりません。"
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "リンク済み"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}〜から {price} 月額料金制で、初期費用はかかりません。"
   },
   "wo868v": {
     "defaultMessage": "Nostrキーまたはバンカーでログイン →"

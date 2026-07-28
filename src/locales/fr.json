@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "L’abonnement de ce déploiement a expiré et il a été réduit à zéro. Vos données sont toujours disponibles ici ; renouvelez votre abonnement pour le relancer."
   },
+  "JcmOUh": {
+    "defaultMessage": "Exploitez votre propre relais Nostr à partir de {price} par mois, avec une augmentation en minutes sur son propre nom d’hôte, le chiffrement TLS et l’espace de stockage inclus."
+  },
   "JiCBWy": {
     "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "Répartition des coûts"
   },
+  "cZDydd": {
+    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM : {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "Les méthodes de paiement enregistrées sont utilisées pour effectuer automatiquement le renouvellement un jour avant l’expiration de la machine virtuelle. Choisissez celle qui doit être définie par défaut."
   },
-  "iuZoh0": {
-    "defaultMessage": "Hébergez votre propre relais Nostr à partir de {price}par mois, avec une augmentation en minutes sur son propre nom d’hôte, incluant le protocole TLS et l’espace de stockage."
-  },
   "iv8nNj": {
     "defaultMessage": "Vous n’êtes pas sûr(e) ? <b>strfry</b> est l’outil principal : c’est celui que la plupart des relais publics utilisent. <b>HAVEN</b> si c’est votre relais personnel plutôt qu’un relais communautaire ; il vous donne également accès à un espace de stockage multimédia Blossom, ce qui permet de regrouper vos images et vos notes sous la même clé."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "Veuillez compléter la vérification Captcha."
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price}par mois."
   },
   "kRFEho": {
     "defaultMessage": "Ajouter une clé SSH"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "Valeur du temps restant au tarif précédent :"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price}par mois, sans frais d’installation."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Lié(e)"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois, sans frais d’installation."
   },
   "wo868v": {
     "defaultMessage": "Se connecter avec une clé Nostr ou un bunker →"

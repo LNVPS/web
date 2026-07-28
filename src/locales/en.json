@@ -836,6 +836,9 @@
   "JVZcdC": {
     "defaultMessage": "This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again."
   },
+  "JcmOUh": {
+    "defaultMessage": "Run your own Nostr relay from {price} per month, up in minutes on its own hostname with TLS and storage included."
+  },
   "JiCBWy": {
     "defaultMessage": "Connect over SSH with your selected key."
   },
@@ -1493,6 +1496,9 @@
   "cV0ZGf": {
     "defaultMessage": "Cost Breakdown"
   },
+  "cZDydd": {
+    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1709,9 +1715,6 @@
   "iuQLCB": {
     "defaultMessage": "Saved payment methods used to auto-pay renewals one day before a VM expires. Pick which one is the default."
   },
-  "iuZoh0": {
-    "defaultMessage": "Run your own Nostr relay from {price}/month, up in minutes on its own hostname with TLS and storage included."
-  },
   "iv8nNj": {
     "defaultMessage": "Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
   },
@@ -1780,9 +1783,6 @@
   },
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
-  },
-  "kNiZu3": {
-    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month."
   },
   "kRFEho": {
     "defaultMessage": "Add SSH Key"
@@ -2216,14 +2216,14 @@
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"
   },
-  "wVEeSx": {
-    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month, no setup fee."
-  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
   "waJLKW": {
     "defaultMessage": "Linked"
+  },
+  "wgMz3h": {
+    "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month, no setup fee."
   },
   "wo868v": {
     "defaultMessage": "Sign in with a Nostr key or bunker →"

@@ -54,7 +54,7 @@ function Section({
  * line, the table column and the CTA — comes from the catalog, and there is no
  * constant to fall back to (`LNVPS/web#67`). Two states:
  *
- * - **the catalog quoted a price** — the page says "from {price}/month", which
+ * - **the catalog quoted a price** — the page says "from {price} per month", which
  *   is `relayPriceFrom`: the lowest of the rows we have. True whether the
  *   relays agree or not, so changing one relay's price in admin no longer
  *   makes this page claim a figure that is nobody's price.
@@ -177,7 +177,7 @@ export function NostrRelayHostingPage() {
             ? formatMessage(
                 {
                   defaultMessage:
-                    "Run your own Nostr relay from {price}/month, up in minutes on its own hostname with TLS and storage included.",
+                    "Run your own Nostr relay from {price} per month, up in minutes on its own hostname with TLS and storage included.",
                 },
                 { price: priceText },
               )
@@ -217,7 +217,7 @@ export function NostrRelayHostingPage() {
             {price ? (
               noSetupFee ? (
                 <FormattedMessage
-                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month, no setup fee."
+                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month, no setup fee."
                   values={{
                     count: relays.length,
                     price: (
@@ -231,7 +231,7 @@ export function NostrRelayHostingPage() {
                 />
               ) : (
                 <FormattedMessage
-                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price}/month."
+                  defaultMessage="{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month."
                   values={{
                     count: relays.length,
                     price: (
@@ -270,7 +270,7 @@ export function NostrRelayHostingPage() {
                     <th className="py-2 pr-4 font-normal">
                       <FormattedMessage defaultMessage="Storage" />
                     </th>
-                    {/* The backing for "from {price}/month" above: with the
+                    {/* The backing for "from {price} per month" above: with the
                         price per relay on the page, a relay priced away from
                         the others reads as its own figure instead of quietly
                         changing the headline. */}

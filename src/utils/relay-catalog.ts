@@ -18,14 +18,14 @@ export function relayApps(apps: Array<App> | undefined): Array<App> {
 }
 
 /**
- * The lowest price the catalog quotes for a relay, ex-VAT and unconverted, or
+ * The lowest price a set of catalog rows quotes, ex-VAT and unconverted, or
  * `undefined` when there is nothing to quote (`LNVPS/web#67`).
  *
  * The pages that use this phrase it as "from", which is why this is a minimum
- * and not a uniformity test. A written-in constant used whenever the relays
+ * and not a uniformity test. A written-in constant used whenever the rows
  * disagreed made both landing pages quote a figure that was nobody's price as
- * soon as one relay's price changed in admin. A minimum off the rows we
- * actually have is true whether they agree or not, and the price column on
+ * soon as one price changed in admin. A minimum off the rows we actually have
+ * is true whether they agree or not, and the price column on
  * `/nostr-relay-hosting` shows what each one really costs.
  *
  * `undefined`, not a fallback, in the two cases where there is no honest
@@ -39,13 +39,13 @@ export function relayApps(apps: Array<App> | undefined): Array<App> {
  * rows we got is still true, and dropping the page's price because one catalog
  * row is missing helps nobody.
  */
-export function relayPriceFrom(
-  relays: Array<App>,
+export function catalogPriceFrom(
+  apps: Array<App>,
 ): { currency: string; amount: number } | undefined {
-  if (relays.length === 0) return undefined;
-  const currency = relays[0].currency;
-  if (!relays.every((a) => a.currency === currency)) return undefined;
-  return { currency, amount: Math.min(...relays.map((a) => a.amount)) };
+  if (apps.length === 0) return undefined;
+  const currency = apps[0].currency;
+  if (!apps.every((a) => a.currency === currency)) return undefined;
+  return { currency, amount: Math.min(...apps.map((a) => a.amount)) };
 }
 
 /**

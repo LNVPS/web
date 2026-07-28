@@ -93,6 +93,20 @@ export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
  */
 export const BlossomAppId = 2;
 
+/**
+ * Region ids the region landing pages are written about
+ * (`GET /api/v1/vm/templates`, `region.id`).
+ *
+ * A page called `/vps-ireland` is about one region, so the id is part of what
+ * the page *is* — the same reason `BlossomAppId` sits here. Nothing else about
+ * a region is written down: the name, the CPU and memory ranges, the disks and
+ * the price all come off the catalog, and a region the API stops returning
+ * renders without figures rather than with remembered ones.
+ */
+export const DublinRegionId = 1;
+export const QuebecRegionId = 2;
+export const LondonRegionId = 3;
+
 export const System = new NostrSystem({
   automaticOutboxModel: false,
   buildFollowGraph: false,

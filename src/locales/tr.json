@@ -29,6 +29,9 @@
   "+UjQFc": {
     "defaultMessage": "Kurallar ve politikalar"
   },
+  "+lH372": {
+    "defaultMessage": "Dublin'de kendi VPS'nizi oluşturun"
+  },
   "+sQCsu": {
     "defaultMessage": "Ödemeyi Tamamla"
   },
@@ -59,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Cüzdanı"
   },
+  "/kXbXW": {
+    "defaultMessage": "Ne tür şeyler inşa edebilirsiniz?"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider} ile devam et"
   },
@@ -73,6 +79,12 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
+  },
+  "0eyb8X": {
+    "defaultMessage": "şu konumda bir VPS üzerinde çalışan bir Bitcoin tam düğümü çalıştırın: {regions}Bitcoin ile Lightning veya doğrudan ödeme yapın. {price}ayda, KDV hariç."
+  },
+  "0gAiqM": {
+    "defaultMessage": "İrlanda'da VPS hosting"
   },
   "0gkn9c": {
     "defaultMessage": "IP adres alanı aboneliğiniz oluşturuldu. Adres alanını tahsis etmek ve aboneliği etkinleştirmek için ilk ödemeyi tamamlayın."
@@ -97,6 +109,12 @@
   },
   "13cluZ": {
     "defaultMessage": "SSH Anahtarını Ekle:"
+  },
+  "18wON0": {
+    "defaultMessage": "VPS Kanada — Quebec VPS, Bitcoin ile ödeme"
+  },
+  "1HKX0H": {
+    "defaultMessage": "Evet, Lightning veya zincir üzerinde. Yenileme aylıktır."
   },
   "1LBny5": {
     "defaultMessage": "Durduruldu"
@@ -134,6 +152,9 @@
   "24piVc": {
     "defaultMessage": "<b>İsterseniz, kendi alan adınızı kullanabilirsiniz.</b> CNAME kaydını sunucunuza yönlendirerek, varsayılan ana bilgisayar adı ile birlikte kendi sertifikanızla hizmet vermenizi sağlarız. Doğrulama adımı gerekmez; sertifika, DNS kaydınız çözüldüğünde otomatik olarak oluşturulur."
   },
+  "2Aa625": {
+    "defaultMessage": "İçinde {region}, disk yukarı doğru hareket ediyor {disk}, ile {cpu} sanal CPU ve {memory} en üst düzeyde."
+  },
   "2QrTo0": {
     "defaultMessage": "Yeni IP Adresi Atama Talebi"
   },
@@ -154,6 +175,9 @@
   },
   "2nfKZI": {
     "defaultMessage": "Daha sonra röle yazılımını değiştirebilir miyim?"
+  },
+  "2xMlQF": {
+    "defaultMessage": "Bir VPS üzerinde, zincir için yeterli depolama alanına sahip bir Bitcoin tam düğümü çalıştırın. Ödemeleri Lightning veya doğrudan zincir üzerinden Bitcoin ile yapın."
   },
   "35johu": {
     "defaultMessage": "Şimşek hızında işlem, zincir üzerinde Bitcoin veya kart ile ödeme. Kayıt olmak için kişisel bilgi gerekmiyor. Nostr anahtarınızla giriş yapın: tarayıcıda NIP-07, API için NIP-98."
@@ -188,6 +212,9 @@
   "3vxkus": {
     "defaultMessage": "Kaydedilecek bir şey yok — cihazınız (Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarı) hesabı korur."
   },
+  "3wJI0g": {
+    "defaultMessage": "Dublin aynı zamanda yönetilen <relay>Nostr röleleri</relay> ve <blossom>Blossom sunucularının</blossom> bulunduğu yerdir."
+  },
   "3woNJO": {
     "defaultMessage": "Varsayılan politikadan önce kurallar, öncelik sırasına göre (önce en düşük öncelikli olanlar) değerlendirilir. Sahteciliği engelleme koruması her zaman ana bilgisayar tarafından uygulanır."
   },
@@ -217,6 +244,9 @@
   },
   "4PkXEE": {
     "defaultMessage": "Seri terminal"
+  },
+  "4Sczsm": {
+    "defaultMessage": "Zincir için yer."
   },
   "4X/Ixq": {
     "defaultMessage": "Şifresi çözülmüş mesaj:"
@@ -692,6 +722,9 @@
   "G/yZLu": {
     "defaultMessage": "Kaldırın / Silin"
   },
+  "G0Z48e": {
+    "defaultMessage": "Quebec'teki tesisimiz, makinenin Avrupa dışında kullanılmasını istediğinizde tercih edebileceğiniz yerdir. Aynı monte etmesi kolay özellikler, aynı aylık faturalandırma ve ödeme Bitcoin ile yapılmaktadır."
+  },
   "G1kGar": {
     "defaultMessage": "Yalnızca geçiş anahtarı kullanan bir hesapta tek geçiş anahtarınızı kaldıramazsınız."
   },
@@ -800,6 +833,9 @@
   "Id24hd": {
     "defaultMessage": "Ad *"
   },
+  "IiNYda": {
+    "defaultMessage": "İçine yerleştirin/entegre edin. {regions}."
+  },
   "Ij0H43": {
     "defaultMessage": "Grafikler"
   },
@@ -832,6 +868,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "Bu uygulamanın aboneliği sona erdi ve ölçeklendirme sıfıra düşürüldü. Verileriniz hala burada bulunuyor; uygulamayı yeniden başlatmak için aboneliğinizi yenileyin."
+  },
+  "JcR1r1": {
+    "defaultMessage": "Bitcoin düğümü barındırma"
   },
   "JcmOUh": {
     "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price} Ayda, kendi alan adında ve TLS ile depolama hizmeti dahil olmak üzere, dakika cinsinden kullanım süresiyle."
@@ -938,6 +977,9 @@
   "N2IrpM": {
     "defaultMessage": "Onayla"
   },
+  "N6XokP": {
+    "defaultMessage": "Hayır. Bu, kök erişimi olan basit bir VPS’dir; siz düğümü kurar ve çalıştırırsınız. Tek tıklamayla yönetilen uygulamalarımız Nostr röleleri ve Blossom medya sunucularıdır ve bunlar yalnızca Dublin’de kullanılabilir."
+  },
   "NQgbYA": {
     "defaultMessage": "Hesap Ayarları"
   },
@@ -1021,6 +1063,9 @@
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
+  "Ppjs/C": {
+    "defaultMessage": "Londra'da VPS hosting"
   },
   "PucUfl": {
     "defaultMessage": "SSH Anahtarını Seçin:"
@@ -1133,6 +1178,9 @@
   "Sczo8n": {
     "defaultMessage": "Süre: {duration}"
   },
+  "SdeZbs": {
+    "defaultMessage": "Bitcoin ile ödeme yapabilir miyim?"
+  },
   "Sg3z1C": {
     "defaultMessage": "Herhangi bir sanal makine seçilmedi."
   },
@@ -1162,6 +1210,9 @@
   },
   "TE4fIS": {
     "defaultMessage": "Şehir"
+  },
+  "TF6JQf": {
+    "defaultMessage": "İstenilen özelliklere göre yapılandırılmış bir VPS {region}: {minCpu}–{maxCpu} sanal CPU ve {minMemory}–{maxMemory} bellek, Bitcoin ile ödeme yapıldı."
   },
   "TGPQYT": {
     "defaultMessage": "{success} ödenmiş"
@@ -1310,6 +1361,9 @@
   "WhLfzM": {
     "defaultMessage": "Adres Satırı 2"
   },
+  "WhmAMo": {
+    "defaultMessage": "Bitcoin Düğümü Barındırma"
+  },
   "Wsj2fc": {
     "defaultMessage": "Devam Eden Olaylar"
   },
@@ -1318,6 +1372,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{ay} other{aylar}}"
+  },
+  "X/4SWn": {
+    "defaultMessage": "Kanada, Quebec'te VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya doğrudan Bitcoin ile yapın."
   },
   "X/xmPf": {
     "defaultMessage": "Kendi veri tabanına sahip, izole bir ortam."
@@ -1430,6 +1487,9 @@
   "aTgjTE": {
     "defaultMessage": "Geçiş anahtarı ekle"
   },
+  "aW+dvb": {
+    "defaultMessage": "{min}–{max} sanal CPU"
+  },
   "acrOoz": {
     "defaultMessage": "Devam et."
   },
@@ -1475,6 +1535,9 @@
   "c0b5XV": {
     "defaultMessage": "Oran"
   },
+  "c3o/3B": {
+    "defaultMessage": "-den {price} ayda, KDV hariç."
+  },
   "c5aQL+": {
     "defaultMessage": "Bir uygulama seçin, ona bir ad verin ve ödeme yapın. Uygulama, TLS'nin zaten etkin olduğu kendi alan adı altında otomatik olarak çalışmaya başlar; herhangi bir işletim sistemi güncellemesi yapmanıza, Docker yapılandırması yapmanıza veya sertifika yenilemenize gerek kalmaz."
   },
@@ -1499,6 +1562,9 @@
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} ayda."
   },
+  "cZIa8g": {
+    "defaultMessage": "Londra'da kendi VPS'nizi oluşturun"
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1517,6 +1583,9 @@
   "d3wxHm": {
     "defaultMessage": "Yükleme geçmişi yükleniyor..."
   },
+  "d6JhA/": {
+    "defaultMessage": "Quebec'te kendi VPS'nizi oluşturun"
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1531,6 +1600,12 @@
   },
   "dPEbZd": {
     "defaultMessage": "Bu kurulum, ödeme yapılmasını bekliyor. Aboneliği ödeyerek kurulumu etkinleştirin."
+  },
+  "dSDJft": {
+    "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi burada oluşturun. {minCpu}–{maxCpu} sanal CPU ve {minMemory}–{maxMemory}ve bunun için Bitcoin ile ödeme yapın."
+  },
+  "dTTuZ+": {
+    "defaultMessage": "Dublin, İrlanda'da VPS hosting hizmeti, şu tarihten itibaren: {price}/ay, KDV hariç. İstediğiniz özelliklere göre özelleştirin. {maxCpu} vCPU. Bitcoin ile Lightning veya doğrudan ödeme yapın."
   },
   "dUQeuG": {
     "defaultMessage": "Geçiş anahtarı hesabı oluştur"
@@ -1582,6 +1657,9 @@
   },
   "eq14GY": {
     "defaultMessage": "Yeni gizli anahtarınız."
+  },
+  "eqv4wu": {
+    "defaultMessage": "Ayrıca Dublin'de"
   },
   "evMlX9": {
     "defaultMessage": "Otomatik olarak yenile"
@@ -1658,6 +1736,9 @@
   "gtGLdm": {
     "defaultMessage": "dahil olmak üzere {amount} işlem ücreti"
   },
+  "gu3xKo": {
+    "defaultMessage": "Zincir için yeterli alana sahip bir VPS, Bitcoin ile ödeniyor. Donanım özelliklerini siz seçin ve kendi node yazılımınızı kurun; root erişimi var, herhangi bir kontrol paneliyle uğraşmanıza gerek yok."
+  },
   "gv8O1e": {
     "defaultMessage": "VPS Teklifleri"
   },
@@ -1688,6 +1769,9 @@
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
   },
+  "i/LmLC": {
+    "defaultMessage": "Londra'da VPS hosting hizmeti, şu fiyatlardan itibaren: {price}aylık, KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya doğrudan blok zinciri üzerinden ödeme yapın."
+  },
   "i2/SmH": {
     "defaultMessage": "Fatura sistemi, bir VPS aboneliği gibi çalışır ve hiçbir uygulamada kurulum ücreti alınmaz."
   },
@@ -1702,6 +1786,9 @@
   },
   "iXNbPf": {
     "defaultMessage": "Yeniden adlandır"
+  },
+  "ia14kg": {
+    "defaultMessage": "Kanada'da VPS hosting"
   },
   "icn2DS": {
     "defaultMessage": "(Önerilir)"
@@ -1823,6 +1910,9 @@
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
   },
+  "lPXSYN": {
+    "defaultMessage": "{min}–{max} bellek"
+  },
   "lYEj5M": {
     "defaultMessage": "Yönetilen Uygulamalar"
   },
@@ -1855,6 +1945,9 @@
   },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+  },
+  "mHEBOr": {
+    "defaultMessage": "Bitcoin Core'u benim için kurar mısınız?"
   },
   "mIuuiJ": {
     "defaultMessage": "Hizmet Durumu ve Çalışma Süresi"
@@ -1946,6 +2039,9 @@
   "oCc8Oq": {
     "defaultMessage": "Anahtar Ekle"
   },
+  "oOdFIC": {
+    "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi tasarlayın ve Bitcoin ile ödeme yapın."
+  },
   "oPvhhB": {
     "defaultMessage": "CPU çekirdekleri"
   },
@@ -1966,6 +2062,9 @@
   },
   "oezJ0C": {
     "defaultMessage": "Sabit IP adresi, sınırsız veri kullanımı, Tor kullanımına izin ve KYC (Müşterini Tanı) zorunluluğu yok. Ödemenizi Lightning ile yapın; kendi düğürümüzü çalıştırdığımız için ödemeniz hiçbir zaman bir işlemciye uğramaz."
+  },
+  "ooCqJa": {
+    "defaultMessage": "İçinde {region}, disk yukarı doğru hareket ediyor {hdd} HDD veya {ssd} SSD, ile {cpu} vCPU ve {memory} en üst seviyede."
   },
   "oswGmn": {
     "defaultMessage": "Ödeme geçmişi varken buradan ayrılamazsınız."
@@ -1996,6 +2095,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "Durun"
+  },
+  "qA0DQR": {
+    "defaultMessage": "Londra'da VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya zincir üstü ödeme yöntemiyle Bitcoin ile yapın."
   },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."
@@ -2096,6 +2198,9 @@
   "sy+pv5": {
     "defaultMessage": "E-posta"
   },
+  "tG2iXV": {
+    "defaultMessage": "{min}–{max} {type} depolama"
+  },
   "tNmjzW": {
     "defaultMessage": "Bağlantı noktası/noktaları"
   },
@@ -2117,11 +2222,17 @@
   "tngc9N": {
     "defaultMessage": "Kaynak CIDR"
   },
+  "toaNGS": {
+    "defaultMessage": "VPS içinde {region}"
+  },
   "tthToS": {
     "defaultMessage": "Engelli"
   },
   "tuJeaZ": {
     "defaultMessage": "Evet."
+  },
+  "twd6jC": {
+    "defaultMessage": "Dublin, İrlanda'da VPS hosting hizmeti. İstediğiniz özelliklere göre (CPU, bellek ve depolama) kendi sunucunuzu yapılandırın. Ödemenizi Bitcoin ile Lightning veya zincir üstü ödeme yöntemleriyle yapın."
   },
   "tzMNF3": {
     "defaultMessage": "Durum"
@@ -2149,6 +2260,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "E-posta: {email}"
+  },
+  "uYtOL7": {
+    "defaultMessage": "VPS İrlanda — Dublin VPS, Bitcoin ile ödeme"
   },
   "ubXbwc": {
     "defaultMessage": "Varsayılan İlke"
@@ -2179,6 +2293,9 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Özel alıcı anahtarını kullanın"
+  },
+  "vIv3vC": {
+    "defaultMessage": "Kanada, Quebec'te VPS hosting hizmeti. {price}aylık, KDV hariç. {minCpu}–{maxCpu} vCPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya doğrudan zincir üzerinden ödeme yapın."
   },
   "vONi+O": {
     "defaultMessage": "Ülke"
@@ -2300,6 +2417,12 @@
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."
   },
+  "yracY5": {
+    "defaultMessage": "VPS Londra — Birleşik Krallık VPS, Bitcoin ile ödeme"
+  },
+  "yrsDLO": {
+    "defaultMessage": "İngiltere merkezli bir sanal makine, aylık olarak faturalandırılır ve Bitcoin ile ödeme alınır. İstediğiniz işlemciyi, belleği ve diski seçin; talep etmediğiniz hiçbir ek özellik bulunmaz."
+  },
   "ys3Bzn": {
     "defaultMessage": "Şimşek Ağı Düğümü VPS Barındırma — Şimşek Ağı ile Ödeme Yapın"
   },
@@ -2308,6 +2431,9 @@
   },
   "z4e/Em": {
     "defaultMessage": "Nostr Röle Sunucu Hizmetlerini Yönetti"
+  },
+  "z8VosU": {
+    "defaultMessage": "Dublin aynı zamanda yönetilen hizmetlerimizin bulunduğu yerdir. <relay>Nostr röleleri</relay> ve <blossom>Blossom sunucuları</blossom> başla, şu tarihten itibaren {price} bir ay."
   },
   "zAN0RF": {
     "defaultMessage": "Şifrelenmiş özel mesajlar"

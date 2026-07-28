@@ -29,6 +29,9 @@
   "+UjQFc": {
     "defaultMessage": "규칙 및 정책"
   },
+  "+lH372": {
+    "defaultMessage": "더블린에 VPS를 구축하세요."
+  },
   "+sQCsu": {
     "defaultMessage": "결제 완료"
   },
@@ -59,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC 지갑"
   },
+  "/kXbXW": {
+    "defaultMessage": "무엇을 만들 수 있을까요?"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider}(으)로 계속하기"
   },
@@ -73,6 +79,12 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
+  },
+  "0eyb8X": {
+    "defaultMessage": "VPS에 비트코인 전체 노드를 실행합니다. {regions}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요. {price}월별, 부가가치세 제외."
+  },
+  "0gAiqM": {
+    "defaultMessage": "아일랜드에서 VPS 호스팅"
   },
   "0gkn9c": {
     "defaultMessage": "귀하의 IP 주소 구독이 생성되었습니다. 첫 번째 결제를 완료하여 주소 공간을 할당하고 구독을 활성화하십시오."
@@ -97,6 +109,12 @@
   },
   "13cluZ": {
     "defaultMessage": "SSH 키 추가:"
+  },
+  "18wON0": {
+    "defaultMessage": "VPS 캐나다 — 퀘벡 VPS, 비트코인으로 결제"
+  },
+  "1HKX0H": {
+    "defaultMessage": "네, 라이트닝 네트워크 또는 온체인 방식으로 결제할 수 있습니다. 갱신 주기는 매월입니다."
   },
   "1LBny5": {
     "defaultMessage": "중단됨"
@@ -134,6 +152,9 @@
   "24piVc": {
     "defaultMessage": "<b>원하는 경우 자체 도메인을 사용할 수 있습니다.</b> 중계 서버에 CNAME 레코드를 설정하면 기본 호스트 이름과 함께 자체 인증서를 사용하여 서비스를 제공합니다. 별도의 확인 단계는 필요하지 않으며, DNS가 올바르게 작동하면 인증서가 발급됩니다."
   },
+  "2Aa625": {
+    "defaultMessage": "안에 {region}디스크는 최대 높이까지 올라갑니다. {disk}그리고 {cpu} 가상 CPU 및 {memory} 최상위 수준에서."
+  },
   "2QrTo0": {
     "defaultMessage": "새로운 IP 주소 할당 방식"
   },
@@ -154,6 +175,9 @@
   },
   "2nfKZI": {
     "defaultMessage": "나중에 릴레이 소프트웨어를 변경할 수 있나요?"
+  },
+  "2xMlQF": {
+    "defaultMessage": "체인 데이터를 저장할 공간이 있는 VPS에 비트코인 풀 노드를 실행합니다. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
   "35johu": {
     "defaultMessage": "라이트닝 네트워크, 온체인 비트코인 또는 카드 결제 방식 중 선택하세요. 가입 시 개인 정보는 필요하지 않습니다. 노스트르 키를 사용하여 로그인하세요. 브라우저에서는 NIP-07을, API에서는 NIP-98을 사용합니다."
@@ -188,6 +212,9 @@
   "3vxkus": {
     "defaultMessage": "저장할 것이 없습니다 — 기기(Face ID, Touch ID, Windows Hello 또는 보안 키)가 계정을 보호합니다."
   },
+  "3wJI0g": {
+    "defaultMessage": "더블린은 저희가 관리하는 <relay>Nostr 릴레이</relay>와 <blossom>블로섬 서버</blossom>가 운영되는 곳이기도 합니다."
+  },
   "3woNJO": {
     "defaultMessage": "기본 정책이 적용되기 전에 규칙은 우선순위에 따라 평가됩니다(우선순위가 낮은 것부터). 스푸핑 방지 기능은 항상 호스트에서 활성화됩니다."
   },
@@ -217,6 +244,9 @@
   },
   "4PkXEE": {
     "defaultMessage": "시리얼 터미널"
+  },
+  "4Sczsm": {
+    "defaultMessage": "체인점을 위한 공간"
   },
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
@@ -692,6 +722,9 @@
   "G/yZLu": {
     "defaultMessage": "제거하다"
   },
+  "G0Z48e": {
+    "defaultMessage": "저희 퀘벡 지점에서는 유럽 외 지역에서 기계를 사용하고 싶을 때 이용하실 수 있습니다. 조립은 직접 하시는 방식이며, 월별 요금은 동일하고, 비트코인으로 결제하실 수 있습니다."
+  },
   "G1kGar": {
     "defaultMessage": "패스키 전용 계정에서는 유일한 패스키를 삭제할 수 없습니다."
   },
@@ -800,6 +833,9 @@
   "Id24hd": {
     "defaultMessage": "이름 *"
   },
+  "IiNYda": {
+    "defaultMessage": "그 안에 내장하세요. {regions}."
+  },
   "Ij0H43": {
     "defaultMessage": "그래프"
   },
@@ -832,6 +868,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "이번 배포의 구독 기간이 만료되었고, 현재는 서비스가 중단되었습니다. 데이터는 여전히 여기에 보관되어 있으니, 구독을 갱신하여 다시 서비스를 시작할 수 있습니다."
+  },
+  "JcR1r1": {
+    "defaultMessage": "비트코인 노드 호스팅"
   },
   "JcmOUh": {
     "defaultMessage": "직접 노스트르 릴레이를 운영하세요. {price} 매달 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 동안 사용 가능합니다."
@@ -938,6 +977,9 @@
   "N2IrpM": {
     "defaultMessage": "확인합니다."
   },
+  "N6XokP": {
+    "defaultMessage": "아닙니다. 여기서는 루트 권한이 있는 일반 VPS를 사용하며, 사용자가 직접 노드를 설치하고 실행합니다. 당사가 제공하는 원클릭으로 간편하게 설치 및 관리할 수 있는 앱은 Nostr 릴레이와 Blossom 미디어 서버이며, 이들은 더블린 지역에서만 사용할 수 있습니다."
+  },
   "NQgbYA": {
     "defaultMessage": "계정 설정"
   },
@@ -1021,6 +1063,9 @@
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
+  "Ppjs/C": {
+    "defaultMessage": "런던에서 VPS 호스팅 서비스를 이용하세요."
   },
   "PucUfl": {
     "defaultMessage": "SSH 키 선택:"
@@ -1133,6 +1178,9 @@
   "Sczo8n": {
     "defaultMessage": "지속 시간: {duration}"
   },
+  "SdeZbs": {
+    "defaultMessage": "비트코인으로 결제할 수 있나요?"
+  },
   "Sg3z1C": {
     "defaultMessage": "선택된 가상 머신이 없습니다."
   },
@@ -1162,6 +1210,9 @@
   },
   "TE4fIS": {
     "defaultMessage": "도시"
+  },
+  "TF6JQf": {
+    "defaultMessage": "맞춤형으로 구축된 VPS {region}: {minCpu}–{maxCpu} 가상 CPU 및 {minMemory}–{maxMemory} 메모리, 비트코인으로 결제."
   },
   "TGPQYT": {
     "defaultMessage": "{success} 지급됨"
@@ -1310,6 +1361,9 @@
   "WhLfzM": {
     "defaultMessage": "주소 2행"
   },
+  "WhmAMo": {
+    "defaultMessage": "비트코인 노드 호스팅"
+  },
   "Wsj2fc": {
     "defaultMessage": "현재 진행 중인 사건"
   },
@@ -1318,6 +1372,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{달} other{개월}}"
+  },
+  "X/4SWn": {
+    "defaultMessage": "캐나다 퀘벡에서 VPS 호스팅을 이용하세요. 원하는 CPU, 메모리, 디스크를 선택하고, 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
   "X/xmPf": {
     "defaultMessage": "독립된 환경으로 자체 데이터베이스를 갖춤"
@@ -1430,6 +1487,9 @@
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
   },
+  "aW+dvb": {
+    "defaultMessage": "{min}–{max} 가상 CPU"
+  },
   "acrOoz": {
     "defaultMessage": "계속 진행하세요."
   },
@@ -1475,6 +1535,9 @@
   "c0b5XV": {
     "defaultMessage": "요금"
   },
+  "c3o/3B": {
+    "defaultMessage": "~에서 {price} 부가세 제외, 월별 금액."
+  },
   "c5aQL+": {
     "defaultMessage": "앱을 선택하고, 이름을 지정하고, 결제하세요. 그러면 TLS가 이미 적용된 자체 호스트 이름으로 앱이 실행됩니다. 운영체제를 패치하거나, Docker를 설정하거나, 인증서를 갱신할 필요가 없습니다."
   },
@@ -1499,6 +1562,9 @@
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price} 매달."
   },
+  "cZIa8g": {
+    "defaultMessage": "런던에 VPS를 구축하세요."
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1517,6 +1583,9 @@
   "d3wxHm": {
     "defaultMessage": "불러오는 기록..."
   },
+  "d6JhA/": {
+    "defaultMessage": "퀘벡에 있는 가상 사설 서버를 구축하세요."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1531,6 +1600,12 @@
   },
   "dPEbZd": {
     "defaultMessage": "이 배포는 결제를 기다리고 있습니다. 구독료를 지불하여 활성화하세요."
+  },
+  "dSDJft": {
+    "defaultMessage": "저희 더블린 사업장입니다. 원하는 기계를 직접 제작해 보세요. {minCpu}–{maxCpu} 가상 CPU 및 {minMemory}–{maxMemory}그리고 비트코인으로 결제하세요."
+  },
+  "dTTuZ+": {
+    "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price}/월, 부가가치세 별도. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "dUQeuG": {
     "defaultMessage": "패스키 계정 만들기"
@@ -1582,6 +1657,9 @@
   },
   "eq14GY": {
     "defaultMessage": "새로운 개인 키입니다."
+  },
+  "eqv4wu": {
+    "defaultMessage": "더블린에서도 마찬가지입니다."
   },
   "evMlX9": {
     "defaultMessage": "자동으로 갱신"
@@ -1658,6 +1736,9 @@
   "gtGLdm": {
     "defaultMessage": "다음 포함 {amount} 처리 수수료"
   },
+  "gu3xKo": {
+    "defaultMessage": "체인에 필요한 용량을 갖춘 VPS를 비트코인으로 결제합니다. 원하는 사양을 선택하고 직접 노드 소프트웨어를 설치하세요. 루트 권한이 제공되며, 제어판은 설치되지 않습니다."
+  },
   "gv8O1e": {
     "defaultMessage": "VPS 상품 안내"
   },
@@ -1688,6 +1769,9 @@
   "huqKGl": {
     "defaultMessage": "계정 만들기"
   },
+  "i/LmLC": {
+    "defaultMessage": "런던에서 이용 가능한 VPS 호스팅, 가격은 다음과 같습니다. {price}월별, 부가가치세 제외. {minCpu}–{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
+  },
   "i2/SmH": {
     "defaultMessage": "요금 부과는 VPS 구독 방식과 동일하며, 모든 앱에 대해 초기 설정 비용이 부과되지 않습니다."
   },
@@ -1702,6 +1786,9 @@
   },
   "iXNbPf": {
     "defaultMessage": "이름 변경"
+  },
+  "ia14kg": {
+    "defaultMessage": "캐나다에서 VPS 호스팅"
   },
   "icn2DS": {
     "defaultMessage": "(추천)"
@@ -1823,6 +1910,9 @@
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
   },
+  "lPXSYN": {
+    "defaultMessage": "{min}–{max} 기억"
+  },
   "lYEj5M": {
     "defaultMessage": "관리되는 앱"
   },
@@ -1855,6 +1945,9 @@
   },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+  },
+  "mHEBOr": {
+    "defaultMessage": "제가 비트코인 코어를 설치해 드릴까요?"
   },
   "mIuuiJ": {
     "defaultMessage": "서비스 상태 및 가동 시간"
@@ -1946,6 +2039,9 @@
   "oCc8Oq": {
     "defaultMessage": "키 추가"
   },
+  "oOdFIC": {
+    "defaultMessage": "저희 더블린 지점입니다. 원하는 기계를 직접 제작하고 비트코인으로 결제하세요."
+  },
   "oPvhhB": {
     "defaultMessage": "CPU 코어"
   },
@@ -1966,6 +2062,9 @@
   },
   "oezJ0C": {
     "defaultMessage": "고정 IP 주소, 트래픽 제한 없음, 토르 네트워크 사용 허용, 그리고 신원 확인 절차 불필요합니다. 라이트닝으로 결제하세요. 자체 노드를 운영하므로 귀하의 결제 정보는 외부 처리 서버에 전달되지 않습니다."
+  },
+  "ooCqJa": {
+    "defaultMessage": "안에 {region}디스크는 최대까지 {hdd} HDD 또는 {ssd} SSD, 함께 {cpu} 가상 CPU 및 {memory} 가장 높은 지점."
   },
   "oswGmn": {
     "defaultMessage": "지급 내역이 남아 있는 동안에는 출금할 수 없습니다."
@@ -1996,6 +2095,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "멈추세요."
+  },
+  "qA0DQR": {
+    "defaultMessage": "런던에서 VPS 호스팅을 이용하세요. 원하는 CPU, 메모리, 디스크를 선택하고, 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -2096,6 +2198,9 @@
   "sy+pv5": {
     "defaultMessage": "이메일"
   },
+  "tG2iXV": {
+    "defaultMessage": "{min}–{max} {type} 저장 공간"
+  },
   "tNmjzW": {
     "defaultMessage": "포트(들)"
   },
@@ -2117,11 +2222,17 @@
   "tngc9N": {
     "defaultMessage": "소스 CIDR"
   },
+  "toaNGS": {
+    "defaultMessage": "VPS가 포함된 {region}"
+  },
   "tthToS": {
     "defaultMessage": "사용 안 함"
   },
   "tuJeaZ": {
     "defaultMessage": "네."
+  },
+  "twd6jC": {
+    "defaultMessage": "아일랜드 더블린에 있는 VPS 호스팅 서비스를 이용하세요. 원하는 사양(CPU, 메모리, 저장 공간)을 직접 선택하여 구성할 수 있습니다. 비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "tzMNF3": {
     "defaultMessage": "상태"
@@ -2149,6 +2260,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "이메일: {email}"
+  },
+  "uYtOL7": {
+    "defaultMessage": "아일랜드 VPS — 더블린 VPS, 비트코인으로 결제"
   },
   "ubXbwc": {
     "defaultMessage": "기본 정책"
@@ -2179,6 +2293,9 @@
   },
   "v4Sg0C": {
     "defaultMessage": "사용자 지정 수신자 키를 사용하세요."
+  },
+  "vIv3vC": {
+    "defaultMessage": "캐나다 퀘벡에서 이용 가능한 VPS 호스팅 서비스 {price}월별, 부가가치세 제외. {minCpu}–{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "vONi+O": {
     "defaultMessage": "국가"
@@ -2300,6 +2417,12 @@
   "yUD6jT": {
     "defaultMessage": "몇 분 정도 소요됩니다. 결제가 완료되면 즉시 처리됩니다."
   },
+  "yracY5": {
+    "defaultMessage": "런던 VPS — 영국 VPS, 비트코인으로 결제"
+  },
+  "yrsDLO": {
+    "defaultMessage": "영국에서 제공하는 가상 서버로, 월 단위로 요금이 부과되며 비트코인으로 결제합니다. 원하는 CPU, 메모리, 디스크를 선택하세요. 요청하지 않은 추가 서비스는 제공되지 않습니다."
+  },
   "ys3Bzn": {
     "defaultMessage": "라이트닝 노드 VPS 호스팅 — 라이트닝으로 결제하세요."
   },
@@ -2308,6 +2431,9 @@
   },
   "z4e/Em": {
     "defaultMessage": "Nostr 릴레이 호스팅 관리"
+  },
+  "z8VosU": {
+    "defaultMessage": "더블린은 저희가 관리하는 시설이 있는 곳이기도 합니다. <relay>노스트르 릴레이</relay> 그리고 <blossom>블로섬 서버</blossom> 실행, ~부터 {price} 한 달."
   },
   "zAN0RF": {
     "defaultMessage": "암호화된 직접 메시지"

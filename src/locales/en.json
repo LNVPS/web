@@ -29,6 +29,9 @@
   "+UjQFc": {
     "defaultMessage": "Rules & policy"
   },
+  "+lH372": {
+    "defaultMessage": "Build your Dublin VPS"
+  },
   "+sQCsu": {
     "defaultMessage": "Complete Payment"
   },
@@ -59,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Wallet"
   },
+  "/kXbXW": {
+    "defaultMessage": "What you can build"
+  },
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
@@ -73,6 +79,12 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
+  },
+  "0eyb8X": {
+    "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price}/month ex-VAT."
+  },
+  "0gAiqM": {
+    "defaultMessage": "VPS hosting in Ireland"
   },
   "0gkn9c": {
     "defaultMessage": "Your IP space subscription has been created. Complete the first payment to allocate the address space and activate the subscription."
@@ -97,6 +109,12 @@
   },
   "13cluZ": {
     "defaultMessage": "Add SSH Key:"
+  },
+  "18wON0": {
+    "defaultMessage": "VPS Canada — Quebec VPS Paid in Bitcoin"
+  },
+  "1HKX0H": {
+    "defaultMessage": "Yes — Lightning or on-chain. Renewal is monthly."
   },
   "1LBny5": {
     "defaultMessage": "Stopped"
@@ -134,6 +152,9 @@
   "24piVc": {
     "defaultMessage": "<b>Your own domain if you want it.</b> Point a CNAME at your relay and we serve it alongside the default hostname with its own certificate. No verification step — the certificate is issued when your DNS resolves."
   },
+  "2Aa625": {
+    "defaultMessage": "In {region}, disk goes up to {disk}, with {cpu} vCPU and {memory} at the top end."
+  },
   "2QrTo0": {
     "defaultMessage": "New IP Space Order"
   },
@@ -154,6 +175,9 @@
   },
   "2nfKZI": {
     "defaultMessage": "Can I switch relay software later?"
+  },
+  "2xMlQF": {
+    "defaultMessage": "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain."
   },
   "35johu": {
     "defaultMessage": "Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key — NIP-07 in the browser, NIP-98 for the API."
@@ -188,6 +212,9 @@
   "3vxkus": {
     "defaultMessage": "Nothing to save — your device (Face ID, Touch ID, Windows Hello or a security key) secures the account."
   },
+  "3wJI0g": {
+    "defaultMessage": "Dublin is also where our managed <relay>Nostr relays</relay> and <blossom>Blossom servers</blossom> run."
+  },
   "3woNJO": {
     "defaultMessage": "Rules are evaluated in priority order (lowest first) before the default policy. Anti-spoofing protection is always enforced by the host."
   },
@@ -217,6 +244,9 @@
   },
   "4PkXEE": {
     "defaultMessage": "Serial terminal"
+  },
+  "4Sczsm": {
+    "defaultMessage": "Room for the chain"
   },
   "4X/Ixq": {
     "defaultMessage": "Decrypted message:"
@@ -692,6 +722,9 @@
   "G/yZLu": {
     "defaultMessage": "Remove"
   },
+  "G0Z48e": {
+    "defaultMessage": "Our Quebec site, for when you want the machine outside Europe. Same build-it-yourself specs, same monthly billing, paid in Bitcoin."
+  },
   "G1kGar": {
     "defaultMessage": "You can't remove your only passkey on a passkey-only account."
   },
@@ -800,6 +833,9 @@
   "Id24hd": {
     "defaultMessage": "Name *"
   },
+  "IiNYda": {
+    "defaultMessage": "Build it in {regions}."
+  },
   "Ij0H43": {
     "defaultMessage": "Graphs"
   },
@@ -832,6 +868,9 @@
   },
   "JVZcdC": {
     "defaultMessage": "This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again."
+  },
+  "JcR1r1": {
+    "defaultMessage": "Bitcoin node hosting"
   },
   "JcmOUh": {
     "defaultMessage": "Run your own Nostr relay from {price} per month, up in minutes on its own hostname with TLS and storage included."
@@ -938,6 +977,9 @@
   "N2IrpM": {
     "defaultMessage": "Confirm"
   },
+  "N6XokP": {
+    "defaultMessage": "No. This is a plain VPS with root access; you install and run the node. Our one-click managed apps are Nostr relays and Blossom media servers, and those are Dublin only."
+  },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
   },
@@ -1021,6 +1063,9 @@
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
+  },
+  "Ppjs/C": {
+    "defaultMessage": "VPS hosting in London"
   },
   "PucUfl": {
     "defaultMessage": "Select SSH Key:"
@@ -1133,6 +1178,9 @@
   "Sczo8n": {
     "defaultMessage": "Duration: {duration}"
   },
+  "SdeZbs": {
+    "defaultMessage": "Can I pay in Bitcoin?"
+  },
   "Sg3z1C": {
     "defaultMessage": "No VM selected"
   },
@@ -1162,6 +1210,9 @@
   },
   "TE4fIS": {
     "defaultMessage": "City"
+  },
+  "TF6JQf": {
+    "defaultMessage": "A VPS built to order in {region}: {minCpu}–{maxCpu} vCPU and {minMemory}–{maxMemory} memory, paid in Bitcoin."
   },
   "TGPQYT": {
     "defaultMessage": "{success} paid"
@@ -1310,6 +1361,9 @@
   "WhLfzM": {
     "defaultMessage": "Address Line 2"
   },
+  "WhmAMo": {
+    "defaultMessage": "Bitcoin Node Hosting"
+  },
   "Wsj2fc": {
     "defaultMessage": "Active Incidents"
   },
@@ -1318,6 +1372,9 @@
   },
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
+  },
+  "X/4SWn": {
+    "defaultMessage": "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
   },
   "X/xmPf": {
     "defaultMessage": "Isolated environment with its own database"
@@ -1430,6 +1487,9 @@
   "aTgjTE": {
     "defaultMessage": "Add passkey"
   },
+  "aW+dvb": {
+    "defaultMessage": "{min}–{max} vCPU"
+  },
   "acrOoz": {
     "defaultMessage": "Continue"
   },
@@ -1475,6 +1535,9 @@
   "c0b5XV": {
     "defaultMessage": "Rate"
   },
+  "c3o/3B": {
+    "defaultMessage": "From {price} per month, excluding VAT."
+  },
   "c5aQL+": {
     "defaultMessage": "Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working — no OS to patch, no Docker to configure, no certificate to renew."
   },
@@ -1499,6 +1562,9 @@
   "cZDydd": {
     "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month."
   },
+  "cZIa8g": {
+    "defaultMessage": "Build your London VPS"
+  },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
@@ -1517,6 +1583,9 @@
   "d3wxHm": {
     "defaultMessage": "Loading history..."
   },
+  "d6JhA/": {
+    "defaultMessage": "Build your Quebec VPS"
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1531,6 +1600,12 @@
   },
   "dPEbZd": {
     "defaultMessage": "This deployment is awaiting payment. Pay its subscription to activate it."
+  },
+  "dSDJft": {
+    "defaultMessage": "Our Dublin site. Build the machine you want between {minCpu}–{maxCpu} vCPU and {minMemory}–{maxMemory}, and pay for it in Bitcoin."
+  },
+  "dTTuZ+": {
+    "defaultMessage": "VPS hosting in Dublin, Ireland from {price}/month ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
   },
   "dUQeuG": {
     "defaultMessage": "Create a passkey account"
@@ -1582,6 +1657,9 @@
   },
   "eq14GY": {
     "defaultMessage": "Your new secret key"
+  },
+  "eqv4wu": {
+    "defaultMessage": "Also in Dublin"
   },
   "evMlX9": {
     "defaultMessage": "Auto-renew"
@@ -1658,6 +1736,9 @@
   "gtGLdm": {
     "defaultMessage": "including {amount} processing fee"
   },
+  "gu3xKo": {
+    "defaultMessage": "A VPS with room for the chain, paid for in Bitcoin. You choose the specs and install your own node software — root access, no control panel in the way."
+  },
   "gv8O1e": {
     "defaultMessage": "VPS Offers"
   },
@@ -1688,6 +1769,9 @@
   "huqKGl": {
     "defaultMessage": "Create account"
   },
+  "i/LmLC": {
+    "defaultMessage": "VPS hosting in London from {price}/month ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
+  },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
   },
@@ -1702,6 +1786,9 @@
   },
   "iXNbPf": {
     "defaultMessage": "Rename"
+  },
+  "ia14kg": {
+    "defaultMessage": "VPS hosting in Canada"
   },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
@@ -1823,6 +1910,9 @@
   "lP4qIQ": {
     "defaultMessage": "Card details"
   },
+  "lPXSYN": {
+    "defaultMessage": "{min}–{max} memory"
+  },
   "lYEj5M": {
     "defaultMessage": "Managed Apps"
   },
@@ -1855,6 +1945,9 @@
   },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+  },
+  "mHEBOr": {
+    "defaultMessage": "Do you install Bitcoin Core for me?"
   },
   "mIuuiJ": {
     "defaultMessage": "Service Status and Uptime"
@@ -1946,6 +2039,9 @@
   "oCc8Oq": {
     "defaultMessage": "Add Key"
   },
+  "oOdFIC": {
+    "defaultMessage": "Our Dublin site. Build the machine you want, and pay for it in Bitcoin."
+  },
   "oPvhhB": {
     "defaultMessage": "CPU cores"
   },
@@ -1966,6 +2062,9 @@
   },
   "oezJ0C": {
     "defaultMessage": "Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning — we run our own node, so your payment never touches a processor."
+  },
+  "ooCqJa": {
+    "defaultMessage": "In {region}, disk goes up to {hdd} HDD or {ssd} SSD, with {cpu} vCPU and {memory} at the top end."
   },
   "oswGmn": {
     "defaultMessage": "You can't leave while payout history exists."
@@ -1996,6 +2095,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "Stop"
+  },
+  "qA0DQR": {
+    "defaultMessage": "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
   },
   "qV+TFm": {
     "defaultMessage": "Payment failed"
@@ -2096,6 +2198,9 @@
   "sy+pv5": {
     "defaultMessage": "Email"
   },
+  "tG2iXV": {
+    "defaultMessage": "{min}–{max} {type} storage"
+  },
   "tNmjzW": {
     "defaultMessage": "Port(s)"
   },
@@ -2117,11 +2222,17 @@
   "tngc9N": {
     "defaultMessage": "Source CIDR"
   },
+  "toaNGS": {
+    "defaultMessage": "VPS in {region}"
+  },
   "tthToS": {
     "defaultMessage": "Disabled"
   },
   "tuJeaZ": {
     "defaultMessage": "Yes."
+  },
+  "twd6jC": {
+    "defaultMessage": "VPS hosting in Dublin, Ireland. Build your own spec — CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain."
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -2149,6 +2260,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "Email: {email}"
+  },
+  "uYtOL7": {
+    "defaultMessage": "VPS Ireland — Dublin VPS Paid in Bitcoin"
   },
   "ubXbwc": {
     "defaultMessage": "Default Policy"
@@ -2179,6 +2293,9 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
+  },
+  "vIv3vC": {
+    "defaultMessage": "VPS hosting in Quebec, Canada from {price}/month ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
   "vONi+O": {
     "defaultMessage": "Country"
@@ -2300,6 +2417,12 @@
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."
   },
+  "yracY5": {
+    "defaultMessage": "VPS London — UK VPS Paid in Bitcoin"
+  },
+  "yrsDLO": {
+    "defaultMessage": "A UK machine, billed monthly and paid in Bitcoin. Pick your CPU, memory and disk; nothing is bundled that you did not ask for."
+  },
   "ys3Bzn": {
     "defaultMessage": "Lightning Node VPS Hosting — Pay with Lightning"
   },
@@ -2308,6 +2431,9 @@
   },
   "z4e/Em": {
     "defaultMessage": "Managed Nostr Relay Hosting"
+  },
+  "z8VosU": {
+    "defaultMessage": "Dublin is also where our managed <relay>Nostr relays</relay> and <blossom>Blossom servers</blossom> run, from {price} a month."
   },
   "zAN0RF": {
     "defaultMessage": "Encrypted direct messages"

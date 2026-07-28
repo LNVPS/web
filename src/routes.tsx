@@ -29,6 +29,10 @@ import { AppsPage } from "./pages/apps.tsx";
 import { BlossomServerHostingPage } from "./pages/blossom-server-hosting.tsx";
 import { NostrRelayHostingPage } from "./pages/nostr-relay-hosting.tsx";
 import { LightningNodeVpsPage } from "./pages/lightning-node-vps.tsx";
+import { BitcoinNodeHostingPage } from "./pages/bitcoin-node-hosting.tsx";
+import { VpsIrelandPage } from "./pages/vps-ireland.tsx";
+import { VpsLondonPage } from "./pages/vps-london.tsx";
+import { VpsCanadaPage } from "./pages/vps-canada.tsx";
 import { AccountAppDeploymentPage } from "./pages/account-app-deployment.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
@@ -40,9 +44,11 @@ import {
   blossomHostingLoader,
   homeLoader,
   newsLoader,
+  regionLoader,
   newsPostLoader,
   statusLoader,
 } from "./loaders.ts";
+import { DublinRegionId, LondonRegionId, QuebecRegionId } from "./const.ts";
 
 // Lazy-load pages that import browser-only libraries (xterm, qr-code-styling)
 // so they are code-split out of the SSR bundle.
@@ -168,6 +174,29 @@ export const routes: RouteObject[] = [
         // managed app, but its relay cross-sell quotes the relays' catalog
         // price rather than a number written into the page.
         loader: appsLoader,
+      },
+      {
+        path: "/bitcoin-node-hosting",
+        element: <BitcoinNodeHostingPage />,
+        // Dublin's row: the page quotes the region with room for the chain.
+        loader: regionLoader(DublinRegionId),
+      },
+      {
+        path: "/vps-ireland",
+        element: <VpsIrelandPage />,
+        // `apps` for the managed-app cross-sell's price; the other two region
+        // pages have no apps in their region and do not fetch the catalog.
+        loader: regionLoader(DublinRegionId, { apps: true }),
+      },
+      {
+        path: "/vps-london",
+        element: <VpsLondonPage />,
+        loader: regionLoader(LondonRegionId),
+      },
+      {
+        path: "/vps-canada",
+        element: <VpsCanadaPage />,
+        loader: regionLoader(QuebecRegionId),
       },
       {
         path: "/vm",

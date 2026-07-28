@@ -1,5 +1,5 @@
 import type { IntlShape } from "react-intl";
-import type { VmTemplate } from "../api";
+import { CostPlanIntervalType, type VmCustomPrice, type VmTemplate } from "../api";
 import { formatBytesText } from "./bytes";
 import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
 
@@ -20,6 +20,64 @@ import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
  * The plans have no page of their own — they are ordered from the homepage —
  * so both URLs point there.
  */
+/**
+ * `Product`/`Offer` structured data for the smallest machine a region can
+ * build, at the price `POST /api/v1/vm/custom-template/price` quotes for it
+ * (`LNVPS/web#22`).
+ *
+ * The region pages sell the custom builder, not a plan: London and Quebec have
+ * no standard plan at all, so `vpsTemplateJsonLd` has nothing to describe
+ * there. Name, description and price come from the caller's catalog row and
+ * the price endpoint; a region with no price gets no markup rather than a
+ * remembered figure.
+ *
+ * The billing period is monthly and is *not* in the response: custom templates
+ * are always billed on a one-month interval
+ * (`lnvps_api_common/src/pricing.rs:882`), which is why the payload has no
+ * interval field to read. `LNVPS/api#302` asks for it on the wire; until then
+ * this is the one figure here the API does not state.
+ *
+ * Ex-VAT, like every other price on the site logged out: tax is applied at
+ * payment against the buyer's country, so it cannot be in a crawled figure.
+ */
+export function regionOfferJsonLd(opts: {
+  name: string;
+  description: string;
+  path: string;
+  regionName: string;
+  price: VmCustomPrice;
+}): object | undefined {
+  const offerPrice = standardUnitPrice(opts.price.amount, opts.price.currency);
+  if (!offerPrice) return undefined;
+  const url = `${SITE_URL}${opts.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: opts.name,
+    description: opts.description,
+    url,
+    brand: { "@type": "Brand", name: "LNVPS" },
+    offers: {
+      "@type": "Offer",
+      url,
+      availability: "https://schema.org/InStock",
+      price: offerPrice,
+      priceCurrency: opts.price.currency,
+      areaServed: { "@type": "Place", name: opts.regionName },
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: offerPrice,
+        priceCurrency: opts.price.currency,
+        valueAddedTaxIncluded: false,
+        billingDuration: 1,
+        billingIncrement: 1,
+        unitCode: BILLING_UNIT[CostPlanIntervalType.MONTH].code,
+        unitText: BILLING_UNIT[CostPlanIntervalType.MONTH].text,
+      },
+    },
+  };
+}
+
 export function vpsTemplateJsonLd(t: VmTemplate, intl: IntlShape): object {
   const offerPrice = standardUnitPrice(t.cost_plan.amount, t.cost_plan.currency);
   return {

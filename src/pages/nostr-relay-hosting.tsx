@@ -8,7 +8,7 @@ import { appJsonLd } from "../utils/app-seo";
 import { formatPriceText } from "../utils/currency";
 import {
   relayApps,
-  relayPriceFrom,
+  catalogPriceFrom,
   relaysHaveNoSetupFee,
 } from "../utils/relay-catalog";
 import BytesSize from "../components/bytes";
@@ -55,7 +55,7 @@ function Section({
  * constant to fall back to (`LNVPS/web#67`). Two states:
  *
  * - **the catalog quoted a price** — the page says "from {price} per month", which
- *   is `relayPriceFrom`: the lowest of the rows we have. True whether the
+ *   is `catalogPriceFrom`: the lowest of the rows we have. True whether the
  *   relays agree or not, so changing one relay's price in admin no longer
  *   makes this page claim a figure that is nobody's price.
  * - **no catalog** — no price anywhere on the page, rather than a number
@@ -80,7 +80,7 @@ export function NostrRelayHostingPage() {
   //
   // Undefined when the catalog gave us nothing to quote, and every use below
   // is branched on that — a price the front end cannot verify is not stated.
-  const price = relayPriceFrom(relays);
+  const price = catalogPriceFrom(relays);
   const priceText = price ? formatPriceText(intl, price) : undefined;
   const priceNode = price ? (
     <CostAmount cost={price} converted={false} />

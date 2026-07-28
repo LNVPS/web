@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lnvps.net/</loc>
     <changefreq>daily</changefreq>
@@ -10,9 +10,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- One entry per app in the catalog. Hand-maintained like the rest of this
-       file: add a line when an app is added. #18 replaces the whole file with a
-       generated one and should source these from /api/v1/apps. -->
   <url>
     <loc>https://lnvps.net/apps/1</loc>
     <changefreq>monthly</changefreq>
@@ -38,19 +35,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Use-case landing pages (#22). One per page as they land. -->
   <url>
     <loc>https://lnvps.net/blossom-server-hosting</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lnvps.net/nostr-relay-hosting</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lnvps.net/lightning-node-vps</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -73,5 +59,141 @@
     <loc>https://lnvps.net/tos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/web-updates-july-2026</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/web-updates-july-2026"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/web-updates-july-2026-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/web-updates-july-2026-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/web-updates-july-2026-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/web-updates-july-2026-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/web-updates-july-2026-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/web-updates-july-2026-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/web-updates-july-2026-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/web-updates-july-2026-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/web-updates-july-2026-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/web-updates-july-2026-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/web-updates-march-2026</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/web-updates-march-2026"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/web-updates-march-2026-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/web-updates-march-2026-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/web-updates-march-2026-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/web-updates-march-2026-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/web-updates-march-2026-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/web-updates-march-2026-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/web-updates-march-2026-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/web-updates-march-2026-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/web-updates-march-2026-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/web-updates-march-2026-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/2026-02-26-network-outage-post-mortem</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/2026-02-26-network-outage-post-mortem-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/referral-program</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/referral-program"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/referral-program-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/referral-program-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/referral-program-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/referral-program-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/referral-program-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/referral-program-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/referral-program-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/referral-program-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/referral-program-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/referral-program-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/web-console</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/web-console"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/web-console-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/web-console-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/web-console-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/web-console-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/web-console-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/web-console-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/web-console-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/web-console-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/web-console-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/web-console-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/Xc-U7jVUxf3zEm_uip-g8-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/ddOh7qIVbN35DAT6Akyxk-zh"/>
+  </url>
+  <url>
+    <loc>https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU</loc>
+    <lastmod>2025-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-ar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-fr"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-ja"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-ko"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-ru"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-tr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://lnvps.net/news/nkbwMjUKSlxDhLSrle9gU-zh"/>
   </url>
 </urlset>

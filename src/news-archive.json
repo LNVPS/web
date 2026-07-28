@@ -1,0 +1,2658 @@
+[
+  {
+    "id": "d9adc05eb1c5fe9455a08c2ec47cc21e031f9d91736c6aa8677fc8b05b9e186a",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-ar"
+      ],
+      [
+        "title",
+        "تحديثات الموقع الإلكتروني — يوليو 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nمنذ آخر تحديث قدمناه في مارس، استمررنا في إضافة تحسينات إلى لوحة التحكم. إليكم كل ما هو جديد.\n\n## قواعد جدار الحماية لكل جهاز افتراضي (VM)\n\nيمكنكم الآن إدارة جدار حماية لكل جهاز افتراضي مباشرةً من لوحة التحكم. تتيح لكم علامة التبويب **\"جدار الحماية\"** الجديدة في صفحة الجهاز الافتراضي تحديد السياسات الافتراضية للبيانات الواردة والصادرة، وإضافة ما يصل إلى 20 قاعدة مخصصة. تدعم كل قاعدة اتجاهًا وبروتوكولًا (TCP/UDP/ICMP)، ومنفذًا أو نطاق منافذ، وعنوان المصدر/الوجهة، وإجراءً (قبول أو حظر أو رفض). يمكن تمكين القواعد أو تعديلها أو إزالتها في أي وقت، مما يمنحكم تحكمًا دقيقًا في الوصول إلى الشبكة دون الحاجة إلى تعديل نظام التشغيل الخاص بالضيف.\n\n## إشعارات Telegram و WhatsApp\n\nبالإضافة إلى البريد الإلكتروني ورسائل Nostr المشفرة، يمكنكم الآن استقبال إشعارات الحساب عبر **Telegram** و **WhatsApp**. يمكنكم إدارة جميع قنوات الإشعارات الخاصة بكم من خلال صفحة إعدادات الحساب المُعاد تصميمها، حيث تعرض كل قناة حالة الاتصال الحالية ويمكن التحكم فيها بشكل مستقل.\n\n## إعادة تصميم إعدادات الحساب\n\nتمت إعادة تنظيم صفحة إعدادات الحساب إلى لوحات منظمة وواضحة، مع صفوف حالة على طراز المحطة الطرفية لكل قناة إشعارات. لم تعد علامة التبويب \"الدعم\" تتطلب منك إرفاق مفتاحك العام يدويًا — بل يتم تضمينه تلقائيًا الآن — وتحتفظ علامة التبويب \"الرسائل\" بسجل للقراءة فقط لمحادثات الدعم السابقة.\n\n## نظرة عامة على الجهاز الافتراضي مع قائمة التنقل الشريطية الجانبية\n\nتتمتع صفحة تفاصيل الجهاز الافتراضي بتصميم جديد للقائمة الشريطية الجانبية مع أقسام مخصصة لـ **\"نظرة عامة\" و \"الفواتير\" و \"وحدة التحكم\" و \"جدار الحماية\" و \"الرسوم البيانية\" و \"السجل\" و \"الترقية\"**. تمت إعادة تصميم النظرة العامة مع شبكة مواصفات واضحة (وحدة المعالجة المركزية، وذاكرة الوصول العشوائي، والقرص، ونظام التشغيل، والمنطقة، ومفتاح SSH)، وشارة حالة حية تعرض استخدام وحدة المعالجة المركزية وذاكرة الوصول العشوائي، ومعلومات انتهاء الصلاحية مع خيارات \"الدفع الآن/التجديد\" السريعة. تعرض الأجهزة الافتراضية التي لا تزال قيد الإعداد الآن محملًا متحركًا بدلاً من التفاصيل غير المكتملة، ويتم تمييز الأجهزة الافتراضية الجديدة كليًا التي تنتظر الدفعة الأولى بوضوح.\n\n## تحسينات صفحة الحالة\n\nتُظهر صفحة الحالة العامة الآن **رسمًا بيانيًا للوقت التشغيلي الشهري** يغطي الأشهر الـ 12 الماضية، حتى تتمكن من رؤية إمكانية الوصول التاريخية في لمحة. أضفنا أيضًا حالة **\"مُخطط لها\"** للصيانة المجدولة، مما يجعل من الواضح متى يُتوقع حدوث العمل بدلاً من حدوث ظرف غير متوقع.\n\n## تحسين محركات البحث وإمكانية الاكتشاف\n\nيحتوي الموقع الآن على عناوين صفحات ووصف تعريفي لكل مسار، وملف `robots.txt`، وخريطة موقع، وبيانات منظمة. يتم وصف منشورات الأخبار والصفحات الرئيسية بشكل صحيح لمحركات البحث ومعاينات الوسائط الاجتماعية، في كل لغة مدعومة.\n\nكما هو الحال دائمًا، شكرًا لاستخدامكم LNVPS. المزيد قادم.\n",
+    "sig": ""
+  },
+  {
+    "id": "ed6c68410bd9cbe3709d5d9f294517ca485e62929c0f1b3911bfdd3dd5f6e08a",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-de"
+      ],
+      [
+        "title",
+        "Web-Aktualisierungen – Juli 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nSeit unserer letzten Zusammenfassung im März haben wir die Verbesserungen im Kontrollpanel kontinuierlich fortgesetzt. Hier sind alle neuen Funktionen.\n\n## Firewall-Regeln pro VM\n\nSie können jetzt eine Firewall für jede VM direkt über das Kontrollpanel verwalten. Ein neuer Tab **Firewall** auf der VM-Seite ermöglicht es Ihnen, Standardrichtlinien für eingehenden und ausgehenden Datenverkehr festzulegen und bis zu 20 benutzerdefinierte Regeln hinzuzufügen. Jede Regel unterstützt eine Richtung, ein Protokoll (TCP/UDP/ICMP), einen Port oder einen Portbereich, eine Quell-/Zieladresse und eine Aktion (akzeptieren, verwerfen oder ablehnen). Regeln können jederzeit aktiviert, bearbeitet oder entfernt werden, wodurch Sie eine feingranulare Kontrolle über den Netzwerkzugriff erhalten, ohne das Gastbetriebssystem zu beeinflussen.\n\n## Telegram- und WhatsApp-Benachrichtigungen\n\nZusätzlich zu E-Mails und verschlüsselten Nostr-DMs können Sie jetzt Kontobenachrichtigungen über **Telegram** und **WhatsApp** erhalten. Verwalten Sie alle Ihre Benachrichtigungskanäle über die neu gestaltete Seite mit den Kontoeinstellungen, wo jeder Kanal seinen aktuellen Verbindungsstatus anzeigt und unabhängig aktiviert oder deaktiviert werden kann.\n\n## Neugestaltung der Kontoeinstellungen\n\nDie Seite mit den Kontoeinstellungen wurde in übersichtliche, abschnittsweise unterteilte Bereiche mit Statuszeilen im Terminal-Stil für jeden Benachrichtigungskanal umgestaltet. Auf dem Tab „Support“ müssen Sie nicht mehr manuell Ihren öffentlichen Schlüssel anhängen – er wird jetzt automatisch hinzugefügt – und auf dem Tab „Nachrichten“ wird ein schreibgeschützter Verlauf der vorherigen Support-Gespräche gespeichert.\n\n## VM-Übersicht mit Seitenleisten-Navigation\n\nDie VM-Detailseite hat ein neues Seitenleisten-Layout mit speziellen Bereichen für **Übersicht, Abrechnung, Konsole, Firewall, Diagramme, Verlauf und Upgrade**. Die Übersicht wurde mit einem übersichtlichen Spezifikationsraster (CPU, RAM, Speicher, Betriebssystem, Region, SSH-Schlüssel), einer Live-Statusanzeige für CPU- und RAM-Auslastung sowie Informationen zum Ablaufdatum mit schnellen Schaltflächen zum Bezahlen/Erneuern neu gestaltet. VMs, die sich noch in der Bereitstellungsphase befinden, zeigen jetzt einen animierten Ladebalken anstelle unvollständiger Details an, und brandneue VMs, die auf ihre erste Zahlung warten, sind deutlich gekennzeichnet.\n\n## Verbesserungen der Statusseite\n\nDie öffentliche Statusseite zeigt jetzt ein **monatliches Diagramm der Betriebszeit**, das die letzten 12 Monate abdeckt, sodass Sie die historische Verfügbarkeit auf einen Blick sehen können. Wir haben außerdem einen Status **Geplant** für geplante Wartungsarbeiten hinzugefügt, um deutlich zu machen, wann mit Arbeiten zu rechnen ist und wann es sich nicht um ein unerwartetes Ereignis handelt.\n\n## SEO und Auffindbarkeit\n\nDie Website bietet jetzt seitenweise Seitentitel und Meta-Beschreibungen, eine Datei `robots.txt`, eine Sitemap und strukturierte Daten. Nachrichtenartikel und wichtige Seiten werden korrekt für Suchmaschinen und Social-Media-Vorschauen in allen unterstützten Sprachen beschrieben.\n\nWie immer vielen Dank, dass Sie LNVPS nutzen. Es werden noch weitere Funktionen folgen.\n",
+    "sig": ""
+  },
+  {
+    "id": "bd953efdb27a9b75e3ada18fc97339894eb852f268fa45ab6def5fd220cd47e7",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026"
+      ],
+      [
+        "title",
+        "Web Updates — July 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ]
+    ],
+    "content": "Since our last round-up in March, we have kept shipping improvements across the control panel. Here is everything new.\n\n## Per-VM Firewall Rules\n\nYou can now manage a firewall for each VM directly from the control panel. A new **Firewall** tab on the VM page lets you set inbound and outbound default policies and add up to 20 custom rules. Each rule supports a direction, protocol (TCP/UDP/ICMP), port or port range, source/destination address, and an action (accept, drop, or reject). Rules can be enabled, edited, or removed at any time, giving you fine-grained control over network access without touching the guest OS.\n\n## Telegram and WhatsApp Notifications\n\nIn addition to email and encrypted Nostr DMs, you can now receive account notifications via **Telegram** and **WhatsApp**. Manage all of your notification channels from the redesigned account settings page, where each channel shows its current connection status and can be toggled independently.\n\n## Account Settings Redesign\n\nThe account settings page has been reorganised into clean, sectioned panels with terminal-style status rows for each notification channel. The Support tab no longer needs you to attach your public key manually — it is now included automatically — and the Messages tab keeps a read-only history of past support conversations.\n\n## VM Overview with Sidebar Navigation\n\nThe VM detail page has a new sidebar layout with dedicated sections for **Overview, Billing, Console, Firewall, Graphs, History, and Upgrade**. The overview has been redesigned with a clear spec grid (CPU, RAM, disk, OS, region, SSH key), a live status pill showing CPU and RAM usage, and expiry information with quick Pay Now / Renew actions. VMs that are still provisioning now show an animated loader instead of incomplete details, and brand-new VMs awaiting their first payment are clearly badged.\n\n## Status Page Improvements\n\nThe public status page now shows a **monthly uptime graph** covering the past 12 months, so you can see historical availability at a glance. We also added a **Planned** state for scheduled maintenance, making it clear when work is expected rather than an unexpected incident.\n\n## SEO and Discoverability\n\nThe site now ships per-route page titles and meta descriptions, a `robots.txt`, a sitemap, and structured data. News posts and key pages are properly described for search engines and social previews, in every supported language.\n\nAs always, thank you for using LNVPS. More to come.\n",
+    "sig": ""
+  },
+  {
+    "id": "1cfff2587ccd724ed533b14098806368cca824db9de14969a31718c3e24beb50",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-es"
+      ],
+      [
+        "title",
+        "Novedades en el sitio web — julio de 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nDesde nuestra última actualización en marzo, hemos seguido implementando mejoras en el panel de control. Aquí tiene todo lo nuevo.\n\n## Reglas de firewall por VM\n\nAhora puede administrar un firewall para cada VM directamente desde el panel de control. Una nueva pestaña de **Firewall** en la página de la VM le permite establecer políticas predeterminadas de entrada y salida y agregar hasta 20 reglas personalizadas. Cada regla admite una dirección, protocolo (TCP/UDP/ICMP), puerto o rango de puertos, dirección de origen/destino y una acción (aceptar, descartar o rechazar). Las reglas se pueden habilitar, editar o eliminar en cualquier momento, lo que le brinda un control preciso sobre el acceso a la red sin tocar el sistema operativo invitado.\n\n## Notificaciones de Telegram y WhatsApp\n\nAdemás del correo electrónico y los mensajes directos encriptados de Nostr, ahora puede recibir notificaciones de la cuenta a través de **Telegram** y **WhatsApp**. Administre todos sus canales de notificación desde la página de configuración de la cuenta rediseñada, donde cada canal muestra su estado de conexión actual y se puede activar o desactivar de forma independiente.\n\n## Rediseño de la configuración de la cuenta\n\nLa página de configuración de la cuenta se ha reorganizado en paneles limpios y seccionados, con filas de estado de estilo terminal para cada canal de notificación. La pestaña de Soporte ya no requiere que adjunte su clave pública manualmente; ahora se incluye automáticamente, y la pestaña de Mensajes mantiene un historial de solo lectura de las conversaciones de soporte anteriores.\n\n## Vista general de la VM con navegación en la barra lateral\n\nLa página de detalles de la VM tiene un nuevo diseño de barra lateral con secciones dedicadas para **Descripción general, facturación, consola, firewall, gráficos, historial y actualización.** La descripción general se ha rediseñado con una cuadrícula de especificaciones clara (CPU, RAM, disco, SO, región, clave SSH), una etiqueta de estado en vivo que muestra el uso de CPU y RAM, e información de vencimiento con acciones rápidas de Pagar ahora / Renovar. Las VM que aún están en fase de aprovisionamiento ahora muestran un indicador de carga animado en lugar de detalles incompletos, y las VM completamente nuevas que están a la espera de su primer pago se identifican claramente.\n\n## Mejoras en la página de estado\n\nLa página de estado pública ahora muestra un **gráfico de tiempo de actividad mensual** que abarca los últimos 12 meses, para que pueda ver la disponibilidad histórica de un vistazo. También agregamos un estado de **Programado** para el mantenimiento programado, lo que indica claramente cuándo se espera que se realice el trabajo en lugar de un incidente inesperado.\n\n## SEO y capacidad de descubrimiento\n\nEl sitio ahora incluye títulos de página y meta descripciones por ruta, un archivo `robots.txt`, un mapa del sitio y datos estructurados. Las publicaciones de noticias y las páginas clave se describen correctamente para los motores de búsqueda y las vistas previas de las redes sociales, en todos los idiomas admitidos.\n\nComo siempre, gracias por usar LNVPS. Próximamente.\n",
+    "sig": ""
+  },
+  {
+    "id": "c6189c2f4cfe40be77a8eb3876963e972c09c00c5742da81df4a8bdc31ea4e37",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-fr"
+      ],
+      [
+        "title",
+        "Mises à jour du site web – juillet 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nDepuis notre dernier récapitulatif en mars, nous avons continué à améliorer les fonctionnalités du panneau de contrôle. Voici toutes les nouveautés.\n\n## Règles de pare-feu par VM\n\nVous pouvez désormais gérer un pare-feu pour chaque VM directement depuis le panneau de contrôle. Un nouvel onglet **Pare-feu** sur la page de la VM vous permet de définir les politiques par défaut pour les connexions entrantes et sortantes et d’ajouter jusqu’à 20 règles personnalisées. Chaque règle prend en charge une direction, un protocole (TCP/UDP/ICMP), un port ou une plage de ports, une adresse source/destination et une action (accepter, supprimer ou rejeter). Les règles peuvent être activées, modifiées ou supprimées à tout moment, ce qui vous donne un contrôle précis sur l’accès au réseau sans avoir à toucher au système d’exploitation invité.\n\n## Notifications Telegram et WhatsApp\n\nEn plus des e-mails et des messages directs chiffrés Nostr, vous pouvez désormais recevoir des notifications de compte via **Telegram** et **WhatsApp**. Gérez tous vos canaux de notification à partir de la page des paramètres de compte redessinée, où chaque canal affiche son état de connexion actuel et peut être activé ou désactivé indépendamment.\n\n## Refonte des paramètres du compte\n\nLa page des paramètres du compte a été réorganisée en panneaux clairs et structurés, avec des lignes d’état de type terminal pour chaque canal de notification. L’onglet Assistance n’a plus besoin que vous attachiez manuellement votre clé publique, car elle est désormais incluse automatiquement, et l’onglet Messages conserve un historique en lecture seule des conversations d’assistance passées.\n\n## Vue d’ensemble de la VM avec navigation dans la barre latérale\n\nLa page des détails de la VM présente une nouvelle mise en page avec une barre latérale dédiée contenant des sections pour **Vue d’ensemble, Facturation, Console, Pare-feu, Graphiques, Historique et Mise à niveau**. La vue d’ensemble a été redessinée avec une grille de spécifications claire (CPU, RAM, disque, système d’exploitation, région, clé SSH), une vignette d’état en direct affichant l’utilisation du CPU et de la RAM, et des informations sur l’expiration avec des actions rapides « Payer maintenant / Renouveler ». Les VM qui sont toujours en cours d’approvisionnement affichent désormais un indicateur de chargement animé au lieu des détails incomplets, et les nouvelles VM qui attendent leur premier paiement sont clairement identifiées.\n\n## Améliorations de la page d’état\n\nLa page d’état publique affiche désormais un **graphique de disponibilité mensuel** couvrant les 12 derniers mois, afin que vous puissiez voir la disponibilité historique en un coup d’œil. Nous avons également ajouté un état **Planifié** pour les opérations de maintenance programmées, ce qui indique clairement quand les travaux sont prévus plutôt qu’un incident imprévu.\n\n## SEO et visibilité\n\nLe site propose désormais des titres et des méta-descriptions de page par itinéraire, un fichier `robots.txt`, une carte du site et des données structurées. Les articles de blog et les pages clés sont correctement décrits pour les moteurs de recherche et les aperçus des réseaux sociaux, dans toutes les langues prises en charge.\n\nComme toujours, merci d’utiliser LNVPS. D’autres nouveautés à venir.\n",
+    "sig": ""
+  },
+  {
+    "id": "5ebab1cc083291c4191b6c2676244dfc36d1a00c1a2685baff5b451e9a57bc8b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-ja"
+      ],
+      [
+        "title",
+        "ウェブサイトの更新情報 — 2026年7月"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n3月に前回お伝えして以来、コントロールパネルにさまざまな改善を加え、継続的にアップデートを行ってきました。今回、新たに追加された機能をご紹介します。\n\n## VMごとのファイアウォールルール\n\n теперь вы можете управлять фаерволом для каждого VM непосредственно из панели управления. Странице VM добавлена новая вкладка «Firewall», позволяющая задавать политики по умолчанию для входящего и исходящего трафика, а также добавлять до 20 пользовательских правил. Каждое правило поддерживает направление, протокол (TCP/UDP/ICMP), порт или диапазон портов, адрес источника/назначения и действие (разрешить, отклонить или запретить). Правила можно включать, редактировать или удалять в любое время, что обеспечивает детальный контроль над сетевым доступом без необходимости внесения изменений в гостевую ОС.\n\n## TelegramとWhatsAppによる通知\n\nEメールと暗号化されたNostr DMに加えて、 теперь вы можете получать уведомления об учетной записи через Telegram и WhatsApp. Управляйте всеми каналами уведомлений на обновленной странице настроек учетной записи, где для каждого канала отображается текущий статус подключения, и каждый канал можно включать или отключать независимо.\n\n## アカウント設定の再設計\n\nСтраница настроек учетной записи была реорганизована в четкие секционированные панели с строками состояния в стиле терминала для каждого канала уведомлений. На вкладке «Поддержка» больше не требуется вручную вставлять ваш открытый ключ — теперь он включается автоматически, а на вкладке «Сообщения» хранятся только для чтения прошлые сообщения службы поддержки.\n\n## サイドバーナビゲーションを備えたVM概要\n\nСтраница сведений о VM имеет новую компоновку с боковой панелью, с отдельными разделами для «Обзор», «Выставление счетов», «Консоль», «Брандмауэр», «Графики», «История» и «Обновление». Страница обзора была переработана с четкой сеткой спецификаций (ЦП, ОЗУ, диск, ОС, регион, ключ SSH), динамическим индикатором состояния, отображающим загрузку ЦП и ОЗУ, и информацией об истечении срока действия с быстрыми действиями «Оплатить сейчас» / «Продлить». Для VM, которые все еще находятся в процессе подготовки, теперь отображается анимированное изображение загрузки вместо неполной информации, а для совершенно новых VM, ожидающих первой оплаты, четко отображается соответствующий значок.\n\n## Улучшения страницы состояния\n\nНа публичной странице состояния теперь отображается **ежемесячный график доступности** за последние 12 месяцев, что позволяет быстро увидеть историческую доступность. Мы также добавили состояние **«Запланировано»** для плановых работ, что позволяет четко определить сроки выполнения, а не непредвиденное возникновение проблемы.\n\n## SEO и улучшение узнаваемости\n\nТеперь на сайте для каждого маршрута реализованы заголовки страниц и метаописания, robots.txt, карта сайта и структурированные данные. Новостные сообщения и ключевые страницы правильно описаны для поисковых систем и предварительного просмотра в социальных сетях на всех поддерживаемых языках.\n\nКак всегда, спасибо за использование LNVPS. Впереди еще много интересного.\n",
+    "sig": ""
+  },
+  {
+    "id": "66d6e708a2f910140e317e33fcebbb7483c2ca97a35d9509f34a5ed1357ad62b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-ko"
+      ],
+      [
+        "title",
+        "웹사이트 업데이트 — 2026년 7월"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n지난 3월 이후 저희는 지속적으로 제어판의 기능을 개선해 왔습니다. 여기에는 새로운 기능들이 포함되어 있습니다.\n\n## VM별 방화벽 규칙\n\n이제 제어판에서 각 VM에 대한 방화벽을 직접 관리할 수 있습니다. VM 페이지의 새로운 **방화벽** 탭을 통해 기본 인바운드 및 아웃바운드 정책을 설정하고 최대 20개의 사용자 지정 규칙을 추가할 수 있습니다. 각 규칙은 방향, 프로토콜(TCP/UDP/ICMP), 포트 또는 포트 범위, 소스/대상 주소, 작업(허용, 차단 또는 거부)을 지원합니다. 규칙은 언제든지 활성화, 편집 또는 제거할 수 있으므로 게스트 OS를 변경하지 않고도 네트워크 액세스를 세밀하게 제어할 수 있습니다.\n\n## 텔레그램 및 왓츠앱 알림\n\n이메일 및 암호화된 Nostr DM 외에도 이제 **텔레그램** 및 **왓츠앱**을 통해 계정 알림을 받을 수 있습니다. 재설계된 계정 설정 페이지에서 모든 알림 채널을 관리할 수 있으며, 각 채널은 현재 연결 상태를 표시하며 독립적으로 활성화/비활성화할 수 있습니다.\n\n## 계정 설정 재설계\n\n계정 설정 페이지가 깔끔한 섹션으로 재구성되었으며, 각 알림 채널에 대한 터미널 스타일 상태 행이 추가되었습니다. 지원 탭에서는 더 이상 수동으로 공개 키를 첨부할 필요가 없으며, 이제 자동으로 포함됩니다. 메시지 탭에는 이전 지원 대화 기록이 읽기 전용으로 표시됩니다.\n\n## 사이드바 탐색 기능이 있는 VM 개요\n\nVM 상세 페이지에 **개요, 결제, 콘솔, 방화벽, 그래프, 기록 및 업그레이드**를 위한 전용 섹션이 있는 새 사이드바 레이아웃이 적용되었습니다. 개요는 CPU, RAM, 디스크, OS, 리전, SSH 키를 명확하게 보여주는 명확한 사양 그리드, CPU 및 RAM 사용량을 실시간으로 보여주는 상태 표시기, 빠른 \"지금 지불\" / \"갱신\" 액션이 있는 만료 정보를 보여주도록 재설계되었습니다. 아직 프로비저닝 중인 VM은 이제 불완전한 상세 정보 대신 애니메이션 로더를 표시하며, 첫 번째 결제를 기다리는 완전히 새로운 VM은 명확하게 표시됩니다.\n\n## 상태 페이지 개선\n\n공개 상태 페이지에서는 이제 지난 12개월 동안의 **월별 가동 시간 그래프**를 표시하므로 과거 가용성을 한눈에 확인할 수 있습니다. 또한 예정된 유지 관리를 위해 **예정됨** 상태를 추가하여 언제 작업이 예상되는지 명확하게 알 수 있도록 했습니다.\n\n## SEO 및 검색 가능성 향상\n\n사이트는 이제 경로별 페이지 제목 및 메타 설명, `robots.txt`, 사이트맵 및 구조화된 데이터를 제공합니다. 뉴스 게시물 및 주요 페이지는 모든 지원 언어로 검색 엔진 및 소셜 미디어 미리보기에 적합하게 설명됩니다.\n\n언제나처럼 LNVPS를 이용해 주셔서 감사합니다. 앞으로도 더 많은 기능이 추가될 예정입니다.\n",
+    "sig": ""
+  },
+  {
+    "id": "4bf44c513525f848a215af8b45272e442a2b85cdba55e52645ea2fc7a3f1399b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-pt"
+      ],
+      [
+        "title",
+        "Novidades no site — julho de 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nDesde nossa última atualização em março, continuamos a realizar melhorias no painel de controle. Aqui está tudo o que há de novo.\n\n## Regras de Firewall por VM\n\nAgora você pode gerenciar um firewall para cada VM diretamente do painel de controle. Uma nova guia **Firewall** na página da VM permite definir políticas padrão de entrada e saída e adicionar até 20 regras personalizadas. Cada regra oferece suporte para direção, protocolo (TCP/UDP/ICMP), porta ou intervalo de portas, endereço de origem/destino e uma ação (aceitar, descartar ou rejeitar). As regras podem ser ativadas, editadas ou removidas a qualquer momento, oferecendo controle preciso sobre o acesso à rede sem precisar alterar o sistema operacional do cliente.\n\n## Notificações por Telegram e WhatsApp\n\nAlém de e-mail e mensagens criptografadas do Nostr, agora você pode receber notificações da sua conta via **Telegram** e **WhatsApp**. Gerencie todos os seus canais de notificação na página de configurações da conta redesenhada, onde cada canal mostra seu status atual de conexão e pode ser ativado ou desativado independentemente.\n\n## Redesign das Configurações da Conta\n\nA página de configurações da conta foi reorganizada em painéis limpos e seccionados, com linhas de status no estilo terminal para cada canal de notificação. Na guia Suporte, você não precisa mais anexar sua chave pública manualmente; ela agora é incluída automaticamente, e a guia Mensagens mantém um histórico somente leitura das conversas de suporte anteriores.\n\n## Visão Geral da VM com Navegação na Barra Lateral\n\nA página de detalhes da VM tem um novo layout de barra lateral com seções dedicadas para **Visão Geral, Faturamento, Console, Firewall, Gráficos, Histórico e Atualização**. A visão geral foi redesenhada com uma grade de especificações clara (CPU, RAM, disco, SO, região, chave SSH), um indicador de status ao vivo mostrando o uso de CPU e RAM e informações de vencimento com ações rápidas de Pagar Agora / Renovar. As VMs que ainda estão sendo provisionadas agora exibem um carregador animado em vez de detalhes incompletos, e as VMs totalmente novas que aguardam seu primeiro pagamento são claramente identificadas.\n\n## Melhorias na Página de Status\n\nA página de status pública agora exibe um **gráfico mensal de tempo de atividade** cobrindo os últimos 12 meses, para que você possa ver a disponibilidade histórica de relance. Também adicionamos um estado **Programado** para manutenção agendada, deixando claro quando o trabalho é esperado, em vez de um incidente inesperado.\n\n## SEO e Indexação\n\nO site agora oferece títulos de página e meta descrições por rota, um arquivo `robots.txt`, um mapa do site e dados estruturados. As notícias e as páginas principais são devidamente descritas para mecanismos de busca e pré-visualizações de mídia social, em todos os idiomas suportados.\n\nComo sempre, obrigado por usar o LNVPS. Em breve, mais novidades.\n",
+    "sig": ""
+  },
+  {
+    "id": "7c58732081da47d8c22c4409f35bb558a47ed84ff9ffd10f40e686da35e235cc",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-ru"
+      ],
+      [
+        "title",
+        "Обновления веб-сайта — июль 2026 года"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nС момента нашей последней сводки в марте мы продолжали вносить улучшения в панель управления. Вот все новое.\n\n## Правила брандмауэра для каждой виртуальной машины\n\nТеперь вы можете управлять брандмауэром для каждой виртуальной машины непосредственно из панели управления. Новая вкладка **Брандмауэр** на странице виртуальной машины позволяет устанавливать параметры политики для входящих и исходящих подключений и добавлять до 20 пользовательских правил. Каждое правило поддерживает направление, протокол (TCP/UDP/ICMP), порт или диапазон портов, адрес источника/назначения и действие (разрешить, отклонить или запретить). Правила можно включать, редактировать или удалять в любое время, что обеспечивает детальный контроль над сетевым доступом без изменения гостевой ОС.\n\n## Уведомления в Telegram и WhatsApp\n\nВ дополнение к электронной почте и зашифрованным личным сообщениям в Nostr, теперь вы можете получать уведомления об учетной записи через **Telegram** и **WhatsApp**. Управляйте всеми каналами уведомлений на обновленной странице настроек учетной записи, где для каждого канала отображается текущий статус подключения, и каждый канал можно включать или выключать независимо.\n\n## Обновленный дизайн страницы настроек учетной записи\n\nСтраница настроек учетной записи была переработана и разделена на четкие, разделенные панели со строками статуса в стиле терминала для каждого канала уведомлений. На вкладке «Поддержка» больше не требуется вручную прикреплять ваш открытый ключ — он теперь включается автоматически, а на вкладке «Сообщения» хранится неизменяемый журнал прошлых разговоров в службе поддержки.\n\n## Обзор виртуальной машины с навигацией в боковой панели\n\nНа странице сведений о виртуальной машине реализована новая компоновка с боковой панелью, содержащей отдельные разделы для **Обзора, тарифов, консоли, брандмауэра, графиков, истории и обновления**. Раздел обзора был переработан и включает в себя четкую таблицу спецификаций (CPU, RAM, диск, ОС, регион, SSH-ключ), динамическую строку состояния, показывающую использование CPU и RAM, и информацию об истечении срока действия с кнопками быстрого доступа «Оплатить сейчас» / «Продлить». Виртуальные машины, которые все еще находятся в процессе подготовки, теперь показывают анимированный индикатор загрузки вместо неполных данных, а совершенно новые виртуальные машины, ожидающие первой оплаты, четко помечены.\n\n## Улучшения страницы статуса\n\nНа общедоступной странице статуса теперь отображается **ежемесячный график времени безотказной работы** за последние 12 месяцев, чтобы вы могли быстро увидеть историческую доступность. Мы также добавили состояние **Запланировано** для запланированных технических работ, чтобы было понятно, когда ожидается выполнение работ, а не неожиданный сбой.\n\n## SEO и возможность поиска\n\nНа сайте теперь используются заголовки и мета-описания страниц для каждого маршрута, файл `robots.txt`, карта сайта и структурированные данные. Новости и основные страницы правильно описаны для поисковых систем и предварительного просмотра в социальных сетях на каждом поддерживаемом языке.\n\nКак всегда, спасибо за использование LNVPS. Впереди еще много интересного.\n",
+    "sig": ""
+  },
+  {
+    "id": "f027b1ee57ce273cf2633191fe293381c0f7d43abbdcf591a27f646a8b700f7c",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-tr"
+      ],
+      [
+        "title",
+        "Web Sitesi Güncellemeleri – Temmuz 2026"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nMart ayındaki son güncellememizden bu yana, kontrol panelinde sürekli iyileştirmeler yapmaya devam ettik. İşte yeni eklenen özellikler.\n\n## VM Başına Özel Güvenlik Duvarı Kuralları\n\nArtık her VM için güvenlik duvarını doğrudan kontrol panelinden yönetebilirsiniz. VM sayfasındaki yeni **Güvenlik Duvarı** sekmesi, gelen ve giden varsayılan ilkeleri ayarlamanıza ve en fazla 20 özel kural eklemenize olanak tanır. Her kural, bir yön, protokol (TCP/UDP/ICMP), bağlantı noktası veya bağlantı noktası aralığı, kaynak/hedef adres ve bir eylem (kabul et, reddet veya bloke et) destekler. Kurallar istediğiniz zaman etkinleştirilebilir, düzenlenebilir veya kaldırılabilir; böylece konuk işletim sistemine dokunmadan ağ erişimini hassas bir şekilde kontrol edebilirsiniz.\n\n## Telegram ve WhatsApp Bildirimleri\n\nE-posta ve şifreli Nostr DM'lerinin yanı sıra, artık hesap bildirimlerini **Telegram** ve **WhatsApp** üzerinden alabilirsiniz. Tasarlanmış yeniden hesap ayarları sayfasından tüm bildirim kanallarınızı yönetin; burada her kanal güncel bağlantı durumunu gösterir ve bağımsız olarak etkin veya devre dışı bırakılabilir.\n\n## Hesap Ayarları Yeniden Tasarlandı\n\nHesap ayarları sayfası, her bildirim kanalı için terminal tarzı durum satırlarına sahip, düzenli ve bölümlere ayrılmış panellere ayrıldı. Destek sekmesinde artık genel anahtarınızı manuel olarak eklemenize gerek kalmayacak; artık otomatik olarak dahil ediliyor ve Mesajlar sekmesi, geçmişteki destek konuşmalarının salt okunur bir geçmişini tutuyor.\n\n## Yan Kenar Çubuğu Navigasyonu ile VM Genel Bakış\n\nVM ayrıntı sayfasında, **Genel Bakış, Faturalama, Konsol, Güvenlik Duvarı, Grafikler, Geçmiş ve Yükseltme** için özel bölümlere sahip yeni bir yan çubuk düzeni bulunur. Genel bakış, net bir özellik ızgarası (CPU, RAM, disk, işletim sistemi, bölge, SSH anahtarı), CPU ve RAM kullanımını gösteren canlı bir durum etiketi ve hızlı Öde / Yenile eylemleri ile yeniden tasarlandı. Hala oluşturulmakta olan VM'ler artık eksik ayrıntılar yerine animasyonlu bir yükleyici gösterir ve ilk ödemesini bekleyen yepyeni VM'ler, açıkça işaretlenir.\n\n## Durum Sayfası İyileştirmeleri\n\nHerkese açık durum sayfası artık son 12 ayı kapsayan **aylık çalışma süresi grafiği** gösteriyor, böylece geçmiş kullanılabilirliği hızlı bir şekilde görebilirsiniz. Ayrıca, planlı bakım için bir **Planlanmış** durum ekledik; böylece bir çalışmanın ne zaman beklendiği açıkça belirtilir ve beklenmedik bir olay yaşanmaz.\n\n## SEO ve Bulunabilirlik\n\nSite artık sayfa başına özel sayfa başlıkları ve meta açıklamaları, `robots.txt`, bir site haritası ve yapılandırılmış veri sunmaktadır. Haber yayınları ve temel sayfalar, desteklenen her dilde arama motorları ve sosyal önizlemeler için düzgün bir şekilde açıklanır.\n\nHer zaman olduğu gibi, LNVPS'yi kullandığınız için teşekkür ederiz. Daha fazlası geliyor.\n",
+    "sig": ""
+  },
+  {
+    "id": "74506923c3ae4525edd8ce2239f43dd1b17f858e22195bdd2607c7ec806eb01e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1783360800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-july-2026-zh"
+      ],
+      [
+        "title",
+        "网站更新——2026年7月"
+      ],
+      [
+        "published_at",
+        "1783360800"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n自我们上一次在三月进行的总结之后，我们一直在持续改进控制面板。以下是所有新增内容。\n\n## 虚拟机防火墙规则\n\n现在，您可以直接从控制面板管理每个虚拟机的防火墙。虚拟机页面上的新“**防火墙**”选项卡允许您设置入站和出站默认策略，并添加最多 20 条自定义规则。每条规则都支持方向、协议（TCP/UDP/ICMP）、端口或端口范围、源/目标地址以及操作（接受、丢弃或拒绝）。规则可以随时启用、编辑或删除，从而让您能够对网络访问进行细致的控制，而无需触及客户操作系统。\n\n## Telegram 和 WhatsApp 通知\n\n除了电子邮件和加密的 Nostr 私信之外，您现在还可以通过 **Telegram** 和 **WhatsApp** 接收帐户通知。您可以从重新设计的帐户设置页面管理所有通知渠道，每个渠道都会显示其当前的连接状态，并且可以独立切换。\n\n## 帐户设置重新设计\n\n帐户设置页面已重新组织为简洁、分段的面板，每个通知渠道都具有终端风格的状态行。支持选项卡不再需要您手动附加公钥——现在会自动包含，并且“消息”选项卡会保留过去的支持对话的只读历史记录。\n\n## 具有侧边栏导航的虚拟机概览\n\n虚拟机详细信息页面具有新的侧边栏布局，其中包含用于“**概览、计费、控制台、防火墙、图表、历史记录和升级**”的专用部分。概览已重新设计，具有清晰的规格网格（CPU、RAM、磁盘、操作系统、区域、SSH 密钥）、显示 CPU 和 RAM 使用情况的实时状态指示器以及带有快速“立即付款/续订”操作的到期信息。正在配置的虚拟机现在显示动画加载器，而不是不完整的详细信息，并且等待进行首次付款的全新虚拟机会明确标明。\n\n## 状态页面改进\n\n公共状态页面现在显示**月度正常运行时间图表**，涵盖过去 12 个月，因此您可以一目了然地查看历史可用性。我们还添加了一个“**计划中**”状态，用于计划维护，这样可以清楚地表明何时会进行维护，而不是发生意外事件。\n\n## SEO 和可发现性\n\n该网站现在为每个路由提供页面标题和元描述、`robots.txt` 文件、站点地图和结构化数据。新闻帖子和关键页面都针对搜索引擎进行了适当的描述，并且针对所有受支持的语言都进行了社交预览。\n\n与往常一样，感谢您使用 LNVPS。未来还会推出更多功能。\n",
+    "sig": ""
+  },
+  {
+    "id": "dc238145ac009c0175a5cfdc02bc0f0bc49352e805e2a9d27e32b4a5fe042d98",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-ar"
+      ],
+      [
+        "title",
+        "تحديثات الموقع الإلكتروني — مارس 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nلقد استمرت عمليات الشحن بوتيرة ثابتة منذ إطلاق برنامج الإحالة. فيما يلي كل ما ظهر في لوحة التحكم منذ ذلك الحين.\n\n## تصميمات جديدة وواجهة مستخدم مُعاد تصميمها\n\nتمت إعادة تصميم الواجهة مع تصميمين جديدين: تصميم **نيون** داكن وتصميم **فاتح**. يمكنك التبديل بين التصميمين في أي وقت باستخدام أداة تبديل التصميم الجديدة في شريط التنقل. تعرض قائمة الأجهزة الافتراضية الآن خوادمك في تخطيط صف مضغوط يتناسب مع المزيد من المعلومات في لمحة سريعة.\n\n## مدفوعات بطاقة ريفولوت\n\nبالإضافة إلى Bitcoin Lightning و NWC، يمكنك الآن الدفع باستخدام **بطاقة ريفولوت** عبر نظام الدفع المدمج من ريفولوت. تم إعادة تصميم عملية الدفع لعرض جميع طرق الدفع المتاحة معًا، بما في ذلك رسوم المعالجة، حتى تعرف بالضبط المبلغ الذي سيتم تحصيله منك قبل التأكيد.\n\n## فترات تجديد مرنة\n\nعند تجديد أو طلب جهاز افتراضي، يمكنك الآن الاختيار من بين فترات فوترة متعددة بدلاً من أن تكون مقيدًا بفترة واحدة. اختر الفترة التي تناسب احتياجاتك وسيتم تحديث السعر تلقائيًا.\n\n## صفحة الاتصال\n\nتتوفر الآن **صفحة اتصال** جديدة من خلال شريط التنقل الرئيسي للاستفسارات العامة.\n\n## قائمة عناوين IP\n\nيتم الآن عرض عناوين IP والشبكات الفرعية المخصصة لك في نظرة عامة على الحساب، مما يسهل رؤية جميع الموارد المرتبطة بحسابك في مكان واحد.\n\n## معلومات وحدة المعالجة المركزية\n\nتعرض الآن بطاقات الأجهزة الافتراضية وصفحة الموارد الشركة المصنعة لوحدة المعالجة المركزية، والبنية، وعلامات الميزات، مما يمنحك رؤية أوضح للأجهزة التي تعمل عليها أجهزتك الافتراضية.\n\n## إعادة تصميم صفحة الحساب\n\nتمت إعادة تنظيم قسم الحساب مع **شريط جانبي ثابت** للتنقل. يحتوي كل قسم (الإعدادات، مفاتح SSH، النطاقات، الإحالة، الرسائل، الدعم) الآن على صفحته المخصصة مع تسمية واضحة ومؤشر للحالة النشطة.\n\n## وكيل مسار مجال نوستر\n\nتتضمن الآن صفحة تكوين مجال نوستر تعليمات خطوة بخطوة لإعداد **وكيل يعتمد على المسار** (`/_nostr/...`) كبديل لتكوين النطاق الفرعي المباشر.\n\n## رسائل مباشرة مشفرة (NIP-17)\n\nيتواصل الدعم من خلال رسائل مباشرة مشفرة من طرف إلى طرف باستخدام معيار NIP-17. يتيح لك علامة التبويب **\"الرسائل\"** المخصصة في قسم الحساب عرض الرسائل والرد عليها من فريق الدعم. يتم فك تشفير الرسائل محليًا باستخدام مفاتيح نوستر الخاصة بك وتخزينها مؤقتًا في متصفحك لتحميل أسرع.\n\n## التحقق من البريد الإلكتروني عند الطلب\n\nعند تقديم طلب جهاز افتراضي جديد، تظهر خطوة للتحقق من البريد الإلكتروني إذا لم يتم تأكيد عنوان البريد الإلكتروني الخاص بحسابك بعد. هذا يبقي عملية الطلب في مكان واحد دون توجيهك بعيدًا.\n\n## إعادة التثبيت في صفحة تفاصيل الجهاز الافتراضي\n\nتمت نقل إجراء إعادة التثبيت من قائمة الأجهزة الافتراضية إلى صفحة **\"تفاصيل الجهاز الافتراضي\"**، جنبًا إلى جنب مع إجراءات الإدارة الأخرى.\n\n## التوطين\n\nتتوفر الآن لوحة التحكم الكاملة في عشر لغات: العربية والصينية والألمانية والإسبانية والفرنسية واليابانية والكورية والبرتغالية والروسية والتركية. يتم اكتشاف اللغة المفضلة في متصفحك تلقائيًا ويمكنك التبديل في أي وقت من أداة تحديد اللغة في شريط التنقل. يتم تنسيق التواريخ والأرقام والتكاليف لتتناسب مع موقعك المحدد، ويتم عرض اللغة العربية بتخطيط من اليمين إلى اليسار في جميع أنحاء البرنامج.\n",
+    "sig": ""
+  },
+  {
+    "id": "c09aa8e11cdaffafddec059b14722ad5ce74f43f6c920cd7a4aad3174c282ab8",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-de"
+      ],
+      [
+        "title",
+        "Webseiten-Updates – März 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nSeit dem Start des Empfehlungsprogramms sind unsere Versandzahlen stetig gestiegen. Hier ist eine Übersicht über alle Änderungen, die seitdem im Bedienfeld vorgenommen wurden.\n\n## Neue Designs und überarbeitete Benutzeroberfläche\n\nDie Benutzeroberfläche wurde mit zwei neuen Designs überarbeitet: einem **Neon**-Dunkeldesign und einem **Hellen** Design. Sie können jederzeit zwischen den Designs wechseln, indem Sie den neuen Design-Umschalter in der Navigationsleiste verwenden. Die Liste der virtuellen Maschinen zeigt Ihre Server nun in einem kompakten, reihenförmigen Layout an, sodass mehr Informationen auf einen Blick angezeigt werden.\n\n## Revolut-Kartenzahlungen\n\nZusätzlich zu Bitcoin Lightning und NWC können Sie jetzt über die integrierte Revolut-Zahlungsabwicklung mit einer **Revolut-Karte** bezahlen. Der Zahlungsvorgang wurde so umgestaltet, dass alle verfügbaren Zahlungsmethoden, einschließlich der Bearbeitungsgebühren, zusammen angezeigt werden, damit Sie genau wissen, welche Gebühren Ihnen vor der Bestätigung berechnet werden.\n\n## Flexible Verlängerungsintervalle\n\nBeim Verlängern oder Bestellen einer virtuellen Maschine können Sie jetzt aus mehreren Abrechnungsintervallen wählen, anstatt auf einen einzigen Zeitraum beschränkt zu sein. Wählen Sie das Intervall, das Ihren Anforderungen entspricht, und der Preis wird automatisch aktualisiert.\n\n## Kontaktseite\n\nEine neue **Kontakt**seite ist über die Hauptnavigation verfügbar, um allgemeine Anfragen zu stellen.\n\n## IP-Adressübersicht\n\nIhre zugewiesenen IP-Adressen und Subnetze sind jetzt in der Kontoübersicht sichtbar, sodass Sie alle mit Ihrem Konto verbundenen Ressourcen einfach an einem Ort einsehen können.\n\n## CPU-Informationen\n\nVM-Karten und die Ressourcen-Seite zeigen jetzt den CPU-Hersteller, die Architektur und die Feature-Flags an, wodurch Sie einen besseren Einblick in die Hardware erhalten, auf der Ihre virtuellen Maschinen ausgeführt werden.\n\n## Neugestaltung der Kontoseite\n\nDer Kontobereich wurde mit einer **permanenten Seitenleiste** zur Navigation neu organisiert. Jeder Abschnitt (Einstellungen, SSH-Schlüssel, Domains, Empfehlung, Nachrichten, Support) hat jetzt eine eigene spezielle Seite mit einer klaren Beschriftung und einer Anzeige des aktiven Zustands.\n\n## Nostr-Domain-Pfad-Proxy\n\nAuf der Konfigurationsseite für Nostr-Domains finden Sie jetzt schrittweise Anleitungen zum Einrichten eines **pfadbasierten Proxys** (`/_nostr/...`) als Alternative zur direkten Subdomain-Konfiguration.\n\n## Verschlüsselte Direktnachrichten (NIP-17)\n\nDer Support kommuniziert über Ende-zu-Ende-verschlüsselte Direktnachrichten unter Verwendung des NIP-17-Standards. Ein spezieller **Nachrichten**-Tab im Kontobereich ermöglicht es Ihnen, Nachrichten vom Support-Team anzuzeigen und darauf zu antworten. Die Nachrichten werden lokal mit Ihren Nostr-Schlüsseln entschlüsselt und in Ihrem Browser zwischengespeichert, um schnelles Laden zu gewährleisten.\n\n## E-Mail-Verifizierung bei Bestellung\n\nBeim Aufgeben einer neuen Bestellung für eine virtuelle Maschine wird ein Inline-Schritt zur E-Mail-Verifizierung angezeigt, falls Ihre Konto-E-Mail noch nicht bestätigt wurde. Dadurch bleibt der Bestellvorgang an einem Ort, ohne dass Sie umgeleitet werden.\n\n## Neuinstallation auf der Detailseite der virtuellen Maschine\n\nDie Funktion zum Neuinstallieren wurde von der Liste der virtuellen Maschinen auf die jeweilige **Detailseite der virtuellen Maschine** zusammen mit den anderen Verwaltungsfunktionen verschoben.\n\n## Internationalisierung\n\nDas gesamte Bedienfeld ist jetzt in zehn Sprachen verfügbar: Arabisch, Chinesisch, Deutsch, Spanisch, Französisch, Japanisch, Koreanisch, Portugiesisch, Russisch und Türkisch. Die bevorzugte Sprache Ihres Browsers wird automatisch erkannt, und Sie können jederzeit über den Sprachauswahl-Button in der Navigationsleiste wechseln. Datums-, Zahlen- und Kostenangaben werden so formatiert, dass sie der von Ihnen ausgewählten Sprache entsprechen, und Arabisch wird im gesamten Layout von rechts nach links angezeigt.\n",
+    "sig": ""
+  },
+  {
+    "id": "3a0b1d45e0f1d17cf54ee69b4e5caf036e71345d1a47e14aec8f6d8eda5af022",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026"
+      ],
+      [
+        "title",
+        "Web Updates — March 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ]
+    ],
+    "content": "We have been shipping steadily since the referral program launched. Here is everything that has landed in the control panel since then.\n\n## New Themes and Redesigned UI\n\nThe interface has been overhauled with two new themes: a **Neon** dark theme and a **Light** theme. You can toggle between themes at any time using the new theme switcher in the navigation bar. The VM list now displays your servers in a compact row layout that fits more information at a glance.\n\n## Revolut Card Payments\n\nIn addition to Bitcoin Lightning and NWC, you can now pay using a **Revolut card** via the embedded Revolut checkout. The payment flow has been redesigned to show all available payment methods together, including processing fees so you know exactly what you will be charged before confirming.\n\n## Flexible Renewal Intervals\n\nWhen renewing or ordering a VM, you can now select from multiple billing intervals rather than being locked to a single period. Choose the interval that suits your needs and the price updates automatically.\n\n## Contact Page\n\nA new **Contact** page is available from the main navigation for general enquiries.\n\n## IP Space Listing\n\nYour allocated IP addresses and subnets are now visible in the account overview, making it easy to see all resources associated with your account in one place.\n\n## CPU Information\n\nVM cards and the resources page now display CPU manufacturer, architecture, and feature flags, giving you clearer visibility into the hardware your VMs are running on.\n\n## Account Page Redesign\n\nThe account section has been reorganised with a **persistent sidebar** navigation. Each section (Settings, SSH Keys, Domains, Referral, Messages, Support) now has its own dedicated page with a clear label and active-state indicator.\n\n## Nostr Domain Path Proxy\n\nThe Nostr domain configuration page now includes step-by-step instructions for setting up a **path-based proxy** (`/_nostr/...`) as an alternative to the direct subdomain configuration.\n\n## Encrypted Direct Messages (NIP-17)\n\nSupport communicates via end-to-end encrypted direct messages using the NIP-17 standard. A dedicated **Messages** tab in the Account section lets you view and reply to messages from the support team. Messages are decrypted locally using your Nostr keys and cached in your browser for fast loading.\n\n## Email Verification on Order\n\nWhen placing a new VM order, an inline email verification step appears if your account email is not yet confirmed. This keeps the order flow in one place without redirecting you away.\n\n## Reinstall on VM Detail Page\n\nThe reinstall action has been moved from the VM list to the individual **VM detail page**, alongside the other management actions.\n\n## Internationalisation\n\nThe full control panel is now available in ten languages: Arabic, Chinese, German, Spanish, French, Japanese, Korean, Portuguese, Russian, and Turkish. Your browser's preferred language is detected automatically and you can switch at any time from the language selector in the navigation bar. Dates, numbers, and costs are formatted to match your selected locale, and Arabic is displayed with a right-to-left layout throughout.\n",
+    "sig": ""
+  },
+  {
+    "id": "c4933049d32ce0e78f0a81a2b2d56e5fd5ffddb9e14a550d0a6008eef8d371a7",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-es"
+      ],
+      [
+        "title",
+        "Novedades en el sitio web — marzo de 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nDesde el lanzamiento del programa de referencias, hemos estado procesando pedidos de forma constante. Aquí tiene todo lo que ha aparecido en el panel de control desde entonces.\n\n## Nuevos temas y interfaz de usuario rediseñada\n\nLa interfaz se ha renovado con dos nuevos temas: un tema oscuro **Neon** y un tema **Claro**. Puede alternar entre los temas en cualquier momento utilizando el nuevo selector de temas en la barra de navegación. La lista de máquinas virtuales ahora muestra sus servidores en una disposición compacta en fila que muestra más información de un vistazo.\n\n## Pagos con tarjeta Revolut\n\nAdemás de Bitcoin Lightning y NWC, ahora puede pagar utilizando una **tarjeta Revolut** a través de la pasarela de pago de Revolut integrada. El flujo de pago se ha rediseñado para mostrar todos los métodos de pago disponibles juntos, incluidos los costos de procesamiento, para que sepa exactamente cuánto se le cobrará antes de confirmar.\n\n## Intervalos de renovación flexibles\n\nAl renovar o solicitar una máquina virtual, ahora puede seleccionar entre varios intervalos de facturación en lugar de estar limitado a un solo período. Elija el intervalo que se adapte a sus necesidades y el precio se actualizará automáticamente.\n\n## Página de contacto\n\nAhora está disponible una nueva página de **Contacto** desde la navegación principal para consultas generales.\n\n## Listado de espacio IP\n\nSus direcciones IP y subredes asignadas ahora son visibles en la descripción general de la cuenta, lo que facilita ver todos los recursos asociados con su cuenta en un solo lugar.\n\n## Información de la CPU\n\nLas tarjetas de máquinas virtuales y la página de recursos ahora muestran el fabricante de la CPU, la arquitectura y las marcas de características, lo que le brinda una mayor visibilidad del hardware en el que se ejecutan sus máquinas virtuales.\n\n## Rediseño de la página de la cuenta\n\nLa sección de la cuenta se ha reorganizado con una navegación de **barra lateral persistente**. Cada sección (Configuración, claves SSH, dominios, referencias, mensajes, soporte) ahora tiene su propia página dedicada con una etiqueta clara y un indicador de estado activo.\n\n## Proxy de ruta de dominio Nostr\n\nLa página de configuración del dominio Nostr ahora incluye instrucciones paso a paso para configurar un **proxy basado en rutas** (`/_nostr/...`) como alternativa a la configuración directa del subdominio.\n\n## Mensajes directos encriptados (NIP-17)\n\nEl equipo de soporte se comunica a través de mensajes directos encriptados de extremo a extremo utilizando el estándar NIP-17. Una pestaña de **Mensajes** dedicada en la sección de la cuenta le permite ver y responder a los mensajes del equipo de soporte. Los mensajes se descifran localmente utilizando sus claves Nostr y se almacenan en caché en su navegador para una carga rápida.\n\n## Verificación de correo electrónico al realizar un pedido\n\nAl realizar un nuevo pedido de máquina virtual, aparece un paso de verificación de correo electrónico en línea si el correo electrónico de su cuenta aún no está confirmado. Esto mantiene el flujo de pedido en un solo lugar sin redirigirlo.\n\n## Reinstalación en la página de detalles de la máquina virtual\n\nLa acción de reinstalación se ha movido de la lista de máquinas virtuales a la página de **detalles de la máquina virtual** individual, junto con las demás acciones de administración.\n\n## Internacionalización\n\nEl panel de control completo ahora está disponible en diez idiomas: árabe, chino, alemán, español, francés, japonés, coreano, portugués, ruso y turco. El idioma preferido de su navegador se detecta automáticamente y puede cambiarlo en cualquier momento desde el selector de idiomas en la barra de navegación. Las fechas, los números y los costos se formatean para que coincidan con su configuración regional seleccionada, y el árabe se muestra con una presentación de derecha a izquierda en todo el sitio.\n",
+    "sig": ""
+  },
+  {
+    "id": "a2b70bbd972acad29823c3df18e47ccb5693fc8859a2024e73a1b44ee9272bd3",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-fr"
+      ],
+      [
+        "title",
+        "Mises à jour du site web — mars 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nDepuis le lancement du programme de parrainage, nous avons constaté une augmentation constante des commandes. Voici tout ce qui a été ajouté au panneau de contrôle depuis lors.\n\n## Nouveaux thèmes et interface utilisateur retravaillée\n\nL’interface a été entièrement remaniée avec deux nouveaux thèmes : un thème sombre **Neon** et un thème **clair**. Vous pouvez basculer entre les thèmes à tout moment en utilisant le nouveau sélecteur de thème dans la barre de navigation. La liste des VM affiche désormais vos serveurs dans une mise en page compacte qui permet d’afficher plus d’informations en un coup d’œil.\n\n## Paiements par carte Revolut\n\nEn plus de Bitcoin Lightning et NWC, vous pouvez désormais payer en utilisant une **carte Revolut** via le module de paiement Revolut intégré. Le processus de paiement a été repensé pour afficher tous les modes de paiement disponibles ensemble, y compris les frais de traitement, afin que vous sachiez exactement ce qui vous sera facturé avant de confirmer.\n\n## Intervalles de renouvellement flexibles\n\nLorsque vous renouvelez ou commandez une VM, vous pouvez désormais choisir parmi plusieurs intervalles de facturation au lieu d’être limité à une seule période. Choisissez l’intervalle qui correspond à vos besoins et le prix se mettra à jour automatiquement.\n\n## Page Contact\n\nUne nouvelle page **Contact** est disponible dans le menu principal pour les demandes générales.\n\n## Liste des adresses IP\n\nVos adresses IP et sous-réseaux attribués sont désormais visibles dans l’aperçu du compte, ce qui facilite la consultation de toutes les ressources associées à votre compte en un seul endroit.\n\n## Informations sur le processeur\n\nLes cartes VM et la page des ressources affichent désormais le fabricant, l’architecture et les indicateurs de fonctionnalité du processeur, ce qui vous donne une meilleure visibilité sur le matériel sur lequel s’exécutent vos VM.\n\n## Refonte de la page du compte\n\nLa section compte a été réorganisée avec une navigation par **barre latérale persistante**. Chaque section (Paramètres, Clés SSH, Domaines, Parrainage, Messages, Assistance) dispose désormais de sa propre page dédiée avec une étiquette claire et un indicateur d’état actif.\n\n## Proxy de chemin de domaine Nostr\n\nLa page de configuration du domaine Nostr comprend désormais des instructions étape par étape pour configurer un **proxy basé sur un chemin** (`/_nostr/...`) comme alternative à la configuration directe du sous-domaine.\n\n## Messages directs chiffrés (NIP-17)\n\nL’assistance communique par le biais de messages directs chiffrés de bout en bout en utilisant la norme NIP-17. Un onglet **Messages** dédié dans la section Comptes vous permet de consulter et de répondre aux messages de l’équipe d’assistance. Les messages sont déchiffrés localement à l’aide de vos clés Nostr et mis en cache dans votre navigateur pour un chargement rapide.\n\n## Vérification par e-mail lors de la commande\n\nLorsque vous passez une nouvelle commande de VM, une étape de vérification par e-mail en ligne s’affiche si l’adresse e-mail de votre compte n’a pas encore été confirmée. Cela permet de maintenir le processus de commande dans un seul endroit sans vous rediriger.\n\n## Réinstallation sur la page des détails de la VM\n\nL’action de réinstallation a été déplacée de la liste des VM vers la page **détaillée de la VM** individuelle, à côté des autres actions de gestion.\n\n## Internationalisation\n\nL’ensemble du panneau de contrôle est désormais disponible dans dix langues : arabe, chinois, allemand, espagnol, français, japonais, coréen, portugais, russe et turc. La langue préférée de votre navigateur est détectée automatiquement et vous pouvez basculer à tout moment à partir du sélecteur de langue dans la barre de navigation. Les dates, les nombres et les coûts sont formatés pour correspondre à la langue sélectionnée, et l’arabe est affiché avec une mise en page de droite à gauche dans tout le système.\n",
+    "sig": ""
+  },
+  {
+    "id": "3a8ab05eec5c42a660b0a65554033026c31ef4958765e95c94c839a80d8586cb",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-ja"
+      ],
+      [
+        "title",
+        "ウェブサイトの更新情報 — 2026年3月"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\nリファラルプログラム開始以降、順調に出荷を行っています。以下に、それ以降にコントロールパネルに追加された機能の概要を示します。\n\n## 新しいテーマとUIの再設計\n\nインターフェースが刷新され、**ネオン**カラーのダークテーマと**ライト**テーマという2つの新しいテーマが追加されました。ナビゲーションバーにある新しいテーマ切り替え機能を使用すると、いつでもテーマを切り替えることができます。VMリストでは、サーバーがよりコンパクトな行形式で表示されるようになり、一目でより多くの情報を確認できるようになりました。\n\n## Revolutカードによる支払い\n\nBitcoin LightningやNWCに加えて、埋め込まれたRevolutチェックアウトを通じて、**Revolutカード**を使用して支払うことができるようになりました。支払いの流れが再設計され、すべての利用可能な支払い方法（手数料を含む）がまとめて表示されるため、確認前に正確にいくら請求されるかを確認できます。\n\n## 柔軟な更新間隔\n\nVMの更新または注文時に、単一の期間に制限されるのではなく、複数の請求間隔から選択できるようになりました。ニーズに合った間隔を選択すると、価格が自動的に更新されます。\n\n## お問い合わせページ\n\n一般的なお問い合わせについては、メインナビゲーションからアクセスできる新しい**お問い合わせ**ページをご利用いただけます。\n\n## IPアドレスとサブネットのリスト\n\n割り当てられたIPアドレスとサブネットがアカウント概要に表示されるようになり、アカウントに関連するすべてのリソースを1か所で簡単に確認できるようになりました。\n\n## CPU情報\n\nVMカードとリソースページには、CPUのメーカー、アーキテクチャ、および機能フラグが表示されるようになり、VMが実行されているハードウェアをより明確に確認できるようになりました。\n\n## アカウントページの再設計\n\nアカウントセクションが再編成され、**固定サイドバー**ナビゲーションが追加されました。各セクション（設定、SSHキー、ドメイン、リファラル、メッセージ、サポート）には、明確なラベルとアクティブ状態のインジケーターを備えた専用のページが用意されています。\n\n## Nostrドメインパスプロキシ\n\nNostrドメイン設定ページには、直接的なサブドメイン設定の代替として、**パスベースのプロキシ** (`/_nostr/...`)を設定するための段階的な手順が追加されました。\n\n## 暗号化されたダイレクトメッセージ (NIP-17)\n\nサポートとのやり取りは、NIP-17標準に準拠したエンドツーエンドで暗号化されたダイレクトメッセージで行われます。アカウントセクションにある専用の**メッセージ**タブから、サポートチームからのメッセージを表示および返信できます。メッセージはローカルでNostrキーを使用して復号化され、ブラウザにキャッシュされて高速に読み込まれます。\n\n## 注文時のEメール認証\n\n新しいVMを注文する際に、アカウントのEメールアドレスがまだ認証されていない場合、インラインのEメール認証手順が表示されます。これにより、リダイレクトすることなく、注文プロセスを1か所で完了できます。\n\n## VM詳細ページでの再インストール\n\n再インストールのアクションは、VMリストから個々の**VM詳細ページ**に移動され、他の管理アクションとともに表示されるようになりました。\n\n## 多言語対応\n\nコントロールパネル全体が、アラビア語、中国語、ドイツ語、スペイン語、フランス語、日本語、韓国語、ポルトガル語、ロシア語、トルコ語の10言語で利用可能になりました。ブラウザで優先される言語が自動的に検出され、ナビゲーションバーにある言語セレクターからいつでも言語を切り替えることができます。日付、数値、および料金は、選択したロケールに合わせてフォーマットされ、アラビア語はページ全体で右から左へのレイアウトで表示されます。\n",
+    "sig": ""
+  },
+  {
+    "id": "9cfd35896a137ef177da579e0a869eb4e398ad20584af4e8a00561742a32a74e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-ko"
+      ],
+      [
+        "title",
+        "웹사이트 업데이트 — 2026년 3월"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n추천 프로그램을 시작한 이후 꾸준히 서비스를 제공하고 있습니다. 그 이후 제어판에 추가된 모든 기능은 다음과 같습니다.\n\n## 새로운 테마와 재설계된 UI\n\n두 가지 새로운 테마인 **네온** 다크 테마와 **라이트** 테마로 인터페이스가 완전히 변경되었습니다. 내비게이션 바에 있는 새로운 테마 전환기를 사용하여 언제든지 테마를 전환할 수 있습니다. VM 목록은 이제 서버를 한눈에 더 많은 정보를 볼 수 있는 간결한 행 레이아웃으로 표시합니다.\n\n## Revolut 카드 결제\n\n비트코인 라이트닝 및 NWC 외에 이제 임베디드 Revolut 결제 시스템을 통해 **Revolut 카드**로 결제할 수 있습니다. 결제 프로세스가 재설계되어 사용 가능한 모든 결제 방법(처리 수수료 포함)을 함께 표시하므로 확인하기 전에 정확히 얼마를 지불해야 하는지 알 수 있습니다.\n\n## 유연한 갱신 간격\n\nVM을 갱신하거나 주문할 때 이제 단일 기간으로 제한되지 않고 여러 결제 간격 중에서 선택할 수 있습니다. 필요에 맞는 간격을 선택하면 가격이 자동으로 업데이트됩니다.\n\n## 문의 페이지\n\n일반 문의를 위한 새로운 **문의** 페이지가 주 내비게이션에서 제공됩니다.\n\n## IP 주소 목록\n\n할당된 IP 주소 및 서브넷이 계정 개요에 표시되므로 계정과 관련된 모든 리소스를 한곳에서 쉽게 확인할 수 있습니다.\n\n## CPU 정보\n\nVM 카드 및 리소스 페이지는 이제 CPU 제조업체, 아키텍처 및 기능 플래그를 표시하여 VM이 실행되는 하드웨어에 대한 더 명확한 정보를 제공합니다.\n\n## 계정 페이지 재설계\n\n계정 섹션이 **지속적인 사이드바** 내비게이션으로 재구성되었습니다. 각 섹션(설정, SSH 키, 도메인, 추천, 메시지, 지원)에는 이제 명확한 레이블과 활성 상태 표시기가 있는 자체 페이지가 있습니다.\n\n## Nostr 도메인 경로 프록시\n\nNostr 도메인 구성 페이지에는 이제 직접 하위 도메인 구성의 대안으로 **경로 기반 프록시** (`/_nostr/...`)를 설정하는 단계별 지침이 포함됩니다.\n\n## 암호화된 직접 메시지(NIP-17)\n\n지원팀은 NIP-17 표준을 사용하여 종단 간 암호화된 직접 메시지를 통해 통신합니다. 계정 섹션의 전용 **메시지** 탭에서 지원팀의 메시지를 보고 답장할 수 있습니다. 메시지는 로컬에서 Nostr 키를 사용하여 복호화되고 브라우저에 캐시되어 빠르게 로드됩니다.\n\n## 주문 시 이메일 확인\n\n새 VM 주문 시 계정 이메일이 아직 확인되지 않은 경우 인라인 이메일 확인 단계가 나타납니다. 이렇게 하면 주문 프로세스가 한 곳에서 진행되어 다른 페이지로 리디렉션되지 않습니다.\n\n## VM 세부 정보 페이지에서 재설치\n\n재설치 작업이 VM 목록에서 각 **VM 세부 정보 페이지**로 이동하여 다른 관리 작업과 함께 사용할 수 있습니다.\n\n## 다국어 지원\n\n이제 전체 제어판을 아랍어, 중국어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 포르투갈어, 러시아어, 튀르키예어의 10개 언어로 사용할 수 있습니다. 브라우저의 기본 언어가 자동으로 감지되며 내비게이션 바의 언어 선택기에서 언제든지 전환할 수 있습니다. 날짜, 숫자 및 비용은 선택한 로케일에 맞게 형식이 지정되며 아랍어는 전체적으로 오른쪽에서 왼쪽으로 레이아웃으로 표시됩니다.\n",
+    "sig": ""
+  },
+  {
+    "id": "bf03861ddbc525877d18096041b178a490144a31efac858c652c7a4eec38c4fb",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-pt"
+      ],
+      [
+        "title",
+        "Atualizações do site — Março de 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nDesde o lançamento do programa de indicação, temos mantido um fluxo constante de novos usuários. Aqui está tudo o que foi implementado no painel de controle desde então.\n\n## Novos Temas e Interface Redesenhada\n\nA interface foi completamente reformulada com dois novos temas: um tema escuro **Neon** e um tema **Claro**. Você pode alternar entre os temas a qualquer momento usando o novo seletor de temas na barra de navegação. A lista de VMs agora exibe seus servidores em um layout compacto em linha, que exibe mais informações de forma rápida.\n\n## Pagamentos com Cartão Revolut\n\nAlém do Bitcoin Lightning e NWC, agora você pode pagar usando um **cartão Revolut** por meio do processo de checkout integrado do Revolut. O fluxo de pagamento foi redesenhado para mostrar todos os métodos de pagamento disponíveis juntos, incluindo as taxas de processamento, para que você saiba exatamente quanto será cobrado antes de confirmar.\n\n## Intervalos de Renovação Flexíveis\n\nAo renovar ou solicitar uma VM, agora você pode escolher entre vários intervalos de cobrança, em vez de ficar restrito a um único período. Escolha o intervalo que melhor atende às suas necessidades e o preço será atualizado automaticamente.\n\n## Página de Contato\n\nUma nova página de **Contato** está disponível no menu de navegação principal para consultas gerais.\n\n## Lista de Espaços de IP\n\nSeus endereços IP e sub-redes alocados agora são visíveis na visão geral da conta, facilitando a visualização de todos os recursos associados à sua conta em um só lugar.\n\n## Informações da CPU\n\nAs placas de VM e a página de recursos agora exibem o fabricante, a arquitetura e os sinalizadores de recursos da CPU, oferecendo uma visão mais clara do hardware em que suas VMs estão sendo executadas.\n\n## Redesenho da Página da Conta\n\nA seção da conta foi reorganizada com uma navegação de **barra lateral persistente**. Cada seção (Configurações, Chaves SSH, Domínios, Indicação, Mensagens, Suporte) agora tem sua própria página dedicada com um rótulo claro e um indicador de estado ativo.\n\n## Proxy de Caminho de Domínio Nostr\n\nA página de configuração de domínio Nostr agora inclui instruções passo a passo para configurar um **proxy baseado em caminho** (`/_nostr/…`) como uma alternativa à configuração direta de subdomínio.\n\n## Mensagens Diretas Criptografadas (NIP-17)\n\nO suporte se comunica por meio de mensagens diretas com criptografia de ponta a ponta usando o padrão NIP-17. Uma guia de **Mensagens** dedicada na seção da Conta permite que você visualize e responda a mensagens da equipe de suporte. As mensagens são descriptografadas localmente usando suas chaves Nostr e armazenadas em cache no seu navegador para carregamento rápido.\n\n## Verificação de E-mail no Pedido\n\nAo fazer uma nova solicitação de VM, uma etapa de verificação de e-mail embutida aparece se o e-mail da sua conta ainda não tiver sido confirmado. Isso mantém o fluxo do pedido em um só lugar, sem redirecioná-lo.\n\n## Reinstalação na Página de Detalhes da VM\n\nA ação de reinstalação foi movida da lista de VMs para a página de **detalhes da VM**, juntamente com outras ações de gerenciamento.\n\n## Internacionalização\n\nTodo o painel de controle agora está disponível em dez idiomas: árabe, chinês, alemão, espanhol, francês, japonês, coreano, português, russo e turco. O idioma preferido do seu navegador é detectado automaticamente e você pode alternar a qualquer momento pelo seletor de idiomas na barra de navegação. Datas, números e custos são formatados para corresponder ao local selecionado, e o árabe é exibido com um layout da direita para a esquerda em todo o aplicativo.\n",
+    "sig": ""
+  },
+  {
+    "id": "d9ca970abefc926642f0455e6871fc6b499b69dc73daf2fbe0a93440a2ad5fac",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-ru"
+      ],
+      [
+        "title",
+        "Обновления на веб-сайте — март 2026 года."
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nС момента запуска реферальной программы мы стабильно увеличиваем количество заказов. Вот все изменения, которые были внесены в панель управления с тех пор.\n\n## Новые темы и обновленный пользовательский интерфейс\n\nИнтерфейс был полностью переработан с двумя новыми темами: **«Неон»** (темная тема) и **«Светлая»** тема. Вы можете переключаться между темами в любое время с помощью нового переключателя тем на панели навигации. Список виртуальных машин теперь отображает ваши серверы в сжатом ряду, что позволяет получить больше информации сразу.\n\n## Оплата картой Revolut\n\nВ дополнение к Bitcoin Lightning и NWC теперь вы можете оплачивать заказы с помощью **карты Revolut** через встроенную платежную систему Revolut. Процесс оплаты был переработан, чтобы отображать все доступные способы оплаты вместе, включая комиссию за обработку, чтобы вы точно знали, сколько вам будет выставлено счет до подтверждения.\n\n## Гибкие интервалы продления\n\nПри продлении или заказе виртуальной машины теперь вы можете выбирать один из нескольких периодов оплаты, а не ограничиваться одним. Выберите интервал, который соответствует вашим потребностям, и цена будет автоматически обновлена.\n\n## Страница «Контакты»\n\nНовая страница **«Контакты»** доступна в главном меню навигации для общих вопросов.\n\n## Список IP-адресов\n\nВыделенные IP-адреса и подсети теперь отображаются в обзоре учетной записи, что позволяет легко просматривать все ресурсы, связанные с вашей учетной записью, в одном месте.\n\n## Информация о процессоре\n\nНа карточках виртуальных машин и на странице «Ресурсы» теперь отображаются производитель процессора, архитектура и флаги функций, что обеспечивает более четкое представление об аппаратном обеспечении, на котором работают ваши виртуальные машины.\n\n## Обновленный дизайн страницы «Учетная запись»\n\nРаздел учетной записи был реорганизован с помощью **постоянной боковой панели** навигации. Каждый раздел (Настройки, SSH-ключи, Домены, Рефералы, Сообщения, Поддержка) теперь имеет свою собственную страницу с четкой меткой и индикатором активного состояния.\n\n## Прокси-сервер для Nostr-доменов\n\nНа странице конфигурации Nostr-домена теперь содержатся пошаговые инструкции по настройке **прокси-сервера на основе пути** (`/_nostr/...`) в качестве альтернативы прямой настройке поддомена.\n\n## Зашифрованные личные сообщения (NIP-17)\n\nСлужба поддержки общается с вами с помощью сквозного шифрования личных сообщений, используя стандарт NIP-17. Специальный раздел **«Сообщения»** в разделе «Учетная запись» позволяет просматривать и отвечать на сообщения от команды поддержки. Сообщения расшифровываются локально с использованием ваших ключей Nostr и кэшируются в вашем браузере для быстрой загрузки.\n\n## Подтверждение по электронной почте при заказе\n\nПри размещении нового заказа на виртуальную машину, если ваш адрес электронной почты в учетной записи еще не подтвержден, появляется встроенный шаг подтверждения по электронной почте. Это позволяет сохранить весь процесс заказа в одном месте, не перенаправляя вас на другую страницу.\n\n## Переустановка на странице деталей виртуальной машины\n\nФункция переустановки была перемещена из списка виртуальных машин на отдельную **страницу «Детали виртуальной машины»** вместе с другими параметрами управления.\n\n## Многоязычность\n\nТеперь полная панель управления доступна на десяти языках: арабском, китайском, немецком, испанском, французском, японском, корейском, португальском, русском и турецком. Язык вашего браузера определяется автоматически, и вы можете переключаться в любое время с помощью селектора языка на панели навигации. Даты, числа и цены форматируются в соответствии с выбранным языком, а на арабском языке отображение выполняется в направлении справа налево.\n",
+    "sig": ""
+  },
+  {
+    "id": "fc4572bab580bcd054557324b713b9a960e52e9056687199ae5b8a6775f40ecc",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-tr"
+      ],
+      [
+        "title",
+        "Web Sitesi Güncellemeleri — Mart 2026"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nYönlendirme programımızın başlatılmasından bu yana sürekli olarak siparişler gönderiyoruz. İşte o zamandan beri kontrol panelinde yapılan tüm değişiklikler.\n\n## Yeni Temalar ve Yeniden Tasarlanan Kullanıcı Arayüzü\n\nKullanıcı arayüzü, iki yeni tema ile yeniden düzenlendi: **Neon** koyu tema ve **Açık** tema. Yeni temalar arasında istediğiniz zaman, gezinme çubuğundaki yeni tema değiştiricisi aracılığıyla geçiş yapabilirsiniz. Sanal makine listesi artık sunucularınızı daha kompakt bir sıra düzeninde göstererek, daha fazla bilgiyi tek bir bakışta görmenizi sağlıyor.\n\n## Revolut Kartı ile Ödemeler\n\nBitcoin Lightning ve NWC'ye ek olarak, artık yerleşik Revolut ödeme sayfasından **Revolut kartıyla** ödeme yapabilirsiniz. Ödeme süreci, tüm mevcut ödeme yöntemlerini bir arada, işlem ücretleri de dahil olmak üzere gösterecek şekilde yeniden tasarlandı, böylece onaylamadan önce tam olarak ne kadar ücretlendirileceğinizi bilirsiniz.\n\n## Esnek Yenileme Aralıkları\n\nBir sanal makineyi yenilerken veya sipariş verirken, artık tek bir dönemle sınırlı kalmak yerine birden fazla faturalandırma aralığından seçim yapabilirsiniz. İhtiyaçlarınıza uygun aralığı seçin ve fiyat otomatik olarak güncellenecektir.\n\n## İletişim Sayfası\n\nAna gezinme menüsünden genel sorular için yeni bir **İletişim** sayfası mevcuttur.\n\n## IP Adresi Listesi\n\nTahsis edilen IP adresleriniz ve alt ağlarınız artık hesap genel görünümünde görüntülenebilir, böylece hesabınızla ilişkili tüm kaynakları tek bir yerden kolayca görebilirsiniz.\n\n## CPU Bilgileri\n\nSanal makine kartları ve kaynaklar sayfası artık CPU üreticisini, mimarisini ve özellik işaretlerini görüntüler ve böylece sanal makinenizin çalıştığı donanım hakkında daha net bir bilgi sağlar.\n\n## Hesap Sayfası Yeniden Tasarımı\n\nHesap bölümü, **kalıcı bir yan çubuk** gezinmesi ile yeniden düzenlendi. Her bölümün (Ayarlar, SSH Anahtarları, Alan Adları, Yönlendirme, Mesajlar, Destek) artık net bir etiket ve aktif durum göstergesi ile kendi özel sayfası vardır.\n\n## Nostr Alan Adı Yolu Proxy'si\n\nNostr alan adı yapılandırma sayfası artık doğrudan alt alan adı yapılandırmasına alternatif olarak bir **yol tabanlı proxy** (`/_nostr/...`) kurmak için adım adım talimatlar içerir.\n\n## Şifreli Doğrudan Mesajlar (NIP-17)\n\nDestek, NIP-17 standardını kullanarak uçtan uca şifrelenmiş doğrudan mesajlar aracılığıyla iletişim kurar. Hesap bölümünde bulunan özel **Mesajlar** sekmesi, destek ekibinden gelen mesajları görüntülemenize ve yanıtlamanıza olanak tanır. Mesajlar yerel olarak Nostr anahtarlarınızı kullanarak şifresi çözülür ve hızlı yükleme için tarayıcınızda önbelleğe alınır.\n\n## Sipariş Verirken E-posta Doğrulaması\n\nYeni bir sanal makine siparişi verirken, hesap e-postanız henüz doğrulanmamışsa, yerinde bir e-posta doğrulama adımı görüntülenecektir. Bu, sipariş akışını tek bir yerde tutar ve sizi başka bir yere yönlendirmez.\n\n## Sanal Makine Ayrıntı Sayfasında Yeniden Yükleme\n\nYeniden yükleme işlemi, sanal makine listesinden, diğer yönetim işlemlerinin yanında, **bireysel sanal makine ayrıntı sayfasına** taşındı.\n\n## Uluslararasılaştırma\n\nTüm kontrol paneli artık on dilde mevcuttur: Arapça, Çince, Almanca, İspanyolca, Fransızca, Japonca, Korece, Portekizce, Rusça ve Türkçe. Tarayıcınızın tercih edilen dili otomatik olarak algılanır ve istediğiniz zaman gezinme çubuğundaki dil seçici aracılığıyla değiştirebilirsiniz. Tarihler, sayılar ve maliyetler, seçtiğiniz bölgeye göre biçimlendirilir ve Arapça, her yerde sağdan sola düzenlemede görüntülenir.\n",
+    "sig": ""
+  },
+  {
+    "id": "6bdf9f70557e9ea0809b7ccac91e473c4ede0af12a6f8cb1e2315f524a9a30ef",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772635044,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-updates-march-2026-zh"
+      ],
+      [
+        "title",
+        "网站更新——2026年3月"
+      ],
+      [
+        "published_at",
+        "1772635044"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n自从推荐计划启动以来，我们一直在稳定地进行发货。以下是自那以来所有在控制面板中显示的内容。\n\n## 新主题和重新设计的用户界面\n\n用户界面经过全面改造，新增了两个主题：一个**霓虹**深色主题和一个**浅色**主题。您可以使用导航栏中的新主题切换器随时在主题之间切换。虚拟机列表现在以紧凑的行布局显示您的服务器，以便一目了然地查看更多信息。\n\n## Revolut 支付\n\n除了比特币闪电网络和 NWC 之外，您现在还可以通过嵌入式 Revolut 结账系统使用 **Revolut 信用卡** 进行支付。支付流程已重新设计，以显示所有可用的支付方式，包括处理费用，因此您确切地知道在确认之前将会收取多少费用。\n\n## 灵活的续订周期\n\n在续订或订购虚拟机时，您可以从多个计费周期中进行选择，而不再仅限于单个周期。选择适合您需求的时间间隔，价格会自动更新。\n\n## 联系页面\n\n一个新的 **联系** 页面可在主导航菜单中找到，用于处理一般咨询。\n\n## IP 地址列表\n\n您分配的 IP 地址和子网现在显示在帐户概览中，方便您在一个地方查看与您的帐户相关的所有资源。\n\n## CPU 信息\n\n虚拟机卡和资源页面现在显示 CPU 制造商、架构和功能标志，让您更清楚地了解您的虚拟机正在运行的硬件。\n\n## 帐户页面重新设计\n\n帐户部分已重新组织，并使用 **持久的侧边栏** 导航。每个部分（设置、SSH 密钥、域、推荐、消息、支持）现在都有自己的专用页面，并带有清晰的标签和活动状态指示器。\n\n## Nostr 域名路径代理\n\nNostr 域名配置页面现在包含逐步说明，介绍如何设置基于 **路径的代理** (`/_nostr/...`)，作为直接子域名配置的替代方案。\n\n## 加密的消息（NIP-17）\n\n支持团队通过使用 NIP-17 标准的端到端加密的消息进行交流。帐户部分中的一个专用 **消息** 选项卡，可让您查看并回复来自支持团队的消息。消息将在本地使用您的 Nostr 密钥进行解密，并缓存在您的浏览器中，以便快速加载。\n\n## 订单中的电子邮件验证\n\n在下达新的虚拟机订单时，如果您的帐户电子邮件尚未确认，则会显示一个内联的电子邮件验证步骤。这样可以使整个订单流程在一个地方完成，而无需将您重定向到其他页面。\n\n## 在虚拟机详细信息页面上重新安装\n\n重新安装操作已从虚拟机列表移动到各个 **虚拟机详细信息页面**，与所有其他管理操作一起显示。\n\n## 国际化\n\n完整的控制面板现在提供十种语言：阿拉伯语、中文、德语、西班牙语、法语、日语、韩语、葡萄牙语、俄语和土耳其语。您的浏览器将自动检测您首选的语言，您可以随时从导航栏中的语言选择器中进行切换。日期、数字和费用将格式化以匹配您选择的语言环境，并且阿拉伯语将在整个界面中以从右向左的布局显示。\n",
+    "sig": ""
+  },
+  {
+    "id": "e5463a673bcb5c1829dbcf025d5860221d3f05e78cd70b2225268c4950f92efc",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-ar"
+      ],
+      [
+        "title",
+        "تحليل ما بعد انقطاع الشبكة — 26 فبراير 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nأمس، واجهنا انقطاعًا مطولًا في الشبكة خلال ما كان مقررًا أن يكون مجرد صيانة روتينية: وهو تحديث للبرنامج الثابت لجهاز التوجيه المركزي الخاص بنا. نريد أن نكون شفافين بشأن ما حدث ولماذا استغرق الأمر وقتًا طويلاً لحل المشكلة.\n\n## ما حدث\n\nيبدو أن تحديث البرنامج الثابت نفسه قد اكتمل دون أي مشاكل. بدأ تشغيل جهاز التوجيه بشكل صحيح، وكانت الواجهات موجودة، وكان حركة المرور المحلية بين الخوادم الموجودة على جهاز التوجيه تعمل بشكل جيد. ومع ذلك، رفضت جلسات BGP الصاعدة وأنفاق VXLAN الخاصة بنا بدء العمل مرة أخرى.\n\nبعد ذلك، قضينا حوالي ثماني ساعات في تشخيص بعض أغرب سلوكيات الشبكة التي واجهناها. كان حل ARP على المنافذ العابرة غير متسق. كانت جلسات BGP تُنشأ، وتبدأ حركة المرور في التوجيه، ثم يتوقف الاتصال فعليًا - ليس بالمعنى الحرفي للكلمة، ولكن ببساطة لم يعد يقوم بإعادة توجيه الحزم، مع عدم الإبلاغ عن أي فقدان للحزم. أظهر كل اختبار تشخيصي قمنا بتشغيله على جهاز التوجيه أنه لا توجد به أي مشاكل: لا توجد أخطاء، ولا توجد إدخالات في السجلات، ولا شيء.\n\nاتصلنا بمزود خدمة النقل الخاص بنا، وأكدوا أنهم لم يروا أي مشاكل من جانبهم أيضًا. حاولنا العديد من التكوينات المختلفة. حتى قمنا بنقل تكوينات BGP والأنفاق بالكامل إلى خادم Linux منفصل لعزل المشكلة - وواجهنا نفس المشكلة بالضبط. في تلك المرحلة، بدا أن جهاز التوجيه نفسه قد تم استبعاده، حيث أن المشكلة تتبع منافذ النقل بغض النظر عما كان يشغلها.\n\nبعد استنفاد كل الاحتمالات الأخرى، قمنا بإعادة ضبط المصنع لجهاز التوجيه كملاذ أخير وطبقنا الحد الأدنى من التكوينات من البداية - مجرد إعداد الجسر وشبكة VLAN. لدهشتنا، عملت على الفور. بشكل مثالي.\n\n## السبب الجذري\n\nعلى حد علمنا، أدى تحديث البرنامج الثابت إلى حدوث نوع من التلف الصامت في حالة جهاز التوجيه مما أثر على كيفية تعامل الواجهات المواجهة للشبكة مع حركة المرور. على الرغم من أن التحديث يبدو ناجحًا تمامًا، وأن جهاز التوجيه لم يبلغ عن أي أخطاء، وحتى أن المشكلة تكررت عندما تم التعامل مع BGP بواسطة جهاز مختلف تمامًا، فإن إعادة ضبط المصنع والتكوين النظيف كان كل ما يلزم لحلها. لا يزال هذا أحد الأعطال الأكثر إثارة للدهشة التي تعاملنا معها.\n\n## ما قد تحتاج إلى القيام به\n\n- **إذا كانت جهازك الظاهري غير قابل للوصول إليه**، فيرجى إيقافه وإعادة تشغيله من لوحة التحكم الخاصة بك. في معظم الحالات، سيؤدي ذلك إلى استعادة الاتصال.\n- **إذا كان لا يزال غير قابل للوصول إليه بعد الإيقاف وإعادة التشغيل**، فيرجى الاتصال بالدعم وسوف نقوم بالتحقيق.\n- **إذا رأيت تحذيرًا بشأن تغيير مفتاح مضيف SSH** عند الاتصال بجهازك الظاهري، فهذا متوقع. تمت إعادة تكوين الأجهزة الظاهرية على نطاق واسع للعمل مع الإعداد الجديد، وأعاد cloud-init إنشاء مفاتيح المضيف كجزء من هذه العملية. هذا هو السلوك القياسي لـ cloud-init عندما تتم إعادة تهيئة جهاز ظاهري - يمكنك قبول المفتاح الجديد بأمان.\n\nنعتذر عن فترة التوقف الطويلة والإحباط الذي تسبب فيه. نحن نراجع إجراءات التحديث الخاصة بنا لضمان أننا قادرون على تحديد المشكلات مثل هذه والتعافي منها بسرعة أكبر في المستقبل.\n",
+    "sig": ""
+  },
+  {
+    "id": "3b63e3ad707a4e5759c8fdc3af2a92fd40c94a33e3e0d8f832a8e89b5592727a",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-de"
+      ],
+      [
+        "title",
+        "Post-Mortem des Netzausfalls - 26. Februar 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nGestern kam es zu einem längeren Netzausfall während einer routinemäßigen Wartungsmaßnahme: einem Firmware-Upgrade auf unserem Hauptrouter. Wir möchten transparent machen, was passiert ist und warum es so lange gedauert hat, bis die Störung behoben war.\n\n## Was geschah\n\nDas Firmware-Upgrade selbst schien ohne Probleme abzulaufen. Der Router wurde ohne Probleme hochgefahren, die Schnittstellen waren vorhanden und der lokale Datenverkehr zwischen den Servern auf dem Router funktionierte einwandfrei. Allerdings weigerten sich unsere Upstream-BGP-Sitzungen und VXLAN-Tunnel, wieder hochzufahren.\n\nEs folgten etwa acht Stunden, in denen wir das seltsamste Netzwerkverhalten diagnostizierten, das uns je untergekommen ist. Die ARP-Auflösung an den Transit-Ports war inkonsistent. BGP-Sitzungen wurden aufgebaut, der Datenverkehr begann zu routen, und dann war die Verbindung praktisch tot - nicht wirklich auf Schnittstellenebene, sondern einfach, weil keine Pakete weitergeleitet wurden, ohne dass ein Ausfall gemeldet wurde. Alle Diagnosen, die wir auf dem Router durchführten, zeigten keine Fehler: keine Fehler, keine Protokolleinträge, nichts.\n\nWir setzten uns mit unserem Transitanbieter in Verbindung, der uns bestätigte, dass auch bei ihm keine Probleme auftreten. Wir haben zahlreiche verschiedene Konfigurationen ausprobiert. Wir haben sogar die BGP- und Tunnelkonfigurationen vom Router auf einen separaten Linux-Server verschoben, um das Problem einzugrenzen - und stießen auf genau dasselbe Verhalten. Zu diesem Zeitpunkt schien der Router selbst nicht mehr in Frage zu kommen, da das Problem bei den Transitports auftrat, unabhängig davon, was sie ansteuerte.\n\nNachdem wir alle anderen Möglichkeiten ausgeschöpft hatten, setzten wir den Router als letzten Ausweg auf die Werkseinstellungen zurück und führten eine Minimalkonfiguration von Grund auf durch - nur die Bridge- und VLAN-Einstellungen. Zu unserer Überraschung funktionierte es sofort. Perfekt.\n\n## Grundursache\n\nSoweit wir feststellen konnten, führte die Firmware-Aktualisierung zu einer Art stiller Verfälschung des Router-Status, die sich auf die Art und Weise auswirkte, wie die Transit-Schnittstellen den Datenverkehr abwickelten. Obwohl das Upgrade vollständig erfolgreich zu sein schien, der Router keine Fehler meldete und das Problem sogar reproduzierbar war, wenn BGP von einem ganz anderen Rechner abgewickelt wurde, genügte ein Werksreset und eine saubere Konfiguration, um das Problem zu lösen. Es bleibt einer der rätselhaftesten Ausfälle, mit denen wir zu tun hatten.\n\n## Was Sie möglicherweise tun müssen\n\n- **Wenn Ihre VM nicht erreichbar ist**, stoppen und starten Sie sie bitte über Ihr Kontrollpanel. In den meisten Fällen wird dadurch die Konnektivität wiederhergestellt.\n- **Wenn sie nach dem Stoppen/Starten** immer noch nicht erreichbar ist, wenden Sie sich bitte an den Support, damit wir das überprüfen können.\n- **Wenn Sie bei der Verbindung zu Ihrer VM eine Warnung zur Änderung des SSH-Hostschlüssels** sehen, ist dies zu erwarten. Die VMs wurden massenhaft rekonfiguriert, um mit dem neuen Setup zu arbeiten, und cloud-init hat als Teil dieses Prozesses Host-Schlüssel neu generiert. Dies ist das Standardverhalten von cloud-init bei der Neuinitialisierung einer VM - Sie können den neuen Schlüssel bedenkenlos akzeptieren.\n\nWir entschuldigen uns für die verlängerte Ausfallzeit und die damit verbundene Frustration. Wir sind dabei, unsere Upgrade-Verfahren zu überprüfen, um sicherzustellen, dass wir solche Probleme in Zukunft schneller erkennen und beheben können.\n",
+    "sig": ""
+  },
+  {
+    "id": "35993c8dd56335ac17447a7c0d80101555706889e71ea79a8187a5b4baa051f6",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem"
+      ],
+      [
+        "title",
+        "Network Outage Post-Mortem — February 26, 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ]
+    ],
+    "content": "Yesterday we experienced an extended network outage during what was planned as routine maintenance: a firmware upgrade on our core router. We want to be transparent about what happened and why it took as long as it did to resolve.\n\n## What happened\n\nThe firmware upgrade itself appeared to complete without issue. The router came up cleanly, interfaces were present, and local traffic between servers on the router worked fine. However, our upstream BGP sessions and VXLAN tunnels refused to come back up.\n\nWhat followed was roughly eight hours of diagnosing some of the strangest network behaviour we have encountered. ARP resolution on the transit ports was inconsistent. BGP sessions would establish, traffic would begin routing, and then the link would effectively go dead — not actually down at the interface level, but simply not forwarding packets, with zero drops reported. Every diagnostic we ran on the router showed nothing wrong: no errors, no log entries, nothing.\n\nWe contacted our transit provider, who confirmed they could see nothing wrong on their end either. We tried numerous different configurations. We even moved the BGP and tunnel configs off the router entirely onto a separate Linux server to isolate the problem — and hit the exact same behaviour. At that point the router itself seemed ruled out, since the issue followed the transit ports regardless of what was driving them.\n\nAfter exhausting every other avenue, we factory reset the router as a last resort and applied a minimal configuration from scratch — just the bridge and VLAN setup. To our surprise, it worked instantly. Perfectly.\n\n## Root cause\n\nAs best as we can determine, the firmware upgrade resulted in some form of silent corruption in the router's state that affected how the transit-facing interfaces handled traffic. Despite the upgrade appearing completely successful, the router reporting no errors, and the issue even reproducing when BGP was handled by a different machine entirely, a factory reset and clean configuration was all it took to resolve it. It remains one of the more puzzling failures we have dealt with.\n\n## What you may need to do\n\n- **If your VM is unreachable**, please stop and start it from your control panel. In most cases this will restore connectivity.\n- **If it is still unreachable after a stop/start**, please contact support and we will investigate.\n- **If you see an SSH host key change warning** when connecting to your VM, this is expected. VMs were reconfigured in bulk to work with the new setup, and cloud-init regenerated host keys as part of that process. This is standard cloud-init behaviour when a VM is re-initialised — you can safely accept the new key.\n\nWe apologise for the extended downtime and the frustration it caused. We are reviewing our upgrade procedures to ensure we can identify and recover from issues like this more quickly in the future.\n",
+    "sig": ""
+  },
+  {
+    "id": "cd9cd23a3c57748d070e4d951ad64a109a445639633773d1ee23eb2d33d4f3a1",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-es"
+      ],
+      [
+        "title",
+        "Post-Mortem de la interrupción de la red - 26 de febrero de 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nAyer sufrimos una interrupción prolongada de la red durante lo que estaba previsto como mantenimiento rutinario: una actualización del firmware de nuestro router central. Queremos ser transparentes sobre lo que ocurrió y por qué tardó tanto en resolverse.\n\n## Qué ocurrió\n\nLa actualización del firmware se completó sin problemas. El router apareció limpiamente, las interfaces estaban presentes, y el tráfico local entre los servidores en el router funcionaba bien. Sin embargo, nuestras sesiones upstream BGP y túneles VXLAN se negaron a volver.\n\nLo que siguió fueron unas ocho horas de diagnóstico de algunos de los comportamientos de red más extraños que hemos encontrado. La resolución ARP en los puertos de tránsito era inconsistente. Las sesiones BGP se establecían, el tráfico empezaba a enrutarse, y luego el enlace se quedaba muerto - no se caía realmente a nivel de interfaz, sino que simplemente no reenviaba paquetes, sin que se informara de ninguna caída. Todos los diagnósticos que realizamos en el router no mostraban ningún problema: ni errores, ni entradas de registro, nada.\n\nNos pusimos en contacto con nuestro proveedor de tránsito, que nos confirmó que ellos tampoco veían ningún problema. Probamos numerosas configuraciones diferentes. Incluso trasladamos las configuraciones de BGP y del túnel del router a un servidor Linux independiente para aislar el problema, y obtuvimos exactamente el mismo resultado. En ese punto, el propio router parecía descartado, ya que el problema seguía a los puertos de tránsito, independientemente de lo que los controlaba.\n\nDespués de agotar todas las demás vías, reiniciamos de fábrica el router como último recurso y aplicamos una configuración mínima desde cero: sólo la configuración del puente y la VLAN. Para nuestra sorpresa, funcionó al instante. Perfectamente.\n\n## Causa raíz\n\nPor lo que hemos podido determinar, la actualización del firmware provocó algún tipo de corrupción silenciosa en el estado del router que afectó a la forma en que las interfaces de tránsito gestionaban el tráfico. A pesar de que la actualización parecía completamente exitosa, el router no informaba de errores, y el problema incluso se reproducía cuando BGP era manejado por una máquina completamente diferente, un restablecimiento de fábrica y una configuración limpia fue todo lo que se necesitó para resolverlo. Sigue siendo uno de los fallos más desconcertantes a los que nos hemos enfrentado.\n\n## Lo que puede necesitar hacer\n\n- **Si su máquina virtual está inaccesible**, deténgala e iníciela desde su panel de control. En la mayoría de los casos esto restaurará la conectividad.\n- **Si sigue siendo inalcanzable después de una parada/arranque**, por favor contacte con soporte y lo investigaremos.\n- **Si ve una advertencia de cambio de clave de host SSH** al conectarse a su máquina virtual, esto es normal. Las máquinas virtuales fueron reconfiguradas en bloque para trabajar con la nueva configuración, y cloud-init regeneró las claves de host como parte de ese proceso. Este es el comportamiento estándar de cloud-init cuando una máquina virtual es reiniciada - puedes aceptar la nueva clave.\n\nPedimos disculpas por el tiempo de inactividad prolongado y la frustración que causó. Estamos revisando nuestros procedimientos de actualización para asegurarnos de que podemos identificar y recuperarnos de problemas como este más rápidamente en el futuro.\n",
+    "sig": ""
+  },
+  {
+    "id": "52160a4601ed26a1a1617adca536e718affd724e2c9f0119a7bf932ac4b8ccde",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-fr"
+      ],
+      [
+        "title",
+        "Analyse rétrospective de la panne de réseau - 26 février 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nHier, nous avons connu une panne de réseau prolongée au cours de ce qui était prévu comme une maintenance de routine : une mise à jour du micrologiciel de notre routeur principal. Nous voulons être transparents sur ce qui s'est passé et sur les raisons pour lesquelles il a fallu autant de temps pour résoudre ce problème.\n\n## Ce qui s'est passé\n\nLa mise à jour du micrologiciel s'est déroulée sans problème. Le routeur s'est ouvert proprement, les interfaces étaient présentes et le trafic local entre les serveurs sur le routeur fonctionnait correctement. Cependant, nos sessions BGP en amont et nos tunnels VXLAN ont refusé de se rétablir.\n\nNous avons ensuite passé environ huit heures à diagnostiquer certains des comportements de réseau les plus étranges que nous ayons rencontrés. La résolution ARP sur les ports de transit était incohérente. Les sessions BGP s'établissaient, le trafic commençait à être acheminé, puis la liaison s'arrêtait effectivement - sans être réellement coupée au niveau de l'interface, mais en n'acheminant tout simplement pas les paquets, sans qu'aucune chute ne soit signalée. Tous les diagnostics que nous avons effectués sur le routeur n'ont rien révélé d'anormal : pas d'erreurs, pas d'entrées dans le journal, rien.\n\nNous avons contacté notre fournisseur de transit, qui nous a confirmé qu'il ne voyait rien d'anormal de son côté non plus. Nous avons essayé de nombreuses configurations différentes. Nous avons même déplacé les configurations BGP et tunnel hors du routeur sur un serveur Linux séparé pour isoler le problème - et nous avons rencontré exactement le même comportement. À ce stade, le routeur lui-même semblait exclu, puisque le problème suivait les ports de transit indépendamment de ce qui les alimentait.\n\nAprès avoir épuisé toutes les autres possibilités, nous avons réinitialisé le routeur en dernier recours et appliqué une configuration minimale à partir de zéro - uniquement la configuration du pont et du VLAN. À notre grande surprise, cela a fonctionné instantanément. Parfaitement.\n\n## Cause première\n\nPour autant que nous puissions le déterminer, la mise à jour du firmware a entraîné une forme de corruption silencieuse dans l'état du routeur qui a affecté la façon dont les interfaces de transit géraient le trafic. Bien que la mise à jour ait semblé complètement réussie, que le routeur n'ait signalé aucune erreur et que le problème se soit même reproduit lorsque BGP était géré par une machine entièrement différente, une réinitialisation d'usine et une configuration propre ont suffi à le résoudre. Cela reste l'une des pannes les plus déroutantes que nous ayons rencontrées.\n\n## Ce que vous devez faire\n\n- **Si votre VM est inaccessible**, arrêtez-la et redémarrez-la à partir de votre panneau de contrôle. Dans la plupart des cas, cela rétablira la connectivité.\n- **Si elle est toujours inaccessible après un arrêt/démarrage**, veuillez contacter l'assistance et nous examinerons la situation.\n- **Si vous voyez un avertissement de changement de clé hôte SSH** lorsque vous vous connectez à votre VM, c'est normal. Les machines virtuelles ont été reconfigurées en masse pour fonctionner avec la nouvelle configuration, et cloud-init a régénéré les clés d'hôte dans le cadre de ce processus. Il s'agit d'un comportement standard de cloud-init lorsqu'une VM est réinitialisée - vous pouvez accepter la nouvelle clé en toute sécurité.\n\nNous nous excusons pour ce temps d'arrêt prolongé et pour la frustration qu'il a causée. Nous sommes en train de revoir nos procédures de mise à jour afin de nous assurer que nous pourrons identifier et résoudre des problèmes de ce type plus rapidement à l'avenir.\n",
+    "sig": ""
+  },
+  {
+    "id": "a47233ae5626fa673c749f8f4b004c0ace6da69e9ad4df118d59e7deee78dbde",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-ja"
+      ],
+      [
+        "title",
+        "ネットワーク障害の事後調査 - 2026年2月26日"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n昨日は、定期メンテナンスとして予定されていたコア・ルーターのファームウェアのアップグレード中に、長時間のネットワーク停止が発生しました。何が起こったのか、そしてなぜ解決にこれほど時間がかかったのかについて、透明性を保ちたいと思います。\n\n## 何が起こったのか\n\nファームウェアのアップグレード自体は問題なく完了したように見えた。ルーターはきれいに起動し、インターフェースも存在し、ルーター上のサーバー間のローカルトラフィックは問題なく機能した。しかし、アップストリームのBGPセッションとVXLANトンネルは復旧を拒否しました。\n\nそれから約8時間、私たちが遭遇した中で最も奇妙なネットワークの挙動を診断しました。トランジットポートのARP解決は一貫していませんでした。BGPセッションが確立され、トラフィックがルーティングを開始した後、リンクが事実上デッドになり、インターフェイスレベルで実際にダウンしたわけではなく、単にパケットを転送しないだけで、ゼロドロップが報告されました。ルーターを診断しても、エラーもログも何も出ませんでした。\n\nトランジット・プロバイダーに問い合わせたところ、彼らにも異常がないことを確認しました。さまざまな設定を試しました。さらに、問題の切り分けのために、BGPとトンネルのコンフィグをルーターから別のLinuxサーバーに移しましたが、まったく同じ動作が起こりました。その時点では、ルーター自体が原因ではないと思われました。\n\n他のあらゆる手段を尽くした後、私たちは最後の手段としてルーターを工場出荷時の状態にリセットし、ブリッジとVLANのセットアップだけという最小限のコンフィギュレーションをゼロから適用しました。驚いたことに、それは即座に機能した。完璧だ。\n\n## 根本原因\n\n我々が判断できる限りでは、ファームウェアのアップグレードによってルーターの状態が何らかの形で無言の破損を起こし、トランジットに面したインターフェイスがトラフィックを処理する方法に影響を及ぼした。アップグレードは完全に成功したように見え、ルーターはエラーを報告せず、BGPが全く別のマシンで処理されたときにも問題が再現したにもかかわらず、工場出荷時のリセットとクリーンなコンフィギュレーションだけで解決した。しかし、工場出荷時のリセットとクリーンな設定だけで解決しました。\n\n## やるべきこと\n\n- **VMにアクセスできない場合**、コントロールパネルからVMを停止し、起動してください。ほとんどの場合、これで接続が回復します。\n- **停止・起動後も接続できない場合**、サポートまでご連絡ください。\n- **VMに接続する際にSSHホスト・キー変更の警告**が表示された場合、これは予期されたものです。VMは新しいセットアップで動作するように一括で再設定され、cloud-initはそのプロセスの一部としてホスト鍵を再生成しました。これはVMが再初期化された際のcloud-initの標準的な動作であり、安全に新しいキーを受け入れることができる。\n\nダウンタイムが長引き、ご迷惑をおかけしたことをお詫び申し上げます。今後、このような問題をより迅速に特定し、復旧できるよう、アップグレード手順を見直します。\n",
+    "sig": ""
+  },
+  {
+    "id": "03260ecc26c44f37af72019d64a2450ffb100ad4ce4d35293542982bc7614c59",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-ko"
+      ],
+      [
+        "title",
+        "네트워크 장애 발생 후 검토 보고서 — 2026년 2월 26일"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n어제 예정된 정기 유지 보수 과정에서 코어 라우터의 펌웨어 업그레이드를 진행하던 중 예상보다 긴 네트워크 장애가 발생했습니다. 무슨 일이 있었는지, 그리고 해결하는 데 시간이 오래 걸린 이유에 대해 투명하게 알려드리고자 합니다.\n\n## 발생 상황\n\n겉보기에는 펌웨어 업그레이드가 문제없이 완료된 것 같았습니다. 라우터가 정상적으로 부팅되었고, 인터페이스가 제대로 작동했으며, 라우터 내 서버 간의 로컬 트래픽은 정상적으로 처리되었습니다. 그러나 업스트림 BGP 세션과 VXLAN 터널이 다시 활성화되지 않았습니다.\n\n이후 약 8시간 동안 우리가 겪었던 가장 이상한 네트워크 문제 중 일부를 진단하는 과정이 진행되었습니다. 트랜짓 포트의 ARP 해결이 일관성이 없었습니다. BGP 세션이 설정되고, 트래픽이 라우팅되기 시작했지만, 연결이 제대로 작동하지 않았습니다(인터페이스 수준에서 연결이 끊어진 것은 아니었지만, 패킷을 전달하지 않았고, 패킷 손실은 발생하지 않았습니다). 라우터에서 실행한 모든 진단에서 오류가 없었습니다. 어떤 로그도 기록되지 않았습니다.\n\n트랜짓 제공업체에 연락하여 그쪽에서도 문제가 없다는 것을 확인했습니다. 다양한 설정을 시도했습니다. 문제 해결을 위해 BGP 및 터널 구성을 라우터에서 완전히 분리하여 별도의 Linux 서버에 적용하기도 했습니다. 하지만 동일한 문제가 발생했습니다. 이 시점에서 라우터 자체는 문제가 아닌 것으로 판단되었는데, 문제가 트랜짓 포트와 관련이 있었고, 어떤 구성으로 인해 발생하는지는 알 수 없었습니다.\n\n모든 가능성을 다 검토한 후, 마지막 수단으로 라우터를 공장 초기화하고 처음부터 최소한의 구성(브리지 및 VLAN 설정)을 적용했습니다. 놀랍게도 즉시 정상적으로 작동했습니다. 완벽하게 작동했습니다.\n\n## 근본 원인\n\n현재까지 파악한 바로는 펌웨어 업그레이드 과정에서 라우터의 상태에 조용한 손상이 발생하여 트랜짓 인터페이스가 트래픽을 처리하는 방식에 영향을 미친 것으로 보입니다. 겉보기에 업그레이드가 완전히 성공한 것처럼 보였고, 라우터에서 오류가 발생하지 않았으며, 문제가 BGP를 다른 시스템에서 처리할 때에도 동일하게 발생했음에도 불구하고, 공장 초기화 및 클린 설정을 적용하는 것만으로 문제가 해결되었습니다. 이는 지금까지 우리가 해결했던 문제 중 가장 이해하기 어려운 문제 중 하나입니다.\n\n## 사용자가 해야 할 일\n\n- **VM에 연결할 수 없는 경우**, 제어판에서 VM을 중지했다가 다시 시작하십시오. 대부분의 경우 연결이 다시 정상적으로 작동할 것입니다.\n- **중지/시작 후에도 연결할 수 없는 경우**, 지원팀에 문의하시면 확인해 드리겠습니다.\n- **VM에 연결할 때 SSH 호스트 키 변경 경고가 표시되는 경우**, 이는 예상된 것입니다. VM은 새로운 설정으로 작동하도록 일괄적으로 재구성되었으며, cloud-init가 해당 과정의 일부로 호스트 키를 재생성했습니다. VM이 재초기화될 때 발생하는 표준 cloud-init 동작이므로, 새로운 키를 안전하게 수락할 수 있습니다.\n\n오랜 시간 동안 발생한 불편과 그로 인한 좌절감에 대해 사과드립니다. 향후 이와 같은 문제를 더 빠르고 효율적으로 식별하고 해결할 수 있도록 업그레이드 절차를 검토하고 있습니다.\n",
+    "sig": ""
+  },
+  {
+    "id": "59b9542a45214087ca20b5ca4cd267844ac777cbea2e80332b388863c8226236",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-pt"
+      ],
+      [
+        "title",
+        "Post-Mortem da interrupção da rede - 26 de fevereiro de 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nOntem, tivemos uma interrupção prolongada da rede durante o que foi planejado como manutenção de rotina: uma atualização de firmware em nosso roteador principal. Queremos ser transparentes sobre o que aconteceu e por que demorou tanto tempo para ser resolvido.\n\n## O que aconteceu\n\nA atualização do firmware em si pareceu ser concluída sem problemas. O roteador apareceu de forma limpa, as interfaces estavam presentes e o tráfego local entre os servidores no roteador funcionou bem. No entanto, nossas sessões BGP upstream e os túneis VXLAN se recusaram a voltar a funcionar.\n\nO que se seguiu foram cerca de oito horas de diagnóstico de alguns dos comportamentos de rede mais estranhos que já encontramos. A resolução de ARP nas portas de trânsito era inconsistente. As sessões BGP se estabeleciam, o tráfego começava a ser roteado e, em seguida, o link ficava efetivamente inoperante - não realmente inoperante no nível da interface, mas simplesmente não encaminhava pacotes, com zero quedas relatadas. Todos os diagnósticos que executamos no roteador não mostraram nada de errado: nenhum erro, nenhuma entrada de registro, nada.\n\nEntramos em contato com o nosso provedor de trânsito, que confirmou que também não via nada de errado do seu lado. Tentamos várias configurações diferentes. Até mesmo transferimos as configurações de BGP e de túnel do roteador para um servidor Linux separado para isolar o problema e tivemos exatamente o mesmo comportamento. Nesse ponto, o próprio roteador parecia descartado, pois o problema seguia as portas de trânsito independentemente do que as estava acionando.\n\nDepois de esgotar todas as outras possibilidades, redefinimos o roteador de fábrica como último recurso e aplicamos uma configuração mínima do zero - apenas a ponte e a configuração da VLAN. Para nossa surpresa, funcionou instantaneamente. Perfeitamente.\n\n## Causa raiz\n\nPelo que podemos determinar, a atualização do firmware resultou em alguma forma de corrupção silenciosa no estado do roteador que afetou a forma como as interfaces voltadas para o trânsito lidavam com o tráfego. Apesar de a atualização ter sido completamente bem-sucedida, de o roteador não ter relatado nenhum erro e de o problema ter se reproduzido mesmo quando o BGP foi gerenciado por uma máquina totalmente diferente, bastou uma redefinição de fábrica e uma configuração limpa para resolver o problema. Essa continua sendo uma das falhas mais intrigantes com as quais já lidamos.\n\n## O que você pode precisar fazer\n\n- **Se a sua VM estiver inacessível**, pare e inicie-a no painel de controle. Na maioria dos casos, isso restaurará a conectividade.\n- **Se ela ainda estiver inacessível após a parada/inicialização**, entre em contato com o suporte e nós investigaremos.\n- **Se você vir um aviso de alteração de chave de host SSH** ao se conectar à sua VM, isso é esperado. As VMs foram reconfiguradas em massa para funcionar com a nova configuração, e a instalação na nuvem gerou novamente as chaves do host como parte desse processo. Esse é o comportamento padrão da instalação na nuvem quando uma VM é reinicializada - você pode aceitar a nova chave com segurança.\n\nPedimos desculpas pelo tempo de inatividade prolongado e pela frustração causada. Estamos revisando nossos procedimentos de upgrade para garantir que possamos identificar e nos recuperar de problemas como esse mais rapidamente no futuro.\n",
+    "sig": ""
+  },
+  {
+    "id": "62f0d401c1c988a86ab1236d13644657d0105be624e32e097b3fed65634dd62e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-ru"
+      ],
+      [
+        "title",
+        "Анализ причин сбоя в работе сети — 26 февраля 2026 года."
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nВчера у нас произошел длительный сбой в работе сети во время планового технического обслуживания: обновления прошивки основного маршрутизатора. Мы хотим быть открытыми в отношении того, что произошло, и почему потребовалось столько времени для решения проблемы.\n\n## Что произошло\n\nСамо по себе обновление прошивки, по-видимому, завершилось без проблем. Маршрутизатор успешно запустился, интерфейсы были доступны, и локальный трафик между серверами на маршрутизаторе работал нормально. Однако наши подключения BGP и туннели VXLAN не могли восстановиться.\n\nЗа этим последовало примерно восемь часов диагностики одних из самых странных сетевых проблем, с которыми мы сталкивались. Разрешение ARP на транзитных портах было непоследовательным. Сессии BGP устанавливались, трафик начинал маршрутизироваться, а затем соединение «фактически» отключалось — не на уровне интерфейса, а просто переставало передавать пакеты, при этом не регистрировалось ни одного потерянного пакета. Все диагностические тесты, которые мы проводили на маршрутизаторе, не показывали никаких проблем: ни ошибок, ни записей в журналах, ничего.\n\nМы связались с нашим провайдером, который также подтвердил, что не видит никаких проблем со своей стороны. Мы попробовали различные конфигурации. Мы даже переместили конфигурации BGP и туннелей с маршрутизатора на отдельный Linux-сервер, чтобы изолировать проблему, и столкнулись с точно такой же проблемой. В этот момент сам маршрутизатор, казалось, был исключен, поскольку проблема возникала на транзитных портах независимо от того, что их обслуживало.\n\nПосле того как мы исчерпали все другие возможности, мы в качестве крайней меры выполнили сброс маршрутизатора к заводским настройкам и применили минимальную конфигурацию с нуля — только настройку моста и VLAN. К нашему удивлению, это сразу же заработало. Идеально.\n\n## Причина\n\nНасколько мы можем определить, обновление прошивки привело к некоторому виду скрытой коррупции данных в состоянии маршрутизатора, которая повлияла на то, как транзитные интерфейсы обрабатывали трафик. Несмотря на то, что обновление, казалось, прошло полностью успешно, маршрутизатор не сообщал об ошибках, и проблема воспроизводилась даже тогда, когда BGP обслуживался совершенно другой машиной, сброс к заводским настройкам и чистая конфигурация решили проблему. Это остается одной из самых загадочных проблем, с которыми нам приходилось справляться.\n\n## Что вам, возможно, потребуется сделать\n\n- **Если ваша виртуальная машина недоступна**, пожалуйста, остановите и перезапустите ее из панели управления. В большинстве случаев это восстановит подключение.\n- **Если после остановки/перезапуска она по-прежнему недоступна**, пожалуйста, свяжитесь со службой поддержки, и мы проведем расследование.\n- **Если при подключении к вашей виртуальной машине вы видите предупреждение об изменении ключа SSH**, это ожидаемо. Виртуальные машины были массово переконфигурированы для работы с новой настройкой, и cloud-init перегенерировал ключи в рамках этого процесса. Это стандартное поведение cloud-init, когда виртуальная машина переинициализируется — вы можете безопасно принять новый ключ.\n\nМы приносим извинения за длительный простой и вызванное им разочарование. Мы пересматриваем наши процедуры обновления, чтобы обеспечить возможность более быстрого выявления и устранения подобных проблем в будущем.\n",
+    "sig": ""
+  },
+  {
+    "id": "f22cdebf3b8d3f06bbc492252463add574fa0680fb538f2ececdddadf9a77a03",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-tr"
+      ],
+      [
+        "title",
+        "Ağ Kesintisi Sonrası Analiz — 26 Şubat 2026"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nDün, planlı rutin bakım sırasında, temel yönlendiricimizde gerçekleştirilen bir donanım yazılımı yükseltmesi sırasında uzun süreli bir ağ kesintisi yaşadık. Yaşananları ve çözümlerinin bu kadar uzun sürmesinin nedenlerini şeffaf bir şekilde açıklamak istiyoruz.\n\n## Yaşananlar\n\nDonanım yazılımı yükseltmesinin sorunsuz bir şekilde tamamlandığı görüldü. Yönlendirici düzgün bir şekilde başladı, arayüzler mevcut ve yönlendirici üzerindeki sunucular arasındaki yerel trafik sorunsuz bir şekilde çalıştı. Ancak, yukarı yönlü BGP oturumlarımız ve VXLAN tünellerimiz yeniden başlatılamadı.\n\nBunun ardından yaklaşık sekiz saat boyunca, şimdiye kadar karşılaştığımız en tuhaf ağ davranışlarından bazılarını teşhis ettik. Geçiş bağlantı noktalarındaki ARP çözümlemesi tutarlı değildi. BGP oturumları başlatıldı, trafik yönlendirilmeye başlandı ve ardından bağlantı etkili bir şekilde kullanılamaz hale geldi; arayüz düzeyinde bağlantı kesilmemiş olsa da, paketler iletilmiyordu ve sıfır kayıp bildirildi. Yönlendiricide yaptığımız her teşhis, hiçbir sorun olmadığını gösteriyordu: hiçbir hata, hiçbir günlük kaydı, hiçbir şey yoktu.\n\nÜst bağlantı sağlayıcımızla iletişime geçtik ve onların da kendi uçlarında herhangi bir sorun olmadığını doğruladılar. Birçok farklı yapılandırma denedik. Sorunu izole etmek için BGP ve tünel yapılandırmalarını yönlendirici dışına, ayrı bir Linux sunucusuna bile taşıdık ve tam olarak aynı davranışla karşılaştık. Bu noktada, yönlendiricinin kendisi artık sorunun kaynağı olmaktan çıktı, çünkü sorun, hangi cihazın bunları kontrol ettiğine bakılmaksızın geçiş bağlantı noktalarını takip ediyordu.\n\nDiğer tüm olasılıkları tükettikten sonra, son çare olarak yönlendiriciyi fabrika ayarlarına döndürdük ve baştan minimum bir yapılandırma uyguladık; yalnızca köprü ve VLAN kurulumu. Şaşırtıcı bir şekilde, anında çalıştı. Kusursuz bir şekilde.\n\n## Temel Neden\n\nElimizdeki verilere göre, donanım yazılımı yükseltmesi, yönlendiricinin durumunda, geçişe bakan arayüzlerin trafiği işlemesini etkileyen bir tür sessiz bozulmaya neden oldu. Yükseltme tamamen başarılı görünmesine, yönlendiricinin herhangi bir hata bildirmemesine ve sorunun BGP'nin tamamen farklı bir cihazdan yönetildiği durumda bile tekrarlanmasına rağmen, fabrika ayarlarına döndürme ve temiz bir yapılandırma, sorunu çözmek için yeterli oldu. Bu, şimdiye kadar karşılaştığımız en şaşırtıcı arızalardan biri olarak kaldı.\n\n## Yapmanız Gerekenler\n\n- **Sanal makinenize erişilemiyorsa**, lütfen kontrol panelinizden durdurup yeniden başlatın. Çoğu durumda, bu bağlantıyı yeniden kuracaktır.\n- **Durdurma/yeniden başlatma işleminden sonra hala erişilemiyorsa**, lütfen destek ekibiyle iletişime geçin, biz de durumu inceleyeceğiz.\n- **Sanal makinenize bağlandığınızda bir SSH anahtar değişikliği uyarısı görürseniz**, bu beklenen bir durumdur. Sanal makineler, yeni yapılandırma ile çalışacak şekilde toplu olarak yeniden yapılandırıldı ve cloud-init, bu işlemin bir parçası olarak anahtarları yeniden oluşturdu. Bir sanal makine yeniden başlatıldığında bu, standart cloud-init davranışıdır; yeni anahtarı güvenle kabul edebilirsiniz.\n\nYaşanan uzun süreli kesinti ve bunun neden olduğu sıkıntı için özür dileriz. Gelecekte bu tür sorunları daha hızlı bir şekilde tanımlayabilmemiz ve çözebilmemiz için yükseltme prosedürlerimizi gözden geçiriyoruz.\n",
+    "sig": ""
+  },
+  {
+    "id": "10894558f4bdd28b181b6231ed317794245a7b232a9222b8af7686f01b28eccd",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1772064000,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "2026-02-26-network-outage-post-mortem-zh"
+      ],
+      [
+        "title",
+        "网络故障事后分析 - 2026 年 2 月 26 日"
+      ],
+      [
+        "published_at",
+        "1772064000"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n昨天，我们在计划的例行维护过程中经历了一次长时间的网络中断：对核心路由器进行固件升级。我们希望透明地说明发生了什么，以及为什么需要这么长时间才能解决。\n\n##发生了什么\n\n固件升级本身似乎没有问题。路由器干净利落地启动了，接口也出现了，路由器上服务器之间的本地流量运行正常。但是，我们的上游 BGP 会话和 VXLAN 隧道却拒绝恢复。\n\n随后，我们花了大约 8 个小时来诊断我们遇到的一些最奇怪的网络行为。中转端口上的 ARP 解析不一致。BGP 会话会建立，流量会开始路由，然后链路会实际断开--实际上不是接口断开，而是根本不转发数据包，报告的丢包率为零。我们在路由器上运行的所有诊断程序都没有显示任何问题：没有错误，没有日志条目，什么都没有。\n\n我们联系了我们的转接提供商，他们确认他们也没有发现任何问题。我们尝试了许多不同的配置。我们甚至将 BGP 和隧道配置从路由器上完全移到了一台单独的 Linux 服务器上，以隔离问题，但结果完全一样。在这一点上，路由器本身的问题似乎被排除了，因为无论驱动端口是什么，问题都会跟着中转端口出现。\n\n在用尽所有其他方法后，我们不得已重置了路由器，并从头开始进行最低限度的配置--只有网桥和 VLAN 设置。出乎意料的是，路由器立刻就正常工作了。太完美了\n\n## 根本原因\n\n据我们判断，固件升级导致路由器状态出现某种形式的静默损坏，影响了面向中转接口的流量处理方式。尽管升级似乎完全成功，路由器也没有报告任何错误，甚至当 BGP 完全由另一台机器处理时，问题也会重现，但只需重置出厂设置并清除配置就能解决这个问题。这仍然是我们处理过的最令人费解的故障之一。\n\n## 您可能需要做的事情\n\n- **如果您的虚拟机无法访问**，请从控制面板中停止并启动它。在大多数情况下，这将恢复连接。\n- **如果停止/启动后仍无法访问**，请联系技术支持，我们将进行调查。\n- **如果您在连接虚拟机时看到 SSH 主机密钥更改警告**，这是预料之中的。虚拟机被批量重新配置以使用新设置，而云启动会在此过程中重新生成主机密钥。这是虚拟机重新初始化时云启动的标准行为，您可以放心接受新密钥。\n\n我们对停机时间的延长和由此造成的挫折深表歉意。我们正在审查我们的升级程序，以确保今后能更快地识别和恢复此类问题。\n",
+    "sig": ""
+  },
+  {
+    "id": "3768cabe8cf5229a8df74a58b43632eb5cdd8e0cc1dd6c9d50307f6776ebd70b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-ar"
+      ],
+      [
+        "title",
+        "برنامج الإحالة"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nاكسب وحدات ساتوشي من خلال مشاركة LNVPS! لقد أطلقنا برنامج إحالة يدفع لك عندما يقوم شخص بطلب جهاز افتراضي جديد باستخدام رابط الإحالة الخاص بك.\n\n## طريقة العمل\n\n1. انتقل إلى **الحساب -> برنامج الإحالة** وسجّل.\n2. شارك رابط الإحالة الفريد الخاص بك مع الآخرين.\n3. عندما يزور شخص ما الرابط الخاص بك ويطلب جهازًا افتراضيًا جديدًا، ستربح مبلغًا ماليًا.\n\n## خيارات الدفع\n\nاختر الطريقة التي تريد بها تلقي الدفع:\n\n- **عنوان Lightning** - يتم إرسال المدفوعات مباشرةً إلى أي عنوان Lightning.\n- **محفظة NWC** - يتم إرسال المدفوعات عبر محفظة Nostr Wallet Connect التي قمت بتهيئةها.\n\nيمكنك التبديل بين طرق الدفع في أي وقت من خلال صفحة إعدادات الإحالة.\n\n## تتبع أرباحك\n\nيعرض لوحة معلومات الإحالة الخاصة بك كل شيء في لمحة: الإحالات الناجحة، والأرباح مقسمة حسب العملة، وسجل كامل للمدفوعات.\n\nابدأ اليوم في **الحساب -> برنامج الإحالة** وابدأ في الربح!\n",
+    "sig": ""
+  },
+  {
+    "id": "9dff5a1e2214c1ad891367b8200714eae913aaf00585aca9149468043045a7e3",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-de"
+      ],
+      [
+        "title",
+        "Empfehlungsprogramm"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nVerdienen Sie Sats, indem Sie LNVPS weiterempfehlen! Wir haben ein Empfehlungsprogramm gestartet, das Sie bezahlt, wenn jemand eine neue VM über Ihren Empfehlungslink bestellt.\n\n## Wie es funktioniert\n\n1. Gehen Sie zu **Konto -> Empfehlungsprogramm** und melden Sie sich an\n2. Teilen Sie Ihren einzigartigen Empfehlungslink mit anderen\n3. Wenn jemand Ihren Link besucht und eine neue VM bestellt, erhalten Sie eine Auszahlung\n\n## Auszahlungsoptionen\n\nWählen Sie, wie Sie bezahlt werden möchten:\n\n- **Lightning Adresse** - Auszahlungen werden direkt an eine beliebige Lightning Adresse gesendet\n- **NWC Wallet** - Auszahlungen werden über Ihre konfigurierte Nostr Wallet Connect Wallet gesendet\n\nSie können auf der Seite mit den Empfehlungseinstellungen jederzeit zwischen den Auszahlungsmethoden wechseln.\n\n## Verfolgen Sie Ihren Verdienst\n\nIhr Referral-Dashboard zeigt alles auf einen Blick: erfolgreiche Referrals, nach Währungen aufgeschlüsselte Verdienste und einen vollständigen Auszahlungsverlauf.\n\nStarten Sie noch heute unter **Konto -> Empfehlungsprogramm** und beginnen Sie zu verdienen!\n",
+    "sig": ""
+  },
+  {
+    "id": "5d03b6b9989f5f1b0ea7c9b1d3ba7f12c41c1cd3d410079f9fe2b442ba1999f5",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program"
+      ],
+      [
+        "title",
+        "Referral Program"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ]
+    ],
+    "content": "Earn sats by sharing LNVPS! We've launched a referral program that pays you when someone orders a new VM using your referral link.\n\n## How It Works\n\n1. Head to **Account -> Referral Program** and enroll\n2. Share your unique referral link with others\n3. When someone visits your link and orders a new VM, you earn a payout\n\n## Payout Options\n\nChoose how you want to get paid:\n\n- **Lightning Address** — Payouts sent directly to any Lightning Address\n- **NWC Wallet** — Payouts sent via your configured Nostr Wallet Connect wallet\n\nYou can switch between payout methods at any time from the referral settings page.\n\n## Track Your Earnings\n\nYour referral dashboard shows everything at a glance: successful referrals, earnings broken down by currency, and a full payout history.\n\nGet started today at **Account -> Referral Program** and start earning!\n",
+    "sig": ""
+  },
+  {
+    "id": "328be265e3aeff57943e0c3a9da92a7cbba0b9d49d1e5060c43f09cbe1241144",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-es"
+      ],
+      [
+        "title",
+        "Programa de referencia"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\n¡Gana sats compartiendo LNVPS! Hemos puesto en marcha un programa de referencia que le paga cuando alguien ordena un nuevo VM utilizando su enlace de referencia.\n\n## Cómo funciona\n\n1. Vaya a **Account -> Referral Program** e inscríbase\n2. Comparta su enlace único de recomendación con los demás\n3. Cuando alguien visite su enlace y compre un nuevo VM, usted recibirá un pago\n\n## Opciones de pago\n\nElige cómo quieres cobrar:\n\n- **Dirección Lightning** - Pagos enviados directamente a cualquier dirección Lightning\n- **Monedero NWC** - Pagos enviados a través de su monedero Nostr Wallet Connect configurado\n\nPuede cambiar entre los métodos de pago en cualquier momento desde la página de configuración de referidos.\n\n## Seguimiento de sus ganancias\n\nSu panel de control de referidos muestra todo de un vistazo: referidos exitosos, ganancias desglosadas por divisa y un historial completo de pagos.\n\nComience hoy mismo en **Account -> Referral Program** y ¡empiece a ganar!\n",
+    "sig": ""
+  },
+  {
+    "id": "3a7490202993326431ae2bff874025572e26e440a4631c362f4bb66cc87fcd99",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-fr"
+      ],
+      [
+        "title",
+        "Programme de référence"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nGagnez des points en partageant LNVPS ! Nous avons lancé un programme de parrainage qui vous rémunère lorsque quelqu'un commande un nouveau VM en utilisant votre lien de parrainage.\n\n## Comment ça marche\n\n1. Rendez-vous sur **Compte -> Programme de parrainage** et inscrivez-vous\n2. Partagez votre lien de parrainage unique avec d'autres personnes\n3. Lorsque quelqu'un visite votre lien et commande un nouveau VM, vous recevez un paiement\n\n## Options de paiement\n\nChoisissez comment vous souhaitez être payé :\n\n- **Adresse Lightning** - Les paiements sont envoyés directement à n'importe quelle adresse Lightning\n- **Portefeuille NWC** - Les paiements sont envoyés via votre portefeuille Nostr Wallet Connect configuré\n\nVous pouvez passer d'une méthode de paiement à l'autre à tout moment depuis la page des paramètres de parrainage.\n\n## Suivez vos gains\n\nVotre tableau de bord de parrainage affiche tout en un coup d'œil : les parrainages réussis, les gains ventilés par devise et l'historique complet des paiements.\n\nCommencez dès aujourd'hui à **Compte -> Programme de parrainage** et commencez à gagner !\n",
+    "sig": ""
+  },
+  {
+    "id": "c666423c604c61d022c16c87f61cf24dfec1867cc870c758de02918954d329af",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-ja"
+      ],
+      [
+        "title",
+        "紹介プログラム"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\nLNVPSをシェアしてサッツを稼ごう！あなたの紹介リンクを使って誰かが新しいVMを注文すると、あなたに報酬が支払われる紹介プログラムを開始しました。\n\n## 仕組み\n\n1.アカウント -> 紹介プログラム**にアクセスし、登録します。\n2.あなた独自の紹介リンクを他の人と共有する\n3.誰かがあなたのリンクにアクセスし、新しいVMを注文すると、あなたに報酬が支払われます。\n\n## 支払いオプション\n\n支払い方法を選択してください：\n\n- **ライトニングアドレス** - ライトニングアドレスに直接支払われます。\n- **NWCウォレット** - 設定されたNostrウォレットコネクトウォレット経由で支払われます。\n\n支払い方法は、紹介設定ページからいつでも切り替えることができます。\n\n## 収益の追跡\n\nあなたの紹介ダッシュボードには、成功した紹介、通貨別に分類された収益、完全な支払い履歴など、すべてが一目で表示されます。\n\nアカウント -> 紹介プログラム**で今すぐ始めましょう！\n",
+    "sig": ""
+  },
+  {
+    "id": "351eb734e0f75751b9e9e8b01c45dfd1ef6e806c92cdc8130f41a2ff3523c778",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-ko"
+      ],
+      [
+        "title",
+        "추천 프로그램"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\nLNVPS를 공유하고 사토시를 획득하세요! 다른 사람이 귀하의 추천 링크를 사용하여 새로운 가상 머신을 주문하면 보상을 받는 추천 프로그램을 시작했습니다.\n\n## 작동 방식\n\n1. **계정 -> 추천 프로그램**으로 이동하여 등록합니다.\n2. 고유한 추천 링크를 다른 사람과 공유합니다.\n3. 누군가가 귀하의 링크를 방문하여 새로운 가상 머신을 주문하면 보상을 받습니다.\n\n## 보상 지급 방법\n\n원하는 보상 지급 방법을 선택하세요.\n\n- **라이트닝 주소** — 모든 라이트닝 주소로 직접 보상금을 지급합니다.\n- **NWC 지갑** — 구성된 Nostr Wallet Connect 지갑을 통해 보상금을 지급합니다.\n\n추천 설정 페이지에서 언제든지 보상 지급 방법을 변경할 수 있습니다.\n\n## 수익 추적\n\n추천 대시보드에서 모든 정보를 한눈에 확인할 수 있습니다. 성공적인 추천, 통화별 세분화된 수익, 전체 보상 지급 내역을 확인할 수 있습니다.\n\n오늘 **계정 -> 추천 프로그램**에서 시작하여 수익을 창출하세요!\n",
+    "sig": ""
+  },
+  {
+    "id": "9a99a8e2773147e1ebcad9590931e776a80531c43b7b98f433e8ba5f18a968bc",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-pt"
+      ],
+      [
+        "title",
+        "Programa de indicação"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nGanhe sats compartilhando o LNVPS! Lançamos um programa de indicação que paga a você quando alguém solicita uma nova VM usando seu link de indicação.\n\n## Como funciona\n\n1. Acesse **Account -> Referral Program** e inscreva-se\n2. Compartilhe seu link de indicação exclusivo com outras pessoas\n3. Quando alguém visita seu link e faz um pedido de uma nova VM, você recebe um pagamento\n\n## Opções de pagamento\n\nEscolha como você deseja receber o pagamento:\n\n- **Lightning Address** - Pagamentos enviados diretamente para qualquer Lightning Address\n- **NWC Wallet** - Pagamentos enviados por meio de sua carteira Nostr Wallet Connect configurada\n\nVocê pode alternar entre os métodos de pagamento a qualquer momento na página de configurações de indicação.\n\n## Acompanhe seus ganhos\n\nSeu painel de indicações mostra tudo em um relance: indicações bem-sucedidas, ganhos divididos por moeda e um histórico completo de pagamentos.\n\nComece hoje mesmo em **Conta -> Programa de indicação** e comece a ganhar!\n",
+    "sig": ""
+  },
+  {
+    "id": "3eb41d7e1bb3c153c1c9db3cb59b68003d9be72f49e95f1c849bba355f56d697",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-ru"
+      ],
+      [
+        "title",
+        "Партнёрская программа"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nЗарабатывайте сатоши, делясь информацией о LNVPS! Мы запустили реферальную программу, которая выплачивает вам вознаграждение, когда кто-то заказывает новую виртуальную машину, используя вашу реферальную ссылку.\n\n## Как это работает\n\n1. Перейдите в **Аккаунт -> Реферальная программа** и зарегистрируйтесь.\n2. Поделитесь своей уникальной реферальной ссылкой с другими.\n3. Когда кто-то переходит по вашей ссылке и заказывает новую виртуальную машину, вы получаете выплату.\n\n## Варианты выплат\n\nВыберите, как вы хотите получать выплаты:\n\n- **Lightning Address** — Выплаты отправляются непосредственно на любой Lightning Address.\n- **NWC Wallet** — Выплаты отправляются через ваш настроенный Nostr Wallet Connect кошелек.\n\nВы можете переключаться между способами получения выплат в любое время на странице настроек реферальной программы.\n\n## Отслеживайте свои доходы\n\nНа вашей панели управления реферальной программой отображается вся необходимая информация: успешные рефералы, доходы, разбивтые по валютам, и полная история выплат.\n\nНачните прямо сейчас по адресу **Аккаунт -> Реферальная программа** и начните зарабатывать!\n",
+    "sig": ""
+  },
+  {
+    "id": "09126d9dd4d50dab5ae2d176174091f9d382f021a603b260f795f2b572cd5878",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-tr"
+      ],
+      [
+        "title",
+        "Tavsiye Programı"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nLNVPS'i paylaşarak satoşi kazanın! Birisi sizin yönlendirme bağlantınızı kullanarak yeni bir sanal makine sipariş ettiğinde size ödeme yapan bir yönlendirme programı başlattık.\n\n## Nasıl Çalışır?\n\n1. **Hesap -> Yönlendirme Programı** bölümüne gidin ve kaydolun.\n2. Benzersiz yönlendirme bağlantınızı başkalarıyla paylaşın.\n3. Birisi bağlantınıza tıkladığında ve yeni bir sanal makine sipariş ettiğinde, bir ödeme kazanırsınız.\n\n## Ödeme Seçenekleri\n\nÖdemenizi nasıl almak istediğinizi seçin:\n\n- **Lightning Adresi** — Ödemeler doğrudan herhangi bir Lightning adresine gönderilir.\n- **NWC Cüzdanı** — Ödemeler, yapılandırdığınız Nostr Cüzdan Bağlantısı cüzdanı aracılığıyla gönderilir.\n\nÖdeme yöntemleri arasında istediğiniz zaman yönlendirme ayarları sayfasından geçiş yapabilirsiniz.\n\n## Kazançlarınızı Takip Edin\n\nYönlendirme kontrol paneliniz, her şeyi bir bakışta gösterir: başarılı yönlendirmeler, para birimine göre ayrılmış kazançlar ve tam ödeme geçmişi.\n\nHemen **Hesap -> Yönlendirme Programı** bölümüne giderek başlayın ve kazanç elde etmeye başlayın!\n",
+    "sig": ""
+  },
+  {
+    "id": "2b643a6cf87525b201b77faf34b894603d11e2c5f73fef72e747c245ed84db53",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771927035,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "referral-program-zh"
+      ],
+      [
+        "title",
+        "推荐计划"
+      ],
+      [
+        "published_at",
+        "1771927035"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n通过分享 LNVPS 赚取积分！我们推出了一项推荐计划，当有人使用您的推荐链接订购新虚拟机时，我们就会向您支付报酬。\n\n## 如何运作\n\n1.前往 **账户 -> 推荐计划** 并注册\n2.与他人分享您的唯一推荐链接\n3.当有人访问您的链接并订购新虚拟机时，您就可以获得报酬\n\n## 支付选项\n\n选择付款方式：\n\n- **闪电地址** - 付款直接发送到任何闪电地址\n- **NWC 钱包** - 通过您配置的 Nostr Wallet Connect 钱包发送付款\n\n您可以随时在推荐设置页面切换付款方式。\n\n## 跟踪您的收入\n\n您的推荐控制面板将一目了然地显示所有信息：成功推荐、按货币分类的收入以及完整的支付历史。\n\n立即从 **账户 -> 推荐计划** 开始赚钱！\n",
+    "sig": ""
+  },
+  {
+    "id": "7500b97df552a3dc183853928b4f23c57b04d007cdb2b093c04faf6449d342e3",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-ar"
+      ],
+      [
+        "title",
+        "وحدة تحكم الويب"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nيسرنا أن نعلن عن ميزة \"وحدة التحكم على الويب\" الجديدة!\n\nيمكنك الآن الوصول إلى واجهة سطر الأوامر (Terminal) لجهازك الظاهري مباشرةً من خلال متصفحك - دون الحاجة إلى عميل SSH. هذا مثالي للمهام السريعة للصيانة، أو تصحيح الأخطاء، أو عندما تكون بعيدًا عن محطة العمل المعتادة لديك.\n\nما عليك سوى الانتقال إلى جهازك الظاهري والنقر فوق زر \"وحدة التحكم\" للحصول على وصول فوري إلى واجهة سطر الأوامر.\n\nالميزات:\n\n- الوصول إلى واجهة سطر الأوامر في الوقت الفعلي عبر WebSocket\n- مؤشر حالة الاتصال\n- إعادة الاتصال بنقرة واحدة في حالة الانقطاع\n- عرض يعتمد على WebGL لتحقيق أداء سلس\n\nتعتبر هذه الميزة مفيدة بشكل خاص عندما تحتاج إلى استكشاف مشكلات الشبكة التي قد تمنع الوصول عبر SSH.\n\n**ملاحظة:** لاستخدام وحدة التحكم على الويب، يجب عليك أولاً تعيين كلمة مرور للمستخدم الخاص بك عبر SSH عن طريق تشغيل الأمر `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "d282f171e39f347c3fd590d4ff5f8a4a511ff492d4aef068019e3ccb61b56f18",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-de"
+      ],
+      [
+        "title",
+        "Web-Konsole"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nWir freuen uns, die neue Funktion der Web-Konsole ankündigen zu können!\n\nSie können jetzt direkt über Ihren Browser auf das Terminal Ihrer VM zugreifen - ein SSH-Client ist nicht erforderlich. Dies ist perfekt für schnelle Wartungsaufgaben, Debugging oder wenn Sie nicht an Ihrem üblichen Arbeitsplatz sind.\n\nNavigieren Sie einfach zu Ihrer VM und klicken Sie auf die Schaltfläche Konsole, um sofortigen Terminalzugriff zu erhalten.\n\nMerkmale:\n\n- Echtzeit-Terminalzugriff über WebSocket\n- Anzeige des Verbindungsstatus\n- Wiederherstellung der Verbindung mit einem Klick, wenn die Verbindung getrennt wird\n- WebGL-beschleunigtes Rendering für reibungslose Leistung\n\nDiese Funktion ist besonders nützlich, wenn Sie Netzwerkprobleme beheben müssen, die den SSH-Zugang verhindern könnten.\n\n**Hinweis:** Um die Web-Konsole zu verwenden, müssen Sie zunächst ein Passwort für Ihren Benutzer über SSH festlegen, indem Sie `passwd` ausführen.\n",
+    "sig": ""
+  },
+  {
+    "id": "5173e1fb6ba066990a1cb3e72e0f2698c0ddb968ae4af24d35cec6bd5ae22f5f",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console"
+      ],
+      [
+        "title",
+        "Web Console"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ]
+    ],
+    "content": "We're excited to announce the new Web Console feature!\n\nYou can now access your VM's terminal directly from your browser - no SSH client required. This is perfect for quick maintenance tasks, debugging, or when you're away from your usual workstation.\n\nSimply navigate to your VM and click the Console button to get instant terminal access.\n\nFeatures:\n\n- Real-time terminal access via WebSocket\n- Connection status indicator\n- One-click reconnect if disconnected\n- WebGL-accelerated rendering for smooth performance\n\nThis feature is especially useful when you need to troubleshoot network issues that might prevent SSH access.\n\n**Note:** To use the web console, you'll need to set a password for your user via SSH first by running `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "bf14172693c8d77f2d7d9fbd919704d0fa7c7d5a7349a5ffb37d2d30cd915f88",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-es"
+      ],
+      [
+        "title",
+        "Consola web"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nNos complace anunciar la nueva función de la Consola Web\n\nAhora puede acceder al terminal de su máquina virtual directamente desde su navegador, sin necesidad de un cliente SSH. Esto es perfecto para tareas rápidas de mantenimiento, depuración, o cuando usted está lejos de su estación de trabajo habitual.\n\nSimplemente navegue hasta su máquina virtual y haga clic en el botón Consola para obtener acceso instantáneo al terminal.\n\nCaracterísticas:\n\n- Acceso a terminal en tiempo real a través de WebSocket\n- Indicador del estado de la conexión\n- Reconexión con un clic en caso de desconexión\n- Renderizado acelerado por WebGL para un rendimiento fluido\n\nEsta función resulta especialmente útil cuando es necesario solucionar problemas de red que podrían impedir el acceso SSH.\n\n**Nota:** Para utilizar la consola web, primero tendrás que establecer una contraseña para tu usuario a través de SSH ejecutando `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "a68f48320647dcb4d0022ba277d434cbbf70b96bab28752359e1088be279851f",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-fr"
+      ],
+      [
+        "title",
+        "Console Web"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nNous sommes ravis d'annoncer la nouvelle fonctionnalité de la console Web !\n\nVous pouvez désormais accéder au terminal de votre VM directement depuis votre navigateur - aucun client SSH n'est nécessaire. C'est parfait pour les tâches de maintenance rapide, le débogage, ou lorsque vous n'êtes pas sur votre poste de travail habituel.\n\nIl vous suffit de naviguer vers votre VM et de cliquer sur le bouton Console pour accéder instantanément au terminal.\n\nCaractéristiques :\n\n- Accès au terminal en temps réel via WebSocket\n- Indicateur d'état de la connexion\n- Reconnexion en un clic en cas de déconnexion\n- Rendu accéléré par WebGL pour des performances fluides\n\nCette fonctionnalité est particulièrement utile lorsque vous devez résoudre des problèmes de réseau susceptibles d'empêcher l'accès au SSH.\n\n**Note:** Pour utiliser la console web, vous devrez d'abord définir un mot de passe pour votre utilisateur via SSH en exécutant `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "a703796670ec63a0f14a24a812ca4a3507f5df8af6714b98bda5045ed4dbe570",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-ja"
+      ],
+      [
+        "title",
+        "ウェブコンソール"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n新しいウェブコンソール機能を発表できることを嬉しく思います！\n\nSSHクライアント不要で、ブラウザから直接VMのターミナルにアクセスできるようになりました。これは、迅速なメンテナンス作業やデバッグ、あるいはいつものワークステーションから離れているときに最適です。\n\nVM に移動して Console ボタンをクリックするだけで、すぐにターミナルにアクセスできます。\n\n特徴\n\n- WebSocketを介したリアルタイムのターミナルアクセス\n- 接続ステータスインジケータ\n- 切断時にワンクリックで再接続\n- WebGLによる高速レンダリングでスムーズなパフォーマンスを実現\n\nこの機能は、SSHアクセスを妨げる可能性のあるネットワークの問題をトラブルシューティングする必要がある場合に特に便利です。\n\n**注意:** ウェブコンソールを使うには、まず `passwd` を実行して SSH 経由でユーザーのパスワードを設定する必要があります。\n",
+    "sig": ""
+  },
+  {
+    "id": "2d8aef984c46d6401ea3a1bb5dab1bb87c76352fb9d293bb7584153d664acd05",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-ko"
+      ],
+      [
+        "title",
+        "웹 콘솔"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n새로운 웹 콘솔 기능을 발표하게 되어 기쁩니다!\n\n이제 브라우저에서 직접 가상 머신의 터미널에 액세스할 수 있습니다. SSH 클라이언트는 필요하지 않습니다. 이는 간단한 유지 관리 작업, 디버깅 또는 평소 작업 공간에서 멀리 떨어져 있을 때 유용합니다.\n\n가상 머신으로 이동하여 콘솔 버튼을 클릭하면 즉시 터미널에 액세스할 수 있습니다.\n\n기능:\n\n- WebSocket을 통한 실시간 터미널 액세스\n- 연결 상태 표시기\n- 연결이 끊어진 경우 한 번의 클릭으로 재연결\n- 부드러운 성능을 위한 WebGL 가속 렌더링\n\n이 기능은 SSH 액세스를 방해할 수 있는 네트워크 문제를 해결해야 할 때 특히 유용합니다.\n\n**참고:** 웹 콘솔을 사용하려면 먼저 `passwd`를 실행하여 사용자 계정에 암호를 설정해야 합니다.\n",
+    "sig": ""
+  },
+  {
+    "id": "af5c5caf5e31e3c7afd8e52df34581edd8d388546cf5544a939ba586f3c21350",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-pt"
+      ],
+      [
+        "title",
+        "Console da Web"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nTemos o prazer de anunciar o novo recurso do Console da Web!\n\nAgora você pode acessar o terminal da sua VM diretamente do seu navegador, sem necessidade de cliente SSH. Isso é perfeito para tarefas rápidas de manutenção, depuração ou quando você estiver longe de sua estação de trabalho habitual.\n\nBasta navegar até sua VM e clicar no botão Console para obter acesso instantâneo ao terminal.\n\nRecursos:\n\n- Acesso ao terminal em tempo real via WebSocket\n- Indicador de status da conexão\n- Reconexão com um clique em caso de desconexão\n- Renderização acelerada por WebGL para um desempenho suave\n\nEsse recurso é especialmente útil quando você precisa solucionar problemas de rede que podem impedir o acesso SSH.\n\n**Observação:** Para usar o console da Web, primeiro será necessário definir uma senha para o seu usuário via SSH executando `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "d7d5b0ede2b83843cea8dcce796e551758337b5f0a7c9fa1224f49d58172f5df",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-ru"
+      ],
+      [
+        "title",
+        "Веб-консоль"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nМы рады сообщить о новой функции веб-консоли!\n\nТеперь вы можете получить доступ к терминалу своей виртуальной машины непосредственно из браузера — установка SSH-клиента не требуется. Это идеально подходит для быстрых задач обслуживания, отладки или когда вы находитесь не за своим рабочим местом.\n\nПросто перейдите к своей виртуальной машине и нажмите кнопку «Консоль», чтобы получить мгновенный доступ к терминалу.\n\nОсновные возможности:\n\n- Доступ к терминалу в реальном времени через WebSocket\n- Индикатор состояния подключения\n- Возможность повторного подключения в один клик в случае разрыва соединения\n- Рендеринг с использованием WebGL для обеспечения плавной работы\n\nЭта функция особенно полезна, когда необходимо устранить неполадки в сети, которые могут препятствовать доступу по SSH.\n\n**Примечание:** Чтобы использовать веб-консоль, сначала необходимо установить пароль для своего пользователя через SSH, выполнив команду `passwd`.\n",
+    "sig": ""
+  },
+  {
+    "id": "34e4178b664c1627ace012e19f4c19eedaf80e5b0f9a11821dc0825f9eac2e60",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-tr"
+      ],
+      [
+        "title",
+        "Web Konsolu"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nYeni Web Konsolu özelliğini duyurmaktan heyecan duyuyoruz!\n\nArtık sanal makinenizin terminaline doğrudan tarayıcınızdan erişebilirsiniz; SSH istemcisine gerek yok. Bu, hızlı bakım görevleri, hata ayıklama veya her zamanki çalışma alanınızdan uzaktayken oldukça kullanışlıdır.\n\nSadece sanal makinenize gidin ve anında terminal erişimi için Konsol düğmesine tıklayın.\n\nÖzellikler:\n\n- WebSocket aracılığıyla gerçek zamanlı terminal erişimi\n- Bağlantı durumu göstergesi\n- Bağlantı kesilirse tek tıklamayla yeniden bağlanma\n- Sorunsuz performans için WebGL ile hızlandırılmış görüntü oluşturma\n\nBu özellik, özellikle SSH erişimini engelleyebilecek ağ sorunlarını gidermeniz gerektiğinde kullanışlıdır.\n\n**Not:** Web konsolunu kullanmak için, önce `passwd` komutunu çalıştırarak kullanıcınız için bir parola ayarlamanız gerekir.\n",
+    "sig": ""
+  },
+  {
+    "id": "1924078faee8ec49a165a4eafb300de3f9eba2d5b29f1fe9d63a73778a55bf93",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1771582008,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "web-console-zh"
+      ],
+      [
+        "title",
+        "网络控制台"
+      ],
+      [
+        "published_at",
+        "1771582008"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n我们很高兴地宣布新的网络控制台功能！\n\n现在，您可以直接从浏览器访问虚拟机的终端，无需使用 SSH 客户端。这非常适合快速维护任务、调试或不在工作站时使用。\n\n只需导航到虚拟机，然后单击控制台按钮，即可立即访问终端。\n\n功能\n\n- 通过 WebSocket 进行实时终端访问\n- 连接状态指示器\n- 断开时一键重新连接\n- WebGL 加速渲染，性能流畅\n\n当你需要排除可能妨碍 SSH 访问的网络故障时，这一功能尤其有用。\n\n**注意：** 要使用网络控制台，需要先通过 SSH 设置用户密码，方法是运行 `passwd`。\n",
+    "sig": ""
+  },
+  {
+    "id": "7ac41ac000b97dcb579d3c4ad76e91c6d90b3720740f3d3360c750d17fd614b9",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-ar"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nميزة رائعة أخرى اكتملت اليوم وهي NWC!\n\nيتيح هذا التجديد التلقائي مباشرةً عبر شبكات Nostr، لن تحتاج إلى إجراء تجديدات يدوية بعد الآن!\n\nما عليك سوى تكوين اتصال محفظة NWC الخاصة بك في \"الحساب\" -> \"الإعدادات\".\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nثم قم بتمكين التجديد التلقائي على أجهزتك الافتراضية!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nيمكنك أيضًا الدفع مقابل أجهزة افتراضية جديدة أو إجراء تجديد يدوي باستخدام اتصال NWC الخاص بك.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "5ecf9b4a9dc685fa2d75725952e7bbe939fa5455e3f8a528caa5fa9dcf15c31e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-de"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nEine weitere großartige Funktion, die heute fertiggestellt wurde, ist NWC!\n\nDies ermöglicht eine automatische Erneuerung direkt über Nostr-Relais, keine manuellen Erneuerungen mehr!\n\nKonfigurieren Sie einfach Ihre NWC-Wallet-Verbindung unter Konto -> Einstellungen\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nAktivieren Sie dann die automatische Erneuerung auf Ihren VM's!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nSie können auch für neue VMs bezahlen oder sie manuell über Ihre NWC-Verbindung erneuern.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "fd49756effe8b65092af157f5ee563fead96bbb8c37776dfb19b2b1fddb3a19e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ]
+    ],
+    "content": "Another great feature completed today is NWC!\n\nThis allows for automatic renewal directly via Nostr relays, no more manual renewals!\n\nJust configure your NWC wallet connection in Account -> Settings\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nThen enable automatic renewal on your VM's!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nYou can also pay for new VM's or renew manually with your NWC connection.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "bbc26ff0e83701d36fe4dcb4e1a1f6694f6bc87ac75b8c047784c834a752288e",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-es"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nOtra de las grandes novedades de hoy es el NWC\n\nEsto permite la renovación automática directamente a través de los relés Nostr, ¡no más renovaciones manuales!\n\nSólo tienes que configurar la conexión de tu monedero NWC en Cuenta -> Configuración\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nA continuación, active la renovación automática en sus máquinas virtuales\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nTambién puedes pagar por nuevas máquinas virtuales o renovarlas manualmente con tu conexión NWC.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "9a1b5c85ea33c247cad4f10d034078fe22bc3d45ab723b765009e15154a8d42b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-fr"
+      ],
+      [
+        "title",
+        "CNO"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nUne autre grande fonctionnalité a été mise en place aujourd'hui : la CNO !\n\nElle permet un renouvellement automatique directement via les relais Nostr, plus de renouvellements manuels !\n\nIl suffit de configurer votre connexion au portefeuille NWC dans Compte -> Paramètres\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nEnsuite, activez le renouvellement automatique sur vos VM !\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nVous pouvez également payer pour de nouvelles VM ou les renouveler manuellement avec votre connexion NWC.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "5a016f7c0f8416c540bad54aa6678dbb8538d3ab76f4d9376679d69acb32327b",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-ja"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n今日完成したもうひとつの素晴らしい機能がNWCだ！\n\nこれにより、Nostrリレーを経由して直接自動更新が可能になり、手動での更新がなくなりました！\n\nアカウント -> 設定でNWCウォレット接続を設定するだけです。\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nそして、VMの自動更新を有効にする！\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nまた、NWC接続を使用して、新しいVMの料金を支払ったり、手動で更新することもできます。\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "8be88e6dbb5b1925b8ac4d005487c3199d0dd67fb330fcdcf2bd6c9e5f9277e0",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-ko"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n오늘 완료된 또 다른 훌륭한 기능은 NWC입니다!\n\n이제 Nostr 릴레이를 통해 자동으로 갱신할 수 있으므로 더 이상 수동으로 갱신할 필요가 없습니다!\n\n계정 -> 설정에서 NWC 지갑 연결을 구성하세요.\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\n그런 다음 VM에서 자동 갱신을 활성화하세요!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nNWC 연결을 통해 새 VM에 대한 요금을 지불하거나 수동으로 갱신할 수도 있습니다.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "251f5884267c4f28eca5fe09ff0a3e8df74cfd7c0a20daec5e74d78bfa791446",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-pt"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nOutro recurso excelente concluído hoje é o NWC!\n\nIsso permite a renovação automática diretamente pelos relés do Nostr, sem mais renovações manuais!\n\nBasta configurar a conexão da carteira NWC em Conta -> Configurações\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nEm seguida, ative a renovação automática em suas VMs!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nVocê também pode pagar por novas VMs ou renovar manualmente com sua conexão NWC.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "ed6a3d5962b368f0311e2dafd915c5582ada60ede86d2de3023c85ba754486ae",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-ru"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nЕще одна замечательная функция, над которой мы работали и которую завершили сегодня, — NWC!\n\nТеперь можно автоматически продлевать подписку непосредственно через ретрансляторы Nostr, больше не нужно делать это вручную!\n\nПросто настройте подключение вашего кошелька NWC в разделе «Аккаунт» -> «Настройки».\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nЗатем включите автоматическое продление для ваших виртуальных машин!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nВы также можете оплачивать новые виртуальные машины или продлевать подписку вручную, используя подключение NWC.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "7e45f4efbb9392c709c1f78fe8b71ca335bddb75f99861e238ca7fee5f1e0292",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-tr"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nBugün tamamlanan bir başka harika özellik de NWC!\n\nBu, Nostr aktarma merkezleri aracılığıyla otomatik yenilemeye olanak tanır, artık manuel yenileme yapmanıza gerek kalmaz!\n\nNWC cüzdan bağlantınızı Hesap -> Ayarlar bölümünde yapılandırın.\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\nDaha sonra sanal makinelerinizde otomatik yenilemeyi etkinleştirin!\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\nAyrıca yeni sanal makineler için ödeme yapabilir veya NWC bağlantınızla manuel olarak yenileyebilirsiniz.\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "3a5fb177530d5f012a71d00a0f753bbfc5cb7bbbce934e885e8a4b06243db865",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755101117,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "Xc-U7jVUxf3zEm_uip-g8-zh"
+      ],
+      [
+        "title",
+        "NWC"
+      ],
+      [
+        "published_at",
+        "1755101117"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n今天完成的另一项重要功能是 NWC！\n\n它允许直接通过 Nostr 中继器自动续订，不再需要手动续订！\n\n只需在账户 -> 设置中配置您的 NWC 钱包连接即可。\n\n![nwc_setting](https://image.nostr.build/c395b70500aa53fb1fa4ca94a766d117d8268efb2dcc958b4eba053b18466fe0.png)\n\n然后在您的虚拟机上启用自动更新！\n\n![auto_renew_vm](https://image.nostr.build/11909943d8b9a5e8efeca73a21f7c6c47e4eb52aee7bfcafce7e4bbe29f4833f.png)\n\n您也可以使用 NWC 连接为新虚拟机付费或手动续订。\n\n![nwc_payment](https://image.nostr.build/e9bc94ca4b9129ceeab93103c6b17e5e2a22019894373ecacaffd3552c7c07ed.png)\n",
+    "sig": ""
+  },
+  {
+    "id": "e2f2021c63bcd3a544de7f7e68dd26d2c12452adb754f394b3eb56ef7bd7adcd",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-ar"
+      ],
+      [
+        "title",
+        "ترقيات الأجهزة الافتراضية!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\nيسرنا أن نعلن عن ميزة \"ترقيات الجهاز الافتراضي\" الجديدة! تتيح هذه الميزة لجميع المستخدمين ترقية وحدة المعالجة المركزية (CPU) وذاكرة الوصول العشوائي (RAM) ومساحة القرص حسب الحاجة، وذلك ببضع نقرات فقط.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nبمجرد إتمام عملية الدفع مقابل الترقية، سيتم ترقية جهازك الافتراضي وإعادة تشغيله على الفور، مما يتيح لك توسيع نطاق مشاريعك بسهولة!\n",
+    "sig": ""
+  },
+  {
+    "id": "e2e82832a519a196acf36279c739a74738ec16cc74d210a8c7b1bfe75917d3ce",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-de"
+      ],
+      [
+        "title",
+        "VM-Aktualisierungen!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\nWir freuen uns, die neue Funktion „VM-Upgrades“ vorstellen zu dürfen! Mit dieser Funktion können alle Benutzer ihre CPU, ihren RAM und ihren Speicherplatz bei Bedarf mit nur wenigen Klicks aufrüsten.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nSobald Ihre Zahlungen für das Upgrade abgeschlossen sind, wird Ihre VM sofort aktualisiert und neu gestartet, wodurch Sie Ihre Projekte einfach skalieren können!\n",
+    "sig": ""
+  },
+  {
+    "id": "f9e6d4d3cf68166f40c579aed73903a5d48abe9f9eedc82cf3b975e81069d022",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk"
+      ],
+      [
+        "title",
+        "VM Upgrades!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ]
+    ],
+    "content": "We're excited to announce the new VM Upgrades feature! This feature allows all users to upgrade their CPU, RAM, and disk space on demand with only a few clicks.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nOnce your upgrade payment is complete, your VM will be upgraded and restarted instantly, allowing for easy scaling of your projects!\n",
+    "sig": ""
+  },
+  {
+    "id": "895f82ab6fb8713fcc0b124b273b9ccb9e19a4e12a6f8af78e367d57caf58e53",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-es"
+      ],
+      [
+        "title",
+        "Actualizaciones de VM"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\nNos complace anunciar la nueva función de actualización de máquinas virtuales Esta función permite a todos los usuarios actualizar su CPU, RAM y espacio en disco bajo demanda con sólo unos clics.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nUna vez realizado el pago de la actualización, tu máquina virtual se actualizará y se reiniciará al instante, lo que te permitirá escalar fácilmente tus proyectos\n",
+    "sig": ""
+  },
+  {
+    "id": "17f3bfdc8d0dee0562ab5c024d018ba67e10df4759d175c1bc0e79809aa4731f",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-fr"
+      ],
+      [
+        "title",
+        "Mises à niveau des machines virtuelles !"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\nNous sommes ravis d’annoncer la nouvelle fonctionnalité de mise à niveau des machines virtuelles ! Grâce à cette fonctionnalité, tous les utilisateurs peuvent augmenter la capacité de leur processeur, de leur mémoire vive et de leur espace disque à la demande, en quelques clics seulement.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nUne fois votre paiement de mise à niveau effectué, votre machine virtuelle sera mise à niveau et redémarrée instantanément, ce qui vous permettra de développer facilement vos projets !\n",
+    "sig": ""
+  },
+  {
+    "id": "21f48638ba26625746a8040adc0c13d5919531e3bec93de53dc7f3093dba3a9f",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-ja"
+      ],
+      [
+        "title",
+        "VMのアップグレード！"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n新しいVMアップグレード機能を発表できることを嬉しく思います！この機能により、すべてのユーザーが数回クリックするだけで、CPU、RAM、ディスク容量をオンデマンドでアップグレードすることができます。\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nアップグレードの支払いが完了すると、VMは即座にアップグレードされ、再起動されます！\n",
+    "sig": ""
+  },
+  {
+    "id": "909758462b256a832cc2d4ea7f9bd6510fc4de281ce78c66db7fe0c2ff8a8908",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-ko"
+      ],
+      [
+        "title",
+        "가상 머신 업그레이드!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n새로운 VM 업그레이드 기능을 발표합니다! 이 기능을 통해 모든 사용자는 몇 번의 클릭만으로 CPU, RAM 및 디스크 공간을 필요에 따라 업그레이드할 수 있습니다.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\n업그레이드 결제가 완료되면 VM이 즉시 업그레이드되고 재시작되어 프로젝트를 쉽게 확장할 수 있습니다!\n",
+    "sig": ""
+  },
+  {
+    "id": "1a691b61ff77953995f68ea678a9dec10d2aee2f8288876c9f96ce23470e8de0",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-pt"
+      ],
+      [
+        "title",
+        "Upgrades de VM!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\nTemos o prazer de anunciar o novo recurso VM Upgrades! Esse recurso permite que todos os usuários façam upgrade da CPU, da RAM e do espaço em disco sob demanda com apenas alguns cliques.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nAssim que o pagamento do upgrade for concluído, sua VM será atualizada e reiniciada instantaneamente, permitindo o dimensionamento fácil de seus projetos!\n",
+    "sig": ""
+  },
+  {
+    "id": "74a9b0372115ece38eea93677f28ce0e51294b8696b70b31779ced82caac022d",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-ru"
+      ],
+      [
+        "title",
+        "Обновление виртуальных машин!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\nМы рады объявить о новой функции «Обновление виртуальных машин»! Эта функция позволяет всем пользователям мгновенно обновлять свои виртуальные машины, увеличивая объём процессора, оперативной памяти и дискового пространства всего в несколько кликов.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nПосле завершения оплаты обновления ваша виртуальная машина будет немедленно обновлена и перезагружена, что позволит легко масштабировать ваши проекты!\n",
+    "sig": ""
+  },
+  {
+    "id": "d7603a62cdc1cffcc952cf7d911960a1c1f27fd3ffdcf7b18fba9c6ceb2a16c0",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-tr"
+      ],
+      [
+        "title",
+        "Sanal Makinelerin Yükseltilmesi!"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\nYeni VM Yükseltme özelliğini duyurmaktan heyecan duyuyoruz! Bu özellik sayesinde tüm kullanıcılar, birkaç tıklamayla istedikleri zaman CPU, RAM ve disk alanlarını yükseltebilirler.\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\nYükseltme ödemeniz tamamlandıktan sonra, VM'niz anında yükseltilir ve yeniden başlatılır; böylece projelerinizi kolayca ölçeklendirebilirsiniz!\n",
+    "sig": ""
+  },
+  {
+    "id": "46aab6f1b216614133185458bc382e869cf9864ad41be04fea3d92182f94da1a",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1755073287,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "ddOh7qIVbN35DAT6Akyxk-zh"
+      ],
+      [
+        "title",
+        "虚拟机升级！"
+      ],
+      [
+        "published_at",
+        "1755073287"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n我们很高兴地宣布推出新的虚拟机升级功能！此功能允许所有用户只需点击几下，即可按需升级其 CPU、RAM 和磁盘空间。\n\n![upgrade_page](https://npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49.blossom.band/461eeaf520e8c58436eff558ff1fb0d9df030ae54abefaaaed9c6b99939350ec.png)\n\n升级付款完成后，您的虚拟机将立即升级并重启，从而可以轻松扩展您的项目！\n",
+    "sig": ""
+  },
+  {
+    "id": "8b5193fb08aa910f55c04ba74ef519d8f2b862e0fa43375756fdf1a86fb8dc41",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-ar"
+      ],
+      [
+        "title",
+        "تحديثات الأسعار"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ar",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*تمت ترجمة هذه المقالة تلقائيًا من الإنجليزية.*\n\n# تحديثات الأسعار\n\nبهدف تحسين الخدمات التي نقدمها، سنقوم بزيادة الأسعار اعتبارًا من 6 مارس 2025:\n\nفيما يلي التغييرات في الأسعار (جميع الأسعار شهرية، بعقد متجدد):\n\n| الاسم    | السعر    | السعر الجديد |\n| :------- | :------- | :---------- |\n| Tiny     | 2 يورو   | 2.70 يورو   |\n| Small    | 4 يورو   | 5.10 يورو   |\n| Medium   | 8 يورو   | 9.90 يورو   |\n| Large    | 17 يورو  | 21.90 يورو  |\n| X-Large  | 30 يورو  | 39.90 يورو  |\n| XX-Large | 45 يورو  | 55.50 يورو  |\n\nتتزامن هذه التغييرات مع إصدار خيارات تسعير مخصصة!\n\n![رفع](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### قمنا أيضًا بإصدار بعض الميزات الأخرى:\n\n- سجلات PTR قابلة للتكوين من قبل المستخدم\n- صفحة فوترة منفصلة لمعلومات الجهاز الظاهري\n- رسوم بيانية لاستخدام موارد الجهاز الظاهري\n- يتم تخصيص إدخال DNS أمامي للأجهزة الظاهرية الجديدة على lnvps.cloud (على سبيل المثال، vm-1.lnvps.cloud)، وسيتم إضافة إدخال أمامي للأجهزة الظاهرية الموجودة في تاريخ لاحق.\n- بالإضافة إلى العديد من التحسينات الأخرى الأصغر في معالجة تخصيص الموارد.\n",
+    "sig": ""
+  },
+  {
+    "id": "3f4b35b6e8c356e7e63603f9127f5aadcb019bb9525c589551275a9be520c029",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-de"
+      ],
+      [
+        "title",
+        "Preisaktualisierungen"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "de",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Dieser Beitrag wurde automatisch aus dem Englischen übersetzt.*\n\n# Preisaktualisierungen\n\nUm die Qualität unserer Dienstleistungen zu verbessern, erhöhen wir die Preise ab dem 6. März 2025:\n\nHier sind die Preisänderungen (alle Preise sind monatlich, bei einem unbefristeten Vertrag):\n\n| Name     | Preis  | Neuer Preis |\n| -------- | ------ | ----------- |\n| Tiny     | 2 EUR  | 2,70 EUR    |\n| Small    | 4 EUR  | 5,10 EUR    |\n| Medium   | 8 EUR  | 9,90 EUR    |\n| Large    | 17 EUR | 21,90 EUR   |\n| X-Large  | 30 EUR | 39,90 EUR   |\n| XX-Large | 45 EUR | 55,50 EUR   |\n\nDiese Änderungen fallen mit der Einführung individueller Preisgestaltung zusammen!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### Wir haben auch einige weitere Funktionen eingeführt:\n\n- Vom Benutzer konfigurierbare PTR-Einträge\n- Separate Abrechnungsseite für VM-Informationen\n- Diagramme zur VM-Ressourcennutzung\n- Neue VMs erhalten einen Forward-DNS-Eintrag unter lnvps.cloud (z. B. vm-1.lnvps.cloud), bestehenden VMs wird dies zu einem späteren Zeitpunkt hinzugefügt.\n- Sowie viele weitere kleinere Verbesserungen bei der Verwaltung der Ressourcenzuweisung\n",
+    "sig": ""
+  },
+  {
+    "id": "cf8d74bfbef99303c8bf637873996c448455ca580eacedbda8dfa6995311241c",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU"
+      ],
+      [
+        "title",
+        "Price Updates"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ]
+    ],
+    "content": "# Price Updates\n\nIn order to improve the services we offer, we are increasing the prices effective date March 6th 2025:\n\nHere are the price changes (all prices are per month, rolling contract):\n\n| name     | Price  | New Price |\n| -------- | ------ | --------- |\n| Tiny     | 2 EUR  | 2.70 EUR  |\n| Small    | 4 EUR  | 5.10 EUR  |\n| Medium   | 8 EUR  | 9.90 EUR  |\n| Large    | 17 EUR | 21.90 EUR |\n| X-Large  | 30 EUR | 39.90 EUR |\n| XX-Large | 45 EUR | 55.50 EUR |\n\nThese changes coincide with the release of custom pricing!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### We have also released a few other features:\n\n- User configurable PTR records\n- Separate billing page o VM info view\n- VM resource usage graphs\n- New VM's are assigned a forward DNS entry on lnvps.cloud (eg. vm-1.lnvps.cloud) existing VM's will have a forward entry added at a later date.\n- As well as many other smaller improvements in the handling of resource allocation\n",
+    "sig": ""
+  },
+  {
+    "id": "7daf701c5128425192745a3d5e5c73e9d56cb20ae8b2385d6648b278d402db26",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-es"
+      ],
+      [
+        "title",
+        "Actualizaciones de precios"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "es",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicación fue traducida automáticamente del inglés.*\n\n# Actualizaciones de precios\n\nPara mejorar los servicios que ofrecemos, vamos a aumentar los precios a partir del 6 de marzo de 2025:\n\nAquí están los cambios de precios (todos los precios son por mes, contrato renovable):\n\n| Nombre    | Precio | Nuevo precio |\n| -------- | ------ | ----------- |\n| Tiny     | 2 EUR  | 2,70 EUR    |\n| Small    | 4 EUR  | 5,10 EUR    |\n| Medium   | 8 EUR  | 9,90 EUR    |\n| Large    | 17 EUR | 21,90 EUR   |\n| X-Large  | 30 EUR | 39,90 EUR   |\n| XX-Large | 45 EUR | 55,50 EUR   |\n\nEstos cambios coinciden con el lanzamiento de precios personalizados.\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### También hemos lanzado algunas otras funciones:\n\n- Registros PTR configurables por el usuario\n- Página de facturación o vista de información de la máquina virtual separada\n- Gráficos de uso de recursos de la máquina virtual\n- A las nuevas máquinas virtuales se les asigna una entrada DNS directa en lnvps.cloud (por ejemplo, vm-1.lnvps.cloud); a las máquinas virtuales existentes se les agregará una entrada directa en una fecha posterior.\n- Además de muchas otras pequeñas mejoras en la gestión de la asignación de recursos.\n",
+    "sig": ""
+  },
+  {
+    "id": "7ace83fd4901284aa4d810c9bc111ec7c71218ecb025ca240a6d1b3a8bdfaae8",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-fr"
+      ],
+      [
+        "title",
+        "Mises à jour des prix"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "fr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Cet article a été traduit automatiquement depuis l'anglais.*\n\n# Mises à jour des prix\n\nAfin d’améliorer les services que nous proposons, nous augmentons les prix à partir du 6 mars 2025 :\n\nVoici les modifications de prix (tous les prix sont mensuels, contrat à durée indéterminée) :\n\n| nom      | Prix   | Nouveau prix |\n| ------- | ------ | ----------- |\n| Tiny    | 2 EUR  | 2,70 EUR    |\n| Small   | 4 EUR  | 5,10 EUR    |\n| Medium  | 8 EUR  | 9,90 EUR    |\n| Large   | 17 EUR | 21,90 EUR   |\n| X-Large | 30 EUR | 39,90 EUR   |\n| XX-Large| 45 EUR | 55,50 EUR   |\n\nCes changements coïncident avec le lancement de tarifs personnalisés !\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### Nous avons également lancé quelques autres fonctionnalités :\n\n- Enregistrements PTR configurables par l’utilisateur\n- Page de facturation séparée et vue des informations de la VM\n- Graphiques d’utilisation des ressources de la VM\n- Les nouvelles VM se voient attribuer une entrée DNS de redirection sur lnvps.cloud (par exemple, vm-1.lnvps.cloud). Les VM existantes recevront une entrée de redirection ultérieurement.\n- Ainsi que de nombreuses autres améliorations mineures dans la gestion de l’allocation des ressources\n",
+    "sig": ""
+  },
+  {
+    "id": "6a773f619e66bfa24a3ee8b48d8de91fb22f7f18cb9b536e30f0f109f9fea1f0",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-ja"
+      ],
+      [
+        "title",
+        "価格の変更について"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ja",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*この投稿は英語から自動翻訳されました。*\n\n# 価格改定のお知らせ\n\nより良いサービスを提供するため、2025年3月6日より価格を改定いたします。\n\n以下に価格の変更点を示します（すべての価格は月額、自動更新契約）。\n\n| 名称     | 価格  | 新価格   |\n| -------- | ------ | --------- |\n| Tiny     | 2 EUR  | 2.70 EUR  |\n| Small    | 4 EUR  | 5.10 EUR  |\n| Medium   | 8 EUR  | 9.90 EUR  |\n| Large    | 17 EUR | 21.90 EUR |\n| X-Large  | 30 EUR | 39.90 EUR |\n| XX-Large | 45 EUR | 55.50 EUR |\n\n今回の変更は、カスタム価格の導入と同時期に行われます。\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### また、いくつかの新機能もリリースしました。\n\n- ユーザーが設定可能なPTRレコード\n- VM情報表示用の独立した請求ページ\n- VMリソース使用状況グラフ\n- 新規VMには、lnvps.cloudでフォワードDNSエントリが割り当てられます（例：vm-1.lnvps.cloud）。既存のVMには、後日フォワードエントリが追加されます。\n- その他、リソース割り当てに関する様々な改善も行われています。\n",
+    "sig": ""
+  },
+  {
+    "id": "b22c6417b3f224bd5f2f0ebda5280ad215073d0f6b49812e77e91a17c32b2fa1",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-ko"
+      ],
+      [
+        "title",
+        "가격 변경 사항"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ko",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*이 게시물은 영어에서 자동으로 번역되었습니다.*\n\n# 가격 변경\n\n저희가 제공하는 서비스를 개선하기 위해 2025년 3월 6일부터 가격을 인상합니다.\n\n다음은 가격 변경 사항입니다(모든 가격은 월별 요금이며, 계속 계약 적용).\n\n| 이름     | 가격   | 새 가격 |\n| -------- | ------ | ------- |\n| Tiny     | 2 EUR  | 2.70 EUR |\n| Small    | 4 EUR  | 5.10 EUR |\n| Medium   | 8 EUR  | 9.90 EUR |\n| Large    | 17 EUR | 21.90 EUR |\n| X-Large  | 30 EUR | 39.90 EUR |\n| XX-Large | 45 EUR | 55.50 EUR |\n\n이번 변경은 맞춤형 가격 시스템 출시와 함께 이루어집니다!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### 또한 다음과 같은 다른 기능도 출시했습니다.\n\n- 사용자가 설정 가능한 PTR 레코드\n- 별도의 요금 페이지 및 VM 정보 보기\n- VM 리소스 사용량 그래프\n- 새로운 VM에 lnvps.cloud에서 포워드 DNS 항목이 할당됩니다(예: vm-1.lnvps.cloud). 기존 VM에는 추후 포워드 항목이 추가됩니다.\n- 또한 리소스 할당 처리와 관련된 다른 많은 소규모 개선 사항이 있습니다.\n",
+    "sig": ""
+  },
+  {
+    "id": "660957fa84ab94607813e7e210225de99a2e5f27b679c6b1af36c71d4d52adc5",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-pt"
+      ],
+      [
+        "title",
+        "Atualizações de preços"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "pt",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Esta publicação foi traduzida automaticamente do inglês.*\n\n# Atualizações de Preços\n\nPara aprimorar os serviços que oferecemos, estamos aumentando os preços, com efeito a partir de 6 de março de 2025:\n\nAqui estão as mudanças de preços (todos os preços são por mês, contrato de renovação contínua):\n\n| nome     | Preço  | Novo Preço |\n| -------- | ------ | --------- |\n| Tiny     | 2 EUR  | 2,70 EUR  |\n| Small    | 4 EUR  | 5,10 EUR  |\n| Medium   | 8 EUR  | 9,90 EUR  |\n| Large    | 17 EUR | 21,90 EUR |\n| X-Large  | 30 EUR | 39,90 EUR |\n| XX-Large | 45 EUR | 55,50 EUR |\n\nEssas mudanças coincidem com o lançamento de preços personalizados!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### Também lançamos alguns outros recursos:\n\n- Registros PTR configuráveis pelo usuário\n- Página de cobrança separada e visualização de informações da VM\n- Gráficos de uso de recursos da VM\n- Novas VMs recebem uma entrada DNS de encaminhamento em lnvps.cloud (por exemplo, vm-1.lnvps.cloud); uma entrada de encaminhamento será adicionada a VMs existentes em uma data posterior.\n- Além de muitas outras pequenas melhorias no gerenciamento da alocação de recursos\n",
+    "sig": ""
+  },
+  {
+    "id": "cd3265d8ed46f930a2e1037a044ef5dc45e9c2d2af78c7c6f77cca300c4cad88",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-ru"
+      ],
+      [
+        "title",
+        "Обновление цен"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "ru",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Эта публикация была автоматически переведена с английского языка.*\n\n# Обновление цен\n\nВ целях улучшения качества предоставляемых услуг мы повышаем цены, начиная с 6 марта 2025 года:\n\nНиже приведены изменения цен (все цены указаны за месяц, при бессрочном контракте):\n\n| название   | Цена    | Новая цена |\n| -------- | ------ | --------- |\n| Tiny     | 2 евро | 2,70 евро |\n| Small    | 4 евро | 5,10 евро |\n| Medium   | 8 евро | 9,90 евро |\n| Large    | 17 евро| 21,90 евро|\n| X-Large  | 30 евро| 39,90 евро|\n| XX-Large | 45 евро| 55,50 евро|\n\nЭти изменения совпадают с запуском системы индивидуальных цен!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### Мы также выпустили несколько других новых функций:\n\n- Пользовательские настраиваемые PTR-записи\n- Отдельная страница выставления счетов и отображения информации о ВМ\n- Графики использования ресурсов ВМ\n- Новым ВМ назначается запись прямой DNS на lnvps.cloud (например, vm-1.lnvps.cloud), существующим ВМ запись будет добавлена позже.\n- А также множество других небольших улучшений в обработке распределения ресурсов.\n",
+    "sig": ""
+  },
+  {
+    "id": "5a771fe771aef037e17a2b6ec0454bdaca4f454017c107f28a8511145678c23d",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-tr"
+      ],
+      [
+        "title",
+        "Fiyat Güncellemeleri"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "tr",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*Bu gönderi İngilizceden otomatik olarak çevrilmiştir.*\n\n# Fiyat Güncellemeleri\n\nSunduğumuz hizmetleri iyileştirmek amacıyla, 6 Mart 2025 tarihinden itibaren geçerli olmak üzere fiyatları artırıyoruz:\n\nİşte fiyat değişiklikleri (tüm fiyatlar aylık ve devam eden sözleşmeye göredir):\n\n| name     | Fiyat  | Yeni Fiyat |\n| -------- | ------ | --------- |\n| Tiny     | 2 EUR  | 2,70 EUR  |\n| Small    | 4 EUR  | 5,10 EUR  |\n| Medium   | 8 EUR  | 9,90 EUR  |\n| Large    | 17 EUR | 21,90 EUR |\n| X-Large  | 30 EUR | 39,90 EUR |\n| XX-Large | 45 EUR | 55,50 EUR |\n\nBu değişiklikler, özel fiyatlandırmanın yayınlanmasıyla eş zamanlıdır!\n\n![upload](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### Ayrıca birkaç yeni özellik de yayınladık:\n\n- Kullanıcı tarafından yapılandırılabilen PTR kayıtları\n- Ayrı faturalandırma sayfası ve VM bilgi görüntüleme\n- VM kaynak kullanım grafikleri\n- Yeni VM'lere lnvps.cloud üzerinde bir yönlendirme DNS girişi atanır (örneğin, vm-1.lnvps.cloud). Mevcut VM'lere daha sonra bir yönlendirme girişi eklenecektir.\n- Ayrıca kaynak tahsisi işlemlerinde birçok başka küçük iyileştirme yapıldı.\n",
+    "sig": ""
+  },
+  {
+    "id": "701b60034b6a4cfb9aba2efa6d93f98c851b29c5c93a307b85a93cb2d81c743f",
+    "pubkey": "fcd818454002a6c47a980393f0549ac6e629d28d5688114bb60d831b5c1832a7",
+    "created_at": 1741299793,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "nkbwMjUKSlxDhLSrle9gU-zh"
+      ],
+      [
+        "title",
+        "价格更新"
+      ],
+      [
+        "published_at",
+        "1741299793"
+      ],
+      [
+        "L",
+        "ISO-639-1"
+      ],
+      [
+        "l",
+        "zh",
+        "ISO-639-1"
+      ]
+    ],
+    "content": "*本文由英文自动翻译而来。*\n\n# 价格更新\n\n为了改进我们提供的服务，我们将从 2025 年 3 月 6 日起调整价格：\n\n以下是价格变更（所有价格均为每月价格，采用滚动合同）：\n\n| 名称     | 价格    | 新价格    |\n| -------- | ------- | --------- |\n| Tiny     | 2 欧元  | 2.70 欧元  |\n| Small    | 4 欧元  | 5.10 欧元  |\n| Medium   | 8 欧元  | 9.90 欧元  |\n| Large    | 17 欧元 | 21.90 欧元 |\n| X-Large  | 30 欧元 | 39.90 欧元 |\n| XX-Large | 45 欧元 | 55.50 欧元 |\n\n这些变更与定制定价的推出同步！\n\n![上传](https://nostr.download/c91c48d587ac01e8477dd76b42f54fc6c13fe53ca2fff61cd2ed9afe5e9c844e.webp)\n\n### 我们还发布了一些其他功能：\n\n- 用户可配置的 PTR 记录\n- 独立的账单页面和虚拟机信息视图\n- 虚拟机资源使用情况图表\n- 新虚拟机将在 lnvps.cloud 上分配一个转发 DNS 条目（例如：vm-1.lnvps.cloud），现有虚拟机的转发条目将在稍后添加。\n- 以及其他许多关于资源分配处理方面的较小改进。\n",
+    "sig": ""
+  }
+]

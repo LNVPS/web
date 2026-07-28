@@ -6,9 +6,11 @@ COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
 COPY . .
-RUN bunx vite build --outDir dist/client --mode $MODE && \
+RUN bun run news:archive && \
+    bunx vite build --outDir dist/client --mode $MODE && \
     bunx vite build --ssr src/entry-server.tsx --outDir dist/server --mode $MODE && \
-    bun run locale:compile
+    bun run locale:compile && \
+    bun run sitemap
 
 FROM oven/bun:1-alpine AS runner
 ENV NODE_ENV=production

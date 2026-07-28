@@ -9,6 +9,7 @@ import {
 } from "./api";
 import { ApiUrl, BlossomAppId, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
+import { mergeNewsWithArchive } from "./utils/news-archive";
 import { detectLocale } from "./utils/locale";
 
 // ── In-process TTL cache shared across requests ──────────────────────────────
@@ -63,7 +64,7 @@ export interface AppsLoaderData {
 }
 
 export function getNews() {
-  return System.GetQuery("server-news")?.snapshot;
+  return mergeNewsWithArchive(System.GetQuery("server-news")?.snapshot);
 }
 
 export function getStatus() {
@@ -107,11 +108,13 @@ export async function newsLoader({
     request.headers.get("cookie"),
   );
 
+  // An empty `articles` would stick: the page hook prefers loader data over its
+  // own subscription, so hand back undefined and let the client fetch.
   const news = getNews();
-  if (news) {
+  if (news.length > 0) {
     return { articles: filterArticlesByLocale(news, locale) };
   } else {
-    return { articles: undefined }
+    return { articles: undefined };
   }
 }
 

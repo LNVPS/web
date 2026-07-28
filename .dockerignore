@@ -6,4 +6,5 @@ dist
 .github
 .vscode
 docs
+!docs/news
 work

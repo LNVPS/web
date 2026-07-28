@@ -16,8 +16,10 @@ import {
   createHeadStore,
   serializeHead,
 } from "./components/head-context.tsx";
-import { RequestBuilder, EventKind } from "@snort/system";
+import { RequestBuilder, EventKind, type NostrEvent } from "@snort/system";
 import { NostrProfile, System, OnionWebUrl } from "./const.ts";
+import { setNewsArchive } from "./utils/news-archive.ts";
+import newsArchive from "./news-archive.json";
 
 /**
  * Server-relevant config baked in at build time from `VITE_*` env vars. The Bun
@@ -27,6 +29,10 @@ import { NostrProfile, System, OnionWebUrl } from "./const.ts";
 export const serverConfig = {
   onionWebUrl: OnionWebUrl,
 };
+
+// Relays drop old addressable events; the bundled archive is what keeps the
+// news pages complete when they do.
+setNewsArchive(newsArchive as Array<NostrEvent>);
 
 export function startPersistentQueries() {
   const newsReq = new RequestBuilder("server-news");

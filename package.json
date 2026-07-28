@@ -6,7 +6,7 @@
   "packageManager": "bun@1.3.14",
   "scripts": {
     "dev": "bun server/dev.ts",
-    "build": "bun run build:client && bun run build:server && bun run locale:compile && bun run skill:index",
+    "build": "bun run news:archive && bun run build:client && bun run build:server && bun run locale:compile && bun run skill:index && bun run sitemap",
     "skill:index": "bun server/gen-skill-index.ts",
     "build:client": "bunx vite build --mode ${MODE:-production} --outDir dist/client",
     "build:server": "bunx vite build --mode ${MODE:-production} --ssr src/entry-server.tsx --outDir dist/server",
@@ -17,7 +17,9 @@
     "preview": "bunx vite preview",
     "locale:extract": "bunx formatjs extract 'src/**/*.tsx' 'src/**/*.ts' '!src/vite-env.d.ts' --out-file src/locales/en.json",
     "locale:compile": "mkdir -p dist/client/locales && bunx formatjs compile-folder src/locales dist/client/locales",
-    "locale:translate": "bun run locale:extract && bun run locale:compile && ollama_intl -u ${OLLAMA_URL:-http://localhost:11434/v1} -i src/locales/en.json -o src/locales -t German:de -t Spanish:es -t French:fr -t Portuguese:pt -t Japanese:ja -t Chinese:zh -t Russian:ru -t Arabic:ar -t Turkish:tr -t Korean:ko"
+    "locale:translate": "bun run locale:extract && bun run locale:compile && ollama_intl -u ${OLLAMA_URL:-http://localhost:11434/v1} -i src/locales/en.json -o src/locales -t German:de -t Spanish:es -t French:fr -t Portuguese:pt -t Japanese:ja -t Chinese:zh -t Russian:ru -t Arabic:ar -t Turkish:tr -t Korean:ko",
+    "news:archive": "bun server/gen-news-archive.ts",
+    "sitemap": "bun server/gen-sitemap.ts"
   },
   "dependencies": {
     "@formatjs/cli": "^6.13.0",

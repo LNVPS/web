@@ -224,14 +224,34 @@ export function AccountAppsPage() {
 
   useEffect(() => {
     if (!login?.api) return;
-    login.api
+    const api = login.api;
+    // The catalog does not change while the page is open; only the
+    // deployments do.
+    api
       .listApps()
       .then(setApps)
       .catch((e) => e instanceof Error && setError(e.message));
-    login.api
+    api
       .listAppDeployments()
       .then(setDeployments)
       .catch(() => setDeployments([]));
+
+    // A deployment moves through payment → deploying → running without the
+    // customer doing anything, and the row label is derived from what the API
+    // last said (`LNVPS/web#71`). Same 5s interval the VM list uses
+    // (`account.tsx:32`).
+    //
+    // A failed poll keeps the rows already on screen rather than blanking them
+    // to `[]` as the first load does: an empty list means "you have no apps",
+    // which is a lie to tell someone over one dropped request. The next tick
+    // recovers.
+    const t = setInterval(() => {
+      api
+        .listAppDeployments()
+        .then(setDeployments)
+        .catch(() => {});
+    }, 5_000);
+    return () => clearInterval(t);
   }, [login?.api]);
 
   const appById = new Map((apps ?? []).map((a) => [a.id, a]));

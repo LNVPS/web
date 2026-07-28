@@ -47,6 +47,26 @@ export function deploymentLifecycle(d: AppDeployment): DeploymentLifecycle {
   return "stopped";
 }
 
+/**
+ * How one step of the lifecycle progress renders: already behind the
+ * deployment, the one it is at, or still ahead of it.
+ *
+ * The last step is `done` rather than `current` when the deployment reaches
+ * it. Nothing follows `running`, so drawing it as the step in progress leaves
+ * a finished deployment showing two of three marks complete.
+ */
+export type LifecycleStepState = "done" | "current" | "todo";
+
+export function lifecycleStepState(
+  index: number,
+  at: number,
+  total: number,
+): LifecycleStepState {
+  if (index < at) return "done";
+  if (index > at) return "todo";
+  return at === total - 1 ? "done" : "current";
+}
+
 /** Sections the customer can act on, per lifecycle state. */
 export interface DeploymentPermissions {
   /** Resize. Hidden wherever there is no paid period to prorate against. */

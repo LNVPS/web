@@ -39,5 +39,11 @@ export function useNewsPost(dTag?: string) {
   }, [dTag]);
 
   const events = useRequestBuilder(req);
+
+  // A `d` tag names one exact article, translation or not, so the locale is not
+  // the visitor's to pick here: filtering the French article out of its own URL
+  // leaves the page blank.
+  if (dTag) return article ? [article] : events;
+
   return filterArticlesByLocale(articles ?? events, locale);
 }

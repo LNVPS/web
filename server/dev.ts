@@ -7,6 +7,11 @@ import fs from "node:fs/promises";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import { renderPage } from "./ssr-render.ts";
+import { generateNewsArchive } from "./gen-news-archive.ts";
+
+// The archive is generated, not committed, and `src/entry-server.tsx` imports
+// it: without this a fresh checkout renders 500 until something runs a build.
+console.log(`news archive: ${generateNewsArchive()} events`);
 
 const port = Number(process.env.PORT) || 3000;
 const base = process.env.BASE || "/";

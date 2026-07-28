@@ -650,6 +650,24 @@ export interface App {
    * not because an app may have no volumes, which arrives as `[]`.
    */
   volumes?: Array<AppVolume>;
+  /**
+   * Class of software, sentence case with no article and no "managed" —
+   * "Nostr relay", "Blossom media server" (LNVPS/api#241). The page title and
+   * meta description are templated from this plus `display_name`.
+   *
+   * Required and never empty on the API side. Optional here only because an
+   * API build older than that release does not send it at all. See
+   * LNVPS/web#35.
+   */
+  category?: string;
+  /**
+   * Per-app override for the page `<title>`, unset for almost every app.
+   * Arrives over the wire, so it is never extracted for translation — English
+   * only, which is why `category` carries the general case.
+   */
+  seo_title?: string;
+  /** Per-app override for the meta description. English only, as `seo_title`. */
+  seo_description?: string;
 }
 
 /** One persistent volume of an app (LNVPS/api#260). */

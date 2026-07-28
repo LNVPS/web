@@ -1,4 +1,6 @@
+import type { IntlShape } from "react-intl";
 import { CostPlanIntervalType, type App } from "../api";
+import { GiB } from "../const";
 import { smallestUnitScale } from "./currency";
 
 /** Matches `SITE_URL` in `src/components/seo.tsx:5`, for absolute schema URLs. */
@@ -40,21 +42,112 @@ function standardUnitPrice(app: App): string | undefined {
 }
 
 /**
+ * The page `<title>`, without the `" | LNVPS"` that `Seo` appends.
+ *
+ * Templated from `display_name` + `category` rather than written per app: the
+ * catalog is a database table, so copy for a sixth app has to arrive as a row,
+ * not as a frontend deploy. `seo_title` is the escape hatch for an app the
+ * template does not serve, and is English-only by construction — it arrives
+ * over the wire and so is never extracted for translation.
+ *
+ * Falls back to the bare `display_name` when `category` is missing, which only
+ * happens against an API build older than LNVPS/api#241.
+ */
+export function appSeoTitle(app: App, intl: IntlShape): string {
+  if (app.seo_title) return app.seo_title;
+  if (!app.category) return app.display_name;
+  return intl.formatMessage(
+    { defaultMessage: "{name} Hosting — Managed {category}" },
+    { name: app.display_name, category: app.category },
+  );
+}
+
+/**
+ * The meta description, templated from the app's structured fields.
+ *
+ * Deliberately does **not** interpolate `app.description`: that is admin free
+ * text with no length or grammatical contract ("A feature-rich hierarchical
+ * community relay"), so dropping it into a sentence produces a broken one
+ * about half the time. It keeps its existing jobs — the catalog card blurb and
+ * the paragraph under the h1.
+ *
+ * Each optional clause is guarded independently and every branch ends on a
+ * complete sentence, so an app with no volumes, a yearly plan or a BTC price
+ * still reads as prose rather than as a template with holes in it.
+ */
+export function appSeoDescription(
+  app: App,
+  intl: IntlShape,
+): string | undefined {
+  if (app.seo_description) return app.seo_description;
+  if (!app.category) return app.description;
+
+  const storage = app.storage_bytes >= GiB ? app.storage_bytes / GiB : undefined;
+  const lede =
+    storage !== undefined
+      ? intl.formatMessage(
+          {
+            defaultMessage:
+              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} GB storage, no server to patch.",
+          },
+          {
+            name: app.display_name,
+            category: app.category,
+            storage: intl.formatNumber(storage, { maximumFractionDigits: 0 }),
+          },
+        )
+      : intl.formatMessage(
+          {
+            defaultMessage:
+              "Run {name} as a managed {category} on LNVPS — own hostname, TLS included, no server to patch.",
+          },
+          { name: app.display_name, category: app.category },
+        );
+
+  // A figure is only quotable when it is a monthly price in a currency
+  // `formatNumber` can render. BTC amounts are millisats, and a yearly plan's
+  // amount is not a monthly one — either way, quote the payment options
+  // instead of a number that would be wrong.
+  const monthly =
+    app.interval_amount === 1 &&
+    app.interval_type === CostPlanIntervalType.MONTH;
+  const price = standardUnitPrice(app);
+  const priceClause =
+    monthly && price !== undefined
+      ? intl.formatMessage(
+          { defaultMessage: "{price}/month, pay with Lightning." },
+          {
+            price: intl.formatNumber(Number(price), {
+              style: "currency",
+              currency: app.currency,
+            }),
+          },
+        )
+      : intl.formatMessage({
+          defaultMessage: "Pay with Lightning, Bitcoin, or card.",
+        });
+
+  return `${lede} ${priceClause}`;
+}
+
+/**
  * `Product`/`Offer` structured data for one app. Shape per `LNVPS/web#32`.
  *
  * Built from the app's own price and identity, which every app has, so a new
  * catalog app gets a rich result with no code change here. The description is
- * the API's, the same string the page renders under the h1, so the rich result
+ * the same string as the meta tag, via `appSeoDescription`, so the rich result
  * and the meta tag cannot say different things.
  */
-export function appJsonLd(app: App): object {
+export function appJsonLd(app: App, intl: IntlShape): object {
   const url = `${SITE_URL}/apps/${app.id}`;
   const offerPrice = standardUnitPrice(app);
+  const description = appSeoDescription(app, intl);
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: app.display_name,
-    ...(app.description ? { description: app.description } : {}),
+    ...(description ? { description } : {}),
+    ...(app.category ? { category: app.category } : {}),
     url,
     brand: { "@type": "Brand", name: "LNVPS" },
     ...(offerPrice

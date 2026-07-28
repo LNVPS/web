@@ -12,7 +12,7 @@ import CostLabel, { CostAmount } from "../components/cost";
 import DeployAppForm from "../components/deploy-app-form";
 import Markdown from "../components/markdown";
 import { fetchReadme } from "../utils/readme";
-import { appJsonLd } from "../utils/app-seo";
+import { appJsonLd, appSeoDescription, appSeoTitle } from "../utils/app-seo";
 import { highlightYaml } from "../utils/yaml-highlight";
 import type { AppLoaderData } from "../loaders";
 import BytesSize from "../components/bytes";
@@ -152,7 +152,8 @@ function ReadmeSection({
 
 export function AppPage() {
   const login = useLogin();
-  const { formatMessage } = useIntl();
+  const intl = useIntl();
+  const { formatMessage } = intl;
   const { id } = useParams<{ id: string }>();
   const appId = Number(id);
   // Seeded by appLoader so the first (server) render already has the app, and
@@ -188,10 +189,10 @@ export function AppPage() {
     <div className="flex flex-col gap-6">
       {app ? (
         <Seo
-          title={app.display_name}
+          title={appSeoTitle(app, intl)}
           canonical={`/apps/${app.id}`}
           description={
-            app.description ??
+            appSeoDescription(app, intl) ??
             formatMessage(
               {
                 defaultMessage:
@@ -200,7 +201,7 @@ export function AppPage() {
               { name: app.display_name },
             )
           }
-          jsonLd={appJsonLd(app)}
+          jsonLd={appJsonLd(app, intl)}
         />
       ) : (
         // The loader found no app: either the id does not exist or the catalog

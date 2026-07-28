@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "Evet. Bu sizin bilgisayarınız, istediğiniz yazılımı yükleyebilirsiniz."
   },
+  "+H6Rvj": {
+    "defaultMessage": "Kendi Blossom ve NIP-96 medya sunucunuzu çalıştırın. {price}/ay. Route96, kendi alan adında birkaç dakika içinde kalıcı depolama ve TLS ile birlikte kullanıma hazır hale getirilebilir."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
   },
@@ -101,6 +104,9 @@
   "1M3SKY": {
     "defaultMessage": "Lütfen sorunuzu veya yaşadığınız sorunu ayrıntılı olarak açıklayın."
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} kalıcı depolama alanı – {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# saat} other{# saat}} {m,plural,one{# dakika} other{# dakika}}"
   },
@@ -124,6 +130,9 @@
   },
   "2/hxXE": {
     "defaultMessage": "Faturalandırma, yenileme ve bildirimler"
+  },
+  "24piVc": {
+    "defaultMessage": "<b>İsterseniz, kendi alan adınızı kullanabilirsiniz.</b> CNAME kaydını sunucunuza yönlendirerek, varsayılan ana bilgisayar adı ile birlikte kendi sertifikanızla hizmet vermenizi sağlarız. Doğrulama adımı gerekmez; sertifika, DNS kaydınız çözüldüğünde otomatik olarak oluşturulur."
   },
   "2QrTo0": {
     "defaultMessage": "Yeni IP Adresi Atama Talebi"
@@ -151,6 +160,9 @@
   },
   "36aVfS": {
     "defaultMessage": "Nostr Özel Mesaj"
+  },
+  "375584": {
+    "defaultMessage": "Ödeme gerekiyor."
   },
   "3GLHv9": {
     "defaultMessage": "kimlik doğrula"
@@ -320,6 +332,9 @@
   "7agV2X": {
     "defaultMessage": "Bayrak yarışı / Röle"
   },
+  "7bTzvm": {
+    "defaultMessage": "Kurulum – genellikle bir dakika sürer. İşlem tamamlandıktan sonra son nokta görünür."
+  },
   "7fGyF+": {
     "defaultMessage": "Sil ve yeniden kur"
   },
@@ -413,8 +428,14 @@
   "9gB0vq": {
     "defaultMessage": "Düğümünüz için bir VPS oluşturun."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Barındırma – Yönetilen {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Onaylanıyor"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}Ayda bir ödeme yapın ve Lightning ile ödeyin."
   },
   "9t1iiv": {
     "defaultMessage": "Yapılandır"
@@ -508,6 +529,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Şimdi yeniden etkinleştirin."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Dört farklı röle uygulaması, hepsi aylık {price}, kurulum ücreti yok."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -743,6 +767,9 @@
   "HqRNN8": {
     "defaultMessage": "Destek"
   },
+  "HzgGfH": {
+    "defaultMessage": "Lightning, Bitcoin veya kredi kartıyla ödeme yapın."
+  },
   "I3JhPS": {
     "defaultMessage": "Ağ"
   },
@@ -751,6 +778,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "Henüz hiçbir NWC cüzdanı kaydedilmedi. Ödemeleri almak için aşağıda bir tane ekleyin."
+  },
+  "IDpruN": {
+    "defaultMessage": "Dağıtılıyor."
   },
   "ILTAun": {
     "defaultMessage": "Sanal makineniz hazırlanıyor. Bu işlem genellikle bir veya iki dakika sürer."
@@ -793,6 +823,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS Hizmet Durumu ve Çalışma Süresi"
+  },
+  "JVZcdC": {
+    "defaultMessage": "Bu uygulamanın aboneliği sona erdi ve ölçeklendirme sıfıra düşürüldü. Verileriniz hala burada bulunuyor; uygulamayı yeniden başlatmak için aboneliğinizi yenileyin."
   },
   "JiCBWy": {
     "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
@@ -854,8 +887,8 @@
   "LHX6Oo": {
     "defaultMessage": "Son kullanma tarihi {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
+  "LJljHH": {
+    "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde — özel alan adı, TLS dahil, yamalanması gereken sunucu yok."
   },
   "LR754a": {
     "defaultMessage": "Yenilenme tarihi:"
@@ -875,8 +908,14 @@
   "LwGAe6": {
     "defaultMessage": "Ayrıca LNVPS'de de."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Toplam"
+  },
   "MTnSwY": {
     "defaultMessage": "örneğin, vergi"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerinde Route96 yüklü olan bir VPS ile daha da ölçeklendirebilirsiniz."
   },
   "Mp+zDS": {
     "defaultMessage": "Bu bileşen yalnızca Lightning ödemelerini destekler."
@@ -952,6 +991,9 @@
   },
   "P7PLVj": {
     "defaultMessage": "Tarih"
+  },
+  "PJKhfR": {
+    "defaultMessage": "Yönetilen bir uygulama, asıl odak noktanın aktarım işlemi olduğu durumlarda en doğru çözümdür. Değiştirilmiş bir sürüm çalıştırmak, diğer hizmetleri aynı sunucuda barındırmak veya sunucuyu kendiniz yönetmek isterseniz, <a>VPS hosting</a> hizmetimiz Dublin, Londra ve Quebec’te sınırsız trafikle ve her planda statik IPv4 ve IPv6 adresleriyle başlar."
   },
   "PJtOx7": {
     "defaultMessage": "Bildirilecek herhangi bir olay bulunmamaktadır."
@@ -1136,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "LNURL'yi göster"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}Ayda bir ücret, kurulum ücreti yok."
+  },
   "Tbo377": {
     "defaultMessage": "Fatura"
   },
@@ -1234,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "Oluşturun"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerine Route96 yüklediğiniz bir VPS ile ölçeklenebilirliği artırabilirsiniz."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1487,6 +1535,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde — kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
+  },
   "e4ehrh": {
     "defaultMessage": "Makinenizi oluşturun"
   },
@@ -1513,6 +1564,9 @@
   },
   "exrlwL": {
     "defaultMessage": "Küçük harfler, sayılar ve tireler. Bu, alt alan adınız haline gelir."
+  },
+  "f+jGyB": {
+    "defaultMessage": "Silme işlemi, faturalandırmayı durdurur ve dağıtımı ile ilişkili tüm birimleri kalıcı olarak kaldırır."
   },
   "f00p/7": {
     "defaultMessage": "Yükleme başarısız oldu."
@@ -1543,6 +1597,9 @@
   },
   "fxYCqm": {
     "defaultMessage": "Konum: {location}"
+  },
+  "g1GUs5": {
+    "defaultMessage": "sanal CPU"
   },
   "gBvImw": {
     "defaultMessage": "{count} sapları"
@@ -1663,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "Hiçbiri ayarlanmamış – bir tane ekleyin."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "Dağıtım ana bilgisayar adı atandığında bu alan adı için bir CNAME kaydını o adrese yönlendirin. Kaldırmak için boş bırakın."
@@ -1802,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "Komisyon"
   },
+  "n7yYXG": {
+    "defaultMessage": "Hizmet"
+  },
   "n9fdaJ": {
     "defaultMessage": "Doğrulanmamış"
   },
@@ -1810,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Ödeme Yöntemi"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Bu uygulamanın ücreti ödenip kullanıma sunulduktan sonra ayarlar değiştirilebilir."
   },
   "nWQFic": {
     "defaultMessage": "Yenile"
@@ -1892,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "Ayarlanmadı"
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1945,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
+  },
+  "rOtXKf": {
+    "defaultMessage": "Aynı zamanda bir Nostr rölesi mi işletiyorsunuz? Bu durumda tam teşekküllü bir sunucuya ihtiyaç duyulmaz; çünkü bu işlem... <a>{price} bir ay boyunca yönetilen bir uygulama olarak</a>."
   },
   "rbrahO": {
     "defaultMessage": "Kapat"
@@ -2144,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "Yükseltme Mevcut Değil"
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2231,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>Sınırsız veri trafiği.</b> Bir yönlendirme düğümü sürekli olarak bilgi alışverişinde bulunur. Bant genişliği ölçüm cihazına bakmanız gerekmez."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Dört farklı röle uygulaması, hepsi aylık {price}, kurulum ücreti yok."
+  "zzkKCh": {
+    "defaultMessage": "{storage} kalıcı depolama alanı"
   }
 }

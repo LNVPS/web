@@ -198,7 +198,7 @@ export function BlossomServerHostingPage() {
           },
           { price: priceText },
         )}
-        jsonLd={[...(app ? [appJsonLd(app)] : []), faqJsonLd(faq)]}
+        jsonLd={[...(app ? [appJsonLd(app, intl)] : []), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">

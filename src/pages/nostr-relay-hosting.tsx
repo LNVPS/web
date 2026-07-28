@@ -151,7 +151,7 @@ export function NostrRelayHostingPage() {
           },
           { price: priceText },
         )}
-        jsonLd={[...relays.map(appJsonLd), faqJsonLd(faq)]}
+        jsonLd={[...relays.map((r) => appJsonLd(r, intl)), faqJsonLd(faq)]}
       />
       <div className="flex flex-col gap-8">
         <header className="flex flex-col gap-3">

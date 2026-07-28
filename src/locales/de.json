@@ -14,6 +14,9 @@
   "+EHk4e": {
     "defaultMessage": "Ja. Das ist Ihr Gerät – installieren Sie, was immer Sie möchten."
   },
+  "+H6Rvj": {
+    "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96 lässt sich innerhalb von Minuten auf seinem eigenen Hostnamen installieren und bietet persistente Datenspeicherung sowie TLS-Unterstützung."
+  },
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
   },
@@ -101,6 +104,9 @@
   "1M3SKY": {
     "defaultMessage": "Bitte beschreiben Sie Ihre Frage oder Ihr Problem detailliert..."
   },
+  "1R0JfT": {
+    "defaultMessage": "{storage} von persistentem Speicher – {breakdown}"
+  },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# Std.} other{# Std.}} {m,plural,one{# Min.} other{# Minuten}}"
   },
@@ -154,6 +160,9 @@
   },
   "36aVfS": {
     "defaultMessage": "Nostr Direktnachricht"
+  },
+  "375584": {
+    "defaultMessage": "Zahlung erforderlich."
   },
   "3GLHv9": {
     "defaultMessage": "authentifizieren"
@@ -323,6 +332,9 @@
   "7agV2X": {
     "defaultMessage": "Weiterleiten / Relais"
   },
+  "7bTzvm": {
+    "defaultMessage": "Einrichtung – dies dauert normalerweise etwa eine Minute. Das Endgerät wird angezeigt, sobald es in Betrieb ist."
+  },
   "7fGyF+": {
     "defaultMessage": "Löschen & neu installieren"
   },
@@ -416,8 +428,14 @@
   "9gB0vq": {
     "defaultMessage": "Erstellen Sie ein virtuelles privates Server (VPS) für Ihren Knoten."
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Hosting – Verwaltetes {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Wird bestätigt"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}pro Monat bezahlen mit Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Konfigurieren"
@@ -511,6 +529,9 @@
   },
   "Bzv1CO": {
     "defaultMessage": "Jetzt wieder aktivieren."
+  },
+  "C8Qzcv": {
+    "defaultMessage": "Vier verschiedene Relais-Implementierungen, jeweils {price} pro Monat, ohne Einrichtungskosten."
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -746,6 +767,9 @@
   "HqRNN8": {
     "defaultMessage": "Unterstützung"
   },
+  "HzgGfH": {
+    "defaultMessage": "Bezahlen Sie mit Lightning, Bitcoin oder per Karte."
+  },
   "I3JhPS": {
     "defaultMessage": "Netzwerk"
   },
@@ -754,6 +778,9 @@
   },
   "ID2dFf": {
     "defaultMessage": "Bisher wurde noch keine NWC-Wallet gespeichert. Fügen Sie unten eine hinzu, um Auszahlungen zu erhalten."
+  },
+  "IDpruN": {
+    "defaultMessage": "Bereitstellen"
   },
   "ILTAun": {
     "defaultMessage": "Ihre virtuelle Maschine wird gerade eingerichtet. Dies dauert in der Regel ein bis zwei Minuten."
@@ -796,6 +823,9 @@
   },
   "JVClQM": {
     "defaultMessage": "Status und Verfügbarkeit des LNVPS-Dienstes"
+  },
+  "JVZcdC": {
+    "defaultMessage": "Das Abonnement für diese Bereitstellung ist abgelaufen, und die Kapazität wurde auf null reduziert. Ihre Daten sind weiterhin vorhanden – verlängern Sie das Abonnement, um die Bereitstellung wieder zu aktivieren."
   },
   "JiCBWy": {
     "defaultMessage": "Verbinde dich per SSH mit deinem ausgewählten Schlüssel."
@@ -857,8 +887,8 @@
   "LHX6Oo": {
     "defaultMessage": "Gültig bis {exp}"
   },
-  "LKipQw": {
-    "defaultMessage": "{price}/month, no setup fee. 20 GB for your files."
+  "LJljHH": {
+    "defaultMessage": "Betreiben Sie {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS inklusive, keine Server-Updates erforderlich."
   },
   "LR754a": {
     "defaultMessage": "Wird automatisch verlängert am"
@@ -878,8 +908,14 @@
   "LwGAe6": {
     "defaultMessage": "Ebenfalls auf LNVPS."
   },
+  "MJ2jZQ": {
+    "defaultMessage": "Gesamt"
+  },
   "MTnSwY": {
     "defaultMessage": "zzgl. Steuer"
+  },
+  "MfiEGP": {
+    "defaultMessage": "{storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
   },
   "Mp+zDS": {
     "defaultMessage": "Diese Komponente unterstützt ausschließlich Lightning-Zahlungen."
@@ -1142,6 +1178,9 @@
   "TaUfJI": {
     "defaultMessage": "LNURL anzeigen"
   },
+  "Tb1zdK": {
+    "defaultMessage": "{price}pro Monat, ohne Einrichtungskosten."
+  },
   "Tbo377": {
     "defaultMessage": "Rechnungsstellung"
   },
@@ -1240,6 +1279,9 @@
   },
   "VzzYJk": {
     "defaultMessage": "Erstellen Sie"
+  },
+  "W16obH": {
+    "defaultMessage": "{breakdown}. {storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
   },
   "W8nHSd": {
     "defaultMessage": "FAQ"
@@ -1493,6 +1535,9 @@
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
+  "e2hZoG": {
+    "defaultMessage": "Betreiben Sie {name} als verwaltetes {category} auf LNVPS – eigener Hostname, TLS-Verschlüsselung inklusive {storage} Speicher, kein Server, der gepatcht werden muss."
+  },
   "e4ehrh": {
     "defaultMessage": "Stelle deine Maschine zusammen"
   },
@@ -1519,6 +1564,9 @@
   },
   "exrlwL": {
     "defaultMessage": "Kleinbuchstaben, Ziffern und Bindestriche. Dies wird Ihre Subdomain."
+  },
+  "f+jGyB": {
+    "defaultMessage": "Durch das Löschen wird die Abrechnung beendet und die Bereitstellung sowie die zugehörigen Speicherbereiche werden dauerhaft entfernt."
   },
   "f00p/7": {
     "defaultMessage": "Hochladen fehlgeschlagen."
@@ -1549,6 +1597,9 @@
   },
   "fxYCqm": {
     "defaultMessage": "Ort: {location}"
+  },
+  "g1GUs5": {
+    "defaultMessage": "virtuelle CPU"
   },
   "gBvImw": {
     "defaultMessage": "{count} Griffe"
@@ -1669,9 +1720,6 @@
   },
   "jf7fbc": {
     "defaultMessage": "Keine festgelegt – eine hinzufügen."
-  },
-  "jgrdHK": {
-    "defaultMessage": "20 GB of files, with a separate 5 GB volume for the database. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
   "jhBqwg": {
     "defaultMessage": "Richten Sie einen CNAME für diese Domain auf den Hostnamen der Bereitstellung, sobald dieser zugewiesen ist. Leer lassen zum Entfernen."
@@ -1808,6 +1856,9 @@
   "mznk9z": {
     "defaultMessage": "Kommission"
   },
+  "n7yYXG": {
+    "defaultMessage": "Service"
+  },
   "n9fdaJ": {
     "defaultMessage": "Nicht verifiziert."
   },
@@ -1816,6 +1867,9 @@
   },
   "nFQbxh": {
     "defaultMessage": "Zahlungsmethode"
+  },
+  "nQHBG0": {
+    "defaultMessage": "Die Einstellungen können geändert werden, sobald die Kosten für diese Bereitstellung beglichen und der Prozess gestartet wurde."
   },
   "nWQFic": {
     "defaultMessage": "Verlängern"
@@ -1898,9 +1952,6 @@
   "p5LNtB": {
     "defaultMessage": "Nicht festgelegt."
   },
-  "pJmk+U": {
-    "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with 20 GB for your files and TLS included."
-  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -1951,6 +2002,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Rechnungsinformationen"
+  },
+  "rOtXKf": {
+    "defaultMessage": "Betreiben Sie auch einen Nostr-Relay-Server? Für diesen ist kein ganzer Server erforderlich – er ist <a>{price} ein Monat als verwaltete Anwendung</a>."
   },
   "rbrahO": {
     "defaultMessage": "Schließen"
@@ -2150,9 +2204,6 @@
   "x0cZXf": {
     "defaultMessage": "Upgrade nicht verfügbar."
   },
-  "x27Qqd": {
-    "defaultMessage": "20 GB persistent storage for your files, plus a 5 GB database volume of its own — 25 GB allocated in total"
-  },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
   },
@@ -2237,7 +2288,7 @@
   "zbyKVt": {
     "defaultMessage": "<b>Unbegrenztes Datenvolumen.</b> Ein Routing-Knoten kommuniziert ständig mit anderen Knoten. Sie sollten nicht ständig die Bandbreitennutzung überwachen."
   },
-  "C8Qzcv": {
-    "defaultMessage": "Vier verschiedene Relais-Implementierungen, jeweils {price} pro Monat, ohne Einrichtungskosten."
+  "zzkKCh": {
+    "defaultMessage": "{storage} von permanentem Speicher"
   }
 }

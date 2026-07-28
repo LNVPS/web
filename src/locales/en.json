@@ -428,8 +428,14 @@
   "9gB0vq": {
     "defaultMessage": "Build your node's VPS"
   },
+  "9jmYTR": {
+    "defaultMessage": "{name} Hosting — Managed {category}"
+  },
   "9p3I3O": {
     "defaultMessage": "Confirming"
+  },
+  "9siBxf": {
+    "defaultMessage": "{price}/month, pay with Lightning."
   },
   "9t1iiv": {
     "defaultMessage": "Configure"
@@ -761,6 +767,9 @@
   "HqRNN8": {
     "defaultMessage": "Support"
   },
+  "HzgGfH": {
+    "defaultMessage": "Pay with Lightning, Bitcoin, or card."
+  },
   "I3JhPS": {
     "defaultMessage": "Network"
   },
@@ -877,6 +886,9 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Expires {exp}"
+  },
+  "LJljHH": {
+    "defaultMessage": "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, no server to patch."
   },
   "LR754a": {
     "defaultMessage": "Renews at"
@@ -1522,6 +1534,9 @@
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
+  },
+  "e2hZoG": {
+    "defaultMessage": "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch."
   },
   "e4ehrh": {
     "defaultMessage": "Build your machine"

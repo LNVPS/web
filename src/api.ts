@@ -766,10 +766,13 @@ export interface AppDeploymentUsage {
   storage_bytes?: number;
   /** When the reading was taken. */
   collected: string;
-  /** Per-service CPU and memory behind the totals. */
-  services: AppDeploymentServiceUsage[];
-  /** Per-volume storage behind the total. */
-  volumes: AppDeploymentVolumeUsage[];
+  /**
+   * Per-service CPU and memory behind the totals. Absent on readings taken
+   * before the operator reported the breakdown, so render it defensively.
+   */
+  services?: AppDeploymentServiceUsage[];
+  /** Per-volume storage behind the total. Absent like `services`. */
+  volumes?: AppDeploymentVolumeUsage[];
 }
 
 /** A user's running instance of a catalog app. */

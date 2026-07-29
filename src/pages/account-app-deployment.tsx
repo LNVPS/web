@@ -37,6 +37,7 @@ import {
   deploymentPermissions,
   lifecycleStepState,
   usageBarReading,
+  usageBreakdown,
 } from "../utils/app-deployment";
 
 /**
@@ -622,7 +623,7 @@ function DeploymentUsageCard({
           />
         </p>
 
-        {usage.services.length > 0 && (
+        {usageBreakdown(usage).services.length > 0 && (
           <div className="border-t border-cyber-border pt-3 mt-1">
             <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
               <FormattedMessage defaultMessage="By service" />
@@ -642,7 +643,7 @@ function DeploymentUsageCard({
                 </tr>
               </thead>
               <tbody>
-                {usage.services.map((s) => (
+                {usageBreakdown(usage).services.map((s) => (
                   <tr key={s.service} className="text-cyber-text">
                     <td className="py-0.5 pr-3 font-mono">{s.service}</td>
                     <td className="py-0.5 pr-3">{cpuLabel(s.cpu_milli)}</td>
@@ -656,7 +657,7 @@ function DeploymentUsageCard({
           </div>
         )}
 
-        {usage.volumes.length > 0 && (
+        {usageBreakdown(usage).volumes.length > 0 && (
           <div className="border-t border-cyber-border pt-3 mt-1">
             <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
               <FormattedMessage defaultMessage="By volume" />
@@ -673,7 +674,7 @@ function DeploymentUsageCard({
                 </tr>
               </thead>
               <tbody>
-                {usage.volumes.map((v) => (
+                {usageBreakdown(usage).volumes.map((v) => (
                   <tr key={`${v.service}/${v.name}`} className="text-cyber-text">
                     <td className="py-0.5 pr-3 font-mono">
                       {v.service}/{v.name}

@@ -4,12 +4,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { App, AppRegion } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
-import {
-  AppConfigField,
-  DEPLOYMENT_NAME_RE,
-  defaultConfigValues,
-  parseAppConfig,
-} from "../utils/app-compose";
+import { configFieldDisplayLabel, parseComposeSchema, type ConfigField } from "lnvps-compose";
+import { DEPLOYMENT_NAME_RE, defaultConfigValues } from "../utils/deployment-form";
 
 export function ConfigInput({
   field,
@@ -17,13 +13,13 @@ export function ConfigInput({
   onChange,
   disabled,
 }: {
-  field: AppConfigField;
+  field: ConfigField;
   value: string;
   onChange: (v: string) => void;
   /** Show the value without letting it be edited (see `LNVPS/web#54`). */
   disabled?: boolean;
 }) {
-  const label = field.label ?? field.name;
+  const label = configFieldDisplayLabel(field);
   if (field.type === "bool") {
     return (
       <label
@@ -73,7 +69,10 @@ export default function DeployAppForm({ app }: { app: App }) {
   const navigate = useNavigate();
   const { formatMessage } = useIntl();
 
-  const fields = useMemo(() => parseAppConfig(app.compose), [app.compose]);
+  const fields = useMemo(
+    () => parseComposeSchema(app.compose).config,
+    [app.compose],
+  );
   const [name, setName] = useState("");
   const [values, setValues] = useState<Record<string, string>>(() =>
     defaultConfigValues(fields),

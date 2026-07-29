@@ -15,7 +15,7 @@ import {
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import { ConfigInput } from "../components/deploy-app-form";
-import { parseAppConfig } from "../utils/app-compose";
+import { parseComposeSchema } from "lnvps-compose";
 import Spinner from "../components/spinner";
 import BytesSize from "../components/bytes";
 import Seo from "../components/seo";
@@ -115,7 +115,10 @@ function ConfigEditor({
   onError: (msg: string) => void;
 }) {
   const login = useLogin();
-  const fields = useMemo(() => parseAppConfig(app.compose), [app.compose]);
+  const fields = useMemo(
+    () => parseComposeSchema(app.compose).config,
+    [app.compose],
+  );
   const [name, setName] = useState(deployment.name);
   const [customDomain, setCustomDomain] = useState(
     deployment.custom_domain ?? "",

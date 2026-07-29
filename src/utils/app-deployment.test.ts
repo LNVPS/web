@@ -1,10 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { AppDeploymentUsage } from "../api";
-import {
-  lifecycleStepState,
-  usageBarReading,
-  usageBreakdown,
-} from "./app-deployment";
+import { lifecycleStepState, usageBarReading } from "./app-deployment";
 
 describe("lifecycleStepState", () => {
   test("marks the last step done once the deployment reaches it", () => {
@@ -40,38 +35,5 @@ describe("usageBarReading", () => {
     expect(usageBarReading(70, 100)).toEqual({ pct: 70, level: "warning" });
     expect(usageBarReading(89, 100)).toEqual({ pct: 89, level: "warning" });
     expect(usageBarReading(90, 100)).toEqual({ pct: 90, level: "critical" });
-  });
-});
-
-describe("usageBreakdown", () => {
-  // Regression: a reading stored before the per-service/volume split shipped
-  // has only the totals, and DeploymentUsageCard crashed reading
-  // `usage.services.length` of `undefined`.
-  test("normalises absent services/volumes to empty arrays", () => {
-    const totalsOnly: AppDeploymentUsage = {
-      cpu_milli: 500,
-      memory_bytes: 1024,
-      collected: "2026-01-01T00:00:00Z",
-    };
-    expect(usageBreakdown(totalsOnly)).toEqual({ services: [], volumes: [] });
-  });
-
-  test("passes a full reading through untouched", () => {
-    const services: AppDeploymentUsage["services"] = [
-      { service: "web", cpu_milli: 500, memory_bytes: 1024 },
-    ];
-    const volumes: AppDeploymentUsage["volumes"] = [
-      { service: "web", name: "data", storage_bytes: 2048 },
-    ];
-    const full: AppDeploymentUsage = {
-      cpu_milli: 500,
-      memory_bytes: 1024,
-      storage_bytes: 2048,
-      collected: "2026-01-01T00:00:00Z",
-      services,
-      volumes,
-    };
-    expect(usageBreakdown(full).services).toBe(services);
-    expect(usageBreakdown(full).volumes).toBe(volumes);
   });
 });

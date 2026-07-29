@@ -1,4 +1,4 @@
-import { AppDeployment, AppDeploymentUsage } from "../api";
+import { AppDeployment } from "../api";
 
 /**
  * Where a deployment is in its life, as one value.
@@ -109,22 +109,6 @@ export interface UsageBarReading {
   /** 0-100, clamped so a reading past quota still draws a full bar. */
   pct: number;
   level: UsageLevel;
-}
-
-/**
- * A usage reading's per-service and per-volume breakdown with the absent case
- * normalised to empty arrays. Readings stored before the operator reported
- * the breakdown carry only the totals — `services`/`volumes` are absent — and
- * the usage card crashed on them reading `.length` of `undefined`.
- */
-export function usageBreakdown(usage: AppDeploymentUsage): {
-  services: NonNullable<AppDeploymentUsage["services"]>;
-  volumes: NonNullable<AppDeploymentUsage["volumes"]>;
-} {
-  return {
-    services: usage.services ?? [],
-    volumes: usage.volumes ?? [],
-  };
 }
 
 /**

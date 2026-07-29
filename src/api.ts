@@ -2035,7 +2035,7 @@ export class LNVpsApi {
         body: body ? JSON.stringify(body) : undefined,
         headers: {
           accept: "application/json",
-          "content-type": "application/json",
+          ...(body ? { "content-type": "application/json" } : {}),
           authorization: (await this.#auth(u, method)) ?? "",
         },
         signal: controller.signal,

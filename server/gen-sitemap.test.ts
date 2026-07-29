@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   buildSitemapXml,
   STATIC_ENTRIES,
+  withRetry,
   type ArchiveEvent,
 } from "./gen-sitemap";
 
@@ -61,5 +62,45 @@ describe("buildSitemapXml", () => {
 
   test("lastmod is the published_at date", () => {
     expect(xml).toContain("<lastmod>2026-07-06</lastmod>");
+  });
+});
+
+describe("withRetry", () => {
+  test("returns the first success without retrying", async () => {
+    let calls = 0;
+    const result = await withRetry(async () => {
+      calls++;
+      return "ok";
+    });
+    expect(result).toBe("ok");
+    expect(calls).toBe(1);
+  });
+
+  test("retries a failure and returns the later success", async () => {
+    let calls = 0;
+    const result = await withRetry(
+      async () => {
+        calls++;
+        if (calls < 3) throw new Error("transient");
+        return "ok";
+      },
+      { delayMs: 0 },
+    );
+    expect(result).toBe("ok");
+    expect(calls).toBe(3);
+  });
+
+  test("stops at the attempt limit and throws the last error", async () => {
+    let calls = 0;
+    await expect(
+      withRetry(
+        async () => {
+          calls++;
+          throw new Error(`fail ${calls}`);
+        },
+        { attempts: 3, delayMs: 0 },
+      ),
+    ).rejects.toThrow("fail 3");
+    expect(calls).toBe(3);
   });
 });

@@ -163,11 +163,31 @@ async function fetchAppIds(): Promise<Array<number>> {
   return ids;
 }
 
+/**
+ * Retry a flaky call rather than fail the build on the first attempt. The
+ * scrubbing path in front of the API drops some SYN packets under concurrent
+ * connection bursts, so a timeout here is often gone on the next try (the
+ * Docker registry login in `build-deploy.yml` retries the same flake).
+ */
+export async function withRetry<T>(
+  fn: () => Promise<T>,
+  { attempts = 3, delayMs = 2000 }: { attempts?: number; delayMs?: number } = {},
+): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (attempt >= attempts) throw err;
+      await new Promise((r) => setTimeout(r, delayMs));
+    }
+  }
+}
+
 if (import.meta.main) {
   const archive = JSON.parse(
     readFileSync(ARCHIVE_PATH, "utf-8"),
   ) as Array<ArchiveEvent>;
-  const appIds = await fetchAppIds();
+  const appIds = await withRetry(fetchAppIds);
   const xml = buildSitemapXml(archive, appIds);
 
   for (const dir of OUT_DIRS) {

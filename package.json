@@ -37,6 +37,7 @@
     "classnames": "^2.5.1",
     "dns-over-http-resolver": "^3.0.16",
     "iso-3166-1": "^2.1.1",
+    "js-yaml": "^4.1.1",
     "marked": "^15.0.7",
     "qr-code-styling": "^1.8.4",
     "react": "^19.1.0",

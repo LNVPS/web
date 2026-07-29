@@ -57,7 +57,6 @@
   "overrides": {
     "@babel/runtime": "^7.26.10",
     "glob": "^10.5.0",
-    "js-yaml": "^4.1.1",
     "lodash": "^4.17.23",
     "minimatch": "^9.0.7",
     "react": "^19.1.0",

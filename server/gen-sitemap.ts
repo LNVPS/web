@@ -163,6 +163,8 @@ async function fetchAppIds(): Promise<Array<number>> {
   return ids;
 }
 
+const RETRY_ATTEMPTS = 3;
+
 /**
  * Retry a flaky call rather than fail the build on the first attempt. The
  * scrubbing path in front of the API drops some SYN packets under concurrent
@@ -171,13 +173,17 @@ async function fetchAppIds(): Promise<Array<number>> {
  */
 export async function withRetry<T>(
   fn: () => Promise<T>,
-  { attempts = 3, delayMs = 2000 }: { attempts?: number; delayMs?: number } = {},
+  { delayMs = 2000 }: { delayMs?: number } = {},
 ): Promise<T> {
   for (let attempt = 1; ; attempt++) {
     try {
       return await fn();
     } catch (err) {
-      if (attempt >= attempts) throw err;
+      if (attempt >= RETRY_ATTEMPTS) throw err;
+      // Otherwise identical to a fast first-try success in the build log.
+      console.warn(
+        `retrying after a failed attempt (${attempt}/${RETRY_ATTEMPTS}): ${err}`,
+      );
       await new Promise((r) => setTimeout(r, delayMs));
     }
   }

@@ -93,13 +93,10 @@ describe("withRetry", () => {
   test("stops at the attempt limit and throws the last error", async () => {
     let calls = 0;
     await expect(
-      withRetry(
-        async () => {
-          calls++;
-          throw new Error(`fail ${calls}`);
-        },
-        { attempts: 3, delayMs: 0 },
-      ),
+      withRetry(async () => {
+        calls++;
+        throw new Error(`fail ${calls}`);
+      }, { delayMs: 0 }),
     ).rejects.toThrow("fail 3");
     expect(calls).toBe(3);
   });

@@ -4,11 +4,14 @@ import {
   FormattedDate,
   FormattedMessage,
   FormattedRelativeTime,
+  useIntl,
 } from "react-intl";
 import {
   App,
   AppDeployment,
+  AppDeploymentServiceUsage,
   AppDeploymentUsage,
+  AppDeploymentVolumeUsage,
   AppUpgradeQuote,
   MAX_RESOURCE_MULTIPLIER,
 } from "../api";
@@ -551,6 +554,79 @@ function UsageBar({
   );
 }
 
+/**
+ * A thin, unlabelled usage bar with just a percentage — the compact form for
+ * a per-service breakdown, where a header row above the list already says
+ * which column is which.
+ */
+function CompactUsageBar({ used, quota }: { used: number; quota: number }) {
+  const { formatNumber } = useIntl();
+  const reading = usageBarReading(used, quota);
+  if (!reading) return null;
+  const high = reading.level === "critical";
+  const mid = reading.level === "warning";
+  return (
+    <div className="flex flex-1 min-w-0 items-center gap-1.5">
+      <div className="h-1.5 flex-1 overflow-hidden rounded-full border border-cyber-border bg-cyber-panel-light">
+        <div
+          className={`h-full rounded-full ${high ? "bg-cyber-danger" : mid ? "bg-cyber-warning" : "bg-cyber-primary"}`}
+          style={{ width: `${reading.pct}%` }}
+        />
+      </div>
+      <span
+        className={`w-8 flex-shrink-0 text-right font-mono text-[0.65rem] tabular-nums ${high ? "text-cyber-danger" : mid ? "text-cyber-warning" : "text-cyber-muted"}`}
+      >
+        {formatNumber(reading.pct / 100, {
+          style: "percent",
+          maximumFractionDigits: 0,
+        })}
+      </span>
+    </div>
+  );
+}
+
+/** One service's CPU and RAM, each as a fraction of the app's own quota. */
+function ServiceUsageRow({
+  service,
+  quotaCpuMilli,
+  quotaMemBytes,
+}: {
+  service: AppDeploymentServiceUsage;
+  quotaCpuMilli: number;
+  quotaMemBytes: number;
+}) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="w-16 flex-shrink-0 truncate font-mono text-[0.65rem] text-cyber-text">
+        {service.service}
+      </span>
+      <CompactUsageBar used={service.cpu_milli} quota={quotaCpuMilli} />
+      <CompactUsageBar used={service.memory_bytes} quota={quotaMemBytes} />
+    </div>
+  );
+}
+
+/** One volume's storage, as a fraction of the app's storage quota. */
+function VolumeUsageRow({
+  volume,
+  quotaStorageBytes,
+}: {
+  volume: AppDeploymentVolumeUsage;
+  quotaStorageBytes: number;
+}) {
+  return (
+    <div className="flex items-center gap-2">
+      <span
+        className="w-24 flex-shrink-0 truncate font-mono text-[0.65rem] text-cyber-text"
+        title={`${volume.service}/${volume.name}`}
+      >
+        {volume.service}/{volume.name}
+      </span>
+      <CompactUsageBar used={volume.storage_bytes} quota={quotaStorageBytes} />
+    </div>
+  );
+}
+
 /** Readable age for a usage reading. */
 function UsageAge({ collected }: { collected: string }) {
   const now = useRef(Date.now()).current;
@@ -628,32 +704,25 @@ function DeploymentUsageCard({
             <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
               <FormattedMessage defaultMessage="By service" />
             </p>
-            <table className="w-full text-xs tabular-nums">
-              <thead>
-                <tr className="text-left text-cyber-muted">
-                  <th className="font-normal pb-1 pr-3">
-                    <FormattedMessage defaultMessage="Service" />
-                  </th>
-                  <th className="font-normal pb-1 pr-3">
-                    <FormattedMessage defaultMessage="CPU" />
-                  </th>
-                  <th className="font-normal pb-1">
-                    <FormattedMessage defaultMessage="RAM" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {usageBreakdown(usage).services.map((s) => (
-                  <tr key={s.service} className="text-cyber-text">
-                    <td className="py-0.5 pr-3 font-mono">{s.service}</td>
-                    <td className="py-0.5 pr-3">{cpuLabel(s.cpu_milli)}</td>
-                    <td className="py-0.5">
-                      <BytesSize value={s.memory_bytes} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-2 text-cyber-muted">
+                <span className="w-16 flex-shrink-0" />
+                <span className="flex-1 text-[0.6rem] uppercase tracking-wider">
+                  <FormattedMessage defaultMessage="CPU" />
+                </span>
+                <span className="flex-1 text-[0.6rem] uppercase tracking-wider">
+                  <FormattedMessage defaultMessage="RAM" />
+                </span>
+              </div>
+              {usageBreakdown(usage).services.map((s) => (
+                <ServiceUsageRow
+                  key={s.service}
+                  service={s}
+                  quotaCpuMilli={quotaCpuMilli}
+                  quotaMemBytes={quotaMemBytes}
+                />
+              ))}
+            </div>
           </div>
         )}
 
@@ -662,30 +731,21 @@ function DeploymentUsageCard({
             <p className="m-0 mb-2 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
               <FormattedMessage defaultMessage="By volume" />
             </p>
-            <table className="w-full text-xs tabular-nums">
-              <thead>
-                <tr className="text-left text-cyber-muted">
-                  <th className="font-normal pb-1 pr-3">
-                    <FormattedMessage defaultMessage="Volume" />
-                  </th>
-                  <th className="font-normal pb-1">
-                    <FormattedMessage defaultMessage="Used" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {usageBreakdown(usage).volumes.map((v) => (
-                  <tr key={`${v.service}/${v.name}`} className="text-cyber-text">
-                    <td className="py-0.5 pr-3 font-mono">
-                      {v.service}/{v.name}
-                    </td>
-                    <td className="py-0.5">
-                      <BytesSize value={v.storage_bytes} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-2 text-cyber-muted">
+                <span className="w-24 flex-shrink-0" />
+                <span className="flex-1 text-[0.6rem] uppercase tracking-wider">
+                  <FormattedMessage defaultMessage="Used" />
+                </span>
+              </div>
+              {usageBreakdown(usage).volumes.map((v) => (
+                <VolumeUsageRow
+                  key={`${v.service}/${v.name}`}
+                  volume={v}
+                  quotaStorageBytes={quotaStorageBytes}
+                />
+              ))}
+            </div>
           </div>
         )}
       </div>

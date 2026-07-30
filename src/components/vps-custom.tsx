@@ -233,8 +233,8 @@ export function VpsCustomOrder({
   const [disk, setDisk] = useState(
     Math.floor((preferredDisk(params.disks)?.min_disk ?? GiB) / GiB),
   );
-  const [ip4, setIp4] = useState(params.min_ip4 ?? 1);
-  const [ip6, setIp6] = useState(params.min_ip6 ?? 0);
+  const [ip4, setIp4] = useState(params.min_ip4);
+  const [ip6, setIp6] = useState(params.min_ip6);
 
   const [price, setPrice] = useState<VmCustomPrice>();
 
@@ -263,8 +263,8 @@ export function VpsCustomOrder({
       setDiskType(disk0);
       setRam(Math.floor((params.min_memory ?? GiB) / GiB));
       setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
-      setIp4(params.min_ip4 ?? 1);
-      setIp6(params.min_ip6 ?? 0);
+      setIp4(params.min_ip4);
+      setIp6(params.min_ip6);
     }
   }, [params]);
 

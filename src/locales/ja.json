@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWCウォレット"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "何を作ることができますか。"
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostrドメイン"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "LNVPSの利用規約。当社の利用ポリシー、適切な利用に関するガイドライン、およびサービス条件をお読みください。"
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "実行時に一度割り当て"
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "パスキーでのサインインに失敗しました"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

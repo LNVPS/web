@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC 钱包"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "你可以构建什么。"
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr 域名"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "LNVPS 服务条款。请阅读我们的使用政策、可接受的使用规范和服务条款。"
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "启动后自动分配。"
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "通行密钥登录失败"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

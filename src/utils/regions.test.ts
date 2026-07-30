@@ -21,6 +21,10 @@ const dublin: VmCustomTemplateParams = {
   max_cpu: 64,
   min_memory: 1 * GiB,
   max_memory: 128 * GiB,
+  min_ip4: 1,
+  max_ip4: 4,
+  min_ip6: 0,
+  max_ip6: 1,
   disks: [
     {
       min_disk: 100 * GiB,
@@ -45,6 +49,10 @@ const london: VmCustomTemplateParams = {
   max_cpu: 16,
   min_memory: 1 * GiB,
   max_memory: 16 * GiB,
+  min_ip4: 1,
+  max_ip4: 1,
+  min_ip6: 0,
+  max_ip6: 0,
   disks: [
     {
       min_disk: 10 * GiB,

@@ -47,6 +47,24 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
         {template?.cpu} vCPU{cpuInfo && ` (${cpuInfo})`},{" "}
         <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
         <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
+        {(template?.ip4_count ?? 0) > 1 && (
+          <>
+            ,{" "}
+            <FormattedMessage
+              defaultMessage="{count} IPv4"
+              values={{ count: template?.ip4_count ?? 0 }}
+            />
+          </>
+        )}
+        {(template?.ip6_count ?? 0) > 0 && (
+          <>
+            ,{" "}
+            <FormattedMessage
+              defaultMessage="{count} IPv6"
+              values={{ count: template?.ip6_count ?? 0 }}
+            />
+          </>
+        )}
         {region && (
           <>
             ,{" "}

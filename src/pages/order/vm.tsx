@@ -56,6 +56,8 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
               disk_type: template.disk_type,
               disk_interface: template.disk_interface,
               pricing_id: template.pricing_id!,
+              ip4_count: template.ip4_count,
+              ip6_count: template.ip6_count,
             },
             useImage,
             useSshKey,

@@ -247,6 +247,10 @@ export interface VmCustomTemplateParams {
   min_cpu: number;
   min_memory: number;
   max_memory: number;
+  min_ip4: number;
+  max_ip4: number;
+  min_ip6: number;
+  max_ip6: number;
   disks: Array<VmCustomTemplateDiskParams>;
 }
 
@@ -264,6 +268,8 @@ export interface VmCustomTemplateRequest {
   disk: number;
   disk_type: DiskType;
   disk_interface: DiskInterface;
+  ip4_count?: number;
+  ip6_count?: number;
 }
 
 export interface VmCustomPrice {
@@ -290,6 +296,8 @@ export interface VmTemplate {
   disk_size: number;
   disk_type: DiskType;
   disk_interface: DiskInterface;
+  ip4_count: number;
+  ip6_count: number;
   cost_plan: VmCostPlan;
   region: VmHostRegion;
 }

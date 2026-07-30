@@ -233,6 +233,8 @@ export function VpsCustomOrder({
   const [disk, setDisk] = useState(
     Math.floor((preferredDisk(params.disks)?.min_disk ?? GiB) / GiB),
   );
+  const [ip4, setIp4] = useState(params.min_ip4);
+  const [ip6, setIp6] = useState(params.min_ip6);
 
   const [price, setPrice] = useState<VmCustomPrice>();
 
@@ -261,6 +263,8 @@ export function VpsCustomOrder({
       setDiskType(disk0);
       setRam(Math.floor((params.min_memory ?? GiB) / GiB));
       setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
+      setIp4(params.min_ip4);
+      setIp6(params.min_ip6);
     }
   }, [params]);
 
@@ -284,11 +288,13 @@ export function VpsCustomOrder({
           disk: disk * GiB,
           disk_type: diskType?.disk_type ?? DiskType.SSD,
           disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
+          ip4_count: ip4,
+          ip6_count: ip6,
         })
         .then(setPrice);
     }, 500);
     return () => clearTimeout(t);
-  }, [region, cpu, ram, disk, diskType, params]);
+  }, [region, cpu, ram, disk, diskType, ip4, ip6, params]);
 
   if (templates.length == 0) return;
 
@@ -425,6 +431,26 @@ export function VpsCustomOrder({
             max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
             onChange={setDisk}
           />
+          {params.max_ip4 > params.min_ip4 && (
+            <ResourceSlider
+              label={<FormattedMessage defaultMessage="IPv4" />}
+              unit="IPs"
+              value={ip4}
+              min={params.min_ip4}
+              max={params.max_ip4}
+              onChange={setIp4}
+            />
+          )}
+          {params.max_ip6 > params.min_ip6 && (
+            <ResourceSlider
+              label={<FormattedMessage defaultMessage="IPv6" />}
+              unit="IPs"
+              value={ip6}
+              min={params.min_ip6}
+              max={params.max_ip6}
+              onChange={setIp6}
+            />
+          )}
         </div>
       </div>
 
@@ -432,7 +458,8 @@ export function VpsCustomOrder({
       <div className="flex flex-col gap-3 border-t border-cyber-border bg-cyber-panel-light px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-col gap-0.5">
           <div className="font-mono text-xs text-cyber-muted tabular-nums">
-            {cpu} vCPU · {ram} GB · {disk} {diskUnit} @ {params.region.name}
+            {cpu} vCPU · {ram} GB · {disk} {diskUnit} · {ip4} IPv4
+            {ip6 > 0 && ` + ${ip6} IPv6`} @ {params.region.name}
           </div>
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
@@ -451,6 +478,8 @@ export function VpsCustomOrder({
               disk_size: disk * GiB,
               disk_type: diskType?.disk_type ?? DiskType.SSD,
               disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
+              ip4_count: ip4,
+              ip6_count: ip6,
               created: new Date().toISOString(),
               region: params.region,
               cost_plan,

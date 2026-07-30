@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "Кошелек NWC"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "Что вы можете создать."
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Домены Nostr"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "Условия использования сервиса LNVPS. Ознакомьтесь с нашими правилами использования, требованиями к допустимому использованию и условиями предоставления услуг."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "Назначается после запуска."
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Не удалось войти с ключом доступа"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

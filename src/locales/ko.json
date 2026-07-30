@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC 지갑"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "무엇을 만들 수 있을까요?"
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "노스트르 도메인"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "LNVPS 이용 약관. 당사의 이용 정책, 허용되는 사용 지침 및 서비스 약관을 읽어보세요."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "실행 시 한 번 할당됨"
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "패스키 로그인 실패"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

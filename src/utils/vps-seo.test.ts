@@ -21,6 +21,8 @@ function template(over: Partial<VmTemplate> = {}): VmTemplate {
     disk_size: 160 * GiB,
     disk_type: DiskType.SSD,
     disk_interface: DiskInterface.PCIe,
+    ip4_count: 1,
+    ip6_count: 0,
     cost_plan: {
       id: 16,
       name: "Medium Yearly Discount Cost Plan",

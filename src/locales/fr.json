@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "Portefeuille NWC"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "Ce que vous pouvez créer."
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Domaines Nostr"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "Conditions d’utilisation de LNVPS. Veuillez consulter nos règles d’utilisation, nos directives concernant l’utilisation acceptable et nos conditions de service."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "Attribué une fois l’opération lancée."
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Échec de la connexion par clé d'accès"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

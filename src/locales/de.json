@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC-Wallet"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "Was Sie erstellen können."
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr-Domänen"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "Nutzungsbedingungen für LNVPS. Bitte lesen Sie unsere Nutzungsrichtlinien, Richtlinien für die zulässige Nutzung und die Servicebedingungen."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "Einmal zugewiesen, bleibt es zugewiesen."
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Passkey-Anmeldung fehlgeschlagen"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

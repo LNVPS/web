@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Cüzdanı"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "Ne tür şeyler inşa edebilirsiniz?"
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr Alan Adları"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "LNVPS Hizmet Şartları. Kullanım politikalarımızı, kabul edilebilir kullanım yönergelerimizi ve hizmet şartlarımızı okuyun."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "Çalıştırıldıktan sonra atanır."
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Geçiş anahtarıyla giriş başarısız"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

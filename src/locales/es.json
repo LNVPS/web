@@ -62,6 +62,9 @@
   "/QkDVJ": {
     "defaultMessage": "Cartera NWC"
   },
+  "/hnclP": {
+    "defaultMessage": "{count} IPv4"
+  },
   "/kXbXW": {
     "defaultMessage": "Qué puedes construir."
   },
@@ -551,6 +554,9 @@
   "BZF5HJ": {
     "defaultMessage": "Dominios Nostr"
   },
+  "BnPEWz": {
+    "defaultMessage": "IPv4"
+  },
   "BnoVvl": {
     "defaultMessage": "Términos de servicio de LNVPS. Consulte nuestras políticas de uso, las directrices para un uso adecuado y los términos del servicio."
   },
@@ -856,6 +862,9 @@
   },
   "J+pWCM": {
     "defaultMessage": "New size"
+  },
+  "J7750w": {
+    "defaultMessage": "{count} IPv6"
   },
   "JAJV1y": {
     "defaultMessage": "Se asigna una vez que se inicia el proceso."
@@ -1867,6 +1876,9 @@
   },
   "jwt9EL": {
     "defaultMessage": "Error al iniciar sesión con la clave de acceso"
+  },
+  "jyXJcj": {
+    "defaultMessage": "IPv6"
   },
   "jzU8se": {
     "defaultMessage": "Deploy Route96 — {price}/month"

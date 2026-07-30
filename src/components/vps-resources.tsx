@@ -41,12 +41,32 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const cpuMfg = formatCpuMfg(template?.cpu_mfg);
   const cpuArch = formatCpuArch(template?.cpu_arch);
   const cpuInfo = [cpuMfg, cpuArch].filter(Boolean).join(" ");
+  const ip4Count = template?.ip4_count;
+  const ip6Count = template?.ip6_count;
   return (
     <>
       <div className="text-xs text-cyber-muted">
         {template?.cpu} vCPU{cpuInfo && ` (${cpuInfo})`},{" "}
         <BytesSize value={template?.memory ?? 0} /> RAM,{" "}
         <BytesSize value={template?.disk_size ?? 0} /> {diskType?.toUpperCase()}
+        {ip4Count !== undefined && ip4Count > 1 && (
+          <>
+            ,{" "}
+            <FormattedMessage
+              defaultMessage="{count} IPv4"
+              values={{ count: ip4Count }}
+            />
+          </>
+        )}
+        {ip6Count !== undefined && ip6Count > 0 && (
+          <>
+            ,{" "}
+            <FormattedMessage
+              defaultMessage="{count} IPv6"
+              values={{ count: ip6Count }}
+            />
+          </>
+        )}
         {region && (
           <>
             ,{" "}

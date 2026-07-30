@@ -9,7 +9,7 @@
     "defaultMessage": "外发；已发出。"
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "停止操作会保留您已上传的内容；只有删除操作才会将其移除。"
   },
   "+EHk4e": {
     "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
@@ -171,7 +171,7 @@
     "defaultMessage": "创建订单"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "我可以存储多少数据？"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "立即付款。"
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "搭建您自己的媒体服务器——每月只需 {price}。"
   },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
@@ -435,7 +435,7 @@
     "defaultMessage": "保存提款方式。"
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "是的，使用 CNAME。一旦 DNS 解析成功，证书就会自动颁发。"
   },
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
@@ -711,7 +711,7 @@
     "defaultMessage": "已断开连接。"
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "它运行在哪里？"
   },
   "FazwRl": {
     "defaultMessage": "请重试。"
@@ -837,7 +837,7 @@
     "defaultMessage": "准备好了。"
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "爱尔兰都柏林。"
   },
   "Id24hd": {
     "defaultMessage": "姓名 *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "未找到订单。"
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "可以使用闪电网络、链上比特币或银行卡进行支付。请使用您的 Nostr 私钥登录。无需进行身份验证（KYC）。"
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "如果我停止付费，我的活动会怎样？"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "停止将您的图片和视频上传到其他人的服务器。Route96 是一款由 Blossom 和 NIP-96 开发的媒体服务器，可在 LNVPS 上几分钟内部署完成，并包含存储空间和 TLS 加密功能。"
   },
   "U7fZs8": {
     "defaultMessage": "需要多长时间？"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "请保存此卡，以便今后使用。"
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "Route96 是一款高性能的 Blossom/NIP-96 服务器。它是<a>开源</a>的，并且由我们开发和维护。您无需依赖一个无法了解其内部机制的“黑盒”；您可以查看每一行代码，并且可以随时带着您的数据离开。"
   },
   "UPP+wZ": {
     "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}…… {storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到虚拟专用服务器 (VPS) 上，以进一步提升。"
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "常见问题解答"
   },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
@@ -1497,7 +1497,7 @@
     "defaultMessage": "保存后将重新应用配置并重启应用。"
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "选择您喜欢的支付方式。"
   },
   "aPcXT9": {
     "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
@@ -1830,7 +1830,7 @@
     "defaultMessage": "技能.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "为什么要自己搭建媒体服务器？"
   },
   "j7VE/p": {
     "defaultMessage": "标准 BTC 交易 — 确认后到账"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "包含哪些内容？"
   },
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "部署《Route96》——每月 {price}。"
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范——Route96 同时支持这两种规范。"
   },
   "k9Pskm": {
     "defaultMessage": "高速固态存储"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "已管理的应用：运行软件，无需运行服务器。"
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "Nostr 使您的身份信息可以自由转移。目前，媒体内容往往存在一个问题，即无法完全自主掌控——您的图片存储在其他人的服务器上，受其规则约束，一旦对方停止服务，这些图片就会消失。Blossom 服务器可以将控制权重新交还给您。"
   },
   "mHEBOr": {
     "defaultMessage": "您能帮我安装比特币核心软件吗？"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "什么是Blossom？"
   },
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
@@ -2214,7 +2214,7 @@
     "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "Blossom 媒体服务器，每月起价 {price}。"
   },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "无法升级。"
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "您自己的主机名——<code>your-name.ie.apps.lnvps.cloud</code>，并已启用自动 TLS。"
   },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"

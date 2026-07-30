@@ -9,7 +9,7 @@
     "defaultMessage": "صادر"
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "إيقاف العملية يحافظ على الملفات التي تم تحميلها؛ أما حذفها فيؤدي إلى إزالتها نهائيًا."
   },
   "+EHk4e": {
     "defaultMessage": "نعم. هذا جهازك، لذا قم بتثبيت ما تريد."
@@ -171,7 +171,7 @@
     "defaultMessage": "إنشاء طلب شراء"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "كم يمكنني تخزين؟"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "ادفع الآن."
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "استضِف خادم الوسائط الخاص بك — مقابل {price} شهريًا."
   },
   "7wbySo": {
     "defaultMessage": "أرسل لنا رسالة مباشرة وسيتواصل معك فريق الدعم."
@@ -435,7 +435,7 @@
     "defaultMessage": "حفظ مسار الدفع"
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "نعم، وهو اسم مستعار (CNAME)، ويتم إصدار الشهادة تلقائيًا بمجرد حل سجلات نظام أسماء النطاقات (DNS)."
   },
   "8ecw1u": {
     "defaultMessage": "مقابض"
@@ -711,7 +711,7 @@
     "defaultMessage": "غير متصل."
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "أين يتم تشغيله؟"
   },
   "FazwRl": {
     "defaultMessage": "حاول مرة أخرى."
@@ -837,7 +837,7 @@
     "defaultMessage": "جاهز."
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "دبلن، أيرلندا."
   },
   "Id24hd": {
     "defaultMessage": "الاسم *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "لم يتم العثور على أي طلب."
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "يمكنك الدفع باستخدام شبكة لايتنينج، أو عملة البيتكوين مباشرةً على البلوك تشين، أو عن طريق البطاقة. سجّل الدخول باستخدام مفتاح نوستر الخاص بك. لا حاجة لتقديم معلومات تعريفية (KYC)."
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "ماذا يحدث لفعالياتي إذا توقفت عن الدفع؟"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "توقف عن تحميل الصور ومقاطع الفيديو الخاصة بك على خوادم الآخرين. \"Route96\" هو خادم وسائط من نوع \"Blossom\" و\"NIP-96\"، ويمكن نشره على \"LNVPS\" في غضون دقائق، مع توفير مساحة تخزين وبروتوكول TLS."
   },
   "U7fZs8": {
     "defaultMessage": "كم يستغرق؟"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "احتفظ بهذه البطاقة لاستخدامها في عمليات الدفع المستقبلية."
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "\"Route96\" هو خادم \"Blossom/NIP-96\" عالي الأداء. وهو برنامج <a>مفتوح المصدر</a>، وهو من تطويرنا — لقد قمنا ببرمجته ونحن ندير تشغيله. أنت لا تعتمد على نظام معقد وغير شفاف؛ يمكنك قراءة كل سطر من التعليمات البرمجية، ويمكنك الخروج ببياناتك متى شئت."
   },
   "UPP+wZ": {
     "defaultMessage": "يستخدم بواسطة {count,plural,one{الآلة الافتراضية.} other{الأجهزة الافتراضية}} {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}، {storage} إجمالاً، هذا مناسب لخادم وسائط شخصي؛ وإذا كنت بحاجة إلى المزيد، يمكنك استخدام خادم افتراضي خاص (VPS) وتثبيت برنامج Route96 بنفسك لتوسيع نطاقه بشكل أكبر."
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "أسئلة متكررة."
   },
   "WEoZhh": {
     "defaultMessage": "تعذر العثور على اشتراك لتحصيل تكلفة هذه الترقية."
@@ -1497,7 +1497,7 @@
     "defaultMessage": "الحفظ يعيد تطبيق الإعدادات ويعيد تشغيل التطبيق."
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "ادفع بالطريقة التي تفضلها."
   },
   "aPcXT9": {
     "defaultMessage": "يتم تجميع المدفوعات مع عمليات الإحالة الأخرى على الشبكة في معاملة واحدة، وذلك بعد تجاوز رصيدك الحد الأدنى المطلوب. ويتم خصم حصتك من رسوم الشبكة من رصيدك. هذا ينطبق فقط على عناوين الشبكة الرئيسية."
@@ -1830,7 +1830,7 @@
     "defaultMessage": "ملف SKILL.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "لماذا أقوم باستضافة ملفات الوسائط بنفسي؟"
   },
   "j7VE/p": {
     "defaultMessage": "معاملة BTC عادية — تُضاف بعد التأكيد"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "وجّه سجل CNAME لهذا النطاق إلى اسم مضيف النشر بمجرد تعيينه. اتركه فارغًا للإزالة."
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "ما الذي يتضمنه؟"
   },
   "jmVweB": {
     "defaultMessage": "جارٍ تحميل مفاتيح SSH..."
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "نشر تطبيق Route96 — {price}‏/شهر"
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "بروتوكول لتخزين واسترجاع الملفات باستخدام قيم التجزئة الخاصة بها، مصمم للعمل مع نظام \"نوستر\". يعتبر \"NIP-96\" المواصفة القديمة لتخزين الملفات عبر بروتوكول HTTP — بينما يدعم \"Route96\" كلا البروتوكولين."
   },
   "k9Pskm": {
     "defaultMessage": "تخزين SSD سريع"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "التطبيقات المُدارة: قم بتشغيل البرنامج دون تشغيل الخادم."
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "تتيح لك منصة نوستر الاحتفاظ بهويتك وإمكانية نقلها. كانت الوسائط هي الجزء الذي لم يكن كذلك — صورك تُخزَّن على خادم شخص آخر، وتخضع لشروطه، وتختفي عندما يشاء. يسمح لك خادم \"Blossom\" باستعادة السيطرة عليها ووضعها تحت إشرافك."
   },
   "mHEBOr": {
     "defaultMessage": "هل يمكنك تثبيت برنامج \"بيتكوين كور\" على جهازي؟"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "خدمات استضافة VPS في كيبيك، كندا، تبدأ من {price} باستثناء ضريبة القيمة المضافة. {minCpu}–{maxCpu} وحدة معالجة مركزية افتراضية، بحد أقصى {maxDisk} {diskType}ادفع بالبيتكوين عبر شبكة لايتنينغ أو مباشرةً على البلوك تشين."
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "ما هو برنامج Blossom؟"
   },
   "pus6h6": {
     "defaultMessage": "يمكنك المغادرة في أي وقت. سيتوقف الكود عن توليد المزيد من الأرباح، ولن يمكن إعادة استخدامه."
@@ -2214,7 +2214,7 @@
     "defaultMessage": "تتوفر خدمة المراسلة المشفرة فقط لحسابات نوستر. لا يمتلك حسابك مفتاح نوستر لقراءة رسائل NIP-17 أو إرسالها. للحصول على المساعدة، يرجى استخدام علامة التبويب \"الدعم\"."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "استضافة خادم الوسائط بلوسوم ابتداءً من {price} شهريًا."
   },
   "sn+Rj5": {
     "defaultMessage": "تسجيل الدخول بمفتاح مرور"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "لا يمكن إجراء الترقية."
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "اسم المضيف الخاص بك — <code>your-name.ie.apps.lnvps.cloud</code> — مع تفعيل بروتوكول TLS تلقائيًا."
   },
   "xOnplm": {
     "defaultMessage": "جارٍ تحميل طرق الدفع…"

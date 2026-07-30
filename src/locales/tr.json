@@ -9,7 +9,7 @@
     "defaultMessage": "Giden"
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "Durdurma işlemi yüklemelerinizi saklar; yalnızca silme işlemi yüklemeleri tamamen kaldırır."
   },
   "+EHk4e": {
     "defaultMessage": "Evet. Bu sizin bilgisayarınız, istediğiniz yazılımı yükleyebilirsiniz."
@@ -171,7 +171,7 @@
     "defaultMessage": "Sipariş Oluştur"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "Ne kadar veri depolayabilirim?"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "Şimdi öde"
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "Kendi medya sunucunuzu barındırın – ayda {price}."
   },
   "7wbySo": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin, ekip en kısa sürede size dönüş yapacaktır."
@@ -435,7 +435,7 @@
     "defaultMessage": "Ödeme Yöntemini Kaydet"
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "Evet, doğru – CNAME ve sertifika, DNS çözüldükten sonra otomatik olarak yayınlanır."
   },
   "8ecw1u": {
     "defaultMessage": "Kollar"
@@ -711,7 +711,7 @@
     "defaultMessage": "Bağlantı kesildi"
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "Nerede çalıştırılıyor?"
   },
   "FazwRl": {
     "defaultMessage": "Tekrar deneyin."
@@ -837,7 +837,7 @@
     "defaultMessage": "Hazır."
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "Dublin, İrlanda."
   },
   "Id24hd": {
     "defaultMessage": "Ad *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "Herhangi bir sipariş bulunamadı."
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "Şimşek Ağı, zincir üzerindeki Bitcoin veya kredi kartı ile ödeme yapabilirsiniz. Nostr anahtarınızla giriş yapın. Kimlik doğrulama gerekmiyor."
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "Ödemeyi durdurursam, etkinliklerime ne olur?"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "Resimlerinizi ve videolarınızı başka birinin sunucusuna yüklemeyi bırakın. Route96, LNVPS üzerinde dakikalar içinde kurulabilen, depolama alanı ve TLS içeren Blossom ve NIP-96 medya sunucusudur."
   },
   "U7fZs8": {
     "defaultMessage": "Ne kadar sürüyor?"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "Bu kartı gelecekteki ödemeler için saklayın."
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "Route96, yüksek performanslı bir Blossom/NIP-96 sunucusudur. <a>Açık kaynaklıdır</a> ve bize aittir; biz yazdık ve biz yönetiyoruz. Güvenmediğiniz bir kara kutu değil; her satırını okuyabilir ve istediğiniz zaman verilerinizle buradan ayrılabilirsiniz."
   },
   "UPP+wZ": {
     "defaultMessage": "Kullanımda olan {count,plural,one{Sanal Makine} other{Sanal makineler}}: {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}. {storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerine Route96 yüklediğiniz bir VPS ile ölçeklenebilirliği artırabilirsiniz."
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "Sıkça Sorulan Sorular"
   },
   "WEoZhh": {
     "defaultMessage": "Bu yükseltmenin faturalandırılacağı bir abonelik bulunamadı."
@@ -1497,7 +1497,7 @@
     "defaultMessage": "Kaydetmek yapılandırmayı yeniden uygular ve uygulamayı yeniden başlatır."
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "İstediğiniz şekilde ödeme yapın."
   },
   "aPcXT9": {
     "defaultMessage": "Ödemeler, diğer zincir içi yönlendirenlerle birlikte birleştirilerek tek bir işlemde gerçekleştirilir; bu işlem, bakiyeniz minimum tutarı aştığında gerçekleşir. Ağ ücretinden düşülecek olan payınız, bakiyenizden kesilir. Yalnızca ana ağ adresleri geçerlidir."
@@ -1830,7 +1830,7 @@
     "defaultMessage": "BECERİLER.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "Neden medya içeriklerini kendi sunucunuzda barındırasınız?"
   },
   "j7VE/p": {
     "defaultMessage": "Standart BTC işlemi — onaydan sonra hesaba geçer"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "Dağıtım ana bilgisayar adı atandığında bu alan adı için bir CNAME kaydını o adrese yönlendirin. Kaldırmak için boş bırakın."
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "Neler dahil?"
   },
   "jmVweB": {
     "defaultMessage": "SSH anahtarları yükleniyor..."
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "Route96 oyununu kullanıma sunun — ayda {price}."
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
   },
   "k9Pskm": {
     "defaultMessage": "Hızlı katı hal depolama (SSD)"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "Yönetilen Uygulamalar: yazılımı sunucu çalıştırmadan çalıştırın."
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "Nostr, kimliğinizin taşınabilir kalmasını sağlar. Medya ise bu konuda farklı davranır; görselleriniz başka bir sunucuda, başkasının belirlediği koşullar altında saklanır ve o sunucu kapatıldığında kaybolur. Blossom sunucusu, bunları tekrar kontrolünüz altına almanızı sağlar."
   },
   "mHEBOr": {
     "defaultMessage": "Bitcoin Core'u benim için kurar mısınız?"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "Kanada, Québec'te VPS sunucu hizmeti. {price} KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning ağı veya doğrudan zincir üzerinden ödeme yapın."
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "Blossom nedir?"
   },
   "pus6h6": {
     "defaultMessage": "İstediğiniz zaman çıkış yapabilirsiniz. Kodunuz artık geçerli olmayacak ve yeniden kullanılamayacaktır."
@@ -2214,7 +2214,7 @@
     "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "Blossom Medya Sunucusu, aylık {price}'dan başlayan fiyatlarla hizmetinizde."
   },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "Yükseltme Mevcut Değil"
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "Kendi alan adınız — <code>your-name.ie.apps.lnvps.cloud</code> — otomatik TLS ile"
   },
   "xOnplm": {
     "defaultMessage": "Ödeme yöntemleri yükleniyor…"

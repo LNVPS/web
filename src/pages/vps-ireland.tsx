@@ -5,7 +5,7 @@ import { CostAmount } from "../components/cost";
 import BytesSize from "../components/bytes";
 import { Section } from "../components/landing";
 import { RegionLanding } from "../components/region-landing";
-import { formatPriceText } from "../utils/currency";
+import { formatPriceWithInterval } from "../utils/currency";
 import { catalogPriceFrom } from "../utils/relay-catalog";
 import { regionCustomTemplate } from "../utils/regions";
 import { DublinRegionId } from "../const";
@@ -28,7 +28,7 @@ export function VpsIrelandPage() {
   const intl = useIntl();
   const { offers, from, apps } = useLoaderData<RegionLoaderData>();
   const template = regionCustomTemplate(offers, DublinRegionId);
-  const fromText = from ? formatPriceText(intl, from) : undefined;
+  const fromText = from ? formatPriceWithInterval(intl, from) : undefined;
   // "From" across the whole catalog, since the sentence names the relays and
   // the Blossom servers together. Undefined when the catalog is unreachable,
   // and the sentence then drops the figure.
@@ -58,7 +58,7 @@ export function VpsIrelandPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in Dublin, Ireland from {price}/month ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain.",
           },
           { price: fromText, maxCpu: template.max_cpu },
         )

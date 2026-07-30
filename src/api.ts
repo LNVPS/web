@@ -275,6 +275,8 @@ export interface VmCustomTemplateRequest {
 export interface VmCustomPrice {
   currency: string;
   amount: number;
+  interval_amount: number;
+  interval_type: CostPlanIntervalType;
 }
 
 export interface VmTemplateResponse {

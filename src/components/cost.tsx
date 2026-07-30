@@ -1,14 +1,14 @@
-import { FormattedMessage, FormattedNumber } from "react-intl";
+import { FormattedNumber, useIntl } from "react-intl";
 import useLogin from "../hooks/login";
 import { taxRateFor, useTaxRates } from "../hooks/tax";
 import useExchangeRates from "../hooks/useExchangeRates";
-import { convertAmount } from "../utils/currency";
+import { convertAmount, formatIntervalText } from "../utils/currency";
 
 interface Price {
   currency: string;
   amount: number;
 }
-type Cost = Price & { interval_type?: string };
+type Cost = Price & { interval_type?: string; interval_amount?: number };
 
 function grossPrice<T extends Price>(p: T, rate: number): T {
   return { ...p, amount: Math.round(p.amount * (1 + rate / 100)) };
@@ -51,6 +51,7 @@ export default function CostLabel({
           currency: target,
           amount: Math.round(converted),
           interval_type: base.interval_type,
+          interval_amount: base.interval_amount,
         }}
         converted={true}
       />{" "}
@@ -68,32 +69,8 @@ export function IntervalSuffix({
   interval: string;
   n?: number;
 }) {
-  const count = n ?? 1;
-  switch (interval) {
-    case "day":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {day} other {days}}"
-          values={{ n: count }}
-        />
-      );
-    case "month":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {month} other {months}}"
-          values={{ n: count }}
-        />
-      );
-    case "year":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {year} other {years}}"
-          values={{ n: count }}
-        />
-      );
-    default:
-      return <>{interval}</>;
-  }
+  const intl = useIntl();
+  return <>{formatIntervalText(intl, interval, n ?? 1)}</>;
 }
 
 export function CostAmount({
@@ -137,7 +114,8 @@ export function CostAmount({
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>
-          /<IntervalSuffix interval={cost.interval_type} />
+          /{(cost.interval_amount ?? 1) > 1 && <>{cost.interval_amount} </>}
+          <IntervalSuffix interval={cost.interval_type} n={cost.interval_amount} />
         </>
       )}
     </span>

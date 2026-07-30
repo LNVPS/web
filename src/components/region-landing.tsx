@@ -97,7 +97,7 @@ export function RegionLanding({
             {from && (
               <p className="m-0 max-w-prose text-cyber-text">
                 <FormattedMessage
-                  defaultMessage="From {price} per month, excluding VAT."
+                  defaultMessage="From {price}, excluding VAT."
                   values={{
                     price: <CostAmount cost={from} converted={false} />,
                   }}

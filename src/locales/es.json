@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{año} other{años}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "Ejecute un nodo completo de Bitcoin en un servidor virtual privado (VPS) ubicado en {regions}Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques. Desde {price} sin IVA."
+  },
   "+Qebzr": {
     "defaultMessage": "Dirección en la cadena de bloques"
   },
@@ -82,9 +85,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "Ejecute un nodo completo de Bitcoin en un VPS en {regions}. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques. Desde {price}/mes, sin IVA."
   },
   "0gAiqM": {
     "defaultMessage": "Alojamiento VPS en Irlanda."
@@ -1325,6 +1325,9 @@
   "Uvhzx4": {
     "defaultMessage": "La renovación automática está desactivada. Para evitar interrupciones, renueve manualmente antes de la fecha de vencimiento."
   },
+  "V/V4bz": {
+    "defaultMessage": "Alojamiento VPS en Dublín, Irlanda, desde {price} precio sin IVA. Configure las especificaciones que desee. {maxCpu} vCPU. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
+  },
   "V7fgpY": {
     "defaultMessage": "Completando el inicio de sesión…"
   },
@@ -1550,9 +1553,6 @@
   "c0b5XV": {
     "defaultMessage": "Tasa."
   },
-  "c3o/3B": {
-    "defaultMessage": "Desde {price} por mes, IVA no incluido."
-  },
   "c5aQL+": {
     "defaultMessage": "Elige una aplicación, dale un nombre y paga. Se implementa automáticamente en su propio nombre de dominio con TLS ya configurado: no es necesario aplicar parches al sistema operativo, ni configurar Docker, ni renovar el certificado."
   },
@@ -1622,9 +1622,6 @@
   "dSDJft": {
     "defaultMessage": "Nuestras instalaciones en Dublín. Diseña la máquina que desees. {minCpu}–{maxCpu} vCPU y {minMemory}–{maxMemory}y páguelo con Bitcoin."
   },
-  "dTTuZ+": {
-    "defaultMessage": "Alojamiento VPS en Dublín, Irlanda, a partir de {price}/mes, IVA no incluido. Configure las especificaciones que desee. {maxCpu} vCPU. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
-  },
   "dUQeuG": {
     "defaultMessage": "Crear cuenta con clave de acceso"
   },
@@ -1657,6 +1654,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "Configura tu máquina"
+  },
+  "e55cj/": {
+    "defaultMessage": "Desde {price}, sin incluir el IVA."
   },
   "eKEL/g": {
     "defaultMessage": "Pendiente"
@@ -1702,6 +1702,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Inicie sesión para realizar su pedido."
+  },
+  "fNZGof": {
+    "defaultMessage": "Alojamiento VPS en Londres desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin mediante la red Lightning o directamente en la cadena de bloques."
   },
   "fblXmJ": {
     "defaultMessage": "Nombre de la instancia"
@@ -1786,9 +1789,6 @@
   },
   "huqKGl": {
     "defaultMessage": "Crear cuenta"
-  },
-  "i/LmLC": {
-    "defaultMessage": "Alojamiento VPS en Londres desde {price}/mes, sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
   "i2/SmH": {
     "defaultMessage": "El sistema de facturación funciona de forma similar a una suscripción de VPS, sin costes de configuración para ninguna aplicación."
@@ -2117,6 +2117,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "Alojamiento VPS en Quebec, Canadá, desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin a través de Lightning o directamente en la cadena de bloques."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2323,9 +2326,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Utilice una clave de destinatario personalizada."
-  },
-  "vIv3vC": {
-    "defaultMessage": "Alojamiento VPS en Quebec, Canadá, a partir de {price}/mes, sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
   "vONi+O": {
     "defaultMessage": "País"

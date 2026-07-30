@@ -7,7 +7,7 @@ import { OrderCta, RegionSpecs, Section } from "../components/landing";
 import { DiskType } from "../api";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { formatBytesText } from "../utils/bytes";
-import { formatPriceText } from "../utils/currency";
+import { formatPriceWithInterval } from "../utils/currency";
 import {
   regionCustomTemplate,
   regionDisk,
@@ -40,7 +40,7 @@ export function BitcoinNodeHostingPage() {
   const hdd = regionDisk(dublin, DiskType.HDD);
   const ssd = regionDisk(dublin, DiskType.SSD);
   const maxDisk = regionMaxDisk(dublin);
-  const fromText = from ? formatPriceText(intl, from) : undefined;
+  const fromText = from ? formatPriceWithInterval(intl, from) : undefined;
 
   // The regions we actually offer a build in, named as the catalog names them
   // and sorted, since the endpoint's order is not stable and a sentence should
@@ -58,7 +58,7 @@ export function BitcoinNodeHostingPage() {
       ? formatMessage(
           {
             defaultMessage:
-              "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price}/month ex-VAT.",
+              "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price} ex-VAT.",
           },
           { regions: regionList, price: fromText },
         )
@@ -139,7 +139,7 @@ export function BitcoinNodeHostingPage() {
             {from && (
               <p className="m-0 max-w-prose text-cyber-text">
                 <FormattedMessage
-                  defaultMessage="From {price} per month, excluding VAT."
+                  defaultMessage="From {price}, excluding VAT."
                   values={{
                     price: <CostAmount cost={from} converted={false} />,
                   }}

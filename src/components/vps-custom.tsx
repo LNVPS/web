@@ -243,8 +243,8 @@ export function VpsCustomOrder({
     name: "custom",
     amount: price?.amount ?? 0,
     currency: (price?.currency as "BTC" | "EUR" | "USD") ?? "USD",
-    interval_amount: 1,
-    interval_type: CostPlanIntervalType.MONTH,
+    interval_amount: price?.interval_amount ?? 1,
+    interval_type: price?.interval_type ?? CostPlanIntervalType.MONTH,
   };
 
   // Reset selected template when region changes

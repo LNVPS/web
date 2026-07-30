@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { RegionLanding } from "../components/region-landing";
 import { formatBytesText } from "../utils/bytes";
-import { formatPriceText } from "../utils/currency";
+import { formatPriceWithInterval } from "../utils/currency";
 import { regionCustomTemplate, regionMaxDisk } from "../utils/regions";
 import { LondonRegionId } from "../const";
 import type { RegionLoaderData } from "../loaders";
@@ -19,14 +19,14 @@ export function VpsLondonPage() {
   const { offers, from } = useLoaderData<RegionLoaderData>();
   const template = regionCustomTemplate(offers, LondonRegionId);
   const disk = regionMaxDisk(template);
-  const fromText = from ? formatPriceText(intl, from) : undefined;
+  const fromText = from ? formatPriceWithInterval(intl, from) : undefined;
 
   const description =
     fromText && template && disk
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in London from {price}/month ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in London from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
           },
           {
             price: fromText,

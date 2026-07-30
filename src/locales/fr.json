@@ -18,7 +18,10 @@
     "defaultMessage": "Exploitez votre propre serveur multimédia Blossom et NIP-96 pour {price}/mois. Route96 peut être déployé en quelques minutes sur son propre nom de domaine, avec un stockage persistant et le protocole TLS inclus."
   },
   "+JVG/q": {
-    "defaultMessage": "{n,plural,one{an} other{ans}}"
+    "defaultMessage": "{n,plural,one{an} other{années}}"
+  },
+  "+Mo6Oy": {
+    "defaultMessage": "Exécutez un nœud complet Bitcoin sur un serveur virtuel privé (VPS) situé à {regions}Vous pouvez payer en Bitcoin via le réseau Lightning ou directement sur la chaîne de blocs. À partir de {price} hors TVA."
   },
   "+Qebzr": {
     "defaultMessage": "Adresse sur la chaîne"
@@ -82,9 +85,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "Exécutez un nœud Bitcoin complet sur un serveur virtuel privé (VPS) situé à {regions}. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs. À partir de {price}par mois, hors TVA."
   },
   "0gAiqM": {
     "defaultMessage": "Hébergement VPS en Irlande."
@@ -1325,6 +1325,9 @@
   "Uvhzx4": {
     "defaultMessage": "Le renouvellement automatique est désactivé. Renouvelez manuellement avant la date d’expiration pour éviter toute interruption."
   },
+  "V/V4bz": {
+    "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de : {price} hors TVA. Configurez votre modèle personnalisé jusqu’à… {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
+  },
   "V7fgpY": {
     "defaultMessage": "Connexion en cours…"
   },
@@ -1550,9 +1553,6 @@
   "c0b5XV": {
     "defaultMessage": "Taux"
   },
-  "c3o/3B": {
-    "defaultMessage": "De {price} par mois, hors TVA."
-  },
   "c5aQL+": {
     "defaultMessage": "Choisissez une application, donnez-lui un nom, effectuez le paiement. Elle sera accessible via son propre nom de domaine, avec TLS déjà configuré – aucune mise à jour du système d’exploitation à effectuer, aucune configuration de Docker, aucun certificat à renouveler."
   },
@@ -1622,9 +1622,6 @@
   "dSDJft": {
     "defaultMessage": "Notre site de Dublin. Créez la machine que vous souhaitez. {minCpu}–{maxCpu} vCPU et {minMemory}–{maxMemory}et payez-le en Bitcoin."
   },
-  "dTTuZ+": {
-    "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de {price}/mois, hors TVA. Configurez les spécifications de votre choix. {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la blockchain."
-  },
   "dUQeuG": {
     "defaultMessage": "Créer un compte avec une clé d'accès"
   },
@@ -1657,6 +1654,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "Configurez votre machine"
+  },
+  "e55cj/": {
+    "defaultMessage": "À partir de {price}, hors taxes sur la valeur ajoutée."
   },
   "eKEL/g": {
     "defaultMessage": "En attente"
@@ -1702,6 +1702,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Connectez-vous pour passer votre commande."
+  },
+  "fNZGof": {
+    "defaultMessage": "Hébergement VPS à Londres, à partir de {price} hors TVA. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}Vous pouvez payer en Bitcoin, soit via le réseau Lightning, soit directement sur la chaîne principale."
   },
   "fblXmJ": {
     "defaultMessage": "Nom de l’instance"
@@ -1786,9 +1789,6 @@
   },
   "huqKGl": {
     "defaultMessage": "Créer un compte"
-  },
-  "i/LmLC": {
-    "defaultMessage": "Hébergement VPS à Londres à partir de {price}par mois, hors taxes. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}Vous pouvez payer en Bitcoin, soit via le réseau Lightning, soit directement sur la chaîne principale."
   },
   "i2/SmH": {
     "defaultMessage": "La facturation fonctionne comme un abonnement VPS, sans frais d’installation pour aucune application."
@@ -2117,6 +2117,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "Hébergement VPS au Québec, Canada, à partir de {price} hors TVA. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}Vous pouvez payer en Bitcoin, soit via le réseau Lightning, soit directement sur la chaîne de blocs."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2323,9 +2326,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Utiliser une clé de destinataire personnalisée."
-  },
-  "vIv3vC": {
-    "defaultMessage": "Hébergement VPS au Québec, Canada, à partir de {price}par mois, hors TVA. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}. Payez en Bitcoin via Lightning Network ou directement sur la chaîne principale."
   },
   "vONi+O": {
     "defaultMessage": "Pays"

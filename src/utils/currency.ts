@@ -54,17 +54,17 @@ export function formatIntervalText(
   switch (interval) {
     case "day":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {day} other {days}}" },
+        { defaultMessage: "{n, plural, one {day} other {# days}}" },
         { n },
       );
     case "month":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {month} other {months}}" },
+        { defaultMessage: "{n, plural, one {month} other {# months}}" },
         { n },
       );
     case "year":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {year} other {years}}" },
+        { defaultMessage: "{n, plural, one {year} other {# years}}" },
         { n },
       );
     default:

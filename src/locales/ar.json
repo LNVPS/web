@@ -17,9 +17,6 @@
   "+H6Rvj": {
     "defaultMessage": "قم بتشغيل خادم الوسائط الخاص بك من نوع Blossom وNIP-96 لـ {price}‏/شهر. يمكن إعداد Route96 في دقائق معدودة على اسم النطاق الخاص به، مع توفير مساحة تخزين دائمة وبروتوكول أمان طبقة النقل (TLS)."
   },
-  "+JVG/q": {
-    "defaultMessage": "{n,plural,one{عام} other{سنوات}}"
-  },
   "+Mo6Oy": {
     "defaultMessage": "قم بتشغيل عقدة بيتكوين كاملة على خادم افتراضي خاص في {regions}يمكنك الدفع بعملة البيتكوين عبر شبكة لايتنينج أو مباشرةً على البلوك تشين. ابتداءً من: {price} باستثناء ضريبة القيمة المضافة."
   },
@@ -130,6 +127,9 @@
   },
   "1aBLDj": {
     "defaultMessage": "ادفع من أي محفظة تدعم شبكة لايتنينغ لتجديد الاشتراك."
+  },
+  "1bHQJa": {
+    "defaultMessage": "{n,plural,one{شهر} other{# أشهر}}"
   },
   "1kZ3H0": {
     "defaultMessage": "عرض المعاملة"
@@ -359,9 +359,6 @@
   "7NFfmz": {
     "defaultMessage": "المنتجات"
   },
-  "7Xz8h2": {
-    "defaultMessage": "{n,plural,one{يوم} other{أيام}}"
-  },
   "7agV2X": {
     "defaultMessage": "يُمرِّر/ينقل"
   },
@@ -568,6 +565,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
+  },
+  "Cbg9PU": {
+    "defaultMessage": "{n,plural,one{يوم} other{# أيام}}"
   },
   "Cououe": {
     "defaultMessage": "سجّل الدخول لتفعيل هذا التطبيق."
@@ -1375,9 +1375,6 @@
   },
   "WwXOJ8": {
     "defaultMessage": "انشر الخوادم وأدِرها"
-  },
-  "WxTcqt": {
-    "defaultMessage": "{n,plural,one{شهر} other{أشهر}}"
   },
   "X/4SWn": {
     "defaultMessage": "خدمة استضافة VPS في كيبيك، كندا. اختر وحدة المعالجة المركزية والذاكرة والتخزين الذي يناسبك. ادفع باستخدام عملة البيتكوين عبر شبكة Lightning أو مباشرة."
@@ -2362,6 +2359,9 @@
   },
   "wbsq7O": {
     "defaultMessage": "الاستخدام"
+  },
+  "wcUmWu": {
+    "defaultMessage": "{n,plural,one{سنة} other{# سنوات}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,zero{# تنفيذ لآلية الترحيل} one{تنفيذ واحد لآلية الترحيل} two{تنفيذان لآلية الترحيل} few{# تنفيذات لآلية الترحيل} many{# تنفيذًا لآلية الترحيل} other{# تنفيذ لآلية الترحيل}}، من {price} شهريًا، بدون رسوم إعداد أولية."

@@ -17,9 +17,6 @@
   "+H6Rvj": {
     "defaultMessage": "Run your own Blossom and NIP-96 media server for {price}/month. Route96, up in minutes on its own hostname with persistent storage and TLS included."
   },
-  "+JVG/q": {
-    "defaultMessage": "{n, plural, one {year} other {years}}"
-  },
   "+Mo6Oy": {
     "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price} ex-VAT."
   },
@@ -130,6 +127,9 @@
   },
   "1aBLDj": {
     "defaultMessage": "Pay from any Lightning wallet to top up this subscription."
+  },
+  "1bHQJa": {
+    "defaultMessage": "{n, plural, one {month} other {# months}}"
   },
   "1kZ3H0": {
     "defaultMessage": "View transaction"
@@ -359,9 +359,6 @@
   "7NFfmz": {
     "defaultMessage": "Products"
   },
-  "7Xz8h2": {
-    "defaultMessage": "{n, plural, one {day} other {days}}"
-  },
   "7agV2X": {
     "defaultMessage": "Relay"
   },
@@ -568,6 +565,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
+  },
+  "Cbg9PU": {
+    "defaultMessage": "{n, plural, one {day} other {# days}}"
   },
   "Cououe": {
     "defaultMessage": "Log in to deploy this app."
@@ -1375,9 +1375,6 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Deploy & manage servers"
-  },
-  "WxTcqt": {
-    "defaultMessage": "{n, plural, one {month} other {months}}"
   },
   "X/4SWn": {
     "defaultMessage": "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
@@ -2362,6 +2359,9 @@
   },
   "wbsq7O": {
     "defaultMessage": "Usage"
+  },
+  "wcUmWu": {
+    "defaultMessage": "{n, plural, one {year} other {# years}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month, no setup fee."

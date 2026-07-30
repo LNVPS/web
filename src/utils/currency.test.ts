@@ -5,11 +5,11 @@ import { formatIntervalText, formatPriceText, formatPriceWithInterval } from "./
 const intl = createIntl({ locale: "en", messages: {} });
 
 describe("formatIntervalText", () => {
-  test("singular at one, plural above it", () => {
+  test("bare word at one, count prefixed above it", () => {
     expect(formatIntervalText(intl, "month", 1)).toBe("month");
-    expect(formatIntervalText(intl, "month", 3)).toBe("months");
+    expect(formatIntervalText(intl, "month", 3)).toBe("3 months");
     expect(formatIntervalText(intl, "day", 1)).toBe("day");
-    expect(formatIntervalText(intl, "year", 2)).toBe("years");
+    expect(formatIntervalText(intl, "year", 2)).toBe("2 years");
   });
 
   test("defaults to one when n is omitted", () => {
@@ -43,7 +43,7 @@ describe("formatPriceWithInterval", () => {
     );
   });
 
-  test("carries interval_amount into the pluralised word", () => {
+  test("carries interval_amount into both the count and the word", () => {
     const cost = {
       currency: "EUR",
       amount: 1500,
@@ -51,7 +51,7 @@ describe("formatPriceWithInterval", () => {
       interval_amount: 3,
     };
     expect(formatPriceWithInterval(intl, cost)).toBe(
-      `${formatPriceText(intl, cost)}/months`,
+      `${formatPriceText(intl, cost)}/3 months`,
     );
   });
 });

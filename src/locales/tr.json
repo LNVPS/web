@@ -17,9 +17,6 @@
   "+H6Rvj": {
     "defaultMessage": "Kendi Blossom ve NIP-96 medya sunucunuzu çalıştırın. {price}/ay. Route96, kendi alan adında birkaç dakika içinde kalıcı depolama ve TLS ile birlikte kullanıma hazır hale getirilebilir."
   },
-  "+JVG/q": {
-    "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
-  },
   "+Mo6Oy": {
     "defaultMessage": "bir VPS üzerinde çalışan bir Bitcoin tam düğümü çalıştırın. {regions}Bitcoin ile Lightning veya doğrudan blok zinciri üzerinden ödeme yapın. Şuradan: {price} KDV hariç."
   },
@@ -130,6 +127,9 @@
   },
   "1aBLDj": {
     "defaultMessage": "Bu aboneliği yenilemek için herhangi bir Lightning cüzdanından ödeme yapın."
+  },
+  "1bHQJa": {
+    "defaultMessage": "{n,plural,one{ay} other{# aylar}}"
   },
   "1kZ3H0": {
     "defaultMessage": "İşlemi görüntüle"
@@ -359,9 +359,6 @@
   "7NFfmz": {
     "defaultMessage": "Ürünler"
   },
-  "7Xz8h2": {
-    "defaultMessage": "{n,plural,one{gün} other{gün}}"
-  },
   "7agV2X": {
     "defaultMessage": "Bayrak yarışı / Röle"
   },
@@ -568,6 +565,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
+  },
+  "Cbg9PU": {
+    "defaultMessage": "{n,plural,one{gün} other{# gün}}"
   },
   "Cououe": {
     "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
@@ -1375,9 +1375,6 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Sunucuları dağıtın ve yönetin"
-  },
-  "WxTcqt": {
-    "defaultMessage": "{n,plural,one{ay} other{aylar}}"
   },
   "X/4SWn": {
     "defaultMessage": "Kanada, Quebec'te VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya doğrudan Bitcoin ile yapın."
@@ -2362,6 +2359,9 @@
   },
   "wbsq7O": {
     "defaultMessage": "Kullanım"
+  },
+  "wcUmWu": {
+    "defaultMessage": "{n,plural,one{yıl} other{# yıl}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} aylık olarak, kurulum ücreti yok."

@@ -17,9 +17,6 @@
   "+H6Rvj": {
     "defaultMessage": "Configure o seu próprio servidor de mídia Blossom e NIP-96 para {price}/mês. Route96, disponível em minutos no seu próprio nome de domínio, com armazenamento persistente e TLS incluídos."
   },
-  "+JVG/q": {
-    "defaultMessage": "{n,plural,one{ano} other{anos}}"
-  },
   "+Mo6Oy": {
     "defaultMessage": "Execute um nó completo de Bitcoin num servidor virtual privado (VPS) em {regions}Pague em Bitcoin através da rede Lightning ou diretamente na blockchain. A partir de {price} preço sem IVA."
   },
@@ -130,6 +127,9 @@
   },
   "1aBLDj": {
     "defaultMessage": "Pague através de qualquer carteira Lightning para renovar esta assinatura."
+  },
+  "1bHQJa": {
+    "defaultMessage": "{n,plural,one{mês} other{# meses}}"
   },
   "1kZ3H0": {
     "defaultMessage": "Ver transação"
@@ -359,9 +359,6 @@
   "7NFfmz": {
     "defaultMessage": "Produtos"
   },
-  "7Xz8h2": {
-    "defaultMessage": "{n,plural,one{dia} other{dias}}"
-  },
   "7agV2X": {
     "defaultMessage": "Revezamento / Transmitir / Relé"
   },
@@ -568,6 +565,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
+  },
+  "Cbg9PU": {
+    "defaultMessage": "{n,plural,one{dia} other{# dias}}"
   },
   "Cououe": {
     "defaultMessage": "Faça o login para implementar este aplicativo."
@@ -1375,9 +1375,6 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Implante e gerencie servidores"
-  },
-  "WxTcqt": {
-    "defaultMessage": "{n,plural,one{mês} other{meses}}"
   },
   "X/4SWn": {
     "defaultMessage": "Serviço de hospedagem VPS em Quebec, Canadá. Escolha o seu processador, memória e disco. Pague com Bitcoin através da Lightning Network ou diretamente na blockchain."
@@ -2362,6 +2359,9 @@
   },
   "wbsq7O": {
     "defaultMessage": "Utilização"
+  },
+  "wcUmWu": {
+    "defaultMessage": "{n,plural,one{ano} other{# anos}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# implementação do relé} other{# implementações de retransmissão}}, de {price} por mês, sem taxa de configuração."

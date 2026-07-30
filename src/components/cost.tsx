@@ -8,7 +8,7 @@ interface Price {
   currency: string;
   amount: number;
 }
-type Cost = Price & { interval_type?: string };
+type Cost = Price & { interval_type?: string; interval_amount?: number };
 
 function grossPrice<T extends Price>(p: T, rate: number): T {
   return { ...p, amount: Math.round(p.amount * (1 + rate / 100)) };
@@ -51,6 +51,7 @@ export default function CostLabel({
           currency: target,
           amount: Math.round(converted),
           interval_type: base.interval_type,
+          interval_amount: base.interval_amount,
         }}
         converted={true}
       />{" "}
@@ -113,7 +114,7 @@ export function CostAmount({
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>
-          /<IntervalSuffix interval={cost.interval_type} />
+          /<IntervalSuffix interval={cost.interval_type} n={cost.interval_amount} />
         </>
       )}
     </span>

@@ -1,5 +1,5 @@
 import type { IntlShape } from "react-intl";
-import { type VmCustomPrice, type VmTemplate } from "../api";
+import { CostPlanIntervalType, type VmCustomPrice, type VmTemplate } from "../api";
 import { formatBytesText } from "./bytes";
 import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
 
@@ -33,7 +33,9 @@ import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
  *
  * The billing period comes off the price response itself
  * (`interval_amount`/`interval_type`), the same fields `vpsTemplateJsonLd`
- * reads off a standard plan's `cost_plan` below.
+ * reads off a standard plan's `cost_plan` below. Falls back to a monthly
+ * default when they're absent, so this degrades instead of throwing against
+ * an API that hasn't shipped them yet.
  *
  * Ex-VAT, like every other price on the site logged out: tax is applied at
  * payment against the buyer's country, so it cannot be in a crawled figure.
@@ -67,10 +69,10 @@ export function regionOfferJsonLd(opts: {
         price: offerPrice,
         priceCurrency: opts.price.currency,
         valueAddedTaxIncluded: false,
-        billingDuration: opts.price.interval_amount,
+        billingDuration: opts.price.interval_amount ?? 1,
         billingIncrement: 1,
-        unitCode: BILLING_UNIT[opts.price.interval_type].code,
-        unitText: BILLING_UNIT[opts.price.interval_type].text,
+        unitCode: BILLING_UNIT[opts.price.interval_type ?? CostPlanIntervalType.MONTH].code,
+        unitText: BILLING_UNIT[opts.price.interval_type ?? CostPlanIntervalType.MONTH].text,
       },
     },
   };

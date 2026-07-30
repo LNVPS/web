@@ -35,4 +35,23 @@ describe("formatPriceWithInterval", () => {
       `${formatPriceText(intl, cost)}/year`,
     );
   });
+
+  test("falls back to a monthly default instead of printing 'undefined'", () => {
+    const cost = { currency: "EUR", amount: 500 };
+    expect(formatPriceWithInterval(intl, cost)).toBe(
+      `${formatPriceText(intl, cost)}/month`,
+    );
+  });
+
+  test("carries interval_amount into the pluralised word", () => {
+    const cost = {
+      currency: "EUR",
+      amount: 1500,
+      interval_type: "month",
+      interval_amount: 3,
+    };
+    expect(formatPriceWithInterval(intl, cost)).toBe(
+      `${formatPriceText(intl, cost)}/months`,
+    );
+  });
 });

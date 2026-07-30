@@ -75,12 +75,26 @@ export function formatIntervalText(
 /**
  * `formatPriceText` with "/<interval>" appended, for a recurring price —
  * the custom-VM entry price on the region pages, not a one-off figure.
+ *
+ * `interval_type` falls back to month when absent, so a price from an API
+ * that hasn't shipped the field yet still reads right instead of printing
+ * the literal word "undefined".
  */
 export function formatPriceWithInterval(
   intl: IntlShape,
-  cost: { currency: string; amount: number; interval_type: string },
+  cost: {
+    currency: string;
+    amount: number;
+    interval_type?: string;
+    interval_amount?: number;
+  },
 ): string {
-  return `${formatPriceText(intl, cost)}/${formatIntervalText(intl, cost.interval_type)}`;
+  const interval = formatIntervalText(
+    intl,
+    cost.interval_type ?? "month",
+    cost.interval_amount,
+  );
+  return `${formatPriceText(intl, cost)}/${interval}`;
 }
 
 /** A currency's rate relative to the snapshot base (the base itself is 1). */

@@ -131,4 +131,21 @@ describe("regionOfferJsonLd", () => {
       }),
     ).toBeUndefined();
   });
+
+  test("degrades to a monthly default instead of throwing against a pre-api#347 payload", () => {
+    // The type says interval_amount/interval_type are always there; a server
+    // that hasn't deployed api#347 yet still won't send them.
+    const price = { currency: "EUR", amount: 500 } as VmCustomPrice;
+    const offer = offerOf(
+      regionOfferJsonLd({
+        name: "VPS in Dublin",
+        description: "A VPS built to order in Dublin.",
+        path: "/vps-ireland",
+        regionName: "Dublin (IE)",
+        price,
+      })!,
+    );
+    expect(offer?.priceSpecification.unitCode).toBe("MON");
+    expect(offer?.priceSpecification.billingDuration).toBe(1);
+  });
 });

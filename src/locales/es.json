@@ -9,7 +9,7 @@
     "defaultMessage": "Salida."
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "Si detienes la operación, se conservarán tus archivos subidos; solo al eliminarlos, dejarán de estar disponibles."
   },
   "+EHk4e": {
     "defaultMessage": "Sí. Es tu computadora, así que instala lo que quieras."
@@ -171,7 +171,7 @@
     "defaultMessage": "Crear pedido"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "¿Cuánto espacio de almacenamiento tengo disponible?"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "Pague ahora."
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "Aloja tu propio servidor multimedia: {price} al mes."
   },
   "7wbySo": {
     "defaultMessage": "Envíenos un mensaje directamente y el equipo se pondrá en contacto con usted."
@@ -435,7 +435,7 @@
     "defaultMessage": "Guardar la ruta de pago."
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "Sí, se utiliza un registro CNAME y el certificado se emite automáticamente una vez que se resuelve la consulta DNS."
   },
   "8ecw1u": {
     "defaultMessage": "Manijas"
@@ -711,7 +711,7 @@
     "defaultMessage": "Desconectado."
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "¿Dónde se proyecta?"
   },
   "FazwRl": {
     "defaultMessage": "Inténtalo de nuevo."
@@ -837,7 +837,7 @@
     "defaultMessage": "Listo."
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "Dublín, Irlanda."
   },
   "Id24hd": {
     "defaultMessage": "Nombre *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "No se encontró ninguna orden."
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "Puedes pagar con Lightning Network, con bitcoin directamente en la cadena de bloques o con tarjeta. Inicia sesión con tu clave Nostr. No se requiere verificación de identidad (KYC)."
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "¿Qué ocurre con mis eventos si dejo de pagar?"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "Deje de subir sus imágenes y vídeos al servidor de otra persona. Route96 es un servidor multimedia Blossom y NIP-96, que se puede implementar en LNVPS en cuestión de minutos e incluye almacenamiento y TLS."
   },
   "U7fZs8": {
     "defaultMessage": "¿Cuánto tiempo tarda?"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "Guarde esta tarjeta para futuros pagos."
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "Route96 es un servidor Blossom/NIP-96 de alto rendimiento. Es de <a>código abierto</a> y pertenece a nosotros: lo hemos creado y gestionamos. No estás confiando en una caja negra; puedes leer cada línea del código y, cuando quieras, puedes irte con tus datos."
   },
   "UPP+wZ": {
     "defaultMessage": "En uso por {count,plural,one{VM} other{Máquinas virtuales}}: {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}. {storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más capacidad, puede instalar Route96 en un VPS y ampliarlo según sus necesidades."
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "Preguntas frecuentes"
   },
   "WEoZhh": {
     "defaultMessage": "No se encontró una suscripción a la que facturar esta mejora."
@@ -1497,7 +1497,7 @@
     "defaultMessage": "Al guardar se vuelve a aplicar la configuración y se reinicia la aplicación."
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "Pague como prefiera."
   },
   "aPcXT9": {
     "defaultMessage": "Los pagos se agrupan con los de otros remitentes en la cadena de bloques y se realizan en una sola transacción una vez que su saldo supera el mínimo requerido. Su parte de la comisión de la red se deduce de su saldo. Solo se aceptan direcciones de la red principal."
@@ -1830,7 +1830,7 @@
     "defaultMessage": "SKILL.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "¿Por qué alojar contenido multimedia en un servidor propio?"
   },
   "j7VE/p": {
     "defaultMessage": "Transacción BTC estándar — se acredita tras la confirmación"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "Apunte un CNAME de este dominio al nombre de host del despliegue cuando esté asignado. Déjelo vacío para eliminarlo."
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "¿Qué incluye?"
   },
   "jmVweB": {
     "defaultMessage": "Cargando las claves SSH..."
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "Implementa Route96: {price} al mes."
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "Un protocolo para almacenar y recuperar archivos mediante su código hash, diseñado para funcionar con Nostr. NIP-96 es la especificación más antigua para el almacenamiento de archivos a través de HTTP; Route96 es compatible con ambas."
   },
   "k9Pskm": {
     "defaultMessage": "Almacenamiento SSD rápido"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "Aplicaciones gestionadas: ejecute el software sin necesidad de ejecutar el servidor."
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "Nostr mantiene tu identidad accesible en cualquier lugar. Los archivos multimedia son la parte que no lo hace: tus imágenes se almacenan en el servidor de otra persona, bajo sus condiciones, y desaparecen cuando esa persona decide hacerlo. Un servidor Blossom permite que vuelvas a tener el control."
   },
   "mHEBOr": {
     "defaultMessage": "¿Me instalas Bitcoin Core?"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "Alojamiento VPS en Quebec, Canadá, desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "¿Qué es Blossom?"
   },
   "pus6h6": {
     "defaultMessage": "Puede utilizar el código cuando quiera. Una vez utilizado, dejará de generar beneficios y no podrá volver a usarse."
@@ -2214,7 +2214,7 @@
     "defaultMessage": "El servicio de mensajería cifrada solo está disponible para las cuentas de Nostr. Su cuenta no tiene una clave de Nostr necesaria para leer o enviar mensajes NIP-17. Si necesita ayuda, utilice la pestaña de Soporte."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "Alojamiento de Blossom Media Server desde {price} al mes."
   },
   "sn+Rj5": {
     "defaultMessage": "Iniciar sesión con clave de acceso"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "No se puede realizar la actualización."
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "Su propio nombre de dominio — <code>su-nombre.ie.apps.lnvps.cloud</code> — con TLS habilitado automáticamente."
   },
   "xOnplm": {
     "defaultMessage": "Cargando los métodos de pago…"

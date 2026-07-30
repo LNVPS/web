@@ -9,7 +9,7 @@
     "defaultMessage": "발신"
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "중단하면 업로드한 내용이 그대로 유지됩니다. 완전히 삭제해야만 내용이 제거됩니다."
   },
   "+EHk4e": {
     "defaultMessage": "네, 맞습니다. 사용하시는 컴퓨터이므로 원하는 대로 설치하세요."
@@ -171,7 +171,7 @@
     "defaultMessage": "주문 생성"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "얼마나 많은 데이터를 저장할 수 있나요?"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "지금 결제하세요."
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "자체 미디어 서버를 구축하여 운영하세요 — 월 {price}"
   },
   "7wbySo": {
     "defaultMessage": "메시지를 보내주시면 담당 팀에서 연락을 드릴 것입니다."
@@ -435,7 +435,7 @@
     "defaultMessage": "지급 경로 저장"
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "네, 맞습니다. CNAME 레코드를 설정하면 인증서가 자동으로 발급됩니다(DNS 확인 후)."
   },
   "8ecw1u": {
     "defaultMessage": "손잡이"
@@ -711,7 +711,7 @@
     "defaultMessage": "연결이 끊어졌습니다."
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "어디에서 실행되나요?"
   },
   "FazwRl": {
     "defaultMessage": "다시 시도해 보세요."
@@ -837,7 +837,7 @@
     "defaultMessage": "준비 완료."
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "아일랜드의 더블린."
   },
   "Id24hd": {
     "defaultMessage": "이름 *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "해당 주문을 찾을 수 없습니다."
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "라이트닝 네트워크, 온체인 비트코인 또는 카드 결제 방식 중 선택하세요. 노스트르 키를 사용하여 로그인합니다. 개인 정보 확인 절차는 없습니다."
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "결제를 중단하면 내 이벤트는 어떻게 되나요?"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "다른 사람의 서버에 이미지와 동영상을 업로드하는 것을 중단하세요. Route96은 LNVPS에 몇 분 안에 배포할 수 있는 Blossom 및 NIP-96 미디어 서버이며, 저장 공간과 TLS가 함께 제공됩니다."
   },
   "U7fZs8": {
     "defaultMessage": "얼마나 걸립니까?"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "이 카드를 저장하여 다음에 사용할 때 결제에 이용하세요."
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "Route96은 고성능 Blossom/NIP-96 서버입니다. 이 소프트웨어는 <a>오픈 소스</a>이며, 저희가 직접 개발하고 운영합니다. 따라서 사용자는 알 수 없는 블랙박스를 사용하는 것이 아니라 모든 코드를 확인하고 필요할 때 언제든지 데이터를 가져갈 수 있습니다."
   },
   "UPP+wZ": {
     "defaultMessage": "사용 중인 항목은 다음과 같습니다. {count,plural,one{가상 머신} other{가상 머신}}: {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}. {storage} 전체적으로 보면 그렇습니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치한 VPS를 사용하여 확장할 수 있습니다."
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "자주 묻는 질문"
   },
   "WEoZhh": {
     "defaultMessage": "이 업그레이드를 청구할 구독을 찾을 수 없습니다."
@@ -1497,7 +1497,7 @@
     "defaultMessage": "저장하면 구성이 다시 적용되고 앱이 재시작됩니다."
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "원하는 방식으로 결제하세요."
   },
   "aPcXT9": {
     "defaultMessage": "지급은 다른 온체인 추천인들과 함께 묶여 하나의 거래로 처리되며, 귀하의 잔액이 최소 금액을 초과하면 지급이 이루어집니다. 네트워크 수수료 중 귀하의 몫은 귀하의 잔액에서 차감됩니다. 메인넷 주소만 해당됩니다."
@@ -1830,7 +1830,7 @@
     "defaultMessage": "기술.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "미디어를 직접 호스팅해야 하는 이유는 무엇인가요?"
   },
   "j7VE/p": {
     "defaultMessage": "표준 BTC 트랜잭션 — 확인 후 반영됩니다"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "배포 호스트 이름이 할당되면 이 도메인의 CNAME을 해당 호스트 이름으로 지정하세요. 제거하려면 비워 두세요."
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "무엇이 포함됩니까?"
   },
   "jmVweB": {
     "defaultMessage": "SSH 키를 불러오는 중..."
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "Route96 배포 — 월 {price}"
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "해시값을 기준으로 파일을 저장하고 검색하는 프로토콜로, 노스트르(Nostr)와 함께 작동하도록 설계되었습니다. NIP-96은 이전 버전의 HTTP 파일 저장 방식이며, Route96은 두 가지 방식을 모두 지원합니다."
   },
   "k9Pskm": {
     "defaultMessage": "빠른 솔리드 스테이트 스토리지"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "관리형 앱: 서버를 실행하지 않고 소프트웨어를 실행합니다."
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "Nostr은 사용자의 신원을 보관하고 이동성을 유지할 수 있도록 합니다. 기존에는 미디어가 그렇지 않았습니다. 즉, 사용자의 이미지는 다른 사람의 서버에 저장되고, 해당 서버 운영자의 정책에 따라 관리되며, 서버가 사라지면 이미지도 함께 사라집니다. Blossom 서버는 이러한 상황을 개선하여 사용자가 직접 제어할 수 있도록 합니다."
   },
   "mHEBOr": {
     "defaultMessage": "제가 비트코인 코어를 설치해 드릴까요?"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "캐나다 퀘벡에서 제공하는 VPS 호스팅 서비스 {price} 부가가치세 제외. {minCpu}–{maxCpu} 가상 CPU, 최대 {maxDisk} {diskType}비트코인을 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "Blossom이란 무엇인가요?"
   },
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
@@ -2214,7 +2214,7 @@
     "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "블로섬 미디어 서버 호스팅, 월 {price}부터"
   },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "업그레이드 불가"
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "사용자님의 호스트 이름은 다음과 같습니다. <code>your-name.ie.apps.lnvps.cloud</code>, 자동으로 TLS가 적용됩니다."
   },
   "xOnplm": {
     "defaultMessage": "결제 수단을 불러오는 중입니다…"

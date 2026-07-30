@@ -9,7 +9,7 @@
     "defaultMessage": "発信。"
   },
   "+Bj8tM": {
-    "defaultMessage": "Stopping retains your uploads; only deleting removes them"
+    "defaultMessage": "停止してもアップロードしたデータは保持されます。削除した場合のみ、データが完全に消去されます。"
   },
   "+EHk4e": {
     "defaultMessage": "はい。これはあなたのコンピューターです。好きなものをインストールしてください。"
@@ -171,7 +171,7 @@
     "defaultMessage": "注文を作成する"
   },
   "2lKQfH": {
-    "defaultMessage": "How much can I store?"
+    "defaultMessage": "どれくらいのデータを保存できますか？"
   },
   "2mZOHz": {
     "defaultMessage": "Quote currency"
@@ -390,7 +390,7 @@
     "defaultMessage": "今すぐお支払いください。"
   },
   "7v5vj0": {
-    "defaultMessage": "Host your own media server — {price} a month"
+    "defaultMessage": "独自のメディアサーバーを構築して運用しましょう。月額{price}です。"
   },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
@@ -435,7 +435,7 @@
     "defaultMessage": "支払い方法を保存する"
   },
   "8dAKuZ": {
-    "defaultMessage": "Yes — CNAME, and the certificate is issued automatically once DNS resolves."
+    "defaultMessage": "はい、CNAMEレコードを設定し、DNSが解決されると証明書は自動的に発行されます。"
   },
   "8ecw1u": {
     "defaultMessage": "ハンドル"
@@ -711,7 +711,7 @@
     "defaultMessage": "接続が切断されました。"
   },
   "FZup6q": {
-    "defaultMessage": "Where does it run?"
+    "defaultMessage": "どこで（プログラムなどが）実行されますか？"
   },
   "FazwRl": {
     "defaultMessage": "もう一度試してください。"
@@ -837,7 +837,7 @@
     "defaultMessage": "準備完了。"
   },
   "IbWc3k": {
-    "defaultMessage": "Dublin, Ireland."
+    "defaultMessage": "アイルランドのダブリン。"
   },
   "Id24hd": {
     "defaultMessage": "名前 *"
@@ -1071,7 +1071,7 @@
     "defaultMessage": "該当する注文は見つかりませんでした。"
   },
   "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
+    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはカードで支払い。Nostrキーを使ってログインしてください。本人確認は不要です。"
   },
   "PlcGQq": {
     "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
@@ -1281,7 +1281,7 @@
     "defaultMessage": "支払いを停止した場合、登録したイベントはどうなりますか？"
   },
   "U0GEAC": {
-    "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
+    "defaultMessage": "他人のサーバーに画像や動画をアップロードするのをやめましょう。Route96は、BlossomとNIP-96メディアサーバーであり、LNVPS上に数分で展開でき、ストレージとTLSが含まれています。"
   },
   "U7fZs8": {
     "defaultMessage": "どれくらいの時間がかかりますか？"
@@ -1290,7 +1290,7 @@
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
   },
   "UANa+W": {
-    "defaultMessage": "Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+    "defaultMessage": "Route96は、高性能なBlossom/NIP-96サーバーです。これは<a>オープンソース</a>であり、私たち自身で開発し、運用しています。つまり、ブラックボックスに頼る必要はありません。すべてのコードを閲覧でき、いつでも好きなときにデータを持ち出すことができます。"
   },
   "UPP+wZ": {
     "defaultMessage": "使用状況： {count,plural,one{仮想マシン} other{仮想マシン}}： {vms}"
@@ -1362,7 +1362,7 @@
     "defaultMessage": "{breakdown}、 {storage} 合計で。快適な個人用メディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用することで、さらに拡張できます。"
   },
   "W8nHSd": {
-    "defaultMessage": "FAQ"
+    "defaultMessage": "よくある質問"
   },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
@@ -1497,7 +1497,7 @@
     "defaultMessage": "保存すると設定が再適用され、アプリが再起動します。"
   },
   "aLe15X": {
-    "defaultMessage": "Pay how you like"
+    "defaultMessage": "好きな支払い方法でどうぞ。"
   },
   "aPcXT9": {
     "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
@@ -1830,7 +1830,7 @@
     "defaultMessage": "SKILL.md"
   },
   "j52BNh": {
-    "defaultMessage": "Why self-host media"
+    "defaultMessage": "なぜ自分でメディアをホストするのか。"
   },
   "j7VE/p": {
     "defaultMessage": "通常のBTCトランザクション — 承認後に反映されます"
@@ -1863,7 +1863,7 @@
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
   },
   "jhyC12": {
-    "defaultMessage": "What is included"
+    "defaultMessage": "何が含まれていますか？"
   },
   "jmVweB": {
     "defaultMessage": "SSHキーを読み込んでいます。"
@@ -1881,10 +1881,10 @@
     "defaultMessage": "IPv6"
   },
   "jzU8se": {
-    "defaultMessage": "Deploy Route96 — {price}/month"
+    "defaultMessage": "Route96をデプロイ — 月額{price}"
   },
   "k2S+Z0": {
-    "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both."
+    "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
   },
   "k9Pskm": {
     "defaultMessage": "高速なソリッドステートストレージ"
@@ -1968,7 +1968,7 @@
     "defaultMessage": "管理対象アプリ：サーバーを起動せずにソフトウェアを実行します。"
   },
   "mDRXDi": {
-    "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
+    "defaultMessage": "Nostrは、あなたのアイデンティティをどこでも利用できるようにします。従来のメディアでは、画像が他のサーバーに保存され、そのサーバーのルールに従い、必要に応じて削除されるため、自分の管理下にはありませんでした。Blossomサーバーを使用すれば、画像を再び自分の管理下に置くことができます。"
   },
   "mHEBOr": {
     "defaultMessage": "私にBitcoin Coreをインストールしてもらえますか？"
@@ -2121,7 +2121,7 @@
     "defaultMessage": "カナダのケベック州におけるVPSホスティングサービス {price} 付加価値税抜き。 {minCpu}－{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いが可能です。"
   },
   "ps4K9r": {
-    "defaultMessage": "What is Blossom?"
+    "defaultMessage": "Blossomとは何ですか？"
   },
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
@@ -2214,7 +2214,7 @@
     "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
   },
   "sehISV": {
-    "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+    "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額{price}から。"
   },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
@@ -2388,7 +2388,7 @@
     "defaultMessage": "アップグレードは利用できません。"
   },
   "xExBHw": {
-    "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+    "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、TLSが自動的に適用されます。"
   },
   "xOnplm": {
     "defaultMessage": "支払い方法を読み込んでいます…。"

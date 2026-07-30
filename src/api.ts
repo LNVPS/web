@@ -356,6 +356,26 @@ export interface VmInstance {
    * known — use it to filter OS images for a reinstall. Omitted if unknown.
    */
   cpu_arch?: CpuArch;
+  /**
+   * The VM's own SSH host keys, scanned from the guest after boot — for
+   * verifying the host on first connect instead of trusting whatever key it
+   * presents. Always an array, empty until the scan succeeds, and
+   * re-captured after a reinstall. Not the same as `ssh_key`, the customer's
+   * authorized key.
+   */
+  host_ssh_keys: Array<VmSshHostKey>;
+}
+
+export interface VmSshHostKey {
+  /** Key algorithm, e.g. "ssh-ed25519". */
+  key_type: string;
+  /** Base64 key blob, without the algorithm prefix or a comment. */
+  public_key: string;
+  /**
+   * `SHA256:…` fingerprint over the decoded key blob — the form
+   * `ssh-keygen -lf` prints and the one a client shows on an unknown host.
+   */
+  fingerprint_sha256: string;
 }
 
 export interface VmIpAssignment {

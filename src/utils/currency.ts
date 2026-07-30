@@ -41,6 +41,48 @@ export function formatPriceText(
   });
 }
 
+/**
+ * The word for a billing interval ("month", "months", ...) — the one place
+ * that maps an interval to text, so `IntervalSuffix` and a plain-text price
+ * sentence read the same translation instead of two that could drift apart.
+ */
+export function formatIntervalText(
+  intl: IntlShape,
+  interval: string,
+  n = 1,
+): string {
+  switch (interval) {
+    case "day":
+      return intl.formatMessage(
+        { defaultMessage: "{n, plural, one {day} other {days}}" },
+        { n },
+      );
+    case "month":
+      return intl.formatMessage(
+        { defaultMessage: "{n, plural, one {month} other {months}}" },
+        { n },
+      );
+    case "year":
+      return intl.formatMessage(
+        { defaultMessage: "{n, plural, one {year} other {years}}" },
+        { n },
+      );
+    default:
+      return interval;
+  }
+}
+
+/**
+ * `formatPriceText` with "/<interval>" appended, for a recurring price —
+ * the custom-VM entry price on the region pages, not a one-off figure.
+ */
+export function formatPriceWithInterval(
+  intl: IntlShape,
+  cost: { currency: string; amount: number; interval_type: string },
+): string {
+  return `${formatPriceText(intl, cost)}/${formatIntervalText(intl, cost.interval_type)}`;
+}
+
 /** A currency's rate relative to the snapshot base (the base itself is 1). */
 function rateOf(currency: string, rates: ExchangeRates): number | undefined {
   if (currency === rates.base) return 1;

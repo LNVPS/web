@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "VPS上でビットコインのフルノードを稼働させる。 {regions}ビットコインで、ライトニングネットワークまたはオンチェーン経由で支払ってください。 {price} 付加価値税抜き。"
+  },
   "+Qebzr": {
     "defaultMessage": "オンチェーンアドレス"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "VPS上でビットコインのフルノードを稼働させる。 {regions}ビットコインで、ライトニングネットワークまたはオンチェーンで支払いを受け付けます。 {price}月額料金（税別）。"
   },
   "0gAiqM": {
     "defaultMessage": "アイルランドでのVPSホスティング"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "自動更新はオフになっています。サービスが中断されないように、有効期限が切れる前に手動で更新してください。"
   },
+  "V/V4bz": {
+    "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービス {price} 消費税抜き。お客様のニーズに合わせて仕様を自由にカスタマイズできます。 {maxCpu} 仮想CPU。ライトニングネットワークまたはオンチェーンでビットコインを使ってお支払いください。"
+  },
   "V7fgpY": {
     "defaultMessage": "サインインを完了しています…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "レート、割合"
   },
-  "c3o/3B": {
-    "defaultMessage": "～から {price} 月額料金で、消費税は含まれません。"
-  },
   "c5aQL+": {
     "defaultMessage": "アプリを選び、名前を付け、料金を支払います。すると、TLSがすでに有効になっている状態で、独自のホスト名で自動的に起動します。OSのパッチを当てたり、Dockerを設定したり、証明書を更新したりする必要はありません。"
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "当社のダブリン拠点。お客様がご希望の機械を組み立てます。 {minCpu}{maxCpu} vCPUおよび {minMemory}–{maxMemory}そして、ビットコインで支払います。"
   },
-  "dTTuZ+": {
-    "defaultMessage": "アイルランドのダブリンにあるVPSホスティング（仮想専用サーバー）サービス {price}月額料金（税別）。お客様のニーズに合わせて仕様をカスタマイズできます。 {maxCpu} vCPU。ライトニングネットワークまたはオンチェーンでビットコインで支払ってください。"
-  },
   "dUQeuG": {
     "defaultMessage": "パスキーアカウントを作成"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
+  },
+  "e55cj/": {
+    "defaultMessage": "から {price}消費税は含まれません。"
   },
   "eKEL/g": {
     "defaultMessage": "保留中"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "ご注文にはログインが必要です。"
+  },
+  "fNZGof": {
+    "defaultMessage": "ロンドンでのVPSホスティング（サービス） {price} 付加価値税（VAT）を除く。 {minCpu}{maxCpu} 仮想CPU、最大。 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いを受け付けます。"
   },
   "fblXmJ": {
     "defaultMessage": "インスタンス名"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
-  },
-  "i/LmLC": {
-    "defaultMessage": "ロンドンでのVPSホスティングは、[価格]から {price}月額、税別。 {minCpu}{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンで支払ってください。"
   },
   "i2/SmH": {
     "defaultMessage": "課金システムはVPSのサブスクリプションと同様に機能し、どのアプリにも初期費用はかかりません。"
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "カナダのケベック州におけるVPSホスティングサービス {price} 付加価値税抜き。 {minCpu}－{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いが可能です。"
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "カスタム受信者キーを使用する"
-  },
-  "vIv3vC": {
-    "defaultMessage": "カナダのケベック州におけるVPSホスティング（提供元：） {price}月額、税別。 {minCpu}–{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンで支払ってください。"
   },
   "vONi+O": {
     "defaultMessage": "国"

@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "bir VPS üzerinde çalışan bir Bitcoin tam düğümü çalıştırın. {regions}Bitcoin ile Lightning veya doğrudan blok zinciri üzerinden ödeme yapın. Şuradan: {price} KDV hariç."
+  },
   "+Qebzr": {
     "defaultMessage": "Zincir Üzerindeki Adres"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "şu konumda bir VPS üzerinde çalışan bir Bitcoin tam düğümü çalıştırın: {regions}Bitcoin ile Lightning veya doğrudan ödeme yapın. {price}ayda, KDV hariç."
   },
   "0gAiqM": {
     "defaultMessage": "İrlanda'da VPS hosting"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "Otomatik yenileme özelliği devre dışı bırakıldı. Hizmetin kesintisiz devam etmesi için son kullanma tarihinden önce manuel olarak yenileyin."
   },
+  "V/V4bz": {
+    "defaultMessage": "İrlanda'nın Dublin şehrinde VPS sunucu hizmeti. {price} KDV dahil değil. İstediğiniz özelliklere göre özelleştirin. {maxCpu} sanal CPU. Ödemenizi Bitcoin ile Lightning ağı üzerinden veya doğrudan blok zinciri üzerinde yapın."
+  },
   "V7fgpY": {
     "defaultMessage": "Giriş tamamlanıyor…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "Oran"
   },
-  "c3o/3B": {
-    "defaultMessage": "-den {price} ayda, KDV hariç."
-  },
   "c5aQL+": {
     "defaultMessage": "Bir uygulama seçin, ona bir ad verin ve ödeme yapın. Uygulama, TLS'nin zaten etkin olduğu kendi alan adı altında otomatik olarak çalışmaya başlar; herhangi bir işletim sistemi güncellemesi yapmanıza, Docker yapılandırması yapmanıza veya sertifika yenilemenize gerek kalmaz."
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi burada oluşturun. {minCpu}–{maxCpu} sanal CPU ve {minMemory}–{maxMemory}ve bunun için Bitcoin ile ödeme yapın."
   },
-  "dTTuZ+": {
-    "defaultMessage": "Dublin, İrlanda'da VPS hosting hizmeti, şu tarihten itibaren: {price}/ay, KDV hariç. İstediğiniz özelliklere göre özelleştirin. {maxCpu} vCPU. Bitcoin ile Lightning veya doğrudan ödeme yapın."
-  },
   "dUQeuG": {
     "defaultMessage": "Geçiş anahtarı hesabı oluştur"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "Makinenizi oluşturun"
+  },
+  "e55cj/": {
+    "defaultMessage": "-den itibaren / -dan başlayarak {price}KDV hariç."
   },
   "eKEL/g": {
     "defaultMessage": "Beklemede"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Sipariş Vermek İçin Giriş Yapın"
+  },
+  "fNZGof": {
+    "defaultMessage": "Londra'da VPS sunucu hizmeti. {price} KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya zincir üzerinde ödeme yapın."
   },
   "fblXmJ": {
     "defaultMessage": "Örnek adı"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
-  },
-  "i/LmLC": {
-    "defaultMessage": "Londra'da VPS hosting hizmeti, şu fiyatlardan itibaren: {price}aylık, KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya doğrudan blok zinciri üzerinden ödeme yapın."
   },
   "i2/SmH": {
     "defaultMessage": "Fatura sistemi, bir VPS aboneliği gibi çalışır ve hiçbir uygulamada kurulum ücreti alınmaz."
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "Kanada, Québec'te VPS sunucu hizmeti. {price} KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning ağı veya doğrudan zincir üzerinden ödeme yapın."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Özel alıcı anahtarını kullanın"
-  },
-  "vIv3vC": {
-    "defaultMessage": "Kanada, Quebec'te VPS hosting hizmeti. {price}aylık, KDV hariç. {minCpu}–{maxCpu} vCPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya doğrudan zincir üzerinden ödeme yapın."
   },
   "vONi+O": {
     "defaultMessage": "Ülke"

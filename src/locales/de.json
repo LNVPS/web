@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "Betreiben Sie einen vollständigen Bitcoin-Knoten auf einem VPS in {regions}Bezahlen Sie mit Bitcoin über das Lightning-Netzwerk oder direkt in der Blockchain. Ab {price} zzgl. Mehrwertsteuer."
+  },
   "+Qebzr": {
     "defaultMessage": "On-Chain-Adresse"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "Betreiben Sie einen vollständigen Bitcoin-Knoten auf einem VPS in {regions}. Bezahlen Sie mit Bitcoin über das Lightning-Netzwerk oder direkt in der Bitcoin-Blockchain. Ab {price}pro Monat, zuzüglich Mehrwertsteuer."
   },
   "0gAiqM": {
     "defaultMessage": "VPS-Hosting in Irland"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "Die automatische Verlängerung ist deaktiviert. Bitte verlängern Sie die Mitgliedschaft manuell, bevor sie ausläuft, um eine Unterbrechung zu vermeiden."
   },
+  "V/V4bz": {
+    "defaultMessage": "VPS-Hosting in Dublin, Irland, ab {price} zzgl. Mehrwertsteuer. Stellen Sie Ihre eigene Konfiguration zusammen, bis zu {maxCpu} vCPU. Zahlung in Bitcoin per Lightning Network oder direkt auf der Blockchain möglich."
+  },
   "V7fgpY": {
     "defaultMessage": "Anmeldung wird abgeschlossen…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "Bewertung"
   },
-  "c3o/3B": {
-    "defaultMessage": "Von {price} pro Monat, zuzüglich Mehrwertsteuer."
-  },
   "c5aQL+": {
     "defaultMessage": "Wählen Sie eine App aus, geben Sie ihr einen Namen und bezahlen Sie. Sie wird auf ihrem eigenen Hostnamen bereitgestellt, wobei TLS bereits aktiviert ist – es sind keine Betriebssystem-Updates erforderlich, keine Docker-Konfigurationen notwendig und keine Zertifikate müssen erneuert werden."
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "Unser Standort in Dublin. Hier können Sie die Maschine Ihrer Wahl zusammenstellen. {minCpu}–{maxCpu} vCPU und {minMemory}–{maxMemory}und bezahlen Sie es mit Bitcoin."
   },
-  "dTTuZ+": {
-    "defaultMessage": "VPS-Hosting in Dublin, Irland, ab {price}pro Monat, zuzüglich Mehrwertsteuer. Stellen Sie Ihre eigene Konfiguration zusammen, bis zu {maxCpu} vCPU. Zahlung in Bitcoin über das Lightning-Netzwerk oder direkt auf der Blockchain möglich."
-  },
   "dUQeuG": {
     "defaultMessage": "Passkey-Konto erstellen"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "Stelle deine Maschine zusammen"
+  },
+  "e55cj/": {
+    "defaultMessage": "Von {price}zzgl. Mehrwertsteuer."
   },
   "eKEL/g": {
     "defaultMessage": "Ausstehend"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Anmelden, um eine Bestellung aufzugeben"
+  },
+  "fNZGof": {
+    "defaultMessage": "VPS-Hosting in London ab {price} zzgl. Mehrwertsteuer. {minCpu}–{maxCpu} virtuelle CPU, bis zu {maxDisk} {diskType}Bezahlen Sie mit Bitcoin über das Lightning-Netzwerk oder direkt auf der Blockchain."
   },
   "fblXmJ": {
     "defaultMessage": "Instanzname"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "Konto erstellen"
-  },
-  "i/LmLC": {
-    "defaultMessage": "VPS-Hosting in London ab {price}pro Monat, zuzüglich Mehrwertsteuer. {minCpu}–{maxCpu} vCPU, bis zu {maxDisk} {diskType}Bezahlen Sie in Bitcoin über das Lightning-Netzwerk oder direkt in der Bitcoin-Blockchain."
   },
   "i2/SmH": {
     "defaultMessage": "Die Abrechnung funktioniert wie ein VPS-Abonnement, wobei für keine der Apps eine Einrichtungsgebühr anfällt."
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "VPS-Hosting in Québec, Kanada, ab {price} zzgl. Mehrwertsteuer. {minCpu}–{maxCpu} virtuelle CPU, bis zu {maxDisk} {diskType}Sie können mit Bitcoin über das Lightning-Netzwerk oder direkt (on-chain) bezahlen."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Benutzen Sie einen benutzerdefinierten Empfängerschlüssel."
-  },
-  "vIv3vC": {
-    "defaultMessage": "VPS-Hosting in Québec, Kanada, ab {price}pro Monat, zuzüglich Mehrwertsteuer. {minCpu}–{maxCpu} vCPU, bis zu {maxDisk} {diskType}Bezahlen Sie mit Bitcoin über das Lightning-Netzwerk oder direkt in der Bitcoin-Blockchain."
   },
   "vONi+O": {
     "defaultMessage": "Land"

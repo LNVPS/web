@@ -4,10 +4,11 @@ import {
   CostPlanIntervalType,
   DiskInterface,
   DiskType,
+  type VmCustomPrice,
   type VmTemplate,
 } from "../api";
 import { GiB } from "../const";
-import { vpsTemplateJsonLd } from "./vps-seo";
+import { regionOfferJsonLd, vpsTemplateJsonLd } from "./vps-seo";
 
 const intl = createIntl({ locale: "en", messages: {} });
 
@@ -45,6 +46,16 @@ function offerOf(schema: object): Offer | undefined {
   return (schema as { offers?: Offer }).offers;
 }
 
+function customPrice(over: Partial<VmCustomPrice> = {}): VmCustomPrice {
+  return {
+    currency: "EUR",
+    amount: 500,
+    interval_amount: 1,
+    interval_type: CostPlanIntervalType.MONTH,
+    ...over,
+  };
+}
+
 describe("vpsTemplateJsonLd", () => {
   test("scales the amount out of minor units and keeps the billing period", () => {
     const offer = offerOf(vpsTemplateJsonLd(template(), intl));
@@ -77,5 +88,47 @@ describe("vpsTemplateJsonLd", () => {
     expect(schema.description).toBe(
       "4 vCPU, 4GB RAM, 160GB SSD storage in Dublin (IE).",
     );
+  });
+});
+
+describe("regionOfferJsonLd", () => {
+  test("reads the billing period off the price, not a hardcoded month", () => {
+    const offer = offerOf(
+      regionOfferJsonLd({
+        name: "VPS in Dublin",
+        description: "A VPS built to order in Dublin.",
+        path: "/vps-ireland",
+        regionName: "Dublin (IE)",
+        price: customPrice({ interval_type: CostPlanIntervalType.YEAR }),
+      })!,
+    );
+    expect(offer?.priceSpecification.unitCode).toBe("ANN");
+    expect(offer?.priceSpecification.billingDuration).toBe(1);
+  });
+
+  test("a longer interval_amount carries through as the billing duration", () => {
+    const offer = offerOf(
+      regionOfferJsonLd({
+        name: "VPS in Dublin",
+        description: "A VPS built to order in Dublin.",
+        path: "/vps-ireland",
+        regionName: "Dublin (IE)",
+        price: customPrice({ interval_amount: 3 }),
+      })!,
+    );
+    expect(offer?.priceSpecification.unitCode).toBe("MON");
+    expect(offer?.priceSpecification.billingDuration).toBe(3);
+  });
+
+  test("undefined for a BTC price, whose amount is millisats", () => {
+    expect(
+      regionOfferJsonLd({
+        name: "VPS in Dublin",
+        description: "A VPS built to order in Dublin.",
+        path: "/vps-ireland",
+        regionName: "Dublin (IE)",
+        price: customPrice({ currency: "BTC", amount: 1791986 }),
+      }),
+    ).toBeUndefined();
   });
 });

@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{년} other{년}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "[특정 지역]에 있는 VPS에서 비트코인 풀 노드를 실행합니다. {regions}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요. {price} 부가세 제외."
+  },
   "+Qebzr": {
     "defaultMessage": "온체인 주소"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "VPS에 비트코인 전체 노드를 실행합니다. {regions}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요. {price}월별, 부가가치세 제외."
   },
   "0gAiqM": {
     "defaultMessage": "아일랜드에서 VPS 호스팅"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "자동 갱신 기능이 꺼져 있습니다. 서비스 중단을 피하려면 만료되기 전에 수동으로 갱신하세요."
   },
+  "V/V4bz": {
+    "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price} 부가세 제외 가격입니다. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
+  },
   "V7fgpY": {
     "defaultMessage": "로그인 완료 중…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "요금"
   },
-  "c3o/3B": {
-    "defaultMessage": "~에서 {price} 부가세 제외, 월별 금액."
-  },
   "c5aQL+": {
     "defaultMessage": "앱을 선택하고, 이름을 지정하고, 결제하세요. 그러면 TLS가 이미 적용된 자체 호스트 이름으로 앱이 실행됩니다. 운영체제를 패치하거나, Docker를 설정하거나, 인증서를 갱신할 필요가 없습니다."
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "저희 더블린 사업장입니다. 원하는 기계를 직접 제작해 보세요. {minCpu}–{maxCpu} 가상 CPU 및 {minMemory}–{maxMemory}그리고 비트코인으로 결제하세요."
   },
-  "dTTuZ+": {
-    "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price}/월, 부가가치세 별도. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
-  },
   "dUQeuG": {
     "defaultMessage": "패스키 계정 만들기"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
+  },
+  "e55cj/": {
+    "defaultMessage": "부터 {price}부가세는 제외합니다."
   },
   "eKEL/g": {
     "defaultMessage": "대기 중"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "주문하려면 로그인하세요."
+  },
+  "fNZGof": {
+    "defaultMessage": "런던에서 제공되는 VPS 호스팅 서비스 {price} 부가가치세 제외. {minCpu}–{maxCpu} 가상 CPU, 최대 {maxDisk} {diskType}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "fblXmJ": {
     "defaultMessage": "인스턴스 이름"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "계정 만들기"
-  },
-  "i/LmLC": {
-    "defaultMessage": "런던에서 이용 가능한 VPS 호스팅, 가격은 다음과 같습니다. {price}월별, 부가가치세 제외. {minCpu}–{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "i2/SmH": {
     "defaultMessage": "요금 부과는 VPS 구독 방식과 동일하며, 모든 앱에 대해 초기 설정 비용이 부과되지 않습니다."
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "캐나다 퀘벡에서 제공하는 VPS 호스팅 서비스 {price} 부가가치세 제외. {minCpu}–{maxCpu} 가상 CPU, 최대 {maxDisk} {diskType}비트코인을 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "사용자 지정 수신자 키를 사용하세요."
-  },
-  "vIv3vC": {
-    "defaultMessage": "캐나다 퀘벡에서 이용 가능한 VPS 호스팅 서비스 {price}월별, 부가가치세 제외. {minCpu}–{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인을 사용하여 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "vONi+O": {
     "defaultMessage": "국가"

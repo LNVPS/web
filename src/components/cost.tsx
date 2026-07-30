@@ -1,8 +1,8 @@
-import { FormattedMessage, FormattedNumber } from "react-intl";
+import { FormattedNumber, useIntl } from "react-intl";
 import useLogin from "../hooks/login";
 import { taxRateFor, useTaxRates } from "../hooks/tax";
 import useExchangeRates from "../hooks/useExchangeRates";
-import { convertAmount } from "../utils/currency";
+import { convertAmount, formatIntervalText } from "../utils/currency";
 
 interface Price {
   currency: string;
@@ -68,32 +68,8 @@ export function IntervalSuffix({
   interval: string;
   n?: number;
 }) {
-  const count = n ?? 1;
-  switch (interval) {
-    case "day":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {day} other {days}}"
-          values={{ n: count }}
-        />
-      );
-    case "month":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {month} other {months}}"
-          values={{ n: count }}
-        />
-      );
-    case "year":
-      return (
-        <FormattedMessage
-          defaultMessage="{n, plural, one {year} other {years}}"
-          values={{ n: count }}
-        />
-      );
-    default:
-      return <>{interval}</>;
-  }
+  const intl = useIntl();
+  return <>{formatIntervalText(intl, interval, n ?? 1)}</>;
 }
 
 export function CostAmount({

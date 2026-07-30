@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "在某个虚拟专用服务器（VPS）上运行一个比特币完整节点。 {regions}可通过闪电网络或链上方式使用比特币支付。从…… {price} 不含增值税。"
+  },
   "+Qebzr": {
     "defaultMessage": "链上地址"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "在某个地区的虚拟专用服务器（VPS）上运行一个比特币完整节点。 {regions}可通过闪电网络或链上方式使用比特币支付。来自 {price}每月，不含增值税。"
   },
   "0gAiqM": {
     "defaultMessage": "在爱尔兰提供 VPS 虚拟主机服务。"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "已关闭自动续订功能。请在到期前手动续订，以避免服务中断。"
   },
+  "V/V4bz": {
+    "defaultMessage": "在爱尔兰都柏林提供 VPS 主机服务，起价为： {price} 不含增值税。您可以根据自己的需求配置。 {maxCpu} 虚拟 CPU。可通过闪电网络或直接链上支付比特币。"
+  },
   "V7fgpY": {
     "defaultMessage": "正在完成登录…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "费率"
   },
-  "c3o/3B": {
-    "defaultMessage": "来自 {price} 每月，不含增值税。"
-  },
   "c5aQL+": {
     "defaultMessage": "选择一个应用程序，为其命名，然后付费。它会自动在自己的主机名上运行，并且已启用 TLS 加密，无需修复操作系统、配置 Docker 或更新证书。"
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "我们在都柏林的工厂。您可以根据自己的需求定制机器。 {minCpu}——{maxCpu} 虚拟 CPU 和 {minMemory}——{maxMemory}并使用比特币支付。"
   },
-  "dTTuZ+": {
-    "defaultMessage": "在爱尔兰都柏林提供 VPS 虚拟主机服务，起价为 {price}不含增值税，每月费用。您可以根据自己的需求定制配置。 {maxCpu} 虚拟 CPU。您可以使用比特币通过闪电网络或链上方式进行支付。"
-  },
   "dUQeuG": {
     "defaultMessage": "创建通行密钥账户"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "配置您的机器"
+  },
+  "e55cj/": {
+    "defaultMessage": "从…… {price}，不含增值税。"
   },
   "eKEL/g": {
     "defaultMessage": "待处理"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "登录以进行订购。"
+  },
+  "fNZGof": {
+    "defaultMessage": "伦敦的 VPS 主机，起价为 {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
   "fblXmJ": {
     "defaultMessage": "实例名称"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "创建账户"
-  },
-  "i/LmLC": {
-    "defaultMessage": "伦敦的 VPS 虚拟主机，起价为 {price}每月，不含增值税。 {minCpu}——{maxCpu} vCPU，最多 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
   "i2/SmH": {
     "defaultMessage": "计费方式类似于虚拟专用服务器（VPS）的订阅模式，任何应用程序都不收取设置费用。"
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "使用自定义收件人密钥。"
-  },
-  "vIv3vC": {
-    "defaultMessage": "位于加拿大魁北克的 VPS 虚拟主机，起价为 {price}每月，不含增值税。 {minCpu}——{maxCpu} vCPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
   "vONi+O": {
     "defaultMessage": "国家"

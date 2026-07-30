@@ -1,5 +1,5 @@
 import type { IntlShape } from "react-intl";
-import { CostPlanIntervalType, type VmCustomPrice, type VmTemplate } from "../api";
+import { type VmCustomPrice, type VmTemplate } from "../api";
 import { formatBytesText } from "./bytes";
 import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
 
@@ -31,11 +31,9 @@ import { BILLING_UNIT, SITE_URL, standardUnitPrice } from "./schema-org";
  * the price endpoint; a region with no price gets no markup rather than a
  * remembered figure.
  *
- * The billing period is monthly and is *not* in the response: custom templates
- * are always billed on a one-month interval
- * (`lnvps_api_common/src/pricing.rs:882`), which is why the payload has no
- * interval field to read. `LNVPS/api#302` asks for it on the wire; until then
- * this is the one figure here the API does not state.
+ * The billing period comes off the price response itself
+ * (`interval_amount`/`interval_type`), the same fields `vpsTemplateJsonLd`
+ * reads off a standard plan's `cost_plan` below.
  *
  * Ex-VAT, like every other price on the site logged out: tax is applied at
  * payment against the buyer's country, so it cannot be in a crawled figure.
@@ -69,10 +67,10 @@ export function regionOfferJsonLd(opts: {
         price: offerPrice,
         priceCurrency: opts.price.currency,
         valueAddedTaxIncluded: false,
-        billingDuration: 1,
+        billingDuration: opts.price.interval_amount,
         billingIncrement: 1,
-        unitCode: BILLING_UNIT[CostPlanIntervalType.MONTH].code,
-        unitText: BILLING_UNIT[CostPlanIntervalType.MONTH].text,
+        unitCode: BILLING_UNIT[opts.price.interval_type].code,
+        unitText: BILLING_UNIT[opts.price.interval_type].text,
       },
     },
   };

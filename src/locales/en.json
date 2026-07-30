@@ -20,6 +20,9 @@
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
+  "+Mo6Oy": {
+    "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price} ex-VAT."
+  },
   "+Qebzr": {
     "defaultMessage": "On-chain Address"
   },
@@ -79,9 +82,6 @@
   },
   "0RxidJ": {
     "defaultMessage": "LNURL"
-  },
-  "0eyb8X": {
-    "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price}/month ex-VAT."
   },
   "0gAiqM": {
     "defaultMessage": "VPS hosting in Ireland"
@@ -1316,6 +1316,9 @@
   "Uvhzx4": {
     "defaultMessage": "Automatic renewal is off. Renew manually before expiry to avoid interruption."
   },
+  "V/V4bz": {
+    "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
+  },
   "V7fgpY": {
     "defaultMessage": "Completing sign-in…"
   },
@@ -1541,9 +1544,6 @@
   "c0b5XV": {
     "defaultMessage": "Rate"
   },
-  "c3o/3B": {
-    "defaultMessage": "From {price} per month, excluding VAT."
-  },
   "c5aQL+": {
     "defaultMessage": "Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working — no OS to patch, no Docker to configure, no certificate to renew."
   },
@@ -1613,9 +1613,6 @@
   "dSDJft": {
     "defaultMessage": "Our Dublin site. Build the machine you want between {minCpu}–{maxCpu} vCPU and {minMemory}–{maxMemory}, and pay for it in Bitcoin."
   },
-  "dTTuZ+": {
-    "defaultMessage": "VPS hosting in Dublin, Ireland from {price}/month ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
-  },
   "dUQeuG": {
     "defaultMessage": "Create a passkey account"
   },
@@ -1648,6 +1645,9 @@
   },
   "e4ehrh": {
     "defaultMessage": "Build your machine"
+  },
+  "e55cj/": {
+    "defaultMessage": "From {price}, excluding VAT."
   },
   "eKEL/g": {
     "defaultMessage": "Pending"
@@ -1693,6 +1693,9 @@
   },
   "fNSGnl": {
     "defaultMessage": "Login To Order"
+  },
+  "fNZGof": {
+    "defaultMessage": "VPS hosting in London from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
   "fblXmJ": {
     "defaultMessage": "Instance name"
@@ -1777,9 +1780,6 @@
   },
   "huqKGl": {
     "defaultMessage": "Create account"
-  },
-  "i/LmLC": {
-    "defaultMessage": "VPS hosting in London from {price}/month ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
@@ -2105,6 +2105,9 @@
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
   },
+  "phIEA8": {
+    "defaultMessage": "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2311,9 +2314,6 @@
   },
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
-  },
-  "vIv3vC": {
-    "defaultMessage": "VPS hosting in Quebec, Canada from {price}/month ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
   "vONi+O": {
     "defaultMessage": "Country"

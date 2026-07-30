@@ -187,7 +187,7 @@ export function AppResources({
 export function AppCard({ app }: { app: App }) {
   return (
     <Link
-      to={`/apps/${app.id}`}
+      to={`/apps/${app.name}`}
       className="flex flex-col gap-3 rounded-sm border border-cyber-border bg-cyber-panel p-4 transition-all duration-200 hover:border-cyber-primary hover:shadow-neon-sm"
     >
       <div className="flex items-center gap-3">

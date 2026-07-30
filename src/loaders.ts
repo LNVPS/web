@@ -148,24 +148,27 @@ export async function statusLoader(): Promise<StatusLoaderData> {
 }
 
 /**
- * `/apps/:id` is the public product page for an orderable managed app, so it
- * has to server-render a real title and h1 rather than fetch the app in an
- * effect. The catalog is public, so fetch unauthenticated — the same client the
- * homepage uses for its app section.
+ * `/apps/:slug` is the public product page for an orderable managed app,
+ * addressed by `app.name` — the API's URL/DNS-safe slug (`LNVPS/web#94`) —
+ * so it has to server-render a real title and h1 rather than fetch the app in
+ * an effect. There is no by-slug endpoint, so this reads the same public
+ * catalog `appsLoader` and the homepage already fetch and cache, and finds
+ * the row there — one more app in the catalog costs no new request here.
  */
 export async function appLoader({
   params,
 }: LoaderFunctionArgs): Promise<AppLoaderData> {
-  const id = Number(params.id);
-  if (!Number.isFinite(id)) return { app: undefined };
+  const slug = params.slug;
+  if (!slug) return { app: undefined };
 
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
-  const app = await cached(`app_${id}`, () => api.getApp(id));
+  const apps = await cached("apps", () => api.listApps());
+  const app = apps?.find((a) => a.name === slug);
   return { app };
 }
 
 /**
- * `/apps` is the public catalog listing, so like `/apps/:id` it has to
+ * `/apps` is the public catalog listing, so like `/apps/:slug` it has to
  * server-render its content rather than fetch in an effect. Shares the `apps`
  * cache entry with `homeLoader`, which fetches the same unauthenticated list.
  */
@@ -214,8 +217,9 @@ export function regionLoader(regionId: number, opts?: { apps?: boolean }) {
  * hardcoded one. The page's copy is static, so an undefined app costs the
  * structured data and nothing else.
  *
- * Shares the `app_2` cache entry with `appLoader`, which fetches the same
- * unauthenticated record for `/apps/2`.
+ * Its own `app_2` cache entry, not the catalog `appLoader` reads from
+ * (`LNVPS/web#94`) — a single-app fetch by id, cheaper than filtering the
+ * whole list for a page that only wants this one row.
  */
 export async function blossomHostingLoader(): Promise<AppLoaderData> {
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);

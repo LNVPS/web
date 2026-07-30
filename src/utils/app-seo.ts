@@ -93,7 +93,7 @@ export function appSeoDescription(
  * and the meta tag cannot say different things.
  */
 export function appJsonLd(app: App, intl: IntlShape): object {
-  const url = `${SITE_URL}/apps/${app.id}`;
+  const url = `${SITE_URL}/apps/${app.name}`;
   const offerPrice = standardUnitPrice(app.amount, app.currency);
   const description = appSeoDescription(app, intl);
   return {

@@ -35,7 +35,7 @@ function Block({ title, children }: { title: ReactNode; children: ReactNode }) {
 }
 
 /**
- * The public catalog listing. `/apps/:id` is the product page for one app; this
+ * The public catalog listing. `/apps/:slug` is the product page for one app; this
  * is the page the launch copy's "browse the catalog" call to action points at,
  * so it has to server-render a real title, h1 and the app list.
  */
@@ -65,7 +65,7 @@ export function AppsPage() {
       ) : (
         // No catalog means the fetch failed or returned nothing. The copy below
         // still renders, but a catalog page with no catalog is broken, not a
-        // page worth ranking. Same reasoning as `/apps/:id`: keep it out of the
+        // page worth ranking. Same reasoning as `/apps/:slug`: keep it out of the
         // index rather than serve a soft 404 (`renderPage` returns 200 always).
         <Seo noindex={true} />
       )}

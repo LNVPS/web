@@ -150,7 +150,7 @@ export const routes: RouteObject[] = [
         loader: appsLoader,
       },
       {
-        path: "/apps/:id",
+        path: "/apps/:slug",
         element: <AppPage />,
         loader: appLoader,
       },

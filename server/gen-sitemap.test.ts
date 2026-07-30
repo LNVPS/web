@@ -25,7 +25,7 @@ function article(d: string, lang?: string): ArchiveEvent {
 describe("buildSitemapXml", () => {
   const xml = buildSitemapXml(
     [article("post"), article("post-de", "de")],
-    [1, 6],
+    ["strfry", "route96"],
   );
 
   test("a translation is its own URL, not only an alternate", () => {
@@ -49,9 +49,9 @@ describe("buildSitemapXml", () => {
     }
   });
 
-  test("app URLs come from the ids it was given", () => {
-    expect(xml).toContain("<loc>https://lnvps.net/apps/6</loc>");
-    expect(xml).not.toContain("<loc>https://lnvps.net/apps/2</loc>");
+  test("app URLs come from the slugs it was given", () => {
+    expect(xml).toContain("<loc>https://lnvps.net/apps/route96</loc>");
+    expect(xml).not.toContain("<loc>https://lnvps.net/apps/blossom</loc>");
   });
 
   test("keeps every static route", () => {

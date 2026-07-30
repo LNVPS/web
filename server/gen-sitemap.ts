@@ -4,7 +4,8 @@
  *
  * The hand-maintained file listed none of the articles and went stale against
  * the catalog, so both moving parts are read from their source: the articles
- * from `src/news-archive.json`, the app ids from the public catalog endpoint.
+ * from `src/news-archive.json`, the app slugs (`name`, the URL/DNS-safe field
+ * `/apps/:slug` routes on — `LNVPS/web#94`) from the public catalog endpoint.
  * A build with no catalog fails rather than publishing a sitemap that quietly
  * drops product pages.
  *
@@ -133,14 +134,14 @@ function newsEntries(archive: Array<ArchiveEvent>): Array<string> {
 
 export function buildSitemapXml(
   archive: Array<ArchiveEvent>,
-  appIds: Array<number>,
+  appSlugs: Array<string>,
 ): string {
   const entries = [
     ...STATIC_ENTRIES.map((e) =>
       xmlEntry(e.path, { changefreq: e.changefreq, priority: e.priority }),
     ),
-    ...appIds.map((id) =>
-      xmlEntry(`/apps/${id}`, { changefreq: "monthly", priority: "0.8" }),
+    ...appSlugs.map((slug) =>
+      xmlEntry(`/apps/${slug}`, { changefreq: "monthly", priority: "0.8" }),
     ),
     ...newsEntries(archive),
   ];
@@ -154,13 +155,15 @@ export function buildSitemapXml(
   ].join("\n");
 }
 
-async function fetchAppIds(): Promise<Array<number>> {
+async function fetchAppSlugs(): Promise<Array<string>> {
   const res = await fetch(APPS_URL, { signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`${APPS_URL} returned ${res.status}`);
-  const body = (await res.json()) as { data?: Array<{ id: number }> };
-  const ids = (body.data ?? []).map((a) => a.id).sort((a, b) => a - b);
-  if (ids.length === 0) throw new Error(`${APPS_URL} returned no apps`);
-  return ids;
+  const body = (await res.json()) as { data?: Array<{ name: string }> };
+  const slugs = (body.data ?? [])
+    .map((a) => a.name)
+    .sort((a, b) => a.localeCompare(b));
+  if (slugs.length === 0) throw new Error(`${APPS_URL} returned no apps`);
+  return slugs;
 }
 
 const RETRY_ATTEMPTS = 3;
@@ -193,8 +196,8 @@ if (import.meta.main) {
   const archive = JSON.parse(
     readFileSync(ARCHIVE_PATH, "utf-8"),
   ) as Array<ArchiveEvent>;
-  const appIds = await withRetry(fetchAppIds);
-  const xml = buildSitemapXml(archive, appIds);
+  const appSlugs = await withRetry(fetchAppSlugs);
+  const xml = buildSitemapXml(archive, appSlugs);
 
   for (const dir of OUT_DIRS) {
     if (!existsSync(dir)) continue;
@@ -203,6 +206,6 @@ if (import.meta.main) {
     console.log(`wrote ${out}`);
   }
   console.log(
-    `sitemap: ${STATIC_ENTRIES.length} static + ${appIds.length} apps + ${archive.length} news URLs`,
+    `sitemap: ${STATIC_ENTRIES.length} static + ${appSlugs.length} apps + ${archive.length} news URLs`,
   );
 }

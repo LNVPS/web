@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { App, AppDeployment, LNVpsApi } from "../api";
 import { ApiUrl } from "../const";
@@ -154,8 +154,6 @@ export function AppPage() {
   const login = useLogin();
   const intl = useIntl();
   const { formatMessage } = intl;
-  const { id } = useParams<{ id: string }>();
-  const appId = Number(id);
   // Seeded by appLoader so the first (server) render already has the app, and
   // therefore a real title and h1. The effect below still refreshes it.
   const { app: loadedApp } = useLoaderData<AppLoaderData>();
@@ -165,8 +163,13 @@ export function AppPage() {
   const [readme, setReadme] = useState<string>();
   const [error, setError] = useState<string>();
 
+  // The route param is the slug, which the id-keyed deployment/app-detail
+  // endpoints do not take — read the numeric id off what the loader already
+  // resolved rather than re-deriving it from the URL.
+  const appId = loadedApp?.id;
+
   useEffect(() => {
-    if (!Number.isFinite(appId)) return;
+    if (appId === undefined) return;
     // The catalog is public; browse with an unauthenticated client when logged
     // out. Deployments are user-owned, so only fetch those when logged in.
     const api = login?.api ?? new LNVpsApi(ApiUrl, undefined);
@@ -190,7 +193,7 @@ export function AppPage() {
       {app ? (
         <Seo
           title={appSeoTitle(app, intl)}
-          canonical={`/apps/${app.id}`}
+          canonical={`/apps/${app.name}`}
           description={
             appSeoDescription(app, intl) ??
             formatMessage(

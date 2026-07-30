@@ -87,9 +87,10 @@ export const ServiceBirth = new Date("2024-06-05T00:00:00Z");
  * Catalog id of Route96, the app `/blossom-server-hosting` sells.
  *
  * A use-case landing page is about one specific app, so the id is part of what
- * the page *is* — it is also the target of the page's call to action
- * (`/apps/2`). Kept here rather than in the page so the route loader and the
- * page cannot drift apart.
+ * the page *is* — the loader fetches this app and only this app. Kept here
+ * rather than in the page so the route loader and the page cannot drift
+ * apart. The page's call-to-action link targets the fetched app's own slug
+ * (`app.name`, `LNVPS/web#94`), not this id.
  */
 export const BlossomAppId = 2;
 

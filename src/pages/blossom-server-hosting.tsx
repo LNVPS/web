@@ -7,7 +7,6 @@ import { appJsonLd } from "../utils/app-seo";
 import { faqJsonLd, type FaqItem } from "../utils/faq-seo";
 import { formatPriceText } from "../utils/currency";
 import { formatBytesText } from "../utils/bytes";
-import { BlossomAppId } from "../const";
 import type { AppLoaderData } from "../loaders";
 
 /** Section heading in the site's eyebrow style, kept as an h2 for structure.
@@ -41,8 +40,8 @@ function Section({
  * NIP-96 media server in the managed app catalog (`LNVPS/web#38`).
  *
  * The copy is fixed marketing prose, so the page renders in full even when the
- * catalog is unreachable — unlike `/apps/:id` there is no id to resolve and no
- * empty shell to keep out of the index. The loader exists only to supply the
+ * catalog is unreachable — unlike `/apps/:slug` there is no slug to resolve and
+ * no empty shell to keep out of the index. The loader exists only to supply the
  * app's real price to the `Product`/`Offer` schema; without it the page simply
  * ships no product markup.
  *
@@ -343,7 +342,7 @@ export function BlossomServerHostingPage() {
 
         <div>
           <Link
-            to={`/apps/${BlossomAppId}`}
+            to={app ? `/apps/${app.name}` : "/apps"}
             className="inline-block rounded-sm border border-cyber-primary bg-cyber-primary/20 px-4 py-2 font-bold uppercase text-cyber-primary hover:bg-cyber-primary/30 hover:shadow-neon"
           >
             {priceNode ? (

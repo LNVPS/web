@@ -5,11 +5,11 @@ import { formatIntervalText, formatPriceText, formatPriceWithInterval } from "./
 const intl = createIntl({ locale: "en", messages: {} });
 
 describe("formatIntervalText", () => {
-  test("bare word at one, count prefixed above it", () => {
+  test("the word only — no count, callers that already print their own count depend on this", () => {
     expect(formatIntervalText(intl, "month", 1)).toBe("month");
-    expect(formatIntervalText(intl, "month", 3)).toBe("3 months");
+    expect(formatIntervalText(intl, "month", 3)).toBe("months");
     expect(formatIntervalText(intl, "day", 1)).toBe("day");
-    expect(formatIntervalText(intl, "year", 2)).toBe("2 years");
+    expect(formatIntervalText(intl, "year", 2)).toBe("years");
   });
 
   test("defaults to one when n is omitted", () => {

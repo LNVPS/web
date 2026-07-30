@@ -17,6 +17,9 @@
   "+H6Rvj": {
     "defaultMessage": "Exploitez votre propre serveur multimédia Blossom et NIP-96 pour {price}/mois. Route96 peut être déployé en quelques minutes sur son propre nom de domaine, avec un stockage persistant et le protocole TLS inclus."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{an} other{années}}"
+  },
   "+Mo6Oy": {
     "defaultMessage": "Exécutez un nœud complet Bitcoin sur un serveur virtuel privé (VPS) situé à {regions}Vous pouvez payer en Bitcoin via le réseau Lightning ou directement sur la chaîne de blocs. À partir de {price} hors TVA."
   },
@@ -127,9 +130,6 @@
   },
   "1aBLDj": {
     "defaultMessage": "Effectuez un paiement depuis n’importe quel portefeuille Lightning pour renouveler cet abonnement."
-  },
-  "1bHQJa": {
-    "defaultMessage": "{n,plural,one{mois} other{# mois}}"
   },
   "1kZ3H0": {
     "defaultMessage": "Voir la transaction"
@@ -359,6 +359,9 @@
   "7NFfmz": {
     "defaultMessage": "Produits"
   },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{jour} other{jours}}"
+  },
   "7agV2X": {
     "defaultMessage": "Relais"
   },
@@ -565,9 +568,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
-  },
-  "Cbg9PU": {
-    "defaultMessage": "{n,plural,one{jour} other{# jours}}"
   },
   "Cououe": {
     "defaultMessage": "Connectez-vous pour déployer cette application."
@@ -1375,6 +1375,9 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Déployer et gérer des serveurs"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{mois} other{mois}}"
   },
   "X/4SWn": {
     "defaultMessage": "Hébergement VPS au Québec, au Canada. Choisissez votre processeur, votre mémoire et votre disque dur. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs."
@@ -2359,9 +2362,6 @@
   },
   "wbsq7O": {
     "defaultMessage": "Utilisation"
-  },
-  "wcUmWu": {
-    "defaultMessage": "{n,plural,one{an} other{# années}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois, sans frais d’installation."

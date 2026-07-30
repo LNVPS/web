@@ -17,6 +17,9 @@
   "+H6Rvj": {
     "defaultMessage": "Запустите собственный медиасервер Blossom и NIP-96 для {price}В месяц. Route96 — развертывание занимает всего несколько минут на собственном сервере с использованием постоянного хранилища и поддержкой TLS."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{год} other{лет}}"
+  },
   "+Mo6Oy": {
     "defaultMessage": "Запустите полную ноду Bitcoin на виртуальном частном сервере в… {regions}Оплачивайте в биткоинах через Lightning Network или напрямую, в основной сети. С {price} без НДС."
   },
@@ -127,9 +130,6 @@
   },
   "1aBLDj": {
     "defaultMessage": "Оплатите подписку с любого кошелька Lightning."
-  },
-  "1bHQJa": {
-    "defaultMessage": "{n,plural,one{месяц} other{# месяцы}}"
   },
   "1kZ3H0": {
     "defaultMessage": "Посмотреть транзакцию"
@@ -359,6 +359,9 @@
   "7NFfmz": {
     "defaultMessage": "Продукты"
   },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{день} other{дней}}"
+  },
   "7agV2X": {
     "defaultMessage": "Эстафета"
   },
@@ -565,9 +568,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Обратитесь за помощью к команде."
-  },
-  "Cbg9PU": {
-    "defaultMessage": "{n,plural,one{день} other{# дней}}"
   },
   "Cououe": {
     "defaultMessage": "Войдите в систему, чтобы установить это приложение."
@@ -1375,6 +1375,9 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Разворачивайте и управляйте серверами"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{месяц} other{месяцы}}"
   },
   "X/4SWn": {
     "defaultMessage": "Виртуальный выделенный сервер (VPS) в Квебеке, Канада. Выберите процессор, объем памяти и дисковое пространство. Оплачивайте в биткоинах через Lightning Network или напрямую."
@@ -2359,9 +2362,6 @@
   },
   "wbsq7O": {
     "defaultMessage": "Применение/Использование"
-  },
-  "wcUmWu": {
-    "defaultMessage": "{n,plural,one{год} other{# лет}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# реализация ретранслятора} few{# реализации ретранслятора} many{# реализаций ретранслятора} other{# реализации ретранслятора}}, начиная с {price} в месяц, без платы за установку."

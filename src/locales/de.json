@@ -17,6 +17,9 @@
   "+H6Rvj": {
     "defaultMessage": "Betreiben Sie Ihren eigenen Blossom- und NIP-96-Medienserver für {price}/Monat. Route96 lässt sich innerhalb von Minuten auf seinem eigenen Hostnamen installieren und bietet persistente Datenspeicherung sowie TLS-Unterstützung."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{Jahr} other{Jahre}}"
+  },
   "+Mo6Oy": {
     "defaultMessage": "Betreiben Sie einen vollständigen Bitcoin-Knoten auf einem VPS in {regions}Bezahlen Sie mit Bitcoin über das Lightning-Netzwerk oder direkt in der Blockchain. Ab {price} zzgl. Mehrwertsteuer."
   },
@@ -127,9 +130,6 @@
   },
   "1aBLDj": {
     "defaultMessage": "Zahlen Sie mit einer beliebigen Lightning-Wallet, um dieses Abonnement aufzuladen."
-  },
-  "1bHQJa": {
-    "defaultMessage": "{n,plural,one{Monat} other{# Monate}}"
   },
   "1kZ3H0": {
     "defaultMessage": "Transaktion ansehen"
@@ -359,6 +359,9 @@
   "7NFfmz": {
     "defaultMessage": "Produkte"
   },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{Tag} other{Tage}}"
+  },
   "7agV2X": {
     "defaultMessage": "Weiterleiten / Relais"
   },
@@ -565,9 +568,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
-  },
-  "Cbg9PU": {
-    "defaultMessage": "{n,plural,one{Tag} other{# Tage}}"
   },
   "Cououe": {
     "defaultMessage": "Melden Sie sich an, um diese App zu installieren."
@@ -1375,6 +1375,9 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Server bereitstellen & verwalten"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{Monat} other{Monate}}"
   },
   "X/4SWn": {
     "defaultMessage": "VPS-Hosting in Québec, Kanada. Wählen Sie Ihre CPU, Ihren Speicher und Ihre Festplatte aus. Bezahlen Sie in Bitcoin über Lightning oder direkt in der Bitcoin-Blockchain."
@@ -2359,9 +2362,6 @@
   },
   "wbsq7O": {
     "defaultMessage": "Anwendung"
-  },
-  "wcUmWu": {
-    "defaultMessage": "{n,plural,one{Jahr} other{# Jahre}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# Relais-Implementierung} other{# Relais-Implementierungen}}, von {price} pro Monat, ohne Einrichtungskosten."

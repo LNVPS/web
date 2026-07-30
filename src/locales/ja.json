@@ -17,6 +17,9 @@
   "+H6Rvj": {
     "defaultMessage": "BlossomおよびNIP-96メディアサーバーを自分で運用して、 {price}1か月に1回。Route96は、独自のホスト名で数分以内に起動し、永続ストレージとTLSが組み込まれています。"
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{年} other{年}}"
+  },
   "+Mo6Oy": {
     "defaultMessage": "VPS上でビットコインのフルノードを稼働させる。 {regions}ビットコインで、ライトニングネットワークまたはオンチェーン経由で支払ってください。 {price} 付加価値税抜き。"
   },
@@ -127,9 +130,6 @@
   },
   "1aBLDj": {
     "defaultMessage": "このサブスクリプションにチャージするには、任意のLightningウォレットからお支払いください。"
-  },
-  "1bHQJa": {
-    "defaultMessage": "{n,plural,one{月} other{# か月}}"
   },
   "1kZ3H0": {
     "defaultMessage": "取引を表示"
@@ -359,6 +359,9 @@
   "7NFfmz": {
     "defaultMessage": "製品"
   },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{日} other{日}}"
+  },
   "7agV2X": {
     "defaultMessage": "リレー"
   },
@@ -565,9 +568,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
-  },
-  "Cbg9PU": {
-    "defaultMessage": "{n,plural,one{日} other{# 日}}"
   },
   "Cououe": {
     "defaultMessage": "このアプリを公開するには、ログインしてください。"
@@ -1375,6 +1375,9 @@
   },
   "WwXOJ8": {
     "defaultMessage": "サーバーのデプロイと管理"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{月} other{か月}}"
   },
   "X/4SWn": {
     "defaultMessage": "カナダのケベック州でVPSホスティングをご利用いただけます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでのビットコイン決済でお願いします。"
@@ -2359,9 +2362,6 @@
   },
   "wbsq7O": {
     "defaultMessage": "使用方法"
-  },
-  "wcUmWu": {
-    "defaultMessage": "{n,plural,one{年} other{# 年}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}〜から {price} 月額料金制で、初期費用はかかりません。"

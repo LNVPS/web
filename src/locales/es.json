@@ -17,6 +17,9 @@
   "+H6Rvj": {
     "defaultMessage": "Ejecute su propio servidor de medios Blossom y NIP-96. {price}/mes. Route96 se puede implementar en cuestión de minutos en su propio servidor, con almacenamiento persistente y TLS incluido."
   },
+  "+JVG/q": {
+    "defaultMessage": "{n,plural,one{año} other{años}}"
+  },
   "+Mo6Oy": {
     "defaultMessage": "Ejecute un nodo completo de Bitcoin en un servidor virtual privado (VPS) ubicado en {regions}Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques. Desde {price} sin IVA."
   },
@@ -127,9 +130,6 @@
   },
   "1aBLDj": {
     "defaultMessage": "Pague desde cualquier billetera Lightning para recargar esta suscripción."
-  },
-  "1bHQJa": {
-    "defaultMessage": "{n,plural,one{mes} other{# meses}}"
   },
   "1kZ3H0": {
     "defaultMessage": "Ver transacción"
@@ -359,6 +359,9 @@
   "7NFfmz": {
     "defaultMessage": "Productos"
   },
+  "7Xz8h2": {
+    "defaultMessage": "{n,plural,one{día} other{días}}"
+  },
   "7agV2X": {
     "defaultMessage": "Relevo."
   },
@@ -565,9 +568,6 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Pide ayuda al equipo."
-  },
-  "Cbg9PU": {
-    "defaultMessage": "{n,plural,one{día} other{# días}}"
   },
   "Cououe": {
     "defaultMessage": "Inicie sesión para implementar esta aplicación."
@@ -1375,6 +1375,9 @@
   },
   "WwXOJ8": {
     "defaultMessage": "Despliega y gestiona servidores"
+  },
+  "WxTcqt": {
+    "defaultMessage": "{n,plural,one{mes} other{meses}}"
   },
   "X/4SWn": {
     "defaultMessage": "Alojamiento VPS en Quebec, Canadá. Elija su CPU, memoria y disco. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
@@ -2359,9 +2362,6 @@
   },
   "wbsq7O": {
     "defaultMessage": "Uso."
-  },
-  "wcUmWu": {
-    "defaultMessage": "{n,plural,one{año} other{# años}}"
   },
   "wgMz3h": {
     "defaultMessage": "{count,plural,one{# implementación del relé} other{# implementaciones de relés}}, desde {price} por mes, sin coste de instalación."

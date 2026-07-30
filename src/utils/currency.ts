@@ -54,17 +54,17 @@ export function formatIntervalText(
   switch (interval) {
     case "day":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {day} other {# days}}" },
+        { defaultMessage: "{n, plural, one {day} other {days}}" },
         { n },
       );
     case "month":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {month} other {# months}}" },
+        { defaultMessage: "{n, plural, one {month} other {months}}" },
         { n },
       );
     case "year":
       return intl.formatMessage(
-        { defaultMessage: "{n, plural, one {year} other {# years}}" },
+        { defaultMessage: "{n, plural, one {year} other {years}}" },
         { n },
       );
     default:
@@ -78,7 +78,10 @@ export function formatIntervalText(
  *
  * `interval_type` falls back to month when absent, so a price from an API
  * that hasn't shipped the field yet still reads right instead of printing
- * the literal word "undefined".
+ * the literal word "undefined". The count is printed here, not inside
+ * `formatIntervalText` — `IntervalSuffix` callers that already show their
+ * own count (`payment-flow.tsx`, `vm-billing.tsx`) only want the word from
+ * that helper, so the digit belongs at the one call site that needs it.
  */
 export function formatPriceWithInterval(
   intl: IntlShape,
@@ -89,12 +92,10 @@ export function formatPriceWithInterval(
     interval_amount?: number;
   },
 ): string {
-  const interval = formatIntervalText(
-    intl,
-    cost.interval_type ?? "month",
-    cost.interval_amount,
-  );
-  return `${formatPriceText(intl, cost)}/${interval}`;
+  const n = cost.interval_amount ?? 1;
+  const interval = formatIntervalText(intl, cost.interval_type ?? "month", n);
+  const count = n > 1 ? `${n} ` : "";
+  return `${formatPriceText(intl, cost)}/${count}${interval}`;
 }
 
 /** A currency's rate relative to the snapshot base (the base itself is 1). */

@@ -9,6 +9,7 @@ import {
   App,
 } from "./api";
 import { regionCustomTemplate, regionEntrySpec } from "./utils/regions";
+import { findApp } from "./utils/apps";
 import { ApiUrl, BlossomAppId, System } from "./const";
 import { filterArticlesByLocale } from "./utils/news-locale";
 import { mergeNewsWithArchive } from "./utils/news-archive";
@@ -154,6 +155,10 @@ export async function statusLoader(): Promise<StatusLoaderData> {
  * an effect. There is no by-slug endpoint, so this reads the same public
  * catalog `appsLoader` and the homepage already fetch and cache, and finds
  * the row there — one more app in the catalog costs no new request here.
+ *
+ * `findApp` also matches a numeric param against `id`, so a link off the old
+ * (already-indexed) `/apps/<id>` sitemap entries still resolves instead of
+ * turning into a crawled `noindex` at 200.
  */
 export async function appLoader({
   params,
@@ -163,8 +168,7 @@ export async function appLoader({
 
   const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
   const apps = await cached("apps", () => api.listApps());
-  const app = apps?.find((a) => a.name === slug);
-  return { app };
+  return { app: findApp(apps, slug) };
 }
 
 /**

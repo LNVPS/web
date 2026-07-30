@@ -363,6 +363,21 @@ export default function VmPage() {
               <pre className="select-all bg-cyber-panel px-4 py-3 rounded-sm font-mono text-sm text-cyber-text-bright w-fit max-w-full overflow-x-auto">
                 ssh {state.image.default_username}@{bestHost()}
               </pre>
+              {(state.host_ssh_keys?.length ?? 0) > 0 && (
+                <div className="mt-3 flex flex-col gap-2">
+                  <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+                    <FormattedMessage defaultMessage="Verify the host key on first connect" />
+                  </span>
+                  {state.host_ssh_keys.map((k) => (
+                    <pre
+                      key={k.fingerprint_sha256}
+                      className="select-all bg-cyber-panel px-4 py-2 rounded-sm font-mono text-xs text-cyber-muted w-fit max-w-full overflow-x-auto"
+                    >
+                      {k.key_type} {k.fingerprint_sha256}
+                    </pre>
+                  ))}
+                </div>
+              )}
             </SectionCard>
           )}
 

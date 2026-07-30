@@ -114,9 +114,7 @@ export function CostAmount({
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>
-          /{cost.interval_amount && cost.interval_amount > 1 && (
-            <>{cost.interval_amount} </>
-          )}
+          /{(cost.interval_amount ?? 1) > 1 && <>{cost.interval_amount} </>}
           <IntervalSuffix interval={cost.interval_type} n={cost.interval_amount} />
         </>
       )}

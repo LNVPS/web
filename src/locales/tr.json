@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "Evet, her yerden çıkış yap"
+  },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "İrlanda'nın Dublin şehrinde VPS sunucu hizmeti. {price} KDV dahil değil. İstediğiniz özelliklere göre özelleştirin. {maxCpu} sanal CPU. Ödemenizi Bitcoin ile Lightning ağı üzerinden veya doğrudan blok zinciri üzerinde yapın."
   },
+  "V3ka34": {
+    "defaultMessage": "Etkin oturumlar"
+  },
   "V7fgpY": {
     "defaultMessage": "Giriş tamamlanıyor…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "Kendi Nostr rölenizi çalıştırın"
   },
+  "XW6btx": {
+    "defaultMessage": "Bu cihaz dahil tüm tarayıcı ve cihazlardan çıkış yapar. Artık güvenmediğiniz bir yerde oturum açtıysanız bunu kullanın."
+  },
   "XW9RGA": {
     "defaultMessage": "Bir hesaba ihtiyacım var mı?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Alan Adı Ekle"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "Her yerden çıkış yap"
   },
   "ZmOSyB": {
     "defaultMessage": "LNVPS ekibiyle iletişime geçin. VPS hosting hizmetimiz veya ödeme seçenekleri hakkında sorularınız mı var? Size yardımcı olmak için buradayız."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "Son 12 Ay İçindeki Aylık Çalışma Süresi"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Nostr anahtarıyla oturum açıyorsunuz, bu yüzden iptal edilecek kayıtlı oturum yok. Her istek ayrı ayrı imzalanır."
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarıyla giriş yapın. Herhangi bir hesaba geçiş anahtarı ekleyebilirsiniz."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."
+  },
+  "yfhNX4": {
+    "defaultMessage": "Oturum açmak 30 gün geçerli bir oturum oluşturur. Birinin ele geçirildiğini düşünüyorsanız tümünü iptal edin."
   },
   "yracY5": {
     "defaultMessage": "VPS Londra — Birleşik Krallık VPS, Bitcoin ile ödeme"

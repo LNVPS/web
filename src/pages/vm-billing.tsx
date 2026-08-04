@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { VmInstance, VmPayment, SavedPaymentMethod } from "../api";
 import useLogin from "../hooks/login";
+import { openInvoice } from "../utils";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import CostLabel, { IntervalSuffix } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
@@ -159,10 +160,7 @@ export function VmBillingPage() {
       <div
         title="Generate Invoice"
         className="cursor-pointer"
-        onClick={async () => {
-          const l = await login?.api.invoiceLink(a.id);
-          window.open(l, "_blank");
-        }}
+        onClick={() => openInvoice(login?.api, a.id)}
       >
         <Icon name="printer" />
       </div>

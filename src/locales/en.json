@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "Yes, sign out everywhere"
+  },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
   },
+  "V3ka34": {
+    "defaultMessage": "Active Sessions"
+  },
   "V7fgpY": {
     "defaultMessage": "Completing sign-in…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "Run your own Nostr relay"
   },
+  "XW6btx": {
+    "defaultMessage": "Signs you out of every browser and device, including this one. Use this if you've signed in somewhere you no longer trust."
+  },
   "XW9RGA": {
     "defaultMessage": "Do I need an account?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Add Domain"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "Sign out everywhere"
   },
   "ZmOSyB": {
     "defaultMessage": "Get in touch with the LNVPS team. Have questions about our VPS hosting or payment options? We're here to help."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
+  },
+  "hXAhO/": {
+    "defaultMessage": "You sign in with a Nostr key, so there are no stored sessions to revoke. Each request is signed individually."
   },
   "hs3HVz": {
     "defaultMessage": "Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."
+  },
+  "yfhNX4": {
+    "defaultMessage": "Signing in creates a session that stays valid for 30 days. Revoke them all if you think one has been exposed."
   },
   "yracY5": {
     "defaultMessage": "VPS London — UK VPS Paid in Bitcoin"

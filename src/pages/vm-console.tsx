@@ -19,6 +19,7 @@ export function VmConsolePage() {
   const wsRef = useRef<WebSocket | null>(null);
   const termObjRef = useRef<Terminal | null>(null);
   const [status, setStatus] = useState<ConnectionStatus>("connecting");
+  const [error, setError] = useState<string>();
 
   function cleanup() {
     wsRef.current?.close();
@@ -32,8 +33,20 @@ export function VmConsolePage() {
 
     cleanup();
     setStatus("connecting");
+    setError(undefined);
 
-    const ws = await login.api.connect_terminal(state.id);
+    // Connecting now involves an HTTP round trip to mint a single-use ticket
+    // before the socket is opened, so this can fail before we ever get a
+    // WebSocket. Without a catch the page sits on "Connecting..." forever with
+    // no way to retry (the Reconnect button only shows when disconnected).
+    let ws: WebSocket;
+    try {
+      ws = await login.api.connect_terminal(state.id);
+    } catch (e) {
+      setStatus("disconnected");
+      setError(e instanceof Error ? e.message : String(e));
+      return;
+    }
 
     wsRef.current = ws;
 
@@ -75,8 +88,19 @@ export function VmConsolePage() {
 
       cleanup();
       setStatus("connecting");
+      setError(undefined);
 
-      const ws = await login.api.connect_terminal(state.id);
+      // See openTerminal: the ticket request can fail before a socket exists.
+      let ws: WebSocket;
+      try {
+        ws = await login.api.connect_terminal(state.id);
+      } catch (e) {
+        if (!cancelled) {
+          setStatus("disconnected");
+          setError(e instanceof Error ? e.message : String(e));
+        }
+        return;
+      }
 
       if (cancelled) {
         ws.close();
@@ -158,6 +182,11 @@ export function VmConsolePage() {
           )}
         </div>
       </div>
+      {error && (
+        <div className="rounded-sm bg-cyber-danger/20 p-4 text-sm text-cyber-danger">
+          {error}
+        </div>
+      )}
       <div className="border p-2" ref={termRef}></div>
     </div>
   );

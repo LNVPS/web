@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "Ja, überall abmelden"
+  },
   "CYP/Jx": {
     "defaultMessage": "Lassen Sie sich vom Team unterstützen."
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "VPS-Hosting in Dublin, Irland, ab {price} zzgl. Mehrwertsteuer. Stellen Sie Ihre eigene Konfiguration zusammen, bis zu {maxCpu} vCPU. Zahlung in Bitcoin per Lightning Network oder direkt auf der Blockchain möglich."
   },
+  "V3ka34": {
+    "defaultMessage": "Aktive Sitzungen"
+  },
   "V7fgpY": {
     "defaultMessage": "Anmeldung wird abgeschlossen…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "Betreiben Sie Ihren eigenen Nostr-Relay-Server."
   },
+  "XW6btx": {
+    "defaultMessage": "Meldet Sie in jedem Browser und auf jedem Gerät ab, auch auf diesem. Nutzen Sie das, wenn Sie sich irgendwo angemeldet haben, dem Sie nicht mehr vertrauen."
+  },
   "XW9RGA": {
     "defaultMessage": "Benötige ich ein Benutzerkonto?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Domäne hinzufügen"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "Überall abmelden"
   },
   "ZmOSyB": {
     "defaultMessage": "Nehmen Sie Kontakt mit dem LNVPS-Team auf. Haben Sie Fragen zu unserem VPS-Hosting oder den Zahlungsmöglichkeiten? Wir sind für Sie da."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "Monatliche Verfügbarkeit (letzte 12 Monate)"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Sie melden sich mit einem Nostr-Schlüssel an, daher gibt es keine gespeicherten Sitzungen zum Widerrufen. Jede Anfrage wird einzeln signiert."
   },
   "hs3HVz": {
     "defaultMessage": "Melden Sie sich mit Face ID, Touch ID, Windows Hello oder einem Sicherheitsschlüssel an. Sie können jedem Konto einen Passkey hinzufügen."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minuten. Die Bereitstellung erfolgt, sobald die Zahlung abgeschlossen ist."
+  },
+  "yfhNX4": {
+    "defaultMessage": "Beim Anmelden entsteht eine Sitzung, die 30 Tage gültig bleibt. Widerrufen Sie alle, wenn Sie vermuten, dass eine davon offengelegt wurde."
   },
   "yracY5": {
     "defaultMessage": "VPS London – UK-VPS, Bezahlung in Bitcoin."

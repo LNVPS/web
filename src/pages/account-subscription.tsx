@@ -8,6 +8,7 @@ import {
   VmPayment,
 } from "../api";
 import useLogin from "../hooks/login";
+import { openInvoice } from "../utils";
 import { CostAmount } from "../components/cost";
 import { Card, CardBody, CardTitle } from "../components/card";
 import { Icon } from "../components/icon";
@@ -170,10 +171,7 @@ export function AccountSubscriptionPage() {
       <div
         title="Generate invoice"
         className="cursor-pointer"
-        onClick={async () => {
-          const l = await login?.api.invoiceLink(p.id);
-          if (l) window.open(l, "_blank");
-        }}
+        onClick={() => openInvoice(login?.api, p.id)}
       >
         <Icon name="printer" />
       </div>

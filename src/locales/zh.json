@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "是的，在所有设备上退出登录"
+  },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "在爱尔兰都柏林提供 VPS 主机服务，起价为： {price} 不含增值税。您可以根据自己的需求配置。 {maxCpu} 虚拟 CPU。可通过闪电网络或直接链上支付比特币。"
   },
+  "V3ka34": {
+    "defaultMessage": "活动会话"
+  },
   "V7fgpY": {
     "defaultMessage": "正在完成登录…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "搭建并运行您自己的 Nostr 中继节点。"
   },
+  "XW6btx": {
+    "defaultMessage": "将您从所有浏览器和设备（包括当前设备）退出登录。如果您曾在不再信任的地方登录过，请使用此功能。"
+  },
   "XW9RGA": {
     "defaultMessage": "我需要注册一个账户吗？"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "添加域名"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "在所有设备上退出登录"
   },
   "ZmOSyB": {
     "defaultMessage": "请联系 LNVPS 团队。如果您对我们的虚拟专用服务器托管服务或付款方式有任何疑问，我们随时为您提供帮助。"
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "月度正常运行时间（过去 12 个月）"
+  },
+  "hXAhO/": {
+    "defaultMessage": "您使用 Nostr 密钥登录，因此没有可撤销的已存储会话。每个请求都会单独签名。"
   },
   "hs3HVz": {
     "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "几分钟。付款完成后，系统会立即进行处理。"
+  },
+  "yfhNX4": {
+    "defaultMessage": "登录会创建一个有效期为 30 天的会话。如果您认为某个会话已泄露，请撤销全部会话。"
   },
   "yracY5": {
     "defaultMessage": "伦敦 VPS——英国 VPS，使用比特币支付。"

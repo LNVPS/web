@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "Oui, me déconnecter partout"
+  },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de : {price} hors TVA. Configurez votre modèle personnalisé jusqu’à… {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
   },
+  "V3ka34": {
+    "defaultMessage": "Sessions actives"
+  },
   "V7fgpY": {
     "defaultMessage": "Connexion en cours…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "Exploitez votre propre relais Nostr."
   },
+  "XW6btx": {
+    "defaultMessage": "Vous déconnecte de tous les navigateurs et appareils, y compris celui-ci. À utiliser si vous vous êtes connecté quelque part en quoi vous n'avez plus confiance."
+  },
   "XW9RGA": {
     "defaultMessage": "Est-ce que je dois créer un compte ?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Ajouter un domaine"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "Se déconnecter partout"
   },
   "ZmOSyB": {
     "defaultMessage": "Contactez l’équipe LNVPS. Vous avez des questions sur notre service d’hébergement VPS ou sur les options de paiement? Nous sommes là pour vous aider."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "Taux de disponibilité mensuel (sur les 12 derniers mois)"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Vous vous connectez avec une clé Nostr : il n'y a donc aucune session stockée à révoquer. Chaque requête est signée individuellement."
   },
   "hs3HVz": {
     "defaultMessage": "Connectez-vous avec Face ID, Touch ID, Windows Hello ou une clé de sécurité. Vous pouvez ajouter une clé d'accès à n'importe quel compte."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."
+  },
+  "yfhNX4": {
+    "defaultMessage": "La connexion crée une session valable 30 jours. Révoquez-les toutes si vous pensez que l'une d'elles a été exposée."
   },
   "yracY5": {
     "defaultMessage": "VPS Londres – VPS au Royaume-Uni, paiement en Bitcoin."

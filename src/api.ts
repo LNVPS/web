@@ -15,6 +15,20 @@ export type ApiResponse<T> = ApiResponseBase & {
   data: T;
 };
 
+/**
+ * Short-lived credential for endpoints a browser cannot send an
+ * `Authorization` header to (WebSocket handshakes, HTML navigations).
+ *
+ * Minted by `POST /api/v1/auth/ticket` and passed as `?ticket=`. Valid for one
+ * use, for one path, for `expires_in` seconds — so a copy that ends up in an
+ * access log or browser history is inert.
+ */
+export interface AuthTicket {
+  ticket: string;
+  /** Lifetime in seconds. */
+  expires_in: number;
+}
+
 export enum DiskType {
   SSD = "ssd",
   HDD = "hdd",
@@ -1293,6 +1307,21 @@ export class LNVpsApi {
     return data;
   }
 
+  /**
+   * Invalidate every outstanding session token for this account — "log out
+   * everywhere".
+   *
+   * Only affects `Bearer` sessions (OAuth / passkey logins); a Nostr key has no
+   * server-issued token to revoke. The caller's own token is invalidated too,
+   * so the UI must drop the local session afterwards.
+   */
+  async revokeAllSessions() {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req("/api/v1/account/sessions", "DELETE"),
+    );
+    return data;
+  }
+
   // --- Passkey (WebAuthn) authentication -------------------------------------
   // The register/login ceremonies are unauthenticated: call them on a
   // token-less client (`new LNVpsApi(ApiUrl, undefined)`).
@@ -1616,9 +1645,9 @@ export class LNVpsApi {
   }
 
   async invoiceLink(id: string) {
-    const u = `${this.url}/api/v1/payment/${id}/invoice`;
-    const auth_b64 = await this.#authQuery(u);
-    return `${u}?auth=${auth_b64}`;
+    const path = `/api/v1/payment/${id}/invoice`;
+    const ticket = await this.#authTicket(path);
+    return `${this.url}${path}?ticket=${encodeURIComponent(ticket)}`;
   }
 
   async getPaymentMethods() {
@@ -1629,11 +1658,11 @@ export class LNVpsApi {
   }
 
   async connect_terminal(id: number) {
-    const u = `${this.url}/api/v1/vm/${id}/console`;
-    const auth_b64 = await this.#authQuery(u);
+    const path = `/api/v1/vm/${id}/console`;
+    const ticket = await this.#authTicket(path);
     // Rewrite http(s):// → ws(s):// so the URL is valid for WebSocket
-    const wsUrl = u.replace(/^http(s?):\/\//, "ws$1://");
-    const ws = new WebSocket(`${wsUrl}?auth=${auth_b64}`);
+    const wsUrl = `${this.url}${path}`.replace(/^http(s?):\/\//, "ws$1://");
+    const ws = new WebSocket(`${wsUrl}?ticket=${encodeURIComponent(ticket)}`);
     return await new Promise<WebSocket>((resolve, reject) => {
       ws.onopen = () => {
         resolve(ws);
@@ -2033,17 +2062,23 @@ export class LNVpsApi {
   }
 
   /**
-   * Build the `?auth=` query-string value used by the WebSocket console and the
-   * invoice download link (which cannot send an Authorization header). Returns
-   * the OAuth token directly for Bearer sessions, or a base64 NIP-98 event for
-   * Nostr sessions.
+   * Mint a single-use ticket for an endpoint that cannot receive an
+   * `Authorization` header (the WebSocket console, the invoice page).
+   *
+   * `path` must be the exact path the ticket will be used on — the server binds
+   * the ticket to it and refuses it anywhere else. Mint immediately before use:
+   * tickets expire in ~30s and die on first use.
+   *
+   * This replaces the older `?auth=<base64 nip98 event>` scheme, which put a
+   * signature made by the user's identity key into a URL, and which never
+   * worked at all for OAuth/passkey sessions (the server only ever parsed that
+   * parameter as a Nostr event, so a Bearer JWT was rejected).
    */
-  async #authQuery(url: string) {
-    if (this.token) {
-      return this.token;
-    }
-    const auth = await this.#auth_event(url, "GET");
-    return base64.encode(new TextEncoder().encode(JSON.stringify(auth)));
+  async #authTicket(path: string) {
+    const { data } = await this.#handleResponse<ApiResponse<AuthTicket>>(
+      await this.#req("/api/v1/auth/ticket", "POST", { path }),
+    );
+    return data.ticket;
   }
 
   async #req(

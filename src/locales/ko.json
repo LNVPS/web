@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "예, 모든 기기에서 로그아웃"
+  },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price} 부가세 제외 가격입니다. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
+  "V3ka34": {
+    "defaultMessage": "활성 세션"
+  },
   "V7fgpY": {
     "defaultMessage": "로그인 완료 중…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "나만의 Nostr 릴레이 서버를 운영하세요."
   },
+  "XW6btx": {
+    "defaultMessage": "이 기기를 포함한 모든 브라우저와 기기에서 로그아웃합니다. 더 이상 신뢰할 수 없는 곳에서 로그인한 경우 사용하세요."
+  },
   "XW9RGA": {
     "defaultMessage": "계정을 만들어야 하나요?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "도메인 추가"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "모든 기기에서 로그아웃"
   },
   "ZmOSyB": {
     "defaultMessage": "LNVPS 팀에 문의하세요. VPS 호스팅 또는 결제 옵션에 대해 궁금한 점이 있으신가요? 언제든지 도움을 드릴 준비가 되어 있습니다."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "월별 가동 시간(최근 12개월)"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Nostr 키로 로그인하므로 취소할 저장된 세션이 없습니다. 각 요청은 개별적으로 서명됩니다."
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello 또는 보안 키로 로그인하세요. 모든 계정에 패스키를 추가할 수 있습니다."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "몇 분 정도 소요됩니다. 결제가 완료되면 즉시 처리됩니다."
+  },
+  "yfhNX4": {
+    "defaultMessage": "로그인하면 30일 동안 유효한 세션이 생성됩니다. 세션이 노출된 것 같다면 모두 취소하세요."
   },
   "yracY5": {
     "defaultMessage": "런던 VPS — 영국 VPS, 비트코인으로 결제"

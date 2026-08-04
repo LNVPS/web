@@ -5,6 +5,7 @@ import { AsyncButton } from "../components/button";
 import { PageHeader, SectionCard } from "../components/section";
 import { PaymentMethods } from "../components/payment-methods";
 import PasskeysSection from "../components/passkeys-section";
+import SessionsSection from "../components/sessions-section";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
@@ -208,6 +209,15 @@ export function AccountSettings() {
         }
       >
         <PasskeysSection accountType={acc.account_type} />
+      </SectionCard>
+
+      <SectionCard
+        title={<FormattedMessage defaultMessage="Active Sessions" />}
+        description={
+          <FormattedMessage defaultMessage="Signing in creates a session that stays valid for 30 days. Revoke them all if you think one has been exposed." />
+        }
+      >
+        <SessionsSection accountType={acc.account_type} />
       </SectionCard>
 
       <SectionCard

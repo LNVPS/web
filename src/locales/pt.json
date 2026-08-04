@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "Sim, terminar sessão em todo o lado"
+  },
   "CYP/Jx": {
     "defaultMessage": "Peça ajuda à equipa."
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "Serviço de hospedagem VPS em Dublin, Irlanda, a partir de {price} preço sem IVA. Configure o seu modelo de acordo com as suas preferências até um máximo de: {maxCpu} vCPU. Pague em Bitcoin através da Lightning Network ou diretamente na blockchain."
   },
+  "V3ka34": {
+    "defaultMessage": "Sessões ativas"
+  },
   "V7fgpY": {
     "defaultMessage": "A concluir o início de sessão…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "Crie e gerencie seu próprio nó de retransmissão Nostr."
   },
+  "XW6btx": {
+    "defaultMessage": "Termina a sua sessão em todos os navegadores e dispositivos, incluindo este. Use isto se iniciou sessão nalgum sítio em que já não confia."
+  },
   "XW9RGA": {
     "defaultMessage": "Preciso criar uma conta?"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "Adicionar Domínio"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "Terminar sessão em todo o lado"
   },
   "ZmOSyB": {
     "defaultMessage": "Entre em contato com a equipe da LNVPS. Tem alguma dúvida sobre o nosso serviço de hospedagem VPS ou sobre as opções de pagamento? Estamos aqui para ajudar."
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "Tempo de atividade mensal (últimos 12 meses)"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Inicia sessão com uma chave Nostr, por isso não há sessões guardadas para revogar. Cada pedido é assinado individualmente."
   },
   "hs3HVz": {
     "defaultMessage": "Inicie sessão com Face ID, Touch ID, Windows Hello ou uma chave de segurança. Pode adicionar uma chave de acesso a qualquer conta."
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutos. O serviço é ativado após a confirmação do pagamento."
+  },
+  "yfhNX4": {
+    "defaultMessage": "Iniciar sessão cria uma sessão válida durante 30 dias. Revogue todas se achar que alguma foi exposta."
   },
   "yracY5": {
     "defaultMessage": "VPS Londres — VPS no Reino Unido, pagamento em Bitcoin."

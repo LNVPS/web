@@ -572,6 +572,9 @@
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
+  "CC6msQ": {
+    "defaultMessage": "はい、すべてからサインアウトします"
+  },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
   },
@@ -1328,6 +1331,9 @@
   "V/V4bz": {
     "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービス {price} 消費税抜き。お客様のニーズに合わせて仕様を自由にカスタマイズできます。 {maxCpu} 仮想CPU。ライトニングネットワークまたはオンチェーンでビットコインを使ってお支払いください。"
   },
+  "V3ka34": {
+    "defaultMessage": "アクティブなセッション"
+  },
   "V7fgpY": {
     "defaultMessage": "サインインを完了しています…"
   },
@@ -1409,6 +1415,9 @@
   "XO5rF3": {
     "defaultMessage": "独自のNostrリレーを運用しましょう。"
   },
+  "XW6btx": {
+    "defaultMessage": "この端末を含む、すべてのブラウザーとデバイスからサインアウトします。信頼できない場所でサインインした場合にご利用ください。"
+  },
   "XW9RGA": {
     "defaultMessage": "アカウントは必要ですか？"
   },
@@ -1483,6 +1492,9 @@
   },
   "ZewCpX": {
     "defaultMessage": "ドメインを追加"
+  },
+  "ZmIH8d": {
+    "defaultMessage": "すべてからサインアウト"
   },
   "ZmOSyB": {
     "defaultMessage": "LNVPSチームまでお気軽にお問い合わせください。VPSホスティングや支払い方法についてご質問がございましたら、お気軽にご連絡ください。喜んでお手伝いさせていただきます。"
@@ -1786,6 +1798,9 @@
   },
   "hX8VXF": {
     "defaultMessage": "月間稼働時間（過去12か月）"
+  },
+  "hXAhO/": {
+    "defaultMessage": "Nostr 鍵でサインインしているため、取り消せる保存済みセッションはありません。リクエストごとに個別に署名されます。"
   },
   "hs3HVz": {
     "defaultMessage": "Face ID、Touch ID、Windows Hello、またはセキュリティキーでサインインできます。どのアカウントにもパスキーを追加できます。"
@@ -2452,6 +2467,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
+  },
+  "yfhNX4": {
+    "defaultMessage": "サインインすると 30 日間有効なセッションが作成されます。いずれかが漏れた可能性がある場合はすべて取り消してください。"
   },
   "yracY5": {
     "defaultMessage": "VPSロンドン — イギリスのVPS。ビットコインで支払い可能。"

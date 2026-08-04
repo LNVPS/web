@@ -1,5 +1,6 @@
 import { base16 } from "@scure/base";
 import { AccountDetail } from "./api";
+import { showError } from "./toast";
 
 /**
  * Derive the VAT rate (as a fraction, e.g. 0.23 for 23%) that will currently be
@@ -144,4 +145,37 @@ export function timeValueParts(
     };
   if (n >= 60) return { unit: "minute", value: Math.floor(n / 60) };
   return { unit: "second", value: n };
+}
+
+/**
+ * Open a payment invoice in a new tab.
+ *
+ * The URL can only be built after an async round trip (the server mints a
+ * single-use ticket, since the invoice page cannot receive an `Authorization`
+ * header). Calling `window.open` *after* an await loses the user-gesture
+ * context and is silently swallowed by popup blockers, so the tab is opened
+ * synchronously on the click and navigated once the link is ready.
+ *
+ * Errors are surfaced as a toast rather than thrown, so a failed ticket request
+ * doesn't leave the user staring at a blank tab wondering what happened.
+ */
+export async function openInvoice(
+  api: { invoiceLink: (id: string) => Promise<string> } | undefined,
+  id: string,
+) {
+  if (!api) return;
+  const tab = window.open("", "_blank");
+  try {
+    const link = await api.invoiceLink(id);
+    if (tab) {
+      tab.location.href = link;
+    } else {
+      // Popup blocked outright — fall back to a direct navigation attempt so
+      // the action isn't a no-op.
+      window.open(link, "_blank");
+    }
+  } catch (e) {
+    tab?.close();
+    showError(e, "Could not open the invoice");
+  }
 }

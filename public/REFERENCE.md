@@ -13,13 +13,18 @@ Complete endpoint documentation for the LNVPS customer-facing API.
 - [Template Endpoints](#template-endpoints)
 - [Custom VM Endpoints](#custom-vm-endpoints)
 - [Subscription Endpoints](#subscription-endpoints)
+- [Firewall Endpoints](#firewall-endpoints)
+- [WebSocket Endpoints](#websocket-endpoints)
 - [Public Endpoints](#public-endpoints)
 
 ---
 
 ## Authentication
 
-All endpoints except those marked "Public" require NIP-98 HTTP Authentication.
+All endpoints except those marked "Public" require authentication with **either**:
+
+- `Authorization: Nostr <base64_encoded_event_json>` — NIP-98 (Nostr accounts)
+- `Authorization: Bearer <jwt>` — session token from OAuth (`GET /api/v1/oauth/{provider}/login`) or passkey/WebAuthn login (`POST /api/v1/webauthn/login/start` → `/finish`)
 
 ### NIP-98 Event Structure
 
@@ -40,9 +45,11 @@ All endpoints except those marked "Public" require NIP-98 HTTP Authentication.
 
 **Validation rules:**
 
-- `created_at` must be within 600 seconds of server time
-- `u` tag must exactly match the request URL
+- `created_at` must be within **60 seconds** of server time
+- Each event id may be used **once** — sign a fresh event per request, never reuse
+- `u` tag must match the request path
 - `method` tag must match the HTTP method (GET, POST, PATCH, etc.)
+- `payload` tag is optional, but when present must be the lowercase hex SHA-256 of the exact request body
 - Signature must be valid
 
 **Header format:**
@@ -50,6 +57,34 @@ All endpoints except those marked "Public" require NIP-98 HTTP Authentication.
 ```
 Authorization: Nostr <base64_encoded_event_json>
 ```
+
+### Auth Tickets
+
+WebSocket and HTML endpoints cannot receive an `Authorization` header, so they take a single-use, path-scoped, 30-second ticket in the query string.
+
+```http
+POST /api/v1/auth/ticket
+Content-Type: application/json
+
+{"path": "/api/v1/vm/7/console"}
+```
+
+**Response:**
+
+```json
+{ "data": { "ticket": "...", "expires_in": 30 } }
+```
+
+Tickets may only be minted for `/api/v1/vm/{id}/console`, `/api/v1/payment/{id}/invoice` and `/api/v1/support/chat`. Pass as `?ticket=<ticket>`. The legacy `?auth=<base64_nip98_event>` form still works but is **deprecated**.
+
+### Rate Limiting
+
+| Bucket  | Limit          | Endpoints                                                                                                                     |
+| ------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| General | 600 req/min/IP | Everything else                                                                                                               |
+| Strict  | 10 req/min/IP  | WebAuthn register/login, OAuth login/callback, email verification, WhatsApp verify/confirm, contact form, LNURL-pay endpoints |
+
+Exceeding a limit returns `429 Too Many Requests` with a `Retry-After` header.
 
 ---
 
@@ -77,12 +112,24 @@ GET /api/v1/account
     "city": "Berlin",
     "state": null,
     "postcode": "10115",
-    "tax_id": null
+    "tax_id": null,
+    "account_type": "nostr",
+    "tax": [
+      {
+        "company_id": 1,
+        "company_name": "LNVPS",
+        "rate": 23.0,
+        "country_code": "IRL",
+        "treatment": "domestic"
+      }
+    ]
   }
 }
 ```
 
 `email_verified` is `true` once the user has confirmed their email address.
+`account_type` is one of `nostr`, `oauth`, `webauthn` (read-only; only `nostr` accounts have a usable Nostr key, so `contact_nip17` is rejected for the others).
+`tax` is read-only and lists the VAT rate currently applicable per seller company.
 
 ### Update Account
 
@@ -105,12 +152,11 @@ Content-Type: application/json
   "city": "Berlin",
   "state": "Berlin",
   "postcode": "10115",
-  "tax_id": "DE123456789",
-  "nwc_connection_string": "nostr+walletconnect://..."
+  "tax_id": "DE123456789"
 }
 ```
 
-**Note:** Setting `nwc_connection_string` enables automatic renewal payments via Nostr Wallet Connect.
+**Note:** NWC connection strings are **no longer stored on the account** — add one via `POST /api/v1/payment-methods` (see [Saved Payment Methods](#saved-payment-methods)), then set `auto_renewal_enabled: true` on each VM you want auto-renewed.
 
 ### Verify Email
 
@@ -130,8 +176,16 @@ Confirms an email verification token sent by the server after a `PATCH /api/v1/a
 
 1. `PATCH /api/v1/account` with `{"email": "user@example.com"}` — server sends verification email.
 2. User clicks link in email containing `?token=<token>`.
-3. `GET /api/v1/account/verify-email?token=<token>` — confirms the token.
+3. `GET /api/v1/account/verify-email?token=<token>` — confirms the token (**links expire after 24 hours**).
 4. `GET /api/v1/account` now returns `email_verified: true`.
+
+### Revoke All Sessions
+
+```http
+DELETE /api/v1/account/sessions
+```
+
+Invalidates every outstanding `Bearer` session token for the account ("log out everywhere"), including the caller's own. NIP-98 auth is unaffected.
 
 ---
 
@@ -174,6 +228,8 @@ GET /api/v1/vm
         "disk_size": 21474836480,
         "disk_type": "ssd",
         "disk_interface": "scsi",
+        "ip4_count": 1,
+        "ip6_count": 1,
         "cost_plan": {
           "id": 1,
           "name": "Monthly",
@@ -210,7 +266,18 @@ GET /api/v1/vm
         "disk_read": 0,
         "disk_write": 0
       },
-      "auto_renewal_enabled": false
+      "auto_renewal_enabled": false,
+      "deleting_on": "2024-02-15T12:00:00Z",
+      "subscription_id": 42,
+      "max_prepay_days": 365,
+      "cpu_arch": "x86_64",
+      "host_ssh_keys": [
+        {
+          "key_type": "ssh-ed25519",
+          "public_key": "AAAAC3NzaC1lZDI1NTE5...",
+          "fingerprint_sha256": "SHA256:..."
+        }
+      ]
     }
   ],
   "total": 1,
@@ -218,6 +285,15 @@ GET /api/v1/vm
   "offset": 0
 }
 ```
+
+**Notes:**
+
+- `expires` is absent for VMs that have never been paid for
+- `deleting_on` is the date the VM is deleted if not renewed (expiry + grace period)
+- `subscription_id` is the subscription this VM is billed under
+- `max_prepay_days` caps how far ahead the VM may be renewed
+- `host_sunset_date` (when present) means the host is being decommissioned; renewals are blocked once `expires` reaches it
+- `host_ssh_keys` are the VM's own SSH host keys, for verifying the host on first connect (empty until captured after first boot)
 
 ### Get VM
 
@@ -254,7 +330,7 @@ Content-Type: application/json
 
 **Response:** VM object (same as Get VM)
 
-**Important:** The VM is created with `expires = created` (unpaid state). Call `/api/v1/vm/{id}/renew` to generate a payment invoice.
+**Important:** The VM is created unpaid (no `expires`). Call `/api/v1/vm/{id}/renew` to generate a payment invoice.
 
 ### Update VM
 
@@ -295,9 +371,16 @@ PATCH /api/v1/vm/{id}/restart
 
 ```http
 PATCH /api/v1/vm/{id}/re-install
+Content-Type: application/json
+
+{"image_id": 7}
 ```
 
+The body is optional — omit it to reinstall the VM's current image, or pass `image_id` to switch OS.
+
 **Warning:** This destroys all data on the VM and reinstalls the OS.
+
+**Errors:** `402` if the VM is expired (renew first), `403` if the VM is not yours or the image is unavailable, `404` if the VM or image does not exist.
 
 ### Renew VM
 
@@ -308,8 +391,8 @@ GET /api/v1/vm/{id}/renew
 **Query parameters:**
 | Parameter | Type | Values | Default |
 |-----------|------|--------|---------|
-| `method` | string | `lightning`, `revolut`, `paypal`, `stripe`, `nwc` | `lightning` |
-| `intervals` | number | Number of billing intervals to pay for | `1` |
+| `method` | string | `lightning`, `onchain`, `revolut`, `paypal`, `stripe`, `nwc` | `lightning` |
+| `intervals` | number | Billing intervals to pay for (`1`–`120`) | `1` |
 
 **Response:**
 
@@ -320,8 +403,9 @@ GET /api/v1/vm/{id}/renew
     "vm_id": 123,
     "created": "2024-01-01T12:00:00Z",
     "expires": "2024-01-01T12:15:00Z",
-    "amount": 21000,
+    "amount": 21000000,
     "tax": 0,
+    "processing_fee": 0,
     "currency": "BTC",
     "is_paid": false,
     "data": {
@@ -329,6 +413,7 @@ GET /api/v1/vm/{id}/renew
     },
     "time": 2592000,
     "is_upgrade": false,
+    "is_refund": false,
     "upgrade_params": null
   }
 }
@@ -336,10 +421,12 @@ GET /api/v1/vm/{id}/renew
 
 **Notes:**
 
-- `amount` is in satoshis (BTC) or cents (fiat)
+- `amount`, `tax` and `processing_fee` are in the smallest currency unit: **millisatoshis** for BTC, cents for fiat
 - `time` is seconds added to expiry upon payment
 - `expires` on the payment is invoice expiry (typically 15 minutes)
-- `data.Lightning` contains the BOLT11 invoice
+- `data.lightning` (lowercase) contains the BOLT11 invoice. Other variants: `{"onchain": {"address": "bc1...", "outpoint": "txid:vout"}}`, `{"revolut": {"token": "..."}}`, `{"stripe": {"session_id": "..."}}`
+- `paid_at` is present once `is_paid` is true; `is_refund: true` rows are money returned to the customer
+- A renewal is **rejected** if it would push `expires` beyond `now + max_prepay_days` or beyond the host's sunset date
 
 ### Renew VM via LNURL
 
@@ -394,22 +481,20 @@ Content-Type: application/json
 }
 ```
 
-All fields are optional. Only include resources you want to change.
+All fields are optional, but the request must keep every resource at or above its current value **and strictly increase at least one** of `cpu`/`memory`/`disk`. Shrinking or no-op requests are rejected — downgrade by reinstalling onto a smaller template.
+
+**Query parameters:** `method` — `lightning` (default), `revolut`, `paypal`; determines the quote currency.
 
 **Response:**
 
 ```json
 {
   "data": {
-    "upgrade_cost": {
-      "amount": 5000,
-      "currency": "EUR"
-    },
-    "new_renewal_cost": {
-      "amount": 1500,
-      "currency": "EUR"
-    },
-    "discount": 0
+    "cost_difference": { "amount": 5000, "currency": "EUR" },
+    "new_renewal_cost": { "amount": 1500, "currency": "EUR" },
+    "discount": { "amount": 500, "currency": "EUR" },
+    "tax": { "amount": 1150, "currency": "EUR" },
+    "processing_fee": { "amount": 0, "currency": "EUR" }
   }
 }
 ```
@@ -417,13 +502,17 @@ All fields are optional. Only include resources you want to change.
 ### Upgrade VM
 
 ```http
-POST /api/v1/vm/{id}/upgrade
+POST /api/v1/vm/{id}/upgrade?method=lightning
 Content-Type: application/json
 ```
 
 **Request body:** Same as upgrade quote.
 
+**Query parameters:** `method` — `lightning` (default), `revolut`, `nwc`, `saved`; plus `payment_method_id` for `method=saved`. With `nwc`/`saved` the request briefly waits for settlement, so the returned payment may already be `is_paid: true`.
+
 **Response:** Payment object (same as Renew VM).
+
+**Important:** Running VMs are stopped and restarted to apply hardware changes.
 
 ---
 
@@ -470,6 +559,12 @@ Content-Type: application/json
 | `name`     | string | Yes      | Friendly name for the key |
 | `key_data` | string | Yes      | Full SSH public key       |
 
+### Delete SSH Key
+
+```http
+DELETE /api/v1/ssh-key/{id}
+```
+
 ---
 
 ## Payment Endpoints
@@ -493,11 +588,60 @@ GET /api/v1/payment/methods
     {
       "name": "revolut",
       "currencies": ["EUR", "USD"],
-      "metadata": {}
+      "metadata": {},
+      "processing_fee_rate": 1.0,
+      "min_amount": 100,
+      "min_amount_currency": "EUR"
     }
   ]
 }
 ```
+
+Method names: `lightning`, `onchain`, `revolut`, `paypal`, `stripe`, `nwc`, `lnurl`.
+
+### Saved Payment Methods
+
+Wallets/cards used for automatic renewals and referral payouts. Provider tokens and NWC connection strings are **never** returned.
+
+```http
+GET    /api/v1/payment-methods
+POST   /api/v1/payment-methods
+PATCH  /api/v1/payment-methods/{id}
+DELETE /api/v1/payment-methods/{id}
+```
+
+**Add an NWC wallet:**
+
+```json
+{ "nwc_connection_string": "nostr+walletconnect://...", "name": "My wallet" }
+```
+
+The connection is validated (must expose `pay_invoice`); the first method added becomes the default.
+
+**Response:**
+
+```json
+{
+  "data": {
+    "id": 1,
+    "provider": "nwc",
+    "name": "My wallet",
+    "created": "2024-01-01T00:00:00Z",
+    "is_default": true,
+    "enabled": true
+  }
+}
+```
+
+`PATCH` accepts `is_default`, `enabled` and `name` (send `null` to clear the label). Setting `is_default: true` clears it on the other methods.
+
+### Exchange Rates
+
+```http
+GET /api/v1/exchange-rate?base=BTC
+```
+
+Public. Returns `{ "updated", "base", "rates": { "EUR": 95000.0, ... } }` where 1 unit of `base` = `rates[X]` units of X (standard units). Convert A→B as `rates[B] / rates[A]`. Prefer this over the deprecated `other_price[]` fields.
 
 ### Get Payment
 
@@ -514,10 +658,12 @@ GET /api/v1/payment/{id}
     "vm_id": 123,
     "created": "2024-01-01T12:00:00Z",
     "expires": "2024-01-01T12:15:00Z",
-    "amount": 21000,
+    "amount": 21000000,
     "tax": 0,
+    "processing_fee": 0,
     "currency": "BTC",
     "is_paid": true,
+    "paid_at": "2024-01-01T12:03:00Z",
     "data": {
       "lightning": "lnbc210u1pj..."
     },
@@ -531,10 +677,10 @@ GET /api/v1/payment/{id}
 ### Get Invoice
 
 ```http
-GET /api/v1/payment/{id}/invoice
+GET /api/v1/payment/{id}/invoice?ticket=<ticket>
 ```
 
-Returns HTML invoice suitable for printing/PDF generation.
+Returns HTML invoice suitable for printing/PDF generation. Authenticated by an [auth ticket](#auth-tickets) (the legacy `?auth=` form is deprecated).
 
 ---
 
@@ -543,8 +689,15 @@ Returns HTML invoice suitable for printing/PDF generation.
 ### List Images
 
 ```http
-GET /api/v1/image
+GET /api/v1/image?arch=x86_64
 ```
+
+**Query parameters:**
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `arch` | string | Optional CPU architecture filter (`x86_64`/`amd64`, `arm64`/`aarch64`). Returns matching plus architecture-agnostic images. Unknown value → `400` |
+
+Use `VmStatus.cpu_arch` to pick the right `arch` when listing images for a reinstall.
 
 **Response:**
 
@@ -557,7 +710,9 @@ GET /api/v1/image
       "flavour": "server",
       "version": "24.04",
       "release_date": "2024-04-25T00:00:00Z",
-      "default_username": "ubuntu"
+      "cpu_arch": "x86_64",
+      "default_username": "ubuntu",
+      "popularity": 0.42
     },
     {
       "id": 2,
@@ -573,8 +728,10 @@ GET /api/v1/image
 
 **Distributions:**
 
-- `ubuntu`, `debian`, `centos`, `fedora`
-- `freebsd`, `opensuse`, `archlinux`, `redhatenterprise`
+- `ubuntu`, `debian`, `centos`, `fedora`, `freebsd`, `opensuse`, `archlinux`
+- `redhatenterprise`, `almalinux`, `rockylinux`, `alpine`, `nixos`, `openbsd`, `netbsd`, `gentoo`, `voidlinux`
+
+`popularity` is the fraction (0.0–1.0) of active VMs using the image.
 
 ---
 
@@ -586,37 +743,67 @@ GET /api/v1/image
 GET /api/v1/vm/templates
 ```
 
-Returns both standard templates and custom pricing options.
+Returns both standard templates and custom pricing options. Note the payload is an **object**, not an array.
 
 **Response:**
 
 ```json
 {
-  "data": [
-    {
-      "id": 1,
-      "name": "VPS-Small",
-      "created": "2024-01-01T00:00:00Z",
-      "expires": null,
-      "cpu": 1,
-      "memory": 1073741824,
-      "disk_size": 21474836480,
-      "disk_type": "ssd",
-      "disk_interface": "scsi",
-      "cost_plan": {
-        "amount": 500,
-        "currency": "EUR",
-        "interval_amount": 1,
-        "interval_type": "month"
-      },
-      "region": {
+  "data": {
+    "templates": [
+      {
         "id": 1,
-        "name": "EU-West"
+        "name": "VPS-Small",
+        "created": "2024-01-01T00:00:00Z",
+        "expires": null,
+        "cpu": 1,
+        "memory": 1073741824,
+        "disk_size": 21474836480,
+        "disk_type": "ssd",
+        "disk_interface": "scsi",
+        "ip4_count": 1,
+        "ip6_count": 1,
+        "cost_plan": {
+          "amount": 500,
+          "currency": "EUR",
+          "interval_amount": 1,
+          "interval_type": "month"
+        },
+        "region": {
+          "id": 1,
+          "name": "EU-West",
+          "company_id": 1
+        }
       }
-    }
-  ]
+    ],
+    "custom_template": [
+      {
+        "id": 1,
+        "name": "Custom",
+        "region": { "id": 1, "name": "EU-West", "company_id": 1 },
+        "min_cpu": 1,
+        "max_cpu": 8,
+        "min_memory": 1073741824,
+        "max_memory": 34359738368,
+        "min_ip4": 1,
+        "max_ip4": 4,
+        "min_ip6": 0,
+        "max_ip6": 8,
+        "disks": [
+          {
+            "min_disk": 21474836480,
+            "max_disk": 1099511627776,
+            "disk_type": "ssd",
+            "disk_interface": "pcie"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
+
+`ip4_count` / `ip6_count` state how many addresses the offer includes (a VM may hold more than one per family).
 
 ---
 
@@ -650,27 +837,24 @@ Content-Type: application/json
 | `disk`           | u64    | Yes      | Disk size in bytes        |
 | `disk_type`      | string | Yes      | `hdd` or `ssd`            |
 | `disk_interface` | string | Yes      | `sata`, `scsi`, or `pcie` |
+| `ip4_count`      | u16    | No       | IPv4 addresses (default `1`) |
+| `ip6_count`      | u16    | No       | IPv6 addresses (default `1`) |
 
 **Response:**
 
 ```json
 {
   "data": {
-    "cost_difference": {
-      "amount": 5000,
-      "currency": "EUR"
-    },
-    "new_renewal_cost": {
-      "amount": 1500,
-      "currency": "EUR"
-    },
-    "discount": {
-      "amount": 500,
-      "currency": "EUR"
-    }
+    "currency": "EUR",
+    "amount": 1500,
+    "interval_amount": 1,
+    "interval_type": "month",
+    "other_price": [{ "currency": "BTC", "amount": 1500000 }]
   }
 }
 ```
+
+Custom builds renew monthly, so `interval_amount`/`interval_type` are always `1`/`"month"`. `other_price` is deprecated — use `GET /api/v1/exchange-rate`.
 
 ### Create Custom VM
 
@@ -719,32 +903,55 @@ GET /api/v1/subscriptions
       "created": "2024-01-01T00:00:00Z",
       "expires": "2024-02-01T00:00:00Z",
       "is_active": true,
-      "currency": "EUR",
-      "interval_amount": 1,
-      "interval_type": "month",
-      "setup_fee": 0,
       "auto_renewal_enabled": true,
+      "company_id": 1,
       "line_items": [
         {
           "id": 1,
           "subscription_id": 1,
           "name": "IPv4 /24",
           "description": null,
-          "amount": 1000,
-          "setup_amount": 500,
-          "configuration": null
+          "price": { "currency": "EUR", "amount": 1000 },
+          "setup_fee": { "currency": "EUR", "amount": 500 },
+          "configuration": null,
+          "resource": { "type": "vps", "vm_id": 123 }
         }
       ]
     }
-  ]
+  ],
+  "total": 1,
+  "limit": 50,
+  "offset": 0
 }
 ```
+
+`resource` is a tagged union linking the line item to what it bills for: `{"type": "vps", "vm_id": n}` or `{"type": "ip_range", "ip_range_subscription_id": n}` (null when there is no linked resource).
 
 ### Create Subscription
 
 ```http
 POST /api/v1/subscriptions
 Content-Type: application/json
+
+{
+  "name": "My IP Block Subscription",
+  "currency": "USD",
+  "auto_renewal_enabled": true,
+  "line_items": [{ "type": "ip_range", "ip_space_pricing_id": 5 }]
+}
+```
+
+Line item types: `ip_range` (`ip_space_pricing_id`), `asn_sponsoring` (`asn`, not yet implemented), `dns_hosting` (`domain`, not yet implemented).
+
+The subscription is created **inactive**; resources are allocated only after the first payment via `GET /api/v1/subscriptions/{id}/renew`.
+
+### Update Subscription
+
+```http
+PATCH /api/v1/subscriptions/{id}
+Content-Type: application/json
+
+{"auto_renewal_enabled": false}
 ```
 
 ### Get Subscription
@@ -764,8 +971,81 @@ GET /api/v1/subscriptions/{id}/payments
 ### Renew Subscription
 
 ```http
-GET /api/v1/subscriptions/{id}/renew
+GET /api/v1/subscriptions/{id}/renew?method=lightning
 ```
+
+`method` is one of `lightning` (default), `revolut`, `paypal`, `stripe`. The first payment includes setup fees plus the recurring cost; later renewals charge only the recurring cost.
+
+---
+
+## Firewall Endpoints
+
+Per-VM ACCEPT/DROP/REJECT rules, evaluated in `priority` order (lower first) before the default policy. Default limit is **20 rules per VM**; any change queues an asynchronous re-apply on the host. Anti-spoofing is always enforced regardless of user rules.
+
+```http
+GET    /api/v1/vm/{id}/firewall
+POST   /api/v1/vm/{id}/firewall
+PATCH  /api/v1/vm/{id}/firewall/{rule_id}
+DELETE /api/v1/vm/{id}/firewall/{rule_id}
+GET    /api/v1/vm/{id}/firewall/policy
+PATCH  /api/v1/vm/{id}/firewall/policy
+```
+
+**Rule:**
+
+```json
+{
+  "id": 1,
+  "priority": 10,
+  "direction": "inbound",
+  "protocol": "tcp",
+  "action": "accept",
+  "src_cidr": null,
+  "dst_port_start": 22,
+  "dst_port_end": 22,
+  "enabled": true
+}
+```
+
+`direction`: `inbound`/`outbound`. `protocol`: `any`/`tcp`/`udp`/`icmp`. `action`: `accept`/`drop`/`reject`. Send `null` for `src_cidr`/`dst_port_*` to mean "any". Ports are 1–65535 with `dst_port_start <= dst_port_end`.
+
+**Policy:**
+
+```json
+{ "policy_in": "drop", "policy_out": null }
+```
+
+`null` inherits the host default (allow-all). On `PATCH`, omit a field to leave it unchanged.
+
+---
+
+## WebSocket Endpoints
+
+Both authenticate with `?ticket=<ticket>` from [Auth Tickets](#auth-tickets) (legacy `?auth=<base64_nip98_event>` deprecated).
+
+### VM Serial Console
+
+```
+WS /api/v1/vm/{id}/console?ticket=<ticket>
+```
+
+Raw bidirectional relay to the VM's serial port.
+
+### Support Chat
+
+```
+WS /api/v1/support/chat?ticket=<ticket>
+```
+
+Send each message as one text frame. Replies stream back as JSON text frames:
+
+```json
+{ "type": "token", "text": "..." }
+{ "type": "final", "text": "..." }
+{ "type": "error", "message": "..." }
+```
+
+Exactly one terminal `final`/`error` per message sent. Limits: 4000 chars per message, 50 messages per connection (reconnect to continue; history is preserved). The agent can read your account, VMs, payments and history and can start/stop/restart VMs — it cannot extend, refund or delete a VM. Ignore unrecognised frame types.
 
 ---
 
@@ -776,10 +1056,11 @@ These endpoints do not require authentication.
 ### List IP Spaces
 
 ```http
-GET /api/v1/ip_space
+GET /api/v1/ip_space?limit=50&offset=0
 ```
 
-Returns available regions with pricing information.
+Returns available (non-reserved) IP space with per-prefix-size pricing:
+`{ id, min_prefix_size, max_prefix_size, registry, ip_version, pricing[] }` where `registry` is `ARIN|RIPE|APNIC|LACNIC|AFRINIC` and `ip_version` is `ipv4|ipv6`.
 
 ### Get IP Space
 
@@ -793,7 +1074,7 @@ GET /api/v1/ip_space/{id}
 GET /.well-known/lnurlp/{vm_id}
 ```
 
-LNURL-pay compatible endpoint for ad-hoc VM extension payments.
+LNURL-pay compatible endpoint for ad-hoc VM extension payments. Invoices are generated by `GET /api/v1/vm/{id}/renew-lnurlp?amount=<millisats>` (minimum 1000 msat). Both sit in the strict rate-limit bucket.
 
 ### Contact Form
 
@@ -824,7 +1105,9 @@ All errors return:
 | 400  | Bad request (invalid parameters)             |
 | 401  | Unauthorized (invalid/missing NIP-98 auth)   |
 | 403  | Forbidden (resource belongs to another user) |
+| 402  | Payment required (e.g. VM expired)           |
 | 404  | Resource not found                           |
+| 429  | Rate limited — retry after `Retry-After` s   |
 | 500  | Internal server error                        |
 
 ---
@@ -857,19 +1140,39 @@ All errors return:
 
 ### VM States
 
-| State     | Description           |
-| --------- | --------------------- |
-| `pending` | Being provisioned     |
-| `running` | Online and accessible |
-| `stopped` | Powered off           |
-| `failed`  | Error state           |
+| State      | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| `unknown`  | Not yet known (default before first poll)                |
+| `creating` | First payment received; being provisioned for the first time |
+| `running`  | Online and accessible                                    |
+| `stopped`  | Powered off                                              |
 
 ### Payment Methods
 
-| Value       | Description               |
-| ----------- | ------------------------- |
-| `lightning` | Bitcoin Lightning Network |
-| `revolut`   | Fiat via Revolut          |
+| Value       | Description                              |
+| ----------- | ---------------------------------------- |
+| `lightning` | Bitcoin Lightning Network                |
+| `onchain`   | On-chain Bitcoin (BTC only)              |
+| `revolut`   | Card/fiat via Revolut                    |
+| `paypal`    | Fiat via PayPal                          |
+| `stripe`    | Card/fiat via Stripe                     |
+| `nwc`       | Saved Nostr Wallet Connect wallet        |
+| `lnurl`     | LNURL-pay                                |
+
+### Currency Units
+
+| Currency  | Smallest unit             |
+| --------- | ------------------------- |
+| `BTC`     | millisatoshis (1 sat = 1000) |
+| `EUR`/`USD` | cents                   |
+
+### Account Types
+
+| Value      | Description                                            |
+| ---------- | ------------------------------------------------------ |
+| `nostr`    | Nostr key account (NIP-98 auth, npub/NIP-17 available)  |
+| `oauth`    | Google/GitHub/Facebook/Apple login (Bearer token)       |
+| `webauthn` | Passkey account (Bearer token)                          |
 
 ### Cost Plan Interval Types
 

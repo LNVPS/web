@@ -1330,9 +1330,7 @@ export class LNVpsApi {
   async webauthnRegisterStart(name?: string) {
     const { data } = await this.#handleResponse<
       ApiResponse<WebauthnRegisterStart>
-    >(
-      await this.#req("/api/v1/webauthn/register/start", "POST", { name }),
-    );
+    >(await this.#req("/api/v1/webauthn/register/start", "POST", { name }));
     return data;
   }
 
@@ -1354,9 +1352,9 @@ export class LNVpsApi {
 
   /** Begin usernameless passkey login. */
   async webauthnLoginStart() {
-    const { data } = await this.#handleResponse<ApiResponse<WebauthnLoginStart>>(
-      await this.#req("/api/v1/webauthn/login/start", "POST"),
-    );
+    const { data } = await this.#handleResponse<
+      ApiResponse<WebauthnLoginStart>
+    >(await this.#req("/api/v1/webauthn/login/start", "POST"));
     return data;
   }
 
@@ -1388,9 +1386,7 @@ export class LNVpsApi {
   async addPasskeyStart(name?: string) {
     const { data } = await this.#handleResponse<
       ApiResponse<WebauthnRegisterStart>
-    >(
-      await this.#req("/api/v1/webauthn/credentials/start", "POST", { name }),
-    );
+    >(await this.#req("/api/v1/webauthn/credentials/start", "POST", { name }));
     return data;
   }
 
@@ -1426,7 +1422,9 @@ export class LNVpsApi {
   }
 
   async addNwcPaymentMethod(nwc_connection_string: string, name?: string) {
-    const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
+    const { data } = await this.#handleResponse<
+      ApiResponse<SavedPaymentMethod>
+    >(
       await this.#req("/api/v1/payment-methods", "POST", {
         nwc_connection_string,
         name,
@@ -1439,9 +1437,9 @@ export class LNVpsApi {
     id: number,
     patch: { is_default?: boolean; enabled?: boolean; name?: string | null },
   ) {
-    const { data } = await this.#handleResponse<ApiResponse<SavedPaymentMethod>>(
-      await this.#req(`/api/v1/payment-methods/${id}`, "PATCH", patch),
-    );
+    const { data } = await this.#handleResponse<
+      ApiResponse<SavedPaymentMethod>
+    >(await this.#req(`/api/v1/payment-methods/${id}`, "PATCH", patch));
     return data;
   }
 
@@ -1860,10 +1858,7 @@ export class LNVpsApi {
   }
 
   /** Toggle a subscription's automatic renewal. Returns the updated subscription. */
-  async patchSubscription(
-    id: number,
-    req: { auto_renewal_enabled?: boolean },
-  ) {
+  async patchSubscription(id: number, req: { auto_renewal_enabled?: boolean }) {
     const { data } = await this.#handleResponse<ApiResponse<Subscription>>(
       await this.#req(`/api/v1/subscriptions/${id}`, "PATCH", req),
     );

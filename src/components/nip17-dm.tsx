@@ -132,7 +132,7 @@ export default function Nip17DM() {
       >
         {messages.length === 0 ? (
           <p className="text-cyber-muted text-sm text-center m-auto">
-            <FormattedMessage defaultMessage="No messages yet. Start a conversation below." />
+            <FormattedMessage defaultMessage="Nothing here yet." />
           </p>
         ) : (
           messages.map((msg) => (
@@ -164,10 +164,6 @@ export default function Nip17DM() {
             </div>
           ))
         )}
-      </div>
-
-      <div className="border border-cyber-border rounded-sm bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
-        <FormattedMessage defaultMessage="This inbox is no longer monitored, so new messages can't be sent here. For support, please open a ticket from the Support tab." />
       </div>
     </div>
   );

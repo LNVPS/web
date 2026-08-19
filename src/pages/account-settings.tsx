@@ -8,16 +8,11 @@ import PasskeysSection from "../components/passkeys-section";
 import SessionsSection from "../components/sessions-section";
 import { default as iso } from "iso-3166-1";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
 /** Label + control pair, stacked on mobile and aligned in a grid on desktop. */
-function Field({
-  label,
-  children,
-}: {
-  label: ReactNode;
-  children: ReactNode;
-}) {
+function Field({ label, children }: { label: ReactNode; children: ReactNode }) {
   return (
     <label className="flex flex-col gap-1.5 sm:grid sm:grid-cols-[10rem_1fr] sm:items-center sm:gap-4">
       <span className="text-sm text-cyber-text">{label}</span>
@@ -289,27 +284,41 @@ export function AccountSettings() {
               contact_nip17 for them. */}
           {(channels?.nip17 ?? true) &&
             (acc.account_type ?? "nostr") === "nostr" && (
-            <ChannelRow
-              name={<FormattedMessage defaultMessage="Nostr DM" />}
-              hint={
-                <FormattedMessage defaultMessage="Encrypted NIP-17 direct message" />
-              }
-              toggle={
-                <input
-                  type="checkbox"
-                  aria-label="Enable Nostr DM notifications"
-                  checked={acc.contact_nip17}
-                  onChange={(e) => update({ contact_nip17: e.target.checked })}
-                />
-              }
-              status={
-                <StatusChip
-                  kind="on"
-                  label={<FormattedMessage defaultMessage="Ready" />}
-                />
-              }
-            />
-          )}
+              <ChannelRow
+                name={<FormattedMessage defaultMessage="Nostr DM" />}
+                hint={
+                  <FormattedMessage
+                    defaultMessage="Encrypted NIP-17 direct message — read them in {link}"
+                    values={{
+                      link: (
+                        <Link
+                          to="/account/notifications"
+                          className="text-cyber-accent underline"
+                        >
+                          <FormattedMessage defaultMessage="Notifications" />
+                        </Link>
+                      ),
+                    }}
+                  />
+                }
+                toggle={
+                  <input
+                    type="checkbox"
+                    aria-label="Enable Nostr DM notifications"
+                    checked={acc.contact_nip17}
+                    onChange={(e) =>
+                      update({ contact_nip17: e.target.checked })
+                    }
+                  />
+                }
+                status={
+                  <StatusChip
+                    kind="on"
+                    label={<FormattedMessage defaultMessage="Ready" />}
+                  />
+                }
+              />
+            )}
 
           {/* Telegram channel */}
           {channels?.telegram && (
@@ -370,11 +379,7 @@ export function AccountSettings() {
                         setError(undefined);
                         try {
                           const res = await login.api.telegramLink();
-                          window.open(
-                            res.url,
-                            "_blank",
-                            "noopener,noreferrer",
-                          );
+                          window.open(res.url, "_blank", "noopener,noreferrer");
                         } catch (e: unknown) {
                           setError(e instanceof Error ? e.message : String(e));
                         }

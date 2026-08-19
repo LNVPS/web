@@ -55,7 +55,9 @@ const SECTIONS: Array<NavSection> = [
       {
         to: "/account/subscriptions",
         label: <FormattedMessage defaultMessage="Subscriptions" />,
-        hint: <FormattedMessage defaultMessage="Recurring services & billing" />,
+        hint: (
+          <FormattedMessage defaultMessage="Recurring services & billing" />
+        ),
       },
       {
         to: "/account/settings",
@@ -77,10 +79,11 @@ const SECTIONS: Array<NavSection> = [
         ),
       },
       {
-        to: "/account/messages",
-        label: <FormattedMessage defaultMessage="Messages" />,
-        hint: <FormattedMessage defaultMessage="Encrypted direct messages" />,
-        // Nostr DMs need the account's Nostr key; token accounts don't have one.
+        to: "/account/notifications",
+        label: <FormattedMessage defaultMessage="Notifications" />,
+        hint: <FormattedMessage defaultMessage="Notices sent as Nostr DMs" />,
+        // The channel delivers over NIP-17, which needs the account's Nostr
+        // key; token accounts have none and receive notices by another channel.
         show: (login) => !login.isNostrless,
       },
       {

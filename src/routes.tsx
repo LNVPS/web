@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import type { RouteObject } from "react-router-dom";
+import { Navigate, type RouteObject } from "react-router-dom";
 import Layout from "./pages/layout.tsx";
 import HomePage from "./pages/home.tsx";
 import { OrderPage } from "./pages/order";
@@ -20,7 +20,7 @@ import { VmFirewallPage } from "./pages/vm-firewall.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
 import { AccountSupportChatPage } from "./pages/account-support-chat.tsx";
-import { AccountMessagesPage } from "./pages/account-messages.tsx";
+import { AccountNotificationsPage } from "./pages/account-notifications.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
@@ -108,8 +108,16 @@ export const routes: RouteObject[] = [
             element: <AccountNostrDomainPage />,
           },
           {
+            // NIP-17 is a notification channel that is on by default for Nostr
+            // accounts, so this inbox is where platform notices arrive, not a
+            // support conversation. The old path stays as a redirect: it is in
+            // bookmarks and in years of support replies.
             path: "messages",
-            element: <AccountMessagesPage />,
+            element: <Navigate to="/account/notifications" replace />,
+          },
+          {
+            path: "notifications",
+            element: <AccountNotificationsPage />,
           },
           {
             path: "support",

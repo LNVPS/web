@@ -65,13 +65,30 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>(
           }
           case "codespan": {
             return (
-              <code key={ctr++} className="bg-cyber-panel px-2">
+              <code
+                key={ctr++}
+                className="bg-cyber-panel px-2 rounded-sm break-all"
+              >
                 {t.raw.substring(1, t.raw.length - 1)}
               </code>
             );
           }
           case "code": {
-            return <pre key={ctr++}>{t.raw}</pre>;
+            // `text` rather than `raw`: raw still carries the ``` fences.
+            //
+            // Wrapped rather than scrolled. A fenced block sits inside whatever
+            // container the caller gives it — a chat bubble is the narrow case —
+            // and an unwrapped <pre> is as wide as its longest line, which pushes
+            // that container past the viewport. `overflow-x-auto` stays as the
+            // backstop for a single unbreakable token (a long URL, a hash).
+            return (
+              <pre
+                key={ctr++}
+                className="bg-cyber-panel rounded-sm p-3 my-2 text-sm whitespace-pre-wrap break-words overflow-x-auto"
+              >
+                {t.text ?? t.raw}
+              </pre>
+            );
           }
           case "br": {
             return <br key={ctr++} />;

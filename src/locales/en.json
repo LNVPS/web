@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "What you can build"
   },
+  "/lLr44": {
+    "defaultMessage": "Type a message…"
+  },
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
@@ -194,8 +197,8 @@
   "3GLHv9": {
     "defaultMessage": "authenticate"
   },
-  "3NsyM4": {
-    "defaultMessage": "Encrypted NIP-17 direct message"
+  "3PIm6u": {
+    "defaultMessage": "Ask anything about your account — billing, a VM that won't boot, or what a charge was for. For refunds, extensions or deletions, use the contact form instead."
   },
   "3VI9mt": {
     "defaultMessage": "Save Changes"
@@ -283,9 +286,6 @@
   },
   "556JQK": {
     "defaultMessage": "Deploy"
-  },
-  "5FWCVu": {
-    "defaultMessage": "Your encrypted NIP-17 message history with support."
   },
   "5QYdPU": {
     "defaultMessage": "Start Time"
@@ -455,6 +455,9 @@
   "90f82/": {
     "defaultMessage": "Start VM"
   },
+  "9WRlF4": {
+    "defaultMessage": "Send"
+  },
   "9d9svQ": {
     "defaultMessage": "No passkeys yet. Add one to sign in without a key."
   },
@@ -515,9 +518,6 @@
   "AfmrGS": {
     "defaultMessage": "Send Code"
   },
-  "AxlcnX": {
-    "defaultMessage": "This inbox is no longer monitored, so new messages can't be sent here. For support, please open a ticket from the Support tab."
-  },
   "B3YjIQ": {
     "defaultMessage": "Save this key now — it CANNOT be recovered."
   },
@@ -574,6 +574,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "Yes, sign out everywhere"
+  },
+  "CEERm0": {
+    "defaultMessage": "Live Chat"
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
@@ -658,9 +661,6 @@
   },
   "EUDyqt": {
     "defaultMessage": "{n} stopped"
-  },
-  "EUSRTV": {
-    "defaultMessage": "Your past encrypted NIP-17 messages with support. This inbox is no longer monitored — please use the Support tab to reach us."
   },
   "Ecfndm": {
     "defaultMessage": "Invoice"
@@ -799,9 +799,6 @@
   },
   "HAlOn1": {
     "defaultMessage": "Name"
-  },
-  "HOWHco": {
-    "defaultMessage": "No messages yet. Start a conversation below."
   },
   "HPBE7M": {
     "defaultMessage": "Back to apps"
@@ -995,6 +992,12 @@
   "N6XokP": {
     "defaultMessage": "No. This is a plain VPS with root access; you install and run the node. Our one-click managed apps are Nostr relays and Blossom media servers, and those are Dublin only."
   },
+  "NAidKb": {
+    "defaultMessage": "Notifications"
+  },
+  "NLgFjn": {
+    "defaultMessage": "Nothing here yet."
+  },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
   },
@@ -1054,6 +1057,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "No referrals yet. Share your link to start converting."
+  },
+  "P1QHV0": {
+    "defaultMessage": "Thinking…"
   },
   "P7PLVj": {
     "defaultMessage": "Date"
@@ -1166,6 +1172,9 @@
   "Rw82/V": {
     "defaultMessage": "per month"
   },
+  "S3OX0p": {
+    "defaultMessage": "Encrypted NIP-17 direct message — read them in {link}"
+  },
   "S5oncX": {
     "defaultMessage": "Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees."
   },
@@ -1277,11 +1286,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "Send us a message"
+  },
   "U+Ddsx": {
     "defaultMessage": "Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost."
   },
   "U/W38H": {
     "defaultMessage": "What happens to my events if I stop paying?"
+  },
+  "U093E7": {
+    "defaultMessage": "Support Chat"
   },
   "U0GEAC": {
     "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
@@ -1619,6 +1634,9 @@
   "d6JhA/": {
     "defaultMessage": "Build your Quebec VPS"
   },
+  "dH48sC": {
+    "defaultMessage": "Live chat isn't available right now. {link} and the team will get back to you."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1645,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "Thank you for contacting us. We'll get back to you as soon as possible."
+  },
+  "dOGweU": {
+    "defaultMessage": "Reconnecting..."
   },
   "dOQCL8": {
     "defaultMessage": "Display name"
@@ -1658,6 +1679,9 @@
   "djJp6c": {
     "defaultMessage": "History"
   },
+  "djY1KH": {
+    "defaultMessage": "Notices sent as Nostr DMs"
+  },
   "duElEE": {
     "defaultMessage": "No history entries found for this VM."
   },
@@ -1666,6 +1690,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch."
+  },
+  "e4Rg0n": {
+    "defaultMessage": "Notifications LNVPS has sent you as encrypted NIP-17 direct messages."
   },
   "e4ehrh": {
     "defaultMessage": "Build your machine"
@@ -1687,6 +1714,9 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr Extension"
+  },
+  "eg3pYc": {
+    "defaultMessage": "Message limit reached for this session — reconnect to continue. Your conversation history is kept."
   },
   "eq14GY": {
     "defaultMessage": "Your new secret key"
@@ -1787,20 +1817,23 @@
   "h/PJh3": {
     "defaultMessage": "After selecting a new key, please restart the VM."
   },
+  "h1wLxC": {
+    "defaultMessage": "notification settings"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} vCPU"
   },
   "hADOUq": {
     "defaultMessage": "Saved. The app will restart shortly."
   },
-  "hMzcSq": {
-    "defaultMessage": "Messages"
-  },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
   },
   "hXAhO/": {
     "defaultMessage": "You sign in with a Nostr key, so there are no stored sessions to revoke. Each request is signed individually."
+  },
+  "hZkw2A": {
+    "defaultMessage": "Nostr DM notifications are only available for Nostr accounts — yours has no Nostr key to decrypt them with. Choose another channel in {settings}."
   },
   "hs3HVz": {
     "defaultMessage": "Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account."
@@ -1828,6 +1861,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
+  },
+  "ilooI+": {
+    "defaultMessage": "Looking up {tools}…"
   },
   "ir0wB7": {
     "defaultMessage": "I understand all data will be permanently deleted."
@@ -1931,6 +1967,9 @@
   "ku+mDU": {
     "defaultMessage": "State"
   },
+  "l+Z32c": {
+    "defaultMessage": "Enter to send, Shift+Enter for a new line."
+  },
   "l0VA3b": {
     "defaultMessage": "Is traffic metered?"
   },
@@ -1945,6 +1984,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "Pay"
+  },
+  "lFXHsw": {
+    "defaultMessage": "Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM."
   },
   "lKv8ex": {
     "defaultMessage": "Default"
@@ -1985,6 +2027,9 @@
   "m4xBT/": {
     "defaultMessage": "Managed Apps: run the software without running the server"
   },
+  "mBLNqg": {
+    "defaultMessage": "Start Chat"
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
@@ -2005,6 +2050,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "Copy to Clipboard"
+  },
+  "mRKf2V": {
+    "defaultMessage": "The connection dropped before the reply finished. Reconnecting — ask again once it's back."
   },
   "mV5FZi": {
     "defaultMessage": "Leave Referral Program"
@@ -2077,6 +2125,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "Expiry warnings, payment receipts and provisioning notices arrive here while the Nostr DM channel is enabled in {settings}. This inbox isn't monitored for replies — to reach a human, use {support}."
   },
   "oBSxZS": {
     "defaultMessage": "Upgrade Quote"
@@ -2228,9 +2279,6 @@
   "sTesGq": {
     "defaultMessage": "No offers available"
   },
-  "sUw18G": {
-    "defaultMessage": "Encrypted messaging is only available for Nostr accounts. Your account has no Nostr key to read or send NIP-17 messages. For help, please use the Support tab."
-  },
   "sehISV": {
     "defaultMessage": "Blossom Media Server Hosting from {price}/month"
   },
@@ -2303,6 +2351,9 @@
   "u3FDCD": {
     "defaultMessage": "Terms of Service and Acceptable Use"
   },
+  "uARutB": {
+    "defaultMessage": "contact support by email"
+  },
   "uJV0wU": {
     "defaultMessage": "IP Address"
   },
@@ -2311,6 +2362,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "Email: {email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "The agent can't extend, refund or delete a VM. For those, {link}."
   },
   "uYtOL7": {
     "defaultMessage": "VPS Ireland — Dublin VPS Paid in Bitcoin"
@@ -2402,6 +2456,9 @@
   "wz7uSD": {
     "defaultMessage": "including {amount} tax"
   },
+  "x/me2T": {
+    "defaultMessage": "Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete — use the form below for those."
+  },
   "x0cZXf": {
     "defaultMessage": "Upgrade Not Available"
   },
@@ -2483,14 +2540,14 @@
   "z+hIFs": {
     "defaultMessage": "No payments yet."
   },
+  "z1KiHv": {
+    "defaultMessage": "Messages are limited to {max} characters."
+  },
   "z4e/Em": {
     "defaultMessage": "Managed Nostr Relay Hosting"
   },
   "z8VosU": {
     "defaultMessage": "Dublin is also where our managed <relay>Nostr relays</relay> and <blossom>Blossom servers</blossom> run, from {price} a month."
-  },
-  "zAN0RF": {
-    "defaultMessage": "Encrypted direct messages"
   },
   "zEk9h3": {
     "defaultMessage": "Virtual Machines"

@@ -2040,12 +2040,26 @@ export class LNVpsApi {
     }
   }
 
+  /**
+   * Build a NIP-98 auth event for one request.
+   *
+   * The `nonce` tag is load-bearing, not decoration: the server now treats each
+   * auth event as single-use and keys that on the event id, which is the hash
+   * of (pubkey, created_at, kind, tags, content). `created_at` has one-second
+   * resolution, so two identical requests (same key, URL and method) signed
+   * within the same second would otherwise produce *the same event id* and the
+   * second is rejected with "Auth check failed: Credential has already been
+   * used" — which any retry, double-click or parallel fetch can trigger.
+   * Unknown tags are ignored by the server.
+   */
   async #auth_event(url: string, method: string) {
+    const nonce = base64.encode(crypto.getRandomValues(new Uint8Array(16)));
     return await this.publisher?.generic((eb) => {
       return eb
         .kind(EventKind.HttpAuthentication)
         .tag(["u", url])
-        .tag(["method", method]);
+        .tag(["method", method])
+        .tag(["nonce", nonce]);
     });
   }
 

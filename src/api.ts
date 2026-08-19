@@ -29,6 +29,32 @@ export interface AuthTicket {
   expires_in: number;
 }
 
+/**
+ * A frame streamed back from the support-agent chat WebSocket
+ * (`/api/v1/support/chat`).
+ *
+ * Every message sent produces exactly one terminal frame (`final` or `error`).
+ * `tool_start`/`tool_done` are only sent to callers holding the `users:view`
+ * admin permission — ordinary customers never see them. The server is free to
+ * add frame types, so unknown `type` values must be ignored rather than
+ * treated as an error.
+ */
+export type SupportChatEvent =
+  /** Fragment of the reply — append as it arrives. */
+  | { type: "token"; text: string }
+  /** Complete reply; equals all preceding tokens concatenated. */
+  | { type: "final"; text: string }
+  /** The turn failed. The connection may stay open. */
+  | { type: "error"; message: string }
+  /** The agent began running an internal lookup. */
+  | { type: "tool_start"; name: string }
+  /** The agent finished running an internal lookup. */
+  | { type: "tool_done"; name: string };
+
+/** Server-enforced limits on the support chat socket. */
+export const SUPPORT_CHAT_MAX_MESSAGE_LENGTH = 4000;
+export const SUPPORT_CHAT_MAX_MESSAGES_PER_CONNECTION = 50;
+
 export enum DiskType {
   SSD = "ssd",
   HDD = "hdd",
@@ -1656,7 +1682,14 @@ export class LNVpsApi {
   }
 
   async connect_terminal(id: number) {
-    const path = `/api/v1/vm/${id}/console`;
+    return await this.#connectWebSocket(`/api/v1/vm/${id}/console`);
+  }
+
+  /**
+   * Mint a ticket for `path` and open an authenticated WebSocket to it,
+   * resolving once the socket is open.
+   */
+  async #connectWebSocket(path: string) {
     const ticket = await this.#authTicket(path);
     // Rewrite http(s):// → ws(s):// so the URL is valid for WebSocket
     const wsUrl = `${this.url}${path}`.replace(/^http(s?):\/\//, "ws$1://");
@@ -1669,6 +1702,46 @@ export class LNVpsApi {
         reject(e);
       };
     });
+  }
+
+  /**
+   * Whether this server serves the support-agent chat at all.
+   *
+   * There is no capability endpoint, so this probes the route directly: the
+   * WebSocket path is only mounted when the API is built with the `agent`
+   * feature, so an unmounted route answers `404` while a mounted one rejects a
+   * plain (non-upgrade) GET with `400`. Deliberately unauthenticated — it needs
+   * no identity, and signing a NIP-98 event for it would burn a single-use
+   * credential (and pop a signer prompt) just to find out whether a menu entry
+   * should exist.
+   *
+   * A server built with the feature but with no agent configured still answers
+   * `400` here; it refuses at the protocol level instead, with an `error` frame
+   * on connect, which the chat page surfaces.
+   */
+  async supportChatAvailable() {
+    try {
+      const rsp = await fetch(`${this.url}/api/v1/support/chat`, {
+        method: "GET",
+      });
+      return rsp.status !== 404;
+    } catch {
+      // A network failure says nothing about the feature; don't hide the entry
+      // point on a transient error.
+      return true;
+    }
+  }
+
+  /**
+   * Open a live chat with the AI support agent.
+   *
+   * Messages are sent as plain text frames; replies stream back as JSON event
+   * frames (see {@link SupportChatEvent}). The socket is capped server-side at
+   * {@link SUPPORT_CHAT_MAX_MESSAGES_PER_CONNECTION} messages — reconnect to
+   * continue, conversation history is preserved per account.
+   */
+  async connectSupportChat() {
+    return await this.#connectWebSocket("/api/v1/support/chat");
   }
 
   async listDomains() {

@@ -8,10 +8,15 @@ import { AccountDetail, LNVpsApi } from "../api";
 import { EventKind, EventBuilder } from "@snort/system";
 import { PageHeader, SectionCard } from "../components/section";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
+import useSupportChatAvailable from "../hooks/support-chat";
 
 export function AccountSupportPage() {
   const login = useLogin();
   const [account, setAccount] = useState<AccountDetail>();
+  // Not every deployment runs the support agent; offering a chat that cannot
+  // connect is worse than not offering one, so the card waits for the probe.
+  const chatAvailable = useSupportChatAvailable();
 
   useEffect(() => {
     login?.api.getAccount().then(setAccount);
@@ -63,6 +68,22 @@ export function AccountSupportPage() {
           <FormattedMessage defaultMessage="Reach the team directly — we'll get back to you." />
         }
       />
+
+      {chatAvailable && (
+        <SectionCard
+          title={<FormattedMessage defaultMessage="Live Chat" />}
+          description={
+            <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete — use the form below for those." />
+          }
+        >
+          <Link
+            to="/account/support/chat"
+            className="inline-block rounded-sm border border-cyber-border px-4 py-2 text-sm font-medium hover:border-cyber-primary hover:text-cyber-primary"
+          >
+            <FormattedMessage defaultMessage="Start Chat" />
+          </Link>
+        </SectionCard>
+      )}
 
       <SectionCard
         title={<FormattedMessage defaultMessage="Contact Support" />}

@@ -19,6 +19,7 @@ import { VmHistoryPage } from "./pages/vm-history.tsx";
 import { VmFirewallPage } from "./pages/vm-firewall.tsx";
 import VmUpgradePage from "./pages/vm-upgrade.tsx";
 import { AccountSupportPage } from "./pages/account-support.tsx";
+import { AccountSupportChatPage } from "./pages/account-support-chat.tsx";
 import { AccountMessagesPage } from "./pages/account-messages.tsx";
 import { ContactPage } from "./pages/contact.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
@@ -113,6 +114,10 @@ export const routes: RouteObject[] = [
           {
             path: "support",
             element: <AccountSupportPage />,
+          },
+          {
+            path: "support/chat",
+            element: <AccountSupportChatPage />,
           },
           {
             path: "referral",

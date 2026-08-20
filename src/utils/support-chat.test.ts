@@ -4,10 +4,19 @@ import {
   applyChatEvent,
   ChatState,
   emptyChatState,
+  isThinking,
+  stallTurn,
 } from "./support-chat";
 
 function run(events: Parameters<typeof applyChatEvent>[1][]): ChatState {
-  return events.reduce(applyChatEvent, emptyChatState);
+  return runFrom(emptyChatState, events);
+}
+
+function runFrom(
+  from: ChatState,
+  events: Parameters<typeof applyChatEvent>[1][],
+): ChatState {
+  return events.reduce(applyChatEvent, from);
 }
 
 describe("support chat reducer", () => {
@@ -35,7 +44,6 @@ describe("support chat reducer", () => {
       streaming: false,
     });
     expect(s.awaitingReply).toBe(false);
-    expect(s.activeTools).toEqual([]);
   });
 
   test("final with no preceding token still produces a message", () => {
@@ -70,22 +78,79 @@ describe("support chat reducer", () => {
     expect(s.messages[1]).toMatchObject({ text: "boom", failed: true });
   });
 
-  test("tool frames track in-flight lookups", () => {
+  test("tool frames track in-flight lookups on the turn", () => {
     const started = run([
       { type: "tool_start", name: "list_vms" },
       { type: "tool_start", name: "get_account" },
     ]);
-    expect(started.activeTools).toEqual(["list_vms", "get_account"]);
+    expect(started.messages).toHaveLength(1);
+    expect(started.messages[0].tools).toEqual([
+      { name: "list_vms", running: true },
+      { name: "get_account", running: true },
+    ]);
 
     const done = applyChatEvent(started, {
       type: "tool_done",
       name: "list_vms",
     });
-    expect(done.activeTools).toEqual(["get_account"]);
+    expect(done.messages[0].tools).toEqual([
+      { name: "list_vms", running: false },
+      { name: "get_account", running: true },
+    ]);
 
     // A tool_done for something never started is a no-op, not a crash.
     const unknown = applyChatEvent(done, { type: "tool_done", name: "nope" });
     expect(unknown).toBe(done);
+  });
+
+  test("a tool_done with no turn open is ignored", () => {
+    const s = applyChatEvent(emptyChatState, {
+      type: "tool_done",
+      name: "list_vms",
+    });
+    expect(s).toBe(emptyChatState);
+  });
+
+  test("the same tool run twice closes the newest call first", () => {
+    const s = run([
+      { type: "tool_start", name: "list_vms" },
+      { type: "tool_start", name: "list_vms" },
+      { type: "tool_done", name: "list_vms" },
+    ]);
+    expect(s.messages[0].tools).toEqual([
+      { name: "list_vms", running: true },
+      { name: "list_vms", running: false },
+    ]);
+  });
+
+  // Regression: tool frames used to live outside the transcript. Opening a
+  // message of their own would end the streaming turn, so `final` — which
+  // carries the whole visible reply — would land in a second bubble and the
+  // narration streamed before the tool call would be shown twice.
+  test("tools annotate the streamed turn instead of splitting it", () => {
+    const s = run([
+      { type: "token", text: "Let me check. " },
+      { type: "tool_start", name: "list_vms" },
+      { type: "tool_done", name: "list_vms" },
+      { type: "token", text: "You have one VM." },
+      { type: "final", text: "Let me check. You have one VM." },
+    ]);
+    expect(s.messages).toHaveLength(1);
+    expect(s.messages[0]).toMatchObject({
+      text: "Let me check. You have one VM.",
+      streaming: false,
+    });
+    expect(s.messages[0].tools).toEqual([{ name: "list_vms", running: false }]);
+  });
+
+  test("a turn that fails after a lookup keeps the lookup", () => {
+    const s = run([
+      { type: "tool_start", name: "list_vms" },
+      { type: "error", message: "boom" },
+    ]);
+    expect(s.messages).toHaveLength(1);
+    expect(s.messages[0]).toMatchObject({ text: "boom", failed: true });
+    expect(s.messages[0].tools).toEqual([{ name: "list_vms", running: true }]);
   });
 
   test("unknown frame types are ignored", () => {
@@ -108,5 +173,72 @@ describe("support chat reducer", () => {
     const sent = appendUserMessage(emptyChatState, "hi");
     const s = applyChatEvent(sent, { type: "final", text: "hello" });
     expect(new Set(s.messages.map((m) => m.id)).size).toBe(s.messages.length);
+  });
+
+  test("ids stay unique when a tool frame opens the turn", () => {
+    const sent = appendUserMessage(emptyChatState, "hi");
+    const s = runFrom(sent, [
+      { type: "tool_start", name: "list_vms" },
+      { type: "final", text: "hello" },
+    ]);
+    expect(new Set(s.messages.map((m) => m.id)).size).toBe(s.messages.length);
+  });
+});
+
+describe("thinking indicator", () => {
+  test("shows while a turn has produced nothing visible", () => {
+    const sent = appendUserMessage(emptyChatState, "hi");
+    expect(isThinking(sent)).toBe(true);
+    expect(
+      isThinking(applyChatEvent(sent, { type: "tool_start", name: "x" })),
+    ).toBe(true);
+  });
+
+  test("stops once tokens are arriving, and when the turn ends", () => {
+    const sent = appendUserMessage(emptyChatState, "hi");
+    const streaming = applyChatEvent(sent, { type: "token", text: "He" });
+    expect(isThinking(streaming)).toBe(false);
+    expect(
+      isThinking(applyChatEvent(streaming, { type: "final", text: "Hey" })),
+    ).toBe(false);
+    expect(isThinking(emptyChatState)).toBe(false);
+  });
+});
+
+describe("stalled turns", () => {
+  // Regression: a turn whose terminal frame never arrives (agent hung upstream,
+  // or a half-open socket that never fires `close`) left `awaitingReply` true
+  // forever, which disables the composer — the chat would sit on "Thinking…"
+  // and refuse to send anything else, with nothing on screen explaining why.
+  test("give the user back the composer and say what happened", () => {
+    const sent = appendUserMessage(emptyChatState, "hi");
+    const s = stallTurn(sent, "no reply");
+    expect(s.awaitingReply).toBe(false);
+    expect(s.messages[s.messages.length - 1]).toMatchObject({
+      text: "no reply",
+      failed: true,
+    });
+  });
+
+  test("partial output is kept when the rest never arrives", () => {
+    const s = stallTurn(
+      runFrom(appendUserMessage(emptyChatState, "hi"), [
+        { type: "token", text: "Your VM is" },
+      ]),
+      "no reply",
+    );
+    expect(s.messages.map((m) => m.text)).toEqual([
+      "hi",
+      "Your VM is",
+      "no reply",
+    ]);
+  });
+
+  // The deadline fires on a timer, so it can land after the reply did.
+  test("a stall after the turn completed changes nothing", () => {
+    const done = runFrom(appendUserMessage(emptyChatState, "hi"), [
+      { type: "final", text: "all good" },
+    ]);
+    expect(stallTurn(done, "no reply")).toBe(done);
   });
 });

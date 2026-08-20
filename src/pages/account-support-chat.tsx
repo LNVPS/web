@@ -10,6 +10,7 @@ import {
 import Markdown from "../components/markdown";
 import { PageHeader } from "../components/section";
 import Seo from "../components/seo";
+import Spinner from "../components/spinner";
 import useLogin from "../hooks/login";
 import useSupportChatAvailable from "../hooks/support-chat";
 import {
@@ -17,6 +18,9 @@ import {
   applyChatEvent,
   type ChatMessage,
   emptyChatState,
+  isThinking,
+  stallTurn,
+  type ToolCall,
 } from "../utils/support-chat";
 
 type ConnectionStatus =
@@ -35,6 +39,21 @@ type ConnectionStatus =
  * server-side, so reconnecting resumes where it left off.
  */
 const RECONNECT_BACKOFF_MS = [1_000, 2_000, 5_000, 10_000];
+
+/**
+ * How long a turn may produce nothing at all before it is treated as dead.
+ *
+ * Silence is not evidence of a dead connection here: the server pings every
+ * 20s whether or not the turn is progressing, so a socket whose agent task has
+ * hung looks exactly like a healthy one, and a half-open TCP connection reports
+ * `OPEN` long after the peer stopped listening. Neither produces a `close`
+ * event, so without a deadline the composer waits forever for a terminal frame.
+ *
+ * Generous, because a legitimate turn can be slow: the model streams tokens as
+ * it generates, so two minutes of *total* silence means something upstream
+ * stopped, not that the answer is long.
+ */
+const TURN_STALL_MS = 120_000;
 
 /**
  * Live chat with the AI support agent (`WebSocket /api/v1/support/chat`).
@@ -63,7 +82,13 @@ export function AccountSupportChatPage() {
   // is missing, until we know.
   const chatAvailable = useSupportChatAvailable();
 
-  const { messages, activeTools, awaitingReply } = chat;
+  /**
+   * Bumped on every frame received. Restarts the stall deadline, so progress
+   * of any kind (a token, a tool frame) counts as the turn being alive.
+   */
+  const [lastFrameAt, setLastFrameAt] = useState(0);
+
+  const { messages, awaitingReply } = chat;
 
   useEffect(() => {
     let cancelled = false;
@@ -106,6 +131,7 @@ export function AccountSupportChatPage() {
           // Not a frame we understand — ignore rather than break the session.
           return;
         }
+        setLastFrameAt(Date.now());
         setChat((c) => applyChatEvent(c, parsed));
       };
       ws.onclose = () => {
@@ -122,7 +148,7 @@ export function AccountSupportChatPage() {
                 }),
               })
             : c;
-          return { ...next, awaitingReply: false, activeTools: [] };
+          return { ...next, awaitingReply: false };
         });
         if (cancelled) return;
 
@@ -156,7 +182,27 @@ export function AccountSupportChatPage() {
   // Keep the newest message in view as tokens stream in.
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
-  }, [messages, activeTools]);
+  }, [messages]);
+
+  // Give up on a turn that has gone completely silent, and take the socket down
+  // with it: if the reply is missing because the connection is half-open, the
+  // only way to find out is to build a new one.
+  useEffect(() => {
+    if (!awaitingReply) return;
+    const timer = setTimeout(() => {
+      setChat((c) =>
+        stallTurn(
+          c,
+          formatMessage({
+            defaultMessage:
+              "No reply came back for that message. Reconnecting — please ask again.",
+          }),
+        ),
+      );
+      wsRef.current?.close();
+    }, TURN_STALL_MS);
+    return () => clearTimeout(timer);
+  }, [awaitingReply, lastFrameAt, formatMessage]);
 
   const atMessageLimit = sentCount >= SUPPORT_CHAT_MAX_MESSAGES_PER_CONNECTION;
   const tooLong = input.length > SUPPORT_CHAT_MAX_MESSAGE_LENGTH;
@@ -168,9 +214,21 @@ export function AccountSupportChatPage() {
     input.trim().length > 0;
 
   function send() {
-    if (!canSend || !wsRef.current) return;
+    const ws = wsRef.current;
+    if (!canSend || !ws) return;
+    // `send()` on a socket that is closing or closed discards the data silently
+    // rather than throwing, so marking the turn in flight here would wait for a
+    // reply to a message the server never received — the composer would lock up
+    // with no error and no way back. Rebuild the connection instead, keeping
+    // what was typed.
+    if (ws.readyState !== WebSocket.OPEN) {
+      setStatus("reconnecting");
+      setAttempt((a) => a + 1);
+      return;
+    }
     const text = input.trim();
-    wsRef.current.send(text);
+    ws.send(text);
+    setLastFrameAt(Date.now());
     setChat((c) => appendUserMessage(c, text));
     setInput("");
     setSentCount((c) => c + 1);
@@ -265,16 +323,9 @@ export function AccountSupportChatPage() {
           {messages.map((m) => (
             <ChatBubble key={m.id} message={m} />
           ))}
-          {activeTools.length > 0 && (
-            <div className="text-xs text-cyber-muted italic">
-              <FormattedMessage
-                defaultMessage="Looking up {tools}…"
-                values={{ tools: activeTools.join(", ") }}
-              />
-            </div>
-          )}
-          {awaitingReply && activeTools.length === 0 && (
-            <div className="text-xs text-cyber-muted italic">
+          {isThinking(chat) && (
+            <div className="flex items-center gap-2 text-xs text-cyber-muted italic">
+              <Spinner width={12} height={12} />
               <FormattedMessage defaultMessage="Thinking…" />
             </div>
           )}
@@ -362,12 +413,63 @@ function ChatBubble({ message }: { message: ChatMessage }) {
               : "bg-cyber-panel-light text-cyber-text",
         )}
       >
-        {isUser || message.failed ? (
-          <span className="whitespace-pre-wrap">{message.text}</span>
-        ) : (
-          <Markdown content={message.text} />
+        {message.tools && message.tools.length > 0 && (
+          <ToolCalls tools={message.tools} />
         )}
+        {message.text.length > 0 &&
+          (isUser || message.failed ? (
+            <span className="whitespace-pre-wrap">{message.text}</span>
+          ) : (
+            <Markdown content={message.text} />
+          ))}
       </div>
+    </div>
+  );
+}
+
+/**
+ * The lookups a turn ran, as one chip each.
+ *
+ * Kept in the transcript after they finish rather than shown as a line that
+ * disappears: which tools a question triggered is what makes a slow or wrong
+ * answer explicable afterwards. Only privileged accounts are sent these frames.
+ */
+function ToolCalls({ tools }: { tools: Array<ToolCall> }) {
+  return (
+    <div className="mb-2 flex flex-wrap gap-1.5">
+      {tools.map((tool, i) => (
+        <span
+          key={`${tool.name}-${i}`}
+          className={classNames(
+            "inline-flex items-center gap-1.5 rounded-sm border px-2 py-0.5 font-mono text-[11px] leading-5",
+            tool.running
+              ? "border-cyber-primary/40 text-cyber-primary"
+              : "border-cyber-border text-cyber-muted",
+          )}
+        >
+          {tool.running ? (
+            <Spinner width={10} height={10} className="shrink-0" />
+          ) : (
+            <svg
+              width={10}
+              height={10}
+              viewBox="0 0 16 16"
+              fill="none"
+              className="shrink-0"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 8.5 6.5 12 13 4"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+          {tool.name}
+        </span>
+      ))}
     </div>
   );
 }

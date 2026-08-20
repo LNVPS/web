@@ -1,6 +1,7 @@
 import {
   AppUpgradeRequest,
   LNVpsApi,
+  RenewalQuote,
   SubscriptionPayment,
   VmInstance,
   VmPayment,
@@ -51,7 +52,13 @@ export interface PaymentSource {
   /** Create a payment for the chosen method. */
   createPayment: (
     method: string,
-    opts: { saveCard?: boolean; paymentMethodId?: number; intervals?: number },
+    opts: {
+      saveCard?: boolean;
+      paymentMethodId?: number;
+      intervals?: number;
+      /** Discount code; an unusable code fails the request. */
+      code?: string;
+    },
   ) => Promise<VmPayment>;
   /** Resolve true once the given payment has settled. */
   pollPaid: (paymentId: string) => Promise<boolean>;
@@ -82,6 +89,17 @@ export interface PaymentSource {
    * to true.
    */
   allowSavedMethods?: boolean;
+  /**
+   * Price the order without creating anything. Present only for sources whose
+   * endpoint has a quote (the renewals); when set, the checkout shows the
+   * server's own totals instead of a client-side estimate, and can offer a
+   * discount code field — a code is only worth asking for if its value can be
+   * shown before the customer commits.
+   */
+  quote?: (
+    method: string,
+    opts: { intervals?: number; code?: string },
+  ) => Promise<RenewalQuote>;
 }
 
 /** Flatten a SubscriptionPayment (Price objects) onto the VmPayment shape. */
@@ -100,6 +118,7 @@ export function subscriptionToVmPayment(p: SubscriptionPayment): VmPayment {
     data: p.data,
     time: 0,
     payment_method: p.payment_method,
+    discount: p.discount,
   };
 }
 
@@ -116,6 +135,7 @@ export function subscriptionRenewalSource(
           saveCard: opts.saveCard,
           paymentMethodId: opts.paymentMethodId,
           intervals: opts.intervals,
+          code: opts.code,
         }),
       ),
     pollPaid: async (paymentId) => {
@@ -131,11 +151,11 @@ export function subscriptionRenewalSource(
       }
       return undefined;
     },
+    quote: (method, opts) =>
+      api.quoteSubscriptionRenewal(subscriptionId, method, opts),
     ...extra,
   };
 }
-
-
 
 /** Renew a VM by renewing the subscription it's billed under. */
 export function vmRenewalSource(

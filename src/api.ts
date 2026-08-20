@@ -462,6 +462,38 @@ export type PaymentData =
       };
     };
 
+/**
+ * What a discount code took off an order. The payment's `amount`/`tax` are
+ * already net of it — `amount_off` is only there so the receipt can show the
+ * list price and the saving as separate lines.
+ */
+export interface Discount {
+  /** The code that was applied. */
+  code?: string;
+  /**
+   * Amount taken off, in the payment currency's smallest unit (cents for
+   * fiat, millisats for BTC).
+   */
+  amount_off: number;
+}
+
+/**
+ * What a renewal would cost, priced by the server without creating anything
+ * (no payment row, no Lightning invoice, no provider order). Runs the same
+ * pricing path as the renewal itself, so it can't drift from what is charged
+ * — use it instead of re-deriving VAT and processing fees client-side.
+ */
+export interface RenewalQuote {
+  /** Net of any discount, smallest unit (cents / millisats). */
+  amount: number;
+  tax: number;
+  processing_fee: number;
+  currency: string;
+  /** Seconds this would add to expiry. */
+  time: number;
+  discount?: Discount;
+}
+
 export interface VmPayment {
   id: string;
   vm_id: number;
@@ -478,6 +510,8 @@ export interface VmPayment {
   is_upgrade?: boolean;
   upgrade_params?: VmUpgradeRequest | null;
   payment_method?: string;
+  /** Present when a discount code was applied; `amount`/`tax` are net of it. */
+  discount?: Discount;
 }
 
 export interface PatchVm {
@@ -678,6 +712,8 @@ export interface SubscriptionPayment {
   // Payment-method-specific data needed to complete the payment
   // (e.g. the Lightning invoice when payment_method === "lightning").
   data: PaymentData;
+  /** Present when a discount code was applied; `amount`/`tax` are net of it. */
+  discount?: Discount;
 }
 
 export interface SubscriptionSummary {
@@ -1938,13 +1974,53 @@ export class LNVpsApi {
     return data;
   }
 
-  async renewSubscription(
+  /**
+   * Price a subscription renewal without creating a payment. `method` also
+   * accepts the off-session values `saved` and `nwc` (priced as `revolut` and
+   * `lightning`), so a saved method can be priced without charging it. An
+   * unusable discount code fails with the same error as the renewal, and
+   * quoting never consumes a code's usage limit.
+   */
+  async quoteSubscriptionRenewal(
     subscriptionId: number,
     method?: string,
-    opts?: { saveCard?: boolean; paymentMethodId?: number; intervals?: number },
+    opts?: { intervals?: number; code?: string },
   ) {
     const params = new URLSearchParams();
     if (method !== undefined) params.set("method", method);
+    if (opts?.code) params.set("code", opts.code);
+    if (opts?.intervals !== undefined && opts.intervals > 1) {
+      params.set("intervals", opts.intervals.toString());
+    }
+    const { data } = await this.#handleResponse<ApiResponse<RenewalQuote>>(
+      await this.#req(
+        `/api/v1/subscriptions/${subscriptionId}/renew/quote?${params.toString()}`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  async renewSubscription(
+    subscriptionId: number,
+    method?: string,
+    opts?: {
+      saveCard?: boolean;
+      paymentMethodId?: number;
+      intervals?: number;
+      /**
+       * Discount code. A code that can't be used (unknown, expired, exhausted,
+       * or not applicable to this order) **fails the request** rather than
+       * quietly invoicing full price — surface the error to the customer.
+       */
+      code?: string;
+    },
+  ) {
+    const params = new URLSearchParams();
+    if (method !== undefined) params.set("method", method);
+    // A discounted order is priced fresh, so this never hands back a pending
+    // full-price invoice.
+    if (opts?.code) params.set("code", opts.code);
     if (opts?.intervals !== undefined && opts.intervals > 1) {
       params.set("intervals", opts.intervals.toString());
     }

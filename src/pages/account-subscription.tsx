@@ -142,6 +142,25 @@ export function AccountSubscriptionPage() {
       currency: p.amount.currency,
       amount: p.amount.amount + p.tax.amount + p.processing_fee.amount,
     },
+    // The charge is already net of any discount; say why it's lower.
+    note:
+      (p.discount?.amount_off ?? 0) > 0 ? (
+        <FormattedMessage
+          defaultMessage="{amount} off{code, select, none {} other { · {code}}}"
+          values={{
+            amount: (
+              <CostAmount
+                cost={{
+                  currency: p.amount.currency,
+                  amount: p.discount!.amount_off,
+                }}
+                converted={false}
+              />
+            ),
+            code: p.discount?.code ?? "none",
+          }}
+        />
+      ) : undefined,
     method:
       p.payment_method ??
       ("lightning" in p.data
@@ -257,7 +276,11 @@ export function AccountSubscriptionPage() {
             price={
               <>
                 <CostAmount
-                  cost={{ currency, amount: totalAmount, interval_type: "month" }}
+                  cost={{
+                    currency,
+                    amount: totalAmount,
+                    interval_type: "month",
+                  }}
                   converted={false}
                   taxable
                   companyId={subscription.company_id}
@@ -402,7 +425,11 @@ export function AccountSubscriptionPage() {
                 </span>
                 <span className="text-cyber-text-bright tabular-nums">
                   <CostAmount
-                    cost={{ currency, amount: totalAmount, interval_type: "month" }}
+                    cost={{
+                      currency,
+                      amount: totalAmount,
+                      interval_type: "month",
+                    }}
                     converted={false}
                     taxable
                     companyId={subscription.company_id}

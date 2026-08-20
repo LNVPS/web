@@ -2,6 +2,7 @@ import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import {
   AccountDetail,
   PaymentMethod,
+  RenewalQuote,
   SavedPaymentMethod,
   VmPayment,
 } from "../api";
@@ -65,13 +66,11 @@ export default function PaymentFlow({
   onCancel,
 }: PaymentFlowProps) {
   const login = useLogin();
-  const { formatNumber } = useIntl();
+  const { formatNumber, formatMessage } = useIntl();
   const { data: methods, loading: methodsLoading } = usePaymentMethods();
   const { data: rates } = useExchangeRates();
 
-  const [payment, setPayment] = useState<VmPayment | undefined>(
-    initialPayment,
-  );
+  const [payment, setPayment] = useState<VmPayment | undefined>(initialPayment);
   const [showLnurl, setShowLnurl] = useState(false);
   // The chosen payment option. Selecting is instant; the charge happens from
   // the shared Pay button so the summary can reflect the method's fees first.
@@ -102,6 +101,22 @@ export default function PaymentFlow({
   const [intervals, setIntervals] = useState(1);
   const intervalsRef = useRef(intervals);
   intervalsRef.current = intervals;
+  // Discount code. What the customer is typing, and — separately — the code
+  // that has actually been applied to the quote. Only the applied one is sent,
+  // so a half-typed code never errors at them mid-keystroke.
+  const [code, setCode] = useState("");
+  const [appliedCode, setAppliedCode] = useState<string>();
+  const appliedCodeRef = useRef(appliedCode);
+  appliedCodeRef.current = appliedCode;
+  // A code the server rejected, shown next to the field instead of on the
+  // full-screen error so the customer can just correct it.
+  const [codeError, setCodeError] = useState<string>();
+  // Server-priced order for the current method/duration/code. Authoritative:
+  // it runs the same pricing path as the charge itself, so the summary shows
+  // real VAT, real processing fee and the real discount rather than a
+  // client-side re-derivation.
+  const [quote, setQuote] = useState<RenewalQuote>();
+  const [quoting, setQuoting] = useState(false);
 
   useEffect(() => {
     if (!login?.api) return;
@@ -126,20 +141,86 @@ export default function PaymentFlow({
       opts?: { saveCard?: boolean; paymentMethodId?: number },
     ) {
       setError(undefined);
+      setCodeError(undefined);
       setSavedCharge(opts?.paymentMethodId !== undefined);
+      const usedCode = appliedCodeRef.current;
       try {
         const result = await source.createPayment(method, {
           saveCard: opts?.saveCard,
           paymentMethodId: opts?.paymentMethodId,
           intervals: intervalsRef.current,
+          code: usedCode,
         });
         setPayment(result);
       } catch (e) {
-        if (e instanceof Error) setError(e.message);
+        if (!(e instanceof Error)) return;
+        // With a code entered the overwhelmingly likely cause is the code
+        // itself, and the customer is owed an answer next to the field they
+        // typed in rather than a dead-end error screen.
+        if (usedCode) setCodeError(e.message);
+        else setError(e.message);
       }
     },
     [source],
   );
+
+  // The method the order should be priced through. The quote endpoint accepts
+  // the off-session values (`saved`, `nwc`) and prices them as the rail they
+  // settle on, so a saved method can be priced without being charged.
+  const selectedSavedMethod =
+    selection?.kind === "saved"
+      ? savedMethods.find((x) => x.id === selection.id)
+      : undefined;
+  const quoteMethod = !selection
+    ? undefined
+    : selection.kind === "saved"
+      ? selectedSavedMethod?.provider === "nwc"
+        ? "nwc"
+        : "saved"
+      : // LNURL has no invoice of its own; it settles over Lightning.
+        selection.name === "lnurl"
+        ? "lightning"
+        : selection.name;
+
+  // Price the order server-side whenever the inputs change. Debounced so
+  // dragging the duration slider doesn't fire a request per step.
+  const quoteFn = source.quote;
+  useEffect(() => {
+    // Nothing to price once the invoice exists — that carries its own numbers.
+    if (!quoteFn || !quoteMethod || payment) return;
+    let cancelled = false;
+    setQuoting(true);
+    const t = setTimeout(() => {
+      quoteFn(quoteMethod, { intervals, code: appliedCode })
+        .then((r) => {
+          if (cancelled) return;
+          setQuote(r);
+          setCodeError(undefined);
+        })
+        .catch((e) => {
+          if (cancelled) return;
+          // A quote fails for the same reasons the charge would. With a code
+          // applied it is almost always the code, so say so next to the field
+          // and drop back to list price rather than showing a stale total.
+          if (appliedCode) {
+            setAppliedCode(undefined);
+            if (e instanceof Error) setCodeError(e.message);
+          } else {
+            // Otherwise fall back to the local estimate; the server has the
+            // final say at payment time either way.
+            setQuote(undefined);
+            console.error("Failed to quote renewal:", e);
+          }
+        })
+        .finally(() => {
+          if (!cancelled) setQuoting(false);
+        });
+    }, 300);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [quoteFn, quoteMethod, intervals, appliedCode, payment]);
 
   const handlePaymentComplete = useCallback(() => {
     setPayment(undefined);
@@ -286,12 +367,32 @@ export default function PaymentFlow({
 
   // --- Payment created: process it -------------------------------------
   if (payment) {
+    // `payment.amount` is already net of any discount, so the subtotal is the
+    // list price and the saving reads as its own line.
+    const amountOff = payment.discount?.amount_off ?? 0;
     const lines: Array<ReceiptLine> = [
       {
         label: <FormattedMessage defaultMessage="Subtotal" />,
-        cost: { currency: payment.currency, amount: payment.amount },
+        cost: {
+          currency: payment.currency,
+          amount: payment.amount + amountOff,
+        },
       },
     ];
+    if (amountOff > 0) {
+      lines.push({
+        label: payment.discount?.code ? (
+          <FormattedMessage
+            defaultMessage="Discount ({code})"
+            values={{ code: payment.discount.code }}
+          />
+        ) : (
+          <FormattedMessage defaultMessage="Discount" />
+        ),
+        cost: { currency: payment.currency, amount: amountOff },
+        credit: true,
+      });
+    }
     if (payment.tax > 0) {
       lines.push({
         label: <FormattedMessage defaultMessage="VAT" />,
@@ -495,15 +596,12 @@ export default function PaymentFlow({
 
   // The provider method whose fee config applies to the current selection.
   // A saved revolut method bills through revolut; a saved NWC wallet as lightning.
-  const selectedSaved =
-    selection?.kind === "saved"
-      ? savedMethods.find((m) => m.id === selection.id)
-      : undefined;
   const selectedFeeMethod =
     selection?.kind === "saved"
       ? methods?.find(
           (m) =>
-            m.name === (selectedSaved?.provider === "nwc" ? "lightning" : "revolut"),
+            m.name ===
+            (selectedSavedMethod?.provider === "nwc" ? "lightning" : "revolut"),
         )
       : selection
         ? methods?.find((m) => m.name === selection.name)
@@ -511,10 +609,81 @@ export default function PaymentFlow({
   const lnurlSelected =
     selection?.kind === "method" && selection.name === "lnurl";
 
-  // Build the order summary, folding in the selected method's processing fee.
+  // Build the order summary. Prefer the server's quote — it is the same
+  // pricing path as the charge, so VAT, processing fee and discount are exact
+  // — and fall back to the local estimate only until the first quote lands (or
+  // for a source that has no quote endpoint).
   let receipt: ReactNode = null;
   let orderTotal: { currency: string; amount: number } | undefined;
-  if (duration) {
+  if (quote) {
+    const currency = quote.currency;
+    const amountOff = quote.discount?.amount_off ?? 0;
+    orderTotal = {
+      currency,
+      amount: quote.amount + quote.tax + quote.processing_fee,
+    };
+    const quoteLines: Array<ReceiptLine> = [
+      {
+        label: <FormattedMessage defaultMessage="Subtotal" />,
+        // `amount` is net of the discount; show the list price against it.
+        cost: { currency, amount: quote.amount + amountOff },
+      },
+    ];
+    if (amountOff > 0) {
+      quoteLines.push({
+        label: quote.discount?.code ? (
+          <FormattedMessage
+            defaultMessage="Discount ({code})"
+            values={{ code: quote.discount.code }}
+          />
+        ) : (
+          <FormattedMessage defaultMessage="Discount" />
+        ),
+        cost: { currency, amount: amountOff },
+        credit: true,
+      });
+    }
+    if (quote.tax > 0) {
+      quoteLines.push({
+        label: <FormattedMessage defaultMessage="VAT" />,
+        cost: { currency, amount: quote.tax },
+      });
+    }
+    if (quote.processing_fee > 0) {
+      quoteLines.push({
+        label: <FormattedMessage defaultMessage="Processing fee" />,
+        cost: { currency, amount: quote.processing_fee },
+      });
+    }
+    receipt = (
+      <ReceiptSummary
+        title={<FormattedMessage defaultMessage="Order summary" />}
+        subtitle={
+          duration ? (
+            <FormattedMessage
+              defaultMessage="{n} {unit}"
+              values={{
+                n: intervals,
+                unit: (
+                  <IntervalSuffix
+                    interval={duration.intervalType}
+                    n={intervals}
+                  />
+                ),
+              }}
+            />
+          ) : undefined
+        }
+        lines={quoteLines}
+        total={orderTotal}
+        note={
+          quoting ? (
+            <FormattedMessage defaultMessage="Updating price…" />
+          ) : undefined
+        }
+      />
+    );
+  } else if (duration) {
     const currency = duration.cost.currency;
     const taxRate = accountTaxRate(account, duration.taxCompanyId);
     const subtotal = duration.cost.amount * intervals;
@@ -559,7 +728,10 @@ export default function PaymentFlow({
             values={{
               n: intervals,
               unit: (
-                <IntervalSuffix interval={duration.intervalType} n={intervals} />
+                <IntervalSuffix
+                  interval={duration.intervalType}
+                  n={intervals}
+                />
               ),
             }}
           />
@@ -620,6 +792,88 @@ export default function PaymentFlow({
 
       {receipt}
 
+      {source.quote && (
+        <div className="flex flex-col gap-2">
+          <SectionLabel>
+            <FormattedMessage defaultMessage="Discount code" />
+          </SectionLabel>
+          <div className="flex gap-2">
+            <input
+              type="text"
+              autoComplete="off"
+              autoCapitalize="characters"
+              spellCheck={false}
+              disabled={!!appliedCode}
+              className="min-w-0 flex-1 bg-cyber-panel-light rounded-sm p-3 text-sm font-mono uppercase tracking-wider disabled:opacity-60"
+              placeholder={formatMessage({ defaultMessage: "Enter a code" })}
+              value={code}
+              onChange={(e) => {
+                setCode(e.target.value);
+                setCodeError(undefined);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && code.trim()) {
+                  e.preventDefault();
+                  setAppliedCode(code.trim());
+                }
+              }}
+            />
+            {appliedCode ? (
+              <button
+                onClick={() => {
+                  setAppliedCode(undefined);
+                  setCode("");
+                  setCodeError(undefined);
+                }}
+                className="shrink-0 px-4 text-sm text-cyber-muted hover:text-cyber-primary transition-colors"
+              >
+                <FormattedMessage defaultMessage="Remove" />
+              </button>
+            ) : (
+              <AsyncButton
+                onClick={() => setAppliedCode(code.trim() || undefined)}
+                disabled={!code.trim() || quoting}
+                className="shrink-0"
+              >
+                <FormattedMessage defaultMessage="Apply" />
+              </AsyncButton>
+            )}
+          </div>
+          {codeError ? (
+            <div className="text-xs text-cyber-danger">{codeError}</div>
+          ) : appliedCode && quoting ? (
+            <div className="flex items-center gap-2 text-xs text-cyber-muted">
+              <Spinner />
+              <FormattedMessage defaultMessage="Checking code…" />
+            </div>
+          ) : appliedCode && (quote?.discount?.amount_off ?? 0) > 0 ? (
+            <div className="text-xs text-cyber-primary">
+              <FormattedMessage
+                defaultMessage="{amount} off. Applies to this payment only — later renewals bill at the normal price."
+                values={{
+                  amount: (
+                    <CostAmount
+                      cost={{
+                        currency: quote!.currency,
+                        amount: quote!.discount!.amount_off,
+                      }}
+                      converted={false}
+                    />
+                  ),
+                }}
+              />
+            </div>
+          ) : appliedCode ? (
+            // The code was accepted but priced at nothing on this order (e.g. a
+            // threshold rule that this basket doesn't meet). Saying so beats a
+            // silent no-op.
+            <div className="text-xs text-cyber-muted">
+              <FormattedMessage defaultMessage="This code takes nothing off this order." />
+            </div>
+          ) : null}
+        </div>
+      )}
+
       {source.allowSavedMethods !== false && savedMethods.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
@@ -630,9 +884,7 @@ export default function PaymentFlow({
               <SavedMethodRow
                 key={m.id}
                 method={m}
-                selected={
-                  selection?.kind === "saved" && selection.id === m.id
-                }
+                selected={selection?.kind === "saved" && selection.id === m.id}
                 onSelect={(x) => setSelection({ kind: "saved", id: x.id })}
               />
             ))}

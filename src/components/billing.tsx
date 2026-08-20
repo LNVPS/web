@@ -86,7 +86,10 @@ export function subscriptionStatus(sub: Subscription): {
     };
   }
   if (st.expired) {
-    return { tone: "danger", label: <FormattedMessage defaultMessage="Expired" /> };
+    return {
+      tone: "danger",
+      label: <FormattedMessage defaultMessage="Expired" />,
+    };
   }
   if (st.expiringSoon) {
     return {
@@ -94,7 +97,10 @@ export function subscriptionStatus(sub: Subscription): {
       label: <FormattedMessage defaultMessage="Expiring soon" />,
     };
   }
-  return { tone: "primary", label: <FormattedMessage defaultMessage="Active" /> };
+  return {
+    tone: "primary",
+    label: <FormattedMessage defaultMessage="Active" />,
+  };
 }
 
 /** Length of one billing cycle in days, used to scale the expiry meter. */
@@ -135,7 +141,9 @@ export function expiryStatus(
     expired,
     expiringSoon,
     tone: expired ? "danger" : expiringSoon ? "warning" : "primary",
-    meterPct: expired ? 100 : Math.min(100, Math.max(4, (days / cycleDays) * 100)),
+    meterPct: expired
+      ? 100
+      : Math.min(100, Math.max(4, (days / cycleDays) * 100)),
     daysLeft: Math.max(0, Math.floor(days)),
   };
 }
@@ -224,7 +232,9 @@ export function BillingStatusCard({
             />
           </div>
           <div className="flex justify-between text-[0.7rem] text-cyber-text">
-            <span className={tone === "danger" ? "text-cyber-danger" : undefined}>
+            <span
+              className={tone === "danger" ? "text-cyber-danger" : undefined}
+            >
               {meterLeft}
             </span>
             <span className="uppercase tracking-wider">{meterRight}</span>
@@ -276,7 +286,11 @@ export function DeletionWarning({ deletingOn }: { deletingOn: Date }) {
 export function SunsetWarning({ sunsetOn }: { sunsetOn: Date }) {
   return (
     <div className="flex items-center gap-2 rounded-sm border border-cyber-warning/40 bg-cyber-warning/10 px-3 py-2 text-xs text-cyber-warning">
-      <Icon name="refresh-1" size={14} className="shrink-0 pointer-events-none" />
+      <Icon
+        name="refresh-1"
+        size={14}
+        className="shrink-0 pointer-events-none"
+      />
       <FormattedMessage
         defaultMessage="This host is being retired. Move to a new VPS before {date} — renewals stop then and you'll need to migrate."
         values={{
@@ -386,6 +400,11 @@ export interface PaymentRow {
   status: ReactNode;
   statusTone?: BillingTone;
   action?: ReactNode;
+  /**
+   * Why this amount isn't the list price (e.g. a discount code), shown under
+   * the date/method so a smaller charge is never unexplained.
+   */
+  note?: ReactNode;
 }
 
 /** Payment history list, uniform across VM and subscription billing. */
@@ -442,6 +461,11 @@ export function BillingPaymentsTable({
                     <span className="mx-1.5 text-cyber-border">·</span>
                     {r.method}
                   </span>
+                  {r.note && (
+                    <span className="text-[0.7rem] text-cyber-primary">
+                      {r.note}
+                    </span>
+                  )}
                 </div>
                 <div className="ml-auto flex items-center gap-4">
                   <span className="tabular-nums text-cyber-text-bright">

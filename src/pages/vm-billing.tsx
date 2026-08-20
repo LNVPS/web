@@ -4,7 +4,7 @@ import { VmInstance, VmPayment, SavedPaymentMethod } from "../api";
 import useLogin from "../hooks/login";
 import { openInvoice } from "../utils";
 import usePaymentMethods from "../hooks/usePaymentMethods";
-import CostLabel, { IntervalSuffix } from "../components/cost";
+import CostLabel, { CostAmount, IntervalSuffix } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
 import {
   vmRenewalSource,
@@ -127,6 +127,25 @@ export function VmBillingPage() {
       currency: a.currency,
       amount: a.amount + a.tax + a.processing_fee,
     },
+    // The charge is already net of any discount; say why it's lower.
+    note:
+      (a.discount?.amount_off ?? 0) > 0 ? (
+        <FormattedMessage
+          defaultMessage="{amount} off{code, select, none {} other { · {code}}}"
+          values={{
+            amount: (
+              <CostAmount
+                cost={{
+                  currency: a.currency,
+                  amount: a.discount!.amount_off,
+                }}
+                converted={false}
+              />
+            ),
+            code: a.discount?.code ?? "none",
+          }}
+        />
+      ) : undefined,
     method:
       a.payment_method ??
       ("lightning" in a.data
@@ -362,7 +381,10 @@ function RenewalFlow({
   return (
     <PaymentFlow
       title={
-        <FormattedMessage defaultMessage="Renew VPS #{id}" values={{ id: vm.id }} />
+        <FormattedMessage
+          defaultMessage="Renew VPS #{id}"
+          values={{ id: vm.id }}
+        />
       }
       source={vmRenewalSource(login.api, vm, subscriptionId)}
       initialPayment={initialPayment}

@@ -27,6 +27,12 @@ export function SectionLabel({ children }: { children: ReactNode }) {
 export interface ReceiptLine {
   label: ReactNode;
   cost: { currency: string; amount: number };
+  /**
+   * Render as money coming off the order: a "−" prefix in the accent colour.
+   * `cost.amount` stays positive so it formats (and rounds) like every other
+   * line.
+   */
+  credit?: boolean;
 }
 
 /** One receipt row: label · · · · · amount */
@@ -34,10 +40,12 @@ function LeaderLine({
   label,
   cost,
   strong,
+  credit,
 }: {
   label: ReactNode;
   cost: { currency: string; amount: number };
   strong?: boolean;
+  credit?: boolean;
 }) {
   return (
     <div className="flex items-baseline gap-1">
@@ -54,15 +62,22 @@ function LeaderLine({
         aria-hidden
         className="flex-1 self-end mb-1 border-b border-dotted border-cyber-border"
       />
-      <CostAmount
-        cost={cost}
-        converted={false}
-        className={
-          strong
-            ? "text-cyber-primary font-bold tabular-nums"
-            : "text-cyber-text tabular-nums text-sm"
-        }
-      />
+      <span className="flex items-baseline">
+        {credit && (
+          <span className="text-cyber-primary tabular-nums text-sm">−</span>
+        )}
+        <CostAmount
+          cost={cost}
+          converted={false}
+          className={
+            strong
+              ? "text-cyber-primary font-bold tabular-nums"
+              : credit
+                ? "text-cyber-primary tabular-nums text-sm"
+                : "text-cyber-text tabular-nums text-sm"
+          }
+        />
+      </span>
     </div>
   );
 }
@@ -99,7 +114,12 @@ export function ReceiptSummary({
         )}
         <div className="flex flex-col gap-2">
           {lines.map((l, i) => (
-            <LeaderLine key={i} label={l.label} cost={l.cost} />
+            <LeaderLine
+              key={i}
+              label={l.label}
+              cost={l.cost}
+              credit={l.credit}
+            />
           ))}
         </div>
         <div className="border-t border-dashed border-cyber-border" />
@@ -162,9 +182,7 @@ export function PaymentOptionRow({
           (selected ? "border-cyber-primary" : "border-cyber-border")
         }
       >
-        {selected && (
-          <span className="w-2 h-2 rounded-full bg-cyber-primary" />
-        )}
+        {selected && <span className="w-2 h-2 rounded-full bg-cyber-primary" />}
       </span>
     </button>
   );

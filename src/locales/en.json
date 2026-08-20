@@ -155,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "Billing, renewal & notifications"
   },
+  "219B5z": {
+    "defaultMessage": "Checking code…"
+  },
   "24piVc": {
     "defaultMessage": "<b>Your own domain if you want it.</b> Point a CNAME at your relay and we serve it alongside the default hostname with its own certificate. No verification step — the certificate is issued when your DNS resolves."
+  },
+  "28C0Aj": {
+    "defaultMessage": "Discount"
   },
   "2Aa625": {
     "defaultMessage": "In {region}, disk goes up to {disk}, with {cpu} vCPU and {memory} at the top end."
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "Select image"
+  },
+  "6oIsme": {
+    "defaultMessage": "after {amount} discount"
   },
   "6sh6sN": {
     "defaultMessage": "You can safely leave this page — the payment appears in your billing history and is applied once it confirms."
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr Domains"
   },
+  "BdYFYb": {
+    "defaultMessage": "No reply came back for that message. Reconnecting — please ask again."
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -661,6 +673,9 @@
   },
   "EUDyqt": {
     "defaultMessage": "{n} stopped"
+  },
+  "EWw/tK": {
+    "defaultMessage": "Apply"
   },
   "Ecfndm": {
     "defaultMessage": "Invoice"
@@ -910,6 +925,9 @@
   },
   "KKYB/E": {
     "defaultMessage": "No saved payment methods yet."
+  },
+  "KKdq0O": {
+    "defaultMessage": "Enter a code"
   },
   "KN7zKn": {
     "defaultMessage": "Error"
@@ -1463,6 +1481,12 @@
   "YOTQyL": {
     "defaultMessage": "{cpu} vCPU, {memory} RAM, {disk} {diskType} storage in {region}."
   },
+  "YQBx00": {
+    "defaultMessage": "Discount code"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} off. Applies to this payment only — later renewals bill at the normal price."
+  },
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },
@@ -1576,6 +1600,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "Paste encrypted message here..."
+  },
+  "bneNNt": {
+    "defaultMessage": "{amount} off{code, select, none {} other { · {code}}}"
   },
   "bpBvBq": {
     "defaultMessage": "Display Currency:"
@@ -1853,6 +1880,9 @@
   "iVkpyZ": {
     "defaultMessage": "One-click Docker apps from a managed catalog."
   },
+  "iX/9/k": {
+    "defaultMessage": "Discount ({code})"
+  },
   "iXNbPf": {
     "defaultMessage": "Rename"
   },
@@ -1861,9 +1891,6 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
-  },
-  "ilooI+": {
-    "defaultMessage": "Looking up {tools}…"
   },
   "ir0wB7": {
     "defaultMessage": "I understand all data will be permanently deleted."
@@ -1903,6 +1930,9 @@
   },
   "jUqYir": {
     "defaultMessage": "Added {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "This code takes nothing off this order."
   },
   "jYLOYR": {
     "defaultMessage": "{n, plural, one {# day} other {# days}}"
@@ -2425,6 +2455,9 @@
   },
   "vy2rlX": {
     "defaultMessage": "Processing fee:"
+  },
+  "w1iy6j": {
+    "defaultMessage": "Updating price…"
   },
   "w3i5cX": {
     "defaultMessage": "Persistent storage — sized per relay above"

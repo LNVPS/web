@@ -84,6 +84,24 @@ export default function VpsPayment({
             />
           </div>
         )}
+        {(payment.discount?.amount_off ?? 0) > 0 && (
+          <div className="text-xs text-cyber-primary">
+            <FormattedMessage
+              defaultMessage="after {amount} discount"
+              values={{
+                amount: (
+                  <CostAmount
+                    cost={{
+                      currency: payment.currency,
+                      amount: payment.discount!.amount_off,
+                    }}
+                    converted={false}
+                  />
+                ),
+              }}
+            />
+          </div>
+        )}
         {payment.processing_fee > 0 && (
           <div className="text-xs text-cyber-muted">
             <FormattedMessage

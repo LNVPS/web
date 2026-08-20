@@ -146,3 +146,4 @@ export async function render(
 }
 
 export { detectLocale } from "./utils/locale.ts";
+export { MarkdownDocuments } from "./markdown-documents.ts";

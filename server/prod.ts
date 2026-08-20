@@ -4,6 +4,7 @@
 import "./polyfill.ts";
 
 import { renderPage } from "./ssr-render.ts";
+import { MARKDOWN_HEADERS, markdownFor } from "./markdown-negotiation.ts";
 
 const port = Number(process.env.PORT) || 3000;
 
@@ -49,6 +50,16 @@ const server = Bun.serve({
       });
     }
 
+    // Raw markdown for clients that explicitly ask for it (e.g. agents)
+    const markdown = markdownFor(
+      pathname,
+      req.headers.get("accept"),
+      ssr.MarkdownDocuments,
+    );
+    if (markdown !== undefined) {
+      return new Response(markdown, { headers: MARKDOWN_HEADERS });
+    }
+
     // SSR for everything else
     try {
       const result = await renderPage(
@@ -60,6 +71,7 @@ const server = Bun.serve({
       );
       const headers: Record<string, string> = {
         "Content-Type": "text/html",
+        Vary: "Accept",
       };
       const onion = onionLocation(url);
       if (onion) headers["Onion-Location"] = onion;

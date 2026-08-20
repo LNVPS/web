@@ -1,5 +1,5 @@
 import Markdown from "../components/markdown";
-import TOS from "../tos.md?raw";
+import { MarkdownDocuments } from "../markdown-documents.ts";
 import Seo from "../components/seo";
 import { useIntl } from "react-intl";
 
@@ -17,7 +17,7 @@ export function TosPage() {
             "Terms of Service for LNVPS. Read our usage policies, acceptable use guidelines, and service terms.",
         })}
       />
-      <Markdown content={TOS} />
+      <Markdown content={MarkdownDocuments["/tos"]} />
     </div>
   );
 }

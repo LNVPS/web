@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "你可以构建什么。"
   },
+  "/lLr44": {
+    "defaultMessage": "输入消息…"
+  },
   "/tiBYY": {
     "defaultMessage": "使用 {provider} 继续"
   },
@@ -152,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "账单、续订和通知"
   },
+  "219B5z": {
+    "defaultMessage": "正在检查代码…"
+  },
   "24piVc": {
     "defaultMessage": "<b>如果您需要，您可以拥有自己的域名。</b>将一个 CNAME 指向您的中继服务器，我们将与默认主机名一起提供服务，并为其配备单独的证书。无需验证步骤——当您的 DNS 解析时，系统会自动颁发证书。"
+  },
+  "28C0Aj": {
+    "defaultMessage": "折扣"
   },
   "2Aa625": {
     "defaultMessage": "在…… {region}，磁盘向上移动到 {disk}以及 {cpu} 虚拟 CPU 和 {memory} 在最高端。"
@@ -194,8 +203,8 @@
   "3GLHv9": {
     "defaultMessage": "验证"
   },
-  "3NsyM4": {
-    "defaultMessage": "已加密的 NIP-17 直接消息。"
+  "3PIm6u": {
+    "defaultMessage": "您可以咨询账户相关的任何问题——账单、无法启动的虚拟机，或某笔扣款的原因。如需退款、延期或删除，请改用联系表单。"
   },
   "3VI9mt": {
     "defaultMessage": "保存更改。"
@@ -242,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "为什么选择这款虚拟专用服务器来搭建闪电网络节点？"
   },
+  "4FRCPv": {
+    "defaultMessage": "关于您的账户，任何问题都可以问——账单、无法启动的虚拟机，或某笔扣款的原因。"
+  },
   "4PKxPs": {
     "defaultMessage": "取消链接。"
   },
@@ -272,9 +284,6 @@
   "4lrWah": {
     "defaultMessage": "加载历史记录时出错：{error}"
   },
-  "4upFOv": {
-    "defaultMessage": "您对资源配置、计费、滥用行为处理或特定服务问题有疑问吗？请发送消息，LNVPS 团队会尽快与您联系。"
-  },
   "5/Pb3D": {
     "defaultMessage": "已激活的订阅服务。"
   },
@@ -283,9 +292,6 @@
   },
   "556JQK": {
     "defaultMessage": "部署"
-  },
-  "5FWCVu": {
-    "defaultMessage": "您与支持团队的加密 NIP-17 消息记录。"
   },
   "5QYdPU": {
     "defaultMessage": "开始时间"
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "选择镜像"
+  },
+  "6oIsme": {
+    "defaultMessage": "之后 {amount} 折扣"
   },
   "6sh6sN": {
     "defaultMessage": "您可以放心离开此页面 — 付款会显示在您的账单历史中，确认后即会生效。"
@@ -455,6 +464,9 @@
   "90f82/": {
     "defaultMessage": "启动虚拟机。"
   },
+  "9WRlF4": {
+    "defaultMessage": "发送"
+  },
   "9d9svQ": {
     "defaultMessage": "还没有通行密钥。添加一个即可无需密钥登录。"
   },
@@ -515,9 +527,6 @@
   "AfmrGS": {
     "defaultMessage": "发送代码。"
   },
-  "AxlcnX": {
-    "defaultMessage": "此收件箱不再接受监控，因此无法在此发送新消息。如需技术支持，请从“支持”选项卡中提交工单。"
-  },
   "B3YjIQ": {
     "defaultMessage": "请立即保存此密钥，因为一旦丢失就无法恢复。"
   },
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr 域名"
   },
+  "BdYFYb": {
+    "defaultMessage": "那条消息没有收到回复。正在重新连接——请再问一次。"
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -562,6 +574,9 @@
   },
   "BnvK83": {
     "defaultMessage": "{price} 起。"
+  },
+  "BrtgIv": {
+    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与价格、区域、操作系统，或如何使用 Lightning 支付。如果您的问题涉及现有虚拟机或付款，请先登录，以便客服查询您的账户。"
   },
   "Bwqhmd": {
     "defaultMessage": "防火墙"
@@ -574,6 +589,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "是的，在所有设备上退出登录"
+  },
+  "CEERm0": {
+    "defaultMessage": "在线聊天"
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
@@ -656,11 +674,14 @@
   "EKlM8d": {
     "defaultMessage": "磁盘（GB）"
   },
+  "ELp7j5": {
+    "defaultMessage": "与 LNVPS 支持在线聊天"
+  },
   "EUDyqt": {
     "defaultMessage": "{n} 个已停止"
   },
-  "EUSRTV": {
-    "defaultMessage": "您之前发送的已加密的 NIP-17 格式的消息已存档。此收件箱不再进行监控，请使用“支持”选项卡与我们联系。"
+  "EWw/tK": {
+    "defaultMessage": "应用"
   },
   "Ecfndm": {
     "defaultMessage": "发票"
@@ -800,9 +821,6 @@
   "HAlOn1": {
     "defaultMessage": "姓名"
   },
-  "HOWHco": {
-    "defaultMessage": "目前还没有消息。请在下方开始新的对话。"
-  },
   "HPBE7M": {
     "defaultMessage": "返回应用列表"
   },
@@ -914,6 +932,9 @@
   "KKYB/E": {
     "defaultMessage": "尚未保存任何支付方式。"
   },
+  "KKdq0O": {
+    "defaultMessage": "输入代码"
+  },
   "KN7zKn": {
     "defaultMessage": "Error"
   },
@@ -962,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "待付款。"
   },
+  "Lc72Gm": {
+    "defaultMessage": "开始新对话"
+  },
   "LjglgP": {
     "defaultMessage": "随机存取存储器"
   },
@@ -994,6 +1018,12 @@
   },
   "N6XokP": {
     "defaultMessage": "不是。这是一个普通的具有 root 权限的 VPS，您需要自行安装和运行节点。我们的一键式托管应用包括 Nostr 中继和 Blossom 媒体服务器，但这些应用仅适用于都柏林服务器。"
+  },
+  "NAidKb": {
+    "defaultMessage": "通知"
+  },
+  "NLgFjn": {
+    "defaultMessage": "这里暂无内容。"
   },
   "NQgbYA": {
     "defaultMessage": "账户设置"
@@ -1054,6 +1084,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "目前还没有任何推荐。分享您的链接，开始进行转化。"
+  },
+  "P1QHV0": {
+    "defaultMessage": "思考中…"
   },
   "P7PLVj": {
     "defaultMessage": "日期"
@@ -1166,6 +1199,9 @@
   "Rw82/V": {
     "defaultMessage": "每月"
   },
+  "S3OX0p": {
+    "defaultMessage": "加密的 NIP-17 私信 — 在...中阅读 {link}"
+  },
   "S5oncX": {
     "defaultMessage": "每个套餐均包含一个 IPv4 地址、一个 IPv6 地址和不限流量。价格不含税费及支付手续费。"
   },
@@ -1256,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "账单"
   },
+  "TfUeeR": {
+    "defaultMessage": "更喜欢通过邮件联系？请发送一条消息，LNVPS 团队会回复您。"
+  },
   "TgGVeW": {
     "defaultMessage": "需要处理"
   },
@@ -1277,11 +1316,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "给我们留言"
+  },
   "U+Ddsx": {
     "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入 — 部分支付和超额支付绝不会丢失。"
   },
   "U/W38H": {
     "defaultMessage": "如果我停止付费，我的活动会怎样？"
+  },
+  "U093E7": {
+    "defaultMessage": "支持聊天"
   },
   "U0GEAC": {
     "defaultMessage": "停止将您的图片和视频上传到其他人的服务器。Route96 是一款由 Blossom 和 NIP-96 开发的媒体服务器，可在 LNVPS 上几分钟内部署完成，并包含存储空间和 TLS 加密功能。"
@@ -1370,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "常见问题解答"
   },
+  "WEUBM+": {
+    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与定价、区域、操作系统，或使用闪电网络支付的方式——无需登录。如果您的问题涉及现有虚拟机或支付，请先登录，以便客服查询您的账户。"
+  },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
   },
@@ -1403,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "保存更改"
   },
+  "X4GAwh": {
+    "defaultMessage": "询问套餐与定价、我们提供哪些区域和操作系统，或使用闪电网络支付的方式。"
+  },
   "X4VESO": {
     "defaultMessage": "清除该 VM 并从全新镜像开始。这将永久删除其上的所有数据。"
   },
@@ -1424,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "已使用。"
   },
+  "XZGfTo": {
+    "defaultMessage": "发送消息"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom 媒体服务器托管服务——Route96"
   },
@@ -1442,11 +1496,20 @@
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
+  "YCzocJ": {
+    "defaultMessage": "如果您有关于资源开通、计费、滥用处理或特定服务问题的疑问，我们随时为您提供帮助。"
+  },
   "YLoN96": {
     "defaultMessage": "<b>所有套餐均提供静态 IPv4 和 IPv6 地址。</b>已注册的节点需要一个不会更改的地址。两者都包含在内，无需额外付费。"
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} 虚拟 CPU，{memory} 内存，{disk} {diskType} 存储，位于 {region}。"
+  },
+  "YQBx00": {
+    "defaultMessage": "优惠码"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} 优惠。仅适用于本次付款——后续续订将按正常价格计费。"
   },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
@@ -1562,6 +1625,9 @@
   "bhfNWq": {
     "defaultMessage": "请在此处粘贴加密后的消息……"
   },
+  "bneNNt": {
+    "defaultMessage": "{amount} 关{code,select,none{} other{ · {code}}}"
+  },
   "bpBvBq": {
     "defaultMessage": "显示货币："
   },
@@ -1619,6 +1685,9 @@
   "d6JhA/": {
     "defaultMessage": "搭建您的魁北克虚拟专用服务器。"
   },
+  "dH48sC": {
+    "defaultMessage": "实时聊天当前不可用。 {link} 团队会回复您。"
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1696,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "感谢您与我们联系。我们会尽快回复您。"
+  },
+  "dOGweU": {
+    "defaultMessage": "正在重新连接..."
   },
   "dOQCL8": {
     "defaultMessage": "显示名称"
@@ -1658,6 +1730,9 @@
   "djJp6c": {
     "defaultMessage": "历史"
   },
+  "djY1KH": {
+    "defaultMessage": "以 Nostr 私信发送的通知"
+  },
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
@@ -1666,6 +1741,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "运行 {name} 作为一种受管理的 {category} 在 LNVPS 上——使用自定义主机名，并启用 TLS。 {storage} 存储，无需更新服务器。"
+  },
+  "e4Rg0n": {
+    "defaultMessage": "LNVPS 以加密 NIP-17 私信形式发送给你的通知。"
   },
   "e4ehrh": {
     "defaultMessage": "配置您的机器"
@@ -1687,6 +1765,9 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展程序"
+  },
+  "eg3pYc": {
+    "defaultMessage": "本次会话已达到消息上限——重新连接以继续。您的对话记录已保留。"
   },
   "eq14GY": {
     "defaultMessage": "您新的密钥。"
@@ -1787,20 +1868,23 @@
   "h/PJh3": {
     "defaultMessage": "选择新的密钥后，请重启虚拟机。"
   },
+  "h1wLxC": {
+    "defaultMessage": "通知设置"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} 虚拟 CPU"
   },
   "hADOUq": {
     "defaultMessage": "已保存。应用即将重启。"
   },
-  "hMzcSq": {
-    "defaultMessage": "消息"
-  },
   "hX8VXF": {
     "defaultMessage": "月度正常运行时间（过去 12 个月）"
   },
   "hXAhO/": {
     "defaultMessage": "您使用 Nostr 密钥登录，因此没有可撤销的已存储会话。每个请求都会单独签名。"
+  },
+  "hZkw2A": {
+    "defaultMessage": "Nostr 私信通知仅适用于 Nostr 账号——你的账号没有 Nostr 密钥来解密它们。请在……中选择其他渠道 {settings}。"
   },
   "hs3HVz": {
     "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
@@ -1819,6 +1903,9 @@
   },
   "iVkpyZ": {
     "defaultMessage": "通过受管理的应用程序目录，只需单击一下即可部署 Docker 应用程序。"
+  },
+  "iX/9/k": {
+    "defaultMessage": "折扣（{code}）"
   },
   "iXNbPf": {
     "defaultMessage": "重命名"
@@ -1867,6 +1954,9 @@
   },
   "jUqYir": {
     "defaultMessage": "已添加。 {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "此代码不会为本订单提供任何折扣。"
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
@@ -1931,6 +2021,9 @@
   "ku+mDU": {
     "defaultMessage": "状态；州"
   },
+  "l+Z32c": {
+    "defaultMessage": "按 Enter 发送，Shift+Enter 换行。"
+  },
   "l0VA3b": {
     "defaultMessage": "是否对流量进行计量？"
   },
@@ -1945,6 +2038,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "付款；工资"
+  },
+  "lFXHsw": {
+    "defaultMessage": "与 LNVPS 客服聊天。它可以查询您的账户、虚拟机和付款记录，并启动、停止或重启虚拟机。"
   },
   "lKv8ex": {
     "defaultMessage": "默认"
@@ -1985,6 +2081,12 @@
   "m4xBT/": {
     "defaultMessage": "已管理的应用：运行软件，无需运行服务器。"
   },
+  "mBLNqg": {
+    "defaultMessage": "开始聊天"
+  },
+  "mDLXhF": {
+    "defaultMessage": "继续您之前的对话——尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr 使您的身份信息可以自由转移。目前，媒体内容往往存在一个问题，即无法完全自主掌控——您的图片存储在其他人的服务器上，受其规则约束，一旦对方停止服务，这些图片就会消失。Blossom 服务器可以将控制权重新交还给您。"
   },
@@ -2005,6 +2107,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
+  },
+  "mRKf2V": {
+    "defaultMessage": "连接在回复完成前断开。正在重新连接——恢复后请再次提问。"
   },
   "mV5FZi": {
     "defaultMessage": "员工推荐奖励计划"
@@ -2069,6 +2174,9 @@
   "nxqAD7": {
     "defaultMessage": "新增事件"
   },
+  "o/1ZFL": {
+    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐、地区、操作系统和闪电支付。无需账号。"
+  },
   "o0jcye": {
     "defaultMessage": "操作系统"
   },
@@ -2077,6 +2185,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "当在……中启用 Nostr DM 频道时，到期提醒、付款回执和开通通知将在此处送达。 {settings}此收件箱不会监控回复——如需联系人工，请使用 {support}。"
   },
   "oBSxZS": {
     "defaultMessage": "升级报价"
@@ -2228,9 +2339,6 @@
   "sTesGq": {
     "defaultMessage": "目前没有可用的优惠。"
   },
-  "sUw18G": {
-    "defaultMessage": "加密消息功能仅适用于 Nostr 账户。您的账户没有用于接收或发送 NIP-17 消息的 Nostr 密钥。如有需要，请使用“帮助”选项卡寻求支持。"
-  },
   "sehISV": {
     "defaultMessage": "Blossom 媒体服务器，每月起价 {price}。"
   },
@@ -2245,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "设置用于报价和支付的货币。"
+  },
+  "sx6MYT": {
+    "defaultMessage": "该代理无法对虚拟机进行延长、退款或删除，也无法操作其未登录的账户。对于这些情况， {link}。"
   },
   "sy+pv5": {
     "defaultMessage": "电子邮件"
@@ -2303,6 +2414,9 @@
   "u3FDCD": {
     "defaultMessage": "服务条款和可接受的使用规范"
   },
+  "uARutB": {
+    "defaultMessage": "通过电子邮件联系技术支持"
+  },
   "uJV0wU": {
     "defaultMessage": "IP 地址"
   },
@@ -2311,6 +2425,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "邮箱：{email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "该代理无法延长、退款或删除虚拟机。对于这些， {link}。"
   },
   "uYtOL7": {
     "defaultMessage": "爱尔兰 VPS——都柏林 VPS，比特币支付。"
@@ -2372,6 +2489,9 @@
   "vy2rlX": {
     "defaultMessage": "处理费："
   },
+  "w1iy6j": {
+    "defaultMessage": "正在更新价格…"
+  },
   "w3i5cX": {
     "defaultMessage": "持久性存储——每个中继设备所需的存储空间如上所述。"
   },
@@ -2401,6 +2521,9 @@
   },
   "wz7uSD": {
     "defaultMessage": "包括{amount}的税费"
+  },
+  "x/me2T": {
+    "defaultMessage": "与 LNVPS 客服助手聊天。它可以查询您的账户、虚拟机和付款信息，并启动、停止或重启虚拟机。它无法办理延期、退款或删除——请使用下方表单处理这些事项。"
   },
   "x0cZXf": {
     "defaultMessage": "无法升级。"
@@ -2483,14 +2606,14 @@
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"
   },
+  "z1KiHv": {
+    "defaultMessage": "消息限制为 {max} 角色。"
+  },
   "z4e/Em": {
     "defaultMessage": "负责管理 Nostr 中继服务器的托管服务。"
   },
   "z8VosU": {
     "defaultMessage": "都柏林也是我们托管服务的所在地。 <relay>Nostr 节点</relay> 以及 <blossom>Blossom 服务器</blossom> 运行，从……开始 {price} 一个月。"
-  },
-  "zAN0RF": {
-    "defaultMessage": "加密的私信"
   },
   "zEk9h3": {
     "defaultMessage": "虚拟机"

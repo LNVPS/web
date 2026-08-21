@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "Ne tür şeyler inşa edebilirsiniz?"
   },
+  "/lLr44": {
+    "defaultMessage": "Bir mesaj yazın…"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider} ile devam et"
   },
@@ -152,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "Faturalandırma, yenileme ve bildirimler"
   },
+  "219B5z": {
+    "defaultMessage": "Kod kontrol ediliyor…"
+  },
   "24piVc": {
     "defaultMessage": "<b>İsterseniz, kendi alan adınızı kullanabilirsiniz.</b> CNAME kaydını sunucunuza yönlendirerek, varsayılan ana bilgisayar adı ile birlikte kendi sertifikanızla hizmet vermenizi sağlarız. Doğrulama adımı gerekmez; sertifika, DNS kaydınız çözüldüğünde otomatik olarak oluşturulur."
+  },
+  "28C0Aj": {
+    "defaultMessage": "İndirim"
   },
   "2Aa625": {
     "defaultMessage": "İçinde {region}, disk yukarı doğru hareket ediyor {disk}, ile {cpu} sanal CPU ve {memory} en üst düzeyde."
@@ -194,8 +203,8 @@
   "3GLHv9": {
     "defaultMessage": "kimlik doğrula"
   },
-  "3NsyM4": {
-    "defaultMessage": "Şifrelenmiş NIP-17 doğrudan mesajı"
+  "3PIm6u": {
+    "defaultMessage": "Hesabınızla ilgili her şeyi sorun — faturalandırma, başlatılamayan bir sanal makine veya bir ücretin ne için yapıldığı. İadeler, uzatmalar veya silme işlemleri için bunun yerine iletişim formunu kullanın."
   },
   "3VI9mt": {
     "defaultMessage": "Değişiklikleri Kaydet"
@@ -242,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "Neden tam olarak bu VPS'yi bir Lightning düğümü için kullanmalıyım?"
   },
+  "4FRCPv": {
+    "defaultMessage": "Hesabınızla ilgili her şeyi sorun — faturalandırma, açılmayan bir sanal makine veya bir ücretin ne için yapıldığı."
+  },
   "4PKxPs": {
     "defaultMessage": "Bağlantıyı kaldır"
   },
@@ -272,9 +284,6 @@
   "4lrWah": {
     "defaultMessage": "Geçmiş yüklenirken bir hata oluştu: {error}"
   },
-  "4upFOv": {
-    "defaultMessage": "Kaynak sağlama, faturalandırma, kötüye kullanım durumları veya belirli bir hizmetle ilgili sorunlarınız mı var? Bir mesaj gönderin, LNVPS ekibi en kısa sürede size geri dönüş yapacaktır."
-  },
   "5/Pb3D": {
     "defaultMessage": "Aktif abonelikler"
   },
@@ -283,9 +292,6 @@
   },
   "556JQK": {
     "defaultMessage": "Dağıt"
-  },
-  "5FWCVu": {
-    "defaultMessage": "Destek ile şifreli NIP-17 mesaj geçmişiniz."
   },
   "5QYdPU": {
     "defaultMessage": "Başlangıç Saati"
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "İmaj seç"
+  },
+  "6oIsme": {
+    "defaultMessage": "sonra {amount} indirim"
   },
   "6sh6sN": {
     "defaultMessage": "Bu sayfadan güvenle ayrılabilirsiniz — ödeme fatura geçmişinizde görünür ve onaylandığında uygulanır."
@@ -455,6 +464,9 @@
   "90f82/": {
     "defaultMessage": "Sanal makineyi başlat"
   },
+  "9WRlF4": {
+    "defaultMessage": "Gönder"
+  },
   "9d9svQ": {
     "defaultMessage": "Henüz geçiş anahtarı yok. Anahtar olmadan giriş yapmak için bir tane ekleyin."
   },
@@ -515,9 +527,6 @@
   "AfmrGS": {
     "defaultMessage": "Kodu Gönder"
   },
-  "AxlcnX": {
-    "defaultMessage": "Bu gelen kutusu artık takip edilmiyor, bu nedenle yeni mesajlar buraya gönderilemez. Destek için lütfen \"Destek\" sekmesinden bir talep oluşturun."
-  },
   "B3YjIQ": {
     "defaultMessage": "Bu anahtarı şimdi kaydedin; aksi takdirde geri alınamaz."
   },
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr Alan Adları"
   },
+  "BdYFYb": {
+    "defaultMessage": "Bu mesaj için yanıt gelmedi. Yeniden bağlanılıyor — lütfen tekrar sorun."
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -562,6 +574,9 @@
   },
   "BnvK83": {
     "defaultMessage": "{price} fiyatından itibaren."
+  },
+  "BrtgIv": {
+    "defaultMessage": "Planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl işlediği hakkında LNVPS destek temsilcisiyle sohbet edin. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınıza bakabilmesi için önce giriş yapın."
   },
   "Bwqhmd": {
     "defaultMessage": "Güvenlik duvarı"
@@ -574,6 +589,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "Evet, her yerden çıkış yap"
+  },
+  "CEERm0": {
+    "defaultMessage": "Canlı Sohbet"
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
@@ -656,11 +674,14 @@
   "EKlM8d": {
     "defaultMessage": "Disk (GB)"
   },
+  "ELp7j5": {
+    "defaultMessage": "LNVPS Destek ile Canlı Sohbet"
+  },
   "EUDyqt": {
     "defaultMessage": "{n} durduruldu"
   },
-  "EUSRTV": {
-    "defaultMessage": "Daha önce şifrelenmiş NIP-17 mesajlarınız destek ekibi tarafından inceleniyordu. Bu gelen kutusu artık izlenmiyor; lütfen bize ulaşmak için Destek sekmesini kullanın."
+  "EWw/tK": {
+    "defaultMessage": "Uygula"
   },
   "Ecfndm": {
     "defaultMessage": "Fatura"
@@ -800,9 +821,6 @@
   "HAlOn1": {
     "defaultMessage": "Ad"
   },
-  "HOWHco": {
-    "defaultMessage": "Henüz mesaj yok. Aşağıda bir sohbet başlatın."
-  },
   "HPBE7M": {
     "defaultMessage": "Uygulamalara geri dön"
   },
@@ -914,6 +932,9 @@
   "KKYB/E": {
     "defaultMessage": "Şu anda kayıtlı ödeme yöntemi bulunmuyor."
   },
+  "KKdq0O": {
+    "defaultMessage": "Bir kod girin"
+  },
   "KN7zKn": {
     "defaultMessage": "Error"
   },
@@ -962,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "Ödeme bekliyor."
   },
+  "Lc72Gm": {
+    "defaultMessage": "Yeni bir sohbet başlat"
+  },
   "LjglgP": {
     "defaultMessage": "RAM"
   },
@@ -994,6 +1018,12 @@
   },
   "N6XokP": {
     "defaultMessage": "Hayır. Bu, kök erişimi olan basit bir VPS’dir; siz düğümü kurar ve çalıştırırsınız. Tek tıklamayla yönetilen uygulamalarımız Nostr röleleri ve Blossom medya sunucularıdır ve bunlar yalnızca Dublin’de kullanılabilir."
+  },
+  "NAidKb": {
+    "defaultMessage": "Bildirimler"
+  },
+  "NLgFjn": {
+    "defaultMessage": "Burada henüz bir şey yok."
   },
   "NQgbYA": {
     "defaultMessage": "Hesap Ayarları"
@@ -1054,6 +1084,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "Henüz herhangi bir yönlendirme yapılmadı. Dönüşüm sağlamaya başlamak için bağlantınızı paylaşın."
+  },
+  "P1QHV0": {
+    "defaultMessage": "Düşünüyor…"
   },
   "P7PLVj": {
     "defaultMessage": "Tarih"
@@ -1166,6 +1199,9 @@
   "Rw82/V": {
     "defaultMessage": "ayda"
   },
+  "S3OX0p": {
+    "defaultMessage": "Şifreli NIP-17 doğrudan mesaj — bunları içinde okuyun {link}"
+  },
   "S5oncX": {
     "defaultMessage": "Her plan bir IPv4 ve bir IPv6 adresi ile sınırsız trafik içerir. Fiyatlara vergiler ve ödeme işlem ücretleri dahil değildir."
   },
@@ -1256,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "Fatura"
   },
+  "TfUeeR": {
+    "defaultMessage": "E-posta mı tercih ediyorsunuz? Bir mesaj gönderin, LNVPS ekibi size dönüş yapacaktır."
+  },
   "TgGVeW": {
     "defaultMessage": "İşlem gerekli"
   },
@@ -1277,11 +1316,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "Bize bir mesaj gönderin"
+  },
   "U+Ddsx": {
     "defaultMessage": "Bu adrese zincir üstü Bitcoin gönderin. İşlem onaylandığında süre, alınan tutarla orantılı olarak otomatik eklenir — kısmi ve fazla ödemeler asla kaybolmaz."
   },
   "U/W38H": {
     "defaultMessage": "Ödemeyi durdurursam, etkinliklerime ne olur?"
+  },
+  "U093E7": {
+    "defaultMessage": "Destek Sohbeti"
   },
   "U0GEAC": {
     "defaultMessage": "Resimlerinizi ve videolarınızı başka birinin sunucusuna yüklemeyi bırakın. Route96, LNVPS üzerinde dakikalar içinde kurulabilen, depolama alanı ve TLS içeren Blossom ve NIP-96 medya sunucusudur."
@@ -1370,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "Sıkça Sorulan Sorular"
   },
+  "WEUBM+": {
+    "defaultMessage": "LNVPS destek temsilcisiyle planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl çalıştığı hakkında sohbet edin — giriş yapmanıza gerek yok. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınızı görüntüleyebilmesi için önce giriş yapın."
+  },
   "WEoZhh": {
     "defaultMessage": "Bu yükseltmenin faturalandırılacağı bir abonelik bulunamadı."
   },
@@ -1403,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "Değişiklikleri kaydet"
   },
+  "X4GAwh": {
+    "defaultMessage": "Planlar ve fiyatlandırma, hangi bölgeleri ve işletim sistemlerini sunduğumuz veya Lightning ile ödemenin nasıl çalıştığı hakkında sorun."
+  },
   "X4VESO": {
     "defaultMessage": "VM'yi siler ve yeni bir imajdan başlatır. Bu, üzerindeki tüm verileri kalıcı olarak siler."
   },
@@ -1424,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "Kullanılmış"
   },
+  "XZGfTo": {
+    "defaultMessage": "Mesaj gönder"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom Medya Sunucusu Barındırma — Route96"
   },
@@ -1442,11 +1496,20 @@
   "Y/tMXU": {
     "defaultMessage": "Ödeme bekleniyor. Onaylandıktan sonra bu işlem otomatik olarak uygulanır."
   },
+  "YCzocJ": {
+    "defaultMessage": "Kaynak tahsisi, faturalandırma, kötüye kullanım yönetimi veya belirli bir hizmet sorunu hakkında sorularınız mı var? Size yardımcı olmak için buradayız."
+  },
   "YLoN96": {
     "defaultMessage": "<b>Her planda statik IPv4 ve IPv6 adresleri bulunur.</b> Duyurulmuş bir düğümün değişmeyen bir adrese ihtiyacı vardır. Her ikisi de standart olarak sunulur, ek bir ücret talep edilmez."
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} sanal CPU {memory} RAM (Rastgele Erişimli Bellek), {disk} {diskType} içinde depolama {region}."
+  },
+  "YQBx00": {
+    "defaultMessage": "İndirim kodu"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} indirim. Yalnızca bu ödemeye uygulanır — sonraki yenilemeler normal fiyattan faturalandırılır."
   },
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
@@ -1562,6 +1625,9 @@
   "bhfNWq": {
     "defaultMessage": "Şifrelenmiş mesajı buraya yapıştırın..."
   },
+  "bneNNt": {
+    "defaultMessage": "{amount} Kapalı{code,select,none{} other{ · {code}}}"
+  },
   "bpBvBq": {
     "defaultMessage": "Gösterilecek para birimi:"
   },
@@ -1619,6 +1685,9 @@
   "d6JhA/": {
     "defaultMessage": "Quebec'te kendi VPS'nizi oluşturun"
   },
+  "dH48sC": {
+    "defaultMessage": "Canlı sohbet şu anda kullanılamıyor. {link} ve ekip size geri dönecek."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1696,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "Bize ulaştığınız için teşekkür ederiz. En kısa sürede size geri dönüş yapacağız."
+  },
+  "dOGweU": {
+    "defaultMessage": "Yeniden bağlanıyor..."
   },
   "dOQCL8": {
     "defaultMessage": "Görünen ad"
@@ -1658,6 +1730,9 @@
   "djJp6c": {
     "defaultMessage": "Tarih"
   },
+  "djY1KH": {
+    "defaultMessage": "Nostr DM olarak gönderilen bildirimler"
+  },
   "duElEE": {
     "defaultMessage": "Bu sanal makine için herhangi bir geçmiş kaydı bulunamadı."
   },
@@ -1666,6 +1741,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde — kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
+  },
+  "e4Rg0n": {
+    "defaultMessage": "LNVPS'nin size şifreli NIP-17 doğrudan mesajlar olarak gönderdiği bildirimler."
   },
   "e4ehrh": {
     "defaultMessage": "Makinenizi oluşturun"
@@ -1687,6 +1765,9 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr Uzantısı"
+  },
+  "eg3pYc": {
+    "defaultMessage": "Bu oturum için mesaj sınırına ulaşıldı — devam etmek için yeniden bağlanın. Konuşma geçmişiniz saklanmaktadır."
   },
   "eq14GY": {
     "defaultMessage": "Yeni gizli anahtarınız."
@@ -1787,20 +1868,23 @@
   "h/PJh3": {
     "defaultMessage": "Yeni bir anahtar seçtikten sonra lütfen sanal makineyi yeniden başlatın."
   },
+  "h1wLxC": {
+    "defaultMessage": "bildirim ayarları"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} sanal CPU"
   },
   "hADOUq": {
     "defaultMessage": "Kaydedildi. Uygulama kısa süre içinde yeniden başlatılacak."
   },
-  "hMzcSq": {
-    "defaultMessage": "Mesajlar"
-  },
   "hX8VXF": {
     "defaultMessage": "Son 12 Ay İçindeki Aylık Çalışma Süresi"
   },
   "hXAhO/": {
     "defaultMessage": "Nostr anahtarıyla oturum açıyorsunuz, bu yüzden iptal edilecek kayıtlı oturum yok. Her istek ayrı ayrı imzalanır."
+  },
+  "hZkw2A": {
+    "defaultMessage": "Nostr DM bildirimleri yalnızca Nostr hesapları için kullanılabilir — hesabınızda bunları şifre çözmek için bir Nostr anahtarı yok. Başka bir kanal seçin: {settings}."
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarıyla giriş yapın. Herhangi bir hesaba geçiş anahtarı ekleyebilirsiniz."
@@ -1819,6 +1903,9 @@
   },
   "iVkpyZ": {
     "defaultMessage": "Yönetilen bir katalogdan tek tıklamayla Docker uygulamalarına erişin."
+  },
+  "iX/9/k": {
+    "defaultMessage": "İndirim ({code})"
   },
   "iXNbPf": {
     "defaultMessage": "Yeniden adlandır"
@@ -1867,6 +1954,9 @@
   },
   "jUqYir": {
     "defaultMessage": "Eklendi {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "Bu kod bu siparişten hiçbir şeyi düşürmüyor."
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# gün} other{# gün}}"
@@ -1931,6 +2021,9 @@
   "ku+mDU": {
     "defaultMessage": "Durum"
   },
+  "l+Z32c": {
+    "defaultMessage": "Göndermek için Enter, yeni satır için Shift+Enter."
+  },
   "l0VA3b": {
     "defaultMessage": "Trafik akışı kontrol altında mı?"
   },
@@ -1945,6 +2038,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "Ödeme yapın."
+  },
+  "lFXHsw": {
+    "defaultMessage": "LNVPS destek temsilcisiyle sohbet edin. Hesabınızı, sanal makinelerinizi ve ödemelerinizi görüntüleyebilir; bir sanal makineyi başlatabilir, durdurabilir veya yeniden başlatabilir."
   },
   "lKv8ex": {
     "defaultMessage": "Varsayılan"
@@ -1985,6 +2081,12 @@
   "m4xBT/": {
     "defaultMessage": "Yönetilen Uygulamalar: yazılımı sunucu çalıştırmadan çalıştırın."
   },
+  "mBLNqg": {
+    "defaultMessage": "Sohbeti Başlat"
+  },
+  "mDLXhF": {
+    "defaultMessage": "Daha önceki konuşmanıza devam ediyoruz — yukarıdaki mesajlar tekrar gösterilmese de ajan hâlâ bağlama sahip. Sıfırdan başlamak isterseniz yeni bir konuşma başlatın."
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr, kimliğinizin taşınabilir kalmasını sağlar. Medya ise bu konuda farklı davranır; görselleriniz başka bir sunucuda, başkasının belirlediği koşullar altında saklanır ve o sunucu kapatıldığında kaybolur. Blossom sunucusu, bunları tekrar kontrolünüz altına almanızı sağlar."
   },
@@ -2005,6 +2107,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "Panoya kopyala"
+  },
+  "mRKf2V": {
+    "defaultMessage": "Bağlantı yanıt tamamlanmadan koptu. Yeniden bağlanılıyor — geri geldiğinde tekrar sorun."
   },
   "mV5FZi": {
     "defaultMessage": "İzinli Çalışan Tavsiye Programı"
@@ -2069,6 +2174,9 @@
   "nxqAD7": {
     "defaultMessage": "Yeni Olay"
   },
+  "o/1ZFL": {
+    "defaultMessage": "Planlar, bölgeler, işletim sistemleri ve Lightning ödemeleri hakkında LNVPS destek temsilcisiyle sohbet edin. Hesap gerekmez."
+  },
   "o0jcye": {
     "defaultMessage": "İşletim Sistemi"
   },
@@ -2077,6 +2185,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "Desteklenen genel anahtar: {npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "Sona erme uyarıları, ödeme makbuzları ve hazırlama bildirimleri, Nostr DM kanalı etkinleştirildiğinde buraya gelir {settings}. Bu gelen kutusu yanıtlar için izlenmemektedir — bir insana ulaşmak için kullanın {support}."
   },
   "oBSxZS": {
     "defaultMessage": "Yükseltme Teklifi"
@@ -2228,9 +2339,6 @@
   "sTesGq": {
     "defaultMessage": "Şu anda geçerli bir teklif bulunmamaktadır."
   },
-  "sUw18G": {
-    "defaultMessage": "Şifreli mesajlaşma yalnızca Nostr hesapları için kullanılabilir. Hesabınızda NIP-17 mesajlarını okumak veya göndermek için gerekli Nostr anahtarı bulunmuyor. Yardım almak için lütfen Destek sekmesini kullanın."
-  },
   "sehISV": {
     "defaultMessage": "Blossom Medya Sunucusu, aylık {price}'dan başlayan fiyatlarla hizmetinizde."
   },
@@ -2245,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "Fiyat teklifi ve ödeme için kullanılacak para birimini belirler."
+  },
+  "sx6MYT": {
+    "defaultMessage": "Temsilci, bir VM'yi uzatamaz, iade edemez veya silemez ve oturum açmadığı bir hesap üzerinde işlem yapamaz. Bunlar için, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "E-posta"
@@ -2303,6 +2414,9 @@
   "u3FDCD": {
     "defaultMessage": "Hizmet Şartları ve Kabul Edilebilir Kullanım"
   },
+  "uARutB": {
+    "defaultMessage": "Destek ekibiyle e-posta yoluyla iletişime geçin"
+  },
   "uJV0wU": {
     "defaultMessage": "IP Adresi"
   },
@@ -2311,6 +2425,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "E-posta: {email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "Ajan, bir VM'yi uzatamaz, iade edemez veya silemez. Bunlar için, {link}."
   },
   "uYtOL7": {
     "defaultMessage": "VPS İrlanda — Dublin VPS, Bitcoin ile ödeme"
@@ -2372,6 +2489,9 @@
   "vy2rlX": {
     "defaultMessage": "İşlem ücreti:"
   },
+  "w1iy6j": {
+    "defaultMessage": "Fiyat güncelleniyor…"
+  },
   "w3i5cX": {
     "defaultMessage": "Kalıcı depolama alanı – her röle için yukarıda belirtilen boyutlarda"
   },
@@ -2401,6 +2521,9 @@
   },
   "wz7uSD": {
     "defaultMessage": "dahil olmak üzere {amount} vergi"
+  },
+  "x/me2T": {
+    "defaultMessage": "LNVPS destek temsilcisiyle sohbet edin. Hesabınızı, sanal makinelerinizi ve ödemelerinizi görüntüleyebilir; bir sanal makineyi başlatabilir, durdurabilir veya yeniden başlatabilir. Uzatma, iade veya silme işlemlerini yapamaz — bunlar için aşağıdaki formu kullanın."
   },
   "x0cZXf": {
     "defaultMessage": "Yükseltme Mevcut Değil"
@@ -2483,14 +2606,14 @@
   "z+hIFs": {
     "defaultMessage": "Henüz hiçbir ödeme yapılmadı."
   },
+  "z1KiHv": {
+    "defaultMessage": "Mesajlar ... ile sınırlıdır {max} karakterler."
+  },
   "z4e/Em": {
     "defaultMessage": "Nostr Röle Sunucu Hizmetlerini Yönetti"
   },
   "z8VosU": {
     "defaultMessage": "Dublin aynı zamanda yönetilen hizmetlerimizin bulunduğu yerdir. <relay>Nostr röleleri</relay> ve <blossom>Blossom sunucuları</blossom> başla, şu tarihten itibaren {price} bir ay."
-  },
-  "zAN0RF": {
-    "defaultMessage": "Şifrelenmiş özel mesajlar"
   },
   "zEk9h3": {
     "defaultMessage": "Sanal Makineler"

@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "Ce que vous pouvez créer."
   },
+  "/lLr44": {
+    "defaultMessage": "Saisissez un message…"
+  },
   "/tiBYY": {
     "defaultMessage": "Continuer avec {provider}"
   },
@@ -152,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "Facturation, renouvellement et notifications"
   },
+  "219B5z": {
+    "defaultMessage": "Vérification du code…"
+  },
   "24piVc": {
     "defaultMessage": "<b>Vous pouvez utiliser votre propre nom de domaine si vous le souhaitez.</b> Indiquez un enregistrement CNAME vers votre serveur relais et nous l’utiliserons avec le nom d’hôte par défaut, en lui attribuant son propre certificat. Aucune étape de vérification n’est nécessaire : le certificat est émis lorsque votre DNS se résout."
+  },
+  "28C0Aj": {
+    "defaultMessage": "Remise"
   },
   "2Aa625": {
     "defaultMessage": "Dans {region}, le disque monte jusqu’à {disk}, avec {cpu} vCPU et {memory} en haut de la gamme."
@@ -194,8 +203,8 @@
   "3GLHv9": {
     "defaultMessage": "authentifier"
   },
-  "3NsyM4": {
-    "defaultMessage": "Message direct chiffré au format NIP-17."
+  "3PIm6u": {
+    "defaultMessage": "Posez toute question concernant votre compte — facturation, une VM qui ne démarre pas, ou à quoi correspond un prélèvement. Pour les remboursements, les prolongations ou les suppressions, utilisez plutôt le formulaire de contact."
   },
   "3VI9mt": {
     "defaultMessage": "Enregistrer les modifications"
@@ -242,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "Pourquoi choisir ce serveur virtuel privé (VPS) pour un nœud Lightning ?"
   },
+  "4FRCPv": {
+    "defaultMessage": "Posez n'importe quelle question sur votre compte — facturation, une VM qui ne démarre pas, ou à quoi correspond un débit."
+  },
   "4PKxPs": {
     "defaultMessage": "Dissocier"
   },
@@ -272,9 +284,6 @@
   "4lrWah": {
     "defaultMessage": "Erreur lors du chargement de l’historique : {error}"
   },
-  "4upFOv": {
-    "defaultMessage": "Vous avez des questions concernant l’approvisionnement, la facturation, la gestion des abus ou un problème spécifique lié à un service? Envoyez-nous un message et l’équipe LNVPS vous répondra dans les plus brefs délais."
-  },
   "5/Pb3D": {
     "defaultMessage": "Abonnements actifs"
   },
@@ -283,9 +292,6 @@
   },
   "556JQK": {
     "defaultMessage": "Déployer"
-  },
-  "5FWCVu": {
-    "defaultMessage": "Votre historique de messages chiffrés NIP-17 avec le support."
   },
   "5QYdPU": {
     "defaultMessage": "Heure de début"
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "Sélectionner l'image"
+  },
+  "6oIsme": {
+    "defaultMessage": "après {amount} remise"
   },
   "6sh6sN": {
     "defaultMessage": "Vous pouvez quitter cette page en toute sécurité — le paiement apparaît dans votre historique de facturation et est appliqué une fois confirmé."
@@ -455,6 +464,9 @@
   "90f82/": {
     "defaultMessage": "Démarrer la machine virtuelle"
   },
+  "9WRlF4": {
+    "defaultMessage": "Envoyer"
+  },
   "9d9svQ": {
     "defaultMessage": "Aucune clé d'accès pour le moment. Ajoutez-en une pour vous connecter sans clé."
   },
@@ -515,9 +527,6 @@
   "AfmrGS": {
     "defaultMessage": "Envoyer le code."
   },
-  "AxlcnX": {
-    "defaultMessage": "Cette boîte de réception n’est plus surveillée, il est donc impossible d’y envoyer de nouveaux messages. Pour obtenir de l’assistance, veuillez créer une demande à partir de l’onglet « Assistance »."
-  },
   "B3YjIQ": {
     "defaultMessage": "Enregistrez cette clé maintenant, car elle ne pourra pas être récupérée."
   },
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "Domaines Nostr"
   },
+  "BdYFYb": {
+    "defaultMessage": "Aucune réponse n'a été reçue pour ce message. Reconnexion — veuillez poser la question à nouveau."
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -562,6 +574,9 @@
   },
   "BnvK83": {
     "defaultMessage": "À partir de {price}."
+  },
+  "BrtgIv": {
+    "defaultMessage": "Discutez avec l'agent d'assistance LNVPS au sujet des forfaits et tarifs, des régions, des systèmes d'exploitation ou du fonctionnement des paiements via Lightning. Connectez-vous d'abord si votre question porte sur une VM existante ou un paiement, afin qu'il puisse consulter votre compte."
   },
   "Bwqhmd": {
     "defaultMessage": "Pare-feu"
@@ -574,6 +589,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "Oui, me déconnecter partout"
+  },
+  "CEERm0": {
+    "defaultMessage": "Chat en direct"
   },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
@@ -656,11 +674,14 @@
   "EKlM8d": {
     "defaultMessage": "Disque dur (Go)"
   },
+  "ELp7j5": {
+    "defaultMessage": "Chat en direct avec le support LNVPS"
+  },
   "EUDyqt": {
     "defaultMessage": "{n} arrêtées"
   },
-  "EUSRTV": {
-    "defaultMessage": "Vos anciens messages NIP-17 chiffrés sont accessibles dans cette boîte de réception, mais celle-ci n’est plus surveillée. Veuillez utiliser l’onglet « Assistance » pour nous contacter."
+  "EWw/tK": {
+    "defaultMessage": "Appliquer"
   },
   "Ecfndm": {
     "defaultMessage": "Facture"
@@ -800,9 +821,6 @@
   "HAlOn1": {
     "defaultMessage": "Nom"
   },
-  "HOWHco": {
-    "defaultMessage": "Aucun message pour le moment. Démarrez une conversation ci-dessous."
-  },
   "HPBE7M": {
     "defaultMessage": "Retour aux applications"
   },
@@ -914,6 +932,9 @@
   "KKYB/E": {
     "defaultMessage": "Aucun moyen de paiement n’a été enregistré pour le moment."
   },
+  "KKdq0O": {
+    "defaultMessage": "Saisissez un code"
+  },
   "KN7zKn": {
     "defaultMessage": "Error"
   },
@@ -962,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "Paiement en attente."
   },
+  "Lc72Gm": {
+    "defaultMessage": "Démarrer une nouvelle conversation"
+  },
   "LjglgP": {
     "defaultMessage": "Mémoire vive"
   },
@@ -994,6 +1018,12 @@
   },
   "N6XokP": {
     "defaultMessage": "Non. Il s’agit d’un simple serveur virtuel privé (VPS) avec accès root ; vous installez et exécutez le nœud. Nos applications gérées, accessibles en un seul clic, sont les relais Nostr et les serveurs multimédias Blossom, et ceux-ci sont uniquement disponibles sur le serveur de Dublin."
+  },
+  "NAidKb": {
+    "defaultMessage": "Notifications"
+  },
+  "NLgFjn": {
+    "defaultMessage": "Rien ici pour le moment."
   },
   "NQgbYA": {
     "defaultMessage": "Paramètres du compte"
@@ -1054,6 +1084,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "Aucun parrainage pour le moment. Partagez votre lien pour commencer à obtenir des conversions."
+  },
+  "P1QHV0": {
+    "defaultMessage": "Réflexion…"
   },
   "P7PLVj": {
     "defaultMessage": "Date"
@@ -1166,6 +1199,9 @@
   "Rw82/V": {
     "defaultMessage": "par mois"
   },
+  "S3OX0p": {
+    "defaultMessage": "Message direct NIP-17 chiffré — lisez-les dans {link}"
+  },
   "S5oncX": {
     "defaultMessage": "Chaque offre inclut une adresse IPv4, une adresse IPv6 et un trafic illimité. Les prix s'entendent hors taxes et hors frais de traitement de paiement."
   },
@@ -1256,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "Facturation"
   },
+  "TfUeeR": {
+    "defaultMessage": "Préférez l'e-mail ? Envoyez-nous un message et l'équipe LNVPS vous recontactera."
+  },
   "TgGVeW": {
     "defaultMessage": "Action requise"
   },
@@ -1277,11 +1316,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "Envoyez-nous un message"
+  },
   "U+Ddsx": {
     "defaultMessage": "Envoyez des bitcoins on-chain à cette adresse. Le temps est crédité automatiquement une fois la transaction confirmée, au prorata du montant reçu — les paiements partiels ou excédentaires ne sont jamais perdus."
   },
   "U/W38H": {
     "defaultMessage": "Que se passe-t-il avec mes événements si j’arrête de payer ?"
+  },
+  "U093E7": {
+    "defaultMessage": "Chat de support"
   },
   "U0GEAC": {
     "defaultMessage": "Arrêtez de téléverser vos images et vidéos sur le serveur d’une autre personne. Route96 est un serveur multimédia Blossom et NIP-96, déployé sur LNVPS en quelques minutes, avec espace de stockage et TLS inclus."
@@ -1370,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "Foire aux questions"
   },
+  "WEUBM+": {
+    "defaultMessage": "Discutez avec l'agent de support LNVPS au sujet des offres et des tarifs, des régions, des systèmes d'exploitation ou du fonctionnement du paiement via Lightning — aucune connexion requise. Connectez-vous d'abord si votre question concerne une VM existante ou un paiement, afin qu'il puisse consulter votre compte."
+  },
   "WEoZhh": {
     "defaultMessage": "Impossible de trouver un abonnement sur lequel facturer cette mise à niveau."
   },
@@ -1403,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "Enregistrer les modifications"
   },
+  "X4GAwh": {
+    "defaultMessage": "Posez des questions sur les forfaits et les tarifs, les régions et les systèmes d'exploitation que nous proposons, ou sur le fonctionnement du paiement via Lightning."
+  },
   "X4VESO": {
     "defaultMessage": "Efface la VM et repart d'une image vierge. Cela supprime définitivement toutes les données qu'elle contient."
   },
@@ -1424,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "Utilisé"
   },
+  "XZGfTo": {
+    "defaultMessage": "Envoyer un message"
+  },
   "XdLEro": {
     "defaultMessage": "Hébergement du serveur multimédia Blossom — Route96"
   },
@@ -1442,11 +1496,20 @@
   "Y/tMXU": {
     "defaultMessage": "En attente du paiement. Cette opération est effectuée automatiquement une fois le paiement confirmé."
   },
+  "YCzocJ": {
+    "defaultMessage": "Vous avez des questions sur le provisionnement, la facturation, la gestion des abus ou un problème de service en particulier ? Nous sommes là pour vous aider."
+  },
   "YLoN96": {
     "defaultMessage": "<b>Adresse IPv4 et IPv6 statique pour chaque forfait.</b> Un nœud annoncé a besoin d’une adresse fixe. Les deux sont inclus dans le forfait de base, il n’y a pas de frais supplémentaires."
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} vCPU, {memory} RAM, {disk} {diskType} stockage dans {region}."
+  },
+  "YQBx00": {
+    "defaultMessage": "Code de réduction"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} Remise. S'applique uniquement à ce paiement — les renouvellements ultérieurs seront facturés au tarif normal."
   },
   "YWjrby": {
     "defaultMessage": "Nous vous envoyons uniquement des alertes concernant votre compte, par exemple l’expiration de la période d’essai. Nous n’envoyons jamais de messages publicitaires."
@@ -1562,6 +1625,9 @@
   "bhfNWq": {
     "defaultMessage": "Collez ici le message chiffré…"
   },
+  "bneNNt": {
+    "defaultMessage": "{amount} éteint{code,select,none{} other{ · {code}}}"
+  },
   "bpBvBq": {
     "defaultMessage": "Devise d’affichage :"
   },
@@ -1619,6 +1685,9 @@
   "d6JhA/": {
     "defaultMessage": "Créez votre serveur virtuel privé (VPS) au Québec."
   },
+  "dH48sC": {
+    "defaultMessage": "Le chat en direct n'est pas disponible en ce moment. {link} et l'équipe reviendra vers vous."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1696,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais."
+  },
+  "dOGweU": {
+    "defaultMessage": "Reconnexion..."
   },
   "dOQCL8": {
     "defaultMessage": "Nom affiché"
@@ -1658,6 +1730,9 @@
   "djJp6c": {
     "defaultMessage": "Histoire"
   },
+  "djY1KH": {
+    "defaultMessage": "Avis envoyés sous forme de DM Nostr"
+  },
   "duElEE": {
     "defaultMessage": "Aucune entrée d’historique n’a été trouvée pour cette machine virtuelle."
   },
@@ -1666,6 +1741,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS — nom d’hôte personnalisé, avec TLS inclus. {storage} stockage, pas de serveur à mettre à jour."
+  },
+  "e4Rg0n": {
+    "defaultMessage": "Notifications que LNVPS vous a envoyées sous forme de messages directs chiffrés NIP-17."
   },
   "e4ehrh": {
     "defaultMessage": "Configurez votre machine"
@@ -1687,6 +1765,9 @@
   },
   "ebmhes": {
     "defaultMessage": "Extension Nostr"
+  },
+  "eg3pYc": {
+    "defaultMessage": "Limite de messages atteinte pour cette session — reconnectez-vous pour continuer. Votre historique de conversation est conservé."
   },
   "eq14GY": {
     "defaultMessage": "Votre nouvelle clé secrète."
@@ -1787,20 +1868,23 @@
   "h/PJh3": {
     "defaultMessage": "Après avoir sélectionné une nouvelle clé, veuillez redémarrer la machine virtuelle."
   },
+  "h1wLxC": {
+    "defaultMessage": "Paramètres de notification"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} vCPU"
   },
   "hADOUq": {
     "defaultMessage": "Enregistré. L'application redémarrera sous peu."
   },
-  "hMzcSq": {
-    "defaultMessage": "Messages"
-  },
   "hX8VXF": {
     "defaultMessage": "Taux de disponibilité mensuel (sur les 12 derniers mois)"
   },
   "hXAhO/": {
     "defaultMessage": "Vous vous connectez avec une clé Nostr : il n'y a donc aucune session stockée à révoquer. Chaque requête est signée individuellement."
+  },
+  "hZkw2A": {
+    "defaultMessage": "Les notifications de messages directs Nostr ne sont disponibles que pour les comptes Nostr — le vôtre ne dispose pas de clé Nostr pour les déchiffrer. Choisissez un autre canal dans {settings}."
   },
   "hs3HVz": {
     "defaultMessage": "Connectez-vous avec Face ID, Touch ID, Windows Hello ou une clé de sécurité. Vous pouvez ajouter une clé d'accès à n'importe quel compte."
@@ -1819,6 +1903,9 @@
   },
   "iVkpyZ": {
     "defaultMessage": "Applications Docker en un seul clic, disponibles dans un catalogue géré."
+  },
+  "iX/9/k": {
+    "defaultMessage": "Remise ({code})"
   },
   "iXNbPf": {
     "defaultMessage": "Renommer"
@@ -1867,6 +1954,9 @@
   },
   "jUqYir": {
     "defaultMessage": "Ajouté {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "Ce code ne fait aucune remise sur cette commande."
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# jour} other{# jours}}"
@@ -1931,6 +2021,9 @@
   "ku+mDU": {
     "defaultMessage": "État"
   },
+  "l+Z32c": {
+    "defaultMessage": "Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne."
+  },
   "l0VA3b": {
     "defaultMessage": "Le trafic est-il limité ?"
   },
@@ -1945,6 +2038,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "Salaire"
+  },
+  "lFXHsw": {
+    "defaultMessage": "Discutez avec l'agent d'assistance LNVPS. Il peut consulter votre compte, vos VM et vos paiements, et démarrer, arrêter ou redémarrer une VM."
   },
   "lKv8ex": {
     "defaultMessage": "Par défaut"
@@ -1985,6 +2081,12 @@
   "m4xBT/": {
     "defaultMessage": "Applications gérées : exécutez le logiciel sans démarrer le serveur."
   },
+  "mBLNqg": {
+    "defaultMessage": "Démarrer le chat"
+  },
+  "mDLXhF": {
+    "defaultMessage": "En reprenant votre conversation précédente — l'agent conserve toujours le contexte, même si les messages ci-dessus ne sont plus affichés. Commencez-en une nouvelle si vous préférez repartir de zéro."
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr permet de conserver le contrôle sur votre identité numérique. Les médias sont l’élément qui pose problème : vos images sont hébergées sur les serveurs d’un tiers, soumises aux conditions d’utilisation de ce tiers, et disparaissent lorsque ce dernier décide de le faire. Un serveur Blossom rétablit ce contrôle en vous permettant de gérer ces éléments."
   },
@@ -2005,6 +2107,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "Copier dans le presse-papiers"
+  },
+  "mRKf2V": {
+    "defaultMessage": "La connexion a été interrompue avant la fin de la réponse. Reconnexion — posez à nouveau la question une fois la connexion rétablie."
   },
   "mV5FZi": {
     "defaultMessage": "Programme de parrainage pour les employés en congé"
@@ -2069,6 +2174,9 @@
   "nxqAD7": {
     "defaultMessage": "Nouveau incident"
   },
+  "o/1ZFL": {
+    "defaultMessage": "Discutez avec l'agent de support LNVPS au sujet des formules, des régions, des systèmes d'exploitation et des paiements Lightning. Aucun compte requis."
+  },
   "o0jcye": {
     "defaultMessage": "système d’exploitation"
   },
@@ -2077,6 +2185,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "Clé publique prise en charge : {npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "Les avertissements d'expiration, les reçus de paiement et les avis de mise en service arrivent ici lorsque le canal de messages directs de Nostr est activé dans {settings}. Cette boîte de réception n'est pas surveillée pour les réponses — pour joindre une personne, utilisez {support}."
   },
   "oBSxZS": {
     "defaultMessage": "Devis pour une mise à niveau"
@@ -2228,9 +2339,6 @@
   "sTesGq": {
     "defaultMessage": "Aucune offre disponible."
   },
-  "sUw18G": {
-    "defaultMessage": "Le chiffrement des messages n’est disponible que pour les comptes Nostr. Votre compte ne dispose pas de clé Nostr permettant de lire ou d’envoyer des messages NIP-17. Pour obtenir de l’aide, veuillez utiliser l’onglet Assistance."
-  },
   "sehISV": {
     "defaultMessage": "Hébergement du serveur multimédia Blossom à partir de {price} par mois."
   },
@@ -2245,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "Définit la devise utilisée pour le devis et le paiement."
+  },
+  "sx6MYT": {
+    "defaultMessage": "L'agent ne peut ni prolonger, ni rembourser ni supprimer une VM, et il ne peut pas agir sur un compte auquel il n'est pas connecté. Pour ceux, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Courriel"
@@ -2303,6 +2414,9 @@
   "u3FDCD": {
     "defaultMessage": "Conditions d’utilisation et règles d’utilisation acceptables."
   },
+  "uARutB": {
+    "defaultMessage": "Contacter l'assistance par e-mail"
+  },
   "uJV0wU": {
     "defaultMessage": "Adresse IP"
   },
@@ -2311,6 +2425,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "Courriel : {email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "L'agent ne peut pas prolonger, rembourser ou supprimer une VM. Pour ceux, {link}."
   },
   "uYtOL7": {
     "defaultMessage": "VPS Irlande — VPS de Dublin, paiement en Bitcoin."
@@ -2372,6 +2489,9 @@
   "vy2rlX": {
     "defaultMessage": "Frais de traitement :"
   },
+  "w1iy6j": {
+    "defaultMessage": "Mise à jour du prix…"
+  },
   "w3i5cX": {
     "defaultMessage": "Mémoire persistante – capacité par relais, comme indiqué ci-dessus."
   },
@@ -2401,6 +2521,9 @@
   },
   "wz7uSD": {
     "defaultMessage": "y compris une taxe de {amount}"
+  },
+  "x/me2T": {
+    "defaultMessage": "Discutez avec l'agent d'assistance LNVPS. Il peut consulter votre compte, vos VM et vos paiements, ainsi que démarrer, arrêter ou redémarrer une VM. Il ne peut pas prolonger, rembourser ou supprimer — utilisez le formulaire ci-dessous pour ces opérations."
   },
   "x0cZXf": {
     "defaultMessage": "Mise à niveau non disponible."
@@ -2483,14 +2606,14 @@
   "z+hIFs": {
     "defaultMessage": "Aucun paiement n’a encore été effectué."
   },
+  "z1KiHv": {
+    "defaultMessage": "Les messages sont limités à {max} personnages."
+  },
   "z4e/Em": {
     "defaultMessage": "Gestion de l’hébergement des relais Nostr."
   },
   "z8VosU": {
     "defaultMessage": "Dublin est également le lieu où nous gérons nos <relay>Relais Nostr</relay> et <blossom>Serveurs Blossom</blossom> exécuter, à partir de {price} un mois."
-  },
-  "zAN0RF": {
-    "defaultMessage": "Messages directs chiffrés."
   },
   "zEk9h3": {
     "defaultMessage": "Machines virtuelles"

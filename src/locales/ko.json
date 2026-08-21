@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "무엇을 만들 수 있을까요?"
   },
+  "/lLr44": {
+    "defaultMessage": "메시지를 입력하세요…"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider}(으)로 계속하기"
   },
@@ -152,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "결제, 갱신 및 알림"
   },
+  "219B5z": {
+    "defaultMessage": "코드 확인 중…"
+  },
   "24piVc": {
     "defaultMessage": "<b>원하는 경우 자체 도메인을 사용할 수 있습니다.</b> 중계 서버에 CNAME 레코드를 설정하면 기본 호스트 이름과 함께 자체 인증서를 사용하여 서비스를 제공합니다. 별도의 확인 단계는 필요하지 않으며, DNS가 올바르게 작동하면 인증서가 발급됩니다."
+  },
+  "28C0Aj": {
+    "defaultMessage": "할인"
   },
   "2Aa625": {
     "defaultMessage": "안에 {region}디스크는 최대 높이까지 올라갑니다. {disk}그리고 {cpu} 가상 CPU 및 {memory} 최상위 수준에서."
@@ -194,8 +203,8 @@
   "3GLHv9": {
     "defaultMessage": "인증"
   },
-  "3NsyM4": {
-    "defaultMessage": "암호화된 NIP-17 직접 메시지"
+  "3PIm6u": {
+    "defaultMessage": "계정과 관련하여 무엇이든 문의해 주세요 — 청구, 부팅되지 않는 VM, 특정 과금 내역 등. 환불, 연장 또는 삭제의 경우, 문의 양식을 대신 이용해 주세요."
   },
   "3VI9mt": {
     "defaultMessage": "변경 사항 저장"
@@ -242,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "번개 네트워크 노드를 운영하기 위해 이 가상 전용 서버(VPS)를 선택한 이유는 무엇인가요?"
   },
+  "4FRCPv": {
+    "defaultMessage": "계정에 관한 것이 무엇이든 물어보세요 — 결제, 부팅되지 않는 VM, 또는 특정 요금이 무엇인지."
+  },
   "4PKxPs": {
     "defaultMessage": "연결 해제"
   },
@@ -272,9 +284,6 @@
   "4lrWah": {
     "defaultMessage": "기록 로딩 중 오류 발생: {error}"
   },
-  "4upFOv": {
-    "defaultMessage": "프로비저닝, 요금 청구, 악용 사례 처리 또는 특정 서비스 문제에 대해 궁금한 점이 있으신가요? 메시지를 보내주시면 LNVPS 팀에서 가능한 한 빨리 답변해 드리겠습니다."
-  },
   "5/Pb3D": {
     "defaultMessage": "활성 구독"
   },
@@ -283,9 +292,6 @@
   },
   "556JQK": {
     "defaultMessage": "배포하다"
-  },
-  "5FWCVu": {
-    "defaultMessage": "지원팀과의 암호화된 NIP-17 메시지 기록입니다."
   },
   "5QYdPU": {
     "defaultMessage": "시작 시간"
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "이미지 선택"
+  },
+  "6oIsme": {
+    "defaultMessage": "이후 {amount} 할인"
   },
   "6sh6sN": {
     "defaultMessage": "이 페이지를 떠나도 안전합니다. 결제는 청구 내역에 표시되며 확인되는 즉시 적용됩니다."
@@ -455,6 +464,9 @@
   "90f82/": {
     "defaultMessage": "가상 머신 시작"
   },
+  "9WRlF4": {
+    "defaultMessage": "보내기"
+  },
   "9d9svQ": {
     "defaultMessage": "아직 패스키가 없습니다. 키 없이 로그인하려면 하나를 추가하세요."
   },
@@ -515,9 +527,6 @@
   "AfmrGS": {
     "defaultMessage": "코드 전송"
   },
-  "AxlcnX": {
-    "defaultMessage": "이 받은 편지함은 더 이상 확인되지 않으므로 새 메시지를 보낼 수 없습니다. 지원이 필요하시면 '지원' 탭에서 문의를 제출해 주세요."
-  },
   "B3YjIQ": {
     "defaultMessage": "이 키를 지금 저장하세요. 복구할 수 없습니다."
   },
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "노스트르 도메인"
   },
+  "BdYFYb": {
+    "defaultMessage": "해당 메시지에 대한 답장이 오지 않았습니다. 다시 연결 중입니다 — 다시 질문해 주세요."
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -562,6 +574,9 @@
   },
   "BnvK83": {
     "defaultMessage": "{price}부터."
+  },
+  "BrtgIv": {
+    "defaultMessage": "LNVPS 지원 에이전트와 요금제 및 가격, 지역, 운영 체제, 또는 Lightning 결제 방식에 대해 채팅으로 문의하세요. 기존 VM이나 결제와 관련된 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
   },
   "Bwqhmd": {
     "defaultMessage": "방화벽"
@@ -574,6 +589,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "예, 모든 기기에서 로그아웃"
+  },
+  "CEERm0": {
+    "defaultMessage": "실시간 채팅"
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
@@ -656,11 +674,14 @@
   "EKlM8d": {
     "defaultMessage": "디스크(GB)"
   },
+  "ELp7j5": {
+    "defaultMessage": "LNVPS 지원팀과 라이브 채팅"
+  },
   "EUDyqt": {
     "defaultMessage": "{n}개 중지됨"
   },
-  "EUSRTV": {
-    "defaultMessage": "이전에 암호화된 NIP-17 메시지를 지원팀에서 확인할 수 있습니다. 이 받은 편지함은 더 이상 모니터링되지 않으므로, 지원 탭을 통해 문의해 주시기 바랍니다."
+  "EWw/tK": {
+    "defaultMessage": "적용"
   },
   "Ecfndm": {
     "defaultMessage": "송장"
@@ -800,9 +821,6 @@
   "HAlOn1": {
     "defaultMessage": "이름"
   },
-  "HOWHco": {
-    "defaultMessage": "아직 메시지가 없습니다. 아래에서 대화를 시작하세요."
-  },
   "HPBE7M": {
     "defaultMessage": "앱으로 돌아가기"
   },
@@ -914,6 +932,9 @@
   "KKYB/E": {
     "defaultMessage": "저장된 결제 수단이 아직 없습니다."
   },
+  "KKdq0O": {
+    "defaultMessage": "코드를 입력하세요"
+  },
   "KN7zKn": {
     "defaultMessage": "Error"
   },
@@ -962,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "미결제 상태"
   },
+  "Lc72Gm": {
+    "defaultMessage": "새로운 대화 시작"
+  },
   "LjglgP": {
     "defaultMessage": "램(RAM)"
   },
@@ -994,6 +1018,12 @@
   },
   "N6XokP": {
     "defaultMessage": "아닙니다. 여기서는 루트 권한이 있는 일반 VPS를 사용하며, 사용자가 직접 노드를 설치하고 실행합니다. 당사가 제공하는 원클릭으로 간편하게 설치 및 관리할 수 있는 앱은 Nostr 릴레이와 Blossom 미디어 서버이며, 이들은 더블린 지역에서만 사용할 수 있습니다."
+  },
+  "NAidKb": {
+    "defaultMessage": "알림"
+  },
+  "NLgFjn": {
+    "defaultMessage": "아직 여기에 아무것도 없습니다."
   },
   "NQgbYA": {
     "defaultMessage": "계정 설정"
@@ -1054,6 +1084,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "아직 추천이 없습니다. 링크를 공유하여 전환을 시작하세요."
+  },
+  "P1QHV0": {
+    "defaultMessage": "생각 중…"
   },
   "P7PLVj": {
     "defaultMessage": "날짜"
@@ -1166,6 +1199,9 @@
   "Rw82/V": {
     "defaultMessage": "매달"
   },
+  "S3OX0p": {
+    "defaultMessage": "암호화된 NIP-17 다이렉트 메시지 — 여기서 읽기 {link}"
+  },
   "S5oncX": {
     "defaultMessage": "모든 플랜에는 IPv4 주소 1개, IPv6 주소 1개와 무제한 트래픽이 포함됩니다. 가격에는 세금 및 결제 처리 수수료가 포함되어 있지 않습니다."
   },
@@ -1256,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "요금 청구"
   },
+  "TfUeeR": {
+    "defaultMessage": "이메일을 선호하시나요? 메시지를 보내주시면 LNVPS 팀이 회신드리겠습니다."
+  },
   "TgGVeW": {
     "defaultMessage": "조치 필요"
   },
@@ -1277,11 +1316,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "메시지를 보내주세요"
+  },
   "U+Ddsx": {
     "defaultMessage": "이 주소로 온체인 비트코인을 보내세요. 트랜잭션이 확인되면 받은 금액에 비례하여 시간이 자동으로 적립됩니다. 부분 결제와 초과 결제는 절대 손실되지 않습니다."
   },
   "U/W38H": {
     "defaultMessage": "결제를 중단하면 내 이벤트는 어떻게 되나요?"
+  },
+  "U093E7": {
+    "defaultMessage": "지원 채팅"
   },
   "U0GEAC": {
     "defaultMessage": "다른 사람의 서버에 이미지와 동영상을 업로드하는 것을 중단하세요. Route96은 LNVPS에 몇 분 안에 배포할 수 있는 Blossom 및 NIP-96 미디어 서버이며, 저장 공간과 TLS가 함께 제공됩니다."
@@ -1370,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "자주 묻는 질문"
   },
+  "WEUBM+": {
+    "defaultMessage": "LNVPS 지원 에이전트와 플랜 및 요금제, 리전, 운영체제, 또는 Lightning으로 결제하는 방법에 대해 채팅하세요. 로그인 없이도 가능합니다. 기존 VM이나 결제에 관한 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
+  },
   "WEoZhh": {
     "defaultMessage": "이 업그레이드를 청구할 구독을 찾을 수 없습니다."
   },
@@ -1403,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "변경사항 저장"
   },
+  "X4GAwh": {
+    "defaultMessage": "요금제와 가격, 제공되는 지역과 운영체제, Lightning 결제 방식에 대해 문의하세요."
+  },
   "X4VESO": {
     "defaultMessage": "VM을 지우고 새 이미지로 시작합니다. 이 작업은 VM의 모든 데이터를 영구적으로 삭제합니다."
   },
@@ -1424,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "사용됨"
   },
+  "XZGfTo": {
+    "defaultMessage": "메시지 보내기"
+  },
   "XdLEro": {
     "defaultMessage": "블로섬 미디어 서버 호스팅 — Route96"
   },
@@ -1442,11 +1496,20 @@
   "Y/tMXU": {
     "defaultMessage": "결제를 기다리는 중입니다. 결제가 확인되면 자동으로 적용됩니다."
   },
+  "YCzocJ": {
+    "defaultMessage": "프로비저닝, 청구, 오남용 처리 또는 특정 서비스 문제에 대해 궁금한 점이 있으신가요? 도와드리겠습니다."
+  },
   "YLoN96": {
     "defaultMessage": "<b>모든 요금제에 고정 IPv4 및 IPv6 주소가 포함됩니다.</b> 네트워크에 연결된 노드는 변경되지 않는 주소가 필요합니다. 두 가지 모두 기본으로 제공되며 추가 요금이 부과되지 않습니다."
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} 가상 CPU {memory} 램(RAM) {disk} {diskType} 저장 위치 {region}."
+  },
+  "YQBx00": {
+    "defaultMessage": "할인 코드"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} 할인. 이번 결제에만 적용됩니다. 이후 갱신 시 정상 요금이 청구됩니다."
   },
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
@@ -1562,6 +1625,9 @@
   "bhfNWq": {
     "defaultMessage": "암호화된 메시지를 여기에 붙여넣으세요."
   },
+  "bneNNt": {
+    "defaultMessage": "{amount} 꺼짐{code,select,none{} other{ · {code}}}"
+  },
   "bpBvBq": {
     "defaultMessage": "표시할 통화:"
   },
@@ -1619,6 +1685,9 @@
   "d6JhA/": {
     "defaultMessage": "퀘벡에 있는 가상 사설 서버를 구축하세요."
   },
+  "dH48sC": {
+    "defaultMessage": "실시간 채팅은 현재 사용할 수 없습니다. {link} 그리고 팀에서 다시 연락드리겠습니다."
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1696,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "문의해 주셔서 감사합니다. 가능한 한 빨리 답변드리겠습니다."
+  },
+  "dOGweU": {
+    "defaultMessage": "재연결 중..."
   },
   "dOQCL8": {
     "defaultMessage": "표시 이름"
@@ -1658,6 +1730,9 @@
   "djJp6c": {
     "defaultMessage": "역사"
   },
+  "djY1KH": {
+    "defaultMessage": "Nostr DM으로 전송되는 알림"
+  },
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
   },
@@ -1666,6 +1741,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "실행하다 {name} 관리되는 방식으로 {category} LNVPS에서 — 자체 호스트 이름 사용, TLS 포함 {storage} 저장 공간만 있으면 되므로, 서버를 업데이트할 필요가 없습니다."
+  },
+  "e4Rg0n": {
+    "defaultMessage": "LNVPS가 암호화된 NIP-17 다이렉트 메시지로 보낸 알림"
   },
   "e4ehrh": {
     "defaultMessage": "머신 구성하기"
@@ -1687,6 +1765,9 @@
   },
   "ebmhes": {
     "defaultMessage": "노스트르 확장 프로그램"
+  },
+  "eg3pYc": {
+    "defaultMessage": "이번 세션의 메시지 한도에 도달했습니다 — 계속하려면 다시 연결하세요. 대화 기록은 유지됩니다."
   },
   "eq14GY": {
     "defaultMessage": "새로운 개인 키입니다."
@@ -1787,20 +1868,23 @@
   "h/PJh3": {
     "defaultMessage": "새 키를 선택한 후에는 가상 머신을 다시 시작하십시오."
   },
+  "h1wLxC": {
+    "defaultMessage": "알림 설정"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} 가상 CPU"
   },
   "hADOUq": {
     "defaultMessage": "저장했습니다. 앱이 곧 재시작됩니다."
   },
-  "hMzcSq": {
-    "defaultMessage": "메시지"
-  },
   "hX8VXF": {
     "defaultMessage": "월별 가동 시간(최근 12개월)"
   },
   "hXAhO/": {
     "defaultMessage": "Nostr 키로 로그인하므로 취소할 저장된 세션이 없습니다. 각 요청은 개별적으로 서명됩니다."
+  },
+  "hZkw2A": {
+    "defaultMessage": "Nostr DM 알림은 Nostr 계정에서만 사용할 수 있습니다 — 귀하의 계정에는 이를 복호화할 Nostr 키가 없습니다. 에서 다른 채널을 선택하세요 {settings}."
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello 또는 보안 키로 로그인하세요. 모든 계정에 패스키를 추가할 수 있습니다."
@@ -1819,6 +1903,9 @@
   },
   "iVkpyZ": {
     "defaultMessage": "관리되는 카탈로그에서 원클릭으로 Docker 앱을 사용할 수 있습니다."
+  },
+  "iX/9/k": {
+    "defaultMessage": "할인({code})"
   },
   "iXNbPf": {
     "defaultMessage": "이름 변경"
@@ -1867,6 +1954,9 @@
   },
   "jUqYir": {
     "defaultMessage": "추가됨 {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "이 코드는 이 주문에서 아무것도 할인되지 않습니다."
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 일} other{# 일}}"
@@ -1931,6 +2021,9 @@
   "ku+mDU": {
     "defaultMessage": "상태"
   },
+  "l+Z32c": {
+    "defaultMessage": "Enter: 전송, Shift+Enter: 줄바꿈"
+  },
   "l0VA3b": {
     "defaultMessage": "교통량 제한이 있나요?"
   },
@@ -1945,6 +2038,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "지급"
+  },
+  "lFXHsw": {
+    "defaultMessage": "LNVPS 지원 에이전트와 채팅하세요. 계정, VM 및 결제 내역을 조회하고 VM을 시작, 중지 또는 재시작할 수 있습니다."
   },
   "lKv8ex": {
     "defaultMessage": "기본값"
@@ -1985,6 +2081,12 @@
   "m4xBT/": {
     "defaultMessage": "관리형 앱: 서버를 실행하지 않고 소프트웨어를 실행합니다."
   },
+  "mBLNqg": {
+    "defaultMessage": "채팅 시작"
+  },
+  "mDLXhF": {
+    "defaultMessage": "이전 대화를 이어갑니다 — 위쪽 메시지는 다시 표시되지 않지만, 에이전트는 여전히 맥락을 유지하고 있습니다. 처음부터 다시 시작하시려면 새 대화를 시작해 주세요."
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr은 사용자의 신원을 보관하고 이동성을 유지할 수 있도록 합니다. 기존에는 미디어가 그렇지 않았습니다. 즉, 사용자의 이미지는 다른 사람의 서버에 저장되고, 해당 서버 운영자의 정책에 따라 관리되며, 서버가 사라지면 이미지도 함께 사라집니다. Blossom 서버는 이러한 상황을 개선하여 사용자가 직접 제어할 수 있도록 합니다."
   },
@@ -2005,6 +2107,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "클립보드로 복사"
+  },
+  "mRKf2V": {
+    "defaultMessage": "응답이 끝나기 전에 연결이 끊어졌습니다. 다시 연결 중입니다 — 연결이 복구되면 다시 질문해 주세요."
   },
   "mV5FZi": {
     "defaultMessage": "휴가 추천 프로그램"
@@ -2069,6 +2174,9 @@
   "nxqAD7": {
     "defaultMessage": "새로운 사고"
   },
+  "o/1ZFL": {
+    "defaultMessage": "LNVPS 지원 에이전트와 플랜, 리전, 운영체제, 라이트닝 결제에 대해 채팅하세요. 계정 없이도 가능합니다."
+  },
   "o0jcye": {
     "defaultMessage": "운영 체제"
   },
@@ -2077,6 +2185,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "공개 키 지원: {npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "만료 경고, 결제 영수증 및 프로비저닝 알림은 Nostr DM 채널이 활성화된 동안 여기에 수신됩니다. {settings}. 이 수신함은 회신 모니터링이 되지 않습니다 — 담당자에게 연결하려면, 사용하세요 {support}."
   },
   "oBSxZS": {
     "defaultMessage": "업그레이드 견적"
@@ -2228,9 +2339,6 @@
   "sTesGq": {
     "defaultMessage": "제안 가능한 상품이 없습니다."
   },
-  "sUw18G": {
-    "defaultMessage": "암호화된 메시지 기능은 노스트르 계정에만 제공됩니다. 귀하의 계정에는 NIP-17 메시지를 읽거나 보내는 데 필요한 노스트르 키가 없습니다. 도움이 필요하시면 지원 섹션을 이용해 주시기 바랍니다."
-  },
   "sehISV": {
     "defaultMessage": "블로섬 미디어 서버 호스팅, 월 {price}부터"
   },
@@ -2245,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "견적 및 결제에 사용되는 통화를 설정합니다."
+  },
+  "sx6MYT": {
+    "defaultMessage": "에이전트는 VM을 연장, 환불 또는 삭제할 수 없으며, 로그인하지 않은 계정에는 작업을 수행할 수 없습니다. 해당 항목에 대해서는, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "이메일"
@@ -2303,6 +2414,9 @@
   "u3FDCD": {
     "defaultMessage": "이용 약관 및 허용되는 사용 범위"
   },
+  "uARutB": {
+    "defaultMessage": "이메일로 고객센터에 문의하세요"
+  },
   "uJV0wU": {
     "defaultMessage": "IP 주소"
   },
@@ -2311,6 +2425,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "이메일: {email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "에이전트는 VM을 연장, 환불 또는 삭제할 수 없습니다. 이러한 경우, {link}."
   },
   "uYtOL7": {
     "defaultMessage": "아일랜드 VPS — 더블린 VPS, 비트코인으로 결제"
@@ -2372,6 +2489,9 @@
   "vy2rlX": {
     "defaultMessage": "수수료:"
   },
+  "w1iy6j": {
+    "defaultMessage": "가격 업데이트 중…"
+  },
   "w3i5cX": {
     "defaultMessage": "영구 저장 공간 — 각 릴레이별 크기"
   },
@@ -2401,6 +2521,9 @@
   },
   "wz7uSD": {
     "defaultMessage": "포함하여 {amount} 세금"
+  },
+  "x/me2T": {
+    "defaultMessage": "LNVPS 지원 에이전트와 채팅하세요. 고객님의 계정, VM 및 결제 내역을 조회하고 VM을 시작, 중지 또는 재시작할 수 있습니다. 연장, 환불 또는 삭제는 불가하며, 해당 작업은 아래 양식을 이용해 주세요."
   },
   "x0cZXf": {
     "defaultMessage": "업그레이드 불가"
@@ -2483,14 +2606,14 @@
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."
   },
+  "z1KiHv": {
+    "defaultMessage": "메시지는 ~까지 제한됩니다 {max} 문자."
+  },
   "z4e/Em": {
     "defaultMessage": "Nostr 릴레이 호스팅 관리"
   },
   "z8VosU": {
     "defaultMessage": "더블린은 저희가 관리하는 시설이 있는 곳이기도 합니다. <relay>노스트르 릴레이</relay> 그리고 <blossom>블로섬 서버</blossom> 실행, ~부터 {price} 한 달."
-  },
-  "zAN0RF": {
-    "defaultMessage": "암호화된 직접 메시지"
   },
   "zEk9h3": {
     "defaultMessage": "가상 머신"

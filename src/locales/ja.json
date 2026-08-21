@@ -71,6 +71,9 @@
   "/kXbXW": {
     "defaultMessage": "何を作ることができますか。"
   },
+  "/lLr44": {
+    "defaultMessage": "メッセージを入力してください…"
+  },
   "/tiBYY": {
     "defaultMessage": "{provider} で続ける"
   },
@@ -152,8 +155,14 @@
   "2/hxXE": {
     "defaultMessage": "請求、更新、および通知"
   },
+  "219B5z": {
+    "defaultMessage": "コードを確認中…"
+  },
   "24piVc": {
     "defaultMessage": "<b>必要な場合は、独自のドメインを使用できます。</b>CNAMEレコードをリレーサーバーに設定すると、デフォルトのホスト名とともに、そのドメイン用の証明書を提供します。検証の手続きは不要で、DNSが解決されると証明書が発行されます。"
+  },
+  "28C0Aj": {
+    "defaultMessage": "割引"
   },
   "2Aa625": {
     "defaultMessage": "～で {region}、ディスクは最大で {disk}とともに {cpu} 仮想CPUおよび {memory} 最上位に。"
@@ -194,8 +203,8 @@
   "3GLHv9": {
     "defaultMessage": "認証"
   },
-  "3NsyM4": {
-    "defaultMessage": "暗号化されたNIP-17ダイレクトメッセージ。"
+  "3PIm6u": {
+    "defaultMessage": "アカウントに関するご質問は何でもどうぞ。請求、起動しない VM、請求内容の確認などです。返金・延長・削除については、こちらではなくお問い合わせフォームをご利用ください。"
   },
   "3VI9mt": {
     "defaultMessage": "変更を保存"
@@ -242,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "なぜ、このVPSをライトニングノードに使うのか？"
   },
+  "4FRCPv": {
+    "defaultMessage": "アカウントについて、請求、起動しないVM、課金の内容など、何でも聞いてください。"
+  },
   "4PKxPs": {
     "defaultMessage": "リンクを解除する。"
   },
@@ -272,9 +284,6 @@
   "4lrWah": {
     "defaultMessage": "履歴の読み込み中にエラーが発生しました：{error}"
   },
-  "4upFOv": {
-    "defaultMessage": "プロビジョニング、請求、不正利用への対応、または特定のサービスに関する問題についてご質問がありますか？メッセージをお送りいただければ、LNVPSチームがなるべく早くご連絡いたします。"
-  },
   "5/Pb3D": {
     "defaultMessage": "現在有効なサブスクリプション"
   },
@@ -283,9 +292,6 @@
   },
   "556JQK": {
     "defaultMessage": "展開する、配備する"
-  },
-  "5FWCVu": {
-    "defaultMessage": "サポートとの暗号化された NIP-17 メッセージ履歴。"
   },
   "5QYdPU": {
     "defaultMessage": "開始時間"
@@ -331,6 +337,9 @@
   },
   "6nAe2O": {
     "defaultMessage": "イメージを選択"
+  },
+  "6oIsme": {
+    "defaultMessage": "その後 {amount} 割引"
   },
   "6sh6sN": {
     "defaultMessage": "このページを離れても問題ありません。支払いは請求履歴に表示され、承認され次第適用されます。"
@@ -455,6 +464,9 @@
   "90f82/": {
     "defaultMessage": "VMを起動します。"
   },
+  "9WRlF4": {
+    "defaultMessage": "送信"
+  },
   "9d9svQ": {
     "defaultMessage": "パスキーはまだありません。追加すると、キーなしでサインインできます。"
   },
@@ -515,9 +527,6 @@
   "AfmrGS": {
     "defaultMessage": "コードを送信"
   },
-  "AxlcnX": {
-    "defaultMessage": "この受信トレイは監視対象外となりました。そのため、新しいメッセージをここへ送信することはできません。サポートが必要な場合は、「サポート」タブからリクエストを送信してください。"
-  },
   "B3YjIQ": {
     "defaultMessage": "このキーは今すぐ保存してください。一度失うと、復元することはできません。"
   },
@@ -554,6 +563,9 @@
   "BZF5HJ": {
     "defaultMessage": "Nostrドメイン"
   },
+  "BdYFYb": {
+    "defaultMessage": "そのメッセージには返信がありませんでした。再接続中 — もう一度お試しください。"
+  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -562,6 +574,9 @@
   },
   "BnvK83": {
     "defaultMessage": "{price} から。"
+  },
+  "BrtgIv": {
+    "defaultMessage": "LNVPSのサポートエージェントにチャットで、プランや料金、リージョン、オペレーティングシステム、またはLightningでの支払いの仕組みについてお問い合わせください。既存のVMや支払いに関するご質問の場合は、アカウントを確認できるように、まずログインしてください。"
   },
   "Bwqhmd": {
     "defaultMessage": "ファイアウォール"
@@ -574,6 +589,9 @@
   },
   "CC6msQ": {
     "defaultMessage": "はい、すべてからサインアウトします"
+  },
+  "CEERm0": {
+    "defaultMessage": "ライブチャット"
   },
   "CYP/Jx": {
     "defaultMessage": "チームに協力を求めましょう。"
@@ -656,11 +674,14 @@
   "EKlM8d": {
     "defaultMessage": "ディスク（GB）"
   },
+  "ELp7j5": {
+    "defaultMessage": "LNVPS サポートとのライブチャット"
+  },
   "EUDyqt": {
     "defaultMessage": "{n} 件停止中"
   },
-  "EUSRTV": {
-    "defaultMessage": "過去に暗号化されたNIP-17形式のメッセージは、引き続きサポート対象です。この受信トレイは監視されなくなったため、お問い合わせには「サポート」タブをご利用ください。"
+  "EWw/tK": {
+    "defaultMessage": "適用"
   },
   "Ecfndm": {
     "defaultMessage": "請求書"
@@ -800,9 +821,6 @@
   "HAlOn1": {
     "defaultMessage": "名前"
   },
-  "HOWHco": {
-    "defaultMessage": "まだメッセージはありません。以下の欄で会話を始めましょう。"
-  },
   "HPBE7M": {
     "defaultMessage": "アプリに戻る"
   },
@@ -914,6 +932,9 @@
   "KKYB/E": {
     "defaultMessage": "まだ支払い方法が登録されていません。"
   },
+  "KKdq0O": {
+    "defaultMessage": "コードを入力してください"
+  },
   "KN7zKn": {
     "defaultMessage": "Error"
   },
@@ -962,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "未払いの支払い。"
   },
+  "Lc72Gm": {
+    "defaultMessage": "新しい会話を開始"
+  },
   "LjglgP": {
     "defaultMessage": "RAM"
   },
@@ -994,6 +1018,12 @@
   },
   "N6XokP": {
     "defaultMessage": "いいえ。これは、root権限が付与されたシンプルなVPSであり、お客様ご自身でノードをインストールして実行する必要があります。当社が提供するワンクリックで簡単にセットアップできるアプリケーションは、NostrリレーとBlossomメディアサーバーであり、これらはダブリンリージョンでのみ利用可能です。"
+  },
+  "NAidKb": {
+    "defaultMessage": "通知"
+  },
+  "NLgFjn": {
+    "defaultMessage": "まだ何もありません。"
   },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
@@ -1054,6 +1084,9 @@
   },
   "P/PGYR": {
     "defaultMessage": "まだ紹介は一件もありません。リンクを共有して、コンバージョンを開始しましょう。"
+  },
+  "P1QHV0": {
+    "defaultMessage": "考え中…"
   },
   "P7PLVj": {
     "defaultMessage": "日付"
@@ -1166,6 +1199,9 @@
   "Rw82/V": {
     "defaultMessage": "毎月"
   },
+  "S3OX0p": {
+    "defaultMessage": "暗号化された NIP-17 のダイレクトメッセージ — 閲覧できます {link}"
+  },
   "S5oncX": {
     "defaultMessage": "すべてのプランにIPv4アドレス1つ、IPv6アドレス1つ、無制限のトラフィックが含まれます。価格には税金および決済手数料は含まれていません。"
   },
@@ -1256,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "請求"
   },
+  "TfUeeR": {
+    "defaultMessage": "メールを希望されますか？メッセージをお送りいただければ、LNVPSチームより折り返しご連絡いたします。"
+  },
   "TgGVeW": {
     "defaultMessage": "対応が必要"
   },
@@ -1277,11 +1316,17 @@
   "TxS1Nf": {
     "defaultMessage": "Tor"
   },
+  "Tya89h": {
+    "defaultMessage": "メッセージをお送りください"
+  },
   "U+Ddsx": {
     "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
   },
   "U/W38H": {
     "defaultMessage": "支払いを停止した場合、登録したイベントはどうなりますか？"
+  },
+  "U093E7": {
+    "defaultMessage": "サポートチャット"
   },
   "U0GEAC": {
     "defaultMessage": "他人のサーバーに画像や動画をアップロードするのをやめましょう。Route96は、BlossomとNIP-96メディアサーバーであり、LNVPS上に数分で展開でき、ストレージとTLSが含まれています。"
@@ -1370,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "よくある質問"
   },
+  "WEUBM+": {
+    "defaultMessage": "LNVPSのサポートエージェントに、プランと料金、リージョン、オペレーティングシステム、またはLightningでの支払いの仕組みについてチャットしてください。ログインは不要です。既存のVMや支払いに関するお問い合わせの場合は、アカウントを確認できるように、まずログインしてください。"
+  },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
   },
@@ -1403,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "変更を保存"
   },
+  "X4GAwh": {
+    "defaultMessage": "プランや料金、提供しているリージョンやOS、Lightningでの支払い方法について質問してください。"
+  },
   "X4VESO": {
     "defaultMessage": "VM を消去して新しいイメージから開始します。これにより VM 上のすべてのデータが完全に削除されます。"
   },
@@ -1424,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "使用済み"
   },
+  "XZGfTo": {
+    "defaultMessage": "メッセージを送信する"
+  },
   "XdLEro": {
     "defaultMessage": "Blossomメディアサーバーのホスティング — Route96"
   },
@@ -1442,11 +1496,20 @@
   "Y/tMXU": {
     "defaultMessage": "お支払いをお待ちしています。確認が完了すると、自動的に適用されます。"
   },
+  "YCzocJ": {
+    "defaultMessage": "プロビジョニング、請求、不正利用の対応、特定のサービスの問題についてご質問はありませんか？サポートいたします。"
+  },
   "YLoN96": {
     "defaultMessage": "<b>すべてのプランで、固定のIPv4アドレスとIPv6アドレスをご利用いただけます。</b> 公開されるノードには、変更されないアドレスが必要です。どちらも追加料金なしで含まれています。"
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} 仮想CPU、 {memory} RAM、 {disk} {diskType} ～に保存 {region}。"
+  },
+  "YQBx00": {
+    "defaultMessage": "割引コード"
+  },
+  "YTV5w7": {
+    "defaultMessage": "{amount} 割引。今回の支払いのみに適用 — 以降の更新は通常料金で請求されます。"
   },
   "YWjrby": {
     "defaultMessage": "アカウントに関する通知のみを送信します。例えば、仮想マシンの有効期限切れなどです。マーケティング目的のメッセージは一切送信しません。"
@@ -1562,6 +1625,9 @@
   "bhfNWq": {
     "defaultMessage": "暗号化されたメッセージをここに貼り付けてください。"
   },
+  "bneNNt": {
+    "defaultMessage": "{amount} オフ{code,select,none{} other{ · {code}}}"
+  },
   "bpBvBq": {
     "defaultMessage": "表示通貨："
   },
@@ -1619,6 +1685,9 @@
   "d6JhA/": {
     "defaultMessage": "ケベック州にVPSを構築しましょう。"
   },
+  "dH48sC": {
+    "defaultMessage": "ライブチャットは現在ご利用いただけません。 {link} チームから改めてご連絡いたします。"
+  },
   "dHfOPB": {
     "defaultMessage": "Cost at new size for the rest of this period"
   },
@@ -1627,6 +1696,9 @@
   },
   "dKHSEA": {
     "defaultMessage": "お問い合わせいただきありがとうございます。できるだけ早くご連絡いたします。"
+  },
+  "dOGweU": {
+    "defaultMessage": "再接続中..."
   },
   "dOQCL8": {
     "defaultMessage": "表示名"
@@ -1658,6 +1730,9 @@
   "djJp6c": {
     "defaultMessage": "歴史"
   },
+  "djY1KH": {
+    "defaultMessage": "Nostr DMとして送信される通知"
+  },
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
   },
@@ -1666,6 +1741,9 @@
   },
   "e2hZoG": {
     "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPS上で — 独自のホスト名を使用し、TLSを有効にする。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
+  },
+  "e4Rg0n": {
+    "defaultMessage": "LNVPS が通知を暗号化された NIP-17 のダイレクトメッセージとしてあなたに送信しました。"
   },
   "e4ehrh": {
     "defaultMessage": "マシンを構成する"
@@ -1687,6 +1765,9 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr拡張機能"
+  },
+  "eg3pYc": {
+    "defaultMessage": "このセッションのメッセージ上限に達しました。再接続して続行してください。会話履歴は保持されます。"
   },
   "eq14GY": {
     "defaultMessage": "新しい秘密鍵です。"
@@ -1787,20 +1868,23 @@
   "h/PJh3": {
     "defaultMessage": "新しいキーを選択した後、仮想マシンを再起動してください。"
   },
+  "h1wLxC": {
+    "defaultMessage": "通知設定"
+  },
   "h9Vgyc": {
     "defaultMessage": "{n} 仮想CPU"
   },
   "hADOUq": {
     "defaultMessage": "保存しました。まもなくアプリが再起動します。"
   },
-  "hMzcSq": {
-    "defaultMessage": "メッセージ"
-  },
   "hX8VXF": {
     "defaultMessage": "月間稼働時間（過去12か月）"
   },
   "hXAhO/": {
     "defaultMessage": "Nostr 鍵でサインインしているため、取り消せる保存済みセッションはありません。リクエストごとに個別に署名されます。"
+  },
+  "hZkw2A": {
+    "defaultMessage": "Nostr DM通知はNostrアカウントでのみ利用可能です。あなたのアカウントにはそれらを復号するためのNostrキーがありません。別のチャネルを…で選択してください {settings}。"
   },
   "hs3HVz": {
     "defaultMessage": "Face ID、Touch ID、Windows Hello、またはセキュリティキーでサインインできます。どのアカウントにもパスキーを追加できます。"
@@ -1819,6 +1903,9 @@
   },
   "iVkpyZ": {
     "defaultMessage": "管理されたカタログから、ワンクリックでDockerアプリケーションを起動できます。"
+  },
+  "iX/9/k": {
+    "defaultMessage": "割引 ({code}）"
   },
   "iXNbPf": {
     "defaultMessage": "名前を変更する。"
@@ -1867,6 +1954,9 @@
   },
   "jUqYir": {
     "defaultMessage": "追加しました。 {date}"
+  },
+  "jYHCJJ": {
+    "defaultMessage": "このコードでは、この注文から何も割引されません。"
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 日} other{# 日}}"
@@ -1931,6 +2021,9 @@
   "ku+mDU": {
     "defaultMessage": "州"
   },
+  "l+Z32c": {
+    "defaultMessage": "Enterキーで送信、Shift+Enterで改行します。"
+  },
   "l0VA3b": {
     "defaultMessage": "交通量は規制されていますか？"
   },
@@ -1945,6 +2038,9 @@
   },
   "lD3+8a": {
     "defaultMessage": "支払い"
+  },
+  "lFXHsw": {
+    "defaultMessage": "LNVPSのサポートエージェントとチャットしてください。お客様のアカウント、VM、支払い情報を照会し、VMの起動、停止、再起動を行うことができます。"
   },
   "lKv8ex": {
     "defaultMessage": "デフォルト"
@@ -1985,6 +2081,12 @@
   "m4xBT/": {
     "defaultMessage": "管理対象アプリ：サーバーを起動せずにソフトウェアを実行します。"
   },
+  "mBLNqg": {
+    "defaultMessage": "チャットを開始"
+  },
+  "mDLXhF": {
+    "defaultMessage": "先ほどの会話を引き継いでいます。上記のメッセージは再び表示されませんが、エージェントには文脈が保持されています。最初からやり直したい場合は、新しい会話を開始してください。"
+  },
   "mDRXDi": {
     "defaultMessage": "Nostrは、あなたのアイデンティティをどこでも利用できるようにします。従来のメディアでは、画像が他のサーバーに保存され、そのサーバーのルールに従い、必要に応じて削除されるため、自分の管理下にはありませんでした。Blossomサーバーを使用すれば、画像を再び自分の管理下に置くことができます。"
   },
@@ -2005,6 +2107,9 @@
   },
   "mOR+qH": {
     "defaultMessage": "クリップボードにコピー"
+  },
+  "mRKf2V": {
+    "defaultMessage": "返信が完了する前に接続が切断されました。再接続中です。復旧したらもう一度お試しください。"
   },
   "mV5FZi": {
     "defaultMessage": "紹介プログラム（有給休暇）"
@@ -2069,6 +2174,9 @@
   "nxqAD7": {
     "defaultMessage": "新規インシデント"
   },
+  "o/1ZFL": {
+    "defaultMessage": "LNVPSのサポートエージェントにチャットで、プラン、リージョン、オペレーティングシステム、Lightning決済についてお問い合わせください。アカウント不要。"
+  },
   "o0jcye": {
     "defaultMessage": "オペレーティングシステム"
   },
@@ -2077,6 +2185,9 @@
   },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
+  },
+  "oA9E7/": {
+    "defaultMessage": "有効期限警告、支払い受領通知、プロビジョニング通知は、Nostr DMチャネルが有効な間、ここに表示されます。 {settings}。この受信トレイは返信の確認は行われていません — 担当者へ連絡するには、 {support}。"
   },
   "oBSxZS": {
     "defaultMessage": "アップグレードの見積もり"
@@ -2228,9 +2339,6 @@
   "sTesGq": {
     "defaultMessage": "現在、利用可能なオファーはありません。"
   },
-  "sUw18G": {
-    "defaultMessage": "暗号化されたメッセージ機能は、Nostrアカウントでのみ利用可能です。お客様のアカウントには、NIP-17形式のメッセージを読み書きするためのNostrキーが設定されていません。サポートが必要な場合は、サポートタブをご利用ください。"
-  },
   "sehISV": {
     "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額{price}から。"
   },
@@ -2245,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "見積もりおよび支払いで使用する通貨を設定します。"
+  },
+  "sx6MYT": {
+    "defaultMessage": "エージェントはVMの延長、返金、削除を行うことができず、ログインしていないアカウントに対して操作を行うこともできません。それらについては、 {link}。"
   },
   "sy+pv5": {
     "defaultMessage": "メール"
@@ -2303,6 +2414,9 @@
   "u3FDCD": {
     "defaultMessage": "利用規約および利用に関する注意事項"
   },
+  "uARutB": {
+    "defaultMessage": "サポートにメールでご連絡ください"
+  },
   "uJV0wU": {
     "defaultMessage": "IPアドレス"
   },
@@ -2311,6 +2425,9 @@
   },
   "uPNlBw": {
     "defaultMessage": "メールアドレス：{email}"
+  },
+  "uWPUqo": {
+    "defaultMessage": "エージェントはVMの延長、返金、削除を行うことはできません。それらについては、 {link}."
   },
   "uYtOL7": {
     "defaultMessage": "アイルランドのVPS — ダブリンのVPS。ビットコインで支払い可能。"
@@ -2372,6 +2489,9 @@
   "vy2rlX": {
     "defaultMessage": "処理手数料："
   },
+  "w1iy6j": {
+    "defaultMessage": "価格を更新中…"
+  },
   "w3i5cX": {
     "defaultMessage": "永続ストレージ：上記の各リレーごとにサイズが設定されます。"
   },
@@ -2401,6 +2521,9 @@
   },
   "wz7uSD": {
     "defaultMessage": "税込み {amount}"
+  },
+  "x/me2T": {
+    "defaultMessage": "LNVPSのサポートエージェントとチャットしてください。アカウント、VM、支払い情報の確認や、VMの開始・停止・再起動が可能です。延長・返金・削除はできないため、それらの手続きには以下のフォームをご利用ください。"
   },
   "x0cZXf": {
     "defaultMessage": "アップグレードは利用できません。"
@@ -2483,14 +2606,14 @@
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"
   },
+  "z1KiHv": {
+    "defaultMessage": "メッセージは最大 {max} 文字。"
+  },
   "z4e/Em": {
     "defaultMessage": "Nostrリレーのホスティングを管理。"
   },
   "z8VosU": {
     "defaultMessage": "ダブリンは、当社が管理する施設の所在地でもあります。 <relay>Nostrリレー</relay> および <blossom>Blossomサーバー</blossom> ～から実行 {price} 1か月。"
-  },
-  "zAN0RF": {
-    "defaultMessage": "暗号化されたダイレクトメッセージ"
   },
   "zEk9h3": {
     "defaultMessage": "仮想マシン"

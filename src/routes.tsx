@@ -22,6 +22,7 @@ import { AccountSupportPage } from "./pages/account-support.tsx";
 import { AccountSupportChatPage } from "./pages/account-support-chat.tsx";
 import { AccountNotificationsPage } from "./pages/account-notifications.tsx";
 import { ContactPage } from "./pages/contact.tsx";
+import { SupportChatPage } from "./pages/support-chat.tsx";
 import { AccountReferralPage } from "./pages/account-referral.tsx";
 import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
 import { AccountAppsPage } from "./pages/account-apps.tsx";
@@ -152,6 +153,12 @@ export const routes: RouteObject[] = [
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        // Public, because the agent serves logged-out visitors here: a guest
+        // session answers from the catalogue without an account.
+        path: "/contact/chat",
+        element: <SupportChatPage />,
       },
       {
         path: "/order",

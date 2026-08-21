@@ -69,7 +69,7 @@ export function AccountSupportPage() {
         }
       />
 
-      {chatAvailable && (
+      {chatAvailable?.available && (
         <SectionCard
           title={<FormattedMessage defaultMessage="Live Chat" />}
           description={

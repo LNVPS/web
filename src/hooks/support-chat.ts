@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LNVpsApi } from "../api";
+import { LNVpsApi, type SupportChatAvailability } from "../api";
 import { ApiUrl } from "../const";
 
 /**
@@ -7,7 +7,7 @@ import { ApiUrl } from "../const";
  * the deployment, not of the user, so re-checking it on each mount would be a
  * request per navigation for a value that cannot change under us.
  */
-let probe: Promise<boolean> | undefined;
+let probe: Promise<SupportChatAvailability> | undefined;
 
 /** Reset the memoised probe. Test-only. */
 export function resetSupportChatProbe() {
@@ -15,13 +15,17 @@ export function resetSupportChatProbe() {
 }
 
 /**
- * Whether the API serves the live support chat.
+ * Whether the API serves the live support chat, and to whom.
  *
  * `undefined` while the probe is in flight — render neither the entry point nor
  * an "unavailable" state until it resolves, so the UI doesn't flash.
+ *
+ * `anonymous` is the one a public page must check: chat can be configured with
+ * logged-out sessions switched off, and offering it anyway renders a box that
+ * always refuses.
  */
 export default function useSupportChatAvailable() {
-  const [available, setAvailable] = useState<boolean>();
+  const [available, setAvailable] = useState<SupportChatAvailability>();
 
   useEffect(() => {
     let cancelled = false;

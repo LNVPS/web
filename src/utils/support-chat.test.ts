@@ -1,10 +1,13 @@
-import { describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import {
   appendUserMessage,
   applyChatEvent,
   ChatState,
   emptyChatState,
+  clearGuestSessionId,
   isThinking,
+  loadGuestSessionId,
+  saveGuestSessionId,
   stallTurn,
 } from "./support-chat";
 
@@ -240,5 +243,71 @@ describe("stalled turns", () => {
       { type: "final", text: "all good" },
     ]);
     expect(stallTurn(done, "no reply")).toBe(done);
+  });
+});
+
+/**
+ * The guest session id is what makes a logged-out conversation survive
+ * anything: a dropped socket mid-answer, a refresh, closing the tab. The
+ * server replays the transcript to the model from this id alone, so losing it
+ * silently starts a new conversation with no sign that anything was lost.
+ */
+describe("guest session id", () => {
+  const realLocalStorage = globalThis.localStorage;
+
+  function fakeStorage(initial?: Record<string, string>) {
+    const map = new Map(Object.entries(initial ?? {}));
+    return {
+      getItem: (k: string) => map.get(k) ?? null,
+      setItem: (k: string, v: string) => void map.set(k, v),
+      removeItem: (k: string) => void map.delete(k),
+    };
+  }
+
+  function useStorage(storage: unknown) {
+    Object.defineProperty(globalThis, "localStorage", {
+      value: storage,
+      configurable: true,
+      writable: true,
+    });
+  }
+
+  afterEach(() => useStorage(realLocalStorage));
+
+  test("survives the page it was issued on", () => {
+    useStorage(fakeStorage());
+    saveGuestSessionId("abc123");
+    expect(loadGuestSessionId()).toBe("abc123");
+  });
+
+  test("nothing stored means a fresh conversation, not an empty id", () => {
+    useStorage(fakeStorage());
+    expect(loadGuestSessionId()).toBeUndefined();
+  });
+
+  test("starting over drops the id so the server issues a new one", () => {
+    useStorage(fakeStorage({ "lnvps:support-chat-guest": "abc123" }));
+    clearGuestSessionId();
+    expect(loadGuestSessionId()).toBeUndefined();
+  });
+
+  // There is no storage during SSR, and a browser with storage blocked throws
+  // on access rather than returning null. Chat still works without it — the
+  // visitor just cannot resume — so neither may propagate.
+  test("no storage at all is survivable", () => {
+    useStorage(undefined);
+    expect(loadGuestSessionId()).toBeUndefined();
+    expect(() => saveGuestSessionId("abc123")).not.toThrow();
+    expect(() => clearGuestSessionId()).not.toThrow();
+  });
+
+  test("storage that throws is survivable", () => {
+    const boom = () => {
+      throw new Error("blocked");
+    };
+    useStorage({ getItem: boom, setItem: boom, removeItem: boom });
+    expect(loadGuestSessionId()).toBeUndefined();
+    expect(() => saveGuestSessionId("abc123")).not.toThrow();
+    expect(() => clearGuestSessionId()).not.toThrow();
   });
 });

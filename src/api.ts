@@ -42,6 +42,15 @@ export interface AuthTicket {
 export type SupportChatEvent =
   /** Fragment of the reply — append as it arrives. */
   | { type: "token"; text: string }
+  /**
+   * The opaque session id issued to an anonymous (logged-out) connection.
+   *
+   * Sent once, before any turn, and never on an authenticated connection.
+   * Reconnecting with it resumes the same transcript — which matters here
+   * because a turn can run for minutes and idle proxies cut the socket. It is
+   * a bearer token: whoever holds it reads that conversation.
+   */
+  | { type: "session"; id: string }
   /** Complete reply; equals all preceding tokens concatenated. */
   | { type: "final"; text: string }
   /** The turn failed. The connection may stay open. */
@@ -54,6 +63,19 @@ export type SupportChatEvent =
 /** Server-enforced limits on the support chat socket. */
 export const SUPPORT_CHAT_MAX_MESSAGE_LENGTH = 4000;
 export const SUPPORT_CHAT_MAX_MESSAGES_PER_CONNECTION = 50;
+/**
+ * The same cap for a logged-out visitor, which the server sets lower: an
+ * anonymous turn costs model tokens with no account to attribute them to.
+ */
+export const SUPPORT_CHAT_MAX_MESSAGES_PER_CONNECTION_ANONYMOUS = 10;
+
+/** What a plain (non-upgrade) `GET` on the chat path reports. */
+export interface SupportChatAvailability {
+  /** The support agent is configured on this server. */
+  available: boolean;
+  /** A visitor who is not logged in may open a session. */
+  anonymous: boolean;
+}
 
 export enum DiskType {
   SSD = "ssd",
@@ -1727,9 +1749,26 @@ export class LNVpsApi {
    */
   async #connectWebSocket(path: string) {
     const ticket = await this.#authTicket(path);
+    return await this.#openWebSocket(path, { ticket });
+  }
+
+  /**
+   * Open a WebSocket to `path` with `query` appended, resolving once it is up.
+   *
+   * Split out from {@link #connectWebSocket} because not every socket carries a
+   * credential: the support chat serves logged-out visitors, and minting a
+   * ticket for one would need a signer they do not have.
+   */
+  async #openWebSocket(path: string, query: Record<string, string>) {
     // Rewrite http(s):// → ws(s):// so the URL is valid for WebSocket
     const wsUrl = `${this.url}${path}`.replace(/^http(s?):\/\//, "ws$1://");
-    const ws = new WebSocket(`${wsUrl}?ticket=${encodeURIComponent(ticket)}`);
+    // `encodeURIComponent` rather than `URLSearchParams`, which encodes a space
+    // as `+`: that is only correct for form bodies, and leaves the value's
+    // meaning up to how the server decodes the query string.
+    const params = Object.entries(query)
+      .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
+      .join("&");
+    const ws = new WebSocket(params.length > 0 ? `${wsUrl}?${params}` : wsUrl);
     return await new Promise<WebSocket>((resolve, reject) => {
       ws.onopen = () => {
         resolve(ws);
@@ -1743,28 +1782,41 @@ export class LNVpsApi {
   /**
    * Whether this server serves the support-agent chat at all.
    *
-   * There is no capability endpoint, so this probes the route directly: the
-   * WebSocket path is only mounted when the API is built with the `agent`
-   * feature, so an unmounted route answers `404` while a mounted one rejects a
-   * plain (non-upgrade) GET with `400`. Deliberately unauthenticated — it needs
-   * no identity, and signing a NIP-98 event for it would burn a single-use
-   * credential (and pop a signer prompt) just to find out whether a menu entry
-   * should exist.
+   * There is no capability endpoint, so this probes the route directly: a
+   * plain (non-upgrade) `GET` answers `{ available, anonymous }`, and `404`
+   * when the API is built without the `agent` feature so the route is not
+   * mounted at all. Deliberately unauthenticated — it needs no identity, and
+   * signing a NIP-98 event for it would burn a single-use credential (and pop a
+   * signer prompt) just to find out whether a menu entry should exist.
    *
-   * A server built with the feature but with no agent configured still answers
-   * `400` here; it refuses at the protocol level instead, with an `error` frame
-   * on connect, which the chat page surfaces.
+   * `available` alone is not enough for a public page: chat can be configured
+   * while anonymous sessions are switched off, and a contact page that offers
+   * one anyway renders a box that always refuses.
+   *
+   * Falls back to `available` without anonymous on anything unreadable — an
+   * older server that fails the upgrade with `400` and no body, or a network
+   * blip. A missing entry point is recoverable; a chat box that cannot connect
+   * is not.
    */
-  async supportChatAvailable() {
+  async supportChatAvailable(): Promise<SupportChatAvailability> {
     try {
       const rsp = await fetch(`${this.url}/api/v1/support/chat`, {
         method: "GET",
       });
-      return rsp.status !== 404;
+      if (rsp.status === 404) return { available: false, anonymous: false };
+      try {
+        const body = (await rsp.json()) as Partial<SupportChatAvailability>;
+        return {
+          available: body.available !== false,
+          anonymous: body.anonymous === true,
+        };
+      } catch {
+        return { available: true, anonymous: false };
+      }
     } catch {
       // A network failure says nothing about the feature; don't hide the entry
       // point on a transient error.
-      return true;
+      return { available: true, anonymous: false };
     }
   }
 
@@ -1778,6 +1830,26 @@ export class LNVpsApi {
    */
   async connectSupportChat() {
     return await this.#connectWebSocket("/api/v1/support/chat");
+  }
+
+  /**
+   * Open a live chat as a logged-out visitor, with no credential at all.
+   *
+   * `guestId` resumes an earlier guest transcript — the server issues one in a
+   * `session` frame on connect. An id this server did not issue is ignored in
+   * favour of a fresh one, so it is safe to reconnect blindly with whatever was
+   * stored.
+   *
+   * Separate from {@link connectSupportChat} rather than a flag on it: the
+   * server treats an *invalid* credential as an error rather than downgrading
+   * to guest, so "anonymous" has to mean sending nothing, not sending something
+   * that might not work.
+   */
+  async connectAnonymousSupportChat(guestId?: string) {
+    return await this.#openWebSocket(
+      "/api/v1/support/chat",
+      guestId ? { guest: guestId } : {},
+    );
   }
 
   async listDomains() {

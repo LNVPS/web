@@ -88,16 +88,51 @@ describe("LNVpsApi websocket auth", () => {
 
   test("support chat is unavailable when the route is not mounted", async () => {
     globalThis.fetch = (async () =>
-      new Response(null, { status: 404 })) as unknown as typeof fetch;
+      new Response(JSON.stringify({ available: false, anonymous: false }), {
+        status: 404,
+      })) as unknown as typeof fetch;
     const api = new LNVpsApi("http://test", undefined, undefined, "token");
-    expect(await api.supportChatAvailable()).toBe(false);
+    expect(await api.supportChatAvailable()).toEqual({
+      available: false,
+      anonymous: false,
+    });
   });
 
-  test("a mounted route rejects the probe with 400 and counts as available", async () => {
+  test("the probe reports whether logged-out visitors may chat", async () => {
+    globalThis.fetch = (async () =>
+      new Response(JSON.stringify({ available: true, anonymous: true }), {
+        status: 200,
+      })) as unknown as typeof fetch;
+    const api = new LNVpsApi("http://test", undefined, undefined, "token");
+    expect(await api.supportChatAvailable()).toEqual({
+      available: true,
+      anonymous: true,
+    });
+  });
+
+  test("guest chat is off unless the server says otherwise", async () => {
+    globalThis.fetch = (async () =>
+      new Response(JSON.stringify({ available: true, anonymous: false }), {
+        status: 200,
+      })) as unknown as typeof fetch;
+    const api = new LNVpsApi("http://test", undefined, undefined, "token");
+    expect(await api.supportChatAvailable()).toEqual({
+      available: true,
+      anonymous: false,
+    });
+  });
+
+  // An older API fails the plain GET rather than answering it. Chat still
+  // exists there, but guest sessions do not, and a public page that offered
+  // one would render a box that always refuses.
+  test("an older server with no probe body counts as available, not anonymous", async () => {
     globalThis.fetch = (async () =>
       new Response(null, { status: 400 })) as unknown as typeof fetch;
     const api = new LNVpsApi("http://test", undefined, undefined, "token");
-    expect(await api.supportChatAvailable()).toBe(true);
+    expect(await api.supportChatAvailable()).toEqual({
+      available: true,
+      anonymous: false,
+    });
   });
 
   test("a network failure does not hide the feature", async () => {
@@ -105,7 +140,29 @@ describe("LNVpsApi websocket auth", () => {
       throw new Error("offline");
     }) as unknown as typeof fetch;
     const api = new LNVpsApi("http://test", undefined, undefined, "token");
-    expect(await api.supportChatAvailable()).toBe(true);
+    expect(await api.supportChatAvailable()).toEqual({
+      available: true,
+      anonymous: false,
+    });
+  });
+
+  // Sending nothing is what selects a guest session: the server treats an
+  // *invalid* credential as an error rather than downgrading to guest, so a
+  // ticket must not be minted here even speculatively.
+  test("anonymous chat opens a socket with no credential at all", async () => {
+    const api = new LNVpsApi("http://test", undefined);
+    await api.connectAnonymousSupportChat();
+
+    expect(requested).toHaveLength(0);
+    expect(socketUrls[0]).toBe("ws://test/api/v1/support/chat");
+  });
+
+  test("a stored guest session id is passed back to resume the transcript", async () => {
+    const api = new LNVpsApi("http://test", undefined);
+    await api.connectAnonymousSupportChat("ab/cd");
+
+    expect(requested).toHaveLength(0);
+    expect(socketUrls[0]).toBe("ws://test/api/v1/support/chat?guest=ab%2Fcd");
   });
 
   test("console shares the same ticketed connect path", async () => {

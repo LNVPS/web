@@ -1,6 +1,69 @@
 import { SupportChatEvent } from "../api";
 
 /**
+ * Where a logged-out visitor's chat session id is kept.
+ *
+ * `localStorage`, so the conversation is still there after the tab is closed,
+ * the browser is restarted or the visitor navigates away and comes back: a
+ * pre-sales question is often followed by a decision made hours later, and
+ * having to re-explain the setup is the thing that makes a guest chat feel
+ * disposable. It also covers the routine case the id exists for at all — the
+ * socket drops whenever a turn runs long enough for a proxy to call it idle,
+ * and a reconnect that started blank would lose the context already given.
+ *
+ * The trade-off is deliberate: the id is a bearer token for that transcript, so
+ * anyone with access to the browser profile can read the conversation back.
+ * That is the same exposure as the transcript being on screen, and a guest
+ * conversation holds no account data by construction — the agent is given the
+ * public catalogue only, with every account-scoped tool refused server-side.
+ */
+const GUEST_SESSION_KEY = "lnvps:support-chat-guest";
+
+/**
+ * The stored guest session id, if this browser has one.
+ *
+ * Storage access is guarded rather than assumed: there is no `localStorage`
+ * during SSR, and a browser with storage blocked (private mode, third-party
+ * restrictions) throws on access rather than returning null. Chat still works
+ * without it — the visitor simply gets a fresh conversation each time.
+ */
+export function loadGuestSessionId(): string | undefined {
+  try {
+    return globalThis.localStorage?.getItem(GUEST_SESSION_KEY) ?? undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Remember the session id the server issued, so the next connection resumes
+ * this conversation rather than starting another one.
+ */
+export function saveGuestSessionId(id: string) {
+  try {
+    globalThis.localStorage?.setItem(GUEST_SESSION_KEY, id);
+  } catch {
+    // Storage unavailable or full: not a reason to break the conversation in
+    // progress, only the ability to resume it later.
+  }
+}
+
+/**
+ * Forget the stored guest session, so the next connection starts fresh.
+ *
+ * The visitor's only way out of a conversation that has gone wrong — a bad
+ * answer the agent keeps referring back to, or a transcript they would rather
+ * not leave behind on a shared machine.
+ */
+export function clearGuestSessionId() {
+  try {
+    globalThis.localStorage?.removeItem(GUEST_SESSION_KEY);
+  } catch {
+    // Nothing to do: if storage cannot be written it cannot be holding an id.
+  }
+}
+
+/**
  * An internal lookup the agent ran while answering.
  *
  * Only privileged callers receive the frames these are built from, so a
@@ -83,6 +146,8 @@ export function stallTurn(state: ChatState, message: string): ChatState {
  *
  * `token` appends to the in-flight agent turn (creating it on the first
  * token); `final` replaces the accumulated text with the authoritative reply,
+ * and `session` carries no transcript content, so it falls through to the
+ * ignored case — the caller reads the id off the raw frame instead.
  * which the server guarantees equals the concatenated tokens. `tool_start` /
  * `tool_done` annotate that same turn rather than producing lines of their own.
  * Unknown frame types are ignored on purpose — the server may add more, and a

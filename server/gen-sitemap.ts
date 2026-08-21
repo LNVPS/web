@@ -42,6 +42,10 @@ export const STATIC_ENTRIES: Array<StaticEntry> = [
   { path: "/news", changefreq: "weekly", priority: "0.8" },
   { path: "/status", changefreq: "hourly", priority: "0.7" },
   { path: "/contact", changefreq: "monthly", priority: "0.6" },
+  // Listed despite being an app surface rather than a page of content: it is
+  // the only support channel that answers immediately and without an account,
+  // and "lnvps support" is a query someone types before they have either.
+  { path: "/contact/chat", changefreq: "monthly", priority: "0.5" },
   { path: "/tos", changefreq: "monthly", priority: "0.4" },
 ];
 

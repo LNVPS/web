@@ -251,6 +251,9 @@
   "4D+xAI": {
     "defaultMessage": "Why this VPS for a Lightning node"
   },
+  "4FRCPv": {
+    "defaultMessage": "Ask anything about your account — billing, a VM that won't boot, or what a charge was for."
+  },
   "4PKxPs": {
     "defaultMessage": "Unlink"
   },
@@ -280,9 +283,6 @@
   },
   "4lrWah": {
     "defaultMessage": "Error loading history: {error}"
-  },
-  "4upFOv": {
-    "defaultMessage": "Have questions about provisioning, billing, abuse handling, or a specific service issue? Send a message and the LNVPS team will get back to you as soon as possible."
   },
   "5/Pb3D": {
     "defaultMessage": "Active subscriptions"
@@ -575,6 +575,9 @@
   "BnvK83": {
     "defaultMessage": "From {price}."
   },
+  "BrtgIv": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. Log in first if your question is about an existing VM or payment, so it can look up your account."
+  },
   "Bwqhmd": {
     "defaultMessage": "Firewall"
   },
@@ -670,6 +673,9 @@
   },
   "EKlM8d": {
     "defaultMessage": "Disk (GB)"
+  },
+  "ELp7j5": {
+    "defaultMessage": "Live Chat with LNVPS Support"
   },
   "EUDyqt": {
     "defaultMessage": "{n} stopped"
@@ -977,6 +983,9 @@
   "LX6weZ": {
     "defaultMessage": "Pending payment"
   },
+  "Lc72Gm": {
+    "defaultMessage": "Start a new conversation"
+  },
   "LjglgP": {
     "defaultMessage": "RAM"
   },
@@ -1283,6 +1292,9 @@
   "Tbo377": {
     "defaultMessage": "Billing"
   },
+  "TfUeeR": {
+    "defaultMessage": "Prefer email? Send a message and the LNVPS team will get back to you."
+  },
   "TgGVeW": {
     "defaultMessage": "Action required"
   },
@@ -1403,6 +1415,9 @@
   "W8nHSd": {
     "defaultMessage": "FAQ"
   },
+  "WEUBM+": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works — no login needed. Log in first if your question is about an existing VM or payment, so it can look up your account."
+  },
   "WEoZhh": {
     "defaultMessage": "Couldn't find a subscription to bill this upgrade to."
   },
@@ -1436,6 +1451,9 @@
   "X0ha1a": {
     "defaultMessage": "Save changes"
   },
+  "X4GAwh": {
+    "defaultMessage": "Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning works."
+  },
   "X4VESO": {
     "defaultMessage": "Wipe the VM and start from a fresh image. This permanently deletes all data on it."
   },
@@ -1457,6 +1475,9 @@
   "XYkq4n": {
     "defaultMessage": "Used"
   },
+  "XZGfTo": {
+    "defaultMessage": "Send a message"
+  },
   "XdLEro": {
     "defaultMessage": "Blossom Media Server Hosting — Route96"
   },
@@ -1474,6 +1495,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
+  },
+  "YCzocJ": {
+    "defaultMessage": "Have questions about provisioning, billing, abuse handling, or a specific service issue? We're here to help."
   },
   "YLoN96": {
     "defaultMessage": "<b>Static IPv4 and IPv6 on every plan.</b> An announced node needs an address that does not move. Both are included, not an add-on."
@@ -2060,6 +2084,9 @@
   "mBLNqg": {
     "defaultMessage": "Start Chat"
   },
+  "mDLXhF": {
+    "defaultMessage": "Picking up your earlier conversation — the agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch."
+  },
   "mDRXDi": {
     "defaultMessage": "Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key."
   },
@@ -2146,6 +2173,9 @@
   },
   "nxqAD7": {
     "defaultMessage": "New Incident"
+  },
+  "o/1ZFL": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans, regions, operating systems and Lightning payments. No account needed."
   },
   "o0jcye": {
     "defaultMessage": "OS"
@@ -2323,6 +2353,9 @@
   },
   "srgk8m": {
     "defaultMessage": "Sets the currency used for the quote and payment."
+  },
+  "sx6MYT": {
+    "defaultMessage": "The agent can't extend, refund or delete a VM, and it can't act on an account it isn't logged into. For those, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Email"

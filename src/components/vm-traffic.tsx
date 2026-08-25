@@ -56,7 +56,7 @@ export default function VmTrafficPanel({
               <FormattedMessage
                 defaultMessage="of {allowance} egress"
                 values={{
-                  allowance: formatTransferText(intl, usage.allowanceBytes, 0),
+                  allowance: formatTransferText(intl, usage.allowanceBytes),
                 }}
               />
             ) : (

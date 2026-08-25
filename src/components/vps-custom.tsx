@@ -17,6 +17,7 @@ import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
 import PlanLimits from "./plan-limits";
 import { formatPortSpeed } from "../utils/plan-limits";
+import { formatDiskInterface } from "../utils/spec-sheet";
 import { FilterButton } from "./button-filter";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -302,7 +303,14 @@ export function VpsCustomOrder({
 
   if (templates.length == 0) return;
 
-  const diskUnit = `GB ${diskType?.disk_type.toUpperCase() ?? "SSD"}`;
+  // Media plus bus, since the builder offers both and a buyer picking storage
+  // wants to know it is NVMe rather than SATA-attached.
+  const diskUnit = [
+    `GB ${diskType?.disk_type.toUpperCase() ?? "SSD"}`,
+    formatDiskInterface(diskType?.disk_interface),
+  ]
+    .filter(Boolean)
+    .join(" ");
   // Absent on an uncapped plan, in which case the manifest simply omits it
   // rather than claiming a speed the API does not state.
   const portSpeed = formatPortSpeed(params.limits?.network_mbps);

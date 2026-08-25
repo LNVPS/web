@@ -455,7 +455,7 @@ function IncludedNote({ offers }: { offers?: VmTemplateResponse }) {
       <FormattedMessage
         defaultMessage="Every plan includes {size} of outbound transfer per month."
         values={{
-          size: formatTransferText(intl, inc.transfer.gb * GB, 0),
+          size: formatTransferText(intl, inc.transfer.gb * GB),
         }}
       />
     );
@@ -471,7 +471,7 @@ function IncludedNote({ offers }: { offers?: VmTemplateResponse }) {
       defaultMessage="Every plan includes {ips}, plus {size} of outbound transfer per month."
       values={{
         ips,
-        size: formatTransferText(intl, inc.transfer.gb * GB, 0),
+        size: formatTransferText(intl, inc.transfer.gb * GB),
       }}
     />
   );

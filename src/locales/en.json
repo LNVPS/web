@@ -83,6 +83,9 @@
   "0HkBaC": {
     "defaultMessage": "Choose one of the following methods to verify your domain:"
   },
+  "0OqCZG": {
+    "defaultMessage": "New order"
+  },
   "0QLzxo": {
     "defaultMessage": "Protocol"
   },
@@ -121,6 +124,9 @@
   },
   "1HKX0H": {
     "defaultMessage": "Yes — Lightning or on-chain. Renewal is monthly."
+  },
+  "1KxVCI": {
+    "defaultMessage": "{read} read / {write} write"
   },
   "1LBny5": {
     "defaultMessage": "Stopped"
@@ -284,6 +290,9 @@
   "4lrWah": {
     "defaultMessage": "Error loading history: {error}"
   },
+  "4pttvV": {
+    "defaultMessage": "SSH key"
+  },
   "5/Pb3D": {
     "defaultMessage": "Active subscriptions"
   },
@@ -301,9 +310,6 @@
   },
   "5QYdPU": {
     "defaultMessage": "Start Time"
-  },
-  "5Sdgxl": {
-    "defaultMessage": "{read} read / {write} write MB/s"
   },
   "5VEOig": {
     "defaultMessage": "Cost at new rate for remaining time:"
@@ -491,6 +497,9 @@
   "90f82/": {
     "defaultMessage": "Start VM"
   },
+  "9WGW0Z": {
+    "defaultMessage": "{pct} of the cores"
+  },
   "9WRlF4": {
     "defaultMessage": "Send"
   },
@@ -524,9 +533,6 @@
   "A7Mqan": {
     "defaultMessage": "Loading renewal…"
   },
-  "AA5h7P": {
-    "defaultMessage": "Performance"
-  },
   "ABL6b+": {
     "defaultMessage": "Turn your code into commission"
   },
@@ -556,6 +562,9 @@
   },
   "AfmrGS": {
     "defaultMessage": "Send Code"
+  },
+  "Ay7iFf": {
+    "defaultMessage": "{v} read"
   },
   "B3YjIQ": {
     "defaultMessage": "Save this key now — it CANNOT be recovered."
@@ -805,6 +814,9 @@
   },
   "G6nrEF": {
     "defaultMessage": "Saved with warnings"
+  },
+  "GCQOx0": {
+    "defaultMessage": "Pay on the next screen. The machine boots once the payment confirms."
   },
   "GCoWpl": {
     "defaultMessage": "Reach the team directly — we'll get back to you."
@@ -1109,6 +1121,9 @@
   "ORGv1Q": {
     "defaultMessage": "Created"
   },
+  "OephhB": {
+    "defaultMessage": "{v} write"
+  },
   "OikYIw": {
     "defaultMessage": "Minimum: {min} GB {type}"
   },
@@ -1147,9 +1162,6 @@
   },
   "PJtOx7": {
     "defaultMessage": "No incidents to report."
-  },
-  "PT4sD/": {
-    "defaultMessage": "Select OS:"
   },
   "PeOVdM": {
     "defaultMessage": "Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node — up to 64 vCPU and 128 GB RAM."
@@ -1244,6 +1256,9 @@
   "RumeRz": {
     "defaultMessage": "Regions"
   },
+  "Rvwnbl": {
+    "defaultMessage": "{size} egress/month"
+  },
   "Rw7iI7": {
     "defaultMessage": "Disable"
   },
@@ -1270,9 +1285,6 @@
   },
   "STWPnc": {
     "defaultMessage": "egress"
-  },
-  "SU1E+O": {
-    "defaultMessage": "New Order"
   },
   "SYYlLP": {
     "defaultMessage": "Manage the NIP-05 handles registered on this domain."
@@ -1457,6 +1469,12 @@
   "VffztH": {
     "defaultMessage": "last used {date}"
   },
+  "VrBNV4": {
+    "defaultMessage": "First payment"
+  },
+  "Vs+JtR": {
+    "defaultMessage": "{read} read / {write} write disk"
+  },
   "VtKAyJ": {
     "defaultMessage": "{count} / {max} rules"
   },
@@ -1552,6 +1570,9 @@
   },
   "YCzocJ": {
     "defaultMessage": "Have questions about provisioning, billing, abuse handling, or a specific service issue? We're here to help."
+  },
+  "YH6meO": {
+    "defaultMessage": "Limit"
   },
   "YLoN96": {
     "defaultMessage": "<b>Static IPv4 and IPv6 on every plan.</b> An announced node needs an address that does not move. Both are included, not an add-on."
@@ -1853,6 +1874,9 @@
   "evSskM": {
     "defaultMessage": "This plan has no transfer limit. Figures are for the current calendar month and reset on the 1st."
   },
+  "ewx2b7": {
+    "defaultMessage": "Launch"
+  },
   "exrlwL": {
     "defaultMessage": "Lowercase letters, digits and hyphens. Becomes your subdomain."
   },
@@ -1876,9 +1900,6 @@
   },
   "fNZGof": {
     "defaultMessage": "VPS hosting in London from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
-  },
-  "fbHyzc": {
-    "defaultMessage": "{n} MB/s disk"
   },
   "fblXmJ": {
     "defaultMessage": "Instance name"
@@ -2090,6 +2111,9 @@
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
   },
+  "kWI6zX": {
+    "defaultMessage": "Shared"
+  },
   "kZ0qJu": {
     "defaultMessage": "{read} read / {write} write IOPS"
   },
@@ -2102,11 +2126,17 @@
   "kr8jZp": {
     "defaultMessage": "{price}/month."
   },
+  "ktNxFJ": {
+    "defaultMessage": "{ip4} × IPv4 · {ip6} × IPv6"
+  },
   "ku+mDU": {
     "defaultMessage": "State"
   },
   "l+Z32c": {
     "defaultMessage": "Enter to send, Shift+Enter for a new line."
+  },
+  "l+g3in": {
+    "defaultMessage": "Sign in to pick an operating system and an SSH key for this machine."
   },
   "l0VA3b": {
     "defaultMessage": "Is traffic metered?"
@@ -2137,6 +2167,9 @@
   },
   "lYEj5M": {
     "defaultMessage": "Managed Apps"
+  },
+  "lhC0On": {
+    "defaultMessage": "Review and launch"
   },
   "lhCavK": {
     "defaultMessage": "Tick “Save this card” when paying with Revolut to store a card here for future payments and automatic renewals."
@@ -2212,6 +2245,9 @@
   },
   "n7yYXG": {
     "defaultMessage": "Service"
+  },
+  "n8cyVk": {
+    "defaultMessage": "Operating system"
   },
   "n9fdaJ": {
     "defaultMessage": "Unverified"
@@ -2332,9 +2368,6 @@
   },
   "phIEA8": {
     "defaultMessage": "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
-  },
-  "plUWdh": {
-    "defaultMessage": "{n} MB/s"
   },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
@@ -2555,9 +2588,6 @@
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
   },
-  "v85Sy5": {
-    "defaultMessage": "{read} read / {write} write MB/s disk"
-  },
   "vONi+O": {
     "defaultMessage": "Country"
   },
@@ -2629,6 +2659,9 @@
   },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+  },
+  "xKGxVN": {
+    "defaultMessage": "{v} disk"
   },
   "xOnplm": {
     "defaultMessage": "Loading payment methods…"

@@ -3,7 +3,9 @@ import type { VmTemplateLimits } from "../api";
 import { GB, formatTransferText } from "../utils/traffic";
 import {
   type PlanLimitRow,
+  diskThroughput,
   headlineLimitRows,
+  iopsUnits,
   planLimitRows,
 } from "../utils/plan-limits";
 
@@ -27,6 +29,16 @@ function LimitValue({
 }) {
   const intl = useIntl();
   const n = (v: number) => intl.formatNumber(v);
+  // Same units the spec sheet uses: thousands of IOPS as "20k", throughput in
+  // GB/s once it passes a gigabyte a second.
+  const iops = (v: number) => {
+    const u = iopsUnits(v);
+    return `${n(u.value)}${u.unit}`;
+  };
+  const mbps = (v: number) => {
+    const t = diskThroughput(v);
+    return `${n(t.value)} ${t.unit}`;
+  };
 
   switch (row.kind) {
     case "network":
@@ -40,7 +52,7 @@ function LimitValue({
       return (
         <FormattedMessage
           defaultMessage="{size} egress per month"
-          values={{ size: formatTransferText(intl, row.gb * GB, 0) }}
+          values={{ size: formatTransferText(intl, row.gb * GB) }}
         />
       );
     case "diskIops":
@@ -48,12 +60,12 @@ function LimitValue({
         return labelled ? (
           <FormattedMessage
             defaultMessage="{n} disk IOPS"
-            values={{ n: n(row.read) }}
+            values={{ n: iops(row.read) }}
           />
         ) : (
           <FormattedMessage
             defaultMessage="{n} IOPS"
-            values={{ n: n(row.read) }}
+            values={{ n: iops(row.read) }}
           />
         );
       }
@@ -61,8 +73,8 @@ function LimitValue({
         <FormattedMessage
           defaultMessage="{read} read / {write} write IOPS"
           values={{
-            read: row.read !== undefined ? n(row.read) : "∞",
-            write: row.write !== undefined ? n(row.write) : "∞",
+            read: row.read !== undefined ? iops(row.read) : "∞",
+            write: row.write !== undefined ? iops(row.write) : "∞",
           }}
         />
       );
@@ -70,30 +82,27 @@ function LimitValue({
       if (row.symmetric && row.read !== undefined) {
         return labelled ? (
           <FormattedMessage
-            defaultMessage="{n} MB/s disk"
-            values={{ n: n(row.read) }}
+            defaultMessage="{v} disk"
+            values={{ v: mbps(row.read) }}
           />
         ) : (
-          <FormattedMessage
-            defaultMessage="{n} MB/s"
-            values={{ n: n(row.read) }}
-          />
+          <>{mbps(row.read)}</>
         );
       }
       return labelled ? (
         <FormattedMessage
-          defaultMessage="{read} read / {write} write MB/s disk"
+          defaultMessage="{read} read / {write} write disk"
           values={{
-            read: row.read !== undefined ? n(row.read) : "∞",
-            write: row.write !== undefined ? n(row.write) : "∞",
+            read: row.read !== undefined ? mbps(row.read) : "∞",
+            write: row.write !== undefined ? mbps(row.write) : "∞",
           }}
         />
       ) : (
         <FormattedMessage
-          defaultMessage="{read} read / {write} write MB/s"
+          defaultMessage="{read} read / {write} write"
           values={{
-            read: row.read !== undefined ? n(row.read) : "∞",
-            write: row.write !== undefined ? n(row.write) : "∞",
+            read: row.read !== undefined ? mbps(row.read) : "∞",
+            write: row.write !== undefined ? mbps(row.write) : "∞",
           }}
         />
       );

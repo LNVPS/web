@@ -7,9 +7,13 @@ import { FormattedMessage, useIntl } from "react-intl";
 export default function SSHKeySelector({
   selectedKey,
   setSelectedKey,
+  hideLabel,
 }: {
   selectedKey: UserSshKey["id"];
   setSelectedKey: (k: UserSshKey["id"]) => void;
+  /** Suppress the built-in heading when the surrounding surface already names
+   *  this step — two headings for one control read as two controls. */
+  hideLabel?: boolean;
 }) {
   const login = useLogin();
   const { formatMessage } = useIntl();
@@ -66,9 +70,11 @@ export default function SSHKeySelector({
       )}
       {!isLoading && sshKeys.length > 0 && (
         <>
-          <b className="text-cyber-primary">
-            <FormattedMessage defaultMessage="Select SSH Key:" />
-          </b>
+          {!hideLabel && (
+            <b className="text-cyber-primary">
+              <FormattedMessage defaultMessage="Select SSH Key:" />
+            </b>
+          )}
           <select
             className="bg-cyber-panel p-2 rounded-sm border border-cyber-border"
             value={selectedKey}
@@ -89,9 +95,11 @@ export default function SSHKeySelector({
       )}
       {!isLoading && (showAddKey || sshKeys.length === 0) && (
         <>
-          <b className="text-cyber-primary">
-            <FormattedMessage defaultMessage="Add SSH Key:" />
-          </b>
+          {!hideLabel && (
+            <b className="text-cyber-primary">
+              <FormattedMessage defaultMessage="Add SSH Key:" />
+            </b>
+          )}
           <textarea
             rows={5}
             placeholder="ssh-[rsa|ed25519] AA== id"

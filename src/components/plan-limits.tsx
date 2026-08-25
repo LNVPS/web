@@ -133,16 +133,32 @@ function LimitValue({
 export default function PlanLimits({
   limits,
   transferGb,
+  exclude,
+  compact,
 }: {
   limits?: VmTemplateLimits;
   transferGb?: number;
+  /** Caps the surrounding surface already states — the custom builder puts the
+   *  port speed on its specification line, so repeating it here reads as two
+   *  different numbers. */
+  exclude?: Array<PlanLimitRow["kind"]>;
+  /** Line only, no footnotes: for a summary footer that has no room to explain. */
+  compact?: boolean;
 }) {
-  const rows = planLimitRows(limits, transferGb);
+  const rows = planLimitRows(limits, transferGb).filter(
+    (r) => !exclude?.includes(r.kind),
+  );
   if (rows.length === 0) return null;
 
   return (
     <div className="flex flex-col gap-1.5">
-      <div className="font-mono text-xs text-cyber-text-bright tabular-nums">
+      <div
+        className={
+          compact
+            ? "font-mono text-xs text-cyber-muted tabular-nums"
+            : "font-mono text-xs text-cyber-text-bright tabular-nums"
+        }
+      >
         {rows.map((row, i) => (
           <span key={row.kind}>
             {i > 0 && " · "}
@@ -150,12 +166,12 @@ export default function PlanLimits({
           </span>
         ))}
       </div>
-      {rows.some((r) => r.kind === "cpuLimit") && (
+      {!compact && rows.some((r) => r.kind === "cpuLimit") && (
         <div className="text-[0.65rem] text-cyber-muted">
           <FormattedMessage defaultMessage="The CPU limit is a share of the cores listed above, not a smaller machine." />
         </div>
       )}
-      {rows.some((r) => r.kind === "transfer") && (
+      {!compact && rows.some((r) => r.kind === "transfer") && (
         <div className="text-[0.65rem] text-cyber-muted">
           <FormattedMessage defaultMessage="Only egress counts against the transfer allowance, and exceeding it does not throttle or suspend the VM." />
         </div>

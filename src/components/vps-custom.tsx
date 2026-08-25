@@ -16,7 +16,7 @@ import { ApiUrl, GiB } from "../const";
 import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
 import PlanLimits from "./plan-limits";
-import { formatPortSpeed, hasPlanLimits } from "../utils/plan-limits";
+import { formatPortSpeed } from "../utils/plan-limits";
 import { FilterButton } from "./button-filter";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -460,20 +460,6 @@ export function VpsCustomOrder({
           )}
         </div>
 
-        {/* Caps apply to every build from this plan whatever the sliders say,
-            so they sit outside the selectable resources. Nothing is rendered
-            when the plan caps nothing. */}
-        {hasPlanLimits(params.limits, params.transfer_gb) && (
-          <div className="flex flex-col gap-2 border-t border-cyber-border pt-3">
-            <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
-              <FormattedMessage defaultMessage="Performance" />
-            </span>
-            <PlanLimits
-              limits={params.limits}
-              transferGb={params.transfer_gb}
-            />
-          </div>
-        )}
       </div>
 
       {/* Summary footer: live build manifest + price + buy */}
@@ -484,6 +470,16 @@ export function VpsCustomOrder({
             {ip6 > 0 && ` + ${ip6} IPv6`}
             {portSpeed && ` · ${portSpeed} port`} @ {params.region.name}
           </div>
+          {/* Caps apply to every build from this plan whatever the sliders say,
+              so they read as a second manifest line rather than a section of
+              the selectable resources. The bandwidth cap is dropped: it is the
+              port speed already on the line above. */}
+          <PlanLimits
+            limits={params.limits}
+            transferGb={params.transfer_gb}
+            exclude={["network"]}
+            compact
+          />
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
               <CostLabel

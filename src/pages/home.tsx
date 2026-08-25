@@ -1,5 +1,5 @@
 import { useState, useEffect, ReactNode } from "react";
-import { DiskType, VmHostRegion } from "../api";
+import { DiskType, VmHostRegion, VmTemplateResponse } from "../api";
 import VpsRow, { VpsPlanCard, VpsTableHeader } from "../components/vps-card";
 import { NostrProfile, OnionWebUrl, isOnion } from "../const";
 import { Link, useLoaderData } from "react-router-dom";
@@ -17,6 +17,8 @@ import { AppCard } from "./account-apps";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { vpsTemplateJsonLd } from "../utils/vps-seo";
+import { includedResources } from "../utils/included-resources";
+import { GB, formatTransferText } from "../utils/traffic";
 import type { HomeLoaderData } from "../loaders";
 
 export default function HomePage() {
@@ -394,13 +396,84 @@ function VpsOffersSection() {
         <VpsCustomOrder templates={offers.custom_template} />
       )}
       <small className="text-cyber-muted text-center">
+        <IncludedNote offers={offers} />{" "}
         {showInclTax ? (
-          <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices include VAT; payment processing fees are excluded." />
+          <FormattedMessage defaultMessage="Prices include VAT; payment processing fees are excluded." />
         ) : (
-          <FormattedMessage defaultMessage="Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees." />
+          <FormattedMessage defaultMessage="Prices exclude tax and payment processing fees." />
         )}
       </small>
     </>
+  );
+}
+
+/**
+ * What every plan includes, read from the catalog rather than asserted.
+ *
+ * Address counts and transfer allowances live in the template configuration
+ * and change without a deploy, so a static sentence here is a promise the
+ * front end cannot keep. Renders nothing when the catalog is empty: no offers
+ * support no claim.
+ */
+function IncludedNote({ offers }: { offers?: VmTemplateResponse }) {
+  const intl = useIntl();
+  const inc = includedResources(offers);
+  if (!inc) return null;
+
+  // Counts differ between plans, so "every plan includes" would be false for
+  // some of them. The cards already carry the per-plan figures.
+  if (!inc.uniformIps || inc.transfer.kind === "varies") {
+    return (
+      <FormattedMessage defaultMessage="Included addresses and monthly transfer allowances are listed with each plan." />
+    );
+  }
+
+  // "address" is carried by whichever clause ends the phrase, so a plan with
+  // both reads "one IPv4 and one IPv6 address" rather than saying it twice.
+  const ips =
+    inc.ip4 > 0 && inc.ip6 > 0 ? (
+      <FormattedMessage
+        defaultMessage="{ip4, plural, one {one IPv4} other {# IPv4}} and {ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
+        values={{ ip4: inc.ip4, ip6: inc.ip6 }}
+      />
+    ) : inc.ip4 > 0 ? (
+      <FormattedMessage
+        defaultMessage="{ip4, plural, one {one IPv4 address} other {# IPv4 addresses}}"
+        values={{ ip4: inc.ip4 }}
+      />
+    ) : (
+      <FormattedMessage
+        defaultMessage="{ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
+        values={{ ip6: inc.ip6 }}
+      />
+    );
+
+  if (inc.ip4 === 0 && inc.ip6 === 0) {
+    return inc.transfer.kind === "unmetered" ? (
+      <FormattedMessage defaultMessage="Every plan includes unmetered traffic." />
+    ) : (
+      <FormattedMessage
+        defaultMessage="Every plan includes {size} of outbound transfer per month."
+        values={{
+          size: formatTransferText(intl, inc.transfer.gb * GB, 0),
+        }}
+      />
+    );
+  }
+
+  return inc.transfer.kind === "unmetered" ? (
+    <FormattedMessage
+      defaultMessage="Every plan includes {ips} and unmetered traffic."
+      values={{ ips }}
+    />
+  ) : (
+    <FormattedMessage
+      defaultMessage="Every plan includes {ips}, plus {size} of outbound transfer per month."
+      values={{
+        ips,
+        size: formatTransferText(intl, inc.transfer.gb * GB, 0),
+      }}
+    />
   );
 }
 

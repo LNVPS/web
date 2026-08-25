@@ -293,6 +293,9 @@
   "556JQK": {
     "defaultMessage": "Deploy"
   },
+  "5KN8U6": {
+    "defaultMessage": "{ip4, plural, one {one IPv4 address} other {# IPv4 addresses}}"
+  },
   "5PalnH": {
     "defaultMessage": "{mbps} Mbit/s"
   },
@@ -337,6 +340,9 @@
   },
   "6axKu6": {
     "defaultMessage": "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card."
+  },
+  "6e0ClM": {
+    "defaultMessage": "Included addresses and monthly transfer allowances are listed with each plan."
   },
   "6hEevT": {
     "defaultMessage": "Set default"
@@ -466,6 +472,9 @@
   },
   "8ecw1u": {
     "defaultMessage": "Handles"
+  },
+  "8jINRO": {
+    "defaultMessage": "Every plan includes unmetered traffic."
   },
   "8lCjAM": {
     "defaultMessage": "Priority"
@@ -613,6 +622,9 @@
   },
   "CEERm0": {
     "defaultMessage": "Live Chat"
+  },
+  "CVnta/": {
+    "defaultMessage": "Prices exclude tax and payment processing fees."
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
@@ -923,6 +935,9 @@
   "JBWS0c": {
     "defaultMessage": "Link"
   },
+  "JElq+X": {
+    "defaultMessage": "Every plan includes {ips} and unmetered traffic."
+  },
   "JH4wUD": {
     "defaultMessage": "Saved ✓"
   },
@@ -977,9 +992,6 @@
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
-  "Kffxdm": {
-    "defaultMessage": "Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices include VAT; payment processing fees are excluded."
-  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
@@ -1009,6 +1021,9 @@
   },
   "LR754a": {
     "defaultMessage": "Renews at"
+  },
+  "LTw4Vy": {
+    "defaultMessage": "Every plan includes {ips}, plus {size} of outbound transfer per month."
   },
   "LX6weZ": {
     "defaultMessage": "Pending payment"
@@ -1237,9 +1252,6 @@
   },
   "S3OX0p": {
     "defaultMessage": "Encrypted NIP-17 direct message — read them in {link}"
-  },
-  "S5oncX": {
-    "defaultMessage": "Every plan includes one IPv4 and one IPv6 address and unmetered traffic. Prices exclude tax and payment processing fees."
   },
   "S5s+VN": {
     "defaultMessage": "Lightning"
@@ -1727,6 +1739,9 @@
   "ckx15w": {
     "defaultMessage": "Network transfer"
   },
+  "coa4qJ": {
+    "defaultMessage": "{ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
+  },
   "cyR7Kh": {
     "defaultMessage": "Back"
   },
@@ -1954,6 +1969,9 @@
   },
   "huqKGl": {
     "defaultMessage": "Create account"
+  },
+  "i0p6sU": {
+    "defaultMessage": "Every plan includes {size} of outbound transfer per month."
   },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
@@ -2429,6 +2447,9 @@
   "sy+pv5": {
     "defaultMessage": "Email"
   },
+  "t21/v7": {
+    "defaultMessage": "Prices include VAT; payment processing fees are excluded."
+  },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} storage"
   },
@@ -2446,6 +2467,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Run your Lightning node on a VPS built for it"
+  },
+  "tcquFI": {
+    "defaultMessage": "{ip4, plural, one {one IPv4} other {# IPv4}} and {ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
   },
   "tiWuG8": {
     "defaultMessage": "Deploy your relay — from {price} per month"

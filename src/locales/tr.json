@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Dağıt"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Mbit/sn"
+  },
   "5QYdPU": {
     "defaultMessage": "Başlangıç Saati"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} okuma / {write} yazma MB/s"
   },
   "5VEOig": {
     "defaultMessage": "Kalan süre için yeni tarifeye göre maliyet:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "Ödenmemiş"
   },
+  "6vjF8Q": {
+    "defaultMessage": "Bant genişliği"
+  },
   "7+Domh": {
     "defaultMessage": "Notlar"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} kural"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# dakika} other{# dakika}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Anahtarları"
+  },
+  "7DObFu": {
+    "defaultMessage": "Disk G/Ç İşlemleri/Saniye"
   },
   "7EjXDp": {
     "defaultMessage": "İnsanlar ve temsilciler için ortak çalışma alanları"
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Meta veri"
   },
+  "8QVkO9": {
+    "defaultMessage": "Yalnızca çıkış trafiği transfer kotasından düşer ve bu kota aşıldığında sanal makine yavaşlatılmaz veya askıya alınmaz."
+  },
   "8X6Kwp": {
     "defaultMessage": "Bir sonraki ödeme"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Yenileme yükleniyor…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Performans"
   },
   "ABL6b+": {
     "defaultMessage": "Kodunuzu gelire dönüştürün."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "İşlem ücreti"
   },
+  "DtYelJ": {
+    "defaultMessage": "Veri transferi"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Bu bağlantıyı paylaşın. Birisi kayıt yaptırıp sanal makinesi ilk ödemesini gerçekleştirdiğinde komisyon kazanırsınız."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} aylık çıkış"
   },
   "GqRat5": {
     "defaultMessage": "Lütfen siparişinizi tamamlamak için e-posta adresinizi doğrulayın."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "LNVPS ekibiyle iletişime geçin. VPS hosting hizmetimiz veya ödeme seçenekleri hakkında sorularınız mı var? Size yardımcı olmak için buradayız."
   },
+  "ZoMETF": {
+    "defaultMessage": "CPU limiti, yukarıda listelenen çekirdeklerin bir payıdır, daha küçük bir makine değildir."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "Bu bileşen yalnızca zincir üstü ödemeleri destekler"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Toplam Çalışma Süresi: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} tahsis edilen çekirdeklerin"
   },
   "bMQUWl": {
     "defaultMessage": "Kaynak CIDR (bu sanal makine)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "tarafından {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} okuma / {write} yazma IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "Biz kendi Lightning ağ düğürümüzü işletiyoruz. Sizin gönderdiğiniz satoshi birimlerinin işlemleri üçüncü taraf bir işlemci üzerinden yapılmaz."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "Kanada, Québec'te VPS sunucu hizmeti. {price} KDV hariç. {minCpu}–{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning ağı veya doğrudan zincir üzerinden ödeme yapın."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} MB/sn"
+  },
   "ps4K9r": {
     "defaultMessage": "Blossom nedir?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Son kullanma tarihi:"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Güvenlik duvarı kuralları"
   },
   "rneMhE": {
     "defaultMessage": "Route96'yı kullanıma sunun."
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Fiyat teklifi ve ödeme için kullanılacak para birimini belirler."
   },
+  "svg9Ub": {
+    "defaultMessage": "İşlemci sınırı"
+  },
   "sx6MYT": {
     "defaultMessage": "Temsilci, bir VM'yi uzatamaz, iade edemez veya silemez ve oturum açmadığı bir hesap üzerinde işlem yapamaz. Bunlar için, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "E-posta"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Disk aktarım hızı"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} depolama"

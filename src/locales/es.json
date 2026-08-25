@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Implementar"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Mbit/s"
+  },
   "5QYdPU": {
     "defaultMessage": "Hora de inicio"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} lectura / {write} escritura MB/s"
   },
   "5VEOig": {
     "defaultMessage": "Costo con la nueva tarifa para el tiempo restante:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "No pagado."
   },
+  "6vjF8Q": {
+    "defaultMessage": "Ancho de banda"
+  },
   "7+Domh": {
     "defaultMessage": "Notas"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} reglas"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# min.} other{# minutos}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Claves SSH"
+  },
+  "7DObFu": {
+    "defaultMessage": "IOPS del disco"
   },
   "7EjXDp": {
     "defaultMessage": "Espacios de trabajo compartidos para personas y agentes."
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Metadatos"
   },
+  "8QVkO9": {
+    "defaultMessage": "Solo el tráfico saliente se descuenta de la cuota de transferencia, y superarla no limita la velocidad ni suspende la VM."
+  },
   "8X6Kwp": {
     "defaultMessage": "Próximo pago."
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Cargando la renovación…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Rendimiento"
   },
   "ABL6b+": {
     "defaultMessage": "Convierte tu código en ingresos por comisiones."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "Cargo por tramitación."
   },
+  "DtYelJ": {
+    "defaultMessage": "Transferencia"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Comparte este enlace. Recibirás una comisión cuando alguien se registre y su máquina virtual realice su primer pago."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} egreso por mes"
   },
   "GqRat5": {
     "defaultMessage": "Por favor, verifique su dirección de correo electrónico para completar su pedido."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "Póngase en contacto con el equipo de LNVPS. ¿Tiene preguntas sobre nuestro servicio de alojamiento VPS o las opciones de pago? Estamos aquí para ayudarle."
   },
+  "ZoMETF": {
+    "defaultMessage": "El límite de CPU es una parte de los núcleos enumerados anteriormente, no una máquina más pequeña."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "Este componente solo admite pagos on-chain"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Tiempo total de funcionamiento: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} de núcleos asignados"
   },
   "bMQUWl": {
     "defaultMessage": "CIDR de origen (esta máquina virtual)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "por {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} lectura / {write} escritura IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "Operamos nuestro propio nodo de Lightning. Tus satoshis no se procesan a través de un tercero."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "Alojamiento VPS en Quebec, Canadá, desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} MB/s"
+  },
   "ps4K9r": {
     "defaultMessage": "¿Qué es Blossom?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Fecha de caducidad:"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Reglas de cortafuegos"
   },
   "rneMhE": {
     "defaultMessage": "Implementar Route96."
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Establece la moneda que se utilizará para el presupuesto y el pago."
   },
+  "svg9Ub": {
+    "defaultMessage": "Límite de CPU"
+  },
   "sx6MYT": {
     "defaultMessage": "El agente no puede extender, reembolsar ni eliminar una VM, y no puede actuar sobre una cuenta en la que no está conectado. Para esas, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Correo electrónico"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Throughput del disco"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} almacenamiento"

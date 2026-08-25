@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "展開する、配備する"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} メガビット/秒"
+  },
   "5QYdPU": {
     "defaultMessage": "開始時間"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} 読み取り / {write} 書き込み MB/秒"
   },
   "5VEOig": {
     "defaultMessage": "残りの期間における新しい料金:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "未払い"
   },
+  "6vjF8Q": {
+    "defaultMessage": "帯域幅"
+  },
   "7+Domh": {
     "defaultMessage": "備考"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} ルール"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# 分} other{# 分}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
+  },
+  "7DObFu": {
+    "defaultMessage": "ディスクIOPS"
   },
   "7EjXDp": {
     "defaultMessage": "人とAIエージェントが共有できるワークスペース"
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "メタデータ"
   },
+  "8QVkO9": {
+    "defaultMessage": "転送枠に算入されるのは送信トラフィックのみであり、枠を超過してもVMのスロットリングや停止は行われません。"
+  },
   "8X6Kwp": {
     "defaultMessage": "次回の支払い。"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "更新処理中です…。"
+  },
+  "AA5h7P": {
+    "defaultMessage": "パフォーマンス"
   },
   "ABL6b+": {
     "defaultMessage": "あなたのコードを収益に変えましょう。"
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "処理手数料"
   },
+  "DtYelJ": {
+    "defaultMessage": "転送量"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "このリンクを共有してください。誰かが登録し、その人の仮想マシンが最初の支払いを行うと、あなたは報酬を得ることができます。"
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} 月間エグレス"
   },
   "GqRat5": {
     "defaultMessage": "ご注文を完了するには、お客様のメールアドレスをご確認ください。"
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "LNVPSチームまでお気軽にお問い合わせください。VPSホスティングや支払い方法についてご質問がございましたら、お気軽にご連絡ください。喜んでお手伝いさせていただきます。"
   },
+  "ZoMETF": {
+    "defaultMessage": "CPU上限は、上記に示されたコアの一部を割り当てるものであり、より小さいマシンではありません。"
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "このコンポーネントはオンチェーン決済のみに対応しています"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "全体の稼働時間： {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "割り当てコアの{pct}"
   },
   "bMQUWl": {
     "defaultMessage": "送信元CIDR（この仮想マシン）"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "{initiatedBy} によって開始"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} 読み取り / {write} 書き込み IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "当社は独自のライトニングノードを運用しています。お客様のサトシ（ビットコインの最小単位）は、第三者の決済サービスを経由しません。"
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "カナダのケベック州におけるVPSホスティングサービス {price} 付加価値税抜き。 {minCpu}－{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いが可能です。"
   },
+  "plUWdh": {
+    "defaultMessage": "{n} MB/秒"
+  },
   "ps4K9r": {
     "defaultMessage": "Blossomとは何ですか？"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "有効期限："
+  },
+  "rlfZ2s": {
+    "defaultMessage": "ファイアウォールルール"
   },
   "rneMhE": {
     "defaultMessage": "Route96をデプロイします。"
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "見積もりおよび支払いで使用する通貨を設定します。"
   },
+  "svg9Ub": {
+    "defaultMessage": "CPU制限"
+  },
   "sx6MYT": {
     "defaultMessage": "エージェントはVMの延長、返金、削除を行うことができず、ログインしていないアカウントに対して操作を行うこともできません。それらについては、 {link}。"
   },
   "sy+pv5": {
     "defaultMessage": "メール"
+  },
+  "tFWVr1": {
+    "defaultMessage": "ディスクスループット"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} 保存、保管、貯蔵"

@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Bereitstellen"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Mbit/s"
+  },
   "5QYdPU": {
     "defaultMessage": "Startzeit"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} Lesen / {write} Schreiben MB/s"
   },
   "5VEOig": {
     "defaultMessage": "Kosten bei dem neuen Tarif für die verbleibende Zeit:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "Unbezahlt"
   },
+  "6vjF8Q": {
+    "defaultMessage": "Bandbreite"
+  },
   "7+Domh": {
     "defaultMessage": "Anmerkungen"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} Regeln"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# Min.} other{# Minuten}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH-Schlüssel"
+  },
+  "7DObFu": {
+    "defaultMessage": "Datenträger-IOPS"
   },
   "7EjXDp": {
     "defaultMessage": "Gemeinsame Arbeitsbereiche für Mitarbeiter und Agenten."
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Metadaten"
   },
+  "8QVkO9": {
+    "defaultMessage": "Nur ausgehender Datenverkehr wird auf das Transferkontingent angerechnet; eine Überschreitung führt weder zu einer Drosselung noch zur Aussetzung der VM."
+  },
   "8X6Kwp": {
     "defaultMessage": "Nächste Zahlung"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Verlängerung wird geladen …"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Leistung"
   },
   "ABL6b+": {
     "defaultMessage": "Verwandeln Sie Ihren Code in Einnahmen."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "Bearbeitungsgebühr"
   },
+  "DtYelJ": {
+    "defaultMessage": "Datenvolumen"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Teilen Sie diesen Link. Sie erhalten eine Provision, wenn sich jemand anmeldet und seine virtuelle Maschine die erste Zahlung vornimmt."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} Ausgangsdaten pro Monat"
   },
   "GqRat5": {
     "defaultMessage": "Bitte bestätigen Sie Ihre E-Mail-Adresse, um Ihre Bestellung abzuschließen."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "Nehmen Sie Kontakt mit dem LNVPS-Team auf. Haben Sie Fragen zu unserem VPS-Hosting oder den Zahlungsmöglichkeiten? Wir sind für Sie da."
   },
+  "ZoMETF": {
+    "defaultMessage": "Das CPU-Limit ist ein Anteil der oben aufgeführten Kerne, nicht eine kleinere Maschine."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "Diese Komponente unterstützt nur On-Chain-Zahlungen"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Gesamtbetriebszeit: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} von zugewiesenen Kernen"
   },
   "bMQUWl": {
     "defaultMessage": "Quell-CIDR (diese virtuelle Maschine)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "von {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} Lesen / {write} Schreiben IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "Wir betreiben einen eigenen Lightning-Knoten. Ihre Satoshis werden nicht über einen Drittanbieter verarbeitet."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "VPS-Hosting in Québec, Kanada, ab {price} zzgl. Mehrwertsteuer. {minCpu}–{maxCpu} virtuelle CPU, bis zu {maxDisk} {diskType}Sie können mit Bitcoin über das Lightning-Netzwerk oder direkt (on-chain) bezahlen."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} MB/s"
+  },
   "ps4K9r": {
     "defaultMessage": "Was ist Blossom?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Gültig bis"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Firewall-Regeln"
   },
   "rneMhE": {
     "defaultMessage": "Route96 bereitstellen"
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Legt die Währung fest, die für das Angebot und die Zahlung verwendet wird."
   },
+  "svg9Ub": {
+    "defaultMessage": "CPU-Limit"
+  },
   "sx6MYT": {
     "defaultMessage": "Der Agent kann eine VM nicht verlängern, erstatten oder löschen und kann nicht auf einem Konto agieren, in das er nicht angemeldet ist. Für diese, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "E-Mail"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Datenträgerdurchsatz"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} Speicher"

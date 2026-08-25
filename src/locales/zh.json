@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "部署"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} 兆比特/秒"
+  },
   "5QYdPU": {
     "defaultMessage": "开始时间"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} 读取 / {write} 写入 MB/s"
   },
   "5VEOig": {
     "defaultMessage": "剩余时间采用新费率计算的费用："
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "未支付"
   },
+  "6vjF8Q": {
+    "defaultMessage": "带宽"
+  },
   "7+Domh": {
     "defaultMessage": "注释"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} 规则"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# 分钟} other{# 分钟}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
+  },
+  "7DObFu": {
+    "defaultMessage": "磁盘 IOPS"
   },
   "7EjXDp": {
     "defaultMessage": "供人和智能客服共享的工作空间。"
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "元数据"
   },
+  "8QVkO9": {
+    "defaultMessage": "仅出站流量会计入传输配额，超出配额不会导致虚拟机被限速或暂停。"
+  },
   "8X6Kwp": {
     "defaultMessage": "下次付款"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "正在加载续订信息……"
+  },
+  "AA5h7P": {
+    "defaultMessage": "性能"
   },
   "ABL6b+": {
     "defaultMessage": "将您的代码转化为收益。"
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "手续费。"
   },
+  "DtYelJ": {
+    "defaultMessage": "流量"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "分享此链接。当有人注册并成功完成首次虚拟货币支付时，您将获得佣金。"
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} 每月出站流量"
   },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "请联系 LNVPS 团队。如果您对我们的虚拟专用服务器托管服务或付款方式有任何疑问，我们随时为您提供帮助。"
   },
+  "ZoMETF": {
+    "defaultMessage": "CPU 限制是上述核心数量的份额，而不是一台更小的机器。"
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "此组件仅支持链上支付"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "总运行时间： {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "已分配核心的{pct}"
   },
   "bMQUWl": {
     "defaultMessage": "源 CIDR（此虚拟机）"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "由 {initiatedBy} 发起"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} 读取 / {write} 写入 IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "我们运行自己的闪电网络节点。您的比特币不会通过第三方进行处理。"
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
+  "plUWdh": {
+    "defaultMessage": "{n} 兆字节/秒"
+  },
   "ps4K9r": {
     "defaultMessage": "什么是Blossom？"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "已过期，截止日期为："
+  },
+  "rlfZ2s": {
+    "defaultMessage": "防火墙规则"
   },
   "rneMhE": {
     "defaultMessage": "部署 Route96。"
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "设置用于报价和支付的货币。"
   },
+  "svg9Ub": {
+    "defaultMessage": "CPU 限制"
+  },
   "sx6MYT": {
     "defaultMessage": "该代理无法对虚拟机进行延长、退款或删除，也无法操作其未登录的账户。对于这些情况， {link}。"
   },
   "sy+pv5": {
     "defaultMessage": "电子邮件"
+  },
+  "tFWVr1": {
+    "defaultMessage": "磁盘吞吐量"
   },
   "tG2iXV": {
     "defaultMessage": "{min}——{max} {type} 存储；仓库"

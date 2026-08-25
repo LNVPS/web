@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "انشر/وزّع."
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} ميجابت/ثانية"
+  },
   "5QYdPU": {
     "defaultMessage": "وقت البدء"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} قراءة / {write} كتابة ميجابايت/ثانية"
   },
   "5VEOig": {
     "defaultMessage": "التكلفة بالسعر الجديد للفترة المتبقية:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "غير مدفوع الأجر."
   },
+  "6vjF8Q": {
+    "defaultMessage": "عرض النطاق الترددي"
+  },
   "7+Domh": {
     "defaultMessage": "ملاحظات"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} قاعدة"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# دقيقة} other{# دقائق}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "مفاتيح SSH"
+  },
+  "7DObFu": {
+    "defaultMessage": "عمليات الإدخال/الإخراج لكل ثانية على القرص"
   },
   "7EjXDp": {
     "defaultMessage": "مساحات عمل مشتركة للموظفين والوكلاء."
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "البيانات الوصفية"
   },
+  "8QVkO9": {
+    "defaultMessage": "يُحتسب الإخراج فقط ضمن حصة النقل، ولا يؤدي تجاوزها إلى تقييد الآلة الافتراضية أو تعليقها."
+  },
   "8X6Kwp": {
     "defaultMessage": "الدفعة التالية."
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "جارٍ تحميل معلومات التجديد…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "الأداء"
   },
   "ABL6b+": {
     "defaultMessage": "حوّل شفرة البرمجة الخاصة بك إلى مصدر دخل."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "رسوم المعالجة"
   },
+  "DtYelJ": {
+    "defaultMessage": "نقل البيانات"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "شارك هذا الرابط. ستحصل على عمولة عندما يقوم شخص بالتسجيل ويُجري جهاز الدفع الخاص به أول عملية دفع."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} إخراج شهري"
   },
   "GqRat5": {
     "defaultMessage": "يرجى التحقق من عنوان بريدك الإلكتروني لإتمام طلبك."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "تواصل مع فريق LNVPS. هل لديك أي أسئلة حول خدمات الاستضافة الافتراضية الخاصة (VPS) أو خيارات الدفع؟ نحن هنا لمساعدتك."
   },
+  "ZoMETF": {
+    "defaultMessage": "حد وحدة المعالجة المركزية هو حصة من النوى المذكورة أعلاه، وليس جهازًا أصغر."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "هذا المكوّن يدعم المدفوعات على السلسلة فقط"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "إجمالي مدة التشغيل: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} من الأنوية المخصصة"
   },
   "bMQUWl": {
     "defaultMessage": "نطاق عناوين IP المصدر (هذه الآلة الافتراضية)."
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "بواسطة {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} قراءة / {write} كتابة IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "نحن نشغل عقدة لايتنينغ الخاصة بنا. معاملاتك بالساتوشي لن تمر عبر معالج تابع لجهة خارجية."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "خدمات استضافة VPS في كيبيك، كندا، تبدأ من {price} باستثناء ضريبة القيمة المضافة. {minCpu}–{maxCpu} وحدة معالجة مركزية افتراضية، بحد أقصى {maxDisk} {diskType}ادفع بالبيتكوين عبر شبكة لايتنينغ أو مباشرةً على البلوك تشين."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} ميغابايت/ثانية"
+  },
   "ps4K9r": {
     "defaultMessage": "ما هو برنامج Blossom؟"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "ينتهي صلاحيته في:"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "قواعد جدار الحماية"
   },
   "rneMhE": {
     "defaultMessage": "نشر Route96."
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "يحدد العملة المستخدمة في عرض الأسعار والدفع."
   },
+  "svg9Ub": {
+    "defaultMessage": "حد المعالج المركزي"
+  },
   "sx6MYT": {
     "defaultMessage": "لا يمكن للوكيل تمديد أو استرداد أو حذف آلة افتراضية، كما لا يمكنه التصرف في حساب غير مسجّل الدخول إليه. أما بالنسبة لتلك، {link}۔"
   },
   "sy+pv5": {
     "defaultMessage": "بريد إلكتروني"
+  },
+  "tFWVr1": {
+    "defaultMessage": "معدل نقل البيانات على القرص"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} تخزين"

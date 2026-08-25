@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Развернуть"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Мбит/с"
+  },
   "5QYdPU": {
     "defaultMessage": "Время начала"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} чтение / {write} запись МБ/с"
   },
   "5VEOig": {
     "defaultMessage": "Стоимость за оставшееся время по новому тарифу:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "Неоплаченный"
   },
+  "6vjF8Q": {
+    "defaultMessage": "Пропускная способность"
+  },
   "7+Domh": {
     "defaultMessage": "Примечания"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} правила"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# мин.} other{# мин.}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Ключи SSH"
+  },
+  "7DObFu": {
+    "defaultMessage": "IOPS диска"
   },
   "7EjXDp": {
     "defaultMessage": "Общие рабочие пространства для сотрудников и агентов."
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Метаданные"
   },
+  "8QVkO9": {
+    "defaultMessage": "Только исходящий трафик учитывается в квоте на передачу данных, а превышение этой квоты не приводит к ограничению скорости или приостановке виртуальной машины."
+  },
   "8X6Kwp": {
     "defaultMessage": "Следующий платёж."
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Идёт процесс продления…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Производительность"
   },
   "ABL6b+": {
     "defaultMessage": "Превратите свой код в источник дохода."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "Комиссия за обработку."
   },
+  "DtYelJ": {
+    "defaultMessage": "Трафик"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Поделитесь этой ссылкой. Вы получите комиссию, когда кто-то зарегистрируется и его виртуальная машина совершит первую оплату."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} исходящий трафик за месяц"
   },
   "GqRat5": {
     "defaultMessage": "Пожалуйста, подтвердите свой адрес электронной почты, чтобы завершить оформление заказа."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "Свяжитесь с командой LNVPS. У вас есть вопросы о наших услугах VPS-хостинга или вариантах оплаты? Мы всегда готовы помочь."
   },
+  "ZoMETF": {
+    "defaultMessage": "Лимит CPU — это доля ядер, перечисленных выше, а не машина меньшего размера."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "Этот компонент поддерживает только он-чейн платежи"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Общее время безотказной работы: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} выделенных ядер"
   },
   "bMQUWl": {
     "defaultMessage": "CIDR-адрес источника (данная виртуальная машина)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "от {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} чтение / {write} запись IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "У нас есть собственный узел Lightning Network. Ваши сатоши не проходят через сторонний процессор."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "Размещение VPS-серверов в Квебеке, Канада, от {price} без НДС. {minCpu}–{maxCpu} виртуальный процессор, до {maxDisk} {diskType}Оплачивайте в биткоинах через сеть Lightning или напрямую, используя основной блокчейн."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} МБ/с"
+  },
   "ps4K9r": {
     "defaultMessage": "Что такое Blossom?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Срок действия истек."
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Правила брандмауэра"
   },
   "rneMhE": {
     "defaultMessage": "Разверните Route96."
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Указывает валюту, используемую для расчётов и оплаты."
   },
+  "svg9Ub": {
+    "defaultMessage": "Лимит CPU"
+  },
   "sx6MYT": {
     "defaultMessage": "Агент не может продлить, вернуть средства за ВМ или удалить ВМ, а также действовать с аккаунтом, в который он не вошёл. Для них, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Электронная почта"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Пропускная способность диска"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} хранилище"

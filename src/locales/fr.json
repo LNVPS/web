@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Déployer"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Mbit/s"
+  },
   "5QYdPU": {
     "defaultMessage": "Heure de début"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} lecture / {write} écriture Mo/s"
   },
   "5VEOig": {
     "defaultMessage": "Coût pour la période restante, au nouveau tarif :"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "Non payé"
   },
+  "6vjF8Q": {
+    "defaultMessage": "Bande passante"
+  },
   "7+Domh": {
     "defaultMessage": "Notes"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} règles"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# min} other{# minutes}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "Clés SSH"
+  },
+  "7DObFu": {
+    "defaultMessage": "IOPS du disque"
   },
   "7EjXDp": {
     "defaultMessage": "Espaces de travail partagés pour les employés et les représentants."
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Métadonnées"
   },
+  "8QVkO9": {
+    "defaultMessage": "Seul le trafic sortant est comptabilisé dans le quota de transfert, et son dépassement n'entraîne ni la limitation du débit ni la suspension de la VM."
+  },
   "8X6Kwp": {
     "defaultMessage": "Prochain paiement"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Chargement du renouvellement…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Performance"
   },
   "ABL6b+": {
     "defaultMessage": "Transformez votre code en revenus."
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "Frais de traitement."
   },
+  "DtYelJ": {
+    "defaultMessage": "Transfert"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Partagez ce lien. Vous recevrez une commission lorsqu’une personne s’inscrira et que sa machine virtuelle effectuera son premier paiement."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} sortie par mois"
   },
   "GqRat5": {
     "defaultMessage": "Veuillez vérifier votre adresse électronique pour finaliser votre commande."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "Contactez l’équipe LNVPS. Vous avez des questions sur notre service d’hébergement VPS ou sur les options de paiement? Nous sommes là pour vous aider."
   },
+  "ZoMETF": {
+    "defaultMessage": "La limite CPU correspond à une part des cœurs répertoriés ci-dessus, et non à une machine plus petite."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "Ce composant ne prend en charge que les paiements on-chain"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Disponibilité totale : {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} de cœurs alloués"
   },
   "bMQUWl": {
     "defaultMessage": "CIDR source (cette machine virtuelle)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "par {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} lecture / {write} écriture IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "Nous exploitons notre propre nœud Lightning. Vos satoshis ne transitent pas par un processeur tiers."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "Hébergement VPS au Québec, Canada, à partir de {price} hors TVA. {minCpu}–{maxCpu} vCPU, jusqu’à {maxDisk} {diskType}Vous pouvez payer en Bitcoin, soit via le réseau Lightning, soit directement sur la chaîne de blocs."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} Mo/s"
+  },
   "ps4K9r": {
     "defaultMessage": "Qu'est-ce que Blossom ?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Date d’expiration :"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Règles de pare-feu"
   },
   "rneMhE": {
     "defaultMessage": "Déployez Route96."
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Définit la devise utilisée pour le devis et le paiement."
   },
+  "svg9Ub": {
+    "defaultMessage": "Limite CPU"
+  },
   "sx6MYT": {
     "defaultMessage": "L'agent ne peut ni prolonger, ni rembourser ni supprimer une VM, et il ne peut pas agir sur un compte auquel il n'est pas connecté. Pour ceux, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Courriel"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Débit du disque"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} stockage"

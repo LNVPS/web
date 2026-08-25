@@ -362,8 +362,54 @@ export interface VmTemplate {
   disk_interface: DiskInterface;
   ip4_count: number;
   ip6_count: number;
+  /**
+   * Monthly **outbound** transfer allowance in GB. Omitted when the plan is
+   * unmetered, which every current plan is — render "unmetered", never 0.
+   */
+  transfer_gb?: number;
   cost_plan: VmCostPlan;
   region: VmHostRegion;
+}
+
+/**
+ * A VM's network transfer for the current UTC calendar month. The allowance is
+ * **outbound only** and resets on the 1st; `bytes_in` is reported for display
+ * but never counted against it. Exceeding the allowance currently has no
+ * automatic effect — no throttle, no suspension, no overage billing — so copy
+ * must not imply otherwise.
+ *
+ * Figures come from the hypervisor's per-VM interface counters, sampled on the
+ * VM sweep, so they are near-real-time rather than exact to the byte.
+ */
+export interface VmTrafficSummary {
+  /** Plan's monthly outbound allowance in GB; omitted when unmetered. */
+  transfer_gb?: number;
+  /** Inclusive UTC start of the period, `YYYY-MM-DD`. */
+  period_start: string;
+  /** Inclusive UTC end of the period, `YYYY-MM-DD`. */
+  period_end: string;
+  /** Outbound bytes this period — the figure `transfer_gb` bounds. */
+  bytes_out: number;
+  /** Inbound bytes this period; never counted against the allowance. */
+  bytes_in: number;
+}
+
+/** One UTC day of transfer. Days with no recorded traffic are omitted. */
+export interface VmTrafficDay {
+  /** UTC day, `YYYY-MM-DD`. */
+  day: string;
+  bytes_in: number;
+  bytes_out: number;
+}
+
+export interface VmTraffic {
+  /**
+   * Identical to `VmInstance.traffic`, and always the **current** calendar
+   * month whatever range was requested.
+   */
+  summary: VmTrafficSummary;
+  /** The requested range only, ascending; gaps where nothing was recorded. */
+  days: Array<VmTrafficDay>;
 }
 
 /**
@@ -426,6 +472,12 @@ export interface VmInstance {
    * authorized key.
    */
   host_ssh_keys: Array<VmSshHostKey>;
+  /**
+   * Network transfer for the current UTC calendar month. Enough to render a
+   * usage bar without calling `getVmTraffic`, which is only needed for the
+   * day-by-day breakdown or a historical range.
+   */
+  traffic?: VmTrafficSummary;
 }
 
 export interface VmSshHostKey {
@@ -1544,6 +1596,23 @@ export class LNVpsApi {
   async getVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * Day-by-day network transfer over a UTC date range (`YYYY-MM-DD`),
+   * defaulting to the current calendar month. The range may span at most 400
+   * days and `end` must not precede `start`. For a usage bar alone, use
+   * `VmInstance.traffic` instead — it is the same `summary` object.
+   */
+  async getVmTraffic(id: number, opts?: { start?: string; end?: string }) {
+    const params = new URLSearchParams();
+    if (opts?.start) params.set("start", opts.start);
+    if (opts?.end) params.set("end", opts.end);
+    const query = params.size > 0 ? `?${params.toString()}` : "";
+    const { data } = await this.#handleResponse<ApiResponse<VmTraffic>>(
+      await this.#req(`/api/v1/vm/${id}/traffic${query}`, "GET"),
     );
     return data;
   }

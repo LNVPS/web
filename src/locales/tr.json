@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "Posta kodu *"
   },
+  "7CSemn": {
+    "defaultMessage": "Kota yalnızca çıkış trafiğini kapsar ve her ayın 1'inde sıfırlanır. Giriş trafiği yalnızca referans için gösterilir ve asla bu kotaya sayılmaz."
+  },
   "7Cdpiv": {
     "defaultMessage": "SSH Anahtarları"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} gelen"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "Lightning ağı için özel olarak oluşturulmuş bir VPS: statik IPv4 ve IPv6 adresleri, sınırsız trafik, Tor kullanımına izin verilir, kimlik doğrulama gerektirmez. Konum seçenekleri: Dublin, Londra veya Québec. Ödemeyi doğrudan Lightning ile yapın."
+  },
+  "DlFmLA": {
+    "defaultMessage": "Bu ay için çıkış trafiği kotanızı kullandınız. VM'nizle ilgili herhangi bir işlem yapılmadı — bant genişliği kısıtlanmadı, askıya alınmadı veya aşım için ücretlendirilmedi — ve kota 1'inde sıfırlanır."
   },
   "DnX0aY": {
     "defaultMessage": "Silmeyi onaylayın."
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "Ayrıca LNVPS'de de."
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} UTC"
+  },
   "MJ2jZQ": {
     "defaultMessage": "Toplam"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerinde Route96 yüklü olan bir VPS ile daha da ölçeklendirebilirsiniz."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "Sınırsız"
   },
   "Mp+zDS": {
     "defaultMessage": "Bu bileşen yalnızca Lightning ödemelerini destekler."
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "Giriş yap"
   },
+  "STWPnc": {
+    "defaultMessage": "giden"
+  },
   "SU1E+O": {
     "defaultMessage": "Yeni Sipariş"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "Otomatik yenileme özelliği devre dışı bırakıldı. Hizmetin kesintisiz devam etmesi için son kullanma tarihinden önce manuel olarak yenileyin."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "/ {allowance} giden"
   },
   "V/V4bz": {
     "defaultMessage": "İrlanda'nın Dublin şehrinde VPS sunucu hizmeti. {price} KDV dahil değil. İstediğiniz özelliklere göre özelleştirin. {maxCpu} sanal CPU. Ödemenizi Bitcoin ile Lightning ağı üzerinden veya doğrudan blok zinciri üzerinde yapın."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "Ödeme {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "Ağ aktarımı"
+  },
   "cyR7Kh": {
     "defaultMessage": "Geri"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "Bu sanal makine için herhangi bir geçmiş kaydı bulunamadı."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}Kullanılan %"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Otomatik olarak yenile"
+  },
+  "evSskM": {
+    "defaultMessage": "Bu planda aktarım sınırı yoktur. Rakamlar geçerli takvim ayına aittir ve ayın 1'inde sıfırlanır."
   },
   "exrlwL": {
     "defaultMessage": "Küçük harfler, sayılar ve tireler. Bu, alt alan adınız haline gelir."

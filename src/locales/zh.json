@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "邮政编码 *"
   },
+  "7CSemn": {
+    "defaultMessage": "该额度仅涵盖出站流量，并于每月1日重置。入站流量仅供参考，不占用该额度。"
+  },
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} 入站"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "专为闪电网络节点打造的虚拟专用服务器，提供静态 IPv4 和 IPv6 地址、无限流量、允许使用 Tor 网络，无需身份验证。服务器位于都柏林、伦敦或魁北克。可直接使用闪电网络进行支付。"
+  },
+  "DlFmLA": {
+    "defaultMessage": "您本月的出站流量额度已用完。未对您的虚拟机采取任何措施——它未被限速、暂停，也不会因超额使用而收费——额度将于每月1日重置。"
   },
   "DnX0aY": {
     "defaultMessage": "确认删除"
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "此外，还可在 LNVPS 上找到。"
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} — {end} 协调世界时"
+  },
   "MJ2jZQ": {
     "defaultMessage": "总计"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到一个虚拟专用服务器（VPS）上，以进一步提升。"
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "不限量"
   },
   "Mp+zDS": {
     "defaultMessage": "此组件仅支持闪电网络支付。"
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "登录"
   },
+  "STWPnc": {
+    "defaultMessage": "出站"
+  },
   "SU1E+O": {
     "defaultMessage": "新秩序"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "已关闭自动续订功能。请在到期前手动续订，以避免服务中断。"
+  },
+  "Uw1G5p": {
+    "defaultMessage": "/ {allowance} 出站"
   },
   "V/V4bz": {
     "defaultMessage": "在爱尔兰都柏林提供 VPS 主机服务，起价为： {price} 不含增值税。您可以根据自己的需求配置。 {maxCpu} 虚拟 CPU。可通过闪电网络或直接链上支付比特币。"
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "付款；工资 {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "网络传输"
+  },
   "cyR7Kh": {
     "defaultMessage": "返回"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}已使用百分比"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "自动续订"
+  },
+  "evSskM": {
+    "defaultMessage": "该计划无转存限制。数字为当前自然月数据，并于每月1日重置。"
   },
   "exrlwL": {
     "defaultMessage": "使用小写字母、数字和连字符。这将成为您的子域名。"

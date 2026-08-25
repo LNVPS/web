@@ -22,7 +22,12 @@ import { Icon } from "./icon";
 
 export type BillingTone = "primary" | "warning" | "danger" | "muted";
 
-const TONE: Record<BillingTone, { pill: string; fill: string }> = {
+/**
+ * The tone classes every billing surface shares. Exported so a toned element
+ * that isn't a `StatusPill` (e.g. the transfer meter) mirrors these exact
+ * strings instead of hand-rolling its own.
+ */
+export const TONE: Record<BillingTone, { pill: string; fill: string }> = {
   primary: {
     pill: "text-cyber-primary border-cyber-primary/50 bg-cyber-primary/10",
     fill: "bg-cyber-primary",

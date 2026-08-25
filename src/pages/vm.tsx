@@ -8,6 +8,7 @@ import OsImageName from "../components/os-image-name";
 import OsImageIcon from "../components/os-image-icon";
 import OsImagePicker from "../components/os-image-picker";
 import BytesSize from "../components/bytes";
+import VmTrafficPanel from "../components/vm-traffic";
 import useLogin from "../hooks/login";
 import { useEffect, useState } from "react";
 import { AsyncButton } from "../components/button";
@@ -352,6 +353,14 @@ export default function VmPage() {
               </div>
             )}
           </SectionCard>
+
+          {state.traffic && (
+            <SectionCard
+              title={<FormattedMessage defaultMessage="Network transfer" />}
+            >
+              <VmTrafficPanel traffic={state.traffic} />
+            </SectionCard>
+          )}
 
           {(state.ip_assignments?.length ?? 0) > 0 && (
             <SectionCard

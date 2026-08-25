@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "Código postal *"
   },
+  "7CSemn": {
+    "defaultMessage": "La cuota solo cubre el tráfico saliente y se reinicia el día 1 de cada mes. El tráfico entrante se muestra solo como referencia y nunca se descuenta de la cuota."
+  },
   "7Cdpiv": {
     "defaultMessage": "Claves SSH"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "Inicie sesión para implementar esta aplicación."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} de entrada"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "Un servidor privado virtual (VPS) diseñado para un nodo de la red Lightning: dirección IPv4 e IPv6 estáticas, tráfico ilimitado, se permite el uso de Tor, sin necesidad de verificación de identidad. Ubicación en Dublín, Londres o Quebec. Pague directamente con la red Lightning."
+  },
+  "DlFmLA": {
+    "defaultMessage": "Has agotado tu cuota de datos salientes para este mes. No se ha realizado ninguna acción sobre tu VM: no está limitada, suspendida ni se ha realizado ningún cargo por el exceso, y la cuota se restablece el día 1."
   },
   "DnX0aY": {
     "defaultMessage": "Confirmar eliminación"
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "También disponible en LNVPS."
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} UTC"
+  },
   "MJ2jZQ": {
     "defaultMessage": "Total"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} en total. Para un servidor multimedia de uso personal, esto es suficiente; si necesita más capacidad, puede ampliarla instalando Route96 en un VPS."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "Sin límite"
   },
   "Mp+zDS": {
     "defaultMessage": "Este componente solo admite pagos con Lightning."
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "Iniciar sesión"
   },
+  "STWPnc": {
+    "defaultMessage": "de salida"
+  },
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "La renovación automática está desactivada. Para evitar interrupciones, renueve manualmente antes de la fecha de vencimiento."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "de {allowance} de salida"
   },
   "V/V4bz": {
     "defaultMessage": "Alojamiento VPS en Dublín, Irlanda, desde {price} precio sin IVA. Configure las especificaciones que desee. {maxCpu} vCPU. Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "Pago. {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "Transferencia de red"
+  },
   "cyR7Kh": {
     "defaultMessage": "Volver"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "No se encontraron entradas de historial para esta máquina virtual."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}% usado"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Renovación automática."
+  },
+  "evSskM": {
+    "defaultMessage": "Este plan no tiene límite de transferencia. Las cifras corresponden al mes calendario actual y se reinician el día 1."
   },
   "exrlwL": {
     "defaultMessage": "Letras minúsculas, números y guiones. Esto será tu subdominio."

@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "우편번호 *"
   },
+  "7CSemn": {
+    "defaultMessage": "할당량은 egress에만 적용되며 매월 1일에 초기화됩니다. ingress는 참고용으로 표시되며 할당량에서 차감되지 않습니다."
+  },
   "7Cdpiv": {
     "defaultMessage": "SSH 키"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "이 앱을 배포하려면 로그인하세요."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} 수신"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "라이트닝 노드에 최적화된 VPS입니다. 고정 IP 주소(IPv4 및 IPv6), 무제한 트래픽, 토르 네트워크 사용 허용, 개인 정보 확인 절차 불필요합니다. 서버 위치는 더블린, 런던 또는 퀘벡 중 선택할 수 있습니다. 라이트닝으로 직접 결제하세요."
+  },
+  "DlFmLA": {
+    "defaultMessage": "이번 달의 egress 허용량이 모두 사용되었습니다. VM에는 아무런 조치도 취해지지 않았습니다 — 속도 제한, 일시 정지, 초과분 과금도 이루어지지 않았으며 — 허용량은 1일에 초기화됩니다."
   },
   "DnX0aY": {
     "defaultMessage": "삭제를 확인합니다."
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "또한 LNVPS에서도 제공됩니다."
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} 협정 세계시"
+  },
   "MJ2jZQ": {
     "defaultMessage": "총계"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} 전체적으로 봤을 때입니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치하여 사용할 수 있는 VPS로 확장할 수 있습니다."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "무제한"
   },
   "Mp+zDS": {
     "defaultMessage": "이 구성 요소는 라이트닝 결제만 지원합니다."
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "로그인"
   },
+  "STWPnc": {
+    "defaultMessage": "송신"
+  },
   "SU1E+O": {
     "defaultMessage": "새로운 주문"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "자동 갱신 기능이 꺼져 있습니다. 서비스 중단을 피하려면 만료되기 전에 수동으로 갱신하세요."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "/ {allowance} 송신"
   },
   "V/V4bz": {
     "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price} 부가세 제외 가격입니다. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "지급하다 {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "네트워크 전송"
+  },
   "cyR7Kh": {
     "defaultMessage": "뒤로"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}사용률"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "자동으로 갱신"
+  },
+  "evSskM": {
+    "defaultMessage": "이 요금제에는 전송량 제한이 없습니다. 수치는 현재 달 기준이며, 매월 1일에 초기화됩니다."
   },
   "exrlwL": {
     "defaultMessage": "소문자, 숫자, 하이픈을 사용합니다. 이것이 귀하의 서브도메인이 됩니다."

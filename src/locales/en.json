@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "Postcode *"
   },
+  "7CSemn": {
+    "defaultMessage": "The allowance covers egress only and resets on the 1st of each month. Ingress is shown for reference and never counts against it."
+  },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "Log in to deploy this app."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} ingress"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "A VPS built for a Lightning node — static IPv4 and IPv6, unmetered traffic, Tor permitted, no KYC. Dublin, London or Quebec. Pay with Lightning itself."
+  },
+  "DlFmLA": {
+    "defaultMessage": "You have used your egress allowance for this month. Nothing has been done to your VM — it is not throttled, suspended or charged for the overage — and the allowance resets on the 1st."
   },
   "DnX0aY": {
     "defaultMessage": "Confirm delete"
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "Also on LNVPS"
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} UTC"
+  },
   "MJ2jZQ": {
     "defaultMessage": "Total"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "Unmetered"
   },
   "Mp+zDS": {
     "defaultMessage": "This component only supports Lightning payments"
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "Sign in"
   },
+  "STWPnc": {
+    "defaultMessage": "egress"
+  },
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "Automatic renewal is off. Renew manually before expiry to avoid interruption."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "of {allowance} egress"
   },
   "V/V4bz": {
     "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "Pay {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "Network transfer"
+  },
   "cyR7Kh": {
     "defaultMessage": "Back"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "No history entries found for this VM."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}% used"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Auto-renew"
+  },
+  "evSskM": {
+    "defaultMessage": "This plan has no transfer limit. Figures are for the current calendar month and reset on the 1st."
   },
   "exrlwL": {
     "defaultMessage": "Lowercase letters, digits and hyphens. Becomes your subdomain."

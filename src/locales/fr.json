@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "Code postal *"
   },
+  "7CSemn": {
+    "defaultMessage": "Le quota ne couvre que le trafic sortant et est réinitialisé le 1er de chaque mois. Le trafic entrant est affiché à titre indicatif et n'est jamais déduit de ce quota."
+  },
   "7Cdpiv": {
     "defaultMessage": "Clés SSH"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "Connectez-vous pour déployer cette application."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} en entrée"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "Un serveur virtuel privé (VPS) conçu pour un nœud Lightning : adresse IPv4 et IPv6 statiques, bande passante illimitée, utilisation de Tor autorisée, pas d’exigences en matière de vérification d’identité. Localisation à Dublin, Londres ou Québec. Paiement possible directement avec Lightning."
+  },
+  "DlFmLA": {
+    "defaultMessage": "Vous avez utilisé votre quota de trafic sortant pour ce mois-ci. Aucune mesure n'a été prise sur votre machine virtuelle — elle n'est ni bridée, ni suspendue, ni facturée pour le dépassement — et le quota se réinitialise le 1er."
   },
   "DnX0aY": {
     "defaultMessage": "Confirmer la suppression."
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "Également disponible sur LNVPS."
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} UTC"
+  },
   "MJ2jZQ": {
     "defaultMessage": "Total"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} au total. Pour un serveur multimédia personnel, c’est suffisant ; si vous avez besoin de plus de ressources, vous pouvez installer Route96 sur un VPS et augmenter la capacité en fonction de vos besoins."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "Illimité"
   },
   "Mp+zDS": {
     "defaultMessage": "Ce composant prend en charge uniquement les paiements Lightning."
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "Se connecter"
   },
+  "STWPnc": {
+    "defaultMessage": "en sortie"
+  },
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "Le renouvellement automatique est désactivé. Renouvelez manuellement avant la date d’expiration pour éviter toute interruption."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "sur {allowance} en sortie"
   },
   "V/V4bz": {
     "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de : {price} hors TVA. Configurez votre modèle personnalisé jusqu’à… {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "Salaire {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "Transfert réseau"
+  },
   "cyR7Kh": {
     "defaultMessage": "Retour"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "Aucune entrée d’historique n’a été trouvée pour cette machine virtuelle."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}% utilisé"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Renouvellement automatique"
+  },
+  "evSskM": {
+    "defaultMessage": "Ce forfait n'a aucune limite de transfert. Les chiffres correspondent au mois civil en cours et sont réinitialisés le 1er."
   },
   "exrlwL": {
     "defaultMessage": "Utilisez des lettres minuscules, des chiffres et des tirets. Cela deviendra votre sous-domaine."

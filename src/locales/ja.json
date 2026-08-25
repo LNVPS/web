@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "郵便番号 *"
   },
+  "7CSemn": {
+    "defaultMessage": "この利用枠はegress（送信）のみを対象とし、毎月1日にリセットされます。ingress（受信）は参考のため表示されるだけで、利用枠にカウントされません。"
+  },
   "7Cdpiv": {
     "defaultMessage": "SSHキー"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "このアプリを公開するには、ログインしてください。"
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} 受信"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "ライトニングネットワークのノード用に構築されたVPSです。固定IPアドレス（IPv4およびIPv6）、無制限のトラフィック、Torの使用許可、本人確認不要。サーバーの所在地はダブリン、ロンドン、またはケベックから選択できます。支払いにはライトニングネットワーク自体を使用します。"
+  },
+  "DlFmLA": {
+    "defaultMessage": "今月の送信トラフィック枠を使い切りました。あなたのVMには何も影響はありません。スロットリング、停止、超過分の請求は行われておらず、枠は1日にリセットされます。"
   },
   "DnX0aY": {
     "defaultMessage": "削除を確定します。"
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "また、LNVPSでも。"
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} ― {end} 協定世界時"
+  },
   "MJ2jZQ": {
     "defaultMessage": "合計"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} 合計で。快適なパーソナルメディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用すれば、さらに拡張できます。"
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "無制限"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "サインイン"
   },
+  "STWPnc": {
+    "defaultMessage": "送信"
+  },
   "SU1E+O": {
     "defaultMessage": "ニュー・オーダー"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "自動更新はオフになっています。サービスが中断されないように、有効期限が切れる前に手動で更新してください。"
+  },
+  "Uw1G5p": {
+    "defaultMessage": "/ {allowance} 送信"
   },
   "V/V4bz": {
     "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービス {price} 消費税抜き。お客様のニーズに合わせて仕様を自由にカスタマイズできます。 {maxCpu} 仮想CPU。ライトニングネットワークまたはオンチェーンでビットコインを使ってお支払いください。"
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "支払い {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "ネットワーク転送"
+  },
   "cyR7Kh": {
     "defaultMessage": "戻る"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}使用率"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "自動更新"
+  },
+  "evSskM": {
+    "defaultMessage": "このプランには転送上限はありません。数値は現在の暦月のもので、1日にリセットされます。"
   },
   "exrlwL": {
     "defaultMessage": "小文字、数字、ハイフンを使用します。これがあなたのサブドメインになります。"

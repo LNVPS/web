@@ -356,6 +356,9 @@
   "78fz1O": {
     "defaultMessage": "Postleitzahl *"
   },
+  "7CSemn": {
+    "defaultMessage": "Das Kontingent gilt nur für ausgehenden Datenverkehr und wird am 1. eines jeden Monats zurückgesetzt. Eingehender Datenverkehr wird nur zu Referenzzwecken angezeigt und wird nie darauf angerechnet."
+  },
   "7Cdpiv": {
     "defaultMessage": "SSH-Schlüssel"
   },
@@ -599,6 +602,9 @@
   "Cououe": {
     "defaultMessage": "Melden Sie sich an, um diese App zu installieren."
   },
+  "Ct2oqQ": {
+    "defaultMessage": "· {bytes} eingehend"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -646,6 +652,9 @@
   },
   "DjPPFA": {
     "defaultMessage": "Ein VPS, das speziell für einen Lightning-Knoten entwickelt wurde – statische IPv4- und IPv6-Adressen, unbegrenztes Datenvolumen, Nutzung von Tor erlaubt, keine KYC-Anforderungen. Standorte: Dublin, London oder Québec. Bezahlung mit Lightning selbst möglich."
+  },
+  "DlFmLA": {
+    "defaultMessage": "Sie haben Ihr Egress-Kontingent für diesen Monat aufgebraucht. An Ihrer VM wurde keine Maßnahme ergriffen – sie wird weder gedrosselt, ausgesetzt noch für die Überschreitung berechnet – und das Kontingent wird am 1. zurückgesetzt."
   },
   "DnX0aY": {
     "defaultMessage": "Löschen bestätigen"
@@ -998,6 +1007,9 @@
   "LwGAe6": {
     "defaultMessage": "Ebenfalls auf LNVPS."
   },
+  "ME4cI7": {
+    "defaultMessage": "{start} – {end} UTC"
+  },
   "MJ2jZQ": {
     "defaultMessage": "Gesamt"
   },
@@ -1006,6 +1018,9 @@
   },
   "MfiEGP": {
     "defaultMessage": "{storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
+  },
+  "Mfs5Nm": {
+    "defaultMessage": "Unbegrenzt"
   },
   "Mp+zDS": {
     "defaultMessage": "Diese Komponente unterstützt ausschließlich Lightning-Zahlungen."
@@ -1220,6 +1235,9 @@
   "SQJto2": {
     "defaultMessage": "Anmelden"
   },
+  "STWPnc": {
+    "defaultMessage": "ausgehend"
+  },
   "SU1E+O": {
     "defaultMessage": "New Order"
   },
@@ -1372,6 +1390,9 @@
   },
   "Uvhzx4": {
     "defaultMessage": "Die automatische Verlängerung ist deaktiviert. Bitte verlängern Sie die Mitgliedschaft manuell, bevor sie ausläuft, um eine Unterbrechung zu vermeiden."
+  },
+  "Uw1G5p": {
+    "defaultMessage": "von {allowance} ausgehend"
   },
   "V/V4bz": {
     "defaultMessage": "VPS-Hosting in Dublin, Irland, ab {price} zzgl. Mehrwertsteuer. Stellen Sie Ihre eigene Konfiguration zusammen, bis zu {maxCpu} vCPU. Zahlung in Bitcoin per Lightning Network oder direkt auf der Blockchain möglich."
@@ -1673,6 +1694,9 @@
   "ciFSHC": {
     "defaultMessage": "Bezahlung {amount}"
   },
+  "ckx15w": {
+    "defaultMessage": "Netzwerktransfer"
+  },
   "cyR7Kh": {
     "defaultMessage": "Zurück"
   },
@@ -1736,6 +1760,9 @@
   "duElEE": {
     "defaultMessage": "Für diese virtuelle Maschine wurden keine Verlaufseinträge gefunden."
   },
+  "dz7KXz": {
+    "defaultMessage": "{pct}% verwendet"
+  },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
@@ -1777,6 +1804,9 @@
   },
   "evMlX9": {
     "defaultMessage": "Automatische Verlängerung"
+  },
+  "evSskM": {
+    "defaultMessage": "Dieser Tarif hat kein Transferlimit. Die Angaben gelten für den aktuellen Kalendermonat und werden am 1. zurückgesetzt."
   },
   "exrlwL": {
     "defaultMessage": "Kleinbuchstaben, Ziffern und Bindestriche. Dies wird Ihre Subdomain."

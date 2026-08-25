@@ -353,9 +353,6 @@
   "6uMqL1": {
     "defaultMessage": "Unpaid"
   },
-  "6vjF8Q": {
-    "defaultMessage": "Bandwidth"
-  },
   "7+Domh": {
     "defaultMessage": "Notes"
   },
@@ -373,9 +370,6 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
-  },
-  "7DObFu": {
-    "defaultMessage": "Disk IOPS"
   },
   "7EjXDp": {
     "defaultMessage": "Shared workspaces for people and agents"
@@ -418,6 +412,9 @@
   },
   "7v5vj0": {
     "defaultMessage": "Host your own media server — {price} a month"
+  },
+  "7vweDH": {
+    "defaultMessage": "{n} disk IOPS"
   },
   "7wbySo": {
     "defaultMessage": "Send us a message directly and the team will get back to you."
@@ -682,9 +679,6 @@
   },
   "DpNZQY": {
     "defaultMessage": "Processing fee"
-  },
-  "DtYelJ": {
-    "defaultMessage": "Transfer"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1868,6 +1862,9 @@
   "fNZGof": {
     "defaultMessage": "VPS hosting in London from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
+  "fbHyzc": {
+    "defaultMessage": "{n} MB/s disk"
+  },
   "fblXmJ": {
     "defaultMessage": "Instance name"
   },
@@ -2372,9 +2369,6 @@
   "rieTwF": {
     "defaultMessage": "Expired on"
   },
-  "rlfZ2s": {
-    "defaultMessage": "Firewall rules"
-  },
   "rneMhE": {
     "defaultMessage": "Deploy Route96"
   },
@@ -2429,17 +2423,11 @@
   "srgk8m": {
     "defaultMessage": "Sets the currency used for the quote and payment."
   },
-  "svg9Ub": {
-    "defaultMessage": "CPU limit"
-  },
   "sx6MYT": {
     "defaultMessage": "The agent can't extend, refund or delete a VM, and it can't act on an account it isn't logged into. For those, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Email"
-  },
-  "tFWVr1": {
-    "defaultMessage": "Disk throughput"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} storage"
@@ -2543,6 +2531,9 @@
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
   },
+  "v85Sy5": {
+    "defaultMessage": "{read} read / {write} write MB/s disk"
+  },
   "vONi+O": {
     "defaultMessage": "Country"
   },
@@ -2566,6 +2557,9 @@
   },
   "vuTMNa": {
     "defaultMessage": "Personal vault-style relay, with its own Blossom media store"
+  },
+  "vvE1WZ": {
+    "defaultMessage": "{n} firewall rules"
   },
   "vy2rlX": {
     "defaultMessage": "Processing fee:"

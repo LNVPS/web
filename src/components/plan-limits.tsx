@@ -17,7 +17,14 @@ import {
  * callers drop their own heading with `hasPlanLimits`.
  */
 
-function LimitValue({ row }: { row: PlanLimitRow }) {
+function LimitValue({
+  row,
+  labelled,
+}: {
+  row: PlanLimitRow;
+  /** Chained-line variant: values carry their own noun, since no label sits beside them. */
+  labelled?: boolean;
+}) {
   const intl = useIntl();
   const n = (v: number) => intl.formatNumber(v);
 
@@ -38,7 +45,12 @@ function LimitValue({ row }: { row: PlanLimitRow }) {
       );
     case "diskIops":
       if (row.symmetric && row.read !== undefined) {
-        return (
+        return labelled ? (
+          <FormattedMessage
+            defaultMessage="{n} disk IOPS"
+            values={{ n: n(row.read) }}
+          />
+        ) : (
           <FormattedMessage
             defaultMessage="{n} IOPS"
             values={{ n: n(row.read) }}
@@ -56,14 +68,27 @@ function LimitValue({ row }: { row: PlanLimitRow }) {
       );
     case "diskThroughput":
       if (row.symmetric && row.read !== undefined) {
-        return (
+        return labelled ? (
+          <FormattedMessage
+            defaultMessage="{n} MB/s disk"
+            values={{ n: n(row.read) }}
+          />
+        ) : (
           <FormattedMessage
             defaultMessage="{n} MB/s"
             values={{ n: n(row.read) }}
           />
         );
       }
-      return (
+      return labelled ? (
+        <FormattedMessage
+          defaultMessage="{read} read / {write} write MB/s disk"
+          values={{
+            read: row.read !== undefined ? n(row.read) : "∞",
+            write: row.write !== undefined ? n(row.write) : "∞",
+          }}
+        />
+      ) : (
         <FormattedMessage
           defaultMessage="{read} read / {write} write MB/s"
           values={{
@@ -85,7 +110,12 @@ function LimitValue({ row }: { row: PlanLimitRow }) {
         />
       );
     case "firewallRules":
-      return (
+      return labelled ? (
+        <FormattedMessage
+          defaultMessage="{n} firewall rules"
+          values={{ n: n(row.max) }}
+        />
+      ) : (
         <FormattedMessage
           defaultMessage="{n} rules"
           values={{ n: n(row.max) }}
@@ -94,24 +124,12 @@ function LimitValue({ row }: { row: PlanLimitRow }) {
   }
 }
 
-function LimitLabel({ kind }: { kind: PlanLimitRow["kind"] }) {
-  switch (kind) {
-    case "network":
-      return <FormattedMessage defaultMessage="Bandwidth" />;
-    case "transfer":
-      return <FormattedMessage defaultMessage="Transfer" />;
-    case "diskIops":
-      return <FormattedMessage defaultMessage="Disk IOPS" />;
-    case "diskThroughput":
-      return <FormattedMessage defaultMessage="Disk throughput" />;
-    case "cpuLimit":
-      return <FormattedMessage defaultMessage="CPU limit" />;
-    case "firewallRules":
-      return <FormattedMessage defaultMessage="Firewall rules" />;
-  }
-}
-
-/** Full cap list for the order page and the custom builder. */
+/**
+ * Full cap list for the order page and the custom builder, chained onto one
+ * dense line like the CPU/RAM/disk/IP specification line: label columns turned
+ * three or four short figures into a block that read heavier than the
+ * specification it qualifies.
+ */
 export default function PlanLimits({
   limits,
   transferGb,
@@ -124,19 +142,14 @@ export default function PlanLimits({
 
   return (
     <div className="flex flex-col gap-1.5">
-      {rows.map((row) => (
-        <div
-          key={row.kind}
-          className="flex items-baseline justify-between gap-3 text-xs"
-        >
-          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
-            <LimitLabel kind={row.kind} />
+      <div className="font-mono text-xs text-cyber-text-bright tabular-nums">
+        {rows.map((row, i) => (
+          <span key={row.kind}>
+            {i > 0 && " · "}
+            <LimitValue row={row} labelled />
           </span>
-          <span className="text-cyber-text-bright tabular-nums">
-            <LimitValue row={row} />
-          </span>
-        </div>
-      ))}
+        ))}
+      </div>
       {rows.some((r) => r.kind === "cpuLimit") && (
         <div className="text-[0.65rem] text-cyber-muted">
           <FormattedMessage defaultMessage="The CPU limit is a share of the cores listed above, not a smaller machine." />

@@ -5,6 +5,8 @@ import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
 import { AsyncButton } from "../../components/button";
 import VpsResources from "../../components/vps-resources";
+import PlanLimits from "../../components/plan-limits";
+import { hasPlanLimits } from "../../utils/plan-limits";
 import OsImagePicker from "../../components/os-image-picker";
 import { sortOsImages } from "../../os-images";
 import SSHKeySelector from "../../components/ssh-keys";
@@ -28,9 +30,7 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
   useEffect(() => {
     const api = new LNVpsApi(ApiUrl, undefined);
     api
-      .listOsImages(
-        templateArch !== CpuArch.UNKNOWN ? templateArch : undefined,
-      )
+      .listOsImages(templateArch !== CpuArch.UNKNOWN ? templateArch : undefined)
       .then((a) => {
         setImages(a);
         // Auto-select the first image in the canonical order.
@@ -100,6 +100,21 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
           />
         )}
       </div>
+      {/* What the plan caps, before the customer commits — the disk and
+          bandwidth limits are enforced on the hypervisor and are not
+          discoverable from the specification line above. Hidden entirely when
+          the plan caps nothing, which is every plan today. */}
+      {hasPlanLimits(template.limits, template.transfer_gb) && (
+        <div className="rounded-sm bg-cyber-panel px-4 py-3 flex flex-col gap-2">
+          <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-primary">
+            <FormattedMessage defaultMessage="Performance" />
+          </span>
+          <PlanLimits
+            limits={template.limits}
+            transferGb={template.transfer_gb}
+          />
+        </div>
+      )}
       <hr />
       {login && (
         <>

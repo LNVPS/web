@@ -293,8 +293,14 @@
   "556JQK": {
     "defaultMessage": "Deploy"
   },
+  "5PalnH": {
+    "defaultMessage": "{mbps} Mbit/s"
+  },
   "5QYdPU": {
     "defaultMessage": "Start Time"
+  },
+  "5Sdgxl": {
+    "defaultMessage": "{read} read / {write} write MB/s"
   },
   "5VEOig": {
     "defaultMessage": "Cost at new rate for remaining time:"
@@ -347,8 +353,14 @@
   "6uMqL1": {
     "defaultMessage": "Unpaid"
   },
+  "6vjF8Q": {
+    "defaultMessage": "Bandwidth"
+  },
   "7+Domh": {
     "defaultMessage": "Notes"
+  },
+  "712uYy": {
+    "defaultMessage": "{n} rules"
   },
   "78CCi1": {
     "defaultMessage": "{n, plural, one {# min} other {# mins}}"
@@ -361,6 +373,9 @@
   },
   "7Cdpiv": {
     "defaultMessage": "SSH Keys"
+  },
+  "7DObFu": {
+    "defaultMessage": "Disk IOPS"
   },
   "7EjXDp": {
     "defaultMessage": "Shared workspaces for people and agents"
@@ -440,6 +455,9 @@
   "8Q504V": {
     "defaultMessage": "Metadata"
   },
+  "8QVkO9": {
+    "defaultMessage": "Only egress counts against the transfer allowance, and exceeding it does not throttle or suspend the VM."
+  },
   "8X6Kwp": {
     "defaultMessage": "Next payment"
   },
@@ -499,6 +517,9 @@
   },
   "A7Mqan": {
     "defaultMessage": "Loading renewal…"
+  },
+  "AA5h7P": {
+    "defaultMessage": "Performance"
   },
   "ABL6b+": {
     "defaultMessage": "Turn your code into commission"
@@ -662,6 +683,9 @@
   "DpNZQY": {
     "defaultMessage": "Processing fee"
   },
+  "DtYelJ": {
+    "defaultMessage": "Transfer"
+  },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
@@ -799,6 +823,9 @@
   },
   "GlTZFC": {
     "defaultMessage": "Share this link. You earn a commission when someone signs up and their VM makes its first payment."
+  },
+  "GoW0ua": {
+    "defaultMessage": "{size} egress per month"
   },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
@@ -1583,6 +1610,12 @@
   "ZmOSyB": {
     "defaultMessage": "Get in touch with the LNVPS team. Have questions about our VPS hosting or payment options? We're here to help."
   },
+  "ZoMETF": {
+    "defaultMessage": "The CPU limit is a share of the cores listed above, not a smaller machine."
+  },
+  "ZqqwZc": {
+    "defaultMessage": "{n} IOPS"
+  },
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
   },
@@ -1630,6 +1663,9 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Overall Uptime: {uptime}"
+  },
+  "bKuAdU": {
+    "defaultMessage": "{pct} of allocated cores"
   },
   "bMQUWl": {
     "defaultMessage": "Source CIDR (this VM)"
@@ -2039,6 +2075,9 @@
   "kSjQ3a": {
     "defaultMessage": "by {initiatedBy}"
   },
+  "kZ0qJu": {
+    "defaultMessage": "{read} read / {write} write IOPS"
+  },
   "kesoZ1": {
     "defaultMessage": "We run our own Lightning node. Your sats do not route through a third-party processor."
   },
@@ -2279,6 +2318,9 @@
   "phIEA8": {
     "defaultMessage": "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
   },
+  "plUWdh": {
+    "defaultMessage": "{n} MB/s"
+  },
   "ps4K9r": {
     "defaultMessage": "What is Blossom?"
   },
@@ -2329,6 +2371,9 @@
   },
   "rieTwF": {
     "defaultMessage": "Expired on"
+  },
+  "rlfZ2s": {
+    "defaultMessage": "Firewall rules"
   },
   "rneMhE": {
     "defaultMessage": "Deploy Route96"
@@ -2384,11 +2429,17 @@
   "srgk8m": {
     "defaultMessage": "Sets the currency used for the quote and payment."
   },
+  "svg9Ub": {
+    "defaultMessage": "CPU limit"
+  },
   "sx6MYT": {
     "defaultMessage": "The agent can't extend, refund or delete a VM, and it can't act on an account it isn't logged into. For those, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Email"
+  },
+  "tFWVr1": {
+    "defaultMessage": "Disk throughput"
   },
   "tG2iXV": {
     "defaultMessage": "{min}–{max} {type} storage"

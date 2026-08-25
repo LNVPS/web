@@ -1,5 +1,6 @@
 import { CpuArch, CpuMfg, VmTemplate } from "../api";
 import BytesSize from "./bytes";
+import { PlanLimitsInline } from "./plan-limits";
 import CostLabel from "./cost";
 import { useNavigateOrder } from "../hooks/order";
 import { AsyncButton } from "./button";
@@ -80,9 +81,14 @@ export function VpsPlanCard({ spec }: { spec: VmTemplate }) {
           {spec.region?.name}
         </span>
       </div>
-      <div className="px-4 py-3 font-mono text-xs text-cyber-text tabular-nums">
-        {spec.cpu} vCPU{cpuInfo && ` (${cpuInfo})`} · <BytesSize value={spec.memory} />{" "}
-        RAM · <BytesSize value={spec.disk_size} /> {spec.disk_type.toUpperCase()}
+      <div className="flex flex-col gap-1 px-4 py-3">
+        <div className="font-mono text-xs text-cyber-text tabular-nums">
+          {spec.cpu} vCPU{cpuInfo && ` (${cpuInfo})`} ·{" "}
+          <BytesSize value={spec.memory} /> RAM ·{" "}
+          <BytesSize value={spec.disk_size} /> {spec.disk_type.toUpperCase()}
+        </div>
+        {/* Renders nothing while every plan is uncapped. */}
+        <PlanLimitsInline limits={spec.limits} transferGb={spec.transfer_gb} />
       </div>
       <div className="flex items-center justify-between gap-3 border-t border-cyber-border bg-cyber-panel-light px-4 py-3">
         <div className="text-xl leading-none text-cyber-text-bright">
@@ -134,7 +140,10 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
       <td>{spec.region?.name}</td>
       <td className="text-cyber-accent">
         {spec.cost_plan && (
-          <CostLabel cost={spec.cost_plan} companyId={spec.region?.company_id} />
+          <CostLabel
+            cost={spec.cost_plan}
+            companyId={spec.region?.company_id}
+          />
         )}
       </td>
       <td>

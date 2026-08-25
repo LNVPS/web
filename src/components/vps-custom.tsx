@@ -15,6 +15,8 @@ import {
 import { ApiUrl, GiB } from "../const";
 import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
+import PlanLimits from "./plan-limits";
+import { formatPortSpeed, hasPlanLimits } from "../utils/plan-limits";
 import { FilterButton } from "./button-filter";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -96,7 +98,9 @@ function diskRank(type: DiskType): number {
 function sortDisks(
   disks: Array<VmCustomTemplateDiskParams>,
 ): Array<VmCustomTemplateDiskParams> {
-  return [...disks].sort((a, b) => diskRank(a.disk_type) - diskRank(b.disk_type));
+  return [...disks].sort(
+    (a, b) => diskRank(a.disk_type) - diskRank(b.disk_type),
+  );
 }
 
 function preferredDisk(
@@ -299,6 +303,9 @@ export function VpsCustomOrder({
   if (templates.length == 0) return;
 
   const diskUnit = `GB ${diskType?.disk_type.toUpperCase() ?? "SSD"}`;
+  // Absent on an uncapped plan, in which case the manifest simply omits it
+  // rather than claiming a speed the API does not state.
+  const portSpeed = formatPortSpeed(params.limits?.network_mbps);
 
   return (
     <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
@@ -452,6 +459,21 @@ export function VpsCustomOrder({
             />
           )}
         </div>
+
+        {/* Caps apply to every build from this plan whatever the sliders say,
+            so they sit outside the selectable resources. Nothing is rendered
+            when the plan caps nothing. */}
+        {hasPlanLimits(params.limits, params.transfer_gb) && (
+          <div className="flex flex-col gap-2 border-t border-cyber-border pt-3">
+            <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+              <FormattedMessage defaultMessage="Performance" />
+            </span>
+            <PlanLimits
+              limits={params.limits}
+              transferGb={params.transfer_gb}
+            />
+          </div>
+        )}
       </div>
 
       {/* Summary footer: live build manifest + price + buy */}
@@ -459,11 +481,15 @@ export function VpsCustomOrder({
         <div className="flex flex-col gap-0.5">
           <div className="font-mono text-xs text-cyber-muted tabular-nums">
             {cpu} vCPU · {ram} GB · {disk} {diskUnit} · {ip4} IPv4
-            {ip6 > 0 && ` + ${ip6} IPv6`} @ {params.region.name}
+            {ip6 > 0 && ` + ${ip6} IPv6`}
+            {portSpeed && ` · ${portSpeed} port`} @ {params.region.name}
           </div>
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
-              <CostLabel cost={cost_plan} companyId={params.region.company_id} />
+              <CostLabel
+                cost={cost_plan}
+                companyId={params.region.company_id}
+              />
             </div>
           )}
         </div>
@@ -483,6 +509,10 @@ export function VpsCustomOrder({
               created: new Date().toISOString(),
               region: params.region,
               cost_plan,
+              // Copied onto the VM at order time, so the confirmation page
+              // states the same caps the built machine will run under.
+              transfer_gb: params.transfer_gb,
+              limits: params.limits,
             }}
           />
         </div>

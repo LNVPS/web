@@ -314,6 +314,46 @@ export interface VmCustomTemplateParams {
   min_ip6: number;
   max_ip6: number;
   disks: Array<VmCustomTemplateDiskParams>;
+  /** Allowance copied onto every custom VM from this plan; absent = unmetered. */
+  transfer_gb?: number;
+  /**
+   * Caps applied to every custom VM built from this plan, whatever
+   * specification is chosen. Not selectable. Never carries
+   * `firewall_rule_limit` — a pricing plan holds none.
+   */
+  limits?: VmTemplateLimits;
+}
+
+/**
+ * The performance caps an offer carries, as enforced on the hypervisor.
+ *
+ * **A field is absent when uncapped**, so `{}` means a VM on this offer is
+ * bounded only by the hardware it lands on — which is what every current offer
+ * returns. Never render an absent field as 0.
+ *
+ * These describe the *offer*, not a host: two hosts backing the same plan are
+ * deliberately indistinguishable to the buyer, and no host figure is exposed.
+ */
+export interface VmTemplateLimits {
+  /** Max disk read IOPS. */
+  disk_iops_read?: number;
+  /** Max disk write IOPS. */
+  disk_iops_write?: number;
+  /** Max disk read throughput, MB/s. */
+  disk_mbps_read?: number;
+  /** Max disk write throughput, MB/s. */
+  disk_mbps_write?: number;
+  /** Max network bandwidth in Mbit/s, applied in each direction. This is a
+   *  rate; the monthly volume is `transfer_gb`. */
+  network_mbps?: number;
+  /**
+   * Fraction of the cores in `cpu` the guest may actually use (0.5 = half).
+   * Not a replacement for `cpu`: a 4-core offer capped at 0.5 still presents
+   * four cores. Showing `cpu` without this overstates the plan.
+   */
+  cpu_limit?: number;
+  /** Max user firewall rules per VM; absent means the server default. */
+  firewall_rule_limit?: number;
 }
 
 export interface VmCustomTemplateDiskParams {
@@ -367,6 +407,8 @@ export interface VmTemplate {
    * unmetered, which every current plan is — render "unmetered", never 0.
    */
   transfer_gb?: number;
+  /** Performance caps enforced on a VM built from this offer. */
+  limits?: VmTemplateLimits;
   cost_plan: VmCostPlan;
   region: VmHostRegion;
 }

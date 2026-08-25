@@ -158,65 +158,70 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
       <SpecSheet template={template} />
 
       {login ? (
-        <div className="flex flex-col">
+        <>
+          {/* Outside the numbered sequence: it blocks the order rather than
+              being a step of it, and inside the list it butted against the
+              first step's marker with no room of its own. */}
           <EmailVerification />
-          <Step
-            index={1}
-            title={<FormattedMessage defaultMessage="Operating system" />}
-            done={useImage !== -1}
-            choice={chosenImage && <OsImageName image={chosenImage} />}
-          >
-            <OsImagePicker
-              images={images}
-              selected={useImage}
-              onSelect={setUseImage}
-            />
-          </Step>
-          <Step
-            index={2}
-            title={<FormattedMessage defaultMessage="SSH key" />}
-            done={useSshKey !== -1}
-          >
-            <SSHKeySelector
-              selectedKey={useSshKey}
-              setSelectedKey={setUseSshKey}
-              hideLabel
-            />
-          </Step>
-          <Step
-            index={3}
-            title={<FormattedMessage defaultMessage="Launch" />}
-            done={ready}
-            last
-          >
-            <div className="flex flex-col gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-[0.6rem] uppercase tracking-[0.2em] text-cyber-muted">
-                  <FormattedMessage defaultMessage="First payment" />
-                </span>
-                {template.cost_plan && (
-                  <span className="text-xl leading-none text-cyber-text-bright">
-                    <CostLabel
-                      cost={template.cost_plan}
-                      companyId={template.region?.company_id}
-                    />
+          <div className="flex flex-col">
+            <Step
+              index={1}
+              title={<FormattedMessage defaultMessage="Operating system" />}
+              done={useImage !== -1}
+              choice={chosenImage && <OsImageName image={chosenImage} />}
+            >
+              <OsImagePicker
+                images={images}
+                selected={useImage}
+                onSelect={setUseImage}
+              />
+            </Step>
+            <Step
+              index={2}
+              title={<FormattedMessage defaultMessage="SSH key" />}
+              done={useSshKey !== -1}
+            >
+              <SSHKeySelector
+                selectedKey={useSshKey}
+                setSelectedKey={setUseSshKey}
+                hideLabel
+              />
+            </Step>
+            <Step
+              index={3}
+              title={<FormattedMessage defaultMessage="Launch" />}
+              done={ready}
+              last
+            >
+              <div className="flex flex-col gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[0.6rem] uppercase tracking-[0.2em] text-cyber-muted">
+                    <FormattedMessage defaultMessage="First payment" />
                   </span>
-                )}
-                <span className="text-[0.65rem] text-cyber-muted">
-                  <FormattedMessage defaultMessage="Pay on the next screen. The machine boots once the payment confirms." />
-                </span>
+                  {template.cost_plan && (
+                    <span className="text-xl leading-none text-cyber-text-bright">
+                      <CostLabel
+                        cost={template.cost_plan}
+                        companyId={template.region?.company_id}
+                      />
+                    </span>
+                  )}
+                  <span className="text-[0.65rem] text-cyber-muted">
+                    <FormattedMessage defaultMessage="Pay on the next screen. The machine boots once the payment confirms." />
+                  </span>
+                </div>
+                <AsyncButton
+                  className="sm:w-56"
+                  disabled={!ready}
+                  onClick={createOrder}
+                >
+                  <FormattedMessage defaultMessage="Create Order" />
+                </AsyncButton>
               </div>
-              <AsyncButton
-                className="sm:w-56"
-                disabled={!ready}
-                onClick={createOrder}
-              >
-                <FormattedMessage defaultMessage="Create Order" />
-              </AsyncButton>
-            </div>
-            {orderError && <b className="text-cyber-danger">{orderError}</b>}
-          </Step>
-        </div>
+              {orderError && <b className="text-cyber-danger">{orderError}</b>}
+            </Step>
+          </div>
+        </>
       ) : (
         <div className="rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 text-xs text-cyber-muted">
           <FormattedMessage defaultMessage="Sign in to pick an operating system and an SSH key for this machine." />

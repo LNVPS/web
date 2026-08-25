@@ -125,9 +125,6 @@
   "1HKX0H": {
     "defaultMessage": "Yes — Lightning or on-chain. Renewal is monthly."
   },
-  "1KxVCI": {
-    "defaultMessage": "{read} read / {write} write"
-  },
   "1LBny5": {
     "defaultMessage": "Stopped"
   },
@@ -302,12 +299,6 @@
   "556JQK": {
     "defaultMessage": "Deploy"
   },
-  "5KN8U6": {
-    "defaultMessage": "{ip4, plural, one {one IPv4 address} other {# IPv4 addresses}}"
-  },
-  "5PalnH": {
-    "defaultMessage": "{mbps} Mbit/s"
-  },
   "5QYdPU": {
     "defaultMessage": "Start Time"
   },
@@ -347,9 +338,6 @@
   "6axKu6": {
     "defaultMessage": "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card."
   },
-  "6e0ClM": {
-    "defaultMessage": "Included addresses and monthly transfer allowances are listed with each plan."
-  },
   "6hEevT": {
     "defaultMessage": "Set default"
   },
@@ -367,9 +355,6 @@
   },
   "7+Domh": {
     "defaultMessage": "Notes"
-  },
-  "712uYy": {
-    "defaultMessage": "{n} rules"
   },
   "78CCi1": {
     "defaultMessage": "{n, plural, one {# min} other {# mins}}"
@@ -425,9 +410,6 @@
   "7v5vj0": {
     "defaultMessage": "Host your own media server — {price} a month"
   },
-  "7vweDH": {
-    "defaultMessage": "{n} disk IOPS"
-  },
   "7wbySo": {
     "defaultMessage": "Send us a message directly and the team will get back to you."
   },
@@ -464,9 +446,6 @@
   "8Q504V": {
     "defaultMessage": "Metadata"
   },
-  "8QVkO9": {
-    "defaultMessage": "Only egress counts against the transfer allowance, and exceeding it does not throttle or suspend the VM."
-  },
   "8X6Kwp": {
     "defaultMessage": "Next payment"
   },
@@ -478,9 +457,6 @@
   },
   "8ecw1u": {
     "defaultMessage": "Handles"
-  },
-  "8jINRO": {
-    "defaultMessage": "Every plan includes unmetered traffic."
   },
   "8lCjAM": {
     "defaultMessage": "Priority"
@@ -842,9 +818,6 @@
   "GlTZFC": {
     "defaultMessage": "Share this link. You earn a commission when someone signs up and their VM makes its first payment."
   },
-  "GoW0ua": {
-    "defaultMessage": "{size} egress per month"
-  },
   "GqRat5": {
     "defaultMessage": "Please verify your email address to complete your order."
   },
@@ -947,9 +920,6 @@
   "JBWS0c": {
     "defaultMessage": "Link"
   },
-  "JElq+X": {
-    "defaultMessage": "Every plan includes {ips} and unmetered traffic."
-  },
   "JH4wUD": {
     "defaultMessage": "Saved ✓"
   },
@@ -1033,9 +1003,6 @@
   },
   "LR754a": {
     "defaultMessage": "Renews at"
-  },
-  "LTw4Vy": {
-    "defaultMessage": "Every plan includes {ips}, plus {size} of outbound transfer per month."
   },
   "LX6weZ": {
     "defaultMessage": "Pending payment"
@@ -1472,9 +1439,6 @@
   "VrBNV4": {
     "defaultMessage": "First payment"
   },
-  "Vs+JtR": {
-    "defaultMessage": "{read} read / {write} write disk"
-  },
   "VtKAyJ": {
     "defaultMessage": "{count} / {max} rules"
   },
@@ -1637,12 +1601,6 @@
   "ZmOSyB": {
     "defaultMessage": "Get in touch with the LNVPS team. Have questions about our VPS hosting or payment options? We're here to help."
   },
-  "ZoMETF": {
-    "defaultMessage": "The CPU limit is a share of the cores listed above, not a smaller machine."
-  },
-  "ZqqwZc": {
-    "defaultMessage": "{n} IOPS"
-  },
   "ZshmbW": {
     "defaultMessage": "This component only supports on-chain payments"
   },
@@ -1690,9 +1648,6 @@
   },
   "b6Q2tD": {
     "defaultMessage": "Overall Uptime: {uptime}"
-  },
-  "bKuAdU": {
-    "defaultMessage": "{pct} of allocated cores"
   },
   "bMQUWl": {
     "defaultMessage": "Source CIDR (this VM)"
@@ -1759,9 +1714,6 @@
   },
   "ckx15w": {
     "defaultMessage": "Network transfer"
-  },
-  "coa4qJ": {
-    "defaultMessage": "{ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
   },
   "cyR7Kh": {
     "defaultMessage": "Back"
@@ -1991,9 +1943,6 @@
   "huqKGl": {
     "defaultMessage": "Create account"
   },
-  "i0p6sU": {
-    "defaultMessage": "Every plan includes {size} of outbound transfer per month."
-  },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
   },
@@ -2113,9 +2062,6 @@
   },
   "kWI6zX": {
     "defaultMessage": "Shared"
-  },
-  "kZ0qJu": {
-    "defaultMessage": "{read} read / {write} write IOPS"
   },
   "kesoZ1": {
     "defaultMessage": "We run our own Lightning node. Your sats do not route through a third-party processor."
@@ -2501,9 +2447,6 @@
   "tZ+Hzu": {
     "defaultMessage": "Run your Lightning node on a VPS built for it"
   },
-  "tcquFI": {
-    "defaultMessage": "{ip4, plural, one {one IPv4} other {# IPv4}} and {ip6, plural, one {one IPv6 address} other {# IPv6 addresses}}"
-  },
   "tiWuG8": {
     "defaultMessage": "Deploy your relay — from {price} per month"
   },
@@ -2659,9 +2602,6 @@
   },
   "xExBHw": {
     "defaultMessage": "Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
-  },
-  "xKGxVN": {
-    "defaultMessage": "{v} disk"
   },
   "xOnplm": {
     "defaultMessage": "Loading payment methods…"

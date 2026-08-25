@@ -15,7 +15,6 @@ import {
 import { ApiUrl, GiB } from "../const";
 import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
-import PlanLimits from "./plan-limits";
 import { formatPortSpeed } from "../utils/plan-limits";
 import { formatDiskInterface } from "../utils/spec-sheet";
 import { FilterButton } from "./button-filter";
@@ -467,7 +466,6 @@ export function VpsCustomOrder({
             />
           )}
         </div>
-
       </div>
 
       {/* Summary footer: live build manifest + price + buy */}
@@ -478,16 +476,6 @@ export function VpsCustomOrder({
             {ip6 > 0 && ` + ${ip6} IPv6`}
             {portSpeed && ` · ${portSpeed} port`} @ {params.region.name}
           </div>
-          {/* Caps apply to every build from this plan whatever the sliders say,
-              so they read as a second manifest line rather than a section of
-              the selectable resources. The bandwidth cap is dropped: it is the
-              port speed already on the line above. */}
-          <PlanLimits
-            limits={params.limits}
-            transferGb={params.transfer_gb}
-            exclude={["network"]}
-            compact
-          />
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
               <CostLabel

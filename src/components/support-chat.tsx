@@ -197,7 +197,7 @@ export default function SupportChat({
                 type: "error",
                 message: formatMessage({
                   defaultMessage:
-                    "The connection dropped before the reply finished. Reconnecting — ask again once it's back.",
+                    "The connection dropped before the reply finished. Reconnecting now, ask again once it's back.",
                 }),
               })
             : c;
@@ -248,7 +248,7 @@ export default function SupportChat({
           c,
           formatMessage({
             defaultMessage:
-              "No reply came back for that message. Reconnecting — please ask again.",
+              "No reply came back for that message. Reconnecting, please ask again.",
           }),
         ),
       );
@@ -361,7 +361,7 @@ export default function SupportChat({
           {messages.length === 0 && (
             <div className="m-auto max-w-md text-center text-sm text-cyber-muted">
               {resumed ? (
-                <FormattedMessage defaultMessage="Picking up your earlier conversation — the agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch." />
+                <FormattedMessage defaultMessage="Picking up your earlier conversation. The agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch." />
               ) : (
                 emptyState
               )}
@@ -406,7 +406,7 @@ export default function SupportChat({
                   />
                 </span>
               ) : atMessageLimit ? (
-                <FormattedMessage defaultMessage="Message limit reached for this session — reconnect to continue. Your conversation history is kept." />
+                <FormattedMessage defaultMessage="Message limit reached for this session, reconnect to continue. Your conversation history is kept." />
               ) : (
                 <FormattedMessage defaultMessage="Enter to send, Shift+Enter for a new line." />
               )}

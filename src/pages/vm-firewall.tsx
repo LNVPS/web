@@ -330,7 +330,7 @@ export function VmFirewallPage() {
         </div>
         {draft.direction === FirewallDirection.OUTBOUND && (
           <div className="text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="For outbound rules, Source CIDR matches this VM's own address. The remote destination host cannot be restricted — only protocol and destination port." />
+            <FormattedMessage defaultMessage="For outbound rules, Source CIDR matches this VM's own address. The remote destination host cannot be restricted, only protocol and destination port." />
           </div>
         )}
         <div className="flex gap-2">

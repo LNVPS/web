@@ -155,7 +155,7 @@ export default function AccountPage() {
           </div>
         ) : healthy.length === 0 ? (
           <p className="rounded-sm border border-dashed border-cyber-border px-4 py-6 text-center text-sm text-cyber-muted">
-            <FormattedMessage defaultMessage="Every machine needs attention — clear the list above to see them here." />
+            <FormattedMessage defaultMessage="Every machine needs attention. Clear the list above to see them here." />
           </p>
         ) : (
           healthy.map((a) => (

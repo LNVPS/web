@@ -74,7 +74,7 @@ export function SupportChatPage() {
           <SupportChat
             emptyState={
               login ? (
-                <FormattedMessage defaultMessage="Ask anything about your account — billing, a VM that won't boot, or what a charge was for." />
+                <FormattedMessage defaultMessage="Ask anything about your account: billing, a VM that won't boot, or what a charge was for." />
               ) : (
                 <FormattedMessage defaultMessage="Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning works." />
               )

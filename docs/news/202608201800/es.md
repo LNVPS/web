@@ -45,7 +45,7 @@ Aplicaciones alojadas con un clic: obtienes un servicio en funcionamiento en una
 - **Elige tus direcciones IPv4 e IPv6** en configuraciones personalizadas
 - **Un pedido de VPS personalizado rediseñado**, centrado primero en el almacenamiento
 - **La fecha real de eliminación** de una VM no renovada, y aviso previo si un host está siendo retirado
-- **Discos más rápidos** en nuevas VM — los existentes lo adoptan en su próxima detención/inicio
+- **Discos más rápidos** en nuevas VM, los existentes lo adoptan en su próxima detención/inicio
 - **Una consola web funcional** para cuentas de Google y passkeys
 
 ## Soporte
@@ -73,4 +73,4 @@ Aplicaciones alojadas con un clic: obtienes un servicio en funcionamiento en una
 
 Inicios de sesión con límite de frecuencia, códigos de verificación con caducidad, sesiones revocables y enlaces de un solo uso para la consola y tus facturas.
 
-Como siempre, gracias por usar LNVPS — y no olvides `BLOG10`.
+Como siempre, gracias por usar LNVPS, y no olvides `BLOG10`.

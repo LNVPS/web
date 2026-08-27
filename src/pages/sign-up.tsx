@@ -298,7 +298,7 @@ function CreateAccount({
               </span>
             </AsyncButton>
             <p className="text-xs text-cyber-muted">
-              <FormattedMessage defaultMessage="Nothing to save — your device (Face ID, Touch ID, Windows Hello or a security key) secures the account." />
+              <FormattedMessage defaultMessage="Nothing to save. Your device (Face ID, Touch ID, Windows Hello or a security key) secures the account." />
             </p>
           </div>
           <div className="flex gap-3 items-center text-cyber-muted text-xs uppercase tracking-widest">
@@ -358,7 +358,7 @@ function CreateAccount({
               {hexToBech32("nsec", theKey.privateKey)}
             </div>
             <b className="text-cyber-warning text-xs">
-              <FormattedMessage defaultMessage="Save this key now — it CANNOT be recovered." />
+              <FormattedMessage defaultMessage="Save this key now. It CANNOT be recovered." />
             </b>
           </div>
           <AsyncButton

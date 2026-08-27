@@ -20,7 +20,7 @@ export function appSeoTitle(app: App, intl: IntlShape): string {
   if (app.seo_title) return app.seo_title;
   if (!app.category) return app.display_name;
   return intl.formatMessage(
-    { defaultMessage: "{name} Hosting — Managed {category}" },
+    { defaultMessage: "{name} Hosting: Managed {category}" },
     { name: app.display_name, category: app.category },
   );
 }
@@ -49,7 +49,7 @@ export function appSeoDescription(
       ? intl.formatMessage(
           {
             defaultMessage:
-              "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, {storage} storage, no server to patch.",
+              "Host {name} as a managed {category} on LNVPS, with its own hostname, TLS included and {storage} storage. No server to patch.",
           },
           {
             name: app.display_name,
@@ -60,7 +60,7 @@ export function appSeoDescription(
       : intl.formatMessage(
           {
             defaultMessage:
-              "Host {name} as a managed {category} on LNVPS — own hostname, TLS included, no server to patch.",
+              "Host {name} as a managed {category} on LNVPS, with its own hostname and TLS included. No server to patch.",
           },
           { name: app.display_name, category: app.category },
         );

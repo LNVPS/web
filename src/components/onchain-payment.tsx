@@ -165,12 +165,12 @@ export default function OnChainPayment({
         <div className="flex flex-col items-center gap-1.5 rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-3 py-2 text-center text-xs text-cyber-primary">
           <div className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-cyber-primary" />
-            <FormattedMessage defaultMessage="Payment received — waiting for confirmation. You can safely leave this page." />
+            <FormattedMessage defaultMessage="Payment received, waiting for confirmation. You can safely leave this page." />
           </div>
           {creditedDays !== undefined && (
             <div className="text-cyber-text">
               <FormattedMessage
-                defaultMessage="Credits {days, plural, one {# day} other {# days}} at the rate when the deposit was seen — pro-rated by the amount received."
+                defaultMessage="Credits {days, plural, one {# day} other {# days}} at the rate when the deposit was seen, pro-rated by the amount received."
                 values={{ days: creditedDays }}
               />
             </div>
@@ -190,7 +190,7 @@ export default function OnChainPayment({
         </div>
       ) : (
         <div className="text-center text-xs text-cyber-muted">
-          <FormattedMessage defaultMessage="Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received — partial and over-payments are never lost." />
+          <FormattedMessage defaultMessage="Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received. Partial and over-payments are never lost." />
         </div>
       )}
       {onDone && (
@@ -202,7 +202,7 @@ export default function OnChainPayment({
             <FormattedMessage defaultMessage="I've sent the payment" />
           </AsyncButton>
           <div className="text-center text-xs text-cyber-muted">
-            <FormattedMessage defaultMessage="You can safely leave this page — the payment appears in your billing history and is applied once it confirms." />
+            <FormattedMessage defaultMessage="You can safely leave this page. The payment appears in your billing history and is applied once it confirms." />
           </div>
         </div>
       )}

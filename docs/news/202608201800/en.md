@@ -4,13 +4,13 @@ The biggest month of shipping since LNVPS launched: a new product line, two new 
 
 Use **`BLOG10`** at checkout for **10% off** VPS renewals, new VMs and managed apps. Valid until **27 August 2026**, no limit on how often you use it.
 
-Discount codes are new this month — you will find the box at checkout, and the saving shows on your invoice and payment history.
+Discount codes are new this month. You will find the box at checkout, and the saving shows on your invoice and payment history.
 
 ## Managed Apps
 
 One-click hosted apps: you get a running service on a URL, we run everything underneath it. Browse the catalog at [lnvps.net/apps](https://lnvps.net/apps).
 
-- Deploy in one form — pick a region, name it, done
+- Deploy in one form: pick a region, name it, done
 - Point your own domain at it
 - Rename, reconfigure or resize any time, with credit for time already paid
 - CPU, memory and storage use shown against your plan
@@ -18,10 +18,10 @@ One-click hosted apps: you get a running service on a URL, we run everything und
 
 ## New ways to log in
 
-- **Google sign-in** — no Nostr key needed
-- **Passkeys** — Face ID, Touch ID, Windows Hello or a hardware key
+- **Google sign-in**: no Nostr key needed
+- **Passkeys**: Face ID, Touch ID, Windows Hello or a hardware key
 - **Sign out everywhere**, from account settings
-- **Tor** — the site and API are on onion services:
+- **Tor**: the site and API are on onion services:
   - Site: `http://rheyodythpbwimdugzofiy5z5ofe4kvqhrxsmyxqy4e4hwf3aempncad.onion`
   - API: `http://rtcrcbworzub5uqtytjhap7q2l4jdoj7zu6nnq5rwu4pq6a467jx2tad.onion`
 
@@ -43,7 +43,7 @@ One-click hosted apps: you get a running service on a URL, we run everything und
 - **Choose your IPv4 and IPv6 addresses** on custom builds
 - **A redesigned custom VPS order**, built around storage first
 - **The real deletion date** for an unrenewed VM, and advance warning if a host is being retired
-- **Faster disks** on new VMs — existing ones pick this up on their next stop/start
+- **Faster disks** on new VMs, existing ones pick this up on their next stop/start
 - **A working web console** for Google and passkey accounts
 
 ## Support
@@ -71,4 +71,4 @@ One-click hosted apps: you get a running service on a URL, we run everything und
 
 Rate-limited logins, expiring verification codes, revocable sessions, and single-use links behind the console and your invoices.
 
-As always, thank you for using LNVPS — and don't forget `BLOG10`.
+As always, thank you for using LNVPS, and don't forget `BLOG10`.

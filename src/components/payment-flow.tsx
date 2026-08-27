@@ -849,7 +849,7 @@ export default function PaymentFlow({
           ) : appliedCode && (quote?.discount?.amount_off ?? 0) > 0 ? (
             <div className="text-xs text-cyber-primary">
               <FormattedMessage
-                defaultMessage="{amount} off. Applies to this payment only — later renewals bill at the normal price."
+                defaultMessage="{amount} off. Applies to this payment only. Later renewals bill at the normal price."
                 values={{
                   amount: (
                     <CostAmount

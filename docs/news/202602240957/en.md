@@ -10,8 +10,8 @@ Earn sats by sharing LNVPS! We've launched a referral program that pays you when
 
 Choose how you want to get paid:
 
-- **Lightning Address** — Payouts sent directly to any Lightning Address
-- **NWC Wallet** — Payouts sent via your configured Nostr Wallet Connect wallet
+- **Lightning Address**: payouts sent directly to any Lightning Address
+- **NWC Wallet**: payouts sent via your configured Nostr Wallet Connect wallet
 
 You can switch between payout methods at any time from the referral settings page.
 

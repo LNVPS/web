@@ -27,7 +27,7 @@ export function AccountNotificationsPage() {
       {login?.isNostrless ? (
         <div className="rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
           <FormattedMessage
-            defaultMessage="Nostr DM notifications are only available for Nostr accounts — yours has no Nostr key to decrypt them with. Choose another channel in {settings}."
+            defaultMessage="Nostr DM notifications are only available for Nostr accounts, and yours has no Nostr key to decrypt them with. Choose another channel in {settings}."
             values={{
               settings: (
                 <Link
@@ -44,7 +44,7 @@ export function AccountNotificationsPage() {
         <>
           <p className="text-cyber-muted text-sm">
             <FormattedMessage
-              defaultMessage="Expiry warnings, payment receipts and provisioning notices arrive here while the Nostr DM channel is enabled in {settings}. This inbox isn't monitored for replies — to reach a human, use {support}."
+              defaultMessage="Expiry warnings, payment receipts and provisioning notices arrive here while the Nostr DM channel is enabled in {settings}. This inbox isn't monitored for replies. To reach a human, use {support}."
               values={{
                 settings: (
                   <Link

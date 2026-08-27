@@ -305,7 +305,7 @@ function UpgradeSection({
   ) {
     return (
       <p className="m-0 text-sm text-cyber-muted">
-        <FormattedMessage defaultMessage="Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period." />
+        <FormattedMessage defaultMessage="Pay for this deployment before resizing it. An upgrade is charged pro-rata against the time left on the current period." />
       </p>
     );
   }
@@ -910,7 +910,7 @@ export function AccountAppDeploymentPage() {
               keeps the volumes on expiry, and a customer who believes they are
               gone has no reason to renew. */}
           <span className="text-sm text-cyber-text">
-            <FormattedMessage defaultMessage="This deployment's subscription has expired and it has been scaled to zero. Your data is still here — renew to start it again." />
+            <FormattedMessage defaultMessage="This deployment's subscription has expired and it has been scaled to zero. Your data is still here. Renew to start it again." />
           </span>
           <Link
             to={`/account/subscriptions/${deployment.subscription_id}`}
@@ -925,7 +925,7 @@ export function AccountAppDeploymentPage() {
         <div className="flex flex-wrap items-center gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3">
           <Spinner width={16} height={16} />
           <span className="text-sm text-cyber-text">
-            <FormattedMessage defaultMessage="Setting up — this usually takes a minute. The endpoint appears once it is running." />
+            <FormattedMessage defaultMessage="Setting up. This usually takes a minute. The endpoint appears once it is running." />
           </span>
         </div>
       )}

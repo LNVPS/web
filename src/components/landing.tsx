@@ -59,13 +59,13 @@ export function RegionSpecs({ template }: { template: VmCustomTemplateParams }) 
     <ul className="m-0 flex max-w-prose list-none flex-col gap-1 p-0 text-cyber-text">
       <li>
         <FormattedMessage
-          defaultMessage="{min}–{max} vCPU"
+          defaultMessage="{min}-{max} vCPU"
           values={{ min: template.min_cpu, max: template.max_cpu }}
         />
       </li>
       <li>
         <FormattedMessage
-          defaultMessage="{min}–{max} memory"
+          defaultMessage="{min}-{max} memory"
           values={{
             min: <BytesSize value={template.min_memory} />,
             max: <BytesSize value={template.max_memory} />,
@@ -75,7 +75,7 @@ export function RegionSpecs({ template }: { template: VmCustomTemplateParams }) 
       {template.disks.map((d) => (
         <li key={`${d.disk_type}-${d.disk_interface}`}>
           <FormattedMessage
-            defaultMessage="{min}–{max} {type} storage"
+            defaultMessage="{min}-{max} {type} storage"
             values={{
               min: <BytesSize value={d.min_disk} />,
               max: <BytesSize value={d.max_disk} />,

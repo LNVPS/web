@@ -133,14 +133,14 @@ export function NostrRelayHostingPage() {
       }),
       answer: formatMessage({
         defaultMessage:
-          "Stopping scales the relay to zero and retains your storage — your event database is intact when you restart. Deleting is what removes data.",
+          "Stopping scales the relay to zero and retains your storage, so your event database is intact when you restart. Deleting is what removes data.",
       }),
     },
     {
       question: formatMessage({ defaultMessage: "Do I need an account?" }),
       answer: formatMessage({
         defaultMessage:
-          "A Nostr key is enough. No email, no name, no KYC. Notifications can go to encrypted Nostr DM, email, Telegram or WhatsApp — your choice.",
+          "A Nostr key is enough. No email, no name, no KYC. Notifications can go to encrypted Nostr DM, email, Telegram or WhatsApp, whichever you prefer.",
       }),
     },
     {
@@ -153,7 +153,7 @@ export function NostrRelayHostingPage() {
       }),
       answer: formatMessage({
         defaultMessage:
-          "Not in place — deploy the new one and migrate. They are separate deployments.",
+          "Not in place. Deploy the new one and migrate, as they are separate deployments.",
       }),
     },
   ];
@@ -183,7 +183,7 @@ export function NostrRelayHostingPage() {
               )
             : formatMessage({
                 defaultMessage:
-                  "Run your own Nostr relay — up in minutes on its own hostname with TLS and storage included.",
+                  "Run your own Nostr relay, up in minutes on its own hostname with TLS and storage included.",
               })
         }
         jsonLd={[...relays.map((r) => appJsonLd(r, intl)), faqJsonLd(faq)]}
@@ -193,7 +193,7 @@ export function NostrRelayHostingPage() {
           <h1 className="m-0 text-3xl text-cyber-text-bright">
             {priceNode ? (
               <FormattedMessage
-                defaultMessage="Run your own Nostr relay — from {price} a month"
+                defaultMessage="Run your own Nostr relay from {price} a month"
                 values={{ price: priceNode }}
               />
             ) : (
@@ -306,7 +306,7 @@ export function NostrRelayHostingPage() {
           )}
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="Not sure? <b>strfry</b> is the workhorse — it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
+              defaultMessage="Not sure? <b>strfry</b> is the workhorse, and it is what most public relays run. <b>HAVEN</b> if this is your personal relay rather than a community one; it is the one that also gives you a Blossom media store, so your images live under the same key as your notes."
               values={{
                 b: (chunks) => (
                   <b className="text-cyber-text-bright">{chunks}</b>
@@ -320,7 +320,7 @@ export function NostrRelayHostingPage() {
           <ul className="m-0 flex max-w-prose list-disc flex-col gap-1 pl-5 text-cyber-text">
             <li>
               <FormattedMessage
-                defaultMessage="Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with a TLS certificate issued automatically"
+                defaultMessage="Your own hostname, <code>your-name.ie.apps.lnvps.cloud</code>, with a TLS certificate issued automatically"
                 values={{
                   code: (chunks) => (
                     <code className="font-mono text-cyber-accent">
@@ -331,14 +331,14 @@ export function NostrRelayHostingPage() {
               />
             </li>
             <li>
-              <FormattedMessage defaultMessage="Persistent storage — sized per relay above" />
+              <FormattedMessage defaultMessage="Persistent storage, sized per relay above" />
             </li>
             <li>
               <FormattedMessage defaultMessage="Isolated environment, not a shared box" />
             </li>
             <li>
               <FormattedMessage
-                defaultMessage="<b>Your own domain if you want it.</b> Point a CNAME at your relay and we serve it alongside the default hostname with its own certificate. No verification step — the certificate is issued when your DNS resolves."
+                defaultMessage="<b>Your own domain if you want it.</b> Point a CNAME at your relay and we serve it alongside the default hostname with its own certificate. No verification step. The certificate is issued when your DNS resolves."
                 values={{
                   b: (chunks) => (
                     <b className="text-cyber-text-bright">{chunks}</b>
@@ -361,7 +361,7 @@ export function NostrRelayHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="Pay how you like" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key — NIP-07 in the browser, NIP-98 for the API." />
+            <FormattedMessage defaultMessage="Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key: NIP-07 in the browser, NIP-98 for the API." />
           </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="We run our own Lightning node. Your sats do not route through a third-party processor." />
@@ -412,7 +412,7 @@ export function NostrRelayHostingPage() {
           >
             {priceNode ? (
               <FormattedMessage
-                defaultMessage="Deploy your relay — from {price} per month"
+                defaultMessage="Deploy your relay from {price} per month"
                 values={{ price: priceNode }}
               />
             ) : (

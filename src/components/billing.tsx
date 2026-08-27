@@ -297,7 +297,7 @@ export function SunsetWarning({ sunsetOn }: { sunsetOn: Date }) {
         className="shrink-0 pointer-events-none"
       />
       <FormattedMessage
-        defaultMessage="This host is being retired. Move to a new VPS before {date} — renewals stop then and you'll need to migrate."
+        defaultMessage="This host is being retired. Move to a new VPS before {date}. Renewals stop then and you'll need to migrate."
         values={{
           date: (
             <FormattedDate
@@ -389,7 +389,7 @@ export function AutoRenewCard({
               (enabled ? "text-cyber-warning" : "text-cyber-muted")
             }
           >
-            <FormattedMessage defaultMessage="None set — add one" />
+            <FormattedMessage defaultMessage="None set, add one" />
           </Link>
         )}
       </div>

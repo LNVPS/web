@@ -18,10 +18,10 @@ This skill enables interaction with the LNVPS customer-facing API to create and 
 
 ## Authentication
 
-Authenticated endpoints accept **either** scheme — never both on one request:
+Authenticated endpoints accept **either** scheme, never both on one request:
 
-- **Nostr (NIP-98):** `Authorization: Nostr <base64 event>` — for Nostr-key accounts.
-- **Session token:** `Authorization: Bearer <jwt>` — issued by the OAuth login flow
+- **Nostr (NIP-98):** `Authorization: Nostr <base64 event>`, for Nostr-key accounts.
+- **Session token:** `Authorization: Bearer <jwt>`, issued by the OAuth login flow
   (`GET /api/v1/oauth/{google|github|facebook|apple}/login`) or a passkey/WebAuthn
   login (`POST /api/v1/webauthn/login/start` → `/finish`).
 
@@ -57,10 +57,10 @@ Example event:
 
 ### NIP-98 validation rules (stricter than they used to be)
 
-- **Sign a fresh event per request.** Each event id is accepted **once** — replay is rejected. Never cache or reuse an auth event.
+- **Sign a fresh event per request.** Each event id is accepted **once**, and replay is rejected. Never cache or reuse an auth event.
 - **`created_at` must be within 60 seconds** of server time (was 600). Fix client clock skew.
 - **`method` tag must match** the request method.
-- **`payload` tag is optional but verified when present** — lowercase hex SHA-256 of the exact request body. Recommended for `POST`/`PATCH`; omitting it is still accepted.
+- **`payload` tag is optional but verified when present**: lowercase hex SHA-256 of the exact request body. Recommended for `POST`/`PATCH`; omitting it is still accepted.
 
 ### Auth tickets (WebSockets and HTML pages)
 
@@ -77,7 +77,7 @@ Single-use, path-scoped, 30 seconds. Valid only for:
 `/api/v1/vm/{id}/console`, `/api/v1/payment/{id}/invoice`, `/api/v1/support/chat`
 (and `/api/admin/v1/jobs/feedback` on the admin API).
 
-Use as `?ticket=<ticket>`. The legacy `?auth=<base64_nip98_event>` form still works but is **deprecated**. A ticket does not grant access — the endpoint still checks ownership.
+Use as `?ticket=<ticket>`. The legacy `?auth=<base64_nip98_event>` form still works but is **deprecated**. A ticket does not grant access. The endpoint still checks ownership.
 
 ### Sessions
 
@@ -138,7 +138,7 @@ Response:
 }
 ```
 
-**Templates**: `GET /api/v1/vm/templates` — note the response is an **object**, not a list:
+**Templates**: `GET /api/v1/vm/templates`. Note the response is an **object**, not a list:
 
 ```json
 {
@@ -310,10 +310,10 @@ Error:
 
 LNVPS accounts require a verified email address. The verification flow works as follows:
 
-1. **Set email on account** — `PATCH /api/v1/account` with `{"email": "user@example.com"}`. The server sends a verification link to that address.
-2. **User clicks the link** — the link includes a `token` query parameter pointing to the API.
-3. **Confirm the token** — `GET /api/v1/account/verify-email?token=<token>`. Returns `200 OK` on success. **Links expire after 24 hours.**
-4. **Check status** — `GET /api/v1/account` returns `email_verified: true` once confirmed.
+1. **Set email on account**: `PATCH /api/v1/account` with `{"email": "user@example.com"}`. The server sends a verification link to that address.
+2. **User clicks the link**: the link includes a `token` query parameter pointing to the API.
+3. **Confirm the token**: `GET /api/v1/account/verify-email?token=<token>`. Returns `200 OK` on success. **Links expire after 24 hours.**
+4. **Check status**: `GET /api/v1/account` returns `email_verified: true` once confirmed.
 
 ### Check if email is verified
 
@@ -348,7 +348,7 @@ Sending a `PATCH` with an email address causes the server to send a verification
 
 ## Common Tasks
 
-**Enable auto-renewal with NWC** — NWC connection strings are **no longer stored on the account**; add one as a saved payment method, then enable auto-renewal per VM:
+**Enable auto-renewal with NWC**: NWC connection strings are **no longer stored on the account**; add one as a saved payment method, then enable auto-renewal per VM:
 
 ```http
 POST /api/v1/payment-methods
@@ -374,7 +374,7 @@ POST /api/v1/vm/{id}/upgrade/quote?method=lightning
 {"cpu": 4, "memory": 8589934592, "disk": 107374182400}
 ```
 
-An upgrade must keep every resource **at or above** its current value and strictly increase at least one of CPU/memory/disk — shrinking or no-op requests are rejected (downgrade = reinstall onto a smaller template). Running VMs are stopped and restarted to apply the change.
+An upgrade must keep every resource **at or above** its current value and strictly increase at least one of CPU/memory/disk. Shrinking or no-op requests are rejected (downgrade = reinstall onto a smaller template). Running VMs are stopped and restarted to apply the change.
 
 **Reinstall with a different OS image:**
 
@@ -462,10 +462,10 @@ NOSTR_SECRET_KEY=$(cat ~/.nostr/lnvps.nsec) nak curl -X PATCH -H "Content-Type: 
 
 ### Notes
 
-- **Use `NOSTR_SECRET_KEY` env var inline** — do NOT use `--sec` flag (it doesn't work with `nak curl`) and do NOT `export` it (inline per-command prevents leaking into child processes)
-- **One signed event per request** — `nak curl` signs a fresh event each invocation, which is required (events are single-use and valid for 60s)
+- **Use `NOSTR_SECRET_KEY` env var inline**: do NOT use `--sec` flag (it doesn't work with `nak curl`) and do NOT `export` it (inline per-command prevents leaking into child processes)
+- **One signed event per request**: `nak curl` signs a fresh event each invocation, which is required (events are single-use and valid for 60s)
 - Public endpoints (`/api/v1/image`, `/api/v1/vm/templates`, `/api/v1/payment/methods`, `/api/v1/exchange-rate`, `/api/v1/ip_space`, `/api/v1/apps`) work with regular `curl`
 - Quote URLs containing `?` to avoid shell interpretation
 - Poll `GET /api/v1/payment/{id}` until `is_paid: true` after paying
 - Poll `GET /api/v1/vm/{id}` until `status.state: "running"` after payment
-- A `429` means you hit the per-IP rate limit — sleep for `Retry-After` seconds
+- A `429` means you hit the per-IP rate limit, so sleep for `Retry-After` seconds

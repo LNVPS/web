@@ -60,7 +60,7 @@ export function AccountSupportChatPage() {
       {chatAvailable && (
         <SupportChat
           emptyState={
-            <FormattedMessage defaultMessage="Ask anything about your account — billing, a VM that won't boot, or what a charge was for. For refunds, extensions or deletions, use the contact form instead." />
+            <FormattedMessage defaultMessage="Ask anything about your account: billing, a VM that won't boot, or what a charge was for. For refunds, extensions or deletions, use the contact form instead." />
           }
         />
       )}

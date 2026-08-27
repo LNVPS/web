@@ -41,7 +41,7 @@ export default function HomePage() {
     logo: "https://lnvps.net/avatar.png",
     description: formatMessage({
       defaultMessage:
-        "High-performance VPS hosting with flexible payments — Bitcoin Lightning or card.",
+        "High-performance VPS hosting with flexible payments: Bitcoin Lightning or card.",
     }),
     sameAs: ["https://github.com/LNVPS"],
   };
@@ -69,7 +69,7 @@ export default function HomePage() {
         canonical="/"
         description={formatMessage({
           defaultMessage:
-            "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, or card — no long-term contracts.",
+            "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, or card. No long-term contracts.",
         })}
         jsonLd={[organizationSchema, webSiteSchema, ...planSchemas]}
       />
@@ -79,12 +79,12 @@ export default function HomePage() {
             <FormattedMessage defaultMessage="High-Performance VPS Hosting" />
           </h1>
           <p className="text-cyber-text">
-            <FormattedMessage defaultMessage="Deploy in minutes. Pay with Lightning, Bitcoin, or card — no long-term contracts." />
+            <FormattedMessage defaultMessage="Deploy in minutes. Pay with Lightning, Bitcoin, or card. No long-term contracts." />
           </p>
           {regionNames.length > 0 && (
             <div className="font-mono text-xs uppercase tracking-[0.2em] text-cyber-muted">
               <FormattedMessage defaultMessage="Regions" />
-              {" — "}
+              {": "}
               {regionNames.join(" · ")}
             </div>
           )}
@@ -418,7 +418,7 @@ function AppsSection() {
       </SectionHeading>
       <p className="text-cyber-muted">
         <FormattedMessage
-          defaultMessage="Software we run for you — each app on its own hostname with TLS already working, no server to patch. Nostr relays and Blossom media servers in the <catalog>catalog</catalog> today."
+          defaultMessage="Software we run for you, each app on its own hostname with TLS already working and no server to patch. Nostr relays and Blossom media servers in the <catalog>catalog</catalog> today."
           values={{
             catalog: (chunks: ReactNode) => (
               <Link to="/apps" className="text-cyber-primary hover:underline">

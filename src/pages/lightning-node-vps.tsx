@@ -78,7 +78,7 @@ export function LightningNodeVpsPage() {
         defaultMessage: "Can I run LND / Core Lightning / Eclair?",
       }),
       answer: formatMessage({
-        defaultMessage: "Yes. It is your machine — install what you like.",
+        defaultMessage: "Yes. It is your machine, install what you like.",
       }),
     },
     {
@@ -94,7 +94,7 @@ export function LightningNodeVpsPage() {
     {
       question: formatMessage({ defaultMessage: "Do I get a static IP?" }),
       answer: formatMessage({
-        defaultMessage: "Yes — one IPv4 and one IPv6 on every plan.",
+        defaultMessage: "Yes, one IPv4 and one IPv6 on every plan.",
       }),
     },
     {
@@ -109,12 +109,12 @@ export function LightningNodeVpsPage() {
     <>
       <Seo
         title={formatMessage({
-          defaultMessage: "Lightning Node VPS Hosting — Pay with Lightning",
+          defaultMessage: "Lightning Node VPS Hosting: Pay with Lightning",
         })}
         canonical="/lightning-node-vps"
         description={formatMessage({
           defaultMessage:
-            "A VPS built for a Lightning node — static IPv4 and IPv6, unmetered traffic, Tor permitted, no KYC. Dublin, London or Quebec. Pay with Lightning itself.",
+            "A VPS built for a Lightning node, with static IPv4 and IPv6, unmetered traffic, Tor permitted and no KYC. Dublin, London or Quebec. Pay with Lightning itself.",
         })}
         jsonLd={faqJsonLd(faq)}
       />
@@ -124,7 +124,7 @@ export function LightningNodeVpsPage() {
             <FormattedMessage defaultMessage="Run your Lightning node on a VPS built for it" />
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning — we run our own node, so your payment never touches a processor." />
+            <FormattedMessage defaultMessage="Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning. We run our own node, so your payment never touches a processor." />
           </p>
         </header>
 
@@ -156,7 +156,7 @@ export function LightningNodeVpsPage() {
             </p>
             <p className="m-0">
               <FormattedMessage
-                defaultMessage="<b>Tor is permitted.</b> Run your node over Tor if you want to — we do not block it, and we do not use Google captchas."
+                defaultMessage="<b>Tor is permitted.</b> Run your node over Tor if you want to. We do not block it, and we do not use Google captchas."
                 values={{
                   b: (chunks) => (
                     <b className="text-cyber-text-bright">{chunks}</b>
@@ -189,13 +189,13 @@ export function LightningNodeVpsPage() {
 
         <Section title={<FormattedMessage defaultMessage="Where" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node — up to 64 vCPU and 128 GB RAM." />
+            <FormattedMessage defaultMessage="Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node, up to 64 vCPU and 128 GB RAM." />
           </p>
         </Section>
 
         <Section title={<FormattedMessage defaultMessage="Sizing" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Build exactly what you need — CPU, memory and storage are configured independently, SSD or HDD, rather than forced into fixed tiers." />
+            <FormattedMessage defaultMessage="Build exactly what you need. CPU, memory and storage are configured independently, SSD or HDD, rather than forced into fixed tiers." />
           </p>
         </Section>
 
@@ -225,7 +225,7 @@ export function LightningNodeVpsPage() {
           <p className="m-0 max-w-prose text-cyber-text">
             {relayCost ? (
               <FormattedMessage
-                defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>from {price} a month as a Managed App</a>."
+                defaultMessage="Running a Nostr relay too? That one does not need a whole server. It is <a>from {price} a month as a Managed App</a>."
                 values={{
                   price: <CostAmount cost={relayCost} converted={false} />,
                   a: (chunks) => (
@@ -240,7 +240,7 @@ export function LightningNodeVpsPage() {
               />
             ) : (
               <FormattedMessage
-                defaultMessage="Running a Nostr relay too? That one does not need a whole server — it is <a>available as a Managed App</a>."
+                defaultMessage="Running a Nostr relay too? That one does not need a whole server. It is <a>available as a Managed App</a>."
                 values={{
                   a: (chunks) => (
                     <Link

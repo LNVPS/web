@@ -23,8 +23,8 @@ Complete endpoint documentation for the LNVPS customer-facing API.
 
 All endpoints except those marked "Public" require authentication with **either**:
 
-- `Authorization: Nostr <base64_encoded_event_json>` — NIP-98 (Nostr accounts)
-- `Authorization: Bearer <jwt>` — session token from OAuth (`GET /api/v1/oauth/{provider}/login`) or passkey/WebAuthn login (`POST /api/v1/webauthn/login/start` → `/finish`)
+- `Authorization: Nostr <base64_encoded_event_json>`: NIP-98 (Nostr accounts)
+- `Authorization: Bearer <jwt>`: session token from OAuth (`GET /api/v1/oauth/{provider}/login`) or passkey/WebAuthn login (`POST /api/v1/webauthn/login/start` → `/finish`)
 
 ### NIP-98 Event Structure
 
@@ -46,7 +46,7 @@ All endpoints except those marked "Public" require authentication with **either*
 **Validation rules:**
 
 - `created_at` must be within **60 seconds** of server time
-- Each event id may be used **once** — sign a fresh event per request, never reuse
+- Each event id may be used **once**. Sign a fresh event per request, never reuse
 - `u` tag must match the request path
 - `method` tag must match the HTTP method (GET, POST, PATCH, etc.)
 - `payload` tag is optional, but when present must be the lowercase hex SHA-256 of the exact request body
@@ -156,7 +156,7 @@ Content-Type: application/json
 }
 ```
 
-**Note:** NWC connection strings are **no longer stored on the account** — add one via `POST /api/v1/payment-methods` (see [Saved Payment Methods](#saved-payment-methods)), then set `auto_renewal_enabled: true` on each VM you want auto-renewed.
+**Note:** NWC connection strings are **no longer stored on the account**: add one via `POST /api/v1/payment-methods` (see [Saved Payment Methods](#saved-payment-methods)), then set `auto_renewal_enabled: true` on each VM you want auto-renewed.
 
 ### Verify Email
 
@@ -174,9 +174,9 @@ Confirms an email verification token sent by the server after a `PATCH /api/v1/a
 
 **Flow:**
 
-1. `PATCH /api/v1/account` with `{"email": "user@example.com"}` — server sends verification email.
+1. `PATCH /api/v1/account` with `{"email": "user@example.com"}`. The server sends a verification email.
 2. User clicks link in email containing `?token=<token>`.
-3. `GET /api/v1/account/verify-email?token=<token>` — confirms the token (**links expire after 24 hours**).
+3. `GET /api/v1/account/verify-email?token=<token>`: confirms the token (**links expire after 24 hours**).
 4. `GET /api/v1/account` now returns `email_verified: true`.
 
 ### Revoke All Sessions
@@ -376,7 +376,7 @@ Content-Type: application/json
 {"image_id": 7}
 ```
 
-The body is optional — omit it to reinstall the VM's current image, or pass `image_id` to switch OS.
+The body is optional. Omit it to reinstall the VM's current image, or pass `image_id` to switch OS.
 
 **Warning:** This destroys all data on the VM and reinstalls the OS.
 
@@ -392,7 +392,7 @@ GET /api/v1/vm/{id}/renew
 | Parameter | Type | Values | Default |
 |-----------|------|--------|---------|
 | `method` | string | `lightning`, `onchain`, `revolut`, `paypal`, `stripe`, `nwc` | `lightning` |
-| `intervals` | number | Billing intervals to pay for (`1`–`120`) | `1` |
+| `intervals` | number | Billing intervals to pay for (`1` to `120`) | `1` |
 
 **Response:**
 
@@ -481,9 +481,9 @@ Content-Type: application/json
 }
 ```
 
-All fields are optional, but the request must keep every resource at or above its current value **and strictly increase at least one** of `cpu`/`memory`/`disk`. Shrinking or no-op requests are rejected — downgrade by reinstalling onto a smaller template.
+All fields are optional, but the request must keep every resource at or above its current value **and strictly increase at least one** of `cpu`/`memory`/`disk`. Shrinking or no-op requests are rejected. Downgrade by reinstalling onto a smaller template.
 
-**Query parameters:** `method` — `lightning` (default), `revolut`, `paypal`; determines the quote currency.
+**Query parameters:** `method`: `lightning` (default), `revolut`, `paypal`; determines the quote currency.
 
 **Response:**
 
@@ -508,7 +508,7 @@ Content-Type: application/json
 
 **Request body:** Same as upgrade quote.
 
-**Query parameters:** `method` — `lightning` (default), `revolut`, `nwc`, `saved`; plus `payment_method_id` for `method=saved`. With `nwc`/`saved` the request briefly waits for settlement, so the returned payment may already be `is_paid: true`.
+**Query parameters:** `method`: `lightning` (default), `revolut`, `nwc`, `saved`; plus `payment_method_id` for `method=saved`. With `nwc`/`saved` the request briefly waits for settlement, so the returned payment may already be `is_paid: true`.
 
 **Response:** Payment object (same as Renew VM).
 
@@ -731,7 +731,7 @@ Use `VmStatus.cpu_arch` to pick the right `arch` when listing images for a reins
 - `ubuntu`, `debian`, `centos`, `fedora`, `freebsd`, `opensuse`, `archlinux`
 - `redhatenterprise`, `almalinux`, `rockylinux`, `alpine`, `nixos`, `openbsd`, `netbsd`, `gentoo`, `voidlinux`
 
-`popularity` is the fraction (0.0–1.0) of active VMs using the image.
+`popularity` is the fraction (0.0 to 1.0) of active VMs using the image.
 
 ---
 
@@ -854,7 +854,7 @@ Content-Type: application/json
 }
 ```
 
-Custom builds renew monthly, so `interval_amount`/`interval_type` are always `1`/`"month"`. `other_price` is deprecated — use `GET /api/v1/exchange-rate`.
+Custom builds renew monthly, so `interval_amount`/`interval_type` are always `1`/`"month"`. `other_price` is deprecated, use `GET /api/v1/exchange-rate` instead.
 
 ### Create Custom VM
 
@@ -1007,7 +1007,7 @@ PATCH  /api/v1/vm/{id}/firewall/policy
 }
 ```
 
-`direction`: `inbound`/`outbound`. `protocol`: `any`/`tcp`/`udp`/`icmp`. `action`: `accept`/`drop`/`reject`. Send `null` for `src_cidr`/`dst_port_*` to mean "any". Ports are 1–65535 with `dst_port_start <= dst_port_end`.
+`direction`: `inbound`/`outbound`. `protocol`: `any`/`tcp`/`udp`/`icmp`. `action`: `accept`/`drop`/`reject`. Send `null` for `src_cidr`/`dst_port_*` to mean "any". Ports are 1-65535 with `dst_port_start <= dst_port_end`.
 
 **Policy:**
 
@@ -1045,7 +1045,7 @@ Send each message as one text frame. Replies stream back as JSON text frames:
 { "type": "error", "message": "..." }
 ```
 
-Exactly one terminal `final`/`error` per message sent. Limits: 4000 chars per message, 50 messages per connection (reconnect to continue; history is preserved). The agent can read your account, VMs, payments and history and can start/stop/restart VMs — it cannot extend, refund or delete a VM. Ignore unrecognised frame types.
+Exactly one terminal `final`/`error` per message sent. Limits: 4000 chars per message, 50 messages per connection (reconnect to continue; history is preserved). The agent can read your account, VMs, payments and history and can start/stop/restart VMs, but it cannot extend, refund or delete a VM. Ignore unrecognised frame types.
 
 ---
 
@@ -1107,7 +1107,7 @@ All errors return:
 | 403  | Forbidden (resource belongs to another user) |
 | 402  | Payment required (e.g. VM expired)           |
 | 404  | Resource not found                           |
-| 429  | Rate limited — retry after `Retry-After` s   |
+| 429  | Rate limited, retry after `Retry-After` s   |
 | 500  | Internal server error                        |
 
 ---

@@ -64,7 +64,7 @@ export function VpsIrelandPage() {
         )
       : intl.formatMessage({
           defaultMessage:
-            "VPS hosting in Dublin, Ireland. Build your own spec — CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain.",
+            "VPS hosting in Dublin, Ireland. Build your own spec, with CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain.",
         });
 
   return (
@@ -72,14 +72,14 @@ export function VpsIrelandPage() {
       path="/vps-ireland"
       regionId={DublinRegionId}
       title={intl.formatMessage({
-        defaultMessage: "VPS Ireland — Dublin VPS Paid in Bitcoin",
+        defaultMessage: "VPS Ireland: Dublin VPS Paid in Bitcoin",
       })}
       description={description}
       h1={<FormattedMessage defaultMessage="VPS hosting in Ireland" />}
       lede={
         template ? (
           <FormattedMessage
-            defaultMessage="Our Dublin site. Build the machine you want between {minCpu}–{maxCpu} vCPU and {minMemory}–{maxMemory}, and pay for it in Bitcoin."
+            defaultMessage="Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin."
             values={{
               minCpu: template.min_cpu,
               maxCpu: template.max_cpu,

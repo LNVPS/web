@@ -10,7 +10,7 @@ In addition to email and encrypted Nostr DMs, you can now receive account notifi
 
 ## Account Settings Redesign
 
-The account settings page has been reorganised into clean, sectioned panels with terminal-style status rows for each notification channel. The Support tab no longer needs you to attach your public key manually — it is now included automatically — and the Messages tab keeps a read-only history of past support conversations.
+The account settings page has been reorganised into clean, sectioned panels with terminal-style status rows for each notification channel. The Support tab no longer needs you to attach your public key manually, as it is now included automatically, and the Messages tab keeps a read-only history of past support conversations.
 
 ## VM Overview with Sidebar Navigation
 

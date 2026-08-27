@@ -124,7 +124,7 @@ export function BlossomServerHostingPage() {
       question: formatMessage({ defaultMessage: "What is Blossom?" }),
       answer: formatMessage({
         defaultMessage:
-          "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec — Route96 speaks both.",
+          "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec, and Route96 speaks both.",
       }),
     },
     // The answer *is* the catalog's storage, so with the catalog unreachable
@@ -165,7 +165,7 @@ export function BlossomServerHostingPage() {
       question: formatMessage({ defaultMessage: "Can I use my own domain?" }),
       answer: formatMessage({
         defaultMessage:
-          "Yes — CNAME, and the certificate is issued automatically once DNS resolves.",
+          "Yes, via CNAME. The certificate is issued automatically once DNS resolves.",
       }),
     },
     {
@@ -187,7 +187,7 @@ export function BlossomServerHostingPage() {
                 { price: priceText },
               )
             : formatMessage({
-                defaultMessage: "Blossom Media Server Hosting — Route96",
+                defaultMessage: "Blossom Media Server Hosting: Route96",
               })
         }
         canonical="/blossom-server-hosting"
@@ -212,7 +212,7 @@ export function BlossomServerHostingPage() {
           <h1 className="m-0 text-3xl text-cyber-text-bright">
             {priceNode ? (
               <FormattedMessage
-                defaultMessage="Host your own media server — {price} a month"
+                defaultMessage="Host your own media server for {price} a month"
                 values={{ price: priceNode }}
               />
             ) : (
@@ -252,7 +252,7 @@ export function BlossomServerHostingPage() {
           </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours — we wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
+              defaultMessage="Route96 is a high-performance Blossom / NIP-96 server. It is <a>open source</a>, and it is ours. We wrote it and we run it. You are not trusting a black box; you can read every line, and you can leave with your data whenever you want."
               values={{
                 a: (chunks) => (
                   <a
@@ -275,7 +275,7 @@ export function BlossomServerHostingPage() {
               <li>
                 {breakdown ? (
                   <FormattedMessage
-                    defaultMessage="{storage} of persistent storage — {breakdown}"
+                    defaultMessage="{storage} of persistent storage ({breakdown})"
                     values={{ storage, breakdown }}
                   />
                 ) : (
@@ -291,7 +291,7 @@ export function BlossomServerHostingPage() {
                 bullets list what we do sell and it is not coming back. */}
             <li>
               <FormattedMessage
-                defaultMessage="Your own hostname — <code>your-name.ie.apps.lnvps.cloud</code> — with automatic TLS"
+                defaultMessage="Your own hostname, <code>your-name.ie.apps.lnvps.cloud</code>, with automatic TLS"
                 values={{
                   code: (chunks) => (
                     <code className="font-mono text-cyber-accent">
@@ -302,7 +302,7 @@ export function BlossomServerHostingPage() {
               />
             </li>
             <li>
-              <FormattedMessage defaultMessage="Bring your own domain via CNAME — separate certificate issued automatically" />
+              <FormattedMessage defaultMessage="Bring your own domain via CNAME, with a separate certificate issued automatically" />
             </li>
             <li>
               <FormattedMessage defaultMessage="Isolated environment with its own database" />
@@ -317,7 +317,7 @@ export function BlossomServerHostingPage() {
           title={<FormattedMessage defaultMessage="Why self-host media" />}
         >
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Nostr keeps your identity portable. Media has been the part that is not — your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key." />
+            <FormattedMessage defaultMessage="Nostr keeps your identity portable. Media has been the part that is not. Your images live on someone else's host, under someone else's terms, and disappear when they do. A Blossom server puts that back under your key." />
           </p>
         </Section>
 
@@ -347,7 +347,7 @@ export function BlossomServerHostingPage() {
           >
             {priceNode ? (
               <FormattedMessage
-                defaultMessage="Deploy Route96 — {price}/month"
+                defaultMessage="Deploy Route96 for {price}/month"
                 values={{ price: priceNode }}
               />
             ) : (

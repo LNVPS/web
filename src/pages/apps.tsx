@@ -54,12 +54,12 @@ export function AppsPage() {
       {catalog.length > 0 ? (
         <Seo
           title={formatMessage({
-            defaultMessage: "Managed App Hosting — No Server to Run",
+            defaultMessage: "Managed App Hosting: No Server to Run",
           })}
           canonical="/apps"
           description={formatMessage({
             defaultMessage:
-              "Deploy an app on LNVPS — up in minutes on its own hostname, TLS and storage included, no OS to patch. Nostr relays and Blossom media servers today.",
+              "Deploy an app on LNVPS and it is up in minutes on its own hostname, with TLS and storage included and no OS to patch. Nostr relays and Blossom media servers today.",
           })}
         />
       ) : (
@@ -75,7 +75,7 @@ export function AppsPage() {
           <FormattedMessage defaultMessage="Managed Apps: run the software without running the server" />
         </h1>
         <p className="m-0 max-w-prose text-cyber-muted">
-          <FormattedMessage defaultMessage="Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working — no OS to patch, no Docker to configure, no certificate to renew." />
+          <FormattedMessage defaultMessage="Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working. No OS to patch, no Docker to configure, no certificate to renew." />
           {cheapest && (
             <>
               {" "}
@@ -115,7 +115,7 @@ export function AppsPage() {
           }
         >
           <FormattedMessage
-            defaultMessage="Every deployment gets {host} with a certificate issued automatically. Bring your own domain and point a CNAME at it — we serve that too, with its own certificate, issued once DNS resolves."
+            defaultMessage="Every deployment gets {host} with a certificate issued automatically. Bring your own domain and point a CNAME at it, and we serve that too, with its own certificate issued once DNS resolves."
             values={{
               host: (
                 <span className="font-mono text-cyber-accent">
@@ -141,7 +141,7 @@ export function AppsPage() {
 
       <p className="m-0 max-w-prose text-sm text-cyber-muted">
         <FormattedMessage
-          defaultMessage="Running in Dublin, Ireland. If you want the whole machine rather than the app on it, the <vps>VPS</vps> is still there — Managed Apps do not replace it."
+          defaultMessage="Running in Dublin, Ireland. If you want the whole machine rather than the app on it, the <vps>VPS</vps> is still there. Managed Apps do not replace it."
           values={{
             vps: (chunks: ReactNode) => (
               <Link to="/" className="text-cyber-primary hover:underline">

@@ -47,7 +47,7 @@ describe("appSeoDescription", () => {
   test("drops the storage clause below 1 GiB", () => {
     const text = appSeoDescription(app({ storage_bytes: 512 * 1024 }), intl);
     expect(text).not.toContain("storage");
-    expect(text).toContain("no server to patch.");
+    expect(text).toContain("No server to patch.");
   });
 
   test("quotes payment options rather than a price on a yearly plan", () => {

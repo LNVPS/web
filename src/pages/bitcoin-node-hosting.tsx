@@ -82,7 +82,7 @@ export function BitcoinNodeHostingPage() {
     {
       question: formatMessage({ defaultMessage: "Can I pay in Bitcoin?" }),
       answer: formatMessage({
-        defaultMessage: "Yes — Lightning or on-chain. Renewal is monthly.",
+        defaultMessage: "Yes, Lightning or on-chain. Renewal is monthly.",
       }),
     },
   ];
@@ -101,7 +101,7 @@ export function BitcoinNodeHostingPage() {
             <FormattedMessage defaultMessage="Bitcoin node hosting" />
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="A VPS with room for the chain, paid for in Bitcoin. You choose the specs and install your own node software — root access, no control panel in the way." />
+            <FormattedMessage defaultMessage="A VPS with room for the chain, paid for in Bitcoin. You choose the specs and install your own node software, with root access and no control panel in the way." />
           </p>
         </header>
 

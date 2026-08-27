@@ -199,7 +199,7 @@ export function AppPage() {
             formatMessage(
               {
                 defaultMessage:
-                  "Deploy {name} as a managed app on LNVPS — pay with Lightning, Bitcoin, or card.",
+                  "Deploy {name} as a managed app on LNVPS. Pay with Lightning, Bitcoin, or card.",
               },
               { name: app.display_name },
             )

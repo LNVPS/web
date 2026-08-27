@@ -12,7 +12,7 @@ Zusätzlich zu E-Mails und verschlüsselten Nostr-DMs können Sie jetzt Kontoben
 
 ## Neugestaltung der Kontoeinstellungen
 
-Die Seite mit den Kontoeinstellungen wurde in übersichtliche, abschnittsweise unterteilte Bereiche mit Statuszeilen im Terminal-Stil für jeden Benachrichtigungskanal umgestaltet. Auf dem Tab „Support“ müssen Sie nicht mehr manuell Ihren öffentlichen Schlüssel anhängen – er wird jetzt automatisch hinzugefügt – und auf dem Tab „Nachrichten“ wird ein schreibgeschützter Verlauf der vorherigen Support-Gespräche gespeichert.
+Die Seite mit den Kontoeinstellungen wurde in übersichtliche, abschnittsweise unterteilte Bereiche mit Statuszeilen im Terminal-Stil für jeden Benachrichtigungskanal umgestaltet. Auf dem Tab „Support“ müssen Sie nicht mehr manuell Ihren öffentlichen Schlüssel anhängen, er wird jetzt automatisch hinzugefügt, und auf dem Tab „Nachrichten“ wird ein schreibgeschützter Verlauf der vorherigen Support-Gespräche gespeichert.
 
 ## VM-Übersicht mit Seitenleisten-Navigation
 

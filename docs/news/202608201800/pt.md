@@ -6,13 +6,13 @@ O maior mês de lançamentos desde que o LNVPS foi lançado: uma nova linha de p
 
 Use **`BLOG10`** no checkout para ter **10% de desconto** em renovações de VPS, novas VMs e aplicativos gerenciados. Válido até **27 de agosto de 2026**, sem limite de quantas vezes você pode usá-lo.
 
-Códigos de desconto são novidade este mês — você encontrará o campo no checkout, e o desconto aparece na sua fatura e no histórico de pagamentos.
+Códigos de desconto são novidade este mês, você encontrará o campo no checkout, e o desconto aparece na sua fatura e no histórico de pagamentos.
 
 ## Aplicativos Gerenciados
 
 Aplicativos hospedados com um clique: você recebe um serviço ativo em uma URL e nós executamos tudo por baixo. Navegue pelo catálogo em [lnvps.net/apps](https://lnvps.net/apps).
 
-- Implante em um único formulário — escolha uma região, dê um nome, pronto
+- Implante em um único formulário, escolha uma região, dê um nome, pronto
 - Aponte seu próprio domínio para ele
 - Renomeie, reconfigure ou redimensione a qualquer momento, com crédito pelo tempo já pago
 - Uso de CPU, memória e armazenamento exibido em relação ao seu plano
@@ -20,10 +20,10 @@ Aplicativos hospedados com um clique: você recebe um serviço ativo em uma URL 
 
 ## Novas formas de login
 
-- **Login com o Google** — sem precisar de chave Nostr
-- **Passkeys** — Face ID, Touch ID, Windows Hello ou uma chave de hardware
+- **Login com o Google**: sem precisar de chave Nostr
+- **Passkeys**: Face ID, Touch ID, Windows Hello ou uma chave de hardware
 - **Encerrar sessão em todos os dispositivos**, nas configurações da conta
-- **Tor** — o site e a API estão disponíveis em serviços onion:
+- **Tor**: o site e a API estão disponíveis em serviços onion:
   - Site: `http://rheyodythpbwimdugzofiy5z5ofe4kvqhrxsmyxqy4e4hwf3aempncad.onion`
   - API: `http://rtcrcbworzub5uqtytjhap7q2l4jdoj7zu6nnq5rwu4pq6a467jx2tad.onion`
 
@@ -45,7 +45,7 @@ Aplicativos hospedados com um clique: você recebe um serviço ativo em uma URL 
 - **Escolha seus endereços IPv4 e IPv6** em builds personalizadas
 - **Um pedido de VPS personalizado redesenhado**, com foco no armazenamento
 - **A data real de exclusão** de uma VM não renovada, e aviso antecipado se um host estiver sendo desativado
-- **Discos mais rápidos** em novas VMs — as existentes passam a ter isso na próxima parada/inicialização
+- **Discos mais rápidos** em novas VMs, as existentes passam a ter isso na próxima parada/inicialização
 - **Um console web funcional** para contas com Google e passkeys
 
 ## Suporte
@@ -73,4 +73,4 @@ Aplicativos hospedados com um clique: você recebe um serviço ativo em uma URL 
 
 Logins com limite de tentativas, códigos de verificação com expiração, sessões revogáveis e links de uso único no console e nas suas faturas.
 
-Como sempre, obrigado por usar o LNVPS — e não se esqueça de `BLOG10`.
+Como sempre, obrigado por usar o LNVPS, e não se esqueça de `BLOG10`.

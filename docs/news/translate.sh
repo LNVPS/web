@@ -101,7 +101,10 @@ translate_text() {
     -H "Content-Type: application/json" \
     -d "$payload")
 
-  echo "$response" | jq -r '.choices[0].message.content'
+  # Some models (vLLM-served reasoning models in particular) pad the reply with
+  # blank lines. Strip leading/trailing whitespace so the written file starts on
+  # the first real line.
+  echo "$response" | jq -r '.choices[0].message.content' | sed -e '/./,$!d' | awk 'NF{p=NR} {l[NR]=$0} END{for(i=1;i<=p;i++) print l[i]}'
 }
 
 # Process a single article directory

@@ -26,7 +26,7 @@ export function VpsLondonPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in London from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in London from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
           },
           {
             price: fromText,
@@ -46,7 +46,7 @@ export function VpsLondonPage() {
       path="/vps-london"
       regionId={LondonRegionId}
       title={intl.formatMessage({
-        defaultMessage: "VPS London — UK VPS Paid in Bitcoin",
+        defaultMessage: "VPS London: UK VPS Paid in Bitcoin",
       })}
       description={description}
       h1={<FormattedMessage defaultMessage="VPS hosting in London" />}

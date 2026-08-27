@@ -225,7 +225,7 @@ export function AccountNostrDomains() {
                 <ul className="text-sm text-cyber-text space-y-1 list-disc list-inside">
                   <li>
                     <FormattedMessage
-                      defaultMessage="{cname} is recommended — it automatically follows server IP changes"
+                      defaultMessage="{cname} is recommended because it automatically follows server IP changes"
                       values={{ cname: <strong>CNAME</strong> }}
                     />
                   </li>
@@ -237,12 +237,12 @@ export function AccountNostrDomains() {
                   </li>
                   <li>
                     <FormattedMessage
-                      defaultMessage="{proxy} works without any DNS changes — useful if you already have a site on the domain"
+                      defaultMessage="{proxy} works without any DNS changes, useful if you already have a site on the domain"
                       values={{ proxy: <strong>Path proxy</strong> }}
                     />
                   </li>
                   <li>
-                    <FormattedMessage defaultMessage="DNS changes may take up to 24–48 hours to propagate" />
+                    <FormattedMessage defaultMessage="DNS changes may take up to 24-48 hours to propagate" />
                   </li>
                 </ul>
               </div>

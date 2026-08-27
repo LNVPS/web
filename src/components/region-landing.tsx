@@ -61,7 +61,7 @@ export function RegionLanding({
           description: intl.formatMessage(
             {
               defaultMessage:
-                "A VPS built to order in {region}: {minCpu}–{maxCpu} vCPU and {minMemory}–{maxMemory} memory, paid in Bitcoin.",
+                "A VPS built to order in {region}: {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory} memory, paid in Bitcoin.",
             },
             {
               region: template.region.name,

@@ -11,9 +11,6 @@
   "+Bj8tM": {
     "defaultMessage": "Si detienes la operación, se conservarán tus archivos subidos; solo al eliminarlos, dejarán de estar disponibles."
   },
-  "+EHk4e": {
-    "defaultMessage": "Sí. Es tu computadora, así que instala lo que quieras."
-  },
   "+H6Rvj": {
     "defaultMessage": "Ejecute su propio servidor de medios Blossom y NIP-96. {price}/mes. Route96 se puede implementar en cuestión de minutos en su propio servidor, con almacenamiento persistente y TLS incluido."
   },
@@ -22,6 +19,9 @@
   },
   "+Mo6Oy": {
     "defaultMessage": "Ejecute un nodo completo de Bitcoin en un servidor virtual privado (VPS) ubicado en {regions}Pague con Bitcoin a través de Lightning o directamente en la cadena de bloques. Desde {price} sin IVA."
+  },
+  "+NBJh2": {
+    "defaultMessage": "Retomando tu conversación anterior, el agente aún conserva el contexto, aunque los mensajes de arriba ya no se muestran. Inicia una nueva si prefieres empezar de cero."
   },
   "+Qebzr": {
     "defaultMessage": "Dirección en la cadena de bloques"
@@ -34,6 +34,12 @@
   },
   "+lH372": {
     "defaultMessage": "Cree su VPS en Dublín."
+  },
+  "+prida": {
+    "defaultMessage": "VPS Irlanda: servidores VPS en Dublín, con pago en Bitcoin."
+  },
+  "+rSMAE": {
+    "defaultMessage": "Servicios de alojamiento VPS de alto rendimiento para Bitcoin Lightning. Pague con Lightning, Bitcoin o tarjeta, sin necesidad de contratos a largo plazo."
   },
   "+sQCsu": {
     "defaultMessage": "Pago completo"
@@ -83,6 +89,9 @@
   "0HkBaC": {
     "defaultMessage": "Elija uno de los siguientes métodos para verificar su dominio:"
   },
+  "0OqCZG": {
+    "defaultMessage": "Nuevo pedido"
+  },
   "0QLzxo": {
     "defaultMessage": "Protocolo."
   },
@@ -116,20 +125,14 @@
   "13cluZ": {
     "defaultMessage": "Añadir clave SSH:"
   },
-  "18wON0": {
-    "defaultMessage": "VPS Canadá — VPS de Quebec, pago en Bitcoin."
-  },
-  "1HKX0H": {
-    "defaultMessage": "Sí, puede ser a través de Lightning o directamente en la cadena de bloques. La renovación es mensual."
-  },
   "1LBny5": {
     "defaultMessage": "Detenido."
   },
   "1M3SKY": {
     "defaultMessage": "Por favor, describa su pregunta o problema con detalle."
   },
-  "1R0JfT": {
-    "defaultMessage": "{storage} de almacenamiento persistente — {breakdown}"
+  "1PSTF4": {
+    "defaultMessage": "Se alcanzó el límite de mensajes para esta sesión, reconéctate para continuar. Se conserva tu historial de conversación."
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# hora} other{# horas}} {m,plural,one{# min.} other{# min.}}"
@@ -143,8 +146,8 @@
   "1p8vog": {
     "defaultMessage": "VPS personalizado"
   },
-  "1szy7r": {
-    "defaultMessage": "Su propio nombre de dominio — <code>su-nombre.ie.apps.lnvps.cloud</code> — con un certificado TLS emitido automáticamente."
+  "1prpZB": {
+    "defaultMessage": "Las notificaciones de mensajes directos de Nostr solo están disponibles para cuentas de Nostr, tu cuenta no tiene ninguna clave de Nostr para descifrarlas. Elige otro canal en {settings}."
   },
   "1v7S+3": {
     "defaultMessage": "Añadir dominio Nostr."
@@ -157,9 +160,6 @@
   },
   "219B5z": {
     "defaultMessage": "Comprobando código…"
-  },
-  "24piVc": {
-    "defaultMessage": "<b>Si lo desea, puede utilizar su propio dominio.</b> Apunte un registro CNAME a su servidor y nosotros lo utilizaremos junto con el nombre de host predeterminado, proporcionándole su propio certificado. No es necesario realizar ningún paso de verificación; el certificado se emite cuando se resuelve su DNS."
   },
   "28C0Aj": {
     "defaultMessage": "Descuento"
@@ -191,9 +191,6 @@
   "2xMlQF": {
     "defaultMessage": "Ejecute un nodo completo de Bitcoin en un servidor privado virtual (VPS) con suficiente espacio para la cadena de bloques. Pague en Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
-  "35johu": {
-    "defaultMessage": "Puedes pagar con criptomonedas (Bitcoin en la red Lightning), o con tarjeta de crédito. No es necesario proporcionar información personal para registrarse. Inicia sesión con tu clave Nostr: NIP-07 en el navegador y NIP-98 para la API."
-  },
   "36aVfS": {
     "defaultMessage": "Mensaje directo de Nostr."
   },
@@ -202,9 +199,6 @@
   },
   "3GLHv9": {
     "defaultMessage": "autenticar"
-  },
-  "3PIm6u": {
-    "defaultMessage": "Pregunta lo que quieras sobre tu cuenta — facturación, una VM que no arranca o el motivo de un cargo. Para reembolsos, extensiones o eliminaciones, usa el formulario de contacto en su lugar."
   },
   "3VI9mt": {
     "defaultMessage": "Guardar cambios"
@@ -220,9 +214,6 @@
   },
   "3eEn1+": {
     "defaultMessage": "<b>Sin necesidad de verificación de identidad (KYC).</b> No se requiere información personal para registrarse. Su nodo, sus claves, su negocio."
-  },
-  "3vxkus": {
-    "defaultMessage": "No es necesario guardar nada; su dispositivo (Face ID, Touch ID, Windows Hello o una clave de seguridad) protege la cuenta."
   },
   "3wJI0g": {
     "defaultMessage": "Dublín es también donde se alojan nuestros servidores <relay>Nostr</relay> y <blossom>Blossom</blossom> gestionados."
@@ -251,9 +242,6 @@
   "4D+xAI": {
     "defaultMessage": "¿Por qué este servidor privado virtual (VPS) para un nodo de Lightning?"
   },
-  "4FRCPv": {
-    "defaultMessage": "Pregunta lo que quieras sobre tu cuenta: facturación, una VM que no arranca o para qué fue un cargo."
-  },
   "4PKxPs": {
     "defaultMessage": "Desvincular"
   },
@@ -272,9 +260,6 @@
   "4eCXO1": {
     "defaultMessage": "{fee} de comisión"
   },
-  "4hI7OE": {
-    "defaultMessage": "Se elimina en {days, plural, one {# día} other {# días}} · {date} — renueva para conservar tus datos."
-  },
   "4j0zpr": {
     "defaultMessage": "Mínimo: {min} núcleos."
   },
@@ -283,6 +268,9 @@
   },
   "4lrWah": {
     "defaultMessage": "Error al cargar el historial: {error}"
+  },
+  "4pttvV": {
+    "defaultMessage": "clave SSH"
   },
   "5/Pb3D": {
     "defaultMessage": "Suscripciones activas"
@@ -293,14 +281,17 @@
   "556JQK": {
     "defaultMessage": "Implementar"
   },
-  "5PalnH": {
-    "defaultMessage": "{mbps} Mbit/s"
+  "5Am0O8": {
+    "defaultMessage": "Chatea con el agente de soporte de LNVPS. Puede consultar tu cuenta, tus máquinas virtuales y tus pagos, e iniciar, detener o reiniciar una máquina virtual. No puede ampliar, reembolsar ni eliminar, usa el formulario de abajo para esas acciones."
+  },
+  "5B072b": {
+    "defaultMessage": "Guarde esta clave ahora, ya que NO se podrá recuperar."
   },
   "5QYdPU": {
     "defaultMessage": "Hora de inicio"
   },
-  "5Sdgxl": {
-    "defaultMessage": "{read} lectura / {write} escritura MB/s"
+  "5VCeOz": {
+    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, es... <a>desde {price} un mes como aplicación gestionada</a>."
   },
   "5VEOig": {
     "defaultMessage": "Costo con la nueva tarifa para el tiempo restante:"
@@ -326,17 +317,14 @@
   "6FbX6y": {
     "defaultMessage": "Al detener la función, la aplicación se recalibra a cero y conserva sus datos. Al eliminarla, se detiene la facturación y se elimina permanentemente la implementación y sus volúmenes."
   },
+  "6G/ao3": {
+    "defaultMessage": "Su propio nombre de dominio, <code>su-nombre.ie.apps.lnvps.cloud</code>, con un certificado TLS emitido automáticamente."
+  },
   "6SfJaf": {
     "defaultMessage": "Actualizar a"
   },
   "6Tps09": {
     "defaultMessage": "Inactivo"
-  },
-  "6UfYVI": {
-    "defaultMessage": "Alojamiento VPS de alto rendimiento con opciones de pago flexibles: Bitcoin Lightning o tarjeta."
-  },
-  "6axKu6": {
-    "defaultMessage": "Implementar {name} como aplicación gestionada en LNVPS: pague con Lightning, Bitcoin o tarjeta."
   },
   "6hEevT": {
     "defaultMessage": "Establecer como predeterminado."
@@ -347,20 +335,14 @@
   "6oIsme": {
     "defaultMessage": "después {amount} descuento"
   },
-  "6sh6sN": {
-    "defaultMessage": "Puedes salir de esta página con seguridad — el pago aparece en tu historial de facturación y se aplica una vez confirmado."
+  "6tYS3u": {
+    "defaultMessage": "Su propio nombre de dominio, <code>su-nombre.ie.apps.lnvps.cloud</code>, con TLS habilitado automáticamente."
   },
   "6uMqL1": {
     "defaultMessage": "No pagado."
   },
-  "6vjF8Q": {
-    "defaultMessage": "Ancho de banda"
-  },
   "7+Domh": {
     "defaultMessage": "Notas"
-  },
-  "712uYy": {
-    "defaultMessage": "{n} reglas"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# min.} other{# minutos}}"
@@ -368,14 +350,14 @@
   "78fz1O": {
     "defaultMessage": "Código postal *"
   },
+  "7BcFF2": {
+    "defaultMessage": "¿No estás seguro? <b>strfry</b> es la opción más utilizada: es el sistema en el que se ejecutan la mayoría de los servidores públicos. <b>HAVEN</b> si este es tu servidor personal y no uno comunitario; además, te proporciona un espacio de almacenamiento multimedia de Blossom, por lo que tus imágenes y notas estarán almacenadas bajo la misma clave."
+  },
   "7CSemn": {
     "defaultMessage": "La cuota solo cubre el tráfico saliente y se reinicia el día 1 de cada mes. El tráfico entrante se muestra solo como referencia y nunca se descuenta de la cuota."
   },
   "7Cdpiv": {
     "defaultMessage": "Claves SSH"
-  },
-  "7DObFu": {
-    "defaultMessage": "IOPS del disco"
   },
   "7EjXDp": {
     "defaultMessage": "Espacios de trabajo compartidos para personas y agentes."
@@ -395,9 +377,6 @@
   "7agV2X": {
     "defaultMessage": "Relevo."
   },
-  "7bTzvm": {
-    "defaultMessage": "Configuración: este proceso suele tardar un minuto. El punto final aparece una vez que se está ejecutando."
-  },
   "7fGyF+": {
     "defaultMessage": "Borrar y reinstalar"
   },
@@ -416,8 +395,8 @@
   "7tOz+m": {
     "defaultMessage": "Pague ahora."
   },
-  "7v5vj0": {
-    "defaultMessage": "Aloja tu propio servidor multimedia: {price} al mes."
+  "7uvnYp": {
+    "defaultMessage": "{start}-{end} UTC"
   },
   "7wbySo": {
     "defaultMessage": "Envíenos un mensaje directamente y el equipo se pondrá en contacto con usted."
@@ -430,6 +409,9 @@
   },
   "7zs+Vz": {
     "defaultMessage": "Memoria: {gb} GB"
+  },
+  "81TEFm": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar el servidor."
   },
   "82Y7Sa": {
     "defaultMessage": "Enviando..."
@@ -455,17 +437,17 @@
   "8Q504V": {
     "defaultMessage": "Metadatos"
   },
-  "8QVkO9": {
-    "defaultMessage": "Solo el tráfico saliente se descuenta de la cuota de transferencia, y superarla no limita la velocidad ni suspende la VM."
-  },
   "8X6Kwp": {
     "defaultMessage": "Próximo pago."
+  },
+  "8aa9L8": {
+    "defaultMessage": "{min}-{max} memoria"
   },
   "8cnlb5": {
     "defaultMessage": "Guardar la ruta de pago."
   },
-  "8dAKuZ": {
-    "defaultMessage": "Sí, se utiliza un registro CNAME y el certificado se emite automáticamente una vez que se resuelve la consulta DNS."
+  "8dGrfx": {
+    "defaultMessage": "<b>Si lo desea, puede utilizar su propio dominio.</b> Apunte un registro CNAME a su servidor y nosotros lo utilizaremos junto con el nombre de host predeterminado, proporcionándole su propio certificado. No es necesario realizar ningún paso de verificación; el certificado se emite cuando se resuelve su DNS."
   },
   "8ecw1u": {
     "defaultMessage": "Manijas"
@@ -476,14 +458,20 @@
   "8lK3rQ": {
     "defaultMessage": "Renueve antes de {date} o bien esto y sus datos se eliminarán de forma permanente."
   },
-  "8vDeUP": {
-    "defaultMessage": "No está en funcionamiento; implemente la nueva versión y realice la migración. Son implementaciones independientes."
-  },
   "8xIysb": {
     "defaultMessage": "Extienda ahora."
   },
   "90f82/": {
     "defaultMessage": "Iniciar máquina virtual."
+  },
+  "97LYWX": {
+    "defaultMessage": "Envía Bitcoin on-chain a esta dirección. El tiempo se acredita automáticamente cuando la transacción se confirma, prorrateado según el importe recibido, los pagos parciales y en exceso nunca se pierden."
+  },
+  "9HB4ZM": {
+    "defaultMessage": "{name} Alojamiento, Gestionado {category}"
+  },
+  "9WGW0Z": {
+    "defaultMessage": "{pct} de los núcleos"
   },
   "9WRlF4": {
     "defaultMessage": "Enviar"
@@ -497,8 +485,8 @@
   "9gB0vq": {
     "defaultMessage": "Cree el servidor privado virtual (VPS) para su nodo."
   },
-  "9jmYTR": {
-    "defaultMessage": "{name} Alojamiento — Gestionado {category}"
+  "9nD0+u": {
+    "defaultMessage": "Corriendo en Dublín, Irlanda. Si lo que quieres es el sistema completo y no solo la aplicación, el <vps>VPS</vps> sigue disponible; las aplicaciones gestionadas no lo reemplazan."
   },
   "9p3I3O": {
     "defaultMessage": "Confirmando"
@@ -512,17 +500,23 @@
   "9uOFF3": {
     "defaultMessage": "Resumen"
   },
+  "9vL1hB": {
+    "defaultMessage": "{amount} de descuento. Solo se aplica a este pago, las renovaciones posteriores se facturarán al precio normal."
+  },
+  "A/UHKJ": {
+    "defaultMessage": "Contacta directamente con el equipo, te responderemos."
+  },
   "A11S6W": {
     "defaultMessage": "Envíenos un mensaje directamente. Su clave pública se incluirá automáticamente."
   },
   "A7Mqan": {
     "defaultMessage": "Cargando la renovación…"
   },
-  "AA5h7P": {
-    "defaultMessage": "Rendimiento"
-  },
   "ABL6b+": {
     "defaultMessage": "Convierte tu código en ingresos por comisiones."
+  },
+  "ABuXuE": {
+    "defaultMessage": "No se recibió respuesta para ese mensaje. Reconectando, por favor, pregunte de nuevo."
   },
   "AGa2G5": {
     "defaultMessage": "Cuando necesitas la máquina completa."
@@ -536,9 +530,6 @@
   "ASrBq8": {
     "defaultMessage": "Claves de acceso"
   },
-  "ATA6lA": {
-    "defaultMessage": "Corriendo en Dublín, Irlanda. Si lo que quieres es el sistema completo y no solo la aplicación, el <vps>VPS</vps> sigue disponible; las aplicaciones gestionadas no lo reemplazan."
-  },
   "ATH3LP": {
     "defaultMessage": "Cambiar el nombre modifica el nombre de host público."
   },
@@ -551,8 +542,8 @@
   "AfmrGS": {
     "defaultMessage": "Enviar código."
   },
-  "B3YjIQ": {
-    "defaultMessage": "Guarde esta clave ahora, ya que NO se podrá recuperar."
+  "Ay7iFf": {
+    "defaultMessage": "{v} Leer"
   },
   "B4reHi": {
     "defaultMessage": "Eventos históricos"
@@ -587,9 +578,6 @@
   "BZF5HJ": {
     "defaultMessage": "Dominios Nostr"
   },
-  "BdYFYb": {
-    "defaultMessage": "No se recibió respuesta para ese mensaje. Reconectando — por favor, pregunte de nuevo."
-  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -617,14 +605,26 @@
   "CEERm0": {
     "defaultMessage": "Chat en vivo"
   },
+  "CVnta/": {
+    "defaultMessage": "Los precios no incluyen impuestos ni comisiones por procesamiento de pagos."
+  },
   "CYP/Jx": {
     "defaultMessage": "Pide ayuda al equipo."
   },
   "Cououe": {
     "defaultMessage": "Inicie sesión para implementar esta aplicación."
   },
+  "CrzPmt": {
+    "defaultMessage": "Suscripción vencida, renueva para conservar esta máquina."
+  },
   "Ct2oqQ": {
     "defaultMessage": "· {bytes} de entrada"
+  },
+  "CtMEOV": {
+    "defaultMessage": "Configure exactamente lo que necesitas: la CPU, la memoria y el almacenamiento se configuran de forma independiente; puedes elegir entre un SSD o un disco duro, en lugar de tener que optar por configuraciones predefinidas."
+  },
+  "CuBwLu": {
+    "defaultMessage": "Los pagos se realizan en una billetera de NWC guardada. Puede agregar una nueva o seleccionar una existente; por defecto, se utilizará la billetera habilitada."
   },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
@@ -632,14 +632,8 @@
   "D3idYv": {
     "defaultMessage": "Configuración"
   },
-  "D45G/S": {
-    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, es... <a>desde {price} un mes como aplicación gestionada</a>."
-  },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
-  },
-  "D9mck8": {
-    "defaultMessage": "Paga cualquier importe cuando quieras — el tiempo se añade proporcionalmente"
   },
   "DATKpj": {
     "defaultMessage": "Esta página se actualizará automáticamente."
@@ -671,26 +665,26 @@
   "Dfuz87": {
     "defaultMessage": "Aún no se han añadido dominios. Añada su primer dominio en el espacio indicado para empezar."
   },
-  "DjPPFA": {
-    "defaultMessage": "Un servidor privado virtual (VPS) diseñado para un nodo de la red Lightning: dirección IPv4 e IPv6 estáticas, tráfico ilimitado, se permite el uso de Tor, sin necesidad de verificación de identidad. Ubicación en Dublín, Londres o Quebec. Pague directamente con la red Lightning."
-  },
-  "DlFmLA": {
-    "defaultMessage": "Has agotado tu cuota de datos salientes para este mes. No se ha realizado ninguna acción sobre tu VM: no está limitada, suspendida ni se ha realizado ningún cargo por el exceso, y la cuota se restablece el día 1."
+  "Dh4ByL": {
+    "defaultMessage": "Nostr mantiene tu identidad accesible en cualquier lugar. Los archivos multimedia son la parte que no lo hace: tus imágenes se almacenan en el servidor de otra persona, bajo sus condiciones, y desaparecen cuando esa persona decide hacerlo. Un servidor Blossom permite que vuelvas a tener el control."
   },
   "DnX0aY": {
     "defaultMessage": "Confirmar eliminación"
   },
+  "DnigOZ": {
+    "defaultMessage": "Puedes pagar con criptomonedas (Bitcoin en la red Lightning), o con tarjeta de crédito. No es necesario proporcionar información personal para registrarse. Inicia sesión con tu clave Nostr: NIP-07 en el navegador y NIP-98 para la API."
+  },
   "DpNZQY": {
     "defaultMessage": "Cargo por tramitación."
-  },
-  "DtYelJ": {
-    "defaultMessage": "Transferencia"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
   "E2YqWs": {
     "defaultMessage": "Programa de referidos"
+  },
+  "E4ywM+": {
+    "defaultMessage": "Aún no activada, paga para ponerla en línea."
   },
   "E8y+Hb": {
     "defaultMessage": "El contrato de arrendamiento ha finalizado."
@@ -719,6 +713,9 @@
   "Ecfndm": {
     "defaultMessage": "Factura"
   },
+  "Ed5Igt": {
+    "defaultMessage": "Los cambios en el DNS pueden tardar entre 24 y 48 horas en aplicarse."
+  },
   "EffI8i": {
     "defaultMessage": "Entorno aislado, no es un espacio compartido."
   },
@@ -746,9 +743,6 @@
   "FAmKDH": {
     "defaultMessage": "Implemente su repetidor."
   },
-  "FBPfJ7": {
-    "defaultMessage": "Mantenga la comisión hasta que alcance esta cantidad antes de realizar el pago; esto es útil en la cadena de bloques para evitar pagos mínimos. Deje este campo en blanco para utilizar el mínimo del sistema; puede aumentarlo, pero no disminuirlo."
-  },
   "FBjXEw": {
     "defaultMessage": "Actualizar el VPS nº{id}"
   },
@@ -772,9 +766,6 @@
   },
   "FazwRl": {
     "defaultMessage": "Inténtalo de nuevo."
-  },
-  "Ff9LAg": {
-    "defaultMessage": "Software que ponemos en funcionamiento para usted: cada aplicación en su propio nombre de dominio, con TLS ya configurado y funcionando, sin necesidad de aplicar parches al servidor. Relés de Nostr y servidores de medios Blossom disponibles en el <catalog>catálogo</catalog> hoy mismo."
   },
   "FlypmR": {
     "defaultMessage": "Añada una dirección de correo electrónico a continuación."
@@ -800,11 +791,14 @@
   "G6nrEF": {
     "defaultMessage": "Guardado con advertencias."
   },
-  "GCoWpl": {
-    "defaultMessage": "Contacta directamente con el equipo — te responderemos."
+  "GCQOx0": {
+    "defaultMessage": "Pague en la siguiente pantalla. La máquina se inicia una vez confirmado el pago."
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
+  },
+  "GHjilO": {
+    "defaultMessage": "Servicio de alojamiento de aplicaciones gestionado: no es necesario administrar ningún servidor."
   },
   "GLA+G9": {
     "defaultMessage": "Otras formas de contactarnos:"
@@ -824,9 +818,6 @@
   "GlTZFC": {
     "defaultMessage": "Comparte este enlace. Recibirás una comisión cuando alguien se registre y su máquina virtual realice su primer pago."
   },
-  "GoW0ua": {
-    "defaultMessage": "{size} egreso por mes"
-  },
   "GqRat5": {
     "defaultMessage": "Por favor, verifique su dirección de correo electrónico para completar su pedido."
   },
@@ -836,9 +827,6 @@
   "GsCz6b": {
     "defaultMessage": "Utilice una clave de remitente personalizada."
   },
-  "GtI0l1": {
-    "defaultMessage": "Los pagos se realizan en una billetera de NWC guardada. Puede agregar una nueva o seleccionar una existente; por defecto, se utilizará la billetera habilitada."
-  },
   "GuLP+V": {
     "defaultMessage": "Se renueva automáticamente un día antes de la fecha de vencimiento, utilizando el método de pago predeterminado."
   },
@@ -847,6 +835,9 @@
   },
   "H0SDpi": {
     "defaultMessage": "Error al registrar la clave de acceso"
+  },
+  "H3hg3V": {
+    "defaultMessage": "Route96 es un servidor Blossom/NIP-96 de alto rendimiento. Es de <a>código abierto</a> y pertenece a nosotros: lo hemos creado y gestionamos. No estás confiando en una caja negra; puedes leer cada línea del código y, cuando quieras, puedes irte con tus datos."
   },
   "H4Ucn0": {
     "defaultMessage": "Entrante"
@@ -862,6 +853,9 @@
   },
   "HVtxik": {
     "defaultMessage": "Dominio personalizado"
+  },
+  "Hct61V": {
+    "defaultMessage": "{storage} de almacenamiento persistente, {breakdown}"
   },
   "HlAgG9": {
     "defaultMessage": "He enviado el pago"
@@ -935,8 +929,8 @@
   "JVClQM": {
     "defaultMessage": "Estado del servicio LNVPS y tiempo de actividad"
   },
-  "JVZcdC": {
-    "defaultMessage": "La suscripción de esta implementación ha caducado y se ha reducido a cero. Sus datos siguen aquí; renueve la suscripción para volver a activarla."
+  "Ja58kB": {
+    "defaultMessage": "Implemente su sistema de retransmisión, desde {price} por mes"
   },
   "JcR1r1": {
     "defaultMessage": "Alojamiento de nodos de Bitcoin"
@@ -947,11 +941,11 @@
   "JiCBWy": {
     "defaultMessage": "Conéctate por SSH con la clave seleccionada."
   },
-  "JlGNV+": {
-    "defaultMessage": "Implementación en cuestión de minutos. Pague con Lightning, Bitcoin o tarjeta, sin necesidad de contratos a largo plazo."
-  },
   "Jm+fih": {
     "defaultMessage": "Inactivo."
+  },
+  "JuR4mj": {
+    "defaultMessage": "Paga cualquier importe cuando quieras, el tiempo se añade proporcionalmente"
   },
   "JykdTz": {
     "defaultMessage": "¿Permiten el uso de Tor?"
@@ -983,14 +977,14 @@
   "Kd8VbI": {
     "defaultMessage": "Alojamiento VPS para Bitcoin Lightning"
   },
-  "Kffxdm": {
-    "defaultMessage": "Cada plan incluye una dirección IPv4 y una dirección IPv6, así como tráfico ilimitado. Los precios incluyen el IVA; las comisiones por el procesamiento de pagos no están incluidas."
-  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
   "KuX7em": {
     "defaultMessage": "Activo durante {duration}."
+  },
+  "KucVE8": {
+    "defaultMessage": "Se recomienda {cname}; detecta automáticamente los cambios en la dirección IP del servidor."
   },
   "Kw4098": {
     "defaultMessage": "Nueva norma."
@@ -1009,9 +1003,6 @@
   },
   "LHX6Oo": {
     "defaultMessage": "Fecha de caducidad. {exp}"
-  },
-  "LJljHH": {
-    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido, no es necesario aplicar parches al servidor."
   },
   "LR754a": {
     "defaultMessage": "Se renueva en:"
@@ -1034,8 +1025,14 @@
   "LwGAe6": {
     "defaultMessage": "También disponible en LNVPS."
   },
-  "ME4cI7": {
-    "defaultMessage": "{start} – {end} UTC"
+  "M8ORKW": {
+    "defaultMessage": "Configuración: este proceso suele tardar un minuto. El punto final aparece una vez que se está ejecutando."
+  },
+  "M9eUaM": {
+    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, ya que está <a>disponible como una aplicación gestionada</a>."
+  },
+  "MIAOtN": {
+    "defaultMessage": "Alojamiento de servidores de medios Blossom, Route96"
   },
   "MJ2jZQ": {
     "defaultMessage": "Total"
@@ -1057,6 +1054,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirmar"
+  },
+  "N3Pob8": {
+    "defaultMessage": "Pregunta lo que quieras sobre tu cuenta, facturación, una VM que no arranca o el motivo de un cargo. Para reembolsos, extensiones o eliminaciones, usa el formulario de contacto en su lugar."
   },
   "N6XokP": {
     "defaultMessage": "No. Se trata de un VPS estándar con acceso de administrador; usted instala y ejecuta el nodo. Nuestras aplicaciones gestionadas, que se instalan con un solo clic, son los retransmisores de Nostr y los servidores de medios Blossom, y estos solo están disponibles en Dublín."
@@ -1094,20 +1094,26 @@
   "OJuBck": {
     "defaultMessage": "Sin contraseña"
   },
+  "OKl9cS": {
+    "defaultMessage": "{min}-{max} CPU virtual"
+  },
   "OLqOyf": {
     "defaultMessage": "Instrucciones de configuración"
   },
   "ORGv1Q": {
     "defaultMessage": "Creado"
   },
+  "OephhB": {
+    "defaultMessage": "{v} escribir"
+  },
   "OikYIw": {
     "defaultMessage": "Mínimo: {min} GB {type}"
   },
-  "OjzGyg": {
-    "defaultMessage": "Pago recibido — esperando confirmación. Puedes salir de esta página con seguridad."
-  },
   "Olq7Wf": {
     "defaultMessage": "Escribe tu mensaje aquí..."
+  },
+  "OnsDNZ": {
+    "defaultMessage": "Las últimas noticias, actualizaciones y anuncios de LNVPS: alojamiento de servidores virtuales privados (VPS) Bitcoin Lightning, con la opción de pago con tarjeta."
   },
   "Op5EHr": {
     "defaultMessage": "Iniciar sesión con Google"
@@ -1133,26 +1139,20 @@
   "P7PLVj": {
     "defaultMessage": "Fecha"
   },
+  "PCD5y1": {
+    "defaultMessage": "Un VPS configurado a medida en {region}: {minCpu}-{maxCpu} vCPU y {minMemory}-{maxMemory} memoria, pagada en Bitcoin."
+  },
   "PJKhfR": {
     "defaultMessage": "Una aplicación gestionada es la solución ideal cuando el objetivo principal es la implementación. Si desea ejecutar una versión modificada, alojar otros servicios en el mismo servidor o administrarlo usted mismo, nuestro servicio de <a>alojamiento VPS</a> comienza en Dublín, Londres y Quebec, con tráfico ilimitado y una dirección IPv4 e IPv6 estáticas en todos los planes."
   },
   "PJtOx7": {
     "defaultMessage": "No hay incidentes que comunicar."
   },
-  "PT4sD/": {
-    "defaultMessage": "Seleccione el sistema operativo:"
-  },
-  "PeOVdM": {
-    "defaultMessage": "Dublín (Irlanda), Londres (Reino Unido) o Quebec (Canadá). Dublín ofrece la mayor capacidad si necesita un nodo grande, con hasta 64 CPU virtuales y 128 GB de RAM."
-  },
   "PfSZy5": {
     "defaultMessage": "No se encontró ninguna orden."
   },
   "Pk14hW": {
     "defaultMessage": "Puedes pagar con Lightning Network, con bitcoin directamente en la cadena de bloques o con tarjeta. Inicia sesión con tu clave Nostr. No se requiere verificación de identidad (KYC)."
-  },
-  "PlcGQq": {
-    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
   },
   "Ppjs/C": {
     "defaultMessage": "Alojamiento VPS en Londres."
@@ -1163,8 +1163,11 @@
   "PujK1s": {
     "defaultMessage": "generar"
   },
-  "QB3YLi": {
-    "defaultMessage": "Al detener la medición, se restablece el valor del indicador a cero y se conservan los datos almacenados; su base de datos de eventos permanece intacta al reiniciar. La eliminación es lo que borra los datos."
+  "Q2VBjI": {
+    "defaultMessage": "Software que ponemos en funcionamiento para usted: cada aplicación en su propio nombre de dominio, con TLS ya configurado y funcionando, sin necesidad de aplicar parches al servidor. Relés de Nostr y servidores de medios Blossom disponibles en el <catalog>catálogo</catalog> hoy mismo."
+  },
+  "QCo/EY": {
+    "defaultMessage": "La suscripción de esta implementación ha caducado y se ha reducido a cero. Sus datos siguen aquí; renueve la suscripción para volver a activarla."
   },
   "QDOm6e": {
     "defaultMessage": "incluido. {rate} impuesto"
@@ -1183,9 +1186,6 @@
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
-  },
-  "Qiih54": {
-    "defaultMessage": "Cada máquina necesita atención — resuelve la lista de arriba para verlas aquí."
   },
   "QlsDcr": {
     "defaultMessage": "Acción."
@@ -1235,17 +1235,14 @@
   "RumeRz": {
     "defaultMessage": "Regiones"
   },
+  "Rvwnbl": {
+    "defaultMessage": "{size} salida/mes"
+  },
   "Rw7iI7": {
     "defaultMessage": "Desactivar"
   },
   "Rw82/V": {
     "defaultMessage": "por mes"
-  },
-  "S3OX0p": {
-    "defaultMessage": "Mensajes directos cifrados NIP-17 — léelos en {link}"
-  },
-  "S5oncX": {
-    "defaultMessage": "Todos los planes incluyen una dirección IPv4, una IPv6 y tráfico ilimitado. Los precios no incluyen impuestos ni comisiones de procesamiento de pago."
   },
   "S5s+VN": {
     "defaultMessage": "Lightning"
@@ -1259,14 +1256,14 @@
   "SMbDTG": {
     "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
   },
+  "SPNOyh": {
+    "defaultMessage": "Sí. Es tu computadora, así que instala lo que quieras."
+  },
   "SQJto2": {
     "defaultMessage": "Iniciar sesión"
   },
   "STWPnc": {
     "defaultMessage": "de salida"
-  },
-  "SU1E+O": {
-    "defaultMessage": "New Order"
   },
   "SYYlLP": {
     "defaultMessage": "Gestiona los handles NIP-05 registrados en este dominio."
@@ -1286,8 +1283,14 @@
   "SnyOdn": {
     "defaultMessage": "convertido"
   },
+  "SpNl4M": {
+    "defaultMessage": "Alojamiento VPS de Lightning Node: pague con Lightning."
+  },
   "Ss0sWu": {
     "defaultMessage": "Pague ahora."
+  },
+  "SuX9Rr": {
+    "defaultMessage": "Mantenga la comisión hasta que alcance esta cantidad antes de realizar el pago; esto es útil en la cadena de bloques para evitar pagos mínimos. Deje este campo en blanco para utilizar el mínimo del sistema; puede aumentarlo, pero no disminuirlo."
   },
   "Sz/3Vf": {
     "defaultMessage": "Indique los valores de actualización que sean mayores o iguales a los valores actuales, y asegúrese de que al menos uno de los valores sea mayor que el actual."
@@ -1298,17 +1301,11 @@
   "T4VxQN": {
     "defaultMessage": "Cargando…"
   },
-  "T7Fjtf": {
-    "defaultMessage": "Período de gracia vencido — puede eliminarse en cualquier momento. Renueva ahora para conservar tus datos."
-  },
   "T7b6ZF": {
     "defaultMessage": "Incidentes resueltos"
   },
   "TE4fIS": {
     "defaultMessage": "Ciudad"
-  },
-  "TF6JQf": {
-    "defaultMessage": "Un VPS configurado a medida en {region}: {minCpu}–{maxCpu} vCPU y {minMemory}–{maxMemory} memoria, pagada en Bitcoin."
   },
   "TGPQYT": {
     "defaultMessage": "{success} pagado/a"
@@ -1316,11 +1313,11 @@
   "TH1fFo": {
     "defaultMessage": "Telegrama"
   },
-  "TKgu8P": {
-    "defaultMessage": "Este host se va a retirar. Cambia a un nuevo VPS antes del {date}: las renovaciones se detienen entonces y tendrás que migrar."
-  },
   "TNSbi4": {
     "defaultMessage": "DNS inversa:"
+  },
+  "TRyGNx": {
+    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido, no es necesario aplicar parches al servidor."
   },
   "TT0vME": {
     "defaultMessage": "Se ha alcanzado el límite de reglas."
@@ -1364,11 +1361,11 @@
   "Tya89h": {
     "defaultMessage": "Envíanos un mensaje"
   },
-  "U+Ddsx": {
-    "defaultMessage": "Envía Bitcoin on-chain a esta dirección. El tiempo se acredita automáticamente cuando la transacción se confirma, prorrateado según el importe recibido — los pagos parciales y en exceso nunca se pierden."
-  },
   "U/W38H": {
     "defaultMessage": "¿Qué ocurre con mis eventos si dejo de pagar?"
+  },
+  "U/wRHL": {
+    "defaultMessage": "{min}-{max} {type} almacenamiento"
   },
   "U093E7": {
     "defaultMessage": "Chat de soporte"
@@ -1382,9 +1379,6 @@
   "U96Gl9": {
     "defaultMessage": "Guarde esta tarjeta para futuros pagos."
   },
-  "UANa+W": {
-    "defaultMessage": "Route96 es un servidor Blossom/NIP-96 de alto rendimiento. Es de <a>código abierto</a> y pertenece a nosotros: lo hemos creado y gestionamos. No estás confiando en una caja negra; puedes leer cada línea del código y, cuando quieras, puedes irte con tus datos."
-  },
   "UPP+wZ": {
     "defaultMessage": "En uso por {count,plural,one{VM} other{Máquinas virtuales}}: {vms}"
   },
@@ -1396,12 +1390,6 @@
   },
   "Ub+AGc": {
     "defaultMessage": "Iniciar sesión"
-  },
-  "UbzBlr": {
-    "defaultMessage": "Se recomienda {cname}; detecta automáticamente los cambios en la dirección IP del servidor."
-  },
-  "Ude0W6": {
-    "defaultMessage": "Instala tu propio relé de Nostr y ponlo en funcionamiento en cuestión de minutos, utilizando su propio nombre de dominio, con TLS y almacenamiento incluidos."
   },
   "UhIOEO": {
     "defaultMessage": "¿Necesita mi identificación?"
@@ -1451,6 +1439,12 @@
   "VffztH": {
     "defaultMessage": "último uso {date}"
   },
+  "Vi+REQ": {
+    "defaultMessage": "Implementación en cuestión de minutos. Pague con Lightning, Bitcoin o tarjeta, sin necesidad de contratos a largo plazo."
+  },
+  "VrBNV4": {
+    "defaultMessage": "Primer pago"
+  },
   "VtKAyJ": {
     "defaultMessage": "{count} / {max} reglas"
   },
@@ -1463,11 +1457,14 @@
   "W8nHSd": {
     "defaultMessage": "Preguntas frecuentes"
   },
-  "WEUBM+": {
-    "defaultMessage": "Chatea con el agente de soporte de LNVPS sobre planes y precios, regiones, sistemas operativos o cómo funciona el pago con Lightning; no es necesario iniciar sesión. Inicia sesión primero si tu consulta es sobre una VM existente o un pago, para que pueda consultar tu cuenta."
-  },
   "WEoZhh": {
     "defaultMessage": "No se encontró una suscripción a la que facturar esta mejora."
+  },
+  "WFUub1": {
+    "defaultMessage": "Un servidor privado virtual (VPS) diseñado para un nodo de la red Lightning: dirección IPv4 e IPv6 estáticas, tráfico ilimitado, se permite el uso de Tor, sin necesidad de verificación de identidad. Ubicación en Dublín, Londres o Quebec. Pague directamente con la red Lightning."
+  },
+  "WHIo1V": {
+    "defaultMessage": "Nuestras instalaciones en Dublín. Diseña la máquina que desees. {minCpu}-{maxCpu} vCPU y {minMemory}-{maxMemory}y páguelo con Bitcoin."
   },
   "WUV28A": {
     "defaultMessage": "Guardando…"
@@ -1480,6 +1477,9 @@
   },
   "WhmAMo": {
     "defaultMessage": "Alojamiento de nodos de Bitcoin"
+  },
+  "WnIMdg": {
+    "defaultMessage": "Se elimina en {days, plural, one {# día} other {# días}} · {date}, renueva para conservar tus datos."
   },
   "Wsj2fc": {
     "defaultMessage": "Incidentes activos"
@@ -1505,6 +1505,9 @@
   "X4VESO": {
     "defaultMessage": "Borra la VM y empieza desde una imagen nueva. Esto elimina permanentemente todos los datos que contiene."
   },
+  "X6gcwK": {
+    "defaultMessage": "La conexión se cortó antes de que terminara la respuesta. Reconectando, vuelve a preguntar cuando vuelva a estar disponible."
+  },
   "XD6788": {
     "defaultMessage": "Cargo por la configuración:"
   },
@@ -1526,9 +1529,6 @@
   "XZGfTo": {
     "defaultMessage": "Enviar un mensaje"
   },
-  "XdLEro": {
-    "defaultMessage": "Alojamiento de servidores de medios Blossom — Route96"
-  },
   "XdcFgv": {
     "defaultMessage": "Administré los servidores de retransmisión de Nostr. Pague con Lightning."
   },
@@ -1538,26 +1538,26 @@
   "Y+LcmX": {
     "defaultMessage": "Si no puede cambiar su DNS, configure un proxy en {path} en su servidor actual para que apunte a {target}."
   },
-  "Y+P9PL": {
-    "defaultMessage": "Utilice su propio dominio mediante CNAME; el certificado se emitirá automáticamente."
-  },
   "Y/tMXU": {
     "defaultMessage": "A la espera del pago. Se aplicará automáticamente una vez que se confirme."
   },
   "YCzocJ": {
     "defaultMessage": "¿Tiene preguntas sobre el aprovisionamiento, la facturación, la gestión de abusos o un problema específico del servicio? Estamos aquí para ayudarle."
   },
+  "YH6meO": {
+    "defaultMessage": "Límite"
+  },
   "YLoN96": {
     "defaultMessage": "<b>Dirección IPv4 e IPv6 estática en todos los planes.</b> Un nodo anunciado necesita una dirección que no cambie. Ambas direcciones están incluidas y no se ofrecen como un servicio adicional."
+  },
+  "YNpOZB": {
+    "defaultMessage": "Mensajes directos cifrados NIP-17, léelos en {link}"
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} CPU virtual, {memory} Memoria RAM. {disk} {diskType} almacenamiento en {region}."
   },
   "YQBx00": {
     "defaultMessage": "Código de descuento"
-  },
-  "YTV5w7": {
-    "defaultMessage": "{amount} de descuento. Solo se aplica a este pago — las renovaciones posteriores se facturarán al precio normal."
   },
   "YWjrby": {
     "defaultMessage": "Solo se enviarán alertas de la cuenta, como el aviso de vencimiento de la máquina virtual. Nunca enviaremos mensajes publicitarios."
@@ -1570,6 +1570,9 @@
   },
   "Yl8GBP": {
     "defaultMessage": "Número de identificación fiscal"
+  },
+  "YsVmzT": {
+    "defaultMessage": "Para las reglas de salida, el CIDR de origen coincide con la dirección de esta máquina virtual. No se puede restringir el host de destino remoto; solo se pueden restringir el protocolo y el puerto de destino."
   },
   "Ysr8td": {
     "defaultMessage": "Obtenido/Ganado"
@@ -1589,11 +1592,11 @@
   "Z8971h": {
     "defaultMessage": "Verificado"
   },
-  "ZOt2+K": {
-    "defaultMessage": "¿También estás gestionando un relé de Nostr? Este no necesita un servidor completo, ya que está <a>disponible como una aplicación gestionada</a>."
-  },
   "ZTj6ca": {
     "defaultMessage": "Pagar con tarjeta"
+  },
+  "ZTpvML": {
+    "defaultMessage": "Alojamiento VPS de alto rendimiento con opciones de pago flexibles: Bitcoin Lightning o tarjeta."
   },
   "ZbOD+W": {
     "defaultMessage": "Consulte el tiempo de actividad en tiempo real y el historial de incidentes de los servicios de LNVPS. Verifique el estado operativo actual de nuestra infraestructura de VPS."
@@ -1610,17 +1613,11 @@
   "ZmOSyB": {
     "defaultMessage": "Póngase en contacto con el equipo de LNVPS. ¿Tiene preguntas sobre nuestro servicio de alojamiento VPS o las opciones de pago? Estamos aquí para ayudarle."
   },
-  "ZoMETF": {
-    "defaultMessage": "El límite de CPU es una parte de los núcleos enumerados anteriormente, no una máquina más pequeña."
-  },
-  "ZqqwZc": {
-    "defaultMessage": "{n} IOPS"
-  },
   "ZshmbW": {
     "defaultMessage": "Este componente solo admite pagos on-chain"
   },
-  "ZvCgZf": {
-    "defaultMessage": "Una clave de Nostr es suficiente. No se requiere correo electrónico, nombre ni verificación de identidad (KYC). Las notificaciones pueden enviarse a mensajes directos encriptados de Nostr, correo electrónico, Telegram o WhatsApp; tú eliges."
+  "a/6iSq": {
+    "defaultMessage": "Implementa Route96: {price} al mes."
   },
   "a60eIK": {
     "defaultMessage": "Al guardar se vuelve a aplicar la configuración y se reinicia la aplicación."
@@ -1633,9 +1630,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "Añadir clave de acceso"
-  },
-  "aW+dvb": {
-    "defaultMessage": "{min}–{max} CPU virtual"
   },
   "acrOoz": {
     "defaultMessage": "Continúe."
@@ -1664,9 +1658,6 @@
   "b6Q2tD": {
     "defaultMessage": "Tiempo total de funcionamiento: {uptime}"
   },
-  "bKuAdU": {
-    "defaultMessage": "{pct} de núcleos asignados"
-  },
   "bMQUWl": {
     "defaultMessage": "CIDR de origen (esta máquina virtual)"
   },
@@ -1691,14 +1682,8 @@
   "c0b5XV": {
     "defaultMessage": "Tasa."
   },
-  "c5aQL+": {
-    "defaultMessage": "Elige una aplicación, dale un nombre y paga. Se implementa automáticamente en su propio nombre de dominio con TLS ya configurado: no es necesario aplicar parches al sistema operativo, ni configurar Docker, ni renovar el certificado."
-  },
-  "c78ZVJ": {
-    "defaultMessage": "Los cambios en el DNS pueden tardar entre 24 y 48 horas en aplicarse."
-  },
-  "cGedMc": {
-    "defaultMessage": "Instantáneo — escanea o paga una factura única"
+  "c5WuqM": {
+    "defaultMessage": "Este host se va a retirar. Cambia a un nuevo VPS antes del {date}: las renovaciones se detienen entonces y tendrás que migrar."
   },
   "cJzoWc": {
     "defaultMessage": "Su propio nombre de host, incluido el protocolo TLS."
@@ -1724,23 +1709,32 @@
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
   },
-  "cdG1p6": {
-    "defaultMessage": "Acredita {days, plural, one {# día} other {# días}} al tipo de cambio del momento en que se detectó el depósito, prorrateado según el importe recibido."
-  },
   "ciFSHC": {
     "defaultMessage": "Pago. {amount}"
   },
   "ckx15w": {
     "defaultMessage": "Transferencia de red"
   },
+  "clx9um": {
+    "defaultMessage": "Alojamiento VPS en Dublín, Irlanda. Configura tu propio servidor: elige el procesador, la memoria y el almacenamiento que necesitas. Paga con Bitcoin a través de Lightning o en la cadena de bloques."
+  },
   "cyR7Kh": {
     "defaultMessage": "Volver"
+  },
+  "d/qDxB": {
+    "defaultMessage": "{proxy} funciona sin necesidad de realizar cambios en la configuración del DNS, lo cual es útil si ya tienes un sitio web en ese dominio."
+  },
+  "d0UBDe": {
+    "defaultMessage": "No es necesario guardar nada; su dispositivo (Face ID, Touch ID, Windows Hello o una clave de seguridad) protege la cuenta."
   },
   "d1nnRF": {
     "defaultMessage": "Enviar otro mensaje."
   },
   "d3wxHm": {
     "defaultMessage": "Cargando el historial..."
+  },
+  "d6IhXk": {
+    "defaultMessage": "VPS Londres, VPS del Reino Unido, pago en Bitcoin."
   },
   "d6JhA/": {
     "defaultMessage": "Cree su VPS en Quebec."
@@ -1766,9 +1760,6 @@
   "dPEbZd": {
     "defaultMessage": "Esta implementación está pendiente de pago. Pague la suscripción para activarla."
   },
-  "dSDJft": {
-    "defaultMessage": "Nuestras instalaciones en Dublín. Diseña la máquina que desees. {minCpu}–{maxCpu} vCPU y {minMemory}–{maxMemory}y páguelo con Bitcoin."
-  },
   "dUQeuG": {
     "defaultMessage": "Crear cuenta con clave de acceso"
   },
@@ -1784,6 +1775,9 @@
   "dXTCjA": {
     "defaultMessage": "No verificado."
   },
+  "dXoYQD": {
+    "defaultMessage": "Cada implementación recibe {host} con un certificado que se emite automáticamente. Utilice su propio dominio y configure un registro CNAME para que apunte a él; nosotros también nos encargaremos de ello, con su propio certificado, que se emitirá una vez que se resuelva el DNS."
+  },
   "dgTL/5": {
     "defaultMessage": "No se han registrado identificadores."
   },
@@ -1796,14 +1790,17 @@
   "duElEE": {
     "defaultMessage": "No se encontraron entradas de historial para esta máquina virtual."
   },
+  "dwuJmA": {
+    "defaultMessage": "Instala tu propio relé de Nostr y ponlo en funcionamiento en cuestión de minutos, utilizando su propio nombre de dominio, con TLS y almacenamiento incluidos."
+  },
   "dz7KXz": {
     "defaultMessage": "{pct}% usado"
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
-  "e2hZoG": {
-    "defaultMessage": "Ejecutar {name} como un servicio gestionado {category} en LNVPS: nombre de host propio, con TLS incluido. {storage} almacenamiento, no hay necesidad de actualizar el servidor."
+  "e/j0NN": {
+    "defaultMessage": "Período de gracia vencido, puede eliminarse en cualquier momento. Renueva ahora para conservar tus datos."
   },
   "e4Rg0n": {
     "defaultMessage": "Notificaciones que LNVPS te ha enviado como mensajes directos cifrados NIP-17."
@@ -1820,6 +1817,9 @@
   "eR9d9s": {
     "defaultMessage": "Se ha enviado un correo electrónico de verificación, por favor revise su bandeja de entrada."
   },
+  "eTuPMz": {
+    "defaultMessage": "Transacción BTC estándar, se acredita tras la confirmación"
+  },
   "eVlu1R": {
     "defaultMessage": "Seleccione el idioma."
   },
@@ -1828,9 +1828,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Extensión de Nostr"
-  },
-  "eg3pYc": {
-    "defaultMessage": "Se alcanzó el límite de mensajes para esta sesión — reconéctate para continuar. Se conserva tu historial de conversación."
   },
   "eq14GY": {
     "defaultMessage": "Tu nueva clave secreta."
@@ -1843,6 +1840,9 @@
   },
   "evSskM": {
     "defaultMessage": "Este plan no tiene límite de transferencia. Las cifras corresponden al mes calendario actual y se reinician el día 1."
+  },
+  "ewx2b7": {
+    "defaultMessage": "Lanzar"
   },
   "exrlwL": {
     "defaultMessage": "Letras minúsculas, números y guiones. Esto será tu subdominio."
@@ -1865,14 +1865,8 @@
   "fNSGnl": {
     "defaultMessage": "Inicie sesión para realizar su pedido."
   },
-  "fNZGof": {
-    "defaultMessage": "Alojamiento VPS en Londres desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin mediante la red Lightning o directamente en la cadena de bloques."
-  },
   "fblXmJ": {
     "defaultMessage": "Nombre de la instancia"
-  },
-  "fnWV0M": {
-    "defaultMessage": "Para las reglas de salida, el CIDR de origen coincide con la dirección de esta máquina virtual. No se puede restringir el host de destino remoto; solo se pueden restringir el protocolo y el puerto de destino."
   },
   "fsB/4p": {
     "defaultMessage": "Guardado."
@@ -1889,14 +1883,23 @@
   "gBvImw": {
     "defaultMessage": "{count} manijas"
   },
+  "gGjH22": {
+    "defaultMessage": "VPS Canadá, VPS de Quebec, pago en Bitcoin."
+  },
   "gH4VcS": {
     "defaultMessage": "Coste del cambio de categoría calculado proporcionalmente:"
+  },
+  "gL1jHz": {
+    "defaultMessage": "Almacenamiento persistente: el tamaño se especifica por cada relé."
   },
   "gPsMm7": {
     "defaultMessage": "Implemente este Worker y agregue una ruta para {route}."
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
+  },
+  "gUwcoo": {
+    "defaultMessage": "Sí, puede ser a través de Lightning o directamente en la cadena de bloques. La renovación es mensual."
   },
   "gWp9QV": {
     "defaultMessage": "{failed} nunca pagado/a."
@@ -1913,14 +1916,8 @@
   "gjvoQG": {
     "defaultMessage": "Tallas"
   },
-  "grcWs1": {
-    "defaultMessage": "Pon en marcha tu propio relé de Nostr, a partir de {price} un mes"
-  },
   "gtGLdm": {
     "defaultMessage": "incluido el cargo de procesamiento de {amount}"
-  },
-  "gu3xKo": {
-    "defaultMessage": "Un VPS con espacio suficiente para la cadena de bloques, pagadero en Bitcoin. Tú eliges las especificaciones e instalas tu propio software de nodo: acceso de administrador, sin panel de control que lo complique."
   },
   "gv8O1e": {
     "defaultMessage": "Ofertas de VPS"
@@ -1949,11 +1946,11 @@
   "hXAhO/": {
     "defaultMessage": "Inicias sesión con una clave Nostr, así que no hay sesiones almacenadas que revocar. Cada solicitud se firma individualmente."
   },
-  "hZkw2A": {
-    "defaultMessage": "Las notificaciones de mensajes directos de Nostr solo están disponibles para cuentas de Nostr — tu cuenta no tiene ninguna clave de Nostr para descifrarlas. Elige otro canal en {settings}."
-  },
   "hs3HVz": {
     "defaultMessage": "Inicie sesión con Face ID, Touch ID, Windows Hello o una clave de seguridad. Puede añadir una clave de acceso a cualquier cuenta."
+  },
+  "hsfQVg": {
+    "defaultMessage": "Dirección IP estática, tráfico sin medición, permitido el uso de Tor y sin necesidad de verificación de identidad (KYC). Pague con Lightning: gestionamos nuestro propio nodo, por lo que su pago nunca pasa por un procesador externo."
   },
   "huqKGl": {
     "defaultMessage": "Crear cuenta"
@@ -1991,9 +1988,6 @@
   "iuQLCB": {
     "defaultMessage": "Los métodos de pago guardados se utilizan para realizar automáticamente los pagos de las renovaciones un día antes de que expire la máquina virtual. Seleccione cuál será el método predeterminado."
   },
-  "iv8nNj": {
-    "defaultMessage": "¿No estás seguro? <b>strfry</b> es la opción más utilizada: es el sistema en el que se ejecutan la mayoría de los servidores públicos. <b>HAVEN</b> si este es tu servidor personal y no uno comunitario; además, te proporciona un espacio de almacenamiento multimedia de Blossom, por lo que tus imágenes y notas estarán almacenadas bajo la misma clave."
-  },
   "iw5cTf": {
     "defaultMessage": "Por volumen."
   },
@@ -2002,12 +1996,6 @@
   },
   "j52BNh": {
     "defaultMessage": "¿Por qué alojar contenido multimedia en un servidor propio?"
-  },
-  "j7VE/p": {
-    "defaultMessage": "Transacción BTC estándar — se acredita tras la confirmación"
-  },
-  "j9/hqS": {
-    "defaultMessage": "Configure exactamente lo que necesitas: la CPU, la memoria y el almacenamiento se configuran de forma independiente; puedes elegir entre un SSD o un disco duro, en lugar de tener que optar por configuraciones predefinidas."
   },
   "jGSUnR": {
     "defaultMessage": "¿Se me asignará una dirección IP estática?"
@@ -2026,12 +2014,6 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# día} other{# días}}"
-  },
-  "jd19T+": {
-    "defaultMessage": "Cada implementación recibe {host} con un certificado que se emite automáticamente. Utilice su propio dominio y configure un registro CNAME para que apunte a él; nosotros también nos encargaremos de ello, con su propio certificado, que se emitirá una vez que se resuelva el DNS."
-  },
-  "jf7fbc": {
-    "defaultMessage": "Ninguno establecido; añada uno."
   },
   "jhBqwg": {
     "defaultMessage": "Apunte un CNAME de este dominio al nombre de host del despliegue cuando esté asignado. Déjelo vacío para eliminarlo."
@@ -2054,14 +2036,11 @@
   "jyXJcj": {
     "defaultMessage": "IPv6"
   },
-  "jzU8se": {
-    "defaultMessage": "Implementa Route96: {price} al mes."
-  },
-  "k2S+Z0": {
-    "defaultMessage": "Un protocolo para almacenar y recuperar archivos mediante su código hash, diseñado para funcionar con Nostr. NIP-96 es la especificación más antigua para el almacenamiento de archivos a través de HTTP; Route96 es compatible con ambas."
-  },
   "k9Pskm": {
     "defaultMessage": "Almacenamiento SSD rápido"
+  },
+  "kExo50": {
+    "defaultMessage": "No está en funcionamiento; implemente la nueva versión y realice la migración. Son implementaciones independientes."
   },
   "kJpuxD": {
     "defaultMessage": "Servicios recurrentes y facturación"
@@ -2075,8 +2054,8 @@
   "kSjQ3a": {
     "defaultMessage": "por {initiatedBy}"
   },
-  "kZ0qJu": {
-    "defaultMessage": "{read} lectura / {write} escritura IOPS"
+  "kWI6zX": {
+    "defaultMessage": "Compartido"
   },
   "kesoZ1": {
     "defaultMessage": "Operamos nuestro propio nodo de Lightning. Tus satoshis no se procesan a través de un tercero."
@@ -2087,11 +2066,20 @@
   "kr8jZp": {
     "defaultMessage": "{price}/mes."
   },
+  "ktNxFJ": {
+    "defaultMessage": "{ip4} × IPv4 · {ip6} × IPv6"
+  },
   "ku+mDU": {
     "defaultMessage": "Estado"
   },
+  "kvj8qh": {
+    "defaultMessage": "<b>Se permite el uso de Tor.</b> Si lo desea, puede ejecutar su nodo a través de Tor; no lo bloqueamos y tampoco utilizamos los sistemas de verificación de Google (captchas)."
+  },
   "l+Z32c": {
     "defaultMessage": "Enter para enviar, Shift+Enter para una nueva línea."
+  },
+  "l+g3in": {
+    "defaultMessage": "Inicia sesión para seleccionar un sistema operativo y una clave SSH para este equipo."
   },
   "l0VA3b": {
     "defaultMessage": "¿Se controla el flujo de tráfico?"
@@ -2117,11 +2105,14 @@
   "lP4qIQ": {
     "defaultMessage": "Datos de la tarjeta"
   },
-  "lPXSYN": {
-    "defaultMessage": "{min}–{max} memoria"
+  "lQNVjN": {
+    "defaultMessage": "Implementar {name} como aplicación gestionada en LNVPS: pague con Lightning, Bitcoin o tarjeta."
   },
   "lYEj5M": {
     "defaultMessage": "Aplicaciones administradas"
+  },
+  "lhC0On": {
+    "defaultMessage": "Revisar y lanzar"
   },
   "lhCavK": {
     "defaultMessage": "Marque la casilla «Guardar esta tarjeta» al pagar con Revolut para guardar una tarjeta aquí y poder utilizarla en futuros pagos y renovaciones automáticas."
@@ -2134,9 +2125,6 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# elemento; artículo} other{# artículos}}"
-  },
-  "ln2Syt": {
-    "defaultMessage": "Suscripción vencida — renueva para conservar esta máquina."
   },
   "lnaWo/": {
     "defaultMessage": "Región"
@@ -2152,12 +2140,6 @@
   },
   "mBLNqg": {
     "defaultMessage": "Iniciar chat"
-  },
-  "mDLXhF": {
-    "defaultMessage": "Retomando tu conversación anterior — el agente aún conserva el contexto, aunque los mensajes de arriba ya no se muestran. Inicia una nueva si prefieres empezar de cero."
-  },
-  "mDRXDi": {
-    "defaultMessage": "Nostr mantiene tu identidad accesible en cualquier lugar. Los archivos multimedia son la parte que no lo hace: tus imágenes se almacenan en el servidor de otra persona, bajo sus condiciones, y desaparecen cuando esa persona decide hacerlo. Un servidor Blossom permite que vuelvas a tener el control."
   },
   "mHEBOr": {
     "defaultMessage": "¿Me instalas Bitcoin Core?"
@@ -2177,9 +2159,6 @@
   "mOR+qH": {
     "defaultMessage": "Copiar al portapapeles"
   },
-  "mRKf2V": {
-    "defaultMessage": "La conexión se cortó antes de que terminara la respuesta. Reconectando — vuelve a preguntar cuando vuelva a estar disponible."
-  },
   "mV5FZi": {
     "defaultMessage": "Programa de referidos para empleados que se van de la empresa"
   },
@@ -2188,6 +2167,9 @@
   },
   "mY+s0A": {
     "defaultMessage": "Cómo nos comunicamos con usted."
+  },
+  "mZQl/y": {
+    "defaultMessage": "Pago recibido, esperando confirmación. Puedes salir de esta página con seguridad."
   },
   "mtEKFV": {
     "defaultMessage": "Procesando…"
@@ -2198,8 +2180,14 @@
   "n7yYXG": {
     "defaultMessage": "Servicio."
   },
+  "n8cyVk": {
+    "defaultMessage": "Sistema operativo"
+  },
   "n9fdaJ": {
     "defaultMessage": "No verificado."
+  },
+  "nCD6ia": {
+    "defaultMessage": "Dublín (Irlanda), Londres (Reino Unido) o Quebec (Canadá). Dublín ofrece la mayor capacidad si necesita un nodo grande, con hasta 64 CPU virtuales y 128 GB de RAM."
   },
   "nDyaq/": {
     "defaultMessage": "Corriendo."
@@ -2216,8 +2204,8 @@
   "nWQFic": {
     "defaultMessage": "Renovar"
   },
-  "naCpPX": {
-    "defaultMessage": "Implemente una aplicación en LNVPS: estará operativa en cuestión de minutos, con su propio nombre de dominio, TLS y almacenamiento incluidos, y sin necesidad de aplicar parches al sistema operativo. Ya puede utilizar los retransmisores de Nostr y los servidores de medios Blossom."
+  "nWhd7w": {
+    "defaultMessage": "Acredita {days, plural, one {# día} other {# días}} al tipo de cambio del momento en que se detectó el depósito, prorrateado según el importe recibido."
   },
   "ndu6sH": {
     "defaultMessage": "Aún no se ha medido."
@@ -2227,9 +2215,6 @@
   },
   "nm81YC": {
     "defaultMessage": "Cargando las ofertas de VPS..."
-  },
-  "nqdKy7": {
-    "defaultMessage": "Servicios de alojamiento VPS de alto rendimiento para Bitcoin Lightning. Pague con Lightning, Bitcoin o tarjeta, sin necesidad de contratos a largo plazo."
   },
   "nrTBF4": {
     "defaultMessage": "Host en retirada"
@@ -2255,9 +2240,6 @@
   "o9lOhm": {
     "defaultMessage": "Soporte para la clave pública: {npub}"
   },
-  "oA9E7/": {
-    "defaultMessage": "Los avisos de vencimiento, los recibos de pago y las notificaciones de aprovisionamiento llegan aquí mientras el canal de mensajes directos de Nostr esté habilitado en {settings}. Este buzón no se monitorea para respuestas — para contactar con una persona, utilice {support}."
-  },
   "oBSxZS": {
     "defaultMessage": "Presupuesto para la mejora."
   },
@@ -2266,6 +2248,12 @@
   },
   "oCc8Oq": {
     "defaultMessage": "Añadir clave"
+  },
+  "oGiUkp": {
+    "defaultMessage": "Ninguno establecido; añada uno."
+  },
+  "oIPESx": {
+    "defaultMessage": "Los avisos de vencimiento, los recibos de pago y las notificaciones de aprovisionamiento llegan aquí mientras el canal de mensajes directos de Nostr esté habilitado en {settings}. Este buzón no se monitorea para respuestas, para contactar con una persona, utilice {support}."
   },
   "oOdFIC": {
     "defaultMessage": "Nuestras instalaciones en Dublín. Diseña la máquina que desees y págalo con Bitcoin."
@@ -2288,9 +2276,6 @@
   "odXlk8": {
     "defaultMessage": "Iniciar sesión"
   },
-  "oezJ0C": {
-    "defaultMessage": "Dirección IP estática, tráfico sin medición, permitido el uso de Tor y sin necesidad de verificación de identidad (KYC). Pague con Lightning: gestionamos nuestro propio nodo, por lo que su pago nunca pasa por un procesador externo."
-  },
   "ooCqJa": {
     "defaultMessage": "En {region}, el disco llega hasta {hdd} HDD o {ssd} SSD, con {cpu} CPU virtual y {memory} en la parte superior."
   },
@@ -2306,6 +2291,12 @@
   "p5LNtB": {
     "defaultMessage": "No configurado."
   },
+  "pMi1Vp": {
+    "defaultMessage": "Chatea con el agente de soporte de LNVPS sobre planes y precios, regiones, sistemas operativos o cómo funciona el pago con Lightning; no es necesario iniciar sesión. Inicia sesión primero si tu consulta es sobre una VM existente o un pago, para que pueda consultar tu cuenta."
+  },
+  "pSpLvj": {
+    "defaultMessage": "Aloja tu propio servidor multimedia: {price} al mes."
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -2314,12 +2305,6 @@
   },
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
-  },
-  "phIEA8": {
-    "defaultMessage": "Alojamiento VPS en Quebec, Canadá, desde {price} sin IVA. {minCpu}–{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin a través de Lightning o directamente en la cadena de bloques."
-  },
-  "plUWdh": {
-    "defaultMessage": "{n} MB/s"
   },
   "ps4K9r": {
     "defaultMessage": "¿Qué es Blossom?"
@@ -2342,9 +2327,6 @@
   "qX7u3z": {
     "defaultMessage": "Etiqueta (por ejemplo, visa personal)"
   },
-  "qduRZE": {
-    "defaultMessage": "Aún no activada — paga para ponerla en línea."
-  },
   "qkLHOL": {
     "defaultMessage": "¿Está seguro de que desea eliminar la clave SSH «[nombre de la clave]»?{name}¿?"
   },
@@ -2353,6 +2335,9 @@
   },
   "quroDq": {
     "defaultMessage": "Historial de máquinas virtuales"
+  },
+  "qxGc3M": {
+    "defaultMessage": "Al detener la medición, se restablece el valor del indicador a cero y se conservan los datos almacenados; su base de datos de eventos permanece intacta al reiniciar. La eliminación es lo que borra los datos."
   },
   "qxg3uo": {
     "defaultMessage": "Acceso"
@@ -2372,14 +2357,8 @@
   "rieTwF": {
     "defaultMessage": "Fecha de caducidad:"
   },
-  "rlfZ2s": {
-    "defaultMessage": "Reglas de cortafuegos"
-  },
   "rneMhE": {
     "defaultMessage": "Implementar Route96."
-  },
-  "rr0r/W": {
-    "defaultMessage": "<b>Se permite el uso de Tor.</b> Si lo desea, puede ejecutar su nodo a través de Tor; no lo bloqueamos y tampoco utilizamos los sistemas de verificación de Google (captchas)."
   },
   "rv2p0H": {
     "defaultMessage": "CPU, memoria RAM y red."
@@ -2390,6 +2369,12 @@
   "rvirM2": {
     "defaultMessage": "Ubicación"
   },
+  "ryuZQh": {
+    "defaultMessage": "Elige una aplicación, dale un nombre y paga. Se implementa automáticamente en su propio nombre de dominio con TLS ya configurado: no es necesario aplicar parches al sistema operativo, ni configurar Docker, ni renovar el certificado."
+  },
+  "s+2Mb4": {
+    "defaultMessage": "Utilice su propio dominio mediante CNAME; el certificado se emitirá automáticamente."
+  },
   "s+YpY+": {
     "defaultMessage": "Obtenga recompensas al recomendar nuestros productos o servicios a otras personas."
   },
@@ -2399,11 +2384,11 @@
   "s2ZjPB": {
     "defaultMessage": "No hay reglas de firewall configuradas. Se aplica la política predeterminada."
   },
+  "s60OWn": {
+    "defaultMessage": "Pay for this deployment before resizing it, an upgrade is charged pro-rata against the time left on the current period."
+  },
   "sAJryD": {
     "defaultMessage": "El IVA y los cargos son estimados; el importe exacto se confirmará al realizar el pago."
-  },
-  "sE5lVR": {
-    "defaultMessage": "Servicio de alojamiento de aplicaciones gestionado: no es necesario administrar ningún servidor."
   },
   "sOF2lj": {
     "defaultMessage": "Ver README completo"
@@ -2413,6 +2398,9 @@
   },
   "sTesGq": {
     "defaultMessage": "No hay ofertas disponibles."
+  },
+  "sYN3Gd": {
+    "defaultMessage": "Cada máquina necesita atención, resuelve la lista de arriba para verlas aquí."
   },
   "sehISV": {
     "defaultMessage": "Alojamiento de Blossom Media Server desde {price} al mes."
@@ -2429,26 +2417,23 @@
   "srgk8m": {
     "defaultMessage": "Establece la moneda que se utilizará para el presupuesto y el pago."
   },
-  "svg9Ub": {
-    "defaultMessage": "Límite de CPU"
-  },
   "sx6MYT": {
     "defaultMessage": "El agente no puede extender, reembolsar ni eliminar una VM, y no puede actuar sobre una cuenta en la que no está conectado. Para esas, {link}."
   },
   "sy+pv5": {
     "defaultMessage": "Correo electrónico"
   },
-  "tFWVr1": {
-    "defaultMessage": "Throughput del disco"
-  },
-  "tG2iXV": {
-    "defaultMessage": "{min}–{max} {type} almacenamiento"
+  "t21/v7": {
+    "defaultMessage": "Los precios incluyen el IVA; las comisiones por procesamiento de pagos están excluidas."
   },
   "tNmjzW": {
     "defaultMessage": "Puerto(s)"
   },
   "tPwWRH": {
     "defaultMessage": "Sus implementaciones"
+  },
+  "tSWoyi": {
+    "defaultMessage": "Un VPS con espacio suficiente para la cadena de bloques, pagadero en Bitcoin. Tú eliges las especificaciones e instalas tu propio software de nodo: acceso de administrador, sin panel de control que lo complique."
   },
   "tTpLsN": {
     "defaultMessage": "No está vinculado."
@@ -2458,9 +2443,6 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Ejecute su nodo de Lightning en un servidor privado virtual (VPS) diseñado específicamente para ello."
-  },
-  "tiWuG8": {
-    "defaultMessage": "Implemente su sistema de retransmisión — desde {price} por mes"
   },
   "tngc9N": {
     "defaultMessage": "CIDR de origen"
@@ -2473,9 +2455,6 @@
   },
   "tuJeaZ": {
     "defaultMessage": "Sí."
-  },
-  "twd6jC": {
-    "defaultMessage": "Alojamiento VPS en Dublín, Irlanda. Configura tu propio servidor: elige el procesador, la memoria y el almacenamiento que necesitas. Paga con Bitcoin a través de Lightning o en la cadena de bloques."
   },
   "tzMNF3": {
     "defaultMessage": "Estado"
@@ -2501,17 +2480,11 @@
   "uJV0wU": {
     "defaultMessage": "Dirección IP"
   },
-  "uNhj6T": {
-    "defaultMessage": "Sí, cada plan incluye una dirección IPv4 y una dirección IPv6."
-  },
   "uPNlBw": {
     "defaultMessage": "Correo electrónico: {email}"
   },
   "uWPUqo": {
     "defaultMessage": "El agente no puede ampliar, reembolsar ni eliminar una VM. Para esas, {link}."
-  },
-  "uYtOL7": {
-    "defaultMessage": "VPS Irlanda: servidores VPS en Dublín, con pago en Bitcoin."
   },
   "ubXbwc": {
     "defaultMessage": "Política predeterminada."
@@ -2531,9 +2504,6 @@
   "uyWYPH": {
     "defaultMessage": "Esto borra todo lo que hay en la VM."
   },
-  "uybUiI": {
-    "defaultMessage": "Las últimas noticias, actualizaciones y anuncios de LNVPS: alojamiento de servidores virtuales privados (VPS) Bitcoin Lightning, con la opción de pago con tarjeta."
-  },
   "v2BRjN": {
     "defaultMessage": "Asunto *"
   },
@@ -2546,8 +2516,14 @@
   "vONi+O": {
     "defaultMessage": "País"
   },
+  "vRG4WY": {
+    "defaultMessage": "Puedes salir de esta página con seguridad, el pago aparece en tu historial de facturación y se aplica una vez confirmado."
+  },
   "vWsXtg": {
     "defaultMessage": "Creando el pago…"
+  },
+  "vahWHk": {
+    "defaultMessage": "Sí, se utiliza un registro CNAME y el certificado se emite automáticamente una vez que se resuelve la consulta DNS."
   },
   "vaoVHG": {
     "defaultMessage": "Volver a las suscripciones"
@@ -2567,14 +2543,14 @@
   "vuTMNa": {
     "defaultMessage": "Sistema de retransmisión personal tipo bóveda, con su propio espacio de almacenamiento multimedia Blossom."
   },
+  "vvE1WZ": {
+    "defaultMessage": "{n} reglas de firewall"
+  },
   "vy2rlX": {
     "defaultMessage": "Cargo por procesamiento:"
   },
   "w1iy6j": {
     "defaultMessage": "Actualizando precio…"
-  },
-  "w3i5cX": {
-    "defaultMessage": "Almacenamiento persistente: el tamaño se especifica por cada relé."
   },
   "wEQDC6": {
     "defaultMessage": "Editar"
@@ -2584,6 +2560,9 @@
   },
   "wLwJ9Q": {
     "defaultMessage": "Valor del tiempo restante a la tarifa anterior:"
+  },
+  "wRSmBV": {
+    "defaultMessage": "Sí, cada plan incluye una dirección IPv4 y una dirección IPv6."
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -2600,17 +2579,20 @@
   "wo868v": {
     "defaultMessage": "Iniciar sesión con una clave Nostr o bunker →"
   },
+  "wty+Xf": {
+    "defaultMessage": "Alojamiento VPS en Londres desde {price} sin IVA. {minCpu}-{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin mediante la red Lightning o directamente en la cadena de bloques."
+  },
   "wz7uSD": {
     "defaultMessage": "incluidos los {amount} de impuestos."
-  },
-  "x/me2T": {
-    "defaultMessage": "Chatea con el agente de soporte de LNVPS. Puede consultar tu cuenta, tus máquinas virtuales y tus pagos, e iniciar, detener o reiniciar una máquina virtual. No puede ampliar, reembolsar ni eliminar — usa el formulario de abajo para esas acciones."
   },
   "x0cZXf": {
     "defaultMessage": "No se puede realizar la actualización."
   },
-  "xExBHw": {
-    "defaultMessage": "Su propio nombre de dominio — <code>su-nombre.ie.apps.lnvps.cloud</code> — con TLS habilitado automáticamente."
+  "xA8JVo": {
+    "defaultMessage": "Un protocolo para almacenar y recuperar archivos mediante su código hash, diseñado para funcionar con Nostr. NIP-96 es la especificación más antigua para el almacenamiento de archivos a través de HTTP; Route96 es compatible con ambas."
+  },
+  "xALX/d": {
+    "defaultMessage": "Una clave de Nostr es suficiente. No se requiere correo electrónico, nombre ni verificación de identidad (KYC). Las notificaciones pueden enviarse a mensajes directos encriptados de Nostr, correo electrónico, Telegram o WhatsApp; tú eliges."
   },
   "xOnplm": {
     "defaultMessage": "Cargando los métodos de pago…"
@@ -2624,6 +2606,9 @@
   "xXbJso": {
     "defaultMessage": "Cerrar sesión"
   },
+  "xYA7Yg": {
+    "defaultMessage": "Instantáneo, escanea o paga una factura única"
+  },
   "xf2LGD": {
     "defaultMessage": "se renueva automáticamente el {date}"
   },
@@ -2632,9 +2617,6 @@
   },
   "xhfdqv": {
     "defaultMessage": "Creando"
-  },
-  "xj59EM": {
-    "defaultMessage": "{proxy} funciona sin necesidad de realizar cambios en la configuración del DNS, lo cual es útil si ya tienes un sitio web en ese dominio."
   },
   "xkr+zo": {
     "defaultMessage": "Términos y condiciones"
@@ -2669,23 +2651,29 @@
   "yRz1m6": {
     "defaultMessage": "Leer primero"
   },
+  "yS/1R0": {
+    "defaultMessage": "Implemente una aplicación en LNVPS: estará operativa en cuestión de minutos, con su propio nombre de dominio, TLS y almacenamiento incluidos, y sin necesidad de aplicar parches al sistema operativo. Ya puede utilizar los retransmisores de Nostr y los servidores de medios Blossom."
+  },
   "yUD6jT": {
     "defaultMessage": "Minutos. Se activa una vez que se completa el pago."
   },
   "yfhNX4": {
     "defaultMessage": "Al iniciar sesión se crea una sesión válida durante 30 días. Revócalas todas si crees que alguna ha quedado expuesta."
   },
-  "yracY5": {
-    "defaultMessage": "VPS Londres — VPS del Reino Unido, pago en Bitcoin."
+  "yoQJWu": {
+    "defaultMessage": "Pregunta lo que quieras sobre tu cuenta: facturación, una VM que no arranca o para qué fue un cargo."
+  },
+  "yqUCzc": {
+    "defaultMessage": "Alojamiento VPS en Quebec, Canadá, desde {price} sin IVA. {minCpu}-{maxCpu} vCPU, hasta {maxDisk} {diskType}Puede pagar con Bitcoin a través de Lightning o directamente en la cadena de bloques."
   },
   "yrsDLO": {
     "defaultMessage": "Se trata de un servidor virtual del Reino Unido, con facturación mensual y pago en Bitcoin. Elija su CPU, memoria y disco; no se incluye ningún servicio que no haya solicitado."
   },
-  "ys3Bzn": {
-    "defaultMessage": "Alojamiento VPS de Lightning Node: pague con Lightning."
-  },
   "z+hIFs": {
     "defaultMessage": "Aún no se han realizado pagos."
+  },
+  "z/H1td": {
+    "defaultMessage": "Pon en marcha tu propio relé de Nostr, a partir de {price} un mes"
   },
   "z1KiHv": {
     "defaultMessage": "Los mensajes están limitados a {max} caracteres."
@@ -2707,6 +2695,9 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>Tráfico sin límite de uso.</b> Un nodo de enrutamiento intercambia información constantemente. No debería estar controlando un medidor de ancho de banda."
+  },
+  "zhuLyw": {
+    "defaultMessage": "Has agotado tu cuota de datos salientes para este mes. No se ha realizado ninguna acción sobre tu VM: no está limitada, suspendida ni se ha realizado ningún cargo por el exceso, y la cuota se restablece el día 1."
   },
   "zzkKCh": {
     "defaultMessage": "{storage} de almacenamiento persistente"

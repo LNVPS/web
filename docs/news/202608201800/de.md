@@ -6,13 +6,13 @@ Der größte Auslieferungmonat seit dem Start von LNVPS: eine neue Produktlinie,
 
 Verwenden Sie **`BLOG10`** beim Checkout für **10 % Rabatt** auf VPS-Verlängerungen, neue VMs und verwaltete Apps. Gültig bis **27. August 2026**, ohne Einschränkung, wie oft Sie ihn verwenden.
 
-Rabattcodes sind neu in diesem Monat — das Feld finden Sie beim Checkout, und die Ersparnis wird in Ihrer Rechnung und im Zahlungsverlauf angezeigt.
+Rabattcodes sind neu in diesem Monat, das Feld finden Sie beim Checkout, und die Ersparnis wird in Ihrer Rechnung und im Zahlungsverlauf angezeigt.
 
 ## Verwaltete Apps
 
 One-Click-Hosted-Apps: Sie erhalten einen laufenden Dienst unter einer URL, wir betreiben alles dahinter. Stöbern Sie im Katalog unter [lnvps.net/apps](https://lnvps.net/apps).
 
-- Bereitstellung über ein einziges Formular — Region wählen, benennen, fertig
+- Bereitstellung über ein einziges Formular, Region wählen, benennen, fertig
 - Eigene Domain darauf verweisen
 - Jederzeit umbenennen, neu konfigurieren oder in der Größe ändern, mit Gutschrift für bereits bezahlte Zeit
 - CPU-, Arbeitsspeicher- und Datenvolumen-Nutzung relativ zu Ihrem Plan angezeigt
@@ -20,10 +20,10 @@ One-Click-Hosted-Apps: Sie erhalten einen laufenden Dienst unter einer URL, wir 
 
 ## Neue Wege zur Anmeldung
 
-- **Google-Anmeldung** — kein Nostr-Schlüssel erforderlich
-- **Passkeys** — Face ID, Touch ID, Windows Hello oder ein Hardware-Schlüssel
+- **Google-Anmeldung**: kein Nostr-Schlüssel erforderlich
+- **Passkeys**: Face ID, Touch ID, Windows Hello oder ein Hardware-Schlüssel
 - **Überall abmelden**, aus den Kontoeinstellungen
-- **Tor** — Website und API sind auf Onion-Diensten:
+- **Tor**: Website und API sind auf Onion-Diensten:
   - Website: `http://rheyodythpbwimdugzofiy5z5ofe4kvqhrxsmyxqy4e4hwf3aempncad.onion`
   - API: `http://rtcrcbworzub5uqtytjhap7q2l4jdoj7zu6nnq5rwu4pq6a467jx2tad.onion`
 
@@ -45,7 +45,7 @@ One-Click-Hosted-Apps: Sie erhalten einen laufenden Dienst unter einer URL, wir 
 - **Ihre IPv4- und IPv6-Adressen bei Custom-Builds wählen**
 - **Eine neu gestaltete Custom-VPS-Bestellung**, zunächst um den Speicherplatz herum aufgebaut
 - **Das tatsächliche Löschdatum** für eine nicht verlängerte VM und Vorwarnung, wenn ein Host ausgemustert wird
-- **Schnellere Festplatten** bei neuen VMs — bestehende VMs übernehmen dies bei ihrem nächsten Stop/Start
+- **Schnellere Festplatten** bei neuen VMs, bestehende VMs übernehmen dies bei ihrem nächsten Stop/Start
 - **Eine funktionierende Web-Konsole** für Google- und Passkey-Konten
 
 ## Support
@@ -73,4 +73,4 @@ One-Click-Hosted-Apps: Sie erhalten einen laufenden Dienst unter einer URL, wir 
 
 Rate-limitierte Anmeldungen, ablaufende Verifizierungs-Codes, widerrufbare Sitzungen und Einmallinks hinter der Konsole und Ihren Rechnungen.
 
-Wie immer: Vielen Dank für die Nutzung von LNVPS — und vergessen Sie `BLOG10` nicht.
+Wie immer: Vielen Dank für die Nutzung von LNVPS, und vergessen Sie `BLOG10` nicht.

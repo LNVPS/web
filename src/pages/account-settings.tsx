@@ -288,7 +288,7 @@ export function AccountSettings() {
                 name={<FormattedMessage defaultMessage="Nostr DM" />}
                 hint={
                   <FormattedMessage
-                    defaultMessage="Encrypted NIP-17 direct message — read them in {link}"
+                    defaultMessage="Encrypted NIP-17 direct message, read them in {link}"
                     values={{
                       link: (
                         <Link

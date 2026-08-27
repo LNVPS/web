@@ -158,7 +158,7 @@ export default function DeployAppForm({ app }: { app: App }) {
               {r.name}
               {r.available
                 ? ""
-                : ` — ${formatMessage({ defaultMessage: "full" })}`}
+                : ` (${formatMessage({ defaultMessage: "full" })})`}
             </option>
           ))}
         </select>

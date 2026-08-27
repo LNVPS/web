@@ -4,7 +4,7 @@ import { useHead, type HeadTags } from "./head-context";
 const SITE_NAME = "LNVPS";
 const SITE_URL = "https://lnvps.net";
 const DEFAULT_DESCRIPTION =
-  "Bitcoin Lightning VPS hosting — pay with Lightning, Bitcoin, or card";
+  "Bitcoin Lightning VPS hosting: pay with Lightning, Bitcoin, or card";
 /**
  * Social-card image. Must stay a wide banner: every platform that renders a
  * card fits the image to a landscape slot, so a square gets centre-cropped or

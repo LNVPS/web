@@ -522,7 +522,7 @@ function PayoutThresholdInput({
         </span>
       </div>
       <p className="m-0 text-cyber-muted text-xs">
-        <FormattedMessage defaultMessage="Hold commission until it reaches this amount before paying out — handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below." />
+        <FormattedMessage defaultMessage="Hold commission until it reaches this amount before paying out, which is handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below." />
       </p>
     </div>
   );
@@ -600,7 +600,7 @@ function PayoutMethodSelector({
       {method === "nwc" && (
         <div className="flex flex-col gap-2 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3">
           <p className="m-0 text-cyber-muted text-sm">
-            <FormattedMessage defaultMessage="Payouts go to a saved NWC wallet. Add or pick one below — the default enabled wallet is used." />
+            <FormattedMessage defaultMessage="Payouts go to a saved NWC wallet. Add or pick one below. The default enabled wallet is used." />
           </p>
           <PaymentMethods providerFilter="nwc" />
         </div>

@@ -65,7 +65,7 @@ export function AccountSupportPage() {
       <PageHeader
         title={<FormattedMessage defaultMessage="Support" />}
         description={
-          <FormattedMessage defaultMessage="Reach the team directly — we'll get back to you." />
+          <FormattedMessage defaultMessage="Reach the team directly and we'll get back to you." />
         }
       />
 
@@ -73,7 +73,7 @@ export function AccountSupportPage() {
         <SectionCard
           title={<FormattedMessage defaultMessage="Live Chat" />}
           description={
-            <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete — use the form below for those." />
+            <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete, so use the form below for those." />
           }
         >
           <Link

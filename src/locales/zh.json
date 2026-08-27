@@ -11,9 +11,6 @@
   "+Bj8tM": {
     "defaultMessage": "停止操作会保留您已上传的内容；只有删除操作才会将其移除。"
   },
-  "+EHk4e": {
-    "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
-  },
   "+H6Rvj": {
     "defaultMessage": "运行您自己的 Blossom 和 NIP-96 媒体服务器，用于…… {price}每月。Route96，可在几分钟内通过其自身的域名进行部署，并包含持久性存储和 TLS 加密。"
   },
@@ -22,6 +19,9 @@
   },
   "+Mo6Oy": {
     "defaultMessage": "在某个虚拟专用服务器（VPS）上运行一个比特币完整节点。 {regions}可通过闪电网络或链上方式使用比特币支付。从…… {price} 不含增值税。"
+  },
+  "+NBJh2": {
+    "defaultMessage": "继续您之前的对话，尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
   },
   "+Qebzr": {
     "defaultMessage": "链上地址"
@@ -34,6 +34,12 @@
   },
   "+lH372": {
     "defaultMessage": "搭建您的都柏林虚拟专用服务器。"
+  },
+  "+prida": {
+    "defaultMessage": "爱尔兰 VPS，都柏林 VPS，比特币支付。"
+  },
+  "+rSMAE": {
+    "defaultMessage": "高性能比特币闪电网络虚拟专用服务器（VPS）托管服务。您可以使用闪电网络、比特币或信用卡支付，无需签订长期合同。"
   },
   "+sQCsu": {
     "defaultMessage": "完成支付。"
@@ -83,6 +89,9 @@
   "0HkBaC": {
     "defaultMessage": "请选择以下其中一种方法来验证您的域名："
   },
+  "0OqCZG": {
+    "defaultMessage": "新订单"
+  },
   "0QLzxo": {
     "defaultMessage": "协议"
   },
@@ -116,20 +125,14 @@
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
   },
-  "18wON0": {
-    "defaultMessage": "加拿大 VPS——魁北克 VPS，比特币支付。"
-  },
-  "1HKX0H": {
-    "defaultMessage": "是的——可以选择闪电网络或链上方式。续订周期为每月一次。"
-  },
   "1LBny5": {
     "defaultMessage": "停止。"
   },
   "1M3SKY": {
     "defaultMessage": "请详细描述您的问题或遇到的情况……"
   },
-  "1R0JfT": {
-    "defaultMessage": "{storage} 持久存储方面—— {breakdown}"
+  "1PSTF4": {
+    "defaultMessage": "本次会话已达到消息上限，重新连接以继续。您的对话记录已保留。"
   },
   "1VQrBL": {
     "defaultMessage": "{h,plural,one{# 小时} other{# 小时}} {m,plural,one{# 分钟} other{# 分钟}}"
@@ -143,8 +146,8 @@
   "1p8vog": {
     "defaultMessage": "自定义 VPS"
   },
-  "1szy7r": {
-    "defaultMessage": "您自己的主机名——<code>your-name.ie.apps.lnvps.cloud</code>，系统会自动为其颁发 TLS 证书。"
+  "1prpZB": {
+    "defaultMessage": "Nostr 私信通知仅适用于 Nostr 账号，你的账号没有 Nostr 密钥来解密它们。请在……中选择其他渠道 {settings}。"
   },
   "1v7S+3": {
     "defaultMessage": "添加 Nostr 域名"
@@ -157,9 +160,6 @@
   },
   "219B5z": {
     "defaultMessage": "正在检查代码…"
-  },
-  "24piVc": {
-    "defaultMessage": "<b>如果您需要，您可以拥有自己的域名。</b>将一个 CNAME 指向您的中继服务器，我们将与默认主机名一起提供服务，并为其配备单独的证书。无需验证步骤——当您的 DNS 解析时，系统会自动颁发证书。"
   },
   "28C0Aj": {
     "defaultMessage": "折扣"
@@ -191,9 +191,6 @@
   "2xMlQF": {
     "defaultMessage": "在虚拟专用服务器（VPS）上运行一个比特币完整节点，并确保有足够的存储空间来存储整个区块链。您可以通过闪电网络或直接链上方式支付比特币。"
   },
-  "35johu": {
-    "defaultMessage": "可以使用闪电网络、链上比特币或信用卡支付。注册时无需提供个人信息。使用您的 Nostr 密钥登录——在浏览器中使用 NIP-07，在 API 中使用 NIP-98。"
-  },
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
   },
@@ -202,9 +199,6 @@
   },
   "3GLHv9": {
     "defaultMessage": "验证"
-  },
-  "3PIm6u": {
-    "defaultMessage": "您可以咨询账户相关的任何问题——账单、无法启动的虚拟机，或某笔扣款的原因。如需退款、延期或删除，请改用联系表单。"
   },
   "3VI9mt": {
     "defaultMessage": "保存更改。"
@@ -220,9 +214,6 @@
   },
   "3eEn1+": {
     "defaultMessage": "<b>无需进行身份验证。</b>注册时无需提供个人信息。您的节点、您的密钥，一切由您掌控。"
-  },
-  "3vxkus": {
-    "defaultMessage": "无需保存任何内容——您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
   },
   "3wJI0g": {
     "defaultMessage": "都柏林也是我们托管的 <relay>Nostr 中继</relay> 以及 <blossom>Blossom 服务器</blossom> 的运行地。"
@@ -251,9 +242,6 @@
   "4D+xAI": {
     "defaultMessage": "为什么选择这款虚拟专用服务器来搭建闪电网络节点？"
   },
-  "4FRCPv": {
-    "defaultMessage": "关于您的账户，任何问题都可以问——账单、无法启动的虚拟机，或某笔扣款的原因。"
-  },
   "4PKxPs": {
     "defaultMessage": "取消链接。"
   },
@@ -272,9 +260,6 @@
   "4eCXO1": {
     "defaultMessage": "手续费 {fee}"
   },
-  "4hI7OE": {
-    "defaultMessage": "将在 {days, plural, one {# 天} other {# 天}}后删除 · {date} — 续费以保留您的数据。"
-  },
   "4j0zpr": {
     "defaultMessage": "最低：{min} 个内核"
   },
@@ -283,6 +268,9 @@
   },
   "4lrWah": {
     "defaultMessage": "加载历史记录时出错：{error}"
+  },
+  "4pttvV": {
+    "defaultMessage": "SSH 密钥"
   },
   "5/Pb3D": {
     "defaultMessage": "已激活的订阅服务。"
@@ -293,14 +281,17 @@
   "556JQK": {
     "defaultMessage": "部署"
   },
-  "5PalnH": {
-    "defaultMessage": "{mbps} 兆比特/秒"
+  "5Am0O8": {
+    "defaultMessage": "与 LNVPS 客服助手聊天。它可以查询您的账户、虚拟机和付款信息，并启动、停止或重启虚拟机。它无法办理延期、退款或删除，请使用下方表单处理这些事项。"
+  },
+  "5B072b": {
+    "defaultMessage": "请立即保存此密钥，因为一旦丢失就无法恢复。"
   },
   "5QYdPU": {
     "defaultMessage": "开始时间"
   },
-  "5Sdgxl": {
-    "defaultMessage": "{read} 读取 / {write} 写入 MB/s"
+  "5VCeOz": {
+    "defaultMessage": "您也在运行 Nostr 中继节点吗？这个中继节点不需要整台服务器，它只是 <a>来自 {price} 一个月的使用期限，作为受管理的应用程序。</a>."
   },
   "5VEOig": {
     "defaultMessage": "剩余时间采用新费率计算的费用："
@@ -326,17 +317,14 @@
   "6FbX6y": {
     "defaultMessage": "停止操作会将应用程序缩减至零，并保留其数据。删除操作会停止计费，并永久删除部署及其卷。"
   },
+  "6G/ao3": {
+    "defaultMessage": "您自己的主机名，<code>your-name.ie.apps.lnvps.cloud</code>，系统会自动为其颁发 TLS 证书。"
+  },
   "6SfJaf": {
     "defaultMessage": "升级至"
   },
   "6Tps09": {
     "defaultMessage": "未激活；不活跃"
-  },
-  "6UfYVI": {
-    "defaultMessage": "高性能 VPS 虚拟主机，支持灵活的支付方式——比特币闪电网络或信用卡。"
-  },
-  "6axKu6": {
-    "defaultMessage": "部署 {name} 作为在 LNVPS 上提供的应用，您可以使用闪电网络、比特币或信用卡进行支付。"
   },
   "6hEevT": {
     "defaultMessage": "设置为默认值。"
@@ -347,20 +335,14 @@
   "6oIsme": {
     "defaultMessage": "之后 {amount} 折扣"
   },
-  "6sh6sN": {
-    "defaultMessage": "您可以放心离开此页面 — 付款会显示在您的账单历史中，确认后即会生效。"
+  "6tYS3u": {
+    "defaultMessage": "您自己的主机名，<code>your-name.ie.apps.lnvps.cloud</code>，并已启用自动 TLS。"
   },
   "6uMqL1": {
     "defaultMessage": "未支付"
   },
-  "6vjF8Q": {
-    "defaultMessage": "带宽"
-  },
   "7+Domh": {
     "defaultMessage": "注释"
-  },
-  "712uYy": {
-    "defaultMessage": "{n} 规则"
   },
   "78CCi1": {
     "defaultMessage": "{n,plural,one{# 分钟} other{# 分钟}}"
@@ -368,14 +350,14 @@
   "78fz1O": {
     "defaultMessage": "邮政编码 *"
   },
+  "7BcFF2": {
+    "defaultMessage": "不确定吗？<b>strfry</b>是主要的运行程序，大多数公共中继服务器都使用它。<b>HAVEN</b>如果这是一个个人中继服务器，而不是社区中继服务器；它还提供一个Blossom媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
+  },
   "7CSemn": {
     "defaultMessage": "该额度仅涵盖出站流量，并于每月1日重置。入站流量仅供参考，不占用该额度。"
   },
   "7Cdpiv": {
     "defaultMessage": "SSH 密钥"
-  },
-  "7DObFu": {
-    "defaultMessage": "磁盘 IOPS"
   },
   "7EjXDp": {
     "defaultMessage": "供人和智能客服共享的工作空间。"
@@ -395,9 +377,6 @@
   "7agV2X": {
     "defaultMessage": "中继；传递"
   },
-  "7bTzvm": {
-    "defaultMessage": "设置过程——这通常需要一分钟。一旦开始运行，终端就会出现。"
-  },
   "7fGyF+": {
     "defaultMessage": "清除并重新安装"
   },
@@ -416,8 +395,8 @@
   "7tOz+m": {
     "defaultMessage": "立即付款。"
   },
-  "7v5vj0": {
-    "defaultMessage": "搭建您自己的媒体服务器——每月只需 {price}。"
+  "7uvnYp": {
+    "defaultMessage": "{start}-{end} 协调世界时"
   },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
@@ -430,6 +409,9 @@
   },
   "7zs+Vz": {
     "defaultMessage": "内存：{gb} GB"
+  },
+  "81TEFm": {
+    "defaultMessage": "运行 {name} 作为一种受管理的 {category} 在 LNVPS 上，使用自定义主机名，并启用 TLS。 {storage} 存储，无需更新服务器。"
   },
   "82Y7Sa": {
     "defaultMessage": "正在发送……"
@@ -455,17 +437,17 @@
   "8Q504V": {
     "defaultMessage": "元数据"
   },
-  "8QVkO9": {
-    "defaultMessage": "仅出站流量会计入传输配额，超出配额不会导致虚拟机被限速或暂停。"
-  },
   "8X6Kwp": {
     "defaultMessage": "下次付款"
+  },
+  "8aa9L8": {
+    "defaultMessage": "{min}，{max} 记忆；存储器"
   },
   "8cnlb5": {
     "defaultMessage": "保存提款方式。"
   },
-  "8dAKuZ": {
-    "defaultMessage": "是的，使用 CNAME。一旦 DNS 解析成功，证书就会自动颁发。"
+  "8dGrfx": {
+    "defaultMessage": "<b>如果您需要，您可以拥有自己的域名。</b>将一个 CNAME 指向您的中继服务器，我们将与默认主机名一起提供服务，并为其配备单独的证书。无需验证步骤，当您的 DNS 解析时，系统会自动颁发证书。"
   },
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
@@ -476,14 +458,20 @@
   "8lK3rQ": {
     "defaultMessage": "到期前续订。 {date} 或者，这些内容及其相关数据将被永久删除。"
   },
-  "8vDeUP": {
-    "defaultMessage": "当前系统未运行——部署新系统并进行迁移。这两个是独立的部署过程。"
-  },
   "8xIysb": {
     "defaultMessage": "立即延长。"
   },
   "90f82/": {
     "defaultMessage": "启动虚拟机。"
+  },
+  "97LYWX": {
+    "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入，部分支付和超额支付绝不会丢失。"
+  },
+  "9HB4ZM": {
+    "defaultMessage": "{name} 托管服务，由我们管理 {category}"
+  },
+  "9WGW0Z": {
+    "defaultMessage": "{pct} 核心"
   },
   "9WRlF4": {
     "defaultMessage": "发送"
@@ -497,8 +485,8 @@
   "9gB0vq": {
     "defaultMessage": "搭建您的节点服务器（VPS）。"
   },
-  "9jmYTR": {
-    "defaultMessage": "{name} 托管服务——由我们管理 {category}"
+  "9nD0+u": {
+    "defaultMessage": "在爱尔兰都柏林进行测试。如果您需要整个虚拟机，而不是其中的应用程序，那么<vps>VPS</vps>仍然可用，“托管应用程序”并不会取代它。"
   },
   "9p3I3O": {
     "defaultMessage": "确认中"
@@ -512,17 +500,23 @@
   "9uOFF3": {
     "defaultMessage": "概述"
   },
+  "9vL1hB": {
+    "defaultMessage": "{amount} 优惠。仅适用于本次付款，后续续订将按正常价格计费。"
+  },
+  "A/UHKJ": {
+    "defaultMessage": "直接联系团队，我们会尽快回复您。"
+  },
   "A11S6W": {
     "defaultMessage": "请直接向我们发送消息。您的公钥将自动包含在内。"
   },
   "A7Mqan": {
     "defaultMessage": "正在加载续订信息……"
   },
-  "AA5h7P": {
-    "defaultMessage": "性能"
-  },
   "ABL6b+": {
     "defaultMessage": "将您的代码转化为收益。"
+  },
+  "ABuXuE": {
+    "defaultMessage": "那条消息没有收到回复。正在重新连接，请再问一次。"
   },
   "AGa2G5": {
     "defaultMessage": "当您需要整台机器时。"
@@ -536,9 +530,6 @@
   "ASrBq8": {
     "defaultMessage": "通行密钥"
   },
-  "ATA6lA": {
-    "defaultMessage": "在爱尔兰都柏林进行测试。如果您需要整个虚拟机，而不是其中的应用程序，那么<vps>VPS</vps>仍然可用——“托管应用程序”并不会取代它。"
-  },
   "ATH3LP": {
     "defaultMessage": "重命名会更改公开主机名。"
   },
@@ -551,8 +542,8 @@
   "AfmrGS": {
     "defaultMessage": "发送代码。"
   },
-  "B3YjIQ": {
-    "defaultMessage": "请立即保存此密钥，因为一旦丢失就无法恢复。"
+  "Ay7iFf": {
+    "defaultMessage": "{v} 阅读"
   },
   "B4reHi": {
     "defaultMessage": "历史事件"
@@ -587,9 +578,6 @@
   "BZF5HJ": {
     "defaultMessage": "Nostr 域名"
   },
-  "BdYFYb": {
-    "defaultMessage": "那条消息没有收到回复。正在重新连接——请再问一次。"
-  },
   "BnPEWz": {
     "defaultMessage": "IPv4"
   },
@@ -617,14 +605,26 @@
   "CEERm0": {
     "defaultMessage": "在线聊天"
   },
+  "CVnta/": {
+    "defaultMessage": "价格不含税费及支付手续费。"
+  },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
   },
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
   },
+  "CrzPmt": {
+    "defaultMessage": "租期已到期，续费以保留此机器。"
+  },
   "Ct2oqQ": {
     "defaultMessage": "· {bytes} 入站"
+  },
+  "CtMEOV": {
+    "defaultMessage": "您可以根据自己的需求定制配置，CPU、内存和存储可以独立配置，可以选择固态硬盘（SSD）或机械硬盘（HDD），而不是被限制在固定的等级中。"
+  },
+  "CuBwLu": {
+    "defaultMessage": "提现款会转入您已保存的 NWC 钱包。您可以添加或选择一个钱包，系统将默认使用启用的钱包。"
   },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
@@ -632,14 +632,8 @@
   "D3idYv": {
     "defaultMessage": "设置"
   },
-  "D45G/S": {
-    "defaultMessage": "您也在运行 Nostr 中继节点吗？这个中继节点不需要整台服务器——它只是 <a>来自 {price} 一个月的使用期限，作为受管理的应用程序。</a>."
-  },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
-  },
-  "D9mck8": {
-    "defaultMessage": "随时支付任意金额 — 时长按比例增加"
   },
   "DATKpj": {
     "defaultMessage": "此页面将自动更新。"
@@ -671,26 +665,26 @@
   "Dfuz87": {
     "defaultMessage": "目前尚未添加任何域名。请在上方添加您的第一个域名，开始使用。"
   },
-  "DjPPFA": {
-    "defaultMessage": "专为闪电网络节点打造的虚拟专用服务器，提供静态 IPv4 和 IPv6 地址、无限流量、允许使用 Tor 网络，无需身份验证。服务器位于都柏林、伦敦或魁北克。可直接使用闪电网络进行支付。"
-  },
-  "DlFmLA": {
-    "defaultMessage": "您本月的出站流量额度已用完。未对您的虚拟机采取任何措施——它未被限速、暂停，也不会因超额使用而收费——额度将于每月1日重置。"
+  "Dh4ByL": {
+    "defaultMessage": "Nostr 使您的身份信息可以自由转移。目前，媒体内容往往存在一个问题，即无法完全自主掌控，您的图片存储在其他人的服务器上，受其规则约束，一旦对方停止服务，这些图片就会消失。Blossom 服务器可以将控制权重新交还给您。"
   },
   "DnX0aY": {
     "defaultMessage": "确认删除"
   },
+  "DnigOZ": {
+    "defaultMessage": "可以使用闪电网络、链上比特币或信用卡支付。注册时无需提供个人信息。使用您的 Nostr 密钥登录，在浏览器中使用 NIP-07，在 API 中使用 NIP-98。"
+  },
   "DpNZQY": {
     "defaultMessage": "手续费。"
-  },
-  "DtYelJ": {
-    "defaultMessage": "流量"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
   },
   "E2YqWs": {
     "defaultMessage": "推荐计划"
+  },
+  "E4ywM+": {
+    "defaultMessage": "尚未激活，付款以使其上线。"
   },
   "E8y+Hb": {
     "defaultMessage": "租赁期已满。"
@@ -719,6 +713,9 @@
   "Ecfndm": {
     "defaultMessage": "发票"
   },
+  "Ed5Igt": {
+    "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
+  },
   "EffI8i": {
     "defaultMessage": "独立的运行环境，而不是共享的环境。"
   },
@@ -746,9 +743,6 @@
   "FAmKDH": {
     "defaultMessage": "部署您的中继站。"
   },
-  "FBPfJ7": {
-    "defaultMessage": "在达到此金额之前，暂不支付佣金——这在链上操作时非常方便，可以避免支付少量佣金。如果留空，则使用系统设定的最低金额；您可以提高此金额，但不能低于该值。"
-  },
   "FBjXEw": {
     "defaultMessage": "升级虚拟专用服务器。{id}"
   },
@@ -772,9 +766,6 @@
   },
   "FazwRl": {
     "defaultMessage": "请重试。"
-  },
-  "Ff9LAg": {
-    "defaultMessage": "我们为您运行的软件——每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -800,11 +791,14 @@
   "G6nrEF": {
     "defaultMessage": "已保存，但存在警告信息。"
   },
-  "GCoWpl": {
-    "defaultMessage": "直接联系团队 — 我们会尽快回复您。"
+  "GCQOx0": {
+    "defaultMessage": "请在下一屏完成支付。支付确认后，机器将启动。"
   },
   "GDR0px": {
     "defaultMessage": "Nostr"
+  },
+  "GHjilO": {
+    "defaultMessage": "托管式应用程序，无需管理服务器。"
   },
   "GLA+G9": {
     "defaultMessage": "其他联系方式："
@@ -824,9 +818,6 @@
   "GlTZFC": {
     "defaultMessage": "分享此链接。当有人注册并成功完成首次虚拟货币支付时，您将获得佣金。"
   },
-  "GoW0ua": {
-    "defaultMessage": "{size} 每月出站流量"
-  },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
   },
@@ -836,9 +827,6 @@
   "GsCz6b": {
     "defaultMessage": "使用自定义发送方密钥。"
   },
-  "GtI0l1": {
-    "defaultMessage": "提现款会转入您已保存的 NWC 钱包。您可以添加或选择一个钱包，系统将默认使用启用的钱包。"
-  },
   "GuLP+V": {
     "defaultMessage": "您的订阅将在到期前一天自动续订，系统将使用您默认的支付方式进行扣款。"
   },
@@ -847,6 +835,9 @@
   },
   "H0SDpi": {
     "defaultMessage": "通行密钥注册失败"
+  },
+  "H3hg3V": {
+    "defaultMessage": "Route96 是一款高性能的 Blossom/NIP-96 服务器。它是<a>开源</a>的，并且由我们开发和维护。您无需依赖一个无法了解其内部机制的“黑盒”；您可以查看每一行代码，并且可以随时带着您的数据离开。"
   },
   "H4Ucn0": {
     "defaultMessage": "入站；进入"
@@ -862,6 +853,9 @@
   },
   "HVtxik": {
     "defaultMessage": "自定义域名"
+  },
+  "Hct61V": {
+    "defaultMessage": "{storage} 持久存储方面，{breakdown}"
   },
   "HlAgG9": {
     "defaultMessage": "我已发送付款"
@@ -935,8 +929,8 @@
   "JVClQM": {
     "defaultMessage": "LNVPS 服务状态和在线时间"
   },
-  "JVZcdC": {
-    "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里——请续订以重新启动。"
+  "Ja58kB": {
+    "defaultMessage": "部署您的中继节点，从 {price} 每月起"
   },
   "JcR1r1": {
     "defaultMessage": "比特币节点托管"
@@ -947,11 +941,11 @@
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
   },
-  "JlGNV+": {
-    "defaultMessage": "几分钟内即可部署。您可以使用闪电网络、比特币或信用卡进行支付，无需签订长期合同。"
-  },
   "Jm+fih": {
     "defaultMessage": "未激活。"
+  },
+  "JuR4mj": {
+    "defaultMessage": "随时支付任意金额，时长按比例增加"
   },
   "JykdTz": {
     "defaultMessage": "你们是否允许使用 Tor？"
@@ -983,14 +977,14 @@
   "Kd8VbI": {
     "defaultMessage": "比特币闪电网络虚拟专用服务器托管"
   },
-  "Kffxdm": {
-    "defaultMessage": "每个套餐都包含一个 IPv4 地址和一个 IPv6 地址，并且流量不限。价格已包含增值税；不包括支付处理费。"
-  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
+  },
+  "KucVE8": {
+    "defaultMessage": "建议使用 {cname}，因为它能够自动跟踪服务器 IP 地址的变化。"
   },
   "Kw4098": {
     "defaultMessage": "新规定。"
@@ -1009,9 +1003,6 @@
   },
   "LHX6Oo": {
     "defaultMessage": "到期日 {exp}"
-  },
-  "LJljHH": {
-    "defaultMessage": "运行 {name} 作为一项管理项目 {category} 使用 LNVPS 时，您可以拥有自己的主机名，并且已启用 TLS，无需更新服务器。"
   },
   "LR754a": {
     "defaultMessage": "续订时间："
@@ -1034,8 +1025,14 @@
   "LwGAe6": {
     "defaultMessage": "此外，还可在 LNVPS 上找到。"
   },
-  "ME4cI7": {
-    "defaultMessage": "{start} — {end} 协调世界时"
+  "M8ORKW": {
+    "defaultMessage": "设置过程，这通常需要一分钟。一旦开始运行，终端就会出现。"
+  },
+  "M9eUaM": {
+    "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器，它<a>可以作为托管应用提供</a>。"
+  },
+  "MIAOtN": {
+    "defaultMessage": "Blossom 媒体服务器托管服务，Route96"
   },
   "MJ2jZQ": {
     "defaultMessage": "总计"
@@ -1057,6 +1054,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "确认。"
+  },
+  "N3Pob8": {
+    "defaultMessage": "您可以咨询账户相关的任何问题，账单、无法启动的虚拟机，或某笔扣款的原因。如需退款、延期或删除，请改用联系表单。"
   },
   "N6XokP": {
     "defaultMessage": "不是。这是一个普通的具有 root 权限的 VPS，您需要自行安装和运行节点。我们的一键式托管应用包括 Nostr 中继和 Blossom 媒体服务器，但这些应用仅适用于都柏林服务器。"
@@ -1094,20 +1094,26 @@
   "OJuBck": {
     "defaultMessage": "无需密码"
   },
+  "OKl9cS": {
+    "defaultMessage": "{min}，{max} 虚拟 CPU"
+  },
   "OLqOyf": {
     "defaultMessage": "设置说明"
   },
   "ORGv1Q": {
     "defaultMessage": "已创建"
   },
+  "OephhB": {
+    "defaultMessage": "{v} 写"
+  },
   "OikYIw": {
     "defaultMessage": "最低要求：{min} GB {type}"
   },
-  "OjzGyg": {
-    "defaultMessage": "已收到付款 — 等待确认。您可以安全离开此页面。"
-  },
   "Olq7Wf": {
     "defaultMessage": "请在此处输入您的消息……"
+  },
+  "OnsDNZ": {
+    "defaultMessage": "LNVPS 的最新消息、更新和公告，现在提供比特币闪电网络虚拟专用服务器（VPS）托管服务，并支持信用卡支付。"
   },
   "Op5EHr": {
     "defaultMessage": "使用 Google 账号登录"
@@ -1133,26 +1139,20 @@
   "P7PLVj": {
     "defaultMessage": "日期"
   },
+  "PCD5y1": {
+    "defaultMessage": "根据您的需求定制的 VPS，可在以下时间完成。 {region}： {minCpu}，{maxCpu} 虚拟 CPU 和 {minMemory}，{maxMemory} 内存，以比特币支付。"
+  },
   "PJKhfR": {
     "defaultMessage": "当需要通过中继进行操作时，使用受管应用是最合适的解决方案。如果您想运行修改后的版本、将其他服务部署在同一服务器上，或者自行管理服务器，我们的<a>虚拟专用服务器（VPS）托管服务</a>将在都柏林、伦敦和魁北克提供无限流量以及每个套餐的静态 IPv4 和 IPv6 地址。"
   },
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
   },
-  "PT4sD/": {
-    "defaultMessage": "选择操作系统："
-  },
-  "PeOVdM": {
-    "defaultMessage": "都柏林（爱尔兰）、伦敦（英国）或魁北克（加拿大）。如果您需要一个大型节点，都柏林的容量最高——最多可达 64 个虚拟 CPU 和 128GB 的内存。"
-  },
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
   "Pk14hW": {
     "defaultMessage": "可以使用闪电网络、链上比特币或银行卡进行支付。请使用您的 Nostr 私钥登录。无需进行身份验证（KYC）。"
-  },
-  "PlcGQq": {
-    "defaultMessage": "Pay for this deployment before resizing it — an upgrade is charged pro-rata against the time left on the current period."
   },
   "Ppjs/C": {
     "defaultMessage": "伦敦的 VPS 虚拟主机服务"
@@ -1163,8 +1163,11 @@
   "PujK1s": {
     "defaultMessage": "生成"
   },
-  "QB3YLi": {
-    "defaultMessage": "停止操作会将刻度归零，并保留您的数据——重新启动时，您的事件数据库将保持完整。删除操作会清除数据。"
+  "Q2VBjI": {
+    "defaultMessage": "我们为您运行的软件，每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
+  },
+  "QCo/EY": {
+    "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里，请续订以重新启动。"
   },
   "QDOm6e": {
     "defaultMessage": "包括。 {rate} 税"
@@ -1183,9 +1186,6 @@
   },
   "QgBuiV": {
     "defaultMessage": "中央处理器"
-  },
-  "Qiih54": {
-    "defaultMessage": "每台机器都需要处理 — 处理完上面的列表后即可在此查看。"
   },
   "QlsDcr": {
     "defaultMessage": "行动；采取措施。"
@@ -1235,17 +1235,14 @@
   "RumeRz": {
     "defaultMessage": "地区"
   },
+  "Rvwnbl": {
+    "defaultMessage": "{size} 出站流量/月"
+  },
   "Rw7iI7": {
     "defaultMessage": "禁用"
   },
   "Rw82/V": {
     "defaultMessage": "每月"
-  },
-  "S3OX0p": {
-    "defaultMessage": "加密的 NIP-17 私信 — 在...中阅读 {link}"
-  },
-  "S5oncX": {
-    "defaultMessage": "每个套餐均包含一个 IPv4 地址、一个 IPv6 地址和不限流量。价格不含税费及支付手续费。"
   },
   "S5s+VN": {
     "defaultMessage": "闪电网络"
@@ -1259,14 +1256,14 @@
   "SMbDTG": {
     "defaultMessage": "This deployment is already at the largest size we offer ({max}× the base app). Contact us if you need more."
   },
+  "SPNOyh": {
+    "defaultMessage": "是的。这是你的电脑，你可以安装你喜欢的任何软件。"
+  },
   "SQJto2": {
     "defaultMessage": "登录"
   },
   "STWPnc": {
     "defaultMessage": "出站"
-  },
-  "SU1E+O": {
-    "defaultMessage": "新秩序"
   },
   "SYYlLP": {
     "defaultMessage": "管理在此域名下注册的 NIP-05 handle。"
@@ -1286,8 +1283,14 @@
   "SnyOdn": {
     "defaultMessage": "已转换。"
   },
+  "SpNl4M": {
+    "defaultMessage": "闪电节点虚拟专用服务器（VPS）托管服务，使用闪电网络支付。"
+  },
   "Ss0sWu": {
     "defaultMessage": "立即支付"
+  },
+  "SuX9Rr": {
+    "defaultMessage": "在达到此金额之前，暂不支付佣金，这在链上操作时非常方便，可以避免支付少量佣金。如果留空，则使用系统设定的最低金额；您可以提高此金额，但不能低于该值。"
   },
   "Sz/3Vf": {
     "defaultMessage": "请指定升级值，使其大于或等于当前值，并且至少有一个值必须大于当前值。"
@@ -1298,17 +1301,11 @@
   "T4VxQN": {
     "defaultMessage": "正在加载……"
   },
-  "T7Fjtf": {
-    "defaultMessage": "已超过宽限期 — 随时可能被删除。立即续费以保留您的数据。"
-  },
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
   },
   "TE4fIS": {
     "defaultMessage": "城市"
-  },
-  "TF6JQf": {
-    "defaultMessage": "根据您的需求定制的 VPS，可在以下时间完成。 {region}： {minCpu}——{maxCpu} 虚拟 CPU 和 {minMemory}——{maxMemory} 内存，以比特币支付。"
   },
   "TGPQYT": {
     "defaultMessage": "{success} 已支付。"
@@ -1316,11 +1313,11 @@
   "TH1fFo": {
     "defaultMessage": "电报"
   },
-  "TKgu8P": {
-    "defaultMessage": "该主机即将停用。请在 {date} 之前迁移到新的 VPS — 届时将无法续费，您需要进行迁移。"
-  },
   "TNSbi4": {
     "defaultMessage": "反向 DNS："
+  },
+  "TRyGNx": {
+    "defaultMessage": "运行 {name} 作为一项管理项目 {category} 使用 LNVPS 时，您可以拥有自己的主机名，并且已启用 TLS，无需更新服务器。"
   },
   "TT0vME": {
     "defaultMessage": "规则限制已达到。"
@@ -1364,11 +1361,11 @@
   "Tya89h": {
     "defaultMessage": "给我们留言"
   },
-  "U+Ddsx": {
-    "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入 — 部分支付和超额支付绝不会丢失。"
-  },
   "U/W38H": {
     "defaultMessage": "如果我停止付费，我的活动会怎样？"
+  },
+  "U/wRHL": {
+    "defaultMessage": "{min}，{max} {type} 存储；仓库"
   },
   "U093E7": {
     "defaultMessage": "支持聊天"
@@ -1382,9 +1379,6 @@
   "U96Gl9": {
     "defaultMessage": "请保存此卡，以便今后使用。"
   },
-  "UANa+W": {
-    "defaultMessage": "Route96 是一款高性能的 Blossom/NIP-96 服务器。它是<a>开源</a>的，并且由我们开发和维护。您无需依赖一个无法了解其内部机制的“黑盒”；您可以查看每一行代码，并且可以随时带着您的数据离开。"
-  },
   "UPP+wZ": {
     "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
   },
@@ -1396,12 +1390,6 @@
   },
   "Ub+AGc": {
     "defaultMessage": "登录"
-  },
-  "UbzBlr": {
-    "defaultMessage": "建议使用 {cname}，因为它能够自动跟踪服务器 IP 地址的变化。"
-  },
-  "Ude0W6": {
-    "defaultMessage": "搭建您自己的 Nostr 中继服务器——只需几分钟即可完成，它将使用您指定的域名，并包含 TLS 加密和存储功能。"
   },
   "UhIOEO": {
     "defaultMessage": "您需要我的身份信息吗？"
@@ -1451,6 +1439,12 @@
   "VffztH": {
     "defaultMessage": "上次使用时间 {date}"
   },
+  "Vi+REQ": {
+    "defaultMessage": "几分钟内即可部署。您可以使用闪电网络、比特币或信用卡进行支付，无需签订长期合同。"
+  },
+  "VrBNV4": {
+    "defaultMessage": "首次付款"
+  },
   "VtKAyJ": {
     "defaultMessage": "{count} / {max} 规则"
   },
@@ -1463,11 +1457,14 @@
   "W8nHSd": {
     "defaultMessage": "常见问题解答"
   },
-  "WEUBM+": {
-    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与定价、区域、操作系统，或使用闪电网络支付的方式——无需登录。如果您的问题涉及现有虚拟机或支付，请先登录，以便客服查询您的账户。"
-  },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
+  },
+  "WFUub1": {
+    "defaultMessage": "专为闪电网络节点打造的虚拟专用服务器，提供静态 IPv4 和 IPv6 地址、无限流量、允许使用 Tor 网络，无需身份验证。服务器位于都柏林、伦敦或魁北克。可直接使用闪电网络进行支付。"
+  },
+  "WHIo1V": {
+    "defaultMessage": "我们在都柏林的工厂。您可以根据自己的需求定制机器。 {minCpu}，{maxCpu} 虚拟 CPU 和 {minMemory}，{maxMemory}并使用比特币支付。"
   },
   "WUV28A": {
     "defaultMessage": "正在保存……"
@@ -1480,6 +1477,9 @@
   },
   "WhmAMo": {
     "defaultMessage": "比特币节点托管"
+  },
+  "WnIMdg": {
+    "defaultMessage": "将在 {days, plural, one {# 天} other {# 天}}后删除 · {date}，续费以保留您的数据。"
   },
   "Wsj2fc": {
     "defaultMessage": "正在发生的事件"
@@ -1505,6 +1505,9 @@
   "X4VESO": {
     "defaultMessage": "清除该 VM 并从全新镜像开始。这将永久删除其上的所有数据。"
   },
+  "X6gcwK": {
+    "defaultMessage": "连接在回复完成前断开。正在重新连接，恢复后请再次提问。"
+  },
   "XD6788": {
     "defaultMessage": "设置费用："
   },
@@ -1526,9 +1529,6 @@
   "XZGfTo": {
     "defaultMessage": "发送消息"
   },
-  "XdLEro": {
-    "defaultMessage": "Blossom 媒体服务器托管服务——Route96"
-  },
   "XdcFgv": {
     "defaultMessage": "管理 Nostr 中继节点。使用闪电网络支付。"
   },
@@ -1538,26 +1538,26 @@
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
-  "Y+P9PL": {
-    "defaultMessage": "通过 CNAME 将您自己的域名连接到这里——系统会自动颁发单独的证书。"
-  },
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
   },
   "YCzocJ": {
     "defaultMessage": "如果您有关于资源开通、计费、滥用处理或特定服务问题的疑问，我们随时为您提供帮助。"
   },
+  "YH6meO": {
+    "defaultMessage": "限制"
+  },
   "YLoN96": {
     "defaultMessage": "<b>所有套餐均提供静态 IPv4 和 IPv6 地址。</b>已注册的节点需要一个不会更改的地址。两者都包含在内，无需额外付费。"
+  },
+  "YNpOZB": {
+    "defaultMessage": "加密的 NIP-17 私信，在...中阅读 {link}"
   },
   "YOTQyL": {
     "defaultMessage": "{cpu} 虚拟 CPU，{memory} 内存，{disk} {diskType} 存储，位于 {region}。"
   },
   "YQBx00": {
     "defaultMessage": "优惠码"
-  },
-  "YTV5w7": {
-    "defaultMessage": "{amount} 优惠。仅适用于本次付款——后续续订将按正常价格计费。"
   },
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
@@ -1570,6 +1570,9 @@
   },
   "Yl8GBP": {
     "defaultMessage": "税务识别号"
+  },
+  "YsVmzT": {
+    "defaultMessage": "对于出站规则，源 CIDR 应与该虚拟机的自身地址匹配。无法限制远程目标主机，只能限制协议和目标端口。"
   },
   "Ysr8td": {
     "defaultMessage": "已获得。"
@@ -1589,11 +1592,11 @@
   "Z8971h": {
     "defaultMessage": "已验证"
   },
-  "ZOt2+K": {
-    "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器——它<a>可以作为托管应用提供</a>。"
-  },
   "ZTj6ca": {
     "defaultMessage": "使用银行卡支付"
+  },
+  "ZTpvML": {
+    "defaultMessage": "高性能 VPS 虚拟主机，支持灵活的支付方式，比特币闪电网络或信用卡。"
   },
   "ZbOD+W": {
     "defaultMessage": "查看 LNVPS 服务的实时运行状态和历史事件记录。了解我们虚拟专用服务器 (VPS) 基础设施的当前运行状况。"
@@ -1610,17 +1613,11 @@
   "ZmOSyB": {
     "defaultMessage": "请联系 LNVPS 团队。如果您对我们的虚拟专用服务器托管服务或付款方式有任何疑问，我们随时为您提供帮助。"
   },
-  "ZoMETF": {
-    "defaultMessage": "CPU 限制是上述核心数量的份额，而不是一台更小的机器。"
-  },
-  "ZqqwZc": {
-    "defaultMessage": "{n} IOPS"
-  },
   "ZshmbW": {
     "defaultMessage": "此组件仅支持链上支付"
   },
-  "ZvCgZf": {
-    "defaultMessage": "只需一个 Nostr 密钥即可。无需电子邮件、姓名或身份验证。通知可以发送到加密的 Nostr 私信、电子邮件、Telegram 或 WhatsApp——由您选择。"
+  "a/6iSq": {
+    "defaultMessage": "部署《Route96》，每月 {price}。"
   },
   "a60eIK": {
     "defaultMessage": "保存后将重新应用配置并重启应用。"
@@ -1633,9 +1630,6 @@
   },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
-  },
-  "aW+dvb": {
-    "defaultMessage": "{min}——{max} 虚拟 CPU"
   },
   "acrOoz": {
     "defaultMessage": "继续。"
@@ -1664,9 +1658,6 @@
   "b6Q2tD": {
     "defaultMessage": "总运行时间： {uptime}"
   },
-  "bKuAdU": {
-    "defaultMessage": "已分配核心的{pct}"
-  },
   "bMQUWl": {
     "defaultMessage": "源 CIDR（此虚拟机）"
   },
@@ -1691,14 +1682,8 @@
   "c0b5XV": {
     "defaultMessage": "费率"
   },
-  "c5aQL+": {
-    "defaultMessage": "选择一个应用程序，为其命名，然后付费。它会自动在自己的主机名上运行，并且已启用 TLS 加密，无需修复操作系统、配置 Docker 或更新证书。"
-  },
-  "c78ZVJ": {
-    "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
-  },
-  "cGedMc": {
-    "defaultMessage": "即时 — 扫描或支付一次性发票"
+  "c5WuqM": {
+    "defaultMessage": "该主机即将停用。请在 {date} 之前迁移到新的 VPS，届时将无法续费，您需要进行迁移。"
   },
   "cJzoWc": {
     "defaultMessage": "包括 TLS 在内的其主机名。"
@@ -1724,23 +1709,32 @@
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
   },
-  "cdG1p6": {
-    "defaultMessage": "按检测到存款时的汇率计入 {days, plural, one {# 天} other {# 天}}，并根据收到的金额按比例计算。"
-  },
   "ciFSHC": {
     "defaultMessage": "付款；工资 {amount}"
   },
   "ckx15w": {
     "defaultMessage": "网络传输"
   },
+  "clx9um": {
+    "defaultMessage": "在爱尔兰都柏林提供 VPS 虚拟主机服务。您可以根据自己的需求定制配置，包括 CPU、内存和存储空间。支持使用比特币通过闪电网络或链上支付。"
+  },
   "cyR7Kh": {
     "defaultMessage": "返回"
+  },
+  "d/qDxB": {
+    "defaultMessage": "{proxy} 无需更改 DNS 设置即可正常工作，如果您的域名下已经有一个网站，这将非常有用。"
+  },
+  "d0UBDe": {
+    "defaultMessage": "无需保存任何内容，您的设备（Face ID、Touch ID、Windows Hello 或安全密钥）为账户提供保护。"
   },
   "d1nnRF": {
     "defaultMessage": "发送另一条消息。"
   },
   "d3wxHm": {
     "defaultMessage": "正在加载历史记录……"
+  },
+  "d6IhXk": {
+    "defaultMessage": "伦敦 VPS，英国 VPS，使用比特币支付。"
   },
   "d6JhA/": {
     "defaultMessage": "搭建您的魁北克虚拟专用服务器。"
@@ -1766,9 +1760,6 @@
   "dPEbZd": {
     "defaultMessage": "此部署正在等待付款。请支付订阅费用以激活它。"
   },
-  "dSDJft": {
-    "defaultMessage": "我们在都柏林的工厂。您可以根据自己的需求定制机器。 {minCpu}——{maxCpu} 虚拟 CPU 和 {minMemory}——{maxMemory}并使用比特币支付。"
-  },
   "dUQeuG": {
     "defaultMessage": "创建通行密钥账户"
   },
@@ -1784,6 +1775,9 @@
   "dXTCjA": {
     "defaultMessage": "未经验证。"
   },
+  "dXoYQD": {
+    "defaultMessage": "每次部署都会获得 {host} 系统会自动颁发证书。请使用您自己的域名，并将 CNAME 记录指向该域名，我们也会为该域名提供服务，并为其颁发独立的证书，证书将在 DNS 解析完成后颁发。"
+  },
   "dgTL/5": {
     "defaultMessage": "未注册的句柄。"
   },
@@ -1796,14 +1790,17 @@
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
   },
+  "dwuJmA": {
+    "defaultMessage": "搭建您自己的 Nostr 中继服务器，只需几分钟即可完成，它将使用您指定的域名，并包含 TLS 加密和存储功能。"
+  },
   "dz7KXz": {
     "defaultMessage": "{pct}已使用百分比"
   },
   "e+P4zS": {
     "defaultMessage": "Compose"
   },
-  "e2hZoG": {
-    "defaultMessage": "运行 {name} 作为一种受管理的 {category} 在 LNVPS 上——使用自定义主机名，并启用 TLS。 {storage} 存储，无需更新服务器。"
+  "e/j0NN": {
+    "defaultMessage": "已超过宽限期，随时可能被删除。立即续费以保留您的数据。"
   },
   "e4Rg0n": {
     "defaultMessage": "LNVPS 以加密 NIP-17 私信形式发送给你的通知。"
@@ -1820,6 +1817,9 @@
   "eR9d9s": {
     "defaultMessage": "已发送验证邮件，请查收您的收件箱。"
   },
+  "eTuPMz": {
+    "defaultMessage": "标准 BTC 交易，确认后到账"
+  },
   "eVlu1R": {
     "defaultMessage": "选择语言。"
   },
@@ -1828,9 +1828,6 @@
   },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展程序"
-  },
-  "eg3pYc": {
-    "defaultMessage": "本次会话已达到消息上限——重新连接以继续。您的对话记录已保留。"
   },
   "eq14GY": {
     "defaultMessage": "您新的密钥。"
@@ -1843,6 +1840,9 @@
   },
   "evSskM": {
     "defaultMessage": "该计划无转存限制。数字为当前自然月数据，并于每月1日重置。"
+  },
+  "ewx2b7": {
+    "defaultMessage": "启动"
   },
   "exrlwL": {
     "defaultMessage": "使用小写字母、数字和连字符。这将成为您的子域名。"
@@ -1865,14 +1865,8 @@
   "fNSGnl": {
     "defaultMessage": "登录以进行订购。"
   },
-  "fNZGof": {
-    "defaultMessage": "伦敦的 VPS 主机，起价为 {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
-  },
   "fblXmJ": {
     "defaultMessage": "实例名称"
-  },
-  "fnWV0M": {
-    "defaultMessage": "对于出站规则，源 CIDR 应与该虚拟机的自身地址匹配。无法限制远程目标主机——只能限制协议和目标端口。"
   },
   "fsB/4p": {
     "defaultMessage": "已保存。"
@@ -1889,14 +1883,23 @@
   "gBvImw": {
     "defaultMessage": "{count} 个把手"
   },
+  "gGjH22": {
+    "defaultMessage": "加拿大 VPS，魁北克 VPS，比特币支付。"
+  },
   "gH4VcS": {
     "defaultMessage": "按比例计算的升级费用："
+  },
+  "gL1jHz": {
+    "defaultMessage": "持久性存储，每个中继设备所需的存储空间如上所述。"
   },
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
+  },
+  "gUwcoo": {
+    "defaultMessage": "是的，可以选择闪电网络或链上方式。续订周期为每月一次。"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 从未支付过。"
@@ -1913,14 +1916,8 @@
   "gjvoQG": {
     "defaultMessage": "尺寸选择。"
   },
-  "grcWs1": {
-    "defaultMessage": "搭建并运行您自己的 Nostr 中继服务器——从这里开始。 {price} 一个月"
-  },
   "gtGLdm": {
     "defaultMessage": "包括 {amount} 的手续费。"
-  },
-  "gu3xKo": {
-    "defaultMessage": "租用一台虚拟专用服务器（VPS），用于部署区块链，并使用比特币支付。您可以自行选择服务器配置，并安装您自己的节点软件——拥有 root 权限，无需使用控制面板。"
   },
   "gv8O1e": {
     "defaultMessage": "VPS 优惠活动"
@@ -1949,11 +1946,11 @@
   "hXAhO/": {
     "defaultMessage": "您使用 Nostr 密钥登录，因此没有可撤销的已存储会话。每个请求都会单独签名。"
   },
-  "hZkw2A": {
-    "defaultMessage": "Nostr 私信通知仅适用于 Nostr 账号——你的账号没有 Nostr 密钥来解密它们。请在……中选择其他渠道 {settings}。"
-  },
   "hs3HVz": {
     "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
+  },
+  "hsfQVg": {
+    "defaultMessage": "采用静态 IP 地址，不限制流量，允许使用 Tor 网络，且无需进行身份验证。您可以使用闪电网络支付，我们运行自己的节点，因此您的付款将不会经过任何第三方处理平台。"
   },
   "huqKGl": {
     "defaultMessage": "创建账户"
@@ -1991,9 +1988,6 @@
   "iuQLCB": {
     "defaultMessage": "已保存的付款方式将用于自动支付续订费用，续订将在虚拟机到期前一天进行。请选择默认使用的付款方式。"
   },
-  "iv8nNj": {
-    "defaultMessage": "不确定吗？<b>strfry</b>是主要的运行程序——大多数公共中继服务器都使用它。<b>HAVEN</b>如果这是一个个人中继服务器，而不是社区中继服务器；它还提供一个Blossom媒体存储空间，这样您的图片和笔记就可以放在同一个目录下。"
-  },
   "iw5cTf": {
     "defaultMessage": "按体积计算。"
   },
@@ -2002,12 +1996,6 @@
   },
   "j52BNh": {
     "defaultMessage": "为什么要自己搭建媒体服务器？"
-  },
-  "j7VE/p": {
-    "defaultMessage": "标准 BTC 交易 — 确认后到账"
-  },
-  "j9/hqS": {
-    "defaultMessage": "您可以根据自己的需求定制配置——CPU、内存和存储可以独立配置，可以选择固态硬盘（SSD）或机械硬盘（HDD），而不是被限制在固定的等级中。"
   },
   "jGSUnR": {
     "defaultMessage": "我会获得一个固定的 IP 地址吗？"
@@ -2026,12 +2014,6 @@
   },
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
-  },
-  "jd19T+": {
-    "defaultMessage": "每次部署都会获得 {host} 系统会自动颁发证书。请使用您自己的域名，并将 CNAME 记录指向该域名——我们也会为该域名提供服务，并为其颁发独立的证书，证书将在 DNS 解析完成后颁发。"
-  },
-  "jf7fbc": {
-    "defaultMessage": "未设置——添加一个。"
   },
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
@@ -2054,14 +2036,11 @@
   "jyXJcj": {
     "defaultMessage": "IPv6"
   },
-  "jzU8se": {
-    "defaultMessage": "部署《Route96》——每月 {price}。"
-  },
-  "k2S+Z0": {
-    "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范——Route96 同时支持这两种规范。"
-  },
   "k9Pskm": {
     "defaultMessage": "高速固态存储"
+  },
+  "kExo50": {
+    "defaultMessage": "当前系统未运行，部署新系统并进行迁移。这两个是独立的部署过程。"
   },
   "kJpuxD": {
     "defaultMessage": "周期性服务与账单"
@@ -2075,8 +2054,8 @@
   "kSjQ3a": {
     "defaultMessage": "由 {initiatedBy} 发起"
   },
-  "kZ0qJu": {
-    "defaultMessage": "{read} 读取 / {write} 写入 IOPS"
+  "kWI6zX": {
+    "defaultMessage": "已共享"
   },
   "kesoZ1": {
     "defaultMessage": "我们运行自己的闪电网络节点。您的比特币不会通过第三方进行处理。"
@@ -2087,11 +2066,20 @@
   "kr8jZp": {
     "defaultMessage": "{price}每月。"
   },
+  "ktNxFJ": {
+    "defaultMessage": "{ip4} × IPv4 · {ip6} × IPv6"
+  },
   "ku+mDU": {
     "defaultMessage": "状态；州"
   },
+  "kvj8qh": {
+    "defaultMessage": "<b>允许使用 Tor。</b>如果您想通过 Tor 网络运行您的节点，请随意这样做，我们不会阻止它，也不会使用谷歌验证码。"
+  },
   "l+Z32c": {
     "defaultMessage": "按 Enter 发送，Shift+Enter 换行。"
+  },
+  "l+g3in": {
+    "defaultMessage": "登录以选择此机器的操作系统和 SSH 密钥。"
   },
   "l0VA3b": {
     "defaultMessage": "是否对流量进行计量？"
@@ -2117,11 +2105,14 @@
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
   },
-  "lPXSYN": {
-    "defaultMessage": "{min}——{max} 记忆；存储器"
+  "lQNVjN": {
+    "defaultMessage": "部署 {name} 作为在 LNVPS 上提供的应用，您可以使用闪电网络、比特币或信用卡进行支付。"
   },
   "lYEj5M": {
     "defaultMessage": "已管理的应用"
+  },
+  "lhC0On": {
+    "defaultMessage": "审核并发布"
   },
   "lhCavK": {
     "defaultMessage": "使用Revolut付款时，请勾选“保存此卡”，以便将该卡保存在此处，用于未来的支付和自动续订。"
@@ -2134,9 +2125,6 @@
   },
   "lmac7x": {
     "defaultMessage": "{n,plural,one{# 项目；物品} other{# 项目；物品}}"
-  },
-  "ln2Syt": {
-    "defaultMessage": "租期已到期 — 续费以保留此机器。"
   },
   "lnaWo/": {
     "defaultMessage": "地区"
@@ -2152,12 +2140,6 @@
   },
   "mBLNqg": {
     "defaultMessage": "开始聊天"
-  },
-  "mDLXhF": {
-    "defaultMessage": "继续您之前的对话——尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
-  },
-  "mDRXDi": {
-    "defaultMessage": "Nostr 使您的身份信息可以自由转移。目前，媒体内容往往存在一个问题，即无法完全自主掌控——您的图片存储在其他人的服务器上，受其规则约束，一旦对方停止服务，这些图片就会消失。Blossom 服务器可以将控制权重新交还给您。"
   },
   "mHEBOr": {
     "defaultMessage": "您能帮我安装比特币核心软件吗？"
@@ -2177,9 +2159,6 @@
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
   },
-  "mRKf2V": {
-    "defaultMessage": "连接在回复完成前断开。正在重新连接——恢复后请再次提问。"
-  },
   "mV5FZi": {
     "defaultMessage": "员工推荐奖励计划"
   },
@@ -2188,6 +2167,9 @@
   },
   "mY+s0A": {
     "defaultMessage": "我们如何与您联系。"
+  },
+  "mZQl/y": {
+    "defaultMessage": "已收到付款，等待确认。您可以安全离开此页面。"
   },
   "mtEKFV": {
     "defaultMessage": "正在处理中……"
@@ -2198,8 +2180,14 @@
   "n7yYXG": {
     "defaultMessage": "服务"
   },
+  "n8cyVk": {
+    "defaultMessage": "操作系统"
+  },
   "n9fdaJ": {
     "defaultMessage": "未经核实"
+  },
+  "nCD6ia": {
+    "defaultMessage": "都柏林（爱尔兰）、伦敦（英国）或魁北克（加拿大）。如果您需要一个大型节点，都柏林的容量最高，最多可达 64 个虚拟 CPU 和 128GB 的内存。"
   },
   "nDyaq/": {
     "defaultMessage": "正在运行。"
@@ -2216,8 +2204,8 @@
   "nWQFic": {
     "defaultMessage": "续订"
   },
-  "naCpPX": {
-    "defaultMessage": "在 LNVPS 上部署应用程序——几分钟内即可完成，应用程序将拥有自己的主机名，并包含 TLS 和存储，无需进行操作系统补丁。现在即可使用 Nostr 中继和 Blossom 媒体服务器。"
+  "nWhd7w": {
+    "defaultMessage": "按检测到存款时的汇率计入 {days, plural, one {# 天} other {# 天}}，并根据收到的金额按比例计算。"
   },
   "ndu6sH": {
     "defaultMessage": "尚未测量。"
@@ -2227,9 +2215,6 @@
   },
   "nm81YC": {
     "defaultMessage": "正在加载 VPS 服务……"
-  },
-  "nqdKy7": {
-    "defaultMessage": "高性能比特币闪电网络虚拟专用服务器（VPS）托管服务。您可以使用闪电网络、比特币或信用卡支付，无需签订长期合同。"
   },
   "nrTBF4": {
     "defaultMessage": "主机即将停用"
@@ -2255,9 +2240,6 @@
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
   },
-  "oA9E7/": {
-    "defaultMessage": "当在……中启用 Nostr DM 频道时，到期提醒、付款回执和开通通知将在此处送达。 {settings}此收件箱不会监控回复——如需联系人工，请使用 {support}。"
-  },
   "oBSxZS": {
     "defaultMessage": "升级报价"
   },
@@ -2266,6 +2248,12 @@
   },
   "oCc8Oq": {
     "defaultMessage": "添加密钥"
+  },
+  "oGiUkp": {
+    "defaultMessage": "未设置，添加一个。"
+  },
+  "oIPESx": {
+    "defaultMessage": "当在……中启用 Nostr DM 频道时，到期提醒、付款回执和开通通知将在此处送达。 {settings}此收件箱不会监控回复，如需联系人工，请使用 {support}。"
   },
   "oOdFIC": {
     "defaultMessage": "我们在都柏林设有办事处。您可以定制您想要的机器，并使用比特币进行支付。"
@@ -2288,9 +2276,6 @@
   "odXlk8": {
     "defaultMessage": "登录"
   },
-  "oezJ0C": {
-    "defaultMessage": "采用静态 IP 地址，不限制流量，允许使用 Tor 网络，且无需进行身份验证。您可以使用闪电网络支付——我们运行自己的节点，因此您的付款将不会经过任何第三方处理平台。"
-  },
   "ooCqJa": {
     "defaultMessage": "在…… {region}，磁盘容量达到 {hdd} 硬盘或 {ssd} 固态硬盘，配备 {cpu} 虚拟 CPU 和 {memory} 在最高端。"
   },
@@ -2306,6 +2291,12 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
+  "pMi1Vp": {
+    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与定价、区域、操作系统，或使用闪电网络支付的方式，无需登录。如果您的问题涉及现有虚拟机或支付，请先登录，以便客服查询您的账户。"
+  },
+  "pSpLvj": {
+    "defaultMessage": "搭建您自己的媒体服务器，每月只需 {price}。"
+  },
   "pYX859": {
     "defaultMessage": "Deleting"
   },
@@ -2314,12 +2305,6 @@
   },
   "pgl1gp": {
     "defaultMessage": "Resize to {size}× base"
-  },
-  "phIEA8": {
-    "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}——{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
-  },
-  "plUWdh": {
-    "defaultMessage": "{n} 兆字节/秒"
   },
   "ps4K9r": {
     "defaultMessage": "什么是Blossom？"
@@ -2342,9 +2327,6 @@
   "qX7u3z": {
     "defaultMessage": "标签（例如：个人签证）"
   },
-  "qduRZE": {
-    "defaultMessage": "尚未激活 — 付款以使其上线。"
-  },
   "qkLHOL": {
     "defaultMessage": "您确定要删除 SSH 密钥吗？{name}？"
   },
@@ -2353,6 +2335,9 @@
   },
   "quroDq": {
     "defaultMessage": "虚拟机历史记录"
+  },
+  "qxGc3M": {
+    "defaultMessage": "停止操作会将刻度归零，并保留您的数据，重新启动时，您的事件数据库将保持完整。删除操作会清除数据。"
   },
   "qxg3uo": {
     "defaultMessage": "访问"
@@ -2372,14 +2357,8 @@
   "rieTwF": {
     "defaultMessage": "已过期，截止日期为："
   },
-  "rlfZ2s": {
-    "defaultMessage": "防火墙规则"
-  },
   "rneMhE": {
     "defaultMessage": "部署 Route96。"
-  },
-  "rr0r/W": {
-    "defaultMessage": "<b>允许使用 Tor。</b>如果您想通过 Tor 网络运行您的节点，请随意这样做——我们不会阻止它，也不会使用谷歌验证码。"
   },
   "rv2p0H": {
     "defaultMessage": "中央处理器、内存和网络。"
@@ -2390,6 +2369,12 @@
   "rvirM2": {
     "defaultMessage": "位置"
   },
+  "ryuZQh": {
+    "defaultMessage": "选择一个应用程序，为其命名，然后付费。它会自动在自己的主机名上运行，并且已启用 TLS 加密，无需修复操作系统、配置 Docker 或更新证书。"
+  },
+  "s+2Mb4": {
+    "defaultMessage": "通过 CNAME 将您自己的域名连接到这里，系统会自动颁发单独的证书。"
+  },
   "s+YpY+": {
     "defaultMessage": "通过推荐他人来赚取奖励。"
   },
@@ -2399,11 +2384,11 @@
   "s2ZjPB": {
     "defaultMessage": "没有防火墙规则。系统将应用默认策略。"
   },
+  "s60OWn": {
+    "defaultMessage": "Pay for this deployment before resizing it，an upgrade is charged pro-rata against the time left on the current period."
+  },
   "sAJryD": {
     "defaultMessage": "增值税和各项费用为预估金额，确切金额将在付款时确认。"
-  },
-  "sE5lVR": {
-    "defaultMessage": "托管式应用程序——无需管理服务器。"
   },
   "sOF2lj": {
     "defaultMessage": "查看完整 README"
@@ -2413,6 +2398,9 @@
   },
   "sTesGq": {
     "defaultMessage": "目前没有可用的优惠。"
+  },
+  "sYN3Gd": {
+    "defaultMessage": "每台机器都需要处理，处理完上面的列表后即可在此查看。"
   },
   "sehISV": {
     "defaultMessage": "Blossom 媒体服务器，每月起价 {price}。"
@@ -2429,26 +2417,23 @@
   "srgk8m": {
     "defaultMessage": "设置用于报价和支付的货币。"
   },
-  "svg9Ub": {
-    "defaultMessage": "CPU 限制"
-  },
   "sx6MYT": {
     "defaultMessage": "该代理无法对虚拟机进行延长、退款或删除，也无法操作其未登录的账户。对于这些情况， {link}。"
   },
   "sy+pv5": {
     "defaultMessage": "电子邮件"
   },
-  "tFWVr1": {
-    "defaultMessage": "磁盘吞吐量"
-  },
-  "tG2iXV": {
-    "defaultMessage": "{min}——{max} {type} 存储；仓库"
+  "t21/v7": {
+    "defaultMessage": "价格包含增值税；支付处理费不包括在内。"
   },
   "tNmjzW": {
     "defaultMessage": "港口（或码头）"
   },
   "tPwWRH": {
     "defaultMessage": "您的部署情况"
+  },
+  "tSWoyi": {
+    "defaultMessage": "租用一台虚拟专用服务器（VPS），用于部署区块链，并使用比特币支付。您可以自行选择服务器配置，并安装您自己的节点软件，拥有 root 权限，无需使用控制面板。"
   },
   "tTpLsN": {
     "defaultMessage": "未关联。"
@@ -2458,9 +2443,6 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "在专门为此目的而设计的虚拟专用服务器（VPS）上运行您的闪电网络节点。"
-  },
-  "tiWuG8": {
-    "defaultMessage": "部署您的中继节点 — 从 {price} 每月起"
   },
   "tngc9N": {
     "defaultMessage": "源 CIDR"
@@ -2473,9 +2455,6 @@
   },
   "tuJeaZ": {
     "defaultMessage": "是的。"
-  },
-  "twd6jC": {
-    "defaultMessage": "在爱尔兰都柏林提供 VPS 虚拟主机服务。您可以根据自己的需求定制配置，包括 CPU、内存和存储空间。支持使用比特币通过闪电网络或链上支付。"
   },
   "tzMNF3": {
     "defaultMessage": "状态"
@@ -2501,17 +2480,11 @@
   "uJV0wU": {
     "defaultMessage": "IP 地址"
   },
-  "uNhj6T": {
-    "defaultMessage": "是的，每个套餐都包含一个 IPv4 地址和一个 IPv6 地址。"
-  },
   "uPNlBw": {
     "defaultMessage": "邮箱：{email}"
   },
   "uWPUqo": {
     "defaultMessage": "该代理无法延长、退款或删除虚拟机。对于这些， {link}。"
-  },
-  "uYtOL7": {
-    "defaultMessage": "爱尔兰 VPS——都柏林 VPS，比特币支付。"
   },
   "ubXbwc": {
     "defaultMessage": "默认策略"
@@ -2531,9 +2504,6 @@
   "uyWYPH": {
     "defaultMessage": "这将清除该 VM 上的所有内容。"
   },
-  "uybUiI": {
-    "defaultMessage": "LNVPS 的最新消息、更新和公告——现在提供比特币闪电网络虚拟专用服务器（VPS）托管服务，并支持信用卡支付。"
-  },
   "v2BRjN": {
     "defaultMessage": "主题 *"
   },
@@ -2546,8 +2516,14 @@
   "vONi+O": {
     "defaultMessage": "国家"
   },
+  "vRG4WY": {
+    "defaultMessage": "您可以放心离开此页面，付款会显示在您的账单历史中，确认后即会生效。"
+  },
   "vWsXtg": {
     "defaultMessage": "正在创建付款……"
+  },
+  "vahWHk": {
+    "defaultMessage": "是的，使用 CNAME。一旦 DNS 解析成功，证书就会自动颁发。"
   },
   "vaoVHG": {
     "defaultMessage": "返回订阅页面。"
@@ -2567,14 +2543,14 @@
   "vuTMNa": {
     "defaultMessage": "采用个人保险箱式中继方式，并配备专属的“Blossom”媒体存储空间。"
   },
+  "vvE1WZ": {
+    "defaultMessage": "{n} 防火墙规则"
+  },
   "vy2rlX": {
     "defaultMessage": "处理费："
   },
   "w1iy6j": {
     "defaultMessage": "正在更新价格…"
-  },
-  "w3i5cX": {
-    "defaultMessage": "持久性存储——每个中继设备所需的存储空间如上所述。"
   },
   "wEQDC6": {
     "defaultMessage": "编辑"
@@ -2584,6 +2560,9 @@
   },
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
+  },
+  "wRSmBV": {
+    "defaultMessage": "是的，每个套餐都包含一个 IPv4 地址和一个 IPv6 地址。"
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -2600,17 +2579,20 @@
   "wo868v": {
     "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"
   },
+  "wty+Xf": {
+    "defaultMessage": "伦敦的 VPS 主机，起价为 {price} 不含增值税。 {minCpu}，{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
+  },
   "wz7uSD": {
     "defaultMessage": "包括{amount}的税费"
-  },
-  "x/me2T": {
-    "defaultMessage": "与 LNVPS 客服助手聊天。它可以查询您的账户、虚拟机和付款信息，并启动、停止或重启虚拟机。它无法办理延期、退款或删除——请使用下方表单处理这些事项。"
   },
   "x0cZXf": {
     "defaultMessage": "无法升级。"
   },
-  "xExBHw": {
-    "defaultMessage": "您自己的主机名——<code>your-name.ie.apps.lnvps.cloud</code>，并已启用自动 TLS。"
+  "xA8JVo": {
+    "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范，Route96 同时支持这两种规范。"
+  },
+  "xALX/d": {
+    "defaultMessage": "只需一个 Nostr 密钥即可。无需电子邮件、姓名或身份验证。通知可以发送到加密的 Nostr 私信、电子邮件、Telegram 或 WhatsApp，由您选择。"
   },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"
@@ -2624,6 +2606,9 @@
   "xXbJso": {
     "defaultMessage": "注销登录"
   },
+  "xYA7Yg": {
+    "defaultMessage": "即时，扫描或支付一次性发票"
+  },
   "xf2LGD": {
     "defaultMessage": "{date}自动续费"
   },
@@ -2632,9 +2617,6 @@
   },
   "xhfdqv": {
     "defaultMessage": "创建中"
-  },
-  "xj59EM": {
-    "defaultMessage": "{proxy} 无需更改 DNS 设置即可正常工作——如果您的域名下已经有一个网站，这将非常有用。"
   },
   "xkr+zo": {
     "defaultMessage": "条款"
@@ -2669,23 +2651,29 @@
   "yRz1m6": {
     "defaultMessage": "请阅读说明。"
   },
+  "yS/1R0": {
+    "defaultMessage": "在 LNVPS 上部署应用程序，几分钟内即可完成，应用程序将拥有自己的主机名，并包含 TLS 和存储，无需进行操作系统补丁。现在即可使用 Nostr 中继和 Blossom 媒体服务器。"
+  },
   "yUD6jT": {
     "defaultMessage": "几分钟。付款完成后，系统会立即进行处理。"
   },
   "yfhNX4": {
     "defaultMessage": "登录会创建一个有效期为 30 天的会话。如果您认为某个会话已泄露，请撤销全部会话。"
   },
-  "yracY5": {
-    "defaultMessage": "伦敦 VPS——英国 VPS，使用比特币支付。"
+  "yoQJWu": {
+    "defaultMessage": "关于您的账户，任何问题都可以问，账单、无法启动的虚拟机，或某笔扣款的原因。"
+  },
+  "yqUCzc": {
+    "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}，{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
   },
   "yrsDLO": {
     "defaultMessage": "这是一台英国制造的服务器，按月计费，并以比特币支付。您可以选择所需的 CPU、内存和硬盘；我们不会在您未要求的情况下捆绑任何其他服务。"
   },
-  "ys3Bzn": {
-    "defaultMessage": "闪电节点虚拟专用服务器（VPS）托管服务——使用闪电网络支付。"
-  },
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"
+  },
+  "z/H1td": {
+    "defaultMessage": "搭建并运行您自己的 Nostr 中继服务器，从这里开始。 {price} 一个月"
   },
   "z1KiHv": {
     "defaultMessage": "消息限制为 {max} 角色。"
@@ -2707,6 +2695,9 @@
   },
   "zbyKVt": {
     "defaultMessage": "<b>不限制流量。</b>路由节点会持续进行数据交换。您无需关注带宽使用情况。"
+  },
+  "zhuLyw": {
+    "defaultMessage": "您本月的出站流量额度已用完。未对您的虚拟机采取任何措施，它未被限速、暂停，也不会因超额使用而收费，额度将于每月1日重置。"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} 持久性存储"

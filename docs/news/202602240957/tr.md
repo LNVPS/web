@@ -12,8 +12,8 @@ LNVPS'i paylaşarak satoşi kazanın! Birisi sizin yönlendirme bağlantınızı
 
 Ödemenizi nasıl almak istediğinizi seçin:
 
-- **Lightning Adresi** — Ödemeler doğrudan herhangi bir Lightning adresine gönderilir.
-- **NWC Cüzdanı** — Ödemeler, yapılandırdığınız Nostr Cüzdan Bağlantısı cüzdanı aracılığıyla gönderilir.
+- **Lightning Adresi**: Ödemeler doğrudan herhangi bir Lightning adresine gönderilir.
+- **NWC Cüzdanı**: Ödemeler, yapılandırdığınız Nostr Cüzdan Bağlantısı cüzdanı aracılığıyla gönderilir.
 
 Ödeme yöntemleri arasında istediğiniz zaman yönlendirme ayarları sayfasından geçiş yapabilirsiniz.
 

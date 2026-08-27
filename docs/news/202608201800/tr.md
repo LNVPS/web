@@ -6,13 +6,13 @@ LNVPS'in lansmanından beri en büyük güncelleme ayı: yeni bir ürün serisi,
 
 Ödeme ekranında **`BLOG10`** kodunu kullanarak VPS yenilemeleri, yeni sanal makineler ve yönetilen uygulamalarda **%10 indirim** yapın. **27 Ağustos 2026** tarihine kadar geçerlidir; kullanım sıklığı için sınır yoktur.
 
-İndirim kodları bu ay yeni — kutuyu ödeme ekranında bulacaksınız, indirim tutarı faturanızda ve ödeme geçmişinizde gösterilir.
+İndirim kodları bu ay yeni, kutuyu ödeme ekranında bulacaksınız, indirim tutarı faturanızda ve ödeme geçmişinizde gösterilir.
 
 ## Yönetilen Uygulamalar
 
 Tek tıkla barındırılan uygulamalar: bir URL üzerinde çalışan bir servis alırsınız, altındaki her şeyi biz yönetiriz. Kataloğa göz atın: [lnvps.net/apps](https://lnvps.net/apps).
 
-- Tek bir formda dağıtın — bölge seçin, isim verin, bitti
+- Tek bir formda dağıtın, bölge seçin, isim verin, bitti
 - Kendi alan adınızı ona yönlendirin
 - İstediğiniz zaman yeniden adlandırın, yapılandırmayı değiştirin veya boyutunu değiştirin; ödenmiş süre için kredi verilir
 - Planınıza göre CPU, bellek ve depolama kullanımı gösterilir
@@ -20,10 +20,10 @@ Tek tıkla barındırılan uygulamalar: bir URL üzerinde çalışan bir servis 
 
 ## Yeni giriş yöntemleri
 
-- **Google ile giriş** — Nostr anahtarı gerekmez
-- **Passkeys** — Face ID, Touch ID, Windows Hello veya bir donanım anahtarı
+- **Google ile giriş**: Nostr anahtarı gerekmez
+- **Passkeys**: Face ID, Touch ID, Windows Hello veya bir donanım anahtarı
 - **Her yerden çıkış yap**, hesap ayarlarından
-- **Tor** — site ve API soğan hizmetlerinde:
+- **Tor**: site ve API soğan hizmetlerinde:
   - Site: `http://rheyodythpbwimdugzofiy5z5ofe4kvqhrxsmyxqy4e4hwf3aempncad.onion`
   - API: `http://rtcrcbworzub5uqtytjhap7q2l4jdoj7zu6nnq5rwu4pq6a467jx2tad.onion`
 
@@ -45,7 +45,7 @@ Tek tıkla barındırılan uygulamalar: bir URL üzerinde çalışan bir servis 
 - **Özel kurulumlarda IPv4 ve IPv6 adreslerinizi seçin**
 - **Yeniden tasarlanmış özel VPS siparişi**, önce depolama üzerine kurgulanmış
 - **Yenilenmemiş bir sanal makine için gerçek silinme tarihi**, bir ana bilgisayar devre dışı bırakılıyorsa önceden uyarı
-- **Yeni sanal makinelerde daha hızlı diskler** — mevcut olanlar bunu bir sonraki durdurma/başlatmada alır
+- **Yeni sanal makinelerde daha hızlı diskler**: mevcut olanlar bunu bir sonraki durdurma/başlatmada alır
 - **Google ve passkey hesapları için çalışan bir web konsolu**
 
 ## Destek
@@ -73,4 +73,4 @@ Tek tıkla barındırılan uygulamalar: bir URL üzerinde çalışan bir servis 
 
 Hız sınırlı girişler, geçerlilik süresi dolan doğrulama kodları, iptal edilebilir oturumlar ve konsol ile faturalarınız için tek kullanımlık bağlantılar.
 
-Her zamanki gibi LNVPS'i kullandığınız için teşekkürler — ve `BLOG10` kodunu unutmayın.
+Her zamanki gibi LNVPS'i kullandığınız için teşekkürler, ve `BLOG10` kodunu unutmayın.

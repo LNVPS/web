@@ -53,9 +53,9 @@ export function ContactPage() {
           title={<FormattedMessage defaultMessage="Live Chat" />}
           description={
             login ? (
-              <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete — use the form below for those." />
+              <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM. It can't extend, refund or delete, so use the form below for those." />
             ) : (
-              <FormattedMessage defaultMessage="Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works — no login needed. Log in first if your question is about an existing VM or payment, so it can look up your account." />
+              <FormattedMessage defaultMessage="Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. No login needed. Log in first if your question is about an existing VM or payment, so it can look up your account." />
             )
           }
         >

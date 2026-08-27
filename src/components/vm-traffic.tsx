@@ -22,7 +22,7 @@ export default function VmTrafficPanel({
   const usage = transferUsage(traffic);
   const period = (
     <FormattedMessage
-      defaultMessage="{start} – {end} UTC"
+      defaultMessage="{start} - {end} UTC"
       values={{
         start: (
           <FormattedDate
@@ -97,7 +97,7 @@ export default function VmTrafficPanel({
 
       {usage.metered && usage.over && (
         <div className="text-xs text-cyber-danger">
-          <FormattedMessage defaultMessage="You have used your egress allowance for this month. Nothing has been done to your VM — it is not throttled, suspended or charged for the overage — and the allowance resets on the 1st." />
+          <FormattedMessage defaultMessage="You have used your egress allowance for this month. Nothing has been done to your VM: it is not throttled, suspended or charged for the overage, and the allowance resets on the 1st." />
         </div>
       )}
 

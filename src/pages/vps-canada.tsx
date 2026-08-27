@@ -26,7 +26,7 @@ export function VpsCanadaPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}–{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
           },
           {
             price: fromText,
@@ -46,7 +46,7 @@ export function VpsCanadaPage() {
       path="/vps-canada"
       regionId={QuebecRegionId}
       title={intl.formatMessage({
-        defaultMessage: "VPS Canada — Quebec VPS Paid in Bitcoin",
+        defaultMessage: "VPS Canada: Quebec VPS Paid in Bitcoin",
       })}
       description={description}
       h1={<FormattedMessage defaultMessage="VPS hosting in Canada" />}

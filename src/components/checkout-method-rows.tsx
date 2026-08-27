@@ -54,15 +54,15 @@ function methodDescription(intl: IntlShape, m: PaymentMethod): string {
   switch (m.name) {
     case "lightning":
       return intl.formatMessage({
-        defaultMessage: "Instant — scan or pay a one-time invoice",
+        defaultMessage: "Instant: scan or pay a one-time invoice",
       });
     case "lnurl":
       return intl.formatMessage({
-        defaultMessage: "Pay any amount, whenever — time is added pro-rata",
+        defaultMessage: "Pay any amount, whenever. Time is added pro-rata",
       });
     case "onchain":
       return intl.formatMessage({
-        defaultMessage: "Standard BTC transaction — credits after confirmation",
+        defaultMessage: "Standard BTC transaction, credits after confirmation",
       });
     case "revolut":
       return intl.formatMessage({

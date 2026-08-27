@@ -136,12 +136,12 @@ function LeaseFooter({
       <div className="flex items-center gap-2 border-t border-cyber-danger/30 bg-cyber-danger/5 px-3 py-1.5 text-xs text-cyber-danger">
         <Icon name="delete" size={13} className="shrink-0 pointer-events-none" />
         {deletingOn === undefined ? (
-          <FormattedMessage defaultMessage="Lease expired — renew to keep this machine." />
+          <FormattedMessage defaultMessage="Lease expired. Renew to keep this machine." />
         ) : overdue ? (
-          <FormattedMessage defaultMessage="Past grace period — may be deleted at any time. Renew now to keep your data." />
+          <FormattedMessage defaultMessage="Past grace period, may be deleted at any time. Renew now to keep your data." />
         ) : (
           <FormattedMessage
-            defaultMessage="Deletes in {days, plural, one {# day} other {# days}} · {date} — renew to keep your data."
+            defaultMessage="Deletes in {days, plural, one {# day} other {# days}} · {date}. Renew to keep your data."
             values={{
               days: delDays,
               date: (
@@ -157,7 +157,7 @@ function LeaseFooter({
   if (st.isNew) {
     return (
       <div className="border-t border-cyber-border bg-cyber-panel-light/40 px-3 py-1.5 text-xs text-cyber-muted">
-        <FormattedMessage defaultMessage="Not activated yet — pay to bring it online." />
+        <FormattedMessage defaultMessage="Not activated yet. Pay to bring it online." />
       </div>
     );
   }

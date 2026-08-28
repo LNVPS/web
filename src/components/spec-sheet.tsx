@@ -5,6 +5,7 @@ import { Card, CardHeader } from "./card";
 import CostLabel from "./cost";
 import BytesSize from "./bytes";
 import { specSheet } from "../utils/spec-sheet";
+import RegionName from "./region-name";
 import { GB, formatTransferText } from "../utils/traffic";
 import { diskThroughput, iopsUnits } from "../utils/plan-limits";
 
@@ -139,7 +140,12 @@ export default function SpecSheet({ template }: { template: VmTemplate }) {
           </span>
           {spec.region && (
             <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-muted">
-              {spec.region}
+              <RegionName
+                region={{
+                  name: spec.region.name,
+                  country_code: spec.region.countryCode,
+                }}
+              />
             </span>
           )}
         </div>

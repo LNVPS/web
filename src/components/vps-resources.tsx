@@ -1,6 +1,7 @@
 import { CpuArch, CpuMfg, VmInstance, VmTemplate } from "../api";
 import BytesSize from "./bytes";
 import { FormattedMessage, useIntl } from "react-intl";
+import RegionName from "./region-name";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -35,7 +36,7 @@ function formatCpuArch(arch?: CpuArch): string | undefined {
 export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
   const { formatNumber } = useIntl();
   const diskType = "template" in vm ? vm.template?.disk_type : vm.disk_type;
-  const region = "region" in vm ? vm.region.name : vm.template?.region?.name;
+  const region = "region" in vm ? vm.region : vm.template?.region;
   const status = "status" in vm ? vm.status : undefined;
   const template = "template" in vm ? vm.template : (vm as VmTemplate);
   const cpuMfg = formatCpuMfg(template?.cpu_mfg);
@@ -70,7 +71,7 @@ export default function VpsResources({ vm }: { vm: VmInstance | VmTemplate }) {
             ,{" "}
             <FormattedMessage
               defaultMessage="Location: {region}"
-              values={{ region }}
+              values={{ region: <RegionName region={region} /> }}
             />
           </>
         )}

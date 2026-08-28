@@ -44,7 +44,8 @@ export interface SpecSheet {
   addresses: { ip4: number; ip6: number };
   /** Max user firewall rules; absent means the server default. */
   firewallRules?: number;
-  region?: string;
+  /** Region label plus the ISO 3166-1 alpha-2 code its flag is drawn from. */
+  region?: { name: string; countryCode?: string | null };
 }
 
 export function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -137,6 +138,11 @@ export function specSheet(template: VmTemplate): SpecSheet {
     },
     addresses: { ip4: template.ip4_count, ip6: template.ip6_count },
     firewallRules: limits?.firewall_rule_limit,
-    region: template.region?.name,
+    region: template.region
+      ? {
+          name: template.region.name,
+          countryCode: template.region.country_code,
+        }
+      : undefined,
   };
 }

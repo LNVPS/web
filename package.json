@@ -36,6 +36,7 @@
     "@xterm/xterm": "^5.5.0",
     "classnames": "^2.5.1",
     "dns-over-http-resolver": "^3.0.16",
+    "flag-icons": "^7.5.0",
     "iso-3166-1": "^2.1.1",
     "lnvps-compose": "github:LNVPS/lnvps-compose#v0.1.0",
     "marked": "^15.0.7",

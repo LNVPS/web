@@ -18,6 +18,7 @@ import VpsPayButton from "./pay-button";
 import { formatPortSpeed } from "../utils/plan-limits";
 import { formatDiskInterface } from "../utils/spec-sheet";
 import { FilterButton } from "./button-filter";
+import RegionName from "./region-name";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -340,13 +341,13 @@ export function VpsCustomOrder({
                     active={region === template.region.id}
                     onClick={() => setRegion(template.region.id)}
                   >
-                    {template.region.name}
+                    <RegionName region={template.region} />
                   </FilterButton>
                 ))}
               </div>
             ) : (
               <span className="py-1 text-sm text-cyber-text-bright">
-                {regions[0]?.region.name}
+                <RegionName region={regions[0]?.region} />
               </span>
             )}
           </div>
@@ -474,7 +475,8 @@ export function VpsCustomOrder({
           <div className="font-mono text-xs text-cyber-muted tabular-nums">
             {cpu} vCPU · {ram} GB · {disk} {diskUnit} · {ip4} IPv4
             {ip6 > 0 && ` + ${ip6} IPv6`}
-            {portSpeed && ` · ${portSpeed} port`} @ {params.region.name}
+            {portSpeed && ` · ${portSpeed} port`} @{" "}
+            <RegionName region={params.region} className="gap-1" />
           </div>
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">

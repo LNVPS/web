@@ -6,6 +6,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { VpsCustomOrder } from "../components/vps-custom";
 import { LatestNews } from "../components/latest-news";
 import { FilterButton } from "../components/button-filter";
+import RegionName from "../components/region-name";
 import { appendDedupe, dedupe } from "@snort/shared";
 import useLogin from "../hooks/login";
 import { useTaxRates } from "../hooks/tax";
@@ -310,7 +311,7 @@ function VpsOffersSection() {
                       })
                     }
                   >
-                    {r.name}
+                    <RegionName region={r} />
                   </FilterButton>
                 );
               })}

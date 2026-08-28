@@ -294,6 +294,11 @@ export interface VmCostPlan {
 export interface VmHostRegion {
   id: number;
   name: string;
+  /**
+   * ISO 3166-1 alpha-2 country the region sits in, or null when unset.
+   * Render the flag from this rather than parsing the region name.
+   */
+  country_code?: string | null;
   /** Seller company id; match against account.tax[].company_id for the VAT rate */
   company_id: number;
 }
@@ -935,6 +940,8 @@ export interface CreateAppDeploymentRequest {
 export interface AppRegion {
   id: number;
   name: string;
+  /** ISO 3166-1 alpha-2 country of the region, or null when unset. */
+  country_code?: string | null;
   /** Whether a cluster in this region currently has free capacity for the app. */
   available: boolean;
   /** Wildcard base domain; a deployment's host is `{name}.{ingress_domain}`. */

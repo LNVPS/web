@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { CpuArch, VmInstance, VmIpAssignment, VmOsImage } from "../api";
 import VmActions from "../components/vps-actions";
 import OsImageName from "../components/os-image-name";
+import RegionName from "../components/region-name";
 import OsImageIcon from "../components/os-image-icon";
 import OsImagePicker from "../components/os-image-picker";
 import BytesSize from "../components/bytes";
@@ -297,7 +298,7 @@ export default function VmPage() {
           />
           <StatBlock
             label={<FormattedMessage defaultMessage="Region" />}
-            value={t.region.name}
+            value={<RegionName region={t.region} />}
           />
           <StatBlock
             label={<FormattedMessage defaultMessage="SSH Key" />}

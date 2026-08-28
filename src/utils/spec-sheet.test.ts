@@ -27,7 +27,12 @@ function template(over: Partial<VmTemplate> = {}): VmTemplate {
       interval_amount: 1,
       interval_type: "month",
     },
-    region: { id: 1, name: "Quebec (CA)", company_id: 1 },
+    region: {
+      id: 1,
+      name: "Quebec",
+      country_code: "CA",
+      company_id: 1,
+    },
     ...over,
   } as VmTemplate;
 }
@@ -76,7 +81,7 @@ describe("specSheet", () => {
     expect(s.storage.iops).toBeUndefined();
     expect(s.network).toEqual({ portSpeed: undefined, transferGb: undefined });
     expect(s.firewallRules).toBeUndefined();
-    expect(s.region).toBe("Quebec (CA)");
+    expect(s.region).toEqual({ name: "Quebec", countryCode: "CA" });
     expect(s.addresses).toEqual({ ip4: 1, ip6: 1 });
     expect(s.storage.type).toBe("SSD");
     expect(s.storage.interface).toBe("NVMe");

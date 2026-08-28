@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* SVG country flags for region labels (`fi fi-xx`). */
+@import "flag-icons/css/flag-icons.min.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant light (&:where(.light, .light *));

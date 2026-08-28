@@ -3,6 +3,7 @@ import BytesSize from "./bytes";
 import CostLabel from "./cost";
 import { useNavigateOrder } from "../hooks/order";
 import { AsyncButton } from "./button";
+import RegionName from "./region-name";
 import { FormattedMessage } from "react-intl";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -77,7 +78,7 @@ export function VpsPlanCard({ spec }: { spec: VmTemplate }) {
       <div className="flex items-baseline justify-between gap-2 border-b border-cyber-border bg-cyber-panel-light px-4 py-2.5">
         <span className="text-sm text-cyber-text-bright">{spec.name}</span>
         <span className="text-[0.6rem] uppercase tracking-[0.25em] text-cyber-muted">
-          {spec.region?.name}
+          <RegionName region={spec.region} />
         </span>
       </div>
       <div className="flex flex-col gap-1 px-4 py-3">
@@ -134,7 +135,9 @@ export default function VpsRow({ spec }: { spec: VmTemplate }) {
         <BytesSize value={spec.disk_size} />{" "}
         <span className="text-cyber-muted">{spec.disk_type.toUpperCase()}</span>
       </td>
-      <td>{spec.region?.name}</td>
+      <td>
+        <RegionName region={spec.region} />
+      </td>
       <td className="text-cyber-accent">
         {spec.cost_plan && (
           <CostLabel

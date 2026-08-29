@@ -5,6 +5,9 @@
   "+1wksq": {
     "defaultMessage": "L’arrêt d’un déploiement le ramène à zéro, mais conserve le stockage. Vos données restent disponibles lorsque vous le redémarrez. Seule la suppression les efface complètement."
   },
+  "+20FW7": {
+    "defaultMessage": "Appareils"
+  },
   "+3NyB6": {
     "defaultMessage": "Sortant(e) / En direction de la destination"
   },
@@ -22,6 +25,9 @@
   },
   "+NBJh2": {
     "defaultMessage": "En reprenant votre conversation précédente, l'agent conserve toujours le contexte, même si les messages ci-dessus ne sont plus affichés. Commencez-en une nouvelle si vous préférez repartir de zéro."
+  },
+  "+QO7qN": {
+    "defaultMessage": "L'option la plus sûre : votre clé privée ne touche jamais un navigateur. Collez la clé publique obtenue avec wg pubkey, ou depuis un tunnel vide dans l'application WireGuard."
   },
   "+Qebzr": {
     "defaultMessage": "Adresse sur la chaîne"
@@ -71,6 +77,9 @@
   "/QkDVJ": {
     "defaultMessage": "Portefeuille NWC"
   },
+  "/aBLH2": {
+    "defaultMessage": "Commencer"
+  },
   "/hnclP": {
     "defaultMessage": "{count} IPv4"
   },
@@ -98,6 +107,9 @@
   "0RxidJ": {
     "defaultMessage": "LNURL"
   },
+  "0Wpi3L": {
+    "defaultMessage": "Aucune région de sortie n'est disponible pour le moment."
+  },
   "0gAiqM": {
     "defaultMessage": "Hébergement VPS en Irlande."
   },
@@ -124,6 +136,9 @@
   },
   "13cluZ": {
     "defaultMessage": "Ajouter une clé SSH :"
+  },
+  "1A/d7u": {
+    "defaultMessage": "Se renouvelle"
   },
   "1LBny5": {
     "defaultMessage": "Arrêté"
@@ -172,6 +187,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Test de vitesse"
+  },
+  "2h97cm": {
+    "defaultMessage": "Scanner dans l'application"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# sec} other{# sec}}"
@@ -242,6 +260,9 @@
   "4D+xAI": {
     "defaultMessage": "Pourquoi choisir ce serveur virtuel privé (VPS) pour un nœud Lightning ?"
   },
+  "4Ni9AU": {
+    "defaultMessage": "Zone de sortie"
+  },
   "4PKxPs": {
     "defaultMessage": "Dissocier"
   },
@@ -301,6 +322,9 @@
   },
   "5h1V4e": {
     "defaultMessage": "Non. Inscrivez-vous en utilisant une clé Nostr et effectuez le paiement en satoshis."
+  },
+  "5nYzR2": {
+    "defaultMessage": "Régions de sortie"
   },
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
@@ -467,6 +491,9 @@
   "97LYWX": {
     "defaultMessage": "Envoyez des bitcoins on-chain à cette adresse. Le temps est crédité automatiquement une fois la transaction confirmée, au prorata du montant reçu, les paiements partiels ou excédentaires ne sont jamais perdus."
   },
+  "9BtPto": {
+    "defaultMessage": "Chaque appareil peut utiliser chaque région. Changer de serveur de sortie est une question de fichier de configuration différent, pas de forfait différent."
+  },
   "9HB4ZM": {
     "defaultMessage": "{name} Hébergement, Géré {category}"
   },
@@ -539,6 +566,9 @@
   "AVkjIn": {
     "defaultMessage": "complet"
   },
+  "Ad/aI9": {
+    "defaultMessage": "Conservez la clé privée dans ce navigateur pour pouvoir télécharger à nouveau la configuration plus tard. Toute personne utilisant ce profil de navigateur peut la lire. Ne l'activez pas et la configuration ne sera affichée qu'une seule fois."
+  },
   "AfmrGS": {
     "defaultMessage": "Envoyer le code."
   },
@@ -550,6 +580,9 @@
   },
   "B52Em/": {
     "defaultMessage": "Première ligne de l’adresse"
+  },
+  "B9PNcU": {
+    "defaultMessage": "Afficher la configuration"
   },
   "B9v1WK": {
     "defaultMessage": "Mode de paiement"
@@ -635,6 +668,9 @@
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
   },
+  "D9EaRj": {
+    "defaultMessage": "{amount} Configuration"
+  },
   "DATKpj": {
     "defaultMessage": "Cette page se mettra à jour automatiquement."
   },
@@ -713,6 +749,9 @@
   "Ecfndm": {
     "defaultMessage": "Facture"
   },
+  "EcglP9": {
+    "defaultMessage": "Clé"
+  },
   "Ed5Igt": {
     "defaultMessage": "Les modifications du DNS peuvent prendre jusqu’à 24 à 48 heures pour être prises en compte."
   },
@@ -790,6 +829,9 @@
   },
   "G6nrEF": {
     "defaultMessage": "Enregistré avec des avertissements."
+  },
+  "GBAnXy": {
+    "defaultMessage": "MTU"
   },
   "GCQOx0": {
     "defaultMessage": "Paiement sur l'écran suivant. La machine démarre une fois le paiement confirmé."
@@ -914,6 +956,9 @@
   "J+pWCM": {
     "defaultMessage": "New size"
   },
+  "J/aZhf": {
+    "defaultMessage": "Seul votre appareil possède la clé privée de ce tunnel. Remplacez le texte indicatif par celle-ci avant d'importer le fichier."
+  },
   "J7750w": {
     "defaultMessage": "{count} IPv6"
   },
@@ -1019,6 +1064,9 @@
   "LjziLu": {
     "defaultMessage": "Chiffrer le message"
   },
+  "LpI0+d": {
+    "defaultMessage": "J'ai une clé"
+  },
   "LqFfRA": {
     "defaultMessage": "Pays"
   },
@@ -1030,6 +1078,9 @@
   },
   "M9eUaM": {
     "defaultMessage": "Vous gérez également un relais Nostr ? Celui-ci n’a pas besoin d’un serveur complet, il est <a>disponible sous forme d’application gérée</a>."
+  },
+  "MAfFB1": {
+    "defaultMessage": "Ordinateur portable"
   },
   "MIAOtN": {
     "defaultMessage": "Hébergement du serveur multimédia Blossom, Route96"
@@ -1045,6 +1096,9 @@
   },
   "Mfs5Nm": {
     "defaultMessage": "Illimité"
+  },
+  "MhwErg": {
+    "defaultMessage": "Les appareils peuvent être enregistrés une fois l'abonnement payé. Rien n'est configuré sur un serveur de route avant cela."
   },
   "Mp+zDS": {
     "defaultMessage": "Ce composant prend en charge uniquement les paiements Lightning."
@@ -1069,6 +1123,9 @@
   },
   "NQgbYA": {
     "defaultMessage": "Paramètres du compte"
+  },
+  "NZw0gL": {
+    "defaultMessage": "Tunnels WireGuard"
   },
   "NZyhSX": {
     "defaultMessage": "Actualités"
@@ -1103,6 +1160,9 @@
   "ORGv1Q": {
     "defaultMessage": "Créé"
   },
+  "OeOwwQ": {
+    "defaultMessage": "Supprimer {name}? Sa clé et son adresse sont libérées, et la configuration sur cet appareil cesse de fonctionner."
+  },
   "OephhB": {
     "defaultMessage": "{v} écrire"
   },
@@ -1123,6 +1183,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disque"
+  },
+  "OvzONl": {
+    "defaultMessage": "Désactivé"
   },
   "OyvHWp": {
     "defaultMessage": "Déploiement"
@@ -1151,6 +1214,9 @@
   "PfSZy5": {
     "defaultMessage": "Aucune commande n’a été trouvée."
   },
+  "PfUTPz": {
+    "defaultMessage": "VPN"
+  },
   "Pk14hW": {
     "defaultMessage": "Paiement par Lightning Network, directement sur la blockchain Bitcoin, ou par carte. Connectez-vous avec votre clé Nostr. Pas de vérification d’identité."
   },
@@ -1165,6 +1231,9 @@
   },
   "Q2VBjI": {
     "defaultMessage": "Logiciels que nous mettons en service pour vous : chaque application dispose de son propre nom de domaine, avec TLS déjà configuré, et il n’est pas nécessaire de mettre à jour les serveurs. Les relais Nostr et les serveurs de médias Blossom sont disponibles dans le <catalog>catalogue</catalog> dès aujourd’hui."
+  },
+  "Q5CLtp": {
+    "defaultMessage": "Plans"
   },
   "QCo/EY": {
     "defaultMessage": "L’abonnement de ce déploiement a expiré et il a été réduit à zéro. Vos données sont toujours disponibles ici ; renouvelez votre abonnement pour le relancer."
@@ -1183,6 +1252,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "Supprimer définitivement ?"
+  },
+  "Qa5kz3": {
+    "defaultMessage": "DNS"
   },
   "QgBuiV": {
     "defaultMessage": "Processeur"
@@ -1378,6 +1450,9 @@
   },
   "U96Gl9": {
     "defaultMessage": "Conservez cette carte pour les prochains paiements."
+  },
+  "U9elQP": {
+    "defaultMessage": "Aucun appareil pour l'instant. Ajoutez-en un pour obtenir un fichier de configuration."
   },
   "UPP+wZ": {
     "defaultMessage": "En utilisation par : {count,plural,one{VM} other{Machines virtuelles}}: {vms}"
@@ -1685,6 +1760,9 @@
   "c5WuqM": {
     "defaultMessage": "Cet hôte va être mis hors service. Passez à un nouveau VPS avant le {date}, les renouvellements s'arrêtent alors et vous devrez migrer."
   },
+  "cHcRBI": {
+    "defaultMessage": "Chaque appareil autorisé par votre forfait est enregistré. Supprimez-en un pour libérer un emplacement."
+  },
   "cJzoWc": {
     "defaultMessage": "Son propre nom d’hôte, y compris le protocole TLS."
   },
@@ -1778,6 +1856,9 @@
   "dXoYQD": {
     "defaultMessage": "Chaque déploiement reçoit {host} avec un certificat généré automatiquement. Utilisez votre propre nom de domaine et configurez un enregistrement CNAME pour qu’il y pointe ; nous nous occupons également de cela, en fournissant un certificat spécifique, une fois que la résolution DNS est effectuée."
   },
+  "dfXxCq": {
+    "defaultMessage": "Télécharger le fichier .conf"
+  },
   "dgTL/5": {
     "defaultMessage": "Aucun nom d’utilisateur enregistré."
   },
@@ -1810,6 +1891,9 @@
   },
   "e55cj/": {
     "defaultMessage": "À partir de {price}, hors taxes sur la valeur ajoutée."
+  },
+  "e6Ph5+": {
+    "defaultMessage": "Adresse"
   },
   "eKEL/g": {
     "defaultMessage": "En attente"
@@ -1964,6 +2048,9 @@
   "iO1K6D": {
     "defaultMessage": "Aucun message pour le moment."
   },
+  "iQpuv+": {
+    "defaultMessage": "Générer pour moi"
+  },
   "iVkpyZ": {
     "defaultMessage": "Applications Docker en un seul clic, disponibles dans un catalogue géré."
   },
@@ -2015,6 +2102,9 @@
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# jour} other{# jours}}"
   },
+  "jaG7WG": {
+    "defaultMessage": "Forfait VPN"
+  },
   "jhBqwg": {
     "defaultMessage": "Faites pointer un CNAME de ce domaine vers le nom d'hôte du déploiement une fois celui-ci attribué. Laissez vide pour supprimer."
   },
@@ -2041,6 +2131,9 @@
   },
   "kExo50": {
     "defaultMessage": "Non installé, déployez la nouvelle version et effectuez la migration. Il s’agit de déploiements distincts."
+  },
+  "kFWJpj": {
+    "defaultMessage": "Ajouter un appareil"
   },
   "kJpuxD": {
     "defaultMessage": "Services récurrents et facturation"
@@ -2129,6 +2222,9 @@
   "lnaWo/": {
     "defaultMessage": "Région"
   },
+  "lqpcIb": {
+    "defaultMessage": "Acheter le plan"
+  },
   "lsFKTa": {
     "defaultMessage": "Nous débitons le mode de paiement que vous avez enregistré. Le débit est effectué automatiquement une fois la confirmation reçue."
   },
@@ -2186,6 +2282,9 @@
   "n9fdaJ": {
     "defaultMessage": "Non vérifié"
   },
+  "nBO87C": {
+    "defaultMessage": "Masquer la configuration"
+  },
   "nCD6ia": {
     "defaultMessage": "Dublin (Irlande), Londres (Royaume-Uni) ou Québec (Canada). Dublin offre la plus grande capacité si vous avez besoin d’un grand nœud, avec jusqu’à 64 cœurs virtuels et 128 Go de mémoire vive."
   },
@@ -2236,6 +2335,9 @@
   },
   "o2AdrJ": {
     "defaultMessage": "Cette machine virtuelle utilise un modèle personnalisé et ne peut pas être mise à niveau. Seules les machines virtuelles utilisant des modèles standard prennent en charge les mises à niveau."
+  },
+  "o5s71l": {
+    "defaultMessage": "{count,plural,one{# appareil} other{# appareils}}"
   },
   "o9lOhm": {
     "defaultMessage": "Clé publique prise en charge : {npub}"
@@ -2318,6 +2420,9 @@
   "qA0DQR": {
     "defaultMessage": "Hébergement VPS à Londres. Choisissez votre processeur, votre mémoire et votre espace disque. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs."
   },
+  "qB17v9": {
+    "defaultMessage": "Enregistrez cette configuration maintenant : sa clé privée ne figure que sur cette page et ne pourra plus être affichée."
+  },
   "qV+TFm": {
     "defaultMessage": "Le paiement a échoué."
   },
@@ -2350,6 +2455,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Détails de la facturation"
+  },
+  "rTxzLw": {
+    "defaultMessage": "Aucun forfait VPN n'est encore en vente."
   },
   "rbrahO": {
     "defaultMessage": "Fermer"
@@ -2557,6 +2665,9 @@
   },
   "wL4Olp": {
     "defaultMessage": "Renouvelle {date}"
+  },
+  "wLCwU4": {
+    "defaultMessage": "Gérer la facturation"
   },
   "wLwJ9Q": {
     "defaultMessage": "Valeur du temps restant au tarif précédent :"

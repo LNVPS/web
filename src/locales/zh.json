@@ -5,6 +5,9 @@
   "+1wksq": {
     "defaultMessage": "停止部署会将其缩减至零，但会保留存储数据。当您再次启动时，您的数据仍然存在。只有删除操作才会彻底清除数据。"
   },
+  "+20FW7": {
+    "defaultMessage": "设备"
+  },
   "+3NyB6": {
     "defaultMessage": "外发；已发出。"
   },
@@ -22,6 +25,9 @@
   },
   "+NBJh2": {
     "defaultMessage": "继续您之前的对话，尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
+  },
+  "+QO7qN": {
+    "defaultMessage": "最安全的选择：您的私钥绝不会接触浏览器。请粘贴来自 wg pubkey 命令的公钥，或从 WireGuard 应用中创建的空隧道获取公钥。"
   },
   "+Qebzr": {
     "defaultMessage": "链上地址"
@@ -71,6 +77,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC 钱包"
   },
+  "/aBLH2": {
+    "defaultMessage": "开始使用"
+  },
   "/hnclP": {
     "defaultMessage": "{count} IPv4"
   },
@@ -98,6 +107,9 @@
   "0RxidJ": {
     "defaultMessage": "LNURL"
   },
+  "0Wpi3L": {
+    "defaultMessage": "当前没有可用的出口区域。"
+  },
   "0gAiqM": {
     "defaultMessage": "在爱尔兰提供 VPS 虚拟主机服务。"
   },
@@ -124,6 +136,9 @@
   },
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
+  },
+  "1A/d7u": {
+    "defaultMessage": "续订"
   },
   "1LBny5": {
     "defaultMessage": "停止。"
@@ -172,6 +187,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "网速测试"
+  },
+  "2h97cm": {
+    "defaultMessage": "在应用中扫码"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# 秒} other{# 秒}}"
@@ -242,6 +260,9 @@
   "4D+xAI": {
     "defaultMessage": "为什么选择这款虚拟专用服务器来搭建闪电网络节点？"
   },
+  "4Ni9AU": {
+    "defaultMessage": "出口区域"
+  },
   "4PKxPs": {
     "defaultMessage": "取消链接。"
   },
@@ -301,6 +322,9 @@
   },
   "5h1V4e": {
     "defaultMessage": "请使用您的 Nostr 密钥注册，并以聪（sats）支付。"
+  },
+  "5nYzR2": {
+    "defaultMessage": "退出区域"
   },
   "5ow6dg": {
     "defaultMessage": "WhatsApp（一款聊天软件）"
@@ -467,6 +491,9 @@
   "97LYWX": {
     "defaultMessage": "将链上比特币发送到此地址。交易确认后，时间将根据收到的金额按比例自动计入，部分支付和超额支付绝不会丢失。"
   },
+  "9BtPto": {
+    "defaultMessage": "每个设备都可以使用每个地区。切换出口节点只是不同的配置文件，而不是不同的套餐。"
+  },
   "9HB4ZM": {
     "defaultMessage": "{name} 托管服务，由我们管理 {category}"
   },
@@ -539,6 +566,9 @@
   "AVkjIn": {
     "defaultMessage": "满的；完整的；充分的"
   },
+  "Ad/aI9": {
+    "defaultMessage": "将私钥保存在此浏览器中，以便日后可以再次下载配置。使用此浏览器配置文件的任何人都能够读取它。若不保存，配置将只显示一次。"
+  },
   "AfmrGS": {
     "defaultMessage": "发送代码。"
   },
@@ -550,6 +580,9 @@
   },
   "B52Em/": {
     "defaultMessage": "地址第一行"
+  },
+  "B9PNcU": {
+    "defaultMessage": "显示配置"
   },
   "B9v1WK": {
     "defaultMessage": "支付方式。"
@@ -635,6 +668,9 @@
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
   },
+  "D9EaRj": {
+    "defaultMessage": "{amount} 设置"
+  },
   "DATKpj": {
     "defaultMessage": "此页面将自动更新。"
   },
@@ -713,6 +749,9 @@
   "Ecfndm": {
     "defaultMessage": "发票"
   },
+  "EcglP9": {
+    "defaultMessage": "键"
+  },
   "Ed5Igt": {
     "defaultMessage": "DNS 更改生效可能需要 24 到 48 小时。"
   },
@@ -790,6 +829,9 @@
   },
   "G6nrEF": {
     "defaultMessage": "已保存，但存在警告信息。"
+  },
+  "GBAnXy": {
+    "defaultMessage": "最大传输单元（MTU）"
   },
   "GCQOx0": {
     "defaultMessage": "请在下一屏完成支付。支付确认后，机器将启动。"
@@ -914,6 +956,9 @@
   "J+pWCM": {
     "defaultMessage": "New size"
   },
+  "J/aZhf": {
+    "defaultMessage": "只有您的设备拥有此隧道的私钥。在导入文件之前，请将其填入占位符的位置。"
+  },
   "J7750w": {
     "defaultMessage": "{count} IPv6"
   },
@@ -1019,6 +1064,9 @@
   "LjziLu": {
     "defaultMessage": "加密消息"
   },
+  "LpI0+d": {
+    "defaultMessage": "我有一把钥匙"
+  },
   "LqFfRA": {
     "defaultMessage": "国家/地区"
   },
@@ -1030,6 +1078,9 @@
   },
   "M9eUaM": {
     "defaultMessage": "您是否也在运行 Nostr 中继节点？如果是，那么您不需要整台服务器，它<a>可以作为托管应用提供</a>。"
+  },
+  "MAfFB1": {
+    "defaultMessage": "笔记本电脑"
   },
   "MIAOtN": {
     "defaultMessage": "Blossom 媒体服务器托管服务，Route96"
@@ -1045,6 +1096,9 @@
   },
   "Mfs5Nm": {
     "defaultMessage": "不限量"
+  },
+  "MhwErg": {
+    "defaultMessage": "订阅付款完成后即可注册设备。在此之前，路由服务器上不会进行任何配置。"
   },
   "Mp+zDS": {
     "defaultMessage": "此组件仅支持闪电网络支付。"
@@ -1069,6 +1123,9 @@
   },
   "NQgbYA": {
     "defaultMessage": "账户设置"
+  },
+  "NZw0gL": {
+    "defaultMessage": "WireGuard 隧道"
   },
   "NZyhSX": {
     "defaultMessage": "新闻"
@@ -1103,6 +1160,9 @@
   "ORGv1Q": {
     "defaultMessage": "已创建"
   },
+  "OeOwwQ": {
+    "defaultMessage": "移除 {name}？其密钥和地址被释放，该设备上的配置也随之失效。"
+  },
   "OephhB": {
     "defaultMessage": "{v} 写"
   },
@@ -1123,6 +1183,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "磁盘"
+  },
+  "OvzONl": {
+    "defaultMessage": "关闭"
   },
   "OyvHWp": {
     "defaultMessage": "部署"
@@ -1151,6 +1214,9 @@
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
+  "PfUTPz": {
+    "defaultMessage": "VPN"
+  },
   "Pk14hW": {
     "defaultMessage": "可以使用闪电网络、链上比特币或银行卡进行支付。请使用您的 Nostr 私钥登录。无需进行身份验证（KYC）。"
   },
@@ -1165,6 +1231,9 @@
   },
   "Q2VBjI": {
     "defaultMessage": "我们为您运行的软件，每个应用程序都使用独立的域名，并已启用 TLS 加密，无需进行服务器补丁更新。今天，Nostr 中继服务器和 Blossom 媒体服务器已在 <catalog>目录</catalog> 中提供。"
+  },
+  "Q5CLtp": {
+    "defaultMessage": "计划"
   },
   "QCo/EY": {
     "defaultMessage": "此次部署的订阅已过期，并且已被缩减至零。您的数据仍然保存在这里，请续订以重新启动。"
@@ -1183,6 +1252,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "永久删除吗？"
+  },
+  "Qa5kz3": {
+    "defaultMessage": "DNS"
   },
   "QgBuiV": {
     "defaultMessage": "中央处理器"
@@ -1378,6 +1450,9 @@
   },
   "U96Gl9": {
     "defaultMessage": "请保存此卡，以便今后使用。"
+  },
+  "U9elQP": {
+    "defaultMessage": "暂无设备。添加一个设备以获取配置文件。"
   },
   "UPP+wZ": {
     "defaultMessage": "正在使用中。 {count,plural,one{虚拟机} other{虚拟机}}： {vms}"
@@ -1685,6 +1760,9 @@
   "c5WuqM": {
     "defaultMessage": "该主机即将停用。请在 {date} 之前迁移到新的 VPS，届时将无法续费，您需要进行迁移。"
   },
+  "cHcRBI": {
+    "defaultMessage": "您的套餐允许的每台设备均已注册。请移除一台设备以释放名额。"
+  },
   "cJzoWc": {
     "defaultMessage": "包括 TLS 在内的其主机名。"
   },
@@ -1778,6 +1856,9 @@
   "dXoYQD": {
     "defaultMessage": "每次部署都会获得 {host} 系统会自动颁发证书。请使用您自己的域名，并将 CNAME 记录指向该域名，我们也会为该域名提供服务，并为其颁发独立的证书，证书将在 DNS 解析完成后颁发。"
   },
+  "dfXxCq": {
+    "defaultMessage": "下载 .conf 文件"
+  },
   "dgTL/5": {
     "defaultMessage": "未注册的句柄。"
   },
@@ -1810,6 +1891,9 @@
   },
   "e55cj/": {
     "defaultMessage": "从…… {price}，不含增值税。"
+  },
+  "e6Ph5+": {
+    "defaultMessage": "地址"
   },
   "eKEL/g": {
     "defaultMessage": "待处理"
@@ -1964,6 +2048,9 @@
   "iO1K6D": {
     "defaultMessage": "目前还没有帖子。"
   },
+  "iQpuv+": {
+    "defaultMessage": "为我生成"
+  },
   "iVkpyZ": {
     "defaultMessage": "通过受管理的应用程序目录，只需单击一下即可部署 Docker 应用程序。"
   },
@@ -2015,6 +2102,9 @@
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 天} other{# 天}}"
   },
+  "jaG7WG": {
+    "defaultMessage": "VPN 套餐"
+  },
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
   },
@@ -2041,6 +2131,9 @@
   },
   "kExo50": {
     "defaultMessage": "当前系统未运行，部署新系统并进行迁移。这两个是独立的部署过程。"
+  },
+  "kFWJpj": {
+    "defaultMessage": "添加设备"
   },
   "kJpuxD": {
     "defaultMessage": "周期性服务与账单"
@@ -2129,6 +2222,9 @@
   "lnaWo/": {
     "defaultMessage": "地区"
   },
+  "lqpcIb": {
+    "defaultMessage": "购买计划"
+  },
   "lsFKTa": {
     "defaultMessage": "正在使用您保存的付款方式进行扣款。系统会在确认后自动执行此操作。"
   },
@@ -2186,6 +2282,9 @@
   "n9fdaJ": {
     "defaultMessage": "未经核实"
   },
+  "nBO87C": {
+    "defaultMessage": "隐藏配置"
+  },
   "nCD6ia": {
     "defaultMessage": "都柏林（爱尔兰）、伦敦（英国）或魁北克（加拿大）。如果您需要一个大型节点，都柏林的容量最高，最多可达 64 个虚拟 CPU 和 128GB 的内存。"
   },
@@ -2236,6 +2335,9 @@
   },
   "o2AdrJ": {
     "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
+  },
+  "o5s71l": {
+    "defaultMessage": "{count,plural,one{# 设备} other{# 设备}}"
   },
   "o9lOhm": {
     "defaultMessage": "支持公钥：{npub}"
@@ -2318,6 +2420,9 @@
   "qA0DQR": {
     "defaultMessage": "在伦敦提供 VPS 虚拟主机服务。您可以选择所需的 CPU、内存和硬盘。支持通过闪电网络或链上方式使用比特币支付。"
   },
+  "qB17v9": {
+    "defaultMessage": "请立即保存此配置：其私钥仅显示在本页面上，之后将无法再次查看。"
+  },
   "qV+TFm": {
     "defaultMessage": "支付失败。"
   },
@@ -2350,6 +2455,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "账单详情"
+  },
+  "rTxzLw": {
+    "defaultMessage": "目前还没有任何VPN套餐在售。"
   },
   "rbrahO": {
     "defaultMessage": "关闭"
@@ -2557,6 +2665,9 @@
   },
   "wL4Olp": {
     "defaultMessage": "续订。 {date}"
+  },
+  "wLCwU4": {
+    "defaultMessage": "管理账单"
   },
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："

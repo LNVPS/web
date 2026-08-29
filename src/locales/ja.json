@@ -5,6 +5,9 @@
   "+1wksq": {
     "defaultMessage": "デプロイを停止すると、リソースはゼロに縮小され、ストレージは保持されます。再度デプロイを開始すると、データはそのまま残っています。完全に削除した場合のみ、データが削除されます。"
   },
+  "+20FW7": {
+    "defaultMessage": "デバイス"
+  },
   "+3NyB6": {
     "defaultMessage": "発信。"
   },
@@ -22,6 +25,9 @@
   },
   "+NBJh2": {
     "defaultMessage": "先ほどの会話を引き継いでいます。上記のメッセージは再び表示されませんが、エージェントには文脈が保持されています。最初からやり直したい場合は、新しい会話を開始してください。"
+  },
+  "+QO7qN": {
+    "defaultMessage": "最も安全な方法：秘密鍵はブラウザーに決して渡しません。`wg pubkey` の出力、またはWireGuardアプリの空のトンネルから公開鍵をコピーして貼り付けてください。"
   },
   "+Qebzr": {
     "defaultMessage": "オンチェーンアドレス"
@@ -71,6 +77,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWCウォレット"
   },
+  "/aBLH2": {
+    "defaultMessage": "始める"
+  },
   "/hnclP": {
     "defaultMessage": "{count} IPv4"
   },
@@ -98,6 +107,9 @@
   "0RxidJ": {
     "defaultMessage": "LNURL"
   },
+  "0Wpi3L": {
+    "defaultMessage": "現在、利用可能な出口リージョンがありません。"
+  },
   "0gAiqM": {
     "defaultMessage": "アイルランドでのVPSホスティング"
   },
@@ -124,6 +136,9 @@
   },
   "13cluZ": {
     "defaultMessage": "SSHキーを追加："
+  },
+  "1A/d7u": {
+    "defaultMessage": "更新"
   },
   "1LBny5": {
     "defaultMessage": "停止しました。"
@@ -172,6 +187,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "スピードテスト"
+  },
+  "2h97cm": {
+    "defaultMessage": "アプリでスキャン"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# 秒} other{# 秒}}"
@@ -242,6 +260,9 @@
   "4D+xAI": {
     "defaultMessage": "なぜ、このVPSをライトニングノードに使うのか？"
   },
+  "4Ni9AU": {
+    "defaultMessage": "出口領域"
+  },
   "4PKxPs": {
     "defaultMessage": "リンクを解除する。"
   },
@@ -301,6 +322,9 @@
   },
   "5h1V4e": {
     "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
+  },
+  "5nYzR2": {
+    "defaultMessage": "終了リージョン"
   },
   "5ow6dg": {
     "defaultMessage": "ワッツアップ"
@@ -467,6 +491,9 @@
   "97LYWX": {
     "defaultMessage": "このアドレスにオンチェーンでビットコインを送金してください。トランザクションが承認されると、受け取った金額に応じて日割りで自動的に時間が加算されます。一部支払いや過払いが失われることはありません。"
   },
+  "9BtPto": {
+    "defaultMessage": "すべてのデバイスはどのリージョンでも使用できます。出口の切り替えは別の設定ファイルであり、別のプランではありません。"
+  },
   "9HB4ZM": {
     "defaultMessage": "{name} ホスティング、マネージド {category}"
   },
@@ -539,6 +566,9 @@
   "AVkjIn": {
     "defaultMessage": "満タン、いっぱい、完全な、完全な状態の、完全な形で。"
   },
+  "Ad/aI9": {
+    "defaultMessage": "秘密鍵をこのブラウザーに保存すると、後で設定を再度ダウンロードできるようになります。このブラウザープロファイルを使用する誰でもその鍵を読むことができます。オフのままにした場合、設定は一度だけ表示されます。"
+  },
   "AfmrGS": {
     "defaultMessage": "コードを送信"
   },
@@ -550,6 +580,9 @@
   },
   "B52Em/": {
     "defaultMessage": "住所1行目"
+  },
+  "B9PNcU": {
+    "defaultMessage": "設定を表示"
   },
   "B9v1WK": {
     "defaultMessage": "支払い方法"
@@ -635,6 +668,9 @@
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
   },
+  "D9EaRj": {
+    "defaultMessage": "{amount} セットアップ"
+  },
   "DATKpj": {
     "defaultMessage": "このページは自動的に更新されます。"
   },
@@ -713,6 +749,9 @@
   "Ecfndm": {
     "defaultMessage": "請求書"
   },
+  "EcglP9": {
+    "defaultMessage": "キー"
+  },
   "Ed5Igt": {
     "defaultMessage": "DNSの変更が反映されるまでには、最大で24～48時間かかる場合があります。"
   },
@@ -790,6 +829,9 @@
   },
   "G6nrEF": {
     "defaultMessage": "警告付きで保存されました。"
+  },
+  "GBAnXy": {
+    "defaultMessage": "MTU"
   },
   "GCQOx0": {
     "defaultMessage": "次の画面でお支払いください。お支払いが確認されると、機械が起動します。"
@@ -914,6 +956,9 @@
   "J+pWCM": {
     "defaultMessage": "New size"
   },
+  "J/aZhf": {
+    "defaultMessage": "このトンネルの秘密鍵はお使いのデバイスにのみ保存されています。ファイルをインポートする前に、プレースホルダーを実際の秘密鍵に置き換えてください。"
+  },
   "J7750w": {
     "defaultMessage": "{count} IPv6"
   },
@@ -1019,6 +1064,9 @@
   "LjziLu": {
     "defaultMessage": "メッセージを暗号化"
   },
+  "LpI0+d": {
+    "defaultMessage": "鍵を持っています"
+  },
   "LqFfRA": {
     "defaultMessage": "国"
   },
@@ -1030,6 +1078,9 @@
   },
   "M9eUaM": {
     "defaultMessage": "Nostrリレーも運用しているのですね？あれは、専用のサーバーは必要ありません。<a>マネージドアプリとして提供されています</a>。"
+  },
+  "MAfFB1": {
+    "defaultMessage": "ノートパソコン"
   },
   "MIAOtN": {
     "defaultMessage": "Blossomメディアサーバーのホスティング、Route96"
@@ -1045,6 +1096,9 @@
   },
   "Mfs5Nm": {
     "defaultMessage": "無制限"
+  },
+  "MhwErg": {
+    "defaultMessage": "サブスクリプションの支払いが完了すると、デバイスを登録できます。それまではルートサーバーには何も設定されません。"
   },
   "Mp+zDS": {
     "defaultMessage": "このコンポーネントは、Lightningによる支払いのみをサポートします。"
@@ -1069,6 +1123,9 @@
   },
   "NQgbYA": {
     "defaultMessage": "アカウント設定"
+  },
+  "NZw0gL": {
+    "defaultMessage": "WireGuardトンネル"
   },
   "NZyhSX": {
     "defaultMessage": "ニュース"
@@ -1103,6 +1160,9 @@
   "ORGv1Q": {
     "defaultMessage": "作成済み"
   },
+  "OeOwwQ": {
+    "defaultMessage": "削除 {name}？ そのキーとアドレスは解放され、そのデバイス上の設定は機能しなくなります。"
+  },
   "OephhB": {
     "defaultMessage": "{v} 書く"
   },
@@ -1123,6 +1183,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "ディスク"
+  },
+  "OvzONl": {
+    "defaultMessage": "オフ"
   },
   "OyvHWp": {
     "defaultMessage": "展開、配置"
@@ -1151,6 +1214,9 @@
   "PfSZy5": {
     "defaultMessage": "該当する注文は見つかりませんでした。"
   },
+  "PfUTPz": {
+    "defaultMessage": "VPN"
+  },
   "Pk14hW": {
     "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはカードで支払い。Nostrキーを使ってログインしてください。本人確認は不要です。"
   },
@@ -1165,6 +1231,9 @@
   },
   "Q2VBjI": {
     "defaultMessage": "お客様のために運用するソフトウェアです。各アプリケーションはそれぞれ独自のホスト名を持ち、TLSが既に有効になっています。サーバーのパッチを当てる必要はありません。NostrリレーとBlossomメディアサーバーは、本日<catalog>カタログ</catalog>で公開されます。"
+  },
+  "Q5CLtp": {
+    "defaultMessage": "プラン"
   },
   "QCo/EY": {
     "defaultMessage": "このデプロイメントのサブスクリプションは期限切れとなり、現在は停止されています。データはまだここに残っていますので、再開するにはサブスクリプションを更新してください。"
@@ -1183,6 +1252,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "完全に削除しますか？"
+  },
+  "Qa5kz3": {
+    "defaultMessage": "DNS"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -1378,6 +1450,9 @@
   },
   "U96Gl9": {
     "defaultMessage": "このカードを保存して、今後の支払いにご利用ください。"
+  },
+  "U9elQP": {
+    "defaultMessage": "デバイスはまだありません。追加すると設定ファイルが取得できます。"
   },
   "UPP+wZ": {
     "defaultMessage": "使用状況： {count,plural,one{仮想マシン} other{仮想マシン}}： {vms}"
@@ -1685,6 +1760,9 @@
   "c5WuqM": {
     "defaultMessage": "このホストは廃止されます。{date}までに新しいVPSへ移行してください。以降は更新できなくなり、移行が必要になります。"
   },
+  "cHcRBI": {
+    "defaultMessage": "ご利用プランで許可されたすべてのデバイスが登録されています。1台削除すると空き枠ができます。"
+  },
   "cJzoWc": {
     "defaultMessage": "独自のホスト名（TLSを含む）"
   },
@@ -1778,6 +1856,9 @@
   "dXoYQD": {
     "defaultMessage": "すべてのデプロイメントには、以下が含まれます。 {host} 自動的に証明書が発行されます。ご自身でドメインを用意し、CNAMEレコードを設定してください。当社でもそのドメインに対応し、独自の証明書を発行します（DNS解決後に一度だけ）。"
   },
+  "dfXxCq": {
+    "defaultMessage": "「.conf」をダウンロード"
+  },
   "dgTL/5": {
     "defaultMessage": "登録されたハンドルは存在しません。"
   },
@@ -1810,6 +1891,9 @@
   },
   "e55cj/": {
     "defaultMessage": "から {price}消費税は含まれません。"
+  },
+  "e6Ph5+": {
+    "defaultMessage": "住所"
   },
   "eKEL/g": {
     "defaultMessage": "保留中"
@@ -1964,6 +2048,9 @@
   "iO1K6D": {
     "defaultMessage": "まだ投稿はありません。"
   },
+  "iQpuv+": {
+    "defaultMessage": "生成してください"
+  },
   "iVkpyZ": {
     "defaultMessage": "管理されたカタログから、ワンクリックでDockerアプリケーションを起動できます。"
   },
@@ -2015,6 +2102,9 @@
   "jYLOYR": {
     "defaultMessage": "{n,plural,one{# 日} other{# 日}}"
   },
+  "jaG7WG": {
+    "defaultMessage": "VPNプラン"
+  },
   "jhBqwg": {
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
   },
@@ -2041,6 +2131,9 @@
   },
   "kExo50": {
     "defaultMessage": "現在使用中のものは置き換え、新しいものを展開して移行してください。これらは別々の展開作業です。"
+  },
+  "kFWJpj": {
+    "defaultMessage": "デバイスを追加"
   },
   "kJpuxD": {
     "defaultMessage": "継続サービスと請求"
@@ -2129,6 +2222,9 @@
   "lnaWo/": {
     "defaultMessage": "地域"
   },
+  "lqpcIb": {
+    "defaultMessage": "プランを購入"
+  },
   "lsFKTa": {
     "defaultMessage": "保存済みの支払い方法で決済を行います。確認が完了すると、自動的に処理されます。"
   },
@@ -2186,6 +2282,9 @@
   "n9fdaJ": {
     "defaultMessage": "確認されていません。"
   },
+  "nBO87C": {
+    "defaultMessage": "設定を非表示"
+  },
   "nCD6ia": {
     "defaultMessage": "ダブリン（アイルランド）、ロンドン（イギリス）、またはケベック（カナダ）から選択できます。大規模なノードが必要な場合は、ダブリンが最も優れた性能を発揮します。最大で64の仮想CPUと128GBのRAMを搭載できます。"
   },
@@ -2236,6 +2335,9 @@
   },
   "o2AdrJ": {
     "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
+  },
+  "o5s71l": {
+    "defaultMessage": "{count,plural,one{# デバイス} other{# デバイス}}"
   },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
@@ -2318,6 +2420,9 @@
   "qA0DQR": {
     "defaultMessage": "ロンドンでVPSホスティングを利用できます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでビットコインで行えます。"
   },
+  "qB17v9": {
+    "defaultMessage": "今すぐこの設定を保存してください：秘密鍵はこのページにのみ表示されており、再度表示することはできません。"
+  },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
   },
@@ -2350,6 +2455,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "お支払いに関する詳細"
+  },
+  "rTxzLw": {
+    "defaultMessage": "VPNプランはまだ販売されていません。"
   },
   "rbrahO": {
     "defaultMessage": "閉じる"
@@ -2557,6 +2665,9 @@
   },
   "wL4Olp": {
     "defaultMessage": "更新する。 {date}"
+  },
+  "wLCwU4": {
+    "defaultMessage": "請求を管理"
   },
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："

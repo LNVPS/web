@@ -11,6 +11,12 @@
   "+3NyB6": {
     "defaultMessage": "Giden"
   },
+  "+4IoXB": {
+    "defaultMessage": "Hayır. Bir cihaz, her bölgede çalışan bir anahtar çifti ve bir adres barındırır; bu nedenle çıkış noktası değiştirmek farklı bir yapılandırma dosyası kullanmak demektir, farklı bir plan veya yeni bir anahtar değildir."
+  },
+  "+AseCJ": {
+    "defaultMessage": "Başlangıç fiyatıyla WireGuard VPN {price}"
+  },
   "+Bj8tM": {
     "defaultMessage": "Durdurma işlemi yüklemelerinizi saklar; yalnızca silme işlemi yüklemeleri tamamen kaldırır."
   },
@@ -137,6 +143,9 @@
   "13cluZ": {
     "defaultMessage": "SSH Anahtarını Ekle:"
   },
+  "1583Cj": {
+    "defaultMessage": "Her cihazı WireGuard genel anahtarıyla kaydedin. Bunu WireGuard uygulamasıyla veya wg genkey komutuyla oluşturabilir ya da tarayıcıya sizin için bir tane oluşturabilirsiniz."
+  },
   "1A/d7u": {
     "defaultMessage": "Yenilenir"
   },
@@ -190,6 +199,9 @@
   },
   "2h97cm": {
     "defaultMessage": "Uygulamada tarayın"
+  },
+  "2i41cU": {
+    "defaultMessage": "Şu fiyattan itibaren WireGuard VPN {price} başına {period}"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# sn} other{# sn}}"
@@ -259,6 +271,9 @@
   },
   "4D+xAI": {
     "defaultMessage": "Neden tam olarak bu VPS'yi bir Lightning düğümü için kullanmalıyım?"
+  },
+  "4HhPmZ": {
+    "defaultMessage": "Ödemeyi durdurursam ne olur?"
   },
   "4Ni9AU": {
     "defaultMessage": "Çıkış bölgesi"
@@ -659,6 +674,9 @@
   "CuBwLu": {
     "defaultMessage": "Ödemeler, kaydedilmiş bir NWC cüzdanına yapılır. Aşağıda yeni bir cüzdan ekleyebilir veya mevcut olanlardan birini seçebilirsiniz; varsayılan olarak etkinleştirilmiş cüzdan kullanılır."
   },
+  "CwGVUn": {
+    "defaultMessage": "Resmi WireGuard istemcisi, desteklediği tüm platformlarda. Size her bölge için hazır kullanıma hazır bir yapılandırma dosyası ya da telefonda taranacak bir QR kodu sunuyoruz."
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -797,6 +815,9 @@
   "FPbLFA": {
     "defaultMessage": "Kayıtlı yöntemler"
   },
+  "FSW97J": {
+    "defaultMessage": "Bir plan satın alın ve aboneliğini Lightning, Bitcoin veya kart ile ödeyin."
+  },
   "FZeQlc": {
     "defaultMessage": "Bağlantı kesildi"
   },
@@ -805,6 +826,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Tekrar deneyin."
+  },
+  "FcSvWy": {
+    "defaultMessage": "WireGuard VPN, sats ile ödenir"
   },
   "FlypmR": {
     "defaultMessage": "Aşağıya bir e-posta adresi ekleyin."
@@ -857,8 +881,14 @@
   "Gd6Kbk": {
     "defaultMessage": "Henüz etkin değil."
   },
+  "GkIzf5": {
+    "defaultMessage": "Plan için ödeme yapılana kadar route server üzerinde hiçbir şey yapılandırılmaz ve bir cihazın kaldırılması, hizmetin son bulduğu her sunucuda cihazın anahtarını iptal eder."
+  },
   "GlTZFC": {
     "defaultMessage": "Bu bağlantıyı paylaşın. Birisi kayıt yaptırıp sanal makinesi ilk ödemesini gerçekleştirdiğinde komisyon kazanırsınız."
+  },
+  "Gok8vF": {
+    "defaultMessage": "Şuradan bir tünel al {price}"
   },
   "GqRat5": {
     "defaultMessage": "Lütfen siparişinizi tamamlamak için e-posta adresinizi doğrulayın."
@@ -884,17 +914,26 @@
   "H4Ucn0": {
     "defaultMessage": "Gelen"
   },
+  "H7iwrN": {
+    "defaultMessage": "Bir cihaz, kayıtlı bir açık anahtardır: telefonunuz, dizüstü bilgisayarınız, yönlendiriciniz. En fazla {count,plural,one{# cihaz} other{# cihazlar}} tek planda ve çıkardığınız bir cihaz yuvasını boşaltır."
+  },
   "H9Az5Z": {
     "defaultMessage": "Fatura detayları"
   },
   "HAlOn1": {
     "defaultMessage": "Ad"
   },
+  "HK3ph8": {
+    "defaultMessage": "Nasıl çalışır"
+  },
   "HPBE7M": {
     "defaultMessage": "Uygulamalara geri dön"
   },
   "HVtxik": {
     "defaultMessage": "Özel alan adı"
+  },
+  "HYP241": {
+    "defaultMessage": "Lightning, Bitcoin veya kart ile ödenen bir WireGuard VPN. Anahtarları cihazınızın kendisi oluşturur ve biz yalnızca herkese açık yarısını görürüz."
   },
   "Hct61V": {
     "defaultMessage": "{storage} kalıcı depolama alanı, {breakdown}"
@@ -926,8 +965,14 @@
   "ILTAun": {
     "defaultMessage": "Sanal makineniz hazırlanıyor. Bu işlem genellikle bir veya iki dakika sürer."
   },
+  "INMDkx": {
+    "defaultMessage": "Bir tünel edin"
+  },
   "IZFEUg": {
     "defaultMessage": "Hazır."
+  },
+  "IaS36D": {
+    "defaultMessage": "Lightning, zincir üstü Bitcoin veya kart. Kendi Lightning düğümümüzü işletiyoruz, bu nedenle satoshiler üçüncü taraf bir aracıdan geçmez."
   },
   "IbWc3k": {
     "defaultMessage": "Dublin, İrlanda."
@@ -1091,6 +1136,9 @@
   "MTnSwY": {
     "defaultMessage": "örneğin, vergi"
   },
+  "MZQ6io": {
+    "defaultMessage": "Bir yapılandırma dosyasını indirin veya QR kodunu tarayın ve tüneli başlatın. Her çıkış bölgesi için bir dosya vardır ve tümü aynı anahtarı paylaşır."
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerinde Route96 yüklü olan bir VPS ile daha da ölçeklendirebilirsiniz."
   },
@@ -1139,11 +1187,17 @@
   "NmK6zy": {
     "defaultMessage": "Ödeme"
   },
+  "NmVAjK": {
+    "defaultMessage": "Hayır — bir Nostr anahtarıyla giriş yaparsanız: e-posta yok, isim yok, KYC yok. Google veya geçiş anahtarı (passkey) ile giriş yapmak, o hesabın bize verdiği bilgileri kullanır; kartla ödeme yapmak ise kart işlemcisine fatura bilgilerinizi gösterir."
+  },
   "Ntjkqd": {
     "defaultMessage": "veya"
   },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
+  },
+  "OC0eZH": {
+    "defaultMessage": "Trafik veya bağlantı günlükleri yazılmaz. Rota sunucusu, taşıdığı açık anahtarları ve her birine ait dahili adresi saklar; WireGuard ise son el sıkışma zamanını ve mevcut uç noktanızı bellekte tutar, bu da protokolün bir paketi size geri yönlendirmek için ihtiyaç duyduğu bilgidir."
   },
   "OEZ5v2": {
     "defaultMessage": "Abone olmayı görüntüle"
@@ -1211,6 +1265,9 @@
   "PJtOx7": {
     "defaultMessage": "Bildirilecek herhangi bir olay bulunmamaktadır."
   },
+  "PUqHRI": {
+    "defaultMessage": "Trafik veya bağlantı kayıtları tutulmaz. WireGuard'ın kendisi, yalnızca son el sıkışma zamanını ve şu anda bağlandığınız uç noktayı bellekte saklar; çünkü protokol bu bilgiler olmadan bir paketi geri yönlendiremez."
+  },
   "PfSZy5": {
     "defaultMessage": "Herhangi bir sipariş bulunamadı."
   },
@@ -1222,6 +1279,9 @@
   },
   "Ppjs/C": {
     "defaultMessage": "Londra'da VPS hosting"
+  },
+  "PtjZar": {
+    "defaultMessage": "Anahtarları kim üretir?"
   },
   "PucUfl": {
     "defaultMessage": "SSH Anahtarını Seçin:"
@@ -1252,6 +1312,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "Kalıcı olarak silinsin mi?"
+  },
+  "QWN/RL": {
+    "defaultMessage": "Bir VPN planı size bir çıkış sunar, sunucu değil. Statik IPv4 ve IPv6 adresine ve sınırsız trafiğe sahip, kendi hizmetlerinizi çalıştırabileceğiniz bir makine istiyorsanız, <a>VPS barındırma</a> hizmetimiz de aynı altyapı üzerinde çalışır."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1295,6 +1358,9 @@
   "RQNCao": {
     "defaultMessage": "NIP-05 kimlik barındırma"
   },
+  "RR5RDI": {
+    "defaultMessage": "Plan sona erer ve cihazlarınız bağlantıyı keser. Anahtarlarınız ve adresleriniz, cihazları kaldırana kadar saklanır; böylece planı yenilediğinizde aynı tüneller geri gelir."
+  },
   "RXjd0H": {
     "defaultMessage": "Hesabıma geri dön"
   },
@@ -1315,6 +1381,12 @@
   },
   "Rw82/V": {
     "defaultMessage": "ayda"
+  },
+  "RzQOmD": {
+    "defaultMessage": "E-posta adresime ihtiyacınız var mı?"
+  },
+  "S3jr4e": {
+    "defaultMessage": "Tüneller, VPS filomuzla aynı altyapı üzerinde çalışır: elimizde bulunduğu yerlerde kendi donanımımız ve AS214973 adres alanı, bulunmadığı yerlerde ise kiralanan kapasite kullanılır. Anahtar çiftini cihazınız oluşturur ve bize yalnızca açık (public) kısmını iletir; böylece trafiğinizin şifrelenmesinde kullanılan anahtar hiçbir zaman bizim tarafımızda bulunmaz."
   },
   "S5s+VN": {
     "defaultMessage": "Lightning"
@@ -1559,6 +1631,9 @@
   "Wsj2fc": {
     "defaultMessage": "Devam Eden Olaylar"
   },
+  "WuyDui": {
+    "defaultMessage": "Elimizde tuttuklarımız ve tutmadıklarımız"
+  },
   "WwXOJ8": {
     "defaultMessage": "Sunucuları dağıtın ve yönetin"
   },
@@ -1615,6 +1690,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "Ödeme bekleniyor. Onaylandıktan sonra bu işlem otomatik olarak uygulanır."
+  },
+  "YCAVvS": {
+    "defaultMessage": "Satın alırken bir bölge seçmem gerekiyor mu?"
   },
   "YCzocJ": {
     "defaultMessage": "Kaynak tahsisi, faturalandırma, kötüye kullanım yönetimi veya belirli bir hizmet sorunu hakkında sorularınız mı var? Size yardımcı olmak için buradayız."
@@ -1961,6 +2039,9 @@
   "fxYCqm": {
     "defaultMessage": "Konum: {location}"
   },
+  "fz0z4c": {
+    "defaultMessage": "Plan"
+  },
   "g1GUs5": {
     "defaultMessage": "sanal CPU"
   },
@@ -2156,6 +2237,9 @@
   "kfr95E": {
     "defaultMessage": "Adres Satırı 1"
   },
+  "khi+xY": {
+    "defaultMessage": "Siz oluşturursunuz. Cihazınız WireGuard anahtar çiftini oluşturur ve bize yalnızca herkese açık yarısını gönderir; böylece trafiğinizin şifresini çözen anahtar, bizim teslim edebileceğimiz ya da kaybedebileceğimiz bir anahtar asla olmaz."
+  },
   "kr8jZp": {
     "defaultMessage": "{price}ayda."
   },
@@ -2255,6 +2339,9 @@
   "mOR+qH": {
     "defaultMessage": "Panoya kopyala"
   },
+  "mQ+mUF": {
+    "defaultMessage": "Tüm makineyi istediğinizde"
+  },
   "mV5FZi": {
     "defaultMessage": "İzinli Çalışan Tavsiye Programı"
   },
@@ -2272,6 +2359,9 @@
   },
   "mznk9z": {
     "defaultMessage": "Komisyon"
+  },
+  "n3LLz7": {
+    "defaultMessage": "Düğüm listesi #{id}"
   },
   "n7yYXG": {
     "defaultMessage": "Hizmet"
@@ -2393,8 +2483,14 @@
   "p5LNtB": {
     "defaultMessage": "Ayarlanmadı"
   },
+  "pHg2Hv": {
+    "defaultMessage": "Her cihaz her bölgeye ulaşabilir. Tünelin içindeki adres nereden çıkarsanız çıkın aynıdır; dolayısıyla ülke değiştirmek bir yapılandırma dosyası düzenleme meselesidir, yeniden kayıt olma değil."
+  },
   "pMi1Vp": {
     "defaultMessage": "LNVPS destek temsilcisiyle planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl çalıştığı hakkında sohbet edin, giriş yapmanıza gerek yok. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınızı görüntüleyebilmesi için önce giriş yapın."
+  },
+  "pSgJJF": {
+    "defaultMessage": "Genel anahtarınızı ve ona atanmış dahili adresi saklıyoruz. Bu çift, bir WireGuard eşinin (peer) tam olarak ne olduğudur ve bir rota sunucusunun sizi taşıması için ihtiyaç duyduğu tek şeydir."
   },
   "pSpLvj": {
     "defaultMessage": "Kendi medya sunucunuzu barındırın, ayda {price}."
@@ -2422,6 +2518,9 @@
   },
   "qB17v9": {
     "defaultMessage": "Bu yapılandırmayı şimdi kaydedin: özel anahtarı yalnızca bu sayfada yer alıyor ve bir daha gösterilemez."
+  },
+  "qCGD63": {
+    "defaultMessage": "Nasıl ödeme yapabilirim?"
   },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."
@@ -2453,8 +2552,14 @@
   "r3V7v4": {
     "defaultMessage": "Kontrol ettiğiniz alan adlarında ücretsiz NIP-05 kimlik barındırma."
   },
+  "r8GkHj": {
+    "defaultMessage": "Bir Nostr anahtarıyla giriş yapın; hesapta hiçbir e-posta veya isim bulunmaz. Lightning veya zincir üstü Bitcoin ile ödeme yapın; kart ekstresi de söz konusu olmaz."
+  },
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
+  },
+  "rRJFl8": {
+    "defaultMessage": "Bağlanmak için neye ihtiyacım var?"
   },
   "rTxzLw": {
     "defaultMessage": "Henüz satışta VPN planı yok."
@@ -2488,6 +2593,9 @@
   },
   "s+ixZq": {
     "defaultMessage": "Varsayılan yöntem"
+  },
+  "s/BEY9": {
+    "defaultMessage": "Günlük kayıtları tutuyor musunuz?"
   },
   "s2ZjPB": {
     "defaultMessage": "Herhangi bir güvenlik duvarı kuralı tanımlanmamıştır. Varsayılan politika uygulanır."
@@ -2657,6 +2765,9 @@
   "vy2rlX": {
     "defaultMessage": "İşlem ücreti:"
   },
+  "w/+hVh": {
+    "defaultMessage": "Şuradan bir WireGuard VPN: {price} başına {period}, Lightning, Bitcoin veya kart ile ödeme yapılır. Cihazınız kendi anahtarlarını oluşturur ve biz yalnızca herkese açık olan yarısını görürüz."
+  },
   "w1iy6j": {
     "defaultMessage": "Fiyat güncelleniyor…"
   },
@@ -2704,6 +2815,9 @@
   },
   "xALX/d": {
     "defaultMessage": "Bir Nostr anahtarı yeterli. E-posta, ad veya kimlik doğrulama gerekmiyor. Bildirimler şifrelenmiş Nostr özel mesajlarına, e-postaya, Telegram'a veya WhatsApp'a gönderilebilir; bu sizin seçiminize bağlıdır."
+  },
+  "xBrtnx": {
+    "defaultMessage": "Adresler"
   },
   "xOnplm": {
     "defaultMessage": "Ödeme yöntemleri yükleniyor…"
@@ -2785,6 +2899,9 @@
   },
   "z/H1td": {
     "defaultMessage": "Kendi Nostr rölenizi çalıştırın, şu adresten: {price} bir ay"
+  },
+  "z/w4hy": {
+    "defaultMessage": "Trafiğinizin şifresini çözen özel anahtar, cihazınızda oluşturulur ve bize asla gönderilmez; dolayısıyla bu anahtar, kaybetmemiz, sızdırmamız ya da mahkeme kararıyla teslim etmemiz söz konusu olamayacak bir şeydir."
   },
   "z1KiHv": {
     "defaultMessage": "Mesajlar ... ile sınırlıdır {max} karakterler."

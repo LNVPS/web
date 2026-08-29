@@ -11,6 +11,12 @@
   "+3NyB6": {
     "defaultMessage": "De saída / Em direção ao destino."
   },
+  "+4IoXB": {
+    "defaultMessage": "Não. Um dispositivo mantém um par de chaves e um endereço que funcionam em todas as regiões, portanto trocar de saída é apenas um arquivo de configuração diferente, não um plano diferente ou uma chave nova."
+  },
+  "+AseCJ": {
+    "defaultMessage": "WireGuard VPN a partir de {price}"
+  },
   "+Bj8tM": {
     "defaultMessage": "Interromper mantém os seus ficheiros carregados; apenas apagá-los remove-os."
   },
@@ -137,6 +143,9 @@
   "13cluZ": {
     "defaultMessage": "Adicionar chave SSH:"
   },
+  "1583Cj": {
+    "defaultMessage": "Registe cada dispositivo pela sua chave pública WireGuard. Gere-a com a aplicação WireGuard ou com o wg genkey, ou deixa o navegador criar uma por ti."
+  },
   "1A/d7u": {
     "defaultMessage": "Renovação"
   },
@@ -190,6 +199,9 @@
   },
   "2h97cm": {
     "defaultMessage": "Digitalizar na aplicação"
+  },
+  "2i41cU": {
+    "defaultMessage": "WireGuard VPN a partir de {price} por {period}"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# seg.} other{# segundos}}"
@@ -259,6 +271,9 @@
   },
   "4D+xAI": {
     "defaultMessage": "Por que usar este VPS para um nó Lightning?"
+  },
+  "4HhPmZ": {
+    "defaultMessage": "O que acontece se eu parar de pagar?"
   },
   "4Ni9AU": {
     "defaultMessage": "Região de saída"
@@ -659,6 +674,9 @@
   "CuBwLu": {
     "defaultMessage": "Os pagamentos são efetuados para uma carteira NWC guardada. Adicione ou selecione uma abaixo, a carteira padrão ativada será utilizada."
   },
+  "CwGVUn": {
+    "defaultMessage": "O cliente oficial do WireGuard, em qualquer plataforma que ele suporte. Fornecemos um ficheiro de configuração pronto a usar por região, ou um código QR para ler no telemóvel."
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -797,6 +815,9 @@
   "FPbLFA": {
     "defaultMessage": "Métodos salvos"
   },
+  "FSW97J": {
+    "defaultMessage": "Compre um plano e pague a sua subscrição com Lightning, Bitcoin ou cartão."
+  },
   "FZeQlc": {
     "defaultMessage": "Desligado/a"
   },
@@ -805,6 +826,9 @@
   },
   "FazwRl": {
     "defaultMessage": "Tente novamente."
+  },
+  "FcSvWy": {
+    "defaultMessage": "WireGuard VPN, pago em sats"
   },
   "FlypmR": {
     "defaultMessage": "Adicione um endereço de e-mail abaixo."
@@ -857,8 +881,14 @@
   "Gd6Kbk": {
     "defaultMessage": "Ainda não está ativo."
   },
+  "GkIzf5": {
+    "defaultMessage": "Nada é configurado num route server até que o plano seja pago, e remover um dispositivo revoga a sua chave em todos os servidores onde o serviço termina."
+  },
   "GlTZFC": {
     "defaultMessage": "Partilhe este link. Receberá uma comissão quando alguém se registar e o seu sistema de gestão de máquinas virtuais efetuar o primeiro pagamento."
+  },
+  "Gok8vF": {
+    "defaultMessage": "Obtenha um túnel de {price}"
   },
   "GqRat5": {
     "defaultMessage": "Por favor, confirme o seu endereço de e-mail para finalizar o seu pedido."
@@ -884,17 +914,26 @@
   "H4Ucn0": {
     "defaultMessage": "Entrada."
   },
+  "H7iwrN": {
+    "defaultMessage": "Um dispositivo é uma chave pública registada: o seu telemóvel, o seu portátil, o seu router. Até {count,plural,one{# dispositivo} other{# dispositivos}} num plano, e um dispositivo que remove liberta a sua ranhura."
+  },
   "H9Az5Z": {
     "defaultMessage": "Detalhes da faturação"
   },
   "HAlOn1": {
     "defaultMessage": "Nome"
   },
+  "HK3ph8": {
+    "defaultMessage": "Como funciona"
+  },
   "HPBE7M": {
     "defaultMessage": "Voltar para os aplicativos"
   },
   "HVtxik": {
     "defaultMessage": "Domínio personalizado"
+  },
+  "HYP241": {
+    "defaultMessage": "Uma VPN WireGuard paga com Lightning, Bitcoin ou cartão. O seu dispositivo gera as suas próprias chaves e nós apenas vemos a metade pública."
   },
   "Hct61V": {
     "defaultMessage": "{storage} do armazenamento persistente, {breakdown}"
@@ -926,8 +965,14 @@
   "ILTAun": {
     "defaultMessage": "A sua máquina virtual está a ser configurada. Normalmente, este processo demora um ou dois minutos."
   },
+  "INMDkx": {
+    "defaultMessage": "Obtenha um túnel"
+  },
   "IZFEUg": {
     "defaultMessage": "Pronto."
+  },
+  "IaS36D": {
+    "defaultMessage": "Lightning, Bitcoin on-chain ou cartão. Gerimos o nosso próprio nó Lightning, por isso os sats não passam por um processador terceiro."
   },
   "IbWc3k": {
     "defaultMessage": "Dublim, Irlanda."
@@ -1091,6 +1136,9 @@
   "MTnSwY": {
     "defaultMessage": "por exemplo, imposto"
   },
+  "MZQ6io": {
+    "defaultMessage": "Descarregue uma configuração ou leia o seu código QR e ative o túnel. Um ficheiro por região de saída, todos partilhando a mesma chave."
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} no total. Para um servidor de mídia pessoal, isso é suficiente; se precisar de mais, pode instalar o Route96 num VPS e aumentar a capacidade conforme necessário."
   },
@@ -1139,11 +1187,17 @@
   "NmK6zy": {
     "defaultMessage": "Pagamento"
   },
+  "NmVAjK": {
+    "defaultMessage": "Não, se iniciar sessão com uma chave Nostr: sem email, sem nome, sem KYC. Iniciar sessão com o Google ou com uma chave de acesso utiliza o que essa conta nos fornece, e pagar com cartão significa que o processador de pagamentos vê os seus dados de faturação."
+  },
   "Ntjkqd": {
     "defaultMessage": "ou"
   },
   "Ny9qbm": {
     "defaultMessage": "Nostr: {handle}"
+  },
+  "OC0eZH": {
+    "defaultMessage": "Nenhum registo de tráfego ou de ligações é guardado. Um servidor de rotas mantém as chaves públicas que transporta e o endereço interno de cada uma delas, e o WireGuard mantém em memória a hora do último handshake e o seu endpoint atual, que é o que o protocolo precisa para encaminhar um pacote de volta para si."
   },
   "OEZ5v2": {
     "defaultMessage": "Ver assinatura"
@@ -1211,6 +1265,9 @@
   "PJtOx7": {
     "defaultMessage": "Não há ocorrências a relatar."
   },
+  "PUqHRI": {
+    "defaultMessage": "Nenhum registo de tráfego ou de ligações é gravado. O próprio WireGuard mantém em memória a hora do último handshake e o endpoint a partir do qual está atualmente a ligar-se, porque o protocolo não consegue encaminhar um pacote de volta sem essas informações."
+  },
   "PfSZy5": {
     "defaultMessage": "Nenhuma encomenda encontrada."
   },
@@ -1222,6 +1279,9 @@
   },
   "Ppjs/C": {
     "defaultMessage": "Serviço de hospedagem VPS em Londres."
+  },
+  "PtjZar": {
+    "defaultMessage": "Quem gera as chaves?"
   },
   "PucUfl": {
     "defaultMessage": "Selecione a chave SSH:"
@@ -1252,6 +1312,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "Eliminar permanentemente?"
+  },
+  "QWN/RL": {
+    "defaultMessage": "Um plano de VPN dá-lhe uma saída, não um servidor. Se quer uma máquina para executar os seus próprios serviços, com IPv4 e IPv6 estáticos e tráfego ilimitado, a nossa <a>hospedagem VPS</a> funciona na mesma frota."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1295,6 +1358,9 @@
   "RQNCao": {
     "defaultMessage": "Hospedagem de identidade NIP-05"
   },
+  "RR5RDI": {
+    "defaultMessage": "O plano expira e os seus dispositivos deixam de se ligar. As suas chaves e endereços são mantidos até remover os dispositivos, por isso, ao renovar, os mesmos túneis regressam."
+  },
   "RXjd0H": {
     "defaultMessage": "Voltar à conta"
   },
@@ -1315,6 +1381,12 @@
   },
   "Rw82/V": {
     "defaultMessage": "por mês"
+  },
+  "RzQOmD": {
+    "defaultMessage": "Precisas do meu e-mail?"
+  },
+  "S3jr4e": {
+    "defaultMessage": "Túneis na mesma infraestrutura da nossa frota de VPS: o nosso próprio hardware e espaço de endereçamento AS214973 onde o temos, capacidade alugada onde não temos. O seu dispositivo gera o par de chaves e entrega apenas a metade pública, pelo que a chave com que o seu tráfego é encriptado nunca existe do nosso lado."
   },
   "S5s+VN": {
     "defaultMessage": "Lightning"
@@ -1559,6 +1631,9 @@
   "Wsj2fc": {
     "defaultMessage": "Incidentes Ativos"
   },
+  "WuyDui": {
+    "defaultMessage": "O que possuímos, e o que não possuímos"
+  },
   "WwXOJ8": {
     "defaultMessage": "Implante e gerencie servidores"
   },
@@ -1615,6 +1690,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "Aguardando o pagamento. Este processo é aplicado automaticamente após a confirmação."
+  },
+  "YCAVvS": {
+    "defaultMessage": "Tenho de escolher uma região quando compro?"
   },
   "YCzocJ": {
     "defaultMessage": "Tem dúvidas sobre provisionamento, faturamento, tratamento de abusos ou sobre um problema específico do serviço? Estamos aqui para ajudar."
@@ -1961,6 +2039,9 @@
   "fxYCqm": {
     "defaultMessage": "Localização: {location}"
   },
+  "fz0z4c": {
+    "defaultMessage": "Plano"
+  },
   "g1GUs5": {
     "defaultMessage": "CPU virtual"
   },
@@ -2156,6 +2237,9 @@
   "kfr95E": {
     "defaultMessage": "Endereço, Linha 1"
   },
+  "khi+xY": {
+    "defaultMessage": "Você mesmo. O seu dispositivo gera o par de chaves WireGuard e envia-nos apenas a metade pública, pelo que a chave que desencripta o seu tráfego nunca está nas nossas mãos para entregar ou perder."
+  },
   "kr8jZp": {
     "defaultMessage": "{price}por mês."
   },
@@ -2255,6 +2339,9 @@
   "mOR+qH": {
     "defaultMessage": "Copiar para a área de transferência"
   },
+  "mQ+mUF": {
+    "defaultMessage": "Quando você quer uma máquina inteira em vez disso"
+  },
   "mV5FZi": {
     "defaultMessage": "Programa de Indicação para o Período de Afastamento"
   },
@@ -2272,6 +2359,9 @@
   },
   "mznk9z": {
     "defaultMessage": "Comissão"
+  },
+  "n3LLz7": {
+    "defaultMessage": "Listagem de nós #{id}"
   },
   "n7yYXG": {
     "defaultMessage": "Serviço"
@@ -2393,8 +2483,14 @@
   "p5LNtB": {
     "defaultMessage": "Não definido."
   },
+  "pHg2Hv": {
+    "defaultMessage": "Cada dispositivo alcança todas as regiões. O endereço dentro do túnel é o mesmo independentemente de onde sair, por isso mudar de país é apenas uma questão de ficheiro de configuração, não de novo registo."
+  },
   "pMi1Vp": {
     "defaultMessage": "Converse com o agente de suporte da LNVPS sobre planos e preços, regiões, sistemas operacionais ou como funciona o pagamento com Lightning, sem necessidade de login. Faça login primeiro se a sua pergunta for sobre uma VM existente ou um pagamento, para que o agente possa consultar a sua conta."
+  },
+  "pSgJJF": {
+    "defaultMessage": "Guardamos a sua chave pública e o endereço interno atribuído a ela. Esse par é o que constitui um peer WireGuard, e é tudo o que um servidor de rotas precisa para o transportar."
   },
   "pSpLvj": {
     "defaultMessage": "Crie o seu próprio servidor de mídia, {price} por mês."
@@ -2422,6 +2518,9 @@
   },
   "qB17v9": {
     "defaultMessage": "Guarde esta configuração agora: a sua chave privada está apenas nesta página e não pode ser mostrada novamente."
+  },
+  "qCGD63": {
+    "defaultMessage": "Como posso pagar?"
   },
   "qV+TFm": {
     "defaultMessage": "O pagamento não foi efetuado."
@@ -2453,8 +2552,14 @@
   "r3V7v4": {
     "defaultMessage": "Hospedagem gratuita de identidade NIP-05 em domínios que você controla."
   },
+  "r8GkHj": {
+    "defaultMessage": "Entre com uma chave Nostr e não há nenhum e-mail ou nome na conta. Pague com Lightning ou Bitcoin on-chain e não há fatura de cartão também."
+  },
   "rF6EmI": {
     "defaultMessage": "Detalhes da faturação"
+  },
+  "rRJFl8": {
+    "defaultMessage": "O que preciso para conectar?"
   },
   "rTxzLw": {
     "defaultMessage": "Ainda não há planos de VPN à venda."
@@ -2488,6 +2593,9 @@
   },
   "s+ixZq": {
     "defaultMessage": "Método padrão"
+  },
+  "s/BEY9": {
+    "defaultMessage": "Você mantém registros?"
   },
   "s2ZjPB": {
     "defaultMessage": "Não existem regras de firewall. A política predefinida está em vigor."
@@ -2657,6 +2765,9 @@
   "vy2rlX": {
     "defaultMessage": "Taxa de processamento:"
   },
+  "w/+hVh": {
+    "defaultMessage": "Uma VPN WireGuard a partir de {price} por {period}, pago com Lightning, Bitcoin ou cartão. O seu dispositivo gera as suas próprias chaves e nós apenas vemos a metade pública."
+  },
   "w1iy6j": {
     "defaultMessage": "Atualizando preço…"
   },
@@ -2704,6 +2815,9 @@
   },
   "xALX/d": {
     "defaultMessage": "Uma chave Nostr é suficiente. Sem necessidade de e-mail, nome ou verificação de identidade (KYC). As notificações podem ser enviadas para mensagens diretas criptografadas do Nostr, e-mail, Telegram ou WhatsApp, a escolha é sua."
+  },
+  "xBrtnx": {
+    "defaultMessage": "Endereços"
   },
   "xOnplm": {
     "defaultMessage": "A carregar os métodos de pagamento…"
@@ -2785,6 +2899,9 @@
   },
   "z/H1td": {
     "defaultMessage": "Crie o seu próprio nó de retransmissão Nostr, a partir de {price} um mês"
+  },
+  "z/w4hy": {
+    "defaultMessage": "A chave privada que desencripta o seu tráfego é gerada no seu dispositivo e nunca nos é enviada, por isso não é nossa para perder, para vazar ou para sermos obrigados a apresentar."
   },
   "z1KiHv": {
     "defaultMessage": "As mensagens são limitadas a {max} personagens."

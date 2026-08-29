@@ -11,6 +11,12 @@
   "+3NyB6": {
     "defaultMessage": "발신"
   },
+  "+4IoXB": {
+    "defaultMessage": "아니요. 기기에는 모든 지역에서 사용 가능한 하나의 키페어와 하나의 주소가 저장되므로, 출구(exit) 노드를 변경하는 것은 다른 요금제나 새 키가 아니라 다른 설정 파일일 뿐입니다."
+  },
+  "+AseCJ": {
+    "defaultMessage": "다음에서 WireGuard VPN {price}"
+  },
   "+Bj8tM": {
     "defaultMessage": "중단하면 업로드한 내용이 그대로 유지됩니다. 완전히 삭제해야만 내용이 제거됩니다."
   },
@@ -137,6 +143,9 @@
   "13cluZ": {
     "defaultMessage": "SSH 키 추가:"
   },
+  "1583Cj": {
+    "defaultMessage": "각 기기를 WireGuard 공개 키로 등록하세요. WireGuard 앱이나 wg genkey로 키를 생성하거나, 브라우저가 대신 생성하도록 할 수도 있습니다."
+  },
   "1A/d7u": {
     "defaultMessage": "갱신됨"
   },
@@ -190,6 +199,9 @@
   },
   "2h97cm": {
     "defaultMessage": "앱에서 스캔하세요"
+  },
+  "2i41cU": {
+    "defaultMessage": "WireGuard VPN 부터 {price} 당 {period}"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# 초} other{# 초}}"
@@ -259,6 +271,9 @@
   },
   "4D+xAI": {
     "defaultMessage": "번개 네트워크 노드를 운영하기 위해 이 가상 전용 서버(VPS)를 선택한 이유는 무엇인가요?"
+  },
+  "4HhPmZ": {
+    "defaultMessage": "납부를 중단하면 어떻게 되나요?"
   },
   "4Ni9AU": {
     "defaultMessage": "출구 영역"
@@ -659,6 +674,9 @@
   "CuBwLu": {
     "defaultMessage": "지급액은 저장된 NWC 지갑으로 전송됩니다. 아래에서 지갑을 추가하거나 선택하세요. 기본적으로 활성화된 지갑이 사용됩니다."
   },
+  "CwGVUn": {
+    "defaultMessage": "지원되는 모든 플랫폼에서 사용할 수 있는 공식 WireGuard 클라이언트입니다. 지역별로 바로 사용 가능한 설정 파일을 제공하거나, 휴대폰에서 스캔할 수 있는 QR 코드를 제공합니다."
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -797,6 +815,9 @@
   "FPbLFA": {
     "defaultMessage": "저장된 결제 수단"
   },
+  "FSW97J": {
+    "defaultMessage": "플랜을 구매하고 Lightning, 비트코인 또는 카드로 구독료를 결제하세요."
+  },
   "FZeQlc": {
     "defaultMessage": "연결이 끊어졌습니다."
   },
@@ -805,6 +826,9 @@
   },
   "FazwRl": {
     "defaultMessage": "다시 시도해 보세요."
+  },
+  "FcSvWy": {
+    "defaultMessage": "사토시로 결제하는 WireGuard VPN"
   },
   "FlypmR": {
     "defaultMessage": "아래에 이메일 주소를 입력하세요."
@@ -857,8 +881,14 @@
   "Gd6Kbk": {
     "defaultMessage": "아직 활성화되지 않음"
   },
+  "GkIzf5": {
+    "defaultMessage": "플랜 요금이 결제되기 전까지는 라우트 서버에 아무것도 구성되지 않으며, 기기를 제거하면 해당 서비스가 종료되는 모든 서버에서 기기의 키가 취소됩니다."
+  },
   "GlTZFC": {
     "defaultMessage": "이 링크를 공유하세요. 누군가가 가입하고 해당 사용자의 가상 머신(VM)에서 첫 번째 결제가 이루어지면 수수료가 지급됩니다."
+  },
+  "Gok8vF": {
+    "defaultMessage": "다음에서 터널 받기 {price}"
   },
   "GqRat5": {
     "defaultMessage": "주문 완료를 위해 이메일 주소를 확인해 주시기 바랍니다."
@@ -884,17 +914,26 @@
   "H4Ucn0": {
     "defaultMessage": "유입되는"
   },
+  "H7iwrN": {
+    "defaultMessage": "기기란 등록된 공개 키 하나를 뜻합니다. 휴대폰, 노트북, 라우터 등이 그에 해당합니다. 최대 {count,plural,one{# 장치} other{# 장치}} 한 요금제에 등록되어 있으며, 제거한 기기는 해당 슬롯을 비워줍니다."
+  },
   "H9Az5Z": {
     "defaultMessage": "결제 정보"
   },
   "HAlOn1": {
     "defaultMessage": "이름"
   },
+  "HK3ph8": {
+    "defaultMessage": "작동 방식"
+  },
   "HPBE7M": {
     "defaultMessage": "앱으로 돌아가기"
   },
   "HVtxik": {
     "defaultMessage": "사용자 지정 도메인"
+  },
+  "HYP241": {
+    "defaultMessage": "라이트닝, 비트코인 또는 카드로 결제하는 WireGuard VPN입니다. 기기가 자체 키를 생성하며, 저희는 공개 키 부분만 확인할 수 있습니다."
   },
   "Hct61V": {
     "defaultMessage": "{storage} 영구 저장 장치의 경우, {breakdown}"
@@ -926,8 +965,14 @@
   "ILTAun": {
     "defaultMessage": "가상 머신이 프로비저닝되고 있습니다. 이 과정은 보통 1~2분 정도 소요됩니다."
   },
+  "INMDkx": {
+    "defaultMessage": "터널을 구하세요"
+  },
   "IZFEUg": {
     "defaultMessage": "준비 완료."
+  },
+  "IaS36D": {
+    "defaultMessage": "라이트닝, 온체인 비트코인, 또는 카드로 결제하실 수 있습니다. 저희는 자체 라이트닝 노드를 운영하기 때문에 사토시가 제3자 결제 처리업체를 경유하지 않습니다."
   },
   "IbWc3k": {
     "defaultMessage": "아일랜드의 더블린."
@@ -1091,6 +1136,9 @@
   "MTnSwY": {
     "defaultMessage": "예: 세금"
   },
+  "MZQ6io": {
+    "defaultMessage": "설정 파일을 다운로드하거나 QR 코드를 스캔하여 터널을 활성화하세요. 종료 리전(exit region)당 파일 하나씩이며, 모두 동일한 키를 공유합니다."
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} 전체적으로 봤을 때입니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치하여 사용할 수 있는 VPS로 확장할 수 있습니다."
   },
@@ -1139,11 +1187,17 @@
   "NmK6zy": {
     "defaultMessage": "결제"
   },
+  "NmVAjK": {
+    "defaultMessage": "Nostr 키로 로그인하면 그렇지 않습니다: 이메일도, 이름도, KYC도 필요 없습니다. Google 또는 패스키로 로그인하면 해당 계정이 제공하는 정보를 사용하게 되고, 카드로 결제하면 카드 결제 처리업체가 청구 정보를 보게 됩니다."
+  },
   "Ntjkqd": {
     "defaultMessage": "또는"
   },
   "Ny9qbm": {
     "defaultMessage": "노스트르: {handle}"
+  },
+  "OC0eZH": {
+    "defaultMessage": "트래픽 로그나 연결 로그는 기록되지 않습니다. 라우트 서버는 자신이 전달하는 공개 키와 각 키에 해당하는 내부 주소를 보관하며, WireGuard는 마지막 핸드셰이크 시간과 현재 엔드포인트를 메모리에 유지합니다. 이는 프로토콜이 패킷을 다시 사용자에게 라우팅하는 데 필요한 정보입니다."
   },
   "OEZ5v2": {
     "defaultMessage": "구독 내역 보기"
@@ -1211,6 +1265,9 @@
   "PJtOx7": {
     "defaultMessage": "보고할 만한 사건은 없습니다."
   },
+  "PUqHRI": {
+    "defaultMessage": "트래픽 로그나 연결 로그는 기록되지 않습니다. WireGuard 자체는 마지막 핸드셰이크 시간과 현재 접속 중인 엔드포인트를 메모리에 보관하는데, 이 정보가 없으면 패킷을 되돌려 라우팅할 수 없기 때문입니다."
+  },
   "PfSZy5": {
     "defaultMessage": "해당 주문을 찾을 수 없습니다."
   },
@@ -1222,6 +1279,9 @@
   },
   "Ppjs/C": {
     "defaultMessage": "런던에서 VPS 호스팅 서비스를 이용하세요."
+  },
+  "PtjZar": {
+    "defaultMessage": "키는 누가 생성하나요?"
   },
   "PucUfl": {
     "defaultMessage": "SSH 키 선택:"
@@ -1252,6 +1312,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "영구적으로 삭제하시겠습니까?"
+  },
+  "QWN/RL": {
+    "defaultMessage": "VPN 플랜은 서버가 아니라 탈출구를 제공합니다. 고정 IPv4 및 IPv6와 무제한 트래픽으로 자신만의 서비스를 운영할 박스가 필요하시다면, 저희 <a>VPS 호스팅</a>이 동일한 서버 인프라에서 운영됩니다."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1295,6 +1358,9 @@
   "RQNCao": {
     "defaultMessage": "NIP-05 신원 호스팅"
   },
+  "RR5RDI": {
+    "defaultMessage": "요금제가 만료되면 기기들이 연결이 중단됩니다. 기기를 삭제하기 전까지는 키와 주소가 보관되므로, 갱신하면 동일한 터널이 그대로 복원됩니다."
+  },
   "RXjd0H": {
     "defaultMessage": "계정으로 돌아가기"
   },
@@ -1315,6 +1381,12 @@
   },
   "Rw82/V": {
     "defaultMessage": "매달"
+  },
+  "RzQOmD": {
+    "defaultMessage": "제 이메일이 필요하신가요?"
+  },
+  "S3jr4e": {
+    "defaultMessage": "저희 VPS 플릿과 동일한 인프라를 사용하는 터널: 보유한 지역에서는 저희 자체 하드웨어와 AS214973 주소 공간을, 그렇지 않은 지역에서는 임대 용량을 사용합니다. 기기에서 키페어를 생성하고 공개 키 부분만 전송하기 때문에, 트래픽을 암호화하는 데 사용되는 키는 저희 측에 존재하지 않습니다."
   },
   "S5s+VN": {
     "defaultMessage": "라이트닝"
@@ -1559,6 +1631,9 @@
   "Wsj2fc": {
     "defaultMessage": "현재 진행 중인 사건"
   },
+  "WuyDui": {
+    "defaultMessage": "우리가 지닌 것, 그리고 지니지 않은 것"
+  },
   "WwXOJ8": {
     "defaultMessage": "서버 배포 및 관리"
   },
@@ -1615,6 +1690,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "결제를 기다리는 중입니다. 결제가 확인되면 자동으로 적용됩니다."
+  },
+  "YCAVvS": {
+    "defaultMessage": "구매할 때 지역을 반드시 선택해야 하나요?"
   },
   "YCzocJ": {
     "defaultMessage": "프로비저닝, 청구, 오남용 처리 또는 특정 서비스 문제에 대해 궁금한 점이 있으신가요? 도와드리겠습니다."
@@ -1961,6 +2039,9 @@
   "fxYCqm": {
     "defaultMessage": "위치: {location}"
   },
+  "fz0z4c": {
+    "defaultMessage": "계획"
+  },
   "g1GUs5": {
     "defaultMessage": "가상 CPU"
   },
@@ -2156,6 +2237,9 @@
   "kfr95E": {
     "defaultMessage": "주소 1번 줄"
   },
+  "khi+xY": {
+    "defaultMessage": "네, 그렇습니다. 기기에서 WireGuard 키페어를 생성하고 공개 키 부분만 저희에게 전송하기 때문에, 트래픽을 복호화하는 키는 저희가 넘겨주거나 잃어버릴 수 없는 것입니다."
+  },
   "kr8jZp": {
     "defaultMessage": "{price}/월."
   },
@@ -2255,6 +2339,9 @@
   "mOR+qH": {
     "defaultMessage": "클립보드로 복사"
   },
+  "mQ+mUF": {
+    "defaultMessage": "기계 전체가 필요할 때는"
+  },
   "mV5FZi": {
     "defaultMessage": "휴가 추천 프로그램"
   },
@@ -2272,6 +2359,9 @@
   },
   "mznk9z": {
     "defaultMessage": "수수료"
+  },
+  "n3LLz7": {
+    "defaultMessage": "노드 목록 #{id}"
   },
   "n7yYXG": {
     "defaultMessage": "서비스"
@@ -2393,8 +2483,14 @@
   "p5LNtB": {
     "defaultMessage": "설정되지 않음"
   },
+  "pHg2Hv": {
+    "defaultMessage": "모든 기기가 모든 지역에 접속할 수 있습니다. 터널 내부의 주소는 어느 지점에서 나오더라도 동일하므로, 국가를 변경하는 것은 재등록이 아니라 설정 파일 하나만 바꾸면 되는 일입니다."
+  },
   "pMi1Vp": {
     "defaultMessage": "LNVPS 지원 에이전트와 플랜 및 요금제, 리전, 운영체제, 또는 Lightning으로 결제하는 방법에 대해 채팅하세요. 로그인 없이도 가능합니다. 기존 VM이나 결제에 관한 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
+  },
+  "pSgJJF": {
+    "defaultMessage": "저희는 귀하의 공개 키와 그 키에 할당된 내부 주소를 보관합니다. 이 쌍이 바로 WireGuard 피어(peer)를 구성하는 것이며, 라우트 서버가 귀하를 연결하는 데 필요한 전부입니다."
   },
   "pSpLvj": {
     "defaultMessage": "자체 미디어 서버를 구축하여 운영하세요, 월 {price}"
@@ -2422,6 +2518,9 @@
   },
   "qB17v9": {
     "defaultMessage": "지금 이 설정을 저장하세요: 개인 키는 이 페이지에서만 표시되며 다시 확인할 수 없습니다."
+  },
+  "qCGD63": {
+    "defaultMessage": "결제는 어떻게 하나요?"
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -2453,8 +2552,14 @@
   "r3V7v4": {
     "defaultMessage": "직접 관리하는 도메인에서 무료 NIP-05 신원 호스팅."
   },
+  "r8GkHj": {
+    "defaultMessage": "Nostr 키로 로그인하면 계정에 이메일이나 이름이 전혀 없습니다. 라이트닝(Lightning)이나 온체인 비트코인으로 결제하면 카드 거래 내역도 남지 않습니다."
+  },
   "rF6EmI": {
     "defaultMessage": "결제 정보"
+  },
+  "rRJFl8": {
+    "defaultMessage": "연결하려면 무엇이 필요한가요?"
   },
   "rTxzLw": {
     "defaultMessage": "아직 판매 중인 VPN 요금제가 없습니다."
@@ -2488,6 +2593,9 @@
   },
   "s+ixZq": {
     "defaultMessage": "기본 방법"
+  },
+  "s/BEY9": {
+    "defaultMessage": "로그를 보관하시나요?"
   },
   "s2ZjPB": {
     "defaultMessage": "방화벽 규칙이 없습니다. 기본 정책이 적용됩니다."
@@ -2657,6 +2765,9 @@
   "vy2rlX": {
     "defaultMessage": "수수료:"
   },
+  "w/+hVh": {
+    "defaultMessage": "다음에서 제공되는 WireGuard VPN {price} 매 {period}라이트닝, 비트코인 또는 카드로 결제하세요. 기기가 자체 키를 생성하며, 우리는 공개 키 부분만 확인할 수 있습니다."
+  },
   "w1iy6j": {
     "defaultMessage": "가격 업데이트 중…"
   },
@@ -2704,6 +2815,9 @@
   },
   "xALX/d": {
     "defaultMessage": "Nostr 키 하나만 있으면 됩니다. 이메일 주소, 이름 또는 개인 신원 확인 절차는 필요하지 않습니다. 알림은 암호화된 Nostr DM, 이메일, 텔레그램 또는 왓츠앱으로 전송할 수 있습니다. 원하는 방식으로 선택하세요."
+  },
+  "xBrtnx": {
+    "defaultMessage": "주소"
   },
   "xOnplm": {
     "defaultMessage": "결제 수단을 불러오는 중입니다…"
@@ -2785,6 +2899,9 @@
   },
   "z/H1td": {
     "defaultMessage": "자체 Nostr 릴레이를 운영하세요. {price} 한 달"
+  },
+  "z/w4hy": {
+    "defaultMessage": "트래픽을 복호화하는 개인 키는 사용자 기기에서 생성되며 당사로 전송되지 않으므로, 당사가 분실하거나 유출하거나 제출을 강요당할 대상이 아닙니다."
   },
   "z1KiHv": {
     "defaultMessage": "메시지는 ~까지 제한됩니다 {max} 문자."

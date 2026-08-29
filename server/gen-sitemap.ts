@@ -32,6 +32,7 @@ export interface StaticEntry {
 export const STATIC_ENTRIES: Array<StaticEntry> = [
   { path: "/", changefreq: "daily", priority: "1.0" },
   { path: "/apps", changefreq: "weekly", priority: "0.9" },
+  { path: "/vpn", changefreq: "monthly", priority: "0.9" },
   { path: "/blossom-server-hosting", changefreq: "monthly", priority: "0.9" },
   { path: "/nostr-relay-hosting", changefreq: "monthly", priority: "0.9" },
   { path: "/lightning-node-vps", changefreq: "monthly", priority: "0.9" },

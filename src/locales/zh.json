@@ -11,6 +11,12 @@
   "+3NyB6": {
     "defaultMessage": "外发；已发出。"
   },
+  "+4IoXB": {
+    "defaultMessage": "不。一个设备持有一对密钥和一个地址，它们在所有地区都可用，因此切换出口节点只是换一个配置文件，而不是更换套餐或生成新密钥。"
+  },
+  "+AseCJ": {
+    "defaultMessage": "WireGuard VPN 起 {price}"
+  },
   "+Bj8tM": {
     "defaultMessage": "停止操作会保留您已上传的内容；只有删除操作才会将其移除。"
   },
@@ -137,6 +143,9 @@
   "13cluZ": {
     "defaultMessage": "添加 SSH 密钥："
   },
+  "1583Cj": {
+    "defaultMessage": "通过每台设备的 WireGuard 公钥进行注册。您可以使用 WireGuard 应用或 wg genkey 命令生成公钥，也可以让浏览器为您生成一个。"
+  },
   "1A/d7u": {
     "defaultMessage": "续订"
   },
@@ -190,6 +199,9 @@
   },
   "2h97cm": {
     "defaultMessage": "在应用中扫码"
+  },
+  "2i41cU": {
+    "defaultMessage": "WireGuard VPN 起价 {price} 每 {period}"
   },
   "2jI5j1": {
     "defaultMessage": "{n,plural,one{# 秒} other{# 秒}}"
@@ -259,6 +271,9 @@
   },
   "4D+xAI": {
     "defaultMessage": "为什么选择这款虚拟专用服务器来搭建闪电网络节点？"
+  },
+  "4HhPmZ": {
+    "defaultMessage": "如果我不继续付款会怎样？"
   },
   "4Ni9AU": {
     "defaultMessage": "出口区域"
@@ -659,6 +674,9 @@
   "CuBwLu": {
     "defaultMessage": "提现款会转入您已保存的 NWC 钱包。您可以添加或选择一个钱包，系统将默认使用启用的钱包。"
   },
+  "CwGVUn": {
+    "defaultMessage": "官方 WireGuard 客户端，支持其所能运行的所有平台。我们为每个区域提供即用型配置文件，或可供手机扫描的二维码。"
+  },
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
@@ -797,6 +815,9 @@
   "FPbLFA": {
     "defaultMessage": "已保存的支付方式"
   },
+  "FSW97J": {
+    "defaultMessage": "购买套餐并使用闪电网络、比特币或银行卡支付订阅费用。"
+  },
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
@@ -805,6 +826,9 @@
   },
   "FazwRl": {
     "defaultMessage": "请重试。"
+  },
+  "FcSvWy": {
+    "defaultMessage": "WireGuard VPN，用聪（sats）支付"
   },
   "FlypmR": {
     "defaultMessage": "请在下方添加电子邮件地址。"
@@ -857,8 +881,14 @@
   "Gd6Kbk": {
     "defaultMessage": "尚未激活。"
   },
+  "GkIzf5": {
+    "defaultMessage": "在付费购买套餐之前，路由服务器上不会配置任何内容；移除设备会撤销其在服务所接入的每台服务器上的密钥。"
+  },
   "GlTZFC": {
     "defaultMessage": "分享此链接。当有人注册并成功完成首次虚拟货币支付时，您将获得佣金。"
+  },
+  "Gok8vF": {
+    "defaultMessage": "从……获取隧道 {price}"
   },
   "GqRat5": {
     "defaultMessage": "请验证您的电子邮件地址，以完成订单。"
@@ -884,17 +914,26 @@
   "H4Ucn0": {
     "defaultMessage": "入站；进入"
   },
+  "H7iwrN": {
+    "defaultMessage": "一台设备即指一个已注册的公钥：您的手机、您的笔记本电脑、您的路由器。最多 {count,plural,one{# 设备} other{# 设备}} 在同一套餐下，移除设备后会释放其名额。"
+  },
   "H9Az5Z": {
     "defaultMessage": "账单详情。"
   },
   "HAlOn1": {
     "defaultMessage": "姓名"
   },
+  "HK3ph8": {
+    "defaultMessage": "工作原理"
+  },
   "HPBE7M": {
     "defaultMessage": "返回应用列表"
   },
   "HVtxik": {
     "defaultMessage": "自定义域名"
+  },
+  "HYP241": {
+    "defaultMessage": "一款可用闪电网络、比特币或银行卡支付的 WireGuard VPN。密钥由您的设备自行生成，我们只会看到公钥部分。"
   },
   "Hct61V": {
     "defaultMessage": "{storage} 持久存储方面，{breakdown}"
@@ -926,8 +965,14 @@
   "ILTAun": {
     "defaultMessage": "您的虚拟机正在配置中。通常需要一两分钟的时间。"
   },
+  "INMDkx": {
+    "defaultMessage": "获取一个隧道"
+  },
   "IZFEUg": {
     "defaultMessage": "准备好了。"
+  },
+  "IaS36D": {
+    "defaultMessage": "闪电网络、链上比特币或银行卡支付。我们运行自己的闪电节点，因此聪（sats）不会经过第三方支付处理器。"
   },
   "IbWc3k": {
     "defaultMessage": "爱尔兰都柏林。"
@@ -1091,6 +1136,9 @@
   "MTnSwY": {
     "defaultMessage": "不含税。"
   },
+  "MZQ6io": {
+    "defaultMessage": "下载一个配置文件，或扫描其二维码，然后启动隧道。每个出口区域一个文件，全部共享同一个密钥。"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到一个虚拟专用服务器（VPS）上，以进一步提升。"
   },
@@ -1139,11 +1187,17 @@
   "NmK6zy": {
     "defaultMessage": "付款。"
   },
+  "NmVAjK": {
+    "defaultMessage": "如果你使用 Nostr 密钥登录就不会：无需邮箱、无需姓名、无需 KYC 认证。用 Google 或通行密钥登录则会提供该账户所包含的信息，而用银行卡支付则意味着支付处理商会看到你的账单信息。"
+  },
   "Ntjkqd": {
     "defaultMessage": "或者"
   },
   "Ny9qbm": {
     "defaultMessage": "Nostr：{handle}"
+  },
+  "OC0eZH": {
+    "defaultMessage": "不写入任何流量日志或连接日志。路由服务器仅保存其所持有的公钥以及每个公钥对应的内部地址，而 WireGuard 会在内存中保留最近一次握手的时间和您当前的端点地址，这是协议将数据包路由回给您所必需的信息。"
   },
   "OEZ5v2": {
     "defaultMessage": "查看订阅信息"
@@ -1211,6 +1265,9 @@
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
   },
+  "PUqHRI": {
+    "defaultMessage": "不记录任何流量或连接日志。WireGuard 本身只在内存中保留最近一次握手时间和您当前拨入所用的端点地址，因为协议若没有这些信息就无法将数据包路由回来。"
+  },
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
@@ -1222,6 +1279,9 @@
   },
   "Ppjs/C": {
     "defaultMessage": "伦敦的 VPS 虚拟主机服务"
+  },
+  "PtjZar": {
+    "defaultMessage": "谁生成密钥？"
   },
   "PucUfl": {
     "defaultMessage": "选择 SSH 密钥："
@@ -1252,6 +1312,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "永久删除吗？"
+  },
+  "QWN/RL": {
+    "defaultMessage": "VPN 套餐为您提供的是出口，而不是服务器。如果您想要一台可以运行自己服务的机器，配备静态 IPv4 和 IPv6 地址以及不限流量，我们的 <a>VPS 主机</a>运行在同一服务器集群上。"
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1295,6 +1358,9 @@
   "RQNCao": {
     "defaultMessage": "NIP-05 身份托管"
   },
+  "RR5RDI": {
+    "defaultMessage": "套餐到期后，其中的设备将无法连接。在您移除这些设备之前，您的密钥和地址会被保留，因此续费后相同的隧道即可恢复。"
+  },
   "RXjd0H": {
     "defaultMessage": "返回账户。"
   },
@@ -1315,6 +1381,12 @@
   },
   "Rw82/V": {
     "defaultMessage": "每月"
+  },
+  "RzQOmD": {
+    "defaultMessage": "你需要我的电子邮箱吗？"
+  },
+  "S3jr4e": {
+    "defaultMessage": "隧道与我们的 VPS 集群运行在相同的基础设施上：在我们拥有资源的地方使用我们自己的硬件和 AS214973 地址空间，在没有的地方则使用租用的容量。密钥对由您的设备生成，且只交出公钥部分，因此用于加密您流量的密钥绝不会存在于我们这边。"
   },
   "S5s+VN": {
     "defaultMessage": "闪电网络"
@@ -1559,6 +1631,9 @@
   "Wsj2fc": {
     "defaultMessage": "正在发生的事件"
   },
+  "WuyDui": {
+    "defaultMessage": "我们所坚守的，以及我们所放弃的"
+  },
   "WwXOJ8": {
     "defaultMessage": "部署和管理服务器"
   },
@@ -1615,6 +1690,9 @@
   },
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
+  },
+  "YCAVvS": {
+    "defaultMessage": "购买时必须选择地区吗？"
   },
   "YCzocJ": {
     "defaultMessage": "如果您有关于资源开通、计费、滥用处理或特定服务问题的疑问，我们随时为您提供帮助。"
@@ -1961,6 +2039,9 @@
   "fxYCqm": {
     "defaultMessage": "地点：{location}"
   },
+  "fz0z4c": {
+    "defaultMessage": "计划"
+  },
   "g1GUs5": {
     "defaultMessage": "虚拟 CPU"
   },
@@ -2156,6 +2237,9 @@
   "kfr95E": {
     "defaultMessage": "地址行 1"
   },
+  "khi+xY": {
+    "defaultMessage": "由您的设备来做。您的设备会生成 WireGuard 密钥对，并且只把公钥部分发送给我们，因此解密您流量的密钥永远不会由我们保管，也就不存在被我们交出或丢失的可能。"
+  },
   "kr8jZp": {
     "defaultMessage": "{price}每月。"
   },
@@ -2255,6 +2339,9 @@
   "mOR+qH": {
     "defaultMessage": "复制到剪贴板"
   },
+  "mQ+mUF": {
+    "defaultMessage": "当你想要的是一台完整的机器时"
+  },
   "mV5FZi": {
     "defaultMessage": "员工推荐奖励计划"
   },
@@ -2272,6 +2359,9 @@
   },
   "mznk9z": {
     "defaultMessage": "委员会；佣金"
+  },
+  "n3LLz7": {
+    "defaultMessage": "节点列表 #{id}"
   },
   "n7yYXG": {
     "defaultMessage": "服务"
@@ -2393,8 +2483,14 @@
   "p5LNtB": {
     "defaultMessage": "未设置。"
   },
+  "pHg2Hv": {
+    "defaultMessage": "每台设备都能连到每个地区。隧道内的地址无论从哪里出口都相同，因此切换国家只需更换一个配置文件，无需重新注册。"
+  },
   "pMi1Vp": {
     "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与定价、区域、操作系统，或使用闪电网络支付的方式，无需登录。如果您的问题涉及现有虚拟机或支付，请先登录，以便客服查询您的账户。"
+  },
+  "pSgJJF": {
+    "defaultMessage": "我们保存您的公钥以及分配给它的内部地址。这一对密钥与地址的组合就是 WireGuard 对等端（peer）的全部定义，路由服务器所需的也正是这些信息，足以承载您的流量。"
   },
   "pSpLvj": {
     "defaultMessage": "搭建您自己的媒体服务器，每月只需 {price}。"
@@ -2422,6 +2518,9 @@
   },
   "qB17v9": {
     "defaultMessage": "请立即保存此配置：其私钥仅显示在本页面上，之后将无法再次查看。"
+  },
+  "qCGD63": {
+    "defaultMessage": "如何付款？"
   },
   "qV+TFm": {
     "defaultMessage": "支付失败。"
@@ -2453,8 +2552,14 @@
   "r3V7v4": {
     "defaultMessage": "在您掌控的域名上免费托管 NIP-05 身份。"
   },
+  "r8GkHj": {
+    "defaultMessage": "使用 Nostr 密钥登录，账户上完全没有电子邮件或姓名。使用闪电网络或链上比特币支付，也不会留下任何账单记录。"
+  },
   "rF6EmI": {
     "defaultMessage": "账单详情"
+  },
+  "rRJFl8": {
+    "defaultMessage": "我需要连接什么？"
   },
   "rTxzLw": {
     "defaultMessage": "目前还没有任何VPN套餐在售。"
@@ -2488,6 +2593,9 @@
   },
   "s+ixZq": {
     "defaultMessage": "默认方法"
+  },
+  "s/BEY9": {
+    "defaultMessage": "你们保留日志吗？"
   },
   "s2ZjPB": {
     "defaultMessage": "没有防火墙规则。系统将应用默认策略。"
@@ -2657,6 +2765,9 @@
   "vy2rlX": {
     "defaultMessage": "处理费："
   },
+  "w/+hVh": {
+    "defaultMessage": "一款 WireGuard VPN，价格低至 {price} 每 {period}，通过闪电网络、比特币或银行卡支付。您的设备自行生成密钥，我们只能看到公钥部分。"
+  },
   "w1iy6j": {
     "defaultMessage": "正在更新价格…"
   },
@@ -2704,6 +2815,9 @@
   },
   "xALX/d": {
     "defaultMessage": "只需一个 Nostr 密钥即可。无需电子邮件、姓名或身份验证。通知可以发送到加密的 Nostr 私信、电子邮件、Telegram 或 WhatsApp，由您选择。"
+  },
+  "xBrtnx": {
+    "defaultMessage": "地址"
   },
   "xOnplm": {
     "defaultMessage": "正在加载支付方式……"
@@ -2785,6 +2899,9 @@
   },
   "z/H1td": {
     "defaultMessage": "搭建并运行您自己的 Nostr 中继服务器，从这里开始。 {price} 一个月"
+  },
+  "z/w4hy": {
+    "defaultMessage": "用于解密您流量的私钥是在您的设备上生成的，绝不会发送给我们，因此我们不可能将其丢失、泄露，也不会被要求交出。"
   },
   "z1KiHv": {
     "defaultMessage": "消息限制为 {max} 角色。"

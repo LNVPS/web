@@ -68,6 +68,10 @@ export interface AppsLoaderData {
   apps?: App[];
 }
 
+export interface VpnLoaderData {
+  vpn?: VpnService[];
+}
+
 export interface RegionLoaderData {
   /** The whole catalog: the Bitcoin page names every region, not just one. */
   offers?: VmTemplateResponse;
@@ -114,6 +118,18 @@ export async function homeLoader({
       : undefined;
 
   return { offers, paymentMethods, latestNews, apps, vpn };
+}
+
+/**
+ * Loader for `/vpn`, the public VPN page.
+ *
+ * Shares the `vpn_services` cache entry with `homeLoader`, which fetches the
+ * same unauthenticated list.
+ */
+export async function vpnLoader(): Promise<VpnLoaderData> {
+  const api = new LNVpsApi(ApiUrl ?? "", undefined, 5000);
+  const vpn = await cached("vpn_services", () => api.listVpnServices());
+  return { vpn };
 }
 
 export async function newsLoader({

@@ -414,10 +414,7 @@ function VpnSection() {
   return (
     <>
       <SectionHeading>
-        <Link
-          to="/account/vpn"
-          className="hover:text-cyber-primary transition-colors"
-        >
+        <Link to="/vpn" className="hover:text-cyber-primary transition-colors">
           <FormattedMessage defaultMessage="VPN" />
         </Link>
       </SectionHeading>
@@ -428,7 +425,7 @@ function VpnSection() {
             service={s}
             action={
               <Link
-                to="/account/vpn"
+                to="/vpn"
                 className="rounded-sm border border-cyber-primary bg-cyber-primary/20 px-3 py-2 text-center text-sm font-bold text-cyber-primary transition-all duration-200 hover:bg-cyber-primary/30 hover:shadow-neon"
               >
                 <FormattedMessage defaultMessage="Get started" />

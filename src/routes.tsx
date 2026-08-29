@@ -28,6 +28,7 @@ import { AccountSubscriptionsPage } from "./pages/account-subscriptions.tsx";
 import { AccountAppsPage } from "./pages/account-apps.tsx";
 import { AppPage } from "./pages/app.tsx";
 import { AppsPage } from "./pages/apps.tsx";
+import { VpnPage } from "./pages/vpn.tsx";
 import { BlossomServerHostingPage } from "./pages/blossom-server-hosting.tsx";
 import { NostrRelayHostingPage } from "./pages/nostr-relay-hosting.tsx";
 import { LightningNodeVpsPage } from "./pages/lightning-node-vps.tsx";
@@ -49,6 +50,7 @@ import {
   regionLoader,
   newsPostLoader,
   statusLoader,
+  vpnLoader,
 } from "./loaders.ts";
 import { DublinRegionId, LondonRegionId, QuebecRegionId } from "./const.ts";
 
@@ -183,6 +185,11 @@ export const routes: RouteObject[] = [
         path: "/apps/:slug",
         element: <AppPage />,
         loader: appLoader,
+      },
+      {
+        path: "/vpn",
+        element: <VpnPage />,
+        loader: vpnLoader,
       },
       {
         path: "/blossom-server-hosting",

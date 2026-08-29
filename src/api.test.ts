@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
-import { LNVpsApi } from "./api";
+import { ApiError, LNVpsApi } from "./api";
 
 describe("LNVpsApi#req content-type", () => {
   const realFetch = globalThis.fetch;
@@ -173,5 +173,55 @@ describe("LNVpsApi websocket auth", () => {
       JSON.stringify({ path: "/api/v1/vm/7/console" }),
     );
     expect(socketUrls[0]).toBe("wss://test/api/v1/vm/7/console?ticket=tk%201");
+  });
+});
+
+describe("API error handling", () => {
+  const realFetch = globalThis.fetch;
+  const api = new LNVpsApi("http://test", undefined);
+
+  /** Answer the next request with this status and body, whatever the URL. */
+  function stubFetch(status: number, body: string) {
+    globalThis.fetch = (async () =>
+      new Response(body, { status })) as unknown as typeof fetch;
+  }
+
+  afterEach(() => {
+    globalThis.fetch = realFetch;
+  });
+
+  // A 404 is a state to render (no VPN plan, no referral), a 502 is a fault.
+  // A caller holding only a message string has to guess between them.
+  test("a failed call rejects with the server's message and its status", async () => {
+    stubFetch(404, JSON.stringify({ error: "You do not have a VPN plan" }));
+    const err = await api.getVpnPlan().catch((e) => e);
+
+    expect(err).toBeInstanceOf(ApiError);
+    expect(err.status).toBe(404);
+    expect(err.message).toBe("You do not have a VPN plan");
+  });
+
+  test("a non-JSON error body still carries the status", async () => {
+    stubFetch(502, "<html>bad gateway</html>");
+    const err = await api.listVpnServices().catch((e) => e);
+
+    expect(err).toBeInstanceOf(ApiError);
+    expect(err.status).toBe(502);
+    expect(err.message).toContain("bad gateway");
+  });
+
+  test("an ApiError is an Error, for callers that only check that", async () => {
+    stubFetch(400, JSON.stringify({ error: "A device needs a name" }));
+    const err = await api
+      .addVpnDevice({ name: "", public_key: "x" })
+      .catch((e) => e);
+
+    expect(err).toBeInstanceOf(Error);
+    expect(err.message).toBe("A device needs a name");
+  });
+
+  test("a successful call returns the payload", async () => {
+    stubFetch(200, JSON.stringify({ data: [] }));
+    expect(await api.listVpnServices()).toEqual([]);
   });
 });

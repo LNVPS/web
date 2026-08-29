@@ -15,6 +15,7 @@ import { Icon } from "../components/icon";
 // IP ranges are not production-ready yet; keep the import for when re-enabled.
 // import IpBlockCard from "../components/ip-block-card";
 import { AppCard } from "./account-apps";
+import VpnServiceCard from "../components/vpn-service-card";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { vpsTemplateJsonLd } from "../utils/vps-seo";
@@ -92,6 +93,7 @@ export default function HomePage() {
         </header>
         <LatestNews />
         <VpsOffersSection />
+        <VpnSection />
         <AppsSection />
         {/* IP ranges are not production-ready yet — hidden from the homepage. */}
         {/* <IpSpaceSection /> */}
@@ -400,6 +402,41 @@ function VpsOffersSection() {
           <FormattedMessage defaultMessage="Prices exclude tax and payment processing fees." />
         )}
       </small>
+    </>
+  );
+}
+
+function VpnSection() {
+  const { vpn } = useLoaderData<HomeLoaderData>();
+  // Nothing on sale yet is the current state on production, and a heading over
+  // an empty grid would advertise a product a visitor cannot buy.
+  if (!vpn || vpn.length === 0) return null;
+  return (
+    <>
+      <SectionHeading>
+        <Link
+          to="/account/vpn"
+          className="hover:text-cyber-primary transition-colors"
+        >
+          <FormattedMessage defaultMessage="VPN" />
+        </Link>
+      </SectionHeading>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {vpn.map((s) => (
+          <VpnServiceCard
+            key={s.id}
+            service={s}
+            action={
+              <Link
+                to="/account/vpn"
+                className="rounded-sm border border-cyber-primary bg-cyber-primary/20 px-3 py-2 text-center text-sm font-bold text-cyber-primary transition-all duration-200 hover:bg-cyber-primary/30 hover:shadow-neon"
+              >
+                <FormattedMessage defaultMessage="Get started" />
+              </Link>
+            }
+          />
+        ))}
+      </div>
     </>
   );
 }

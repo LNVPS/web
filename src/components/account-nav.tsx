@@ -46,6 +46,11 @@ const SECTIONS: Array<NavSection> = [
         label: <FormattedMessage defaultMessage="Apps" />,
         hint: <FormattedMessage defaultMessage="One-click Docker apps" />,
       },
+      {
+        to: "/account/vpn",
+        label: <FormattedMessage defaultMessage="VPN" />,
+        hint: <FormattedMessage defaultMessage="WireGuard tunnels" />,
+      },
       // New product offerings slot in here.
     ],
   },

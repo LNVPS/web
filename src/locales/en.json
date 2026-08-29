@@ -5,6 +5,9 @@
   "+1wksq": {
     "defaultMessage": "Stopping a deployment scales it to zero and keeps the storage. Your data is still there when you start it again. Only deleting removes it."
   },
+  "+20FW7": {
+    "defaultMessage": "Devices"
+  },
   "+3NyB6": {
     "defaultMessage": "Outbound"
   },
@@ -71,6 +74,9 @@
   "/QkDVJ": {
     "defaultMessage": "NWC Wallet"
   },
+  "/aBLH2": {
+    "defaultMessage": "Get started"
+  },
   "/hnclP": {
     "defaultMessage": "{count} IPv4"
   },
@@ -98,6 +104,9 @@
   "0RxidJ": {
     "defaultMessage": "LNURL"
   },
+  "0Wpi3L": {
+    "defaultMessage": "No exit regions are available right now."
+  },
   "0gAiqM": {
     "defaultMessage": "VPS hosting in Ireland"
   },
@@ -124,6 +133,9 @@
   },
   "13cluZ": {
     "defaultMessage": "Add SSH Key:"
+  },
+  "1A/d7u": {
+    "defaultMessage": "Renews"
   },
   "1LBny5": {
     "defaultMessage": "Stopped"
@@ -172,6 +184,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Speedtest"
+  },
+  "2h97cm": {
+    "defaultMessage": "Scan in the app"
   },
   "2jI5j1": {
     "defaultMessage": "{n, plural, one {# sec} other {# secs}}"
@@ -242,6 +257,9 @@
   "4D+xAI": {
     "defaultMessage": "Why this VPS for a Lightning node"
   },
+  "4Ni9AU": {
+    "defaultMessage": "Exit region"
+  },
   "4PKxPs": {
     "defaultMessage": "Unlink"
   },
@@ -301,6 +319,9 @@
   },
   "5h1V4e": {
     "defaultMessage": "No. Sign up with a Nostr key and pay in sats."
+  },
+  "5nYzR2": {
+    "defaultMessage": "Exit regions"
   },
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
@@ -467,6 +488,9 @@
   "97LYWX": {
     "defaultMessage": "Send on-chain Bitcoin to this address. Time is credited automatically once the transaction confirms, pro-rated by the amount received. Partial and over-payments are never lost."
   },
+  "9BtPto": {
+    "defaultMessage": "Every device can use every region. Switching exit is a different config file, not a different plan."
+  },
   "9HB4ZM": {
     "defaultMessage": "{name} Hosting: Managed {category}"
   },
@@ -542,6 +566,9 @@
   "AfmrGS": {
     "defaultMessage": "Send Code"
   },
+  "Ar2z6d": {
+    "defaultMessage": "You have registered every device your plan allows. Remove one to free a slot."
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} read"
   },
@@ -550,6 +577,9 @@
   },
   "B52Em/": {
     "defaultMessage": "Address line 1"
+  },
+  "B9PNcU": {
+    "defaultMessage": "Show config"
   },
   "B9v1WK": {
     "defaultMessage": "Payout Route"
@@ -634,6 +664,9 @@
   },
   "D4ANpe": {
     "defaultMessage": "{multiplier}× base app"
+  },
+  "D9EaRj": {
+    "defaultMessage": "{amount} setup"
   },
   "DATKpj": {
     "defaultMessage": "This page will update automatically."
@@ -790,6 +823,9 @@
   },
   "G6nrEF": {
     "defaultMessage": "Saved with warnings"
+  },
+  "GBAnXy": {
+    "defaultMessage": "MTU"
   },
   "GCQOx0": {
     "defaultMessage": "Pay on the next screen. The machine boots once the payment confirms."
@@ -1046,6 +1082,9 @@
   "Mfs5Nm": {
     "defaultMessage": "Unmetered"
   },
+  "MhwErg": {
+    "defaultMessage": "Devices can be registered once the subscription is paid. Nothing is configured on a route server before then."
+  },
   "Mp+zDS": {
     "defaultMessage": "This component only supports Lightning payments"
   },
@@ -1069,6 +1108,9 @@
   },
   "NQgbYA": {
     "defaultMessage": "Account Settings"
+  },
+  "NZw0gL": {
+    "defaultMessage": "WireGuard tunnels"
   },
   "NZyhSX": {
     "defaultMessage": "News"
@@ -1103,6 +1145,9 @@
   "ORGv1Q": {
     "defaultMessage": "Created"
   },
+  "OeOwwQ": {
+    "defaultMessage": "Remove {name}? Its key and address are released, and the config on that device stops working."
+  },
   "OephhB": {
     "defaultMessage": "{v} write"
   },
@@ -1123,6 +1168,9 @@
   },
   "OuCSDn": {
     "defaultMessage": "Disk"
+  },
+  "OvzONl": {
+    "defaultMessage": "Off"
   },
   "OyvHWp": {
     "defaultMessage": "Deployment"
@@ -1151,6 +1199,9 @@
   "PfSZy5": {
     "defaultMessage": "No order found"
   },
+  "PfUTPz": {
+    "defaultMessage": "VPN"
+  },
   "Pk14hW": {
     "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
   },
@@ -1165,6 +1216,9 @@
   },
   "Q2VBjI": {
     "defaultMessage": "Software we run for you, each app on its own hostname with TLS already working and no server to patch. Nostr relays and Blossom media servers in the <catalog>catalog</catalog> today."
+  },
+  "Q5CLtp": {
+    "defaultMessage": "Plans"
   },
   "QCo/EY": {
     "defaultMessage": "This deployment's subscription has expired and it has been scaled to zero. Your data is still here. Renew to start it again."
@@ -1183,6 +1237,9 @@
   },
   "QT2jf3": {
     "defaultMessage": "Delete permanently?"
+  },
+  "Qa5kz3": {
+    "defaultMessage": "DNS"
   },
   "QgBuiV": {
     "defaultMessage": "CPU"
@@ -1378,6 +1435,9 @@
   },
   "U96Gl9": {
     "defaultMessage": "Save this card for future payments"
+  },
+  "U9elQP": {
+    "defaultMessage": "No devices yet. Add one to get a config file."
   },
   "UPP+wZ": {
     "defaultMessage": "In use by {count, plural, one {VM} other {VMs}}: {vms}"
@@ -1778,6 +1838,9 @@
   "dXoYQD": {
     "defaultMessage": "Every deployment gets {host} with a certificate issued automatically. Bring your own domain and point a CNAME at it, and we serve that too, with its own certificate issued once DNS resolves."
   },
+  "dfXxCq": {
+    "defaultMessage": "Download .conf"
+  },
   "dgTL/5": {
     "defaultMessage": "No Registered Handles"
   },
@@ -1810,6 +1873,9 @@
   },
   "e55cj/": {
     "defaultMessage": "From {price}, excluding VAT."
+  },
+  "e6Ph5+": {
+    "defaultMessage": "Address"
   },
   "eKEL/g": {
     "defaultMessage": "Pending"
@@ -1940,6 +2006,9 @@
   "hADOUq": {
     "defaultMessage": "Saved. The app will restart shortly."
   },
+  "hEVEsz": {
+    "defaultMessage": "This device's private key was generated in another browser session, so it cannot be filled in here. Paste the key you saved over the placeholder, or remove the device and register a new one."
+  },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
   },
@@ -2015,6 +2084,9 @@
   "jYLOYR": {
     "defaultMessage": "{n, plural, one {# day} other {# days}}"
   },
+  "jaG7WG": {
+    "defaultMessage": "VPN plan"
+  },
   "jhBqwg": {
     "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
   },
@@ -2041,6 +2113,9 @@
   },
   "kExo50": {
     "defaultMessage": "Not in place. Deploy the new one and migrate, as they are separate deployments."
+  },
+  "kFWJpj": {
+    "defaultMessage": "Add device"
   },
   "kJpuxD": {
     "defaultMessage": "Recurring services & billing"
@@ -2126,8 +2201,14 @@
   "lmac7x": {
     "defaultMessage": "{n, plural, one {# item} other {# items}}"
   },
+  "lmoXjC": {
+    "defaultMessage": "Device name, e.g. Laptop"
+  },
   "lnaWo/": {
     "defaultMessage": "Region"
+  },
+  "lqpcIb": {
+    "defaultMessage": "Buy plan"
   },
   "lsFKTa": {
     "defaultMessage": "Charging your saved payment method. This is applied automatically once it confirms."
@@ -2186,6 +2267,9 @@
   "n9fdaJ": {
     "defaultMessage": "Unverified"
   },
+  "nBO87C": {
+    "defaultMessage": "Hide config"
+  },
   "nCD6ia": {
     "defaultMessage": "Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node, up to 64 vCPU and 128 GB RAM."
   },
@@ -2236,6 +2320,9 @@
   },
   "o2AdrJ": {
     "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
+  },
+  "o5s71l": {
+    "defaultMessage": "{count, plural, one {# device} other {# devices}}"
   },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
@@ -2350,6 +2437,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Billing Details"
+  },
+  "rTxzLw": {
+    "defaultMessage": "No VPN plans are on sale yet."
   },
   "rbrahO": {
     "defaultMessage": "Close"
@@ -2557,6 +2647,9 @@
   },
   "wL4Olp": {
     "defaultMessage": "Renews {date}"
+  },
+  "wLCwU4": {
+    "defaultMessage": "Manage billing"
   },
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"

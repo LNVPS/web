@@ -1331,6 +1331,124 @@ export interface Passkey {
   last_used?: string;
 }
 
+/**
+ * A VPN plan on sale.
+ *
+ * `regions` is not an allocation: every region accepts every device, so the
+ * list is what the customer may point a tunnel at, not something they choose
+ * between at purchase.
+ */
+export interface VpnService {
+  id: number;
+  name: string;
+  /** Recurring price, smallest unit of `currency`. */
+  amount: number;
+  /** One-off, charged on the first payment only. */
+  setup_amount: number;
+  currency: string;
+  interval_amount: number;
+  interval_type: CostPlanIntervalType;
+  /** Devices a plan on this service may register. */
+  device_limit: number;
+  /** Whether devices get an address of this family. */
+  ipv4: boolean;
+  ipv6: boolean;
+  regions: Array<VpnRegion>;
+}
+
+export interface VpnRegion {
+  region_id: number;
+  name: string;
+  country_code?: string | null;
+}
+
+/** Billing state of a VPN plan; devices only work while it is `active`. */
+export type VpnBillingState = "unpaid" | "active" | "expired";
+
+export interface VpnPlan {
+  id: number;
+  service_id: number;
+  device_limit: number;
+  device_count: number;
+  /** Pay this subscription to activate the plan. */
+  subscription_id: number;
+  billing_state: VpnBillingState;
+  expires?: string | null;
+  created: string;
+}
+
+/**
+ * A registered device, which is one WireGuard peer.
+ *
+ * The addresses are the same in every region, so a device switches exit by
+ * dialling a different endpoint with the same `[Interface]` block.
+ */
+export interface VpnDevice {
+  id: number;
+  name: string;
+  /** Base64, as `wg` writes it. */
+  public_key: string;
+  address4?: string | null;
+  address6?: string | null;
+  enabled: boolean;
+  created: string;
+}
+
+/**
+ * One region's configuration for one device.
+ *
+ * The fields and `config` say the same thing twice on purpose: an app building
+ * its own tunnel wants the fields, a customer running `wg-quick` wants a file.
+ */
+export interface VpnDeviceConfig {
+  region_id: number;
+  region_name: string;
+  /** `host:port` to dial. */
+  endpoint: string;
+  /** The route server's key for this region. */
+  public_key: string;
+  /** The device's own addresses. */
+  address: Array<string>;
+  dns: Array<string>;
+  /** Not 1500: WireGuard's overhead comes off the inside of the tunnel. */
+  mtu: number;
+  persistent_keepalive?: number | null;
+  /** Full tunnel, for the families the device holds. */
+  allowed_ips: Array<string>;
+  /**
+   * A ready-to-use `wg-quick` file whose `PrivateKey` is the placeholder
+   * {@link PRIVATE_KEY_PLACEHOLDER}: the customer generated the pair and only
+   * ever sent the public half.
+   */
+  config: string;
+}
+
+export interface AddVpnDeviceRequest {
+  /** The customer's label for it. */
+  name: string;
+  /** The device's WireGuard public key, base64. */
+  public_key: string;
+}
+
+/**
+ * A failed API call, carrying the HTTP status alongside the server's message.
+ *
+ * The status is what tells "you do not have one of these" apart from "the
+ * request did not get through": a 404 is often a legitimate state to render
+ * (no VPN plan, no referral), while a 500 or a dropped connection is not, and
+ * a caller that cannot tell them apart has to guess. Extends `Error`, so the
+ * `e instanceof Error` checks throughout the app keep working.
+ */
+export class ApiError extends Error {
+  constructor(
+    message: string,
+    readonly status: number,
+  ) {
+    super(message);
+    this.name = "ApiError";
+  }
+}
+
 export class LNVpsApi {
   constructor(
     readonly url: string,
@@ -2308,6 +2426,84 @@ export class LNVpsApi {
     );
   }
 
+  /** VPN plans for sale and the regions they exit through. Unauthenticated. */
+  async listVpnServices() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<VpnService>>>(
+      await this.#req("/api/v1/vpn/services", "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * The caller's VPN plan.
+   *
+   * Throws a not-found error when they have never bought one, which is the
+   * ordinary case for most accounts rather than a fault.
+   */
+  async getVpnPlan() {
+    const { data } = await this.#handleResponse<ApiResponse<VpnPlan>>(
+      await this.#req("/api/v1/vpn", "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * Buy a plan, or restart a lapsed one. Returns the plan carrying the
+   * `subscription_id` to pay; nothing is configured on a route server until
+   * that payment lands.
+   */
+  async createVpnPlan(serviceId: number) {
+    const { data } = await this.#handleResponse<ApiResponse<VpnPlan>>(
+      await this.#req("/api/v1/vpn", "POST", { service_id: serviceId }),
+    );
+    return data;
+  }
+
+  async listVpnDevices() {
+    const { data } = await this.#handleResponse<ApiResponse<Array<VpnDevice>>>(
+      await this.#req("/api/v1/vpn/devices", "GET"),
+    );
+    return data;
+  }
+
+  /**
+   * Register a device by its public key.
+   *
+   * Idempotent on the key: sending the same one twice returns the device it
+   * already made rather than consuming a second slot, so a retry after a lost
+   * response is safe. Refused until the plan's subscription is paid.
+   */
+  async addVpnDevice(req: AddVpnDeviceRequest) {
+    const { data } = await this.#handleResponse<ApiResponse<VpnDevice>>(
+      await this.#req("/api/v1/vpn/devices", "POST", req),
+    );
+    return data;
+  }
+
+  /** Turn a device off or on, keeping its slot, key and addresses. */
+  async setVpnDeviceEnabled(id: number, enabled: boolean) {
+    const { data } = await this.#handleResponse<ApiResponse<VpnDevice>>(
+      await this.#req(`/api/v1/vpn/devices/${id}/enabled`, "POST", { enabled }),
+    );
+    return data;
+  }
+
+  /** Remove a device, releasing its slot and its addresses for reuse. */
+  async deleteVpnDevice(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<void>>(
+      await this.#req(`/api/v1/vpn/devices/${id}`, "DELETE"),
+    );
+    return data;
+  }
+
+  /** One config per region, all sharing this device's `[Interface]` block. */
+  async getVpnDeviceConfigs(id: number) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<Array<VpnDeviceConfig>>
+    >(await this.#req(`/api/v1/vpn/devices/${id}/configs`, "GET"));
+    return data;
+  }
+
   async verifyEmail(token: string) {
     const { data } = await this.#handleResponse<ApiResponse<void>>(
       await this.#req(`/api/v1/account/verify-email?token=${token}`, "GET"),
@@ -2365,12 +2561,12 @@ export class LNVpsApi {
       try {
         const obj = JSON.parse(text) as ApiResponseBase;
         if (obj.error) {
-          return Promise.reject(new Error(obj.error));
+          return Promise.reject(new ApiError(obj.error, rsp.status));
         }
       } catch {
         // JSON parse failed
       }
-      return Promise.reject(new Error(text));
+      return Promise.reject(new ApiError(text, rsp.status));
     }
   }
 

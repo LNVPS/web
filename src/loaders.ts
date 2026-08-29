@@ -7,6 +7,7 @@ import {
   VmCustomPrice,
   AvailableIpSpace,
   App,
+  VpnService,
 } from "./api";
 import { regionCustomTemplate, regionEntrySpec } from "./utils/regions";
 import { findApp } from "./utils/apps";
@@ -44,6 +45,7 @@ export interface HomeLoaderData {
   paymentMethods?: PaymentMethod[];
   latestNews?: TaggedNostrEvent[];
   apps?: App[];
+  vpn?: VpnService[];
 }
 
 export interface NewsLoaderData {
@@ -97,10 +99,13 @@ export async function homeLoader({
   // (or render it — see IpSpaceSection in home.tsx).
   // The app catalog is a public browse surface (like VM templates), fetched
   // unauthenticated here for SSR on the homepage.
-  const [offers, paymentMethods, apps] = await Promise.all([
+  const [offers, paymentMethods, apps, vpn] = await Promise.all([
     cached("offers", () => api.listOffers()),
     cached("payment_methods", () => api.getPaymentMethods()),
     cached("apps", () => api.listApps()),
+    // Public like the other catalogs, so the plans are in the server-rendered
+    // HTML rather than appearing after hydration.
+    cached("vpn_services", () => api.listVpnServices()),
   ]);
 
   const latestNews =
@@ -108,7 +113,7 @@ export async function homeLoader({
       ? filterArticlesByLocale(news, locale).slice(0, 1)
       : undefined;
 
-  return { offers, paymentMethods, latestNews, apps };
+  return { offers, paymentMethods, latestNews, apps, vpn };
 }
 
 export async function newsLoader({

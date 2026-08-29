@@ -58,6 +58,8 @@ const VmPage = lazy(() => import("./pages/vm.tsx"));
 const VmConsolePage = lazy(() =>
   import("./pages/vm-console.tsx").then((m) => ({ default: m.VmConsolePage })),
 );
+// The VPN page renders a config QR, which pulls in the browser-only QR lib.
+const AccountVpnPage = lazy(() => import("./pages/account-vpn.tsx"));
 // Dev-only component catalogue; pulls in the browser-only QR lib.
 const ComponentGalleryPage = lazy(
   () => import("./pages/component-gallery.tsx"),
@@ -135,6 +137,14 @@ export const routes: RouteObject[] = [
           {
             path: "apps",
             element: <AccountAppsPage />,
+          },
+          {
+            path: "vpn",
+            element: (
+              <Lazy>
+                <AccountVpnPage />
+              </Lazy>
+            ),
           },
           {
             path: "apps/deployments/:id",

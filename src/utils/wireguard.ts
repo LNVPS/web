@@ -34,6 +34,25 @@ export function generateWireGuardKeypair(): WireGuardKeypair {
 }
 
 /**
+ * The public key a private key belongs to, or `undefined` when the input is not
+ * a WireGuard key at all.
+ *
+ * Used to check a stored key against the device it claims to be for: the server
+ * only ever knows public keys, so this is the one way to tell whether a key
+ * kept in the browser still opens a given tunnel. Pasting the wrong one into a
+ * config produces a tunnel that hands shake with nothing and says why nowhere.
+ */
+export function publicKeyFor(privateKey: string): string | undefined {
+  try {
+    const secret = base64.decode(privateKey.trim());
+    if (secret.length !== 32) return undefined;
+    return base64.encode(x25519.getPublicKey(secret));
+  } catch {
+    return undefined;
+  }
+}
+
+/**
  * Put the private key the client kept into the config the API rendered.
  *
  * Returns the config untouched when there is no key to insert, so a config can

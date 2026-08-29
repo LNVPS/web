@@ -9,7 +9,6 @@ import Spinner from "./spinner";
 import QrCode from "./qr";
 import RegionName from "./region-name";
 import { applyPrivateKey, configFileName } from "../utils/wireguard";
-import { recallPrivateKey } from "../utils/vpn-keys";
 
 /** Hand the rendered config to the browser as a `.conf` download. */
 function download(filename: string, contents: string) {
@@ -31,15 +30,20 @@ function download(filename: string, contents: string) {
  * dials. Switching region is editing two lines, which is why they are tabs on
  * one config rather than separate downloads to keep track of.
  *
- * The private key is filled in from this tab's store when it has it. When it
- * does not (the device was registered in an earlier session), the placeholder
- * is left in place and said out loud, because a config that silently carries an
- * unusable key is worse than one that admits what is missing.
+ * A private key is only ever passed in by the caller that just generated one,
+ * and only for as long as that page stays open. Nothing here stores it: the
+ * browser is a bad place to keep the key that lets somebody use your tunnel,
+ * and a customer who saved the file already has it where it belongs. Without
+ * one, the API's placeholder stays in view and is said out loud, because a
+ * config that silently carries an unusable key is worse than one that admits
+ * what is missing.
  */
 export default function VpnDeviceConfigPanel({
   device,
+  privateKey,
 }: {
   device: VpnDevice;
+  privateKey?: string;
 }) {
   const login = useLogin();
   const [configs, setConfigs] = useState<Array<VpnDeviceConfig>>();
@@ -74,7 +78,6 @@ export default function VpnDeviceConfigPanel({
   }
 
   const selected = configs.find((c) => c.region_id === regionId) ?? configs[0];
-  const privateKey = recallPrivateKey(device.public_key);
   const config = applyPrivateKey(selected.config, privateKey);
 
   return (
@@ -100,7 +103,7 @@ export default function VpnDeviceConfigPanel({
 
       {!privateKey && (
         <div className="rounded-sm border border-cyber-warning/40 bg-cyber-warning/10 px-3 py-2 text-xs text-cyber-warning">
-          <FormattedMessage defaultMessage="This device's private key was generated in another browser session, so it cannot be filled in here. Paste the key you saved over the placeholder, or remove the device and register a new one." />
+          <FormattedMessage defaultMessage="Only your device has this tunnel's private key. Put it in place of the placeholder before importing the file." />
         </div>
       )}
 

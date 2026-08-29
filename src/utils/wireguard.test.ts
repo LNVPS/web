@@ -5,6 +5,7 @@ import {
   applyPrivateKey,
   configFileName,
   generateWireGuardKeypair,
+  publicKeyFor,
 } from "./wireguard";
 
 describe("generateWireGuardKeypair", () => {
@@ -22,6 +23,26 @@ describe("generateWireGuardKeypair", () => {
     const b = generateWireGuardKeypair();
     expect(a.privateKey).not.toBe(b.privateKey);
     expect(a.publicKey).not.toBe(b.publicKey);
+  });
+});
+
+describe("publicKeyFor", () => {
+  test("derives the public half of a generated pair", () => {
+    const { privateKey, publicKey } = generateWireGuardKeypair();
+    expect(publicKeyFor(privateKey)).toBe(publicKey);
+  });
+
+  test("a key for another device derives to a different public key", () => {
+    const a = generateWireGuardKeypair();
+    const b = generateWireGuardKeypair();
+    expect(publicKeyFor(a.privateKey)).not.toBe(b.publicKey);
+  });
+
+  test("nothing usable comes back from junk", () => {
+    expect(publicKeyFor("")).toBeUndefined();
+    expect(publicKeyFor("not base64 at all!")).toBeUndefined();
+    // Right alphabet, wrong length: a truncated key must not derive something.
+    expect(publicKeyFor("AAAA")).toBeUndefined();
   });
 });
 

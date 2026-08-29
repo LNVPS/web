@@ -15,7 +15,15 @@ import { Icon } from "../components/icon";
 import VpnDeviceConfigPanel from "../components/vpn-device-config";
 import VpnServiceCard from "../components/vpn-service-card";
 import { generateWireGuardKeypair } from "../utils/wireguard";
-import { forgetPrivateKey, rememberPrivateKey } from "../utils/vpn-keys";
+import {
+  forgetPrivateKey,
+  keyStorageEnabled,
+  recallPrivateKey,
+  rememberPrivateKey,
+  setKeyStorageEnabled,
+} from "../utils/vpn-keys";
+import Modal from "../components/modal";
+import { FilterButton } from "../components/button-filter";
 
 /** Tone and label for a plan's billing state, wherever the plan is shown. */
 function planStatus(plan: VpnPlan): { tone: BillingTone; label: string } {
@@ -29,15 +37,133 @@ function planStatus(plan: VpnPlan): { tone: BillingTone; label: string } {
   }
 }
 
+/**
+ * Adding a device, as a dialog rather than a permanent form.
+ *
+ * Registering a device is a once-per-machine act, so the row of fields, the key
+ * choice and the two lines of explanation that go with it were sitting on the
+ * page every time somebody came to fetch a config they already had. Behind a
+ * button, the explanation can be as long as it needs to be at the moment it is
+ * actually being read.
+ */
+function AddDeviceModal({
+  name,
+  onNameChange,
+  ownKey,
+  onOwnKeyChange,
+  storeKeys,
+  onStoreKeysChange,
+  onSubmit,
+  onClose,
+}: {
+  name: string;
+  onNameChange: (v: string) => void;
+  ownKey: string;
+  onOwnKeyChange: (v: string) => void;
+  storeKeys: boolean;
+  onStoreKeysChange: (v: boolean) => void;
+  onSubmit: () => Promise<void>;
+  onClose: () => void;
+}) {
+  const { formatMessage } = useIntl();
+  const [bringOwn, setBringOwn] = useState(false);
+
+  return (
+    <Modal id="vpn-add-device" onClose={onClose}>
+      <div className="flex flex-col gap-4">
+        <h2 className="m-0 text-xl text-cyber-text-bright">
+          <FormattedMessage defaultMessage="Add device" />
+        </h2>
+
+        <label className="flex flex-col gap-1">
+          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+            <FormattedMessage defaultMessage="Name" />
+          </span>
+          <input
+            type="text"
+            autoFocus
+            value={name}
+            maxLength={64}
+            placeholder={formatMessage({ defaultMessage: "Laptop" })}
+            onChange={(e) => onNameChange(e.target.value)}
+          />
+        </label>
+
+        <div className="flex flex-col gap-2">
+          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+            <FormattedMessage defaultMessage="Key" />
+          </span>
+          <div className="flex flex-wrap gap-2">
+            <FilterButton
+              active={!bringOwn}
+              onClick={() => {
+                setBringOwn(false);
+                onOwnKeyChange("");
+              }}
+            >
+              <FormattedMessage defaultMessage="Generate for me" />
+            </FilterButton>
+            <FilterButton active={bringOwn} onClick={() => setBringOwn(true)}>
+              <FormattedMessage defaultMessage="I have a key" />
+            </FilterButton>
+          </div>
+
+          {bringOwn ? (
+            <>
+              <input
+                type="text"
+                spellCheck={false}
+                value={ownKey}
+                placeholder="wg genkey | wg pubkey"
+                onChange={(e) => onOwnKeyChange(e.target.value)}
+                className="font-mono text-xs"
+              />
+              <span className="text-xs text-cyber-muted">
+                <FormattedMessage defaultMessage="The safest option: your private key never touches a browser. Paste the public key from wg pubkey, or from an empty tunnel in the WireGuard app." />
+              </span>
+            </>
+          ) : (
+            <label className="flex items-start gap-2 text-xs text-cyber-muted">
+              <input
+                type="checkbox"
+                className="mt-0.5"
+                checked={storeKeys}
+                onChange={(e) => onStoreKeysChange(e.target.checked)}
+              />
+              <FormattedMessage defaultMessage="Keep the private key in this browser so the config can be downloaded again later. Anyone using this browser profile can read it. Leave it off and the config is shown once." />
+            </label>
+          )}
+        </div>
+
+        <AsyncButton
+          className="justify-center bg-cyber-primary/20 border-cyber-primary text-cyber-primary font-bold hover:bg-cyber-primary/30 hover:shadow-neon"
+          disabled={
+            name.trim().length === 0 || (bringOwn && ownKey.trim().length === 0)
+          }
+          onClick={onSubmit}
+        >
+          <FormattedMessage defaultMessage="Add device" />
+        </AsyncButton>
+      </div>
+    </Modal>
+  );
+}
+
 /** A registered device: what it is, whether it is on, and its configs. */
 function DeviceRow({
   device,
+  privateKey,
+  keyIsEphemeral,
   open,
   onToggleOpen,
   onSetEnabled,
   onDelete,
 }: {
   device: VpnDevice;
+  /** The key that opens this tunnel, when the browser has it. */
+  privateKey?: string;
+  /** True when that key is only in memory: this page is the last place it is. */
+  keyIsEphemeral?: boolean;
   open: boolean;
   onToggleOpen: () => void;
   onSetEnabled: (enabled: boolean) => Promise<void>;
@@ -96,8 +222,13 @@ function DeviceRow({
         </div>
       </div>
       {open && (
-        <div className="border-t border-cyber-border/60 bg-cyber-panel-light/40 px-4 py-4">
-          <VpnDeviceConfigPanel device={device} />
+        <div className="flex flex-col gap-3 border-t border-cyber-border/60 bg-cyber-panel-light/40 px-4 py-4">
+          {privateKey && keyIsEphemeral && (
+            <div className="rounded-sm border border-cyber-warning/40 bg-cyber-warning/10 px-3 py-2 text-xs text-cyber-warning">
+              <FormattedMessage defaultMessage="Save this config now: its private key is only in this page and cannot be shown again." />
+            </div>
+          )}
+          <VpnDeviceConfigPanel device={device} privateKey={privateKey} />
         </div>
       )}
     </div>
@@ -113,8 +244,24 @@ export default function AccountVpnPage() {
   const [plan, setPlan] = useState<VpnPlan | null>();
   const [devices, setDevices] = useState<Array<VpnDevice>>([]);
   const [newName, setNewName] = useState("");
+  const [newKey, setNewKey] = useState("");
+  const [adding, setAdding] = useState(false);
+  // Read once on mount: `localStorage` is not available while server-rendering,
+  // so the switch cannot be read during the first render pass.
+  const [storeKeys, setStoreKeys] = useState(false);
   const [openDevice, setOpenDevice] = useState<number>();
   const [error, setError] = useState<string>();
+  /**
+   * Private keys generated on this page, for as long as it stays open.
+   *
+   * Deliberately not persisted anywhere. A key that lets somebody use your
+   * tunnel does not belong in browser storage, where every script on the origin
+   * and anyone with the machine can read it; the customer downloads the config
+   * while it is on screen and the key lives in their WireGuard client after
+   * that. Leaving the page loses it, which is the honest cost of us never
+   * having had it.
+   */
+  const [freshKeys, setFreshKeys] = useState<Record<number, string>>({});
 
   const reload = useCallback(async () => {
     // The catalog is public, so it loads the same way whether or not the
@@ -148,6 +295,10 @@ export default function AccountVpnPage() {
     reload();
   }, [reload]);
 
+  useEffect(() => {
+    setStoreKeys(keyStorageEnabled());
+  }, []);
+
   async function buy(service: VpnService) {
     if (!login?.api) return;
     setError(undefined);
@@ -164,25 +315,35 @@ export default function AccountVpnPage() {
     const name = newName.trim();
     if (!name) return;
     setError(undefined);
-    // The keypair is made here and the private half never leaves the browser:
-    // that is the product's security claim, so it is not an optimisation to be
-    // traded away later for a server-side "convenience" generator.
-    const { privateKey, publicKey } = generateWireGuardKeypair();
-    rememberPrivateKey(publicKey, privateKey);
+
+    // A key the customer brought was made by `wg genkey` or by the WireGuard
+    // app, and its private half never exists in a browser at all. Generating
+    // here is for someone with no client to hand yet.
+    const pasted = newKey.trim();
+    const keypair = pasted
+      ? { publicKey: pasted, privateKey: undefined }
+      : generateWireGuardKeypair();
+    const privateKey = keypair.privateKey;
+
     try {
       const device = await login.api.addVpnDevice({
         name,
-        public_key: publicKey,
+        public_key: keypair.publicKey,
       });
       setNewName("");
+      setNewKey("");
+      setAdding(false);
       setDevices((d) => [...d.filter((x) => x.id !== device.id), device]);
-      // Open the new device straight away: the config is the thing the customer
-      // came for, and it is the one moment this tab certainly has the key.
+      if (privateKey) {
+        setFreshKeys((k) => ({ ...k, [device.id]: privateKey }));
+        // A no-op unless the customer turned storage on.
+        rememberPrivateKey(privateKey);
+      }
+      // Open the new device straight away: the config is what the customer came
+      // for, and for a generated key this page is the only place it exists.
       setOpenDevice(device.id);
       await reload();
     } catch (e) {
-      // The key was never registered, so it is not worth keeping.
-      forgetPrivateKey(publicKey);
       if (e instanceof Error) setError(e.message);
     }
   }
@@ -217,6 +378,11 @@ export default function AccountVpnPage() {
     try {
       await login.api.deleteVpnDevice(device.id);
       forgetPrivateKey(device.public_key);
+      setFreshKeys((k) => {
+        const next = { ...k };
+        delete next[device.id];
+        return next;
+      });
       setDevices((d) => d.filter((x) => x.id !== device.id));
       await reload();
     } catch (e) {
@@ -347,32 +513,41 @@ export default function AccountVpnPage() {
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              <Eyebrow>
-                <FormattedMessage defaultMessage="Devices" />
-              </Eyebrow>
-
-              <div className="flex flex-wrap items-center gap-2">
-                <input
-                  type="text"
-                  value={newName}
-                  maxLength={64}
-                  placeholder={formatMessage({
-                    defaultMessage: "Device name, e.g. Laptop",
-                  })}
-                  onChange={(e) => setNewName(e.target.value)}
-                  className="min-w-0 flex-1"
-                />
+              <div className="flex items-center justify-between gap-3">
+                <Eyebrow>
+                  <FormattedMessage defaultMessage="Devices" />
+                </Eyebrow>
                 <AsyncButton
-                  disabled={atLimit || newName.trim().length === 0}
-                  onClick={addDevice}
+                  className="text-sm"
+                  disabled={atLimit}
+                  title={
+                    atLimit
+                      ? formatMessage({
+                          defaultMessage:
+                            "Every device your plan allows is registered. Remove one to free a slot.",
+                        })
+                      : undefined
+                  }
+                  onClick={() => setAdding(true)}
                 >
                   <FormattedMessage defaultMessage="Add device" />
                 </AsyncButton>
               </div>
-              {atLimit && (
-                <span className="text-xs text-cyber-muted">
-                  <FormattedMessage defaultMessage="You have registered every device your plan allows. Remove one to free a slot." />
-                </span>
+
+              {adding && (
+                <AddDeviceModal
+                  name={newName}
+                  onNameChange={setNewName}
+                  ownKey={newKey}
+                  onOwnKeyChange={setNewKey}
+                  storeKeys={storeKeys}
+                  onStoreKeysChange={(v) => {
+                    setKeyStorageEnabled(v);
+                    setStoreKeys(v);
+                  }}
+                  onSubmit={addDevice}
+                  onClose={() => setAdding(false)}
+                />
               )}
 
               {devices.length === 0 ? (
@@ -385,6 +560,10 @@ export default function AccountVpnPage() {
                     <DeviceRow
                       key={d.id}
                       device={d}
+                      privateKey={
+                        recallPrivateKey(d.public_key) ?? freshKeys[d.id]
+                      }
+                      keyIsEphemeral={!recallPrivateKey(d.public_key)}
                       open={openDevice === d.id}
                       onToggleOpen={() =>
                         setOpenDevice((x) => (x === d.id ? undefined : d.id))

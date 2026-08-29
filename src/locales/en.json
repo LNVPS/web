@@ -26,6 +26,9 @@
   "+NBJh2": {
     "defaultMessage": "Picking up your earlier conversation. The agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch."
   },
+  "+QO7qN": {
+    "defaultMessage": "The safest option: your private key never touches a browser. Paste the public key from wg pubkey, or from an empty tunnel in the WireGuard app."
+  },
   "+Qebzr": {
     "defaultMessage": "On-chain Address"
   },
@@ -563,11 +566,11 @@
   "AVkjIn": {
     "defaultMessage": "full"
   },
+  "Ad/aI9": {
+    "defaultMessage": "Keep the private key in this browser so the config can be downloaded again later. Anyone using this browser profile can read it. Leave it off and the config is shown once."
+  },
   "AfmrGS": {
     "defaultMessage": "Send Code"
-  },
-  "Ar2z6d": {
-    "defaultMessage": "You have registered every device your plan allows. Remove one to free a slot."
   },
   "Ay7iFf": {
     "defaultMessage": "{v} read"
@@ -745,6 +748,9 @@
   },
   "Ecfndm": {
     "defaultMessage": "Invoice"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
   },
   "Ed5Igt": {
     "defaultMessage": "DNS changes may take up to 24-48 hours to propagate"
@@ -950,6 +956,9 @@
   "J+pWCM": {
     "defaultMessage": "New size"
   },
+  "J/aZhf": {
+    "defaultMessage": "Only your device has this tunnel's private key. Put it in place of the placeholder before importing the file."
+  },
   "J7750w": {
     "defaultMessage": "{count} IPv6"
   },
@@ -1055,6 +1064,9 @@
   "LjziLu": {
     "defaultMessage": "Encrypt Message"
   },
+  "LpI0+d": {
+    "defaultMessage": "I have a key"
+  },
   "LqFfRA": {
     "defaultMessage": "Country *"
   },
@@ -1066,6 +1078,9 @@
   },
   "M9eUaM": {
     "defaultMessage": "Running a Nostr relay too? That one does not need a whole server. It is <a>available as a Managed App</a>."
+  },
+  "MAfFB1": {
+    "defaultMessage": "Laptop"
   },
   "MIAOtN": {
     "defaultMessage": "Blossom Media Server Hosting: Route96"
@@ -1745,6 +1760,9 @@
   "c5WuqM": {
     "defaultMessage": "This host is being retired. Move to a new VPS before {date}. Renewals stop then and you'll need to migrate."
   },
+  "cHcRBI": {
+    "defaultMessage": "Every device your plan allows is registered. Remove one to free a slot."
+  },
   "cJzoWc": {
     "defaultMessage": "Its own hostname, TLS included"
   },
@@ -2006,9 +2024,6 @@
   "hADOUq": {
     "defaultMessage": "Saved. The app will restart shortly."
   },
-  "hEVEsz": {
-    "defaultMessage": "This device's private key was generated in another browser session, so it cannot be filled in here. Paste the key you saved over the placeholder, or remove the device and register a new one."
-  },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
   },
@@ -2032,6 +2047,9 @@
   },
   "iO1K6D": {
     "defaultMessage": "No posts yet.."
+  },
+  "iQpuv+": {
+    "defaultMessage": "Generate for me"
   },
   "iVkpyZ": {
     "defaultMessage": "One-click Docker apps from a managed catalog."
@@ -2200,9 +2218,6 @@
   },
   "lmac7x": {
     "defaultMessage": "{n, plural, one {# item} other {# items}}"
-  },
-  "lmoXjC": {
-    "defaultMessage": "Device name, e.g. Laptop"
   },
   "lnaWo/": {
     "defaultMessage": "Region"
@@ -2404,6 +2419,9 @@
   },
   "qA0DQR": {
     "defaultMessage": "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
+  },
+  "qB17v9": {
+    "defaultMessage": "Save this config now: its private key is only in this page and cannot be shown again."
   },
   "qV+TFm": {
     "defaultMessage": "Payment failed"

@@ -94,14 +94,16 @@ export default function VmPage() {
         </div>
         <div className="flex items-center gap-2">
           <span className="select-all font-mono text-sm">
-            {a.reverse_dns ?? "—"}
+            {a.reverse_dns ?? "not set"}
           </span>
-          <Icon
-            name="pencil"
-            className="inline shrink-0"
-            size={13}
+          <button
+            type="button"
+            className="flex items-center gap-1 text-sm text-cyber-muted hover:text-cyber-primary transition-colors cursor-pointer"
             onClick={() => setEditReverse(a)}
-          />
+          >
+            <Icon name="pencil" className="inline shrink-0" size={13} />
+            <FormattedMessage defaultMessage="Change" />
+          </button>
         </div>
       </div>
     );

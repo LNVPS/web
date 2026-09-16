@@ -307,7 +307,7 @@ export default function VmPage() {
                 {state.ssh_key?.name ?? "none"}
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-sm text-cyber-accent hover:text-cyber-text-bright cursor-pointer"
+                  className="flex items-center gap-1 text-sm text-cyber-muted hover:text-cyber-primary transition-colors cursor-pointer"
                   onClick={() => setEditKey(true)}
                 >
                   <Icon name="pencil" className="inline shrink-0" size={13} />

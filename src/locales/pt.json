@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "O que acontece se eu parar de pagar?"
   },
+  "4Ir778": {
+    "defaultMessage": "Depois de selecionar uma nova chave, pare a VM e inicie-a novamente. Reiniciar não é suficiente: a chave só é aplicada num arranque a frio."
+  },
   "4Ni9AU": {
     "defaultMessage": "Região de saída"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternativa)"
+  },
+  "BY343C": {
+    "defaultMessage": "Alterar"
   },
   "BZF5HJ": {
     "defaultMessage": "Domínios Nostr"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "O seu código de indicação."
-  },
-  "h/PJh3": {
-    "defaultMessage": "Depois de selecionar uma nova chave, reinicie a máquina virtual."
   },
   "h1wLxC": {
     "defaultMessage": "Configurações de notificações"

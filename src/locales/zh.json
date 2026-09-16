@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "如果我不继续付款会怎样？"
   },
+  "4Ir778": {
+    "defaultMessage": "选择新密钥后，请先停止虚拟机再启动。重启不够，密钥只在冷启动时写入。"
+  },
   "4Ni9AU": {
     "defaultMessage": "出口区域"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "（备选方案）"
+  },
+  "BY343C": {
+    "defaultMessage": "更改"
   },
   "BZF5HJ": {
     "defaultMessage": "Nostr 域名"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "您的推荐码"
-  },
-  "h/PJh3": {
-    "defaultMessage": "选择新的密钥后，请重启虚拟机。"
   },
   "h1wLxC": {
     "defaultMessage": "通知设置"

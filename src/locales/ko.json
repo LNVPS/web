@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "납부를 중단하면 어떻게 되나요?"
   },
+  "4Ir778": {
+    "defaultMessage": "새 키를 선택한 뒤 VM을 중지했다가 다시 시작하세요. 재시작만으로는 적용되지 않으며, 키는 콜드 부팅 때만 반영됩니다."
+  },
   "4Ni9AU": {
     "defaultMessage": "출구 영역"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(대안)"
+  },
+  "BY343C": {
+    "defaultMessage": "변경"
   },
   "BZF5HJ": {
     "defaultMessage": "노스트르 도메인"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "고유 추천 코드"
-  },
-  "h/PJh3": {
-    "defaultMessage": "새 키를 선택한 후에는 가상 머신을 다시 시작하십시오."
   },
   "h1wLxC": {
     "defaultMessage": "알림 설정"

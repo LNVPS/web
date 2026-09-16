@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "Was passiert, wenn ich aufhöre zu zahlen?"
   },
+  "4Ir778": {
+    "defaultMessage": "Nachdem Sie einen neuen Schlüssel ausgewählt haben, stoppen Sie die VM und starten Sie sie erneut. Ein Neustart genügt nicht: Der Schlüssel wird nur bei einem Kaltstart übernommen."
+  },
   "4Ni9AU": {
     "defaultMessage": "Exit-Region"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternative)"
+  },
+  "BY343C": {
+    "defaultMessage": "Ändern"
   },
   "BZF5HJ": {
     "defaultMessage": "Nostr-Domänen"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "Ihr Empfehlungscode"
-  },
-  "h/PJh3": {
-    "defaultMessage": "Nachdem Sie einen neuen Schlüssel ausgewählt haben, starten Sie bitte die virtuelle Maschine neu."
   },
   "h1wLxC": {
     "defaultMessage": "Benachrichtigungseinstellungen"

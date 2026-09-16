@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "What happens if I stop paying?"
   },
+  "4Ir778": {
+    "defaultMessage": "After selecting a new key, stop the VM and start it again. Restart is not enough: the key is only applied on a cold boot."
+  },
   "4Ni9AU": {
     "defaultMessage": "Exit region"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternative)"
+  },
+  "BY343C": {
+    "defaultMessage": "Change"
   },
   "BZF5HJ": {
     "defaultMessage": "Nostr Domains"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "Your referral code"
-  },
-  "h/PJh3": {
-    "defaultMessage": "After selecting a new key, please restart the VM."
   },
   "h1wLxC": {
     "defaultMessage": "notification settings"

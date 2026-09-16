@@ -304,13 +304,15 @@ export default function VmPage() {
             label={<FormattedMessage defaultMessage="SSH Key" />}
             value={
               <span className="flex items-center gap-2">
-                {state.ssh_key?.name ?? "—"}
-                <Icon
-                  name="pencil"
-                  className="inline shrink-0"
-                  size={13}
+                {state.ssh_key?.name ?? "none"}
+                <button
+                  type="button"
+                  className="flex items-center gap-1 text-sm text-cyber-accent hover:text-cyber-text-bright cursor-pointer"
                   onClick={() => setEditKey(true)}
-                />
+                >
+                  <Icon name="pencil" className="inline shrink-0" size={13} />
+                  <FormattedMessage defaultMessage="Change" />
+                </button>
               </span>
             }
           />
@@ -541,7 +543,7 @@ export default function VmPage() {
           <SSHKeySelector selectedKey={key} setSelectedKey={setKey} />
           <div className="flex flex-col gap-4 mt-8">
             <small>
-              <FormattedMessage defaultMessage="After selecting a new key, please restart the VM." />
+              <FormattedMessage defaultMessage="After selecting a new key, stop the VM and start it again. Restart is not enough: the key is only applied on a cold boot." />
             </small>
             {error && <b className="text-cyber-danger">{error}</b>}
             <AsyncButton

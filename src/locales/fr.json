@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "Que se passe-t-il si j'arrête de payer ?"
   },
+  "4Ir778": {
+    "defaultMessage": "Après avoir sélectionné une nouvelle clé, arrêtez la VM puis redémarrez-la. Un redémarrage ne suffit pas : la clé n'est appliquée qu'à un démarrage à froid."
+  },
   "4Ni9AU": {
     "defaultMessage": "Zone de sortie"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Option alternative)"
+  },
+  "BY343C": {
+    "defaultMessage": "Modifier"
   },
   "BZF5HJ": {
     "defaultMessage": "Domaines Nostr"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "Votre code de parrainage"
-  },
-  "h/PJh3": {
-    "defaultMessage": "Après avoir sélectionné une nouvelle clé, veuillez redémarrer la machine virtuelle."
   },
   "h1wLxC": {
     "defaultMessage": "Paramètres de notification"

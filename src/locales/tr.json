@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "Ödemeyi durdurursam ne olur?"
   },
+  "4Ir778": {
+    "defaultMessage": "Yeni bir anahtar seçtikten sonra sanal makineyi durdurup yeniden başlatın. Yeniden başlatma yeterli değildir: anahtar yalnızca soğuk açılışta uygulanır."
+  },
   "4Ni9AU": {
     "defaultMessage": "Çıkış bölgesi"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternatif)"
+  },
+  "BY343C": {
+    "defaultMessage": "Değiştir"
   },
   "BZF5HJ": {
     "defaultMessage": "Nostr Alan Adları"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "Öneri kodunuz"
-  },
-  "h/PJh3": {
-    "defaultMessage": "Yeni bir anahtar seçtikten sonra lütfen sanal makineyi yeniden başlatın."
   },
   "h1wLxC": {
     "defaultMessage": "bildirim ayarları"

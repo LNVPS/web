@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "¿Qué pasa si dejo de pagar?"
   },
+  "4Ir778": {
+    "defaultMessage": "Después de seleccionar una clave nueva, detén la VM y vuelve a iniciarla. Reiniciar no es suficiente: la clave solo se aplica en un arranque en frío."
+  },
   "4Ni9AU": {
     "defaultMessage": "Región de salida"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "(Alternativa)"
+  },
+  "BY343C": {
+    "defaultMessage": "Cambiar"
   },
   "BZF5HJ": {
     "defaultMessage": "Dominios Nostr"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "Tu código de referencia."
-  },
-  "h/PJh3": {
-    "defaultMessage": "Después de seleccionar una nueva clave, reinicie la máquina virtual."
   },
   "h1wLxC": {
     "defaultMessage": "Configuración de notificaciones"

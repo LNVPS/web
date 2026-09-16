@@ -275,6 +275,9 @@
   "4HhPmZ": {
     "defaultMessage": "支払いを止めたらどうなりますか？"
   },
+  "4Ir778": {
+    "defaultMessage": "新しい鍵を選択したら、VM を停止してから起動してください。再起動では不十分で、鍵はコールドブート時にのみ適用されます。"
+  },
   "4Ni9AU": {
     "defaultMessage": "出口領域"
   },
@@ -622,6 +625,9 @@
   },
   "BXmJ0S": {
     "defaultMessage": "（代替案）"
+  },
+  "BY343C": {
+    "defaultMessage": "変更"
   },
   "BZF5HJ": {
     "defaultMessage": "Nostrドメイン"
@@ -2092,9 +2098,6 @@
   },
   "h+26/n": {
     "defaultMessage": "お客様の紹介コード"
-  },
-  "h/PJh3": {
-    "defaultMessage": "新しいキーを選択した後、仮想マシンを再起動してください。"
   },
   "h1wLxC": {
     "defaultMessage": "通知設定"

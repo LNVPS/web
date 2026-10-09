@@ -1,7 +1,7 @@
 # Terms of Service and Acceptable Use
 
 **LNVPS**  
-_Last Updated: July 15, 2026_
+_Last Updated: October 9, 2026_
 
 Welcome to LNVPS, a trading name of Apex Strata Ltd, a company registered in Ireland. These Terms of Service ("Terms") govern your use of our Virtual Private Server (VPS) hosting services, website, and related offerings (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, please do not use our Services.
 
@@ -14,6 +14,9 @@ LNVPS is a trading name of Apex Strata Ltd, a company registered in Ireland.
 - **Company Registration Number**: 702423
 - **Registered Office**: Suite 10628, 26/27 Upper Pembroke Street, Dublin 2, D02 X361, Ireland
 - **Email**: support@lnvps.net
+- **Abuse reports**: noc+abuse@apexstrata.ie
+
+For the purposes of Articles 11 and 12 of the EU Digital Services Act (Regulation (EU) 2022/2065), our single point of contact for Member State authorities, the European Commission and the European Board for Digital Services is noc+abuse@apexstrata.ie, and our point of contact for customers is support@lnvps.net. We can be contacted in English.
 
 ---
 
@@ -62,7 +65,34 @@ You agree not to use the Services to:
 
 **Tor**: Running Tor relays (non-exit) is permitted. Running Tor exit nodes is not permitted without our prior written consent.
 
-We reserve the right to suspend or terminate your Services without notice if we detect violations, subject to applicable law. Abuse reports may be sent to noc+abuse@apexstrata.ie.
+**Traffic from your service**: You are responsible for all traffic sent from your VPS and its IP addresses, including traffic from anyone you let use it. This covers VPNs, proxies, exit nodes, shared accounts and any other service that relays other people's traffic. If you run such a service you must take reasonable steps to prevent abuse through it, such as blocking peer-to-peer file sharing where your users could use it to infringe copyright, and you must deal with abuse reports about it. A violation by one of your users is treated as your violation.
+
+We reserve the right to suspend or terminate your Services if we detect violations, subject to applicable law and Section 6.1.
+
+### 6.1 Abuse Reports and Enforcement
+
+**Reporting**: Anyone can report illegal content or abuse coming from our network by email to noc+abuse@apexstrata.ie. A report should include the IP address, the date and time with its timezone, a description of the problem, and any evidence such as logs, URLs or file hashes. Where a report includes contact details we will confirm receipt and, for reports about content stored on our servers, tell the reporter what we decided.
+
+**How we handle reports**: Each report is reviewed by a person. We check that the IP address and time match one of our customers' services and decide in a timely, careful and impartial way. We do not monitor the content of your VPS or your traffic in general. Depending on how serious and how clear the problem is, we may:
+
+- forward the report to you and ask you to fix the problem and reply within 48 hours;
+- restrict part of your service, for example blocking certain network ports;
+- suspend your service until the problem is fixed;
+- terminate your service for serious or repeated violations.
+
+We may suspend a service immediately and without warning where there is an ongoing attack, a risk to people's safety, child sexual abuse material, or a threat to our network or other customers. Repeated reports about the same service count towards termination even when each one is resolved.
+
+**Your identity**: We do not give your name, contact details or other personal data to people who report abuse, except where we are required to by law, such as under a court order.
+
+**Statement of reasons**: If we restrict, suspend or terminate your service because of illegal content or a breach of these Terms, we will tell you what we did, the facts it was based on, whether it followed a report, the law or section of these Terms involved, and how you can challenge it. We may withhold this only where the law requires us to, for example where it would interfere with a criminal investigation.
+
+**Challenging a decision**: You can challenge any decision made under this section by replying to our notice or emailing support@lnvps.net within six months of the decision. A person will review your challenge and reply without undue delay, and we will reverse the decision if it was wrong. You also keep any right you have to go to court.
+
+**Copyright notices for Canadian services**: For services in our Canadian region we forward copyright infringement notices that comply with the Canadian Copyright Act to the customer, tell the sender that we have done so, and keep a record that identifies the customer for six months, or twelve months where we are told that proceedings have started.
+
+**Law enforcement**: If we become aware of information suggesting that a criminal offence involving a threat to someone's life or safety has happened, is happening or is likely to happen, we will report it to the relevant authorities.
+
+**Records**: We keep abuse reports, the actions we took and your replies for up to 12 months after a report is closed, or longer where the law requires it.
 
 ---
 
@@ -101,14 +131,14 @@ To exercise the right of withdrawal, contact us at support@lnvps.net with a clea
 ## 8. Termination
 
 - **By You**: You may terminate your account at any time via your control panel or by contacting us, subject to the billing cycle terms.
-- **By Us**: We may suspend or terminate your Services for non-payment, violation of these Terms, or if required by law, with or without notice depending on the severity of the breach.
+- **By Us**: We may suspend or terminate your Services for non-payment, violation of these Terms, or if required by law, with or without notice depending on the severity of the breach. Suspension and termination for abuse follow Section 6.1.
 - **Effect of Termination**: Upon termination or expiry of your service, your VPS is stopped and your access to it ends. We may permanently delete your VPS and associated data after 7 days unless otherwise required by law. You are responsible for retrieving your data before your service expires or is terminated; renewing an expired service within the retention period restores access.
 
 ---
 
 ## 9. Data and Privacy
 
-- **Your Data**: You retain ownership of data uploaded to your VPS. We do not access it except as needed to provide the Services or comply with legal obligations.
+- **Your Data**: You retain ownership of data uploaded to your VPS. We do not access it except as needed to provide the Services, to comply with legal obligations, or to investigate a specific abuse report or security incident involving your service. In an investigation we may take a snapshot of your VPS and examine its network traffic, configuration and logs, limited to what is needed to find the source of the problem. The snapshot is deleted when the investigation ends.
 - **Backups**: You are responsible for maintaining backups of your data unless a backup service is included in your plan.
 - **GDPR Compliance**: We process personal data in accordance with the General Data Protection Regulation (GDPR). We collect only the minimal information necessary to provide the Services; accounts may be created without providing personal contact details. For data protection queries, contact support@lnvps.net.
 

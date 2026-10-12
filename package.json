@@ -39,7 +39,7 @@
     "dns-over-http-resolver": "^3.0.16",
     "flag-icons": "^7.5.0",
     "iso-3166-1": "^2.1.1",
-    "lnvps-compose": "github:LNVPS/lnvps-compose#v0.1.3",
+    "lnvps-compose": "github:LNVPS/lnvps-compose#v0.1.4",
     "marked": "^15.0.7",
     "qr-code-styling": "^1.8.4",
     "react": "^19.1.0",

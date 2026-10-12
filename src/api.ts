@@ -1012,7 +1012,7 @@ export interface AppBackup {
   id: number;
   run_id: string;
   service: string;
-  method: "command" | "volume";
+  method: "command" | "volume" | "exec";
   artifact: string;
   state: AppBackupState;
   size_bytes?: number | null;

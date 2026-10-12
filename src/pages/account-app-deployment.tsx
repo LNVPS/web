@@ -16,7 +16,7 @@ import {
 } from "../api";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
-import { ConfigInput } from "../components/deploy-app-form";
+import { ConfigFields } from "../components/config-fields";
 import { parseComposeSchema } from "lnvps-compose";
 import Spinner from "../components/spinner";
 import BytesSize from "../components/bytes";
@@ -204,15 +204,12 @@ function ConfigEditor({
 
       {fields.length > 0 && (
         <div className="flex flex-col gap-3 border-t border-cyber-border pt-4">
-          {fields.map((f) => (
-            <ConfigInput
-              key={f.name}
-              field={f}
-              value={values[f.name] ?? f.default ?? ""}
-              disabled={readOnly}
-              onChange={(v) => setValues((s) => ({ ...s, [f.name]: v }))}
-            />
-          ))}
+          <ConfigFields
+            fields={fields}
+            valueOf={(f) => values[f.name] ?? f.default ?? ""}
+            disabled={readOnly}
+            onChange={(name, v) => setValues((s) => ({ ...s, [name]: v }))}
+          />
           <p className="m-0 text-xs text-cyber-muted">
             <FormattedMessage defaultMessage="Saving re-applies the config and restarts the app." />
           </p>

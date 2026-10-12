@@ -4,65 +4,13 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { App, AppRegion } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
-import { configFieldDisplayLabel, parseComposeSchema, type ConfigField } from "lnvps-compose";
-import { DEPLOYMENT_NAME_RE, defaultConfigValues } from "../utils/deployment-form";
-
-export function ConfigInput({
-  field,
-  value,
-  onChange,
-  disabled,
-}: {
-  field: ConfigField;
-  value: string;
-  onChange: (v: string) => void;
-  /** Show the value without letting it be edited (see `LNVPS/web#54`). */
-  disabled?: boolean;
-}) {
-  const label = configFieldDisplayLabel(field);
-  if (field.type === "bool") {
-    return (
-      <label
-        className={
-          "flex items-center gap-2 text-sm text-cyber-text select-none " +
-          (disabled ? "opacity-60" : "cursor-pointer")
-        }
-      >
-        <input
-          type="checkbox"
-          checked={value === "true"}
-          disabled={disabled}
-          onChange={(e) => onChange(e.target.checked ? "true" : "false")}
-        />
-        {label}
-      </label>
-    );
-  }
-  return (
-    <label className={"flex flex-col gap-1 " + (disabled ? "opacity-60" : "")}>
-      <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
-        {label}
-        {field.required && <span className="text-cyber-danger"> *</span>}
-      </span>
-      {field.type === "file" ? (
-        <textarea
-          rows={4}
-          value={value}
-          disabled={disabled}
-          onChange={(e) => onChange(e.target.value)}
-          className="font-mono text-xs"
-        />
-      ) : (
-        <input
-          type={field.type === "int" ? "number" : "text"}
-          value={value}
-          disabled={disabled}
-          onChange={(e) => onChange(e.target.value)}
-        />
-      )}
-    </label>
-  );
-}
+import { parseComposeSchema } from "lnvps-compose";
+import { ConfigFields } from "./config-fields";
+import {
+  DEPLOYMENT_NAME_RE,
+  defaultConfigValues,
+  hasMissingRequired,
+} from "../utils/deployment-form";
 
 export default function DeployAppForm({ app }: { app: App }) {
   const login = useLogin();
@@ -99,8 +47,9 @@ export default function DeployAppForm({ app }: { app: App }) {
     nameValid && selectedRegion?.ingress_domain
       ? `${name}.${selectedRegion.ingress_domain}`
       : undefined;
-  const missingRequired = fields.some(
-    (f) => f.required && !values[f.name]?.trim(),
+  const missingRequired = hasMissingRequired(
+    fields,
+    (f) => values[f.name] ?? "",
   );
   const canDeploy = nameValid && regionId !== undefined && !missingRequired;
 
@@ -166,14 +115,11 @@ export default function DeployAppForm({ app }: { app: App }) {
 
       {fields.length > 0 && (
         <div className="flex flex-col gap-3 border-t border-cyber-border pt-4">
-          {fields.map((f) => (
-            <ConfigInput
-              key={f.name}
-              field={f}
-              value={values[f.name] ?? ""}
-              onChange={(v) => setValues((s) => ({ ...s, [f.name]: v }))}
-            />
-          ))}
+          <ConfigFields
+            fields={fields}
+            valueOf={(f) => values[f.name] ?? ""}
+            onChange={(name, v) => setValues((s) => ({ ...s, [name]: v }))}
+          />
         </div>
       )}
 

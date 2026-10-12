@@ -13,3 +13,10 @@ export function defaultConfigValues(
   }
   return out;
 }
+
+export function hasMissingRequired(
+  fields: ReadonlyArray<ConfigField>,
+  valueOf: (field: ConfigField) => string,
+): boolean {
+  return fields.some((f) => f.required && !valueOf(f).trim());
+}

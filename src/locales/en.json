@@ -347,6 +347,9 @@
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
   },
+  "5q3qC0": {
+    "defaultMessage": "Download"
+  },
   "5uQfFj": {
     "defaultMessage": "What is Nostr?"
   },
@@ -593,6 +596,9 @@
   "Ay7iFf": {
     "defaultMessage": "{v} read"
   },
+  "B1JEDn": {
+    "defaultMessage": "A backup copies your app's data to LNVPS storage. Download it to keep your own copy."
+  },
   "B4reHi": {
     "defaultMessage": "History Events"
   },
@@ -664,6 +670,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Get help from the team"
+  },
+  "Cnm0QA": {
+    "defaultMessage": "Queued"
   },
   "Cououe": {
     "defaultMessage": "Log in to deploy this app."
@@ -1124,6 +1133,9 @@
   "LwGAe6": {
     "defaultMessage": "Also on LNVPS"
   },
+  "M59JhX": {
+    "defaultMessage": "Manual"
+  },
   "M8ORKW": {
     "defaultMessage": "Setting up. This usually takes a minute. The endpoint appears once it is running."
   },
@@ -1448,6 +1460,9 @@
   "T1/en5": {
     "defaultMessage": "ID: {id}"
   },
+  "T3lqx5": {
+    "defaultMessage": "Backups"
+  },
   "T4VxQN": {
     "defaultMessage": "Loading…"
   },
@@ -1721,6 +1736,9 @@
   "YWjrby": {
     "defaultMessage": "Account alerts only, such as VM expiration. We never send marketing messages."
   },
+  "YXDqQm": {
+    "defaultMessage": "No backups yet."
+  },
   "YdQxfw": {
     "defaultMessage": "Contact Support"
   },
@@ -1861,6 +1879,9 @@
   },
   "cV0ZGf": {
     "defaultMessage": "Cost Breakdown"
+  },
+  "cXAlMR": {
+    "defaultMessage": "Scheduled"
   },
   "cZDydd": {
     "defaultMessage": "{count, plural, one {# relay implementation} other {# relay implementations}}, from {price} per month."
@@ -2561,6 +2582,9 @@
   "rF6EmI": {
     "defaultMessage": "Billing Details"
   },
+  "rMgF34": {
+    "defaultMessage": "Back up now"
+  },
   "rRJFl8": {
     "defaultMessage": "What do I need to connect?"
   },
@@ -2740,6 +2764,9 @@
   },
   "vWsXtg": {
     "defaultMessage": "Creating payment…"
+  },
+  "vXCeIi": {
+    "defaultMessage": "Failed"
   },
   "vahWHk": {
     "defaultMessage": "Yes, via CNAME. The certificate is issued automatically once DNS resolves."

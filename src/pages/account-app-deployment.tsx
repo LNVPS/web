@@ -17,6 +17,8 @@ import {
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import { ConfigFields } from "../components/config-fields";
+import AppBackups from "../components/app-backups";
+import { appSupportsBackups } from "../utils/app-backups";
 import { parseComposeSchema } from "lnvps-compose";
 import Spinner from "../components/spinner";
 import BytesSize from "../components/bytes";
@@ -1077,6 +1079,17 @@ export function AccountAppDeploymentPage() {
           />
         </SectionCard>
       )}
+
+      {app &&
+        deployment.billing_state !== "unpaid" &&
+        appSupportsBackups(app.compose) && (
+          <SectionCard title={<FormattedMessage defaultMessage="Backups" />}>
+            <AppBackups
+              deployment={deployment}
+              canStart={deployment.status === "running"}
+            />
+          </SectionCard>
+        )}
 
       {/* Resize. Hidden unless there is a paid period to prorate against —
           the API answers 400 otherwise, and quoting against a period nobody

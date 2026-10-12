@@ -1006,6 +1006,29 @@ export interface AppDeploymentUsage {
   volumes?: AppDeploymentVolumeUsage[];
 }
 
+export type AppBackupState = "pending" | "running" | "completed" | "failed";
+
+export interface AppBackup {
+  id: number;
+  run_id: string;
+  service: string;
+  method: "command" | "volume";
+  artifact: string;
+  state: AppBackupState;
+  size_bytes?: number | null;
+  message?: string | null;
+  scheduled: boolean;
+  created: string;
+  started?: string | null;
+  completed?: string | null;
+}
+
+export interface AppBackupDownload {
+  url: string;
+  filename: string;
+  expires: string;
+}
+
 /** A user's running instance of a catalog app. */
 export interface AppDeployment {
   id: number;
@@ -1531,6 +1554,43 @@ export class LNVpsApi {
       await this.#req(`/api/v1/app-deployments/${id}`, "PATCH", req),
     );
     return data;
+  }
+
+  async listAppBackups(id: number, limit = 100, offset = 0) {
+    const params = new URLSearchParams({
+      limit: limit.toString(),
+      offset: offset.toString(),
+    });
+    const { data } = await this.#handleResponse<PaginatedResponse<AppBackup>>(
+      await this.#req(`/api/v1/app-deployments/${id}/backups?${params}`, "GET"),
+    );
+    return data;
+  }
+
+  async startAppBackup(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<Array<AppBackup>>>(
+      await this.#req(`/api/v1/app-deployments/${id}/backups`, "POST"),
+    );
+    return data;
+  }
+
+  async getAppBackupDownload(id: number, backupId: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AppBackupDownload>>(
+      await this.#req(
+        `/api/v1/app-deployments/${id}/backups/${backupId}/download`,
+        "GET",
+      ),
+    );
+    return data;
+  }
+
+  async deleteAppBackup(id: number, backupId: number) {
+    await this.#handleResponse<ApiResponseBase>(
+      await this.#req(
+        `/api/v1/app-deployments/${id}/backups/${backupId}`,
+        "DELETE",
+      ),
+    );
   }
 
   async startAppDeployment(id: number) {

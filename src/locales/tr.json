@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "Hayır. Bir Nostr anahtarıyla kaydolun ve satoshi cinsinden ödeme yapın."
   },
+  "5lP56d": {
+    "defaultMessage": "Eklentiler"
+  },
   "5nYzR2": {
     "defaultMessage": "Çıkış bölgeleri"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} indirim. Yalnızca bu ödemeye uygulanır, sonraki yenilemeler normal fiyattan faturalandırılır."
   },
+  "9vwnaT": {
+    "defaultMessage": "Transfer: sınırsız"
+  },
   "A/UHKJ": {
     "defaultMessage": "Ekibe doğrudan ulaşın, size geri döneceğiz."
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "İşlem ücreti"
+  },
+  "DtYelJ": {
+    "defaultMessage": "Transfer"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "Port hızı"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "Bir yapılandırma dosyasını indirin veya QR kodunu tarayın ve tüneli başlatın. Her çıkış bölgesi için bir dosya vardır ve tümü aynı anahtarı paylaşır."
   },
+  "MchCHv": {
+    "defaultMessage": "Port hızı (Mbit/sn)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerinde Route96 yüklü olan bir VPS ile daha da ölçeklendirebilirsiniz."
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "Evet. CNAME kaydını, aktarım sunucunuzun ana bilgisayar adına yönlendirin. DNS çözümlemesi tamamlandığında, bu kayıt için otomatik olarak ayrı bir sertifika düzenleyeceğiz."
+  },
+  "N0nw1G": {
+    "defaultMessage": "Aylık transfer (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Onayla"
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "Abone olmayı görüntüle"
+  },
+  "OG77ID": {
+    "defaultMessage": "Port hızı: sınırsız"
   },
   "OJuBck": {
     "defaultMessage": "Şifresiz"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "Kalıcı depolama alanı, her röle için yukarıda belirtilen boyutlarda"
   },
+  "gMKnxm": {
+    "defaultMessage": "{min} ile {max} GB arasında"
+  },
   "gPsMm7": {
     "defaultMessage": "Bu İşçi'yi devreye alın ve şu rota için bir yapılandırma ekleyin: {route}"
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "Kaydedildi. Uygulama kısa süre içinde yeniden başlatılacak."
+  },
+  "hWDpJn": {
+    "defaultMessage": "{min} ile {max} Mbit/sn arasında"
   },
   "hX8VXF": {
     "defaultMessage": "Son 12 Ay İçindeki Aylık Çalışma Süresi"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "İşletim Sistemi"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "Bu sanal makine, özel bir şablon kullanır ve yükseltilemez. Yalnızca standart şablonlar kullanan sanal makineler yükseltmeyi destekler."
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# cihaz} other{# cihazlar}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Eski tarifeye göre kalan sürenin değeri:"
   },
+  "wMxOFC": {
+    "defaultMessage": "Port hızı: {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "Evet, her planda bir adet IPv4 ve bir adet IPv6 adresi bulunmaktadır."
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "dahil olmak üzere {amount} vergi"
-  },
-  "x0cZXf": {
-    "defaultMessage": "Yükseltme Mevcut Değil"
   },
   "xA8JVo": {
     "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."
+  },
+  "yc13cF": {
+    "defaultMessage": "Transfer: aylık {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "Oturum açmak 30 gün geçerli bir oturum oluşturur. Birinin ele geçirildiğini düşünüyorsanız tümünü iptal edin."

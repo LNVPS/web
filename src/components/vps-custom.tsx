@@ -17,7 +17,9 @@ import CostLabel from "./cost";
 import VpsPayButton from "./pay-button";
 import { formatPortSpeed } from "../utils/plan-limits";
 import { formatDiskInterface } from "../utils/spec-sheet";
+import { formatTransferAllowance } from "../utils/bandwidth";
 import { FilterButton } from "./button-filter";
+import ResourceSlider from "./resource-slider";
 import RegionName from "./region-name";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
@@ -121,66 +123,6 @@ const DISK_COPY: Record<DiskType, { title: string; blurb: ReactNode }> = {
   },
 };
 
-/** One compact resource row: label · slider · editable value. */
-function ResourceSlider({
-  label,
-  unit,
-  value,
-  min,
-  max,
-  step = 1,
-  onChange,
-}: {
-  label: ReactNode;
-  unit: string;
-  value: number;
-  min: number;
-  max: number;
-  step?: number;
-  onChange: (v: number) => void;
-}) {
-  const clamp = (v: number) => Math.max(min, Math.min(max, v));
-  return (
-    <div className="flex items-center gap-3">
-      <span className="w-16 shrink-0 text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
-        {label}
-      </span>
-      <input
-        type="range"
-        value={value}
-        onChange={(e) => onChange(e.target.valueAsNumber)}
-        min={min}
-        max={max}
-        step={step}
-        className="min-w-0 grow"
-      />
-      <div className="flex shrink-0 items-baseline justify-end gap-1.5">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => {
-            const v = parseInt(e.target.value);
-            if (!isNaN(v)) onChange(clamp(v));
-          }}
-          min={min}
-          max={max}
-          // Inline padding/border override the higher-specificity global
-          // `input` rule; width sizes to the digit count (4-digit floor).
-          style={{
-            width: `${Math.max(4, String(value).length) + 1}ch`,
-            padding: 0,
-            border: "none",
-          }}
-          className="bg-transparent text-right text-lg leading-none text-cyber-text-bright tabular-nums focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-        />
-        <span className="w-10 text-[0.65rem] uppercase tracking-wider text-cyber-muted">
-          {unit}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export function VpsCustomOrder({
   templates,
 }: {
@@ -238,8 +180,10 @@ export function VpsCustomOrder({
   const [disk, setDisk] = useState(
     Math.floor((preferredDisk(params.disks)?.min_disk ?? GiB) / GiB),
   );
-  const [ip4, setIp4] = useState(params.min_ip4);
-  const [ip6, setIp6] = useState(params.min_ip6);
+  const ip4 = params.min_ip4;
+  const ip6 = params.min_ip6;
+  const transferGb = params.transfer?.default;
+  const networkMbps = params.network?.default;
 
   const [price, setPrice] = useState<VmCustomPrice>();
 
@@ -268,8 +212,6 @@ export function VpsCustomOrder({
       setDiskType(disk0);
       setRam(Math.floor((params.min_memory ?? GiB) / GiB));
       setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
-      setIp4(params.min_ip4);
-      setIp6(params.min_ip6);
     }
   }, [params]);
 
@@ -295,11 +237,24 @@ export function VpsCustomOrder({
           disk_interface: diskType?.disk_interface ?? DiskInterface.PCIe,
           ip4_count: ip4,
           ip6_count: ip6,
+          transfer_gb: transferGb,
+          network_mbps: networkMbps,
         })
         .then(setPrice);
     }, 500);
     return () => clearTimeout(t);
-  }, [region, cpu, ram, disk, diskType, ip4, ip6, params]);
+  }, [
+    region,
+    cpu,
+    ram,
+    disk,
+    diskType,
+    ip4,
+    ip6,
+    transferGb,
+    networkMbps,
+    params,
+  ]);
 
   if (templates.length == 0) return;
 
@@ -313,7 +268,7 @@ export function VpsCustomOrder({
     .join(" ");
   // Absent on an uncapped plan, in which case the manifest simply omits it
   // rather than claiming a speed the API does not state.
-  const portSpeed = formatPortSpeed(params.limits?.network_mbps);
+  const portSpeed = formatPortSpeed(networkMbps ?? params.limits?.network_mbps);
 
   return (
     <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
@@ -446,26 +401,6 @@ export function VpsCustomOrder({
             max={Math.floor((diskType?.max_disk ?? 0) / GiB)}
             onChange={setDisk}
           />
-          {params.max_ip4 > params.min_ip4 && (
-            <ResourceSlider
-              label={<FormattedMessage defaultMessage="IPv4" />}
-              unit="IPs"
-              value={ip4}
-              min={params.min_ip4}
-              max={params.max_ip4}
-              onChange={setIp4}
-            />
-          )}
-          {params.max_ip6 > params.min_ip6 && (
-            <ResourceSlider
-              label={<FormattedMessage defaultMessage="IPv6" />}
-              unit="IPs"
-              value={ip6}
-              min={params.min_ip6}
-              max={params.max_ip6}
-              onChange={setIp6}
-            />
-          )}
         </div>
       </div>
 
@@ -475,8 +410,10 @@ export function VpsCustomOrder({
           <div className="font-mono text-xs text-cyber-muted tabular-nums">
             {cpu} vCPU · {ram} GB · {disk} {diskUnit} · {ip4} IPv4
             {ip6 > 0 && ` + ${ip6} IPv6`}
-            {portSpeed && ` · ${portSpeed} port`} @{" "}
-            <RegionName region={params.region} className="gap-1" />
+            {portSpeed && ` · ${portSpeed} port`}
+            {transferGb !== undefined &&
+              ` · ${formatTransferAllowance(transferGb)}/mo`}{" "}
+            @ <RegionName region={params.region} className="gap-1" />
           </div>
           {price && (
             <div className="text-xl leading-none text-cyber-text-bright">
@@ -505,8 +442,11 @@ export function VpsCustomOrder({
               cost_plan,
               // Copied onto the VM at order time, so the confirmation page
               // states the same caps the built machine will run under.
-              transfer_gb: params.transfer_gb,
-              limits: params.limits,
+              transfer_gb: transferGb ?? params.transfer_gb,
+              limits: {
+                ...params.limits,
+                network_mbps: networkMbps ?? params.limits?.network_mbps,
+              },
             }}
           />
         </div>

@@ -1,6 +1,22 @@
 import { useNavigate } from "react-router-dom";
-import { CpuArch, LNVpsApi, VmOsImage, VmTemplate } from "../../api";
-import { useEffect, useState } from "react";
+import {
+  CpuArch,
+  LNVpsApi,
+  VmCustomPrice,
+  VmCustomTemplateParams,
+  VmOsImage,
+  VmTemplate,
+} from "../../api";
+import { useEffect, useMemo, useState } from "react";
+import ResourceSlider from "../../components/resource-slider";
+import {
+  OrderAddons,
+  addonsFor,
+  hasAddons,
+  NETWORK_STEP_MBPS,
+  TRANSFER_STEP_GB,
+  withAddons,
+} from "../../utils/order-addons";
 import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
 import { AsyncButton } from "../../components/button";
@@ -71,13 +87,133 @@ function Step({
   );
 }
 
-export default function OrderVmPage({ template }: { template: VmTemplate }) {
+function AddonsPanel({
+  plan,
+  addons,
+  onChange,
+}: {
+  plan: VmCustomTemplateParams;
+  addons: OrderAddons;
+  onChange: (addons: OrderAddons) => void;
+}) {
+  return (
+    <div className="overflow-hidden rounded-sm border border-cyber-border bg-cyber-panel">
+      <div className="flex items-baseline gap-2 border-b border-cyber-border bg-cyber-panel-light px-4 py-2.5">
+        <span className="text-sm text-cyber-text-bright">
+          <FormattedMessage defaultMessage="Network" />
+        </span>
+        <span className="text-[0.6rem] uppercase tracking-[0.25em] text-cyber-muted">
+          <FormattedMessage defaultMessage="Add-ons" />
+        </span>
+      </div>
+      <div className="flex flex-col gap-3 px-4 py-4">
+        {plan.max_ip4 > plan.min_ip4 && (
+          <ResourceSlider
+            label={<FormattedMessage defaultMessage="IPv4" />}
+            unit="IPs"
+            value={addons.ip4}
+            min={plan.min_ip4}
+            max={plan.max_ip4}
+            onChange={(ip4) => onChange({ ...addons, ip4 })}
+          />
+        )}
+        {plan.max_ip6 > plan.min_ip6 && (
+          <ResourceSlider
+            label={<FormattedMessage defaultMessage="IPv6" />}
+            unit="IPs"
+            value={addons.ip6}
+            min={plan.min_ip6}
+            max={plan.max_ip6}
+            onChange={(ip6) => onChange({ ...addons, ip6 })}
+          />
+        )}
+        {plan.transfer &&
+          addons.transferGb !== undefined &&
+          plan.transfer.max > plan.transfer.min && (
+            <ResourceSlider
+              label={<FormattedMessage defaultMessage="Transfer" />}
+              unit="GB/mo"
+              value={addons.transferGb}
+              min={plan.transfer.min}
+              max={plan.transfer.max}
+              step={TRANSFER_STEP_GB}
+              onChange={(transferGb) => onChange({ ...addons, transferGb })}
+            />
+          )}
+        {plan.network &&
+          addons.networkMbps !== undefined &&
+          plan.network.max > plan.network.min && (
+            <ResourceSlider
+              label={<FormattedMessage defaultMessage="Port speed" />}
+              unit="Mbps"
+              value={addons.networkMbps}
+              min={plan.network.min}
+              max={plan.network.max}
+              step={NETWORK_STEP_MBPS}
+              onChange={(networkMbps) => onChange({ ...addons, networkMbps })}
+            />
+          )}
+      </div>
+    </div>
+  );
+}
+
+export default function OrderVmPage({
+  template: baseTemplate,
+}: {
+  template: VmTemplate;
+}) {
   const login = useLogin();
   const navigate = useNavigate();
   const [useImage, setUseImage] = useState(-1);
   const [useSshKey, setUseSshKey] = useState(-1);
   const [images, setImages] = useState<Array<VmOsImage>>([]);
   const [orderError, setOrderError] = useState("");
+  const [plan, setPlan] = useState<VmCustomTemplateParams>();
+  const [addons, setAddons] = useState<OrderAddons>(() =>
+    addonsFor(baseTemplate),
+  );
+  const [price, setPrice] = useState<VmCustomPrice>();
+
+  const pricingId = baseTemplate?.pricing_id;
+  useEffect(() => {
+    if (!pricingId) return;
+    new LNVpsApi(ApiUrl, undefined).listOffers().then((offers) => {
+      const found = offers.custom_template?.find((p) => p.id === pricingId);
+      setPlan(found);
+      if (found) setAddons(addonsFor(baseTemplate, found));
+    });
+  }, [pricingId, baseTemplate]);
+
+  useEffect(() => {
+    if (!pricingId || !plan) return;
+    const t = setTimeout(() => {
+      new LNVpsApi(ApiUrl, undefined)
+        .customPrice({
+          pricing_id: pricingId,
+          cpu: baseTemplate.cpu,
+          memory: baseTemplate.memory,
+          disk: baseTemplate.disk_size,
+          disk_type: baseTemplate.disk_type,
+          disk_interface: baseTemplate.disk_interface,
+          ip4_count: addons.ip4,
+          ip6_count: addons.ip6,
+          transfer_gb: addons.transferGb,
+          network_mbps: addons.networkMbps,
+        })
+        .then(setPrice)
+        .catch(() => setPrice(undefined));
+    }, 500);
+    return () => clearTimeout(t);
+  }, [pricingId, plan, baseTemplate, addons]);
+
+  const template = useMemo(
+    () =>
+      baseTemplate?.pricing_id
+        ? withAddons(baseTemplate, addons, price)
+        : baseTemplate,
+    [baseTemplate, addons, price],
+  );
 
   // Fetch images without auth (public endpoint) to reduce signer burden.
   // When the template pins a CPU architecture, filter to compatible images so
@@ -114,6 +250,8 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
               pricing_id: template.pricing_id!,
               ip4_count: template.ip4_count,
               ip6_count: template.ip6_count,
+              transfer_gb: template.transfer_gb,
+              network_mbps: template.limits?.network_mbps,
             },
             useImage,
             useSshKey,
@@ -156,6 +294,10 @@ export default function OrderVmPage({ template }: { template: VmTemplate }) {
       {/* The machine itself, caps included — everything the buyer is agreeing
           to, before a single choice is asked of them. */}
       <SpecSheet template={template} />
+
+      {plan && hasAddons(plan) && (
+        <AddonsPanel plan={plan} addons={addons} onChange={setAddons} />
+      )}
 
       {login ? (
         <>

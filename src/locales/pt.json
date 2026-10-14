@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "Não. Registe-se com uma chave Nostr e efetue o pagamento em satoshis."
   },
+  "5lP56d": {
+    "defaultMessage": "Complementos"
+  },
   "5nYzR2": {
     "defaultMessage": "Regiões de saída"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} Oferta. Aplica-se apenas a este pagamento, renovações posteriores serão cobradas pelo preço normal."
   },
+  "9vwnaT": {
+    "defaultMessage": "Transferência: ilimitada"
+  },
   "A/UHKJ": {
     "defaultMessage": "Fale diretamente com a equipe, retornaremos para você."
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "Taxa de processamento"
+  },
+  "DtYelJ": {
+    "defaultMessage": "Transferência"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "Velocidade da porta"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "Descarregue uma configuração ou leia o seu código QR e ative o túnel. Um ficheiro por região de saída, todos partilhando a mesma chave."
   },
+  "MchCHv": {
+    "defaultMessage": "Velocidade da porta (Mbit/s)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} no total. Para um servidor de mídia pessoal, isso é suficiente; se precisar de mais, pode instalar o Route96 num VPS e aumentar a capacidade conforme necessário."
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "Sim. Configure um registro CNAME para que ele aponte para o nome de host do seu servidor de retransmissão. Emitiremos automaticamente um certificado separado assim que o DNS for resolvido."
+  },
+  "N0nw1G": {
+    "defaultMessage": "Transferência mensal (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Confirme."
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "Ver assinatura"
+  },
+  "OG77ID": {
+    "defaultMessage": "Velocidade da porta: sem limite"
   },
   "OJuBck": {
     "defaultMessage": "Sem necessidade de senha"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "Armazenamento persistente, dimensionado por relé, conforme indicado acima."
   },
+  "gMKnxm": {
+    "defaultMessage": "Entre {min} e {max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "Implemente este Worker e adicione uma rota para {route}."
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "Guardado. A aplicação será reiniciada em breve."
+  },
+  "hWDpJn": {
+    "defaultMessage": "Entre {min} e {max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "Tempo de atividade mensal (últimos 12 meses)"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "SO"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "Esta máquina virtual utiliza um modelo personalizado e não pode ser atualizada. Apenas as máquinas virtuais que utilizam modelos padrão suportam atualizações."
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# dispositivo} other{# dispositivos}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Valor do tempo restante à tarifa antiga:"
   },
+  "wMxOFC": {
+    "defaultMessage": "Velocidade da porta: {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "Sim, cada plano inclui um endereço IPv4 e um endereço IPv6."
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "incluindo {amount} de imposto"
-  },
-  "x0cZXf": {
-    "defaultMessage": "Atualização indisponível."
   },
   "xA8JVo": {
     "defaultMessage": "Um protocolo para armazenar e recuperar arquivos identificados pelo seu hash, projetado para funcionar com o Nostr. O NIP-96 é a especificação mais antiga para armazenamento de arquivos via HTTP, o Route96 suporta ambos."
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutos. O serviço é ativado após a confirmação do pagamento."
+  },
+  "yc13cF": {
+    "defaultMessage": "Transferência: {amount} por mês"
   },
   "yfhNX4": {
     "defaultMessage": "Iniciar sessão cria uma sessão válida durante 30 dias. Revogue todas se achar que alguma foi exposta."

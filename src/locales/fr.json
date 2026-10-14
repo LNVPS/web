@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "Non. Inscrivez-vous en utilisant une clé Nostr et effectuez le paiement en satoshis."
   },
+  "5lP56d": {
+    "defaultMessage": "Options"
+  },
   "5nYzR2": {
     "defaultMessage": "Régions de sortie"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} Remise. S'applique uniquement à ce paiement, les renouvellements ultérieurs seront facturés au tarif normal."
   },
+  "9vwnaT": {
+    "defaultMessage": "Transfert : illimité"
+  },
   "A/UHKJ": {
     "defaultMessage": "Contactez l'équipe directement, nous vous répondrons."
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "Frais de traitement."
+  },
+  "DtYelJ": {
+    "defaultMessage": "Transfert"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "Vitesse du port"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "Téléchargez une configuration, ou scannez son code QR, puis établissez le tunnel. Un fichier par région de sortie, tous partageant la même clé."
   },
+  "MchCHv": {
+    "defaultMessage": "Vitesse du port (Mbit/s)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} au total. Pour un serveur multimédia personnel, c’est suffisant ; si vous avez besoin de plus de ressources, vous pouvez installer Route96 sur un VPS et augmenter la capacité en fonction de vos besoins."
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "Oui. Configurez un enregistrement CNAME qui pointe vers le nom d’hôte de votre serveur relais. Nous émettons automatiquement un certificat distinct une fois que la résolution DNS est effectuée."
+  },
+  "N0nw1G": {
+    "defaultMessage": "Transfert mensuel (Go)"
   },
   "N2IrpM": {
     "defaultMessage": "Confirmer"
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "Consulter l’abonnement"
+  },
+  "OG77ID": {
+    "defaultMessage": "Vitesse du port : illimitée"
   },
   "OJuBck": {
     "defaultMessage": "Sans mot de passe"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "Mémoire persistante, capacité par relais, comme indiqué ci-dessus."
   },
+  "gMKnxm": {
+    "defaultMessage": "Entre {min} et {max} Go"
+  },
   "gPsMm7": {
     "defaultMessage": "Déployez ce worker et ajoutez une route pour {route}."
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "Enregistré. L'application redémarrera sous peu."
+  },
+  "hWDpJn": {
+    "defaultMessage": "Entre {min} et {max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "Taux de disponibilité mensuel (sur les 12 derniers mois)"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "système d’exploitation"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "Cette machine virtuelle utilise un modèle personnalisé et ne peut pas être mise à niveau. Seules les machines virtuelles utilisant des modèles standard prennent en charge les mises à niveau."
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# appareil} other{# appareils}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Valeur du temps restant au tarif précédent :"
   },
+  "wMxOFC": {
+    "defaultMessage": "Vitesse du port : {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "Oui, chaque forfait comprend une adresse IPv4 et une adresse IPv6."
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "y compris une taxe de {amount}"
-  },
-  "x0cZXf": {
-    "defaultMessage": "Mise à niveau non disponible."
   },
   "xA8JVo": {
     "defaultMessage": "Il s’agit d’un protocole permettant de stocker et de récupérer des fichiers en utilisant leur hachage, conçu pour fonctionner avec Nostr. La norme NIP-96 est la spécification plus ancienne pour le stockage de fichiers via HTTP ; Route96 prend en charge les deux normes."
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."
+  },
+  "yc13cF": {
+    "defaultMessage": "Transfert : {amount} par mois"
   },
   "yfhNX4": {
     "defaultMessage": "La connexion crée une session valable 30 jours. Révoquez-les toutes si vous pensez que l'une d'elles a été exposée."

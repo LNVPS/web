@@ -2,10 +2,21 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
   AccountDetail,
+  LNVpsApi,
+  VmCustomTemplateParams,
   VmInstance,
   VmUpgradeRequest,
   VmUpgradeQuote,
 } from "../api";
+import { ApiUrl } from "../const";
+import {
+  bandwidthUpgradeRange,
+  formatTransferAllowance,
+  upgradePlan,
+  withBandwidthUpgrade,
+} from "../utils/bandwidth";
+import { formatPortSpeed } from "../utils/plan-limits";
+import { NETWORK_STEP_MBPS, TRANSFER_STEP_GB } from "../utils/order-addons";
 import { accountTaxRate, processingFeeEstimate } from "../utils";
 import { AsyncButton } from "../components/button";
 import useLogin from "../hooks/login";
@@ -32,13 +43,20 @@ export default function VmUpgradePage() {
   // Upgrade payments live on the VM's subscription; needed to poll settlement.
   const subscriptionId = state?.subscription_id;
 
+  const [plans, setPlans] = useState<Array<VmCustomTemplateParams>>([]);
+  useEffect(() => {
+    new LNVpsApi(ApiUrl ?? "", undefined)
+      .listOffers()
+      .then((o) => setPlans(o.custom_template ?? []))
+      .catch((e) => console.error("Failed to load plans:", e));
+  }, []);
+
   useEffect(() => {
     login?.api
       ?.getAccount()
       .then(setAccount)
       .catch((e) => console.error("Failed to load account:", e));
   }, [login?.api]);
-
 
   // Only methods the upgrade endpoint can charge (Lightning, cards). NWC,
   // LNURL and saved methods have no interactive upgrade-payment path.
@@ -67,6 +85,11 @@ export default function VmUpgradePage() {
     (state?.template.disk_size ?? 20 * 1024 * 1024 * 1024) /
       (1024 * 1024 * 1024),
   );
+  const currentTransferGb = state?.template.transfer_gb;
+  const currentNetworkMbps = state?.template.limits?.network_mbps;
+  const [upgradeTransferGb, setUpgradeTransferGb] = useState(currentTransferGb);
+  const [upgradeNetworkMbps, setUpgradeNetworkMbps] =
+    useState(currentNetworkMbps);
 
   if (!state) {
     return (
@@ -76,22 +99,20 @@ export default function VmUpgradePage() {
     );
   }
 
-  const isStandardTemplate = !state?.template.pricing_id;
-
-  if (!isStandardTemplate) {
-    return (
-      <div className="flex flex-col gap-4">
-        <div className="bg-cyber-warning/20 text-cyber-warning p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-2">
-            <FormattedMessage defaultMessage="Upgrade Not Available" />
-          </h3>
-          <p>
-            <FormattedMessage defaultMessage="This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades." />
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const plan = upgradePlan(plans, state.template);
+  const transferRange = bandwidthUpgradeRange(
+    plan?.transfer,
+    currentTransferGb,
+  );
+  const networkRange = bandwidthUpgradeRange(plan?.network, currentNetworkMbps);
+  const transferUp =
+    transferRange !== undefined &&
+    upgradeTransferGb !== undefined &&
+    upgradeTransferGb > transferRange.current;
+  const networkUp =
+    networkRange !== undefined &&
+    upgradeNetworkMbps !== undefined &&
+    upgradeNetworkMbps > networkRange.current;
 
   const currentCpu = state.template.cpu;
   const currentMemoryGB = state.template.memory / (1024 * 1024 * 1024);
@@ -103,7 +124,9 @@ export default function VmUpgradePage() {
     upgradeDisk >= currentDiskGB &&
     (upgradeCpu > currentCpu ||
       upgradeMemory > currentMemoryGB ||
-      upgradeDisk > currentDiskGB);
+      upgradeDisk > currentDiskGB ||
+      transferUp ||
+      networkUp);
 
   async function getQuote() {
     if (!login?.api || !hasValidUpgrade) return;
@@ -111,15 +134,9 @@ export default function VmUpgradePage() {
     setError(undefined);
     setQuote(undefined);
     try {
-      const request: VmUpgradeRequest = {};
-      if (upgradeCpu > currentCpu) request.cpu = upgradeCpu;
-      if (upgradeMemory > currentMemoryGB)
-        request.memory = upgradeMemory * 1024 * 1024 * 1024;
-      if (upgradeDisk > currentDiskGB)
-        request.disk = upgradeDisk * 1024 * 1024 * 1024;
       const result = await login.api.getVmUpgradeQuote(
         state!.id,
-        request,
+        getUpgradeRequest(),
         selectedMethod || undefined,
       );
       setQuote(result);
@@ -137,7 +154,13 @@ export default function VmUpgradePage() {
       request.memory = upgradeMemory * 1024 * 1024 * 1024;
     if (upgradeDisk > currentDiskGB)
       request.disk = upgradeDisk * 1024 * 1024 * 1024;
-    return request;
+    return withBandwidthUpgrade(
+      request,
+      transferRange ? upgradeTransferGb : undefined,
+      currentTransferGb,
+      networkRange ? upgradeNetworkMbps : undefined,
+      currentNetworkMbps,
+    );
   }
 
   // The upgrade charge is a payment on the VM's subscription.
@@ -208,6 +231,28 @@ export default function VmUpgradePage() {
                   type: state.template.disk_type.toUpperCase(),
                 }}
               />
+            </div>
+            <div>
+              {currentTransferGb !== undefined && currentTransferGb > 0 ? (
+                <FormattedMessage
+                  defaultMessage="Transfer: {amount} per month"
+                  values={{
+                    amount: formatTransferAllowance(currentTransferGb),
+                  }}
+                />
+              ) : (
+                <FormattedMessage defaultMessage="Transfer: unmetered" />
+              )}
+            </div>
+            <div>
+              {formatPortSpeed(currentNetworkMbps) ? (
+                <FormattedMessage
+                  defaultMessage="Port speed: {speed}"
+                  values={{ speed: formatPortSpeed(currentNetworkMbps) }}
+                />
+              ) : (
+                <FormattedMessage defaultMessage="Port speed: uncapped" />
+              )}
             </div>
           </div>
         </div>
@@ -282,6 +327,72 @@ export default function VmUpgradePage() {
                 />
               </small>
             </div>
+
+            {transferRange && (
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  <FormattedMessage defaultMessage="Monthly transfer (GB)" />
+                </label>
+                <input
+                  type="number"
+                  min={transferRange.current}
+                  max={transferRange.max}
+                  step={TRANSFER_STEP_GB}
+                  value={upgradeTransferGb}
+                  onChange={(e) =>
+                    setUpgradeTransferGb(
+                      Math.min(
+                        transferRange.max,
+                        parseInt(e.target.value) || transferRange.current,
+                      ),
+                    )
+                  }
+                  className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
+                />
+                <small className="text-cyber-muted">
+                  <FormattedMessage
+                    defaultMessage="Between {min} and {max} GB"
+                    values={{
+                      min: transferRange.current,
+                      max: transferRange.max,
+                    }}
+                  />
+                </small>
+              </div>
+            )}
+
+            {networkRange && (
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  <FormattedMessage defaultMessage="Port speed (Mbit/s)" />
+                </label>
+                <input
+                  type="number"
+                  min={networkRange.current}
+                  max={networkRange.max}
+                  step={NETWORK_STEP_MBPS}
+                  value={upgradeNetworkMbps}
+                  onChange={(e) =>
+                    setUpgradeNetworkMbps(
+                      Math.min(
+                        networkRange.max,
+                        parseInt(e.target.value) || networkRange.current,
+                      ),
+                    )
+                  }
+                  className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
+                />
+                <small className="text-cyber-muted">
+                  <FormattedMessage
+                    defaultMessage="Between {min} and {max} Mbit/s"
+                    values={{
+                      min: networkRange.current,
+                      max: networkRange.max,
+                    }}
+                  />
+                </small>
+              </div>
+            )}
           </div>
         </div>
       </div>

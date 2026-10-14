@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "Nein. Registrieren Sie sich mit einem Nostr-Schlüssel und zahlen Sie in Satoshis."
   },
+  "5lP56d": {
+    "defaultMessage": "Zusatzoptionen"
+  },
   "5nYzR2": {
     "defaultMessage": "Exit-Regionen"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} Rabatt. Gilt nur für diese Zahlung, spätere Verlängerungen werden zum regulären Preis abgerechnet."
   },
+  "9vwnaT": {
+    "defaultMessage": "Transfer: unbegrenzt"
+  },
   "A/UHKJ": {
     "defaultMessage": "Kontaktiere das Team direkt, wir melden uns bei dir."
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "Bearbeitungsgebühr"
+  },
+  "DtYelJ": {
+    "defaultMessage": "Transfer"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "Portgeschwindigkeit"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "Lade eine Konfiguration herunter oder scanne den zugehörigen QR-Code und bringe den Tunnel hoch. Eine Datei pro Exit-Region, alle teilen sich denselben Schlüssel."
   },
+  "MchCHv": {
+    "defaultMessage": "Portgeschwindigkeit (Mbit/s)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} insgesamt. Für einen privaten Medienserver ist das ausreichend; wenn Sie mehr benötigen, können Sie durch die Installation von Route96 auf einem virtuellen Privaten Server (VPS) die Kapazität weiter ausbauen."
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "Ja. Richten Sie einen CNAME-Eintrag ein, der auf den Hostnamen Ihres Relay-Servers verweist. Sobald die DNS-Auflösung erfolgt ist, stellen wir automatisch ein separates Zertifikat aus."
+  },
+  "N0nw1G": {
+    "defaultMessage": "Monatlicher Transfer (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Bestätigen"
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "Abonnement anzeigen"
+  },
+  "OG77ID": {
+    "defaultMessage": "Portgeschwindigkeit: unbegrenzt"
   },
   "OJuBck": {
     "defaultMessage": "Ohne Passwort"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "Dauerhafter Speicher, die Größe wird pro Relais oben angegeben."
   },
+  "gMKnxm": {
+    "defaultMessage": "Zwischen {min} und {max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "Setzen Sie diesen Worker ein und fügen Sie eine Route für {route} hinzu."
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "Gespeichert. Die App wird in Kürze neu gestartet."
+  },
+  "hWDpJn": {
+    "defaultMessage": "Zwischen {min} und {max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "Monatliche Verfügbarkeit (letzte 12 Monate)"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "Betriebssystem"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "Diese virtuelle Maschine verwendet eine benutzerdefinierte Vorlage und kann nicht aktualisiert werden. Nur virtuelle Maschinen, die Standardvorlagen verwenden, unterstützen Aktualisierungen."
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# Gerät} other{# Geräte}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Wert der verbleibenden Zeit zum alten Tarif:"
   },
+  "wMxOFC": {
+    "defaultMessage": "Portgeschwindigkeit: {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "Ja, in jedem Tarif ist jeweils eine IPv4- und eine IPv6-Adresse enthalten."
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "einschließlich {amount} Mehrwertsteuer"
-  },
-  "x0cZXf": {
-    "defaultMessage": "Upgrade nicht verfügbar."
   },
   "xA8JVo": {
     "defaultMessage": "Ein Protokoll zum Speichern und Abrufen von Dateien, das auf deren Hash-Wert basiert und für die Verwendung mit Nostr entwickelt wurde. NIP-96 ist die ältere HTTP-Spezifikation für die Dateispeicherung, Route96 unterstützt beide."
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minuten. Die Bereitstellung erfolgt, sobald die Zahlung abgeschlossen ist."
+  },
+  "yc13cF": {
+    "defaultMessage": "Transfer: {amount} pro Monat"
   },
   "yfhNX4": {
     "defaultMessage": "Beim Anmelden entsteht eine Sitzung, die 30 Tage gültig bleibt. Widerrufen Sie alle, wenn Sie vermuten, dass eine davon offengelegt wurde."

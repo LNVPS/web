@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "No. Sign up with a Nostr key and pay in sats."
   },
+  "5lP56d": {
+    "defaultMessage": "Add-ons"
+  },
   "5nYzR2": {
     "defaultMessage": "Exit regions"
   },
@@ -551,6 +554,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} off. Applies to this payment only. Later renewals bill at the normal price."
   },
+  "9vwnaT": {
+    "defaultMessage": "Transfer: unmetered"
+  },
   "A/UHKJ": {
     "defaultMessage": "Reach the team directly and we'll get back to you."
   },
@@ -745,6 +751,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "Processing fee"
+  },
+  "DtYelJ": {
+    "defaultMessage": "Transfer"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "Port speed"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1157,6 +1169,9 @@
   "MZQ6io": {
     "defaultMessage": "Download a config, or scan its QR code, and bring the tunnel up. One file per exit region, all sharing the same key."
   },
+  "MchCHv": {
+    "defaultMessage": "Port speed (Mbit/s)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
@@ -1171,6 +1186,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "Yes. Point a CNAME at your relay's hostname. We issue a separate certificate for it automatically once DNS resolves."
+  },
+  "N0nw1G": {
+    "defaultMessage": "Monthly transfer (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
@@ -1219,6 +1237,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "View subscription"
+  },
+  "OG77ID": {
+    "defaultMessage": "Port speed: uncapped"
   },
   "OJuBck": {
     "defaultMessage": "Passwordless"
@@ -2084,6 +2105,9 @@
   "gL1jHz": {
     "defaultMessage": "Persistent storage, sized per relay above"
   },
+  "gMKnxm": {
+    "defaultMessage": "Between {min} and {max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
   },
@@ -2128,6 +2152,9 @@
   },
   "hADOUq": {
     "defaultMessage": "Saved. The app will restart shortly."
+  },
+  "hWDpJn": {
+    "defaultMessage": "Between {min} and {max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
@@ -2446,9 +2473,6 @@
   },
   "o0jcye": {
     "defaultMessage": "OS"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "This VM uses a custom template and cannot be upgraded. Only VMs using standard templates support upgrades."
   },
   "o5s71l": {
     "defaultMessage": "{count, plural, one {# device} other {# devices}}"
@@ -2813,6 +2837,9 @@
   "wLwJ9Q": {
     "defaultMessage": "Value of remaining time at old rate:"
   },
+  "wMxOFC": {
+    "defaultMessage": "Port speed: {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "Yes, one IPv4 and one IPv6 on every plan."
   },
@@ -2836,9 +2863,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "including {amount} tax"
-  },
-  "x0cZXf": {
-    "defaultMessage": "Upgrade Not Available"
   },
   "xA8JVo": {
     "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec, and Route96 speaks both."
@@ -2911,6 +2935,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."
+  },
+  "yc13cF": {
+    "defaultMessage": "Transfer: {amount} per month"
   },
   "yfhNX4": {
     "defaultMessage": "Signing in creates a session that stays valid for 30 days. Revoke them all if you think one has been exposed."

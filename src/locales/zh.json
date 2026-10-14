@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "请使用您的 Nostr 密钥注册，并以聪（sats）支付。"
   },
+  "5lP56d": {
+    "defaultMessage": "附加项"
+  },
   "5nYzR2": {
     "defaultMessage": "退出区域"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} 优惠。仅适用于本次付款，后续续订将按正常价格计费。"
   },
+  "9vwnaT": {
+    "defaultMessage": "流量：不限"
+  },
   "A/UHKJ": {
     "defaultMessage": "直接联系团队，我们会尽快回复您。"
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "手续费。"
+  },
+  "DtYelJ": {
+    "defaultMessage": "流量"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "端口速率"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "下载一个配置文件，或扫描其二维码，然后启动隧道。每个出口区域一个文件，全部共享同一个密钥。"
   },
+  "MchCHv": {
+    "defaultMessage": "端口速率（Mbit/s）"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} 总的来说，对于个人媒体服务器而言，目前的配置已经足够；如果需要更高的性能，您可以自行安装 Route96 到一个虚拟专用服务器（VPS）上，以进一步提升。"
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "是的。将一个 CNAME 指向您的中继服务器的主机名。一旦 DNS 解析成功，我们会自动为其颁发单独的证书。"
+  },
+  "N0nw1G": {
+    "defaultMessage": "每月流量（GB）"
   },
   "N2IrpM": {
     "defaultMessage": "确认。"
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "查看订阅信息"
+  },
+  "OG77ID": {
+    "defaultMessage": "端口速率：不限速"
   },
   "OJuBck": {
     "defaultMessage": "无需密码"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "持久性存储，每个中继设备所需的存储空间如上所述。"
   },
+  "gMKnxm": {
+    "defaultMessage": "{min} 至 {max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "已保存。应用即将重启。"
+  },
+  "hWDpJn": {
+    "defaultMessage": "{min} 至 {max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "月度正常运行时间（过去 12 个月）"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "操作系统"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "此虚拟机使用了自定义模板，无法进行升级。只有使用标准模板的虚拟机才支持升级。"
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# 设备} other{# 设备}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "剩余时间按原价格计算的价值："
   },
+  "wMxOFC": {
+    "defaultMessage": "端口速率：{speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "是的，每个套餐都包含一个 IPv4 地址和一个 IPv6 地址。"
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "包括{amount}的税费"
-  },
-  "x0cZXf": {
-    "defaultMessage": "无法升级。"
   },
   "xA8JVo": {
     "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范，Route96 同时支持这两种规范。"
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "几分钟。付款完成后，系统会立即进行处理。"
+  },
+  "yc13cF": {
+    "defaultMessage": "流量：每月 {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "登录会创建一个有效期为 30 天的会话。如果您认为某个会话已泄露，请撤销全部会话。"

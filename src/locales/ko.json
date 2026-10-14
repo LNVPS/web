@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "아니요. 노스트르 키를 사용하여 가입하고 사토시로 결제하세요."
   },
+  "5lP56d": {
+    "defaultMessage": "추가 옵션"
+  },
   "5nYzR2": {
     "defaultMessage": "출구 지역"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} 할인. 이번 결제에만 적용됩니다. 이후 갱신 시 정상 요금이 청구됩니다."
   },
+  "9vwnaT": {
+    "defaultMessage": "전송량: 무제한"
+  },
   "A/UHKJ": {
     "defaultMessage": "팀에 직접 연락하세요, 곧 답변드리겠습니다."
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "처리 수수료"
+  },
+  "DtYelJ": {
+    "defaultMessage": "전송량"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "포트 속도"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "설정 파일을 다운로드하거나 QR 코드를 스캔하여 터널을 활성화하세요. 종료 리전(exit region)당 파일 하나씩이며, 모두 동일한 키를 공유합니다."
   },
+  "MchCHv": {
+    "defaultMessage": "포트 속도 (Mbit/s)"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} 전체적으로 봤을 때입니다. 편리한 개인 미디어 서버를 원하신다면, 필요에 따라 직접 Route96을 설치하여 사용할 수 있는 VPS로 확장할 수 있습니다."
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "네, 중계 서버의 호스트 이름으로 CNAME 레코드를 설정하세요. DNS가 제대로 작동하면 자동으로 별도의 인증서를 발급해 드립니다."
+  },
+  "N0nw1G": {
+    "defaultMessage": "월간 전송량 (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "구독 내역 보기"
+  },
+  "OG77ID": {
+    "defaultMessage": "포트 속도: 무제한"
   },
   "OJuBck": {
     "defaultMessage": "비밀번호 없이"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "영구 저장 공간, 각 릴레이별 크기"
   },
+  "gMKnxm": {
+    "defaultMessage": "{min}~{max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "저장했습니다. 앱이 곧 재시작됩니다."
+  },
+  "hWDpJn": {
+    "defaultMessage": "{min}~{max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "월별 가동 시간(최근 12개월)"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "운영 체제"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "이 가상 머신은 사용자 지정 템플릿을 사용하므로 업그레이드할 수 없습니다. 표준 템플릿을 사용하는 가상 머신만 업그레이드를 지원합니다."
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# 기기} other{# 기기}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "기존 요금으로 남은 시간에 대한 가치:"
   },
+  "wMxOFC": {
+    "defaultMessage": "포트 속도: {speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "네, 모든 요금제에 IPv4 주소와 IPv6 주소 각각 하나씩 포함됩니다."
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "포함하여 {amount} 세금"
-  },
-  "x0cZXf": {
-    "defaultMessage": "업그레이드 불가"
   },
   "xA8JVo": {
     "defaultMessage": "해시값을 기준으로 파일을 저장하고 검색하는 프로토콜로, 노스트르(Nostr)와 함께 작동하도록 설계되었습니다. NIP-96은 이전 버전의 HTTP 파일 저장 방식이며, Route96은 두 가지 방식을 모두 지원합니다."
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "몇 분 정도 소요됩니다. 결제가 완료되면 즉시 처리됩니다."
+  },
+  "yc13cF": {
+    "defaultMessage": "전송량: 월 {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "로그인하면 30일 동안 유효한 세션이 생성됩니다. 세션이 노출된 것 같다면 모두 취소하세요."

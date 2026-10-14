@@ -319,8 +319,10 @@ export interface VmCustomTemplateParams {
   min_ip6: number;
   max_ip6: number;
   disks: Array<VmCustomTemplateDiskParams>;
-  /** Allowance copied onto every custom VM from this plan; absent = unmetered. */
+  /** Default allowance for an order on this plan; absent = unmetered. */
   transfer_gb?: number;
+  transfer?: BandwidthRange;
+  network?: BandwidthRange;
   /**
    * Caps applied to every custom VM built from this plan, whatever
    * specification is chosen. Not selectable. Never carries
@@ -361,6 +363,12 @@ export interface VmTemplateLimits {
   firewall_rule_limit?: number;
 }
 
+export interface BandwidthRange {
+  min: number;
+  max: number;
+  default: number;
+}
+
 export interface VmCustomTemplateDiskParams {
   min_disk: number;
   max_disk: number;
@@ -377,6 +385,8 @@ export interface VmCustomTemplateRequest {
   disk_interface: DiskInterface;
   ip4_count?: number;
   ip6_count?: number;
+  transfer_gb?: number;
+  network_mbps?: number;
 }
 
 export interface VmCustomPrice {
@@ -719,6 +729,8 @@ export interface VmUpgradeRequest {
   cpu?: number;
   memory?: number;
   disk?: number;
+  transfer_gb?: number;
+  network_mbps?: number;
 }
 
 export interface Price {

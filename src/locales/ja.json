@@ -341,6 +341,9 @@
   "5h1V4e": {
     "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
   },
+  "5lP56d": {
+    "defaultMessage": "追加オプション"
+  },
   "5nYzR2": {
     "defaultMessage": "終了リージョン"
   },
@@ -548,6 +551,9 @@
   "9vL1hB": {
     "defaultMessage": "{amount} 割引。今回の支払いのみに適用、以降の更新は通常料金で請求されます。"
   },
+  "9vwnaT": {
+    "defaultMessage": "転送量：無制限"
+  },
   "A/UHKJ": {
     "defaultMessage": "チームに直接ご連絡ください、折り返しご対応します。"
   },
@@ -736,6 +742,12 @@
   },
   "DpNZQY": {
     "defaultMessage": "処理手数料"
+  },
+  "DtYelJ": {
+    "defaultMessage": "転送量"
+  },
+  "Dz7rA+": {
+    "defaultMessage": "ポート速度"
   },
   "E2X6+s": {
     "defaultMessage": "nsec1… or bunker://…"
@@ -1145,6 +1157,9 @@
   "MZQ6io": {
     "defaultMessage": "設定ファイルをダウンロードするかQRコードをスキャンして、トンネルを起動します。出口リージョンごとに1ファイルで、すべて同じ鍵を共有します。"
   },
+  "MchCHv": {
+    "defaultMessage": "ポート速度（Mbit/s）"
+  },
   "MfiEGP": {
     "defaultMessage": "{storage} 合計で。快適なパーソナルメディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用すれば、さらに拡張できます。"
   },
@@ -1159,6 +1174,9 @@
   },
   "MqbiJp": {
     "defaultMessage": "はい。CNAMEレコードを作成し、リレーサーバーのホスト名に設定してください。DNSが解決されると、自動的に別の証明書を発行します。"
+  },
+  "N0nw1G": {
+    "defaultMessage": "月間転送量（GB）"
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
@@ -1207,6 +1225,9 @@
   },
   "OEZ5v2": {
     "defaultMessage": "購読プランを確認する"
+  },
+  "OG77ID": {
+    "defaultMessage": "ポート速度：無制限"
   },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
@@ -2063,6 +2084,9 @@
   "gL1jHz": {
     "defaultMessage": "永続ストレージ：上記の各リレーごとにサイズが設定されます。"
   },
+  "gMKnxm": {
+    "defaultMessage": "{min}〜{max} GB"
+  },
   "gPsMm7": {
     "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
   },
@@ -2107,6 +2131,9 @@
   },
   "hADOUq": {
     "defaultMessage": "保存しました。まもなくアプリが再起動します。"
+  },
+  "hWDpJn": {
+    "defaultMessage": "{min}〜{max} Mbit/s"
   },
   "hX8VXF": {
     "defaultMessage": "月間稼働時間（過去12か月）"
@@ -2425,9 +2452,6 @@
   },
   "o0jcye": {
     "defaultMessage": "オペレーティングシステム"
-  },
-  "o2AdrJ": {
-    "defaultMessage": "この仮想マシンはカスタムテンプレートを使用しているため、アップグレードできません。アップグレードをサポートしているのは、標準テンプレートを使用している仮想マシンのみです。"
   },
   "o5s71l": {
     "defaultMessage": "{count,plural,one{# デバイス} other{# デバイス}}"
@@ -2786,6 +2810,9 @@
   "wLwJ9Q": {
     "defaultMessage": "旧料金での残りの期間の価値："
   },
+  "wMxOFC": {
+    "defaultMessage": "ポート速度：{speed}"
+  },
   "wRSmBV": {
     "defaultMessage": "はい、すべてのプランでIPv4アドレスとIPv6アドレスをそれぞれ1つずつ提供します。"
   },
@@ -2809,9 +2836,6 @@
   },
   "wz7uSD": {
     "defaultMessage": "税込み {amount}"
-  },
-  "x0cZXf": {
-    "defaultMessage": "アップグレードは利用できません。"
   },
   "xA8JVo": {
     "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
@@ -2884,6 +2908,9 @@
   },
   "yUD6jT": {
     "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
+  },
+  "yc13cF": {
+    "defaultMessage": "転送量：月 {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "サインインすると 30 日間有効なセッションが作成されます。いずれかが漏れた可能性がある場合はすべて取り消してください。"

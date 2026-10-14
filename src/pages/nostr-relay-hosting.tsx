@@ -377,7 +377,7 @@ export function NostrRelayHostingPage() {
               above is Dublin only — do not merge the two lists. */}
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with unmetered traffic and a static IPv4 and IPv6 on every plan."
+              defaultMessage="A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with at least 1 TB of transfer a month and a static IPv4 and IPv6 on every plan."
               values={{
                 a: (chunks) => (
                   <Link

@@ -299,9 +299,6 @@
   "4eCXO1": {
     "defaultMessage": "手数料 {fee}"
   },
-  "4j0zpr": {
-    "defaultMessage": "最小要件：{min} コア"
-  },
   "4l6vz1": {
     "defaultMessage": "コピー"
   },
@@ -313,9 +310,6 @@
   },
   "5/Pb3D": {
     "defaultMessage": "現在有効なサブスクリプション"
-  },
-  "53RN0g": {
-    "defaultMessage": "お支払い手続きへ進んでください。"
   },
   "556JQK": {
     "defaultMessage": "展開する、配備する"
@@ -329,14 +323,11 @@
   "5QYdPU": {
     "defaultMessage": "開始時間"
   },
+  "5V9Nif": {
+    "defaultMessage": "VMは、支払いが確認されると、新しいCPU、メモリ、またはディスクを適用するために再起動されます。"
+  },
   "5VCeOz": {
     "defaultMessage": "Nostrのリレーも運営しているのですね？あれは、専用のサーバー全体を必要としません。 <a>から {price} 1か月間、マネージドアプリとして利用</a>。"
-  },
-  "5VEOig": {
-    "defaultMessage": "残りの期間における新しい料金:"
-  },
-  "5elgIe": {
-    "defaultMessage": "エラー："
   },
   "5h1V4e": {
     "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
@@ -365,8 +356,8 @@
   "6G/ao3": {
     "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、自動的に発行されたTLS証明書が設定されます。"
   },
-  "6SfJaf": {
-    "defaultMessage": "アップグレードするには"
+  "6HDvaQ": {
+    "defaultMessage": "以降は月額"
   },
   "6Tps09": {
     "defaultMessage": "非アクティブ"
@@ -416,6 +407,9 @@
   "7NFfmz": {
     "defaultMessage": "製品"
   },
+  "7Op9IC": {
+    "defaultMessage": "支払済み時間分のクレジット"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{日} other{日}}"
   },
@@ -452,17 +446,11 @@
   "7yPJTW": {
     "defaultMessage": "まもなく期限切れになります。"
   },
-  "7zs+Vz": {
-    "defaultMessage": "メモリ：{gb} GB"
-  },
   "81TEFm": {
     "defaultMessage": "実行する {name} 管理されたものとして {category} LNVPS上で、独自のホスト名を使用し、TLSを有効にする。 {storage} ストレージのみ。サーバーのパッチ適用は不要。"
   },
   "82Y7Sa": {
     "defaultMessage": "送信中..."
-  },
-  "8BgaUL": {
-    "defaultMessage": "現在の仕様"
   },
   "8EkkgC": {
     "defaultMessage": "VisaまたはMastercard、Revolut経由で請求"
@@ -550,9 +538,6 @@
   },
   "9vL1hB": {
     "defaultMessage": "{amount} 割引。今回の支払いのみに適用、以降の更新は通常料金で請求されます。"
-  },
-  "9vwnaT": {
-    "defaultMessage": "転送量：無制限"
   },
   "A/UHKJ": {
     "defaultMessage": "チームに直接ご連絡ください、折り返しご対応します。"
@@ -656,6 +641,9 @@
   "Bzv1CO": {
     "defaultMessage": "今すぐ再開してください。"
   },
+  "C/Kq27": {
+    "defaultMessage": "VM を再起動します"
+  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -692,6 +680,9 @@
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
+  "Czw6Yl": {
+    "defaultMessage": "現在"
+  },
   "D3idYv": {
     "defaultMessage": "設定"
   },
@@ -706,9 +697,6 @@
   },
   "DDMksJ": {
     "defaultMessage": "最初のVPSをデプロイしましょう。"
-  },
-  "DFLJpz": {
-    "defaultMessage": "新しい月額料金：{cost}"
   },
   "DTd1bi": {
     "defaultMessage": "ライトニング、オンチェーン、またはカード"
@@ -761,17 +749,11 @@
   "E8y+Hb": {
     "defaultMessage": "賃貸契約が満了しました。"
   },
-  "EBMKSN": {
-    "defaultMessage": "仮想マシンの仕様をアップグレードします。"
-  },
   "ED9RG5": {
     "defaultMessage": "監査ログ"
   },
   "EIJT7Y": {
     "defaultMessage": "危険な操作"
-  },
-  "EKlM8d": {
-    "defaultMessage": "ディスク（GB）"
   },
   "ELp7j5": {
     "defaultMessage": "LNVPS サポートとのライブチャット"
@@ -1010,9 +992,6 @@
   "IvjoDS": {
     "defaultMessage": "接続済み"
   },
-  "Iz4veS": {
-    "defaultMessage": "最小要件：{min} GB"
-  },
   "J+dIsA": {
     "defaultMessage": "購読"
   },
@@ -1127,6 +1106,9 @@
   "LjziLu": {
     "defaultMessage": "メッセージを暗号化"
   },
+  "Lm+IAa": {
+    "defaultMessage": "今回のお支払い"
+  },
   "LpI0+d": {
     "defaultMessage": "鍵を持っています"
   },
@@ -1157,9 +1139,6 @@
   "MZQ6io": {
     "defaultMessage": "設定ファイルをダウンロードするかQRコードをスキャンして、トンネルを起動します。出口リージョンごとに1ファイルで、すべて同じ鍵を共有します。"
   },
-  "MchCHv": {
-    "defaultMessage": "ポート速度（Mbit/s）"
-  },
   "MfiEGP": {
     "defaultMessage": "{storage} 合計で。快適なパーソナルメディアサーバーを構築するには、必要に応じてRoute96をインストールしたVPSを利用すれば、さらに拡張できます。"
   },
@@ -1174,9 +1153,6 @@
   },
   "MqbiJp": {
     "defaultMessage": "はい。CNAMEレコードを作成し、リレーサーバーのホスト名に設定してください。DNSが解決されると、自動的に別の証明書を発行します。"
-  },
-  "N0nw1G": {
-    "defaultMessage": "月間転送量（GB）"
   },
   "N2IrpM": {
     "defaultMessage": "確認する。"
@@ -1226,9 +1202,6 @@
   "OEZ5v2": {
     "defaultMessage": "購読プランを確認する"
   },
-  "OG77ID": {
-    "defaultMessage": "ポート速度：無制限"
-  },
   "OJuBck": {
     "defaultMessage": "パスワード不要"
   },
@@ -1246,9 +1219,6 @@
   },
   "OephhB": {
     "defaultMessage": "{v} 書く"
-  },
-  "OikYIw": {
-    "defaultMessage": "最小要件：{min} GBの{type}"
   },
   "Olq7Wf": {
     "defaultMessage": "ここにメッセージを入力してください。"
@@ -1271,9 +1241,6 @@
   "OyvHWp": {
     "defaultMessage": "展開、配置"
   },
-  "P+08xT": {
-    "defaultMessage": "見積もりを依頼する"
-  },
   "P/PGYR": {
     "defaultMessage": "まだ紹介は一件もありません。リンクを共有して、コンバージョンを開始しましょう。"
   },
@@ -1285,9 +1252,6 @@
   },
   "PCD5y1": {
     "defaultMessage": "お客様のご要望に応じて構築されるVPS {region}： {minCpu}{maxCpu} 仮想CPUおよび {minMemory}{maxMemory} メモリ、支払いはビットコインで。"
-  },
-  "PJKhfR": {
-    "defaultMessage": "リレーが重要な要素となる場合は、マネージドアプリが最適なソリューションです。カスタムビルドを実行したり、他のサービスを同じ場所に配置したり、サーバーの管理を自分で行いたい場合は、ダブリン、ロンドン、ケベックに拠点を置く弊社の<a>VPSホスティング</a>をご利用ください。すべてのプランで、無制限のトラフィックと固定IPアドレス（IPv4およびIPv6）を提供しています。"
   },
   "PJtOx7": {
     "defaultMessage": "報告すべき事象はありません。"
@@ -1340,8 +1304,8 @@
   "QT2jf3": {
     "defaultMessage": "完全に削除しますか？"
   },
-  "QWN/RL": {
-    "defaultMessage": "VPNプランで提供されるのは出口であって、サーバーではありません。静的なIPv4・IPv6アドレスと無制限のトラフィックで、ご自身のサービスを動かせるマシンをお探しの場合は、当社の<a>VPSホスティング</a>が同じサーバー群上で稼働しています。"
+  "QVsrAB": {
+    "defaultMessage": "Lightningノード用に構築されたVPS。静的なIPv4とIPv6、月間最低1TBの転送量、Tor利用可、KYC不要。ダブリン、ロンドン、ケベックから選べます。支払いはLightningで。"
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1358,6 +1322,9 @@
   "QuGLBN": {
     "defaultMessage": "このSSHキーは、1つまたは複数の仮想マシンで使用されているため、削除できません。"
   },
+  "QzAwVv": {
+    "defaultMessage": "VPS #{id} のリサイズ"
+  },
   "R+j5Qu": {
     "defaultMessage": "IPアドレスは割り当てられていません。"
   },
@@ -1369,15 +1336,6 @@
   },
   "R5zovH": {
     "defaultMessage": "お問い合わせとサポート"
-  },
-  "R7x8iU": {
-    "defaultMessage": "ディスク：{gb} GB、{type}"
-  },
-  "RAyrhP": {
-    "defaultMessage": "付加価値税（{rate}："
-  },
-  "RB2CER": {
-    "defaultMessage": "CPUコア"
   },
   "RCHbbR": {
     "defaultMessage": "請求情報の管理、自動更新の設定、および弊社からの連絡方法についてご確認ください。"
@@ -1463,14 +1421,14 @@
   "SuX9Rr": {
     "defaultMessage": "この金額に達するまで手数料を保留し、その後で支払うように設定します。少額の支払いを避けるために便利です。空白のままにすると、システムで設定された最小値が使用されます。必要に応じて値を高くすることはできますが、最小値より低くすることはできません。"
   },
-  "Sz/3Vf": {
-    "defaultMessage": "アップグレードする値として、現在の値以上で、かつ、少なくとも1つは現在の値よりも大きい値を指定してください。"
-  },
   "T1/en5": {
     "defaultMessage": "ID：{id}"
   },
   "T4VxQN": {
     "defaultMessage": "読み込み中……"
+  },
+  "T69oK0": {
+    "defaultMessage": "<b>十分な通信量。</b>ルーティングノードは常にピアと通信しており、その通信量は、すべてのプランに含まれる月1TBに余裕で収まります。もっと必要ですか？注文時または後から追加できます。"
   },
   "T7b6ZF": {
     "defaultMessage": "解決済みのインシデント"
@@ -1583,6 +1541,9 @@
   "Uw1G5p": {
     "defaultMessage": "/ {allowance} 送信"
   },
+  "Uyg4Ur": {
+    "defaultMessage": "VPNプランは出口を提供するもので、サーバーを提供するものではありません。固定のIPv4とIPv6、月間最低1TBの転送量を備えた、自前のサービスを実行するためのボックスが欲しい場合は、当社の<a>VPSホスティング</a>は同じサーバー群で動作しています。"
+  },
   "V/V4bz": {
     "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービス {price} 消費税抜き。お客様のニーズに合わせて仕様を自由にカスタマイズできます。 {maxCpu} 仮想CPU。ライトニングネットワークまたはオンチェーンでビットコインを使ってお支払いください。"
   },
@@ -1616,6 +1577,9 @@
   "Vi+REQ": {
     "defaultMessage": "数分で導入できます。支払い方法は、Lightning、ビットコイン、またはクレジットカードをご利用いただけます。長期契約は一切ありません。"
   },
+  "Vn25W2": {
+    "defaultMessage": "大きいサイズを選択すると、ここに価格が表示されます。この請求期間の残り分について、差額をお支払いいただきます。"
+  },
   "VrBNV4": {
     "defaultMessage": "初回支払い"
   },
@@ -1633,9 +1597,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
-  },
-  "WFUub1": {
-    "defaultMessage": "ライトニングネットワークのノード用に構築されたVPSです。固定IPアドレス（IPv4およびIPv6）、無制限のトラフィック、Torの使用許可、本人確認不要。サーバーの所在地はダブリン、ロンドン、またはケベックから選択できます。支払いにはライトニングネットワーク自体を使用します。"
   },
   "WHIo1V": {
     "defaultMessage": "当社のダブリン拠点。お客様がご希望の機械を組み立てます。 {minCpu}{maxCpu} vCPUおよび {minMemory}-{maxMemory}そして、ビットコインで支払います。"
@@ -1751,6 +1712,9 @@
   "Yl8GBP": {
     "defaultMessage": "納税者番号"
   },
+  "Ys/B2r": {
+    "defaultMessage": "静的IPアドレス、月1TB以上のデータ転送量、Tor利用可、KYC不要。Lightningで支払えます。自前のノードを運用しているため、お支払いは決済プロセッサーを一切介しません。"
+  },
   "YsVmzT": {
     "defaultMessage": "送信ルールの場合、ソースCIDRは、この仮想マシンの自身のIPアドレスと一致します。リモートの宛先ホストを制限することはできません。制限できるのは、プロトコルと宛先ポートのみです。"
   },
@@ -1771,6 +1735,9 @@
   },
   "Z8971h": {
     "defaultMessage": "確認済み"
+  },
+  "ZKRP7f": {
+    "defaultMessage": "このVMは現在、オンラインでリサイズできません。サポートにご連絡ください。こちらで対応いたします。"
   },
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
@@ -1841,11 +1808,11 @@
   "bMQUWl": {
     "defaultMessage": "送信元CIDR（この仮想マシン）"
   },
-  "bO+E2G": {
-    "defaultMessage": "いいえ。すべてのプランには、データ通信量制限がないものが含まれています。"
-  },
   "bW7B87": {
     "defaultMessage": "新しい"
+  },
+  "bg/ESW": {
+    "defaultMessage": "料金を計算中…"
   },
   "bh3pad": {
     "defaultMessage": "ご購入前にログインしてください。"
@@ -1879,9 +1846,6 @@
   },
   "cQtv0G": {
     "defaultMessage": "{n} 件稼働中"
-  },
-  "cV0ZGf": {
-    "defaultMessage": "費用内訳"
   },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# リレーの実装} other{# リレーの実装}}～から {price} 1か月に。"
@@ -2078,14 +2042,8 @@
   "gGjH22": {
     "defaultMessage": "VPSカナダ、ケベックのVPS。ビットコインで支払い可能。"
   },
-  "gH4VcS": {
-    "defaultMessage": "按分計算されたアップグレード費用："
-  },
   "gL1jHz": {
     "defaultMessage": "永続ストレージ：上記の各リレーごとにサイズが設定されます。"
-  },
-  "gMKnxm": {
-    "defaultMessage": "{min}〜{max} GB"
   },
   "gPsMm7": {
     "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
@@ -2132,9 +2090,6 @@
   "hADOUq": {
     "defaultMessage": "保存しました。まもなくアプリが再起動します。"
   },
-  "hWDpJn": {
-    "defaultMessage": "{min}〜{max} Mbit/s"
-  },
   "hX8VXF": {
     "defaultMessage": "月間稼働時間（過去12か月）"
   },
@@ -2144,11 +2099,11 @@
   "hs3HVz": {
     "defaultMessage": "Face ID、Touch ID、Windows Hello、またはセキュリティキーでサインインできます。どのアカウントにもパスキーを追加できます。"
   },
-  "hsfQVg": {
-    "defaultMessage": "固定IPアドレス、無制限のデータ通信量、Torの使用許可、KYC（顧客確認）は不要。支払いにはライトニングネットワークをご利用ください。当社独自のノードを運用しているため、お客様のお支払いは決済処理業者を経由することはありません。"
-  },
   "huqKGl": {
     "defaultMessage": "アカウントを作成"
+  },
+  "hxU3Dx": {
+    "defaultMessage": "残り期間分の新サイズ料金"
   },
   "i2/SmH": {
     "defaultMessage": "課金システムはVPSのサブスクリプションと同様に機能し、どのアプリにも初期費用はかかりません。"
@@ -2176,6 +2131,9 @@
   },
   "icn2DS": {
     "defaultMessage": "（おすすめ）"
+  },
+  "im3sBQ": {
+    "defaultMessage": "アウトバウンド転送は従量課金です。すべてのプランには毎月最低1 TBが含まれており、注文時または後日に追加できます。インバウンドトラフィックは無料です。"
   },
   "ir0wB7": {
     "defaultMessage": "すべてのデータが完全に削除されることを理解しました。"
@@ -2294,9 +2252,6 @@
   "l4RUua": {
     "defaultMessage": "サービス：{service}"
   },
-  "l7PJ8l": {
-    "defaultMessage": "現在お支払いいただく合計金額："
-  },
   "lCILNz": {
     "defaultMessage": "今すぐ購入"
   },
@@ -2411,9 +2366,6 @@
   "nDyaq/": {
     "defaultMessage": "実行中。"
   },
-  "nFQbxh": {
-    "defaultMessage": "支払い方法"
-  },
   "nLgLHn": {
     "defaultMessage": "収集された {when}"
   },
@@ -2458,9 +2410,6 @@
   },
   "o9lOhm": {
     "defaultMessage": "公開鍵をサポート：{npub}"
-  },
-  "oBSxZS": {
-    "defaultMessage": "アップグレードの見積もり"
   },
   "oC2JR/": {
     "defaultMessage": "<b>停止するとデータは保持されます。</b> リレーを一時停止しても、再開したときにイベントデータベースはそのまま残ります。データを削除した場合のみ、ストレージから消去されます。"
@@ -2549,6 +2498,9 @@
   "qCGD63": {
     "defaultMessage": "支払い方法を教えてください。"
   },
+  "qNB4sp": {
+    "defaultMessage": "支払いしてアップグレード"
+  },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
   },
@@ -2557,6 +2509,9 @@
   },
   "qX7u3z": {
     "defaultMessage": "ラベル（例：個人用ビザ）"
+  },
+  "qYjcyZ": {
+    "defaultMessage": "帯域幅の変更は、支払いの確認が完了し次第、再起動なしで適用されます。"
   },
   "qkLHOL": {
     "defaultMessage": "SSHキー「」を削除してもよろしいですか？{name}「？」"
@@ -2630,9 +2585,6 @@
   "s60OWn": {
     "defaultMessage": "Pay for this deployment before resizing it、an upgrade is charged pro-rata against the time left on the current period."
   },
-  "sAJryD": {
-    "defaultMessage": "付加価値税と手数料は概算であり、実際の金額は支払い時に確定します。"
-  },
   "sOF2lj": {
     "defaultMessage": "README 全文を表示"
   },
@@ -2656,9 +2608,6 @@
   },
   "sqvjkf": {
     "defaultMessage": "ハンドルを追加"
-  },
-  "srgk8m": {
-    "defaultMessage": "見積もりおよび支払いで使用する通貨を設定します。"
   },
   "sx6MYT": {
     "defaultMessage": "エージェントはVMの延長、返金、削除を行うことができず、ログインしていないアカウントに対して操作を行うこともできません。それらについては、 {link}。"
@@ -2686,6 +2635,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Lightningノードを、その目的に特化したVPSで運用しましょう。"
+  },
+  "tgvES0": {
+    "defaultMessage": "現在"
   },
   "tngc9N": {
     "defaultMessage": "送信元CIDR"
@@ -2747,6 +2699,9 @@
   "uyWYPH": {
     "defaultMessage": "これにより VM 上のすべてが消去されます。"
   },
+  "v+lbmr": {
+    "defaultMessage": "スライダーを移動して新しいサイズを選択してください。"
+  },
   "v2BRjN": {
     "defaultMessage": "件名"
   },
@@ -2756,8 +2711,14 @@
   "v4Sg0C": {
     "defaultMessage": "カスタム受信者キーを使用する"
   },
+  "vIkTT1": {
+    "defaultMessage": "リレーが目的である場合、マネージドアプリが最適な選択肢です。修正したビルドを動作させたい、他のサービスを同置したい、サーバーを自分で管理したい場合は、当社の<a>VPSホスティング</a>がダブリン、ロンドン、ケベックで提供されており、すべてのプランで毎月最低1TBの転送量と静的IPv4およびIPv6を備えています。"
+  },
   "vONi+O": {
     "defaultMessage": "国"
+  },
+  "vPxUsy": {
+    "defaultMessage": "再起動なし"
   },
   "vRG4WY": {
     "defaultMessage": "このページを離れても問題ありません。支払いは請求履歴に表示され、承認され次第適用されます。"
@@ -2789,9 +2750,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} ファイアウォールルール"
   },
-  "vy2rlX": {
-    "defaultMessage": "処理手数料："
-  },
   "w/+hVh": {
     "defaultMessage": "〜によるWireGuard VPN {price} あたり {period}、Lightning、Bitcoin またはカードでお支払いください。デバイスが鍵を独自に生成し、当社が見るのは公開鍵の半分だけです。"
   },
@@ -2806,12 +2764,6 @@
   },
   "wLCwU4": {
     "defaultMessage": "請求を管理"
-  },
-  "wLwJ9Q": {
-    "defaultMessage": "旧料金での残りの期間の価値："
-  },
-  "wMxOFC": {
-    "defaultMessage": "ポート速度：{speed}"
   },
   "wRSmBV": {
     "defaultMessage": "はい、すべてのプランでIPv4アドレスとIPv6アドレスをそれぞれ1つずつ提供します。"
@@ -2873,9 +2825,6 @@
   "xkr+zo": {
     "defaultMessage": "利用規約"
   },
-  "xmSWcf": {
-    "defaultMessage": "CPU：{cores} コア"
-  },
   "xuTqgN": {
     "defaultMessage": "お支払い方法"
   },
@@ -2908,9 +2857,6 @@
   },
   "yUD6jT": {
     "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
-  },
-  "yc13cF": {
-    "defaultMessage": "転送量：月 {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "サインインすると 30 日間有効なセッションが作成されます。いずれかが漏れた可能性がある場合はすべて取り消してください。"
@@ -2947,12 +2893,6 @@
   },
   "zFegDD": {
     "defaultMessage": "お問い合わせ"
-  },
-  "zRPHCo": {
-    "defaultMessage": "メモリ（GB）"
-  },
-  "zbyKVt": {
-    "defaultMessage": "<b>無制限のデータ通信量。</b> ルーティングノードは常に情報を交換しています。帯域幅メーターを監視する必要はありません。"
   },
   "zhuLyw": {
     "defaultMessage": "今月の送信トラフィック枠を使い切りました。あなたのVMには何も影響はありません。スロットリング、停止、超過分の請求は行われておらず、枠は1日にリセットされます。"

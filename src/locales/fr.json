@@ -299,9 +299,6 @@
   "4eCXO1": {
     "defaultMessage": "{fee} de frais"
   },
-  "4j0zpr": {
-    "defaultMessage": "Minimum : {min} cœurs"
-  },
   "4l6vz1": {
     "defaultMessage": "Copier"
   },
@@ -313,9 +310,6 @@
   },
   "5/Pb3D": {
     "defaultMessage": "Abonnements actifs"
-  },
-  "53RN0g": {
-    "defaultMessage": "Passez au paiement."
   },
   "556JQK": {
     "defaultMessage": "Déployer"
@@ -329,14 +323,11 @@
   "5QYdPU": {
     "defaultMessage": "Heure de début"
   },
+  "5V9Nif": {
+    "defaultMessage": "La machine virtuelle redémarre une fois le paiement confirmé, afin d'appliquer le nouveau CPU, la mémoire ou le disque."
+  },
   "5VCeOz": {
     "defaultMessage": "Vous faites également fonctionner un relais Nostr ? Celui-ci n’a pas besoin d’un serveur complet, il est… <a>de {price} un mois en tant qu’application gérée</a>."
-  },
-  "5VEOig": {
-    "defaultMessage": "Coût pour la période restante, au nouveau tarif :"
-  },
-  "5elgIe": {
-    "defaultMessage": "Erreur :"
   },
   "5h1V4e": {
     "defaultMessage": "Non. Inscrivez-vous en utilisant une clé Nostr et effectuez le paiement en satoshis."
@@ -365,8 +356,8 @@
   "6G/ao3": {
     "defaultMessage": "Votre propre nom d’hôte, soit <code>your-name.ie.apps.lnvps.cloud</code>, avec un certificat TLS émis automatiquement."
   },
-  "6SfJaf": {
-    "defaultMessage": "Mettez à niveau vers"
+  "6HDvaQ": {
+    "defaultMessage": "Puis par mois"
   },
   "6Tps09": {
     "defaultMessage": "Inactif"
@@ -416,6 +407,9 @@
   "7NFfmz": {
     "defaultMessage": "Produits"
   },
+  "7Op9IC": {
+    "defaultMessage": "Crédit pour le temps déjà payé"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{jour} other{jours}}"
   },
@@ -452,17 +446,11 @@
   "7yPJTW": {
     "defaultMessage": "Bientôt expiré."
   },
-  "7zs+Vz": {
-    "defaultMessage": "Mémoire : {gb} Go"
-  },
   "81TEFm": {
     "defaultMessage": "Exécuter {name} en tant que service géré {category} sur LNVPS, nom d’hôte personnalisé, avec TLS inclus. {storage} stockage, pas de serveur à mettre à jour."
   },
   "82Y7Sa": {
     "defaultMessage": "Envoi en cours..."
-  },
-  "8BgaUL": {
-    "defaultMessage": "Spécifications actuelles"
   },
   "8EkkgC": {
     "defaultMessage": "Visa ou Mastercard, facturé via Revolut"
@@ -550,9 +538,6 @@
   },
   "9vL1hB": {
     "defaultMessage": "{amount} Remise. S'applique uniquement à ce paiement, les renouvellements ultérieurs seront facturés au tarif normal."
-  },
-  "9vwnaT": {
-    "defaultMessage": "Transfert : illimité"
   },
   "A/UHKJ": {
     "defaultMessage": "Contactez l'équipe directement, nous vous répondrons."
@@ -656,6 +641,9 @@
   "Bzv1CO": {
     "defaultMessage": "Réactivez maintenant."
   },
+  "C/Kq27": {
+    "defaultMessage": "Redémarre la VM"
+  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -692,6 +680,9 @@
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
+  "Czw6Yl": {
+    "defaultMessage": "Actuellement"
+  },
   "D3idYv": {
     "defaultMessage": "Paramètres"
   },
@@ -706,9 +697,6 @@
   },
   "DDMksJ": {
     "defaultMessage": "Déployez votre premier VPS."
-  },
-  "DFLJpz": {
-    "defaultMessage": "Nouveau coût mensuel de renouvellement : {cost}"
   },
   "DTd1bi": {
     "defaultMessage": "Lightning, on-chain ou carte"
@@ -761,17 +749,11 @@
   "E8y+Hb": {
     "defaultMessage": "Le bail est arrivé à terme."
   },
-  "EBMKSN": {
-    "defaultMessage": "Mettre à niveau les spécifications de la machine virtuelle"
-  },
   "ED9RG5": {
     "defaultMessage": "Journal d’audit"
   },
   "EIJT7Y": {
     "defaultMessage": "Zone dangereuse"
-  },
-  "EKlM8d": {
-    "defaultMessage": "Disque dur (Go)"
   },
   "ELp7j5": {
     "defaultMessage": "Chat en direct avec le support LNVPS"
@@ -1010,9 +992,6 @@
   "IvjoDS": {
     "defaultMessage": "Connecté"
   },
-  "Iz4veS": {
-    "defaultMessage": "Minimum : {min} Go"
-  },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
   },
@@ -1127,6 +1106,9 @@
   "LjziLu": {
     "defaultMessage": "Chiffrer le message"
   },
+  "Lm+IAa": {
+    "defaultMessage": "Payable maintenant"
+  },
   "LpI0+d": {
     "defaultMessage": "J'ai une clé"
   },
@@ -1157,9 +1139,6 @@
   "MZQ6io": {
     "defaultMessage": "Téléchargez une configuration, ou scannez son code QR, puis établissez le tunnel. Un fichier par région de sortie, tous partageant la même clé."
   },
-  "MchCHv": {
-    "defaultMessage": "Vitesse du port (Mbit/s)"
-  },
   "MfiEGP": {
     "defaultMessage": "{storage} au total. Pour un serveur multimédia personnel, c’est suffisant ; si vous avez besoin de plus de ressources, vous pouvez installer Route96 sur un VPS et augmenter la capacité en fonction de vos besoins."
   },
@@ -1174,9 +1153,6 @@
   },
   "MqbiJp": {
     "defaultMessage": "Oui. Configurez un enregistrement CNAME qui pointe vers le nom d’hôte de votre serveur relais. Nous émettons automatiquement un certificat distinct une fois que la résolution DNS est effectuée."
-  },
-  "N0nw1G": {
-    "defaultMessage": "Transfert mensuel (Go)"
   },
   "N2IrpM": {
     "defaultMessage": "Confirmer"
@@ -1226,9 +1202,6 @@
   "OEZ5v2": {
     "defaultMessage": "Consulter l’abonnement"
   },
-  "OG77ID": {
-    "defaultMessage": "Vitesse du port : illimitée"
-  },
   "OJuBck": {
     "defaultMessage": "Sans mot de passe"
   },
@@ -1246,9 +1219,6 @@
   },
   "OephhB": {
     "defaultMessage": "{v} écrire"
-  },
-  "OikYIw": {
-    "defaultMessage": "Minimum : {min} Go de {type}"
   },
   "Olq7Wf": {
     "defaultMessage": "Tapez votre message ici..."
@@ -1271,9 +1241,6 @@
   "OyvHWp": {
     "defaultMessage": "Déploiement"
   },
-  "P+08xT": {
-    "defaultMessage": "Obtenir un devis"
-  },
   "P/PGYR": {
     "defaultMessage": "Aucun parrainage pour le moment. Partagez votre lien pour commencer à obtenir des conversions."
   },
@@ -1285,9 +1252,6 @@
   },
   "PCD5y1": {
     "defaultMessage": "Un serveur virtuel privé (VPS) configuré sur mesure en {region}: {minCpu}-{maxCpu} vCPU et {minMemory}-{maxMemory} mémoire, paiement en Bitcoin."
-  },
-  "PJKhfR": {
-    "defaultMessage": "Une application gérée est la solution idéale lorsque le relais est l’élément central. Si vous souhaitez exécuter une version modifiée, regrouper d’autres services ou gérer vous-même le serveur, notre offre <a>d’hébergement VPS</a> commence à Dublin, Londres et Québec, avec un trafic illimité et une adresse IP statique IPv4 et IPv6 pour chaque forfait."
   },
   "PJtOx7": {
     "defaultMessage": "Aucun incident à signaler."
@@ -1340,8 +1304,8 @@
   "QT2jf3": {
     "defaultMessage": "Supprimer définitivement ?"
   },
-  "QWN/RL": {
-    "defaultMessage": "Un forfait VPN vous donne une sortie, pas un serveur. Si vous souhaitez une machine pour héberger vos propres services, avec une IPv4 et une IPv6 statiques et du trafic illimité, notre <a>hébergement VPS</a> fonctionne sur la même flotte de serveurs."
+  "QVsrAB": {
+    "defaultMessage": "Un VPS conçu pour un nœud Lightning, avec des adresses IPv4 et IPv6 statiques, au moins 1 To de transfert par mois, Tor autorisé et sans KYC. Dublin, Londres ou Québec. Paiement en Lightning lui-même."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1358,6 +1322,9 @@
   "QuGLBN": {
     "defaultMessage": "Cette clé SSH est utilisée par une ou plusieurs machines virtuelles et ne peut pas être supprimée."
   },
+  "QzAwVv": {
+    "defaultMessage": "Redimensionner le VPS n°{id}"
+  },
   "R+j5Qu": {
     "defaultMessage": "Aucune adresse IP attribuée."
   },
@@ -1369,15 +1336,6 @@
   },
   "R5zovH": {
     "defaultMessage": "Contact et assistance"
-  },
-  "R7x8iU": {
-    "defaultMessage": "Disque : {gb} Go, type {type}"
-  },
-  "RAyrhP": {
-    "defaultMessage": "TVA{rate}) :"
-  },
-  "RB2CER": {
-    "defaultMessage": "Cœurs du processeur"
   },
   "RCHbbR": {
     "defaultMessage": "Gérez vos informations de facturation, le renouvellement automatique et les moyens par lesquels nous pouvons vous contacter."
@@ -1463,14 +1421,14 @@
   "SuX9Rr": {
     "defaultMessage": "Conservez la commission jusqu’à ce qu’elle atteigne ce montant avant d’effectuer le paiement. Cette option est pratique pour éviter les petits paiements sur la chaîne. Laissez le champ vide pour utiliser le minimum du système ; vous pouvez augmenter cette valeur, mais pas la diminuer."
   },
-  "Sz/3Vf": {
-    "defaultMessage": "Veuillez indiquer les valeurs de mise à niveau qui sont supérieures ou égales aux valeurs actuelles, en veillant à ce qu’au moins une valeur soit supérieure à la valeur actuelle."
-  },
   "T1/en5": {
     "defaultMessage": "ID : {id}"
   },
   "T4VxQN": {
     "defaultMessage": "Chargement en cours…"
+  },
+  "T69oK0": {
+    "defaultMessage": "<b>Un volume de transfert généreux.</b> Un nœud de routage communique en permanence avec ses pairs, et cela rentre facilement dans les 1 To par mois inclus dans chaque forfait. Besoin de plus ? Ajoutez-le lors de votre commande ou ultérieurement."
   },
   "T7b6ZF": {
     "defaultMessage": "Incidents résolus"
@@ -1583,6 +1541,9 @@
   "Uw1G5p": {
     "defaultMessage": "sur {allowance} en sortie"
   },
+  "Uyg4Ur": {
+    "defaultMessage": "Un forfait VPN vous offre un point de sortie, pas un serveur. Si vous souhaitez une machine pour faire tourner vos propres services, avec des adresses IPv4 et IPv6 statiques et au moins 1 To de trafic par mois, notre <a>hébergement VPS</a> fonctionne sur le même parc de serveurs."
+  },
   "V/V4bz": {
     "defaultMessage": "Hébergement VPS à Dublin, en Irlande, à partir de : {price} hors TVA. Configurez votre modèle personnalisé jusqu’à… {maxCpu} vCPU. Paiement accepté en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
   },
@@ -1616,6 +1577,9 @@
   "Vi+REQ": {
     "defaultMessage": "Mise en service en quelques minutes. Paiement possible avec Lightning, Bitcoin ou par carte, pas de contrats à long terme."
   },
+  "Vn25W2": {
+    "defaultMessage": "Le prix s'affiche ici une fois que vous avez choisi une taille plus grande. Vous payez la différence pour le reste de cette période de facturation."
+  },
   "VrBNV4": {
     "defaultMessage": "Premier paiement"
   },
@@ -1633,9 +1597,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "Impossible de trouver un abonnement sur lequel facturer cette mise à niveau."
-  },
-  "WFUub1": {
-    "defaultMessage": "Un serveur virtuel privé (VPS) conçu pour un nœud Lightning : adresse IPv4 et IPv6 statiques, bande passante illimitée, utilisation de Tor autorisée, pas d’exigences en matière de vérification d’identité. Localisation à Dublin, Londres ou Québec. Paiement possible directement avec Lightning."
   },
   "WHIo1V": {
     "defaultMessage": "Notre site de Dublin. Créez la machine que vous souhaitez. {minCpu}-{maxCpu} vCPU et {minMemory}-{maxMemory}et payez-le en Bitcoin."
@@ -1751,6 +1712,9 @@
   "Yl8GBP": {
     "defaultMessage": "Numéro d’identification fiscale"
   },
+  "Ys/B2r": {
+    "defaultMessage": "Adresse statique, au moins 1 To de transfert par mois, Tor autorisé et sans KYC. Payez avec Lightning. Nous exploitons notre propre nœud, votre paiement ne passe donc jamais par un processeur de paiement."
+  },
   "YsVmzT": {
     "defaultMessage": "Pour les règles de sortie, le CIDR source correspond à l’adresse propre de cette machine virtuelle. L’hôte de destination distant ne peut pas être restreint ; seuls le protocole et le port de destination peuvent l’être."
   },
@@ -1771,6 +1735,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Vérifié"
+  },
+  "ZKRP7f": {
+    "defaultMessage": "Cette VM ne peut pas être redimensionnée en ligne pour le moment. Contactez le support et nous trouverons une solution."
   },
   "ZTj6ca": {
     "defaultMessage": "Payer par carte"
@@ -1841,11 +1808,11 @@
   "bMQUWl": {
     "defaultMessage": "CIDR source (cette machine virtuelle)"
   },
-  "bO+E2G": {
-    "defaultMessage": "Non. Chaque forfait comprend une quantité illimitée de données."
-  },
   "bW7B87": {
     "defaultMessage": "Nouveau"
+  },
+  "bg/ESW": {
+    "defaultMessage": "Calcul du prix…"
   },
   "bh3pad": {
     "defaultMessage": "Veuillez vous connecter avant de procéder à votre achat."
@@ -1879,9 +1846,6 @@
   },
   "cQtv0G": {
     "defaultMessage": "{n} en cours d'exécution"
-  },
-  "cV0ZGf": {
-    "defaultMessage": "Répartition des coûts"
   },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois."
@@ -2078,14 +2042,8 @@
   "gGjH22": {
     "defaultMessage": "VPS Canada, Serveurs VPS au Québec, paiement en Bitcoin."
   },
-  "gH4VcS": {
-    "defaultMessage": "Coût de la mise à niveau, calculé au prorata :"
-  },
   "gL1jHz": {
     "defaultMessage": "Mémoire persistante, capacité par relais, comme indiqué ci-dessus."
-  },
-  "gMKnxm": {
-    "defaultMessage": "Entre {min} et {max} Go"
   },
   "gPsMm7": {
     "defaultMessage": "Déployez ce worker et ajoutez une route pour {route}."
@@ -2132,9 +2090,6 @@
   "hADOUq": {
     "defaultMessage": "Enregistré. L'application redémarrera sous peu."
   },
-  "hWDpJn": {
-    "defaultMessage": "Entre {min} et {max} Mbit/s"
-  },
   "hX8VXF": {
     "defaultMessage": "Taux de disponibilité mensuel (sur les 12 derniers mois)"
   },
@@ -2144,11 +2099,11 @@
   "hs3HVz": {
     "defaultMessage": "Connectez-vous avec Face ID, Touch ID, Windows Hello ou une clé de sécurité. Vous pouvez ajouter une clé d'accès à n'importe quel compte."
   },
-  "hsfQVg": {
-    "defaultMessage": "Adresse IP statique, volume de données illimité, utilisation du réseau Tor autorisée et aucune vérification d’identité requise. Paiement accepté via Lightning : nous exploitons notre propre nœud, ce qui garantit que votre paiement ne passe jamais par un processeur tiers."
-  },
   "huqKGl": {
     "defaultMessage": "Créer un compte"
+  },
+  "hxU3Dx": {
+    "defaultMessage": "Nouvelle taille pour le reste de cette période"
   },
   "i2/SmH": {
     "defaultMessage": "La facturation fonctionne comme un abonnement VPS, sans frais d’installation pour aucune application."
@@ -2176,6 +2131,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommandé)"
+  },
+  "im3sBQ": {
+    "defaultMessage": "Les transferts sortants sont facturés à l'usage. Chaque forfait comprend au moins 1 To par mois, et vous pouvez en ajouter davantage au moment de la commande ou par la suite. Le trafic entrant est gratuit."
   },
   "ir0wB7": {
     "defaultMessage": "Je comprends que toutes les données seront définitivement supprimées."
@@ -2294,9 +2252,6 @@
   "l4RUua": {
     "defaultMessage": "Service : {service}"
   },
-  "l7PJ8l": {
-    "defaultMessage": "Montant total dû immédiatement :"
-  },
   "lCILNz": {
     "defaultMessage": "Acheter maintenant"
   },
@@ -2411,9 +2366,6 @@
   "nDyaq/": {
     "defaultMessage": "En cours d’exécution."
   },
-  "nFQbxh": {
-    "defaultMessage": "Mode de paiement"
-  },
   "nLgLHn": {
     "defaultMessage": "Recueillis {when}"
   },
@@ -2458,9 +2410,6 @@
   },
   "o9lOhm": {
     "defaultMessage": "Clé publique prise en charge : {npub}"
-  },
-  "oBSxZS": {
-    "defaultMessage": "Devis pour une mise à niveau"
   },
   "oC2JR/": {
     "defaultMessage": "<b>L’arrêt conserve vos données.</b> Si vous mettez une relève en pause, la base de données des événements sera toujours disponible lorsque vous la redémarrerez. Seule la suppression efface les données stockées."
@@ -2549,6 +2498,9 @@
   "qCGD63": {
     "defaultMessage": "Comment payer ?"
   },
+  "qNB4sp": {
+    "defaultMessage": "Payer et mettre à niveau"
+  },
   "qV+TFm": {
     "defaultMessage": "Le paiement a échoué."
   },
@@ -2557,6 +2509,9 @@
   },
   "qX7u3z": {
     "defaultMessage": "Libellé (par exemple, visa personnel)"
+  },
+  "qYjcyZ": {
+    "defaultMessage": "Les modifications de bande passante s'appliquent dès la confirmation du paiement, sans redémarrage."
   },
   "qkLHOL": {
     "defaultMessage": "Êtes-vous sûr de vouloir supprimer la clé SSH «{name}?"
@@ -2630,9 +2585,6 @@
   "s60OWn": {
     "defaultMessage": "Pay for this deployment before resizing it, an upgrade is charged pro-rata against the time left on the current period."
   },
-  "sAJryD": {
-    "defaultMessage": "La TVA et les frais sont estimés ; le montant exact sera confirmé au moment du paiement."
-  },
   "sOF2lj": {
     "defaultMessage": "Voir le README complet"
   },
@@ -2656,9 +2608,6 @@
   },
   "sqvjkf": {
     "defaultMessage": "Ajouter une poignée"
-  },
-  "srgk8m": {
-    "defaultMessage": "Définit la devise utilisée pour le devis et le paiement."
   },
   "sx6MYT": {
     "defaultMessage": "L'agent ne peut ni prolonger, ni rembourser ni supprimer une VM, et il ne peut pas agir sur un compte auquel il n'est pas connecté. Pour ceux, {link}."
@@ -2686,6 +2635,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Exécutez votre nœud Lightning sur un serveur virtuel privé (VPS) spécialement conçu à cet effet."
+  },
+  "tgvES0": {
+    "defaultMessage": "Maintenant"
   },
   "tngc9N": {
     "defaultMessage": "CIDR source"
@@ -2747,6 +2699,9 @@
   "uyWYPH": {
     "defaultMessage": "Cela efface tout sur la VM."
   },
+  "v+lbmr": {
+    "defaultMessage": "Déplacez le curseur pour sélectionner la nouvelle taille."
+  },
   "v2BRjN": {
     "defaultMessage": "Objet *"
   },
@@ -2756,8 +2711,14 @@
   "v4Sg0C": {
     "defaultMessage": "Utiliser une clé de destinataire personnalisée."
   },
+  "vIkTT1": {
+    "defaultMessage": "Une application managée est la bonne réponse lorsque le relais est l’objectif. Si vous souhaitez exécuter une version modifiée, co-localiser d’autres services ou gérer vous-même la machine, notre <a>hébergement VPS</a> est disponible à Dublin, Londres et Québec, avec au moins 1 To de trafic par mois et des adresses IPv4 et IPv6 statiques sur chaque offre."
+  },
   "vONi+O": {
     "defaultMessage": "Pays"
+  },
+  "vPxUsy": {
+    "defaultMessage": "Aucun redémarrage"
   },
   "vRG4WY": {
     "defaultMessage": "Vous pouvez quitter cette page en toute sécurité, le paiement apparaît dans votre historique de facturation et est appliqué une fois confirmé."
@@ -2789,9 +2750,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} règles de pare-feu"
   },
-  "vy2rlX": {
-    "defaultMessage": "Frais de traitement :"
-  },
   "w/+hVh": {
     "defaultMessage": "Un VPN WireGuard de {price} par {period}, payé avec Lightning, Bitcoin ou carte. Votre appareil génère ses propres clés et nous ne voyons jamais que la moitié publique."
   },
@@ -2806,12 +2764,6 @@
   },
   "wLCwU4": {
     "defaultMessage": "Gérer la facturation"
-  },
-  "wLwJ9Q": {
-    "defaultMessage": "Valeur du temps restant au tarif précédent :"
-  },
-  "wMxOFC": {
-    "defaultMessage": "Vitesse du port : {speed}"
   },
   "wRSmBV": {
     "defaultMessage": "Oui, chaque forfait comprend une adresse IPv4 et une adresse IPv6."
@@ -2873,9 +2825,6 @@
   "xkr+zo": {
     "defaultMessage": "Conditions générales"
   },
-  "xmSWcf": {
-    "defaultMessage": "Processeur : {cores} cœurs"
-  },
   "xuTqgN": {
     "defaultMessage": "Modes de paiement"
   },
@@ -2908,9 +2857,6 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."
-  },
-  "yc13cF": {
-    "defaultMessage": "Transfert : {amount} par mois"
   },
   "yfhNX4": {
     "defaultMessage": "La connexion crée une session valable 30 jours. Révoquez-les toutes si vous pensez que l'une d'elles a été exposée."
@@ -2947,12 +2893,6 @@
   },
   "zFegDD": {
     "defaultMessage": "Contactez-nous"
-  },
-  "zRPHCo": {
-    "defaultMessage": "Mémoire (Go)"
-  },
-  "zbyKVt": {
-    "defaultMessage": "<b>Volume de données illimité.</b> Un nœud de routage communique en permanence. Vous n’avez pas besoin de surveiller un compteur de bande passante."
   },
   "zhuLyw": {
     "defaultMessage": "Vous avez utilisé votre quota de trafic sortant pour ce mois-ci. Aucune mesure n'a été prise sur votre machine virtuelle, elle n'est ni bridée, ni suspendue, ni facturée pour le dépassement, et le quota se réinitialise le 1er."

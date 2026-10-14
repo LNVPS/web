@@ -88,7 +88,8 @@ export function LightningNodeVpsPage() {
     {
       question: formatMessage({ defaultMessage: "Is traffic metered?" }),
       answer: formatMessage({
-        defaultMessage: "No. Every plan includes unmetered traffic.",
+        defaultMessage:
+          "Outbound transfer is metered. Every plan includes at least 1 TB a month, and you can add more when you order or later. Inbound traffic is free.",
       }),
     },
     {
@@ -114,7 +115,7 @@ export function LightningNodeVpsPage() {
         canonical="/lightning-node-vps"
         description={formatMessage({
           defaultMessage:
-            "A VPS built for a Lightning node, with static IPv4 and IPv6, unmetered traffic, Tor permitted and no KYC. Dublin, London or Quebec. Pay with Lightning itself.",
+            "A VPS built for a Lightning node, with static IPv4 and IPv6, at least 1 TB of transfer a month, Tor permitted and no KYC. Dublin, London or Quebec. Pay with Lightning itself.",
         })}
         jsonLd={faqJsonLd(faq)}
       />
@@ -124,7 +125,7 @@ export function LightningNodeVpsPage() {
             <FormattedMessage defaultMessage="Run your Lightning node on a VPS built for it" />
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning. We run our own node, so your payment never touches a processor." />
+            <FormattedMessage defaultMessage="Static addressing, at least 1 TB of transfer a month, Tor permitted, and no KYC. Pay for it with Lightning. We run our own node, so your payment never touches a processor." />
           </p>
         </header>
 
@@ -146,7 +147,7 @@ export function LightningNodeVpsPage() {
             </p>
             <p className="m-0">
               <FormattedMessage
-                defaultMessage="<b>Unmetered traffic.</b> A routing node gossips constantly. You should not be watching a bandwidth meter."
+                defaultMessage="<b>Plenty of transfer.</b> A routing node talks to its peers all the time, and that fits easily in the 1 TB a month every plan includes. Need more? Add it when you order or later."
                 values={{
                   b: (chunks) => (
                     <b className="text-cyber-text-bright">{chunks}</b>

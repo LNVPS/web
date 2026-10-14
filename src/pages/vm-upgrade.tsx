@@ -1,55 +1,367 @@
-import { useState, useEffect } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 import {
   AccountDetail,
-  LNVpsApi,
+  Price,
   VmCustomTemplateParams,
   VmInstance,
-  VmUpgradeRequest,
   VmUpgradeQuote,
 } from "../api";
-import { ApiUrl } from "../const";
-import {
-  bandwidthUpgradeRange,
-  formatTransferAllowance,
-  upgradePlan,
-  withBandwidthUpgrade,
-} from "../utils/bandwidth";
-import { formatPortSpeed } from "../utils/plan-limits";
-import { NETWORK_STEP_MBPS, TRANSFER_STEP_GB } from "../utils/order-addons";
 import { accountTaxRate, processingFeeEstimate } from "../utils";
 import { AsyncButton } from "../components/button";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import PaymentFlow from "../components/payment-flow";
 import { vmUpgradeSource } from "../components/payment-sources";
-import { CostAmount } from "../components/cost";
-import { FormattedMessage } from "react-intl";
+import CostLabel, { CostAmount } from "../components/cost";
 import Seo from "../components/seo";
+import SpecSheet from "../components/spec-sheet";
+import ResourceSlider from "../components/resource-slider";
+import { Card, CardBody, CardTitle } from "../components/card";
+import { StatusPill } from "../components/billing";
+import { FilterButton } from "../components/button-filter";
+import { formatTransferAllowance } from "../utils/bandwidth";
+import { formatPortSpeed } from "../utils/plan-limits";
+import { NETWORK_STEP_MBPS, TRANSFER_STEP_GB } from "../utils/order-addons";
+import {
+  UpgradeBounds,
+  UpgradeSelection,
+  currentSelection,
+  upgradeBounds,
+  upgradeEffect,
+  upgradeRequest,
+} from "../utils/upgrade";
+
+const UPGRADE_METHODS = ["lightning", "revolut", "paypal", "stripe"];
+
+function Line({
+  label,
+  children,
+  strong,
+}: {
+  label: ReactNode;
+  children: ReactNode;
+  strong?: boolean;
+}) {
+  return (
+    <div
+      className={
+        strong
+          ? "flex items-baseline justify-between gap-4 text-cyber-text-bright"
+          : "flex items-baseline justify-between gap-4 text-sm text-cyber-text"
+      }
+    >
+      <span>{label}</span>
+      <span className="tabular-nums">{children}</span>
+    </div>
+  );
+}
+
+function Change({ from, to }: { from: string; to: string }) {
+  return (
+    <span className="whitespace-nowrap">
+      {from} <span className="text-cyber-muted">→</span>{" "}
+      <span className="text-cyber-primary">{to}</span>
+    </span>
+  );
+}
+
+function ResizeCard({
+  bounds,
+  selection,
+  onChange,
+  effect,
+}: {
+  bounds: UpgradeBounds;
+  selection: UpgradeSelection;
+  onChange: (s: UpgradeSelection) => void;
+  effect: ReturnType<typeof upgradeEffect>;
+}) {
+  const start = currentSelection(bounds);
+  const pairs: Array<[string, string]> = [
+    [`${start.cpu} vCPU`, `${selection.cpu} vCPU`],
+    [`${start.memoryGb} GB`, `${selection.memoryGb} GB`],
+    [`${start.diskGb} GB disk`, `${selection.diskGb} GB disk`],
+  ];
+  if (start.transferGb !== undefined && selection.transferGb !== undefined) {
+    pairs.push([
+      `${formatTransferAllowance(start.transferGb)}/mo`,
+      `${formatTransferAllowance(selection.transferGb)}/mo`,
+    ]);
+  }
+  if (start.networkMbps !== undefined && selection.networkMbps !== undefined) {
+    pairs.push([
+      formatPortSpeed(start.networkMbps) ?? "",
+      formatPortSpeed(selection.networkMbps) ?? "",
+    ]);
+  }
+  const changes = pairs.filter(([from, to]) => from !== to);
+
+  return (
+    <Card>
+      <CardTitle
+        right={
+          effect === "restart" ? (
+            <StatusPill tone="warning">
+              <FormattedMessage defaultMessage="Restarts the VM" />
+            </StatusPill>
+          ) : effect === "live" ? (
+            <StatusPill tone="primary">
+              <FormattedMessage defaultMessage="No restart" />
+            </StatusPill>
+          ) : undefined
+        }
+      >
+        <FormattedMessage defaultMessage="New size" />
+      </CardTitle>
+      <CardBody className="flex flex-col gap-3 px-4 py-4">
+        <ResourceSlider
+          label={<FormattedMessage defaultMessage="CPU cores" />}
+          unit="vCPU"
+          value={selection.cpu}
+          min={bounds.cpu.min}
+          max={bounds.cpu.max}
+          onChange={(cpu) => onChange({ ...selection, cpu })}
+        />
+        <ResourceSlider
+          label={<FormattedMessage defaultMessage="Memory" />}
+          unit="GB"
+          value={selection.memoryGb}
+          min={bounds.memoryGb.min}
+          max={bounds.memoryGb.max}
+          onChange={(memoryGb) => onChange({ ...selection, memoryGb })}
+        />
+        <ResourceSlider
+          label={<FormattedMessage defaultMessage="Storage" />}
+          unit="GB"
+          value={selection.diskGb}
+          min={bounds.diskGb.min}
+          max={bounds.diskGb.max}
+          onChange={(diskGb) => onChange({ ...selection, diskGb })}
+        />
+        {bounds.transferGb && selection.transferGb !== undefined && (
+          <ResourceSlider
+            label={<FormattedMessage defaultMessage="Transfer" />}
+            unit="GB/mo"
+            value={selection.transferGb}
+            min={bounds.transferGb.min}
+            max={bounds.transferGb.max}
+            step={TRANSFER_STEP_GB}
+            onChange={(transferGb) => onChange({ ...selection, transferGb })}
+          />
+        )}
+        {bounds.networkMbps && selection.networkMbps !== undefined && (
+          <ResourceSlider
+            label={<FormattedMessage defaultMessage="Port speed" />}
+            unit="Mbps"
+            value={selection.networkMbps}
+            min={bounds.networkMbps.min}
+            max={bounds.networkMbps.max}
+            step={NETWORK_STEP_MBPS}
+            onChange={(networkMbps) => onChange({ ...selection, networkMbps })}
+          />
+        )}
+      </CardBody>
+      <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-cyber-border bg-cyber-panel-light px-4 py-2.5 font-mono text-xs text-cyber-text">
+        {changes.length > 0 ? (
+          changes.map(([from, to]) => <Change key={from} from={from} to={to} />)
+        ) : (
+          <span className="text-cyber-muted">
+            <FormattedMessage defaultMessage="Move a slider to pick the new size." />
+          </span>
+        )}
+      </div>
+    </Card>
+  );
+}
+
+function QuoteCard({
+  quote,
+  loading,
+  error,
+  current,
+  tax,
+  fee,
+  taxRate,
+  methods,
+  method,
+  onMethod,
+  effect,
+  onPay,
+}: {
+  quote?: VmUpgradeQuote;
+  loading: boolean;
+  error?: string;
+  current: ReactNode;
+  tax: number;
+  fee: number;
+  taxRate: number;
+  methods: Array<string>;
+  method: string;
+  onMethod: (m: string) => void;
+  effect: ReturnType<typeof upgradeEffect>;
+  onPay: () => void;
+}) {
+  const currency = quote?.cost_difference.currency;
+  const money = (amount: number) =>
+    currency && (
+      <CostAmount cost={{ currency, amount } as Price} converted={false} />
+    );
+  const net = quote?.cost_difference.amount ?? 0;
+
+  return (
+    <Card>
+      <CardTitle
+        right={
+          loading && (
+            <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-muted">
+              <FormattedMessage defaultMessage="Pricing…" />
+            </span>
+          )
+        }
+      >
+        <FormattedMessage defaultMessage="Payment" />
+      </CardTitle>
+      <CardBody className="flex flex-col gap-4 px-4 py-4">
+        {methods.length > 1 && (
+          <div className="flex flex-wrap gap-2">
+            {methods.map((m) => (
+              <FilterButton
+                key={m}
+                active={m === method}
+                onClick={() => onMethod(m)}
+              >
+                {m.charAt(0).toUpperCase() + m.slice(1)}
+              </FilterButton>
+            ))}
+          </div>
+        )}
+
+        {error && (
+          <div className="rounded-sm border border-cyber-danger/50 bg-cyber-danger/10 px-3 py-2 text-sm text-cyber-danger">
+            {error}
+          </div>
+        )}
+
+        {quote ? (
+          <div className="flex flex-col gap-1.5">
+            <Line
+              label={
+                <FormattedMessage defaultMessage="New size for the rest of this period" />
+              }
+            >
+              {money(net + quote.discount.amount)}
+            </Line>
+            <Line
+              label={
+                <FormattedMessage defaultMessage="Credit for the time already paid" />
+              }
+            >
+              <span className="text-cyber-primary">
+                −{money(quote.discount.amount)}
+              </span>
+            </Line>
+            <Line
+              label={
+                <FormattedMessage
+                  defaultMessage="VAT ({rate})"
+                  values={{
+                    rate: `${(taxRate * 100).toFixed((taxRate * 100) % 1 === 0 ? 0 : 1)}%`,
+                  }}
+                />
+              }
+            >
+              {money(tax)}
+            </Line>
+            {fee > 0 && (
+              <Line
+                label={<FormattedMessage defaultMessage="Processing fee" />}
+              >
+                {money(fee)}
+              </Line>
+            )}
+            <div className="my-1 border-t border-cyber-border" />
+            <div className="flex items-baseline justify-between gap-4">
+              <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
+                <FormattedMessage defaultMessage="Due now" />
+              </span>
+              <span className="text-2xl leading-none text-cyber-text-bright tabular-nums">
+                {money(net + tax + fee)}
+              </span>
+            </div>
+            <div className="flex items-baseline justify-between gap-4 text-sm text-cyber-text">
+              <span>
+                <FormattedMessage defaultMessage="Then per month" />
+              </span>
+              <span className="tabular-nums">
+                <CostAmount cost={quote.new_renewal_cost} converted={false} />
+              </span>
+            </div>
+            <div className="flex items-baseline justify-between gap-4 text-xs text-cyber-muted">
+              <span>
+                <FormattedMessage defaultMessage="Currently" />
+              </span>
+              <span className="tabular-nums">{current}</span>
+            </div>
+          </div>
+        ) : (
+          !error && (
+            <p className="m-0 text-sm text-cyber-muted">
+              <FormattedMessage defaultMessage="The price appears here once you pick a bigger size. You pay the difference for what's left of this billing period." />
+            </p>
+          )
+        )}
+
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-xs text-cyber-muted">
+            {effect === "restart" ? (
+              <FormattedMessage defaultMessage="The VM restarts once the payment confirms, to apply the new CPU, memory or disk." />
+            ) : effect === "live" ? (
+              <FormattedMessage defaultMessage="Bandwidth changes apply as soon as the payment confirms, without a restart." />
+            ) : null}
+          </span>
+          <AsyncButton
+            className="sm:w-56"
+            disabled={!quote || loading}
+            onClick={onPay}
+          >
+            <FormattedMessage defaultMessage="Pay and upgrade" />
+          </AsyncButton>
+        </div>
+      </CardBody>
+    </Card>
+  );
+}
 
 export default function VmUpgradePage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
-  // Payment methods are only used to derive a default currency for the upgrade
-  // quote; the actual method is chosen in the payment flow itself.
   const { data: paymentMethods } = usePaymentMethods();
   const [state] = useState<VmInstance | undefined>(location?.state);
-  const [error, setError] = useState<string>();
+  const [plan, setPlan] = useState<VmCustomTemplateParams>();
+  const [planError, setPlanError] = useState<string>();
+  const [selection, setSelection] = useState<UpgradeSelection>();
   const [quote, setQuote] = useState<VmUpgradeQuote>();
+  const [quoteError, setQuoteError] = useState<string>();
   const [loading, setLoading] = useState(false);
-  const [selectedMethod, setSelectedMethod] = useState<string>("");
+  const [selectedMethod, setSelectedMethod] = useState("");
   const [account, setAccount] = useState<AccountDetail>();
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
-  // Upgrade payments live on the VM's subscription; needed to poll settlement.
-  const subscriptionId = state?.subscription_id;
 
-  const [plans, setPlans] = useState<Array<VmCustomTemplateParams>>([]);
+  const upgradeMethods = useMemo(
+    () =>
+      (paymentMethods ?? []).filter((m) => UPGRADE_METHODS.includes(m.name)),
+    [paymentMethods],
+  );
+
   useEffect(() => {
-    new LNVpsApi(ApiUrl ?? "", undefined)
-      .listOffers()
-      .then((o) => setPlans(o.custom_template ?? []))
-      .catch((e) => console.error("Failed to load plans:", e));
-  }, []);
+    if (selectedMethod || upgradeMethods.length === 0) return;
+    const match = upgradeMethods.find((m) =>
+      (m.currencies as Array<string>).includes(login?.currency ?? ""),
+    );
+    setSelectedMethod((match ?? upgradeMethods[0]).name);
+  }, [selectedMethod, upgradeMethods, login?.currency]);
 
   useEffect(() => {
     login?.api
@@ -58,38 +370,56 @@ export default function VmUpgradePage() {
       .catch((e) => console.error("Failed to load account:", e));
   }, [login?.api]);
 
-  // Only methods the upgrade endpoint can charge (Lightning, cards). NWC,
-  // LNURL and saved methods have no interactive upgrade-payment path.
-  const UPGRADE_METHODS = ["lightning", "revolut", "paypal", "stripe"];
-  const upgradeMethods = paymentMethods?.filter((m) =>
-    UPGRADE_METHODS.includes(m.name),
-  );
-
-  // Default the selection to a method that settles in the user's preferred
-  // currency (so the quote shows in that currency), else the first available.
+  const vmId = state?.id;
   useEffect(() => {
-    if (selectedMethod || !upgradeMethods?.length) return;
-    const match = upgradeMethods.find((m) =>
-      (m.currencies as Array<string>).includes(login?.currency ?? ""),
-    );
-    setSelectedMethod((match ?? upgradeMethods[0]).name);
-  }, [selectedMethod, upgradeMethods, login?.currency]);
+    if (!login?.api || vmId === undefined) return;
+    login.api
+      .getVmUpgradeOptions(vmId)
+      .then(setPlan)
+      .catch((e) => setPlanError(e instanceof Error ? e.message : String(e)));
+  }, [login?.api, vmId]);
 
-  const [upgradeCpu, setUpgradeCpu] = useState<number>(
-    state?.template.cpu ?? 1,
+  const bounds = useMemo(
+    () => (state && plan ? upgradeBounds(state.template, plan) : undefined),
+    [state, plan],
   );
-  const [upgradeMemory, setUpgradeMemory] = useState<number>(
-    (state?.template.memory ?? 1024 * 1024 * 1024) / (1024 * 1024 * 1024),
+  useEffect(() => {
+    if (bounds) setSelection(currentSelection(bounds));
+  }, [bounds]);
+
+  const request = useMemo(
+    () => (state && selection ? upgradeRequest(state.template, selection) : {}),
+    [state, selection],
   );
-  const [upgradeDisk, setUpgradeDisk] = useState<number>(
-    (state?.template.disk_size ?? 20 * 1024 * 1024 * 1024) /
-      (1024 * 1024 * 1024),
-  );
-  const currentTransferGb = state?.template.transfer_gb;
-  const currentNetworkMbps = state?.template.limits?.network_mbps;
-  const [upgradeTransferGb, setUpgradeTransferGb] = useState(currentTransferGb);
-  const [upgradeNetworkMbps, setUpgradeNetworkMbps] =
-    useState(currentNetworkMbps);
+  const effect = upgradeEffect(request);
+  const requestKey = JSON.stringify(request);
+
+  useEffect(() => {
+    setQuoteError(undefined);
+    if (!login?.api || vmId === undefined || effect === "none") {
+      setQuote(undefined);
+      return;
+    }
+    setLoading(true);
+    const t = setTimeout(() => {
+      login.api
+        .getVmUpgradeQuote(
+          vmId,
+          JSON.parse(requestKey),
+          selectedMethod || undefined,
+        )
+        .then(setQuote)
+        .catch((e) => {
+          setQuote(undefined);
+          setQuoteError(e instanceof Error ? e.message : String(e));
+        })
+        .finally(() => setLoading(false));
+    }, 500);
+    return () => {
+      clearTimeout(t);
+      setLoading(false);
+    };
+  }, [login?.api, vmId, requestKey, selectedMethod, effect]);
 
   if (!state) {
     return (
@@ -99,72 +429,8 @@ export default function VmUpgradePage() {
     );
   }
 
-  const plan = upgradePlan(plans, state.template);
-  const transferRange = bandwidthUpgradeRange(
-    plan?.transfer,
-    currentTransferGb,
-  );
-  const networkRange = bandwidthUpgradeRange(plan?.network, currentNetworkMbps);
-  const transferUp =
-    transferRange !== undefined &&
-    upgradeTransferGb !== undefined &&
-    upgradeTransferGb > transferRange.current;
-  const networkUp =
-    networkRange !== undefined &&
-    upgradeNetworkMbps !== undefined &&
-    upgradeNetworkMbps > networkRange.current;
-
-  const currentCpu = state.template.cpu;
-  const currentMemoryGB = state.template.memory / (1024 * 1024 * 1024);
-  const currentDiskGB = state.template.disk_size / (1024 * 1024 * 1024);
-
-  const hasValidUpgrade =
-    upgradeCpu >= currentCpu &&
-    upgradeMemory >= currentMemoryGB &&
-    upgradeDisk >= currentDiskGB &&
-    (upgradeCpu > currentCpu ||
-      upgradeMemory > currentMemoryGB ||
-      upgradeDisk > currentDiskGB ||
-      transferUp ||
-      networkUp);
-
-  async function getQuote() {
-    if (!login?.api || !hasValidUpgrade) return;
-    setLoading(true);
-    setError(undefined);
-    setQuote(undefined);
-    try {
-      const result = await login.api.getVmUpgradeQuote(
-        state!.id,
-        getUpgradeRequest(),
-        selectedMethod || undefined,
-      );
-      setQuote(result);
-    } catch (e) {
-      if (e instanceof Error) setError(e.message);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  function getUpgradeRequest(): VmUpgradeRequest {
-    const request: VmUpgradeRequest = {};
-    if (upgradeCpu > currentCpu) request.cpu = upgradeCpu;
-    if (upgradeMemory > currentMemoryGB)
-      request.memory = upgradeMemory * 1024 * 1024 * 1024;
-    if (upgradeDisk > currentDiskGB)
-      request.disk = upgradeDisk * 1024 * 1024 * 1024;
-    return withBandwidthUpgrade(
-      request,
-      transferRange ? upgradeTransferGb : undefined,
-      currentTransferGb,
-      networkRange ? upgradeNetworkMbps : undefined,
-      currentNetworkMbps,
-    );
-  }
-
-  // The upgrade charge is a payment on the VM's subscription.
-  if (showPaymentFlow && state && quote && login?.api) {
+  const subscriptionId = state.subscription_id;
+  if (showPaymentFlow && quote && login?.api) {
     if (subscriptionId === undefined) {
       return (
         <div className="rounded-sm bg-cyber-danger/20 p-4 text-sm text-cyber-danger">
@@ -173,413 +439,93 @@ export default function VmUpgradePage() {
       );
     }
     return (
-      <div className="flex flex-col gap-4">
-        <PaymentFlow
-          title={
-            <FormattedMessage
-              defaultMessage="Upgrade VPS #{id}"
-              values={{ id: state.id }}
-            />
-          }
-          source={vmUpgradeSource(
-            login.api,
-            state,
-            getUpgradeRequest(),
-            subscriptionId,
-          )}
-          onPaymentComplete={() => {
-            setShowPaymentFlow(false);
-            setQuote(undefined);
-          }}
-          onCancel={() => setShowPaymentFlow(false)}
-        />
-      </div>
+      <PaymentFlow
+        title={
+          <FormattedMessage
+            defaultMessage="Upgrade VPS #{id}"
+            values={{ id: state.id }}
+          />
+        }
+        source={vmUpgradeSource(login.api, state, request, subscriptionId)}
+        onPaymentComplete={() => {
+          setShowPaymentFlow(false);
+          setQuote(undefined);
+        }}
+        onCancel={() => setShowPaymentFlow(false)}
+      />
     );
   }
 
+  const taxRate = accountTaxRate(account, state.template.region?.company_id);
+  const net = quote?.cost_difference.amount ?? 0;
+  const tax = quote?.tax?.amount ?? Math.round(net * taxRate);
+  const method = upgradeMethods.find((m) => m.name === selectedMethod);
+  const fee =
+    quote?.processing_fee?.amount ??
+    (quote && method
+      ? processingFeeEstimate(method, quote.cost_difference.currency, net + tax)
+      : 0);
+
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <Seo noindex={true} />
-
-      <div className="text-xl">
-        <FormattedMessage defaultMessage="Upgrade VM Specifications" />
+      <div className="flex flex-col gap-1">
+        <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-muted">
+          <FormattedMessage defaultMessage="Upgrade" />
+        </span>
+        <h1 className="m-0 text-2xl text-cyber-text-bright">
+          <FormattedMessage
+            defaultMessage="Resize VPS #{id}"
+            values={{ id: state.id }}
+          />
+        </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-cyber-panel p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-4">
-            <FormattedMessage defaultMessage="Current Specifications" />
-          </h3>
-          <div className="space-y-2">
-            <div>
-              <FormattedMessage
-                defaultMessage="CPU: {cores} cores"
-                values={{ cores: currentCpu }}
-              />
-            </div>
-            <div>
-              <FormattedMessage
-                defaultMessage="Memory: {gb} GB"
-                values={{ gb: currentMemoryGB }}
-              />
-            </div>
-            <div>
-              <FormattedMessage
-                defaultMessage="Disk: {gb} GB {type}"
-                values={{
-                  gb: currentDiskGB,
-                  type: state.template.disk_type.toUpperCase(),
-                }}
-              />
-            </div>
-            <div>
-              {currentTransferGb !== undefined && currentTransferGb > 0 ? (
-                <FormattedMessage
-                  defaultMessage="Transfer: {amount} per month"
-                  values={{
-                    amount: formatTransferAllowance(currentTransferGb),
-                  }}
-                />
-              ) : (
-                <FormattedMessage defaultMessage="Transfer: unmetered" />
-              )}
-            </div>
-            <div>
-              {formatPortSpeed(currentNetworkMbps) ? (
-                <FormattedMessage
-                  defaultMessage="Port speed: {speed}"
-                  values={{ speed: formatPortSpeed(currentNetworkMbps) }}
-                />
-              ) : (
-                <FormattedMessage defaultMessage="Port speed: uncapped" />
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-cyber-panel p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-4">
-            <FormattedMessage defaultMessage="Upgrade To" />
-          </h3>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                <FormattedMessage defaultMessage="CPU Cores" />
-              </label>
-              <input
-                type="number"
-                min={currentCpu}
-                value={upgradeCpu}
-                onChange={(e) =>
-                  setUpgradeCpu(parseInt(e.target.value) || currentCpu)
-                }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-              />
-              <small className="text-cyber-muted">
-                <FormattedMessage
-                  defaultMessage="Minimum: {min} cores"
-                  values={{ min: currentCpu }}
-                />
-              </small>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                <FormattedMessage defaultMessage="Memory (GB)" />
-              </label>
-              <input
-                type="number"
-                min={currentMemoryGB}
-                value={upgradeMemory}
-                onChange={(e) =>
-                  setUpgradeMemory(parseInt(e.target.value) || currentMemoryGB)
-                }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-              />
-              <small className="text-cyber-muted">
-                <FormattedMessage
-                  defaultMessage="Minimum: {min} GB"
-                  values={{ min: currentMemoryGB }}
-                />
-              </small>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                <FormattedMessage defaultMessage="Disk (GB)" />
-              </label>
-              <input
-                type="number"
-                min={currentDiskGB}
-                value={upgradeDisk}
-                onChange={(e) =>
-                  setUpgradeDisk(parseInt(e.target.value) || currentDiskGB)
-                }
-                className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-              />
-              <small className="text-cyber-muted">
-                <FormattedMessage
-                  defaultMessage="Minimum: {min} GB {type}"
-                  values={{
-                    min: currentDiskGB,
-                    type: state.template.disk_type.toUpperCase(),
-                  }}
-                />
-              </small>
-            </div>
-
-            {transferRange && (
-              <div>
-                <label className="block text-sm font-medium mb-1">
-                  <FormattedMessage defaultMessage="Monthly transfer (GB)" />
-                </label>
-                <input
-                  type="number"
-                  min={transferRange.current}
-                  max={transferRange.max}
-                  step={TRANSFER_STEP_GB}
-                  value={upgradeTransferGb}
-                  onChange={(e) =>
-                    setUpgradeTransferGb(
-                      Math.min(
-                        transferRange.max,
-                        parseInt(e.target.value) || transferRange.current,
-                      ),
-                    )
-                  }
-                  className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-                />
-                <small className="text-cyber-muted">
-                  <FormattedMessage
-                    defaultMessage="Between {min} and {max} GB"
-                    values={{
-                      min: transferRange.current,
-                      max: transferRange.max,
-                    }}
-                  />
-                </small>
-              </div>
-            )}
-
-            {networkRange && (
-              <div>
-                <label className="block text-sm font-medium mb-1">
-                  <FormattedMessage defaultMessage="Port speed (Mbit/s)" />
-                </label>
-                <input
-                  type="number"
-                  min={networkRange.current}
-                  max={networkRange.max}
-                  step={NETWORK_STEP_MBPS}
-                  value={upgradeNetworkMbps}
-                  onChange={(e) =>
-                    setUpgradeNetworkMbps(
-                      Math.min(
-                        networkRange.max,
-                        parseInt(e.target.value) || networkRange.current,
-                      ),
-                    )
-                  }
-                  className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-                />
-                <small className="text-cyber-muted">
-                  <FormattedMessage
-                    defaultMessage="Between {min} and {max} Mbit/s"
-                    values={{
-                      min: networkRange.current,
-                      max: networkRange.max,
-                    }}
-                  />
-                </small>
-              </div>
-            )}
-          </div>
-        </div>
+      <div className="flex flex-col gap-2">
+        <span className="text-[0.65rem] uppercase tracking-[0.25em] text-cyber-text">
+          <FormattedMessage defaultMessage="Now" />
+        </span>
+        <SpecSheet template={state.template} />
       </div>
 
-      <div className="bg-cyber-panel p-4 rounded-sm">
-        <h3 className="text-lg font-bold mb-4">
-          <FormattedMessage defaultMessage="Payment Method" />
-        </h3>
-        <select
-          value={selectedMethod}
-          onChange={(e) => {
-            setSelectedMethod(e.target.value);
-            setQuote(undefined);
-          }}
-          className="w-full px-3 py-2 bg-cyber-panel-light rounded-sm border border-cyber-border focus:border-cyber-primary"
-        >
-          {upgradeMethods?.map((method) => (
-            <option key={method.name} value={method.name}>
-              {method.name.charAt(0).toUpperCase() + method.name.slice(1)}
-              {method.currencies.length > 0 &&
-                ` (${method.currencies.join(", ")})`}
-            </option>
-          ))}
-        </select>
-        <small className="text-cyber-muted mt-2 block">
-          <FormattedMessage defaultMessage="Sets the currency used for the quote and payment." />
-        </small>
-      </div>
-
-      {error && (
-        <div className="bg-cyber-danger/20 text-cyber-danger p-4 rounded-sm">
-          <strong>
-            <FormattedMessage defaultMessage="Error:" />
-          </strong>{" "}
-          {error}
-        </div>
-      )}
-
-      {quote && (
-        <div className="bg-cyber-primary/20 text-cyber-primary p-4 rounded-sm">
-          <h3 className="text-lg font-bold mb-2">
-            <FormattedMessage defaultMessage="Upgrade Quote" />
-          </h3>
-          <div className="space-y-3">
-            <div className="bg-cyber-primary/10 p-3 rounded-sm">
-              <h4 className="font-semibold mb-2">
-                <FormattedMessage defaultMessage="Cost Breakdown" />
-              </h4>
-              <div className="space-y-1 text-sm">
-                <div className="flex justify-between">
-                  <span>
-                    <FormattedMessage defaultMessage="Value of remaining time at old rate:" />
-                  </span>
-                  <span>
-                    <CostAmount cost={quote.discount} converted={false} />
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span>
-                    <FormattedMessage defaultMessage="Cost at new rate for remaining time:" />
-                  </span>
-                  <span>
-                    <CostAmount
-                      cost={{
-                        currency: quote.cost_difference.currency,
-                        amount:
-                          quote.cost_difference.amount + quote.discount.amount,
-                      }}
-                      converted={false}
-                    />
-                  </span>
-                </div>
-                <hr className="border-cyber-primary my-2" />
-                <div className="flex justify-between">
-                  <span>
-                    <FormattedMessage defaultMessage="Pro-rated upgrade cost:" />
-                  </span>
-                  <span>
-                    <CostAmount
-                      cost={quote.cost_difference}
-                      converted={false}
-                    />
-                  </span>
-                </div>
-                {(() => {
-                  const currency = quote.cost_difference.currency;
-                  const net = quote.cost_difference.amount;
-                  // Prefer server-computed tax/fee; fall back to a client-side
-                  // estimate so the breakdown is populated either way.
-                  const taxRate = accountTaxRate(
-                    account,
-                    state.template.region?.company_id,
-                  );
-                  const tax =
-                    quote.tax?.amount ?? Math.round(net * taxRate);
-                  const method = upgradeMethods?.find(
-                    (m) => m.name === selectedMethod,
-                  );
-                  const fee =
-                    quote.processing_fee?.amount ??
-                    (method
-                      ? processingFeeEstimate(method, currency, net + tax)
-                      : 0);
-                  return (
-                    <>
-                      <div className="flex justify-between">
-                        <span>
-                          <FormattedMessage
-                            defaultMessage="VAT ({rate}):"
-                            values={{
-                              rate: `${(taxRate * 100).toFixed(taxRate * 100 % 1 === 0 ? 0 : 1)}%`,
-                            }}
-                          />
-                        </span>
-                        <CostAmount
-                          cost={{ currency, amount: tax }}
-                          converted={false}
-                        />
-                      </div>
-                      {fee > 0 && (
-                        <div className="flex justify-between">
-                          <span>
-                            <FormattedMessage defaultMessage="Processing fee:" />
-                          </span>
-                          <CostAmount
-                            cost={{ currency, amount: fee }}
-                            converted={false}
-                          />
-                        </div>
-                      )}
-                      <hr className="border-cyber-primary my-2" />
-                      <div className="flex justify-between font-semibold text-base">
-                        <span>
-                          <FormattedMessage defaultMessage="Total due now:" />
-                        </span>
-                        <CostAmount
-                          cost={{ currency, amount: net + tax + fee }}
-                          converted={false}
-                        />
-                      </div>
-                      {quote.tax === undefined && (
-                        <div className="text-xs text-cyber-primary/70 pt-1">
-                          <FormattedMessage defaultMessage="VAT and fees are estimated; the exact amount is confirmed at payment." />
-                        </div>
-                      )}
-                    </>
-                  );
-                })()}
-              </div>
-            </div>
-            <p className="font-semibold">
-              <FormattedMessage
-                defaultMessage="New monthly renewal cost: {cost}"
-                values={{
-                  cost: (
-                    <strong>
-                      <CostAmount
-                        cost={quote.new_renewal_cost}
-                        converted={false}
-                      />
-                    </strong>
-                  ),
-                }}
+      {planError ? (
+        <Card>
+          <CardBody className="px-4 py-3 text-sm text-cyber-text">
+            <FormattedMessage defaultMessage="This VM can't be resized online right now. Contact support and we'll sort it out." />
+          </CardBody>
+        </Card>
+      ) : bounds && selection ? (
+        <>
+          <ResizeCard
+            bounds={bounds}
+            selection={selection}
+            onChange={setSelection}
+            effect={effect}
+          />
+          <QuoteCard
+            quote={quote}
+            loading={loading}
+            error={quoteError}
+            current={
+              <CostLabel
+                cost={state.template.cost_plan}
+                companyId={state.template.region?.company_id}
               />
-            </p>
-          </div>
-        </div>
-      )}
-
-      <div className="flex gap-4">
-        <AsyncButton onClick={getQuote} disabled={!hasValidUpgrade || loading}>
-          <FormattedMessage defaultMessage="Get Quote" />
-        </AsyncButton>
-        {quote && (
-          <AsyncButton
-            onClick={() => setShowPaymentFlow(true)}
-            disabled={loading}
-          >
-            <FormattedMessage defaultMessage="Proceed to Payment" />
-          </AsyncButton>
-        )}
-      </div>
-
-      {!hasValidUpgrade && (
-        <div className="text-cyber-warning text-sm">
-          <FormattedMessage defaultMessage="Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current." />
-        </div>
+            }
+            tax={tax}
+            fee={fee}
+            taxRate={taxRate}
+            methods={upgradeMethods.map((m) => m.name)}
+            method={selectedMethod}
+            onMethod={setSelectedMethod}
+            effect={effect}
+            onPay={() => setShowPaymentFlow(true)}
+          />
+        </>
+      ) : (
+        <span className="text-sm text-cyber-muted">
+          <FormattedMessage defaultMessage="Loading…" />
+        </span>
       )}
     </div>
   );

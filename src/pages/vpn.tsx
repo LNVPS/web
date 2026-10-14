@@ -302,7 +302,7 @@ export function VpnPage() {
         >
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage
-              defaultMessage="A VPN plan gives you an exit, not a server. If you want a box to run your own services on, with a static IPv4 and IPv6 and unmetered traffic, our <a>VPS hosting</a> runs on the same fleet."
+              defaultMessage="A VPN plan gives you an exit, not a server. If you want a box to run your own services on, with a static IPv4 and IPv6 and at least 1 TB of transfer a month, our <a>VPS hosting</a> runs on the same fleet."
               values={{
                 a: (chunks) => (
                   <Link

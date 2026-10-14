@@ -299,9 +299,6 @@
   "4eCXO1": {
     "defaultMessage": "{fee} fee"
   },
-  "4j0zpr": {
-    "defaultMessage": "Minimum: {min} cores"
-  },
   "4l6vz1": {
     "defaultMessage": "Copy"
   },
@@ -313,9 +310,6 @@
   },
   "5/Pb3D": {
     "defaultMessage": "Active subscriptions"
-  },
-  "53RN0g": {
-    "defaultMessage": "Proceed to Payment"
   },
   "556JQK": {
     "defaultMessage": "Deploy"
@@ -329,14 +323,11 @@
   "5QYdPU": {
     "defaultMessage": "Start Time"
   },
+  "5V9Nif": {
+    "defaultMessage": "The VM restarts once the payment confirms, to apply the new CPU, memory or disk."
+  },
   "5VCeOz": {
     "defaultMessage": "Running a Nostr relay too? That one does not need a whole server. It is <a>from {price} a month as a Managed App</a>."
-  },
-  "5VEOig": {
-    "defaultMessage": "Cost at new rate for remaining time:"
-  },
-  "5elgIe": {
-    "defaultMessage": "Error:"
   },
   "5h1V4e": {
     "defaultMessage": "No. Sign up with a Nostr key and pay in sats."
@@ -368,8 +359,8 @@
   "6G/ao3": {
     "defaultMessage": "Your own hostname, <code>your-name.ie.apps.lnvps.cloud</code>, with a TLS certificate issued automatically"
   },
-  "6SfJaf": {
-    "defaultMessage": "Upgrade To"
+  "6HDvaQ": {
+    "defaultMessage": "Then per month"
   },
   "6Tps09": {
     "defaultMessage": "Inactive"
@@ -419,6 +410,9 @@
   "7NFfmz": {
     "defaultMessage": "Products"
   },
+  "7Op9IC": {
+    "defaultMessage": "Credit for the time already paid"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n, plural, one {day} other {days}}"
   },
@@ -455,17 +449,11 @@
   "7yPJTW": {
     "defaultMessage": "Expiring soon"
   },
-  "7zs+Vz": {
-    "defaultMessage": "Memory: {gb} GB"
-  },
   "81TEFm": {
     "defaultMessage": "Host {name} as a managed {category} on LNVPS, with its own hostname, TLS included and {storage} storage. No server to patch."
   },
   "82Y7Sa": {
     "defaultMessage": "Sending..."
-  },
-  "8BgaUL": {
-    "defaultMessage": "Current Specifications"
   },
   "8EkkgC": {
     "defaultMessage": "Visa or Mastercard, billed via Revolut"
@@ -553,9 +541,6 @@
   },
   "9vL1hB": {
     "defaultMessage": "{amount} off. Applies to this payment only. Later renewals bill at the normal price."
-  },
-  "9vwnaT": {
-    "defaultMessage": "Transfer: unmetered"
   },
   "A/UHKJ": {
     "defaultMessage": "Reach the team directly and we'll get back to you."
@@ -662,6 +647,9 @@
   "Bzv1CO": {
     "defaultMessage": "Reactivate now"
   },
+  "C/Kq27": {
+    "defaultMessage": "Restarts the VM"
+  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -701,6 +689,9 @@
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
+  "Czw6Yl": {
+    "defaultMessage": "Currently"
+  },
   "D3idYv": {
     "defaultMessage": "Settings"
   },
@@ -715,9 +706,6 @@
   },
   "DDMksJ": {
     "defaultMessage": "Deploy your first VPS"
-  },
-  "DFLJpz": {
-    "defaultMessage": "New monthly renewal cost: {cost}"
   },
   "DTd1bi": {
     "defaultMessage": "Lightning, on-chain, or card"
@@ -770,17 +758,11 @@
   "E8y+Hb": {
     "defaultMessage": "Lease expired"
   },
-  "EBMKSN": {
-    "defaultMessage": "Upgrade VM Specifications"
-  },
   "ED9RG5": {
     "defaultMessage": "Audit log"
   },
   "EIJT7Y": {
     "defaultMessage": "Danger zone"
-  },
-  "EKlM8d": {
-    "defaultMessage": "Disk (GB)"
   },
   "ELp7j5": {
     "defaultMessage": "Live Chat with LNVPS Support"
@@ -1019,9 +1001,6 @@
   "IvjoDS": {
     "defaultMessage": "Connected"
   },
-  "Iz4veS": {
-    "defaultMessage": "Minimum: {min} GB"
-  },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
@@ -1136,6 +1115,9 @@
   "LjziLu": {
     "defaultMessage": "Encrypt Message"
   },
+  "Lm+IAa": {
+    "defaultMessage": "Due now"
+  },
   "LpI0+d": {
     "defaultMessage": "I have a key"
   },
@@ -1169,9 +1151,6 @@
   "MZQ6io": {
     "defaultMessage": "Download a config, or scan its QR code, and bring the tunnel up. One file per exit region, all sharing the same key."
   },
-  "MchCHv": {
-    "defaultMessage": "Port speed (Mbit/s)"
-  },
   "MfiEGP": {
     "defaultMessage": "{storage} in total. For a personal media server that is comfortable; if you need more, a VPS with Route96 installed yourself scales further."
   },
@@ -1186,9 +1165,6 @@
   },
   "MqbiJp": {
     "defaultMessage": "Yes. Point a CNAME at your relay's hostname. We issue a separate certificate for it automatically once DNS resolves."
-  },
-  "N0nw1G": {
-    "defaultMessage": "Monthly transfer (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
@@ -1238,9 +1214,6 @@
   "OEZ5v2": {
     "defaultMessage": "View subscription"
   },
-  "OG77ID": {
-    "defaultMessage": "Port speed: uncapped"
-  },
   "OJuBck": {
     "defaultMessage": "Passwordless"
   },
@@ -1258,9 +1231,6 @@
   },
   "OephhB": {
     "defaultMessage": "{v} write"
-  },
-  "OikYIw": {
-    "defaultMessage": "Minimum: {min} GB {type}"
   },
   "Olq7Wf": {
     "defaultMessage": "Type your message here..."
@@ -1283,9 +1253,6 @@
   "OyvHWp": {
     "defaultMessage": "Deployment"
   },
-  "P+08xT": {
-    "defaultMessage": "Get Quote"
-  },
   "P/PGYR": {
     "defaultMessage": "No referrals yet. Share your link to start converting."
   },
@@ -1297,9 +1264,6 @@
   },
   "PCD5y1": {
     "defaultMessage": "A VPS built to order in {region}: {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory} memory, paid in Bitcoin."
-  },
-  "PJKhfR": {
-    "defaultMessage": "A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with unmetered traffic and a static IPv4 and IPv6 on every plan."
   },
   "PJtOx7": {
     "defaultMessage": "No incidents to report."
@@ -1352,8 +1316,8 @@
   "QT2jf3": {
     "defaultMessage": "Delete permanently?"
   },
-  "QWN/RL": {
-    "defaultMessage": "A VPN plan gives you an exit, not a server. If you want a box to run your own services on, with a static IPv4 and IPv6 and unmetered traffic, our <a>VPS hosting</a> runs on the same fleet."
+  "QVsrAB": {
+    "defaultMessage": "A VPS built for a Lightning node, with static IPv4 and IPv6, at least 1 TB of transfer a month, Tor permitted and no KYC. Dublin, London or Quebec. Pay with Lightning itself."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1370,6 +1334,9 @@
   "QuGLBN": {
     "defaultMessage": "This SSH key is in use by one or more VMs and cannot be deleted."
   },
+  "QzAwVv": {
+    "defaultMessage": "Resize VPS #{id}"
+  },
   "R+j5Qu": {
     "defaultMessage": "No IPs assigned"
   },
@@ -1381,15 +1348,6 @@
   },
   "R5zovH": {
     "defaultMessage": "Contact and Support"
-  },
-  "R7x8iU": {
-    "defaultMessage": "Disk: {gb} GB {type}"
-  },
-  "RAyrhP": {
-    "defaultMessage": "VAT ({rate}):"
-  },
-  "RB2CER": {
-    "defaultMessage": "CPU Cores"
   },
   "RCHbbR": {
     "defaultMessage": "Manage your billing details, automatic renewal and how we reach you."
@@ -1475,9 +1433,6 @@
   "SuX9Rr": {
     "defaultMessage": "Hold commission until it reaches this amount before paying out, which is handy on-chain to avoid tiny payouts. Leave blank to use the system minimum; you can raise it but not go below."
   },
-  "Sz/3Vf": {
-    "defaultMessage": "Please specify upgrade values that are greater than or equal to current values, with at least one value being greater than current."
-  },
   "T1/en5": {
     "defaultMessage": "ID: {id}"
   },
@@ -1486,6 +1441,9 @@
   },
   "T4VxQN": {
     "defaultMessage": "Loading…"
+  },
+  "T69oK0": {
+    "defaultMessage": "<b>Plenty of transfer.</b> A routing node talks to its peers all the time, and that fits easily in the 1 TB a month every plan includes. Need more? Add it when you order or later."
   },
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
@@ -1598,6 +1556,9 @@
   "Uw1G5p": {
     "defaultMessage": "of {allowance} egress"
   },
+  "Uyg4Ur": {
+    "defaultMessage": "A VPN plan gives you an exit, not a server. If you want a box to run your own services on, with a static IPv4 and IPv6 and at least 1 TB of transfer a month, our <a>VPS hosting</a> runs on the same fleet."
+  },
   "V/V4bz": {
     "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
   },
@@ -1631,6 +1592,9 @@
   "Vi+REQ": {
     "defaultMessage": "Deploy in minutes. Pay with Lightning, Bitcoin, or card. No long-term contracts."
   },
+  "Vn25W2": {
+    "defaultMessage": "The price appears here once you pick a bigger size. You pay the difference for what's left of this billing period."
+  },
   "VrBNV4": {
     "defaultMessage": "First payment"
   },
@@ -1648,9 +1612,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "Couldn't find a subscription to bill this upgrade to."
-  },
-  "WFUub1": {
-    "defaultMessage": "A VPS built for a Lightning node, with static IPv4 and IPv6, unmetered traffic, Tor permitted and no KYC. Dublin, London or Quebec. Pay with Lightning itself."
   },
   "WHIo1V": {
     "defaultMessage": "Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin."
@@ -1769,6 +1730,9 @@
   "Yl8GBP": {
     "defaultMessage": "Tax ID"
   },
+  "Ys/B2r": {
+    "defaultMessage": "Static addressing, at least 1 TB of transfer a month, Tor permitted, and no KYC. Pay for it with Lightning. We run our own node, so your payment never touches a processor."
+  },
   "YsVmzT": {
     "defaultMessage": "For outbound rules, Source CIDR matches this VM's own address. The remote destination host cannot be restricted, only protocol and destination port."
   },
@@ -1789,6 +1753,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Verified"
+  },
+  "ZKRP7f": {
+    "defaultMessage": "This VM can't be resized online right now. Contact support and we'll sort it out."
   },
   "ZTj6ca": {
     "defaultMessage": "Pay by card"
@@ -1859,11 +1826,11 @@
   "bMQUWl": {
     "defaultMessage": "Source CIDR (this VM)"
   },
-  "bO+E2G": {
-    "defaultMessage": "No. Every plan includes unmetered traffic."
-  },
   "bW7B87": {
     "defaultMessage": "New"
+  },
+  "bg/ESW": {
+    "defaultMessage": "Pricing…"
   },
   "bh3pad": {
     "defaultMessage": "Please login first before making a purchase"
@@ -1897,9 +1864,6 @@
   },
   "cQtv0G": {
     "defaultMessage": "{n} running"
-  },
-  "cV0ZGf": {
-    "defaultMessage": "Cost Breakdown"
   },
   "cXAlMR": {
     "defaultMessage": "Scheduled"
@@ -2099,14 +2063,8 @@
   "gGjH22": {
     "defaultMessage": "VPS Canada: Quebec VPS Paid in Bitcoin"
   },
-  "gH4VcS": {
-    "defaultMessage": "Pro-rated upgrade cost:"
-  },
   "gL1jHz": {
     "defaultMessage": "Persistent storage, sized per relay above"
-  },
-  "gMKnxm": {
-    "defaultMessage": "Between {min} and {max} GB"
   },
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
@@ -2153,9 +2111,6 @@
   "hADOUq": {
     "defaultMessage": "Saved. The app will restart shortly."
   },
-  "hWDpJn": {
-    "defaultMessage": "Between {min} and {max} Mbit/s"
-  },
   "hX8VXF": {
     "defaultMessage": "Monthly Uptime (Past 12 Months)"
   },
@@ -2165,11 +2120,11 @@
   "hs3HVz": {
     "defaultMessage": "Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account."
   },
-  "hsfQVg": {
-    "defaultMessage": "Static addressing, unmetered traffic, Tor permitted, and no KYC. Pay for it with Lightning. We run our own node, so your payment never touches a processor."
-  },
   "huqKGl": {
     "defaultMessage": "Create account"
+  },
+  "hxU3Dx": {
+    "defaultMessage": "New size for the rest of this period"
   },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
@@ -2197,6 +2152,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Recommended)"
+  },
+  "im3sBQ": {
+    "defaultMessage": "Outbound transfer is metered. Every plan includes at least 1 TB a month, and you can add more when you order or later. Inbound traffic is free."
   },
   "ir0wB7": {
     "defaultMessage": "I understand all data will be permanently deleted."
@@ -2315,9 +2273,6 @@
   "l4RUua": {
     "defaultMessage": "Service: {service}"
   },
-  "l7PJ8l": {
-    "defaultMessage": "Total due now:"
-  },
   "lCILNz": {
     "defaultMessage": "Buy Now"
   },
@@ -2432,9 +2387,6 @@
   "nDyaq/": {
     "defaultMessage": "Running"
   },
-  "nFQbxh": {
-    "defaultMessage": "Payment Method"
-  },
   "nLgLHn": {
     "defaultMessage": "Collected {when}"
   },
@@ -2479,9 +2431,6 @@
   },
   "o9lOhm": {
     "defaultMessage": "Support pubkey: {npub}"
-  },
-  "oBSxZS": {
-    "defaultMessage": "Upgrade Quote"
   },
   "oC2JR/": {
     "defaultMessage": "<b>Stopping keeps your data.</b> Pause a relay and the event database is still there when you start it again. Only deleting removes storage."
@@ -2570,6 +2519,9 @@
   "qCGD63": {
     "defaultMessage": "How do I pay?"
   },
+  "qNB4sp": {
+    "defaultMessage": "Pay and upgrade"
+  },
   "qV+TFm": {
     "defaultMessage": "Payment failed"
   },
@@ -2578,6 +2530,9 @@
   },
   "qX7u3z": {
     "defaultMessage": "Label (e.g. Personal Visa)"
+  },
+  "qYjcyZ": {
+    "defaultMessage": "Bandwidth changes apply as soon as the payment confirms, without a restart."
   },
   "qkLHOL": {
     "defaultMessage": "Are you sure you want to delete SSH key \"{name}\"?"
@@ -2654,9 +2609,6 @@
   "s60OWn": {
     "defaultMessage": "Pay for this deployment before resizing it. An upgrade is charged pro-rata against the time left on the current period."
   },
-  "sAJryD": {
-    "defaultMessage": "VAT and fees are estimated; the exact amount is confirmed at payment."
-  },
   "sOF2lj": {
     "defaultMessage": "View full README"
   },
@@ -2680,9 +2632,6 @@
   },
   "sqvjkf": {
     "defaultMessage": "Add Handle"
-  },
-  "srgk8m": {
-    "defaultMessage": "Sets the currency used for the quote and payment."
   },
   "sx6MYT": {
     "defaultMessage": "The agent can't extend, refund or delete a VM, and it can't act on an account it isn't logged into. For those, {link}."
@@ -2710,6 +2659,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Run your Lightning node on a VPS built for it"
+  },
+  "tgvES0": {
+    "defaultMessage": "Now"
   },
   "tngc9N": {
     "defaultMessage": "Source CIDR"
@@ -2771,6 +2723,9 @@
   "uyWYPH": {
     "defaultMessage": "This erases everything on the VM."
   },
+  "v+lbmr": {
+    "defaultMessage": "Move a slider to pick the new size."
+  },
   "v2BRjN": {
     "defaultMessage": "Subject *"
   },
@@ -2780,8 +2735,14 @@
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
   },
+  "vIkTT1": {
+    "defaultMessage": "A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with at least 1 TB of transfer a month and a static IPv4 and IPv6 on every plan."
+  },
   "vONi+O": {
     "defaultMessage": "Country"
+  },
+  "vPxUsy": {
+    "defaultMessage": "No restart"
   },
   "vRG4WY": {
     "defaultMessage": "You can safely leave this page. The payment appears in your billing history and is applied once it confirms."
@@ -2816,9 +2777,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} firewall rules"
   },
-  "vy2rlX": {
-    "defaultMessage": "Processing fee:"
-  },
   "w/+hVh": {
     "defaultMessage": "A WireGuard VPN from {price} per {period}, paid with Lightning, Bitcoin or card. Your device makes its own keys and we only ever see the public half."
   },
@@ -2833,12 +2791,6 @@
   },
   "wLCwU4": {
     "defaultMessage": "Manage billing"
-  },
-  "wLwJ9Q": {
-    "defaultMessage": "Value of remaining time at old rate:"
-  },
-  "wMxOFC": {
-    "defaultMessage": "Port speed: {speed}"
   },
   "wRSmBV": {
     "defaultMessage": "Yes, one IPv4 and one IPv6 on every plan."
@@ -2900,9 +2852,6 @@
   "xkr+zo": {
     "defaultMessage": "Terms"
   },
-  "xmSWcf": {
-    "defaultMessage": "CPU: {cores} cores"
-  },
   "xuTqgN": {
     "defaultMessage": "Payment Methods"
   },
@@ -2935,9 +2884,6 @@
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."
-  },
-  "yc13cF": {
-    "defaultMessage": "Transfer: {amount} per month"
   },
   "yfhNX4": {
     "defaultMessage": "Signing in creates a session that stays valid for 30 days. Revoke them all if you think one has been exposed."
@@ -2974,12 +2920,6 @@
   },
   "zFegDD": {
     "defaultMessage": "Contact"
-  },
-  "zRPHCo": {
-    "defaultMessage": "Memory (GB)"
-  },
-  "zbyKVt": {
-    "defaultMessage": "<b>Unmetered traffic.</b> A routing node gossips constantly. You should not be watching a bandwidth meter."
   },
   "zhuLyw": {
     "defaultMessage": "You have used your egress allowance for this month. Nothing has been done to your VM: it is not throttled, suspended or charged for the overage, and the allowance resets on the 1st."

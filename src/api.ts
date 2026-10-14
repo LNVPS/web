@@ -2227,6 +2227,13 @@ export class LNVpsApi {
     return data;
   }
 
+  async getVmUpgradeOptions(vm_id: number) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<VmCustomTemplateParams>
+    >(await this.#req(`/api/v1/vm/${vm_id}/upgrade/options`, "GET"));
+    return data;
+  }
+
   async getVmUpgradeQuote(
     vm_id: number,
     req: VmUpgradeRequest,

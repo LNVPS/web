@@ -299,9 +299,6 @@
   "4eCXO1": {
     "defaultMessage": "{fee} işlem ücreti"
   },
-  "4j0zpr": {
-    "defaultMessage": "En az: {min} çekirdekler"
-  },
   "4l6vz1": {
     "defaultMessage": "Kopyala"
   },
@@ -313,9 +310,6 @@
   },
   "5/Pb3D": {
     "defaultMessage": "Aktif abonelikler"
-  },
-  "53RN0g": {
-    "defaultMessage": "Ödemeye Geçin"
   },
   "556JQK": {
     "defaultMessage": "Dağıt"
@@ -329,14 +323,11 @@
   "5QYdPU": {
     "defaultMessage": "Başlangıç Saati"
   },
+  "5V9Nif": {
+    "defaultMessage": "Ödeme onaylandığında, yeni CPU, bellek veya disk yapılandırmasının uygulanması için sanal makine yeniden başlatılır."
+  },
   "5VCeOz": {
     "defaultMessage": "Aynı zamanda bir Nostr rölesi mi çalıştırıyorsunuz? Bu röle için tüm bir sunucuya gerek yok; çünkü o... <a>-den {price} bir ay boyunca yönetilen bir uygulama olarak</a>."
-  },
-  "5VEOig": {
-    "defaultMessage": "Kalan süre için yeni tarifeye göre maliyet:"
-  },
-  "5elgIe": {
-    "defaultMessage": "Hata:"
   },
   "5h1V4e": {
     "defaultMessage": "Hayır. Bir Nostr anahtarıyla kaydolun ve satoshi cinsinden ödeme yapın."
@@ -365,8 +356,8 @@
   "6G/ao3": {
     "defaultMessage": "Kendi alan adınız, <code>your-name.ie.apps.lnvps.cloud</code>, otomatik olarak oluşturulan bir TLS sertifikasıyla birlikte."
   },
-  "6SfJaf": {
-    "defaultMessage": "Yükseltin"
+  "6HDvaQ": {
+    "defaultMessage": "Sonrasında aylık"
   },
   "6Tps09": {
     "defaultMessage": "Etkin değil"
@@ -416,6 +407,9 @@
   "7NFfmz": {
     "defaultMessage": "Ürünler"
   },
+  "7Op9IC": {
+    "defaultMessage": "Daha önce ödenen süre için kredi"
+  },
   "7Xz8h2": {
     "defaultMessage": "{n,plural,one{gün} other{gün}}"
   },
@@ -452,17 +446,11 @@
   "7yPJTW": {
     "defaultMessage": "Yakında sona erecek."
   },
-  "7zs+Vz": {
-    "defaultMessage": "Bellek: {gb} GB"
-  },
   "81TEFm": {
     "defaultMessage": "Çalıştır {name} yönetilen bir şekilde {category} LNVPS üzerinde, kendi alan adı, TLS dahil. {storage} depolama alanı, yamalanması gereken sunucu yok."
   },
   "82Y7Sa": {
     "defaultMessage": "Gönderiliyor..."
-  },
-  "8BgaUL": {
-    "defaultMessage": "Mevcut Teknik Özellikler"
   },
   "8EkkgC": {
     "defaultMessage": "Visa veya Mastercard, Revolut üzerinden tahsil edilir"
@@ -550,9 +538,6 @@
   },
   "9vL1hB": {
     "defaultMessage": "{amount} indirim. Yalnızca bu ödemeye uygulanır, sonraki yenilemeler normal fiyattan faturalandırılır."
-  },
-  "9vwnaT": {
-    "defaultMessage": "Transfer: sınırsız"
   },
   "A/UHKJ": {
     "defaultMessage": "Ekibe doğrudan ulaşın, size geri döneceğiz."
@@ -656,6 +641,9 @@
   "Bzv1CO": {
     "defaultMessage": "Şimdi yeniden etkinleştirin."
   },
+  "C/Kq27": {
+    "defaultMessage": "Sanal makineyi yeniden başlatır"
+  },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
   },
@@ -692,6 +680,9 @@
   "CwmTc6": {
     "defaultMessage": "New renewal price"
   },
+  "Czw6Yl": {
+    "defaultMessage": "Şu anda"
+  },
   "D3idYv": {
     "defaultMessage": "Ayarlar"
   },
@@ -706,9 +697,6 @@
   },
   "DDMksJ": {
     "defaultMessage": "İlk VPS’inizi kullanıma sunun."
-  },
-  "DFLJpz": {
-    "defaultMessage": "Yeni aylık yenileme ücreti: {cost}"
   },
   "DTd1bi": {
     "defaultMessage": "Lightning, zincir üstü veya kart"
@@ -761,17 +749,11 @@
   "E8y+Hb": {
     "defaultMessage": "Kiralama süresi doldu."
   },
-  "EBMKSN": {
-    "defaultMessage": "Sanal Makine Özelliklerini Yükselt"
-  },
   "ED9RG5": {
     "defaultMessage": "Denetim kaydı"
   },
   "EIJT7Y": {
     "defaultMessage": "Tehlikeli bölge"
-  },
-  "EKlM8d": {
-    "defaultMessage": "Disk (GB)"
   },
   "ELp7j5": {
     "defaultMessage": "LNVPS Destek ile Canlı Sohbet"
@@ -1010,9 +992,6 @@
   "IvjoDS": {
     "defaultMessage": "Bağlantılı"
   },
-  "Iz4veS": {
-    "defaultMessage": "En az: {min} GB"
-  },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
   },
@@ -1127,6 +1106,9 @@
   "LjziLu": {
     "defaultMessage": "Mesajı şifrele"
   },
+  "Lm+IAa": {
+    "defaultMessage": "Şimdi ödenecek"
+  },
   "LpI0+d": {
     "defaultMessage": "Bir anahtarım var"
   },
@@ -1157,9 +1139,6 @@
   "MZQ6io": {
     "defaultMessage": "Bir yapılandırma dosyasını indirin veya QR kodunu tarayın ve tüneli başlatın. Her çıkış bölgesi için bir dosya vardır ve tümü aynı anahtarı paylaşır."
   },
-  "MchCHv": {
-    "defaultMessage": "Port hızı (Mbit/sn)"
-  },
   "MfiEGP": {
     "defaultMessage": "{storage} toplamda. Kişisel bir medya sunucusu için bu yeterli olacaktır; eğer daha fazlasına ihtiyacınız olursa, kendiniz kurduğunuz ve üzerinde Route96 yüklü olan bir VPS ile daha da ölçeklendirebilirsiniz."
   },
@@ -1174,9 +1153,6 @@
   },
   "MqbiJp": {
     "defaultMessage": "Evet. CNAME kaydını, aktarım sunucunuzun ana bilgisayar adına yönlendirin. DNS çözümlemesi tamamlandığında, bu kayıt için otomatik olarak ayrı bir sertifika düzenleyeceğiz."
-  },
-  "N0nw1G": {
-    "defaultMessage": "Aylık transfer (GB)"
   },
   "N2IrpM": {
     "defaultMessage": "Onayla"
@@ -1226,9 +1202,6 @@
   "OEZ5v2": {
     "defaultMessage": "Abone olmayı görüntüle"
   },
-  "OG77ID": {
-    "defaultMessage": "Port hızı: sınırsız"
-  },
   "OJuBck": {
     "defaultMessage": "Şifresiz"
   },
@@ -1246,9 +1219,6 @@
   },
   "OephhB": {
     "defaultMessage": "{v} yaz"
-  },
-  "OikYIw": {
-    "defaultMessage": "En az: {min} GB {type}"
   },
   "Olq7Wf": {
     "defaultMessage": "Mesajınızı buraya yazın..."
@@ -1271,9 +1241,6 @@
   "OyvHWp": {
     "defaultMessage": "Dağıtım"
   },
-  "P+08xT": {
-    "defaultMessage": "Fiyat teklifi alın"
-  },
   "P/PGYR": {
     "defaultMessage": "Henüz herhangi bir yönlendirme yapılmadı. Dönüşüm sağlamaya başlamak için bağlantınızı paylaşın."
   },
@@ -1285,9 +1252,6 @@
   },
   "PCD5y1": {
     "defaultMessage": "İstenilen özelliklere göre yapılandırılmış bir VPS {region}: {minCpu}-{maxCpu} sanal CPU ve {minMemory}-{maxMemory} bellek, Bitcoin ile ödeme yapıldı."
-  },
-  "PJKhfR": {
-    "defaultMessage": "Yönetilen bir uygulama, asıl odak noktanın aktarım işlemi olduğu durumlarda en doğru çözümdür. Değiştirilmiş bir sürüm çalıştırmak, diğer hizmetleri aynı sunucuda barındırmak veya sunucuyu kendiniz yönetmek isterseniz, <a>VPS hosting</a> hizmetimiz Dublin, Londra ve Quebec’te sınırsız trafikle ve her planda statik IPv4 ve IPv6 adresleriyle başlar."
   },
   "PJtOx7": {
     "defaultMessage": "Bildirilecek herhangi bir olay bulunmamaktadır."
@@ -1340,8 +1304,8 @@
   "QT2jf3": {
     "defaultMessage": "Kalıcı olarak silinsin mi?"
   },
-  "QWN/RL": {
-    "defaultMessage": "Bir VPN planı size bir çıkış sunar, sunucu değil. Statik IPv4 ve IPv6 adresine ve sınırsız trafiğe sahip, kendi hizmetlerinizi çalıştırabileceğiniz bir makine istiyorsanız, <a>VPS barındırma</a> hizmetimiz de aynı altyapı üzerinde çalışır."
+  "QVsrAB": {
+    "defaultMessage": "Lightning düğümü için tasarlanmış, statik IPv4 ve IPv6'ya sahip, ayda en az 1 TB transfer imkânı sunan, Tor'a izin veren ve KYC gerektirmeyen bir VPS. Dublin, Londra veya Quebec. Lightning ile ödeme yapın."
   },
   "Qa5kz3": {
     "defaultMessage": "DNS"
@@ -1358,6 +1322,9 @@
   "QuGLBN": {
     "defaultMessage": "Bu SSH anahtarı bir veya daha fazla sanal makine tarafından kullanılıyor ve silinemez."
   },
+  "QzAwVv": {
+    "defaultMessage": "VPS #{id} yeniden boyutlandır"
+  },
   "R+j5Qu": {
     "defaultMessage": "Herhangi bir IP adresi atanmadı."
   },
@@ -1369,15 +1336,6 @@
   },
   "R5zovH": {
     "defaultMessage": "İletişim ve Destek"
-  },
-  "R7x8iU": {
-    "defaultMessage": "Disk: {gb} GB {type}"
-  },
-  "RAyrhP": {
-    "defaultMessage": "KDV{rate}):"
-  },
-  "RB2CER": {
-    "defaultMessage": "CPU Çekirdekleri"
   },
   "RCHbbR": {
     "defaultMessage": "Faturalandırma bilgilerinizi, otomatik yenileme ayarlarınızı ve sizinle nasıl iletişim kuracağımızı yönetin."
@@ -1463,14 +1421,14 @@
   "SuX9Rr": {
     "defaultMessage": "Bu miktara ulaşana kadar komisyonu bekletin ve ardından ödeme yapın; bu, küçük ödemelerden kaçınmak için zincir üzerinde kullanışlı bir yöntemdir. Sistemdeki minimum değeri kullanmak için boş bırakın; bu değeri artırabilirsiniz ancak minimum değerin altına indiremezsiniz."
   },
-  "Sz/3Vf": {
-    "defaultMessage": "Lütfen, mevcut değerlerden büyük veya mevcut değerlere eşit olan yükseltme değerlerini belirtin; bu değerlerden en az birinin mevcut değerden büyük olması gerekmektedir."
-  },
   "T1/en5": {
     "defaultMessage": "Kimlik: {id}"
   },
   "T4VxQN": {
     "defaultMessage": "Yükleniyor…"
+  },
+  "T69oK0": {
+    "defaultMessage": "<b>Bol veri aktarımı.</b> Yönlendirme düğümü sürekli olarak akranlarıyla iletişim kurar ve bu, her planın dahil ettiği aylık 1 TB içinde rahatlıkla sığar. Daha fazlasına mı ihtiyacınız var? Sipariş verirken veya sonradan ekleyebilirsiniz."
   },
   "T7b6ZF": {
     "defaultMessage": "Çözülen Olaylar"
@@ -1583,6 +1541,9 @@
   "Uw1G5p": {
     "defaultMessage": "/ {allowance} giden"
   },
+  "Uyg4Ur": {
+    "defaultMessage": "Bir VPN planı size bir çıkış noktası verir, bir sunucu değil. Kendi hizmetlerinizi çalıştırmak için statik IPv4 ve IPv6 ile ayda en az 1 TB transfer kapasiteli bir sunucu kutusu istiyorsanız, <a>VPS barındırma</a> hizmetimiz aynı sunucu filosu üzerinde çalışır."
+  },
   "V/V4bz": {
     "defaultMessage": "İrlanda'nın Dublin şehrinde VPS sunucu hizmeti. {price} KDV dahil değil. İstediğiniz özelliklere göre özelleştirin. {maxCpu} sanal CPU. Ödemenizi Bitcoin ile Lightning ağı üzerinden veya doğrudan blok zinciri üzerinde yapın."
   },
@@ -1616,6 +1577,9 @@
   "Vi+REQ": {
     "defaultMessage": "Birkaç dakika içinde kullanıma başlayın. Lightning, Bitcoin veya kredi kartıyla ödeme yapın; uzun vadeli sözleşmelere gerek yok."
   },
+  "Vn25W2": {
+    "defaultMessage": "Daha büyük bir boyut seçtiğinizde fiyat burada görünür. Bu fatura döneminin kalan süresi için farkı ödersiniz."
+  },
   "VrBNV4": {
     "defaultMessage": "İlk ödeme"
   },
@@ -1633,9 +1597,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "Bu yükseltmenin faturalandırılacağı bir abonelik bulunamadı."
-  },
-  "WFUub1": {
-    "defaultMessage": "Lightning ağı için özel olarak oluşturulmuş bir VPS: statik IPv4 ve IPv6 adresleri, sınırsız trafik, Tor kullanımına izin verilir, kimlik doğrulama gerektirmez. Konum seçenekleri: Dublin, Londra veya Québec. Ödemeyi doğrudan Lightning ile yapın."
   },
   "WHIo1V": {
     "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi burada oluşturun. {minCpu}-{maxCpu} sanal CPU ve {minMemory}-{maxMemory}ve bunun için Bitcoin ile ödeme yapın."
@@ -1751,6 +1712,9 @@
   "Yl8GBP": {
     "defaultMessage": "Vergi Kimlik Numarası"
   },
+  "Ys/B2r": {
+    "defaultMessage": "Statik adresleme, ayda en az 1 TB veri transferi, Tor'a izin veriliyor ve KYC yok. Lightning ile ödeme yapın. Kendi düğümümüzü işletiyoruz, bu sayede ödemeniz hiçbir ödeme işlemcisine uğramaz."
+  },
   "YsVmzT": {
     "defaultMessage": "Giden kurallar için Kaynak CIDR, bu sanal makinenin kendi adresiyle eşleşir. Uzak hedef ana bilgisayar kısıtlanamaz; yalnızca protokol ve hedef bağlantı noktası belirtilebilir."
   },
@@ -1771,6 +1735,9 @@
   },
   "Z8971h": {
     "defaultMessage": "Doğrulandı"
+  },
+  "ZKRP7f": {
+    "defaultMessage": "Bu sanal makine şu anda çevrim içi olarak yeniden boyutlandırılamıyor. Destek ekibiyle iletişime geçin, biz hallederiz."
   },
   "ZTj6ca": {
     "defaultMessage": "Kartla öde"
@@ -1841,11 +1808,11 @@
   "bMQUWl": {
     "defaultMessage": "Kaynak CIDR (bu sanal makine)"
   },
-  "bO+E2G": {
-    "defaultMessage": "Hayır. Her pakete sınırsız veri kullanımı dahildir."
-  },
   "bW7B87": {
     "defaultMessage": "Yeni"
+  },
+  "bg/ESW": {
+    "defaultMessage": "Fiyat hesaplanıyor…"
   },
   "bh3pad": {
     "defaultMessage": "Lütfen satın alma işlemini gerçekleştirmeden önce giriş yapınız."
@@ -1879,9 +1846,6 @@
   },
   "cQtv0G": {
     "defaultMessage": "{n} çalışıyor"
-  },
-  "cV0ZGf": {
-    "defaultMessage": "Maliyetlerin Detaylı Dökümü"
   },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} ayda."
@@ -2078,14 +2042,8 @@
   "gGjH22": {
     "defaultMessage": "VPS Kanada, Quebec VPS, Bitcoin ile ödeme"
   },
-  "gH4VcS": {
-    "defaultMessage": "Oransal olarak hesaplanan yükseltme maliyeti:"
-  },
   "gL1jHz": {
     "defaultMessage": "Kalıcı depolama alanı, her röle için yukarıda belirtilen boyutlarda"
-  },
-  "gMKnxm": {
-    "defaultMessage": "{min} ile {max} GB arasında"
   },
   "gPsMm7": {
     "defaultMessage": "Bu İşçi'yi devreye alın ve şu rota için bir yapılandırma ekleyin: {route}"
@@ -2132,9 +2090,6 @@
   "hADOUq": {
     "defaultMessage": "Kaydedildi. Uygulama kısa süre içinde yeniden başlatılacak."
   },
-  "hWDpJn": {
-    "defaultMessage": "{min} ile {max} Mbit/sn arasında"
-  },
   "hX8VXF": {
     "defaultMessage": "Son 12 Ay İçindeki Aylık Çalışma Süresi"
   },
@@ -2144,11 +2099,11 @@
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarıyla giriş yapın. Herhangi bir hesaba geçiş anahtarı ekleyebilirsiniz."
   },
-  "hsfQVg": {
-    "defaultMessage": "Sabit IP adresi, sınırsız veri kullanımı, Tor kullanımına izin ve KYC (Müşterini Tanı) zorunluluğu yok. Ödemenizi Lightning ile yapın; kendi düğürümüzü çalıştırdığımız için ödemeniz hiçbir zaman bir işlemciye uğramaz."
-  },
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
+  },
+  "hxU3Dx": {
+    "defaultMessage": "Bu dönemin geri kalanı için yeni boyut"
   },
   "i2/SmH": {
     "defaultMessage": "Fatura sistemi, bir VPS aboneliği gibi çalışır ve hiçbir uygulamada kurulum ücreti alınmaz."
@@ -2176,6 +2131,9 @@
   },
   "icn2DS": {
     "defaultMessage": "(Önerilir)"
+  },
+  "im3sBQ": {
+    "defaultMessage": "Giden trafik ölçülür. Her plan ayda en az 1 TB içerir ve sipariş sırasında veya sonrasında daha fazlasını ekleyebilirsiniz. Gelen trafik ücretsizdir."
   },
   "ir0wB7": {
     "defaultMessage": "Tüm verilerin kalıcı olarak silineceğini anlıyorum."
@@ -2294,9 +2252,6 @@
   "l4RUua": {
     "defaultMessage": "Hizmet: {service}"
   },
-  "l7PJ8l": {
-    "defaultMessage": "Şu anda ödenmesi gereken toplam tutar:"
-  },
   "lCILNz": {
     "defaultMessage": "Şimdi Satın Al"
   },
@@ -2411,9 +2366,6 @@
   "nDyaq/": {
     "defaultMessage": "Koşma / Çalışır durumda"
   },
-  "nFQbxh": {
-    "defaultMessage": "Ödeme Yöntemi"
-  },
   "nLgLHn": {
     "defaultMessage": "Toplandı {when}"
   },
@@ -2458,9 +2410,6 @@
   },
   "o9lOhm": {
     "defaultMessage": "Desteklenen genel anahtar: {npub}"
-  },
-  "oBSxZS": {
-    "defaultMessage": "Yükseltme Teklifi"
   },
   "oC2JR/": {
     "defaultMessage": "<b>Durdurmak, verilerinizi saklar.</b> Bir röleyi durdurup tekrar başlattığınızda olay veri tabanı hala mevcut olur. Yalnızca silme işlemi depolama alanını boşaltır."
@@ -2549,6 +2498,9 @@
   "qCGD63": {
     "defaultMessage": "Nasıl ödeme yapabilirim?"
   },
+  "qNB4sp": {
+    "defaultMessage": "Öde ve yükselt"
+  },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."
   },
@@ -2557,6 +2509,9 @@
   },
   "qX7u3z": {
     "defaultMessage": "Etiket (örneğin, Kişisel Vize)"
+  },
+  "qYjcyZ": {
+    "defaultMessage": "Bant genişliği değişiklikleri, ödeme onaylandığı anda, yeniden başlatma gerektirmeden uygulanır."
   },
   "qkLHOL": {
     "defaultMessage": "SSH anahtarını silmek istediğinizden emin misiniz?{name}?"
@@ -2630,9 +2585,6 @@
   "s60OWn": {
     "defaultMessage": "Pay for this deployment before resizing it, an upgrade is charged pro-rata against the time left on the current period."
   },
-  "sAJryD": {
-    "defaultMessage": "KDV ve diğer ücretler tahmini olarak belirtilmiştir; kesin tutar ödeme sırasında doğrulanacaktır."
-  },
   "sOF2lj": {
     "defaultMessage": "README dosyasının tamamını görüntüle"
   },
@@ -2656,9 +2608,6 @@
   },
   "sqvjkf": {
     "defaultMessage": "Sap Ekleyin"
-  },
-  "srgk8m": {
-    "defaultMessage": "Fiyat teklifi ve ödeme için kullanılacak para birimini belirler."
   },
   "sx6MYT": {
     "defaultMessage": "Temsilci, bir VM'yi uzatamaz, iade edemez veya silemez ve oturum açmadığı bir hesap üzerinde işlem yapamaz. Bunlar için, {link}."
@@ -2686,6 +2635,9 @@
   },
   "tZ+Hzu": {
     "defaultMessage": "Lightning düğümünüzü, özellikle bu amaç için tasarlanmış bir sanal özel sunucuda (VPS) çalıştırın."
+  },
+  "tgvES0": {
+    "defaultMessage": "Şimdi"
   },
   "tngc9N": {
     "defaultMessage": "Kaynak CIDR"
@@ -2747,6 +2699,9 @@
   "uyWYPH": {
     "defaultMessage": "Bu, VM'deki her şeyi siler."
   },
+  "v+lbmr": {
+    "defaultMessage": "Yeni boyutu seçmek için kaydırıcıyı hareket ettirin."
+  },
   "v2BRjN": {
     "defaultMessage": "Konu *"
   },
@@ -2756,8 +2711,14 @@
   "v4Sg0C": {
     "defaultMessage": "Özel alıcı anahtarını kullanın"
   },
+  "vIkTT1": {
+    "defaultMessage": "Yönetilen Uygulama, aktarımın asıl mesele olduğu durumlarda doğru cevaptır. Değiştirilmiş bir derlemeyi çalıştırmak, diğer hizmetleri aynı konumda barındırmak veya sunucuyu kendiniz yönetmek istiyorsanız, <a>VPS barındırma</a> hizmetimiz Dublin, Londra ve Quebec'te başlıyor; aylık en az 1 TB transfer ve her planda statik IPv4 ile IPv6 adresleri sunuyor."
+  },
   "vONi+O": {
     "defaultMessage": "Ülke"
+  },
+  "vPxUsy": {
+    "defaultMessage": "Yeniden başlatma yok"
   },
   "vRG4WY": {
     "defaultMessage": "Bu sayfadan güvenle ayrılabilirsiniz, ödeme fatura geçmişinizde görünür ve onaylandığında uygulanır."
@@ -2789,9 +2750,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} güvenlik duvarı kuralları"
   },
-  "vy2rlX": {
-    "defaultMessage": "İşlem ücreti:"
-  },
   "w/+hVh": {
     "defaultMessage": "Şuradan bir WireGuard VPN: {price} başına {period}, Lightning, Bitcoin veya kart ile ödeme yapılır. Cihazınız kendi anahtarlarını oluşturur ve biz yalnızca herkese açık olan yarısını görürüz."
   },
@@ -2806,12 +2764,6 @@
   },
   "wLCwU4": {
     "defaultMessage": "Faturalandırmayı yönet"
-  },
-  "wLwJ9Q": {
-    "defaultMessage": "Eski tarifeye göre kalan sürenin değeri:"
-  },
-  "wMxOFC": {
-    "defaultMessage": "Port hızı: {speed}"
   },
   "wRSmBV": {
     "defaultMessage": "Evet, her planda bir adet IPv4 ve bir adet IPv6 adresi bulunmaktadır."
@@ -2873,9 +2825,6 @@
   "xkr+zo": {
     "defaultMessage": "Şartlar"
   },
-  "xmSWcf": {
-    "defaultMessage": "İşlemci: {cores} çekirdekler"
-  },
   "xuTqgN": {
     "defaultMessage": "Ödeme Yöntemleri"
   },
@@ -2908,9 +2857,6 @@
   },
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."
-  },
-  "yc13cF": {
-    "defaultMessage": "Transfer: aylık {amount}"
   },
   "yfhNX4": {
     "defaultMessage": "Oturum açmak 30 gün geçerli bir oturum oluşturur. Birinin ele geçirildiğini düşünüyorsanız tümünü iptal edin."
@@ -2947,12 +2893,6 @@
   },
   "zFegDD": {
     "defaultMessage": "İletişim"
-  },
-  "zRPHCo": {
-    "defaultMessage": "Bellek (GB)"
-  },
-  "zbyKVt": {
-    "defaultMessage": "<b>Sınırsız veri trafiği.</b> Bir yönlendirme düğümü sürekli olarak bilgi alışverişinde bulunur. Bant genişliği ölçüm cihazına bakmanız gerekmez."
   },
   "zhuLyw": {
     "defaultMessage": "Bu ay için çıkış trafiği kotanızı kullandınız. VM'nizle ilgili herhangi bir işlem yapılmadı, bant genişliği kısıtlanmadı, askıya alınmadı veya aşım için ücretlendirilmedi, ve kota 1'inde sıfırlanır."

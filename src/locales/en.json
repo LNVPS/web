@@ -200,6 +200,9 @@
   "2Aa625": {
     "defaultMessage": "In {region}, disk goes up to {disk}, with {cpu} vCPU and {memory} at the top end."
   },
+  "2J5AyF": {
+    "defaultMessage": "Your account credit covers this order in full, so there is nothing else to pay."
+  },
   "2QrTo0": {
     "defaultMessage": "New IP Space Order"
   },

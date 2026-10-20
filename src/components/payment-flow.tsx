@@ -62,6 +62,10 @@ interface PaymentFlowProps {
  * difference between them is the {@link PaymentSource}; the method selection,
  * up-front receipt, Lightning/card widgets and polling live here.
  */
+function creditCoversQuote(quote: RenewalQuote): boolean {
+  return (quote.credit?.amount ?? 0) >= quote.amount + quote.tax;
+}
+
 export default function PaymentFlow({
   title,
   source,
@@ -668,6 +672,8 @@ export default function PaymentFlow({
   const lnurlSelected =
     selection?.kind === "method" && selection.name === "lnurl";
 
+  const fullyCovered = !!quote?.credit && !quoting && creditCoversQuote(quote);
+
   // Build the order summary. Prefer the server's quote — it is the same
   // pricing path as the charge, so VAT, processing fee and discount are exact
   // — and fall back to the local estimate only until the first quote lands (or
@@ -944,25 +950,35 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {source.allowSavedMethods !== false && savedMethods.length > 0 && (
-        <div className="flex flex-col gap-3">
-          <SectionLabel>
-            <FormattedMessage defaultMessage="Saved methods" />
-          </SectionLabel>
-          <div className="flex flex-col gap-2">
-            {savedMethods.map((m) => (
-              <SavedMethodRow
-                key={m.id}
-                method={m}
-                selected={selection?.kind === "saved" && selection.id === m.id}
-                onSelect={(x) => setSelection({ kind: "saved", id: x.id })}
-              />
-            ))}
-          </div>
+      {fullyCovered && (
+        <div className="rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-4 py-3 text-sm text-cyber-text">
+          <FormattedMessage defaultMessage="Your account credit covers this order in full, so there is nothing else to pay." />
         </div>
       )}
 
-      {bitcoinRows.length > 0 && (
+      {!fullyCovered &&
+        source.allowSavedMethods !== false &&
+        savedMethods.length > 0 && (
+          <div className="flex flex-col gap-3">
+            <SectionLabel>
+              <FormattedMessage defaultMessage="Saved methods" />
+            </SectionLabel>
+            <div className="flex flex-col gap-2">
+              {savedMethods.map((m) => (
+                <SavedMethodRow
+                  key={m.id}
+                  method={m}
+                  selected={
+                    selection?.kind === "saved" && selection.id === m.id
+                  }
+                  onSelect={(x) => setSelection({ kind: "saved", id: x.id })}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+      {!fullyCovered && bitcoinRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay with Bitcoin" />
@@ -982,7 +998,7 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {coinRows.length > 0 && (
+      {!fullyCovered && coinRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay with crypto" />
@@ -1000,7 +1016,7 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {cardRows.length > 0 && (
+      {!fullyCovered && cardRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay by card" />

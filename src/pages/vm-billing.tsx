@@ -6,7 +6,11 @@ import { openInvoice } from "../utils";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import CostLabel, { CostAmount, IntervalSuffix } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
-import { isDepositPayment, depositOutpoint } from "../utils/deposit";
+import {
+  paymentMethodLabel,
+  isDepositPayment,
+  depositOutpoint,
+} from "../utils/deposit";
 import {
   vmRenewalSource,
   subscriptionToVmPayment,
@@ -147,17 +151,7 @@ export function VmBillingPage() {
           }}
         />
       ) : undefined,
-    method:
-      a.payment_method ??
-      ("lightning" in a.data
-        ? "lightning"
-        : "revolut" in a.data
-          ? "revolut"
-          : "onchain" in a.data
-            ? "onchain"
-            : "fixedfloat" in a.data
-              ? "fixedfloat"
-              : "—"),
+    method: paymentMethodLabel(a.payment_method, a.data),
     // On-chain deposits are never rejected — late payments still credit
     // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: a.is_paid ? (

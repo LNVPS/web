@@ -175,9 +175,11 @@ export function CoinMethodRow({
   return (
     <PaymentOptionRow
       icon={
-        <span className="pointer-events-none font-mono text-[0.6rem] font-bold">
-          {coinTicker(coin)}
-        </span>
+        <Icon
+          name={`coin-${coinTicker(coin).toLowerCase()}`}
+          size={22}
+          className="pointer-events-none"
+        />
       }
       title={coinName(intl, coin)}
       subtitle={intl.formatMessage({

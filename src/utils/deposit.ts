@@ -1,4 +1,5 @@
 import type { PaymentData } from "../api";
+import { coinTicker } from "./currency";
 
 /**
  * Whether a payment is a Bitcoin deposit rather than an invoice: a plain
@@ -14,4 +15,20 @@ export function depositOutpoint(data: PaymentData): string | undefined {
   if ("onchain" in data) return data.onchain.outpoint;
   if ("fixedfloat" in data) return data.fixedfloat.outpoint;
   return undefined;
+}
+
+/** Method label for a payment row, naming the coin and amount for a swap. */
+export function paymentMethodLabel(
+  method: string | undefined,
+  data: PaymentData,
+): string {
+  if ("fixedfloat" in data) {
+    const { coin, amount } = data.fixedfloat;
+    return `${amount} ${coinTicker(coin)}`;
+  }
+  if (method) return method;
+  if ("lightning" in data) return "lightning";
+  if ("revolut" in data) return "revolut";
+  if ("onchain" in data) return "onchain";
+  return "—";
 }

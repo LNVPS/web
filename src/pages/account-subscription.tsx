@@ -13,7 +13,7 @@ import { CostAmount } from "../components/cost";
 import { Card, CardBody, CardTitle } from "../components/card";
 import { Icon } from "../components/icon";
 import PaymentFlow from "../components/payment-flow";
-import { isDepositPayment } from "../utils/deposit";
+import { paymentMethodLabel, isDepositPayment } from "../utils/deposit";
 import {
   subscriptionRenewalSource,
   subscriptionToVmPayment,
@@ -165,17 +165,7 @@ export function AccountSubscriptionPage() {
           }}
         />
       ) : undefined,
-    method:
-      p.payment_method ??
-      ("lightning" in p.data
-        ? "lightning"
-        : "revolut" in p.data
-          ? "revolut"
-          : "onchain" in p.data
-            ? "onchain"
-            : "fixedfloat" in p.data
-              ? "fixedfloat"
-              : "—"),
+    method: paymentMethodLabel(p.payment_method, p.data),
     // On-chain deposits are never rejected — late payments still credit
     // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: p.is_paid ? (

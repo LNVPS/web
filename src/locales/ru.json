@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "Нет. Зарегистрируйтесь, используя ключ Nostr, и оплатите в сатоши."
   },
-  "5lP56d": {
-    "defaultMessage": "Дополнительно"
-  },
   "5nYzR2": {
     "defaultMessage": "Области выхода"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "Ключ SSH"
   },
-  "sTesGq": {
-    "defaultMessage": "Предложений нет."
-  },
   "sYN3Gd": {
     "defaultMessage": "Каждая машина требует внимания, разберите список выше, чтобы увидеть их здесь."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "Название (необязательно)"
+  },
+  "spsPUc": {
+    "defaultMessage": "Распродано"
   },
   "sqvjkf": {
     "defaultMessage": "Добавить рукоятку."

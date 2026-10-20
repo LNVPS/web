@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "Não. Registe-se com uma chave Nostr e efetue o pagamento em satoshis."
   },
-  "5lP56d": {
-    "defaultMessage": "Complementos"
-  },
   "5nYzR2": {
     "defaultMessage": "Regiões de saída"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "Chave SSH"
   },
-  "sTesGq": {
-    "defaultMessage": "Nenhuma oferta disponível."
-  },
   "sYN3Gd": {
     "defaultMessage": "Cada máquina precisa de atenção, resolva a lista acima para vê-las aqui."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "Etiqueta (opcional)"
+  },
+  "spsPUc": {
+    "defaultMessage": "Esgotado"
   },
   "sqvjkf": {
     "defaultMessage": "Adicionar alça"

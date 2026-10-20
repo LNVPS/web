@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "Nein. Registrieren Sie sich mit einem Nostr-Schlüssel und zahlen Sie in Satoshis."
   },
-  "5lP56d": {
-    "defaultMessage": "Zusatzoptionen"
-  },
   "5nYzR2": {
     "defaultMessage": "Exit-Regionen"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "SSH-Schlüssel"
   },
-  "sTesGq": {
-    "defaultMessage": "Es liegen derzeit keine Angebote vor."
-  },
   "sYN3Gd": {
     "defaultMessage": "Jede Maschine benötigt Aufmerksamkeit, arbeite die obige Liste ab, um sie hier zu sehen."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "Beschriftung (optional)"
+  },
+  "spsPUc": {
+    "defaultMessage": "Ausverkauft"
   },
   "sqvjkf": {
     "defaultMessage": "Griff hinzufügen"

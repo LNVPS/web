@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "ノストルキーで登録し、サトシ単位で支払ってください。"
   },
-  "5lP56d": {
-    "defaultMessage": "追加オプション"
-  },
   "5nYzR2": {
     "defaultMessage": "終了リージョン"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "SSHキー"
   },
-  "sTesGq": {
-    "defaultMessage": "現在、利用可能なオファーはありません。"
-  },
   "sYN3Gd": {
     "defaultMessage": "すべてのマシンに対応が必要です、上のリストを片付けるとここに表示されます。"
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "ラベル（任意）"
+  },
+  "spsPUc": {
+    "defaultMessage": "売り切れ"
   },
   "sqvjkf": {
     "defaultMessage": "ハンドルを追加"

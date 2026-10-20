@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "请使用您的 Nostr 密钥注册，并以聪（sats）支付。"
   },
-  "5lP56d": {
-    "defaultMessage": "附加项"
-  },
   "5nYzR2": {
     "defaultMessage": "退出区域"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "SSH 密钥"
   },
-  "sTesGq": {
-    "defaultMessage": "目前没有可用的优惠。"
-  },
   "sYN3Gd": {
     "defaultMessage": "每台机器都需要处理，处理完上面的列表后即可在此查看。"
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "标签（可选）"
+  },
+  "spsPUc": {
+    "defaultMessage": "已售罄"
   },
   "sqvjkf": {
     "defaultMessage": "添加把手"

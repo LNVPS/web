@@ -335,9 +335,6 @@
   "5h1V4e": {
     "defaultMessage": "No. Sign up with a Nostr key and pay in sats."
   },
-  "5lP56d": {
-    "defaultMessage": "Add-ons"
-  },
   "5nYzR2": {
     "defaultMessage": "Exit regions"
   },
@@ -2651,9 +2648,6 @@
   "sQu9nL": {
     "defaultMessage": "SSH Key"
   },
-  "sTesGq": {
-    "defaultMessage": "No offers available"
-  },
   "sYN3Gd": {
     "defaultMessage": "Every machine needs attention. Clear the list above to see them here."
   },
@@ -2665,6 +2659,9 @@
   },
   "snh6R6": {
     "defaultMessage": "Label (optional)"
+  },
+  "spsPUc": {
+    "defaultMessage": "Sold out"
   },
   "sqvjkf": {
     "defaultMessage": "Add Handle"

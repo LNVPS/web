@@ -132,12 +132,12 @@ export default function CoinPayment({
       <div className="text-center text-xs text-cyber-muted">
         <FormattedMessage defaultMessage="The exchange service is provided by FixedFloat. Creating an order confirms your agreement with the rules of FixedFloat." />{" "}
         <a
-          href="https://ff.io/rules"
+          href="https://ff.io/terms-of-service"
           target="_blank"
           rel="noreferrer"
           className="underline decoration-dotted underline-offset-2"
         >
-          ff.io/rules ↗
+          ff.io/terms-of-service ↗
         </a>
       </div>
       {onDone && (

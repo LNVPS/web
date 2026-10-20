@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "아니요. 노스트르 키를 사용하여 가입하고 사토시로 결제하세요."
   },
-  "5lP56d": {
-    "defaultMessage": "추가 옵션"
-  },
   "5nYzR2": {
     "defaultMessage": "출구 지역"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "SSH 키"
   },
-  "sTesGq": {
-    "defaultMessage": "제안 가능한 상품이 없습니다."
-  },
   "sYN3Gd": {
     "defaultMessage": "모든 머신에 조치가 필요합니다, 위 목록을 처리하면 여기에 표시됩니다."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "라벨(선택 사항)"
+  },
+  "spsPUc": {
+    "defaultMessage": "품절"
   },
   "sqvjkf": {
     "defaultMessage": "핸들 추가"

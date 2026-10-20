@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "Hayır. Bir Nostr anahtarıyla kaydolun ve satoshi cinsinden ödeme yapın."
   },
-  "5lP56d": {
-    "defaultMessage": "Eklentiler"
-  },
   "5nYzR2": {
     "defaultMessage": "Çıkış bölgeleri"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "SSH Anahtarı"
   },
-  "sTesGq": {
-    "defaultMessage": "Şu anda geçerli bir teklif bulunmamaktadır."
-  },
   "sYN3Gd": {
     "defaultMessage": "Her makine ilgilenilmeyi bekliyor, burada görmek için yukarıdaki listeyi temizleyin."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "Etiket (isteğe bağlı)"
+  },
+  "spsPUc": {
+    "defaultMessage": "Tükendi"
   },
   "sqvjkf": {
     "defaultMessage": "Sap Ekleyin"

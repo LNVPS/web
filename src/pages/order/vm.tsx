@@ -103,7 +103,7 @@ function AddonsPanel({
           <FormattedMessage defaultMessage="Network" />
         </span>
         <span className="text-[0.6rem] uppercase tracking-[0.25em] text-cyber-muted">
-          <FormattedMessage defaultMessage="Add-ons" />
+          <FormattedMessage defaultMessage="Configure" />
         </span>
       </div>
       <div className="flex flex-col gap-3 px-4 py-4">

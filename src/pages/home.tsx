@@ -365,10 +365,10 @@ function VpsOffersSection() {
         </div>
       ) : offers?.templates !== undefined && offers.templates.length === 0 ? (
         // With custom pricing available below, an empty template list isn't
-        // "no offers" — stay quiet and let the custom order section speak.
+        // "sold out" — stay quiet and let the custom order section speak.
         (offers.custom_template?.length ?? 0) > 0 ? null : (
           <div className="text-cyber-danger bold text-xl uppercase">
-            <FormattedMessage defaultMessage="No offers available" />
+            <FormattedMessage defaultMessage="Sold out" />
           </div>
         )
       ) : (offers?.templates.length ?? 0) <= 2 ? (

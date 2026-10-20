@@ -332,9 +332,6 @@
   "5h1V4e": {
     "defaultMessage": "لا. سجّل باستخدام مفتاح نوستر وادفع بالساتوشي."
   },
-  "5lP56d": {
-    "defaultMessage": "إضافات"
-  },
   "5nYzR2": {
     "defaultMessage": "مناطق الخروج"
   },
@@ -2591,9 +2588,6 @@
   "sQu9nL": {
     "defaultMessage": "مفتاح SSH"
   },
-  "sTesGq": {
-    "defaultMessage": "لا توجد عروض متاحة."
-  },
   "sYN3Gd": {
     "defaultMessage": "كل جهاز يحتاج إلى انتباه، عالِج القائمة أعلاه لرؤيتها هنا."
   },
@@ -2605,6 +2599,9 @@
   },
   "snh6R6": {
     "defaultMessage": "التسمية (اختياري)"
+  },
+  "spsPUc": {
+    "defaultMessage": "نفدت الكمية"
   },
   "sqvjkf": {
     "defaultMessage": "أضف مقبضًا"

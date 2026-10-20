@@ -104,7 +104,12 @@
 }
 
 /* Light theme overrides */
+:root {
+  --visa-ink: #ffffff;
+}
+
 .light {
+  --visa-ink: #1434cb;
   --color-cyber-primary: #16a34a;
   --color-cyber-primary-dim: oklch(0.55 0.17 150 / 0.27);
   --color-cyber-dark: #e5e7eb;

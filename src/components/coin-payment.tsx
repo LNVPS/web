@@ -51,7 +51,7 @@ export default function CoinPayment({
     return () => clearInterval(tx);
   }, [payment.id, pollPaid, pollDetected, seen, onPaid]);
 
-  if (!("fixedfloat" in payment.data)) {
+  if (typeof payment.data !== "object" || !("fixedfloat" in payment.data)) {
     return (
       <div className="text-cyber-danger">
         <FormattedMessage defaultMessage="This component only supports coin payments" />

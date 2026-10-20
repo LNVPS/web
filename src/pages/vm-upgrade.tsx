@@ -209,6 +209,7 @@ function QuoteCard({
       <CostAmount cost={{ currency, amount } as Price} converted={false} />
     );
   const net = quote?.cost_difference.amount ?? 0;
+  const creditUsed = quote?.credit?.amount ?? 0;
 
   return (
     <Card>
@@ -281,13 +282,20 @@ function QuoteCard({
                 {money(fee)}
               </Line>
             )}
+            {creditUsed > 0 && (
+              <Line
+                label={<FormattedMessage defaultMessage="Account credit" />}
+              >
+                <span className="text-cyber-primary">−{money(creditUsed)}</span>
+              </Line>
+            )}
             <div className="my-1 border-t border-cyber-border" />
             <div className="flex items-baseline justify-between gap-4">
               <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
                 <FormattedMessage defaultMessage="Due now" />
               </span>
               <span className="text-2xl leading-none text-cyber-text-bright tabular-nums">
-                {money(net + tax + fee)}
+                {money(Math.max(0, net + tax + fee - creditUsed))}
               </span>
             </div>
             <div className="flex items-baseline justify-between gap-4 text-sm text-cyber-text">

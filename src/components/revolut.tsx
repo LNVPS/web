@@ -80,7 +80,10 @@ export function RevolutPayWidget({
 
     let destroyed = false;
 
-    const token = "revolut" in payment.data ? payment.data.revolut.token : "";
+    const token =
+      typeof payment.data === "object" && "revolut" in payment.data
+        ? payment.data.revolut.token
+        : "";
     RevolutCheckout(token, mode ?? "prod").then((instance) => {
       if (destroyed) {
         instance.destroy();
@@ -331,9 +334,7 @@ export function RevolutPayWidget({
         ) : (
           <div className="rounded-sm border border-cyber-border bg-cyber-panel-light px-3 py-3">
             <div className="text-sm text-cyber-text-bright">{name}</div>
-            {email && (
-              <div className="text-xs text-cyber-muted">{email}</div>
-            )}
+            {email && <div className="text-xs text-cyber-muted">{email}</div>}
             {addressSummary && (
               <div className="text-xs text-cyber-text mt-1">
                 {addressSummary}

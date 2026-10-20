@@ -39,7 +39,7 @@ export default function VpsPayment({
   }, [payment.id]);
 
   // Only works for Lightning payments
-  if (!("lightning" in payment.data)) {
+  if (typeof payment.data !== "object" || !("lightning" in payment.data)) {
     return (
       <div className="text-cyber-danger">
         <FormattedMessage defaultMessage="This component only supports Lightning payments" />

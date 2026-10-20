@@ -35,7 +35,9 @@ export default function OnChainPayment({
   // yet confirmed. The server re-prices on discovery, so this carries the
   // re-calculated credited `time` the deposit actually buys.
   const initialSeen =
-    "onchain" in payment.data && payment.data.onchain.outpoint
+    typeof payment.data === "object" &&
+    "onchain" in payment.data &&
+    payment.data.onchain.outpoint
       ? payment
       : undefined;
   const [detectedPayment, setDetectedPayment] = useState<VmPayment | undefined>(
@@ -43,7 +45,9 @@ export default function OnChainPayment({
   );
   const detected = !!detectedPayment;
   const outpoint =
-    detectedPayment && "onchain" in detectedPayment.data
+    detectedPayment &&
+    typeof detectedPayment.data === "object" &&
+    "onchain" in detectedPayment.data
       ? detectedPayment.data.onchain.outpoint
       : undefined;
   const txid = outpoint?.split(":")[0];
@@ -72,7 +76,7 @@ export default function OnChainPayment({
     return () => clearInterval(tx);
   }, [payment.id, pollPaid, pollDetected, detectedPayment, onPaid]);
 
-  if (!("onchain" in payment.data)) {
+  if (typeof payment.data !== "object" || !("onchain" in payment.data)) {
     return (
       <div className="text-cyber-danger">
         <FormattedMessage defaultMessage="This component only supports on-chain payments" />

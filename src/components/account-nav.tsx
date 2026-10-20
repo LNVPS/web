@@ -65,6 +65,11 @@ const SECTIONS: Array<NavSection> = [
         ),
       },
       {
+        to: "/account/credit",
+        label: <FormattedMessage defaultMessage="Credit" />,
+        hint: <FormattedMessage defaultMessage="Prepaid balance for orders" />,
+      },
+      {
         to: "/account/settings",
         label: <FormattedMessage defaultMessage="Settings" />,
         hint: (

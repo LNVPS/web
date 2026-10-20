@@ -191,7 +191,9 @@ export function AccountSubscriptionPage() {
         <Icon name="printer" />
       </div>
     ) : isDepositPayment(p.data) ||
-      ("lightning" in p.data && new Date(p.expires) > new Date()) ? (
+      (typeof p.data === "object" &&
+        "lightning" in p.data &&
+        new Date(p.expires) > new Date()) ? (
       // Unpaid but still payable (on-chain deposits are never rejected;
       // Lightning invoices until they expire): reopen at the QR stage.
       <div

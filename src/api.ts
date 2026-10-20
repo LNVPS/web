@@ -581,6 +581,8 @@ export interface UserSshKey {
 }
 
 export type PaymentData =
+  /** Paid in full from account credit; nothing to pay externally. */
+  | "credit"
   | { lightning: string }
   | { revolut: { token: string } }
   | { stripe: { session_id: string } }
@@ -633,6 +635,12 @@ export interface Discount {
  * pricing path as the renewal itself, so it can't drift from what is charged
  * — use it instead of re-deriving VAT and processing fees client-side.
  */
+export interface AccountCreditLine {
+  /** Part of the bill the balance covers, in `currency` minor units. */
+  amount: number;
+  currency: string;
+}
+
 export interface RenewalQuote {
   /** Net of any discount, smallest unit (cents / millisats). */
   amount: number;
@@ -642,6 +650,8 @@ export interface RenewalQuote {
   /** Seconds this would add to expiry. */
   time: number;
   discount?: Discount;
+  /** Set when the balance is auto-applied: the part of the bill it covers. */
+  credit?: AccountCreditLine;
 }
 
 export interface VmPayment {
@@ -660,8 +670,10 @@ export interface VmPayment {
   is_upgrade?: boolean;
   upgrade_params?: VmUpgradeRequest | null;
   payment_method?: string;
-  /** Present when a discount code was applied; `amount`/`tax` are net of it. */
+  /** Present when a disc13 code was applied; `amount`/`tax` are net of it. */
   discount?: Discount;
+  /** Part of the bill paid from account credit. */
+  credit?: AccountCreditLine;
 }
 
 export interface PatchVm {
@@ -766,6 +778,8 @@ export interface VmUpgradeQuote {
   tax?: Price;
   /** Payment processing fee, when the server computes it (else estimated client-side). */
   processing_fee?: Price;
+  /** Part of the upgrade the balance covers. */
+  credit?: AccountCreditLine;
 }
 
 export interface LnurlPayResponse {
@@ -868,6 +882,8 @@ export interface SubscriptionPayment {
   data: PaymentData;
   /** Present when a discount code was applied; `amount`/`tax` are net of it. */
   discount?: Discount;
+  /** Part of the bill paid from account credit. */
+  credit?: AccountCreditLine;
 }
 
 export interface SubscriptionSummary {
@@ -1271,6 +1287,36 @@ export interface ReferralPatchRequest {
    * unchanged. When set it must be at least the system minimum.
    */
   payout_threshold?: number | null;
+}
+
+export interface AccountCredit {
+  /** Minor units of `currency` (msat for BTC). */
+  balance: number;
+  currency: string;
+  /** When true every quote spends as much of the balance as the bill allows. */
+  auto_apply: boolean;
+}
+
+export type AccountCreditEventKind = "topup" | "spend" | "refund" | "admin";
+
+export interface AccountCreditEvent {
+  kind: AccountCreditEventKind;
+  /** Signed change to the balance. */
+  amount: number;
+  currency: string;
+  subscription_payment_id: string | null;
+  note: string | null;
+  created: string;
+}
+
+export interface AccountCreditTopup {
+  /** BOLT11 invoice to pay. */
+  pr: string;
+  payment_hash: string;
+  /** msat the invoice is for. */
+  amount: number;
+  currency: string;
+  expires: string;
 }
 
 export type PaginatedResponse<T> = ApiResponseBase & {
@@ -2491,6 +2537,44 @@ export class LNVpsApi {
       ),
     );
     return data;
+  }
+
+  async getAccountCredit() {
+    const { data } = await this.#handleResponse<ApiResponse<AccountCredit>>(
+      await this.#req("/api/v1/account/credit", "GET"),
+    );
+    return data;
+  }
+
+  async setCreditAutoApply(autoApply: boolean) {
+    const { data } = await this.#handleResponse<ApiResponse<AccountCredit>>(
+      await this.#req("/api/v1/account/credit", "PATCH", {
+        auto_apply: autoApply,
+      }),
+    );
+    return data;
+  }
+
+  /** Issue a Lightning invoice that adds `amountMsat` to the balance. */
+  async topUpCredit(amountMsat: number) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<AccountCreditTopup>
+    >(
+      await this.#req("/api/v1/account/credit/topup", "POST", {
+        amount: amountMsat,
+      }),
+    );
+    return data;
+  }
+
+  async listCreditEvents(limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    return await this.#handleResponse<PaginatedResponse<AccountCreditEvent>>(
+      await this.#req(`/api/v1/account/credit/events${query}`, "GET"),
+    );
   }
 
   async enrollReferral(req: ReferralSignupRequest) {

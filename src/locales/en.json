@@ -98,6 +98,9 @@
   "/tiBYY": {
     "defaultMessage": "Continue with {provider}"
   },
+  "00LcfG": {
+    "defaultMessage": "Load more"
+  },
   "0Azlrb": {
     "defaultMessage": "Manage"
   },
@@ -136,6 +139,9 @@
   },
   "0t1qvq": {
     "defaultMessage": "Add Rule"
+  },
+  "111qQK": {
+    "defaultMessage": "Spent"
   },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
@@ -566,6 +572,9 @@
   "AGa2G5": {
     "defaultMessage": "When you want the whole machine instead"
   },
+  "AIgHom": {
+    "defaultMessage": "No credit activity yet."
+  },
   "AL9+3/": {
     "defaultMessage": "Couldn't find a subscription to renew for this VM."
   },
@@ -595,6 +604,9 @@
   },
   "B1JEDn": {
     "defaultMessage": "A backup copies your app's data to LNVPS storage. Download it to keep your own copy."
+  },
+  "B1d/RG": {
+    "defaultMessage": "Payment received. Your balance has been updated."
   },
   "B4reHi": {
     "defaultMessage": "History Events"
@@ -697,6 +709,9 @@
   },
   "Czw6Yl": {
     "defaultMessage": "Currently"
+  },
+  "D+xlZ1": {
+    "defaultMessage": "Pay a Lightning invoice and the amount is added to your balance."
   },
   "D3idYv": {
     "defaultMessage": "Settings"
@@ -929,6 +944,9 @@
   "H4Ucn0": {
     "defaultMessage": "Inbound"
   },
+  "H5+NAX": {
+    "defaultMessage": "Balance"
+  },
   "H7iwrN": {
     "defaultMessage": "A device is one registered public key: your phone, your laptop, your router. Up to {count, plural, one {# device} other {# devices}} on one plan, and a device you remove frees its slot."
   },
@@ -995,6 +1013,9 @@
   "Id24hd": {
     "defaultMessage": "Name *"
   },
+  "IeUH3/": {
+    "defaultMessage": "Refund"
+  },
   "IiNYda": {
     "defaultMessage": "Build it in {regions}."
   },
@@ -1030,6 +1051,9 @@
   },
   "JVClQM": {
     "defaultMessage": "LNVPS Service Status and Uptime"
+  },
+  "JXdbo8": {
+    "defaultMessage": "Done"
   },
   "Ja58kB": {
     "defaultMessage": "Deploy your relay from {price} per month"
@@ -1118,6 +1142,9 @@
   "LX6weZ": {
     "defaultMessage": "Pending payment"
   },
+  "LaLTJR": {
+    "defaultMessage": "Adjustment"
+  },
   "Lc72Gm": {
     "defaultMessage": "Start a new conversation"
   },
@@ -1160,6 +1187,9 @@
   "MJ2jZQ": {
     "defaultMessage": "Total"
   },
+  "MOEWbV": {
+    "defaultMessage": "Amount (sats)"
+  },
   "MTnSwY": {
     "defaultMessage": "ex. tax"
   },
@@ -1183,6 +1213,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirm"
+  },
+  "N2W+L6": {
+    "defaultMessage": "Add credit"
   },
   "N3Pob8": {
     "defaultMessage": "Ask anything about your account: billing, a VM that won't boot, or what a charge was for. For refunds, extensions or deletions, use the contact form instead."
@@ -1240,6 +1273,9 @@
   },
   "ORGv1Q": {
     "defaultMessage": "Created"
+  },
+  "OcZR/l": {
+    "defaultMessage": "Pay with account credit"
   },
   "OeOwwQ": {
     "defaultMessage": "Remove {name}? Its key and address are released, and the config on that device stops working."
@@ -1592,6 +1628,9 @@
   "VJ4xwX": {
     "defaultMessage": "News and Product Updates"
   },
+  "VJx71I": {
+    "defaultMessage": "Paid from your account credit. Applying it now."
+  },
   "VKfWR3": {
     "defaultMessage": "Recommended"
   },
@@ -1703,6 +1742,9 @@
   "XdcFgv": {
     "defaultMessage": "Managed Nostr relays. Pay with Lightning."
   },
+  "Xy/hId": {
+    "defaultMessage": "Account Credit"
+  },
   "XyIrRh": {
     "defaultMessage": "Pay with Bitcoin"
   },
@@ -1790,6 +1832,9 @@
   "ZewCpX": {
     "defaultMessage": "Add Domain"
   },
+  "ZgQnsi": {
+    "defaultMessage": "Every quote uses as much credit as the bill allows, and you pay the rest. Automatic renewals use credit when it covers the whole renewal."
+  },
   "ZmIH8d": {
     "defaultMessage": "Sign out everywhere"
   },
@@ -1804,6 +1849,9 @@
   },
   "a60eIK": {
     "defaultMessage": "Saving re-applies the config and restarts the app."
+  },
+  "aE53im": {
+    "defaultMessage": "Top-up"
   },
   "aLe15X": {
     "defaultMessage": "Pay how you like"
@@ -1855,6 +1903,9 @@
   },
   "bhfNWq": {
     "defaultMessage": "Paste encrypted message here..."
+  },
+  "bk6Lnx": {
+    "defaultMessage": "Account credit"
   },
   "bneNNt": {
     "defaultMessage": "{amount} off{code, select, none {} other { · {code}}}"
@@ -2207,6 +2258,9 @@
   "jOo6oG": {
     "defaultMessage": "Manage VM access keys"
   },
+  "jS6bEf": {
+    "defaultMessage": "Prepaid balance for orders"
+  },
   "jUqYir": {
     "defaultMessage": "Added {date}"
   },
@@ -2318,6 +2372,9 @@
   "lQNVjN": {
     "defaultMessage": "Deploy {name} as a managed app on LNVPS. Pay with Lightning, Bitcoin, or card."
   },
+  "lQjSeV": {
+    "defaultMessage": "Top up a balance and spend it on new orders, renewals and upgrades."
+  },
   "lYEj5M": {
     "defaultMessage": "Managed Apps"
   },
@@ -2363,6 +2420,9 @@
   "mJPBXd": {
     "defaultMessage": "Encrypted message (copy and include in your email):"
   },
+  "mLvz+r": {
+    "defaultMessage": "Credit"
+  },
   "mMug3Z": {
     "defaultMessage": "earned · {currency}"
   },
@@ -2395,6 +2455,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "Node listing #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "The invoice expires in 10 minutes. Your balance updates as soon as it is paid."
   },
   "n7yYXG": {
     "defaultMessage": "Service"
@@ -2512,6 +2575,9 @@
   },
   "p5LNtB": {
     "defaultMessage": "Not set"
+  },
+  "pH2FMK": {
+    "defaultMessage": "Create invoice"
   },
   "pHg2Hv": {
     "defaultMessage": "Every device reaches every region. The address inside the tunnel is the same wherever you exit, so switching country is a config file, not a re-registration."
@@ -2917,6 +2983,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "Deploy an app on LNVPS and it is up in minutes on its own hostname, with TLS and storage included and no OS to patch. Nostr relays and Blossom media servers today."
+  },
+  "ySPSCo": {
+    "defaultMessage": "Spend my balance automatically"
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."

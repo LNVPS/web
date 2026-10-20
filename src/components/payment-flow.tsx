@@ -261,6 +261,7 @@ export default function PaymentFlow({
   const isOffSession =
     !!payment &&
     (savedCharge ||
+      typeof payment.data !== "object" ||
       (!("lightning" in payment.data) &&
         !("revolut" in payment.data) &&
         !("onchain" in payment.data) &&
@@ -425,16 +426,39 @@ export default function PaymentFlow({
         cost: { currency: payment.currency, amount: payment.processing_fee },
       });
     }
+    const creditUsed = payment.credit?.amount ?? 0;
+    if (creditUsed > 0) {
+      lines.push({
+        label: <FormattedMessage defaultMessage="Account credit" />,
+        cost: { currency: payment.currency, amount: creditUsed },
+        credit: true,
+      });
+    }
     const total = {
       currency: payment.currency,
-      amount: payment.amount + payment.tax + payment.processing_fee,
+      amount: Math.max(
+        0,
+        payment.amount + payment.tax + payment.processing_fee - creditUsed,
+      ),
     };
 
     return (
       <div className="flex flex-col gap-5">
         <CheckoutHeader title={title} onBack={leavePayment} />
 
-        {"lightning" in payment.data ? (
+        {typeof payment.data !== "object" ? (
+          <div className="flex flex-col gap-4">
+            <ReceiptSummary
+              title={<FormattedMessage defaultMessage="Invoice" />}
+              lines={lines}
+              total={total}
+            />
+            <div className="flex items-center justify-center gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
+              <Spinner />
+              <FormattedMessage defaultMessage="Paid from your account credit. Applying it now." />
+            </div>
+          </div>
+        ) : "lightning" in payment.data ? (
           <VpsPayment
             payment={payment}
             pollPaid={source.pollPaid}
@@ -653,9 +677,13 @@ export default function PaymentFlow({
   if (quote) {
     const currency = quote.currency;
     const amountOff = quote.discount?.amount_off ?? 0;
+    const creditUsed = quote.credit?.amount ?? 0;
     orderTotal = {
       currency,
-      amount: quote.amount + quote.tax + quote.processing_fee,
+      amount: Math.max(
+        0,
+        quote.amount + quote.tax + quote.processing_fee - creditUsed,
+      ),
     };
     const quoteLines: Array<ReceiptLine> = [
       {
@@ -688,6 +716,13 @@ export default function PaymentFlow({
       quoteLines.push({
         label: <FormattedMessage defaultMessage="Processing fee" />,
         cost: { currency, amount: quote.processing_fee },
+      });
+    }
+    if (creditUsed > 0) {
+      quoteLines.push({
+        label: <FormattedMessage defaultMessage="Account credit" />,
+        cost: { currency, amount: creditUsed },
+        credit: true,
       });
     }
     receipt = (
@@ -993,6 +1028,8 @@ export default function PaymentFlow({
         >
           {lnurlSelected ? (
             <FormattedMessage defaultMessage="Show LNURL" />
+          ) : orderTotal && orderTotal.amount === 0 && quote?.credit ? (
+            <FormattedMessage defaultMessage="Pay with account credit" />
           ) : orderTotal ? (
             <FormattedMessage
               defaultMessage="Pay {amount}"

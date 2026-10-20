@@ -181,7 +181,9 @@ export function VmBillingPage() {
         <Icon name="printer" />
       </div>
     ) : isDepositPayment(a.data) ||
-      ("lightning" in a.data && new Date(a.expires) > new Date()) ? (
+      (typeof a.data === "object" &&
+        "lightning" in a.data &&
+        new Date(a.expires) > new Date()) ? (
       // Unpaid but still payable (on-chain deposits are never rejected;
       // Lightning invoices until they expire): reopen at the QR stage.
       <div

@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import type { PaymentData } from "../api";
 import {
   depositOutpoint,
+  isCreditPayment,
   isDepositPayment,
   paymentMethodLabel,
 } from "./deposit";
@@ -59,5 +60,18 @@ describe("paymentMethodLabel", () => {
     expect(paymentMethodLabel(undefined, { stripe: { session_id: "s" } })).toBe(
       "—",
     );
+  });
+});
+
+describe("credit-funded payments", () => {
+  test("bare credit data is not a deposit and has no outpoint", () => {
+    expect(isCreditPayment("credit")).toBe(true);
+    expect(isCreditPayment({ lightning: "lnbc1" })).toBe(false);
+    expect(isDepositPayment("credit")).toBe(false);
+    expect(depositOutpoint("credit")).toBeUndefined();
+  });
+
+  test("labels as credit", () => {
+    expect(paymentMethodLabel(undefined, "credit")).toBe("credit");
   });
 });

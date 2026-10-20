@@ -189,7 +189,8 @@ export type PaymentMethodType =
   | "nwc"
   | "lnurl"
   | "onchain"
-  | "fixedfloat";
+  | "fixedfloat"
+  | "credit";
 
 /** Coins payable through the `fixedfloat` method. */
 export type FixedFloatCoin = "XMR" | "LTC" | "ETH" | "USDTTRC";

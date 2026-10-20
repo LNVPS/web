@@ -1309,13 +1309,19 @@ export interface AccountCreditEvent {
   created: string;
 }
 
+export type CreditTopupMethod = "lightning" | "onchain" | "fixedfloat";
+
 export interface AccountCreditTopup {
-  /** BOLT11 invoice to pay. */
-  pr: string;
+  /** BOLT11 invoice to pay; only set for Lightning top-ups. */
+  pr?: string;
   payment_hash: string;
-  /** msat the invoice is for. */
+  method: CreditTopupMethod;
+  /** What to pay: an invoice, a receive address or a swap deposit. */
+  data: PaymentData;
+  /** msat requested, or received once a deposit is seen. */
   amount: number;
   currency: string;
+  is_paid: boolean;
   expires: string;
 }
 
@@ -2555,15 +2561,28 @@ export class LNVpsApi {
     return data;
   }
 
-  /** Issue a Lightning invoice that adds `amountMsat` to the balance. */
-  async topUpCredit(amountMsat: number) {
+  /** Start a top-up that adds `amountMsat` to the balance. */
+  async topUpCredit(
+    amountMsat: number,
+    method: CreditTopupMethod = "lightning",
+    coin?: FixedFloatCoin,
+  ) {
     const { data } = await this.#handleResponse<
       ApiResponse<AccountCreditTopup>
     >(
       await this.#req("/api/v1/account/credit/topup", "POST", {
         amount: amountMsat,
+        method,
+        coin,
       }),
     );
+    return data;
+  }
+
+  async getCreditTopup(paymentHash: string) {
+    const { data } = await this.#handleResponse<
+      ApiResponse<AccountCreditTopup>
+    >(await this.#req(`/api/v1/account/credit/topup/${paymentHash}`, "GET"));
     return data;
   }
 

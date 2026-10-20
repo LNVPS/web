@@ -6,6 +6,7 @@ import {
   AccountCreditEvent,
   AccountCreditEventKind,
   AccountCreditTopup,
+  FixedFloatCoin,
 } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "../components/button";
@@ -14,11 +15,14 @@ import { CostAmount } from "../components/cost";
 import QrCode from "../components/qr";
 import { PageHeader, SectionCard } from "../components/section";
 import { showError } from "../toast";
+import { coinTicker } from "../utils/currency";
+import { depositOutpoint } from "../utils/deposit";
 
 const PAGE_SIZE = 20;
 const PRESET_SATS = [10_000, 50_000, 100_000, 500_000];
 const MIN_TOPUP_SATS = 1;
 const TOPUP_POLL_MS = 3_000;
+const COINS: ReadonlyArray<string> = ["XMR", "LTC", "ETH", "USDTTRC"];
 
 function EventKind({ kind }: { kind: AccountCreditEventKind }) {
   const label: Record<AccountCreditEventKind, React.ReactNode> = {
@@ -30,7 +34,24 @@ function EventKind({ kind }: { kind: AccountCreditEventKind }) {
   return <span>{label[kind] ?? kind}</span>;
 }
 
-function TopUpInvoice({
+type TopupChoice =
+  | { kind: "lightning" }
+  | { kind: "onchain" }
+  | { kind: "coin"; coin: FixedFloatCoin };
+
+function choiceKey(c: TopupChoice) {
+  return c.kind === "coin" ? c.coin : c.kind;
+}
+
+function choiceLabel(c: TopupChoice) {
+  if (c.kind === "lightning")
+    return <FormattedMessage defaultMessage="Lightning" />;
+  if (c.kind === "onchain")
+    return <FormattedMessage defaultMessage="On-chain" />;
+  return coinTicker(c.coin);
+}
+
+function TopUpPayment({
   topup,
   onSettled,
   onClose,
@@ -42,29 +63,17 @@ function TopUpInvoice({
   const { api } = useLogin() ?? {};
   const settledRef = useRef(onSettled);
   settledRef.current = onSettled;
-  const [startBalance, setStartBalance] = useState<number>();
-  const [paid, setPaid] = useState(false);
+  const [current, setCurrent] = useState(topup);
+  const paid = current.is_paid;
 
   useEffect(() => {
-    if (!api) return;
-    let cancelled = false;
-    api
-      .getAccountCredit()
-      .then((c) => !cancelled && setStartBalance(c.balance))
-      .catch(console.error);
-    return () => {
-      cancelled = true;
-    };
-  }, [api]);
-
-  useEffect(() => {
-    if (!api || startBalance === undefined || paid) return;
+    if (!api || paid) return;
     const tx = setInterval(async () => {
       try {
-        const c = await api.getAccountCredit();
-        if (c.balance > startBalance) {
+        const next = await api.getCreditTopup(topup.payment_hash);
+        setCurrent(next);
+        if (next.is_paid) {
           clearInterval(tx);
-          setPaid(true);
           settledRef.current();
         }
       } catch (e) {
@@ -72,7 +81,7 @@ function TopUpInvoice({
       }
     }, TOPUP_POLL_MS);
     return () => clearInterval(tx);
-  }, [api, startBalance, paid]);
+  }, [api, topup.payment_hash, paid]);
 
   if (paid) {
     return (
@@ -87,38 +96,118 @@ function TopUpInvoice({
     );
   }
 
-  const link = `lightning:${topup.pr}`;
+  const data = current.data;
+  const lightning = typeof data === "object" && "lightning" in data;
+  const onchain = typeof data === "object" && "onchain" in data;
+  const swap = typeof data === "object" && "fixedfloat" in data;
+  const outpoint = depositOutpoint(data);
+  const txid = outpoint?.split(":")[0];
+
+  let target = "";
+  let link = "";
+  if (lightning) {
+    target = current.pr ?? "";
+    link = `lightning:${target}`;
+  } else if (onchain) {
+    target = data.onchain.address;
+    link = `bitcoin:${target}?amount=${(topup.amount / 1000 / 1e8).toFixed(8)}`;
+  } else if (swap) {
+    target = data.fixedfloat.address;
+    link = target;
+  }
+
   return (
     <div className="flex flex-col gap-4 items-center rounded-sm border border-cyber-border bg-cyber-panel p-3">
-      <QrCode
-        data={link}
-        link={link}
-        width={512}
-        height={512}
-        avatar="/avatar.png"
-        className="cursor-pointer rounded-sm overflow-hidden"
-      />
-      <div className="text-cyber-primary">
-        <CostAmount
-          cost={{ currency: topup.currency, amount: topup.amount }}
-          converted={false}
+      {!outpoint && (
+        <QrCode
+          data={link}
+          link={lightning || onchain ? link : undefined}
+          width={512}
+          height={512}
+          avatar={lightning || onchain ? "/avatar.png" : undefined}
+          className="cursor-pointer rounded-sm overflow-hidden"
         />
-      </div>
+      )}
+      {swap ? (
+        <div className="flex flex-col items-center gap-1">
+          <div className="text-xs text-cyber-muted">
+            <FormattedMessage defaultMessage="Send exactly" />
+          </div>
+          <div className="monospace select-all text-lg text-cyber-primary">
+            {data.fixedfloat.amount} {coinTicker(data.fixedfloat.coin)}
+          </div>
+        </div>
+      ) : (
+        <div className="text-cyber-primary">
+          <CostAmount
+            cost={{ currency: current.currency, amount: current.amount }}
+            converted={false}
+          />
+        </div>
+      )}
       <div className="monospace select-all break-all text-center text-sm text-cyber-text">
-        {topup.pr}
+        {target}
       </div>
+      {outpoint ? (
+        <div className="flex flex-col items-center gap-1.5 rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-3 py-2 text-center text-xs text-cyber-primary">
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-cyber-primary" />
+            <FormattedMessage defaultMessage="Payment received, waiting for confirmation. You can safely leave this page." />
+          </div>
+          {txid && (
+            <a
+              href={`https://mempool.space/tx/${txid}`}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono break-all underline decoration-dotted underline-offset-2 hover:text-cyber-text-bright"
+            >
+              <FormattedMessage defaultMessage="View transaction" />
+              {" ↗"}
+            </a>
+          )}
+        </div>
+      ) : (
+        <div className="text-xs text-cyber-muted text-center">
+          {lightning && (
+            <FormattedMessage defaultMessage="The invoice expires in 10 minutes. Your balance updates as soon as it is paid." />
+          )}
+          {onchain && (
+            <FormattedMessage defaultMessage="Send any amount of on-chain Bitcoin to this address. Your balance is credited with what arrives once it confirms." />
+          )}
+          {swap && (
+            <FormattedMessage
+              defaultMessage="Send only {ticker} on the right network within 15 minutes. It is swapped to Bitcoin and your balance is credited with what arrives once that confirms."
+              values={{ ticker: coinTicker(data.fixedfloat.coin) }}
+            />
+          )}
+        </div>
+      )}
       <div className="flex items-center gap-3">
-        <CopyButton text={topup.pr} />
+        <CopyButton text={target} />
         <button
           onClick={onClose}
           className="text-sm text-cyber-muted hover:text-cyber-primary transition-colors"
         >
-          <FormattedMessage defaultMessage="Close" />
+          {onchain || swap ? (
+            <FormattedMessage defaultMessage="I've sent the payment" />
+          ) : (
+            <FormattedMessage defaultMessage="Close" />
+          )}
         </button>
       </div>
-      <div className="text-xs text-cyber-muted text-center">
-        <FormattedMessage defaultMessage="The invoice expires in 10 minutes. Your balance updates as soon as it is paid." />
-      </div>
+      {swap && (
+        <div className="text-center text-xs text-cyber-muted">
+          <FormattedMessage defaultMessage="The exchange service is provided by FixedFloat. Creating an order confirms your agreement with the rules of FixedFloat." />{" "}
+          <a
+            href="https://ff.io/terms-of-service"
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-dotted underline-offset-2"
+          >
+            ff.io/terms-of-service ↗
+          </a>
+        </div>
+      )}
     </div>
   );
 }
@@ -132,6 +221,10 @@ export function AccountCreditPage() {
   const [loadedEvents, setLoadedEvents] = useState(false);
   const [sats, setSats] = useState("");
   const [topup, setTopup] = useState<AccountCreditTopup>();
+  const [choices, setChoices] = useState<Array<TopupChoice>>([
+    { kind: "lightning" },
+  ]);
+  const [choice, setChoice] = useState<TopupChoice>({ kind: "lightning" });
   const [error, setError] = useState<string>();
 
   const loadCredit = useCallback(async () => {
@@ -151,6 +244,25 @@ export function AccountCreditPage() {
   );
 
   useEffect(() => {
+    if (!api) return;
+    api
+      .getPaymentMethods()
+      .then((methods) => {
+        const next: Array<TopupChoice> = [{ kind: "lightning" }];
+        if (methods.some((m) => m.name === "onchain"))
+          next.push({ kind: "onchain" });
+        const coins =
+          methods.find((m) => m.name === "fixedfloat")?.currencies ?? [];
+        for (const c of coins) {
+          if (COINS.includes(c))
+            next.push({ kind: "coin", coin: c as FixedFloatCoin });
+        }
+        setChoices(next);
+      })
+      .catch(console.error);
+  }, [api]);
+
+  useEffect(() => {
     loadCredit().catch(showError);
     loadEvents(0).catch(showError);
   }, [loadCredit, loadEvents]);
@@ -163,7 +275,13 @@ export function AccountCreditPage() {
     if (!api || !validAmount) return;
     setError(undefined);
     try {
-      setTopup(await api.topUpCredit(amountSats * 1000));
+      setTopup(
+        await api.topUpCredit(
+          amountSats * 1000,
+          choice.kind === "coin" ? "fixedfloat" : choice.kind,
+          choice.kind === "coin" ? choice.coin : undefined,
+        ),
+      );
     } catch (e) {
       if (e instanceof Error) setError(e.message);
     }
@@ -227,11 +345,11 @@ export function AccountCreditPage() {
       <SectionCard
         title={<FormattedMessage defaultMessage="Add credit" />}
         description={
-          <FormattedMessage defaultMessage="Pay a Lightning invoice and the amount is added to your balance." />
+          <FormattedMessage defaultMessage="Pay with Bitcoin or a supported coin and the amount is added to your balance." />
         }
       >
         {topup ? (
-          <TopUpInvoice
+          <TopUpPayment
             topup={topup}
             onSettled={refreshAfterTopup}
             onClose={() => {
@@ -260,6 +378,24 @@ export function AccountCreditPage() {
                 </button>
               ))}
             </div>
+            {choices.length > 1 && (
+              <div className="flex flex-wrap gap-2">
+                {choices.map((c) => (
+                  <button
+                    key={choiceKey(c)}
+                    onClick={() => setChoice(c)}
+                    className={classNames(
+                      "px-3 py-1.5 rounded-sm border text-sm transition-all duration-200",
+                      choiceKey(c) === choiceKey(choice)
+                        ? "border-cyber-primary text-cyber-primary shadow-neon-sm"
+                        : "border-cyber-border text-cyber-text hover:border-cyber-primary",
+                    )}
+                  >
+                    {choiceLabel(c)}
+                  </button>
+                ))}
+              </div>
+            )}
             <label className="flex flex-col gap-1.5 sm:max-w-xs">
               <span className="text-sm text-cyber-text">
                 <FormattedMessage defaultMessage="Amount (sats)" />
@@ -278,7 +414,7 @@ export function AccountCreditPage() {
               disabled={!validAmount}
               onClick={createTopup}
             >
-              <FormattedMessage defaultMessage="Create invoice" />
+              <FormattedMessage defaultMessage="Continue" />
             </AsyncButton>
           </div>
         )}

@@ -602,6 +602,9 @@
   "AfmrGS": {
     "defaultMessage": "Send Code"
   },
+  "AozuFZ": {
+    "defaultMessage": "On-chain"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} read"
   },
@@ -712,9 +715,6 @@
   },
   "Czw6Yl": {
     "defaultMessage": "Currently"
-  },
-  "D+xlZ1": {
-    "defaultMessage": "Pay a Lightning invoice and the amount is added to your balance."
   },
   "D3idYv": {
     "defaultMessage": "Settings"
@@ -1312,6 +1312,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "Thinking…"
+  },
+  "P6MssC": {
+    "defaultMessage": "Send only {ticker} on the right network within 15 minutes. It is swapped to Bitcoin and your balance is credited with what arrives once that confirms."
   },
   "P7PLVj": {
     "defaultMessage": "Date"
@@ -2165,6 +2168,9 @@
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
+  "gfVtOu": {
+    "defaultMessage": "Pay with Bitcoin or a supported coin and the amount is added to your balance."
+  },
   "gjvoQG": {
     "defaultMessage": "Sizing"
   },
@@ -2579,9 +2585,6 @@
   "p5LNtB": {
     "defaultMessage": "Not set"
   },
-  "pH2FMK": {
-    "defaultMessage": "Create invoice"
-  },
   "pHg2Hv": {
     "defaultMessage": "Every device reaches every region. The address inside the tunnel is the same wherever you exit, so switching country is a config file, not a re-registration."
   },
@@ -2611,6 +2614,9 @@
   },
   "q/uwLT": {
     "defaultMessage": "Stop"
+  },
+  "q2BAvD": {
+    "defaultMessage": "Send any amount of on-chain Bitcoin to this address. Your balance is credited with what arrives once it confirms."
   },
   "qA0DQR": {
     "defaultMessage": "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."

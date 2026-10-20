@@ -6,6 +6,7 @@ import { openInvoice } from "../utils";
 import usePaymentMethods from "../hooks/usePaymentMethods";
 import CostLabel, { CostAmount, IntervalSuffix } from "../components/cost";
 import PaymentFlow from "../components/payment-flow";
+import { isDepositPayment, depositOutpoint } from "../utils/deposit";
 import {
   vmRenewalSource,
   subscriptionToVmPayment,
@@ -154,13 +155,15 @@ export function VmBillingPage() {
           ? "revolut"
           : "onchain" in a.data
             ? "onchain"
-            : "—"),
+            : "fixedfloat" in a.data
+              ? "fixedfloat"
+              : "—"),
     // On-chain deposits are never rejected — late payments still credit
     // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: a.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
-    ) : "onchain" in a.data ? (
-      a.data.onchain.outpoint ? (
+    ) : isDepositPayment(a.data) ? (
+      depositOutpoint(a.data) ? (
         <FormattedMessage defaultMessage="Confirming" />
       ) : (
         <FormattedMessage defaultMessage="Pending" />
@@ -172,7 +175,7 @@ export function VmBillingPage() {
     ),
     statusTone: a.is_paid
       ? "primary"
-      : "onchain" in a.data || new Date(a.expires) > new Date()
+      : isDepositPayment(a.data) || new Date(a.expires) > new Date()
         ? "warning"
         : "danger",
     action: a.is_paid ? (
@@ -183,7 +186,7 @@ export function VmBillingPage() {
       >
         <Icon name="printer" />
       </div>
-    ) : "onchain" in a.data ||
+    ) : isDepositPayment(a.data) ||
       ("lightning" in a.data && new Date(a.expires) > new Date()) ? (
       // Unpaid but still payable (on-chain deposits are never rejected;
       // Lightning invoices until they expire): reopen at the QR stage.

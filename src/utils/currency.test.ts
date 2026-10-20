@@ -1,6 +1,11 @@
 import { describe, expect, test } from "bun:test";
 import { createIntl } from "react-intl";
-import { formatIntervalText, formatPriceText, formatPriceWithInterval } from "./currency";
+import {
+  coinTicker,
+  formatIntervalText,
+  formatPriceText,
+  formatPriceWithInterval,
+} from "./currency";
 
 const intl = createIntl({ locale: "en", messages: {} });
 
@@ -53,5 +58,13 @@ describe("formatPriceWithInterval", () => {
     expect(formatPriceWithInterval(intl, cost)).toBe(
       `${formatPriceText(intl, cost)}/3 months`,
     );
+  });
+});
+
+describe("coinTicker", () => {
+  test("USDTTRC reads as USDT and other coins keep their code", () => {
+    expect(coinTicker("USDTTRC")).toBe("USDT");
+    expect(coinTicker("XMR")).toBe("XMR");
+    expect(coinTicker("LTC")).toBe("LTC");
   });
 });

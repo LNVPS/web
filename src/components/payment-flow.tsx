@@ -1,6 +1,7 @@
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import {
   AccountDetail,
+  FixedFloatCoin,
   PaymentMethod,
   RenewalQuote,
   SavedPaymentMethod,
@@ -21,6 +22,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { accountTaxRate, processingFeeEstimate } from "../utils";
 import VpsPayment from "./vps-payment";
 import OnChainPayment from "./onchain-payment";
+import CoinPayment from "./coin-payment";
 import {
   SectionLabel,
   ReceiptSummary,
@@ -29,11 +31,14 @@ import {
 } from "./checkout";
 import {
   BITCOIN_METHODS,
+  CoinMethodRow,
   ProviderMethodRow,
   SavedMethodRow,
   shouldShowMethod,
 } from "./checkout-method-rows";
 import { PaymentSource } from "./payment-sources";
+
+const COINS: ReadonlyArray<string> = ["XMR", "LTC", "ETH", "USDTTRC"];
 
 interface PaymentFlowProps {
   /** Heading shown at every step, e.g. "Renew VPS #12". */
@@ -75,7 +80,9 @@ export default function PaymentFlow({
   // The chosen payment option. Selecting is instant; the charge happens from
   // the shared Pay button so the summary can reflect the method's fees first.
   const [selection, setSelection] = useState<
-    { kind: "method"; name: string } | { kind: "saved"; id: number }
+    | { kind: "method"; name: string }
+    | { kind: "coin"; coin: FixedFloatCoin }
+    | { kind: "saved"; id: number }
   >();
   // Set when charging a saved method off-session: the backend charges it
   // server-side, so there's no interactive widget even if the returned payment
@@ -138,7 +145,11 @@ export default function PaymentFlow({
   const createPayment = useCallback(
     async function (
       method: string,
-      opts?: { saveCard?: boolean; paymentMethodId?: number },
+      opts?: {
+        saveCard?: boolean;
+        paymentMethodId?: number;
+        coin?: FixedFloatCoin;
+      },
     ) {
       setError(undefined);
       setCodeError(undefined);
@@ -148,6 +159,7 @@ export default function PaymentFlow({
         const result = await source.createPayment(method, {
           saveCard: opts?.saveCard,
           paymentMethodId: opts?.paymentMethodId,
+          coin: opts?.coin,
           intervals: intervalsRef.current,
           code: usedCode,
         });
@@ -177,10 +189,12 @@ export default function PaymentFlow({
       ? selectedSavedMethod?.provider === "nwc"
         ? "nwc"
         : "saved"
-      : // LNURL has no invoice of its own; it settles over Lightning.
-        selection.name === "lnurl"
-        ? "lightning"
-        : selection.name;
+      : selection.kind === "coin"
+        ? "fixedfloat"
+        : // LNURL has no invoice of its own; it settles over Lightning.
+          selection.name === "lnurl"
+          ? "lightning"
+          : selection.name;
 
   // Price the order server-side whenever the inputs change. Debounced so
   // dragging the duration slider doesn't fire a request per step.
@@ -249,7 +263,8 @@ export default function PaymentFlow({
     (savedCharge ||
       (!("lightning" in payment.data) &&
         !("revolut" in payment.data) &&
-        !("onchain" in payment.data)));
+        !("onchain" in payment.data) &&
+        !("fixedfloat" in payment.data)));
   useEffect(() => {
     if (!payment || !isOffSession) return;
     const tx = setInterval(async () => {
@@ -296,6 +311,7 @@ export default function PaymentFlow({
     // 2. First available provider method.
     const first = (methods ?? [])
       .filter((m) => shouldShowMethod(m, hasNwc))
+      .filter((m) => m.name !== "fixedfloat")
       .filter((m) => m.name !== "lnurl" || !!source.lnurl)[0];
     if (first) setSelection({ kind: "method", name: first.name });
   }, [
@@ -322,6 +338,10 @@ export default function PaymentFlow({
       } else {
         await createPayment("saved", { paymentMethodId: selection.id });
       }
+      return;
+    }
+    if (selection.kind === "coin") {
+      await createPayment("fixedfloat", { coin: selection.coin });
       return;
     }
     if (selection.name === "lnurl") {
@@ -429,6 +449,14 @@ export default function PaymentFlow({
             // On-chain confirmation takes 10+ minutes and is credited
             // server-side, so let the user leave instead of watching a
             // spinner. The pending payment shows up in billing history.
+            onDone={onCancel ?? leavePayment}
+          />
+        ) : "fixedfloat" in payment.data ? (
+          <CoinPayment
+            payment={payment}
+            pollPaid={source.pollPaid}
+            pollDetected={source.pollDetected}
+            onPaid={handlePaymentComplete}
             onDone={onCancel ?? leavePayment}
           />
         ) : "revolut" in payment.data && !savedCharge ? (
@@ -591,8 +619,11 @@ export default function PaymentFlow({
         BITCOIN_METHODS.indexOf(a.name) - BITCOIN_METHODS.indexOf(b.name),
     );
   const cardRows = providerRows.filter(
-    (m) => !BITCOIN_METHODS.includes(m.name),
+    (m) => !BITCOIN_METHODS.includes(m.name) && m.name !== "fixedfloat",
   );
+  const coinRows = (
+    providerRows.find((m) => m.name === "fixedfloat")?.currencies ?? []
+  ).filter((c): c is FixedFloatCoin => COINS.includes(c));
 
   // The provider method whose fee config applies to the current selection.
   // A saved revolut method bills through revolut; a saved NWC wallet as lightning.
@@ -604,7 +635,11 @@ export default function PaymentFlow({
             (selectedSavedMethod?.provider === "nwc" ? "lightning" : "revolut"),
         )
       : selection
-        ? methods?.find((m) => m.name === selection.name)
+        ? methods?.find(
+            (m) =>
+              m.name ===
+              (selection.kind === "coin" ? "fixedfloat" : selection.name),
+          )
         : undefined;
   const lnurlSelected =
     selection?.kind === "method" && selection.name === "lnurl";
@@ -906,6 +941,24 @@ export default function PaymentFlow({
                   selection?.kind === "method" && selection.name === method.name
                 }
                 onSelect={(m) => setSelection({ kind: "method", name: m.name })}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {coinRows.length > 0 && (
+        <div className="flex flex-col gap-3">
+          <SectionLabel>
+            <FormattedMessage defaultMessage="Pay with crypto" />
+          </SectionLabel>
+          <div className="flex flex-col gap-2">
+            {coinRows.map((coin) => (
+              <CoinMethodRow
+                key={coin}
+                coin={coin}
+                selected={selection?.kind === "coin" && selection.coin === coin}
+                onSelect={(c) => setSelection({ kind: "coin", coin: c })}
               />
             ))}
           </div>

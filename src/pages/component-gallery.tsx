@@ -24,6 +24,7 @@ import {
 } from "../components/checkout-method-rows";
 import VpsInstanceRow from "../components/vps-instance";
 import OnChainPayment from "../components/onchain-payment";
+import CoinPayment from "../components/coin-payment";
 import VpsPayment from "../components/vps-payment";
 import { RevolutPayWidget } from "../components/revolut";
 import QrCode from "../components/qr";
@@ -193,6 +194,12 @@ const METHODS: Array<PaymentMethod> = [
     processing_fee_currency: "BTC",
   },
   {
+    name: "fixedfloat",
+    currencies: ["XMR", "LTC", "ETH", "USDTTRC"],
+    min_amount: 13_000_000,
+    min_amount_currency: "BTC",
+  },
+  {
     name: "revolut",
     currencies: ["EUR", "USD"],
     processing_fee_rate: 1.5,
@@ -245,6 +252,8 @@ const FLOW_STATES = [
   "lnurl",
   "on-chain · awaiting",
   "on-chain · received (0-conf)",
+  "coin · awaiting",
+  "coin · swap complete",
   "revolut (card)",
 ] as const;
 type FlowState = (typeof FLOW_STATES)[number];
@@ -271,6 +280,31 @@ function onchainPayment(zeroConf: boolean): VmPayment {
       onchain: {
         address: "bc1qexampleaddressfordemodonotsend000000000",
         outpoint: zeroConf
+          ? "3a1b2c3d4e5f60718293a4b5c6d7e8f90112233445566778899aabbccddeeff00:0"
+          : undefined,
+      },
+    },
+  } as unknown as VmPayment;
+}
+
+function coinPayment(swapped: boolean): VmPayment {
+  return {
+    id: "demo",
+    vm_id: 42,
+    created: iso(0),
+    expires: iso(DAY),
+    amount: 21_000_000,
+    tax: 0,
+    processing_fee: 0,
+    currency: "BTC",
+    is_paid: false,
+    time: 30 * 86_400,
+    data: {
+      fixedfloat: {
+        coin: "XMR",
+        address: "4AdUndXHHZ6cfufTMvppY6JwXNouMBzSkbLYfpAV5Usx3skxNgYeYTRj",
+        amount: "0.336538",
+        outpoint: swapped
           ? "3a1b2c3d4e5f60718293a4b5c6d7e8f90112233445566778899aabbccddeeff00:0"
           : undefined,
       },
@@ -347,6 +381,18 @@ function PaymentFlowDemo({ state }: { state: FlowState }) {
           payment={onchainPayment(false)}
           pollPaid={noop}
           pollDetected={noDetect}
+        />
+      );
+    case "coin · awaiting":
+      return (
+        <CoinPayment key="coin" payment={coinPayment(false)} pollPaid={noop} />
+      );
+    case "coin · swap complete":
+      return (
+        <CoinPayment
+          key="coinswap"
+          payment={coinPayment(true)}
+          pollPaid={noop}
         />
       );
     case "on-chain · received (0-conf)":

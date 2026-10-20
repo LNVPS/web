@@ -124,3 +124,8 @@ export function convertAmount(
   const standardTo = standardFrom * (rTo / rFrom);
   return standardTo * smallestUnitScale(to);
 }
+
+/** Ticker shown for a swap coin, e.g. `USDT` for `USDTTRC`. */
+export function coinTicker(coin: string): string {
+  return coin === "USDTTRC" ? "USDT" : coin;
+}

@@ -9,6 +9,7 @@ import {
 } from "../api";
 import { ApiUrl } from "../const";
 import { planCycleDays } from "./billing";
+import { depositOutpoint } from "../utils/deposit";
 
 const MS_PER_DAY = 86_400_000;
 
@@ -55,6 +56,8 @@ export interface PaymentSource {
     opts: {
       saveCard?: boolean;
       paymentMethodId?: number;
+      /** Coin to pay with, for the `fixedfloat` method. */
+      coin?: string;
       intervals?: number;
       /** Discount code; an unusable code fails the request. */
       code?: string;
@@ -134,6 +137,7 @@ export function subscriptionRenewalSource(
         await api.renewSubscription(subscriptionId, method, {
           saveCard: opts.saveCard,
           paymentMethodId: opts.paymentMethodId,
+          coin: opts.coin,
           intervals: opts.intervals,
           code: opts.code,
         }),
@@ -146,7 +150,7 @@ export function subscriptionRenewalSource(
     },
     pollDetected: async (paymentId) => {
       const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
-      if (!p.is_paid && "onchain" in p.data && p.data.onchain.outpoint) {
+      if (!p.is_paid && depositOutpoint(p.data)) {
         return subscriptionToVmPayment(p);
       }
       return undefined;
@@ -195,6 +199,7 @@ export function vmUpgradeSource(
     createPayment: (method, opts) =>
       api.createVmUpgradePayment(vm.id, upgradeRequest, method, {
         paymentMethodId: opts.paymentMethodId,
+        coin: opts.coin,
       }),
     pollPaid: async (paymentId) => {
       const p = await api.getSubscriptionPayment(subscriptionId, paymentId);
@@ -224,6 +229,7 @@ export function appUpgradeSource(
           method,
           {
             paymentMethodId: opts.paymentMethodId,
+            coin: opts.coin,
           },
         ),
       ),

@@ -13,6 +13,7 @@ import { CostAmount } from "../components/cost";
 import { Card, CardBody, CardTitle } from "../components/card";
 import { Icon } from "../components/icon";
 import PaymentFlow from "../components/payment-flow";
+import { isDepositPayment } from "../utils/deposit";
 import {
   subscriptionRenewalSource,
   subscriptionToVmPayment,
@@ -172,12 +173,14 @@ export function AccountSubscriptionPage() {
           ? "revolut"
           : "onchain" in p.data
             ? "onchain"
-            : "—"),
+            : "fixedfloat" in p.data
+              ? "fixedfloat"
+              : "—"),
     // On-chain deposits are never rejected — late payments still credit
     // pro-rata — so a pending on-chain payment is "awaiting", not expired.
     status: p.is_paid ? (
       <FormattedMessage defaultMessage="Paid" />
-    ) : "onchain" in p.data ? (
+    ) : isDepositPayment(p.data) ? (
       <FormattedMessage defaultMessage="Pending" />
     ) : new Date(p.expires) <= new Date() ? (
       <FormattedMessage defaultMessage="Expired" />
@@ -186,7 +189,7 @@ export function AccountSubscriptionPage() {
     ),
     statusTone: p.is_paid
       ? "primary"
-      : "onchain" in p.data || new Date(p.expires) > new Date()
+      : isDepositPayment(p.data) || new Date(p.expires) > new Date()
         ? "warning"
         : "danger",
     action: p.is_paid ? (
@@ -197,7 +200,7 @@ export function AccountSubscriptionPage() {
       >
         <Icon name="printer" />
       </div>
-    ) : "onchain" in p.data ||
+    ) : isDepositPayment(p.data) ||
       ("lightning" in p.data && new Date(p.expires) > new Date()) ? (
       // Unpaid but still payable (on-chain deposits are never rejected;
       // Lightning invoices until they expire): reopen at the QR stage.

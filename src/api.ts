@@ -188,7 +188,11 @@ export type PaymentMethodType =
   | "stripe"
   | "nwc"
   | "lnurl"
-  | "onchain";
+  | "onchain"
+  | "fixedfloat";
+
+/** Coins payable through the `fixedfloat` method. */
+export type FixedFloatCoin = "XMR" | "LTC" | "ETH" | "USDTTRC";
 
 export type PaymentTypeValue = "new" | "renew" | "upgrade";
 
@@ -591,6 +595,21 @@ export type PaymentData =
          */
         outpoint?: string;
       };
+    }
+  | {
+      /** A coin swapped into our Bitcoin wallet by FixedFloat. */
+      fixedfloat: {
+        coin: FixedFloatCoin;
+        /** Deposit address for `coin`. */
+        address: string;
+        /** Amount of `coin` to send, a decimal string. */
+        amount: string;
+        /**
+         * "{txid}:{vout}" of the Bitcoin the swap delivered, set once it is
+         * seen in the mempool. Absent until the swap pays out.
+         */
+        outpoint?: string;
+      };
     };
 
 /**
@@ -675,7 +694,7 @@ export interface ExchangeRates {
 export interface PaymentMethod {
   name: PaymentMethodType;
   metadata?: Record<string, string>;
-  currencies: Array<"BTC" | "EUR" | "USD">;
+  currencies: Array<"BTC" | "EUR" | "USD" | FixedFloatCoin>;
   processing_fee_rate?: number;
   processing_fee_base?: number;
   processing_fee_currency?: string;
@@ -1649,10 +1668,11 @@ export class LNVpsApi {
     id: number,
     req: AppUpgradeRequest,
     method?: string,
-    opts?: { paymentMethodId?: number },
+    opts?: { paymentMethodId?: number; coin?: string },
   ) {
     const params = new URLSearchParams();
     if (method !== undefined) params.set("method", method);
+    if (opts?.coin) params.set("coin", opts.coin);
     if (opts?.paymentMethodId !== undefined) {
       params.set("payment_method_id", opts.paymentMethodId.toString());
     }
@@ -2254,10 +2274,11 @@ export class LNVpsApi {
     vm_id: number,
     req: VmUpgradeRequest,
     method?: string,
-    opts?: { paymentMethodId?: number },
+    opts?: { paymentMethodId?: number; coin?: string },
   ) {
     const params = new URLSearchParams();
     if (method !== undefined) params.set("method", method);
+    if (opts?.coin) params.set("coin", opts.coin);
     // For method=saved off-session charges: select a specific saved card.
     if (opts?.paymentMethodId !== undefined) {
       params.set("payment_method_id", opts.paymentMethodId.toString());
@@ -2397,6 +2418,8 @@ export class LNVpsApi {
       saveCard?: boolean;
       paymentMethodId?: number;
       intervals?: number;
+      /** Coin to pay with, required for `method=fixedfloat`. */
+      coin?: string;
       /**
        * Discount code. A code that can't be used (unknown, expired, exhausted,
        * or not applicable to this order) **fails the request** rather than
@@ -2407,6 +2430,7 @@ export class LNVpsApi {
   ) {
     const params = new URLSearchParams();
     if (method !== undefined) params.set("method", method);
+    if (opts?.coin) params.set("coin", opts.coin);
     // A discounted order is priced fresh, so this never hands back a pending
     // full-price invoice.
     if (opts?.code) params.set("code", opts.code);

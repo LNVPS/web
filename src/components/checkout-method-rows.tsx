@@ -1,14 +1,21 @@
 import { FormattedMessage, IntlShape, useIntl } from "react-intl";
-import { PaymentMethod, SavedPaymentMethod } from "../api";
+import { FixedFloatCoin, PaymentMethod, SavedPaymentMethod } from "../api";
 import { Icon } from "./icon";
 import { PaymentOptionRow } from "./checkout";
+import { coinTicker } from "../utils/currency";
 
 /**
  * Generic provider methods the checkout renders as "new payment" options. NWC
  * is intentionally excluded: a usable NWC wallet is always a *saved* payment
  * method, so it's listed in the saved-methods section instead of here.
  */
-const KNOWN_METHODS = ["lightning", "lnurl", "revolut", "onchain"];
+const KNOWN_METHODS = [
+  "lightning",
+  "lnurl",
+  "revolut",
+  "onchain",
+  "fixedfloat",
+];
 
 /**
  * Whether a provider method should appear in the list. NWC is only useful once
@@ -139,6 +146,49 @@ function methodSubtitle(intl: IntlShape, m: PaymentMethod): string {
     : description;
 }
 
+function coinName(intl: IntlShape, coin: string): string {
+  switch (coin) {
+    case "XMR":
+      return intl.formatMessage({ defaultMessage: "Monero" });
+    case "LTC":
+      return intl.formatMessage({ defaultMessage: "Litecoin" });
+    case "ETH":
+      return intl.formatMessage({ defaultMessage: "Ethereum" });
+    case "USDTTRC":
+      return intl.formatMessage({ defaultMessage: "Tether (USDT on TRON)" });
+    default:
+      return coin;
+  }
+}
+
+/** One coin payable through the `fixedfloat` method. */
+export function CoinMethodRow({
+  coin,
+  selected,
+  onSelect,
+}: {
+  coin: FixedFloatCoin;
+  selected?: boolean;
+  onSelect: (coin: FixedFloatCoin) => void;
+}) {
+  const intl = useIntl();
+  return (
+    <PaymentOptionRow
+      icon={
+        <span className="pointer-events-none font-mono text-[0.6rem] font-bold">
+          {coinTicker(coin)}
+        </span>
+      }
+      title={coinName(intl, coin)}
+      subtitle={intl.formatMessage({
+        defaultMessage: "Swapped to Bitcoin, credits after confirmation",
+      })}
+      selected={selected}
+      onSelect={() => onSelect(coin)}
+    />
+  );
+}
+
 /** One selectable provider payment method. */
 export function ProviderMethodRow({
   method,
@@ -176,7 +226,12 @@ function savedMethodDetails(m: SavedPaymentMethod): {
     const last4 = m.card_last_four ? `•••• ${m.card_last_four}` : "";
     const brand = m.card_brand.toLowerCase();
     return {
-      icon: brand === "visa" ? "visa" : brand === "mastercard" ? "mastercard" : "revolut",
+      icon:
+        brand === "visa"
+          ? "visa"
+          : brand === "mastercard"
+            ? "mastercard"
+            : "revolut",
       details: `${m.card_brand} ${last4}`.trim(),
     };
   }

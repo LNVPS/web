@@ -12,6 +12,7 @@ import useLogin from "../hooks/login";
 import { useTaxRates } from "../hooks/tax";
 import Spinner from "../components/spinner";
 import { Icon } from "../components/icon";
+import { coinTicker } from "../utils/currency";
 // IP ranges are not production-ready yet; keep the import for when re-enabled.
 // import IpBlockCard from "../components/ip-block-card";
 import { AppCard } from "./account-apps";
@@ -207,6 +208,8 @@ function FilterSection({
   );
 }
 
+const COIN_ICONS: ReadonlyArray<string> = ["XMR", "LTC", "ETH", "USDTTRC"];
+
 function PaymentMethodsFooter() {
   const { paymentMethods: methods } = useLoaderData<HomeLoaderData>();
   return (
@@ -242,6 +245,16 @@ function PaymentMethodsFooter() {
           className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
         />
       )}
+      {(methods?.find((m) => m.name === "fixedfloat")?.currencies ?? [])
+        .filter((c) => COIN_ICONS.includes(c))
+        .map((coin) => (
+          <Icon
+            key={coin}
+            name={`coin-${coinTicker(coin).toLowerCase()}`}
+            size={48}
+            className="opacity-60 hover:opacity-100 transition-all rounded-sm border border-cyber-border p-1 hover:border-cyber-primary hover:shadow-neon-sm"
+          />
+        ))}
       {methods?.some((m) => m.name === "nwc") && (
         <a href="https://nwc.dev" target="_blank" title="NWC">
           <Icon

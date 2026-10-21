@@ -2399,6 +2399,9 @@
   "kLNEaL": {
     "defaultMessage": "Please complete the captcha verification"
   },
+  "kLojfC": {
+    "defaultMessage": "We use cookies to measure which ads lead to orders. Nothing is set unless you accept."
+  },
   "kRFEho": {
     "defaultMessage": "Add SSH Key"
   },
@@ -2705,6 +2708,9 @@
   "pus6h6": {
     "defaultMessage": "Leave any time. Your code stops earning and can't be reused."
   },
+  "pvtgR2": {
+    "defaultMessage": "Decline"
+  },
   "q/uwLT": {
     "defaultMessage": "Stop"
   },
@@ -2824,6 +2830,9 @@
   },
   "sehISV": {
     "defaultMessage": "Blossom Media Server Hosting from {price}/month"
+  },
+  "sjzLbX": {
+    "defaultMessage": "Accept"
   },
   "sn+Rj5": {
     "defaultMessage": "Sign in with a passkey"

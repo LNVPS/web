@@ -6,6 +6,7 @@ import TaxToggle from "../components/tax-toggle";
 import LanguageSwitcher from "../components/language-switcher";
 import { saveRefCode } from "../ref";
 import Toaster from "../components/toaster";
+import AdsConsent from "../components/ads-consent";
 
 export default function Layout() {
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function Layout() {
 
       <Outlet />
       <Toaster />
+      <AdsConsent />
     </div>
   );
 }

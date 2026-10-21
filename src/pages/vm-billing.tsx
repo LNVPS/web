@@ -29,6 +29,8 @@ import { Icon } from "../components/icon";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { showError } from "../toast";
+import { AdsSettings } from "../utils/ads-env";
+import { isFirstPayment, trackPurchase } from "../utils/ads";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -77,8 +79,10 @@ export function VmBillingPage() {
   }
 
   async function onPaymentComplete() {
+    const firstPayment = isFirstPayment(state);
     setShowPaymentFlow(false);
     setResumePayment(undefined);
+    if (firstPayment) trackPurchase(AdsSettings, window);
     const newState = await reloadVmState();
     if (params["action"] === "renew") {
       navigate("/vm", { state: newState });

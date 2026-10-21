@@ -142,7 +142,23 @@ describe("events", () => {
     trackPurchase({ tagId: "AW-1", purchaseLabel: "" }, win);
     expect(calls).toEqual([]);
     trackPurchase({ tagId: "AW-1", purchaseLabel: "lbl" }, win);
-    expect(calls).toEqual([["event", "conversion", { send_to: "AW-1/lbl" }]]);
+    expect(calls).toEqual([
+      [
+        "event",
+        "conversion",
+        {
+          send_to: "AW-1/lbl",
+          value: 1.0,
+          currency: "EUR",
+          transaction_id: "",
+        },
+      ],
+    ]);
+    calls.length = 0;
+    trackPurchase({ tagId: "AW-1", purchaseLabel: "lbl" }, win, 42);
+    expect((calls[0][2] as { transaction_id: string }).transaction_id).toBe(
+      "42",
+    );
   });
 });
 

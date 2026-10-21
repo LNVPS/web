@@ -101,9 +101,13 @@ export function isFirstPayment(vm: { expires?: string } | undefined) {
 export function trackPurchase(
   config: AdsConfig | undefined,
   win: Pick<Window, "gtag">,
+  transactionId?: string | number,
 ) {
   if (!config?.purchaseLabel) return;
   win.gtag?.("event", "conversion", {
     send_to: `${config.tagId}/${config.purchaseLabel}`,
+    value: 1.0,
+    currency: "EUR",
+    transaction_id: transactionId === undefined ? "" : String(transactionId),
   });
 }

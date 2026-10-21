@@ -82,7 +82,7 @@ export function VmBillingPage() {
     const firstPayment = isFirstPayment(state);
     setShowPaymentFlow(false);
     setResumePayment(undefined);
-    if (firstPayment) trackPurchase(AdsSettings, window);
+    if (firstPayment) trackPurchase(AdsSettings, window, state?.id);
     const newState = await reloadVmState();
     if (params["action"] === "renew") {
       navigate("/vm", { state: newState });

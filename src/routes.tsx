@@ -39,6 +39,8 @@ import { VpsCanadaPage } from "./pages/vps-canada.tsx";
 import { AccountAppDeploymentPage } from "./pages/account-app-deployment.tsx";
 import { AccountSubscriptionPage } from "./pages/account-subscription.tsx";
 import { AccountCreditPage } from "./pages/account-credit.tsx";
+import { AccountAbusePage } from "./pages/account-abuse.tsx";
+import { AccountAbuseCasePage } from "./pages/account-abuse-case.tsx";
 import { AccountSshKeysPage } from "./pages/account-ssh-keys.tsx";
 import AccountLayout from "./pages/account-layout.tsx";
 import VmLayout from "./pages/vm-layout.tsx";
@@ -104,6 +106,14 @@ export const routes: RouteObject[] = [
           {
             path: "credit",
             element: <AccountCreditPage />,
+          },
+          {
+            path: "abuse",
+            element: <AccountAbusePage />,
+          },
+          {
+            path: "abuse/:id",
+            element: <AccountAbuseCasePage />,
           },
           {
             path: "ssh-keys",

@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "En reprenant votre conversation précédente, l'agent conserve toujours le contexte, même si les messages ci-dessus ne sont plus affichés. Commencez-en une nouvelle si vous préférez repartir de zéro."
   },
+  "+ORUuS": {
+    "defaultMessage": "Il n'y a aucun rapport concernant vos services."
+  },
   "+QO7qN": {
     "defaultMessage": "L'option la plus sûre : votre clé privée ne touche jamais un navigateur. Collez la clé publique obtenue avec wg pubkey, ou depuis un tunnel vide dans l'application WireGuard."
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "Paiement intégral"
+  },
+  "+whhvl": {
+    "defaultMessage": "Ses fondements"
   },
   "/0TOL5": {
     "defaultMessage": "Montant"
@@ -98,6 +104,12 @@
   "/tiBYY": {
     "defaultMessage": "Continuer avec {provider}"
   },
+  "00LcfG": {
+    "defaultMessage": "Voir plus"
+  },
+  "03d8yD": {
+    "defaultMessage": "Retour à vos rapports"
+  },
   "0Azlrb": {
     "defaultMessage": "Gérer"
   },
@@ -137,6 +149,9 @@
   "0t1qvq": {
     "defaultMessage": "Ajouter une règle"
   },
+  "111qQK": {
+    "defaultMessage": "Dépensé"
+  },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
   },
@@ -164,6 +179,9 @@
   "1aBLDj": {
     "defaultMessage": "Effectuez un paiement depuis n’importe quel portefeuille Lightning pour renouveler cet abonnement."
   },
+  "1giEBC": {
+    "defaultMessage": "Échange terminé, en attente de la confirmation du Bitcoin. Vous pouvez quitter cette page en toute sécurité."
+  },
   "1kZ3H0": {
     "defaultMessage": "Voir la transaction"
   },
@@ -190,6 +208,9 @@
   },
   "2Aa625": {
     "defaultMessage": "Dans {region}, le disque monte jusqu’à {disk}, avec {cpu} vCPU et {memory} en haut de la gamme."
+  },
+  "2J5AyF": {
+    "defaultMessage": "Le crédit de votre compte couvre intégralement cette commande, il n'y a donc rien d'autre à payer."
   },
   "2QrTo0": {
     "defaultMessage": "Nouvelle commande d’adresses IP."
@@ -221,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "Exécutez un nœud Bitcoin complet sur un serveur virtuel privé (VPS) avec suffisamment d’espace pour la chaîne de blocs. Payez en Bitcoin via Lightning Network ou directement sur la chaîne de blocs."
   },
+  "32rBNK": {
+    "defaultMessage": "Conditions d'utilisation"
+  },
   "36aVfS": {
     "defaultMessage": "Message privé Nostr"
   },
   "375584": {
     "defaultMessage": "Paiement requis."
+  },
+  "3FC4qE": {
+    "defaultMessage": "Aucune mesure prise"
   },
   "3GLHv9": {
     "defaultMessage": "authentifier"
@@ -338,6 +365,9 @@
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
   },
+  "5q3qC0": {
+    "defaultMessage": "Télécharger"
+  },
   "5uQfFj": {
     "defaultMessage": "Qu’est-ce que Nostr ?"
   },
@@ -358,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "Inactif"
+  },
+  "6eN2z4": {
+    "defaultMessage": "Contester cette décision"
   },
   "6hEevT": {
     "defaultMessage": "Définir la valeur par défaut"
@@ -418,6 +451,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Annuler le paiement."
+  },
+  "7i28vb": {
+    "defaultMessage": "Payer en crypto"
   },
   "7jdMye": {
     "defaultMessage": "L’arrêt de l’opération permet de conserver vos données."
@@ -482,6 +518,9 @@
   "8ecw1u": {
     "defaultMessage": "Poignées"
   },
+  "8evTa5": {
+    "defaultMessage": "digne de {amount}"
+  },
   "8lCjAM": {
     "defaultMessage": "Priorité"
   },
@@ -490,6 +529,9 @@
   },
   "8xIysb": {
     "defaultMessage": "Prolongez maintenant."
+  },
+  "8zIOy4": {
+    "defaultMessage": "Rapports sur vos services"
   },
   "90f82/": {
     "defaultMessage": "Démarrer la machine virtuelle"
@@ -554,6 +596,9 @@
   "AGa2G5": {
     "defaultMessage": "Quand vous voulez l’ensemble de la machine."
   },
+  "AIgHom": {
+    "defaultMessage": "Pas encore d'activité de crédit."
+  },
   "AL9+3/": {
     "defaultMessage": "Impossible de trouver un abonnement à renouveler pour cette machine virtuelle."
   },
@@ -578,8 +623,20 @@
   "AfmrGS": {
     "defaultMessage": "Envoyer le code."
   },
+  "AkCxS/": {
+    "defaultMessage": "Raison"
+  },
+  "AozuFZ": {
+    "defaultMessage": "Sur la chaîne"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} lu"
+  },
+  "B1JEDn": {
+    "defaultMessage": "Une sauvegarde copie les données de votre application dans le stockage LNVPS. Téléchargez-la pour conserver votre propre copie."
+  },
+  "B1d/RG": {
+    "defaultMessage": "Paiement reçu. Votre solde a été mis à jour."
   },
   "B4reHi": {
     "defaultMessage": "Événements historiques"
@@ -632,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "Discutez avec l'agent d'assistance LNVPS au sujet des forfaits et tarifs, des régions, des systèmes d'exploitation ou du fonctionnement des paiements via Lightning. Connectez-vous d'abord si votre question porte sur une VM existante ou un paiement, afin qu'il puisse consulter votre compte."
   },
+  "BtKQM7": {
+    "defaultMessage": "Nous n'avons pas encore pris de décision concernant ce rapport."
+  },
   "Bwqhmd": {
     "defaultMessage": "Pare-feu"
   },
@@ -640,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "Redémarre la VM"
+  },
+  "CAdhz6": {
+    "defaultMessage": "Section 6 de nos Conditions d'utilisation"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -655,6 +718,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Demandez de l’aide à l’équipe."
+  },
+  "Cnm0QA": {
+    "defaultMessage": "En file d'attente"
   },
   "Cououe": {
     "defaultMessage": "Connectez-vous pour déployer cette application."
@@ -833,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "Renouveler l’abonnement"
   },
+  "Fv1ZSz": {
+    "defaultMessage": "Fermé"
+  },
   "G/yZLu": {
     "defaultMessage": "Supprimer"
   },
@@ -853,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "MTU"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "Les rapports que nous avons reçus concernant vos services et les décisions que nous avons prises."
   },
   "GCQOx0": {
     "defaultMessage": "Paiement sur l'écran suivant. La machine démarre une fois le paiement confirmé."
@@ -910,6 +982,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Entrant/entrant(e)"
+  },
+  "H5+NAX": {
+    "defaultMessage": "Balance"
   },
   "H7iwrN": {
     "defaultMessage": "Un appareil correspond à une clé publique enregistrée : votre téléphone, votre ordinateur portable, votre routeur. Jusqu'à {count,plural,one{# appareil} other{# appareils}} sur un forfait, et un appareil que vous retirez libère son emplacement."
@@ -977,6 +1052,9 @@
   "Id24hd": {
     "defaultMessage": "Nom *"
   },
+  "IeUH3/": {
+    "defaultMessage": "Remboursement"
+  },
   "IiNYda": {
     "defaultMessage": "Intégrez-le. {regions}."
   },
@@ -988,6 +1066,9 @@
   },
   "IvjoDS": {
     "defaultMessage": "Connecté"
+  },
+  "Iw8/zq": {
+    "defaultMessage": "Service résilié"
   },
   "J+dIsA": {
     "defaultMessage": "Abonnements"
@@ -1010,8 +1091,17 @@
   "JH4wUD": {
     "defaultMessage": "Enregistré ✓"
   },
+  "JQZCRR": {
+    "defaultMessage": "Comment nous l'avons trouvé"
+  },
+  "JV8/uB": {
+    "defaultMessage": "Notre réponse : décision confirmée"
+  },
   "JVClQM": {
     "defaultMessage": "État du service LNVPS et durée de fonctionnement."
+  },
+  "JXdbo8": {
+    "defaultMessage": "Fait"
   },
   "Ja58kB": {
     "defaultMessage": "Déployez votre relais, à partir de {price} par mois"
@@ -1022,11 +1112,17 @@
   "JcmOUh": {
     "defaultMessage": "Exploitez votre propre relais Nostr à partir de {price} par mois, avec une augmentation en minutes sur son propre nom d’hôte, le chiffrement TLS et l’espace de stockage inclus."
   },
+  "JfG49w": {
+    "defaultMessage": "Ouvrir"
+  },
   "JiCBWy": {
     "defaultMessage": "Connectez-vous en SSH avec la clé sélectionnée."
   },
   "Jm+fih": {
     "defaultMessage": "Inactif."
+  },
+  "Jqk9V7": {
+    "defaultMessage": "Envoyer {ticker} à cette adresse dans les 15 minutes. Il est échangé contre du Bitcoin et votre temps est crédité une fois la confirmation obtenue, au prorata du Bitcoin reçu."
   },
   "JuR4mj": {
     "defaultMessage": "Payez n'importe quel montant, à tout moment, le temps est ajouté au prorata"
@@ -1039,6 +1135,12 @@
   },
   "K3r6DQ": {
     "defaultMessage": "Supprimer"
+  },
+  "K4nZtw": {
+    "defaultMessage": "Service restreint"
+  },
+  "K661xm": {
+    "defaultMessage": "Le service d'échange est fourni par FixedFloat. La création d'une commande confirme votre acceptation des règles de FixedFloat."
   },
   "KAL6xF": {
     "defaultMessage": "Nom de la clé"
@@ -1094,6 +1196,9 @@
   "LX6weZ": {
     "defaultMessage": "Paiement en attente."
   },
+  "LaLTJR": {
+    "defaultMessage": "Ajustement"
+  },
   "Lc72Gm": {
     "defaultMessage": "Démarrer une nouvelle conversation"
   },
@@ -1112,8 +1217,14 @@
   "LqFfRA": {
     "defaultMessage": "Pays"
   },
+  "Lvmmrd": {
+    "defaultMessage": "Converti en Bitcoin, crédits appliqués après confirmation."
+  },
   "LwGAe6": {
     "defaultMessage": "Également disponible sur LNVPS."
+  },
+  "M59JhX": {
+    "defaultMessage": "Manuel"
   },
   "M8ORKW": {
     "defaultMessage": "Configuration, cette opération prend généralement une minute. Le point de terminaison apparaît une fois qu’il est en fonctionnement."
@@ -1129,6 +1240,9 @@
   },
   "MJ2jZQ": {
     "defaultMessage": "Total"
+  },
+  "MOEWbV": {
+    "defaultMessage": "Montant (sats)"
   },
   "MTnSwY": {
     "defaultMessage": "hors taxes"
@@ -1153,6 +1267,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Confirmer"
+  },
+  "N2W+L6": {
+    "defaultMessage": "Ajouter du crédit"
   },
   "N3Pob8": {
     "defaultMessage": "Posez toute question concernant votre compte, facturation, une VM qui ne démarre pas, ou à quoi correspond un prélèvement. Pour les remboursements, les prolongations ou les suppressions, utilisez plutôt le formulaire de contact."
@@ -1211,6 +1328,9 @@
   "ORGv1Q": {
     "defaultMessage": "Créé"
   },
+  "OcZR/l": {
+    "defaultMessage": "Régler avec le crédit du compte"
+  },
   "OeOwwQ": {
     "defaultMessage": "Supprimer {name}? Sa clé et son adresse sont libérées, et la configuration sur cet appareil cesse de fonctionner."
   },
@@ -1243,6 +1363,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "Réflexion…"
+  },
+  "P6MssC": {
+    "defaultMessage": "Envoyer uniquement {ticker} sur le bon réseau, dans les 15 minutes. Il est converti en Bitcoin et votre solde est crédité du montant reçu une fois la transaction confirmée."
   },
   "P7PLVj": {
     "defaultMessage": "Date"
@@ -1310,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "Processeur"
   },
+  "QkYbYl": {
+    "defaultMessage": "Une personne examinera cela et répondra par courriel."
+  },
   "QlsDcr": {
     "defaultMessage": "Action"
   },
@@ -1363,6 +1489,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "par mois"
+  },
+  "RydJAB": {
+    "defaultMessage": "Monero"
   },
   "RzQOmD": {
     "defaultMessage": "Avez-vous besoin de mon adresse e-mail ?"
@@ -1420,6 +1549,9 @@
   },
   "T1/en5": {
     "defaultMessage": "ID : {id}"
+  },
+  "T3lqx5": {
+    "defaultMessage": "Sauvegardes"
   },
   "T4VxQN": {
     "defaultMessage": "Chargement en cours…"
@@ -1556,11 +1688,17 @@
   "VJ4xwX": {
     "defaultMessage": "Actualités et mises à jour des produits"
   },
+  "VJx71I": {
+    "defaultMessage": "Payé à partir du crédit de votre compte. Application en cours."
+  },
   "VKfWR3": {
     "defaultMessage": "Recommandé"
   },
   "VL/B6x": {
     "defaultMessage": "votre@adresse-e-mail.com"
+  },
+  "VL1Y/1": {
+    "defaultMessage": "Rapport introuvable"
   },
   "VLRCfi": {
     "defaultMessage": "Disponibilité au cours des 30 derniers jours : {uptime}"
@@ -1667,14 +1805,23 @@
   "XdcFgv": {
     "defaultMessage": "Gestion des relais Nostr. Paiement accepté via Lightning."
   },
+  "Xy/hId": {
+    "defaultMessage": "Crédit de compte"
+  },
   "XyIrRh": {
     "defaultMessage": "Payer en Bitcoin"
+  },
+  "Xyh2gH": {
+    "defaultMessage": "Décisions"
   },
   "Y+LcmX": {
     "defaultMessage": "Si vous ne pouvez pas modifier votre DNS, configurez un serveur proxy à l’adresse {path} sur votre serveur actuel et redirigez-le vers {target}."
   },
   "Y/tMXU": {
     "defaultMessage": "En attente du paiement. Cette opération est effectuée automatiquement une fois le paiement confirmé."
+  },
+  "Y8HR16": {
+    "defaultMessage": "Rapport transmis à votre attention"
   },
   "YCAVvS": {
     "defaultMessage": "Dois-je choisir une région lors de l'achat ?"
@@ -1700,6 +1847,9 @@
   "YWjrby": {
     "defaultMessage": "Nous vous envoyons uniquement des alertes concernant votre compte, par exemple l’expiration de la période d’essai. Nous n’envoyons jamais de messages publicitaires."
   },
+  "YXDqQm": {
+    "defaultMessage": "Pas encore de sauvegardes."
+  },
   "YdQxfw": {
     "defaultMessage": "Contactez le service d’assistance."
   },
@@ -1717,6 +1867,9 @@
   },
   "Ysr8td": {
     "defaultMessage": "Gagné(s)"
+  },
+  "Yukb/e": {
+    "defaultMessage": "Rapport n°{id}"
   },
   "YyojwF": {
     "defaultMessage": "Modifications de la configuration :"
@@ -1751,6 +1904,12 @@
   "ZewCpX": {
     "defaultMessage": "Ajouter un domaine"
   },
+  "ZgQnsi": {
+    "defaultMessage": "Chaque devis utilise le maximum de crédit autorisé par la facture, et vous réglez le solde. Les renouvellements automatiques utilisent le crédit lorsqu'il couvre la totalité du renouvellement."
+  },
+  "ZjV1o9": {
+    "defaultMessage": "Nous l'avons trouvé nous-mêmes."
+  },
   "ZmIH8d": {
     "defaultMessage": "Se déconnecter partout"
   },
@@ -1765,6 +1924,9 @@
   },
   "a60eIK": {
     "defaultMessage": "L'enregistrement réapplique la configuration et redémarre l'application."
+  },
+  "aE53im": {
+    "defaultMessage": "Recharge"
   },
   "aLe15X": {
     "defaultMessage": "Payez comme vous le souhaitez."
@@ -1817,6 +1979,9 @@
   "bhfNWq": {
     "defaultMessage": "Collez ici le message chiffré…"
   },
+  "bk6Lnx": {
+    "defaultMessage": "Crédit du compte"
+  },
   "bneNNt": {
     "defaultMessage": "{amount} éteint{code,select,none{} other{ · {code}}}"
   },
@@ -1844,6 +2009,9 @@
   "cQtv0G": {
     "defaultMessage": "{n} en cours d'exécution"
   },
+  "cXAlMR": {
+    "defaultMessage": "Programmé"
+  },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# mise en œuvre du relais} other{# implémentations de relais}}, à partir de {price} par mois."
   },
@@ -1852,6 +2020,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM : {name}"
+  },
+  "chO5f1": {
+    "defaultMessage": "Envoyer uniquement {ticker} sur le bon réseau. Tout le reste est perdu."
   },
   "ciFSHC": {
     "defaultMessage": "Salaire {amount}"
@@ -2042,6 +2213,9 @@
   "gL1jHz": {
     "defaultMessage": "Mémoire persistante, capacité par relais, comme indiqué ci-dessus."
   },
+  "gNrB5A": {
+    "defaultMessage": "Ce composant ne prend en charge que les paiements en pièces de monnaie."
+  },
   "gPsMm7": {
     "defaultMessage": "Déployez ce worker et ajoutez une route pour {route}."
   },
@@ -2062,6 +2236,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "Console"
+  },
+  "gfVtOu": {
+    "defaultMessage": "Payez avec Bitcoin ou une cryptomonnaie prise en charge, et le montant sera ajouté à votre solde."
   },
   "gjvoQG": {
     "defaultMessage": "Tailles"
@@ -2095,6 +2272,9 @@
   },
   "hs3HVz": {
     "defaultMessage": "Connectez-vous avec Face ID, Touch ID, Windows Hello ou une clé de sécurité. Vous pouvez ajouter une clé d'accès à n'importe quel compte."
+  },
+  "hsV9Bt": {
+    "defaultMessage": "Si nous restreignons ou suspendons un service, la décision apparaît ici avec les faits et les motifs sur lesquels elle repose. Vous pouvez contester toute décision pendant six mois. Voir la section 6.1 des {terms}."
   },
   "huqKGl": {
     "defaultMessage": "Créer un compte"
@@ -2159,6 +2339,9 @@
   "jOo6oG": {
     "defaultMessage": "Gérer les clés d’accès aux machines virtuelles."
   },
+  "jS6bEf": {
+    "defaultMessage": "Solde prépayé pour les commandes"
+  },
   "jUqYir": {
     "defaultMessage": "Ajouté {date}"
   },
@@ -2180,6 +2363,12 @@
   "jmVweB": {
     "defaultMessage": "Chargement des clés SSH…"
   },
+  "jpvXxP": {
+    "defaultMessage": "Le délai de six mois pour contester cette décision est expiré."
+  },
+  "jsrdVV": {
+    "defaultMessage": "Tether (USDT sur TRON)"
+  },
   "jtkU3K": {
     "defaultMessage": "Conversion"
   },
@@ -2200,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "Ajouter un appareil"
+  },
+  "kGvjzB": {
+    "defaultMessage": "Service rétabli"
   },
   "kJpuxD": {
     "defaultMessage": "Services récurrents et facturation"
@@ -2267,6 +2459,9 @@
   "lQNVjN": {
     "defaultMessage": "Déployer {name} en tant qu’application gérée sur LNVPS, vous pouvez payer avec Lightning, Bitcoin ou par carte."
   },
+  "lQjSeV": {
+    "defaultMessage": "Rechargez un solde et utilisez-le pour de nouvelles commandes, des renouvellements et des mises à niveau."
+  },
   "lYEj5M": {
     "defaultMessage": "Applications gérées"
   },
@@ -2312,6 +2507,9 @@
   "mJPBXd": {
     "defaultMessage": "Message chiffré (copiez-le et incluez-le dans votre courriel) :"
   },
+  "mLvz+r": {
+    "defaultMessage": "Crédit"
+  },
   "mMug3Z": {
     "defaultMessage": "gagné(e) · {currency}"
   },
@@ -2336,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "Paiement reçu, en attente de confirmation. Vous pouvez quitter cette page en toute sécurité."
   },
+  "mm+Sp2": {
+    "defaultMessage": "Notre réponse : décision infirmée"
+  },
   "mtEKFV": {
     "defaultMessage": "Traitement en cours…"
   },
@@ -2344,6 +2545,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "Liste des nœuds #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "La facture expire dans 10 minutes. Votre solde est mis à jour dès que le paiement est effectué."
   },
   "n7yYXG": {
     "defaultMessage": "Service."
@@ -2384,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "Chargement des offres VPS…"
   },
+  "np6bff": {
+    "defaultMessage": "Suite à un rapport que nous avons reçu"
+  },
   "nrTBF4": {
     "defaultMessage": "Hôte en retrait"
+  },
+  "nszMdp": {
+    "defaultMessage": "Signalements d'abus"
   },
   "nvJ5bE": {
     "defaultMessage": "Applications Docker en un seul clic."
@@ -2417,6 +2627,9 @@
   "oGiUkp": {
     "defaultMessage": "Aucun paramètre défini ; veuillez en ajouter un."
   },
+  "oH0ANW": {
+    "defaultMessage": "Votre défi"
+  },
   "oIPESx": {
     "defaultMessage": "Les avertissements d'expiration, les reçus de paiement et les avis de mise en service arrivent ici lorsque le canal de messages directs de Nostr est activé dans {settings}. Cette boîte de réception n'est pas surveillée pour les réponses, pour joindre une personne, utilisez {support}."
   },
@@ -2441,6 +2654,9 @@
   "odXlk8": {
     "defaultMessage": "Se connecter"
   },
+  "ohE0sW": {
+    "defaultMessage": "Ethereum"
+  },
   "ooCqJa": {
     "defaultMessage": "Dans {region}, le disque monte jusqu’à {hdd} Disque dur ou {ssd} SSD, avec {cpu} vCPU et {memory} en haut de la gamme."
   },
@@ -2449,6 +2665,12 @@
   },
   "oxq33u": {
     "defaultMessage": "Idéal pour / Le mieux pour"
+  },
+  "oyKw8D": {
+    "defaultMessage": "Litecoin"
+  },
+  "p2r80F": {
+    "defaultMessage": "Service suspendu"
   },
   "p4N05H": {
     "defaultMessage": "Télécharger"
@@ -2486,6 +2708,9 @@
   "q/uwLT": {
     "defaultMessage": "Arrêtez."
   },
+  "q2BAvD": {
+    "defaultMessage": "Envoyez n'importe quel montant de Bitcoin on-chain à cette adresse. Votre solde est crédité du montant reçu une fois la transaction confirmée."
+  },
   "qA0DQR": {
     "defaultMessage": "Hébergement VPS à Londres. Choisissez votre processeur, votre mémoire et votre espace disque. Payez en Bitcoin via Lightning ou directement sur la chaîne de blocs."
   },
@@ -2509,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "Les modifications de bande passante s'appliquent dès la confirmation du paiement, sans redémarrage."
+  },
+  "qewbDw": {
+    "defaultMessage": "Loi ou section des Conditions applicable"
   },
   "qkLHOL": {
     "defaultMessage": "Êtes-vous sûr de vouloir supprimer la clé SSH «{name}?"
@@ -2536,6 +2764,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Détails de la facturation"
+  },
+  "rMgF34": {
+    "defaultMessage": "Faire une sauvegarde maintenant"
   },
   "rRJFl8": {
     "defaultMessage": "De quoi ai-je besoin pour me connecter ?"
@@ -2708,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "Utiliser une clé de destinataire personnalisée."
   },
+  "v58ab1": {
+    "defaultMessage": "Envoyer un défi"
+  },
   "vIkTT1": {
     "defaultMessage": "Une application managée est la bonne réponse lorsque le relais est l’objectif. Si vous souhaitez exécuter une version modifiée, co-localiser d’autres services ou gérer vous-même la machine, notre <a>hébergement VPS</a> est disponible à Dublin, Londres et Québec, avec au moins 1 To de trafic par mois et des adresses IPv4 et IPv6 statiques sur chaque offre."
   },
@@ -2720,8 +2954,14 @@
   "vRG4WY": {
     "defaultMessage": "Vous pouvez quitter cette page en toute sécurité, le paiement apparaît dans votre historique de facturation et est appliqué une fois confirmé."
   },
+  "vSTolh": {
+    "defaultMessage": "Vous pouvez contester cette décision jusqu'au {date}. Vous conservez également tout droit de saisir les tribunaux."
+  },
   "vWsXtg": {
     "defaultMessage": "Création du paiement…"
+  },
+  "vXCeIi": {
+    "defaultMessage": "Échec"
   },
   "vahWHk": {
     "defaultMessage": "Oui, utilisez un enregistrement CNAME, et le certificat sera émis automatiquement une fois que la résolution DNS aura eu lieu."
@@ -2801,6 +3041,9 @@
   "xQ8iOj": {
     "defaultMessage": "Vous n’avez encore aucun abonnement actif."
   },
+  "xRTG5Q": {
+    "defaultMessage": "Envoyer exactement"
+  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2851,6 +3094,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "Déployez une application sur LNVPS : en quelques minutes, elle sera opérationnelle avec son propre nom de domaine, le protocole TLS et l’espace de stockage inclus, sans qu’il soit nécessaire de mettre à jour le système d’exploitation. Les relais Nostr et les serveurs multimédias Blossom sont disponibles dès aujourd’hui."
+  },
+  "ySPSCo": {
+    "defaultMessage": "Dépenser automatiquement mon solde"
   },
   "yUD6jT": {
     "defaultMessage": "Minutes. Le service est activé une fois le paiement effectué."

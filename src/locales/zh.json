@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "继续您之前的对话，尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
   },
+  "+ORUuS": {
+    "defaultMessage": "暂无关于您服务的报告。"
+  },
   "+QO7qN": {
     "defaultMessage": "最安全的选择：您的私钥绝不会接触浏览器。请粘贴来自 wg pubkey 命令的公钥，或从 WireGuard 应用中创建的空隧道获取公钥。"
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "完成支付。"
+  },
+  "+whhvl": {
+    "defaultMessage": "它所依据的内容"
   },
   "/0TOL5": {
     "defaultMessage": "金额"
@@ -98,6 +104,12 @@
   "/tiBYY": {
     "defaultMessage": "使用 {provider} 继续"
   },
+  "00LcfG": {
+    "defaultMessage": "加载更多"
+  },
+  "03d8yD": {
+    "defaultMessage": "返回您的报告"
+  },
   "0Azlrb": {
     "defaultMessage": "管理"
   },
@@ -137,6 +149,9 @@
   "0t1qvq": {
     "defaultMessage": "添加规则。"
   },
+  "111qQK": {
+    "defaultMessage": "已支出"
+  },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
   },
@@ -164,6 +179,9 @@
   "1aBLDj": {
     "defaultMessage": "使用任意闪电网络钱包支付，即可充值此订阅。"
   },
+  "1giEBC": {
+    "defaultMessage": "兑换完成，正在等待比特币交易确认。您可以放心离开此页面。"
+  },
   "1kZ3H0": {
     "defaultMessage": "查看交易"
   },
@@ -190,6 +208,9 @@
   },
   "2Aa625": {
     "defaultMessage": "在…… {region}，磁盘向上移动到 {disk}以及 {cpu} 虚拟 CPU 和 {memory} 在最高端。"
+  },
+  "2J5AyF": {
+    "defaultMessage": "您的账户余额已完全覆盖本订单，无需再支付任何费用。"
   },
   "2QrTo0": {
     "defaultMessage": "新的 IP 地址分配方案"
@@ -221,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "在虚拟专用服务器（VPS）上运行一个比特币完整节点，并确保有足够的存储空间来存储整个区块链。您可以通过闪电网络或直接链上方式支付比特币。"
   },
+  "32rBNK": {
+    "defaultMessage": "服务条款"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr 私信"
   },
   "375584": {
     "defaultMessage": "需要付款。"
+  },
+  "3FC4qE": {
+    "defaultMessage": "未采取行动"
   },
   "3GLHv9": {
     "defaultMessage": "验证"
@@ -338,6 +365,9 @@
   "5ow6dg": {
     "defaultMessage": "WhatsApp（一款聊天软件）"
   },
+  "5q3qC0": {
+    "defaultMessage": "下载"
+  },
   "5uQfFj": {
     "defaultMessage": "什么是 Nostr？"
   },
@@ -358,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "未激活；不活跃"
+  },
+  "6eN2z4": {
+    "defaultMessage": "对这一决定提出异议"
   },
   "6hEevT": {
     "defaultMessage": "设置为默认值。"
@@ -418,6 +451,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "取消付款。"
+  },
+  "7i28vb": {
+    "defaultMessage": "加密货币支付"
   },
   "7jdMye": {
     "defaultMessage": "停止操作可保留您的数据。"
@@ -482,6 +518,9 @@
   "8ecw1u": {
     "defaultMessage": "把手；处理；应对"
   },
+  "8evTa5": {
+    "defaultMessage": "值得 {amount}"
+  },
   "8lCjAM": {
     "defaultMessage": "优先级"
   },
@@ -490,6 +529,9 @@
   },
   "8xIysb": {
     "defaultMessage": "立即延长。"
+  },
+  "8zIOy4": {
+    "defaultMessage": "您的服务报告"
   },
   "90f82/": {
     "defaultMessage": "启动虚拟机。"
@@ -554,6 +596,9 @@
   "AGa2G5": {
     "defaultMessage": "当您需要整台机器时。"
   },
+  "AIgHom": {
+    "defaultMessage": "暂无信用活动。"
+  },
   "AL9+3/": {
     "defaultMessage": "找不到可用于续订此虚拟机的订阅。"
   },
@@ -578,8 +623,20 @@
   "AfmrGS": {
     "defaultMessage": "发送代码。"
   },
+  "AkCxS/": {
+    "defaultMessage": "原因"
+  },
+  "AozuFZ": {
+    "defaultMessage": "链上"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} 阅读"
+  },
+  "B1JEDn": {
+    "defaultMessage": "备份会将您的应用数据复制到 LNVPS 存储空间。请下载以保留您自己的副本。"
+  },
+  "B1d/RG": {
+    "defaultMessage": "已收到款项，您的余额已更新。"
   },
   "B4reHi": {
     "defaultMessage": "历史事件"
@@ -632,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与价格、区域、操作系统，或如何使用 Lightning 支付。如果您的问题涉及现有虚拟机或付款，请先登录，以便客服查询您的账户。"
   },
+  "BtKQM7": {
+    "defaultMessage": "我们尚未就这份报告做出决定。"
+  },
   "Bwqhmd": {
     "defaultMessage": "防火墙"
   },
@@ -640,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "重启虚拟机"
+  },
+  "CAdhz6": {
+    "defaultMessage": "我们《服务条款》第六条"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -655,6 +718,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "寻求团队的帮助。"
+  },
+  "Cnm0QA": {
+    "defaultMessage": "已排队"
   },
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
@@ -833,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "续订订阅。"
   },
+  "Fv1ZSz": {
+    "defaultMessage": "已关闭"
+  },
   "G/yZLu": {
     "defaultMessage": "移除。"
   },
@@ -853,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "最大传输单元（MTU）"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "我们收到的关于贵方服务的报告及我们的决定"
   },
   "GCQOx0": {
     "defaultMessage": "请在下一屏完成支付。支付确认后，机器将启动。"
@@ -910,6 +982,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "入站；进入"
+  },
+  "H5+NAX": {
+    "defaultMessage": "平衡"
   },
   "H7iwrN": {
     "defaultMessage": "一台设备即指一个已注册的公钥：您的手机、您的笔记本电脑、您的路由器。最多 {count,plural,one{# 设备} other{# 设备}} 在同一套餐下，移除设备后会释放其名额。"
@@ -977,6 +1052,9 @@
   "Id24hd": {
     "defaultMessage": "姓名 *"
   },
+  "IeUH3/": {
+    "defaultMessage": "退款"
+  },
   "IiNYda": {
     "defaultMessage": "将其嵌入其中。 {regions}."
   },
@@ -988,6 +1066,9 @@
   },
   "IvjoDS": {
     "defaultMessage": "已连接。"
+  },
+  "Iw8/zq": {
+    "defaultMessage": "服务已终止"
   },
   "J+dIsA": {
     "defaultMessage": "订阅"
@@ -1010,8 +1091,17 @@
   "JH4wUD": {
     "defaultMessage": "已保存。"
   },
+  "JQZCRR": {
+    "defaultMessage": "我们是如何发现的"
+  },
+  "JV8/uB": {
+    "defaultMessage": "我方答复：维持决定"
+  },
   "JVClQM": {
     "defaultMessage": "LNVPS 服务状态和在线时间"
+  },
+  "JXdbo8": {
+    "defaultMessage": "完成"
   },
   "Ja58kB": {
     "defaultMessage": "部署您的中继节点，从 {price} 每月起"
@@ -1022,11 +1112,17 @@
   "JcmOUh": {
     "defaultMessage": "从这里开始搭建并运行您自己的 Nostr 中继节点。 {price} 每月，在自己的主机名上以分钟为单位进行计费，包含 TLS 和存储。"
   },
+  "JfG49w": {
+    "defaultMessage": "打开"
+  },
   "JiCBWy": {
     "defaultMessage": "使用所选密钥通过 SSH 连接。"
   },
   "Jm+fih": {
     "defaultMessage": "未激活。"
+  },
+  "Jqk9V7": {
+    "defaultMessage": "发送 {ticker} 在15分钟内发送至此地址。该笔款项将被兑换为比特币，确认到账后，将根据实际收到的比特币等比例计入您的时间。"
   },
   "JuR4mj": {
     "defaultMessage": "随时支付任意金额，时长按比例增加"
@@ -1039,6 +1135,12 @@
   },
   "K3r6DQ": {
     "defaultMessage": "删除"
+  },
+  "K4nZtw": {
+    "defaultMessage": "服务受限"
+  },
+  "K661xm": {
+    "defaultMessage": "兑换服务由 FixedFloat 提供。创建订单即表示您已同意 FixedFloat 的规则。"
   },
   "KAL6xF": {
     "defaultMessage": "密钥名称"
@@ -1094,6 +1196,9 @@
   "LX6weZ": {
     "defaultMessage": "待付款。"
   },
+  "LaLTJR": {
+    "defaultMessage": "调整"
+  },
   "Lc72Gm": {
     "defaultMessage": "开始新对话"
   },
@@ -1112,8 +1217,14 @@
   "LqFfRA": {
     "defaultMessage": "国家/地区"
   },
+  "Lvmmrd": {
+    "defaultMessage": "已兑换为比特币，确认后到账"
+  },
   "LwGAe6": {
     "defaultMessage": "此外，还可在 LNVPS 上找到。"
+  },
+  "M59JhX": {
+    "defaultMessage": "手册"
   },
   "M8ORKW": {
     "defaultMessage": "设置过程，这通常需要一分钟。一旦开始运行，终端就会出现。"
@@ -1129,6 +1240,9 @@
   },
   "MJ2jZQ": {
     "defaultMessage": "总计"
+  },
+  "MOEWbV": {
+    "defaultMessage": "金额（聪）"
   },
   "MTnSwY": {
     "defaultMessage": "不含税。"
@@ -1153,6 +1267,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "确认。"
+  },
+  "N2W+L6": {
+    "defaultMessage": "充值"
   },
   "N3Pob8": {
     "defaultMessage": "您可以咨询账户相关的任何问题，账单、无法启动的虚拟机，或某笔扣款的原因。如需退款、延期或删除，请改用联系表单。"
@@ -1211,6 +1328,9 @@
   "ORGv1Q": {
     "defaultMessage": "已创建"
   },
+  "OcZR/l": {
+    "defaultMessage": "使用账户余额支付"
+  },
   "OeOwwQ": {
     "defaultMessage": "移除 {name}？其密钥和地址被释放，该设备上的配置也随之失效。"
   },
@@ -1243,6 +1363,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "思考中…"
+  },
+  "P6MssC": {
+    "defaultMessage": "仅发送 {ticker} 15分钟内将到达正确的网络。该资产将被兑换为比特币，交易确认后，到账金额将计入您的账户余额。"
   },
   "P7PLVj": {
     "defaultMessage": "日期"
@@ -1310,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "中央处理器"
   },
+  "QkYbYl": {
+    "defaultMessage": "会有人对此进行审核，并通过邮件回复。"
+  },
   "QlsDcr": {
     "defaultMessage": "行动；采取措施。"
   },
@@ -1363,6 +1489,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "每月"
+  },
+  "RydJAB": {
+    "defaultMessage": "门罗币"
   },
   "RzQOmD": {
     "defaultMessage": "你需要我的电子邮箱吗？"
@@ -1420,6 +1549,9 @@
   },
   "T1/en5": {
     "defaultMessage": "ID：{id}"
+  },
+  "T3lqx5": {
+    "defaultMessage": "备份"
   },
   "T4VxQN": {
     "defaultMessage": "正在加载……"
@@ -1556,11 +1688,17 @@
   "VJ4xwX": {
     "defaultMessage": "新闻和产品更新"
   },
+  "VJx71I": {
+    "defaultMessage": "已从您的账户余额中支付。正在为您应用。"
+  },
   "VKfWR3": {
     "defaultMessage": "推荐"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
+  },
+  "VL1Y/1": {
+    "defaultMessage": "未找到报告"
   },
   "VLRCfi": {
     "defaultMessage": "过去 30 天的正常运行时间： {uptime}"
@@ -1667,14 +1805,23 @@
   "XdcFgv": {
     "defaultMessage": "管理 Nostr 中继节点。使用闪电网络支付。"
   },
+  "Xy/hId": {
+    "defaultMessage": "账户贷记"
+  },
   "XyIrRh": {
     "defaultMessage": "使用比特币支付"
+  },
+  "Xyh2gH": {
+    "defaultMessage": "决定"
   },
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
   "Y/tMXU": {
     "defaultMessage": "正在等待付款。系统会在确认后自动应用此设置。"
+  },
+  "Y8HR16": {
+    "defaultMessage": "报告已转发给您"
   },
   "YCAVvS": {
     "defaultMessage": "购买时必须选择地区吗？"
@@ -1700,6 +1847,9 @@
   "YWjrby": {
     "defaultMessage": "仅发送账户提醒，例如虚拟机到期通知。我们绝不会发送营销信息。"
   },
+  "YXDqQm": {
+    "defaultMessage": "暂无备份。"
+  },
   "YdQxfw": {
     "defaultMessage": "联系客服。"
   },
@@ -1717,6 +1867,9 @@
   },
   "Ysr8td": {
     "defaultMessage": "已获得。"
+  },
+  "Yukb/e": {
+    "defaultMessage": "报告编号{id}"
   },
   "YyojwF": {
     "defaultMessage": "配置更改："
@@ -1751,6 +1904,12 @@
   "ZewCpX": {
     "defaultMessage": "添加域名"
   },
+  "ZgQnsi": {
+    "defaultMessage": "每份报价单都会使用账单允许的最大信用额度，剩余部分由您支付。当信用额度足以覆盖全部续费金额时，自动续费将使用该额度进行抵扣。"
+  },
+  "ZjV1o9": {
+    "defaultMessage": "是我们自己找到的。"
+  },
   "ZmIH8d": {
     "defaultMessage": "在所有设备上退出登录"
   },
@@ -1765,6 +1924,9 @@
   },
   "a60eIK": {
     "defaultMessage": "保存后将重新应用配置并重启应用。"
+  },
+  "aE53im": {
+    "defaultMessage": "充值"
   },
   "aLe15X": {
     "defaultMessage": "选择您喜欢的支付方式。"
@@ -1817,6 +1979,9 @@
   "bhfNWq": {
     "defaultMessage": "请在此处粘贴加密后的消息……"
   },
+  "bk6Lnx": {
+    "defaultMessage": "账户贷方"
+  },
   "bneNNt": {
     "defaultMessage": "{amount} 关{code,select,none{} other{ · {code}}}"
   },
@@ -1844,6 +2009,9 @@
   "cQtv0G": {
     "defaultMessage": "{n} 个运行中"
   },
+  "cXAlMR": {
+    "defaultMessage": "已安排"
+  },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# 个中继实现} other{# 个中继实现}}，从 {price} 每月起。"
   },
@@ -1852,6 +2020,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "虚拟机：{name}"
+  },
+  "chO5f1": {
+    "defaultMessage": "仅发送 {ticker} 在正确的网络上。其余一切都会丢失。"
   },
   "ciFSHC": {
     "defaultMessage": "付款；工资 {amount}"
@@ -2042,6 +2213,9 @@
   "gL1jHz": {
     "defaultMessage": "持久性存储，每个中继设备所需的存储空间如上所述。"
   },
+  "gNrB5A": {
+    "defaultMessage": "此组件仅支持金币支付。"
+  },
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
@@ -2062,6 +2236,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "控制台"
+  },
+  "gfVtOu": {
+    "defaultMessage": "使用比特币或支持的币种进行支付，支付金额将计入您的账户余额。"
   },
   "gjvoQG": {
     "defaultMessage": "尺寸选择。"
@@ -2095,6 +2272,9 @@
   },
   "hs3HVz": {
     "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
+  },
+  "hsV9Bt": {
+    "defaultMessage": "如果我们限制或暂停某项服务，该决定会连同其依据的事实和理由显示在此处。您可以在六个月内对任何决定提出异议。请参阅{terms}第 6.1 节。"
   },
   "huqKGl": {
     "defaultMessage": "创建账户"
@@ -2159,6 +2339,9 @@
   "jOo6oG": {
     "defaultMessage": "管理虚拟机访问密钥。"
   },
+  "jS6bEf": {
+    "defaultMessage": "订单预付款余额"
+  },
   "jUqYir": {
     "defaultMessage": "已添加。 {date}"
   },
@@ -2180,6 +2363,12 @@
   "jmVweB": {
     "defaultMessage": "正在加载 SSH 密钥……"
   },
+  "jpvXxP": {
+    "defaultMessage": "对这一决定提出申诉的六个月期限已届满。"
+  },
+  "jsrdVV": {
+    "defaultMessage": "泰达币（波场链上的USDT）"
+  },
   "jtkU3K": {
     "defaultMessage": "转换"
   },
@@ -2200,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "添加设备"
+  },
+  "kGvjzB": {
+    "defaultMessage": "服务已恢复"
   },
   "kJpuxD": {
     "defaultMessage": "周期性服务与账单"
@@ -2267,6 +2459,9 @@
   "lQNVjN": {
     "defaultMessage": "部署 {name} 作为在 LNVPS 上提供的应用，您可以使用闪电网络、比特币或信用卡进行支付。"
   },
+  "lQjSeV": {
+    "defaultMessage": "充值余额，用于新订单、续费和升级。"
+  },
   "lYEj5M": {
     "defaultMessage": "已管理的应用"
   },
@@ -2312,6 +2507,9 @@
   "mJPBXd": {
     "defaultMessage": "加密消息（复制并包含在您的电子邮件中）："
   },
+  "mLvz+r": {
+    "defaultMessage": "信用"
+  },
   "mMug3Z": {
     "defaultMessage": "已获得；赚取。 {currency}"
   },
@@ -2336,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "已收到付款，等待确认。您可以安全离开此页面。"
   },
+  "mm+Sp2": {
+    "defaultMessage": "我方回复：决定已撤销"
+  },
   "mtEKFV": {
     "defaultMessage": "正在处理中……"
   },
@@ -2344,6 +2545,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "节点列表 #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "此发票将在10分钟后到期。付款成功后，您的余额将立即更新。"
   },
   "n7yYXG": {
     "defaultMessage": "服务"
@@ -2384,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "正在加载 VPS 服务……"
   },
+  "np6bff": {
+    "defaultMessage": "在我们收到一份报告后"
+  },
   "nrTBF4": {
     "defaultMessage": "主机即将停用"
+  },
+  "nszMdp": {
+    "defaultMessage": "滥用举报"
   },
   "nvJ5bE": {
     "defaultMessage": "一键部署 Docker 应用程序。"
@@ -2417,6 +2627,9 @@
   "oGiUkp": {
     "defaultMessage": "未设置，添加一个。"
   },
+  "oH0ANW": {
+    "defaultMessage": "你的挑战"
+  },
   "oIPESx": {
     "defaultMessage": "当在……中启用 Nostr DM 频道时，到期提醒、付款回执和开通通知将在此处送达。 {settings}此收件箱不会监控回复，如需联系人工，请使用 {support}。"
   },
@@ -2441,6 +2654,9 @@
   "odXlk8": {
     "defaultMessage": "登录"
   },
+  "ohE0sW": {
+    "defaultMessage": "以太坊"
+  },
   "ooCqJa": {
     "defaultMessage": "在…… {region}，磁盘容量达到 {hdd} 硬盘或 {ssd} 固态硬盘，配备 {cpu} 虚拟 CPU 和 {memory} 在最高端。"
   },
@@ -2449,6 +2665,12 @@
   },
   "oxq33u": {
     "defaultMessage": "最适合"
+  },
+  "oyKw8D": {
+    "defaultMessage": "莱特币"
+  },
+  "p2r80F": {
+    "defaultMessage": "服务已暂停"
   },
   "p4N05H": {
     "defaultMessage": "上传"
@@ -2486,6 +2708,9 @@
   "q/uwLT": {
     "defaultMessage": "停止。"
   },
+  "q2BAvD": {
+    "defaultMessage": "向此地址发送任意金额的链上比特币。交易确认后，到账金额将计入您的余额。"
+  },
   "qA0DQR": {
     "defaultMessage": "在伦敦提供 VPS 虚拟主机服务。您可以选择所需的 CPU、内存和硬盘。支持通过闪电网络或链上方式使用比特币支付。"
   },
@@ -2509,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "支付确认后，带宽变更立即生效，无需重启。"
+  },
+  "qewbDw": {
+    "defaultMessage": "所依据的法律或条款"
   },
   "qkLHOL": {
     "defaultMessage": "您确定要删除 SSH 密钥吗？{name}？"
@@ -2536,6 +2764,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "账单详情"
+  },
+  "rMgF34": {
+    "defaultMessage": "立即备份"
   },
   "rRJFl8": {
     "defaultMessage": "我需要连接什么？"
@@ -2708,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "使用自定义收件人密钥。"
   },
+  "v58ab1": {
+    "defaultMessage": "发起挑战"
+  },
   "vIkTT1": {
     "defaultMessage": "当核心需求是中继时，托管应用就是正确选择。如果您想运行修改过的构建版本、与其他服务共置，或自行管理服务器，我们的<a>VPS 托管</a>服务在都柏林、伦敦和魁北克提供起步方案，每月至少 1 TB 流量，并且所有套餐均包含静态 IPv4 和 IPv6 地址。"
   },
@@ -2720,8 +2954,14 @@
   "vRG4WY": {
     "defaultMessage": "您可以放心离开此页面，付款会显示在您的账单历史中，确认后即会生效。"
   },
+  "vSTolh": {
+    "defaultMessage": "您可以在 {date} 之前对此决定提出异议。您也保留向法院提起诉讼的任何权利。"
+  },
   "vWsXtg": {
     "defaultMessage": "正在创建付款……"
+  },
+  "vXCeIi": {
+    "defaultMessage": "失败"
   },
   "vahWHk": {
     "defaultMessage": "是的，使用 CNAME。一旦 DNS 解析成功，证书就会自动颁发。"
@@ -2801,6 +3041,9 @@
   "xQ8iOj": {
     "defaultMessage": "您目前还没有订阅任何内容。"
   },
+  "xRTG5Q": {
+    "defaultMessage": "精确发送"
+  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2851,6 +3094,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "在 LNVPS 上部署应用程序，几分钟内即可完成，应用程序将拥有自己的主机名，并包含 TLS 和存储，无需进行操作系统补丁。现在即可使用 Nostr 中继和 Blossom 媒体服务器。"
+  },
+  "ySPSCo": {
+    "defaultMessage": "自动使用我的余额"
   },
   "yUD6jT": {
     "defaultMessage": "几分钟。付款完成后，系统会立即进行处理。"

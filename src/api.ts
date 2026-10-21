@@ -1290,6 +1290,52 @@ export interface ReferralPatchRequest {
   payout_threshold?: number | null;
 }
 
+export type AbuseActionKind =
+  | "forwarded"
+  | "restricted"
+  | "suspended"
+  | "terminated"
+  | "reinstated"
+  | "no_action";
+
+export type AbuseChallengeOutcome = "upheld" | "reversed";
+
+export interface AbuseCase {
+  id: number;
+  vm_id: number | null;
+  summary: string;
+  created: string;
+  closed_at: string | null;
+}
+
+export interface AbuseAction {
+  id: number;
+  kind: AbuseActionKind;
+  reason: string;
+  facts: string;
+  legal_basis: string | null;
+  /** False when LNVPS found the problem itself rather than being told of it. */
+  followed_report: boolean;
+  created: string;
+  /** The last day this decision can be challenged. */
+  challenge_until: string;
+}
+
+export interface AbuseChallenge {
+  id: number;
+  action_id: number;
+  message: string;
+  received_at: string;
+  outcome: AbuseChallengeOutcome | null;
+  response: string | null;
+  decided_at: string | null;
+}
+
+export interface AbuseCaseDetail extends AbuseCase {
+  actions: Array<AbuseAction>;
+  challenges: Array<AbuseChallenge>;
+}
+
 export interface AccountCredit {
   /** Minor units of `currency` (msat for BTC). */
   balance: number;
@@ -2584,6 +2630,37 @@ export class LNVpsApi {
     const { data } = await this.#handleResponse<
       ApiResponse<AccountCreditTopup>
     >(await this.#req(`/api/v1/account/credit/topup/${paymentHash}`, "GET"));
+    return data;
+  }
+
+  async listAbuseCases(limit?: number, offset?: number) {
+    const params = new URLSearchParams();
+    if (limit !== undefined) params.set("limit", limit.toString());
+    if (offset !== undefined) params.set("offset", offset.toString());
+    const query = params.toString() ? `?${params.toString()}` : "";
+    return await this.#handleResponse<PaginatedResponse<AbuseCase>>(
+      await this.#req(`/api/v1/abuse/cases${query}`, "GET"),
+    );
+  }
+
+  async getAbuseCase(id: number) {
+    const { data } = await this.#handleResponse<ApiResponse<AbuseCaseDetail>>(
+      await this.#req(`/api/v1/abuse/cases/${id}`, "GET"),
+    );
+    return data;
+  }
+
+  async challengeAbuseDecision(
+    caseId: number,
+    actionId: number,
+    message: string,
+  ) {
+    const { data } = await this.#handleResponse<ApiResponse<AbuseChallenge>>(
+      await this.#req(`/api/v1/abuse/cases/${caseId}/challenges`, "POST", {
+        action_id: actionId,
+        message,
+      }),
+    );
     return data;
   }
 

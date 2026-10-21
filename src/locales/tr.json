@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "Daha önceki konuşmanıza devam ediyoruz, yukarıdaki mesajlar tekrar gösterilmese de ajan hâlâ bağlama sahip. Sıfırdan başlamak isterseniz yeni bir konuşma başlatın."
   },
+  "+ORUuS": {
+    "defaultMessage": "Hizmetlerinizle ilgili herhangi bir rapor bulunmamaktadır."
+  },
   "+QO7qN": {
     "defaultMessage": "En güvenli seçenek: özel anahtarınız hiçbir zaman bir tarayıcıya dokunmaz. Genel anahtarı wg pubkey çıktısından ya da WireGuard uygulamasındaki boş bir tünelden kopyalayıp yapıştırın."
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "Ödemeyi Tamamla"
+  },
+  "+whhvl": {
+    "defaultMessage": "Dayanıldığı şey"
   },
   "/0TOL5": {
     "defaultMessage": "Miktar"
@@ -98,6 +104,12 @@
   "/tiBYY": {
     "defaultMessage": "{provider} ile devam et"
   },
+  "00LcfG": {
+    "defaultMessage": "Daha fazla yükle"
+  },
+  "03d8yD": {
+    "defaultMessage": "Raporlarınıza geri dönün"
+  },
   "0Azlrb": {
     "defaultMessage": "Yönet"
   },
@@ -137,6 +149,9 @@
   "0t1qvq": {
     "defaultMessage": "Kural Ekle"
   },
+  "111qQK": {
+    "defaultMessage": "Harcanan"
+  },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
   },
@@ -164,6 +179,9 @@
   "1aBLDj": {
     "defaultMessage": "Bu aboneliği yenilemek için herhangi bir Lightning cüzdanından ödeme yapın."
   },
+  "1giEBC": {
+    "defaultMessage": "Takas tamamlandı, Bitcoin onayı bekleniyor. Bu sayfadan güvenle ayrılabilirsiniz."
+  },
   "1kZ3H0": {
     "defaultMessage": "İşlemi görüntüle"
   },
@@ -190,6 +208,9 @@
   },
   "2Aa625": {
     "defaultMessage": "İçinde {region}, disk yukarı doğru hareket ediyor {disk}, ile {cpu} sanal CPU ve {memory} en üst düzeyde."
+  },
+  "2J5AyF": {
+    "defaultMessage": "Hesap bakiyeniz bu siparişin tamamını karşıladığı için ödenecek başka bir şey yoktur."
   },
   "2QrTo0": {
     "defaultMessage": "Yeni IP Adresi Atama Talebi"
@@ -221,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "Bir VPS üzerinde, zincir için yeterli depolama alanına sahip bir Bitcoin tam düğümü çalıştırın. Ödemeleri Lightning veya doğrudan zincir üzerinden Bitcoin ile yapın."
   },
+  "32rBNK": {
+    "defaultMessage": "Hizmet Şartları"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr Özel Mesaj"
   },
   "375584": {
     "defaultMessage": "Ödeme gerekiyor."
+  },
+  "3FC4qE": {
+    "defaultMessage": "Hiçbir işlem yapılmamıştır."
   },
   "3GLHv9": {
     "defaultMessage": "kimlik doğrula"
@@ -338,6 +365,9 @@
   "5ow6dg": {
     "defaultMessage": "WhatsApp"
   },
+  "5q3qC0": {
+    "defaultMessage": "İndir"
+  },
   "5uQfFj": {
     "defaultMessage": "Nostr nedir?"
   },
@@ -358,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "Etkin değil"
+  },
+  "6eN2z4": {
+    "defaultMessage": "Bu karara itiraz edin"
   },
   "6hEevT": {
     "defaultMessage": "Varsayılanı ayarla"
@@ -418,6 +451,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "Ödemeyi iptal et"
+  },
+  "7i28vb": {
+    "defaultMessage": "Kripto ile öde"
   },
   "7jdMye": {
     "defaultMessage": "Durdurmak, verilerinizi korur."
@@ -482,6 +518,9 @@
   "8ecw1u": {
     "defaultMessage": "Kollar"
   },
+  "8evTa5": {
+    "defaultMessage": "değer {amount}"
+  },
   "8lCjAM": {
     "defaultMessage": "Öncelik"
   },
@@ -490,6 +529,9 @@
   },
   "8xIysb": {
     "defaultMessage": "Şimdi uzatın"
+  },
+  "8zIOy4": {
+    "defaultMessage": "Hizmetlerinizle ilgili raporlar"
   },
   "90f82/": {
     "defaultMessage": "Sanal makineyi başlat"
@@ -554,6 +596,9 @@
   "AGa2G5": {
     "defaultMessage": "Makinenin tamamına ihtiyacınız olduğunda"
   },
+  "AIgHom": {
+    "defaultMessage": "Henüz kredi hareketi yok."
+  },
   "AL9+3/": {
     "defaultMessage": "Bu sanal makine için yenilenebilir bir abonelik bulunamadı."
   },
@@ -578,8 +623,20 @@
   "AfmrGS": {
     "defaultMessage": "Kodu Gönder"
   },
+  "AkCxS/": {
+    "defaultMessage": "Sebep"
+  },
+  "AozuFZ": {
+    "defaultMessage": "Zincir üzerinde"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} okumak"
+  },
+  "B1JEDn": {
+    "defaultMessage": "Yedekleme, uygulamanızın verilerini LNVPS depolama alanına kopyalar. Kendi kopyanızı saklamak için indirin."
+  },
+  "B1d/RG": {
+    "defaultMessage": "Ödeme alındı. Bakiyeniz güncellendi."
   },
   "B4reHi": {
     "defaultMessage": "Tarihi Olaylar"
@@ -632,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "Planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl işlediği hakkında LNVPS destek temsilcisiyle sohbet edin. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınıza bakabilmesi için önce giriş yapın."
   },
+  "BtKQM7": {
+    "defaultMessage": "Henüz bu rapor hakkında bir karar vermedik."
+  },
   "Bwqhmd": {
     "defaultMessage": "Güvenlik duvarı"
   },
@@ -640,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "Sanal makineyi yeniden başlatır"
+  },
+  "CAdhz6": {
+    "defaultMessage": "Hizmet Şartlarımızın 6. Bölümü"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -655,6 +718,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "Ekip üyelerinden yardım alın."
+  },
+  "Cnm0QA": {
+    "defaultMessage": "Sırada"
   },
   "Cououe": {
     "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
@@ -833,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "Aboneliği yenileyin"
   },
+  "Fv1ZSz": {
+    "defaultMessage": "Kapalı"
+  },
   "G/yZLu": {
     "defaultMessage": "Kaldırın / Silin"
   },
@@ -853,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "MTU"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "Hizmetlerinizle ilgili aldığımız raporlar ve verdiğimiz karar."
   },
   "GCQOx0": {
     "defaultMessage": "Sonraki ekranda ödeme yapın. Ödeme onaylandığında makine başlatılır."
@@ -910,6 +982,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "Gelen"
+  },
+  "H5+NAX": {
+    "defaultMessage": "Denge"
   },
   "H7iwrN": {
     "defaultMessage": "Bir cihaz, kayıtlı bir açık anahtardır: telefonunuz, dizüstü bilgisayarınız, yönlendiriciniz. En fazla {count,plural,one{# cihaz} other{# cihazlar}} tek planda ve çıkardığınız bir cihaz yuvasını boşaltır."
@@ -977,6 +1052,9 @@
   "Id24hd": {
     "defaultMessage": "Ad *"
   },
+  "IeUH3/": {
+    "defaultMessage": "İade"
+  },
   "IiNYda": {
     "defaultMessage": "İçine yerleştirin/entegre edin. {regions}."
   },
@@ -988,6 +1066,9 @@
   },
   "IvjoDS": {
     "defaultMessage": "Bağlantılı"
+  },
+  "Iw8/zq": {
+    "defaultMessage": "Hizmet sonlandırıldı"
   },
   "J+dIsA": {
     "defaultMessage": "Abone olun"
@@ -1010,8 +1091,17 @@
   "JH4wUD": {
     "defaultMessage": "Kaydedildi ✓"
   },
+  "JQZCRR": {
+    "defaultMessage": "Nasıl bulduk"
+  },
+  "JV8/uB": {
+    "defaultMessage": "Cevabımız: karar aynen onaylandı"
+  },
   "JVClQM": {
     "defaultMessage": "LNVPS Hizmet Durumu ve Çalışma Süresi"
+  },
+  "JXdbo8": {
+    "defaultMessage": "Tamamlandı"
   },
   "Ja58kB": {
     "defaultMessage": "Rölenizi konuşlandırın, şu konumdan: {price} ayda bir"
@@ -1022,11 +1112,17 @@
   "JcmOUh": {
     "defaultMessage": "Kendi Nostr rölenizi şu adresten çalıştırın: {price} Ayda, kendi alan adında ve TLS ile depolama hizmeti dahil olmak üzere, dakika cinsinden kullanım süresiyle."
   },
+  "JfG49w": {
+    "defaultMessage": "Açık"
+  },
   "JiCBWy": {
     "defaultMessage": "Seçtiğiniz anahtarla SSH ile bağlanın."
   },
   "Jm+fih": {
     "defaultMessage": "Etkin değil"
+  },
+  "Jqk9V7": {
+    "defaultMessage": "Gönder {ticker} bu adrese 15 dakika içinde. Bitcoin'e çevrilir ve onaylandığında, alınan Bitcoin miktarına orantılı olarak süreniz hesabınıza eklenir."
   },
   "JuR4mj": {
     "defaultMessage": "İstediğiniz zaman istediğiniz tutarı ödeyin, süre orantılı olarak eklenir"
@@ -1039,6 +1135,12 @@
   },
   "K3r6DQ": {
     "defaultMessage": "Sil"
+  },
+  "K4nZtw": {
+    "defaultMessage": "Hizmet kısıtlandı"
+  },
+  "K661xm": {
+    "defaultMessage": "Takas hizmeti FixedFloat tarafından sağlanmaktadır. Bir emir oluşturmak, FixedFloat kurallarını kabul ettiğinizi onaylar."
   },
   "KAL6xF": {
     "defaultMessage": "Anahtar adı"
@@ -1094,6 +1196,9 @@
   "LX6weZ": {
     "defaultMessage": "Ödeme bekliyor."
   },
+  "LaLTJR": {
+    "defaultMessage": "Ayar"
+  },
   "Lc72Gm": {
     "defaultMessage": "Yeni bir sohbet başlat"
   },
@@ -1112,8 +1217,14 @@
   "LqFfRA": {
     "defaultMessage": "Ülke"
   },
+  "Lvmmrd": {
+    "defaultMessage": "Bitcoin'e takas yapıldı, krediler onay sonrası eklenir."
+  },
   "LwGAe6": {
     "defaultMessage": "Ayrıca LNVPS'de de."
+  },
+  "M59JhX": {
+    "defaultMessage": "Kılavuz"
   },
   "M8ORKW": {
     "defaultMessage": "Kurulum, genellikle bir dakika sürer. İşlem tamamlandıktan sonra son nokta görünür."
@@ -1129,6 +1240,9 @@
   },
   "MJ2jZQ": {
     "defaultMessage": "Toplam"
+  },
+  "MOEWbV": {
+    "defaultMessage": "Tutar (sats)"
   },
   "MTnSwY": {
     "defaultMessage": "örneğin, vergi"
@@ -1153,6 +1267,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "Onayla"
+  },
+  "N2W+L6": {
+    "defaultMessage": "Kredi ekle"
   },
   "N3Pob8": {
     "defaultMessage": "Hesabınızla ilgili her şeyi sorun, faturalandırma, başlatılamayan bir sanal makine veya bir ücretin ne için yapıldığı. İadeler, uzatmalar veya silme işlemleri için bunun yerine iletişim formunu kullanın."
@@ -1211,6 +1328,9 @@
   "ORGv1Q": {
     "defaultMessage": "Oluşturuldu"
   },
+  "OcZR/l": {
+    "defaultMessage": "Hesap bakiyesi ile öde"
+  },
   "OeOwwQ": {
     "defaultMessage": "Kaldır {name}? Anahtarı ve adresi serbest bırakılır ve o cihazdaki yapılandırma çalışmayı durdurur."
   },
@@ -1243,6 +1363,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "Düşünüyor…"
+  },
+  "P6MssC": {
+    "defaultMessage": "Sadece gönder {ticker} 15 dakika içinde doğru ağda. Bitcoin'e takas edilir ve onaylandıktan sonra gelen tutar bakiyenize tanımlanır."
   },
   "P7PLVj": {
     "defaultMessage": "Tarih"
@@ -1310,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "QkYbYl": {
+    "defaultMessage": "Bir kişi bunu inceleyip e-posta ile yanıtlayacak."
+  },
   "QlsDcr": {
     "defaultMessage": "Eylem"
   },
@@ -1363,6 +1489,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "ayda"
+  },
+  "RydJAB": {
+    "defaultMessage": "Monero"
   },
   "RzQOmD": {
     "defaultMessage": "E-posta adresime ihtiyacınız var mı?"
@@ -1420,6 +1549,9 @@
   },
   "T1/en5": {
     "defaultMessage": "Kimlik: {id}"
+  },
+  "T3lqx5": {
+    "defaultMessage": "Yedekler"
   },
   "T4VxQN": {
     "defaultMessage": "Yükleniyor…"
@@ -1556,11 +1688,17 @@
   "VJ4xwX": {
     "defaultMessage": "Haberler ve Ürün Güncellemeleri"
   },
+  "VJx71I": {
+    "defaultMessage": "Hesap kredinizden ödendi. Şu an uygulanıyor."
+  },
   "VKfWR3": {
     "defaultMessage": "Önerilen"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
+  },
+  "VL1Y/1": {
+    "defaultMessage": "Rapor bulunamadı"
   },
   "VLRCfi": {
     "defaultMessage": "Son 30 Gün İçindeki Çalışma Süresi: {uptime}"
@@ -1667,14 +1805,23 @@
   "XdcFgv": {
     "defaultMessage": "Nostr rölelerini yönetti. Ödemeler Lightning ile yapıldı."
   },
+  "Xy/hId": {
+    "defaultMessage": "Hesap Kredisi"
+  },
   "XyIrRh": {
     "defaultMessage": "Bitcoin ile öde"
+  },
+  "Xyh2gH": {
+    "defaultMessage": "Kararlar"
   },
   "Y+LcmX": {
     "defaultMessage": "DNS ayarlarınızı değiştiremiyorsanız, proxy kullanın. {path} mevcut sunucunuzda {target}"
   },
   "Y/tMXU": {
     "defaultMessage": "Ödeme bekleniyor. Onaylandıktan sonra bu işlem otomatik olarak uygulanır."
+  },
+  "Y8HR16": {
+    "defaultMessage": "Rapor size yönlendirildi."
   },
   "YCAVvS": {
     "defaultMessage": "Satın alırken bir bölge seçmem gerekiyor mu?"
@@ -1700,6 +1847,9 @@
   "YWjrby": {
     "defaultMessage": "Yalnızca hesapla ilgili uyarılar gönderilir; örneğin, sanal makine süresinin dolması gibi. Asla pazarlama mesajı göndermeyiz."
   },
+  "YXDqQm": {
+    "defaultMessage": "Henüz yedek yok."
+  },
   "YdQxfw": {
     "defaultMessage": "Destekle İletişime Geçin"
   },
@@ -1717,6 +1867,9 @@
   },
   "Ysr8td": {
     "defaultMessage": "Kazanılan"
+  },
+  "Yukb/e": {
+    "defaultMessage": "Rapor No{id}"
   },
   "YyojwF": {
     "defaultMessage": "Yapılandırma Değişiklikleri:"
@@ -1751,6 +1904,12 @@
   "ZewCpX": {
     "defaultMessage": "Alan Adı Ekle"
   },
+  "ZgQnsi": {
+    "defaultMessage": "Her teklif, faturanın izin verdiği ölçüde kredi kullanır ve kalan tutarı siz ödersiniz. Otomatik yenilemelerde, kredi yalnızca tüm yenileme bedelini karşıladığında kullanılır."
+  },
+  "ZjV1o9": {
+    "defaultMessage": "Kendi başımıza bulduk."
+  },
   "ZmIH8d": {
     "defaultMessage": "Her yerden çıkış yap"
   },
@@ -1765,6 +1924,9 @@
   },
   "a60eIK": {
     "defaultMessage": "Kaydetmek yapılandırmayı yeniden uygular ve uygulamayı yeniden başlatır."
+  },
+  "aE53im": {
+    "defaultMessage": "Yenileme"
   },
   "aLe15X": {
     "defaultMessage": "İstediğiniz şekilde ödeme yapın."
@@ -1817,6 +1979,9 @@
   "bhfNWq": {
     "defaultMessage": "Şifrelenmiş mesajı buraya yapıştırın..."
   },
+  "bk6Lnx": {
+    "defaultMessage": "Hesap kredisi"
+  },
   "bneNNt": {
     "defaultMessage": "{amount} Kapalı{code,select,none{} other{ · {code}}}"
   },
@@ -1844,6 +2009,9 @@
   "cQtv0G": {
     "defaultMessage": "{n} çalışıyor"
   },
+  "cXAlMR": {
+    "defaultMessage": "Planlandı"
+  },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# röle uygulaması} other{# röle uygulamaları}}, itibaren {price} ayda."
   },
@@ -1852,6 +2020,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "chO5f1": {
+    "defaultMessage": "Yalnızca gönder {ticker} Doğru ağda. Diğer her şey kaybolur."
   },
   "ciFSHC": {
     "defaultMessage": "Ödeme {amount}"
@@ -2042,6 +2213,9 @@
   "gL1jHz": {
     "defaultMessage": "Kalıcı depolama alanı, her röle için yukarıda belirtilen boyutlarda"
   },
+  "gNrB5A": {
+    "defaultMessage": "Bu bileşen yalnızca madeni para ödemelerini destekler."
+  },
   "gPsMm7": {
     "defaultMessage": "Bu İşçi'yi devreye alın ve şu rota için bir yapılandırma ekleyin: {route}"
   },
@@ -2062,6 +2236,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "Konsol"
+  },
+  "gfVtOu": {
+    "defaultMessage": "Bitcoin veya desteklenen bir coin ile ödeme yaptığınızda tutar bakiyenize eklenir."
   },
   "gjvoQG": {
     "defaultMessage": "Boyutlandırma"
@@ -2095,6 +2272,9 @@
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarıyla giriş yapın. Herhangi bir hesaba geçiş anahtarı ekleyebilirsiniz."
+  },
+  "hsV9Bt": {
+    "defaultMessage": "Bir hizmeti kısıtlar veya askıya alırsak, karar dayandığı olgular ve gerekçelerle birlikte burada görünür. Herhangi bir karara altı ay boyunca itiraz edebilirsiniz. {terms} belgesinin 6.1 bölümüne bakın."
   },
   "huqKGl": {
     "defaultMessage": "Hesap oluştur"
@@ -2159,6 +2339,9 @@
   "jOo6oG": {
     "defaultMessage": "Sanal makine erişim anahtarlarını yönetin."
   },
+  "jS6bEf": {
+    "defaultMessage": "Siparişler için ön ödeme bakiyesi"
+  },
   "jUqYir": {
     "defaultMessage": "Eklendi {date}"
   },
@@ -2180,6 +2363,12 @@
   "jmVweB": {
     "defaultMessage": "SSH anahtarları yükleniyor..."
   },
+  "jpvXxP": {
+    "defaultMessage": "Bu karara itiraz için altı aylık süre dolmuştur."
+  },
+  "jsrdVV": {
+    "defaultMessage": "Tether (TRON üzerinde USDT)"
+  },
   "jtkU3K": {
     "defaultMessage": "Dönüşüm"
   },
@@ -2200,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "Cihaz ekle"
+  },
+  "kGvjzB": {
+    "defaultMessage": "Hizmet yeniden sağlandı"
   },
   "kJpuxD": {
     "defaultMessage": "Yinelenen hizmetler ve faturalandırma"
@@ -2267,6 +2459,9 @@
   "lQNVjN": {
     "defaultMessage": "Dağıt {name} LNVPS üzerinde yönetilen bir uygulama olarak kullanın, Lightning, Bitcoin veya kredi kartıyla ödeme yapın."
   },
+  "lQjSeV": {
+    "defaultMessage": "Bakiye yükleyin ve bunu yeni siparişler, yenilemeler ve yükseltmeler için harcayın."
+  },
   "lYEj5M": {
     "defaultMessage": "Yönetilen Uygulamalar"
   },
@@ -2312,6 +2507,9 @@
   "mJPBXd": {
     "defaultMessage": "Şifrelenmiş mesaj (kopyalayın ve e-postanıza ekleyin):"
   },
+  "mLvz+r": {
+    "defaultMessage": "Kredi"
+  },
   "mMug3Z": {
     "defaultMessage": "kazanılan {currency}"
   },
@@ -2336,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "Ödeme alındı, onay bekleniyor. Bu sayfadan güvenle ayrılabilirsiniz."
   },
+  "mm+Sp2": {
+    "defaultMessage": "Cevabımız: karar bozuldu"
+  },
   "mtEKFV": {
     "defaultMessage": "İşlem devam ediyor…"
   },
@@ -2344,6 +2545,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "Düğüm listesi #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "Faturanın süresi 10 dakika içinde dolacak. Bakiyeniz ödeme yapıldığı anda güncellenir."
   },
   "n7yYXG": {
     "defaultMessage": "Hizmet"
@@ -2384,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "VPS yükleme işlemleri şu seçenekleri sunar..."
   },
+  "np6bff": {
+    "defaultMessage": "Almış olduğumuz bir rapor doğrultusunda"
+  },
   "nrTBF4": {
     "defaultMessage": "Sunucu kapanıyor"
+  },
+  "nszMdp": {
+    "defaultMessage": "Kötüye Kullanım Bildirimleri"
   },
   "nvJ5bE": {
     "defaultMessage": "Tek tıklamayla çalışan Docker uygulamaları"
@@ -2417,6 +2627,9 @@
   "oGiUkp": {
     "defaultMessage": "Hiçbiri ayarlanmamış, bir tane ekleyin."
   },
+  "oH0ANW": {
+    "defaultMessage": "Sizin Meydan Okumanız"
+  },
   "oIPESx": {
     "defaultMessage": "Sona erme uyarıları, ödeme makbuzları ve hazırlama bildirimleri, Nostr DM kanalı etkinleştirildiğinde buraya gelir {settings}. Bu gelen kutusu yanıtlar için izlenmemektedir, bir insana ulaşmak için kullanın {support}."
   },
@@ -2441,6 +2654,9 @@
   "odXlk8": {
     "defaultMessage": "Giriş yapın"
   },
+  "ohE0sW": {
+    "defaultMessage": "Ethereum"
+  },
   "ooCqJa": {
     "defaultMessage": "İçinde {region}, disk yukarı doğru hareket ediyor {hdd} HDD veya {ssd} SSD, ile {cpu} vCPU ve {memory} en üst seviyede."
   },
@@ -2449,6 +2665,12 @@
   },
   "oxq33u": {
     "defaultMessage": "En iyisi şudur:"
+  },
+  "oyKw8D": {
+    "defaultMessage": "Litecoin"
+  },
+  "p2r80F": {
+    "defaultMessage": "Hizmet askıya alındı"
   },
   "p4N05H": {
     "defaultMessage": "Yükle"
@@ -2486,6 +2708,9 @@
   "q/uwLT": {
     "defaultMessage": "Durun"
   },
+  "q2BAvD": {
+    "defaultMessage": "Bu adrese herhangi bir miktarda zincir üstü Bitcoin gönderin. İşlem onaylandığında, gelen tutar bakiyenize eklenir."
+  },
   "qA0DQR": {
     "defaultMessage": "Londra'da VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya zincir üstü ödeme yöntemiyle Bitcoin ile yapın."
   },
@@ -2509,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "Bant genişliği değişiklikleri, ödeme onaylandığı anda, yeniden başlatma gerektirmeden uygulanır."
+  },
+  "qewbDw": {
+    "defaultMessage": "Dayanılan yasa veya Şartlar bölümü"
   },
   "qkLHOL": {
     "defaultMessage": "SSH anahtarını silmek istediğinizden emin misiniz?{name}?"
@@ -2536,6 +2764,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "Fatura Bilgileri"
+  },
+  "rMgF34": {
+    "defaultMessage": "Şimdi yedekle"
   },
   "rRJFl8": {
     "defaultMessage": "Bağlanmak için neye ihtiyacım var?"
@@ -2708,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "Özel alıcı anahtarını kullanın"
   },
+  "v58ab1": {
+    "defaultMessage": "Meydan okuma gönder"
+  },
   "vIkTT1": {
     "defaultMessage": "Yönetilen Uygulama, aktarımın asıl mesele olduğu durumlarda doğru cevaptır. Değiştirilmiş bir derlemeyi çalıştırmak, diğer hizmetleri aynı konumda barındırmak veya sunucuyu kendiniz yönetmek istiyorsanız, <a>VPS barındırma</a> hizmetimiz Dublin, Londra ve Quebec'te başlıyor; aylık en az 1 TB transfer ve her planda statik IPv4 ile IPv6 adresleri sunuyor."
   },
@@ -2720,8 +2954,14 @@
   "vRG4WY": {
     "defaultMessage": "Bu sayfadan güvenle ayrılabilirsiniz, ödeme fatura geçmişinizde görünür ve onaylandığında uygulanır."
   },
+  "vSTolh": {
+    "defaultMessage": "Bu karara {date} tarihine kadar itiraz edebilirsiniz. Mahkemeye başvurma hakkınız da saklıdır."
+  },
   "vWsXtg": {
     "defaultMessage": "Ödeme oluşturuluyor…"
+  },
+  "vXCeIi": {
+    "defaultMessage": "Başarısız"
   },
   "vahWHk": {
     "defaultMessage": "Evet, doğru, CNAME ve sertifika, DNS çözüldükten sonra otomatik olarak yayınlanır."
@@ -2801,6 +3041,9 @@
   "xQ8iOj": {
     "defaultMessage": "Henüz herhangi bir aboneliğiniz bulunmuyor."
   },
+  "xRTG5Q": {
+    "defaultMessage": "Tam olarak gönder"
+  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2851,6 +3094,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "LNVPS üzerinde bir uygulama dağıtın; kendi alan adı, TLS ve depolama alanı dahil olmak üzere birkaç dakika içinde kullanıma hazır hale getirin, işletim sistemi güncellemeleriyle uğraşmanıza gerek kalmaz. Bugün Nostr röleleri ve Blossom medya sunucuları kullanıma sunuldu."
+  },
+  "ySPSCo": {
+    "defaultMessage": "Bakiyemi otomatik olarak harca"
   },
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."

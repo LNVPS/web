@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "Picking up your earlier conversation. The agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch."
   },
+  "+ORUuS": {
+    "defaultMessage": "There are no reports about your services."
+  },
   "+QO7qN": {
     "defaultMessage": "The safest option: your private key never touches a browser. Paste the public key from wg pubkey, or from an empty tunnel in the WireGuard app."
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "Complete Payment"
+  },
+  "+whhvl": {
+    "defaultMessage": "What it was based on"
   },
   "/0TOL5": {
     "defaultMessage": "Amount"
@@ -100,6 +106,9 @@
   },
   "00LcfG": {
     "defaultMessage": "Load more"
+  },
+  "03d8yD": {
+    "defaultMessage": "Back to your reports"
   },
   "0Azlrb": {
     "defaultMessage": "Manage"
@@ -233,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain."
   },
+  "32rBNK": {
+    "defaultMessage": "Terms of Service"
+  },
   "36aVfS": {
     "defaultMessage": "Nostr DM"
   },
   "375584": {
     "defaultMessage": "Needs payment"
+  },
+  "3FC4qE": {
+    "defaultMessage": "No action taken"
   },
   "3GLHv9": {
     "defaultMessage": "authenticate"
@@ -373,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "Inactive"
+  },
+  "6eN2z4": {
+    "defaultMessage": "Challenge this decision"
   },
   "6hEevT": {
     "defaultMessage": "Set default"
@@ -512,6 +530,9 @@
   "8xIysb": {
     "defaultMessage": "Extend now"
   },
+  "8zIOy4": {
+    "defaultMessage": "Reports about your services"
+  },
   "90f82/": {
     "defaultMessage": "Start VM"
   },
@@ -602,6 +623,9 @@
   "AfmrGS": {
     "defaultMessage": "Send Code"
   },
+  "AkCxS/": {
+    "defaultMessage": "Reason"
+  },
   "AozuFZ": {
     "defaultMessage": "On-chain"
   },
@@ -665,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. Log in first if your question is about an existing VM or payment, so it can look up your account."
   },
+  "BtKQM7": {
+    "defaultMessage": "We have not made a decision on this report yet."
+  },
   "Bwqhmd": {
     "defaultMessage": "Firewall"
   },
@@ -673,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "Restarts the VM"
+  },
+  "CAdhz6": {
+    "defaultMessage": "Section 6 of our Terms of Service"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -869,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "Renew subscription"
   },
+  "Fv1ZSz": {
+    "defaultMessage": "Closed"
+  },
   "G/yZLu": {
     "defaultMessage": "Remove"
   },
@@ -889,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "MTU"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "Reports we received about your services and what we decided."
   },
   "GCQOx0": {
     "defaultMessage": "Pay on the next screen. The machine boots once the payment confirms."
@@ -1031,6 +1067,9 @@
   "IvjoDS": {
     "defaultMessage": "Connected"
   },
+  "Iw8/zq": {
+    "defaultMessage": "Service terminated"
+  },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
@@ -1052,6 +1091,12 @@
   "JH4wUD": {
     "defaultMessage": "Saved ✓"
   },
+  "JQZCRR": {
+    "defaultMessage": "How we found it"
+  },
+  "JV8/uB": {
+    "defaultMessage": "Our reply: decision upheld"
+  },
   "JVClQM": {
     "defaultMessage": "LNVPS Service Status and Uptime"
   },
@@ -1066,6 +1111,9 @@
   },
   "JcmOUh": {
     "defaultMessage": "Run your own Nostr relay from {price} per month, up in minutes on its own hostname with TLS and storage included."
+  },
+  "JfG49w": {
+    "defaultMessage": "Open"
   },
   "JiCBWy": {
     "defaultMessage": "Connect over SSH with your selected key."
@@ -1087,6 +1135,9 @@
   },
   "K3r6DQ": {
     "defaultMessage": "Delete"
+  },
+  "K4nZtw": {
+    "defaultMessage": "Service restricted"
   },
   "K661xm": {
     "defaultMessage": "The exchange service is provided by FixedFloat. Creating an order confirms your agreement with the rules of FixedFloat."
@@ -1382,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "CPU"
   },
+  "QkYbYl": {
+    "defaultMessage": "A person will review this and reply by email."
+  },
   "QlsDcr": {
     "defaultMessage": "Action"
   },
@@ -1643,6 +1697,9 @@
   "VL/B6x": {
     "defaultMessage": "your@email.com"
   },
+  "VL1Y/1": {
+    "defaultMessage": "Report not found"
+  },
   "VLRCfi": {
     "defaultMessage": "Past 30 Days Uptime: {uptime}"
   },
@@ -1754,11 +1811,17 @@
   "XyIrRh": {
     "defaultMessage": "Pay with Bitcoin"
   },
+  "Xyh2gH": {
+    "defaultMessage": "Decisions"
+  },
   "Y+LcmX": {
     "defaultMessage": "If you cannot change your DNS, proxy {path} on your existing server to {target}"
   },
   "Y/tMXU": {
     "defaultMessage": "Waiting for payment. This is applied automatically once it confirms."
+  },
+  "Y8HR16": {
+    "defaultMessage": "Report forwarded to you"
   },
   "YCAVvS": {
     "defaultMessage": "Do I have to pick a region when I buy?"
@@ -1805,6 +1868,9 @@
   "Ysr8td": {
     "defaultMessage": "Earned"
   },
+  "Yukb/e": {
+    "defaultMessage": "Report #{id}"
+  },
   "YyojwF": {
     "defaultMessage": "Configuration Changes:"
   },
@@ -1840,6 +1906,9 @@
   },
   "ZgQnsi": {
     "defaultMessage": "Every quote uses as much credit as the bill allows, and you pay the rest. Automatic renewals use credit when it covers the whole renewal."
+  },
+  "ZjV1o9": {
+    "defaultMessage": "We found it ourselves"
   },
   "ZmIH8d": {
     "defaultMessage": "Sign out everywhere"
@@ -2204,6 +2273,9 @@
   "hs3HVz": {
     "defaultMessage": "Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account."
   },
+  "hsV9Bt": {
+    "defaultMessage": "If we restrict or suspend a service, the decision appears here with the facts and reasons behind it. You can challenge any decision for six months. See section 6.1 of the {terms}."
+  },
   "huqKGl": {
     "defaultMessage": "Create account"
   },
@@ -2291,6 +2363,9 @@
   "jmVweB": {
     "defaultMessage": "Loading SSH keys..."
   },
+  "jpvXxP": {
+    "defaultMessage": "The six month window to challenge this decision has closed."
+  },
   "jsrdVV": {
     "defaultMessage": "Tether (USDT on TRON)"
   },
@@ -2314,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "Add device"
+  },
+  "kGvjzB": {
+    "defaultMessage": "Service restored"
   },
   "kJpuxD": {
     "defaultMessage": "Recurring services & billing"
@@ -2456,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "Payment received, waiting for confirmation. You can safely leave this page."
   },
+  "mm+Sp2": {
+    "defaultMessage": "Our reply: decision reversed"
+  },
   "mtEKFV": {
     "defaultMessage": "Processing…"
   },
@@ -2507,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "Loading VPS offers..."
   },
+  "np6bff": {
+    "defaultMessage": "Following a report we received"
+  },
   "nrTBF4": {
     "defaultMessage": "Host retiring"
+  },
+  "nszMdp": {
+    "defaultMessage": "Abuse Reports"
   },
   "nvJ5bE": {
     "defaultMessage": "One-click Docker apps"
@@ -2539,6 +2626,9 @@
   },
   "oGiUkp": {
     "defaultMessage": "None set, add one"
+  },
+  "oH0ANW": {
+    "defaultMessage": "Your challenge"
   },
   "oIPESx": {
     "defaultMessage": "Expiry warnings, payment receipts and provisioning notices arrive here while the Nostr DM channel is enabled in {settings}. This inbox isn't monitored for replies. To reach a human, use {support}."
@@ -2578,6 +2668,9 @@
   },
   "oyKw8D": {
     "defaultMessage": "Litecoin"
+  },
+  "p2r80F": {
+    "defaultMessage": "Service suspended"
   },
   "p4N05H": {
     "defaultMessage": "Upload"
@@ -2641,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "Bandwidth changes apply as soon as the payment confirms, without a restart."
+  },
+  "qewbDw": {
+    "defaultMessage": "Law or Terms section"
   },
   "qkLHOL": {
     "defaultMessage": "Are you sure you want to delete SSH key \"{name}\"?"
@@ -2843,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "Use custom recipient key"
   },
+  "v58ab1": {
+    "defaultMessage": "Send challenge"
+  },
   "vIkTT1": {
     "defaultMessage": "A Managed App is the right answer when the relay is the point. If you want to run a modified build, co-locate other services, or manage the box yourself, our <a>VPS hosting</a> starts in Dublin, London and Quebec with at least 1 TB of transfer a month and a static IPv4 and IPv6 on every plan."
   },
@@ -2854,6 +2953,9 @@
   },
   "vRG4WY": {
     "defaultMessage": "You can safely leave this page. The payment appears in your billing history and is applied once it confirms."
+  },
+  "vSTolh": {
+    "defaultMessage": "You can challenge this until {date}. You also keep any right you have to go to court."
   },
   "vWsXtg": {
     "defaultMessage": "Creating payment…"

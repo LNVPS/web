@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "이전 대화를 이어갑니다, 위쪽 메시지는 다시 표시되지 않지만, 에이전트는 여전히 맥락을 유지하고 있습니다. 처음부터 다시 시작하시려면 새 대화를 시작해 주세요."
   },
+  "+ORUuS": {
+    "defaultMessage": "귀하의 서비스에 관한 보고서는 없습니다."
+  },
   "+QO7qN": {
     "defaultMessage": "가장 안전한 방법: 개인 키가 브라우저에 노출되지 않도록 하세요. wg pubkey 명령의 출력이나 WireGuard 앱의 빈 터널에서 공개 키를 붙여넣으세요."
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "결제 완료"
+  },
+  "+whhvl": {
+    "defaultMessage": "기반이 된 것"
   },
   "/0TOL5": {
     "defaultMessage": "수량"
@@ -98,6 +104,12 @@
   "/tiBYY": {
     "defaultMessage": "{provider}(으)로 계속하기"
   },
+  "00LcfG": {
+    "defaultMessage": "더 보기"
+  },
+  "03d8yD": {
+    "defaultMessage": "내 리포트로 돌아가기"
+  },
   "0Azlrb": {
     "defaultMessage": "관리하다"
   },
@@ -137,6 +149,9 @@
   "0t1qvq": {
     "defaultMessage": "규칙 추가"
   },
+  "111qQK": {
+    "defaultMessage": "지출"
+  },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
   },
@@ -164,6 +179,9 @@
   "1aBLDj": {
     "defaultMessage": "어떤 라이트닝 지갑에서든 결제하여 이 구독 서비스를 충전할 수 있습니다."
   },
+  "1giEBC": {
+    "defaultMessage": "스왑이 완료되었습니다. 비트코인 확인 처리를 기다리는 중입니다. 이 페이지를 안전하게 닫으셔도 됩니다."
+  },
   "1kZ3H0": {
     "defaultMessage": "거래 보기"
   },
@@ -190,6 +208,9 @@
   },
   "2Aa625": {
     "defaultMessage": "안에 {region}디스크는 최대 높이까지 올라갑니다. {disk}그리고 {cpu} 가상 CPU 및 {memory} 최상위 수준에서."
+  },
+  "2J5AyF": {
+    "defaultMessage": "고객님의 계정 크레딧으로 이 주문 금액을 전액 충당할 수 있으므로, 추가로 결제하실 금액이 없습니다."
   },
   "2QrTo0": {
     "defaultMessage": "새로운 IP 주소 할당 방식"
@@ -221,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "체인 데이터를 저장할 공간이 있는 VPS에 비트코인 풀 노드를 실행합니다. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
+  "32rBNK": {
+    "defaultMessage": "이용약관"
+  },
   "36aVfS": {
     "defaultMessage": "노스트르 다이렉트 메시지"
   },
   "375584": {
     "defaultMessage": "결제가 필요합니다."
+  },
+  "3FC4qE": {
+    "defaultMessage": "조치 없음"
   },
   "3GLHv9": {
     "defaultMessage": "인증"
@@ -338,6 +365,9 @@
   "5ow6dg": {
     "defaultMessage": "왓츠앱"
   },
+  "5q3qC0": {
+    "defaultMessage": "다운로드"
+  },
   "5uQfFj": {
     "defaultMessage": "Nostr이란 무엇인가요?"
   },
@@ -358,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "비활성 상태"
+  },
+  "6eN2z4": {
+    "defaultMessage": "이 결정에 이의 제기"
   },
   "6hEevT": {
     "defaultMessage": "기본값으로 설정"
@@ -418,6 +451,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "결제 취소"
+  },
+  "7i28vb": {
+    "defaultMessage": "암호화폐로 결제"
   },
   "7jdMye": {
     "defaultMessage": "중단하면 데이터가 보존됩니다."
@@ -482,6 +518,9 @@
   "8ecw1u": {
     "defaultMessage": "손잡이"
   },
+  "8evTa5": {
+    "defaultMessage": "가치 {amount}"
+  },
   "8lCjAM": {
     "defaultMessage": "우선순위"
   },
@@ -490,6 +529,9 @@
   },
   "8xIysb": {
     "defaultMessage": "지금 연장하세요."
+  },
+  "8zIOy4": {
+    "defaultMessage": "귀사 서비스에 대한 보고서"
   },
   "90f82/": {
     "defaultMessage": "가상 머신 시작"
@@ -554,6 +596,9 @@
   "AGa2G5": {
     "defaultMessage": "전체 장치가 필요할 때."
   },
+  "AIgHom": {
+    "defaultMessage": "아직 신용 거래 내역이 없습니다."
+  },
   "AL9+3/": {
     "defaultMessage": "이 가상 머신에 대해 갱신할 수 있는 구독을 찾을 수 없습니다."
   },
@@ -578,8 +623,20 @@
   "AfmrGS": {
     "defaultMessage": "코드 전송"
   },
+  "AkCxS/": {
+    "defaultMessage": "사유"
+  },
+  "AozuFZ": {
+    "defaultMessage": "온체인"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} 읽다"
+  },
+  "B1JEDn": {
+    "defaultMessage": "백업은 앱 데이터를 LNVPS 저장소에 복사합니다. 다운로드하여 자체 사본을 보관하세요."
+  },
+  "B1d/RG": {
+    "defaultMessage": "입금이 완료되었습니다. 잔액이 갱신되었습니다."
   },
   "B4reHi": {
     "defaultMessage": "역사적 사건"
@@ -632,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "LNVPS 지원 에이전트와 요금제 및 가격, 지역, 운영 체제, 또는 Lightning 결제 방식에 대해 채팅으로 문의하세요. 기존 VM이나 결제와 관련된 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
   },
+  "BtKQM7": {
+    "defaultMessage": "아직 이 보고서에 대해 결정을 내리지 않았습니다."
+  },
   "Bwqhmd": {
     "defaultMessage": "방화벽"
   },
@@ -640,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "VM을 다시 시작합니다"
+  },
+  "CAdhz6": {
+    "defaultMessage": "당사 이용약관 제6조"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -655,6 +718,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "팀의 도움을 받으세요."
+  },
+  "Cnm0QA": {
+    "defaultMessage": "대기 중"
   },
   "Cououe": {
     "defaultMessage": "이 앱을 배포하려면 로그인하세요."
@@ -833,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "구독 갱신"
   },
+  "Fv1ZSz": {
+    "defaultMessage": "종료"
+  },
   "G/yZLu": {
     "defaultMessage": "제거하다"
   },
@@ -853,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "MTU (최대 전송 단위)"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "귀사의 서비스에 대해 접수한 보고서 및 결정 사항"
   },
   "GCQOx0": {
     "defaultMessage": "다음 화면에서 결제하세요. 결제가 확인되면 기기가 부팅됩니다."
@@ -910,6 +982,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "유입되는"
+  },
+  "H5+NAX": {
+    "defaultMessage": "균형"
   },
   "H7iwrN": {
     "defaultMessage": "기기란 등록된 공개 키 하나를 뜻합니다. 휴대폰, 노트북, 라우터 등이 그에 해당합니다. 최대 {count,plural,one{# 장치} other{# 장치}} 한 요금제에 등록되어 있으며, 제거한 기기는 해당 슬롯을 비워줍니다."
@@ -977,6 +1052,9 @@
   "Id24hd": {
     "defaultMessage": "이름 *"
   },
+  "IeUH3/": {
+    "defaultMessage": "환불"
+  },
   "IiNYda": {
     "defaultMessage": "그 안에 내장하세요. {regions}."
   },
@@ -988,6 +1066,9 @@
   },
   "IvjoDS": {
     "defaultMessage": "연결됨"
+  },
+  "Iw8/zq": {
+    "defaultMessage": "서비스 종료"
   },
   "J+dIsA": {
     "defaultMessage": "구독 서비스"
@@ -1010,8 +1091,17 @@
   "JH4wUD": {
     "defaultMessage": "저장됨 ✓"
   },
+  "JQZCRR": {
+    "defaultMessage": "우리가 어떻게 찾았는지"
+  },
+  "JV8/uB": {
+    "defaultMessage": "당사 회신: 결정 유지"
+  },
   "JVClQM": {
     "defaultMessage": "LNVPS 서비스 상태 및 가동 시간"
+  },
+  "JXdbo8": {
+    "defaultMessage": "완료"
   },
   "Ja58kB": {
     "defaultMessage": "릴레이를 배치하세요. {price} 매월"
@@ -1022,11 +1112,17 @@
   "JcmOUh": {
     "defaultMessage": "직접 노스트르 릴레이를 운영하세요. {price} 매달 자체 호스트 이름으로 TLS 및 스토리지를 포함하여 몇 분 동안 사용 가능합니다."
   },
+  "JfG49w": {
+    "defaultMessage": "열기"
+  },
   "JiCBWy": {
     "defaultMessage": "선택한 키로 SSH에 연결합니다."
   },
   "Jm+fih": {
     "defaultMessage": "비활성 상태입니다."
+  },
+  "Jqk9V7": {
+    "defaultMessage": "보내기 {ticker} 이 주소로 15분 이내에 보내야 합니다. 비트코인으로 스왑되며, 해당 거래가 확정되면 수신된 비트코인 비율에 비례하여 시간 크레딧이 적립됩니다."
   },
   "JuR4mj": {
     "defaultMessage": "언제든 원하는 금액 결제, 시간이 비례하여 추가됩니다"
@@ -1039,6 +1135,12 @@
   },
   "K3r6DQ": {
     "defaultMessage": "삭제하세요."
+  },
+  "K4nZtw": {
+    "defaultMessage": "서비스가 제한됩니다"
+  },
+  "K661xm": {
+    "defaultMessage": "거래 서비스는 FixedFloat에서 제공됩니다. 주문을 생성하시면 FixedFloat의 규칙에 동의하신 것으로 간주됩니다."
   },
   "KAL6xF": {
     "defaultMessage": "키 이름"
@@ -1094,6 +1196,9 @@
   "LX6weZ": {
     "defaultMessage": "미결제 상태"
   },
+  "LaLTJR": {
+    "defaultMessage": "조정"
+  },
   "Lc72Gm": {
     "defaultMessage": "새로운 대화 시작"
   },
@@ -1112,8 +1217,14 @@
   "LqFfRA": {
     "defaultMessage": "국가"
   },
+  "Lvmmrd": {
+    "defaultMessage": "비트코인으로 스왑 완료, 확인 후 크레딧 적립"
+  },
   "LwGAe6": {
     "defaultMessage": "또한 LNVPS에서도 제공됩니다."
+  },
+  "M59JhX": {
+    "defaultMessage": "매뉴얼"
   },
   "M8ORKW": {
     "defaultMessage": "설정하는 데 시간이 조금 걸립니다. 보통 1분 정도 소요됩니다. 설정이 완료되면 엔드포인트가 나타납니다."
@@ -1129,6 +1240,9 @@
   },
   "MJ2jZQ": {
     "defaultMessage": "총계"
+  },
+  "MOEWbV": {
+    "defaultMessage": "금액 (sats)"
   },
   "MTnSwY": {
     "defaultMessage": "예: 세금"
@@ -1153,6 +1267,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "확인합니다."
+  },
+  "N2W+L6": {
+    "defaultMessage": "크레딧 추가"
   },
   "N3Pob8": {
     "defaultMessage": "계정과 관련하여 무엇이든 문의해 주세요, 청구, 부팅되지 않는 VM, 특정 과금 내역 등. 환불, 연장 또는 삭제의 경우, 문의 양식을 대신 이용해 주세요."
@@ -1211,6 +1328,9 @@
   "ORGv1Q": {
     "defaultMessage": "생성됨"
   },
+  "OcZR/l": {
+    "defaultMessage": "계정 크레딧으로 결제"
+  },
   "OeOwwQ": {
     "defaultMessage": "삭제 {name}? 해당 키와 주소가 해제되며, 그 기기의 설정(config)은 더 이상 작동하지 않게 됩니다."
   },
@@ -1243,6 +1363,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "생각 중…"
+  },
+  "P6MssC": {
+    "defaultMessage": "보내기만 {ticker} 15분 이내에 올바른 네트워크로. 비트코인으로 스왑되며, 해당 거래가 확정되면 입금된 금액이 잔고에 반영됩니다."
   },
   "P7PLVj": {
     "defaultMessage": "날짜"
@@ -1310,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "중앙 처리 장치"
   },
+  "QkYbYl": {
+    "defaultMessage": "담당자가 검토 후 이메일로 회신해 드리겠습니다."
+  },
   "QlsDcr": {
     "defaultMessage": "행동하다 / 조치하다"
   },
@@ -1363,6 +1489,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "매달"
+  },
+  "RydJAB": {
+    "defaultMessage": "모네로"
   },
   "RzQOmD": {
     "defaultMessage": "제 이메일이 필요하신가요?"
@@ -1420,6 +1549,9 @@
   },
   "T1/en5": {
     "defaultMessage": "ID: {id}"
+  },
+  "T3lqx5": {
+    "defaultMessage": "백업"
   },
   "T4VxQN": {
     "defaultMessage": "불러오는 중..."
@@ -1556,11 +1688,17 @@
   "VJ4xwX": {
     "defaultMessage": "최신 뉴스 및 제품 업데이트"
   },
+  "VJx71I": {
+    "defaultMessage": "계정 크레딧으로 결제되었습니다. 지금 적용 중입니다."
+  },
   "VKfWR3": {
     "defaultMessage": "권장"
   },
   "VL/B6x": {
     "defaultMessage": "your@email.com"
+  },
+  "VL1Y/1": {
+    "defaultMessage": "보고서를 찾을 수 없습니다."
   },
   "VLRCfi": {
     "defaultMessage": "최근 30일 동안의 가동 시간: {uptime}"
@@ -1667,14 +1805,23 @@
   "XdcFgv": {
     "defaultMessage": "Nostr 릴레이 서버를 관리합니다. 라이트닝 네트워크로 결제하세요."
   },
+  "Xy/hId": {
+    "defaultMessage": "계좌 크레딧"
+  },
   "XyIrRh": {
     "defaultMessage": "비트코인으로 결제"
+  },
+  "Xyh2gH": {
+    "defaultMessage": "결정"
   },
   "Y+LcmX": {
     "defaultMessage": "DNS 설정을 변경할 수 없는 경우, 프록시 설정을 사용하세요. {path} 기존 서버에서 {target}"
   },
   "Y/tMXU": {
     "defaultMessage": "결제를 기다리는 중입니다. 결제가 확인되면 자동으로 적용됩니다."
+  },
+  "Y8HR16": {
+    "defaultMessage": "보고서가 귀하에게 전달되었습니다."
   },
   "YCAVvS": {
     "defaultMessage": "구매할 때 지역을 반드시 선택해야 하나요?"
@@ -1700,6 +1847,9 @@
   "YWjrby": {
     "defaultMessage": "계정 관련 알림만 발송하며, 예를 들어 가상 머신의 사용 기간 만료 알림 등이 있습니다. 마케팅 메시지는 절대 보내지 않습니다."
   },
+  "YXDqQm": {
+    "defaultMessage": "아직 백업이 없습니다."
+  },
   "YdQxfw": {
     "defaultMessage": "고객 지원팀에 문의하세요."
   },
@@ -1717,6 +1867,9 @@
   },
   "Ysr8td": {
     "defaultMessage": "획득한"
+  },
+  "Yukb/e": {
+    "defaultMessage": "보고서 #{id}"
   },
   "YyojwF": {
     "defaultMessage": "구성 변경 사항:"
@@ -1751,6 +1904,12 @@
   "ZewCpX": {
     "defaultMessage": "도메인 추가"
   },
+  "ZgQnsi": {
+    "defaultMessage": "모든 견적서는 청구서에서 허용하는 한도 내에서 최대한 크레딧을 적용하며, 나머지 금액은 직접 결제됩니다. 자동 갱신의 경우, 크레딧으로 전체 갱신 비용을 충당할 수 있을 때 크레딧이 적용됩니다."
+  },
+  "ZjV1o9": {
+    "defaultMessage": "우리가 직접 찾았다."
+  },
   "ZmIH8d": {
     "defaultMessage": "모든 기기에서 로그아웃"
   },
@@ -1765,6 +1924,9 @@
   },
   "a60eIK": {
     "defaultMessage": "저장하면 구성이 다시 적용되고 앱이 재시작됩니다."
+  },
+  "aE53im": {
+    "defaultMessage": "충전"
   },
   "aLe15X": {
     "defaultMessage": "원하는 방식으로 결제하세요."
@@ -1817,6 +1979,9 @@
   "bhfNWq": {
     "defaultMessage": "암호화된 메시지를 여기에 붙여넣으세요."
   },
+  "bk6Lnx": {
+    "defaultMessage": "계좌 크레딧"
+  },
   "bneNNt": {
     "defaultMessage": "{amount} 꺼짐{code,select,none{} other{ · {code}}}"
   },
@@ -1844,6 +2009,9 @@
   "cQtv0G": {
     "defaultMessage": "{n}개 실행 중"
   },
+  "cXAlMR": {
+    "defaultMessage": "예약됨"
+  },
   "cZDydd": {
     "defaultMessage": "{count,plural,one{# 릴레이 구현} other{# 릴레이 구현}}부터 {price} 매달."
   },
@@ -1852,6 +2020,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "VM: {name}"
+  },
+  "chO5f1": {
+    "defaultMessage": "보내기만 {ticker} 올바른 네트워크에서만. 그 외에는 모두 유실된다."
   },
   "ciFSHC": {
     "defaultMessage": "지급하다 {amount}"
@@ -2042,6 +2213,9 @@
   "gL1jHz": {
     "defaultMessage": "영구 저장 공간, 각 릴레이별 크기"
   },
+  "gNrB5A": {
+    "defaultMessage": "이 컴포넌트는 코인 결제만 지원합니다."
+  },
   "gPsMm7": {
     "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
   },
@@ -2062,6 +2236,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "콘솔"
+  },
+  "gfVtOu": {
+    "defaultMessage": "비트코인 또는 지원되는 코인으로 결제하시면 해당 금액이 잔액에 추가됩니다."
   },
   "gjvoQG": {
     "defaultMessage": "사이즈 조정"
@@ -2095,6 +2272,9 @@
   },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello 또는 보안 키로 로그인하세요. 모든 계정에 패스키를 추가할 수 있습니다."
+  },
+  "hsV9Bt": {
+    "defaultMessage": "서비스를 제한하거나 정지하면 그 결정이 근거가 된 사실과 이유와 함께 여기에 표시됩니다. 모든 결정에 대해 6개월 동안 이의를 제기할 수 있습니다. {terms}의 6.1항을 참조하세요."
   },
   "huqKGl": {
     "defaultMessage": "계정 만들기"
@@ -2159,6 +2339,9 @@
   "jOo6oG": {
     "defaultMessage": "가상 머신 액세스 키 관리"
   },
+  "jS6bEf": {
+    "defaultMessage": "주문 선입금 잔액"
+  },
   "jUqYir": {
     "defaultMessage": "추가됨 {date}"
   },
@@ -2180,6 +2363,12 @@
   "jmVweB": {
     "defaultMessage": "SSH 키를 불러오는 중..."
   },
+  "jpvXxP": {
+    "defaultMessage": "이 결정에 이의를 제기할 수 있는 6개월의 기간이 종료되었습니다."
+  },
+  "jsrdVV": {
+    "defaultMessage": "테더 (트론 기반 USDT)"
+  },
   "jtkU3K": {
     "defaultMessage": "변환"
   },
@@ -2200,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "기기 추가"
+  },
+  "kGvjzB": {
+    "defaultMessage": "서비스가 복구되었습니다."
   },
   "kJpuxD": {
     "defaultMessage": "정기 서비스 및 청구"
@@ -2267,6 +2459,9 @@
   "lQNVjN": {
     "defaultMessage": "배포하다 {name} LNVPS에서 관리되는 앱으로, 라이트닝, 비트코인 또는 신용카드로 결제하세요."
   },
+  "lQjSeV": {
+    "defaultMessage": "잔액을 충전하여 신규 주문, 갱신 및 업그레이드에 사용하세요."
+  },
   "lYEj5M": {
     "defaultMessage": "관리되는 앱"
   },
@@ -2312,6 +2507,9 @@
   "mJPBXd": {
     "defaultMessage": "암호화된 메시지(복사하여 이메일에 포함):"
   },
+  "mLvz+r": {
+    "defaultMessage": "크레딧"
+  },
   "mMug3Z": {
     "defaultMessage": "획득했습니다. {currency}"
   },
@@ -2336,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "결제가 접수되었습니다, 확인을 기다리는 중입니다. 이 페이지를 나가셔도 됩니다."
   },
+  "mm+Sp2": {
+    "defaultMessage": "당사 답변: 결정 번복"
+  },
   "mtEKFV": {
     "defaultMessage": "처리 중..."
   },
@@ -2344,6 +2545,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "노드 목록 #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "청구서가 10분 후 만료됩니다. 결제 완료 시 잔액이 즉시 갱신됩니다."
   },
   "n7yYXG": {
     "defaultMessage": "서비스"
@@ -2384,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "VPS 로딩 중..."
   },
+  "np6bff": {
+    "defaultMessage": "수신한 보고에 따라"
+  },
   "nrTBF4": {
     "defaultMessage": "호스트 종료 예정"
+  },
+  "nszMdp": {
+    "defaultMessage": "신고 내역"
   },
   "nvJ5bE": {
     "defaultMessage": "원클릭으로 Docker 앱 실행"
@@ -2417,6 +2627,9 @@
   "oGiUkp": {
     "defaultMessage": "설정된 항목이 없습니다. 하나 추가하세요."
   },
+  "oH0ANW": {
+    "defaultMessage": "당신의 도전"
+  },
   "oIPESx": {
     "defaultMessage": "만료 경고, 결제 영수증 및 프로비저닝 알림은 Nostr DM 채널이 활성화된 동안 여기에 수신됩니다. {settings}. 이 수신함은 회신 모니터링이 되지 않습니다, 담당자에게 연결하려면, 사용하세요 {support}."
   },
@@ -2441,6 +2654,9 @@
   "odXlk8": {
     "defaultMessage": "로그인하세요."
   },
+  "ohE0sW": {
+    "defaultMessage": "이더리움"
+  },
   "ooCqJa": {
     "defaultMessage": "안에 {region}디스크는 최대까지 {hdd} HDD 또는 {ssd} SSD, 함께 {cpu} 가상 CPU 및 {memory} 가장 높은 지점."
   },
@@ -2449,6 +2665,12 @@
   },
   "oxq33u": {
     "defaultMessage": "가장 적합한 것은"
+  },
+  "oyKw8D": {
+    "defaultMessage": "라이트코인"
+  },
+  "p2r80F": {
+    "defaultMessage": "서비스 중단"
   },
   "p4N05H": {
     "defaultMessage": "업로드"
@@ -2486,6 +2708,9 @@
   "q/uwLT": {
     "defaultMessage": "멈추세요."
   },
+  "q2BAvD": {
+    "defaultMessage": "이 주소로 온체인 비트코인을 원하는 금액만큼 송금해 주세요. 트랜잭션이 확인되면 도착한 금액이 잔액에 입금됩니다."
+  },
   "qA0DQR": {
     "defaultMessage": "런던에서 VPS 호스팅을 이용하세요. 원하는 CPU, 메모리, 디스크를 선택하고, 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
@@ -2509,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "대역폭 변경 사항은 결제가 확인되는 즉시 재시작 없이 적용됩니다."
+  },
+  "qewbDw": {
+    "defaultMessage": "근거가 된 법률 또는 약관 조항"
   },
   "qkLHOL": {
     "defaultMessage": "SSH 키를 삭제하시겠습니까?{name}물음표."
@@ -2536,6 +2764,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "결제 정보"
+  },
+  "rMgF34": {
+    "defaultMessage": "지금 백업하세요"
   },
   "rRJFl8": {
     "defaultMessage": "연결하려면 무엇이 필요한가요?"
@@ -2708,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "사용자 지정 수신자 키를 사용하세요."
   },
+  "v58ab1": {
+    "defaultMessage": "도전 보내기"
+  },
   "vIkTT1": {
     "defaultMessage": "릴레이가 핵심이라면 Managed App이 정답입니다. 수정된 빌드를 실행하거나, 다른 서비스를 함께 배치하거나, 서버를 직접 관리하고 싶다면, 당사의 <a>VPS 호스팅</a>은 더블린, 런던, 퀘벡에서 시작하며, 모든 플랜에 월 최소 1TB의 전송량과 정적 IPv4 및 IPv6가 포함됩니다."
   },
@@ -2720,8 +2954,14 @@
   "vRG4WY": {
     "defaultMessage": "이 페이지를 떠나도 안전합니다. 결제는 청구 내역에 표시되며 확인되는 즉시 적용됩니다."
   },
+  "vSTolh": {
+    "defaultMessage": "{date}까지 이 결정에 이의를 제기할 수 있습니다. 법원에 소송을 제기할 수 있는 권리도 그대로 유지됩니다."
+  },
   "vWsXtg": {
     "defaultMessage": "결제 생성 중…"
+  },
+  "vXCeIi": {
+    "defaultMessage": "실패"
   },
   "vahWHk": {
     "defaultMessage": "네, 맞습니다. CNAME 레코드를 설정하면 인증서가 자동으로 발급됩니다(DNS 확인 후)."
@@ -2801,6 +3041,9 @@
   "xQ8iOj": {
     "defaultMessage": "아직 구독 중인 서비스가 없습니다."
   },
+  "xRTG5Q": {
+    "defaultMessage": "정확히 보내다"
+  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2851,6 +3094,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "LNVPS에 앱을 배포하세요. 자체 호스트 이름, TLS 및 스토리지를 갖춘 상태로 몇 분 안에 배포가 완료됩니다. 운영체제 패치는 필요 없습니다. 오늘 Nostr 릴레이 및 Blossom 미디어 서버를 사용해 보세요."
+  },
+  "ySPSCo": {
+    "defaultMessage": "내 잔액을 자동으로 사용"
   },
   "yUD6jT": {
     "defaultMessage": "몇 분 정도 소요됩니다. 결제가 완료되면 즉시 처리됩니다."

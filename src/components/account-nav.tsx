@@ -70,6 +70,11 @@ const SECTIONS: Array<NavSection> = [
         hint: <FormattedMessage defaultMessage="Prepaid balance for orders" />,
       },
       {
+        to: "/account/abuse",
+        label: <FormattedMessage defaultMessage="Abuse Reports" />,
+        hint: <FormattedMessage defaultMessage="Reports about your services" />,
+      },
+      {
         to: "/account/settings",
         label: <FormattedMessage defaultMessage="Settings" />,
         hint: (

@@ -32,6 +32,9 @@
   "+NBJh2": {
     "defaultMessage": "متابعةً لمحادثتك السابقة، لا يزال لدى الوكيل السياق، على الرغم من أن الرسائل أعلاه لم تعد تُعرض. ابدأ محادثة جديدة إذا كنت تفضّل البدء من الصفر."
   },
+  "+ORUuS": {
+    "defaultMessage": "لا توجد تقارير عن خدماتك."
+  },
   "+QO7qN": {
     "defaultMessage": "الخيار الأكثر أمانًا: مفتاحك الخاص لا يلمس المتصفح أبدًا. الصق المفتاح العام من الأمر wg pubkey، أو من نفق فارغ في تطبيق WireGuard."
   },
@@ -55,6 +58,9 @@
   },
   "+sQCsu": {
     "defaultMessage": "إتمام الدفع."
+  },
+  "+whhvl": {
+    "defaultMessage": "ما استند إليه"
   },
   "/0TOL5": {
     "defaultMessage": "المبلغ"
@@ -98,6 +104,12 @@
   "/tiBYY": {
     "defaultMessage": "المتابعة باستخدام {provider}"
   },
+  "00LcfG": {
+    "defaultMessage": "تحميل المزيد"
+  },
+  "03d8yD": {
+    "defaultMessage": "العودة إلى تقاريرك"
+  },
   "0Azlrb": {
     "defaultMessage": "يدير"
   },
@@ -137,6 +149,9 @@
   "0t1qvq": {
     "defaultMessage": "أضف قاعدة."
   },
+  "111qQK": {
+    "defaultMessage": "المصروف"
+  },
   "12+5NG": {
     "defaultMessage": "Pro-rated upgrade"
   },
@@ -164,6 +179,9 @@
   "1aBLDj": {
     "defaultMessage": "ادفع من أي محفظة تدعم شبكة لايتنينغ لتجديد الاشتراك."
   },
+  "1giEBC": {
+    "defaultMessage": "اكتمل التبادل، وبانتظار تأكيد البيتكوين. يمكنك مغادرة هذه الصفحة بأمان."
+  },
   "1kZ3H0": {
     "defaultMessage": "عرض المعاملة"
   },
@@ -190,6 +208,9 @@
   },
   "2Aa625": {
     "defaultMessage": "في {region}، يرتفع القرص إلى {disk}مع {cpu} وحدة معالجة مركزية افتراضية {memory} في الطرف العلوي."
+  },
+  "2J5AyF": {
+    "defaultMessage": "رصيد حسابك يغطي هذا الطلب بالكامل، لذا لا يوجد أي مبلغ آخر عليك سداده."
   },
   "2QrTo0": {
     "defaultMessage": "طلب تخصيص نطاق عنوان بروتوكول الإنترنت الجديد."
@@ -221,11 +242,17 @@
   "2xMlQF": {
     "defaultMessage": "قم بتشغيل عقدة بيتكوين كاملة على خادم افتراضي خاص (VPS) مع مساحة كافية لتخزين سلسلة الكتل. ادفع باستخدام البيتكوين عبر شبكة \"لايتنينغ\" أو مباشرةً على سلسلة الكتل."
   },
+  "32rBNK": {
+    "defaultMessage": "شروط الخدمة"
+  },
   "36aVfS": {
     "defaultMessage": "رسالة مباشرة على منصة نوستر."
   },
   "375584": {
     "defaultMessage": "يتطلب دفع المبلغ."
+  },
+  "3FC4qE": {
+    "defaultMessage": "لم يُتَّخذ أي إجراء"
   },
   "3GLHv9": {
     "defaultMessage": "مصادقة"
@@ -338,6 +365,9 @@
   "5ow6dg": {
     "defaultMessage": "واتساب"
   },
+  "5q3qC0": {
+    "defaultMessage": "تنزيل"
+  },
   "5uQfFj": {
     "defaultMessage": "ما هو نوستر؟"
   },
@@ -358,6 +388,9 @@
   },
   "6Tps09": {
     "defaultMessage": "غير نشط"
+  },
+  "6eN2z4": {
+    "defaultMessage": "اطعن في هذا القرار"
   },
   "6hEevT": {
     "defaultMessage": "عيّن الإعدادات الافتراضية."
@@ -418,6 +451,9 @@
   },
   "7fbBqG": {
     "defaultMessage": "إلغاء الدفع."
+  },
+  "7i28vb": {
+    "defaultMessage": "ادفع بالعملات المشفرة"
   },
   "7jdMye": {
     "defaultMessage": "إيقاف التشغيل يحافظ على بياناتك."
@@ -482,6 +518,9 @@
   "8ecw1u": {
     "defaultMessage": "مقابض"
   },
+  "8evTa5": {
+    "defaultMessage": "قيمة {amount}"
+  },
   "8lCjAM": {
     "defaultMessage": "أولوية"
   },
@@ -490,6 +529,9 @@
   },
   "8xIysb": {
     "defaultMessage": "قم بالتمديد الآن."
+  },
+  "8zIOy4": {
+    "defaultMessage": "تقارير عن خدماتك"
   },
   "90f82/": {
     "defaultMessage": "ابدأ تشغيل الجهاز الظاهري."
@@ -554,6 +596,9 @@
   "AGa2G5": {
     "defaultMessage": "عندما تريد الجهاز بأكمله."
   },
+  "AIgHom": {
+    "defaultMessage": "لا توجد حركة ائتمانية بعد."
+  },
   "AL9+3/": {
     "defaultMessage": "لم يتم العثور على اشتراك لتجديده لهذه الآلة الافتراضية."
   },
@@ -578,8 +623,20 @@
   "AfmrGS": {
     "defaultMessage": "أرسل الرمز."
   },
+  "AkCxS/": {
+    "defaultMessage": "السبب"
+  },
+  "AozuFZ": {
+    "defaultMessage": "على السلسلة"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} اقرأ"
+  },
+  "B1JEDn": {
+    "defaultMessage": "يقوم النسخ الاحتياطي بنسخ بيانات تطبيقك إلى مساحة تخزين LNVPS. قم بتنزيله للاحتفاظ بنسخة خاصة بك."
+  },
+  "B1d/RG": {
+    "defaultMessage": "تم استلام الدفع. تم تحديث رصيدك."
   },
   "B4reHi": {
     "defaultMessage": "أحداث تاريخية"
@@ -632,6 +689,9 @@
   "BrtgIv": {
     "defaultMessage": "تحدث مع موظف دعم LNVPS حول الخطط والأسعار، والمناطق، وأنظمة التشغيل، أو كيفية عمل الدفع عبر لايتنينغ. سجّل الدخول أولاً إذا كان سؤالك يتعلق بآلة افتراضية قائمة أو عملية دفع، حتى يتمكن من الاطلاع على حسابك."
   },
+  "BtKQM7": {
+    "defaultMessage": "لم نتخذ قراراً بشأن هذا التقرير بعد."
+  },
   "Bwqhmd": {
     "defaultMessage": "جدار الحماية"
   },
@@ -640,6 +700,9 @@
   },
   "C/Kq27": {
     "defaultMessage": "يعيد تشغيل الجهاز الافتراضي"
+  },
+  "CAdhz6": {
+    "defaultMessage": "المادة 6 من شروط الخدمة الخاصة بنا"
   },
   "CBHTGe": {
     "defaultMessage": "Credit for time already paid"
@@ -655,6 +718,9 @@
   },
   "CYP/Jx": {
     "defaultMessage": "اطلب المساعدة من الفريق."
+  },
+  "Cnm0QA": {
+    "defaultMessage": "في قائمة الانتظار"
   },
   "Cououe": {
     "defaultMessage": "سجّل الدخول لتفعيل هذا التطبيق."
@@ -833,6 +899,9 @@
   "FoHB5c": {
     "defaultMessage": "جدد الاشتراك."
   },
+  "Fv1ZSz": {
+    "defaultMessage": "مغلق"
+  },
   "G/yZLu": {
     "defaultMessage": "احذف"
   },
@@ -853,6 +922,9 @@
   },
   "GBAnXy": {
     "defaultMessage": "وحدة النقل القصوى"
+  },
+  "GCFQ7V": {
+    "defaultMessage": "التقارير التي استلمناها بشأن خدماتكم وما قررناه."
   },
   "GCQOx0": {
     "defaultMessage": "ادفع في الشاشة التالية. يبدأ الجهاز بالتشغيل بمجرد تأكيد الدفع."
@@ -910,6 +982,9 @@
   },
   "H4Ucn0": {
     "defaultMessage": "وارد"
+  },
+  "H5+NAX": {
+    "defaultMessage": "توازن"
   },
   "H7iwrN": {
     "defaultMessage": "الجهاز هو مفتاح عام واحد مسجَّل: هاتفك، أو حاسوبك المحمول، أو جهاز التوجيه الخاص بك. بحد أقصى {count,plural,one{# جهاز} other{# أجهزة}} على خطة واحدة، والجهاز الذي تزيله يحرّر خانته."
@@ -977,6 +1052,9 @@
   "Id24hd": {
     "defaultMessage": "الاسم *"
   },
+  "IeUH3/": {
+    "defaultMessage": "استرداد"
+  },
   "IiNYda": {
     "defaultMessage": "قم بدمجه فيه. {regions}."
   },
@@ -988,6 +1066,9 @@
   },
   "IvjoDS": {
     "defaultMessage": "متصل"
+  },
+  "Iw8/zq": {
+    "defaultMessage": "تم إنهاء الخدمة"
   },
   "J+dIsA": {
     "defaultMessage": "الاشتراكات"
@@ -1010,8 +1091,17 @@
   "JH4wUD": {
     "defaultMessage": "تم الحفظ ✓"
   },
+  "JQZCRR": {
+    "defaultMessage": "كيف عثرنا عليه"
+  },
+  "JV8/uB": {
+    "defaultMessage": "ردّنا: تمّ تثبيت القرار"
+  },
   "JVClQM": {
     "defaultMessage": "حالة خدمة LNVPS ووقت التشغيل."
+  },
+  "JXdbo8": {
+    "defaultMessage": "تم"
   },
   "Ja58kB": {
     "defaultMessage": "انشر جهاز الإرسال والاستقبال الخاص بك، بدءًا من {price} في الشهر"
@@ -1022,11 +1112,17 @@
   "JcmOUh": {
     "defaultMessage": "قم بتشغيل خادم النوسترا الخاص بك من خلال {price} شهريًا، مع زيادة في عدد الدقائق المتاحة على اسم النطاق الخاص به، بالإضافة إلى تفعيل بروتوكول TLS وتوفير مساحة تخزين."
   },
+  "JfG49w": {
+    "defaultMessage": "فتح"
+  },
   "JiCBWy": {
     "defaultMessage": "اتصل عبر SSH باستخدام المفتاح الذي اخترته."
   },
   "Jm+fih": {
     "defaultMessage": "غير نشط."
+  },
+  "Jqk9V7": {
+    "defaultMessage": "إرسال {ticker} إلى هذا العنوان خلال 15 دقيقة. يتم تبادلها بالبيتكوين، ويُحتسب وقتك في رصيدك بمجرد تأكيد المعاملة، بما يتناسب مع كمية البيتكوين المستلمة."
   },
   "JuR4mj": {
     "defaultMessage": "ادفع أي مبلغ في أي وقت، يُضاف الوقت بالتناسب"
@@ -1039,6 +1135,12 @@
   },
   "K3r6DQ": {
     "defaultMessage": "حذف"
+  },
+  "K4nZtw": {
+    "defaultMessage": "الخدمة مقيدة"
+  },
+  "K661xm": {
+    "defaultMessage": "تُقدَّم خدمة التحويل من قِبل FixedFloat. يُعدّ إنشاء طلب موافقةً منك على شروط FixedFloat."
   },
   "KAL6xF": {
     "defaultMessage": "اسم المفتاح"
@@ -1094,6 +1196,9 @@
   "LX6weZ": {
     "defaultMessage": "الدفعة قيد الانتظار."
   },
+  "LaLTJR": {
+    "defaultMessage": "تعديل"
+  },
   "Lc72Gm": {
     "defaultMessage": "ابدأ محادثة جديدة"
   },
@@ -1112,8 +1217,14 @@
   "LqFfRA": {
     "defaultMessage": "البلد *"
   },
+  "Lvmmrd": {
+    "defaultMessage": "تم التحويل إلى بيتكوين، يُضاف الرصيد بعد التأكيد"
+  },
   "LwGAe6": {
     "defaultMessage": "وكذلك على موقع LNVPS."
+  },
+  "M59JhX": {
+    "defaultMessage": "دليل"
   },
   "M8ORKW": {
     "defaultMessage": "الإعداد، يستغرق هذا عادةً دقيقة واحدة. يظهر البرنامج بمجرد تشغيله."
@@ -1129,6 +1240,9 @@
   },
   "MJ2jZQ": {
     "defaultMessage": "المجموع"
+  },
+  "MOEWbV": {
+    "defaultMessage": "المبلغ (سات)"
   },
   "MTnSwY": {
     "defaultMessage": "مثال: ضريبة"
@@ -1153,6 +1267,9 @@
   },
   "N2IrpM": {
     "defaultMessage": "أكّد."
+  },
+  "N2W+L6": {
+    "defaultMessage": "إضافة رصيد"
   },
   "N3Pob8": {
     "defaultMessage": "اسأل عن أي شيء يتعلق بحسابك، الفوترة، أو جهاز افتراضي لا يُشغَّل، أو سبب عملية خصم. أما بخصوص استرداد المبالغ أو التمديدات أو الحذف، فاستخدم نموذج التواصل بدلاً من ذلك."
@@ -1211,6 +1328,9 @@
   "ORGv1Q": {
     "defaultMessage": "تم إنشاؤه"
   },
+  "OcZR/l": {
+    "defaultMessage": "ادفع برصيد الحساب"
+  },
   "OeOwwQ": {
     "defaultMessage": "إزالة {name}يتم تحرير مفتاحه وعنوانه، ويتوقف إعداد التكوين على ذلك الجهاز عن العمل."
   },
@@ -1243,6 +1363,9 @@
   },
   "P1QHV0": {
     "defaultMessage": "جارٍ التفكير…"
+  },
+  "P6MssC": {
+    "defaultMessage": "أرسل فقط {ticker} على الشبكة الصحيحة خلال 15 دقيقة. يتم استبدالها ببيتكوين، ويُضاف إلى رصيدك المبلغ الذي يصل بعد تأكيد المعاملة."
   },
   "P7PLVj": {
     "defaultMessage": "تاريخ"
@@ -1310,6 +1433,9 @@
   "QgBuiV": {
     "defaultMessage": "وحدة المعالجة المركزية"
   },
+  "QkYbYl": {
+    "defaultMessage": "سيراجع شخصٌ هذا وسيُردّ عبر البريد الإلكتروني."
+  },
   "QlsDcr": {
     "defaultMessage": "إجراء/فعل"
   },
@@ -1363,6 +1489,9 @@
   },
   "Rw82/V": {
     "defaultMessage": "في الشهر"
+  },
+  "RydJAB": {
+    "defaultMessage": "مونرو"
   },
   "RzQOmD": {
     "defaultMessage": "هل تحتاج إلى بريدي الإلكتروني؟"
@@ -1420,6 +1549,9 @@
   },
   "T1/en5": {
     "defaultMessage": "المعرّف: {id}"
+  },
+  "T3lqx5": {
+    "defaultMessage": "النسخ الاحتياطي"
   },
   "T4VxQN": {
     "defaultMessage": "جاري التحميل…"
@@ -1556,11 +1688,17 @@
   "VJ4xwX": {
     "defaultMessage": "أخبار وتحديثات حول المنتجات"
   },
+  "VJx71I": {
+    "defaultMessage": "تم الدفع من رصيد حسابك. جارٍ تطبيقه الآن."
+  },
   "VKfWR3": {
     "defaultMessage": "موصى به"
   },
   "VL/B6x": {
     "defaultMessage": "عنوان بريدك الإلكتروني"
+  },
+  "VL1Y/1": {
+    "defaultMessage": "لم يتم العثور على التقرير"
   },
   "VLRCfi": {
     "defaultMessage": "نسبة التشغيل خلال الـ 30 يومًا الماضية: {uptime}"
@@ -1667,14 +1805,23 @@
   "XdcFgv": {
     "defaultMessage": "أدِرْ خوادم نوستر. ادفع باستخدام نظام لايتنينغ."
   },
+  "Xy/hId": {
+    "defaultMessage": "رصيد ائتماني"
+  },
   "XyIrRh": {
     "defaultMessage": "الدفع بالبيتكوين"
+  },
+  "Xyh2gH": {
+    "defaultMessage": "القرارات"
   },
   "Y+LcmX": {
     "defaultMessage": "إذا لم تتمكن من تغيير إعدادات نظام أسماء النطاقات (DNS)، فاستخدم خادم وكيل. {path} على الخادم الحالي لديك لـ {target}"
   },
   "Y/tMXU": {
     "defaultMessage": "في انتظار استلام الدفعة. سيتم تطبيق ذلك تلقائيًا بمجرد التأكيد."
+  },
+  "Y8HR16": {
+    "defaultMessage": "تمت إعادة توجيه التقرير إليك"
   },
   "YCAVvS": {
     "defaultMessage": "هل يجب عليّ اختيار منطقة عند الشراء؟"
@@ -1700,6 +1847,9 @@
   "YWjrby": {
     "defaultMessage": "تنبيهات الحساب فقط، مثل تاريخ انتهاء صلاحية الجهاز الظاهري. نحن لا نرسل رسائل تسويقية أبدًا."
   },
+  "YXDqQm": {
+    "defaultMessage": "لا توجد نسخ احتياطية بعد."
+  },
   "YdQxfw": {
     "defaultMessage": "اتصل بالدعم الفني"
   },
@@ -1717,6 +1867,9 @@
   },
   "Ysr8td": {
     "defaultMessage": "تم الحصول عليه / تم كسبﻪ."
+  },
+  "Yukb/e": {
+    "defaultMessage": "تقرير رقم{id}"
   },
   "YyojwF": {
     "defaultMessage": "تغييرات الإعدادات:"
@@ -1751,6 +1904,12 @@
   "ZewCpX": {
     "defaultMessage": "أضف نطاقًا."
   },
+  "ZgQnsi": {
+    "defaultMessage": "يستخدم كل عرض سعر أقصى قدر من الرصيد الذي تسمح به الفاتورة، وتدفع الباقي. أما التجديدات التلقائية فتستخدم الرصيد عندما يغطي كامل قيمة التجديد."
+  },
+  "ZjV1o9": {
+    "defaultMessage": "وجدناه بأنفسنا"
+  },
   "ZmIH8d": {
     "defaultMessage": "تسجيل الخروج من كل الأجهزة"
   },
@@ -1765,6 +1924,9 @@
   },
   "a60eIK": {
     "defaultMessage": "الحفظ يعيد تطبيق الإعدادات ويعيد تشغيل التطبيق."
+  },
+  "aE53im": {
+    "defaultMessage": "شحن"
   },
   "aLe15X": {
     "defaultMessage": "ادفع بالطريقة التي تفضلها."
@@ -1817,6 +1979,9 @@
   "bhfNWq": {
     "defaultMessage": "الصق الرسالة المشفرة هنا..."
   },
+  "bk6Lnx": {
+    "defaultMessage": "رصيد الحساب الدائن"
+  },
   "bneNNt": {
     "defaultMessage": "{amount} إيقاف{code,select,none{} other{ · {code}}}"
   },
@@ -1844,6 +2009,9 @@
   "cQtv0G": {
     "defaultMessage": "{n} قيد التشغيل"
   },
+  "cXAlMR": {
+    "defaultMessage": "مجدول"
+  },
   "cZDydd": {
     "defaultMessage": "{count,plural,zero{# تنفيذ لآلية الترحيل} one{تنفيذ واحد لآلية الترحيل} two{تنفيذان لآلية الترحيل} few{# تنفيذات لآلية الترحيل} many{# تنفيذًا لآلية الترحيل} other{# تنفيذ لآلية الترحيل}}، ابتداءً من {price} في الشهر."
   },
@@ -1852,6 +2020,9 @@
   },
   "cbZ7Ix": {
     "defaultMessage": "الآلة الافتراضية: {name}"
+  },
+  "chO5f1": {
+    "defaultMessage": "أرسل فقط {ticker} على الشبكة الصحيحة. أي شيء آخر ضائع."
   },
   "ciFSHC": {
     "defaultMessage": "ادفع/سدّد {amount}"
@@ -2042,6 +2213,9 @@
   "gL1jHz": {
     "defaultMessage": "تخزين دائم، يتم تحديد حجمه لكل مرحل على حدة."
   },
+  "gNrB5A": {
+    "defaultMessage": "هذا المكوّن يدعم الدفع بالعملات المعدنية فقط."
+  },
   "gPsMm7": {
     "defaultMessage": "قم بتفعيل هذا العامل وأضف مسارًا لـ. {route}"
   },
@@ -2062,6 +2236,9 @@
   },
   "gc+2Z2": {
     "defaultMessage": "وحدة تحكم"
+  },
+  "gfVtOu": {
+    "defaultMessage": "ادفع بالبيتكوين أو أي عملة مدعومة، وسيُضاف المبلغ إلى رصيدك."
   },
   "gjvoQG": {
     "defaultMessage": "تحديد المقاسات"
@@ -2095,6 +2272,9 @@
   },
   "hs3HVz": {
     "defaultMessage": "سجّل الدخول باستخدام Face ID أو Touch ID أو Windows Hello أو مفتاح أمان. يمكنك إضافة مفتاح مرور إلى أي حساب."
+  },
+  "hsV9Bt": {
+    "defaultMessage": "إذا قمنا بتقييد خدمة أو تعليقها، يظهر القرار هنا مع الوقائع والأسباب التي استند إليها. يمكنك الاعتراض على أي قرار لمدة ستة أشهر. راجع القسم 6.1 من {terms}."
   },
   "huqKGl": {
     "defaultMessage": "إنشاء حساب"
@@ -2159,6 +2339,9 @@
   "jOo6oG": {
     "defaultMessage": "إدارة مفاتيح الوصول إلى الأجهزة الافتراضية."
   },
+  "jS6bEf": {
+    "defaultMessage": "الرصيد المدفوع مسبقًا للطلبات"
+  },
   "jUqYir": {
     "defaultMessage": "تمت إضافته. {date}"
   },
@@ -2180,6 +2363,12 @@
   "jmVweB": {
     "defaultMessage": "جارٍ تحميل مفاتيح SSH..."
   },
+  "jpvXxP": {
+    "defaultMessage": "لقد انقضت مهلة الستة أشهر المتاحة للطعن في هذا القرار."
+  },
+  "jsrdVV": {
+    "defaultMessage": "تيسر (USDT على ترون)"
+  },
   "jtkU3K": {
     "defaultMessage": "تحويل"
   },
@@ -2200,6 +2389,9 @@
   },
   "kFWJpj": {
     "defaultMessage": "إضافة جهاز"
+  },
+  "kGvjzB": {
+    "defaultMessage": "تمت استعادة الخدمة"
   },
   "kJpuxD": {
     "defaultMessage": "الخدمات المتكررة والفوترة"
@@ -2267,6 +2459,9 @@
   "lQNVjN": {
     "defaultMessage": "انشر/وزّع {name} كتطبيق مُدار على منصة LNVPS، يمكنك الدفع باستخدام عملة لايتكوين أو عملة بيتكوين أو عن طريق البطاقة."
   },
+  "lQjSeV": {
+    "defaultMessage": "اشحن رصيدك وانفقه على الطلبات الجديدة والتجديدات والترقيات."
+  },
   "lYEj5M": {
     "defaultMessage": "التطبيقات المُدارة"
   },
@@ -2312,6 +2507,9 @@
   "mJPBXd": {
     "defaultMessage": "رسالة مشفرة (انسخها وأرفقها في بريدك الإلكتروني):"
   },
+  "mLvz+r": {
+    "defaultMessage": "ائتمان"
+  },
   "mMug3Z": {
     "defaultMessage": "حصل على / كسب {currency}"
   },
@@ -2336,6 +2534,9 @@
   "mZQl/y": {
     "defaultMessage": "تم استلام الدفعة، في انتظار التأكيد. يمكنك مغادرة هذه الصفحة بأمان."
   },
+  "mm+Sp2": {
+    "defaultMessage": "ردّنا: تم نقض القرار"
+  },
   "mtEKFV": {
     "defaultMessage": "جارٍ المعالجة…"
   },
@@ -2344,6 +2545,9 @@
   },
   "n3LLz7": {
     "defaultMessage": "قائمة العقد #{id}"
+  },
+  "n6re9L": {
+    "defaultMessage": "تنتهي صلاحية الفاتورة خلال 10 دقائق. سيتم تحديث رصيدك فور سدادها."
   },
   "n7yYXG": {
     "defaultMessage": "خدمة"
@@ -2384,8 +2588,14 @@
   "nm81YC": {
     "defaultMessage": "جارٍ تحميل خادم VPS..."
   },
+  "np6bff": {
+    "defaultMessage": "بناءً على التقرير الذي تلقيناه"
+  },
   "nrTBF4": {
     "defaultMessage": "إيقاف المضيف"
+  },
+  "nszMdp": {
+    "defaultMessage": "بلاغات الإساءة"
   },
   "nvJ5bE": {
     "defaultMessage": "تطبيقات Docker بنقرة واحدة."
@@ -2417,6 +2627,9 @@
   "oGiUkp": {
     "defaultMessage": "لم يتم تعيين أي منها، أضف واحدة."
   },
+  "oH0ANW": {
+    "defaultMessage": "تحديك"
+  },
   "oIPESx": {
     "defaultMessage": "تصل إلى هنا تنبيهات انتهاء الصلاحية وإيصالات الدفع وإشعارات التجهيز أثناء تفعيل قناة Nostr DM في {settings}. هذا البريد الوارد غير مُراقَب للردود، للتواصل مع شخص حقيقي، استخدم {support}."
   },
@@ -2441,6 +2654,9 @@
   "odXlk8": {
     "defaultMessage": "تسجيل الدخول"
   },
+  "ohE0sW": {
+    "defaultMessage": "إيثريوم"
+  },
   "ooCqJa": {
     "defaultMessage": "في {region}، يرتفع القرص إلى {hdd} قرص صلب أو {ssd} محرك أقراص الحالة الصلبة، مع {cpu} وحدة معالجة مركزية افتراضية {memory} في الطرف العلوي."
   },
@@ -2449,6 +2665,12 @@
   },
   "oxq33u": {
     "defaultMessage": "الأفضل لـ"
+  },
+  "oyKw8D": {
+    "defaultMessage": "لايتكوين"
+  },
+  "p2r80F": {
+    "defaultMessage": "الخدمة موقوفة"
   },
   "p4N05H": {
     "defaultMessage": "حمّل"
@@ -2486,6 +2708,9 @@
   "q/uwLT": {
     "defaultMessage": "توقف"
   },
+  "q2BAvD": {
+    "defaultMessage": "أرسل أي مبلغ من البيتكوين على السلسلة إلى هذا العنوان. يُضاف إلى رصيدك ما يصل إليك بعد التأكيد."
+  },
   "qA0DQR": {
     "defaultMessage": "خدمة استضافة خوادم افتراضية خاصة (VPS) في لندن. اختر وحدة المعالجة المركزية (CPU) والذاكرة والتخزين. ادفع باستخدام عملة البيتكوين عبر شبكة Lightning أو مباشرة."
   },
@@ -2509,6 +2734,9 @@
   },
   "qYjcyZ": {
     "defaultMessage": "تُطبَّق تغييرات النطاق الترددي بمجرد تأكيد الدفع، دون إعادة تشغيل."
+  },
+  "qewbDw": {
+    "defaultMessage": "القانون أو بند الشروط المعتمد"
   },
   "qkLHOL": {
     "defaultMessage": "هل أنت متأكد من أنك تريد حذف مفتاح SSH؟{name}؟"
@@ -2536,6 +2764,9 @@
   },
   "rF6EmI": {
     "defaultMessage": "تفاصيل الفاتورة"
+  },
+  "rMgF34": {
+    "defaultMessage": "أنشئ نسخة احتياطية الآن"
   },
   "rRJFl8": {
     "defaultMessage": "ماذا أحتاج للاتصال؟"
@@ -2708,6 +2939,9 @@
   "v4Sg0C": {
     "defaultMessage": "استخدم مفتاح المستلم المخصص."
   },
+  "v58ab1": {
+    "defaultMessage": "أرسل التحدي"
+  },
   "vIkTT1": {
     "defaultMessage": "التطبيق المُدار هو الخيار الصحيح عندما يكون الوسيط هو الغاية. إذا أردت تشغيل نسخة معدّلة، أو استضافة خدمات أخرى في نفس الموقع، أو إدارة الخادم بنفسك، فتبدأ <a>استضافة VPS</a> لدينا في دبلن ولندن وكويبك بسعة نقل بيانات لا تقل عن 1 تيرابايت شهريًا، مع عنوان IPv4 وعنوان IPv6 ثابتين في كل باقة."
   },
@@ -2720,8 +2954,14 @@
   "vRG4WY": {
     "defaultMessage": "يمكنك مغادرة هذه الصفحة بأمان، ستظهر الدفعة في سجل الفواتير وسيتم تطبيقها بمجرد تأكيدها."
   },
+  "vSTolh": {
+    "defaultMessage": "يمكنك الاعتراض على هذا القرار حتى {date}. كما تحتفظ بأي حق لديك في اللجوء إلى المحكمة."
+  },
   "vWsXtg": {
     "defaultMessage": "جارٍ إنشاء طريقة الدفع…"
+  },
+  "vXCeIi": {
+    "defaultMessage": "فشل"
   },
   "vahWHk": {
     "defaultMessage": "نعم، وهو اسم مستعار (CNAME)، ويتم إصدار الشهادة تلقائيًا بمجرد حل سجلات نظام أسماء النطاقات (DNS)."
@@ -2801,6 +3041,9 @@
   "xQ8iOj": {
     "defaultMessage": "ليس لديك أي اشتراكات حتى الآن."
   },
+  "xRTG5Q": {
+    "defaultMessage": "أرسل بالضبط"
+  },
   "xUdVjn": {
     "defaultMessage": "Route96"
   },
@@ -2851,6 +3094,9 @@
   },
   "yS/1R0": {
     "defaultMessage": "قم بنشر تطبيق على LNVPS، وسيكون جاهزًا في غضون دقائق، مع اسم نطاق خاص به، وشهادة TLS، ومساحة تخزين، دون الحاجة إلى تحديث نظام التشغيل. تتوفر اليوم خدمات إعادة توجيه Nostr وخوادم الوسائط Blossom."
+  },
+  "ySPSCo": {
+    "defaultMessage": "استخدام رصيدي تلقائيًا"
   },
   "yUD6jT": {
     "defaultMessage": "دقائق. يتم تفعيله مرة واحدة بعد إتمام الدفع."

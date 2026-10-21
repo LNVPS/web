@@ -1,7 +1,7 @@
 # Terms of Service and Acceptable Use
 
 **LNVPS**  
-_Last Updated: October 9, 2026_
+_Last Updated: October 21, 2026_
 
 Welcome to LNVPS, a trading name of Apex Strata Ltd, a company registered in Ireland. These Terms of Service ("Terms") govern your use of our Virtual Private Server (VPS) hosting services, website, and related offerings (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, please do not use our Services.
 
@@ -141,6 +141,7 @@ To exercise the right of withdrawal, contact us at support@lnvps.net with a clea
 - **Your Data**: You retain ownership of data uploaded to your VPS. We do not access it except as needed to provide the Services, to comply with legal obligations, or to investigate a specific abuse report or security incident involving your service. In an investigation we may take a snapshot of your VPS and examine its network traffic, configuration and logs, limited to what is needed to find the source of the problem. The snapshot is deleted when the investigation ends.
 - **Backups**: You are responsible for maintaining backups of your data unless a backup service is included in your plan.
 - **GDPR Compliance**: We process personal data in accordance with the General Data Protection Regulation (GDPR). We collect only the minimal information necessary to provide the Services; accounts may be created without providing personal contact details. For data protection queries, contact support@lnvps.net.
+- **Cryptocurrency Payments**: When you pay in a cryptocurrency other than Bitcoin, the payment is converted by a third-party exchange. For each such order we record your IP address, browser user agent and language preferences, together with the exchange order ID, the coin used and your account. We do this to prevent fraud and meet the exchange's compliance requirements, which is our legitimate interest. We keep these records for 13 months and then delete them. We share them with the exchange only when it makes a documented request about a specific order, or where the law requires it.
 
 ---
 

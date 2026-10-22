@@ -361,7 +361,7 @@ export function NostrRelayHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="Pay how you like" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key: NIP-07 in the browser, NIP-98 for the API." />
+            <FormattedMessage defaultMessage="Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. No personal information required to sign up. Log in with your Nostr key: NIP-07 in the browser, NIP-98 for the API." />
           </p>
           <p className="m-0 max-w-prose text-cyber-text">
             <FormattedMessage defaultMessage="We run our own Lightning node. Your sats do not route through a third-party processor." />

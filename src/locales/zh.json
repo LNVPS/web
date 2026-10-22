@@ -26,9 +26,6 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
-  "+Mo6Oy": {
-    "defaultMessage": "在某个虚拟专用服务器（VPS）上运行一个比特币完整节点。 {regions}可通过闪电网络或链上方式使用比特币支付。从…… {price} 不含增值税。"
-  },
   "+NBJh2": {
     "defaultMessage": "继续您之前的对话，尽管上方消息不再显示，智能体仍保留上下文。如果您想从头开始，可以开启新对话。"
   },
@@ -53,9 +50,6 @@
   "+prida": {
     "defaultMessage": "爱尔兰 VPS，都柏林 VPS，比特币支付。"
   },
-  "+rSMAE": {
-    "defaultMessage": "高性能比特币闪电网络虚拟专用服务器（VPS）托管服务。您可以使用闪电网络、比特币或信用卡支付，无需签订长期合同。"
-  },
   "+sQCsu": {
     "defaultMessage": "完成支付。"
   },
@@ -73,6 +67,9 @@
   },
   "/3HL90": {
     "defaultMessage": "选择一个操作系统镜像并重新安装。当前磁盘将被清除并从头重建。"
+  },
+  "/AJZsl": {
+    "defaultMessage": "部署 {name} 作为 LNVPS 上的托管应用。支持使用闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付。"
   },
   "/GCoTA": {
     "defaultMessage": "清楚；清晰；明了"
@@ -239,9 +236,6 @@
   "2nfKZI": {
     "defaultMessage": "我之后可以更换中继软件吗？"
   },
-  "2xMlQF": {
-    "defaultMessage": "在虚拟专用服务器（VPS）上运行一个比特币完整节点，并确保有足够的存储空间来存储整个区块链。您可以通过闪电网络或直接链上方式支付比特币。"
-  },
   "32rBNK": {
     "defaultMessage": "服务条款"
   },
@@ -320,6 +314,9 @@
   "4X/Ixq": {
     "defaultMessage": "已解密的消息："
   },
+  "4b360Q": {
+    "defaultMessage": "我们的都柏林站点。打造你想要的机器，用比特币、门罗币、莱特币或以太币支付。"
+  },
   "4cMKIO": {
     "defaultMessage": "定期续订的套餐，可确保您的服务持续有效。"
   },
@@ -385,6 +382,9 @@
   },
   "6HDvaQ": {
     "defaultMessage": "之后每月"
+  },
+  "6Q4hDQ": {
+    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与价格、可用区域、操作系统，或如何使用闪电网络、门罗币、莱特币或以太坊进行支付。如果您的问题涉及已有的虚拟机或付款，请先登录，以便客服查询您的账户。"
   },
   "6Tps09": {
     "defaultMessage": "未激活；不活跃"
@@ -629,6 +629,9 @@
   "AozuFZ": {
     "defaultMessage": "链上"
   },
+  "Ap1nXa": {
+    "defaultMessage": "数分钟即可完成部署。支持闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付。无需签订长期合约。"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} 阅读"
   },
@@ -686,9 +689,6 @@
   "BnvK83": {
     "defaultMessage": "{price} 起。"
   },
-  "BrtgIv": {
-    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与价格、区域、操作系统，或如何使用 Lightning 支付。如果您的问题涉及现有虚拟机或付款，请先登录，以便客服查询您的账户。"
-  },
   "BtKQM7": {
     "defaultMessage": "我们尚未就这份报告做出决定。"
   },
@@ -724,6 +724,9 @@
   },
   "Cououe": {
     "defaultMessage": "登录以部署此应用程序。"
+  },
+  "Cq/8po": {
+    "defaultMessage": "在 VPS 上运行比特币全节点，预留充足空间以存储区块链数据。支持通过闪电网络或链上以比特币支付，也可使用门罗币、莱特币或以太坊付款。"
   },
   "CrzPmt": {
     "defaultMessage": "租期已到期，续费以保留此机器。"
@@ -761,9 +764,6 @@
   "DDMksJ": {
     "defaultMessage": "部署您的第一个虚拟专用服务器。"
   },
-  "DTd1bi": {
-    "defaultMessage": "闪电网络、链上或信用卡"
-  },
   "DU+LLZ": {
     "defaultMessage": "推荐"
   },
@@ -776,8 +776,14 @@
   "DZ2Koj": {
     "defaultMessage": "方向"
   },
+  "DaC9UX": {
+    "defaultMessage": "高性能VPS主机，支持灵活支付方式：比特币闪电网络、门罗币、莱特币、以太坊或银行卡。"
+  },
   "DbJIBd": {
     "defaultMessage": "社区群组，采用邀请层级制度。"
+  },
+  "Dca9jQ": {
+    "defaultMessage": "加拿大魁北克 VPS 虚拟主机。自由选择 CPU、内存和磁盘。支持比特币闪电网络或链上支付，也可使用门罗币、莱特币或以太坊付款。"
   },
   "Dfuz87": {
     "defaultMessage": "目前尚未添加任何域名。请在上方添加您的第一个域名，开始使用。"
@@ -787,9 +793,6 @@
   },
   "DnX0aY": {
     "defaultMessage": "确认删除"
-  },
-  "DnigOZ": {
-    "defaultMessage": "可以使用闪电网络、链上比特币或信用卡支付。注册时无需提供个人信息。使用您的 Nostr 密钥登录，在浏览器中使用 NIP-07，在 API 中使用 NIP-98。"
   },
   "DpNZQY": {
     "defaultMessage": "手续费。"
@@ -878,9 +881,6 @@
   "FPbLFA": {
     "defaultMessage": "已保存的支付方式"
   },
-  "FSW97J": {
-    "defaultMessage": "购买套餐并使用闪电网络、比特币或银行卡支付订阅费用。"
-  },
   "FZeQlc": {
     "defaultMessage": "已断开连接。"
   },
@@ -899,14 +899,14 @@
   "FoHB5c": {
     "defaultMessage": "续订订阅。"
   },
+  "FtyqJI": {
+    "defaultMessage": "伦敦 VPS 主机，低至 {price} 不含增值税。 {minCpu}—{maxCpu} vCPU，最高可达 {maxDisk} {diskType}可通过闪电网络或链上使用比特币支付，也可使用门罗币、莱特币或以太币支付。"
+  },
   "Fv1ZSz": {
     "defaultMessage": "已关闭"
   },
   "G/yZLu": {
     "defaultMessage": "移除。"
-  },
-  "G0Z48e": {
-    "defaultMessage": "如果您希望将机器运送到欧洲以外的地区，请选择我们的魁北克站点。该站点提供与欧洲站点相同的自行组装配置，采用相同的月度计费方式，并以比特币支付。"
   },
   "G1kGar": {
     "defaultMessage": "在仅使用通行密钥的账户中，您无法删除唯一的通行密钥。"
@@ -1004,9 +1004,6 @@
   "HVtxik": {
     "defaultMessage": "自定义域名"
   },
-  "HYP241": {
-    "defaultMessage": "一款可用闪电网络、比特币或银行卡支付的 WireGuard VPN。密钥由您的设备自行生成，我们只会看到公钥部分。"
-  },
   "Hct61V": {
     "defaultMessage": "{storage} 持久存储方面，{breakdown}"
   },
@@ -1025,6 +1022,9 @@
   "I90sbW": {
     "defaultMessage": "刚才"
   },
+  "IA4Mmd": {
+    "defaultMessage": "闪电网络、链上比特币、门罗币、莱特币、以太坊或银行卡。我们运营自己的闪电网络节点，因此聪不会经过第三方处理商。"
+  },
   "IChMNf": {
     "defaultMessage": "未检测到任何更改。"
   },
@@ -1042,9 +1042,6 @@
   },
   "IZFEUg": {
     "defaultMessage": "准备好了。"
-  },
-  "IaS36D": {
-    "defaultMessage": "闪电网络、链上比特币或银行卡支付。我们运行自己的闪电节点，因此聪（sats）不会经过第三方支付处理器。"
   },
   "IbWc3k": {
     "defaultMessage": "爱尔兰都柏林。"
@@ -1340,9 +1337,6 @@
   "Olq7Wf": {
     "defaultMessage": "请在此处输入您的消息……"
   },
-  "OnsDNZ": {
-    "defaultMessage": "LNVPS 的最新消息、更新和公告，现在提供比特币闪电网络虚拟专用服务器（VPS）托管服务，并支持信用卡支付。"
-  },
   "Op5EHr": {
     "defaultMessage": "使用 Google 账号登录"
   },
@@ -1370,23 +1364,26 @@
   "P7PLVj": {
     "defaultMessage": "日期"
   },
-  "PCD5y1": {
-    "defaultMessage": "根据您的需求定制的 VPS，可在以下时间完成。 {region}： {minCpu}，{maxCpu} 虚拟 CPU 和 {minMemory}，{maxMemory} 内存，以比特币支付。"
-  },
   "PJtOx7": {
     "defaultMessage": "没有发生任何事件，无需报告。"
   },
+  "PM9NT5": {
+    "defaultMessage": "按需定制的VPS，在…… {region}： {minCpu}—{maxCpu} vCPU 和 {minMemory}-{maxMemory} 内存，可用比特币、门罗币、莱特币或以太币支付。"
+  },
   "PUqHRI": {
     "defaultMessage": "不记录任何流量或连接日志。WireGuard 本身只在内存中保留最近一次握手时间和您当前拨入所用的端点地址，因为协议若没有这些信息就无法将数据包路由回来。"
+  },
+  "PZcJ5k": {
+    "defaultMessage": "LNVPS 最新消息、更新与公告：比特币闪电网络 VPS 托管，同时支持门罗币、莱特币、以太坊及银行卡支付。"
+  },
+  "Pcm3iR": {
+    "defaultMessage": "支持闪电网络、比特币、门罗币、莱特币、以太坊或银行卡。注册无需提供个人信息。使用 Nostr 密钥登录：浏览器端使用 NIP-07，API 端使用 NIP-98。"
   },
   "PfSZy5": {
     "defaultMessage": "未找到订单。"
   },
   "PfUTPz": {
     "defaultMessage": "VPN"
-  },
-  "Pk14hW": {
-    "defaultMessage": "可以使用闪电网络、链上比特币或银行卡进行支付。请使用您的 Nostr 私钥登录。无需进行身份验证（KYC）。"
   },
   "Ppjs/C": {
     "defaultMessage": "伦敦的 VPS 虚拟主机服务"
@@ -1417,6 +1414,9 @@
   },
   "QFNCnX": {
     "defaultMessage": "负号{fee} 费用"
+  },
+  "QJbptp": {
+    "defaultMessage": "闪电网络、比特币、门罗币、莱特币、以太坊或银行卡。使用您的 Nostr 密钥登录。无需 KYC。"
   },
   "QN/rCc": {
     "defaultMessage": "解析 JSON 时出错：{msg}"
@@ -1673,9 +1673,6 @@
   "Uyg4Ur": {
     "defaultMessage": "VPN 套餐提供的是一个出口，而不是一台服务器。如果你想找一台可以运行自己服务的机器，配备静态 IPv4 和 IPv6，以及每月至少 1 TB 的流量，我们的 <a>VPS 托管</a> 运行在同一批服务器上。"
   },
-  "V/V4bz": {
-    "defaultMessage": "在爱尔兰都柏林提供 VPS 主机服务，起价为： {price} 不含增值税。您可以根据自己的需求配置。 {maxCpu} 虚拟 CPU。可通过闪电网络或直接链上支付比特币。"
-  },
   "V3ka34": {
     "defaultMessage": "活动会话"
   },
@@ -1709,9 +1706,6 @@
   "VffztH": {
     "defaultMessage": "上次使用时间 {date}"
   },
-  "Vi+REQ": {
-    "defaultMessage": "几分钟内即可部署。您可以使用闪电网络、比特币或信用卡进行支付，无需签订长期合同。"
-  },
   "Vn25W2": {
     "defaultMessage": "选择更大的规格后，价格将显示在此处。您需支付本计费周期剩余部分的差价。"
   },
@@ -1732,9 +1726,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "找不到可用于结算此次升级的订阅。"
-  },
-  "WHIo1V": {
-    "defaultMessage": "我们在都柏林的工厂。您可以根据自己的需求定制机器。 {minCpu}，{maxCpu} 虚拟 CPU 和 {minMemory}，{maxMemory}并使用比特币支付。"
   },
   "WUV28A": {
     "defaultMessage": "正在保存……"
@@ -1763,17 +1754,11 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{月份}}"
   },
-  "X/4SWn": {
-    "defaultMessage": "在加拿大魁北克省提供 VPS 虚拟主机服务。您可以选择所需的 CPU、内存和硬盘。支持通过闪电网络或链上方式使用比特币支付。"
-  },
   "X/xmPf": {
     "defaultMessage": "拥有独立数据库的隔离环境。"
   },
   "X0ha1a": {
     "defaultMessage": "保存更改"
-  },
-  "X4GAwh": {
-    "defaultMessage": "询问套餐与定价、我们提供哪些区域和操作系统，或使用闪电网络支付的方式。"
   },
   "X4VESO": {
     "defaultMessage": "清除该 VM 并从全新镜像开始。这将永久删除其上的所有数据。"
@@ -1796,8 +1781,14 @@
   "XW9RGA": {
     "defaultMessage": "我需要注册一个账户吗？"
   },
+  "XXjN3F": {
+    "defaultMessage": "高性能比特币闪电网络 VPS 主机服务。支持使用闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付。无需签订长期合约。"
+  },
   "XYkq4n": {
     "defaultMessage": "已使用。"
+  },
+  "XZAYHM": {
+    "defaultMessage": "我们的魁北克站点，适合希望将机器部署在欧洲以外的用户。同样的自助配置，同样的按月计费，支持以比特币、门罗币、莱特币或以太币支付。"
   },
   "XZGfTo": {
     "defaultMessage": "发送消息"
@@ -1892,9 +1883,6 @@
   "ZTj6ca": {
     "defaultMessage": "使用银行卡支付"
   },
-  "ZTpvML": {
-    "defaultMessage": "高性能 VPS 虚拟主机，支持灵活的支付方式，比特币闪电网络或信用卡。"
-  },
   "ZbOD+W": {
     "defaultMessage": "查看 LNVPS 服务的实时运行状态和历史事件记录。了解我们虚拟专用服务器 (VPS) 基础设施的当前运行状况。"
   },
@@ -1934,6 +1922,9 @@
   "aPcXT9": {
     "defaultMessage": "当您的余额达到最低限额时，会将您的收益与其他链上推荐人的收益合并到一笔交易中。您的网络费用份额将从您的余额中扣除。仅适用于主网地址。"
   },
+  "aSptrh": {
+    "defaultMessage": "位于爱尔兰都柏林的 VPS 托管服务。自由定制配置，CPU、内存和存储均可按需选择。支持通过闪电网络或链上交易以比特币支付，也接受门罗币、莱特币或以太坊。"
+  },
   "aTgjTE": {
     "defaultMessage": "添加通行密钥"
   },
@@ -1946,6 +1937,9 @@
   "agOXPD": {
     "defaultMessage": "Size"
   },
+  "aimFkf": {
+    "defaultMessage": "伦敦 VPS 托管服务。自由定制 CPU、内存和磁盘。支持通过闪电网络或链上支付比特币，也可使用门罗币、莱特币或以太坊付款。"
+  },
   "alJZVR": {
     "defaultMessage": "Nostr 账户"
   },
@@ -1957,6 +1951,9 @@
   },
   "auFzJF": {
     "defaultMessage": "最低支付额（可选）"
+  },
+  "aztZka": {
+    "defaultMessage": "我们的都柏林基地。在……之间打造你想要的机器 {minCpu}—{maxCpu} 虚拟CPU 和 {minMemory}-{maxMemory}，并使用比特币、门罗币、莱特币或以太坊支付。"
   },
   "b1zuN9": {
     "defaultMessage": "价格"
@@ -2029,9 +2026,6 @@
   },
   "ckx15w": {
     "defaultMessage": "网络传输"
-  },
-  "clx9um": {
-    "defaultMessage": "在爱尔兰都柏林提供 VPS 虚拟主机服务。您可以根据自己的需求定制配置，包括 CPU、内存和存储空间。支持使用比特币通过闪电网络或链上支付。"
   },
   "cyR7Kh": {
     "defaultMessage": "返回"
@@ -2189,6 +2183,9 @@
   "fblXmJ": {
     "defaultMessage": "实例名称"
   },
+  "fdoseY": {
+    "defaultMessage": "一款可通过闪电网络、比特币、门罗币、莱特币、以太坊或银行卡付费的 WireGuard VPN。您的设备自行生成密钥，我们仅能看到公钥部分。"
+  },
   "fsB/4p": {
     "defaultMessage": "已保存。"
   },
@@ -2221,9 +2218,6 @@
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
-  },
-  "gUwcoo": {
-    "defaultMessage": "是的，可以选择闪电网络或链上方式。续订周期为每月一次。"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 从未支付过。"
@@ -2399,6 +2393,9 @@
   "kLNEaL": {
     "defaultMessage": "请完成验证码验证。"
   },
+  "kLojfC": {
+    "defaultMessage": "我们使用 Cookie 来衡量哪些广告促成了订单。在您同意之前，不会设置任何 Cookie。"
+  },
   "kRFEho": {
     "defaultMessage": "添加 SSH 密钥。"
   },
@@ -2455,9 +2452,6 @@
   },
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
-  },
-  "lQNVjN": {
-    "defaultMessage": "部署 {name} 作为在 LNVPS 上提供的应用，您可以使用闪电网络、比特币或信用卡进行支付。"
   },
   "lQjSeV": {
     "defaultMessage": "充值余额，用于新订单、续费和升级。"
@@ -2561,6 +2555,9 @@
   "nBO87C": {
     "defaultMessage": "隐藏配置"
   },
+  "nC+eU0": {
+    "defaultMessage": "与 LNVPS 客服代表在线交流，咨询套餐与定价、区域、操作系统，或了解如何使用闪电网络、门罗币、莱特币或以太坊进行支付。无需登录。如果您的问题涉及已有的虚拟机或付款，请先登录，以便为您查询账户信息。"
+  },
   "nCD6ia": {
     "defaultMessage": "都柏林（爱尔兰）、伦敦（英国）或魁北克（加拿大）。如果您需要一个大型节点，都柏林的容量最高，最多可达 64 个虚拟 CPU 和 128GB 的内存。"
   },
@@ -2606,9 +2603,6 @@
   "nxqAD7": {
     "defaultMessage": "新增事件"
   },
-  "o/1ZFL": {
-    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐、地区、操作系统和闪电支付。无需账号。"
-  },
   "o0jcye": {
     "defaultMessage": "操作系统"
   },
@@ -2633,9 +2627,6 @@
   "oIPESx": {
     "defaultMessage": "当在……中启用 Nostr DM 频道时，到期提醒、付款回执和开通通知将在此处送达。 {settings}此收件箱不会监控回复，如需联系人工，请使用 {support}。"
   },
-  "oOdFIC": {
-    "defaultMessage": "我们在都柏林设有办事处。您可以定制您想要的机器，并使用比特币进行支付。"
-  },
   "oPvhhB": {
     "defaultMessage": "CPU 核心"
   },
@@ -2647,6 +2638,9 @@
   },
   "oawN/U": {
     "defaultMessage": "处理速度快，事件数量多。"
+  },
+  "ocrKiN": {
+    "defaultMessage": "闪电网络、比特币、门罗币、莱特币、以太坊或银行卡"
   },
   "odTkf5": {
     "defaultMessage": "返回登录"
@@ -2662,6 +2656,9 @@
   },
   "oswGmn": {
     "defaultMessage": "在未完成所有提现记录的情况下，您不能离开。"
+  },
+  "oxQL4O": {
+    "defaultMessage": "您可以咨询套餐和价格、我们提供的区域和操作系统，以及如何使用闪电网络、门罗币、莱特币或以太坊进行支付。"
   },
   "oxq33u": {
     "defaultMessage": "最适合"
@@ -2680,9 +2677,6 @@
   },
   "pHg2Hv": {
     "defaultMessage": "每台设备都能连到每个地区。隧道内的地址无论从哪里出口都相同，因此切换国家只需更换一个配置文件，无需重新注册。"
-  },
-  "pMi1Vp": {
-    "defaultMessage": "与 LNVPS 客服聊天，咨询套餐与定价、区域、操作系统，或使用闪电网络支付的方式，无需登录。如果您的问题涉及现有虚拟机或支付，请先登录，以便客服查询您的账户。"
   },
   "pSgJJF": {
     "defaultMessage": "我们保存您的公钥以及分配给它的内部地址。这一对密钥与地址的组合就是 WireGuard 对等端（peer）的全部定义，路由服务器所需的也正是这些信息，足以承载您的流量。"
@@ -2705,14 +2699,14 @@
   "pus6h6": {
     "defaultMessage": "随时都可以停止。一旦停止，您的代码将不再产生收益，且无法再次使用。"
   },
+  "pvtgR2": {
+    "defaultMessage": "谢绝"
+  },
   "q/uwLT": {
     "defaultMessage": "停止。"
   },
   "q2BAvD": {
     "defaultMessage": "向此地址发送任意金额的链上比特币。交易确认后，到账金额将计入您的余额。"
-  },
-  "qA0DQR": {
-    "defaultMessage": "在伦敦提供 VPS 虚拟主机服务。您可以选择所需的 CPU、内存和硬盘。支持通过闪电网络或链上方式使用比特币支付。"
   },
   "qB17v9": {
     "defaultMessage": "请立即保存此配置：其私钥仅显示在本页面上，之后将无法再次查看。"
@@ -2792,6 +2786,9 @@
   "rvirM2": {
     "defaultMessage": "位置"
   },
+  "rwSswF": {
+    "defaultMessage": "来自……的 WireGuard VPN {price} 每 {period}，支持通过闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付。您的设备会自行生成密钥，我们仅能看到其中的公钥部分。"
+  },
   "ryuZQh": {
     "defaultMessage": "选择一个应用程序，为其命名，然后付费。它会自动在自己的主机名上运行，并且已启用 TLS 加密，无需修复操作系统、配置 Docker 或更新证书。"
   },
@@ -2825,6 +2822,9 @@
   "sehISV": {
     "defaultMessage": "Blossom 媒体服务器，每月起价 {price}。"
   },
+  "sjzLbX": {
+    "defaultMessage": "接受"
+  },
   "sn+Rj5": {
     "defaultMessage": "使用通行密钥登录"
   },
@@ -2837,6 +2837,9 @@
   "sqvjkf": {
     "defaultMessage": "添加把手"
   },
+  "svQL8t": {
+    "defaultMessage": "购买套餐，并通过闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付订阅费。"
+  },
   "sx6MYT": {
     "defaultMessage": "该代理无法对虚拟机进行延长、退款或删除，也无法操作其未登录的账户。对于这些情况， {link}。"
   },
@@ -2846,14 +2849,14 @@
   "t21/v7": {
     "defaultMessage": "价格包含增值税；支付处理费不包括在内。"
   },
+  "t2MJPa": {
+    "defaultMessage": "是的，支持闪电网络或链上支付。您也可以使用门罗币、莱特币或以太坊支付，会自动兑换为比特币。按月续费。"
+  },
   "tNmjzW": {
     "defaultMessage": "港口（或码头）"
   },
   "tPwWRH": {
     "defaultMessage": "您的部署情况"
-  },
-  "tSWoyi": {
-    "defaultMessage": "租用一台虚拟专用服务器（VPS），用于部署区块链，并使用比特币支付。您可以自行选择服务器配置，并安装您自己的节点软件，拥有 root 权限，无需使用控制面板。"
   },
   "tTpLsN": {
     "defaultMessage": "未关联。"
@@ -2987,9 +2990,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} 防火墙规则"
   },
-  "w/+hVh": {
-    "defaultMessage": "一款 WireGuard VPN，价格低至 {price} 每 {period}，通过闪电网络、比特币或银行卡支付。您的设备自行生成密钥，我们只能看到公钥部分。"
-  },
   "w1iy6j": {
     "defaultMessage": "正在更新价格…"
   },
@@ -3002,8 +3002,14 @@
   "wLCwU4": {
     "defaultMessage": "管理账单"
   },
+  "wNaptW": {
+    "defaultMessage": "在 VPS 上运行比特币全节点，于 {regions}。通过闪电网络或链上以比特币支付，或使用门罗币、莱特币或以太币。从 {price} 不含增值税。"
+  },
   "wRSmBV": {
     "defaultMessage": "是的，每个套餐都包含一个 IPv4 地址和一个 IPv6 地址。"
+  },
+  "wY4M/H": {
+    "defaultMessage": "一台空间足以容纳整条区块链的 VPS，支持使用比特币、门罗币、莱特币或以太坊支付。您可以自由选择配置并安装自己的节点软件，拥有 root 权限，且没有控制面板的干扰。"
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -3020,11 +3026,11 @@
   "wo868v": {
     "defaultMessage": "使用 Nostr 密钥或 bunker 登录 →"
   },
-  "wty+Xf": {
-    "defaultMessage": "伦敦的 VPS 主机，起价为 {price} 不含增值税。 {minCpu}，{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
-  },
   "wz7uSD": {
     "defaultMessage": "包括{amount}的税费"
+  },
+  "x9Z7IH": {
+    "defaultMessage": "与 LNVPS 客服专员在线交流，了解套餐、地区、操作系统以及闪电网络、门罗币、莱特币和以太坊支付。无需注册。"
   },
   "xA8JVo": {
     "defaultMessage": "这是一种用于存储和检索文件的协议，该协议通过文件哈希值来定位文件，并设计为与 Nostr 一起使用。NIP-96 是较早的 HTTP 文件存储规范，Route96 同时支持这两种规范。"
@@ -3065,8 +3071,14 @@
   "xkr+zo": {
     "defaultMessage": "条款"
   },
+  "xsCvlD": {
+    "defaultMessage": "爱尔兰都柏林 VPS 托管，起 {price} 不含增值税。可自定义配置，最高…… {maxCpu} vCPU。可通过闪电网络或链上以比特币支付，也可使用门罗币、莱特币或以太坊支付。"
+  },
   "xuTqgN": {
     "defaultMessage": "付款方式"
+  },
+  "y/YQY9": {
+    "defaultMessage": "加拿大魁北克 VPS 托管服务，低至 {price} 不含增值税。 {minCpu}—{maxCpu} vCPU，最多 {maxDisk} {diskType}您可以通过闪电网络或链上方式使用比特币支付，也可以使用门罗币、莱特币或以太坊支付。"
   },
   "y0mVUJ": {
     "defaultMessage": "链上比特币"
@@ -3076,6 +3088,9 @@
   },
   "y9xHR9": {
     "defaultMessage": "支付款项"
+  },
+  "yA/g81": {
+    "defaultMessage": "一台位于英国的服务器，按月计费，支持以比特币、门罗币、莱特币或以太币付款。CPU、内存和磁盘均可自由选配，绝不捆绑任何您未选择的配置。"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -3106,12 +3121,6 @@
   },
   "yoQJWu": {
     "defaultMessage": "关于您的账户，任何问题都可以问，账单、无法启动的虚拟机，或某笔扣款的原因。"
-  },
-  "yqUCzc": {
-    "defaultMessage": "位于加拿大魁北克的 VPS 服务器托管服务，提供商为： {price} 不含增值税。 {minCpu}，{maxCpu} 虚拟 CPU，最多可达 {maxDisk} {diskType}可以使用比特币通过闪电网络或主链进行支付。"
-  },
-  "yrsDLO": {
-    "defaultMessage": "这是一台英国制造的服务器，按月计费，并以比特币支付。您可以选择所需的 CPU、内存和硬盘；我们不会在您未要求的情况下捆绑任何其他服务。"
   },
   "z+hIFs": {
     "defaultMessage": "目前尚未收到任何付款。"

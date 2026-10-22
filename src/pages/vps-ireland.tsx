@@ -58,13 +58,13 @@ export function VpsIrelandPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
           },
           { price: fromText, maxCpu: template.max_cpu },
         )
       : intl.formatMessage({
           defaultMessage:
-            "VPS hosting in Dublin, Ireland. Build your own spec, with CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain.",
+            "VPS hosting in Dublin, Ireland. Build your own spec, with CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
         });
 
   return (
@@ -79,7 +79,7 @@ export function VpsIrelandPage() {
       lede={
         template ? (
           <FormattedMessage
-            defaultMessage="Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin."
+            defaultMessage="Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin, Monero, Litecoin or Ethereum."
             values={{
               minCpu: template.min_cpu,
               maxCpu: template.max_cpu,
@@ -88,7 +88,7 @@ export function VpsIrelandPage() {
             }}
           />
         ) : (
-          <FormattedMessage defaultMessage="Our Dublin site. Build the machine you want, and pay for it in Bitcoin." />
+          <FormattedMessage defaultMessage="Our Dublin site. Build the machine you want, and pay for it in Bitcoin, Monero, Litecoin or Ethereum." />
         )
       }
       cta={<FormattedMessage defaultMessage="Build your Dublin VPS" />}

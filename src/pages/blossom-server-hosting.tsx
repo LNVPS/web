@@ -323,7 +323,7 @@ export function BlossomServerHostingPage() {
 
         <Section title={<FormattedMessage defaultMessage="Pay how you like" />}>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC." />
+            <FormattedMessage defaultMessage="Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. Log in with your Nostr key. No KYC." />
           </p>
         </Section>
 

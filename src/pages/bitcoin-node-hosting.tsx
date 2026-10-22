@@ -58,13 +58,13 @@ export function BitcoinNodeHostingPage() {
       ? formatMessage(
           {
             defaultMessage:
-              "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price} ex-VAT.",
+              "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum. From {price} ex-VAT.",
           },
           { regions: regionList, price: fromText },
         )
       : formatMessage({
           defaultMessage:
-            "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain.",
+            "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
         });
 
   // Rendered as the FAQ block *and* handed to `faqJsonLd`, so the markup a
@@ -82,7 +82,7 @@ export function BitcoinNodeHostingPage() {
     {
       question: formatMessage({ defaultMessage: "Can I pay in Bitcoin?" }),
       answer: formatMessage({
-        defaultMessage: "Yes, Lightning or on-chain. Renewal is monthly.",
+        defaultMessage: "Yes, Lightning or on-chain. You can also pay with Monero, Litecoin or Ethereum, which is swapped to Bitcoin. Renewal is monthly.",
       }),
     },
   ];
@@ -101,7 +101,7 @@ export function BitcoinNodeHostingPage() {
             <FormattedMessage defaultMessage="Bitcoin node hosting" />
           </h1>
           <p className="m-0 max-w-prose text-cyber-text">
-            <FormattedMessage defaultMessage="A VPS with room for the chain, paid for in Bitcoin. You choose the specs and install your own node software, with root access and no control panel in the way." />
+            <FormattedMessage defaultMessage="A VPS with room for the chain, paid for in Bitcoin, Monero, Litecoin or Ethereum. You choose the specs and install your own node software, with root access and no control panel in the way." />
           </p>
         </header>
 

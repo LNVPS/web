@@ -26,9 +26,6 @@
   "+JVG/q": {
     "defaultMessage": "{n, plural, one {year} other {years}}"
   },
-  "+Mo6Oy": {
-    "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain. From {price} ex-VAT."
-  },
   "+NBJh2": {
     "defaultMessage": "Picking up your earlier conversation. The agent still has the context, even though the messages above aren't shown again. Start a new one if you'd rather begin from scratch."
   },
@@ -53,9 +50,6 @@
   "+prida": {
     "defaultMessage": "VPS Ireland: Dublin VPS Paid in Bitcoin"
   },
-  "+rSMAE": {
-    "defaultMessage": "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, or card. No long-term contracts."
-  },
   "+sQCsu": {
     "defaultMessage": "Complete Payment"
   },
@@ -73,6 +67,9 @@
   },
   "/3HL90": {
     "defaultMessage": "Choose an OS image and reinstall. The current disk is wiped and rebuilt from scratch."
+  },
+  "/AJZsl": {
+    "defaultMessage": "Deploy {name} as a managed app on LNVPS. Pay with Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card."
   },
   "/GCoTA": {
     "defaultMessage": "Clear"
@@ -239,9 +236,6 @@
   "2nfKZI": {
     "defaultMessage": "Can I switch relay software later?"
   },
-  "2xMlQF": {
-    "defaultMessage": "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain."
-  },
   "32rBNK": {
     "defaultMessage": "Terms of Service"
   },
@@ -320,6 +314,9 @@
   "4X/Ixq": {
     "defaultMessage": "Decrypted message:"
   },
+  "4b360Q": {
+    "defaultMessage": "Our Dublin site. Build the machine you want, and pay for it in Bitcoin, Monero, Litecoin or Ethereum."
+  },
   "4cMKIO": {
     "defaultMessage": "Recurring plans that keep your services active."
   },
@@ -385,6 +382,9 @@
   },
   "6HDvaQ": {
     "defaultMessage": "Then per month"
+  },
+  "6Q4hDQ": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning, Monero, Litecoin or Ethereum works. Log in first if your question is about an existing VM or payment, so it can look up your account."
   },
   "6Tps09": {
     "defaultMessage": "Inactive"
@@ -629,6 +629,9 @@
   "AozuFZ": {
     "defaultMessage": "On-chain"
   },
+  "Ap1nXa": {
+    "defaultMessage": "Deploy in minutes. Pay with Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. No long-term contracts."
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} read"
   },
@@ -686,9 +689,6 @@
   "BnvK83": {
     "defaultMessage": "From {price}."
   },
-  "BrtgIv": {
-    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. Log in first if your question is about an existing VM or payment, so it can look up your account."
-  },
   "BtKQM7": {
     "defaultMessage": "We have not made a decision on this report yet."
   },
@@ -724,6 +724,9 @@
   },
   "Cououe": {
     "defaultMessage": "Log in to deploy this app."
+  },
+  "Cq/8po": {
+    "defaultMessage": "Run a Bitcoin full node on a VPS with room for the chain. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
   },
   "CrzPmt": {
     "defaultMessage": "Lease expired. Renew to keep this machine."
@@ -761,9 +764,6 @@
   "DDMksJ": {
     "defaultMessage": "Deploy your first VPS"
   },
-  "DTd1bi": {
-    "defaultMessage": "Lightning, on-chain, or card"
-  },
   "DU+LLZ": {
     "defaultMessage": "Referral"
   },
@@ -776,8 +776,14 @@
   "DZ2Koj": {
     "defaultMessage": "Direction"
   },
+  "DaC9UX": {
+    "defaultMessage": "High-performance VPS hosting with flexible payments: Bitcoin Lightning, Monero, Litecoin, Ethereum or card."
+  },
   "DbJIBd": {
     "defaultMessage": "Community relays with invite hierarchy"
+  },
+  "Dca9jQ": {
+    "defaultMessage": "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
   },
   "Dfuz87": {
     "defaultMessage": "No domains added yet. Add your first domain above to get started."
@@ -787,9 +793,6 @@
   },
   "DnX0aY": {
     "defaultMessage": "Confirm delete"
-  },
-  "DnigOZ": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. No personal information required to sign up. Log in with your Nostr key: NIP-07 in the browser, NIP-98 for the API."
   },
   "DpNZQY": {
     "defaultMessage": "Processing fee"
@@ -878,9 +881,6 @@
   "FPbLFA": {
     "defaultMessage": "Saved methods"
   },
-  "FSW97J": {
-    "defaultMessage": "Buy a plan and pay its subscription with Lightning, Bitcoin or card."
-  },
   "FZeQlc": {
     "defaultMessage": "Disconnected"
   },
@@ -899,14 +899,14 @@
   "FoHB5c": {
     "defaultMessage": "Renew subscription"
   },
+  "FtyqJI": {
+    "defaultMessage": "VPS hosting in London from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
+  },
   "Fv1ZSz": {
     "defaultMessage": "Closed"
   },
   "G/yZLu": {
     "defaultMessage": "Remove"
-  },
-  "G0Z48e": {
-    "defaultMessage": "Our Quebec site, for when you want the machine outside Europe. Same build-it-yourself specs, same monthly billing, paid in Bitcoin."
   },
   "G1kGar": {
     "defaultMessage": "You can't remove your only passkey on a passkey-only account."
@@ -1004,9 +1004,6 @@
   "HVtxik": {
     "defaultMessage": "Custom domain"
   },
-  "HYP241": {
-    "defaultMessage": "A WireGuard VPN paid with Lightning, Bitcoin or card. Your device makes its own keys and we only ever see the public half."
-  },
   "Hct61V": {
     "defaultMessage": "{storage} of persistent storage ({breakdown})"
   },
@@ -1025,6 +1022,9 @@
   "I90sbW": {
     "defaultMessage": "just now"
   },
+  "IA4Mmd": {
+    "defaultMessage": "Lightning, on-chain Bitcoin, Monero, Litecoin, Ethereum, or card. We run our own Lightning node, so sats do not route through a third-party processor."
+  },
   "IChMNf": {
     "defaultMessage": "No changes detected"
   },
@@ -1042,9 +1042,6 @@
   },
   "IZFEUg": {
     "defaultMessage": "Ready"
-  },
-  "IaS36D": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. We run our own Lightning node, so sats do not route through a third-party processor."
   },
   "IbWc3k": {
     "defaultMessage": "Dublin, Ireland."
@@ -1340,9 +1337,6 @@
   "Olq7Wf": {
     "defaultMessage": "Type your message here..."
   },
-  "OnsDNZ": {
-    "defaultMessage": "Latest news, updates, and announcements from LNVPS: Bitcoin Lightning VPS hosting with card payments too."
-  },
   "Op5EHr": {
     "defaultMessage": "Sign in with Google"
   },
@@ -1370,23 +1364,26 @@
   "P7PLVj": {
     "defaultMessage": "Date"
   },
-  "PCD5y1": {
-    "defaultMessage": "A VPS built to order in {region}: {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory} memory, paid in Bitcoin."
-  },
   "PJtOx7": {
     "defaultMessage": "No incidents to report."
   },
+  "PM9NT5": {
+    "defaultMessage": "A VPS built to order in {region}: {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory} memory, paid in Bitcoin, Monero, Litecoin or Ethereum."
+  },
   "PUqHRI": {
     "defaultMessage": "No traffic or connection logs are written. WireGuard itself keeps a last handshake time and the endpoint you are currently dialling from, in memory, because the protocol cannot route a packet back without them."
+  },
+  "PZcJ5k": {
+    "defaultMessage": "Latest news, updates, and announcements from LNVPS: Bitcoin Lightning VPS hosting, with Monero, Litecoin, Ethereum and card payments too."
+  },
+  "Pcm3iR": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. No personal information required to sign up. Log in with your Nostr key: NIP-07 in the browser, NIP-98 for the API."
   },
   "PfSZy5": {
     "defaultMessage": "No order found"
   },
   "PfUTPz": {
     "defaultMessage": "VPN"
-  },
-  "Pk14hW": {
-    "defaultMessage": "Lightning, on-chain Bitcoin, or card. Log in with your Nostr key. No KYC."
   },
   "Ppjs/C": {
     "defaultMessage": "VPS hosting in London"
@@ -1417,6 +1414,9 @@
   },
   "QFNCnX": {
     "defaultMessage": "−{fee} fee"
+  },
+  "QJbptp": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. Log in with your Nostr key. No KYC."
   },
   "QN/rCc": {
     "defaultMessage": "Error parsing JSON: {msg}"
@@ -1673,9 +1673,6 @@
   "Uyg4Ur": {
     "defaultMessage": "A VPN plan gives you an exit, not a server. If you want a box to run your own services on, with a static IPv4 and IPv6 and at least 1 TB of transfer a month, our <a>VPS hosting</a> runs on the same fleet."
   },
-  "V/V4bz": {
-    "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain."
-  },
   "V3ka34": {
     "defaultMessage": "Active Sessions"
   },
@@ -1709,9 +1706,6 @@
   "VffztH": {
     "defaultMessage": "last used {date}"
   },
-  "Vi+REQ": {
-    "defaultMessage": "Deploy in minutes. Pay with Lightning, Bitcoin, or card. No long-term contracts."
-  },
   "Vn25W2": {
     "defaultMessage": "The price appears here once you pick a bigger size. You pay the difference for what's left of this billing period."
   },
@@ -1732,9 +1726,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "Couldn't find a subscription to bill this upgrade to."
-  },
-  "WHIo1V": {
-    "defaultMessage": "Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin."
   },
   "WUV28A": {
     "defaultMessage": "Saving…"
@@ -1763,17 +1754,11 @@
   "WxTcqt": {
     "defaultMessage": "{n, plural, one {month} other {months}}"
   },
-  "X/4SWn": {
-    "defaultMessage": "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
-  },
   "X/xmPf": {
     "defaultMessage": "Isolated environment with its own database"
   },
   "X0ha1a": {
     "defaultMessage": "Save changes"
-  },
-  "X4GAwh": {
-    "defaultMessage": "Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning works."
   },
   "X4VESO": {
     "defaultMessage": "Wipe the VM and start from a fresh image. This permanently deletes all data on it."
@@ -1796,8 +1781,14 @@
   "XW9RGA": {
     "defaultMessage": "Do I need an account?"
   },
+  "XXjN3F": {
+    "defaultMessage": "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. No long-term contracts."
+  },
   "XYkq4n": {
     "defaultMessage": "Used"
+  },
+  "XZAYHM": {
+    "defaultMessage": "Our Quebec site, for when you want the machine outside Europe. Same build-it-yourself specs, same monthly billing, paid in Bitcoin, Monero, Litecoin or Ethereum."
   },
   "XZGfTo": {
     "defaultMessage": "Send a message"
@@ -1892,9 +1883,6 @@
   "ZTj6ca": {
     "defaultMessage": "Pay by card"
   },
-  "ZTpvML": {
-    "defaultMessage": "High-performance VPS hosting with flexible payments: Bitcoin Lightning or card."
-  },
   "ZbOD+W": {
     "defaultMessage": "Live uptime and incident history for LNVPS services. Check the current operational status of our VPS infrastructure."
   },
@@ -1934,6 +1922,9 @@
   "aPcXT9": {
     "defaultMessage": "Payouts are batched with other on-chain referrers into one transaction once your balance clears the minimum. Your share of the network fee is deducted from your balance. Mainnet addresses only."
   },
+  "aSptrh": {
+    "defaultMessage": "VPS hosting in Dublin, Ireland. Build your own spec, with CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
+  },
   "aTgjTE": {
     "defaultMessage": "Add passkey"
   },
@@ -1946,6 +1937,9 @@
   "agOXPD": {
     "defaultMessage": "Size"
   },
+  "aimFkf": {
+    "defaultMessage": "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
+  },
   "alJZVR": {
     "defaultMessage": "Nostr account"
   },
@@ -1957,6 +1951,9 @@
   },
   "auFzJF": {
     "defaultMessage": "Minimum payout (optional)"
+  },
+  "aztZka": {
+    "defaultMessage": "Our Dublin site. Build the machine you want between {minCpu}-{maxCpu} vCPU and {minMemory}-{maxMemory}, and pay for it in Bitcoin, Monero, Litecoin or Ethereum."
   },
   "b1zuN9": {
     "defaultMessage": "Price"
@@ -2029,9 +2026,6 @@
   },
   "ckx15w": {
     "defaultMessage": "Network transfer"
-  },
-  "clx9um": {
-    "defaultMessage": "VPS hosting in Dublin, Ireland. Build your own spec, with CPU, memory and storage to order. Pay in Bitcoin over Lightning or on-chain."
   },
   "cyR7Kh": {
     "defaultMessage": "Back"
@@ -2189,6 +2183,9 @@
   "fblXmJ": {
     "defaultMessage": "Instance name"
   },
+  "fdoseY": {
+    "defaultMessage": "A WireGuard VPN paid with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card. Your device makes its own keys and we only ever see the public half."
+  },
   "fsB/4p": {
     "defaultMessage": "Saved"
   },
@@ -2221,9 +2218,6 @@
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
-  },
-  "gUwcoo": {
-    "defaultMessage": "Yes, Lightning or on-chain. Renewal is monthly."
   },
   "gWp9QV": {
     "defaultMessage": "{failed} never paid"
@@ -2459,9 +2453,6 @@
   "lP4qIQ": {
     "defaultMessage": "Card details"
   },
-  "lQNVjN": {
-    "defaultMessage": "Deploy {name} as a managed app on LNVPS. Pay with Lightning, Bitcoin, or card."
-  },
   "lQjSeV": {
     "defaultMessage": "Top up a balance and spend it on new orders, renewals and upgrades."
   },
@@ -2564,6 +2555,9 @@
   "nBO87C": {
     "defaultMessage": "Hide config"
   },
+  "nC+eU0": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning, Monero, Litecoin or Ethereum works. No login needed. Log in first if your question is about an existing VM or payment, so it can look up your account."
+  },
   "nCD6ia": {
     "defaultMessage": "Dublin (IE), London (GB) or Quebec (CA). Dublin has the deepest capacity if you need a large node, up to 64 vCPU and 128 GB RAM."
   },
@@ -2609,9 +2603,6 @@
   "nxqAD7": {
     "defaultMessage": "New Incident"
   },
-  "o/1ZFL": {
-    "defaultMessage": "Chat with the LNVPS support agent about plans, regions, operating systems and Lightning payments. No account needed."
-  },
   "o0jcye": {
     "defaultMessage": "OS"
   },
@@ -2636,9 +2627,6 @@
   "oIPESx": {
     "defaultMessage": "Expiry warnings, payment receipts and provisioning notices arrive here while the Nostr DM channel is enabled in {settings}. This inbox isn't monitored for replies. To reach a human, use {support}."
   },
-  "oOdFIC": {
-    "defaultMessage": "Our Dublin site. Build the machine you want, and pay for it in Bitcoin."
-  },
   "oPvhhB": {
     "defaultMessage": "CPU cores"
   },
@@ -2650,6 +2638,9 @@
   },
   "oawN/U": {
     "defaultMessage": "High throughput, large event volume"
+  },
+  "ocrKiN": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card"
   },
   "odTkf5": {
     "defaultMessage": "Back to sign in"
@@ -2665,6 +2656,9 @@
   },
   "oswGmn": {
     "defaultMessage": "You can't leave while payout history exists."
+  },
+  "oxQL4O": {
+    "defaultMessage": "Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning, Monero, Litecoin or Ethereum works."
   },
   "oxq33u": {
     "defaultMessage": "Best for"
@@ -2683,9 +2677,6 @@
   },
   "pHg2Hv": {
     "defaultMessage": "Every device reaches every region. The address inside the tunnel is the same wherever you exit, so switching country is a config file, not a re-registration."
-  },
-  "pMi1Vp": {
-    "defaultMessage": "Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. No login needed. Log in first if your question is about an existing VM or payment, so it can look up your account."
   },
   "pSgJJF": {
     "defaultMessage": "We hold your public key and the internal address assigned to it. That pair is what a WireGuard peer is, and it is all a route server needs to carry you."
@@ -2716,9 +2707,6 @@
   },
   "q2BAvD": {
     "defaultMessage": "Send any amount of on-chain Bitcoin to this address. Your balance is credited with what arrives once it confirms."
-  },
-  "qA0DQR": {
-    "defaultMessage": "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain."
   },
   "qB17v9": {
     "defaultMessage": "Save this config now: its private key is only in this page and cannot be shown again."
@@ -2798,6 +2786,9 @@
   "rvirM2": {
     "defaultMessage": "Location"
   },
+  "rwSswF": {
+    "defaultMessage": "A WireGuard VPN from {price} per {period}, paid with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card. Your device makes its own keys and we only ever see the public half."
+  },
   "ryuZQh": {
     "defaultMessage": "Pick an app, give it a name, pay. It comes up on its own hostname with TLS already working. No OS to patch, no Docker to configure, no certificate to renew."
   },
@@ -2846,6 +2837,9 @@
   "sqvjkf": {
     "defaultMessage": "Add Handle"
   },
+  "svQL8t": {
+    "defaultMessage": "Buy a plan and pay its subscription with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card."
+  },
   "sx6MYT": {
     "defaultMessage": "The agent can't extend, refund or delete a VM, and it can't act on an account it isn't logged into. For those, {link}."
   },
@@ -2855,14 +2849,14 @@
   "t21/v7": {
     "defaultMessage": "Prices include VAT; payment processing fees are excluded."
   },
+  "t2MJPa": {
+    "defaultMessage": "Yes, Lightning or on-chain. You can also pay with Monero, Litecoin or Ethereum, which is swapped to Bitcoin. Renewal is monthly."
+  },
   "tNmjzW": {
     "defaultMessage": "Port(s)"
   },
   "tPwWRH": {
     "defaultMessage": "Your deployments"
-  },
-  "tSWoyi": {
-    "defaultMessage": "A VPS with room for the chain, paid for in Bitcoin. You choose the specs and install your own node software, with root access and no control panel in the way."
   },
   "tTpLsN": {
     "defaultMessage": "Not linked"
@@ -2996,9 +2990,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} firewall rules"
   },
-  "w/+hVh": {
-    "defaultMessage": "A WireGuard VPN from {price} per {period}, paid with Lightning, Bitcoin or card. Your device makes its own keys and we only ever see the public half."
-  },
   "w1iy6j": {
     "defaultMessage": "Updating price…"
   },
@@ -3011,8 +3002,14 @@
   "wLCwU4": {
     "defaultMessage": "Manage billing"
   },
+  "wNaptW": {
+    "defaultMessage": "Run a Bitcoin full node on a VPS in {regions}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum. From {price} ex-VAT."
+  },
   "wRSmBV": {
     "defaultMessage": "Yes, one IPv4 and one IPv6 on every plan."
+  },
+  "wY4M/H": {
+    "defaultMessage": "A VPS with room for the chain, paid for in Bitcoin, Monero, Litecoin or Ethereum. You choose the specs and install your own node software, with root access and no control panel in the way."
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -3029,11 +3026,11 @@
   "wo868v": {
     "defaultMessage": "Sign in with a Nostr key or bunker →"
   },
-  "wty+Xf": {
-    "defaultMessage": "VPS hosting in London from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
-  },
   "wz7uSD": {
     "defaultMessage": "including {amount} tax"
+  },
+  "x9Z7IH": {
+    "defaultMessage": "Chat with the LNVPS support agent about plans, regions, operating systems and Lightning, Monero, Litecoin and Ethereum payments. No account needed."
   },
   "xA8JVo": {
     "defaultMessage": "A protocol for storing and retrieving files addressed by their hash, designed to work with Nostr. NIP-96 is the older HTTP file-storage spec, and Route96 speaks both."
@@ -3074,8 +3071,14 @@
   "xkr+zo": {
     "defaultMessage": "Terms"
   },
+  "xsCvlD": {
+    "defaultMessage": "VPS hosting in Dublin, Ireland from {price} ex-VAT. Build your own spec up to {maxCpu} vCPU. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
+  },
   "xuTqgN": {
     "defaultMessage": "Payment Methods"
+  },
+  "y/YQY9": {
+    "defaultMessage": "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum."
   },
   "y0mVUJ": {
     "defaultMessage": "On-chain Bitcoin"
@@ -3085,6 +3088,9 @@
   },
   "y9xHR9": {
     "defaultMessage": "Payouts"
+  },
+  "yA/g81": {
+    "defaultMessage": "A UK machine, billed monthly and paid in Bitcoin, Monero, Litecoin or Ethereum. Pick your CPU, memory and disk; nothing is bundled that you did not ask for."
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -3115,12 +3121,6 @@
   },
   "yoQJWu": {
     "defaultMessage": "Ask anything about your account: billing, a VM that won't boot, or what a charge was for."
-  },
-  "yqUCzc": {
-    "defaultMessage": "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain."
-  },
-  "yrsDLO": {
-    "defaultMessage": "A UK machine, billed monthly and paid in Bitcoin. Pick your CPU, memory and disk; nothing is bundled that you did not ask for."
   },
   "z+hIFs": {
     "defaultMessage": "No payments yet."

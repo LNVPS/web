@@ -26,7 +26,7 @@ export function VpsCanadaPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in Quebec, Canada from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
           },
           {
             price: fromText,
@@ -38,7 +38,7 @@ export function VpsCanadaPage() {
         )
       : intl.formatMessage({
           defaultMessage:
-            "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain.",
+            "VPS hosting in Quebec, Canada. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
         });
 
   return (
@@ -51,7 +51,7 @@ export function VpsCanadaPage() {
       description={description}
       h1={<FormattedMessage defaultMessage="VPS hosting in Canada" />}
       lede={
-        <FormattedMessage defaultMessage="Our Quebec site, for when you want the machine outside Europe. Same build-it-yourself specs, same monthly billing, paid in Bitcoin." />
+        <FormattedMessage defaultMessage="Our Quebec site, for when you want the machine outside Europe. Same build-it-yourself specs, same monthly billing, paid in Bitcoin, Monero, Litecoin or Ethereum." />
       }
       cta={<FormattedMessage defaultMessage="Build your Quebec VPS" />}
     />

@@ -42,7 +42,7 @@ export function SupportChatPage() {
         canonical="/contact/chat"
         description={formatMessage({
           defaultMessage:
-            "Chat with the LNVPS support agent about plans, regions, operating systems and Lightning payments. No account needed.",
+            "Chat with the LNVPS support agent about plans, regions, operating systems and Lightning, Monero, Litecoin and Ethereum payments. No account needed.",
         })}
       />
       <PageHeader
@@ -51,7 +51,7 @@ export function SupportChatPage() {
           login ? (
             <FormattedMessage defaultMessage="Chat with the LNVPS support agent. It can look up your account, VMs and payments, and start, stop or restart a VM." />
           ) : (
-            <FormattedMessage defaultMessage="Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning works. Log in first if your question is about an existing VM or payment, so it can look up your account." />
+            <FormattedMessage defaultMessage="Chat with the LNVPS support agent about plans and pricing, regions, operating systems or how paying with Lightning, Monero, Litecoin or Ethereum works. Log in first if your question is about an existing VM or payment, so it can look up your account." />
           )
         }
       />
@@ -76,7 +76,7 @@ export function SupportChatPage() {
               login ? (
                 <FormattedMessage defaultMessage="Ask anything about your account: billing, a VM that won't boot, or what a charge was for." />
               ) : (
-                <FormattedMessage defaultMessage="Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning works." />
+                <FormattedMessage defaultMessage="Ask about plans and pricing, which regions and operating systems we offer, or how paying with Lightning, Monero, Litecoin or Ethereum works." />
               )
             }
           />

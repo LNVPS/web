@@ -26,7 +26,7 @@ export function VpsLondonPage() {
       ? intl.formatMessage(
           {
             defaultMessage:
-              "VPS hosting in London from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain.",
+              "VPS hosting in London from {price} ex-VAT. {minCpu}-{maxCpu} vCPU, up to {maxDisk} {diskType}. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
           },
           {
             price: fromText,
@@ -38,7 +38,7 @@ export function VpsLondonPage() {
         )
       : intl.formatMessage({
           defaultMessage:
-            "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain.",
+            "VPS hosting in London. Pick your CPU, memory and disk. Pay in Bitcoin over Lightning or on-chain, or with Monero, Litecoin or Ethereum.",
         });
 
   return (
@@ -51,7 +51,7 @@ export function VpsLondonPage() {
       description={description}
       h1={<FormattedMessage defaultMessage="VPS hosting in London" />}
       lede={
-        <FormattedMessage defaultMessage="A UK machine, billed monthly and paid in Bitcoin. Pick your CPU, memory and disk; nothing is bundled that you did not ask for." />
+        <FormattedMessage defaultMessage="A UK machine, billed monthly and paid in Bitcoin, Monero, Litecoin or Ethereum. Pick your CPU, memory and disk; nothing is bundled that you did not ask for." />
       }
       cta={<FormattedMessage defaultMessage="Build your London VPS" />}
     />

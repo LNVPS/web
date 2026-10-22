@@ -26,9 +26,6 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{년} other{년}}"
   },
-  "+Mo6Oy": {
-    "defaultMessage": "[특정 지역]에 있는 VPS에서 비트코인 풀 노드를 실행합니다. {regions}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요. {price} 부가세 제외."
-  },
   "+NBJh2": {
     "defaultMessage": "이전 대화를 이어갑니다, 위쪽 메시지는 다시 표시되지 않지만, 에이전트는 여전히 맥락을 유지하고 있습니다. 처음부터 다시 시작하시려면 새 대화를 시작해 주세요."
   },
@@ -53,9 +50,6 @@
   "+prida": {
     "defaultMessage": "아일랜드 VPS, 더블린 VPS, 비트코인으로 결제"
   },
-  "+rSMAE": {
-    "defaultMessage": "고성능 비트코인 라이트닝 VPS 호스팅을 이용하세요. 라이트닝, 비트코인 또는 카드로 결제 가능하며, 장기 계약은 필요하지 않습니다."
-  },
   "+sQCsu": {
     "defaultMessage": "결제 완료"
   },
@@ -73,6 +67,9 @@
   },
   "/3HL90": {
     "defaultMessage": "OS 이미지를 선택하고 다시 설치하세요. 현재 디스크는 지워지고 처음부터 다시 만들어집니다."
+  },
+  "/AJZsl": {
+    "defaultMessage": "배포 {name} LNVPS의 관리형 앱으로. Lightning, Bitcoin, Monero, Litecoin, Ethereum 또는 카드로 결제하세요."
   },
   "/GCoTA": {
     "defaultMessage": "명확하게, 깨끗하게, 분명하게"
@@ -239,9 +236,6 @@
   "2nfKZI": {
     "defaultMessage": "나중에 릴레이 소프트웨어를 변경할 수 있나요?"
   },
-  "2xMlQF": {
-    "defaultMessage": "체인 데이터를 저장할 공간이 있는 VPS에 비트코인 풀 노드를 실행합니다. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
-  },
   "32rBNK": {
     "defaultMessage": "이용약관"
   },
@@ -320,6 +314,9 @@
   "4X/Ixq": {
     "defaultMessage": "해독된 메시지:"
   },
+  "4b360Q": {
+    "defaultMessage": "우리의 더블린 사이트. 원하시는 기계를 직접 제작하고, 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제하세요."
+  },
   "4cMKIO": {
     "defaultMessage": "정기적으로 결제되는 요금제로, 서비스를 계속 이용할 수 있습니다."
   },
@@ -385,6 +382,9 @@
   },
   "6HDvaQ": {
     "defaultMessage": "이후 월"
+  },
+  "6Q4hDQ": {
+    "defaultMessage": "LNVPS 고객지원 담당자와 채팅을 통해 요금제 및 가격, 리전, 운영체제, 또는 Lightning, Monero, Litecoin, Ethereum으로 결제하는 방법에 대해 문의하세요. 기존 VM이나 결제에 관한 질문인 경우, 계정을 조회할 수 있도록 먼저 로그인해 주세요."
   },
   "6Tps09": {
     "defaultMessage": "비활성 상태"
@@ -629,6 +629,9 @@
   "AozuFZ": {
     "defaultMessage": "온체인"
   },
+  "Ap1nXa": {
+    "defaultMessage": "분 만에 배포. 라이트닝, 비트코인, 모네로, 라이트코인, 이더리움 또는 카드로 결제. 장기 계약 없음."
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} 읽다"
   },
@@ -686,9 +689,6 @@
   "BnvK83": {
     "defaultMessage": "{price}부터."
   },
-  "BrtgIv": {
-    "defaultMessage": "LNVPS 지원 에이전트와 요금제 및 가격, 지역, 운영 체제, 또는 Lightning 결제 방식에 대해 채팅으로 문의하세요. 기존 VM이나 결제와 관련된 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
-  },
   "BtKQM7": {
     "defaultMessage": "아직 이 보고서에 대해 결정을 내리지 않았습니다."
   },
@@ -724,6 +724,9 @@
   },
   "Cououe": {
     "defaultMessage": "이 앱을 배포하려면 로그인하세요."
+  },
+  "Cq/8po": {
+    "defaultMessage": "체인을 저장할 충분한 용량을 갖춘 VPS에서 비트코인 풀 노드를 실행하세요. 비트코인(라이트닝 또는 온체인) 또는 모네로, 라이트코인, 이더리움으로 결제하세요."
   },
   "CrzPmt": {
     "defaultMessage": "임대 기간이 만료되었습니다, 이 머신을 유지하려면 갱신하세요."
@@ -761,9 +764,6 @@
   "DDMksJ": {
     "defaultMessage": "첫 번째 VPS를 배포하세요."
   },
-  "DTd1bi": {
-    "defaultMessage": "라이트닝, 온체인 또는 카드"
-  },
   "DU+LLZ": {
     "defaultMessage": "추천"
   },
@@ -776,8 +776,14 @@
   "DZ2Koj": {
     "defaultMessage": "방향"
   },
+  "DaC9UX": {
+    "defaultMessage": "유연한 결제를 지원하는 고성능 VPS 호스팅: 비트코인 라이트닝, 모네로, 라이트코인, 이더리움 또는 카드"
+  },
   "DbJIBd": {
     "defaultMessage": "초대 계층 구조를 가진 커뮤니티 릴레이"
+  },
+  "Dca9jQ": {
+    "defaultMessage": "캐나다 퀘벡 VPS 호스팅. 원하는 CPU, 메모리, 디스크를 선택하세요. 라이트닝 또는 온체인을 통한 비트코인, 또는 모네로, 라이트코인, 이더리움으로 결제하세요."
   },
   "Dfuz87": {
     "defaultMessage": "아직 도메인이 추가되지 않았습니다. 위에서 첫 번째 도메인을 추가하여 시작하세요."
@@ -787,9 +793,6 @@
   },
   "DnX0aY": {
     "defaultMessage": "삭제를 확인합니다."
-  },
-  "DnigOZ": {
-    "defaultMessage": "라이트닝 네트워크, 온체인 비트코인 또는 카드 결제 방식 중 선택하세요. 가입 시 개인 정보는 필요하지 않습니다. 노스트르 키를 사용하여 로그인하세요. 브라우저에서는 NIP-07을, API에서는 NIP-98을 사용합니다."
   },
   "DpNZQY": {
     "defaultMessage": "처리 수수료"
@@ -878,9 +881,6 @@
   "FPbLFA": {
     "defaultMessage": "저장된 결제 수단"
   },
-  "FSW97J": {
-    "defaultMessage": "플랜을 구매하고 Lightning, 비트코인 또는 카드로 구독료를 결제하세요."
-  },
   "FZeQlc": {
     "defaultMessage": "연결이 끊어졌습니다."
   },
@@ -899,14 +899,14 @@
   "FoHB5c": {
     "defaultMessage": "구독 갱신"
   },
+  "FtyqJI": {
+    "defaultMessage": "런던 VPS 호스팅 ~부터 {price} VAT 제외. {minCpu}–{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인으로 라이트닝 또는 온체인을 통해 결제하거나, 모네로, 라이트코인 또는 이더리움으로 결제하세요."
+  },
   "Fv1ZSz": {
     "defaultMessage": "종료"
   },
   "G/yZLu": {
     "defaultMessage": "제거하다"
-  },
-  "G0Z48e": {
-    "defaultMessage": "저희 퀘벡 지점에서는 유럽 외 지역에서 기계를 사용하고 싶을 때 이용하실 수 있습니다. 조립은 직접 하시는 방식이며, 월별 요금은 동일하고, 비트코인으로 결제하실 수 있습니다."
   },
   "G1kGar": {
     "defaultMessage": "패스키 전용 계정에서는 유일한 패스키를 삭제할 수 없습니다."
@@ -1004,9 +1004,6 @@
   "HVtxik": {
     "defaultMessage": "사용자 지정 도메인"
   },
-  "HYP241": {
-    "defaultMessage": "라이트닝, 비트코인 또는 카드로 결제하는 WireGuard VPN입니다. 기기가 자체 키를 생성하며, 저희는 공개 키 부분만 확인할 수 있습니다."
-  },
   "Hct61V": {
     "defaultMessage": "{storage} 영구 저장 장치의 경우, {breakdown}"
   },
@@ -1025,6 +1022,9 @@
   "I90sbW": {
     "defaultMessage": "방금"
   },
+  "IA4Mmd": {
+    "defaultMessage": "라이트닝, 온체인 비트코인, 모네로, 라이트코인, 이더리움 또는 카드. 자체 라이트닝 노드를 운영하므로 사토시는 제3자 프로세서를 경유하지 않습니다."
+  },
   "IChMNf": {
     "defaultMessage": "변경 사항 없음"
   },
@@ -1042,9 +1042,6 @@
   },
   "IZFEUg": {
     "defaultMessage": "준비 완료."
-  },
-  "IaS36D": {
-    "defaultMessage": "라이트닝, 온체인 비트코인, 또는 카드로 결제하실 수 있습니다. 저희는 자체 라이트닝 노드를 운영하기 때문에 사토시가 제3자 결제 처리업체를 경유하지 않습니다."
   },
   "IbWc3k": {
     "defaultMessage": "아일랜드의 더블린."
@@ -1340,9 +1337,6 @@
   "Olq7Wf": {
     "defaultMessage": "여기에 메시지를 입력하세요."
   },
-  "OnsDNZ": {
-    "defaultMessage": "LNVPS의 최신 뉴스, 업데이트 및 공지사항, 비트코인 라이트닝 VPS 호스팅을 제공하며, 카드 결제도 지원합니다."
-  },
   "Op5EHr": {
     "defaultMessage": "Google 계정으로 로그인"
   },
@@ -1370,23 +1364,26 @@
   "P7PLVj": {
     "defaultMessage": "날짜"
   },
-  "PCD5y1": {
-    "defaultMessage": "맞춤형으로 구축된 VPS {region}: {minCpu}-{maxCpu} 가상 CPU 및 {minMemory}-{maxMemory} 메모리, 비트코인으로 결제."
-  },
   "PJtOx7": {
     "defaultMessage": "보고할 만한 사건은 없습니다."
   },
+  "PM9NT5": {
+    "defaultMessage": "주문에 맞춰 구축된 VPS를 ~에 {region}: {minCpu}-{maxCpu} vCPU 및 {minMemory}·{maxMemory} 메모리, 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제"
+  },
   "PUqHRI": {
     "defaultMessage": "트래픽 로그나 연결 로그는 기록되지 않습니다. WireGuard 자체는 마지막 핸드셰이크 시간과 현재 접속 중인 엔드포인트를 메모리에 보관하는데, 이 정보가 없으면 패킷을 되돌려 라우팅할 수 없기 때문입니다."
+  },
+  "PZcJ5k": {
+    "defaultMessage": "LNVPS의 최신 소식, 업데이트 및 공지사항: 비트코인 라이트닝 VPS 호스팅, 모네로·라이트코인·이더리움 및 카드 결제도 지원"
+  },
+  "Pcm3iR": {
+    "defaultMessage": "라이트닝, 비트코인, 모네로, 라이트코인, 이더리움 또는 카드로 결제할 수 있습니다. 가입 시 개인정보가 필요하지 않습니다. Nostr 키로 로그인: 브라우저에서는 NIP-07, API에서는 NIP-98을 사용합니다."
   },
   "PfSZy5": {
     "defaultMessage": "해당 주문을 찾을 수 없습니다."
   },
   "PfUTPz": {
     "defaultMessage": "VPN"
-  },
-  "Pk14hW": {
-    "defaultMessage": "라이트닝 네트워크, 온체인 비트코인 또는 카드 결제 방식 중 선택하세요. 노스트르 키를 사용하여 로그인합니다. 개인 정보 확인 절차는 없습니다."
   },
   "Ppjs/C": {
     "defaultMessage": "런던에서 VPS 호스팅 서비스를 이용하세요."
@@ -1417,6 +1414,9 @@
   },
   "QFNCnX": {
     "defaultMessage": "음수{fee} 수수료"
+  },
+  "QJbptp": {
+    "defaultMessage": "라이트닝, 비트코인, 모네로, 라이트코인, 이더리움 또는 카드. 노스트 키로 로그인하세요. KYC 불필요."
   },
   "QN/rCc": {
     "defaultMessage": "JSON 구문 분석 오류: {msg}"
@@ -1673,9 +1673,6 @@
   "Uyg4Ur": {
     "defaultMessage": "VPN 요금제는 서버가 아니라 트래픽의 출구(egress)를 제공합니다. 정적 IPv4와 IPv6, 월 1TB 이상의 전송량을 갖춘 서버에서 자체 서비스를 실행하고 싶으시다면, 저희 <a>VPS 호스팅</a>은 동일한 인프라에서 구동됩니다."
   },
-  "V/V4bz": {
-    "defaultMessage": "아일랜드 더블린에서 제공되는 VPS 호스팅 서비스 {price} 부가세 제외 가격입니다. 원하는 사양으로 직접 구성하세요. {maxCpu} 가상 CPU. 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
-  },
   "V3ka34": {
     "defaultMessage": "활성 세션"
   },
@@ -1709,9 +1706,6 @@
   "VffztH": {
     "defaultMessage": "마지막으로 사용한 날짜/시간 {date}"
   },
-  "Vi+REQ": {
-    "defaultMessage": "몇 분 안에 배포를 완료하세요. 라이트닝, 비트코인 또는 신용카드로 결제하세요. 장기 계약은 필요하지 않습니다."
-  },
   "Vn25W2": {
     "defaultMessage": "더 큰 크기를 선택하면 가격이 여기에 표시됩니다. 이번 청구 기간의 남은 기간에 대해서는 차액을 결제하게 됩니다."
   },
@@ -1732,9 +1726,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "이 업그레이드를 청구할 구독을 찾을 수 없습니다."
-  },
-  "WHIo1V": {
-    "defaultMessage": "저희 더블린 사업장입니다. 원하는 기계를 직접 제작해 보세요. {minCpu}-{maxCpu} 가상 CPU 및 {minMemory}-{maxMemory}그리고 비트코인으로 결제하세요."
   },
   "WUV28A": {
     "defaultMessage": "저장 중..."
@@ -1763,17 +1754,11 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{달} other{개월}}"
   },
-  "X/4SWn": {
-    "defaultMessage": "캐나다 퀘벡에서 VPS 호스팅을 이용하세요. 원하는 CPU, 메모리, 디스크를 선택하고, 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
-  },
   "X/xmPf": {
     "defaultMessage": "독립된 환경으로 자체 데이터베이스를 갖춤"
   },
   "X0ha1a": {
     "defaultMessage": "변경사항 저장"
-  },
-  "X4GAwh": {
-    "defaultMessage": "요금제와 가격, 제공되는 지역과 운영체제, Lightning 결제 방식에 대해 문의하세요."
   },
   "X4VESO": {
     "defaultMessage": "VM을 지우고 새 이미지로 시작합니다. 이 작업은 VM의 모든 데이터를 영구적으로 삭제합니다."
@@ -1796,8 +1781,14 @@
   "XW9RGA": {
     "defaultMessage": "계정을 만들어야 하나요?"
   },
+  "XXjN3F": {
+    "defaultMessage": "고성능 비트코인 라이트닝 VPS 호스팅. 라이트닝, 비트코인, 모네로, 리터코인, 이더리움 또는 카드로 결제 가능합니다. 장기 약정 없음."
+  },
   "XYkq4n": {
     "defaultMessage": "사용됨"
+  },
+  "XZAYHM": {
+    "defaultMessage": "유럽 외 지역에서 머신을 원하실 때를 위한 저희 퀘벡 사이트입니다. 직접 구성 사양과 월 단위 과금은 동일하며, 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제 가능합니다."
   },
   "XZGfTo": {
     "defaultMessage": "메시지 보내기"
@@ -1892,9 +1883,6 @@
   "ZTj6ca": {
     "defaultMessage": "카드로 결제"
   },
-  "ZTpvML": {
-    "defaultMessage": "유연한 결제 방식을 제공하는 고성능 VPS 호스팅 서비스입니다. 비트코인 라이트닝 또는 신용카드로 결제할 수 있습니다."
-  },
   "ZbOD+W": {
     "defaultMessage": "LNVPS 서비스의 현재 가동 시간 및 발생 이력을 확인하세요. 당사의 VPS 인프라의 현재 운영 상태를 확인하십시오."
   },
@@ -1934,6 +1922,9 @@
   "aPcXT9": {
     "defaultMessage": "지급은 다른 온체인 추천인들과 함께 묶여 하나의 거래로 처리되며, 귀하의 잔액이 최소 금액을 초과하면 지급이 이루어집니다. 네트워크 수수료 중 귀하의 몫은 귀하의 잔액에서 차감됩니다. 메인넷 주소만 해당됩니다."
   },
+  "aSptrh": {
+    "defaultMessage": "아일랜드 더블린 VPS 호스팅. CPU, 메모리, 스토리지를 원하는 대로 구성하여 맞춤형 스펙을 구축하세요. 비트코인(라이트닝 또는 온체인), 모네로, 라이트코인, 이더리움으로 결제 가능합니다."
+  },
   "aTgjTE": {
     "defaultMessage": "패스키 추가"
   },
@@ -1946,6 +1937,9 @@
   "agOXPD": {
     "defaultMessage": "Size"
   },
+  "aimFkf": {
+    "defaultMessage": "런던 VPS 호스팅. CPU, 메모리, 디스크를 직접 선택하세요. 비트코인(라이트닝 또는 온체인), 모네로, 라이트코인, 이더리움으로 결제 가능합니다."
+  },
   "alJZVR": {
     "defaultMessage": "Nostr 계정"
   },
@@ -1957,6 +1951,9 @@
   },
   "auFzJF": {
     "defaultMessage": "최소 지급액(선택 사항)"
+  },
+  "aztZka": {
+    "defaultMessage": "다블린 사이트. ~ 사이에서 원하는 기계로 조립해 보세요 {minCpu}-{maxCpu} vCPU 및 {minMemory}-{maxMemory}, 그리고 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제하세요."
   },
   "b1zuN9": {
     "defaultMessage": "가격"
@@ -2029,9 +2026,6 @@
   },
   "ckx15w": {
     "defaultMessage": "네트워크 전송"
-  },
-  "clx9um": {
-    "defaultMessage": "아일랜드 더블린에 있는 VPS 호스팅 서비스를 이용하세요. 원하는 사양(CPU, 메모리, 저장 공간)을 직접 선택하여 구성할 수 있습니다. 비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
   },
   "cyR7Kh": {
     "defaultMessage": "뒤로"
@@ -2189,6 +2183,9 @@
   "fblXmJ": {
     "defaultMessage": "인스턴스 이름"
   },
+  "fdoseY": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum 또는 카드로 결제 가능한 WireGuard VPN입니다. 기기가 자체적으로 키를 생성하며, 우리는 오직 공개 키만 확인할 수 있습니다."
+  },
   "fsB/4p": {
     "defaultMessage": "저장됨"
   },
@@ -2221,9 +2218,6 @@
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
-  },
-  "gUwcoo": {
-    "defaultMessage": "네, 라이트닝 네트워크 또는 온체인 방식으로 결제할 수 있습니다. 갱신 주기는 매월입니다."
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 한 번도 지불하지 않음"
@@ -2399,6 +2393,9 @@
   "kLNEaL": {
     "defaultMessage": "캡차 인증을 완료해 주세요."
   },
+  "kLojfC": {
+    "defaultMessage": "주문으로 이어지는 광고를 측정하기 위해 쿠키를 사용합니다. 동의하지 않으면 아무것도 저장되지 않습니다."
+  },
   "kRFEho": {
     "defaultMessage": "SSH 키 추가"
   },
@@ -2455,9 +2452,6 @@
   },
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
-  },
-  "lQNVjN": {
-    "defaultMessage": "배포하다 {name} LNVPS에서 관리되는 앱으로, 라이트닝, 비트코인 또는 신용카드로 결제하세요."
   },
   "lQjSeV": {
     "defaultMessage": "잔액을 충전하여 신규 주문, 갱신 및 업그레이드에 사용하세요."
@@ -2561,6 +2555,9 @@
   "nBO87C": {
     "defaultMessage": "설정 숨기기"
   },
+  "nC+eU0": {
+    "defaultMessage": "LNVPS 고객 지원 담당자와 채팅으로 플랜 및 요금, 지역, 운영체제, 또는 Lightning, Monero, Litecoin, Ethereum 결제 방법에 대해 문의할 수 있습니다. 로그인이 필요하지 않습니다. 기존 VM이나 결제 관련 질문이 있으시면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
+  },
   "nCD6ia": {
     "defaultMessage": "더블린(아일랜드), 런던(영국) 또는 퀘벡(캐나다) 중에서 선택할 수 있습니다. 많은 용량을 가진 노드가 필요한 경우 더블린을 선택하면 최대 64개의 가상 CPU와 128GB의 RAM을 사용할 수 있습니다."
   },
@@ -2606,9 +2603,6 @@
   "nxqAD7": {
     "defaultMessage": "새로운 사고"
   },
-  "o/1ZFL": {
-    "defaultMessage": "LNVPS 지원 에이전트와 플랜, 리전, 운영체제, 라이트닝 결제에 대해 채팅하세요. 계정 없이도 가능합니다."
-  },
   "o0jcye": {
     "defaultMessage": "운영 체제"
   },
@@ -2633,9 +2627,6 @@
   "oIPESx": {
     "defaultMessage": "만료 경고, 결제 영수증 및 프로비저닝 알림은 Nostr DM 채널이 활성화된 동안 여기에 수신됩니다. {settings}. 이 수신함은 회신 모니터링이 되지 않습니다, 담당자에게 연결하려면, 사용하세요 {support}."
   },
-  "oOdFIC": {
-    "defaultMessage": "저희 더블린 지점입니다. 원하는 기계를 직접 제작하고 비트코인으로 결제하세요."
-  },
   "oPvhhB": {
     "defaultMessage": "CPU 코어"
   },
@@ -2647,6 +2638,9 @@
   },
   "oawN/U": {
     "defaultMessage": "높은 처리량, 많은 이벤트 발생 빈도"
+  },
+  "ocrKiN": {
+    "defaultMessage": "라이트닝, 비트코인, 모네로, 라이트코인, 이더리움 또는 카드"
   },
   "odTkf5": {
     "defaultMessage": "로그인으로 돌아가기"
@@ -2662,6 +2656,9 @@
   },
   "oswGmn": {
     "defaultMessage": "지급 내역이 남아 있는 동안에는 출금할 수 없습니다."
+  },
+  "oxQL4O": {
+    "defaultMessage": "요금제 및 가격, 제공되는 지역 및 운영체제, Lightning·Monero·Litecoin·Ethereum으로 결제하는 방법에 대해 문의해 주세요."
   },
   "oxq33u": {
     "defaultMessage": "가장 적합한 것은"
@@ -2680,9 +2677,6 @@
   },
   "pHg2Hv": {
     "defaultMessage": "모든 기기가 모든 지역에 접속할 수 있습니다. 터널 내부의 주소는 어느 지점에서 나오더라도 동일하므로, 국가를 변경하는 것은 재등록이 아니라 설정 파일 하나만 바꾸면 되는 일입니다."
-  },
-  "pMi1Vp": {
-    "defaultMessage": "LNVPS 지원 에이전트와 플랜 및 요금제, 리전, 운영체제, 또는 Lightning으로 결제하는 방법에 대해 채팅하세요. 로그인 없이도 가능합니다. 기존 VM이나 결제에 관한 질문이라면 계정을 조회할 수 있도록 먼저 로그인해 주세요."
   },
   "pSgJJF": {
     "defaultMessage": "저희는 귀하의 공개 키와 그 키에 할당된 내부 주소를 보관합니다. 이 쌍이 바로 WireGuard 피어(peer)를 구성하는 것이며, 라우트 서버가 귀하를 연결하는 데 필요한 전부입니다."
@@ -2705,14 +2699,14 @@
   "pus6h6": {
     "defaultMessage": "원하는 시간에 종료하세요. 코드는 더 이상 적립금을 제공하지 않으며 재사용할 수 없습니다."
   },
+  "pvtgR2": {
+    "defaultMessage": "거절"
+  },
   "q/uwLT": {
     "defaultMessage": "멈추세요."
   },
   "q2BAvD": {
     "defaultMessage": "이 주소로 온체인 비트코인을 원하는 금액만큼 송금해 주세요. 트랜잭션이 확인되면 도착한 금액이 잔액에 입금됩니다."
-  },
-  "qA0DQR": {
-    "defaultMessage": "런던에서 VPS 호스팅을 이용하세요. 원하는 CPU, 메모리, 디스크를 선택하고, 라이트닝 네트워크 또는 온체인 방식으로 비트코인으로 결제하세요."
   },
   "qB17v9": {
     "defaultMessage": "지금 이 설정을 저장하세요: 개인 키는 이 페이지에서만 표시되며 다시 확인할 수 없습니다."
@@ -2792,6 +2786,9 @@
   "rvirM2": {
     "defaultMessage": "위치"
   },
+  "rwSswF": {
+    "defaultMessage": "~에서 WireGuard VPN {price} 당 {period}, Lightning, Bitcoin, Monero, Litecoin, Ethereum 또는 카드로 결제할 수 있습니다. 기기가 자체 키를 생성하며, 저희는 공개 키만 확인할 수 있습니다."
+  },
   "ryuZQh": {
     "defaultMessage": "앱을 선택하고, 이름을 지정하고, 결제하세요. 그러면 TLS가 이미 적용된 자체 호스트 이름으로 앱이 실행됩니다. 운영체제를 패치하거나, Docker를 설정하거나, 인증서를 갱신할 필요가 없습니다."
   },
@@ -2825,6 +2822,9 @@
   "sehISV": {
     "defaultMessage": "블로섬 미디어 서버 호스팅, 월 {price}부터"
   },
+  "sjzLbX": {
+    "defaultMessage": "수락"
+  },
   "sn+Rj5": {
     "defaultMessage": "패스키로 로그인"
   },
@@ -2837,6 +2837,9 @@
   "sqvjkf": {
     "defaultMessage": "핸들 추가"
   },
+  "svQL8t": {
+    "defaultMessage": "플랜을 구매하고, 라이트닝, 비트코인, 모네로, 라이트코인, 이더리움 또는 카드로 구독료를 결제하세요."
+  },
   "sx6MYT": {
     "defaultMessage": "에이전트는 VM을 연장, 환불 또는 삭제할 수 없으며, 로그인하지 않은 계정에는 작업을 수행할 수 없습니다. 해당 항목에 대해서는, {link}."
   },
@@ -2846,14 +2849,14 @@
   "t21/v7": {
     "defaultMessage": "가격에는 부가가치세가 포함되며, 결제 처리 수수료는 제외됩니다."
   },
+  "t2MJPa": {
+    "defaultMessage": "네, 라이트닝 또는 온체인으로 결제 가능합니다. 모네로, 라이트코인, 이더리움으로도 결제할 수 있으며, 비트코인으로 자동 스왑됩니다. 갱신 주기는 월 단위입니다."
+  },
   "tNmjzW": {
     "defaultMessage": "포트(들)"
   },
   "tPwWRH": {
     "defaultMessage": "귀하의 배포 내역"
-  },
-  "tSWoyi": {
-    "defaultMessage": "체인에 필요한 용량을 갖춘 VPS를 비트코인으로 결제합니다. 원하는 사양을 선택하고 직접 노드 소프트웨어를 설치하세요. 루트 권한이 제공되며, 제어판은 설치되지 않습니다."
   },
   "tTpLsN": {
     "defaultMessage": "연결되지 않음"
@@ -2987,9 +2990,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} 방화벽 규칙"
   },
-  "w/+hVh": {
-    "defaultMessage": "다음에서 제공되는 WireGuard VPN {price} 매 {period}라이트닝, 비트코인 또는 카드로 결제하세요. 기기가 자체 키를 생성하며, 우리는 공개 키 부분만 확인할 수 있습니다."
-  },
   "w1iy6j": {
     "defaultMessage": "가격 업데이트 중…"
   },
@@ -3002,8 +3002,14 @@
   "wLCwU4": {
     "defaultMessage": "청구 관리"
   },
+  "wNaptW": {
+    "defaultMessage": "VPS에서 비트코인 풀 노드 실행 - {regions}. 라이트닝 또는 온체인으로 비트코인을 사용하거나, 모네로, 라이트코인 또는 이더리움으로 결제하세요. 부터 {price} 부가세 제외."
+  },
   "wRSmBV": {
     "defaultMessage": "네, 모든 요금제에 IPv4 주소와 IPv6 주소 각각 하나씩 포함됩니다."
+  },
+  "wY4M/H": {
+    "defaultMessage": "체인을 저장할 수 있는 용량을 갖춘 VPS로, 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제할 수 있습니다. 사양을 직접 선택하고 루트 접근 권한으로 원하는 노드 소프트웨어를 설치하세요. 컨트롤 패널에 방해받지 않는 환경입니다."
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -3020,11 +3026,11 @@
   "wo868v": {
     "defaultMessage": "Nostr 키 또는 벙커로 로그인 →"
   },
-  "wty+Xf": {
-    "defaultMessage": "런던에서 제공되는 VPS 호스팅 서비스 {price} 부가가치세 제외. {minCpu}-{maxCpu} 가상 CPU, 최대 {maxDisk} {diskType}비트코인으로 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
-  },
   "wz7uSD": {
     "defaultMessage": "포함하여 {amount} 세금"
+  },
+  "x9Z7IH": {
+    "defaultMessage": "LNVPS 지원 에이전트와 요금제, 리전, 운영체제 및 라이트닝, 모네로, 라이트코인, 이더리움 결제에 대해 채팅하세요. 계정 없이 이용 가능합니다."
   },
   "xA8JVo": {
     "defaultMessage": "해시값을 기준으로 파일을 저장하고 검색하는 프로토콜로, 노스트르(Nostr)와 함께 작동하도록 설계되었습니다. NIP-96은 이전 버전의 HTTP 파일 저장 방식이며, Route96은 두 가지 방식을 모두 지원합니다."
@@ -3065,8 +3071,14 @@
   "xkr+zo": {
     "defaultMessage": "약관"
   },
+  "xsCvlD": {
+    "defaultMessage": "아일랜드 더블린 VPS 호스팅 ~부터 {price} 부가세 제외. 원하는 사양을 직접 구성 (최대 ~까지) {maxCpu} vCPU. 라이트닝 또는 온체인을 통해 비트코인으로, 또는 모네로, 라이트코인, 이더리움으로 결제할 수 있습니다."
+  },
   "xuTqgN": {
     "defaultMessage": "결제 방법"
+  },
+  "y/YQY9": {
+    "defaultMessage": "캐나다 퀘벡 VPS 호스팅 ~부터 {price} VAT 제외. {minCpu}-{maxCpu} vCPU, 최대 {maxDisk} {diskType}비트코인으로 라이트닝 네트워크 또는 온체인을 통해 결제하거나, 모네로, 라이트코인 또는 이더리움으로 결제하세요."
   },
   "y0mVUJ": {
     "defaultMessage": "온체인 비트코인"
@@ -3076,6 +3088,9 @@
   },
   "y9xHR9": {
     "defaultMessage": "지급 내역"
+  },
+  "yA/g81": {
+    "defaultMessage": "영국 소재 서버 — 월 단위 과금, 비트코인·모네로·라이트코인·이더리움 결제 지원. CPU, 메모리, 디스크를 직접 선택하세요. 요청하지 않은 구성은 하나도 포함되지 않습니다."
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -3106,12 +3121,6 @@
   },
   "yoQJWu": {
     "defaultMessage": "계정에 관한 것이 무엇이든 물어보세요, 결제, 부팅되지 않는 VM, 또는 특정 요금이 무엇인지."
-  },
-  "yqUCzc": {
-    "defaultMessage": "캐나다 퀘벡에서 제공하는 VPS 호스팅 서비스 {price} 부가가치세 제외. {minCpu}-{maxCpu} 가상 CPU, 최대 {maxDisk} {diskType}비트코인을 라이트닝 네트워크 또는 온체인 방식으로 결제하세요."
-  },
-  "yrsDLO": {
-    "defaultMessage": "영국에서 제공하는 가상 서버로, 월 단위로 요금이 부과되며 비트코인으로 결제합니다. 원하는 CPU, 메모리, 디스크를 선택하세요. 요청하지 않은 추가 서비스는 제공되지 않습니다."
   },
   "z+hIFs": {
     "defaultMessage": "아직 결제 내역이 없습니다."

@@ -26,9 +26,6 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{年} other{年}}"
   },
-  "+Mo6Oy": {
-    "defaultMessage": "VPS上でビットコインのフルノードを稼働させる。 {regions}ビットコインで、ライトニングネットワークまたはオンチェーン経由で支払ってください。 {price} 付加価値税抜き。"
-  },
   "+NBJh2": {
     "defaultMessage": "先ほどの会話を引き継いでいます。上記のメッセージは再び表示されませんが、エージェントには文脈が保持されています。最初からやり直したい場合は、新しい会話を開始してください。"
   },
@@ -53,9 +50,6 @@
   "+prida": {
     "defaultMessage": "アイルランドのVPS、ダブリンのVPS。ビットコインで支払い可能。"
   },
-  "+rSMAE": {
-    "defaultMessage": "高性能なビットコインライトニングVPSホスティング。ライトニング、ビットコイン、またはクレジットカードで支払い可能。長期契約は不要です。"
-  },
   "+sQCsu": {
     "defaultMessage": "お支払い完了"
   },
@@ -73,6 +67,9 @@
   },
   "/3HL90": {
     "defaultMessage": "OS イメージを選んで再インストールします。現在のディスクは消去され、一から作り直されます。"
+  },
+  "/AJZsl": {
+    "defaultMessage": "デプロイ {name} LNVPS上のマネージドアプリとして。ライトニング、Bitcoin、Monero、Litecoin、Ethereum、またはカードでお支払いいただけます。"
   },
   "/GCoTA": {
     "defaultMessage": "はっきりしている、明確な、晴れた"
@@ -239,9 +236,6 @@
   "2nfKZI": {
     "defaultMessage": "後でリレーソフトを切り替えることはできますか？"
   },
-  "2xMlQF": {
-    "defaultMessage": "VPS上で、ブロックチェーン全体を保存できるだけの容量を持つBitcoinのフルノードを運用してください。支払い方法として、LightningネットワークまたはオンチェーンでのBitcoin決済をご利用いただけます。"
-  },
   "32rBNK": {
     "defaultMessage": "利用規約"
   },
@@ -320,6 +314,9 @@
   "4X/Ixq": {
     "defaultMessage": "復号されたメッセージ："
   },
+  "4b360Q": {
+    "defaultMessage": "ダブリン拠点の当サイト。ご希望のマシンを製造し、ビットコイン、モネロ、ライトコイン、イーサリアムで決済いただけます。"
+  },
   "4cMKIO": {
     "defaultMessage": "継続契約により、サービスを常に利用可能な状態に保ちます。"
   },
@@ -385,6 +382,9 @@
   },
   "6HDvaQ": {
     "defaultMessage": "以降は月額"
+  },
+  "6Q4hDQ": {
+    "defaultMessage": "LNVPSのサポート担当者に、プランや料金、リージョン、オペレーティングシステム、またはLightning・Monero・Litecoin・Ethereumでの支払い方法について、チャットで問い合わせることができます。既存のVMや支払いに関するご質問がある場合は、アカウントを確認できるよう、まずログインしてください。"
   },
   "6Tps09": {
     "defaultMessage": "非アクティブ"
@@ -629,6 +629,9 @@
   "AozuFZ": {
     "defaultMessage": "オンチェーン"
   },
+  "Ap1nXa": {
+    "defaultMessage": "数分でデプロイ。ライトニング、ビットコイン、モネロ、ライトコイン、イーサリアム、またはカードで決済可能。長期契約なし。"
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} 既読"
   },
@@ -686,9 +689,6 @@
   "BnvK83": {
     "defaultMessage": "{price} から。"
   },
-  "BrtgIv": {
-    "defaultMessage": "LNVPSのサポートエージェントにチャットで、プランや料金、リージョン、オペレーティングシステム、またはLightningでの支払いの仕組みについてお問い合わせください。既存のVMや支払いに関するご質問の場合は、アカウントを確認できるように、まずログインしてください。"
-  },
   "BtKQM7": {
     "defaultMessage": "この報告書については、まだ決定していません。"
   },
@@ -724,6 +724,9 @@
   },
   "Cououe": {
     "defaultMessage": "このアプリを公開するには、ログインしてください。"
+  },
+  "Cq/8po": {
+    "defaultMessage": "ブロックチェーンのデータを収容できる十分な容量を備えたVPS上で、ビットコインのフルノードを動作できます。お支払いは、ライトニングネットワークまたはオンチェーンでのビットコイン、あるいはモネロ、ライトコイン、イーサリアムに対応しています。"
   },
   "CrzPmt": {
     "defaultMessage": "契約期間が終了しました、このマシンを保持するには更新してください。"
@@ -761,9 +764,6 @@
   "DDMksJ": {
     "defaultMessage": "最初のVPSをデプロイしましょう。"
   },
-  "DTd1bi": {
-    "defaultMessage": "ライトニング、オンチェーン、またはカード"
-  },
   "DU+LLZ": {
     "defaultMessage": "紹介"
   },
@@ -776,8 +776,14 @@
   "DZ2Koj": {
     "defaultMessage": "方向"
   },
+  "DaC9UX": {
+    "defaultMessage": "柔軟な支払い方法に対応した高性能VPSホスティング：Bitcoin Lightning、Monero、Litecoin、Ethereum、またはカード。"
+  },
   "DbJIBd": {
     "defaultMessage": "招待階層を持つコミュニティリレー"
+  },
+  "Dca9jQ": {
+    "defaultMessage": "カナダ・ケベック州のVPSホスティング。CPU、メモリ、ディスクを自由に選択。Lightningネットワークまたはオンチェーンでのビットコイン決済、またはMonero、Litecoin、Ethereumでの決済に対応。"
   },
   "Dfuz87": {
     "defaultMessage": "まだドメインは登録されていません。上記に最初のドメインを登録して、設定を開始してください。"
@@ -787,9 +793,6 @@
   },
   "DnX0aY": {
     "defaultMessage": "削除を確定します。"
-  },
-  "DnigOZ": {
-    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはクレジットカードで支払い。アカウント登録には個人情報は不要です。Nostrキーを使ってログインしてください。ブラウザ版ではNIP-07、API版ではNIP-98を使用します。"
   },
   "DpNZQY": {
     "defaultMessage": "処理手数料"
@@ -878,9 +881,6 @@
   "FPbLFA": {
     "defaultMessage": "保存済みの支払い方法"
   },
-  "FSW97J": {
-    "defaultMessage": "プランを購入し、そのサブスクリプションをLightning、Bitcoin、またはカードで支払いましょう。"
-  },
   "FZeQlc": {
     "defaultMessage": "接続が切断されました。"
   },
@@ -899,14 +899,14 @@
   "FoHB5c": {
     "defaultMessage": "サブスクリプションを更新する"
   },
+  "FtyqJI": {
+    "defaultMessage": "ロンドンでのVPSホスティングは～から {price} 消費税別。 {minCpu}－{maxCpu} vCPU（最大） {maxDisk} {diskType}Bitcoin（Lightning Network経由またはオンチェーン）、またはMonero、Litecoin、Ethereumでお支払いください。"
+  },
   "Fv1ZSz": {
     "defaultMessage": "閉店中"
   },
   "G/yZLu": {
     "defaultMessage": "削除する"
-  },
-  "G0Z48e": {
-    "defaultMessage": "ヨーロッパ以外の場所で機械を使用したい場合は、当社のケベック拠点をご利用ください。組み立てはご自身で行い、月額料金はこれまでと同様で、お支払いはビットコインで行います。"
   },
   "G1kGar": {
     "defaultMessage": "パスキーのみのアカウントでは、唯一のパスキーを削除できません。"
@@ -1004,9 +1004,6 @@
   "HVtxik": {
     "defaultMessage": "カスタムドメイン"
   },
-  "HYP241": {
-    "defaultMessage": "Lightning、Bitcoin、カードで支払えるWireGuard VPN。鍵はお使いのデバイスが独自に生成し、当社が見るのは公開鍵の半分だけです。"
-  },
   "Hct61V": {
     "defaultMessage": "{storage} 永続ストレージについて {breakdown}"
   },
@@ -1025,6 +1022,9 @@
   "I90sbW": {
     "defaultMessage": "ついさっき"
   },
+  "IA4Mmd": {
+    "defaultMessage": "ライトニング、オンチェーンのビットコイン、モネロ、ライトコイン、イーサリアム、またはカード。独自のライトニングノードを運用しているため、サットはサードパーティのプロセッサーを経由しません。"
+  },
   "IChMNf": {
     "defaultMessage": "変更は検出されませんでした。"
   },
@@ -1042,9 +1042,6 @@
   },
   "IZFEUg": {
     "defaultMessage": "準備完了。"
-  },
-  "IaS36D": {
-    "defaultMessage": "ライトニング、オンチェーンのビットコイン、またはカードでのお支払いに対応しています。当店は独自のライトニングノードを運用しているため、サトシ（sats）が第三者決済プロセッサを経由することはありません。"
   },
   "IbWc3k": {
     "defaultMessage": "アイルランドのダブリン。"
@@ -1340,9 +1337,6 @@
   "Olq7Wf": {
     "defaultMessage": "ここにメッセージを入力してください。"
   },
-  "OnsDNZ": {
-    "defaultMessage": "LNVPSからの最新ニュース、アップデート、およびお知らせ、ビットコインのライトニングネットワークに対応したVPSホスティング。クレジットカードでの支払いも可能です。"
-  },
   "Op5EHr": {
     "defaultMessage": "Googleでログイン"
   },
@@ -1370,23 +1364,26 @@
   "P7PLVj": {
     "defaultMessage": "日付"
   },
-  "PCD5y1": {
-    "defaultMessage": "お客様のご要望に応じて構築されるVPS {region}： {minCpu}{maxCpu} 仮想CPUおよび {minMemory}{maxMemory} メモリ、支払いはビットコインで。"
-  },
   "PJtOx7": {
     "defaultMessage": "報告すべき事象はありません。"
   },
+  "PM9NT5": {
+    "defaultMessage": "注文に応じて構築されるVPS（所要時間 {region}： {minCpu}‐{maxCpu} vCPUおよび {minMemory}－{maxMemory} ビットコイン、モネロ、ライトコイン、またはイーサリアムで支払われるメモリ"
+  },
   "PUqHRI": {
     "defaultMessage": "トラフィックログや接続ログは一切記録されません。WireGuard自体は、最後のハンドシェイク時刻と現在接続しているエンドポイントをメモリ上に保持します。これは、それらの情報がないとプロトコルがパケットを返送できないためです。"
+  },
+  "PZcJ5k": {
+    "defaultMessage": "LNVPSからの最新ニュース・アップデート・お知らせ：ビットコイン・ライトニング VPSホスティング。モネロ、ライトコイン、イーサリアム、カード払いにも対応。"
+  },
+  "Pcm3iR": {
+    "defaultMessage": "ライトニング、ビットコイン、モネロ、ライトコイン、イーサリアム、またはカード。登録には個人情報は不要です。Nostrキーでログイン：ブラウザではNIP-07、APIではNIP-98。"
   },
   "PfSZy5": {
     "defaultMessage": "該当する注文は見つかりませんでした。"
   },
   "PfUTPz": {
     "defaultMessage": "VPN"
-  },
-  "Pk14hW": {
-    "defaultMessage": "ライトニングネットワーク、オンチェーンのビットコイン、またはカードで支払い。Nostrキーを使ってログインしてください。本人確認は不要です。"
   },
   "Ppjs/C": {
     "defaultMessage": "ロンドンでのVPSホスティング"
@@ -1417,6 +1414,9 @@
   },
   "QFNCnX": {
     "defaultMessage": "-{fee} 料金、手数料"
+  },
+  "QJbptp": {
+    "defaultMessage": "ライトニング、ビットコイン、モネロ、ライトコイン、イーサリアム、またはカード決済。Nostrキーでログイン。KYC不要。"
   },
   "QN/rCc": {
     "defaultMessage": "JSONの解析中にエラーが発生しました：{msg}"
@@ -1673,9 +1673,6 @@
   "Uyg4Ur": {
     "defaultMessage": "VPNプランは出口を提供するもので、サーバーを提供するものではありません。固定のIPv4とIPv6、月間最低1TBの転送量を備えた、自前のサービスを実行するためのボックスが欲しい場合は、当社の<a>VPSホスティング</a>は同じサーバー群で動作しています。"
   },
-  "V/V4bz": {
-    "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービス {price} 消費税抜き。お客様のニーズに合わせて仕様を自由にカスタマイズできます。 {maxCpu} 仮想CPU。ライトニングネットワークまたはオンチェーンでビットコインを使ってお支払いください。"
-  },
   "V3ka34": {
     "defaultMessage": "アクティブなセッション"
   },
@@ -1709,9 +1706,6 @@
   "VffztH": {
     "defaultMessage": "前回使用日 {date}"
   },
-  "Vi+REQ": {
-    "defaultMessage": "数分で導入できます。支払い方法は、Lightning、ビットコイン、またはクレジットカードをご利用いただけます。長期契約は一切ありません。"
-  },
   "Vn25W2": {
     "defaultMessage": "大きいサイズを選択すると、ここに価格が表示されます。この請求期間の残り分について、差額をお支払いいただきます。"
   },
@@ -1732,9 +1726,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "このアップグレードを請求するサブスクリプションが見つかりませんでした。"
-  },
-  "WHIo1V": {
-    "defaultMessage": "当社のダブリン拠点。お客様がご希望の機械を組み立てます。 {minCpu}{maxCpu} vCPUおよび {minMemory}-{maxMemory}そして、ビットコインで支払います。"
   },
   "WUV28A": {
     "defaultMessage": "保存中……"
@@ -1763,17 +1754,11 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{月} other{か月}}"
   },
-  "X/4SWn": {
-    "defaultMessage": "カナダのケベック州でVPSホスティングをご利用いただけます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでのビットコイン決済でお願いします。"
-  },
   "X/xmPf": {
     "defaultMessage": "独自のデータベースを備えた隔離された環境。"
   },
   "X0ha1a": {
     "defaultMessage": "変更を保存"
-  },
-  "X4GAwh": {
-    "defaultMessage": "プランや料金、提供しているリージョンやOS、Lightningでの支払い方法について質問してください。"
   },
   "X4VESO": {
     "defaultMessage": "VM を消去して新しいイメージから開始します。これにより VM 上のすべてのデータが完全に削除されます。"
@@ -1796,8 +1781,14 @@
   "XW9RGA": {
     "defaultMessage": "アカウントは必要ですか？"
   },
+  "XXjN3F": {
+    "defaultMessage": "高性能なBitcoin Lightning VPSホスティング。Lightning、Bitcoin、Monero、Litecoin、Ethereum、またはカードでのお支払いに対応。長期契約なし。"
+  },
   "XYkq4n": {
     "defaultMessage": "使用済み"
+  },
+  "XZAYHM": {
+    "defaultMessage": "ケベック拠点。ヨーロッパ以外にマシンを置きたい方へ。仕様は同じく自由に構成可能、月額課金。ビットコイン、モネロ、ライトコイン、イーサリアムでの支払いに対応。"
   },
   "XZGfTo": {
     "defaultMessage": "メッセージを送信する"
@@ -1892,9 +1883,6 @@
   "ZTj6ca": {
     "defaultMessage": "カードで支払う"
   },
-  "ZTpvML": {
-    "defaultMessage": "高性能なVPSホスティングで、柔軟な支払い方法をご利用いただけます。ビットコインライトニングまたはクレジットカードでどうぞ。"
-  },
   "ZbOD+W": {
     "defaultMessage": "LNVPSサービスの稼働状況とインシデント履歴をリアルタイムで確認できます。当社のVPSインフラの現在の運用状況をご確認ください。"
   },
@@ -1934,6 +1922,9 @@
   "aPcXT9": {
     "defaultMessage": "お支払いについては、残高が最低額を超えた時点で、他のオンチェーン・リファラーからの支払いとまとめて1つのトランザクションとして処理されます。ネットワーク手数料の一部がお客様の残高から差し引かれます。対象はメインネットのアドレスのみです。"
   },
+  "aSptrh": {
+    "defaultMessage": "アイルランド・ダブリンのVPSホスティング。CPU、メモリ、ストレージを自由に選択し、ご自身に最適な構成を構築できます。Lightningネットワークまたはオンチェーンでのビットコイン決済、またはモネロ、ライトコイン、イーサリアムでの決済に対応。"
+  },
   "aTgjTE": {
     "defaultMessage": "パスキーを追加"
   },
@@ -1946,6 +1937,9 @@
   "agOXPD": {
     "defaultMessage": "Size"
   },
+  "aimFkf": {
+    "defaultMessage": "ロンドン VPSホスティング。CPU・メモリ・ディスクを自由に選択。Lightningネットワークまたはオンチェーンでのビットコイン決済、またはモネロ・ライトコイン・イーサリアムでの決済に対応。"
+  },
   "alJZVR": {
     "defaultMessage": "Nostrアカウント"
   },
@@ -1957,6 +1951,9 @@
   },
   "auFzJF": {
     "defaultMessage": "最低払い戻し額（オプション）"
+  },
+  "aztZka": {
+    "defaultMessage": "ダブリンの拠点。ご希望のマシンを、〜と〜の間に {minCpu}―{maxCpu} vCPUと {minMemory}－{maxMemory}、そしてビットコイン、モネロ、ライトコイン、またはイーサリアムで支払う。"
   },
   "b1zuN9": {
     "defaultMessage": "価格"
@@ -2029,9 +2026,6 @@
   },
   "ckx15w": {
     "defaultMessage": "ネットワーク転送"
-  },
-  "clx9um": {
-    "defaultMessage": "アイルランドのダブリンにあるVPSホスティングサービスです。お客様のニーズに合わせて、CPU、メモリ、ストレージなどのスペックを自由に選択いただけます。お支払いには、ライトニングネットワークまたはオンチェーンのビットコインをご利用いただけます。"
   },
   "cyR7Kh": {
     "defaultMessage": "戻る"
@@ -2189,6 +2183,9 @@
   "fblXmJ": {
     "defaultMessage": "インスタンス名"
   },
+  "fdoseY": {
+    "defaultMessage": "Lightning、Bitcoin、Monero、Litecoin、Ethereum、またはカードで支払えるWireGuard VPN。お使いのデバイスが独自の鍵を生成し、私たちが目にするのはあくまで公開鍵のほうだけです。"
+  },
   "fsB/4p": {
     "defaultMessage": "保存しました。"
   },
@@ -2221,9 +2218,6 @@
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
-  },
-  "gUwcoo": {
-    "defaultMessage": "はい。ライトニングネットワークまたはオンチェーンで決済できます。更新は毎月行われます。"
   },
   "gWp9QV": {
     "defaultMessage": "{failed} 支払われなかった。"
@@ -2399,6 +2393,9 @@
   "kLNEaL": {
     "defaultMessage": "CAPTCHA認証を完了してください。"
   },
+  "kLojfC": {
+    "defaultMessage": "クッキーを使用して、どの広告が注文につながったかを測定しています。同意いただかない限り、何も設定されません。"
+  },
   "kRFEho": {
     "defaultMessage": "SSHキーを追加する"
   },
@@ -2455,9 +2452,6 @@
   },
   "lP4qIQ": {
     "defaultMessage": "カード情報"
-  },
-  "lQNVjN": {
-    "defaultMessage": "展開する、配備する {name} LNVPSで管理されているアプリとして提供、Lightning、ビットコイン、またはクレジットカードで支払い。"
   },
   "lQjSeV": {
     "defaultMessage": "残高をチャージし、新規注文・更新・アップグレードにお使いください。"
@@ -2561,6 +2555,9 @@
   "nBO87C": {
     "defaultMessage": "設定を非表示"
   },
+  "nC+eU0": {
+    "defaultMessage": "LNVPSのサポートエージェントに、プランや料金、リージョン、オペレーティングシステム、またはLightning、Monero、Litecoin、Ethereumでの支払い方法についてチャットで相談できます。ログインは不要です。既存のVMや支払いに関するご質問がある場合は、アカウント情報を確認できるよう、まずログインしてください。"
+  },
   "nCD6ia": {
     "defaultMessage": "ダブリン（アイルランド）、ロンドン（イギリス）、またはケベック（カナダ）から選択できます。大規模なノードが必要な場合は、ダブリンが最も優れた性能を発揮します。最大で64の仮想CPUと128GBのRAMを搭載できます。"
   },
@@ -2606,9 +2603,6 @@
   "nxqAD7": {
     "defaultMessage": "新規インシデント"
   },
-  "o/1ZFL": {
-    "defaultMessage": "LNVPSのサポートエージェントにチャットで、プラン、リージョン、オペレーティングシステム、Lightning決済についてお問い合わせください。アカウント不要。"
-  },
   "o0jcye": {
     "defaultMessage": "オペレーティングシステム"
   },
@@ -2633,9 +2627,6 @@
   "oIPESx": {
     "defaultMessage": "有効期限警告、支払い受領通知、プロビジョニング通知は、Nostr DMチャネルが有効な間、ここに表示されます。 {settings}。この受信トレイは返信の確認は行われていません、担当者へ連絡するには、 {support}。"
   },
-  "oOdFIC": {
-    "defaultMessage": "当社のダブリン拠点。お客様が希望する仕様の機械を組み立て、ビットコインで支払うことができます。"
-  },
   "oPvhhB": {
     "defaultMessage": "CPUコア"
   },
@@ -2647,6 +2638,9 @@
   },
   "oawN/U": {
     "defaultMessage": "高い処理能力、大量のイベント処理"
+  },
+  "ocrKiN": {
+    "defaultMessage": "ライトニング、ビットコイン、モネロ、ライトコイン、イーサリアム、またはカード"
   },
   "odTkf5": {
     "defaultMessage": "ログインに戻る"
@@ -2662,6 +2656,9 @@
   },
   "oswGmn": {
     "defaultMessage": "支払履歴が存在する場合は、ログアウトできません。"
+  },
+  "oxQL4O": {
+    "defaultMessage": "プランや料金、対応している地域やOS、Lightning・Monero・Litecoin・Ethereumでの支払い方法などについて、お気軽にお尋ねください。"
   },
   "oxq33u": {
     "defaultMessage": "最適なもの"
@@ -2680,9 +2677,6 @@
   },
   "pHg2Hv": {
     "defaultMessage": "すべてのデバイスがすべてのリージョンに接続できます。トンネル内のアドレスはどこで出口に出ても同じなので、国の切り替えは設定ファイルの変更だけで済み、再登録は不要です。"
-  },
-  "pMi1Vp": {
-    "defaultMessage": "LNVPSのサポートエージェントに、プランと料金、リージョン、オペレーティングシステム、またはLightningでの支払いの仕組みについてチャットしてください。ログインは不要です。既存のVMや支払いに関するお問い合わせの場合は、アカウントを確認できるように、まずログインしてください。"
   },
   "pSgJJF": {
     "defaultMessage": "当社はお客様の公開鍵と、それに割り当てられた内部アドレスを保持します。このペアこそがWireGuardピアの正体であり、ルートサーバーがお客様を扱うために必要な情報はこれだけです。"
@@ -2705,14 +2699,14 @@
   "pus6h6": {
     "defaultMessage": "いつでも解約できます。解約すると、コードの利用は停止され、再利用もできなくなります。"
   },
+  "pvtgR2": {
+    "defaultMessage": "辞退"
+  },
   "q/uwLT": {
     "defaultMessage": "止まれ"
   },
   "q2BAvD": {
     "defaultMessage": "金額を問わず、オンチェーンのビットコインをこのアドレスに送金してください。取引が確認されると、着金分があなたの残高に反映されます。"
-  },
-  "qA0DQR": {
-    "defaultMessage": "ロンドンでVPSホスティングを利用できます。CPU、メモリ、ディスクをお選びください。お支払いは、ライトニングネットワークまたはオンチェーンでビットコインで行えます。"
   },
   "qB17v9": {
     "defaultMessage": "今すぐこの設定を保存してください：秘密鍵はこのページにのみ表示されており、再度表示することはできません。"
@@ -2792,6 +2786,9 @@
   "rvirM2": {
     "defaultMessage": "場所"
   },
+  "rwSswF": {
+    "defaultMessage": "～からのWireGuard VPN {price} あたり {period}、ライトニング、ビットコイン、モネロ、ライトコイン、イーサリアム、またはカードで決済可能。お使いのデバイスが独自の鍵を生成し、私たちが目にするのは公開鍵のみです。"
+  },
   "ryuZQh": {
     "defaultMessage": "アプリを選び、名前を付け、料金を支払います。すると、TLSがすでに有効になっている状態で、独自のホスト名で自動的に起動します。OSのパッチを当てたり、Dockerを設定したり、証明書を更新したりする必要はありません。"
   },
@@ -2825,6 +2822,9 @@
   "sehISV": {
     "defaultMessage": "Blossomメディアサーバーのホスティングサービスを月額{price}から。"
   },
+  "sjzLbX": {
+    "defaultMessage": "承認"
+  },
   "sn+Rj5": {
     "defaultMessage": "パスキーでサインイン"
   },
@@ -2837,6 +2837,9 @@
   "sqvjkf": {
     "defaultMessage": "ハンドルを追加"
   },
+  "svQL8t": {
+    "defaultMessage": "プランを購入し、Lightning、Bitcoin、Monero、Litecoin、Ethereum、またはカードでサブスクリプション料金を支払えます。"
+  },
   "sx6MYT": {
     "defaultMessage": "エージェントはVMの延長、返金、削除を行うことができず、ログインしていないアカウントに対して操作を行うこともできません。それらについては、 {link}。"
   },
@@ -2846,14 +2849,14 @@
   "t21/v7": {
     "defaultMessage": "価格はVAT込みですが、決済手数料は含まれません。"
   },
+  "t2MJPa": {
+    "defaultMessage": "はい、ライトニングでもオンチェーンでも対応しています。モネロ、ライトコイン、イーサリアムでの支払いも可能で、ビットコインに交換されます。更新は毎月です。"
+  },
   "tNmjzW": {
     "defaultMessage": "ポート（複数形）"
   },
   "tPwWRH": {
     "defaultMessage": "お客様のデプロイメント状況"
-  },
-  "tSWoyi": {
-    "defaultMessage": "ビットコインで支払うVPSで、ブロックチェーンを運用するための十分な容量を確保できます。必要なスペックを選択し、独自のノードソフトウェアをインストールしてください。rootアクセス権が付与され、操作を妨げるコントロールパネルは一切ありません。"
   },
   "tTpLsN": {
     "defaultMessage": "リンクされていません。"
@@ -2987,9 +2990,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} ファイアウォールルール"
   },
-  "w/+hVh": {
-    "defaultMessage": "〜によるWireGuard VPN {price} あたり {period}、Lightning、Bitcoin またはカードでお支払いください。デバイスが鍵を独自に生成し、当社が見るのは公開鍵の半分だけです。"
-  },
   "w1iy6j": {
     "defaultMessage": "価格を更新中…"
   },
@@ -3002,8 +3002,14 @@
   "wLCwU4": {
     "defaultMessage": "請求を管理"
   },
+  "wNaptW": {
+    "defaultMessage": "VPS上でビットコインのフルノードを…で運用する {regions}. Lightningネットワークまたはオンチェーンでビットコイン、またはMonero、Litecoin、Ethereumで支払う。〜から {price} 消費税別。"
+  },
   "wRSmBV": {
     "defaultMessage": "はい、すべてのプランでIPv4アドレスとIPv6アドレスをそれぞれ1つずつ提供します。"
+  },
+  "wY4M/H": {
+    "defaultMessage": "ブロックチェーンを収容できる十分な容量を備えたVPS。Bitcoin、Monero、Litecoin、Ethereumでの支払いに対応。スペックは自由に選択し、ご自身のノードソフトウェアをインストールできます。root権限付きで、邪魔なコントロールパネルは一切ありません。"
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -3020,11 +3026,11 @@
   "wo868v": {
     "defaultMessage": "Nostrキーまたはバンカーでログイン →"
   },
-  "wty+Xf": {
-    "defaultMessage": "ロンドンでのVPSホスティング（サービス） {price} 付加価値税（VAT）を除く。 {minCpu}{maxCpu} 仮想CPU、最大。 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いを受け付けます。"
-  },
   "wz7uSD": {
     "defaultMessage": "税込み {amount}"
+  },
+  "x9Z7IH": {
+    "defaultMessage": "プラン、リージョン、OS、Lightning、Monero、Litecoin、Ethereumによるお支払いについて、LNVPSのサポート担当とチャットで相談できます。アカウント登録は不要です。"
   },
   "xA8JVo": {
     "defaultMessage": "ハッシュ値に基づいてファイルを保存および検索するためのプロトコルで、Nostrと連携するように設計されています。NIP-96は、より古いHTTPファイルストレージ仕様です。Route96は両方の仕様に対応しています。"
@@ -3065,8 +3071,14 @@
   "xkr+zo": {
     "defaultMessage": "利用規約"
   },
+  "xsCvlD": {
+    "defaultMessage": "アイルランド・ダブリンのVPSホスティング、～から {price} VAT別。お好みに合わせて仕様を組む（最大～まで） {maxCpu} vCPU。ライトニングまたはオンチェーン経由のビットコイン、またはモネロ、ライトコイン、イーサリアムでの決済が可能です。"
+  },
   "xuTqgN": {
     "defaultMessage": "お支払い方法"
+  },
+  "y/YQY9": {
+    "defaultMessage": "カナダ・ケベック州のVPSホスティング 〜から {price} 消費税別。 {minCpu}－{maxCpu} vCPU、最大 {maxDisk} {diskType}Bitcoin（ライトニング経由またはオンチェーン）、Monero、Litecoin、Ethereumで支払いが可能です。"
   },
   "y0mVUJ": {
     "defaultMessage": "オンチェーンビットコイン"
@@ -3076,6 +3088,9 @@
   },
   "y9xHR9": {
     "defaultMessage": "支払い額"
+  },
+  "yA/g81": {
+    "defaultMessage": "イギリスのサーバー。月額課金で、ビットコイン、モノエロ、ライトコイン、イーサリアムによるお支払いに対応。CPU、メモリ、ディスクを自由に選択でき、ご指定のないものは一切含まれません。"
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -3106,12 +3121,6 @@
   },
   "yoQJWu": {
     "defaultMessage": "アカウントについて、請求、起動しないVM、課金の内容など、何でも聞いてください。"
-  },
-  "yqUCzc": {
-    "defaultMessage": "カナダのケベック州におけるVPSホスティングサービス {price} 付加価値税抜き。 {minCpu}－{maxCpu} vCPU、最大 {maxDisk} {diskType}ビットコインで、ライトニングネットワークまたはオンチェーンでの支払いが可能です。"
-  },
-  "yrsDLO": {
-    "defaultMessage": "英国のサーバーで、月額料金制で、支払い通貨はビットコインです。CPU、メモリ、ディスクをお選びください。ご希望のもの以外は一切含まれません。"
   },
   "z+hIFs": {
     "defaultMessage": "まだ支払いは行われていません。"

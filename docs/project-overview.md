@@ -2,7 +2,7 @@
 
 ## Summary
 
-LNVPS Web is a React SPA for a Bitcoin Lightning Network VPS provider. Users authenticate via Nostr protocol, manage virtual machines (order, start/stop/restart, reinstall, upgrade), access a web terminal, view resource graphs, and pay with Bitcoin Lightning or Revolut.
+LNVPS Web is a React SPA for a Bitcoin Lightning Network VPS provider. Users authenticate via Nostr protocol, manage virtual machines (order, start/stop/restart, reinstall, upgrade), access a web terminal, view resource graphs, and pay with Bitcoin Lightning, on-chain Bitcoin, Monero, Litecoin, Ethereum or Revolut.
 
 **Stack:** React 18 + TypeScript 5.5 + Vite 6 + Tailwind CSS 3
 

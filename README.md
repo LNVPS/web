@@ -12,6 +12,7 @@ A server-side rendered React app running on [Bun](https://bun.sh), with client-s
 - **Resource Monitoring** — CPU, memory, network, and disk usage graphs
 - **Firewall** — Manage per-VM firewall rules
 - **Lightning Payments** — Pay with Bitcoin over the Lightning Network
+- **Monero, Litecoin and Ethereum** — Pay with Monero, Litecoin, Ethereum or Tether, swapped to Bitcoin at checkout
 - **Fiat Payments** — Card payments via Revolut, with saved-card renewals
 - **Auto-Renewal** — Automatic renewals using Nostr Wallet Connect (NWC)
 - **Custom VPS** — Configure custom VM specs (CPU, RAM, disk)

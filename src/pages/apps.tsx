@@ -132,7 +132,7 @@ export function AppsPage() {
         </Block>
         <Block
           title={
-            <FormattedMessage defaultMessage="Lightning, on-chain, or card" />
+            <FormattedMessage defaultMessage="Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card" />
           }
         >
           <FormattedMessage defaultMessage="Billing works like a VPS subscription, with no setup fee on any app." />

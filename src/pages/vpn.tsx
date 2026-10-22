@@ -115,7 +115,7 @@ export function VpnPage() {
       question: formatMessage({ defaultMessage: "How do I pay?" }),
       answer: formatMessage({
         defaultMessage:
-          "Lightning, on-chain Bitcoin, or card. We run our own Lightning node, so sats do not route through a third-party processor.",
+          "Lightning, on-chain Bitcoin, Monero, Litecoin, Ethereum, or card. We run our own Lightning node, so sats do not route through a third-party processor.",
       }),
     },
     {
@@ -146,13 +146,13 @@ export function VpnPage() {
             ? formatMessage(
                 {
                   defaultMessage:
-                    "A WireGuard VPN from {price} per {period}, paid with Lightning, Bitcoin or card. Your device makes its own keys and we only ever see the public half.",
+                    "A WireGuard VPN from {price} per {period}, paid with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card. Your device makes its own keys and we only ever see the public half.",
                 },
                 { price: priceText, period: periodText },
               )
             : formatMessage({
                 defaultMessage:
-                  "A WireGuard VPN paid with Lightning, Bitcoin or card. Your device makes its own keys and we only ever see the public half.",
+                  "A WireGuard VPN paid with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card. Your device makes its own keys and we only ever see the public half.",
               })
         }
         jsonLd={[...services.map((s) => vpnServiceJsonLd(s)), faqJsonLd(faq)]}
@@ -177,7 +177,7 @@ export function VpnPage() {
         <Section title={<FormattedMessage defaultMessage="How it works" />}>
           <ol className="m-0 flex max-w-prose list-decimal flex-col gap-1 pl-5 text-cyber-text">
             <li>
-              <FormattedMessage defaultMessage="Buy a plan and pay its subscription with Lightning, Bitcoin or card." />
+              <FormattedMessage defaultMessage="Buy a plan and pay its subscription with Lightning, Bitcoin, Monero, Litecoin, Ethereum or card." />
             </li>
             <li>
               <FormattedMessage defaultMessage="Register each device by its WireGuard public key. Generate it with the WireGuard app or wg genkey, or let the browser make one for you." />

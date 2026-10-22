@@ -98,7 +98,7 @@ We may suspend a service immediately and without warning where there is an ongoi
 
 ## 7. Payment and Billing
 
-- **Fees**: You agree to pay the fees for your chosen plan as outlined at checkout. Prices may be displayed and paid in Euro (€), US Dollar ($), or Bitcoin (BTC, via the Lightning Network or on-chain), as offered at checkout.
+- **Fees**: You agree to pay the fees for your chosen plan as outlined at checkout. Prices may be displayed and paid in Euro (€), US Dollar ($), or Bitcoin (BTC, via the Lightning Network or on-chain), as offered at checkout. Where offered, you may also pay in Monero (XMR), Litecoin (LTC), Ethereum (ETH) or Tether (USDT), which a third-party exchange converts to Bitcoin.
 - **Exchange Rates**: Where you pay in Bitcoin for a plan priced in fiat currency (or vice versa), the amount payable is calculated at the exchange rate applied at the time the invoice is generated. Once an invoice is paid, it is final; we do not adjust for subsequent exchange rate movements.
 - **Billing Cycle**: The Services are prepaid. Payment is due in advance for each billing period of your chosen plan, and your service runs until the end of the period you have paid for.
 - **Non-Payment**: If your service is not renewed by its expiry date, it will be stopped and you will no longer be able to access it. It may subsequently be deleted in accordance with Section 8.

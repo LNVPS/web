@@ -26,9 +26,6 @@
   "+JVG/q": {
     "defaultMessage": "{n,plural,one{yıl} other{yıl}}"
   },
-  "+Mo6Oy": {
-    "defaultMessage": "bir VPS üzerinde çalışan bir Bitcoin tam düğümü çalıştırın. {regions}Bitcoin ile Lightning veya doğrudan blok zinciri üzerinden ödeme yapın. Şuradan: {price} KDV hariç."
-  },
   "+NBJh2": {
     "defaultMessage": "Daha önceki konuşmanıza devam ediyoruz, yukarıdaki mesajlar tekrar gösterilmese de ajan hâlâ bağlama sahip. Sıfırdan başlamak isterseniz yeni bir konuşma başlatın."
   },
@@ -53,9 +50,6 @@
   "+prida": {
     "defaultMessage": "VPS İrlanda, Dublin VPS, Bitcoin ile ödeme"
   },
-  "+rSMAE": {
-    "defaultMessage": "Yüksek performanslı Bitcoin Lightning VPS barındırma hizmeti. Lightning, Bitcoin veya kredi kartı ile ödeme yapın; uzun vadeli sözleşme gerekmiyor."
-  },
   "+sQCsu": {
     "defaultMessage": "Ödemeyi Tamamla"
   },
@@ -73,6 +67,9 @@
   },
   "/3HL90": {
     "defaultMessage": "Bir işletim sistemi imajı seçin ve yeniden kurun. Mevcut disk silinir ve sıfırdan yeniden oluşturulur."
+  },
+  "/AJZsl": {
+    "defaultMessage": "Dağıt {name} LNVPS üzerinde yönetilen bir uygulama olarak. Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart ile ödeyin."
   },
   "/GCoTA": {
     "defaultMessage": "Açık"
@@ -239,9 +236,6 @@
   "2nfKZI": {
     "defaultMessage": "Daha sonra röle yazılımını değiştirebilir miyim?"
   },
-  "2xMlQF": {
-    "defaultMessage": "Bir VPS üzerinde, zincir için yeterli depolama alanına sahip bir Bitcoin tam düğümü çalıştırın. Ödemeleri Lightning veya doğrudan zincir üzerinden Bitcoin ile yapın."
-  },
   "32rBNK": {
     "defaultMessage": "Hizmet Şartları"
   },
@@ -320,6 +314,9 @@
   "4X/Ixq": {
     "defaultMessage": "Şifresi çözülmüş mesaj:"
   },
+  "4b360Q": {
+    "defaultMessage": "Dublin'deki sitemiz. İstediğiniz makineyi oluşturun ve Bitcoin, Monero, Litecoin veya Ethereum ile ödeyin."
+  },
   "4cMKIO": {
     "defaultMessage": "Hizmetlerinizin aktif kalmasını sağlayan düzenli abonelik planları."
   },
@@ -385,6 +382,9 @@
   },
   "6HDvaQ": {
     "defaultMessage": "Sonrasında aylık"
+  },
+  "6Q4hDQ": {
+    "defaultMessage": "LNVPS destek temsilcisiyle planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning, Monero, Litecoin ya da Ethereum ile ödeme yapmanın nasıl işlediği hakkında sohbet edin. Sorunuz mevcut bir sanal makine veya ödemeyle ilgiliyse, hesabınızın görüntülenebilmesi için önce giriş yapın."
   },
   "6Tps09": {
     "defaultMessage": "Etkin değil"
@@ -629,6 +629,9 @@
   "AozuFZ": {
     "defaultMessage": "Zincir üzerinde"
   },
+  "Ap1nXa": {
+    "defaultMessage": "Dakikalar içinde yayına alın. Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart ile ödeme yapın. Uzun vadeli sözleşme yok."
+  },
   "Ay7iFf": {
     "defaultMessage": "{v} okumak"
   },
@@ -686,9 +689,6 @@
   "BnvK83": {
     "defaultMessage": "{price} fiyatından itibaren."
   },
-  "BrtgIv": {
-    "defaultMessage": "Planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl işlediği hakkında LNVPS destek temsilcisiyle sohbet edin. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınıza bakabilmesi için önce giriş yapın."
-  },
   "BtKQM7": {
     "defaultMessage": "Henüz bu rapor hakkında bir karar vermedik."
   },
@@ -724,6 +724,9 @@
   },
   "Cououe": {
     "defaultMessage": "Bu uygulamayı kullanıma sunmak için oturum açın."
+  },
+  "Cq/8po": {
+    "defaultMessage": "Zincir için yeterli alanı olan bir VPS üzerinde Bitcoin tam düğümü çalıştırın. Ödemeyi Lightning üzerinden ya da zincir üzerinde Bitcoin ile, ya da Monero, Litecoin veya Ethereum ile yapın."
   },
   "CrzPmt": {
     "defaultMessage": "Kira süresi doldu, bu makineyi korumak için yenileyin."
@@ -761,9 +764,6 @@
   "DDMksJ": {
     "defaultMessage": "İlk VPS’inizi kullanıma sunun."
   },
-  "DTd1bi": {
-    "defaultMessage": "Lightning, zincir üstü veya kart"
-  },
   "DU+LLZ": {
     "defaultMessage": "Yönlendirme"
   },
@@ -776,8 +776,14 @@
   "DZ2Koj": {
     "defaultMessage": "Yön"
   },
+  "DaC9UX": {
+    "defaultMessage": "Esnek ödeme seçenekleriyle yüksek performanslı VPS barındırma: Bitcoin Lightning, Monero, Litecoin, Ethereum veya kart."
+  },
   "DbJIBd": {
     "defaultMessage": "Topluluk içinde davet hiyerarşisiyle oluşturulan iletişim ağları"
+  },
+  "Dca9jQ": {
+    "defaultMessage": "Kanada, Quebec'te VPS barındırma. İşlemcinizi, belleğinizi ve diskinizi seçin. Lightning veya zincir üzerinde Bitcoin ile ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
   },
   "Dfuz87": {
     "defaultMessage": "Henüz hiçbir alan adı eklenmedi. Başlamak için ilk alan adınızı yukarıya ekleyin."
@@ -787,9 +793,6 @@
   },
   "DnX0aY": {
     "defaultMessage": "Silmeyi onaylayın."
-  },
-  "DnigOZ": {
-    "defaultMessage": "Şimşek hızında işlem, zincir üzerinde Bitcoin veya kart ile ödeme. Kayıt olmak için kişisel bilgi gerekmiyor. Nostr anahtarınızla giriş yapın: tarayıcıda NIP-07, API için NIP-98."
   },
   "DpNZQY": {
     "defaultMessage": "İşlem ücreti"
@@ -878,9 +881,6 @@
   "FPbLFA": {
     "defaultMessage": "Kayıtlı yöntemler"
   },
-  "FSW97J": {
-    "defaultMessage": "Bir plan satın alın ve aboneliğini Lightning, Bitcoin veya kart ile ödeyin."
-  },
   "FZeQlc": {
     "defaultMessage": "Bağlantı kesildi"
   },
@@ -899,14 +899,14 @@
   "FoHB5c": {
     "defaultMessage": "Aboneliği yenileyin"
   },
+  "FtyqJI": {
+    "defaultMessage": "Londra'da VPS barındırma, ... başlayan {price} KDV hariç. {minCpu}-{maxCpu} vCPU, en fazla {maxDisk} {diskType}. Bitcoin ile Lightning üzerinden veya zincir üzerinde, ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
+  },
   "Fv1ZSz": {
     "defaultMessage": "Kapalı"
   },
   "G/yZLu": {
     "defaultMessage": "Kaldırın / Silin"
-  },
-  "G0Z48e": {
-    "defaultMessage": "Quebec'teki tesisimiz, makinenin Avrupa dışında kullanılmasını istediğinizde tercih edebileceğiniz yerdir. Aynı monte etmesi kolay özellikler, aynı aylık faturalandırma ve ödeme Bitcoin ile yapılmaktadır."
   },
   "G1kGar": {
     "defaultMessage": "Yalnızca geçiş anahtarı kullanan bir hesapta tek geçiş anahtarınızı kaldıramazsınız."
@@ -1004,9 +1004,6 @@
   "HVtxik": {
     "defaultMessage": "Özel alan adı"
   },
-  "HYP241": {
-    "defaultMessage": "Lightning, Bitcoin veya kart ile ödenen bir WireGuard VPN. Anahtarları cihazınızın kendisi oluşturur ve biz yalnızca herkese açık yarısını görürüz."
-  },
   "Hct61V": {
     "defaultMessage": "{storage} kalıcı depolama alanı, {breakdown}"
   },
@@ -1025,6 +1022,9 @@
   "I90sbW": {
     "defaultMessage": "az önce"
   },
+  "IA4Mmd": {
+    "defaultMessage": "Lightning, zincir üstü Bitcoin, Monero, Litecoin, Ethereum veya kart. Kendi Lightning düğümümüzü işletiyoruz, bu nedenle satlar üçüncü taraf bir işlemci üzerinden yönlendirilmez."
+  },
   "IChMNf": {
     "defaultMessage": "Herhangi bir değişiklik tespit edilmedi."
   },
@@ -1042,9 +1042,6 @@
   },
   "IZFEUg": {
     "defaultMessage": "Hazır."
-  },
-  "IaS36D": {
-    "defaultMessage": "Lightning, zincir üstü Bitcoin veya kart. Kendi Lightning düğümümüzü işletiyoruz, bu nedenle satoshiler üçüncü taraf bir aracıdan geçmez."
   },
   "IbWc3k": {
     "defaultMessage": "Dublin, İrlanda."
@@ -1340,9 +1337,6 @@
   "Olq7Wf": {
     "defaultMessage": "Mesajınızı buraya yazın..."
   },
-  "OnsDNZ": {
-    "defaultMessage": "LNVPS'den en son haberler, güncellemeler ve duyurular, ayrıca kredi kartıyla ödeme seçeneği de sunan Bitcoin Lightning VPS barındırma hizmeti."
-  },
   "Op5EHr": {
     "defaultMessage": "Google ile giriş yap"
   },
@@ -1370,23 +1364,26 @@
   "P7PLVj": {
     "defaultMessage": "Tarih"
   },
-  "PCD5y1": {
-    "defaultMessage": "İstenilen özelliklere göre yapılandırılmış bir VPS {region}: {minCpu}-{maxCpu} sanal CPU ve {minMemory}-{maxMemory} bellek, Bitcoin ile ödeme yapıldı."
-  },
   "PJtOx7": {
     "defaultMessage": "Bildirilecek herhangi bir olay bulunmamaktadır."
   },
+  "PM9NT5": {
+    "defaultMessage": "Sipariş üzerine kurulan bir VPS, ... içinde {region}: {minCpu}-{maxCpu} vCPU ve {minMemory}-{maxMemory} Bellek, Bitcoin, Monero, Litecoin veya Ethereum ile ödenen."
+  },
   "PUqHRI": {
     "defaultMessage": "Trafik veya bağlantı kayıtları tutulmaz. WireGuard'ın kendisi, yalnızca son el sıkışma zamanını ve şu anda bağlandığınız uç noktayı bellekte saklar; çünkü protokol bu bilgiler olmadan bir paketi geri yönlendiremez."
+  },
+  "PZcJ5k": {
+    "defaultMessage": "LNVPS'ten en son haberler, güncellemeler ve duyurular: Bitcoin Lightning VPS barındırma, Monero, Litecoin, Ethereum ve kart ödemeleri de dahil."
+  },
+  "Pcm3iR": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart. Kayıt olmak için kişisel bilgi gerekmez. Nostr anahtarınızla giriş yapın: Tarayıcıda NIP-07, API için NIP-98."
   },
   "PfSZy5": {
     "defaultMessage": "Herhangi bir sipariş bulunamadı."
   },
   "PfUTPz": {
     "defaultMessage": "VPN"
-  },
-  "Pk14hW": {
-    "defaultMessage": "Şimşek Ağı, zincir üzerindeki Bitcoin veya kredi kartı ile ödeme yapabilirsiniz. Nostr anahtarınızla giriş yapın. Kimlik doğrulama gerekmiyor."
   },
   "Ppjs/C": {
     "defaultMessage": "Londra'da VPS hosting"
@@ -1417,6 +1414,9 @@
   },
   "QFNCnX": {
     "defaultMessage": "-{fee} ücret"
+  },
+  "QJbptp": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart. Nostr anahtarınızla giriş yapın. KYC yok."
   },
   "QN/rCc": {
     "defaultMessage": "JSON ayrıştırma hatası: {msg}"
@@ -1673,9 +1673,6 @@
   "Uyg4Ur": {
     "defaultMessage": "Bir VPN planı size bir çıkış noktası verir, bir sunucu değil. Kendi hizmetlerinizi çalıştırmak için statik IPv4 ve IPv6 ile ayda en az 1 TB transfer kapasiteli bir sunucu kutusu istiyorsanız, <a>VPS barındırma</a> hizmetimiz aynı sunucu filosu üzerinde çalışır."
   },
-  "V/V4bz": {
-    "defaultMessage": "İrlanda'nın Dublin şehrinde VPS sunucu hizmeti. {price} KDV dahil değil. İstediğiniz özelliklere göre özelleştirin. {maxCpu} sanal CPU. Ödemenizi Bitcoin ile Lightning ağı üzerinden veya doğrudan blok zinciri üzerinde yapın."
-  },
   "V3ka34": {
     "defaultMessage": "Etkin oturumlar"
   },
@@ -1709,9 +1706,6 @@
   "VffztH": {
     "defaultMessage": "en son kullanıldı {date}"
   },
-  "Vi+REQ": {
-    "defaultMessage": "Birkaç dakika içinde kullanıma başlayın. Lightning, Bitcoin veya kredi kartıyla ödeme yapın; uzun vadeli sözleşmelere gerek yok."
-  },
   "Vn25W2": {
     "defaultMessage": "Daha büyük bir boyut seçtiğinizde fiyat burada görünür. Bu fatura döneminin kalan süresi için farkı ödersiniz."
   },
@@ -1732,9 +1726,6 @@
   },
   "WEoZhh": {
     "defaultMessage": "Bu yükseltmenin faturalandırılacağı bir abonelik bulunamadı."
-  },
-  "WHIo1V": {
-    "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi burada oluşturun. {minCpu}-{maxCpu} sanal CPU ve {minMemory}-{maxMemory}ve bunun için Bitcoin ile ödeme yapın."
   },
   "WUV28A": {
     "defaultMessage": "Kaydediliyor…"
@@ -1763,17 +1754,11 @@
   "WxTcqt": {
     "defaultMessage": "{n,plural,one{ay} other{aylar}}"
   },
-  "X/4SWn": {
-    "defaultMessage": "Kanada, Quebec'te VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya doğrudan Bitcoin ile yapın."
-  },
   "X/xmPf": {
     "defaultMessage": "Kendi veri tabanına sahip, izole bir ortam."
   },
   "X0ha1a": {
     "defaultMessage": "Değişiklikleri kaydet"
-  },
-  "X4GAwh": {
-    "defaultMessage": "Planlar ve fiyatlandırma, hangi bölgeleri ve işletim sistemlerini sunduğumuz veya Lightning ile ödemenin nasıl çalıştığı hakkında sorun."
   },
   "X4VESO": {
     "defaultMessage": "VM'yi siler ve yeni bir imajdan başlatır. Bu, üzerindeki tüm verileri kalıcı olarak siler."
@@ -1796,8 +1781,14 @@
   "XW9RGA": {
     "defaultMessage": "Bir hesaba ihtiyacım var mı?"
   },
+  "XXjN3F": {
+    "defaultMessage": "Yüksek performanslı Bitcoin Lightning VPS barındırma hizmeti. Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kartla ödeme yapın. Uzun vadeli sözleşme yok."
+  },
   "XYkq4n": {
     "defaultMessage": "Kullanılmış"
+  },
+  "XZAYHM": {
+    "defaultMessage": "Quebec'teki sitemiz, makinenizi Avrupa dışında barındırmak istediğinizde. Aynı kendi kendine yapılandırma özellikleri, aynı aylık faturalandırma; Bitcoin, Monero, Litecoin veya Ethereum ile ödeme."
   },
   "XZGfTo": {
     "defaultMessage": "Mesaj gönder"
@@ -1892,9 +1883,6 @@
   "ZTj6ca": {
     "defaultMessage": "Kartla öde"
   },
-  "ZTpvML": {
-    "defaultMessage": "Yüksek performanslı VPS hosting hizmeti, esnek ödeme seçenekleriyle: Bitcoin Lightning veya kredi kartı."
-  },
   "ZbOD+W": {
     "defaultMessage": "LNVPS hizmetleri için güncel çalışma süresi ve geçmişteki sorun kayıtlarını görüntüleyin. VPS altyapımızın mevcut çalışma durumunu kontrol edin."
   },
@@ -1934,6 +1922,9 @@
   "aPcXT9": {
     "defaultMessage": "Ödemeler, diğer zincir içi yönlendirenlerle birlikte birleştirilerek tek bir işlemde gerçekleştirilir; bu işlem, bakiyeniz minimum tutarı aştığında gerçekleşir. Ağ ücretinden düşülecek olan payınız, bakiyenizden kesilir. Yalnızca ana ağ adresleri geçerlidir."
   },
+  "aSptrh": {
+    "defaultMessage": "İrlanda, Dublin'de VPS barındırma. İstediğiniz CPU, bellek ve depolama ile kendi yapılandırmanızı oluşturun. Lightning üzerinden veya zincir üzerinde Bitcoin ile, ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
+  },
   "aTgjTE": {
     "defaultMessage": "Geçiş anahtarı ekle"
   },
@@ -1946,6 +1937,9 @@
   "agOXPD": {
     "defaultMessage": "Size"
   },
+  "aimFkf": {
+    "defaultMessage": "Londra'da VPS barındırma. CPU, bellek ve diskinizi seçin. Lightning veya zincir üzerinde Bitcoin ile ödeyin ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
+  },
   "alJZVR": {
     "defaultMessage": "Nostr hesabı"
   },
@@ -1957,6 +1951,9 @@
   },
   "auFzJF": {
     "defaultMessage": "Minimum ödeme tutarı (isteğe bağlı)"
+  },
+  "aztZka": {
+    "defaultMessage": "Dublin sitemiz. İstediğiniz makineyi ... arasında inşa edin {minCpu}-{maxCpu} vCPU ve {minMemory}-{maxMemory}, ve bunun için Bitcoin, Monero, Litecoin veya Ethereum ile ödeme yapın."
   },
   "b1zuN9": {
     "defaultMessage": "Fiyat"
@@ -2029,9 +2026,6 @@
   },
   "ckx15w": {
     "defaultMessage": "Ağ aktarımı"
-  },
-  "clx9um": {
-    "defaultMessage": "Dublin, İrlanda'da VPS hosting hizmeti. İstediğiniz özelliklere göre (CPU, bellek ve depolama) kendi sunucunuzu yapılandırın. Ödemenizi Bitcoin ile Lightning veya zincir üstü ödeme yöntemleriyle yapın."
   },
   "cyR7Kh": {
     "defaultMessage": "Geri"
@@ -2189,6 +2183,9 @@
   "fblXmJ": {
     "defaultMessage": "Örnek adı"
   },
+  "fdoseY": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart ile ödenen bir WireGuard VPN. Cihazınız kendi anahtarlarını oluşturur ve biz yalnızca kamuya açık yarısını görürüz."
+  },
   "fsB/4p": {
     "defaultMessage": "Kaydedildi"
   },
@@ -2221,9 +2218,6 @@
   },
   "gRiKLf": {
     "defaultMessage": "Apps"
-  },
-  "gUwcoo": {
-    "defaultMessage": "Evet, Lightning veya zincir üzerinde. Yenileme aylıktır."
   },
   "gWp9QV": {
     "defaultMessage": "{failed} asla ödenmedi"
@@ -2399,6 +2393,9 @@
   "kLNEaL": {
     "defaultMessage": "Lütfen CAPTCHA doğrulamasını tamamlayın."
   },
+  "kLojfC": {
+    "defaultMessage": "Çerezler, hangi reklamların siparişe dönüştüğünü ölçmek için kullanılmaktadır. Onay vermedikçe hiçbir çerez yerleştirilmez."
+  },
   "kRFEho": {
     "defaultMessage": "SSH Anahtarını Ekle"
   },
@@ -2455,9 +2452,6 @@
   },
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
-  },
-  "lQNVjN": {
-    "defaultMessage": "Dağıt {name} LNVPS üzerinde yönetilen bir uygulama olarak kullanın, Lightning, Bitcoin veya kredi kartıyla ödeme yapın."
   },
   "lQjSeV": {
     "defaultMessage": "Bakiye yükleyin ve bunu yeni siparişler, yenilemeler ve yükseltmeler için harcayın."
@@ -2561,6 +2555,9 @@
   "nBO87C": {
     "defaultMessage": "Yapılandırmayı gizle"
   },
+  "nC+eU0": {
+    "defaultMessage": "LNVPS destek temsilcisiyle planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning, Monero, Litecoin ya da Ethereum ile ödemelerin nasıl işlediği hakkında sohbet edin. Giriş yapmanıza gerek yok. Sorunuz mevcut bir sanal makine veya ödemeyle ilgiliyse, hesabınızın görüntülenebilmesi için lütfen önce giriş yapın."
+  },
   "nCD6ia": {
     "defaultMessage": "Dublin (İrlanda), Londra (Birleşik Krallık) veya Québec (Kanada). Büyük bir sunucu düğümüne ihtiyacınız varsa, Dublin en yüksek kapasiteye sahip; burada 64 sanal CPU ve 128 GB RAM’e kadar kaynak kullanabilirsiniz."
   },
@@ -2606,9 +2603,6 @@
   "nxqAD7": {
     "defaultMessage": "Yeni Olay"
   },
-  "o/1ZFL": {
-    "defaultMessage": "Planlar, bölgeler, işletim sistemleri ve Lightning ödemeleri hakkında LNVPS destek temsilcisiyle sohbet edin. Hesap gerekmez."
-  },
   "o0jcye": {
     "defaultMessage": "İşletim Sistemi"
   },
@@ -2633,9 +2627,6 @@
   "oIPESx": {
     "defaultMessage": "Sona erme uyarıları, ödeme makbuzları ve hazırlama bildirimleri, Nostr DM kanalı etkinleştirildiğinde buraya gelir {settings}. Bu gelen kutusu yanıtlar için izlenmemektedir, bir insana ulaşmak için kullanın {support}."
   },
-  "oOdFIC": {
-    "defaultMessage": "Dublin'deki tesisimiz. İstediğiniz makineyi tasarlayın ve Bitcoin ile ödeme yapın."
-  },
   "oPvhhB": {
     "defaultMessage": "CPU çekirdekleri"
   },
@@ -2647,6 +2638,9 @@
   },
   "oawN/U": {
     "defaultMessage": "Yüksek işlem hızı, büyük olay hacmi"
+  },
+  "ocrKiN": {
+    "defaultMessage": "Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart"
   },
   "odTkf5": {
     "defaultMessage": "Girişe geri dön"
@@ -2662,6 +2656,9 @@
   },
   "oswGmn": {
     "defaultMessage": "Ödeme geçmişi varken buradan ayrılamazsınız."
+  },
+  "oxQL4O": {
+    "defaultMessage": "Planlar ve fiyatlandırma, hangi bölgeleri ve işletim sistemlerini sunduğumuz ya da Lightning, Monero, Litecoin veya Ethereum ile ödeme yapmanın nasıl işlediği hakkında soru sorabilirsiniz."
   },
   "oxq33u": {
     "defaultMessage": "En iyisi şudur:"
@@ -2680,9 +2677,6 @@
   },
   "pHg2Hv": {
     "defaultMessage": "Her cihaz her bölgeye ulaşabilir. Tünelin içindeki adres nereden çıkarsanız çıkın aynıdır; dolayısıyla ülke değiştirmek bir yapılandırma dosyası düzenleme meselesidir, yeniden kayıt olma değil."
-  },
-  "pMi1Vp": {
-    "defaultMessage": "LNVPS destek temsilcisiyle planlar ve fiyatlandırma, bölgeler, işletim sistemleri veya Lightning ile ödeme yapmanın nasıl çalıştığı hakkında sohbet edin, giriş yapmanıza gerek yok. Sorunuz mevcut bir VM veya ödemeyle ilgiliyse, hesabınızı görüntüleyebilmesi için önce giriş yapın."
   },
   "pSgJJF": {
     "defaultMessage": "Genel anahtarınızı ve ona atanmış dahili adresi saklıyoruz. Bu çift, bir WireGuard eşinin (peer) tam olarak ne olduğudur ve bir rota sunucusunun sizi taşıması için ihtiyaç duyduğu tek şeydir."
@@ -2705,14 +2699,14 @@
   "pus6h6": {
     "defaultMessage": "İstediğiniz zaman çıkış yapabilirsiniz. Kodunuz artık geçerli olmayacak ve yeniden kullanılamayacaktır."
   },
+  "pvtgR2": {
+    "defaultMessage": "Reddet"
+  },
   "q/uwLT": {
     "defaultMessage": "Durun"
   },
   "q2BAvD": {
     "defaultMessage": "Bu adrese herhangi bir miktarda zincir üstü Bitcoin gönderin. İşlem onaylandığında, gelen tutar bakiyenize eklenir."
-  },
-  "qA0DQR": {
-    "defaultMessage": "Londra'da VPS hosting hizmeti. İstediğiniz işlemciyi, belleği ve diski seçin. Ödemenizi Lightning veya zincir üstü ödeme yöntemiyle Bitcoin ile yapın."
   },
   "qB17v9": {
     "defaultMessage": "Bu yapılandırmayı şimdi kaydedin: özel anahtarı yalnızca bu sayfada yer alıyor ve bir daha gösterilemez."
@@ -2792,6 +2786,9 @@
   "rvirM2": {
     "defaultMessage": "Konum"
   },
+  "rwSswF": {
+    "defaultMessage": "Bir WireGuard VPN, ... tarafından {price} başına {period}, Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kartla ödenir. Cihazınız kendi anahtarlarını oluşturur ve biz yalnızca herkese açık yarısını görürüz."
+  },
   "ryuZQh": {
     "defaultMessage": "Bir uygulama seçin, ona bir ad verin ve ödeme yapın. Uygulama, TLS'nin zaten etkin olduğu kendi alan adı altında otomatik olarak çalışmaya başlar; herhangi bir işletim sistemi güncellemesi yapmanıza, Docker yapılandırması yapmanıza veya sertifika yenilemenize gerek kalmaz."
   },
@@ -2825,6 +2822,9 @@
   "sehISV": {
     "defaultMessage": "Blossom Medya Sunucusu, aylık {price}'dan başlayan fiyatlarla hizmetinizde."
   },
+  "sjzLbX": {
+    "defaultMessage": "Kabul Et"
+  },
   "sn+Rj5": {
     "defaultMessage": "Geçiş anahtarıyla giriş yap"
   },
@@ -2837,6 +2837,9 @@
   "sqvjkf": {
     "defaultMessage": "Sap Ekleyin"
   },
+  "svQL8t": {
+    "defaultMessage": "Bir plan satın alın ve abonelik ücretini Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kart ile ödeyin."
+  },
   "sx6MYT": {
     "defaultMessage": "Temsilci, bir VM'yi uzatamaz, iade edemez veya silemez ve oturum açmadığı bir hesap üzerinde işlem yapamaz. Bunlar için, {link}."
   },
@@ -2846,14 +2849,14 @@
   "t21/v7": {
     "defaultMessage": "Fiyatlara KDV dahildir; ödeme işleme ücretleri hariçtir."
   },
+  "t2MJPa": {
+    "defaultMessage": "Evet, Lightning veya on-chain. Ayrıca Monero, Litecoin veya Ethereum ile de ödeme yapabilirsiniz; bunlar Bitcoin'e takas edilir. Yenileme aylıktır."
+  },
   "tNmjzW": {
     "defaultMessage": "Bağlantı noktası/noktaları"
   },
   "tPwWRH": {
     "defaultMessage": "Dağıtımlarınız"
-  },
-  "tSWoyi": {
-    "defaultMessage": "Zincir için yeterli alana sahip bir VPS, Bitcoin ile ödeniyor. Donanım özelliklerini siz seçin ve kendi node yazılımınızı kurun; root erişimi var, herhangi bir kontrol paneliyle uğraşmanıza gerek yok."
   },
   "tTpLsN": {
     "defaultMessage": "Bağlantı yok."
@@ -2987,9 +2990,6 @@
   "vvE1WZ": {
     "defaultMessage": "{n} güvenlik duvarı kuralları"
   },
-  "w/+hVh": {
-    "defaultMessage": "Şuradan bir WireGuard VPN: {price} başına {period}, Lightning, Bitcoin veya kart ile ödeme yapılır. Cihazınız kendi anahtarlarını oluşturur ve biz yalnızca herkese açık olan yarısını görürüz."
-  },
   "w1iy6j": {
     "defaultMessage": "Fiyat güncelleniyor…"
   },
@@ -3002,8 +3002,14 @@
   "wLCwU4": {
     "defaultMessage": "Faturalandırmayı yönet"
   },
+  "wNaptW": {
+    "defaultMessage": "Bir VPS'te Bitcoin tam düğümü çalıştırın: {regions}. Lightning veya zincir üzerinde Bitcoin ile, ya da Monero, Litecoin veya Ethereum ile ödeme yapın. Başlangıç: {price} KDV hariç."
+  },
   "wRSmBV": {
     "defaultMessage": "Evet, her planda bir adet IPv4 ve bir adet IPv6 adresi bulunmaktadır."
+  },
+  "wY4M/H": {
+    "defaultMessage": "Zincir için yeterli alana sahip, Bitcoin, Monero, Litecoin veya Ethereum ile ödenen bir VPS. Özellikleri siz seçersiniz, kendi düğüm yazılımınızı kurarsınız; root erişimiyle ve yolunuzu kesen bir kontrol paneli olmadan."
   },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
@@ -3020,11 +3026,11 @@
   "wo868v": {
     "defaultMessage": "Nostr anahtarı veya bunker ile giriş yap →"
   },
-  "wty+Xf": {
-    "defaultMessage": "Londra'da VPS sunucu hizmeti. {price} KDV hariç. {minCpu}-{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning veya zincir üzerinde ödeme yapın."
-  },
   "wz7uSD": {
     "defaultMessage": "dahil olmak üzere {amount} vergi"
+  },
+  "x9Z7IH": {
+    "defaultMessage": "LNVPS destek temsilcisiyle planlar, bölgeler, işletim sistemleri ve Lightning, Monero, Litecoin ve Ethereum ödemeleri hakkında sohbet edin. Hesap gerekmez."
   },
   "xA8JVo": {
     "defaultMessage": "Nostr ile çalışacak şekilde tasarlanmış, dosyaları karma değerlerine göre saklayan ve erişimi sağlayan bir protokol. NIP-96, daha eski bir HTTP dosya depolama standardıdır; Route96 ise her ikisini de destekler."
@@ -3065,8 +3071,14 @@
   "xkr+zo": {
     "defaultMessage": "Şartlar"
   },
+  "xsCvlD": {
+    "defaultMessage": "İrlanda, Dublin'de VPS barındırma, ...'dan başlayan {price} KDV hariç. Kendi yapılandırmanızı oluşturun, en fazla {maxCpu} vCPU. Lightning ağı üzerinden veya zincir üzerinde Bitcoin ile, ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
+  },
   "xuTqgN": {
     "defaultMessage": "Ödeme Yöntemleri"
+  },
+  "y/YQY9": {
+    "defaultMessage": "Kanada, Quebec'te VPS barındırma, ... başlayan {price} KDV hariç. {minCpu}-{maxCpu} vCPU, en fazla {maxDisk} {diskType}. Bitcoin ile Lightning üzerinden veya zincir üzerinde, ya da Monero, Litecoin veya Ethereum ile ödeme yapın."
   },
   "y0mVUJ": {
     "defaultMessage": "Zincir üstü Bitcoin"
@@ -3076,6 +3088,9 @@
   },
   "y9xHR9": {
     "defaultMessage": "Ödemeler"
+  },
+  "yA/g81": {
+    "defaultMessage": "Birleşik Krallık'ta bir sunucu; aylık faturalandırılır ve Bitcoin, Monero, Litecoin veya Ethereum ile ödenir. CPU, bellek ve diskinizi seçin; istemediğiniz hiçbir şey paketlenmez."
   },
   "yDjevn": {
     "defaultMessage": "PGP"
@@ -3106,12 +3121,6 @@
   },
   "yoQJWu": {
     "defaultMessage": "Hesabınızla ilgili her şeyi sorun, faturalandırma, açılmayan bir sanal makine veya bir ücretin ne için yapıldığı."
-  },
-  "yqUCzc": {
-    "defaultMessage": "Kanada, Québec'te VPS sunucu hizmeti. {price} KDV hariç. {minCpu}-{maxCpu} sanal CPU, en fazla {maxDisk} {diskType}Bitcoin ile Lightning ağı veya doğrudan zincir üzerinden ödeme yapın."
-  },
-  "yrsDLO": {
-    "defaultMessage": "İngiltere merkezli bir sanal makine, aylık olarak faturalandırılır ve Bitcoin ile ödeme alınır. İstediğiniz işlemciyi, belleği ve diski seçin; talep etmediğiniz hiçbir ek özellik bulunmaz."
   },
   "z+hIFs": {
     "defaultMessage": "Henüz hiçbir ödeme yapılmadı."

@@ -236,6 +236,12 @@ export function AccountReferralPage() {
         </div>
       </div>
 
+      {state.auto_payout_approved === false && (
+        <div className="rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 text-sm text-cyber-muted">
+          <FormattedMessage defaultMessage="Automatic payouts have not been enabled for your account yet. Your commission keeps accruing and is paid out manually." />
+        </div>
+      )}
+
       {/* ── Hero: the code as a broadcast beacon ───────────────────────────── */}
       <div className="relative rounded-sm border border-cyber-border-bright bg-cyber-darker px-6 py-8 shadow-neon-inset overflow-hidden">
         {/* targeting-reticle corners */}
@@ -391,6 +397,9 @@ export function AccountReferralPage() {
                   </th>
                   <th className="!text-right">
                     <FormattedMessage defaultMessage="Commission" />
+                  </th>
+                  <th className="!text-right">
+                    <FormattedMessage defaultMessage="Payable from" />
                   </th>
                 </tr>
               </thead>
@@ -657,6 +666,18 @@ function UsageRow({ usage }: { usage: ReferralUsage }) {
           cost={{ currency: usage.currency, amount: usage.commission }}
           converted={false}
         />
+      </td>
+      <td className="text-right text-cyber-muted">
+        {usage.payable_after ? (
+          <FormattedDate
+            value={usage.payable_after}
+            year="numeric"
+            month="short"
+            day="numeric"
+          />
+        ) : (
+          "—"
+        )}
       </td>
     </tr>
   );

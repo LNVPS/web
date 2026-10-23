@@ -77,7 +77,8 @@ export function transferUsage(traffic: VmTrafficSummary): TransferUsage {
     meterPct: Math.min(100, Math.max(0, pct)),
     over: pct >= 100,
     // Mirrors the thresholds the server emails on: a courtesy warning at 80%,
-    // and 100% reached. Nothing is throttled or billed at either point.
+    // and 100% reached. At 100% the network is limited to 10 Mbit/s until the
+    // allowance resets; nothing is billed or suspended at either point.
     tone: pct >= 100 ? "danger" : pct >= 80 ? "warning" : "primary",
   };
 }

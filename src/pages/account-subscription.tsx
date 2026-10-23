@@ -386,6 +386,18 @@ export function AccountSubscriptionPage() {
                         </span>
                       )}
                       <ResourceBadge item={li} />
+                      {li.deactivated_at && (
+                        <span className="text-xs text-cyber-muted">
+                          <FormattedMessage
+                            defaultMessage="Stopped billing on {date}"
+                            values={{
+                              date: formatDate(li.deactivated_at, {
+                                dateStyle: "medium",
+                              }),
+                            }}
+                          />
+                        </span>
+                      )}
                     </div>
                     <div className="flex shrink-0 flex-col items-end tabular-nums">
                       <span className="text-cyber-accent">

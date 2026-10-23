@@ -464,6 +464,12 @@ export interface VmTrafficSummary {
   bytes_out: number;
   /** Inbound bytes this period; never counted against the allowance. */
   bytes_in: number;
+  /**
+   * The allowance has been reached and the VM's network is limited to
+   * 10 Mbit/s until it resets on the 1st. Absent on an API older than that
+   * release, which never throttled.
+   */
+  throttled?: boolean;
 }
 
 /** One UTC day of transfer. Days with no recorded traffic are omitted. */
@@ -581,6 +587,11 @@ export interface VmOsImage {
   default_username?: string;
   /** Fraction (0.0–1.0) of active VMs currently using this image. */
   popularity?: number;
+  /**
+   * A VM from this image asks for a disk passphrase on the serial console at
+   * every boot. LNVPS never sees it and cannot recover a lost one.
+   */
+  encrypted?: boolean;
 }
 
 export interface UserSshKey {
@@ -864,6 +875,13 @@ export interface SubscriptionLineItem {
   setup_fee: Price;
   configuration?: unknown;
   resource?: SubscriptionLineItemResource;
+  /**
+   * When this line stopped billing on its own (its VM was deleted) while the
+   * subscription kept going for other lines. Null/absent while it bills.
+   */
+  deactivated_at?: string | null;
+  /** The line this one is an add-on to (e.g. VM snapshots on the VM's line). */
+  parent_line_item_id?: number | null;
 }
 
 // Typed reference to the resource a line item bills for, resolved server-side
@@ -1216,6 +1234,11 @@ export interface Referral {
    * (`referral_rate`) if set, otherwise the referred VM company's default rate.
    */
   effective_referral_rate?: number;
+  /**
+   * An admin has approved this referrer for automated payouts. While false,
+   * commission accrues and is paid out manually. Absent on an older API.
+   */
+  auto_payout_approved?: boolean;
   created: string;
 }
 
@@ -1260,6 +1283,12 @@ export interface ReferralUsage {
   effective_rate: number;
   /** Commission earned = amount * effective_rate% (smallest currency unit). */
   commission: number;
+  /**
+   * When an automated payout may include this commission — the referred VM's
+   * first payment must be old enough to rule out a refund. Absent on an API
+   * older than that release.
+   */
+  payable_after?: string | null;
 }
 
 export interface ReferralState extends Referral {

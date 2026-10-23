@@ -8,10 +8,11 @@ import { formatTransferText, transferUsage } from "../utils/traffic";
  * `VmInstance.traffic` alone — no extra request.
  *
  * Two things the copy here must keep straight: the allowance is **egress only**
- * (ingress is shown because it's interesting, never counted), and
- * exceeding it currently does nothing at all — no throttle, no suspension, no
- * overage charge. An unmetered plan, which is every plan today, gets the
- * figures without a bar, because there is no limit to draw one against.
+ * (ingress is shown because it's interesting, never counted), and reaching it
+ * limits the VM's network to 10 Mbit/s until the allowance resets on the 1st
+ * (`traffic.throttled`) — nothing is suspended and there is no overage charge.
+ * An unmetered plan gets the figures without a bar, because there is no limit
+ * to draw one against.
  */
 export default function VmTrafficPanel({
   traffic,
@@ -71,12 +72,19 @@ export default function VmTrafficPanel({
           </span>
         </div>
         {usage.metered ? (
-          <StatusPill tone={usage.tone}>
-            <FormattedMessage
-              defaultMessage="{pct}% used"
-              values={{ pct: Math.round(usage.pct) }}
-            />
-          </StatusPill>
+          <div className="flex items-center gap-2">
+            {traffic.throttled && (
+              <StatusPill tone="danger">
+                <FormattedMessage defaultMessage="Limited to 10 Mbit/s" />
+              </StatusPill>
+            )}
+            <StatusPill tone={usage.tone}>
+              <FormattedMessage
+                defaultMessage="{pct}% used"
+                values={{ pct: Math.round(usage.pct) }}
+              />
+            </StatusPill>
+          </div>
         ) : (
           <StatusPill tone="muted">
             <FormattedMessage defaultMessage="Unmetered" />
@@ -95,9 +103,9 @@ export default function VmTrafficPanel({
 
       <div className="text-xs text-cyber-muted tabular-nums">{period}</div>
 
-      {usage.metered && usage.over && (
+      {usage.metered && (traffic.throttled || usage.over) && (
         <div className="text-xs text-cyber-danger">
-          <FormattedMessage defaultMessage="You have used your egress allowance for this month. Nothing has been done to your VM: it is not throttled, suspended or charged for the overage, and the allowance resets on the 1st." />
+          <FormattedMessage defaultMessage="You have used your egress allowance for this month. Your VM's network is limited to 10 Mbit/s until the allowance resets on the 1st. It is not suspended and you are not charged for the overage." />
         </div>
       )}
 

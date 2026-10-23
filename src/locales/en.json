@@ -1196,6 +1196,9 @@
   "KP5gy4": {
     "defaultMessage": "<b>Pay with Lightning.</b> There is a certain symmetry to funding your Lightning node over Lightning, and we settle it through our own LND node rather than a third-party processor."
   },
+  "KUma21": {
+    "defaultMessage": "Stopped billing on {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
@@ -1207,6 +1210,9 @@
   },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "Limited to 10 Mbit/s"
   },
   "KuX7em": {
     "defaultMessage": "Active for {duration}"
@@ -2021,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "New"
   },
+  "bfWrFO": {
+    "defaultMessage": "Automatic payouts have not been enabled for your account yet. Your commission keeps accruing and is paid out manually."
+  },
   "bg/ESW": {
     "defaultMessage": "Pricing…"
   },
@@ -2450,6 +2459,9 @@
   "jyXJcj": {
     "defaultMessage": "IPv6"
   },
+  "k6P3JH": {
+    "defaultMessage": "You have used your egress allowance for this month. Your VM's network is limited to 10 Mbit/s until the allowance resets on the 1st. It is not suspended and you are not charged for the overage."
+  },
   "k9Pskm": {
     "defaultMessage": "Fast solid-state storage"
   },
@@ -2485,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Address Line 1"
+  },
+  "kg7a3m": {
+    "defaultMessage": "This image encrypts its disk. On first boot, open the VM's console and choose a passphrase; you will be asked for it again at every boot, so the VM waits at the prompt after a reboot until you enter it. LNVPS never sees the passphrase and cannot recover a lost one."
   },
   "khi+xY": {
     "defaultMessage": "You do. Your device makes the WireGuard keypair and sends us only the public half, so the key that decrypts your traffic is never ours to hand over or to lose."
@@ -2794,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "Pay and upgrade"
+  },
+  "qRwlkz": {
+    "defaultMessage": "Encrypted disk"
   },
   "qV+TFm": {
     "defaultMessage": "Payment failed"
@@ -3197,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "Minutes. It provisions once payment settles."
   },
+  "yYFCLO": {
+    "defaultMessage": "Payable from"
+  },
   "yfhNX4": {
     "defaultMessage": "Signing in creates a session that stays valid for 30 days. Revoke them all if you think one has been exposed."
   },
@@ -3226,9 +3247,6 @@
   },
   "zFegDD": {
     "defaultMessage": "Contact"
-  },
-  "zhuLyw": {
-    "defaultMessage": "You have used your egress allowance for this month. Nothing has been done to your VM: it is not throttled, suspended or charged for the overage, and the allowance resets on the 1st."
   },
   "zxvhnE": {
     "defaultMessage": "Daily"

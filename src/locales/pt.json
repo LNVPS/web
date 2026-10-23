@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "Regras e políticas"
   },
+  "+XNxp7": {
+    "defaultMessage": "O valor cobrado por hora é debitado do saldo da sua conta e nunca é faturado. Ative o débito automático para que cada hora seja descontada do seu saldo."
+  },
   "+lH372": {
     "defaultMessage": "Crie o seu VPS em Dublin."
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "Renovação"
   },
+  "1F9Ma6": {
+    "defaultMessage": "Aplique o crédito automaticamente."
+  },
   "1LBny5": {
     "defaultMessage": "Parado(a)"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "As notificações de DM do Nostr estão disponíveis apenas para contas do Nostr, a sua não possui uma chave Nostr para descriptografá-las. Escolha outro canal em {settings}."
   },
+  "1shehh": {
+    "defaultMessage": "A cobrança é interrompida e o equipamento e os seus dados são apagados permanentemente. O período pelo qual já efetuou o pagamento não será reembolsado."
+  },
   "1v7S+3": {
     "defaultMessage": "Adicionar Domínio Nostr"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Teste de velocidade"
+  },
+  "2a23d0": {
+    "defaultMessage": "Excluir máquina virtual."
   },
   "2h97cm": {
     "defaultMessage": "Digitalizar na aplicação"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "Guarde esta chave agora, pois não será possível recuperá-la."
   },
+  "5GbVS5": {
+    "defaultMessage": "Ative a opção para que cada hora seja debitada automaticamente do saldo da sua conta. Caso contrário, a máquina irá parar quando o tempo de uma hora terminar."
+  },
   "5QYdPU": {
     "defaultMessage": "Hora de início"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "depois {amount} desconto"
+  },
+  "6rrAVK": {
+    "defaultMessage": "O valor é debitado do saldo da sua conta. A máquina inicia o funcionamento após a utilização da primeira hora."
   },
   "6tYS3u": {
     "defaultMessage": "O seu próprio nome de domínio, <code>seu-nome.ie.apps.lnvps.cloud</code>, com TLS ativado automaticamente."
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "Envie-nos uma mensagem diretamente. A sua chave pública será incluída automaticamente."
   },
+  "A2rGF+": {
+    "defaultMessage": "Exclua esta máquina virtual e interrompa a cobrança. A parte não utilizada das horas pelas quais pagou será devolvida ao saldo da sua conta."
+  },
   "A7Mqan": {
     "defaultMessage": "Aguarde enquanto a renovação é processada…"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "Mensagem *"
   },
+  "BNJY54": {
+    "defaultMessage": "A cada hora, é debitado um valor do saldo da sua conta, pouco antes de o tempo expirar. Se o saldo acabar, a máquina para e os dados são apagados após um dia."
+  },
+  "BVwJy0": {
+    "defaultMessage": "O seu saldo está esgotado. Recarregue o seu crédito para continuar."
+  },
   "BXmJ0S": {
     "defaultMessage": "(Alternativa)"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "Chat ao vivo"
+  },
+  "CN4qds": {
+    "defaultMessage": "Pedido de exclusão efetuado. A máquina virtual será removida em breve."
+  },
+  "CPOVRT": {
+    "defaultMessage": "Adicione saldo."
   },
   "CVnta/": {
     "defaultMessage": "Os preços não incluem impostos nem taxas de processamento de pagamento."
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "Este navegador não suporta chaves de acesso."
+  },
+  "EnU4se": {
+    "defaultMessage": "O seu saldo cobre este custo. A máquina para quando o produto acaba, por isso, mantenha-a sempre abastecida."
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "Enviei o pagamento"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} esquerda"
+  },
   "HqRNN8": {
     "defaultMessage": "Suporte"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "Implementando"
+  },
+  "IJFdmD": {
+    "defaultMessage": "Excluir VPS nº{id}?"
   },
   "ILTAun": {
     "defaultMessage": "A sua máquina virtual está a ser configurada. Normalmente, este processo demora um ou dois minutos."
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>Pague com Lightning.</b> Existe uma certa lógica em financiar o seu nó Lightning através da rede Lightning, e nós fazemos isso utilizando o nosso próprio nó LND, em vez de um processador terceirizado."
   },
+  "KUma21": {
+    "defaultMessage": "Cobrança interrompida em {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
   "Kd8VbI": {
     "defaultMessage": "Serviço de hospedagem VPS para Bitcoin Lightning"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "Por hora"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "Limitado a 10 Mbit/s."
   },
   "KuX7em": {
     "defaultMessage": "Ativo durante {duration}."
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "Pare de enviar suas imagens e vídeos para o servidor de outra pessoa. O Route96 é um servidor de mídia Blossom e NIP-96, implementado no LNVPS em poucos minutos, com armazenamento e TLS incluídos."
   },
+  "U37ynk": {
+    "defaultMessage": "Depois, por hora."
+  },
   "U7fZs8": {
     "defaultMessage": "Quanto tempo demora?"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "última utilização {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "Cobrado do saldo da sua conta, com faturamento a cada hora."
   },
   "Vn25W2": {
     "defaultMessage": "O preço aparece aqui assim que você escolher um tamanho maior. Você paga a diferença pelo restante deste período de faturamento."
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "Verifique a chave do servidor na primeira conexão."
   },
+  "afdd17": {
+    "defaultMessage": "O seu saldo garante o funcionamento deste serviço por aproximadamente: {hours,plural,one{# hora} other{# horas}}A máquina para quando o suprimento acaba, por isso, mantenha-a sempre abastecida."
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "Novo"
   },
+  "bfWrFO": {
+    "defaultMessage": "Os pagamentos automáticos ainda não foram ativados para a sua conta. As suas comissões continuam a acumular-se e são pagas manualmente."
+  },
   "bg/ESW": {
     "defaultMessage": "Calculando preço…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "Moeda a exibir:"
+  },
+  "br/CR0": {
+    "defaultMessage": "A cobrança é interrompida e o equipamento e os seus dados são apagados permanentemente. O tempo não utilizado, correspondente às horas pagas a partir do saldo da sua conta, é devolvido ao seu saldo."
   },
   "c0b5XV": {
     "defaultMessage": "Taxa/Avaliação"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "Avisos enviados como mensagens diretas do Nostr"
   },
+  "dqD39h": {
+    "defaultMessage": "Anual"
+  },
   "duElEE": {
     "defaultMessage": "Não foram encontradas entradas de histórico para esta máquina virtual."
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{hora} other{horas}}"
   },
   "dwuJmA": {
     "defaultMessage": "Crie o seu próprio nó de retransmissão Nostr, em poucos minutos, utilizando o seu próprio nome de domínio, com TLS e armazenamento incluídos."
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "Este componente suporta apenas pagamentos em moeda."
   },
+  "gP1+Bj": {
+    "defaultMessage": "O seu saldo é insuficiente. {amount}Recarregue o seu saldo para continuar."
+  },
   "gPsMm7": {
     "defaultMessage": "Implemente este Worker e adicione uma rota para {route}."
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "Inicia sessão com uma chave Nostr, por isso não há sessões guardadas para revogar. Cada pedido é assinado individualmente."
   },
+  "hs364T": {
+    "defaultMessage": "A verificar o saldo da sua conta…"
+  },
   "hs3HVz": {
     "defaultMessage": "Inicie sessão com Face ID, Touch ID, Windows Hello ou uma chave de segurança. Pode adicionar uma chave de acesso a qualquer conta."
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "A cobrança funciona como uma assinatura de VPS, sem taxas de configuração para nenhum aplicativo."
+  },
+  "i4NyOH": {
+    "defaultMessage": "Exclua esta máquina virtual e interrompa a cobrança. Isso apagará permanentemente todos os dados nela contidos, e o tempo pelo qual você já pagou não será reembolsado."
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "Aponte um CNAME deste domínio para o nome de host da implementação assim que este for atribuído. Deixe vazio para remover."
   },
+  "jhYP1/": {
+    "defaultMessage": "Pago a partir de"
+  },
   "jhyC12": {
     "defaultMessage": "O que está incluído?"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "Já utilizou o limite de transferência de dados deste mês. A largura de banda da rede da sua máquina virtual está limitada a 10 Mbit/s até que o limite seja reposto no dia 1. O serviço não foi suspenso e não será cobrado nenhum valor adicional pelo consumo excedente."
   },
   "k9Pskm": {
     "defaultMessage": "Armazenamento SSD rápido"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Endereço, Linha 1"
+  },
+  "kg7a3m": {
+    "defaultMessage": "Esta imagem criptografa o seu disco. Na primeira inicialização, abra a consola da máquina virtual e escolha uma frase secreta; será solicitado que a introduza novamente em cada inicialização, pelo que a máquina virtual aguarda no prompt após uma reinicialização até que a introduza. O LNVPS nunca tem acesso à frase secreta e não pode recuperá-la caso seja perdida."
   },
   "khi+xY": {
     "defaultMessage": "Você mesmo. O seu dispositivo gera o par de chaves WireGuard e envia-nos apenas a metade pública, pelo que a chave que desencripta o seu tráfego nunca está nas nossas mãos para entregar ou perder."
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "Padrão"
+  },
+  "lNbJX1": {
+    "defaultMessage": "Apagar…"
   },
   "lP4qIQ": {
     "defaultMessage": "Dados do cartão"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "Pagar e atualizar"
+  },
+  "qRwlkz": {
+    "defaultMessage": "Disco criptografado"
   },
   "qV+TFm": {
     "defaultMessage": "O pagamento não foi efetuado."
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "Uma VPS com espaço para a blockchain, paga em Bitcoin, Monero, Litecoin ou Ethereum. Você escolhe as especificações e instala seu próprio software de nó, com acesso root e sem painel de controle atrapalhando."
   },
+  "wYsv4Z": {
+    "defaultMessage": "Mensal"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "Minutos. O serviço é ativado após a confirmação do pagamento."
   },
+  "yYFCLO": {
+    "defaultMessage": "Pagável a partir de"
+  },
   "yfhNX4": {
     "defaultMessage": "Iniciar sessão cria uma sessão válida durante 30 dias. Revogue todas se achar que alguma foi exposta."
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "Contato"
   },
-  "zhuLyw": {
-    "defaultMessage": "Você usou sua cota de egresso deste mês. Nada foi feito à sua VM, ela não está com limitação de velocidade, suspensa nem cobrada pelo excedente, e a cota é redefinida no dia 1."
+  "zxvhnE": {
+    "defaultMessage": "Diariamente"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} de armazenamento persistente"

@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "規則と方針"
   },
+  "+XNxp7": {
+    "defaultMessage": "時間単位の料金は、お客様のアカウント残高から差し引かれ、請求書は発行されません。自動的に残高から時間単位で料金が引き落とされるように設定してください。"
+  },
   "+lH372": {
     "defaultMessage": "ダブリンのVPSを構築しましょう。"
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "更新"
   },
+  "1F9Ma6": {
+    "defaultMessage": "クレジットを自動的に適用します。"
+  },
   "1LBny5": {
     "defaultMessage": "停止しました。"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr DM通知はNostrアカウントでのみ利用可能です。あなたのアカウントにはそれらを復号するためのNostrキーがありません。別のチャネルを…で選択してください {settings}。"
   },
+  "1shehh": {
+    "defaultMessage": "課金は停止され、機械およびそのデータは完全に削除されます。すでに支払った期間については払い戻しは行われません。"
+  },
   "1v7S+3": {
     "defaultMessage": "Nostrドメインを追加"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "スピードテスト"
+  },
+  "2a23d0": {
+    "defaultMessage": "VMを削除する。"
   },
   "2h97cm": {
     "defaultMessage": "アプリでスキャン"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "このキーは今すぐ保存してください。一度失うと、復元することはできません。"
   },
+  "5GbVS5": {
+    "defaultMessage": "設定をオンにすると、1時間ごとにアカウントの残高から自動的に料金が引き落とされます。オフになっていると、時間が終了した時点で機械は停止します。"
+  },
   "5QYdPU": {
     "defaultMessage": "開始時間"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "その後 {amount} 割引"
+  },
+  "6rrAVK": {
+    "defaultMessage": "お客様のアカウントの残高から料金が引き落とされます。最初の1時間分の料金が引き落とされると、機械が起動します。"
   },
   "6tYS3u": {
     "defaultMessage": "お客様ご自身のホスト名（<code>your-name.ie.apps.lnvps.cloud</code>）に、TLSが自動的に適用されます。"
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "直接メッセージをお送りください。お客様の公開鍵は自動的に添付されます。"
   },
+  "A2rGF+": {
+    "defaultMessage": "この仮想マシンを削除し、課金を停止します。お支払い済みの時間のうち未使用分は、アカウントの残高として返金されます。"
+  },
   "A7Mqan": {
     "defaultMessage": "更新処理中です…。"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "メッセージ*"
   },
+  "BNJY54": {
+    "defaultMessage": "各時間単位の利用料金は、その時間が終了する直前にアカウント残高から引き落とされます。残高がなくなると機械は停止し、1日後にデータが削除されます。"
+  },
+  "BVwJy0": {
+    "defaultMessage": "残高がありません。チャージしてご利用を続けてください。"
+  },
   "BXmJ0S": {
     "defaultMessage": "（代替案）"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "ライブチャット"
+  },
+  "CN4qds": {
+    "defaultMessage": "削除を依頼します。仮想マシンは間もなく削除されます。"
+  },
+  "CPOVRT": {
+    "defaultMessage": "残高をチャージする。"
   },
   "CVnta/": {
     "defaultMessage": "価格は税および決済手数料を含みません。"
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "このブラウザはパスキーに対応していません。"
+  },
+  "EnU4se": {
+    "defaultMessage": "残高で十分です。機械はインクがなくなると停止するので、常に補充しておいてください。"
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "支払いを送信しました"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} 左"
+  },
   "HqRNN8": {
     "defaultMessage": "サポート"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "展開中"
+  },
+  "IJFdmD": {
+    "defaultMessage": "VPSを削除します。{id}？"
   },
   "ILTAun": {
     "defaultMessage": "仮想マシンのプロビジョニングを行っています。通常、1分から2分程度かかります。"
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>ライトニングで支払いましょう。</b> ライトニングネットワークを通じてライトニングノードに資金を供給することは、ある種の整合性があり、第三者の決済サービスを利用するのではなく、独自のLNDノードを使用して処理します。"
   },
+  "KUma21": {
+    "defaultMessage": "請求を停止しました。 {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
   "Kd8VbI": {
     "defaultMessage": "ビットコインライトニングVPSホスティング"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "時間ごと、毎時"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "最大速度は10Mbpsです。"
   },
   "KuX7em": {
     "defaultMessage": "{duration}の間、アクティブでした。"
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "他人のサーバーに画像や動画をアップロードするのをやめましょう。Route96は、BlossomとNIP-96メディアサーバーであり、LNVPS上に数分で展開でき、ストレージとTLSが含まれています。"
   },
+  "U37ynk": {
+    "defaultMessage": "その後は1時間あたり。"
+  },
   "U7fZs8": {
     "defaultMessage": "どれくらいの時間がかかりますか？"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "前回使用日 {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "お客様のアカウント残高から引き落とし、1時間ごとに料金が発生します。"
   },
   "Vn25W2": {
     "defaultMessage": "大きいサイズを選択すると、ここに価格が表示されます。この請求期間の残り分について、差額をお支払いいただきます。"
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "初回接続時にホストキーを確認してください。"
   },
+  "afdd17": {
+    "defaultMessage": "お客様のアカウント残高によって、このサービスを約～の間ご利用いただけます。 {hours,plural,one{# 時間} other{# 時間}}機械は燃料がなくなると停止するため、常に燃料を満タンにしておいてください。"
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "新しい"
   },
+  "bfWrFO": {
+    "defaultMessage": "お客様のアカウントでは、自動支払いがまだ有効になっていません。報酬は引き続き積み立てられ、手動で支払われます。"
+  },
   "bg/ESW": {
     "defaultMessage": "料金を計算中…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "表示通貨："
+  },
+  "br/CR0": {
+    "defaultMessage": "請求は停止され、機械とそのデータは完全に削除されます。アカウントの残高から支払われた時間のうち未使用分は、残高に返金されます。"
   },
   "c0b5XV": {
     "defaultMessage": "レート、割合"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "Nostr DMとして送信される通知"
   },
+  "dqD39h": {
+    "defaultMessage": "年間"
+  },
   "duElEE": {
     "defaultMessage": "この仮想マシンには、履歴エントリが見つかりませんでした。"
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{時間} other{時間}}"
   },
   "dwuJmA": {
     "defaultMessage": "独自のNostrリレーを構築し、TLSとストレージを含め、数分で独自のホスト名上に立ち上げることができます。"
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "このコンポーネントはコイン決済のみをサポートしています。"
   },
+  "gP1+Bj": {
+    "defaultMessage": "残高が足りません。 {amount}残高を補充して、引き続きご利用ください。"
+  },
   "gPsMm7": {
     "defaultMessage": "このワーカーをデプロイし、{route}へのルーティングを追加してください。"
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "Nostr 鍵でサインインしているため、取り消せる保存済みセッションはありません。リクエストごとに個別に署名されます。"
   },
+  "hs364T": {
+    "defaultMessage": "アカウントの利用可能残高を確認しています。"
+  },
   "hs3HVz": {
     "defaultMessage": "Face ID、Touch ID、Windows Hello、またはセキュリティキーでサインインできます。どのアカウントにもパスキーを追加できます。"
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "課金システムはVPSのサブスクリプションと同様に機能し、どのアプリにも初期費用はかかりません。"
+  },
+  "i4NyOH": {
+    "defaultMessage": "この仮想マシンを削除し、課金を停止します。これにより、仮想マシン上のすべてのデータが完全に削除され、すでに支払った分の料金は返金されません。"
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "ホスト名が割り当てられたら、このドメインの CNAME をデプロイのホスト名に向けてください。削除するには空にしてください。"
   },
+  "jhYP1/": {
+    "defaultMessage": "支払いは、から。"
+  },
   "jhyC12": {
     "defaultMessage": "何が含まれていますか？"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "今月のデータ転送量の上限に達しました。VMのネットワーク速度は、上限がリセットされるまで10Mbit/sに制限されます。サービスは停止されず、超過分についても追加料金は発生しません。"
   },
   "k9Pskm": {
     "defaultMessage": "高速なソリッドステートストレージ"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "住所1行目"
+  },
+  "kg7a3m": {
+    "defaultMessage": "このイメージはディスクを暗号化します。初回起動時に、仮想マシンのコンソールを開き、パスフレーズを選択してください。その後、毎回起動時にパスフレーズの入力を求められるため、仮想マシンは再起動後にプロンプトで待機し、パスフレーズが入力されるまで処理を進めません。LNVPSはパスフレーズを知ることができず、紛失したパスフレーズを復元することもできません。"
   },
   "khi+xY": {
     "defaultMessage": "お客様自身が作成します。お使いのデバイスがWireGuardのキーペアを生成し、公開鍵のみを当社に送信します。そのため、通信を復号する鍵は当社の手に渡ることも、当社が紛失することもありません。"
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "デフォルト"
+  },
+  "lNbJX1": {
+    "defaultMessage": "削除…"
   },
   "lP4qIQ": {
     "defaultMessage": "カード情報"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "支払いしてアップグレード"
+  },
+  "qRwlkz": {
+    "defaultMessage": "暗号化されたディスク"
   },
   "qV+TFm": {
     "defaultMessage": "支払いに失敗しました。"
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "ブロックチェーンを収容できる十分な容量を備えたVPS。Bitcoin、Monero、Litecoin、Ethereumでの支払いに対応。スペックは自由に選択し、ご自身のノードソフトウェアをインストールできます。root権限付きで、邪魔なコントロールパネルは一切ありません。"
   },
+  "wYsv4Z": {
+    "defaultMessage": "毎月"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "数分で処理が完了します。支払いが完了すると、すぐに設定が行われます。"
   },
+  "yYFCLO": {
+    "defaultMessage": "支払いは、～から可能。"
+  },
   "yfhNX4": {
     "defaultMessage": "サインインすると 30 日間有効なセッションが作成されます。いずれかが漏れた可能性がある場合はすべて取り消してください。"
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "お問い合わせ"
   },
-  "zhuLyw": {
-    "defaultMessage": "今月の送信トラフィック枠を使い切りました。あなたのVMには何も影響はありません。スロットリング、停止、超過分の請求は行われておらず、枠は1日にリセットされます。"
+  "zxvhnE": {
+    "defaultMessage": "毎日"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} 永続的なストレージについて。"

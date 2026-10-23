@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "Regeln und Richtlinien"
   },
+  "+XNxp7": {
+    "defaultMessage": "Die stündliche Abrechnung erfolgt direkt über Ihr Konto, es wird keine separate Rechnung erstellt. Aktivieren Sie die automatische Abbuchung, damit jede Stunde von Ihrem Guthaben abgebucht wird."
+  },
   "+lH372": {
     "defaultMessage": "Erstellen Sie Ihren virtuellen Dublin-Server (VPS)."
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "Wird verlängert"
   },
+  "1F9Ma6": {
+    "defaultMessage": "Gutschrift automatisch anwenden."
+  },
   "1LBny5": {
     "defaultMessage": "Gestoppt"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr-DM-Benachrichtigungen sind nur für Nostr-Konten verfügbar, Ihr Konto hat keinen Nostr-Schlüssel, um sie zu entschlüsseln. Wählen Sie in … einen anderen Kanal aus {settings}."
   },
+  "1shehh": {
+    "defaultMessage": "Die Abrechnung wird eingestellt, und das Gerät sowie die darin enthaltenen Daten werden endgültig gelöscht. Für bereits bezahlte Zeiträume erfolgt keine Rückerstattung."
+  },
   "1v7S+3": {
     "defaultMessage": "Nostr-Domäne hinzufügen"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Geschwindigkeitstest"
+  },
+  "2a23d0": {
+    "defaultMessage": "VM löschen"
   },
   "2h97cm": {
     "defaultMessage": "In der App scannen"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "Speichern Sie diesen Schlüssel jetzt, er kann NICHT wiederhergestellt werden."
   },
+  "5GbVS5": {
+    "defaultMessage": "Aktivieren Sie diese Funktion, damit jede Stunde automatisch von Ihrem Guthaben abgebucht wird. Andernfalls stoppt das Gerät, sobald die Stunde abgelaufen ist."
+  },
   "5QYdPU": {
     "defaultMessage": "Startzeit"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "nach {amount} Rabatt"
+  },
+  "6rrAVK": {
+    "defaultMessage": "Die Kosten werden von Ihrem Guthaben abgebucht. Das Gerät wird aktiviert, sobald die erste Stunde abgerechnet wurde."
   },
   "6tYS3u": {
     "defaultMessage": "Ihr eigener Hostname, <code>your-name.ie.apps.lnvps.cloud</code>, mit automatischer TLS-Verschlüsselung."
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "Senden Sie uns eine direkte Nachricht. Ihr öffentlicher Schlüssel wird automatisch hinzugefügt."
   },
+  "A2rGF+": {
+    "defaultMessage": "Löschen Sie diese virtuelle Maschine und stoppen Sie die Abrechnung. Der nicht genutzte Teil der bezahlten Stunden wird Ihrem Konto gutgeschrieben."
+  },
   "A7Mqan": {
     "defaultMessage": "Verlängerung wird geladen …"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "Nachricht *"
   },
+  "BNJY54": {
+    "defaultMessage": "Jede Stunde wird kurz vor Ablauf von Ihrem Guthaben abgebucht. Wenn das Guthaben aufgebraucht ist, stoppt die Maschine und wird nach einem Tag gelöscht."
+  },
+  "BVwJy0": {
+    "defaultMessage": "Ihr Guthaben ist aufgebraucht. Bitte laden Sie Ihr Konto auf, um fortzufahren."
+  },
   "BXmJ0S": {
     "defaultMessage": "(Alternative)"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "Live-Chat"
+  },
+  "CN4qds": {
+    "defaultMessage": "Löschung angefordert. Die virtuelle Maschine wird in Kürze entfernt."
+  },
+  "CPOVRT": {
+    "defaultMessage": "Guthaben aufladen"
   },
   "CVnta/": {
     "defaultMessage": "Die Preise verstehen sich ohne Steuern und Zahlungsgebühren."
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "Dieser Browser unterstützt keine Passkeys."
+  },
+  "EnU4se": {
+    "defaultMessage": "Ihr Guthaben deckt dies ab. Das Gerät stoppt, wenn es leer ist. Füllen Sie es daher rechtzeitig wieder auf."
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "Ich habe die Zahlung gesendet"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} links"
+  },
   "HqRNN8": {
     "defaultMessage": "Unterstützung"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "Bereitstellen"
+  },
+  "IJFdmD": {
+    "defaultMessage": "VPS löschen.{id}?"
   },
   "ILTAun": {
     "defaultMessage": "Ihre virtuelle Maschine wird gerade eingerichtet. Dies dauert in der Regel ein bis zwei Minuten."
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>Mit Lightning bezahlen.</b> Es gibt eine gewisse Logik darin, Ihr Lightning-Knoten über das Lightning-Netzwerk zu finanzieren, und wir wickeln dies über unser eigenes LND-Knoten ab, anstatt einen Drittanbieter einzuschalten."
   },
+  "KUma21": {
+    "defaultMessage": "Die Rechnungsstellung wurde am folgenden Datum eingestellt: {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS-Hosting"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "pro Stunde"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "Auf 10 Mbit/s begrenzt."
   },
   "KuX7em": {
     "defaultMessage": "Aktiv seit {duration}."
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "Hören Sie auf, Ihre Bilder und Videos auf den Servern anderer hochzuladen. Route96 ist ein Blossom- und NIP-96-Medienserver, der innerhalb von Minuten auf LNVPS bereitgestellt wird und Speicherplatz sowie TLS umfasst."
   },
+  "U37ynk": {
+    "defaultMessage": "Dann pro Stunde."
+  },
   "U7fZs8": {
     "defaultMessage": "Wie lange dauert es?"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "zuletzt verwendet {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "Die Kosten werden Ihrem Konto gutgeschrieben und stündlich abgerechnet."
   },
   "Vn25W2": {
     "defaultMessage": "Der Preis wird hier angezeigt, sobald Sie eine größere Größe auswählen. Sie zahlen die Differenz für den Rest dieses Abrechnungszeitraums."
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "Überprüfen Sie beim ersten Verbindungsaufbau den Host-Schlüssel."
   },
+  "afdd17": {
+    "defaultMessage": "Ihr Guthaben ermöglicht den Betrieb für etwa {hours,plural,one{# Stunde} other{# Stunden}}Die Maschine stoppt, wenn der Vorrat aufgebraucht ist. Füllen Sie sie daher regelmäßig nach."
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "Neu"
   },
+  "bfWrFO": {
+    "defaultMessage": "Automatische Auszahlungen wurden für Ihr Konto noch nicht aktiviert. Ihre Provision wird weiterhin angesammelt und manuell ausgezahlt."
+  },
   "bg/ESW": {
     "defaultMessage": "Preis wird berechnet…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "Währung anzeigen:"
+  },
+  "br/CR0": {
+    "defaultMessage": "Die Abrechnung wird eingestellt, und die Maschine sowie ihre Daten werden endgültig gelöscht. Die nicht genutzte Zeit der bezahlten Stunden wird Ihrem Guthaben wieder gutgeschrieben."
   },
   "c0b5XV": {
     "defaultMessage": "Bewertung"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "Benachrichtigungen, die als Nostr-DMs gesendet werden"
   },
+  "dqD39h": {
+    "defaultMessage": "Jährlich"
+  },
   "duElEE": {
     "defaultMessage": "Für diese virtuelle Maschine wurden keine Verlaufseinträge gefunden."
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{Stunde} other{Stunden}}"
   },
   "dwuJmA": {
     "defaultMessage": "Betreiben Sie Ihr eigenes Nostr-Relay, die Einrichtung dauert nur wenige Minuten und erfolgt auf Ihrem eigenen Hostnamen mit integriertem TLS und Speicher."
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "Diese Komponente unterstützt nur Münzzahlungen."
   },
+  "gP1+Bj": {
+    "defaultMessage": "Ihr Kontostand reicht nicht aus. {amount}Füllen Sie Ihr Guthaben auf, um fortzufahren."
+  },
   "gPsMm7": {
     "defaultMessage": "Setzen Sie diesen Worker ein und fügen Sie eine Route für {route} hinzu."
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "Sie melden sich mit einem Nostr-Schlüssel an, daher gibt es keine gespeicherten Sitzungen zum Widerrufen. Jede Anfrage wird einzeln signiert."
   },
+  "hs364T": {
+    "defaultMessage": "Überprüfe dein Guthaben…"
+  },
   "hs3HVz": {
     "defaultMessage": "Melden Sie sich mit Face ID, Touch ID, Windows Hello oder einem Sicherheitsschlüssel an. Sie können jedem Konto einen Passkey hinzufügen."
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "Die Abrechnung funktioniert wie ein VPS-Abonnement, wobei für keine der Apps eine Einrichtungsgebühr anfällt."
+  },
+  "i4NyOH": {
+    "defaultMessage": "Löschen Sie diese virtuelle Maschine und beenden Sie die Abrechnung. Dadurch werden alle Daten auf der virtuellen Maschine dauerhaft gelöscht, und bereits gezahlte Gebühren werden nicht erstattet."
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "Richten Sie einen CNAME für diese Domain auf den Hostnamen der Bereitstellung, sobald dieser zugewiesen ist. Leer lassen zum Entfernen."
   },
+  "jhYP1/": {
+    "defaultMessage": "Bezahlt ab"
+  },
   "jhyC12": {
     "defaultMessage": "Was ist enthalten?"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "Ihr Datenvolumen für den ausgehenden Datenverkehr in diesem Monat ist aufgebraucht. Die Netzwerkgeschwindigkeit Ihrer virtuellen Maschine wird bis zum 1. des Monats, wenn das Volumen wieder aufgefüllt wird, auf 10 Mbit/s begrenzt. Ihr Konto wird nicht gesperrt, und es fallen keine zusätzlichen Gebühren an."
   },
   "k9Pskm": {
     "defaultMessage": "Schneller Solid-State-Speicher"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Adresse, Zeile 1"
+  },
+  "kg7a3m": {
+    "defaultMessage": "Dieses Image verschlüsselt seine Festplatte. Starten Sie die virtuelle Maschine zum ersten Mal und öffnen Sie deren Konsole. Wählen Sie dann ein Passwort aus. Bei jedem Neustart werden Sie aufgefordert, dieses Passwort erneut einzugeben. Daher wartet die virtuelle Maschine nach einem Neustart auf Ihre Eingabe. LNVPS hat niemals Zugriff auf das Passwort und kann es auch nicht wiederherstellen, falls es verloren geht."
   },
   "khi+xY": {
     "defaultMessage": "Sie tun es. Ihr Gerät erzeugt das WireGuard-Schlüsselpaar und sendet uns nur die öffentliche Hälfte, sodass der Schlüssel, der Ihren Datenverkehr entschlüsselt, niemals in unserem Besitz ist und wir ihn weder herausgeben noch verlieren können."
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "Standardmäßig"
+  },
+  "lNbJX1": {
+    "defaultMessage": "Löschen …"
   },
   "lP4qIQ": {
     "defaultMessage": "Kartendetails"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "Bezahlen und hochstufen"
+  },
+  "qRwlkz": {
+    "defaultMessage": "Verschlüsselte Festplatte"
   },
   "qV+TFm": {
     "defaultMessage": "Zahlung fehlgeschlagen."
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "Ein VPS mit ausreichend Platz für die Chain, zahlbar in Bitcoin, Monero, Litecoin oder Ethereum. Sie wählen die Spezifikationen und installieren Ihre eigene Node-Software – mit Root-Zugriff und ohne Control Panel, das im Weg steht."
   },
+  "wYsv4Z": {
+    "defaultMessage": "Monatlich"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "Minuten. Die Bereitstellung erfolgt, sobald die Zahlung abgeschlossen ist."
   },
+  "yYFCLO": {
+    "defaultMessage": "Zahlbar ab"
+  },
   "yfhNX4": {
     "defaultMessage": "Beim Anmelden entsteht eine Sitzung, die 30 Tage gültig bleibt. Widerrufen Sie alle, wenn Sie vermuten, dass eine davon offengelegt wurde."
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "Kontakt"
   },
-  "zhuLyw": {
-    "defaultMessage": "Sie haben Ihr Egress-Kontingent für diesen Monat aufgebraucht. An Ihrer VM wurde keine Maßnahme ergriffen, sie wird weder gedrosselt, ausgesetzt noch für die Überschreitung berechnet, und das Kontingent wird am 1. zurückgesetzt."
+  "zxvhnE": {
+    "defaultMessage": "täglich"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} von permanentem Speicher"

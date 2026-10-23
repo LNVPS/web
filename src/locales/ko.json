@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "규칙 및 정책"
   },
+  "+XNxp7": {
+    "defaultMessage": "시간당 요금은 귀하의 계정 잔액에서 직접 결제되며, 별도의 청구서는 발송되지 않습니다. 자동 결제를 활성화하면 매 시간마다 잔액에서 해당 금액이 차감됩니다."
+  },
   "+lH372": {
     "defaultMessage": "더블린에 VPS를 구축하세요."
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "갱신됨"
   },
+  "1F9Ma6": {
+    "defaultMessage": "적립금을 자동으로 적용합니다."
+  },
   "1LBny5": {
     "defaultMessage": "중단됨"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr DM 알림은 Nostr 계정에서만 사용할 수 있습니다, 귀하의 계정에는 이를 복호화할 Nostr 키가 없습니다. 에서 다른 채널을 선택하세요 {settings}."
   },
+  "1shehh": {
+    "defaultMessage": "요금 청구가 중단되고 기기와 해당 데이터가 영구적으로 삭제됩니다. 이미 지불한 기간에 대해서는 환불이 이루어지지 않습니다."
+  },
   "1v7S+3": {
     "defaultMessage": "Nostr 도메인 추가"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "속도 측정"
+  },
+  "2a23d0": {
+    "defaultMessage": "VM 삭제"
   },
   "2h97cm": {
     "defaultMessage": "앱에서 스캔하세요"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "이 키를 지금 저장하세요. 복구할 수 없습니다."
   },
+  "5GbVS5": {
+    "defaultMessage": "설정을 활성화하면 매시간 계정 잔액에서 자동으로 요금이 차감됩니다. 이 설정을 켜두지 않으면 시간이 다 되면 기계가 작동을 멈춥니다."
+  },
   "5QYdPU": {
     "defaultMessage": "시작 시간"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "이후 {amount} 할인"
+  },
+  "6rrAVK": {
+    "defaultMessage": "귀하의 계좌 잔액에서 요금이 결제됩니다. 첫 시간 동안 사용하면 기기가 작동을 시작합니다."
   },
   "6tYS3u": {
     "defaultMessage": "사용자님의 호스트 이름은 다음과 같습니다. <code>your-name.ie.apps.lnvps.cloud</code>, 자동으로 TLS가 적용됩니다."
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "직접 메시지를 보내주세요. 공개 키가 자동으로 포함됩니다."
   },
+  "A2rGF+": {
+    "defaultMessage": "이 가상 머신을 삭제하고 요금 청구를 중단합니다. 사용하지 않은 시간은 계정에 환불됩니다."
+  },
   "A7Mqan": {
     "defaultMessage": "갱신 중..."
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "메시지 *"
   },
+  "BNJY54": {
+    "defaultMessage": "각 시간 단위마다 계정에 남아 있는 잔액에서 해당 금액이 차감되며, 이는 시간이 거의 다 될 때 이루어집니다. 잔액이 모두 소진되면 기계는 작동을 중단하고, 하루가 지나면 데이터가 삭제됩니다."
+  },
+  "BVwJy0": {
+    "defaultMessage": "잔액이 없습니다. 잔액을 충전하여 계속 사용하세요."
+  },
   "BXmJ0S": {
     "defaultMessage": "(대안)"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "실시간 채팅"
+  },
+  "CN4qds": {
+    "defaultMessage": "삭제 요청되었습니다. 가상 머신이 곧 제거됩니다."
+  },
+  "CPOVRT": {
+    "defaultMessage": "잔액을 충전하세요."
   },
   "CVnta/": {
     "defaultMessage": "가격에는 세금과 결제 수수료가 포함되지 않습니다."
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "이 브라우저는 패스키를 지원하지 않습니다."
+  },
+  "EnU4se": {
+    "defaultMessage": "잔액으로 충분히 충당할 수 있습니다. 기계는 재료가 다 떨어지면 작동을 멈추므로 항상 채워두세요."
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "결제를 보냈습니다"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} 왼쪽"
+  },
   "HqRNN8": {
     "defaultMessage": "지원"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "배포 중"
+  },
+  "IJFdmD": {
+    "defaultMessage": "VPS 삭제#{id}무엇인가요?"
   },
   "ILTAun": {
     "defaultMessage": "가상 머신이 프로비저닝되고 있습니다. 이 과정은 보통 1~2분 정도 소요됩니다."
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>라이트닝으로 결제하세요.</b> 라이트닝 네트워크를 통해 라이트닝 노드를 지원하는 방식에는 일정한 규칙이 있으며, 저희는 제3자 처리 업체를 거치지 않고 자체 LND 노드를 통해 이를 처리합니다."
   },
+  "KUma21": {
+    "defaultMessage": "결제 중단일: {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "깃"
   },
   "Kd8VbI": {
     "defaultMessage": "비트코인 라이트닝 VPS 호스팅"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "시간당"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "최대 10Mbps로 제한됨."
   },
   "KuX7em": {
     "defaultMessage": "활성 상태 {duration}"
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "다른 사람의 서버에 이미지와 동영상을 업로드하는 것을 중단하세요. Route96은 LNVPS에 몇 분 안에 배포할 수 있는 Blossom 및 NIP-96 미디어 서버이며, 저장 공간과 TLS가 함께 제공됩니다."
   },
+  "U37ynk": {
+    "defaultMessage": "그러면 시간당."
+  },
   "U7fZs8": {
     "defaultMessage": "얼마나 걸립니까?"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "마지막으로 사용한 날짜/시간 {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "귀하의 계좌 잔액에서 결제되며, 매시간 요금이 부과됩니다."
   },
   "Vn25W2": {
     "defaultMessage": "더 큰 크기를 선택하면 가격이 여기에 표시됩니다. 이번 청구 기간의 남은 기간에 대해서는 차액을 결제하게 됩니다."
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "처음 연결할 때 호스트 키를 확인하세요."
   },
+  "afdd17": {
+    "defaultMessage": "현재 잔액으로는 대략 이 서비스를 계속 이용할 수 있습니다. {hours,plural,one{# 시간} other{# 시간}}기계가 작동을 멈추지 않도록 재료를 계속 보충해 주세요."
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "새로운"
   },
+  "bfWrFO": {
+    "defaultMessage": "귀하의 계정에서는 아직 자동 지급 기능이 활성화되지 않았습니다. 귀하의 수수료는 계속 누적되며, 수동으로 지급됩니다."
+  },
   "bg/ESW": {
     "defaultMessage": "가격 계산 중…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "표시할 통화:"
+  },
+  "br/CR0": {
+    "defaultMessage": "요금 청구가 중단되고 기계와 해당 데이터가 영구적으로 삭제됩니다. 계정 잔액에서 지불한 시간 중 사용하지 않은 시간이 잔액으로 환불됩니다."
   },
   "c0b5XV": {
     "defaultMessage": "요금"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "Nostr DM으로 전송되는 알림"
   },
+  "dqD39h": {
+    "defaultMessage": "연간"
+  },
   "duElEE": {
     "defaultMessage": "이 가상 머신에 대한 기록 항목이 없습니다."
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{시간} other{시간}}"
   },
   "dwuJmA": {
     "defaultMessage": "자체 호스트 이름으로 Nostr 릴레이를 직접 실행하세요. TLS와 스토리지가 포함되어 있어 몇 분 안에 설정할 수 있습니다."
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "이 컴포넌트는 코인 결제만 지원합니다."
   },
+  "gP1+Bj": {
+    "defaultMessage": "잔액이 부족합니다. {amount}잔액을 충전하여 계속 사용하세요."
+  },
   "gPsMm7": {
     "defaultMessage": "이 워커를 배포하고 다음 경로를 추가합니다. {route}"
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "Nostr 키로 로그인하므로 취소할 저장된 세션이 없습니다. 각 요청은 개별적으로 서명됩니다."
   },
+  "hs364T": {
+    "defaultMessage": "계정 잔액을 확인 중입니다."
+  },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello 또는 보안 키로 로그인하세요. 모든 계정에 패스키를 추가할 수 있습니다."
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "요금 부과는 VPS 구독 방식과 동일하며, 모든 앱에 대해 초기 설정 비용이 부과되지 않습니다."
+  },
+  "i4NyOH": {
+    "defaultMessage": "이 가상 머신을 삭제하고 요금 청구를 중단합니다. 이렇게 하면 해당 가상 머신의 모든 데이터가 영구적으로 삭제되며, 이미 지불한 시간은 환불되지 않습니다."
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "배포 호스트 이름이 할당되면 이 도메인의 CNAME을 해당 호스트 이름으로 지정하세요. 제거하려면 비워 두세요."
   },
+  "jhYP1/": {
+    "defaultMessage": "지급일자"
+  },
   "jhyC12": {
     "defaultMessage": "무엇이 포함됩니까?"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "이번 달에 할당된 데이터 전송량을 모두 사용했습니다. 가상 머신의 네트워크 속도는 1일에 할당량이 재설정될 때까지 10Mbit/s로 제한됩니다. 서비스가 중단되거나 초과 사용량에 대해 요금이 부과되지 않습니다."
   },
   "k9Pskm": {
     "defaultMessage": "빠른 솔리드 스테이트 스토리지"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "주소 1번 줄"
+  },
+  "kg7a3m": {
+    "defaultMessage": "이 이미지에서는 디스크를 암호화합니다. 처음 부팅할 때 가상 머신의 콘솔을 열고 비밀번호를 선택합니다. 이후 모든 부팅 시마다 비밀번호를 다시 입력해야 하므로, 가상 머신은 재부팅 후 프롬프트에서 사용자가 비밀번호를 입력할 때까지 대기합니다. LNVPS는 이 비밀번호를 보거나 분실된 비밀번호를 복구할 수 없습니다."
   },
   "khi+xY": {
     "defaultMessage": "네, 그렇습니다. 기기에서 WireGuard 키페어를 생성하고 공개 키 부분만 저희에게 전송하기 때문에, 트래픽을 복호화하는 키는 저희가 넘겨주거나 잃어버릴 수 없는 것입니다."
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "기본값"
+  },
+  "lNbJX1": {
+    "defaultMessage": "삭제합니다."
   },
   "lP4qIQ": {
     "defaultMessage": "카드 정보"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "결제 및 업그레이드"
+  },
+  "qRwlkz": {
+    "defaultMessage": "암호화된 디스크"
   },
   "qV+TFm": {
     "defaultMessage": "결제가 실패했습니다."
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "체인을 저장할 수 있는 용량을 갖춘 VPS로, 비트코인, 모네로, 라이트코인 또는 이더리움으로 결제할 수 있습니다. 사양을 직접 선택하고 루트 접근 권한으로 원하는 노드 소프트웨어를 설치하세요. 컨트롤 패널에 방해받지 않는 환경입니다."
   },
+  "wYsv4Z": {
+    "defaultMessage": "매월"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "몇 분 정도 소요됩니다. 결제가 완료되면 즉시 처리됩니다."
   },
+  "yYFCLO": {
+    "defaultMessage": "지불 가능 날짜부터"
+  },
   "yfhNX4": {
     "defaultMessage": "로그인하면 30일 동안 유효한 세션이 생성됩니다. 세션이 노출된 것 같다면 모두 취소하세요."
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "문의"
   },
-  "zhuLyw": {
-    "defaultMessage": "이번 달의 egress 허용량이 모두 사용되었습니다. VM에는 아무런 조치도 취해지지 않았습니다, 속도 제한, 일시 정지, 초과분 과금도 이루어지지 않았으며, 허용량은 1일에 초기화됩니다."
+  "zxvhnE": {
+    "defaultMessage": "매일"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} 영구 저장 장치"

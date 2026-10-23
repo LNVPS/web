@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "规章制度"
   },
+  "+XNxp7": {
+    "defaultMessage": "按小时计费，费用直接从您的账户余额中扣除，不会另行开具账单。开启自动扣款功能，系统将每小时从您的余额中扣除相应金额。"
+  },
   "+lH372": {
     "defaultMessage": "搭建您的都柏林虚拟专用服务器。"
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "续订"
   },
+  "1F9Ma6": {
+    "defaultMessage": "自动应用信用额度。"
+  },
   "1LBny5": {
     "defaultMessage": "停止。"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr 私信通知仅适用于 Nostr 账号，你的账号没有 Nostr 密钥来解密它们。请在……中选择其他渠道 {settings}。"
   },
+  "1shehh": {
+    "defaultMessage": "停止计费，并永久删除机器及其数据。您已支付的时间费用不予退还。"
+  },
   "1v7S+3": {
     "defaultMessage": "添加 Nostr 域名"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "网速测试"
+  },
+  "2a23d0": {
+    "defaultMessage": "删除虚拟机。"
   },
   "2h97cm": {
     "defaultMessage": "在应用中扫码"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "请立即保存此密钥，因为一旦丢失就无法恢复。"
   },
+  "5GbVS5": {
+    "defaultMessage": "开启此功能后，系统将自动从您的账户余额中扣除每小时的费用。如果未开启，机器将在时间结束后停止运行。"
+  },
   "5QYdPU": {
     "defaultMessage": "开始时间"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "之后 {amount} 折扣"
+  },
+  "6rrAVK": {
+    "defaultMessage": "从您的账户余额中扣款。当第一次使用时，机器将启动，并从余额中扣除一小时的使用费。"
   },
   "6tYS3u": {
     "defaultMessage": "您自己的主机名，<code>your-name.ie.apps.lnvps.cloud</code>，并已启用自动 TLS。"
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "请直接向我们发送消息。您的公钥将自动包含在内。"
   },
+  "A2rGF+": {
+    "defaultMessage": "删除此虚拟机，并停止计费。您已支付但未使用的时长将退还到您的账户余额中。"
+  },
   "A7Mqan": {
     "defaultMessage": "正在加载续订信息……"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "消息 *"
   },
+  "BNJY54": {
+    "defaultMessage": "每个小时都会从您的账户余额中扣除，通常在时间结束前几分钟进行。如果余额用完，机器将停止运行，并在一天后被删除。"
+  },
+  "BVwJy0": {
+    "defaultMessage": "您的账户余额为零。请充值以继续使用。"
+  },
   "BXmJ0S": {
     "defaultMessage": "（备选方案）"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "在线聊天"
+  },
+  "CN4qds": {
+    "defaultMessage": "已请求删除。虚拟机将在稍后被移除。"
+  },
+  "CPOVRT": {
+    "defaultMessage": "充值。"
   },
   "CVnta/": {
     "defaultMessage": "价格不含税费及支付手续费。"
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "此浏览器不支持通行密钥。"
+  },
+  "EnU4se": {
+    "defaultMessage": "您的账户余额足以支付这笔费用。当机器耗尽时，它会自动停止工作，因此请确保及时补充。"
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "我已发送付款"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} 左侧；离开；剩下。"
+  },
   "HqRNN8": {
     "defaultMessage": "支持"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "部署中"
+  },
+  "IJFdmD": {
+    "defaultMessage": "删除虚拟专用服务器。{id}？"
   },
   "ILTAun": {
     "defaultMessage": "您的虚拟机正在配置中。通常需要一两分钟的时间。"
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>使用闪电网络进行支付。</b> 通过闪电网络为您的闪电网络节点提供资金，这其中存在着一种内在的对称性。我们通过自己的 LND 节点来完成结算，而不是依赖第三方服务商。"
   },
+  "KUma21": {
+    "defaultMessage": "停止计费日期： {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git"
   },
   "Kd8VbI": {
     "defaultMessage": "比特币闪电网络虚拟专用服务器托管"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "每小时的。"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "限制为 10 Mbps。"
   },
   "KuX7em": {
     "defaultMessage": "已激活 {duration}。"
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "停止将您的图片和视频上传到其他人的服务器。Route96 是一款由 Blossom 和 NIP-96 开发的媒体服务器，可在 LNVPS 上几分钟内部署完成，并包含存储空间和 TLS 加密功能。"
   },
+  "U37ynk": {
+    "defaultMessage": "然后按小时计算。"
+  },
   "U7fZs8": {
     "defaultMessage": "需要多长时间？"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "上次使用时间 {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "从您的账户余额中扣款，每小时收费一次。"
   },
   "Vn25W2": {
     "defaultMessage": "选择更大的规格后，价格将显示在此处。您需支付本计费周期剩余部分的差价。"
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "首次连接时，请验证主机密钥。"
   },
+  "afdd17": {
+    "defaultMessage": "您的余额将使此服务持续运行大约。 {hours,plural,one{# 小时} other{# 小时}}当机器用完时就会停止工作，所以请随时补充。"
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "新"
   },
+  "bfWrFO": {
+    "defaultMessage": "您的账户尚未启用自动结算功能。您的佣金会持续累积，并需要手动进行结算。"
+  },
   "bg/ESW": {
     "defaultMessage": "正在计算价格…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "显示货币："
+  },
+  "br/CR0": {
+    "defaultMessage": "停止计费，并永久删除机器及其数据。您账户中未使用的已支付小时数将退还到您的余额中。"
   },
   "c0b5XV": {
     "defaultMessage": "费率"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "以 Nostr 私信发送的通知"
   },
+  "dqD39h": {
+    "defaultMessage": "年度的；每年的"
+  },
   "duElEE": {
     "defaultMessage": "未找到此虚拟机的历史记录。"
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{小时} other{小时}}"
   },
   "dwuJmA": {
     "defaultMessage": "搭建您自己的 Nostr 中继服务器，只需几分钟即可完成，它将使用您指定的域名，并包含 TLS 加密和存储功能。"
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "此组件仅支持金币支付。"
   },
+  "gP1+Bj": {
+    "defaultMessage": "您的余额不足。 {amount}请充值以继续使用。"
+  },
   "gPsMm7": {
     "defaultMessage": "部署此工作进程，并为 {route} 添加路由。"
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "您使用 Nostr 密钥登录，因此没有可撤销的已存储会话。每个请求都会单独签名。"
   },
+  "hs364T": {
+    "defaultMessage": "正在查询您的账户余额……"
+  },
   "hs3HVz": {
     "defaultMessage": "使用 Face ID、Touch ID、Windows Hello 或安全密钥登录。您可以为任何账户添加通行密钥。"
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "计费方式类似于虚拟专用服务器（VPS）的订阅模式，任何应用程序都不收取设置费用。"
+  },
+  "i4NyOH": {
+    "defaultMessage": "删除此虚拟机并停止计费。这将永久删除其中的所有数据，并且您已支付的时间将不予退款。"
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "在部署主机名分配后，将该域名的 CNAME 指向该主机名。留空可移除。"
   },
+  "jhYP1/": {
+    "defaultMessage": "从……支付"
+  },
   "jhyC12": {
     "defaultMessage": "包含哪些内容？"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "您本月的流量额度已用完。您的虚拟机的网络速度将限制为 10 Mbps，直至下个月 1 日额度重置。服务不会暂停，也不会对超出部分收取费用。"
   },
   "k9Pskm": {
     "defaultMessage": "高速固态存储"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "地址行 1"
+  },
+  "kg7a3m": {
+    "defaultMessage": "此镜像会对磁盘进行加密。首次启动时，请打开虚拟机的控制台并选择一个密码短语；每次启动时都会要求您输入该密码短语，因此虚拟机会在重启后停留在提示界面，直到您输入密码短语为止。LNVPS 系统无法访问该密码短语，也无法恢复丢失的密码短语。"
   },
   "khi+xY": {
     "defaultMessage": "由您的设备来做。您的设备会生成 WireGuard 密钥对，并且只把公钥部分发送给我们，因此解密您流量的密钥永远不会由我们保管，也就不存在被我们交出或丢失的可能。"
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "默认"
+  },
+  "lNbJX1": {
+    "defaultMessage": "删除……"
   },
   "lP4qIQ": {
     "defaultMessage": "卡片信息。"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "支付并升级"
+  },
+  "qRwlkz": {
+    "defaultMessage": "加密磁盘"
   },
   "qV+TFm": {
     "defaultMessage": "支付失败。"
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "一台空间足以容纳整条区块链的 VPS，支持使用比特币、门罗币、莱特币或以太坊支付。您可以自由选择配置并安装自己的节点软件，拥有 root 权限，且没有控制面板的干扰。"
   },
+  "wYsv4Z": {
+    "defaultMessage": "每月"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "几分钟。付款完成后，系统会立即进行处理。"
   },
+  "yYFCLO": {
+    "defaultMessage": "自……起可支付。"
+  },
   "yfhNX4": {
     "defaultMessage": "登录会创建一个有效期为 30 天的会话。如果您认为某个会话已泄露，请撤销全部会话。"
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "联系方式"
   },
-  "zhuLyw": {
-    "defaultMessage": "您本月的出站流量额度已用完。未对您的虚拟机采取任何措施，它未被限速、暂停，也不会因超额使用而收费，额度将于每月1日重置。"
+  "zxvhnE": {
+    "defaultMessage": "每日"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} 持久性存储"

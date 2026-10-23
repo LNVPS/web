@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "Kurallar ve politikalar"
   },
+  "+XNxp7": {
+    "defaultMessage": "Saatlik ücretlendirme için hesabınızdaki bakiyeden ödeme yapılır, fatura kesilmez. Otomatik ödeme özelliğini etkinleştirerek her saat için bakiyenizden otomatik olarak para çekilmesi sağlanır."
+  },
   "+lH372": {
     "defaultMessage": "Dublin'de kendi VPS'nizi oluşturun"
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "Yenilenir"
   },
+  "1F9Ma6": {
+    "defaultMessage": "Kredi bakiyesini otomatik olarak uygula"
+  },
   "1LBny5": {
     "defaultMessage": "Durduruldu"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr DM bildirimleri yalnızca Nostr hesapları için kullanılabilir, hesabınızda bunları şifre çözmek için bir Nostr anahtarı yok. Başka bir kanal seçin: {settings}."
   },
+  "1shehh": {
+    "defaultMessage": "Fatura kesintisi durdurulur ve cihaz ile içindeki veriler kalıcı olarak silinir. Önceden ödeme yaptığınız süre için herhangi bir geri ödeme yapılmaz."
+  },
   "1v7S+3": {
     "defaultMessage": "Nostr Alan Adı Ekle"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Hız testi"
+  },
+  "2a23d0": {
+    "defaultMessage": "Sanal makineyi sil."
   },
   "2h97cm": {
     "defaultMessage": "Uygulamada tarayın"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "Bu anahtarı şimdi kaydedin; aksi takdirde geri alınamaz."
   },
+  "5GbVS5": {
+    "defaultMessage": "Her saat için hesabınızdaki bakiyeden otomatik olarak para çekilmesi için bu özelliği etkinleştirin. Aksi takdirde, süre dolduğunda cihaz duracaktır."
+  },
   "5QYdPU": {
     "defaultMessage": "Başlangıç Saati"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "sonra {amount} indirim"
+  },
+  "6rrAVK": {
+    "defaultMessage": "Bakiyenizden ödeme yapılır. Makine, ilk bir saatlik süre bakiyeden düşüldükten sonra çalışmaya başlar."
   },
   "6tYS3u": {
     "defaultMessage": "Kendi alan adınız, <code>your-name.ie.apps.lnvps.cloud</code>, otomatik TLS ile"
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin. Genel anahtarınız otomatik olarak eklenecektir."
   },
+  "A2rGF+": {
+    "defaultMessage": "Bu sanal makineyi silin ve faturalandırmayı durdurun. Önceden ödediğiniz ancak kullanmadığınız saatlerin kalan kısmı hesabınıza kredi olarak iade edilecektir."
+  },
   "A7Mqan": {
     "defaultMessage": "Yenileme yükleniyor…"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "Mesaj *"
   },
+  "BNJY54": {
+    "defaultMessage": "Her saatlik kullanım süresi, bitimine kısa bir süre kala hesabınızdan düşülür. Bakiye tükendiğinde cihaz durur ve bir gün sonra silinir."
+  },
+  "BVwJy0": {
+    "defaultMessage": "Bakiyenizde para bulunmuyor. İşlemlere devam etmek için bakiyenizi güncelleyin."
+  },
   "BXmJ0S": {
     "defaultMessage": "(Alternatif)"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "Canlı Sohbet"
+  },
+  "CN4qds": {
+    "defaultMessage": "Silme işlemi talep edildi. Sanal makine kısa süre içinde kaldırılacak."
+  },
+  "CPOVRT": {
+    "defaultMessage": "Bakiyenizi artırın / Kredi bakiyenize para ekleyin."
   },
   "CVnta/": {
     "defaultMessage": "Fiyatlara vergi ve ödeme işleme ücretleri dahil değildir."
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "Bu tarayıcı geçiş anahtarlarını desteklemiyor."
+  },
+  "EnU4se": {
+    "defaultMessage": "Bakiyeniz bu durumu karşılayacaktır. Makine dolduğunda durur, bu nedenle seviyesini düzenli olarak kontrol edin ve gerektiğinde doldurun."
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "Ödemeyi gönderdim"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} sol"
+  },
   "HqRNN8": {
     "defaultMessage": "Destek"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "Dağıtılıyor."
+  },
+  "IJFdmD": {
+    "defaultMessage": "VPS'yi silin.{id}"
   },
   "ILTAun": {
     "defaultMessage": "Sanal makineniz hazırlanıyor. Bu işlem genellikle bir veya iki dakika sürer."
@@ -1154,14 +1196,23 @@
   "KP5gy4": {
     "defaultMessage": "<b>Lightning ile ödeme yapın.</b> Lightning ağınızdaki düğümünüze Lightning üzerinden fon sağlamak belirli bir uyum içerir ve bunu üçüncü taraf bir işlemci yerine kendi LND düğümüz aracılığıyla gerçekleştiriyoruz."
   },
+  "KUma21": {
+    "defaultMessage": "Fatura kesintisi şu tarihte durduruldu: {date}"
+  },
   "KaSlC8": {
     "defaultMessage": "Git."
   },
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "Saatlik"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
+  },
+  "KpQPY+": {
+    "defaultMessage": "Maksimum 10 Mbit/sn ile sınırlı."
   },
   "KuX7em": {
     "defaultMessage": "Etkin olduğu süre {duration}"
@@ -1631,6 +1682,9 @@
   "U0GEAC": {
     "defaultMessage": "Resimlerinizi ve videolarınızı başka birinin sunucusuna yüklemeyi bırakın. Route96, LNVPS üzerinde dakikalar içinde kurulabilen, depolama alanı ve TLS içeren Blossom ve NIP-96 medya sunucusudur."
   },
+  "U37ynk": {
+    "defaultMessage": "Sonra saat başına."
+  },
   "U7fZs8": {
     "defaultMessage": "Ne kadar sürüyor?"
   },
@@ -1705,6 +1759,9 @@
   },
   "VffztH": {
     "defaultMessage": "en son kullanıldı {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "Bakiyenizden ödeme yapılır, her saat başı faturalandırılır."
   },
   "Vn25W2": {
     "defaultMessage": "Daha büyük bir boyut seçtiğinizde fiyat burada görünür. Bu fatura döneminin kalan süresi için farkı ödersiniz."
@@ -1934,6 +1991,9 @@
   "af6sO8": {
     "defaultMessage": "İlk bağlantıda ana bilgisayar anahtarını doğrulayın."
   },
+  "afdd17": {
+    "defaultMessage": "Bakiyeniz bu işlemi yaklaşık olarak şu süre boyunca devam ettirecektir: {hours,plural,one{# saat} other{# saatler}}Makine yakıtı tükendiğinde durur, bu nedenle yakıtını düzenli olarak doldurun."
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1967,6 +2027,9 @@
   "bW7B87": {
     "defaultMessage": "Yeni"
   },
+  "bfWrFO": {
+    "defaultMessage": "Hesabınız için otomatik ödeme özelliği henüz etkinleştirilmedi. Komisyonunuz birikmeye devam ediyor ve manuel olarak ödeniyor."
+  },
   "bg/ESW": {
     "defaultMessage": "Fiyat hesaplanıyor…"
   },
@@ -1984,6 +2047,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "Gösterilecek para birimi:"
+  },
+  "br/CR0": {
+    "defaultMessage": "Fatura kesintisi durdurulur ve cihaz ile içindeki veriler kalıcı olarak silinir. Hesap bakiyenizden ödenen saatler için kullanılmayan süre, bakiyenize iade edilir."
   },
   "c0b5XV": {
     "defaultMessage": "Oran"
@@ -2099,8 +2165,14 @@
   "djY1KH": {
     "defaultMessage": "Nostr DM olarak gönderilen bildirimler"
   },
+  "dqD39h": {
+    "defaultMessage": "Yıllık"
+  },
   "duElEE": {
     "defaultMessage": "Bu sanal makine için herhangi bir geçmiş kaydı bulunamadı."
+  },
+  "dwPowv": {
+    "defaultMessage": "{n,plural,one{saat} other{saat}}"
   },
   "dwuJmA": {
     "defaultMessage": "Kendi Nostr rölenizi çalıştırın; birkaç dakika içinde kendi alan adınızda, TLS ve depolama alanı dahil olmak üzere kullanıma hazır hale getirin."
@@ -2213,6 +2285,9 @@
   "gNrB5A": {
     "defaultMessage": "Bu bileşen yalnızca madeni para ödemelerini destekler."
   },
+  "gP1+Bj": {
+    "defaultMessage": "Bakiyeniz yeterli değil. {amount}Devam etmek için bakiyenizi artırın."
+  },
   "gPsMm7": {
     "defaultMessage": "Bu İşçi'yi devreye alın ve şu rota için bir yapılandırma ekleyin: {route}"
   },
@@ -2264,6 +2339,9 @@
   "hXAhO/": {
     "defaultMessage": "Nostr anahtarıyla oturum açıyorsunuz, bu yüzden iptal edilecek kayıtlı oturum yok. Her istek ayrı ayrı imzalanır."
   },
+  "hs364T": {
+    "defaultMessage": "Hesabınızdaki kredi bakiyesini kontrol ediyoruz…"
+  },
   "hs3HVz": {
     "defaultMessage": "Face ID, Touch ID, Windows Hello veya bir güvenlik anahtarıyla giriş yapın. Herhangi bir hesaba geçiş anahtarı ekleyebilirsiniz."
   },
@@ -2278,6 +2356,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "Fatura sistemi, bir VPS aboneliği gibi çalışır ve hiçbir uygulamada kurulum ücreti alınmaz."
+  },
+  "i4NyOH": {
+    "defaultMessage": "Bu sanal makineyi silin ve faturalandırmayı durdurun. Bu işlem, üzerindeki tüm verileri kalıcı olarak silecektir ve önceden ödeme yaptığınız süre için geri ödeme yapılmayacaktır."
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2351,6 +2432,9 @@
   "jhBqwg": {
     "defaultMessage": "Dağıtım ana bilgisayar adı atandığında bu alan adı için bir CNAME kaydını o adrese yönlendirin. Kaldırmak için boş bırakın."
   },
+  "jhYP1/": {
+    "defaultMessage": "Ödemesi yapıldı."
+  },
   "jhyC12": {
     "defaultMessage": "Neler dahil?"
   },
@@ -2374,6 +2458,9 @@
   },
   "jyXJcj": {
     "defaultMessage": "IPv6"
+  },
+  "k6P3JH": {
+    "defaultMessage": "Bu ay için ayrılan veri çıkış kotanızı kullandınız. Sanal makinenizin ağ hızı, kota sıfırlanıncaya kadar (yani 1'ine kadar) 10 Mbit/s ile sınırlıdır. Hizmetiniz askıya alınmamıştır ve aşım için herhangi bir ücretlendirme yapılmayacaktır."
   },
   "k9Pskm": {
     "defaultMessage": "Hızlı katı hal depolama (SSD)"
@@ -2410,6 +2497,9 @@
   },
   "kfr95E": {
     "defaultMessage": "Adres Satırı 1"
+  },
+  "kg7a3m": {
+    "defaultMessage": "Bu görüntü diski şifreler. İlk başlatmada sanal makinenin konsolunu açın ve bir parola belirleyin; her başlatmada tekrar istenecektir, bu nedenle sanal makine yeniden başlatma işleminden sonra parolayı girene kadar komut isteminde bekleyecektir. LNVPS parolayı hiçbir zaman görmez ve kaybolmuş bir parolayı kurtaramaz."
   },
   "khi+xY": {
     "defaultMessage": "Siz oluşturursunuz. Cihazınız WireGuard anahtar çiftini oluşturur ve bize yalnızca herkese açık yarısını gönderir; böylece trafiğinizin şifresini çözen anahtar, bizim teslim edebileceğimiz ya da kaybedebileceğimiz bir anahtar asla olmaz."
@@ -2449,6 +2539,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "Varsayılan"
+  },
+  "lNbJX1": {
+    "defaultMessage": "Sil…"
   },
   "lP4qIQ": {
     "defaultMessage": "Kart bilgileri"
@@ -2716,6 +2809,9 @@
   },
   "qNB4sp": {
     "defaultMessage": "Öde ve yükselt"
+  },
+  "qRwlkz": {
+    "defaultMessage": "Şifrelenmiş disk"
   },
   "qV+TFm": {
     "defaultMessage": "Ödeme başarısız oldu."
@@ -3011,6 +3107,9 @@
   "wY4M/H": {
     "defaultMessage": "Zincir için yeterli alana sahip, Bitcoin, Monero, Litecoin veya Ethereum ile ödenen bir VPS. Özellikleri siz seçersiniz, kendi düğüm yazılımınızı kurarsınız; root erişimiyle ve yolunuzu kesen bir kontrol paneli olmadan."
   },
+  "wYsv4Z": {
+    "defaultMessage": "Aylık"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3116,6 +3215,9 @@
   "yUD6jT": {
     "defaultMessage": "Dakikalar. Ödeme işlemi tamamlandıktan sonra devreye girer."
   },
+  "yYFCLO": {
+    "defaultMessage": "Ödenebilir tarihinden itibaren"
+  },
   "yfhNX4": {
     "defaultMessage": "Oturum açmak 30 gün geçerli bir oturum oluşturur. Birinin ele geçirildiğini düşünüyorsanız tümünü iptal edin."
   },
@@ -3146,8 +3248,8 @@
   "zFegDD": {
     "defaultMessage": "İletişim"
   },
-  "zhuLyw": {
-    "defaultMessage": "Bu ay için çıkış trafiği kotanızı kullandınız. VM'nizle ilgili herhangi bir işlem yapılmadı, bant genişliği kısıtlanmadı, askıya alınmadı veya aşım için ücretlendirilmedi, ve kota 1'inde sıfırlanır."
+  "zxvhnE": {
+    "defaultMessage": "Günlük"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} kalıcı depolama alanı"

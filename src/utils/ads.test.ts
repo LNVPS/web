@@ -6,6 +6,7 @@ import {
   isFirstPayment,
   loadAds,
   pageLocation,
+  purchaseValue,
   recordConsent,
   storedConsent,
   trackPageView,
@@ -148,12 +149,21 @@ describe("events", () => {
         "conversion",
         {
           send_to: "AW-1/lbl",
-          value: 1.0,
-          currency: "EUR",
           transaction_id: "",
         },
       ],
     ]);
+    calls.length = 0;
+    trackPurchase({ tagId: "AW-1", purchaseLabel: "lbl" }, win, "p1", {
+      value: 12.34,
+      currency: "EUR",
+    });
+    expect(calls[0][2]).toEqual({
+      send_to: "AW-1/lbl",
+      value: 12.34,
+      currency: "EUR",
+      transaction_id: "p1",
+    });
     calls.length = 0;
     trackPurchase({ tagId: "AW-1", purchaseLabel: "lbl" }, win, 42);
     expect((calls[0][2] as { transaction_id: string }).transaction_id).toBe(
@@ -167,5 +177,47 @@ describe("isFirstPayment", () => {
     expect(isFirstPayment({})).toBe(true);
     expect(isFirstPayment({ expires: "2026-11-01T00:00:00Z" })).toBe(false);
     expect(isFirstPayment(undefined)).toBe(false);
+  });
+});
+
+describe("purchaseValue", () => {
+  const rates = {
+    updated: "",
+    base: "BTC",
+    rates: { EUR: 50_000, USD: 55_000 },
+  };
+
+  test("is amount + VAT + processing fee in standard units", () => {
+    expect(
+      purchaseValue(
+        { amount: 1000, tax: 230, processing_fee: 5, currency: "EUR" },
+        undefined,
+      ),
+    ).toEqual({ value: 12.35, currency: "EUR" });
+    expect(
+      purchaseValue(
+        { amount: 500, tax: 0, processing_fee: 0, currency: "USD" },
+        undefined,
+      ),
+    ).toEqual({ value: 5, currency: "USD" });
+  });
+
+  test("converts BTC (millisats) to EUR", () => {
+    // 0.0002 BTC = 20,000 sats = 20,000,000 msats = 10 EUR at 50,000 EUR/BTC
+    expect(
+      purchaseValue(
+        { amount: 20_000_000, tax: 0, processing_fee: 0, currency: "BTC" },
+        rates,
+      ),
+    ).toEqual({ value: 10, currency: "EUR" });
+  });
+
+  test("gives no value for BTC when rates are unavailable", () => {
+    expect(
+      purchaseValue(
+        { amount: 1, tax: 0, processing_fee: 0, currency: "BTC" },
+        undefined,
+      ),
+    ).toBeUndefined();
   });
 });

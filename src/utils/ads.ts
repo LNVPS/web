@@ -1,3 +1,6 @@
+import type { ExchangeRates } from "../api";
+import { convertAmount, smallestUnitScale } from "./currency";
+
 export const ConsentStorageKey = "ads-consent";
 
 export type ConsentChoice = "granted" | "denied";
@@ -98,16 +101,53 @@ export function isFirstPayment(vm: { expires?: string } | undefined) {
   return vm !== undefined && !vm.expires;
 }
 
+/** What Google Ads is told a purchase was worth: standard units of a fiat currency. */
+export interface PurchaseValue {
+  value: number;
+  currency: string;
+}
+
+/**
+ * The amount a customer was really charged for a payment — list price net of
+ * any discount, plus VAT and processing fee — as a Google Ads conversion
+ * value. Amounts are integers in the smallest unit; BTC (millisats) is
+ * converted to EUR at the current rate since Ads only takes fiat. Returns
+ * undefined when it can't be priced (no rates for a BTC payment), so the
+ * conversion is still counted rather than reported with a wrong value.
+ */
+export function purchaseValue(
+  payment: {
+    amount: number;
+    tax: number;
+    processing_fee: number;
+    currency: string;
+  },
+  rates: ExchangeRates | undefined,
+): PurchaseValue | undefined {
+  const total = payment.amount + payment.tax + payment.processing_fee;
+  let currency = payment.currency;
+  let smallest = total;
+  if (currency === "BTC") {
+    if (!rates) return undefined;
+    const eur = convertAmount(total, "BTC", "EUR", rates);
+    if (eur === undefined) return undefined;
+    currency = "EUR";
+    smallest = eur;
+  }
+  const value = Math.round(smallest) / smallestUnitScale(currency);
+  return { value, currency };
+}
+
 export function trackPurchase(
   config: AdsConfig | undefined,
   win: Pick<Window, "gtag">,
   transactionId?: string | number,
+  amount?: PurchaseValue,
 ) {
   if (!config?.purchaseLabel) return;
   win.gtag?.("event", "conversion", {
     send_to: `${config.tagId}/${config.purchaseLabel}`,
-    value: 1.0,
-    currency: "EUR",
+    ...(amount ? { value: amount.value, currency: amount.currency } : {}),
     transaction_id: transactionId === undefined ? "" : String(transactionId),
   });
 }

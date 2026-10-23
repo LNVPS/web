@@ -40,7 +40,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { showError } from "../toast";
 import { AdsSettings } from "../utils/ads-env";
-import { isFirstPayment, trackPurchase } from "../utils/ads";
+import { isFirstPayment, purchaseValue, trackPurchase } from "../utils/ads";
+import useExchangeRates from "../hooks/useExchangeRates";
 
 export function VmBillingPage() {
   const location = useLocation() as { state?: VmInstance };
@@ -49,6 +50,7 @@ export function VmBillingPage() {
   const { formatDate } = useIntl();
   const navigate = useNavigate();
   const { loading: methodsLoading } = usePaymentMethods();
+  const { data: rates } = useExchangeRates();
   const [payments, setPayments] = useState<Array<VmPayment>>([]);
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
   const [showPaymentFlow, setShowPaymentFlow] = useState(false);
@@ -88,11 +90,21 @@ export function VmBillingPage() {
     return newState;
   }
 
-  async function onPaymentComplete() {
+  async function onPaymentComplete(paid?: VmPayment) {
     const firstPayment = isFirstPayment(state);
     setShowPaymentFlow(false);
     setResumePayment(undefined);
-    if (firstPayment) trackPurchase(AdsSettings, window, state?.id);
+    // Report what the customer was really charged (price net of discount, plus
+    // VAT and processing fee), not a placeholder. The transaction id is the
+    // payment's, so a repeat report of the same payment is deduplicated.
+    if (firstPayment) {
+      trackPurchase(
+        AdsSettings,
+        window,
+        paid?.id ?? state?.id,
+        paid ? purchaseValue(paid, rates) : undefined,
+      );
+    }
     const newState = await reloadVmState();
     if (params["action"] === "renew") {
       navigate("/vm", { state: newState });
@@ -397,7 +409,7 @@ function RenewalFlow({
 }: {
   vm: VmInstance;
   initialPayment?: VmPayment;
-  onPaymentComplete: () => void;
+  onPaymentComplete: (payment?: VmPayment) => void;
   onCancel: () => void;
 }) {
   const login = useLogin();

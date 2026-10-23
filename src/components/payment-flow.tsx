@@ -56,7 +56,8 @@ interface PaymentFlowProps {
    * flow entirely.
    */
   initialPayment?: VmPayment;
-  onPaymentComplete: () => void;
+  /** Called once paid, with the payment that settled (its real amounts). */
+  onPaymentComplete: (payment?: VmPayment) => void;
   onCancel?: () => void;
 }
 
@@ -260,8 +261,8 @@ export default function PaymentFlow({
     setPayment(undefined);
     setShowLnurl(false);
     setSavedCharge(false);
-    onPaymentComplete();
-  }, [onPaymentComplete]);
+    onPaymentComplete(payment);
+  }, [onPaymentComplete, payment]);
 
   // When a method is preselected there is no in-flow selection screen to return
   // to, so backing out of the payment must leave the flow entirely. Otherwise

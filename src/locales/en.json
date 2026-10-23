@@ -1160,6 +1160,9 @@
   "Kd8VbI": {
     "defaultMessage": "Bitcoin Lightning VPS Hosting"
   },
+  "Kj+Lfx": {
+    "defaultMessage": "Hourly"
+  },
   "KkHYsy": {
     "defaultMessage": "Running at {current}× the base app. Resizing costs the difference for the rest of this period, then the new rate from the next renewal. The new size applies once the payment settles, and sizes can only go up."
   },
@@ -2099,8 +2102,14 @@
   "djY1KH": {
     "defaultMessage": "Notices sent as Nostr DMs"
   },
+  "dqD39h": {
+    "defaultMessage": "Yearly"
+  },
   "duElEE": {
     "defaultMessage": "No history entries found for this VM."
+  },
+  "dwPowv": {
+    "defaultMessage": "{n, plural, one {hour} other {hours}}"
   },
   "dwuJmA": {
     "defaultMessage": "Run your own Nostr relay, up in minutes on its own hostname with TLS and storage included."
@@ -3011,6 +3020,9 @@
   "wY4M/H": {
     "defaultMessage": "A VPS with room for the chain, paid for in Bitcoin, Monero, Litecoin or Ethereum. You choose the specs and install your own node software, with root access and no control panel in the way."
   },
+  "wYsv4Z": {
+    "defaultMessage": "Monthly"
+  },
   "wa/t9c": {
     "defaultMessage": "Pay and resize"
   },
@@ -3148,6 +3160,9 @@
   },
   "zhuLyw": {
     "defaultMessage": "You have used your egress allowance for this month. Nothing has been done to your VM: it is not throttled, suspended or charged for the overage, and the allowance resets on the 1st."
+  },
+  "zxvhnE": {
+    "defaultMessage": "Daily"
   },
   "zzkKCh": {
     "defaultMessage": "{storage} of persistent storage"

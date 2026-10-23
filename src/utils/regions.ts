@@ -5,6 +5,7 @@ import {
   type VmCustomTemplateRequest,
   type VmTemplateResponse,
 } from "../api";
+import { preferredTemplate } from "./custom-intervals";
 
 /**
  * The custom-template parameters for one region, or `undefined` when the
@@ -14,12 +15,17 @@ import {
  * the CPU and memory ranges, which disk types exist and how big they go. A
  * region that stops being offered drops out of `GET /api/v1/vm/templates` and
  * the page then renders its prose without figures, which is the honest state.
+ *
+ * A region is offered once per billing interval (and CPU variant); this
+ * returns the longest-interval row so a "from" price is the monthly one.
  */
 export function regionCustomTemplate(
   offers: VmTemplateResponse | undefined,
   regionId: number,
 ): VmCustomTemplateParams | undefined {
-  return offers?.custom_template?.find((t) => t.region.id === regionId);
+  return preferredTemplate(
+    (offers?.custom_template ?? []).filter((t) => t.region.id === regionId),
+  );
 }
 
 /** The disk options of a region, cheapest-media first (SSD before HDD). */

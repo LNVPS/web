@@ -52,6 +52,11 @@ export function formatIntervalText(
   n = 1,
 ): string {
   switch (interval) {
+    case "hour":
+      return intl.formatMessage(
+        { defaultMessage: "{n, plural, one {hour} other {hours}}" },
+        { n },
+      );
     case "day":
       return intl.formatMessage(
         { defaultMessage: "{n, plural, one {day} other {days}}" },

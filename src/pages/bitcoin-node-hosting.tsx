@@ -45,9 +45,9 @@ export function BitcoinNodeHostingPage() {
   // The regions we actually offer a build in, named as the catalog names them
   // and sorted, since the endpoint's order is not stable and a sentence should
   // not reshuffle between requests.
-  const regions = (offers?.custom_template ?? [])
-    .map((t) => t.region.name)
-    .sort((a, b) => a.localeCompare(b));
+  const regions = [
+    ...new Set((offers?.custom_template ?? []).map((t) => t.region.name)),
+  ].sort((a, b) => a.localeCompare(b));
   const regionList =
     regions.length > 0
       ? intl.formatList(regions, { type: "disjunction" })

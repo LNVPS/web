@@ -16,8 +16,8 @@ export const SITE_URL = "https://lnvps.net";
  * alongside because it costs nothing and is what a human reading the markup
  * sees.
  *
- * Codes from UN/CEFACT Rec 20 Annex I, quantity "time": `DAY` day, `MON`
- * month, `ANN` year.
+ * Codes from UN/CEFACT Rec 20 Annex I, quantity "time": `HUR` hour, `DAY`
+ * day, `MON` month, `ANN` year.
  *
  * Typed on the enum, so a new interval type is a type error here rather than
  * an undefined in the markup.
@@ -26,6 +26,7 @@ export const BILLING_UNIT: Record<
   CostPlanIntervalType,
   { code: string; text: string }
 > = {
+  [CostPlanIntervalType.HOUR]: { code: "HUR", text: "HOUR" },
   [CostPlanIntervalType.DAY]: { code: "DAY", text: "DAY" },
   [CostPlanIntervalType.MONTH]: { code: "MON", text: "MONTH" },
   [CostPlanIntervalType.YEAR]: { code: "ANN", text: "YEAR" },

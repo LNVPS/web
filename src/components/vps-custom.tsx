@@ -21,6 +21,14 @@ import { formatTransferAllowance } from "../utils/bandwidth";
 import { FilterButton } from "./button-filter";
 import ResourceSlider from "./resource-slider";
 import RegionName from "./region-name";
+import IntervalTabs from "./interval-tabs";
+import {
+  cpuVariants,
+  distinctIntervals,
+  intervalKey,
+  templateInterval,
+  variantKeyFn,
+} from "../utils/custom-intervals";
 
 function formatCpuMfg(mfg?: CpuMfg): string | undefined {
   if (!mfg || mfg === CpuMfg.UNKNOWN) return undefined;
@@ -160,16 +168,45 @@ export function VpsCustomOrder({
     [templatesByRegion, region],
   );
 
-  // Selected template within region (for when there are multiple variants)
-  const [selectedTemplateId, setSelectedTemplateId] = useState<number>(
-    templates.at(0)?.id ?? 0,
+  // A region is offered as several templates: one per CPU variant, and each
+  // of those once per billing interval. The CPU filter picks a variant, the
+  // tab strip picks an interval, and together they name exactly one template.
+  const variants = useMemo(
+    () => cpuVariants(regionTemplates),
+    [regionTemplates],
+  );
+  const variantKey = useMemo(
+    () => variantKeyFn(regionTemplates),
+    [regionTemplates],
+  );
+  const [variantSel, setVariantSel] = useState<string>();
+  // A selection the new region doesn't offer falls back to its first variant.
+  const activeVariant =
+    variants.find((v) => variantKey(v) === variantSel) ?? variants[0];
+  const activeVariantKey = activeVariant ? variantKey(activeVariant) : "";
+
+  const variantTemplates = useMemo(
+    () => regionTemplates.filter((t) => variantKey(t) === activeVariantKey),
+    [regionTemplates, variantKey, activeVariantKey],
   );
 
-  // Find current params - either by selected template id or first in region
+  const intervals = useMemo(
+    () => distinctIntervals(variantTemplates),
+    [variantTemplates],
+  );
+  const [intervalSel, setIntervalSel] = useState<string>();
+  // Likewise silent: an interval the new selection lacks falls back to the
+  // longest one it has, with the chosen spec left alone.
+  const interval =
+    intervals.find((i) => intervalKey(i) === intervalSel) ?? intervals[0];
+
   const params = useMemo(() => {
-    const found = regionTemplates.find((t) => t.id === selectedTemplateId);
-    return found ?? regionTemplates[0] ?? templates[0];
-  }, [regionTemplates, selectedTemplateId, templates]);
+    const found = variantTemplates.find(
+      (t) =>
+        interval && intervalKey(templateInterval(t)) === intervalKey(interval),
+    );
+    return found ?? variantTemplates[0] ?? templates[0];
+  }, [variantTemplates, interval, templates]);
 
   // Disks with SSD first so it is the default the user sees.
   const sortedDisks = useMemo(() => sortDisks(params.disks), [params.disks]);
@@ -185,34 +222,48 @@ export function VpsCustomOrder({
   const transferGb = params.transfer?.default;
   const networkMbps = params.network?.default;
 
-  const [price, setPrice] = useState<VmCustomPrice>();
+  // Remembered with the template it was quoted for, so switching interval
+  // never shows (or lets the buy button use) the previous interval's price.
+  const [priced, setPriced] = useState<{ id: number; price: VmCustomPrice }>();
+  const price = priced?.id === params.id ? priced.price : undefined;
 
   const cost_plan = {
     id: 0,
     name: "custom",
     amount: price?.amount ?? 0,
     currency: (price?.currency as "BTC" | "EUR" | "USD") ?? "USD",
-    interval_amount: price?.interval_amount ?? 1,
-    interval_type: price?.interval_type ?? CostPlanIntervalType.MONTH,
+    interval_amount: price?.interval_amount ?? interval?.amount ?? 1,
+    interval_type:
+      price?.interval_type ?? interval?.type ?? CostPlanIntervalType.MONTH,
   };
 
-  // Reset selected template when region changes
+  // Start from the minimums when the region or CPU variant changes. Keyed on
+  // those rather than on `params`, which also changes with the interval tab —
+  // switching billing must keep the spec the customer has dialled in.
   useEffect(() => {
-    const firstInRegion = regionTemplates[0];
-    if (firstInRegion) {
-      setSelectedTemplateId(firstInRegion.id);
-    }
-  }, [region, regionTemplates]);
+    const disk0 = preferredDisk(params.disks);
+    setCpu(params.min_cpu ?? 1);
+    setDiskType(disk0);
+    setRam(Math.floor((params.min_memory ?? GiB) / GiB));
+    setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [region, activeVariantKey]);
 
-  // Reset parameters when selected template changes
+  // A different interval is a different template, whose limits may differ:
+  // keep the chosen spec but pull it inside the new template's ranges.
   useEffect(() => {
-    if (params) {
-      const disk0 = preferredDisk(params.disks);
-      setCpu(params.min_cpu ?? 1);
-      setDiskType(disk0);
-      setRam(Math.floor((params.min_memory ?? GiB) / GiB));
-      setDisk(Math.floor((disk0?.min_disk ?? GiB) / GiB));
-    }
+    setCpu((v) => Math.max(params.min_cpu, Math.min(params.max_cpu, v)));
+    setRam((v) =>
+      Math.max(
+        Math.floor(params.min_memory / GiB),
+        Math.min(Math.floor(params.max_memory / GiB), v),
+      ),
+    );
+    setDiskType(
+      (prev) =>
+        params.disks.find((d) => d.disk_type === prev?.disk_type) ??
+        preferredDisk(params.disks),
+    );
   }, [params]);
 
   // Clamp disk value when disk type changes
@@ -225,11 +276,12 @@ export function VpsCustomOrder({
   }, [diskType]);
 
   useEffect(() => {
+    const pricingId = params.id;
     const t = setTimeout(() => {
       const api = new LNVpsApi(ApiUrl ?? "", undefined);
       api
         .customPrice({
-          pricing_id: params.id,
+          pricing_id: pricingId,
           cpu,
           memory: ram * GiB,
           disk: disk * GiB,
@@ -240,7 +292,7 @@ export function VpsCustomOrder({
           transfer_gb: transferGb,
           network_mbps: networkMbps,
         })
-        .then(setPrice);
+        .then((p) => setPriced({ id: pricingId, price: p }));
     }, 500);
     return () => clearTimeout(t);
   }, [
@@ -307,17 +359,17 @@ export function VpsCustomOrder({
             )}
           </div>
 
-          {regionTemplates.length > 1 && (
+          {variants.length > 1 && (
             <div className="flex flex-col gap-2">
               <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
                 <FormattedMessage defaultMessage="CPU" />
               </span>
               <div className="flex flex-wrap gap-2">
-                {regionTemplates.map((template) => (
+                {variants.map((template) => (
                   <FilterButton
-                    key={template.id}
-                    active={selectedTemplateId === template.id}
-                    onClick={() => setSelectedTemplateId(template.id)}
+                    key={variantKey(template)}
+                    active={activeVariantKey === variantKey(template)}
+                    onClick={() => setVariantSel(variantKey(template))}
                   >
                     {getCpuConstraintLabel(template)}
                   </FilterButton>
@@ -326,6 +378,13 @@ export function VpsCustomOrder({
             </div>
           )}
         </div>
+
+        {/* Billing interval — only when the selection offers more than one */}
+        <IntervalTabs
+          intervals={intervals}
+          value={interval}
+          onChange={(i) => setIntervalSel(intervalKey(i))}
+        />
 
         {/* Storage type — SSD leads, HDD framed as the bulk option */}
         {sortedDisks.length > 1 && (

@@ -89,6 +89,7 @@ export enum DiskInterface {
 }
 
 export enum CostPlanIntervalType {
+  HOUR = "hour",
   DAY = "day",
   MONTH = "month",
   YEAR = "year",
@@ -324,6 +325,15 @@ export interface VmCustomTemplateParams {
   min_ip6: number;
   max_ip6: number;
   disks: Array<VmCustomTemplateDiskParams>;
+  /**
+   * Billing interval this template is priced at. A region offers one template
+   * per interval (per CPU variant), so the same region can appear several
+   * times; group on `region.id` and offer the distinct intervals as tabs.
+   * Absent on servers that predate multiple intervals = monthly.
+   */
+  interval_type?: CostPlanIntervalType;
+  /** Number of `interval_type` units per billing period; absent = 1. */
+  interval_amount?: number;
   /** Default allowance for an order on this plan; absent = unmetered. */
   transfer_gb?: number;
   transfer?: BandwidthRange;

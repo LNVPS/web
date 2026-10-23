@@ -1,17 +1,13 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { FormattedDate, FormattedMessage } from "react-intl";
-import {
-  CostPlanIntervalType,
-  SavedPaymentMethod,
-  Subscription,
-  VmCostPlan,
-} from "../api";
+import { SavedPaymentMethod, Subscription } from "../api";
 import { AsyncButton } from "./button";
 import { CostAmount } from "./cost";
 import { Card, CardBody, CardTitle } from "./card";
 import { iconColorClass } from "./checkout-method-rows";
 import { Icon } from "./icon";
+import { TimeValue } from "./time-value";
 
 /**
  * Shared billing views used by both the VM billing page and the subscription
@@ -20,7 +16,15 @@ import { Icon } from "./icon";
  * auto-renew control, and a payment history table.
  */
 
-export type BillingTone = "primary" | "warning" | "danger" | "muted";
+import {
+  expiryStatus,
+  planCycleDays,
+  type BillingTone,
+  type ExpiryStatus,
+} from "../utils/lease";
+
+export { expiryStatus, planCycleDays };
+export type { BillingTone, ExpiryStatus };
 
 /**
  * The tone classes every billing surface shares. Exported so a toned element
@@ -45,18 +49,6 @@ export const TONE: Record<BillingTone, { pill: string; fill: string }> = {
     fill: "bg-cyber-muted",
   },
 };
-
-export interface ExpiryStatus {
-  /** True when there's no expiry yet (never paid / not provisioned). */
-  isNew: boolean;
-  expired: boolean;
-  expiringSoon: boolean;
-  tone: BillingTone;
-  /** Fill percentage for the lease meter (0–100). */
-  meterPct: number;
-  /** Whole days remaining (0 when expired/new). */
-  daysLeft: number;
-}
 
 /** A small tone-coloured status pill, shared across billing surfaces. */
 export function StatusPill({
@@ -108,49 +100,26 @@ export function subscriptionStatus(sub: Subscription): {
   };
 }
 
-/** Length of one billing cycle in days, used to scale the expiry meter. */
-export function planCycleDays(plan: VmCostPlan): number {
-  const n = plan.interval_amount || 1;
-  switch (plan.interval_type) {
-    case CostPlanIntervalType.DAY:
-      return n;
-    case CostPlanIntervalType.MONTH:
-      return n * 30;
-    case CostPlanIntervalType.YEAR:
-      return n * 365;
-    default:
-      return 30;
+/**
+ * How long the lease has left: whole days normally, an hours-and-minutes
+ * figure when the cycle is under a day (hourly), where "0 days left" would be
+ * true and useless.
+ */
+export function LeaseTimeLeft({ status }: { status: ExpiryStatus }) {
+  if (status.subDay) {
+    return (
+      <FormattedMessage
+        defaultMessage="{time} left"
+        values={{ time: <TimeValue seconds={status.secondsLeft} /> }}
+      />
+    );
   }
-}
-
-/** Derive status/tone/meter from an expiry date and the billing cycle length. */
-export function expiryStatus(
-  expires: string | undefined,
-  cycleDays: number,
-): ExpiryStatus {
-  if (!expires) {
-    return {
-      isNew: true,
-      expired: false,
-      expiringSoon: false,
-      tone: "muted",
-      meterPct: 0,
-      daysLeft: 0,
-    };
-  }
-  const days = (new Date(expires).getTime() - Date.now()) / 86_400_000;
-  const expired = days <= 0;
-  const expiringSoon = !expired && days <= 3;
-  return {
-    isNew: false,
-    expired,
-    expiringSoon,
-    tone: expired ? "danger" : expiringSoon ? "warning" : "primary",
-    meterPct: expired
-      ? 100
-      : Math.min(100, Math.max(4, (days / cycleDays) * 100)),
-    daysLeft: Math.max(0, Math.floor(days)),
-  };
+  return (
+    <FormattedMessage
+      defaultMessage="{days, plural, one {# day left} other {# days left}}"
+      values={{ days: status.daysLeft }}
+    />
+  );
 }
 
 /** Icon id for a saved payment method (card brand, wallet, or provider). */
@@ -261,7 +230,14 @@ export function BillingStatusCard({
 }
 
 /** A red "will be deleted" warning for use as the status card's `warning`. */
-export function DeletionWarning({ deletingOn }: { deletingOn: Date }) {
+export function DeletionWarning({
+  deletingOn,
+  withTime,
+}: {
+  deletingOn: Date;
+  /** Show the hour too: an hourly lease's grace period is a single day. */
+  withTime?: boolean;
+}) {
   return (
     <div className="flex items-center gap-2 rounded-sm border border-cyber-danger/40 bg-cyber-danger/10 px-3 py-2 text-xs text-cyber-danger">
       <Icon name="delete" size={14} className="shrink-0 pointer-events-none" />
@@ -277,6 +253,7 @@ export function DeletionWarning({ deletingOn }: { deletingOn: Date }) {
                 year="numeric"
                 month="short"
                 day="numeric"
+                {...(withTime ? { hour: "2-digit", minute: "2-digit" } : {})}
               />
             ),
           }}
@@ -321,12 +298,18 @@ export function AutoRenewCard({
   defaultMethod,
   onToggle,
   saving,
+  creditOnly,
 }: {
   enabled: boolean;
   description: ReactNode;
   defaultMethod?: SavedPaymentMethod;
   onToggle?: () => void;
   saving?: boolean;
+  /**
+   * Hourly billing: renewals are paid from account credit and a saved card is
+   * never charged, so the card row is replaced by a pointer to the balance.
+   */
+  creditOnly?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-3 border border-cyber-border bg-cyber-panel rounded-sm px-4 py-3">
@@ -366,9 +349,20 @@ export function AutoRenewCard({
 
       <div className="flex items-center justify-between gap-3 border-t border-cyber-border/60 pt-3">
         <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
-          <FormattedMessage defaultMessage="Default method" />
+          {creditOnly ? (
+            <FormattedMessage defaultMessage="Paid from" />
+          ) : (
+            <FormattedMessage defaultMessage="Default method" />
+          )}
         </span>
-        {defaultMethod ? (
+        {creditOnly ? (
+          <Link
+            to="/account/credit"
+            className="text-sm uppercase text-cyber-text transition-colors hover:text-cyber-primary"
+          >
+            <FormattedMessage defaultMessage="Account credit" />
+          </Link>
+        ) : defaultMethod ? (
           <span className="flex items-center gap-2">
             <span className="w-7 h-7 rounded-sm bg-cyber-panel-light border border-cyber-border flex items-center justify-center">
               <Icon

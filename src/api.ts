@@ -2001,6 +2001,18 @@ export class LNVpsApi {
     return data;
   }
 
+  /**
+   * Queue the deletion of a VM and stop its billing. The worker does the
+   * deletion, so the VM can linger briefly afterwards. On an hourly VM the
+   * unused time of credit-paid hours goes back to the account credit balance.
+   * Refused (409) while an open abuse case names the VM.
+   */
+  async deleteVm(id: number) {
+    await this.#handleResponse<ApiResponseBase>(
+      await this.#req(`/api/v1/vm/${id}`, "DELETE"),
+    );
+  }
+
   async startVm(id: number) {
     const { data } = await this.#handleResponse<ApiResponse<VmInstance>>(
       await this.#req(`/api/v1/vm/${id}/start`, "PATCH"),

@@ -22,6 +22,7 @@ import { FilterButton } from "./button-filter";
 import ResourceSlider from "./resource-slider";
 import RegionName from "./region-name";
 import IntervalTabs from "./interval-tabs";
+import { isHourly } from "../utils/hourly";
 import {
   cpuVariants,
   distinctIntervals,
@@ -480,6 +481,11 @@ export function VpsCustomOrder({
                 cost={cost_plan}
                 companyId={params.region.company_id}
               />
+            </div>
+          )}
+          {isHourly(interval?.type) && (
+            <div className="text-[0.65rem] text-cyber-muted">
+              <FormattedMessage defaultMessage="Paid from your account credit, billed every hour." />
             </div>
           )}
         </div>

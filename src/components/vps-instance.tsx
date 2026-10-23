@@ -2,7 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { VmInstance } from "../api";
 import VpsResources from "./vps-resources";
 import VmActions from "./vps-actions";
-import { StatusPill, expiryStatus, planCycleDays } from "./billing";
+import {
+  LeaseTimeLeft,
+  StatusPill,
+  expiryStatus,
+  planCycleDays,
+} from "./billing";
 import { Icon } from "./icon";
 import { FormattedDate, FormattedMessage } from "react-intl";
 import classNames from "classnames";
@@ -134,7 +139,11 @@ function LeaseFooter({
     const overdue = delDays !== undefined && delDays <= 0;
     return (
       <div className="flex items-center gap-2 border-t border-cyber-danger/30 bg-cyber-danger/5 px-3 py-1.5 text-xs text-cyber-danger">
-        <Icon name="delete" size={13} className="shrink-0 pointer-events-none" />
+        <Icon
+          name="delete"
+          size={13}
+          className="shrink-0 pointer-events-none"
+        />
         {deletingOn === undefined ? (
           <FormattedMessage defaultMessage="Lease expired. Renew to keep this machine." />
         ) : overdue ? (
@@ -178,10 +187,7 @@ function LeaseFooter({
           st.expiringSoon ? "text-cyber-warning" : "text-cyber-muted",
         )}
       >
-        <FormattedMessage
-          defaultMessage="{days, plural, one {# day left} other {# days left}}"
-          values={{ days: st.daysLeft }}
-        />
+        <LeaseTimeLeft status={st} />
         {expires && (
           <>
             {" · "}

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import {
+  AccountDetail,
   CpuArch,
   LNVpsApi,
   VmCustomPrice,
@@ -27,6 +28,13 @@ import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
 import { ApiUrl } from "../../const";
 import { EmailVerification } from "../../components/email-verification";
+import HourlyCreditPanel from "../../components/hourly-credit";
+import {
+  useAccountCredit,
+  useCreditReadiness,
+} from "../../hooks/account-credit";
+import { accountTaxRate } from "../../utils";
+import { grossTotal, isHourly } from "../../utils/hourly";
 import { FormattedMessage } from "react-intl";
 import { ReactNode } from "react";
 import classNames from "classnames";
@@ -174,6 +182,7 @@ export default function OrderVmPage({
     addonsFor(baseTemplate),
   );
   const [price, setPrice] = useState<VmCustomPrice>();
+  const [account, setAccount] = useState<AccountDetail>();
 
   const pricingId = baseTemplate?.pricing_id;
   useEffect(() => {
@@ -214,6 +223,29 @@ export default function OrderVmPage({
         : baseTemplate,
     [baseTemplate, addons, price],
   );
+
+  // An hourly order is paid from account credit only (the backend refuses to
+  // invoice one), so it can't be placed unless the balance already covers the
+  // first period. Checked here, before the order exists, rather than leaving
+  // the customer to hit the refusal on the next screen.
+  const hourly = isHourly(template?.cost_plan?.interval_type);
+  const { credit, setCredit, reload: reloadCredit } = useAccountCredit(hourly);
+  useEffect(() => {
+    if (!hourly) return;
+    login?.api
+      ?.getAccount()
+      .then(setAccount)
+      .catch((e) => console.error("Failed to load account:", e));
+  }, [hourly, login?.api]);
+  const firstPeriod =
+    hourly && template?.cost_plan
+      ? grossTotal(
+          template.cost_plan,
+          1,
+          accountTaxRate(account, template.region?.company_id),
+        )
+      : undefined;
+  const creditReady = useCreditReadiness(credit, firstPeriod);
 
   // Fetch images without auth (public endpoint) to reduce signer burden.
   // When the template pins a CPU architecture, filter to compatible images so
@@ -278,7 +310,8 @@ export default function OrderVmPage({
   }
 
   const chosenImage = images.find((i) => i.id === useImage);
-  const ready = useSshKey !== -1 && useImage !== -1;
+  const chosen = useSshKey !== -1 && useImage !== -1;
+  const ready = chosen && (!hourly || !!creditReady?.ready);
 
   return (
     <div className="flex flex-col gap-6">
@@ -349,7 +382,11 @@ export default function OrderVmPage({
                     </span>
                   )}
                   <span className="text-[0.65rem] text-cyber-muted">
-                    <FormattedMessage defaultMessage="Pay on the next screen. The machine boots once the payment confirms." />
+                    {hourly ? (
+                      <FormattedMessage defaultMessage="Paid from your account credit. The machine boots once the first hour is taken from it." />
+                    ) : (
+                      <FormattedMessage defaultMessage="Pay on the next screen. The machine boots once the payment confirms." />
+                    )}
                   </span>
                 </div>
                 <AsyncButton
@@ -360,6 +397,18 @@ export default function OrderVmPage({
                   <FormattedMessage defaultMessage="Create Order" />
                 </AsyncButton>
               </div>
+              {hourly && (
+                <HourlyCreditPanel
+                  className="mt-3"
+                  credit={credit}
+                  needed={firstPeriod}
+                  perHour={firstPeriod}
+                  onChange={(c) => {
+                    setCredit(c);
+                    reloadCredit();
+                  }}
+                />
+              )}
               {orderError && <b className="text-cyber-danger">{orderError}</b>}
             </Step>
           </div>

@@ -44,6 +44,9 @@
   "+UjQFc": {
     "defaultMessage": "Rules & policy"
   },
+  "+XNxp7": {
+    "defaultMessage": "Hourly billing is paid from your account credit, never invoiced. Turn on automatic credit so each hour is taken from your balance."
+  },
   "+lH372": {
     "defaultMessage": "Build your Dublin VPS"
   },
@@ -161,6 +164,9 @@
   "1A/d7u": {
     "defaultMessage": "Renews"
   },
+  "1F9Ma6": {
+    "defaultMessage": "Apply credit automatically"
+  },
   "1LBny5": {
     "defaultMessage": "Stopped"
   },
@@ -188,6 +194,9 @@
   "1prpZB": {
     "defaultMessage": "Nostr DM notifications are only available for Nostr accounts, and yours has no Nostr key to decrypt them with. Choose another channel in {settings}."
   },
+  "1shehh": {
+    "defaultMessage": "Billing stops and the machine and its data are permanently deleted. The time you've already paid for is not refunded."
+  },
   "1v7S+3": {
     "defaultMessage": "Add Nostr Domain"
   },
@@ -214,6 +223,9 @@
   },
   "2RFWLf": {
     "defaultMessage": "Speedtest"
+  },
+  "2a23d0": {
+    "defaultMessage": "Delete VM"
   },
   "2h97cm": {
     "defaultMessage": "Scan in the app"
@@ -344,6 +356,9 @@
   "5B072b": {
     "defaultMessage": "Save this key now. It CANNOT be recovered."
   },
+  "5GbVS5": {
+    "defaultMessage": "Turn on to take each hour from your account credit automatically. Without it the machine stops when the hour ends."
+  },
   "5QYdPU": {
     "defaultMessage": "Start Time"
   },
@@ -400,6 +415,9 @@
   },
   "6oIsme": {
     "defaultMessage": "after {amount} discount"
+  },
+  "6rrAVK": {
+    "defaultMessage": "Paid from your account credit. The machine boots once the first hour is taken from it."
   },
   "6tYS3u": {
     "defaultMessage": "Your own hostname, <code>your-name.ie.apps.lnvps.cloud</code>, with automatic TLS"
@@ -584,6 +602,9 @@
   "A11S6W": {
     "defaultMessage": "Send us a message directly. Your public key will be included automatically."
   },
+  "A2rGF+": {
+    "defaultMessage": "Delete this VM and stop billing. The unused part of the hours you've paid for is returned to your account credit."
+  },
   "A7Mqan": {
     "defaultMessage": "Loading renewal…"
   },
@@ -671,6 +692,12 @@
   "BLZbXj": {
     "defaultMessage": "Message *"
   },
+  "BNJY54": {
+    "defaultMessage": "Each hour is taken from your account credit shortly before it ends. If the balance runs out the machine stops, and is deleted after a day."
+  },
+  "BVwJy0": {
+    "defaultMessage": "Your balance is empty. Top up your credit to continue."
+  },
   "BXmJ0S": {
     "defaultMessage": "(Alternative)"
   },
@@ -712,6 +739,12 @@
   },
   "CEERm0": {
     "defaultMessage": "Live Chat"
+  },
+  "CN4qds": {
+    "defaultMessage": "Deletion requested. The VM is removed shortly."
+  },
+  "CPOVRT": {
+    "defaultMessage": "Top up credit"
   },
   "CVnta/": {
     "defaultMessage": "Prices exclude tax and payment processing fees."
@@ -850,6 +883,9 @@
   },
   "EhjW+X": {
     "defaultMessage": "This browser doesn't support passkeys."
+  },
+  "EnU4se": {
+    "defaultMessage": "Your balance covers this. The machine stops when it runs out, so keep it topped up."
   },
   "Epas1Z": {
     "defaultMessage": "{n} {unit}"
@@ -1010,6 +1046,9 @@
   "HlAgG9": {
     "defaultMessage": "I've sent the payment"
   },
+  "HmaKic": {
+    "defaultMessage": "{time} left"
+  },
   "HqRNN8": {
     "defaultMessage": "Support"
   },
@@ -1033,6 +1072,9 @@
   },
   "IDpruN": {
     "defaultMessage": "Deploying"
+  },
+  "IJFdmD": {
+    "defaultMessage": "Delete VPS #{id}?"
   },
   "ILTAun": {
     "defaultMessage": "Your VM is being provisioned. This usually takes a minute or two."
@@ -1634,6 +1676,9 @@
   "U0GEAC": {
     "defaultMessage": "Stop uploading your images and video to someone else's server. Route96 is a Blossom and NIP-96 media server, deployed on LNVPS in minutes, with storage and TLS included."
   },
+  "U37ynk": {
+    "defaultMessage": "Then per hour"
+  },
   "U7fZs8": {
     "defaultMessage": "How long does it take?"
   },
@@ -1708,6 +1753,9 @@
   },
   "VffztH": {
     "defaultMessage": "last used {date}"
+  },
+  "Vlq/wC": {
+    "defaultMessage": "Paid from your account credit, billed every hour."
   },
   "Vn25W2": {
     "defaultMessage": "The price appears here once you pick a bigger size. You pay the difference for what's left of this billing period."
@@ -1937,6 +1985,9 @@
   "af6sO8": {
     "defaultMessage": "Verify the host key on first connect"
   },
+  "afdd17": {
+    "defaultMessage": "Your balance keeps this running for about {hours, plural, one {# hour} other {# hours}}. The machine stops when it runs out, so keep it topped up."
+  },
   "agOXPD": {
     "defaultMessage": "Size"
   },
@@ -1987,6 +2038,9 @@
   },
   "bpBvBq": {
     "defaultMessage": "Display Currency:"
+  },
+  "br/CR0": {
+    "defaultMessage": "Billing stops and the machine and its data are permanently deleted. The unused time of hours paid from your account credit is returned to your balance."
   },
   "c0b5XV": {
     "defaultMessage": "Rate"
@@ -2222,6 +2276,9 @@
   "gNrB5A": {
     "defaultMessage": "This component only supports coin payments"
   },
+  "gP1+Bj": {
+    "defaultMessage": "Your balance doesn't cover {amount}. Top up your credit to continue."
+  },
   "gPsMm7": {
     "defaultMessage": "Deploy this Worker and add a route for {route}"
   },
@@ -2273,6 +2330,9 @@
   "hXAhO/": {
     "defaultMessage": "You sign in with a Nostr key, so there are no stored sessions to revoke. Each request is signed individually."
   },
+  "hs364T": {
+    "defaultMessage": "Checking your account credit…"
+  },
   "hs3HVz": {
     "defaultMessage": "Sign in with Face ID, Touch ID, Windows Hello or a security key. You can add a passkey to any account."
   },
@@ -2287,6 +2347,9 @@
   },
   "i2/SmH": {
     "defaultMessage": "Billing works like a VPS subscription, with no setup fee on any app."
+  },
+  "i4NyOH": {
+    "defaultMessage": "Delete this VM and stop billing. This permanently deletes all data on it, and the time you've already paid for isn't refunded."
   },
   "i5j1QG": {
     "defaultMessage": "App #{id}"
@@ -2359,6 +2422,9 @@
   },
   "jhBqwg": {
     "defaultMessage": "Point a CNAME for this domain at the deployment hostname once it is assigned. Leave empty to remove."
+  },
+  "jhYP1/": {
+    "defaultMessage": "Paid from"
   },
   "jhyC12": {
     "defaultMessage": "What is included"
@@ -2458,6 +2524,9 @@
   },
   "lKv8ex": {
     "defaultMessage": "Default"
+  },
+  "lNbJX1": {
+    "defaultMessage": "Delete…"
   },
   "lP4qIQ": {
     "defaultMessage": "Card details"

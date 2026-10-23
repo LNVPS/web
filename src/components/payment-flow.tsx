@@ -37,6 +37,9 @@ import {
   shouldShowMethod,
 } from "./checkout-method-rows";
 import { PaymentSource } from "./payment-sources";
+import HourlyCreditPanel from "./hourly-credit";
+import { useAccountCredit } from "../hooks/account-credit";
+import { creditReadiness, grossTotal, isHourly } from "../utils/hourly";
 
 const COINS: ReadonlyArray<string> = ["XMR", "LTC", "ETH", "USDTTRC"];
 
@@ -129,6 +132,15 @@ export default function PaymentFlow({
   const [quote, setQuote] = useState<RenewalQuote>();
   const [quoting, setQuoting] = useState(false);
 
+  // Hourly billing is paid from account credit and never invoiced, so the
+  // method list gives way to the credit panel and the charge is always taken
+  // from the balance. The backend refuses anything else for an hourly plan.
+  const hourly = !!source.creditOnly || isHourly(source.duration?.intervalType);
+  const { credit, reload: reloadCredit, setCredit } = useAccountCredit(hourly);
+  // Re-price when the balance or the opt-in changes: the quote only carries a
+  // credit line (and the server only accepts the order) once both are in place.
+  const creditKey = hourly ? `${credit?.auto_apply}:${credit?.balance}` : "";
+
   useEffect(() => {
     if (!login?.api) return;
     login.api
@@ -187,18 +199,22 @@ export default function PaymentFlow({
     selection?.kind === "saved"
       ? savedMethods.find((x) => x.id === selection.id)
       : undefined;
-  const quoteMethod = !selection
-    ? undefined
-    : selection.kind === "saved"
-      ? selectedSavedMethod?.provider === "nwc"
-        ? "nwc"
-        : "saved"
-      : selection.kind === "coin"
-        ? "fixedfloat"
-        : // LNURL has no invoice of its own; it settles over Lightning.
-          selection.name === "lnurl"
-          ? "lightning"
-          : selection.name;
+  const quoteMethod = hourly
+    ? // Credit settles the whole bill, so the rail is moot; Lightning is what
+      // the server's own credit-funded renewals use.
+      "lightning"
+    : !selection
+      ? undefined
+      : selection.kind === "saved"
+        ? selectedSavedMethod?.provider === "nwc"
+          ? "nwc"
+          : "saved"
+        : selection.kind === "coin"
+          ? "fixedfloat"
+          : // LNURL has no invoice of its own; it settles over Lightning.
+            selection.name === "lnurl"
+            ? "lightning"
+            : selection.name;
 
   // Price the order server-side whenever the inputs change. Debounced so
   // dragging the duration slider doesn't fire a request per step.
@@ -238,7 +254,7 @@ export default function PaymentFlow({
       cancelled = true;
       clearTimeout(t);
     };
-  }, [quoteFn, quoteMethod, intervals, appliedCode, payment]);
+  }, [quoteFn, quoteMethod, intervals, appliedCode, payment, creditKey]);
 
   const handlePaymentComplete = useCallback(() => {
     setPayment(undefined);
@@ -301,7 +317,7 @@ export default function PaymentFlow({
   // first available provider method. Wait for saved methods to load first so we
   // don't briefly default to a provider and then not switch.
   useEffect(() => {
-    if (selection || methodsLoading || !savedMethodsLoaded) return;
+    if (hourly || selection || methodsLoading || !savedMethodsLoaded) return;
 
     // 1. A saved payment method (the account default, else the first saved).
     if (source.allowSavedMethods !== false && savedMethods.length > 0) {
@@ -320,6 +336,7 @@ export default function PaymentFlow({
       .filter((m) => m.name !== "lnurl" || !!source.lnurl)[0];
     if (first) setSelection({ kind: "method", name: first.name });
   }, [
+    hourly,
     selection,
     methods,
     methodsLoading,
@@ -333,6 +350,10 @@ export default function PaymentFlow({
 
   // Charge whatever is currently selected. LNURL just reveals its QR.
   async function paySelected() {
+    if (hourly) {
+      await createPayment("lightning");
+      return;
+    }
     if (!selection) return;
     if (selection.kind === "saved") {
       const m = savedMethods.find((x) => x.id === selection.id);
@@ -589,11 +610,13 @@ export default function PaymentFlow({
   // Sensible renewal lengths per billing cadence — yearly plans renew one
   // year at a time (no slider), nobody needs to prepay 12 years ahead.
   const baseSteps =
-    duration?.intervalType === "day"
-      ? [1, 7, 14, 30]
-      : duration?.intervalType === "year"
-        ? [1]
-        : [1, 3, 6, 12];
+    duration?.intervalType === "hour"
+      ? [1, 6, 12, 24]
+      : duration?.intervalType === "day"
+        ? [1, 7, 14, 30]
+        : duration?.intervalType === "year"
+          ? [1]
+          : [1, 3, 6, 12];
   // Cap to what the server will accept (prepay window / host sunset), always
   // leaving at least the single-cycle option.
   const maxIntervals = duration?.maxIntervals;
@@ -823,6 +846,26 @@ export default function PaymentFlow({
     );
   }
 
+  // What this charge comes to, tax included: the server's quote once it lands,
+  // otherwise the local estimate. The credit panel and the Pay button check the
+  // balance against it.
+  const hourlyNeeded = !hourly
+    ? undefined
+    : quote
+      ? { currency: quote.currency, amount: quote.amount + quote.tax }
+      : duration
+        ? grossTotal(
+            duration.cost,
+            intervals,
+            accountTaxRate(account, duration.taxCompanyId),
+          )
+        : source.due;
+  const hourlyReady =
+    !hourly ||
+    (!!credit &&
+      !quoting &&
+      creditReadiness(credit, hourlyNeeded, rates).ready);
+
   return (
     <div className="flex flex-col gap-6">
       <CheckoutHeader title={title} onBack={onCancel} />
@@ -867,6 +910,26 @@ export default function PaymentFlow({
       )}
 
       {receipt}
+
+      {hourly && (
+        <HourlyCreditPanel
+          credit={credit}
+          needed={hourlyNeeded}
+          perHour={
+            duration
+              ? grossTotal(
+                  duration.cost,
+                  1,
+                  accountTaxRate(account, duration.taxCompanyId),
+                )
+              : undefined
+          }
+          onChange={(c) => {
+            setCredit(c);
+            reloadCredit();
+          }}
+        />
+      )}
 
       {source.quote && (
         <div className="flex flex-col gap-2">
@@ -950,13 +1013,14 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {fullyCovered && (
+      {!hourly && fullyCovered && (
         <div className="rounded-sm border border-cyber-primary/40 bg-cyber-primary/10 px-4 py-3 text-sm text-cyber-text">
           <FormattedMessage defaultMessage="Your account credit covers this order in full, so there is nothing else to pay." />
         </div>
       )}
 
-      {!fullyCovered &&
+      {!hourly &&
+        !fullyCovered &&
         source.allowSavedMethods !== false &&
         savedMethods.length > 0 && (
           <div className="flex flex-col gap-3">
@@ -978,7 +1042,7 @@ export default function PaymentFlow({
           </div>
         )}
 
-      {!fullyCovered && bitcoinRows.length > 0 && (
+      {!hourly && !fullyCovered && bitcoinRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay with Bitcoin" />
@@ -998,7 +1062,7 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {!fullyCovered && coinRows.length > 0 && (
+      {!hourly && !fullyCovered && coinRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay with crypto" />
@@ -1016,7 +1080,7 @@ export default function PaymentFlow({
         </div>
       )}
 
-      {!fullyCovered && cardRows.length > 0 && (
+      {!hourly && !fullyCovered && cardRows.length > 0 && (
         <div className="flex flex-col gap-3">
           <SectionLabel>
             <FormattedMessage defaultMessage="Pay by card" />
@@ -1039,11 +1103,13 @@ export default function PaymentFlow({
       <div className="flex flex-col gap-3">
         <AsyncButton
           onClick={paySelected}
-          disabled={!selection}
+          disabled={hourly ? !hourlyReady : !selection}
           className="w-full justify-center bg-cyber-primary/20 text-base"
         >
           {lnurlSelected ? (
             <FormattedMessage defaultMessage="Show LNURL" />
+          ) : hourly ? (
+            <FormattedMessage defaultMessage="Pay with account credit" />
           ) : orderTotal && orderTotal.amount === 0 && quote?.credit ? (
             <FormattedMessage defaultMessage="Pay with account credit" />
           ) : orderTotal ? (

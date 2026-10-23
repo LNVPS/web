@@ -84,6 +84,15 @@ export interface PaymentSource {
     /** Cap on selectable intervals (prepay window / sunset). Unbounded if unset. */
     maxIntervals?: number;
   };
+  /**
+   * Paid from account credit only, never invoiced (hourly billing). The
+   * checkout then shows the credit panel in place of the payment methods.
+   * Set automatically for an hourly `duration`; an upgrade has no duration, so
+   * it sets this and `due` itself.
+   */
+  creditOnly?: boolean;
+  /** What a credit-only source will charge, tax included, when no quote exists. */
+  due?: { currency: string; amount: number };
   /** Optional Lightning address (LNURL) the user can pay from any wallet. */
   lnurl?: { lud16: string };
   /**
@@ -191,8 +200,10 @@ export function vmUpgradeSource(
   vm: VmInstance,
   upgradeRequest: VmUpgradeRequest,
   subscriptionId: number,
+  creditOnly?: { due?: { currency: string; amount: number } },
 ): PaymentSource {
   return {
+    ...(creditOnly ? { creditOnly: true, due: creditOnly.due } : {}),
     // Upgrades now support saved methods off-session: method=nwc pays the
     // Lightning invoice via the saved NWC wallet, method=saved charges a saved
     // Revolut card (optionally a specific one via paymentMethodId).

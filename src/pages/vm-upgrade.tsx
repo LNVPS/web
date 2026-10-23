@@ -9,6 +9,7 @@ import {
   VmUpgradeQuote,
 } from "../api";
 import { accountTaxRate, processingFeeEstimate } from "../utils";
+import { isHourly } from "../utils/hourly";
 import { AsyncButton } from "../components/button";
 import useLogin from "../hooks/login";
 import usePaymentMethods from "../hooks/usePaymentMethods";
@@ -189,7 +190,10 @@ function QuoteCard({
   onMethod,
   effect,
   onPay,
+  hourly,
 }: {
+  /** Hourly: paid from account credit, so no payment method to choose. */
+  hourly?: boolean;
   quote?: VmUpgradeQuote;
   loading: boolean;
   error?: string;
@@ -225,7 +229,7 @@ function QuoteCard({
         <FormattedMessage defaultMessage="Payment" />
       </CardTitle>
       <CardBody className="flex flex-col gap-4 px-4 py-4">
-        {methods.length > 1 && (
+        {!hourly && methods.length > 1 && (
           <div className="flex flex-wrap gap-2">
             {methods.map((m) => (
               <FilterButton
@@ -300,7 +304,11 @@ function QuoteCard({
             </div>
             <div className="flex items-baseline justify-between gap-4 text-sm text-cyber-text">
               <span>
-                <FormattedMessage defaultMessage="Then per month" />
+                {hourly ? (
+                  <FormattedMessage defaultMessage="Then per hour" />
+                ) : (
+                  <FormattedMessage defaultMessage="Then per month" />
+                )}
               </span>
               <span className="tabular-nums">
                 <CostAmount cost={quote.new_renewal_cost} converted={false} />
@@ -438,6 +446,7 @@ export default function VmUpgradePage() {
   }
 
   const subscriptionId = state.subscription_id;
+  const hourly = isHourly(state.template.cost_plan.interval_type);
   if (showPaymentFlow && quote && login?.api) {
     if (subscriptionId === undefined) {
       return (
@@ -454,7 +463,29 @@ export default function VmUpgradePage() {
             values={{ id: state.id }}
           />
         }
-        source={vmUpgradeSource(login.api, state, request, subscriptionId)}
+        source={vmUpgradeSource(
+          login.api,
+          state,
+          request,
+          subscriptionId,
+          hourly
+            ? {
+                due: {
+                  currency: quote.cost_difference.currency,
+                  amount:
+                    quote.cost_difference.amount +
+                    (quote.tax?.amount ??
+                      Math.round(
+                        quote.cost_difference.amount *
+                          accountTaxRate(
+                            account,
+                            state.template.region?.company_id,
+                          ),
+                      )),
+                },
+              }
+            : undefined,
+        )}
         onPaymentComplete={() => {
           setShowPaymentFlow(false);
           setQuote(undefined);
@@ -528,6 +559,7 @@ export default function VmUpgradePage() {
             onMethod={setSelectedMethod}
             effect={effect}
             onPay={() => setShowPaymentFlow(true)}
+            hourly={hourly}
           />
         </>
       ) : (

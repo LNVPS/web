@@ -1,6 +1,6 @@
 import "@xterm/xterm/css/xterm.css";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { CpuArch, VmInstance, VmIpAssignment, VmOsImage } from "../api";
 import VmActions from "../components/vps-actions";
@@ -20,12 +20,14 @@ import {
   DeletionWarning,
   StatusPill,
   expiryStatus,
+  LeaseTimeLeft,
   planCycleDays,
 } from "../components/billing";
 import { SectionCard } from "../components/section";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
-import { showError } from "../toast";
+import { showError, showToast } from "../toast";
+import { isHourly } from "../utils/hourly";
 
 function StatBlock({
   label,
@@ -47,7 +49,7 @@ function StatBlock({
 export default function VmPage() {
   const location = useLocation() as { state?: VmInstance };
   const login = useLogin();
-  const { formatNumber } = useIntl();
+  const { formatNumber, formatMessage } = useIntl();
   const [state, setState] = useState<VmInstance | undefined>(location?.state);
 
   const [editKey, setEditKey] = useState(false);
@@ -55,6 +57,9 @@ export default function VmPage() {
   const [error, setError] = useState<string>();
   const [key, setKey] = useState(state?.ssh_key?.id ?? -1);
   const [images, setImages] = useState<Array<VmOsImage>>([]);
+  const navigate = useNavigate();
+  const [deleting, setDeleting] = useState(false);
+  const [deleteAck, setDeleteAck] = useState(false);
   const [reinstall, setReinstall] = useState(false);
   const [reinstallAck, setReinstallAck] = useState(false);
   const [reinstallImage, setReinstallImage] = useState<number>(
@@ -225,10 +230,7 @@ export default function VmPage() {
             ) : (
               !isExpired && (
                 <span className="text-xs text-cyber-muted tabular-nums">
-                  <FormattedMessage
-                    defaultMessage="{days, plural, one {# day left} other {# days left}}"
-                    values={{ days: st.daysLeft }}
-                  />
+                  <LeaseTimeLeft status={st} />
                 </span>
               )
             )}
@@ -260,7 +262,9 @@ export default function VmPage() {
       </div>
 
       {/* Lapsed lease: surface the deletion deadline. */}
-      {isExpired && deletingOn && <DeletionWarning deletingOn={deletingOn} />}
+      {isExpired && deletingOn && (
+        <DeletionWarning deletingOn={deletingOn} withTime={st.subDay} />
+      )}
 
       {/* Specification */}
       <SectionCard title={<FormattedMessage defaultMessage="Specification" />}>
@@ -414,6 +418,29 @@ export default function VmPage() {
               <FormattedMessage defaultMessage="Reinstall…" />
             </AsyncButton>
           </SectionCard>
+
+          <SectionCard
+            eyebrow={<FormattedMessage defaultMessage="Danger zone" />}
+            title={<FormattedMessage defaultMessage="Delete" />}
+            description={
+              isHourly(t.cost_plan.interval_type) ? (
+                <FormattedMessage defaultMessage="Delete this VM and stop billing. The unused part of the hours you've paid for is returned to your account credit." />
+              ) : (
+                <FormattedMessage defaultMessage="Delete this VM and stop billing. This permanently deletes all data on it, and the time you've already paid for isn't refunded." />
+              )
+            }
+          >
+            <AsyncButton
+              className="border-cyber-danger text-cyber-danger hover:border-cyber-danger hover:shadow-neon-danger hover:text-cyber-danger"
+              onClick={() => {
+                setError(undefined);
+                setDeleteAck(false);
+                setDeleting(true);
+              }}
+            >
+              <FormattedMessage defaultMessage="Delete…" />
+            </AsyncButton>
+          </SectionCard>
         </>
       )}
 
@@ -539,6 +566,77 @@ export default function VmPage() {
             </Modal>
           );
         })()}
+
+      {deleting && state && (
+        <Modal id="delete-vm" onClose={() => setDeleting(false)}>
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1.5">
+              <div className="text-[0.65rem] uppercase tracking-[0.3em] text-cyber-danger">
+                <FormattedMessage defaultMessage="Delete" />
+              </div>
+              <div className="text-xl font-semibold text-cyber-text-bright leading-tight">
+                <FormattedMessage
+                  defaultMessage="Delete VPS #{id}?"
+                  values={{ id: state.id }}
+                />
+              </div>
+              <p className="m-0 text-sm text-cyber-muted">
+                {isHourly(t.cost_plan.interval_type) ? (
+                  <FormattedMessage defaultMessage="Billing stops and the machine and its data are permanently deleted. The unused time of hours paid from your account credit is returned to your balance." />
+                ) : (
+                  <FormattedMessage defaultMessage="Billing stops and the machine and its data are permanently deleted. The time you've already paid for is not refunded." />
+                )}
+              </p>
+            </div>
+            <label className="flex items-center gap-2 text-sm text-cyber-text cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={deleteAck}
+                onChange={(e) => setDeleteAck(e.target.checked)}
+                className="accent-[var(--color-cyber-danger)] w-4 h-4"
+              />
+              <FormattedMessage defaultMessage="I understand all data will be permanently deleted." />
+            </label>
+            {error && <b className="text-sm text-cyber-danger">{error}</b>}
+            <div className="flex justify-end gap-2">
+              <AsyncButton onClick={async () => setDeleting(false)}>
+                <FormattedMessage defaultMessage="Cancel" />
+              </AsyncButton>
+              <AsyncButton
+                disabled={!deleteAck}
+                className={classNames(
+                  "bg-cyber-danger/10 border-cyber-danger text-cyber-danger",
+                  deleteAck
+                    ? "hover:border-cyber-danger hover:shadow-neon-danger"
+                    : "opacity-50 cursor-not-allowed",
+                )}
+                onClick={async () => {
+                  setError(undefined);
+                  if (!login?.api || !deleteAck) return;
+                  try {
+                    await login.api.deleteVm(state.id);
+                    setDeleting(false);
+                    showToast(
+                      formatMessage({
+                        defaultMessage:
+                          "Deletion requested. The VM is removed shortly.",
+                      }),
+                      "success",
+                    );
+                    navigate("/account");
+                  } catch (e) {
+                    // A 409 here means an open abuse case names the VM.
+                    if (e instanceof Error) setError(e.message);
+                    else showError(e);
+                  }
+                }}
+              >
+                <FormattedMessage defaultMessage="Delete VM" />
+              </AsyncButton>
+            </div>
+          </div>
+        </Modal>
+      )}
 
       {editKey && (
         <Modal id="edit-ssh-key" onClose={() => setEditKey(false)}>

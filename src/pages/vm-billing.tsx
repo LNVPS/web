@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { VmInstance, VmPayment, SavedPaymentMethod } from "../api";
+import {
+  AccountDetail,
+  VmInstance,
+  VmPayment,
+  SavedPaymentMethod,
+} from "../api";
 import useLogin from "../hooks/login";
 import { openInvoice } from "../utils";
 import usePaymentMethods from "../hooks/usePaymentMethods";
@@ -22,10 +27,15 @@ import {
   DeletionWarning,
   SunsetWarning,
   expiryStatus,
+  LeaseTimeLeft,
   planCycleDays,
   type PaymentRow,
 } from "../components/billing";
 import { Icon } from "../components/icon";
+import HourlyCreditPanel from "../components/hourly-credit";
+import { useAccountCredit } from "../hooks/account-credit";
+import { accountTaxRate } from "../utils";
+import { grossTotal, isHourly } from "../utils/hourly";
 import { FormattedMessage, useIntl } from "react-intl";
 import Seo from "../components/seo";
 import { showError } from "../toast";
@@ -115,8 +125,28 @@ export function VmBillingPage() {
     }
   }, [login, state, params]);
 
+  // Hourly billing draws on account credit, so the page shows the balance and
+  // whether it covers the next hour. Hooks first: the early return is below.
+  const hourly = isHourly(state?.template.cost_plan.interval_type);
+  const { credit, setCredit } = useAccountCredit(hourly);
+  const [account, setAccount] = useState<AccountDetail>();
+  useEffect(() => {
+    if (!hourly || !login?.api) return;
+    login.api
+      .getAccount()
+      .then(setAccount)
+      .catch((e) => console.error("Failed to load account:", e));
+  }, [hourly, login?.api]);
+
   if (!state) return;
   const plan = state.template.cost_plan;
+  const nextHour = hourly
+    ? grossTotal(
+        plan,
+        plan.interval_amount || 1,
+        accountTaxRate(account, state.template.region?.company_id),
+      )
+    : undefined;
   const expireDate = state.expires ? new Date(state.expires) : undefined;
   const deletingOn = state.deleting_on
     ? new Date(state.deleting_on)
@@ -255,6 +285,9 @@ export function VmBillingPage() {
                     year: "numeric",
                     month: "short",
                     day: "numeric",
+                    // An hour-long lease renews within the day: the date alone
+                    // would read the same for every payment.
+                    ...(hourly ? { hour: "2-digit", minute: "2-digit" } : {}),
                   })
                 : "—"
             }
@@ -265,10 +298,7 @@ export function VmBillingPage() {
               ) : st.expired ? (
                 <FormattedMessage defaultMessage="Lease expired" />
               ) : (
-                <FormattedMessage
-                  defaultMessage="{days, plural, one {# day left} other {# days left}}"
-                  values={{ days: st.daysLeft }}
-                />
+                <LeaseTimeLeft status={st} />
               )
             }
             meterRight={
@@ -283,7 +313,7 @@ export function VmBillingPage() {
             }
             warning={
               st.expired && deletingOn ? (
-                <DeletionWarning deletingOn={deletingOn} />
+                <DeletionWarning deletingOn={deletingOn} withTime={hourly} />
               ) : sunsetOn ? (
                 <SunsetWarning sunsetOn={sunsetOn} />
               ) : undefined
@@ -303,13 +333,29 @@ export function VmBillingPage() {
             }}
           />
 
+          {hourly && (
+            <HourlyCreditPanel
+              credit={credit}
+              needed={nextHour}
+              perHour={nextHour}
+              onChange={setCredit}
+            />
+          )}
+
           <AutoRenewCard
+            creditOnly={hourly}
             enabled={state.auto_renewal_enabled ?? false}
             saving={renewSaving}
             onToggle={toggleRenew}
             defaultMethod={defaultMethod}
             description={
-              state.auto_renewal_enabled ? (
+              hourly ? (
+                state.auto_renewal_enabled ? (
+                  <FormattedMessage defaultMessage="Each hour is taken from your account credit shortly before it ends. If the balance runs out the machine stops, and is deleted after a day." />
+                ) : (
+                  <FormattedMessage defaultMessage="Turn on to take each hour from your account credit automatically. Without it the machine stops when the hour ends." />
+                )
+              ) : state.auto_renewal_enabled ? (
                 <FormattedMessage defaultMessage="Renews automatically one day before expiry using your default payment method." />
               ) : (
                 <FormattedMessage defaultMessage="Turn on to charge your default payment method automatically one day before expiry." />

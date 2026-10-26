@@ -145,6 +145,7 @@ function ResizeCard({
           <ResourceSlider
             label={<FormattedMessage defaultMessage="Transfer" />}
             unit="GB/mo"
+            scaledUnit={{ unit: "TB/mo", factor: 1000 }}
             value={selection.transferGb}
             min={bounds.transferGb.min}
             max={bounds.transferGb.max}

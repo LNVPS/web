@@ -2,7 +2,11 @@ import { FormattedNumber, useIntl } from "react-intl";
 import useLogin from "../hooks/login";
 import { taxRateFor, useTaxRates } from "../hooks/tax";
 import useExchangeRates from "../hooks/useExchangeRates";
-import { convertAmount, formatIntervalText } from "../utils/currency";
+import {
+  convertAmount,
+  formatIntervalText,
+  priceNumber,
+} from "../utils/currency";
 
 interface Price {
   currency: string;
@@ -11,7 +15,8 @@ interface Price {
 type Cost = Price & { interval_type?: string; interval_amount?: number };
 
 function grossPrice<T extends Price>(p: T, rate: number): T {
-  return { ...p, amount: Math.round(p.amount * (1 + rate / 100)) };
+  // Not rounded: a sub-cent hourly price must keep its precision.
+  return { ...p, amount: p.amount * (1 + rate / 100) };
 }
 
 export default function CostLabel({
@@ -49,7 +54,7 @@ export default function CostLabel({
       <CostAmount
         cost={{
           currency: target,
-          amount: Math.round(converted),
+          amount: converted,
           interval_type: base.interval_type,
           interval_amount: base.interval_amount,
         }}
@@ -96,26 +101,21 @@ export function CostAmount({
   let amount = cost.amount;
   if (taxable && login?.incTax) {
     const rate = taxRateFor(rates, companyId);
-    if (rate && rate > 0) amount = Math.round(amount * (1 + rate / 100));
+    if (rate && rate > 0) amount = amount * (1 + rate / 100);
   }
+  const price = priceNumber(cost.currency, amount);
   return (
     <span className={className}>
       {converted && "~"}
-      {cost.currency !== "BTC" ? (
-        <FormattedNumber
-          value={amount / 100}
-          style="currency"
-          currency={cost.currency}
-          trailingZeroDisplay="stripIfInteger"
-        />
-      ) : (
-        <FormattedNumber value={Math.floor(amount / 1000)} />
-      )}
+      <FormattedNumber value={price.value} {...price.options} />
       {cost.currency === "BTC" && " sats"}
       {cost.interval_type && (
         <>
           /{(cost.interval_amount ?? 1) > 1 && <>{cost.interval_amount} </>}
-          <IntervalSuffix interval={cost.interval_type} n={cost.interval_amount} />
+          <IntervalSuffix
+            interval={cost.interval_type}
+            n={cost.interval_amount}
+          />
         </>
       )}
     </span>

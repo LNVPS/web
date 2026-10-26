@@ -1,4 +1,4 @@
-import type { IntlShape } from "react-intl";
+import type { FormatNumberOptions, IntlShape } from "react-intl";
 import { ExchangeRates } from "../api";
 
 /**
@@ -8,6 +8,48 @@ import { ExchangeRates } from "../api";
  */
 export function smallestUnitScale(currency: string): number {
   return currency === "BTC" ? 100_000_000_000 : 100;
+}
+
+/**
+ * The number and `Intl.NumberFormat` options for a price, shared by every
+ * place that paints one so they agree.
+ *
+ * Ordinary prices keep their usual look (whole sats, two decimals), but a
+ * price that is a fraction of that unit — an hourly rate is a few sats or well
+ * under a cent — keeps its precision instead of rounding to 0, 1 or a flat
+ * cent, which would misquote it by a large factor.
+ */
+export function priceNumber(
+  currency: string,
+  amount: number,
+): { value: number; options: FormatNumberOptions } {
+  if (currency === "BTC") {
+    // Millisats. Whole sats at ordinary sizes, up to the millisat below 1,000.
+    const sats = amount / 1000;
+    return Math.abs(sats) < 1000
+      ? {
+          value: sats,
+          options: { maximumFractionDigits: 3 },
+        }
+      : { value: Math.floor(sats), options: {} };
+  }
+  const value = amount / smallestUnitScale(currency);
+  const abs = Math.abs(value);
+  // Two significant digits once the price is under 10 cents (€0.0068/hour).
+  const digits =
+    abs === 0 || abs >= 0.1
+      ? 2
+      : Math.min(8, Math.max(2, Math.ceil(-Math.log10(abs)) + 1));
+  return {
+    value,
+    options: {
+      style: "currency",
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: digits,
+      trailingZeroDisplay: "stripIfInteger",
+    },
+  };
 }
 
 /**
@@ -30,15 +72,9 @@ export function formatPriceText(
   intl: IntlShape,
   cost: { currency: string; amount: number },
 ): string {
-  if (cost.currency === "BTC") {
-    // Mirrors `CostAmount`: millisats floored to sats, no currency style.
-    return `${intl.formatNumber(Math.floor(cost.amount / 1000))} sats`;
-  }
-  return intl.formatNumber(cost.amount / smallestUnitScale(cost.currency), {
-    style: "currency",
-    currency: cost.currency,
-    trailingZeroDisplay: "stripIfInteger",
-  });
+  const { value, options } = priceNumber(cost.currency, cost.amount);
+  const text = intl.formatNumber(value, options);
+  return cost.currency === "BTC" ? `${text} sats` : text;
 }
 
 /**

@@ -5,6 +5,7 @@ import {
   formatIntervalText,
   formatPriceText,
   formatPriceWithInterval,
+  priceNumber,
 } from "./currency";
 
 const intl = createIntl({ locale: "en", messages: {} });
@@ -66,5 +67,39 @@ describe("coinTicker", () => {
     expect(coinTicker("USDTTRC")).toBe("USDT");
     expect(coinTicker("XMR")).toBe("XMR");
     expect(coinTicker("LTC")).toBe("LTC");
+  });
+});
+
+describe("sub-unit prices (hourly)", () => {
+  test("a BTC price under 1,000 sats keeps its millisats", () => {
+    expect(formatPriceText(intl, { currency: "BTC", amount: 9769 })).toBe(
+      "9.769 sats",
+    );
+    expect(formatPriceText(intl, { currency: "BTC", amount: 1500 })).toBe(
+      "1.5 sats",
+    );
+  });
+
+  test("ordinary BTC prices still floor to whole sats", () => {
+    expect(formatPriceText(intl, { currency: "BTC", amount: 6879282 })).toBe(
+      "6,879 sats",
+    );
+  });
+
+  test("a fiat price under 10 cents shows two significant digits", () => {
+    expect(formatPriceText(intl, { currency: "EUR", amount: 0.68 })).toBe(
+      "€0.0068",
+    );
+    expect(formatPriceText(intl, { currency: "EUR", amount: 0.0068 })).toBe(
+      "€0.000068",
+    );
+  });
+
+  test("ordinary fiat prices are unchanged", () => {
+    expect(formatPriceText(intl, { currency: "EUR", amount: 500 })).toBe("€5");
+    expect(formatPriceText(intl, { currency: "EUR", amount: 1234 })).toBe(
+      "€12.34",
+    );
+    expect(priceNumber("EUR", 0).value).toBe(0);
   });
 });

@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "clave SSH"
   },
+  "4tZom7": {
+    "defaultMessage": "Todas las divisas"
+  },
   "5/Pb3D": {
     "defaultMessage": "Suscripciones activas"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Envíenos un mensaje directamente y el equipo se pondrá en contacto con usted."
+  },
+  "7xgzL8": {
+    "defaultMessage": "No tienes {currency} crédito, y tu {held} saldo convertido a {currency} no cubre {amount}. Recarga tu crédito para continuar."
   },
   "7xme6K": {
     "defaultMessage": "Alojamiento VPS de alto rendimiento"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "Incidentes resueltos"
   },
+  "TD5OuO": {
+    "defaultMessage": "Cada cotización utiliza el máximo de crédito que permita la factura, y usted paga el resto. Primero se consume el saldo en la moneda de la factura; de lo contrario, se convierte otro saldo. Las renovaciones automáticas utilizan crédito cuando este cubre la totalidad de la renovación."
+  },
   "TE4fIS": {
     "defaultMessage": "Ciudad"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "Hosting VPS de alto rendimiento con Bitcoin Lightning. Pague con Lightning, Bitcoin, Monero, Litecoin, Ethereum o tarjeta. Sin contratos a largo plazo."
   },
+  "XY4MjK": {
+    "defaultMessage": "Asentamiento"
+  },
   "XYkq4n": {
     "defaultMessage": "Usado."
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "Añadir dominio"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "Cada cotización utiliza el máximo crédito que la factura permite, y usted abona el resto. Las renovaciones automáticas utilizan el crédito cuando este cubre la totalidad de la renovación."
   },
   "ZjV1o9": {
     "defaultMessage": "Lo encontramos nosotros mismos."
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "Consola"
   },
-  "gfVtOu": {
-    "defaultMessage": "Paga con Bitcoin o una moneda compatible y el monto se suma a tu saldo."
-  },
   "gjvoQG": {
     "defaultMessage": "Tallas"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Seleccione el país."
+  },
+  "jN8Nhd": {
+    "defaultMessage": "Paga con Bitcoin o una moneda compatible y el importe se añade a tu {currency} Saldo. Los reembolsos se mantienen en la moneda en la que realizó el pago."
   },
   "jOo6oG": {
     "defaultMessage": "Administrar las claves de acceso a las máquinas virtuales."

@@ -17,6 +17,8 @@ import { PageHeader, SectionCard } from "../components/section";
 import { showError } from "../toast";
 import { coinTicker } from "../utils/currency";
 import { depositOutpoint } from "../utils/deposit";
+import { eventCurrencies } from "../utils/credit";
+import CreditBalances from "../components/credit-balances";
 
 const PAGE_SIZE = 20;
 const PRESET_SATS = [10_000, 50_000, 100_000, 500_000];
@@ -30,6 +32,7 @@ function EventKind({ kind }: { kind: AccountCreditEventKind }) {
     spend: <FormattedMessage defaultMessage="Spent" />,
     refund: <FormattedMessage defaultMessage="Refund" />,
     admin: <FormattedMessage defaultMessage="Adjustment" />,
+    settlement: <FormattedMessage defaultMessage="Settlement" />,
   };
   return <span>{label[kind] ?? kind}</span>;
 }
@@ -226,6 +229,7 @@ export function AccountCreditPage() {
   ]);
   const [choice, setChoice] = useState<TopupChoice>({ kind: "lightning" });
   const [error, setError] = useState<string>();
+  const [currencyFilter, setCurrencyFilter] = useState("");
 
   const loadCredit = useCallback(async () => {
     if (!api) return;
@@ -235,12 +239,16 @@ export function AccountCreditPage() {
   const loadEvents = useCallback(
     async (offset: number) => {
       if (!api) return;
-      const page = await api.listCreditEvents(PAGE_SIZE, offset);
+      const page = await api.listCreditEvents(
+        PAGE_SIZE,
+        offset,
+        currencyFilter || undefined,
+      );
       setEvents((prev) => (offset === 0 ? page.data : [...prev, ...page.data]));
       setTotal(page.total);
       setLoadedEvents(true);
     },
-    [api],
+    [api, currencyFilter],
   );
 
   useEffect(() => {
@@ -312,12 +320,9 @@ export function AccountCreditPage() {
 
       <SectionCard title={<FormattedMessage defaultMessage="Balance" />}>
         <div className="flex flex-col gap-4">
-          <div className="text-3xl text-cyber-text-bright tabular-nums">
+          <div className="text-cyber-text-bright tabular-nums">
             {credit ? (
-              <CostAmount
-                cost={{ currency: credit.currency, amount: credit.balance }}
-                converted={false}
-              />
+              <CreditBalances credit={credit} large />
             ) : (
               <span className="text-cyber-muted">…</span>
             )}
@@ -335,7 +340,7 @@ export function AccountCreditPage() {
                 <FormattedMessage defaultMessage="Spend my balance automatically" />
               </span>
               <span className="text-xs text-cyber-muted">
-                <FormattedMessage defaultMessage="Every quote uses as much credit as the bill allows, and you pay the rest. Automatic renewals use credit when it covers the whole renewal." />
+                <FormattedMessage defaultMessage="Every quote uses as much credit as the bill allows, and you pay the rest. A balance in the bill's currency is spent first, otherwise another balance is converted. Automatic renewals use credit when it covers the whole renewal." />
               </span>
             </span>
           </label>
@@ -345,7 +350,10 @@ export function AccountCreditPage() {
       <SectionCard
         title={<FormattedMessage defaultMessage="Add credit" />}
         description={
-          <FormattedMessage defaultMessage="Pay with Bitcoin or a supported coin and the amount is added to your balance." />
+          <FormattedMessage
+            defaultMessage="Pay with Bitcoin or a supported coin and the amount is added to your {currency} balance. Refunds are kept in the currency you paid in."
+            values={{ currency: credit?.currency ?? "BTC" }}
+          />
         }
       >
         {topup ? (
@@ -421,6 +429,24 @@ export function AccountCreditPage() {
       </SectionCard>
 
       <SectionCard title={<FormattedMessage defaultMessage="History" />}>
+        {eventCurrencies(credit).length > 1 && (
+          <div className="mb-3 flex flex-wrap gap-2">
+            {["", ...eventCurrencies(credit)].map((c) => (
+              <button
+                key={c}
+                onClick={() => setCurrencyFilter(c)}
+                className={classNames(
+                  "px-3 py-1 rounded-sm border text-xs transition-all duration-200",
+                  c === currencyFilter
+                    ? "border-cyber-primary text-cyber-primary shadow-neon-sm"
+                    : "border-cyber-border text-cyber-text hover:border-cyber-primary",
+                )}
+              >
+                {c || <FormattedMessage defaultMessage="All currencies" />}
+              </button>
+            ))}
+          </div>
+        )}
         {loadedEvents && events.length === 0 ? (
           <div className="text-sm text-cyber-muted">
             <FormattedMessage defaultMessage="No credit activity yet." />

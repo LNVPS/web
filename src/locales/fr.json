@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "clé SSH"
   },
+  "4tZom7": {
+    "defaultMessage": "Toutes les devises"
+  },
   "5/Pb3D": {
     "defaultMessage": "Abonnements actifs"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Envoyez-nous un message directement et notre équipe vous répondra dans les plus brefs délais."
+  },
+  "7xgzL8": {
+    "defaultMessage": "Vous ne détenez pas de {currency} crédit, et votre {held} Solde converti en {currency} ne couvre pas {amount}. Rechargez votre crédit pour continuer."
   },
   "7xme6K": {
     "defaultMessage": "Hébergement VPS haute performance"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "Incidents résolus"
   },
+  "TD5OuO": {
+    "defaultMessage": "Chaque devis utilise le maximum de crédit autorisé par la facture, et vous payez le reste. Un solde libellé dans la devise de la facture est d'abord utilisé ; à défaut, un autre solde est converti. Les renouvellements automatiques utilisent le crédit lorsqu'il couvre l'intégralité du renouvellement."
+  },
   "TE4fIS": {
     "defaultMessage": "Ville"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "Hébergement VPS haute performance sur Bitcoin Lightning. Payez avec Lightning, Bitcoin, Monero, Litecoin, Ethereum ou par carte. Sans engagement de longue durée."
   },
+  "XY4MjK": {
+    "defaultMessage": "Règlement"
+  },
   "XYkq4n": {
     "defaultMessage": "Utilisé"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "Ajouter un domaine"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "Chaque devis utilise le maximum de crédit autorisé par la facture, et vous réglez le solde. Les renouvellements automatiques utilisent le crédit lorsqu'il couvre la totalité du renouvellement."
   },
   "ZjV1o9": {
     "defaultMessage": "Nous l'avons trouvé nous-mêmes."
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
-  "gfVtOu": {
-    "defaultMessage": "Payez avec Bitcoin ou une cryptomonnaie prise en charge, et le montant sera ajouté à votre solde."
-  },
   "gjvoQG": {
     "defaultMessage": "Tailles"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Sélectionnez le pays."
+  },
+  "jN8Nhd": {
+    "defaultMessage": "Payez avec Bitcoin ou une monnaie prise en charge, et le montant est ajouté à votre {currency} solde. Les remboursements sont effectués dans la devise de votre paiement."
   },
   "jOo6oG": {
     "defaultMessage": "Gérer les clés d’accès aux machines virtuelles."

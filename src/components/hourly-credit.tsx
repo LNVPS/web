@@ -10,6 +10,7 @@ import { showError } from "../toast";
 import { runwayHours, type Money } from "../utils/hourly";
 import { AsyncButton } from "./button";
 import { CostAmount } from "./cost";
+import CreditBalances from "./credit-balances";
 
 /**
  * Hourly billing is paid from account credit and never invoiced, so wherever
@@ -54,6 +55,14 @@ export default function HourlyCreditPanel({
 
   let message: ReactNode;
   let action: ReactNode;
+  const topUpLink = (
+    <Link
+      to="/account/credit"
+      className="inline-block rounded-sm border border-cyber-primary px-4 py-2 text-center text-sm uppercase text-cyber-primary transition-colors hover:bg-cyber-primary/10"
+    >
+      <FormattedMessage defaultMessage="Top up credit" />
+    </Link>
+  );
   if (!ready.optedIn) {
     message = (
       <FormattedMessage defaultMessage="Hourly billing is paid from your account credit, never invoiced. Turn on automatic credit so each hour is taken from your balance." />
@@ -72,6 +81,18 @@ export default function HourlyCreditPanel({
         <FormattedMessage defaultMessage="Apply credit automatically" />
       </AsyncButton>
     );
+  } else if (ready.otherCurrencyOnly && needed && ready.covers === false) {
+    message = (
+      <FormattedMessage
+        defaultMessage="You hold no {currency} credit, and your {held} balance converted to {currency} doesn't cover {amount}. Top up your credit to continue."
+        values={{
+          currency: needed.currency,
+          held: ready.balanceCurrency,
+          amount: <CostAmount cost={needed} converted={false} />,
+        }}
+      />
+    );
+    action = topUpLink;
   } else if (!ready.funded || ready.covers === false) {
     message = needed ? (
       <FormattedMessage
@@ -83,14 +104,7 @@ export default function HourlyCreditPanel({
     ) : (
       <FormattedMessage defaultMessage="Your balance is empty. Top up your credit to continue." />
     );
-    action = (
-      <Link
-        to="/account/credit"
-        className="inline-block rounded-sm border border-cyber-primary px-4 py-2 text-center text-sm uppercase text-cyber-primary transition-colors hover:bg-cyber-primary/10"
-      >
-        <FormattedMessage defaultMessage="Top up credit" />
-      </Link>
-    );
+    action = topUpLink;
   } else {
     message =
       hours !== undefined ? (
@@ -109,11 +123,8 @@ export default function HourlyCreditPanel({
         <span className="text-[0.65rem] uppercase tracking-[0.2em] text-cyber-text">
           <FormattedMessage defaultMessage="Account credit" />
         </span>
-        <span className="text-lg text-cyber-text-bright">
-          <CostAmount
-            cost={{ currency: credit.currency, amount: credit.balance }}
-            converted={false}
-          />
+        <span className="text-lg text-cyber-text-bright text-right">
+          <CreditBalances credit={credit} />
         </span>
       </div>
       <div className="text-xs leading-relaxed text-cyber-text">{message}</div>

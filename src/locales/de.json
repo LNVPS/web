@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "SSH-Schlüssel"
   },
+  "4tZom7": {
+    "defaultMessage": "Alle Währungen"
+  },
   "5/Pb3D": {
     "defaultMessage": "Aktive Abonnements"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Senden Sie uns eine direkte Nachricht, und unser Team wird sich bei Ihnen melden."
+  },
+  "7xgzL8": {
+    "defaultMessage": "Sie halten keine {currency} Kredit, und Ihre {held} Saldo umgewandelt in {currency} deckt nicht ab {amount}. Laden Sie Ihr Guthaben auf, um fortzufahren."
   },
   "7xme6K": {
     "defaultMessage": "Hochleistungsfähiges VPS-Hosting"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "Gelöste Vorfälle"
   },
+  "TD5OuO": {
+    "defaultMessage": "Jedes Angebot verwendet so viel Guthaben, wie die Rechnung zulässt, und Sie zahlen den Rest. Ein Guthaben in der Währung der Rechnung wird zuerst verwendet, andernfalls wird ein anderes Guthaben umgerechnet. Automatische Verlängerungen nutzen Guthaben, wenn dieses die gesamte Verlängerung abdeckt."
+  },
   "TE4fIS": {
     "defaultMessage": "Stadt"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "Hochleistungs-Bitcoin-Lightning-VPS-Hosting. Bezahlen Sie mit Lightning, Bitcoin, Monero, Litecoin, Ethereum oder Karte. Keine langfristigen Verträge."
   },
+  "XY4MjK": {
+    "defaultMessage": "Siedlung"
+  },
   "XYkq4n": {
     "defaultMessage": "Gebraucht"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "Domäne hinzufügen"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "Jedes Angebot zieht so viel Guthaben ab, wie die Rechnung zulässt, und Sie zahlen den Rest. Automatische Verlängerungen werden mit Guthaben verrechnet, wenn dieses die gesamte Verlängerung abdeckt."
   },
   "ZjV1o9": {
     "defaultMessage": "Wir haben es selbst gefunden."
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "Konsole"
   },
-  "gfVtOu": {
-    "defaultMessage": "Bezahlen Sie mit Bitcoin oder einer unterstützten Kryptowährung, und der Betrag wird Ihrem Guthaben gutgeschrieben."
-  },
   "gjvoQG": {
     "defaultMessage": "Größenbestimmung"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Land auswählen"
+  },
+  "jN8Nhd": {
+    "defaultMessage": "Bezahlen Sie mit Bitcoin oder einer unterstützten Kryptowährung, und der Betrag wird Ihrem {currency} Guthaben. Rückerstattungen erfolgen in der Währung, in der Sie gezahlt haben."
   },
   "jOo6oG": {
     "defaultMessage": "Verwalten Sie die Zugriffsschlüssel für virtuelle Maschinen."

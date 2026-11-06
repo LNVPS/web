@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "SSH anahtarı"
   },
+  "4tZom7": {
+    "defaultMessage": "Tüm para birimleri"
+  },
   "5/Pb3D": {
     "defaultMessage": "Aktif abonelikler"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Bize doğrudan bir mesaj gönderin, ekip en kısa sürede size dönüş yapacaktır."
+  },
+  "7xgzL8": {
+    "defaultMessage": "Hiçbir şey tutmuyorsun. {currency} kredi, ve sizin {held} Dönüştürülen bakiye {currency} kapsamıyor {amount}Devam etmek için bakiyenizi yükleyin."
   },
   "7xme6K": {
     "defaultMessage": "Yüksek Performanslı Sanal Özel Sunucu (VPS) Barındırma"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "Çözülen Olaylar"
   },
+  "TD5OuO": {
+    "defaultMessage": "Her fatura tahmini, faturanın izin verdiği ölçüde kredi kullanır ve kalan tutarı siz ödersiniz. Faturanın para birimindeki bakiye öncelikle kullanılır; aksi halde farklı bir para birimindeki bakiye dönüştürülür. Kredi tüm yenileme tutarını karşıladığında, otomatik yenilemelerde kredi kullanılır."
+  },
   "TE4fIS": {
     "defaultMessage": "Şehir"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "Yüksek performanslı Bitcoin Lightning VPS barındırma hizmeti. Lightning, Bitcoin, Monero, Litecoin, Ethereum veya kartla ödeme yapın. Uzun vadeli sözleşme yok."
   },
+  "XY4MjK": {
+    "defaultMessage": "Yerleşim"
+  },
   "XYkq4n": {
     "defaultMessage": "Kullanılmış"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "Alan Adı Ekle"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "Her teklif, faturanın izin verdiği ölçüde kredi kullanır ve kalan tutarı siz ödersiniz. Otomatik yenilemelerde, kredi yalnızca tüm yenileme bedelini karşıladığında kullanılır."
   },
   "ZjV1o9": {
     "defaultMessage": "Kendi başımıza bulduk."
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "Konsol"
   },
-  "gfVtOu": {
-    "defaultMessage": "Bitcoin veya desteklenen bir coin ile ödeme yaptığınızda tutar bakiyenize eklenir."
-  },
   "gjvoQG": {
     "defaultMessage": "Boyutlandırma"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Ülke seçin"
+  },
+  "jN8Nhd": {
+    "defaultMessage": "Bitcoin veya desteklenen bir coin ile ödeme yaptığınızda, tutar hesabınıza eklenir {currency} Bakiye. İadeler, ödeme yaptığınız para biriminde tutulur."
   },
   "jOo6oG": {
     "defaultMessage": "Sanal makine erişim anahtarlarını yönetin."

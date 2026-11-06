@@ -4,6 +4,7 @@ import {
   type ExchangeRates,
 } from "../api";
 import { convertAmount } from "./currency";
+import { fundedBalances, spendBalance } from "./credit";
 
 /**
  * Hourly billing is paid from account credit only (the backend refuses an
@@ -48,6 +49,10 @@ export interface CreditReadiness {
   covers: boolean | undefined;
   /** The balance expressed in the currency of `needed`, when convertible. */
   balanceInNeededCurrency: number | undefined;
+  /** Currency of the balance the charge would be taken from. */
+  balanceCurrency: string;
+  /** Funds are held, but none in the currency being charged. */
+  otherCurrencyOnly: boolean;
   /** Everything the backend needs is in place. */
   ready: boolean;
 }
@@ -58,20 +63,18 @@ export function creditReadiness(
   rates?: ExchangeRates,
 ): CreditReadiness {
   const optedIn = credit.auto_apply;
-  const funded = credit.balance > 0;
+  const funded = fundedBalances(credit).length > 0;
+  const spend = spendBalance(credit, needed?.currency ?? credit.currency);
+  const balanceCurrency = spend?.currency ?? credit.currency;
   let balanceInNeededCurrency: number | undefined;
   let covers: boolean | undefined;
   if (needed) {
+    const balance = spend?.balance ?? 0;
     balanceInNeededCurrency =
-      credit.currency === needed.currency
-        ? credit.balance
+      balanceCurrency === needed.currency
+        ? balance
         : rates
-          ? convertAmount(
-              credit.balance,
-              credit.currency,
-              needed.currency,
-              rates,
-            )
+          ? convertAmount(balance, balanceCurrency, needed.currency, rates)
           : undefined;
     if (balanceInNeededCurrency !== undefined) {
       covers = balanceInNeededCurrency >= needed.amount;
@@ -82,6 +85,9 @@ export function creditReadiness(
     funded,
     covers,
     balanceInNeededCurrency,
+    balanceCurrency,
+    otherCurrencyOnly:
+      !!needed && funded && balanceCurrency !== needed.currency,
     ready: optedIn && funded && covers !== false,
   };
 }
@@ -96,16 +102,13 @@ export function runwayHours(
   rates?: ExchangeRates,
 ): number | undefined {
   if (perHour.amount <= 0) return undefined;
+  const spend = spendBalance(credit, perHour.currency);
+  if (!spend) return 0;
   const balance =
-    credit.currency === perHour.currency
-      ? credit.balance
+    spend.currency === perHour.currency
+      ? spend.balance
       : rates
-        ? convertAmount(
-            credit.balance,
-            credit.currency,
-            perHour.currency,
-            rates,
-          )
+        ? convertAmount(spend.balance, spend.currency, perHour.currency, rates)
         : undefined;
   if (balance === undefined) return undefined;
   return Math.floor(balance / perHour.amount);

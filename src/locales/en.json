@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "SSH key"
   },
+  "4tZom7": {
+    "defaultMessage": "All currencies"
+  },
   "5/Pb3D": {
     "defaultMessage": "Active subscriptions"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "Send us a message directly and the team will get back to you."
+  },
+  "7xgzL8": {
+    "defaultMessage": "You hold no {currency} credit, and your {held} balance converted to {currency} doesn't cover {amount}. Top up your credit to continue."
   },
   "7xme6K": {
     "defaultMessage": "High-Performance VPS Hosting"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "Resolved Incidents"
   },
+  "TD5OuO": {
+    "defaultMessage": "Every quote uses as much credit as the bill allows, and you pay the rest. A balance in the bill's currency is spent first, otherwise another balance is converted. Automatic renewals use credit when it covers the whole renewal."
+  },
   "TE4fIS": {
     "defaultMessage": "City"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "High-performance Bitcoin Lightning VPS hosting. Pay with Lightning, Bitcoin, Monero, Litecoin, Ethereum, or card. No long-term contracts."
   },
+  "XY4MjK": {
+    "defaultMessage": "Settlement"
+  },
   "XYkq4n": {
     "defaultMessage": "Used"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "Add Domain"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "Every quote uses as much credit as the bill allows, and you pay the rest. Automatic renewals use credit when it covers the whole renewal."
   },
   "ZjV1o9": {
     "defaultMessage": "We found it ourselves"
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "Console"
   },
-  "gfVtOu": {
-    "defaultMessage": "Pay with Bitcoin or a supported coin and the amount is added to your balance."
-  },
   "gjvoQG": {
     "defaultMessage": "Sizing"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "Select country"
+  },
+  "jN8Nhd": {
+    "defaultMessage": "Pay with Bitcoin or a supported coin and the amount is added to your {currency} balance. Refunds are kept in the currency you paid in."
   },
   "jOo6oG": {
     "defaultMessage": "Manage VM access keys"

@@ -1375,7 +1375,15 @@ export interface AbuseCaseDetail extends AbuseCase {
   challenges: Array<AbuseChallenge>;
 }
 
+export interface AccountCreditBalance {
+  /** Minor units of `currency` (msat for BTC). */
+  balance: number;
+  currency: string;
+}
+
 export interface AccountCredit {
+  /** Every balance held, one per currency; absent on older APIs. */
+  balances?: AccountCreditBalance[];
   /** Minor units of `currency` (msat for BTC). */
   balance: number;
   currency: string;
@@ -1383,7 +1391,12 @@ export interface AccountCredit {
   auto_apply: boolean;
 }
 
-export type AccountCreditEventKind = "topup" | "spend" | "refund" | "admin";
+export type AccountCreditEventKind =
+  | "topup"
+  | "spend"
+  | "refund"
+  | "admin"
+  | "settlement";
 
 export interface AccountCreditEvent {
   kind: AccountCreditEventKind;
@@ -2715,8 +2728,9 @@ export class LNVpsApi {
     return data;
   }
 
-  async listCreditEvents(limit?: number, offset?: number) {
+  async listCreditEvents(limit?: number, offset?: number, currency?: string) {
     const params = new URLSearchParams();
+    if (currency) params.set("currency", currency);
     if (limit !== undefined) params.set("limit", limit.toString());
     if (offset !== undefined) params.set("offset", offset.toString());
     const query = params.toString() ? `?${params.toString()}` : "";

@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "SSHキー"
   },
+  "4tZom7": {
+    "defaultMessage": "全通貨"
+  },
   "5/Pb3D": {
     "defaultMessage": "現在有効なサブスクリプション"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "直接メッセージをお送りいただければ、担当者が後ほどご連絡いたします。"
+  },
+  "7xgzL8": {
+    "defaultMessage": "あなたには～がない {currency} クレジット、そしてあなたの {held} 残高の換算先 {currency} 対象外 {amount}. クレジットをチャージして続行してください。"
   },
   "7xme6K": {
     "defaultMessage": "高性能VPSホスティング"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "解決済みのインシデント"
   },
+  "TD5OuO": {
+    "defaultMessage": "各見積もりでは、請求書で適用可能な範囲のクレジットを最大限使用し、残りはお客様にご請求いたします。請求書と同通貨の残高がある場合は優先的に使用され、該当しない場合は他の通貨の残高を為替換算して使用します。自動更新では、クレジットで更新料の全額をカバーできる場合にクレジットが使用されます。"
+  },
   "TE4fIS": {
     "defaultMessage": "都市"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "高性能なBitcoin Lightning VPSホスティング。Lightning、Bitcoin、Monero、Litecoin、Ethereum、またはカードでのお支払いに対応。長期契約なし。"
   },
+  "XY4MjK": {
+    "defaultMessage": "和解"
+  },
   "XYkq4n": {
     "defaultMessage": "使用済み"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "ドメインを追加"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "すべての見積書では、請求額を上限としてクレジットを最大限に適用し、残額をお支払いいただきます。自動更新では、クレジット残高が更新料の全額をカバーできる場合のみクレジットが適用されます。"
   },
   "ZjV1o9": {
     "defaultMessage": "自分たちで見つけた。"
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "コンソール"
   },
-  "gfVtOu": {
-    "defaultMessage": "ビットコインまたは対応コインで支払うと、その金額があなたの残高に追加されます。"
-  },
   "gjvoQG": {
     "defaultMessage": "サイズ調整"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "国を選択してください。"
+  },
+  "jN8Nhd": {
+    "defaultMessage": "ビットコインまたは対応コインで支払うと、その金額があなたの {currency} 残高。返金額は、お支払い時の通貨で保持されます。"
   },
   "jOo6oG": {
     "defaultMessage": "仮想マシンのアクセスキーを管理する。"

@@ -6,7 +6,7 @@
       "type": "skill-md",
       "description": "Create and manage VPS instances using the LNVPS customer API with Bitcoin Lightning Network payments. Use when building integrations that provision virtual machines, handle Lightning invoice payments, manage SSH keys, or automate VPS lifecycle operations.",
       "url": "https://lnvps.net/SKILL.md",
-      "digest": "sha256:cb550836daa1502ba99c2764ac851c9f6d9ecbb6e9e5d2df88f369384dd90890"
+      "digest": "sha256:ac1ea4bc27b5abace7230a84292f663db7852e1c3fc8cdce6f06701e389de4ea"
     }
   ]
 }

@@ -39,6 +39,7 @@ import {
 import { PaymentSource } from "./payment-sources";
 import HourlyCreditPanel from "./hourly-credit";
 import { useAccountCredit } from "../hooks/account-credit";
+import { creditSignature } from "../utils/credit";
 import { creditReadiness, grossTotal, isHourly } from "../utils/hourly";
 
 const COINS: ReadonlyArray<string> = ["XMR", "LTC", "ETH", "USDTTRC"];
@@ -140,7 +141,7 @@ export default function PaymentFlow({
   const { credit, reload: reloadCredit, setCredit } = useAccountCredit(hourly);
   // Re-price when the balance or the opt-in changes: the quote only carries a
   // credit line (and the server only accepts the order) once both are in place.
-  const creditKey = hourly ? `${credit?.auto_apply}:${credit?.balance}` : "";
+  const creditKey = hourly ? creditSignature(credit) : "";
 
   useEffect(() => {
     if (!login?.api) return;

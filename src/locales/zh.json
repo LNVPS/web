@@ -344,6 +344,9 @@
   "4pttvV": {
     "defaultMessage": "SSH 密钥"
   },
+  "4tZom7": {
+    "defaultMessage": "所有货币"
+  },
   "5/Pb3D": {
     "defaultMessage": "已激活的订阅服务。"
   },
@@ -490,6 +493,9 @@
   },
   "7wbySo": {
     "defaultMessage": "请直接给我们发送消息，我们的团队会尽快与您联系。"
+  },
+  "7xgzL8": {
+    "defaultMessage": "你未持有 {currency} 信用，以及你的 {held} 余额转换为 {currency} 未涵盖 {amount}请充值以继续使用。"
   },
   "7xme6K": {
     "defaultMessage": "高性能虚拟专用服务器托管"
@@ -1613,6 +1619,9 @@
   "T7b6ZF": {
     "defaultMessage": "已解决的事件"
   },
+  "TD5OuO": {
+    "defaultMessage": "每份报价单都会使用账单允许范围内的最大信用额度，剩余部分由您支付。账单币种下的余额将优先使用，否则将使用其他币种的余额进行折算。当信用额度足以覆盖整笔续费时，自动续费将使用信用额度。"
+  },
   "TE4fIS": {
     "defaultMessage": "城市"
   },
@@ -1841,6 +1850,9 @@
   "XXjN3F": {
     "defaultMessage": "高性能比特币闪电网络 VPS 主机服务。支持使用闪电网络、比特币、门罗币、莱特币、以太坊或银行卡支付。无需签订长期合约。"
   },
+  "XY4MjK": {
+    "defaultMessage": "结算"
+  },
   "XYkq4n": {
     "defaultMessage": "已使用。"
   },
@@ -1948,9 +1960,6 @@
   },
   "ZewCpX": {
     "defaultMessage": "添加域名"
-  },
-  "ZgQnsi": {
-    "defaultMessage": "每份报价单都会使用账单允许的最大信用额度，剩余部分由您支付。当信用额度足以覆盖全部续费金额时，自动续费将使用该额度进行抵扣。"
   },
   "ZjV1o9": {
     "defaultMessage": "是我们自己找到的。"
@@ -2306,9 +2315,6 @@
   "gc+2Z2": {
     "defaultMessage": "控制台"
   },
-  "gfVtOu": {
-    "defaultMessage": "使用比特币或支持的币种进行支付，支付金额将计入您的账户余额。"
-  },
   "gjvoQG": {
     "defaultMessage": "尺寸选择。"
   },
@@ -2410,6 +2416,9 @@
   },
   "jM8W7d": {
     "defaultMessage": "请选择国家。"
+  },
+  "jN8Nhd": {
+    "defaultMessage": "使用比特币或受支持的币种支付，该金额将添加到您的 {currency} 余额。退款将以您付款时使用的币种保留。"
   },
   "jOo6oG": {
     "defaultMessage": "管理虚拟机访问密钥。"

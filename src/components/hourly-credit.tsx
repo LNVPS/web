@@ -24,6 +24,7 @@ export default function HourlyCreditPanel({
   credit,
   needed,
   perHour,
+  applied,
   onChange,
   className,
 }: {
@@ -32,13 +33,14 @@ export default function HourlyCreditPanel({
   needed?: Money;
   /** One hour's price, to show how long the balance lasts. */
   perHour?: Money;
+  applied?: Money | null;
   /** Called with the refreshed credit after auto-apply is switched on. */
   onChange?: (credit: AccountCredit) => void;
   className?: string;
 }) {
   const login = useLogin();
   const { data: rates } = useExchangeRates();
-  const ready = useCreditReadiness(credit, needed);
+  const ready = useCreditReadiness(credit, needed, applied);
 
   if (!credit || !ready) {
     return (

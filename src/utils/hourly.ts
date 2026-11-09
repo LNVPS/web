@@ -61,8 +61,26 @@ export function creditReadiness(
   credit: AccountCredit,
   needed?: Money,
   rates?: ExchangeRates,
+  applied?: Money | null,
 ): CreditReadiness {
   const optedIn = credit.auto_apply;
+  if (applied !== undefined) {
+    const covered = applied !== null && applied.amount > 0;
+    const covers = needed
+      ? covered && applied.currency === needed.currency
+        ? applied.amount >= needed.amount
+        : false
+      : undefined;
+    return {
+      optedIn,
+      funded: covered,
+      covers,
+      balanceInNeededCurrency: applied?.amount,
+      balanceCurrency: applied?.currency ?? credit.currency,
+      otherCurrencyOnly: false,
+      ready: optedIn && covered && covers !== false,
+    };
+  }
   const funded = fundedBalances(credit).length > 0;
   const spend = spendBalance(credit, needed?.currency ?? credit.currency);
   const balanceCurrency = spend?.currency ?? credit.currency;

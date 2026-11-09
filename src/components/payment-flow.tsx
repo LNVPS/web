@@ -862,11 +862,12 @@ export default function PaymentFlow({
             accountTaxRate(account, duration.taxCompanyId),
           )
         : source.due;
+  const quoteCredit = quote ? (quote.credit ?? null) : undefined;
   const hourlyReady =
     !hourly ||
     (!!credit &&
       !quoting &&
-      creditReadiness(credit, hourlyNeeded, rates).ready);
+      creditReadiness(credit, hourlyNeeded, rates, quoteCredit).ready);
 
   return (
     <div className="flex flex-col gap-6">
@@ -917,6 +918,7 @@ export default function PaymentFlow({
         <HourlyCreditPanel
           credit={credit}
           needed={hourlyNeeded}
+          applied={quoteCredit}
           perHour={
             duration
               ? grossTotal(

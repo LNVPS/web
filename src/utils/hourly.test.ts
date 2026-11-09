@@ -84,11 +84,10 @@ describe("creditReadiness with several balances", () => {
   });
 
   test("flags when only a different currency is held", () => {
-    const r = creditReadiness(
-      both(),
-      { currency: "USD", amount: 100 },
-      { base: "BTC", rates: { EUR: 50_000, USD: 60_000 } } as never,
-    );
+    const r = creditReadiness(both(), { currency: "USD", amount: 100 }, {
+      base: "BTC",
+      rates: { EUR: 50_000, USD: 60_000 },
+    } as never);
     expect(r.otherCurrencyOnly).toBe(true);
     expect(r.balanceCurrency).toBe("EUR");
   });
@@ -167,5 +166,40 @@ describe("runwayHours", () => {
     expect(
       runwayHours(credit(), { currency: "BTC", amount: 0 }),
     ).toBeUndefined();
+  });
+});
+
+describe("creditReadiness with a quote", () => {
+  const needed = { currency: "EUR", amount: 400 };
+  const eurHolder = credit({
+    balance: 0,
+    currency: "EUR",
+    balances: [{ currency: "BTC", balance: 10_000_000 }],
+  });
+
+  test("the quote's credit line makes a foreign balance ready", () => {
+    const r = creditReadiness(eurHolder, needed, rates, needed);
+    expect(r.funded).toBe(true);
+    expect(r.ready).toBe(true);
+  });
+
+  test("a quote that applies no credit is never ready", () => {
+    const r = creditReadiness(credit(), needed, rates, null);
+    expect(r.funded).toBe(false);
+    expect(r.ready).toBe(false);
+  });
+
+  test("a quote covering part of the bill is not ready", () => {
+    const r = creditReadiness(credit(), needed, rates, {
+      currency: "EUR",
+      amount: 300,
+    });
+    expect(r.covers).toBe(false);
+    expect(r.ready).toBe(false);
+  });
+
+  test("without a quote the single-balance rule applies", () => {
+    const r = creditReadiness(eurHolder, needed, rates);
+    expect(r.otherCurrencyOnly).toBe(true);
   });
 });

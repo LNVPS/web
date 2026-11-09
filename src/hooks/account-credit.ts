@@ -40,7 +40,8 @@ export function useAccountCredit(enabled = true) {
 export function useCreditReadiness(
   credit: AccountCredit | undefined,
   needed?: Money,
+  applied?: Money | null,
 ): CreditReadiness | undefined {
   const { data: rates } = useExchangeRates();
-  return credit ? creditReadiness(credit, needed, rates) : undefined;
+  return credit ? creditReadiness(credit, needed, rates, applied) : undefined;
 }

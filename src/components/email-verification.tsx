@@ -3,34 +3,33 @@ import { AccountDetail } from "../api";
 import useLogin from "../hooks/login";
 import { AsyncButton } from "./button";
 import { FormattedMessage, useIntl } from "react-intl";
+import { requestEmailVerification } from "../utils/email-gate";
 
-export function EmailVerification() {
+export function EmailVerification({
+  account,
+  show,
+  loadError,
+}: {
+  account?: AccountDetail;
+  show: boolean;
+  loadError?: string;
+}) {
   const login = useLogin();
   const { formatMessage } = useIntl();
-  const [acc, setAcc] = useState<AccountDetail>();
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string>();
 
   useEffect(() => {
-    let mounted = true;
-    login?.api
-      .getAccount()
-      .then((a) => {
-        if (!mounted) return;
-        setAcc(a);
-        setEmail(a.email ?? "");
-      })
-      .catch((e: unknown) => {
-        if (!mounted) return;
-        setError(e instanceof Error ? e.message : String(e));
-      });
-    return () => {
-      mounted = false;
-    };
-  }, [login]);
+    setEmail(account?.email ?? "");
+  }, [account?.email]);
 
-  if (!acc || acc.email_verified) return null;
+  const shownError = error ?? loadError;
+  if (!account || !show) {
+    return shownError ? (
+      <b className="text-cyber-danger">{shownError}</b>
+    ) : null;
+  }
 
   return (
     <div className="flex flex-col gap-2 rounded-sm bg-cyber-panel px-4 py-3 border border-cyber-primary">
@@ -45,7 +44,7 @@ export function EmailVerification() {
           <FormattedMessage defaultMessage="Verification email sent, please check your inbox." />
         </p>
       ) : (
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
           <input
             type="email"
             placeholder={formatMessage({ defaultMessage: "your@email.com" })}
@@ -59,7 +58,7 @@ export function EmailVerification() {
               if (!login?.api) return;
               setError(undefined);
               try {
-                await login.api.updateAccount({ ...acc, email });
+                await requestEmailVerification(login.api, account, email);
                 setSent(true);
               } catch (e) {
                 setError(e instanceof Error ? e.message : String(e));
@@ -70,7 +69,7 @@ export function EmailVerification() {
           </AsyncButton>
         </div>
       )}
-      {error && <b className="text-cyber-danger">{error}</b>}
+      {shownError && <b className="text-cyber-danger">{shownError}</b>}
     </div>
   );
 }

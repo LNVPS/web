@@ -11,7 +11,11 @@ plugin({
     build.onLoad({ filter: /^(?!.*node_modules).*\.tsx?$/ }, async (args) => {
       const source = await Bun.file(args.path).text();
       const loader = args.path.endsWith("x") ? "tsx" : "ts";
-      if (!source.includes("formatMessage") && !source.includes("defineMessages"))
+      if (
+        !source.includes("formatMessage") &&
+        !source.includes("defineMessages") &&
+        !source.includes("FormattedMessage")
+      )
         return { contents: source, loader };
       const out = await transformAsync(source, {
         filename: args.path,

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import {
-  AccountDetail,
   CpuArch,
   LNVpsApi,
   VmCustomPrice,
@@ -20,7 +19,6 @@ import {
 } from "../../utils/order-addons";
 import CostLabel from "../../components/cost";
 import useLogin from "../../hooks/login";
-import { AsyncButton } from "../../components/button";
 import SpecSheet from "../../components/spec-sheet";
 import OsImagePicker from "../../components/os-image-picker";
 import { sortOsImages } from "../../os-images";
@@ -28,6 +26,8 @@ import SSHKeySelector from "../../components/ssh-keys";
 import { clearRefCode, getRefCode } from "../../ref";
 import { ApiUrl } from "../../const";
 import { EmailVerification } from "../../components/email-verification";
+import { EmailGateNotice, OrderButton } from "../../components/order-button";
+import { useEmailGate } from "../../hooks/email-gate";
 import HourlyCreditPanel from "../../components/hourly-credit";
 import {
   useAccountCredit,
@@ -183,7 +183,7 @@ export default function OrderVmPage({
     addonsFor(baseTemplate),
   );
   const [price, setPrice] = useState<VmCustomPrice>();
-  const [account, setAccount] = useState<AccountDetail>();
+  const { account, gate, error: accountError } = useEmailGate();
 
   const pricingId = baseTemplate?.pricing_id;
   useEffect(() => {
@@ -231,13 +231,6 @@ export default function OrderVmPage({
   // the customer to hit the refusal on the next screen.
   const hourly = isHourly(template?.cost_plan?.interval_type);
   const { credit, setCredit, reload: reloadCredit } = useAccountCredit(hourly);
-  useEffect(() => {
-    if (!hourly) return;
-    login?.api
-      ?.getAccount()
-      .then(setAccount)
-      .catch((e) => console.error("Failed to load account:", e));
-  }, [hourly, login?.api]);
   const firstPeriod =
     hourly && template?.cost_plan
       ? grossTotal(
@@ -338,7 +331,11 @@ export default function OrderVmPage({
           {/* Outside the numbered sequence: it blocks the order rather than
               being a step of it, and inside the list it butted against the
               first step's marker with no room of its own. */}
-          <EmailVerification />
+          <EmailVerification
+            account={account}
+            show={gate === "required"}
+            loadError={accountError}
+          />
           <div className="flex flex-col">
             <Step
               index={1}
@@ -366,7 +363,7 @@ export default function OrderVmPage({
             <Step
               index={3}
               title={<FormattedMessage defaultMessage="Launch" />}
-              done={ready}
+              done={ready && gate === "ok"}
               last
             >
               <div className="flex flex-col gap-3 rounded-sm border border-cyber-border bg-cyber-panel px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
@@ -390,14 +387,13 @@ export default function OrderVmPage({
                     )}
                   </span>
                 </div>
-                <AsyncButton
-                  className="sm:w-56"
-                  disabled={!ready}
+                <OrderButton
+                  ready={ready}
+                  gate={gate}
                   onClick={createOrder}
-                >
-                  <FormattedMessage defaultMessage="Create Order" />
-                </AsyncButton>
+                />
               </div>
+              <EmailGateNotice gate={gate} />
               {hourly && (
                 <HourlyCreditPanel
                   className="mt-3"
